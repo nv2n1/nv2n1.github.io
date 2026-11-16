@@ -1,7 +1,7 @@
 ---
 title: "Profiling Vim Startup and Runtime Performance"
 date: 2015-03-29 04:51:52 +0000
-modified: 2026-04-11 16:21:49 +0000
+modified: 2026-11-16 10:56:17 +0000
 author: "Eric Ma"
 layout: post
 categories: [performance]
@@ -43,6 +43,12 @@ The columns mean:
 - **sourced script**: The file being processed
 
 Sort by the `self+sourced` column to find the slowest plugins. Any single plugin taking more than 200-300ms is worth investigating.
+
+To get a quick ranking of the heaviest scripts:
+
+``` bash
+cat profile.log | sort -k2 -rn | head -20
+```
 
 ## Interpreting Startup Results
 
@@ -112,6 +118,24 @@ Example output:
 - **SELF TIME** reveals where the CPU actually spent time without nested calls.
 
 In this example, `SyntasticMake()` took 127 seconds—a linting plugin doing expensive work on save. The solution is to either disable it for that filetype or replace it with a faster async alternative.
+
+## Narrowing Down the Culprit
+
+If you suspect a particular plugin, profile only its code to cut the noise:
+
+```vim
+:profile start profile.log
+:profile func plugin_name*
+:profile file plugin_name*
+```
+
+To confirm a plugin is at fault, start Vim without any plugins or vimrc:
+
+``` bash
+vim -u NONE
+```
+
+If Vim is fast this way, re-enable plugins one at a time until the slowdown reappears. Also review load order: a slow plugin can simply depend on another slow plugin.
 
 ## Practical Solutions
 

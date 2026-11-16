@@ -9,7 +9,7 @@ permalink: /category/files-storage/
 
 Part of [Linux & Systems Administration Academy](/linux-systems-administration-academy/) > [Linux Essentials Path](/linux-essentials-path/).
 
-116 posts.
+115 posts.
 
 {% assign posts = site.categories[page.category] | sort: date | reverse %}
 <ul class="posts">

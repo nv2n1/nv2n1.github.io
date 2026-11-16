@@ -9,7 +9,7 @@ permalink: /category/performance/
 
 Part of [Linux & Systems Administration Academy](/linux-systems-administration-academy/) > [Linux System Administration Path](/linux-sysadmin-path/).
 
-30 posts.
+29 posts.
 
 {% assign posts = site.categories[page.category] | sort: date | reverse %}
 <ul class="posts">
