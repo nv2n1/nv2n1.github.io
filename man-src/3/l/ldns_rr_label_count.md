@@ -16,8 +16,8 @@ description: "ldns_rr_label_count"
 <p> uint8_t ldns_rr_label_count(ldns_rr *rr); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_rr_label_count</i>()</p>
-<dd>counts the number of labels of the ownername. .br <code>rr</code>: count the labels of this rr .br Returns the number of labels</dl>
+<dt> <i>ldns_rr_label_count</i>()</dt>
+<dd>counts the number of labels of the ownername. .br <code>rr</code>: count the labels of this rr .br Returns the number of labels</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

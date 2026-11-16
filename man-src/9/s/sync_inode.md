@@ -14,10 +14,10 @@ description: "sync_inode – write an inode and its pages to disk."
 <p><i>inode</i></p>
 <dl>
 <dd>
-<dd>the inode to sync</dl>
+</dd><dd>the inode to sync</dd></dl>
 <p> <i>wbc</i></p>
 <dl>
-<dd>controls the writeback mode</dl>
+<dd>controls the writeback mode</dd></dl>
 <h2>Description</h2>
 <p><code>sync_inode</code> will write an inode and its pages to disk. It will also correctly update the inode on its superblock&#8217;s dirty inode lists and will update inode-&gt;i_state. </p>
 <p> The caller must have a ref on the inode.</p>

@@ -16,27 +16,25 @@ description: "oz-customize – tool to automatically modify installed operating 
 <p> Note that oz-customize does the actual customization using a combination of KVM and libvirt, so both of these must be available (and working) for oz-customize to have a chance to succeed. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c &lt;config&gt;</code></p>
-<dd> Get the configuration from config file <code>config</code>, instead of the default /etc/oz/oz.cfg. If neither one exists, Oz will use sensible defaults. The config file is in standard ini format; for an explanation of the sections and keys, see the <code>CONFIGURATION FILE</code> section.</p>
-<dt><code>-d &lt;loglevel&gt;</code></p>
-<dd> Turn on debugging output to level <code>loglevel</code>. The log levels are:</p>
+<dt><code>-c &lt;config&gt;</code></dt>
+<dd> Get the configuration from config file <code>config</code>, instead of the default /etc/oz/oz.cfg. If neither one exists, Oz will use sensible defaults. The config file is in standard ini format; for an explanation of the sections and keys, see the <code>CONFIGURATION FILE</code> section.</dd>
+<dt><code>-d &lt;loglevel&gt;</code></dt>
+<dd> Turn on debugging output to level <code>loglevel</code>. The log levels are:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>0 &#8211; errors only (this is the default)</p>
+<dt>0 &#8211; errors only (this is the default)</dt>
 <dd>
-<dt>1 &#8211; errors and warnings</p>
+</dd><dt>1 &#8211; errors and warnings</dt>
 <dd>
-<dt>2 &#8211; errors, warnings, and information</p>
+</dd><dt>2 &#8211; errors, warnings, and information</dt>
 <dd>
-<dt>3 &#8211; all messages</p>
+</dd><dt>3 &#8211; all messages</dt>
 <dd>
-<dt>4 &#8211; all messages, prepended with the level and classname</p>
-<dd></dl>
+</dd><dt>4 &#8211; all messages, prepended with the level and classname</dt>
+<dd></dd></dl>
 </dl>
-<dt><code>-h</code></p>
-<dd> Print a short help message. </p>
+<dt><code>-h</code></dt>
+<dd> Print a short help message. </dd>
 </dl>
 <h2>CONFIGURATION FILE</h2>
 <p> The Oz configuration file is in standard INI format with several sections. If any section or configuration key is missing, Oz will use a sensible default. For true/false configuration keys, the values of &quot;true&quot;, &quot;True&quot;, &quot;yes&quot;, or &quot;Yes&quot; can be used to turn the option on, and &quot;false&quot;, &quot;False&quot;, &quot;no&quot;, or &quot;No&quot; can be used to turn the behavior off. The configuration file should have the following form: </p>

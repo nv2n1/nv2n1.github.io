@@ -14,16 +14,16 @@ description: "ldns-zsplit – split up a zone file"
 <h2>DESCRIPTION</h2>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-n NUMBER</code></p>
-<dd> Split after NUMBER RRs, <code>ldns-zsplit</code> will not split in the middle of an RRs.</dl>
+<dt><code>-n NUMBER</code></dt>
+<dd> Split after NUMBER RRs, <code>ldns-zsplit</code> will not split in the middle of an RRs.</dd></dl>
 <p> Each part is saved with a numerical suffix, starting with .000. The largest suffix is thus .999. </p>
 <dl>
-<dt><code>-o ORIGIN</code></p>
-<dd> use ORIGIN as origin when reading the zonefile. </p>
-<dt><code>-z</code></p>
-<dd> Sort the zone before splitting. </p>
-<dt><code>-v</code></p>
-<dd> Show version number and exit. </p>
+<dt><code>-o ORIGIN</code></dt>
+<dd> use ORIGIN as origin when reading the zonefile. </dd>
+<dt><code>-z</code></dt>
+<dd> Sort the zone before splitting. </dd>
+<dt><code>-v</code></dt>
+<dd> Show version number and exit. </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Written by the ldns team as an example for ldns usage. </p>

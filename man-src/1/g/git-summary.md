@@ -22,7 +22,7 @@ description: "git-summary – Show repository summary"
 <p> Outputs a repo summary:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git summary
 project  : express
@@ -50,17 +50,15 @@ authors  :
     1 isaacs
     1 Matt Colyer
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> This command can also take a commitish, and will print a summary for the range of commits included in the commitish:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git summary v42..
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Tj Holowaychuk &lt;<i>tj [at] vision-media.ca</i>&gt;</p>
 <h2>REPORTING BUGS</h2>

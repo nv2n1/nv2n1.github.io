@@ -14,10 +14,10 @@ description: "ccw_dev_id_is_equal – compare two ccw_dev_ids"
 <p><i>dev_id1</i></p>
 <dl>
 <dd>
-<dd>a ccw_dev_id</dl>
+</dd><dd>a ccw_dev_id</dd></dl>
 <p> <i>dev_id2</i></p>
 <dl>
-<dd>another ccw_dev_id</dl>
+<dd>another ccw_dev_id</dd></dl>
 <h2>Return</h2>
 <p><code>1</code> if the two structures are equal field-by-field, <code>0</code> if not.</p>
 <h2>Context</h2>
@@ -25,5 +25,5 @@ description: "ccw_dev_id_is_equal – compare two ccw_dev_ids"
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

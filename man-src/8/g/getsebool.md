@@ -15,8 +15,8 @@ description: "getsebool – get SELinux boolean value(s)"
 <p> The setting of boolean values occurs in two stages; first the pending value is changed, then the booleans are committed, causing their active values to become their pending values. This allows a group of booleans to be changed in a single transaction, by setting all of their pending values as desired and then committing once.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd>Show all SELinux booleans.</dl>
+<dt><code>-a</code></dt>
+<dd>Show all SELinux booleans.</dd></dl>
 <h2>Author</h2>
 <p>This manual page was written by Dan Walsh &lt;dwalsh [at] redhat.com&gt;. The program was written by Tresys Technology.</p>
 <h2>See Also</h2>

@@ -21,14 +21,10 @@ CALL SFSETP (IDP)
 <h2>Description</h2>
 
 <dl><dt>IDP
-<dd>(an input array of type INTEGER, dimensioned 8x8) contains 0s and 1s specifying the dot pattern to be transferred to the internal array LDP for use by SFWRLD and SFNORM. When dot fill is selected, each fill line is drawn using dots the same distance apart along the line as the lines are from each other. The dots thus fall at the intersection points of a square grid. Each dot is associated with a particular element of LDP. If that element is a 1, the dot is drawn; if it is a 0, the dot is not drawn. The association is done in such a way as to replicate the pattern specified by LDP across the entire filled area. 
-
+</dt><dd>(an input array of type INTEGER, dimensioned 8x8) contains 0s and 1s specifying the dot pattern to be transferred to the internal array LDP for use by SFWRLD and SFNORM. When dot fill is selected, each fill line is drawn using dots the same distance apart along the line as the lines are from each other. The dots thus fall at the intersection points of a square grid. Each dot is associated with a particular element of LDP. If that element is a 1, the dot is drawn; if it is a 0, the dot is not drawn. The association is done in such a way as to replicate the pattern specified by LDP across the entire filled area. 
  If the fill angle is 0 (the default), then incrementing the first subscript of LDP corresponds to a horizontal motion across the plot from left to right and incrementing the second subscript of LDP corresponds to a vertical motion across the plot from top to bottom. This allows the contents of IDP to be declared in a DATA statement which creates a &quot;picture&quot; of the pattern. For example, the FORTRAN statements 
-
-<dl><dd>&nbsp;<wbr>DIMENSION IDP(8,8) 
- 
+</dd><dl><dd>&nbsp;<wbr>DIMENSION IDP(8,8) 
 &nbsp;<wbr>... 
- 
 &nbsp;<wbr>DATA IDP&nbsp;<wbr>/&nbsp;<wbr>0,0,0,0,0,0,0,0, 
  + 0,1,1,1,1,1,1,0, 
  + 0,1,0,0,0,0,0,1, 
@@ -36,11 +32,11 @@ CALL SFSETP (IDP)
  + 0,1,1,1,1,1,1,0, 
  + 0,1,0,0,0,1,0,0, 
  + 0,1,0,0,0,0,1,0, 
- + 0,1,0,0,0,0,0,1/</dl><dd>creates the letter &quot;R&quot;, with the correct orientation. 
+ + 0,1,0,0,0,0,0,1/</dd></dl><dd>creates the letter &quot;R&quot;, with the correct orientation. 
 
  The contents of the array IDP are transferred to the internal array LDP. The new dot pattern is used until a subsequent call to SFSETP changes the contents of LDP again. 
 
- The default dot pattern consists of all 1s.</dl>
+ The default dot pattern consists of all 1s.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

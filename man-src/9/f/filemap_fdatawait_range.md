@@ -15,15 +15,15 @@ filemap_fdatawait_range - wait for writeback to complete
 <h2>Arguments</h2>
 
 <i>mapping</i>
-<dl><dd><dd>address space structure to wait for</dl>
+<dl><dd></dd><dd>address space structure to wait for</dd></dl>
  
 
  <i>start_byte</i>
-<dl><dd>offset in bytes where the range starts</dl>
+<dl><dd>offset in bytes where the range starts</dd></dl>
  
 
  <i>end_byte</i>
-<dl><dd>offset in bytes where the range ends (inclusive)</dl>
+<dl><dd>offset in bytes where the range ends (inclusive)</dd></dl>
 
 <h2>Description</h2>
 

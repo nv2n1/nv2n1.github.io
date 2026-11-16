@@ -20,28 +20,24 @@ MySQL database driver in GRASS enables GRASS to store vector attributes in MySQL
 
  GRASS modules require 2 parameters to connect to a database. Those parameters are 'driver' and 'database'. For MySQL driver the parameter 'driver' should be set to value 'mysql'. The parameter 'database' can be given in two formats:
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 &nbsp;<wbr>Database name - in case of connection from localhost
-<dt>
-<dd> 
+</dd><dt>
+</dt><dd> 
 &nbsp;<wbr>String of comma separated list of kye=value options.&nbsp;<wbr> Supported options are:
+</dd><dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd> 
+</dt><dd> 
 &nbsp;<wbr>dbname - database name
-<dt>
-<dd> 
+</dd><dt>
+</dt><dd> 
 &nbsp;<wbr>host - host name or IP address
-<dt>
-<dd> 
-&nbsp;<wbr>port - server port number&nbsp;<wbr></dl>
+</dd><dt>
+</dt><dd> 
+&nbsp;<wbr>port - server port number&nbsp;<wbr></dd></dl>
 </dl>
 </dl>
 </dl>
@@ -55,21 +51,19 @@ MySQL database driver in GRASS enables GRASS to store vector attributes in MySQL
 
  GRASS supports almost all MySQL data types with following limitations:
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> 
+</dt><dd> 
 &nbsp;<wbr>Binary columns&nbsp;<wbr>(BINARY, VARBINARY, TINYBLOB, MEDIUMBLOB, BLOB, LONGBLOB) are not not supported. If a table with binary column(s) is used in GRASS a warning is printed and only the supported columns are returned in query results.
-<dt>
-<dd> 
+</dd><dt>
+</dt><dd> 
 &nbsp;<wbr>Columns of type SET and ENUM are represented as string&nbsp;<wbr>(VARCHAR).&nbsp;<wbr>
-<dt>
-<dd> 
+</dd><dt>
+</dt><dd> 
 &nbsp;<wbr>Very large integers in columns of type BIGINT can be lost&nbsp;<wbr> or corrupted because GRASS does not support 64 bin integeres on most platforms.
-<dt>
-<dd> 
-&nbsp;<wbr>GRASS does not currently distinguish types TIMESTAMP and&nbsp;<wbr> DATETIME. Both types are in GRASS interpreted as TIMESTAMP.</dl>
+</dd><dt>
+</dt><dd> 
+&nbsp;<wbr>GRASS does not currently distinguish types TIMESTAMP and&nbsp;<wbr> DATETIME. Both types are in GRASS interpreted as TIMESTAMP.</dd></dl>
 </dl>
 
 <h2>Indexes</h2>

@@ -16,8 +16,8 @@ description: "XmMainWindowSep1 — A MainWindow function that returns the widget
 <p><code>XmMainWindowSep1</code> returns the widget ID of the first Separator in the MainWindow. The first Separator is located between the MenuBar and the Command widget. This Separator is visible only when <code>XmNshowSeparator</code> is True. </p>
 <p> <code>NOTE:</code> <code>XmMainWindowSep1</code> is obsolete and exists for compatibility with previous releases. Use <code>XtNameToWidget</code> instead. Pass a MainWindow variable as the first argument to <code>XtNameToWidget</code> and pass <code>Separator1</code> as the second argument.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the MainWindow widget ID</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the MainWindow widget ID</dd></dl>
 <p> For a complete definition of MainWindow and its associated resources, see <code><a href="/docs/linux/man/3-xmmainwindow/">XmMainWindow</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns the widget ID of the first Separator.</p>

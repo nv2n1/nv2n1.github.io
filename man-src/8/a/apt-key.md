@@ -10,10 +10,10 @@ description: "apt-key – Deprecated APT key management utility"
 <p>apt-key &#8211; Deprecated APT key management utility</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>apt-key</code> [<code>&#8211;keyring&nbsp;</code><i>filename</i>] {add&nbsp;<i>filename</i> | del&nbsp;<i>keyid</i> | export&nbsp;<i>keyid</i> | exportall | list | finger | adv | update | net-update | {-v | &#8211;version} | {-h | &#8211;help}}</dl>
+<dt> <code>apt-key</code> [<code>&#8211;keyring&nbsp;</code><i>filename</i>] {add&nbsp;<i>filename</i> | del&nbsp;<i>keyid</i> | export&nbsp;<i>keyid</i> | exportall | list | finger | adv | update | net-update | {-v | &#8211;version} | {-h | &#8211;help}}</dt></dl>
 <h2>Description</h2>
 <p><code>apt-key</code></p>
-<dd>is used to manage the list of keys used by apt to authenticate packages. Packages which have been authenticated using these keys will be considered trusted. </p>
+<dd>is used to manage the list of keys used by apt to authenticate packages. Packages which have been authenticated using these keys will be considered trusted. </dd>
 <p> Use of <code>apt-key</code> is deprecated, except for the use of <code>apt-key del</code> in maintainer scripts to remove existing keys from the main keyring. If such usage of <code>apt-key</code> is desired the additional installation of the GNU Privacy Guard suite (packaged in gnupg) is required. </p>
 <p> <a href="/docs/linux/man/8-apt-key/">apt-key</a>(8) will last be available in Debian 11 and Ubuntu 22.04.</p>
 <h2>Supported Keyring Files</h2>
@@ -22,36 +22,36 @@ description: "apt-key – Deprecated APT key management utility"
 <h2>Commands</h2>
 <p><code>add</code> <i>filename</i> (deprecated)</p>
 <dl>
-<dd>Add a new key to the list of trusted keys. The key is read from the filename given with the parameter <i>filename</i> or if the filename is &#8211; from standard input. </p>
+<dd>Add a new key to the list of trusted keys. The key is read from the filename given with the parameter <i>filename</i> or if the filename is &#8211; from standard input. </dd>
 <p> It is critical that keys added manually via <code>apt-key</code> are verified to belong to the owner of the repositories they claim to be for otherwise the <code><a href="/docs/linux/man/8-apt-secure/">apt-secure</a></code>(8) infrastructure is completely undermined. </p>
 <p> <i>Note</i>: Instead of using this command a keyring should be placed directly in the /etc/apt/trusted.gpg.d/ directory with a descriptive name and either &quot;gpg&quot; or &quot;asc&quot; as file extension.</dl>
 <p> <code>del</code> <i>keyid</i> (mostly deprecated)</p>
 <dl>
-<dd>Remove a key from the list of trusted keys.</dl>
+<dd>Remove a key from the list of trusted keys.</dd></dl>
 <p> <code>export</code> <i>keyid</i> (deprecated)</p>
 <dl>
-<dd>Output the key <i>keyid</i> to standard output.</dl>
+<dd>Output the key <i>keyid</i> to standard output.</dd></dl>
 <p> <code>exportall</code> (deprecated)</p>
 <dl>
-<dd>Output all trusted keys to standard output.</dl>
+<dd>Output all trusted keys to standard output.</dd></dl>
 <p> <code>list</code>, <code>finger</code> (deprecated)</p>
 <dl>
-<dd>List trusted keys with fingerprints.</dl>
+<dd>List trusted keys with fingerprints.</dd></dl>
 <p> <code>adv</code> (deprecated)</p>
 <dl>
-<dd>Pass advanced options to gpg. With <code>adv &#8211;recv-key</code> you can e.g. download key from keyservers directly into the trusted set of keys. Note that there are <i>no</i> checks performed, so it is easy to completely undermine the <code><a href="/docs/linux/man/8-apt-secure/">apt-secure</a></code>(8) infrastructure if used without care.</dl>
+<dd>Pass advanced options to gpg. With <code>adv &#8211;recv-key</code> you can e.g. download key from keyservers directly into the trusted set of keys. Note that there are <i>no</i> checks performed, so it is easy to completely undermine the <code><a href="/docs/linux/man/8-apt-secure/">apt-secure</a></code>(8) infrastructure if used without care.</dd></dl>
 <p> <code>update</code> (deprecated)</p>
 <dl>
-<dd>Update the local keyring with the archive keyring and remove from the local keyring the archive keys which are no longer valid. The archive keyring is shipped in the archive-keyring package of your distribution, e.g. the ubuntu-keyring package in Ubuntu. </p>
+<dd>Update the local keyring with the archive keyring and remove from the local keyring the archive keys which are no longer valid. The archive keyring is shipped in the archive-keyring package of your distribution, e.g. the ubuntu-keyring package in Ubuntu. </dd>
 <p> Note that a distribution does not need to and in fact should not use this command any longer and instead ship keyring files in the /etc/apt/trusted.gpg.d/ directory directly as this avoids a dependency on gnupg and it is easier to manage keys by simply adding and removing files for maintainers and users alike.</dl>
 <p> <code>net-update</code> (deprecated)</p>
 <dl>
-<dd>Perform an update working similarly to the <code>update</code> command above, but get the archive keyring from a URI instead and validate it against a master key. This requires an installed <code><a href="/docs/linux/man/1-wget/">wget</a></code>(1) and an APT build configured to have a server to fetch from and a master keyring to validate. APT in Debian does not support this command, relying on <code>update</code> instead, but Ubuntu&#8217;s APT does.</dl>
+<dd>Perform an update working similarly to the <code>update</code> command above, but get the archive keyring from a URI instead and validate it against a master key. This requires an installed <code><a href="/docs/linux/man/1-wget/">wget</a></code>(1) and an APT build configured to have a server to fetch from and a master keyring to validate. APT in Debian does not support this command, relying on <code>update</code> instead, but Ubuntu&#8217;s APT does.</dd></dl>
 <h2>Options</h2>
 <p>Note that options need to be defined before the commands described in the previous section. </p>
 <p> <code>&#8211;keyring</code> <i>filename</i> (deprecated)</p>
 <dl>
-<dd>With this option it is possible to specify a particular keyring file the command should operate on. The default is that a command is executed on the trusted.gpg file as well as on all parts in the trusted.gpg.d directory, though trusted.gpg is the primary keyring which means that e.g. new keys are added to this one.</dl>
+<dd>With this option it is possible to specify a particular keyring file the command should operate on. The default is that a command is executed on the trusted.gpg file as well as on all parts in the trusted.gpg.d directory, though trusted.gpg is the primary keyring which means that e.g. new keys are added to this one.</dd></dl>
 <h2>Deprecation</h2>
 <p>Except for using <code>apt-key del</code> in maintainer scripts, the use of <code>apt-key</code> is deprecated. This section shows how to replace existing use of <code>apt-key</code>. </p>
 <p> If your existing use of <code>apt-key add</code> looks like this: </p>
@@ -63,13 +63,13 @@ description: "apt-key – Deprecated APT key management utility"
 <h2>Files</h2>
 <p>/etc/apt/trusted.gpg</p>
 <dl>
-<dd>Keyring of local trusted keys, new keys will be added here. Configuration Item: Dir::Etc::Trusted.</dl>
+<dd>Keyring of local trusted keys, new keys will be added here. Configuration Item: Dir::Etc::Trusted.</dd></dl>
 <p> /etc/apt/trusted.gpg.d/</p>
 <dl>
-<dd>File fragments for the trusted keys, additional keyrings can be stored here (by other packages or the administrator). Configuration Item Dir::Etc::TrustedParts.</dl>
+<dd>File fragments for the trusted keys, additional keyrings can be stored here (by other packages or the administrator). Configuration Item Dir::Etc::TrustedParts.</dd></dl>
 <p> /etc/apt/keyrings/</p>
 <dl>
-<dd>Place to store additional keyrings to be used with Signed-By.</dl>
+<dd>Place to store additional keyrings to be used with Signed-By.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-apt-get/">apt-get</a></code>(8), <code><a href="/docs/linux/man/8-apt-secure/">apt-secure</a></code>(8)</p>
 <h2>Bugs</h2>
@@ -79,13 +79,14 @@ description: "apt-key – Deprecated APT key management utility"
 <h2>Authors</h2>
 <p><code>Jason Gunthorpe</code></p>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 <p> <code>APT team</code></p>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>APT bug page</p>
+<dt> 1.</dt>
+<dd>APT bug page</dd>
 <dl>
-<dd><a rel="nofollow" href="http://bugs.debian.org/src:apt">http://bugs.debian.org/src:apt</a></dl>
+<dd><a rel="nofollow" href="http://bugs.debian.org/src:apt">http://bugs.debian.org/src:apt</a></dd></dl>
+</dl>

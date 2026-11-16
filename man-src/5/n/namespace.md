@@ -50,7 +50,7 @@ description: "namespace.conf – the namespace configuration file"
  /tmp /tmp-inst/ level root,adm
  /var/tmp /var/tmp/tmp-inst/ level root,adm
  $HOME $HOME/$USER.inst/inst- context</pre>
-</dl>
+</dd></dl>
 <p> For the &lt;service&gt;s you need polyinstantiation (login for example) put the following line in /etc/pam.d/&lt;service&gt; as the last line for session group: </p>
 <p> session required pam_namespace.so [arguments] </p>
 <p> This module also depends on pam_selinux.so setting the context.</p>

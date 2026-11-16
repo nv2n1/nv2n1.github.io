@@ -14,17 +14,17 @@ description: "iprdbg – IBM Power RAID storage adapter debug utility"
 <p><code>iprdbg</code> is used to debug IBM Power RAID storage adapters.</p>
 <h2>Exit Status</h2>
 <dl>
-<dt>-EINVAL</p>
-<dd>Invalid input.</p>
-<dt>-ENXIO</p>
-<dd>No IOA devices. </p>
+<dt>-EINVAL</dt>
+<dd>Invalid input.</dd>
+<dt>-ENXIO</dt>
+<dd>No IOA devices. </dd>
 <p> Or an exit status of specified command.</dl>
 <h2>Files</h2>
 <dl>
-<dt>/etc/iprdbg.conf</p>
+<dt>/etc/iprdbg.conf</dt>
 <dd>
-<dt>/var/log/iprdbg</p>
-<dd></dl>
+</dd><dt>/var/log/iprdbg</dt>
+<dd></dd></dl>
 <h2>Notes</h2>
 <p>iprdbg is part of iprutils package</p>
 <h2>See Also</h2>

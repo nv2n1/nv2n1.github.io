@@ -16,14 +16,14 @@ description: "ipmidetectd – IPMI node detection monitoring daemon"
 <p> See the <code><a href="/docs/linux/man/5-ipmidetectd-conf/">ipmidetectd.conf</a>(5)</code> manpage for additional information.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Output help</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd>Output version</p>
-<dt><code>-c</code> <i>FILE</i>, <code>&#8211;config-file</code></p>
-<dd>Specify alternate configuration file</p>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd>Turn on debugging and run daemon in foreground</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Output help</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd>Output version</dd>
+<dt><code>-c</code> <i>FILE</i>, <code>&#8211;config-file</code></dt>
+<dd>Specify alternate configuration file</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd>Turn on debugging and run daemon in foreground</dd></dl>
 <h2>Errors</h2>
 <p>Errors are logged to syslog.</p>
 <h2>Files</h2>

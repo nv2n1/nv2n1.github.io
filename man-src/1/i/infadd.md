@@ -15,28 +15,28 @@ description: "infadd – infinite additions to LDAP server"
 <p> infadd is used to measure performance of the add operation. It can span multiple threads in order to test the performance under heavy locking. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h hostname</code></p>
-<dd> hostname (default: localhost)</p>
-<dt><code>-p port</code></p>
-<dd> port (default: 389)</p>
-<dt><code>-t threads</code></p>
-<dd> number of threads to spin (default: 1)</p>
-<dt><code>-d</code></p>
-<dd> use TCP no-delay</p>
-<dt><code>-q</code></p>
-<dd> quiet mode (no status updates)</p>
-<dt><code>-v</code></p>
-<dd> verbose mode (give per-thread statistics)</p>
-<dt><code>-I num</code></p>
-<dd> first uid (default: 0)</p>
-<dt><code>-l count</code></p>
-<dd> limit count; stops when the total count exceeds &lt;count&gt;</p>
-<dt><code>-i msec</code></p>
-<dd> sample interval in milliseconds (default: 10000)</p>
-<dt><code>-R size</code></p>
-<dd> generate &lt;size&gt; random names instead of using data files</p>
-<dt><code>-z size</code></p>
-<dd> add binary blob of average size of &lt;size&gt; bytes</dl>
+<dt><code>-h hostname</code></dt>
+<dd> hostname (default: localhost)</dd>
+<dt><code>-p port</code></dt>
+<dd> port (default: 389)</dd>
+<dt><code>-t threads</code></dt>
+<dd> number of threads to spin (default: 1)</dd>
+<dt><code>-d</code></dt>
+<dd> use TCP no-delay</dd>
+<dt><code>-q</code></dt>
+<dd> quiet mode (no status updates)</dd>
+<dt><code>-v</code></dt>
+<dd> verbose mode (give per-thread statistics)</dd>
+<dt><code>-I num</code></dt>
+<dd> first uid (default: 0)</dd>
+<dt><code>-l count</code></dt>
+<dd> limit count; stops when the total count exceeds &lt;count&gt;</dd>
+<dt><code>-i msec</code></dt>
+<dd> sample interval in milliseconds (default: 10000)</dd>
+<dt><code>-R size</code></dt>
+<dd> generate &lt;size&gt; random names instead of using data files</dd>
+<dt><code>-z size</code></dt>
+<dd> add binary blob of average size of &lt;size&gt; bytes</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-rsearch/">rsearch</a></code>(1) </p>
 <h2>AUTHOR</h2>

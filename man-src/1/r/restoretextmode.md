@@ -18,10 +18,10 @@ description: "restoretextmode – save or restore the SVGA registers for textmod
 <p> The purpose of this program is usually to recover from a crashed console due to an svgalib, Xfree or other program bug. First save the state of the SVGA card when on a text console. After the crash restore this state. The <code><a href="/docs/linux/man/1-savetextmode/">savetextmode</a></code>(1) and <code><a href="/docs/linux/man/1-textmode/">textmode</a></code>(1) script makes this procedure very easy. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-w </code><i>filename</i></p>
-<dd> write the SVGA state to the file <i>filename</i>.</p>
-<dt><code>-r </code><i>filename</i></p>
-<dd> restore the SVGA state from the file <i>filename</i>.</dl>
+<dt><code>-w </code><i>filename</i></dt>
+<dd> write the SVGA state to the file <i>filename</i>.</dd>
+<dt><code>-r </code><i>filename</i></dt>
+<dd> restore the SVGA state from the file <i>filename</i>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-svgalib/">svgalib</a></code>(7), <code><a href="/docs/linux/man/7-vgagl/">vgagl</a></code>(7), <code>libvga.config</code>(5), <code>vga_gettextmoderegs</code>(3), <code>vga_settextmoderegs</code>(3), <code><a href="/docs/linux/man/1-dumpreg/">dumpreg</a></code>(1), <code><a href="/docs/linux/man/1-convfont/">convfont</a></code>(1), <code><a href="/docs/linux/man/1-fix132x43/">fix132x43</a></code>(1), <code><a href="/docs/linux/man/1-restorefont/">restorefont</a></code>(1), <code><a href="/docs/linux/man/1-restorepalette/">restorepalette</a></code>(1), <code><a href="/docs/linux/man/1-runx/">runx</a></code>(1), <code><a href="/docs/linux/man/1-savetextmode/">savetextmode</a></code>(1), <code><a href="/docs/linux/man/1-setmclk/">setmclk</a></code>(1), <code><a href="/docs/linux/man/1-textmode/">textmode</a></code>(1).</p>
 <h2>AUTHOR</h2>

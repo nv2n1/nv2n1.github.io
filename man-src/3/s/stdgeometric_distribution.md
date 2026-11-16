@@ -11,10 +11,8 @@ std::geometric_distribution - std::geometric_distribution
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;random&gt;
-
     template &lt;class IntType = int&gt;
     (since C++ 11)
-
         class geometric_distribution;</code></pre> 
 Produces random non-negative integer values i, distributed according to discrete probability function: \(P(i|p) = p \cdot (1-p)^i\)P(i|p) = p · (1 − p)i 
 The value represents the number of yes/no trials (each succeeding with probability p) which are necessary to obtain a single success. 
@@ -67,17 +65,11 @@ operator&gt;&gt;
 
 geometric_distribution&lt;&gt;(0.5) is the default and represents the number of coin tosses that are required to get heads 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;string&gt;
-
 #include &lt;map&gt;
-
 #include &lt;random&gt;
-
 int main()
-
 {
     std::random_device rd;
     std::mt19937 gen(rd());

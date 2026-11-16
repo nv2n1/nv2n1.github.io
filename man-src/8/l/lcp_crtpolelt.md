@@ -14,36 +14,36 @@ description: "lcp_crtpolelt – create an Intel(R) TXT policy element of specifi
 <p><code>lcp_crtpolelt</code> is used to create an Intel(R) TXT policy element of specified type.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;create</p>
-<dd>create an policy element</p>
+<dt><code>&#8211;create</dt>
+<dd>create an policy element</dd>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;type&nbsp;<wbr></code><i>type</i></p>
-<dd>type of element; must be first option; see below for type strings and their options</p>
-<dt><code>&#8211;out&nbsp;<wbr></code><i>file</i></p>
-<dd>output file name</p>
-<dt>[<code>&#8211;ctrl&nbsp;<wbr></code><i>pol-elt-ctr1</i>]</p>
-<dd>PolEltControl field (hex or decimal)</dl>
+</dd><dl>
+<dt>&#8211;type&nbsp;<wbr></code><i>type</i></dt>
+<dd>type of element; must be first option; see below for type strings and their options</dd>
+<dt><code>&#8211;out&nbsp;<wbr></code><i>file</i></dt>
+<dd>output file name</dd>
+<dt>[<code>&#8211;ctrl&nbsp;<wbr></code><i>pol-elt-ctr1</i>]</dt>
+<dd>PolEltControl field (hex or decimal)</dd></dl>
 </dl>
-<dt><code>&#8211;show&nbsp;<wbr></code><i>file</i></p>
-<dd>show policy element</p>
-<dt><code>&#8211;verbose</code></p>
-<dd>enable verbose output; can be specified with any command</p>
-<dt><code>&#8211;help</code></p>
-<dd>print out the help message</dl>
+<dt><code>&#8211;show&nbsp;<wbr></code><i>file</i></dt>
+<dd>show policy element</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd>enable verbose output; can be specified with any command</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>print out the help message</dd></dl>
 <h3>Available type options:</h3>
 <dl>
-<dt><code>mle&nbsp;<wbr></code>[<code>&#8211;minver&nbsp;<wbr></code><i>ver</i>]</p>
-<dd>minimum version of SINIT</p>
-<dt><code>mle&nbsp;<wbr></code>[<i>file1</i>][<i>file2</i>]&#8230;</p>
-<dd>one or more files containing MLE hash(es); each file can contain multiple hashes</p>
-<dt><code>pconf&nbsp;<wbr></code>[<i>file1</i>][<i>file2</i>]&#8230;</p>
-<dd>one or more files containing PCR numbers and the desired digest of each; each file will be a PCONF</p>
-<dt><code>custom&nbsp;<wbr></code>[<code>&#8211;uuid&nbsp;<wbr></code><i>UUID</i>]</p>
-<dd>UUID in format: {0xaabbccdd, 0xeeff, 0xgghh, 0xiijj, {0xkk 0xll, 0xmm, 0xnn, 0xoo, 0xpp}} or &quot;&#8211;uuid tboot&quot; to use default</p>
-<dt><code>custom&nbsp;<wbr></code>[<i>file</i>]</p>
-<dd>file containing element data</dl>
+<dt><code>mle&nbsp;<wbr></code>[<code>&#8211;minver&nbsp;<wbr></code><i>ver</i>]</dt>
+<dd>minimum version of SINIT</dd>
+<dt><code>mle&nbsp;<wbr></code>[<i>file1</i>][<i>file2</i>]&#8230;</dt>
+<dd>one or more files containing MLE hash(es); each file can contain multiple hashes</dd>
+<dt><code>pconf&nbsp;<wbr></code>[<i>file1</i>][<i>file2</i>]&#8230;</dt>
+<dd>one or more files containing PCR numbers and the desired digest of each; each file will be a PCONF</dd>
+<dt><code>custom&nbsp;<wbr></code>[<code>&#8211;uuid&nbsp;<wbr></code><i>UUID</i>]</dt>
+<dd>UUID in format: {0xaabbccdd, 0xeeff, 0xgghh, 0xiijj, {0xkk 0xll, 0xmm, 0xnn, 0xoo, 0xpp}} or &quot;&#8211;uuid tboot&quot; to use default</dd>
+<dt><code>custom&nbsp;<wbr></code>[<i>file</i>]</dt>
+<dd>file containing element data</dd></dl>
 <h2>Examples</h2>
 <h3>Create an MLE element:</h3>
 <table>

@@ -15,22 +15,22 @@ description: "ntfstruncate – truncate a file on an NTFS volume"
 <h2>Options</h2>
 <p>Below is a summary of all the options that <code>ntfstruncate</code> accepts. Nearly all options have two equivalent names. The short name is preceded by <code>&#8211;</code> and the long name is preceded by <code>&#8212;</code>. Any single letter options, that don&#8217;t take an argument, can be combined into a single command, e.g. <code>-fv</code> is equivalent to <code>-f -v</code>. Long named options can be abbreviated to any unique prefix of their name.</p>
 <dl>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd>This will override some sensible defaults, such as not using a mounted volume. Use this option with caution.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Show a list of options with a brief description of each one.</p>
-<dt><code>-l</code></p>
-<dd>Display licensing information.</p>
-<dt><code>-n</code>, <code>&#8211;no-action</code></p>
-<dd>Simulate the truncation without actually write to device.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd>Suppress some debug/warning/error messages.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Display more debug/warning/error messages.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Show the version number, copyright and license of <code>ntfstruncate</code>.</p>
-<dt><code>attr-type</code></p>
-<dd>Define a particular attribute type to be truncated (advanced use only). By default, the unnamed $DATA attribute (the contents of a plain file) will be truncated. The attribute has to be specified by a number in decimal or hexadecimal : </p>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd>This will override some sensible defaults, such as not using a mounted volume. Use this option with caution.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Show a list of options with a brief description of each one.</dd>
+<dt><code>-l</code></dt>
+<dd>Display licensing information.</dd>
+<dt><code>-n</code>, <code>&#8211;no-action</code></dt>
+<dd>Simulate the truncation without actually write to device.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd>Suppress some debug/warning/error messages.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Display more debug/warning/error messages.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Show the version number, copyright and license of <code>ntfstruncate</code>.</dd>
+<dt><code>attr-type</code></dt>
+<dd>Define a particular attribute type to be truncated (advanced use only). By default, the unnamed $DATA attribute (the contents of a plain file) will be truncated. The attribute has to be specified by a number in decimal or hexadecimal : </dd>
 <table BORDER>
 <tr>
 <td>
@@ -139,14 +139,14 @@ description: "ntfstruncate – truncate a file on an NTFS volume"
 </tr>
 </table>
 </table>
-<dt><code>attr-name</code></p>
-<dd>Define the name of the particular attribute type to be truncated (advanced use only). </p>
-<dt><code>new-length</code></p>
-<dd>Specify the target size of the file. It will be rounded up to a multiple of the cluster size. A suffix of K, M, G, T, P or E may be appended to mean a multiplicative factor of a power of 1000. Similarly a suffix of Ki, Mi, Gi, Ti, Pi or Ei may be appended to mean a multiplicative factor of a power of 1024.</dl>
+<dt><code>attr-name</code></dt>
+<dd>Define the name of the particular attribute type to be truncated (advanced use only). </dd>
+<dt><code>new-length</code></dt>
+<dd>Specify the target size of the file. It will be rounded up to a multiple of the cluster size. A suffix of K, M, G, T, P or E may be appended to mean a multiplicative factor of a power of 1000. Similarly a suffix of Ki, Mi, Gi, Ti, Pi or Ei may be appended to mean a multiplicative factor of a power of 1024.</dd></dl>
 <h2>Examples</h2>
 <p>Resize to 100MB the file database.db located in the Data directory which is at the root of an NTFS file system.</p>
 <dl>
-<dd><code>ntfstruncate /dev/sda1 Data/database.db 100M</code> </p>
+<dd><code>ntfstruncate /dev/sda1 Data/database.db 100M</code> </dd>
 <h2>Bugs</h2>
 <p>There are no known problems with <code>ntfstruncate</code>. If you find a bug, please send an email describing the problem to the development team:<br />
  ntfs-3g-devel [at] lists.sf.net</p>
@@ -157,3 +157,4 @@ description: "ntfstruncate – truncate a file on an NTFS volume"
  <a rel="nofollow" href="https://github.com/tuxera/ntfs-3g/wiki/">https://github.com/tuxera/ntfs-3g/wiki/</a></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-ntfs-3g/">ntfs-3g</a></code>(8), <code><a href="/docs/linux/man/8-ntfsfallocate/">ntfsfallocate</a></code>(8), <code><a href="/docs/linux/man/8-ntfsprogs/">ntfsprogs</a></code>(8). </p>
+</dl>

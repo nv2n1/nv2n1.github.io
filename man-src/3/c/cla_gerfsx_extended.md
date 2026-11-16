@@ -19,7 +19,7 @@ description: "cla_gerfsx_extended.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  CLA_GERFSX_EXTENDED improves the computed solution to a system of
  linear equations by performing extra-precise iterative refinement
@@ -31,11 +31,11 @@ description: "cla_gerfsx_extended.f –"
  subroutine is only resonsible for setting the second fields of
  ERRS_N and ERRS_C.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>PREC_TYPE</i> </p>
+</dt><dd> <i>PREC_TYPE</i> </dd>
 <pre>
           PREC_TYPE is INTEGER
      Specifies the intermediate precision to be used in refinement.
@@ -298,14 +298,14 @@ where norm(Z) is
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 393 of file cla_gerfsx_extended.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

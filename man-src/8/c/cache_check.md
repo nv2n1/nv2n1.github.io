@@ -15,20 +15,20 @@ description: "cache_check – validates cache metadata on a device or file."
 <p> This tool cannot be run on live metadata.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Print help and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Output version information and exit.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd>Suppress output messages, return only exit code.</p>
-<dt><code>&#8211;super-block-only</code></p>
-<dd>Only check the superblock.</p>
-<dt><code>&#8211;skip-hints</code></p>
-<dd>Skip checking of the policy hint values metadata.</p>
-<dt><code>&#8211;skip-discards</code></p>
-<dd>Skip checking of the discard bits in the metadata.</p>
-<dt><code>&#8211;clear-needs-check-flag</code></p>
-<dd>Clears the &#8216;needs_check&#8217; flag in the superblock.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Print help and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Output version information and exit.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd>Suppress output messages, return only exit code.</dd>
+<dt><code>&#8211;super-block-only</code></dt>
+<dd>Only check the superblock.</dd>
+<dt><code>&#8211;skip-hints</code></dt>
+<dd>Skip checking of the policy hint values metadata.</dd>
+<dt><code>&#8211;skip-discards</code></dt>
+<dd>Skip checking of the discard bits in the metadata.</dd>
+<dt><code>&#8211;clear-needs-check-flag</code></dt>
+<dd>Clears the &#8216;needs_check&#8217; flag in the superblock.</dd></dl>
 <pre> The kernel may set a flag to force the pool to be checked before it's next
  activated. Set this switch to clear the flag if the check is successful.
  If the metadata check failed, the flag is not cleared and a cache_repair run

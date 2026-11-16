@@ -18,27 +18,27 @@ description: "dt2dv – convert a DTL text representation of a TeX DVI file to a
 <p> The format of TeX DVI files is fully described in Donald E. Knuth, <i>TeX: The Program</i>, Addison-Wesley (1986), ISBN 0-201-13437-3, as well as in the <code><a href="/docs/linux/man/1-dvitype/">dvitype</a></code>(1) literate program source code. Brief descriptions of the DTL and DVI formats are given in <code><a href="/docs/linux/man/1-dv2dt/">dv2dt</a></code>(1).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-debug</code></p>
-<dd> Turn on detailed debugging output.</p>
-<dt><code>-group</code></p>
-<dd> Expect each DTL command to be in parentheses.</p>
-<dt><code>-si</code></p>
-<dd> Read all DTL commands from standard input.</p>
-<dt><code>-so</code></p>
-<dd> Write all DVI commands to standard output.</dl>
+<dt><code>-debug</code></dt>
+<dd> Turn on detailed debugging output.</dd>
+<dt><code>-group</code></dt>
+<dd> Expect each DTL command to be in parentheses.</dd>
+<dt><code>-si</code></dt>
+<dd> Read all DTL commands from standard input.</dd>
+<dt><code>-so</code></dt>
+<dd> Write all DVI commands to standard output.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dv2dt/">dv2dt</a></code>(1), <code><a href="/docs/linux/man/1-dvitype/">dvitype</a></code>(1), <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1).</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>*.dvi</i></p>
-<dd> binary TeX DVI file.</p>
-<dt><i>*.dtl</i></p>
-<dd> text representation of a TeX DVI file in <i>DVI Text Language</i> format.</dl>
+<dt><i>*.dvi</i></dt>
+<dd> binary TeX DVI file.</dd>
+<dt><i>*.dtl</i></dt>
+<dd> text representation of a TeX DVI file in <i>DVI Text Language</i> format.</dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>dt2dv</code> and <code><a href="/docs/linux/man/1-dv2dt/">dv2dt</a></code>(1) were written by</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Geoffrey Tobin
 Department of Electronic Engineering
@@ -49,11 +49,11 @@ Tel: +61 3 479 3736
 FAX: +61 3 479 3025
 Email: &lt;G.Tobin [at] ee.latrobe.edu.au&gt;
 </pre>
-</dl>
+</dd></dl>
 <p> These manual pages were written primarily by</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Nelson H. F. Beebe, Ph.D.
 Center for Scientific Computing
@@ -64,5 +64,5 @@ Tel: +1 801 581 5254
 FAX: +1 801 581 4148
 Email: &lt;beebe [at] math.utah.edu&gt;
 </pre>
-</dl>
+</dd></dl>
 <h2>Index</h2>

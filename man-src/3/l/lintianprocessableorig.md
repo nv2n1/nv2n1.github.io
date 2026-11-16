@@ -17,17 +17,17 @@ description: "Lintian::Processable::Orig – access to collected data about the 
 <p> Lintian::Processable::Orig provides an interface to collected data about the upstream (orig) sources.</p>
 <h2>Instance Methods</h2>
 <dl COMPACT>
-<dt>orig</p>
-<dd> Returns the index for orig.tar.gz.</p>
-<dt>orig_index (<font SIZE="-1">FILE</font>)</p>
-<dd> Like &#8220;index&#8221; except orig_index is based on the &#8220;orig tarballs&#8221; of the source packages. </p>
+<dt>orig</dt>
+<dd> Returns the index for orig.tar.gz.</dd>
+<dt>orig_index (<font SIZE="-1">FILE</font>)</dt>
+<dd> Like &#8220;index&#8221; except orig_index is based on the &#8220;orig tarballs&#8221; of the source packages. </dd>
 <p> For native packages &#8220;index&#8221; and &#8220;orig_index&#8221; are generally identical. </p>
 <p> <font SIZE="-1">NB:</font> If sorted_index includes a debian packaging, it is was contained in upstream part of the source package (or the package is native). </p>
 <p> Needs-Info requirements for using <i>orig_index</i>: src-orig-index</p>
-<dt>sorted_orig_index</p>
+<dt>sorted_orig_index</dt>
 <dd>
-<dt>orig_index_resolved_path(<font SIZE="-1">PATH</font>)</p>
-<dd> Resolve <font SIZE="-1">PATH</font> (relative to the root of the package) and return the entry denoting the resolved path. </p>
+</dd><dt>orig_index_resolved_path(<font SIZE="-1">PATH</font>)</dt>
+<dd> Resolve <font SIZE="-1">PATH</font> (relative to the root of the package) and return the entry denoting the resolved path. </dd>
 <p> The resolution is done using resolve_path. </p>
 <p> <font SIZE="-1">NB:</font> If orig_index_resolved_path includes a debian packaging, it is was contained in upstream part of the source package (or the package is native). </p>
 <p> Needs-Info requirements for using <i>orig_index_resolved_path</i>: Same as orig_index</dl>
@@ -35,3 +35,4 @@ description: "Lintian::Processable::Orig – access to collected data about the 
 <p> Originally written by Felix Lechner &lt;felix.lechner [at] lease-up.com&gt; for Lintian.</p>
 <h2>See Also</h2>
 <p> <code><a href="/docs/linux/man/1-lintian/">lintian</a></code>(1)</p>
+</p>

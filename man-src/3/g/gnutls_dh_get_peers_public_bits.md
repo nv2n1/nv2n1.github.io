@@ -14,8 +14,8 @@ description: "gnutls_dh_get_peers_public_bits – API function"
 <p> <code>int gnutls_dh_get_peers_public_bits(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a gnutls session</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a gnutls session</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Get the Diffie-Hellman public key bit size. Can be used for both anonymous and ephemeral Diffie-Hellman.</p>
 <h2>RETURNS</h2>
@@ -29,6 +29,6 @@ description: "gnutls_dh_get_peers_public_bits – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

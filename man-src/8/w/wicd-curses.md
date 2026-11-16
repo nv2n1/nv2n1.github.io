@@ -15,34 +15,34 @@ description: "wicd-curses – curses-based wicd(8) controller"
 <h2>Controls</h2>
 <p>All of these are case sensitive.</p>
 <dl>
-<dt><code>C </code>or<code> enter</code></p>
-<dd>Connect to selected network</p>
-<dt><code>F8 </code>or<code> Q </code>or<code> q</code></p>
-<dd>Quit the client.</p>
-<dt><code>D</code></p>
-<dd>Disconnect all devices from network connections</p>
-<dt><code>ESC</code></p>
-<dd>If connecting to a network, stop doing so</p>
-<dt><code>F5 </code>or<code> R</code></p>
-<dd>Refresh the network list</p>
-<dt><code>P</code></p>
-<dd>Bring up the preferences controller</p>
-<dt><code>I</code></p>
-<dd>Bring up hidden network scanning dialog</p>
-<dt><code>H </code>or<code> h </code>or<code> ?</code></p>
-<dd>Bring up a rather simplistic help dialog. Of course, it mentions this man page first. :-)</p>
-<dt><code>A</code></p>
-<dd>Raise the &quot;About wicd-curses&quot; dialog</p>
-<dt><code>right-arrow</code></p>
-<dd>Bring up network configuration controller for the selected network</p>
-<dt><code>delete</code></p>
-<dd>Delete the selected wired network profile (from the wired network combo box at the top)</p>
-<dt><code>F2</code></p>
-<dd>Rename the selected wired network profile (from the wired network combo box at the top)</p>
-<dt><code>S</code></p>
-<dd>Bring up instructions on how to edit the scripts. I have implemented a way to do this in the interface itself, but making it function with all Linux distros would be difficult. Since you are reading this, you should know how to do what I suggest. ;-)</p>
-<dt><code>O</code></p>
-<dd>Raise the Ad-Hoc network creation dialog </p>
+<dt><code>C </code>or<code> enter</code></dt>
+<dd>Connect to selected network</dd>
+<dt><code>F8 </code>or<code> Q </code>or<code> q</code></dt>
+<dd>Quit the client.</dd>
+<dt><code>D</code></dt>
+<dd>Disconnect all devices from network connections</dd>
+<dt><code>ESC</code></dt>
+<dd>If connecting to a network, stop doing so</dd>
+<dt><code>F5 </code>or<code> R</code></dt>
+<dd>Refresh the network list</dd>
+<dt><code>P</code></dt>
+<dd>Bring up the preferences controller</dd>
+<dt><code>I</code></dt>
+<dd>Bring up hidden network scanning dialog</dd>
+<dt><code>H </code>or<code> h </code>or<code> ?</code></dt>
+<dd>Bring up a rather simplistic help dialog. Of course, it mentions this man page first. :-)</dd>
+<dt><code>A</code></dt>
+<dd>Raise the &quot;About wicd-curses&quot; dialog</dd>
+<dt><code>right-arrow</code></dt>
+<dd>Bring up network configuration controller for the selected network</dd>
+<dt><code>delete</code></dt>
+<dd>Delete the selected wired network profile (from the wired network combo box at the top)</dd>
+<dt><code>F2</code></dt>
+<dd>Rename the selected wired network profile (from the wired network combo box at the top)</dd>
+<dt><code>S</code></dt>
+<dd>Bring up instructions on how to edit the scripts. I have implemented a way to do this in the interface itself, but making it function with all Linux distros would be difficult. Since you are reading this, you should know how to do what I suggest. ;-)</dd>
+<dt><code>O</code></dt>
+<dd>Raise the Ad-Hoc network creation dialog </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-wicd-client/">wicd-client</a></code>(1), <code><a href="/docs/linux/man/8-wicd/">wicd</a></code>(8) </p>

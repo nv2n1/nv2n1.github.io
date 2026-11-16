@@ -11,23 +11,14 @@ std::reverse_iterator - std::reverse_iterator
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;iterator&gt;
-
 template&lt; class Iter &gt;
-
 class reverse_iterator : public std::iterator&lt;
-
 typename std::iterator_traits&lt;Iter&gt;::iterator_category,
-
 typename std::iterator_traits&lt;Iter&gt;::value_type,         (until C++17)
-
 typename std::iterator_traits&lt;Iter&gt;::difference_type,
-
 typename std::iterator_traits&lt;Iter&gt;::pointer,
-
 typename std::iterator_traits&lt;Iter&gt;::reference &gt;
-
 template&lt; class Iter &gt;                                   (since C++17)
-
 class reverse_iterator;</code></pre> 
 std::reverse_iterator is an iterator adaptor that reverses the direction of a given iterator. In other words, when provided with a bidirectional iterator, std::reverse_iterator produces a new iterator that moves from the end to the beginning of the sequence defined by the underlying bidirectional iterator. 
 For a reverse iterator r constructed from an iterator i, the relationship &amp;*r == &amp;*(i-1) is always true (as long as r is dereferenceable); thus a reverse iterator constructed from a one-past-the-end iterator dereferences to the last element in a sequence. 
@@ -114,12 +105,9 @@ std::reverse_iterator does not work with iterators that return a reference to a 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;iterator&gt;
 int main()
-
 {
     std::string s = &quot;Hello, world&quot;;
     std::reverse_iterator&lt;std::string::iterator&gt; r = s.rbegin();

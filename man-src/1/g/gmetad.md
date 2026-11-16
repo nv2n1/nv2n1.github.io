@@ -14,16 +14,16 @@ description: "gmetad – manual page for Ganglia Meta Daemon"
 <h2>DESCRIPTION</h2>
 <p> The Ganglia Meta Daemon (gmetad) collects information from multiple gmond or gmetad data sources, saves the information to local round-robin databases, and exports XML which is the concatentation of all data sources</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print help and exit</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print version and exit</p>
-<dt><code>-c</code>, <code>&#8211;conf</code>=<i>STRING</i></p>
-<dd> Location of gmetad configuration file (default=&#8217;/etc/ganglia/gmetad.conf&#8217;)</p>
-<dt><code>-d</code>, <code>&#8211;debug</code>=<i>INT</i></p>
-<dd> Debug level. If greater than zero, daemon will stay in foreground. (default=&#8217;0&#8242;)</p>
-<dt><code>-p</code>, <code>&#8211;pid-file</code>=<i>STRING</i></p>
-<dd> Write process-id to file</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print help and exit</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print version and exit</dd>
+<dt><code>-c</code>, <code>&#8211;conf</code>=<i>STRING</i></dt>
+<dd> Location of gmetad configuration file (default=&#8217;/etc/ganglia/gmetad.conf&#8217;)</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code>=<i>INT</i></dt>
+<dd> Debug level. If greater than zero, daemon will stay in foreground. (default=&#8217;0&#8242;)</dd>
+<dt><code>-p</code>, <code>&#8211;pid-file</code>=<i>STRING</i></dt>
+<dd> Write process-id to file</dd></dl>
 <h2>AUTHOR</h2>
 <p> Matt Massie &lt;massie [at] cs.berkeley.edu&gt;</p>
 <h2>REPORTING BUGS</h2>

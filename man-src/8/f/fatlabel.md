@@ -15,16 +15,16 @@ description: "fatlabel – set or get MS-DOS filesystem label or volume ID"
 <p> If <i>NEW</i> is omitted, then the existing label or volume ID is written to the standard output. A label can&#8217;t be longer than 11 bytes and should be in all upper case for best compatibility. An empty string or a label consisting only of white space is not allowed. A volume ID must be given as a hexadecimal number (no leading &quot;0x&quot; or similar) and must fit into 32 bits.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-i</code>, <code>&#8211;volume-id</code></p>
-<dd>Switch to volume ID mode.</p>
-<dt><code>-r</code>, <code>&#8211;reset</code></p>
-<dd>Remove label in label mode or generate new ID in volume ID mode.</p>
-<dt><code>-c</code> <i>PAGE</i>, <code>&#8211;codepage</code>=<i>PAGE</i></p>
-<dd>Use DOS codepage <i>PAGE</i> to encode/decode label. By default codepage 850 is used.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Display a help message and terminate.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Show version number and terminate.</dl>
+<dt><code>-i</code>, <code>&#8211;volume-id</code></dt>
+<dd>Switch to volume ID mode.</dd>
+<dt><code>-r</code>, <code>&#8211;reset</code></dt>
+<dd>Remove label in label mode or generate new ID in volume ID mode.</dd>
+<dt><code>-c</code> <i>PAGE</i>, <code>&#8211;codepage</code>=<i>PAGE</i></dt>
+<dd>Use DOS codepage <i>PAGE</i> to encode/decode label. By default codepage 850 is used.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Display a help message and terminate.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Show version number and terminate.</dd></dl>
 <h2>COMPATIBILITY and BUGS</h2>
 <p>For historic reasons FAT label is stored in two different locations: in the boot sector and as a special volume label entry in the root directory. MS-DOS 5.00, MS-DOS 6.22, MS-DOS 7.10, Windows 98, Windows XP and also Windows 10 read FAT label only from the root directory. Absence of the volume label in the root directory is interpreted as empty or none label, even if boot sector contains some valid label. </p>
 <p> When Windows XP or Windows 10 system changes a FAT label it stores it only in the root directory &#8212; letting boot sector unchanged. Which leads to problems when a label is removed on Windows. Old label is still stored in the boot sector but is removed from the root directory. </p>

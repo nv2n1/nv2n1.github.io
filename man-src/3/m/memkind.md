@@ -17,67 +17,42 @@ Link with - lmemkind
                 ERROR HANDLING : void
                                  memkind_error_message(int err, char *msg, size_t size);
 HEAP MANAGEMENT :
-
     void *
     memkind_malloc(memkind_t kind, size_t size);
-
 void *memkind_calloc(memkind_t kind, size_t num, size_t size);
-
 void *memkind_realloc(memkind_t kind, void *ptr, size_t size);
-
 int memkind_posix_memalign(memkind_t kind, void **memptr, size_t alignment, size_t size);
-
 void memkind_free(memkind_t kind, void *ptr);
-
 ALLOCATOR CALLBACK FUNCTION :
-
     void *
     memkind_partition_mmap(int partition, void *addr, size_t size);
 (DEPRECATED)
     KIND MANAGMENT :
-
     int memkind_create(const struct memkind_ops *ops, const char *name, memkind_t *kind);
 (DEPRECATED)
-
     int memkind_create_pmem(const char *dir, size_t max_size, memkind_t *kind);
-
 int memkind_finalize(void);
 (DEPRECATED)
-
     int memkind_get_num_kind(int *num_kind);
 (DEPRECATED)
-
     int memkind_get_kind_by_partition(int partition, memkind_t *kind);
 (DEPRECATED)
-
     int memkind_get_kind_by_name(const char *name, memkind_t *kind);
 (DEPRECATED)
-
     int memkind_get_size(memkind_t kind, size_t *total, size_t *free);
 (DEPRECATED)
-
     int memkind_check_available(memkind_t kind);
 DECORATORS :
-
     void
     memkind_malloc_pre(memkind_t *kind, size_t *size);
-
 void memkind_malloc_post(memkind_t kind, size_t size, void **result);
-
 void memkind_calloc_pre(memkind_t *kind, size_t *nmemb, size_t *size);
-
 void memkind_calloc_post(memkind_t kind, size_t nmemb, size_t size, void **result);
-
 void memkind_posix_memalign_pre(memkind_t *kind, void **memptr, size_t *alignment, size_t *size);
-
 void memkind_posix_memalign_post(memkind_t kind, void **memptr, size_t alignment, size_t size, int *err);
-
 void memkind_realloc_pre(memkind_t *kind, void **ptr, size_t *size);
-
 void memkind_realloc_post(memkind_t kind, void *ptr, size_t size, void **result);
-
 void memkind_free_pre(memkind_t *kind, void **ptr);
-
 void memkind_free_post(memkind_t kind, void *ptr);
 LIBRARY VERSION : int memkind_get_version();
 </code></pre>
@@ -165,77 +140,77 @@ LIBRARY VERSION : int memkind_get_version();
 <h2>KINDS</h2>
 <p> The available kinds of memory</p>
 <dl>
-<dt><code>MEMKIND_DEFAULT</code></p>
-<dd> Default allocation using standard memory and default page size.</p>
-<dt><code>MEMKIND_HUGETLB</code></p>
-<dd> Allocate from standard memory using huge pages. Note: This kind requires huge pages configuration described in SYSTEM CONFIGURATION section.</p>
-<dt><code>MEMKIND_GBTLB</code></p>
-<dd> Allocate from standard memory using giga byte huge pages. Note: This kind requires gigabyte pages configuration described in SYSTEM CONFIGURATION section.</p>
-<dt><code>MEMKIND_INTERLEAVE</code></p>
-<dd> Allocate pages interleaved across all NUMA nodes with transparent huge pages disabled.</p>
-<dt><code>MEMKIND_HBW</code></p>
-<dd> Allocate from the closest high bandwidth memory NUMA node at time of allocation. If there is not enough high bandwidth memory to satisfy the request <i>errno</i> is set to ENOMEM and the allocated poitner is set to NULL.</p>
-<dt><code>MEMKIND_HBW_HUGETLB</code></p>
-<dd> Same as <code>MEMKIND_HBW</code> except the allocation is backed by huge pages. Note: This kind requires huge pages configuration described in SYSTEM CONFIGURATION section.</p>
-<dt><code>MEMKIND_HBW_PREFERRED</code></p>
-<dd> Same as <code>MEMKIND_HBW</code> except that if there is not enough high bandwidth memory to satisfy the request, the allocation will fall back on standard memory.</p>
-<dt><code>MEMKIND_HBW_PREFERRED_HUGETLB</code></p>
-<dd> Same as <code>MEMKIND_HBW_PREFERRED</code> except the allocation is backed by huge pages. Note: This kind requires huge pages configuration described in SYSTEM CONFIGURATION section.</p>
-<dt><code>MEMKIND_HBW_GBTLB</code></p>
-<dd> Same as <code>MEMKIND_HBW</code> except the allocation is backed by one gigabyte huge pages. Note that <i>size</i> can take on any value, but full gigabyte pages will allocated for each request, so remainder of the last page will be wasted. A good use case scenario is to grow a buffer in the course of an application with reallocs. In this case, if there is enough memory available within in already allocated gigabyte page, newer pages are not fetched. This is demonstrated in the examples directory with gb_realloc_example.c This kind requires gigabyte pages configuration described in SYSTEM CONFIGURATION section.</p>
-<dt><code>MEMKIND_HBW_PREFERRED_GBTLB</code></p>
-<dd> Same as <code>MEMKIND_HBW_GBTLB</code> except that if there is not enough high bandwidth memory to satisfy the request, the allocation will fall back on standard memory. Note: This kind requires gigabyte pages configuration described in SYSTEM CONFIGURATION section.</p>
-<dt><code>MEMKIND_HBW_INTERLEAVE</code></p>
-<dd> Same as <code>MEMKIND_HBW</code> except that the pages that support the allocation are interleaved across all high bandwidth nodes and transparent huge pages are disabled.</dl>
+<dt><code>MEMKIND_DEFAULT</code></dt>
+<dd> Default allocation using standard memory and default page size.</dd>
+<dt><code>MEMKIND_HUGETLB</code></dt>
+<dd> Allocate from standard memory using huge pages. Note: This kind requires huge pages configuration described in SYSTEM CONFIGURATION section.</dd>
+<dt><code>MEMKIND_GBTLB</code></dt>
+<dd> Allocate from standard memory using giga byte huge pages. Note: This kind requires gigabyte pages configuration described in SYSTEM CONFIGURATION section.</dd>
+<dt><code>MEMKIND_INTERLEAVE</code></dt>
+<dd> Allocate pages interleaved across all NUMA nodes with transparent huge pages disabled.</dd>
+<dt><code>MEMKIND_HBW</code></dt>
+<dd> Allocate from the closest high bandwidth memory NUMA node at time of allocation. If there is not enough high bandwidth memory to satisfy the request <i>errno</i> is set to ENOMEM and the allocated poitner is set to NULL.</dd>
+<dt><code>MEMKIND_HBW_HUGETLB</code></dt>
+<dd> Same as <code>MEMKIND_HBW</code> except the allocation is backed by huge pages. Note: This kind requires huge pages configuration described in SYSTEM CONFIGURATION section.</dd>
+<dt><code>MEMKIND_HBW_PREFERRED</code></dt>
+<dd> Same as <code>MEMKIND_HBW</code> except that if there is not enough high bandwidth memory to satisfy the request, the allocation will fall back on standard memory.</dd>
+<dt><code>MEMKIND_HBW_PREFERRED_HUGETLB</code></dt>
+<dd> Same as <code>MEMKIND_HBW_PREFERRED</code> except the allocation is backed by huge pages. Note: This kind requires huge pages configuration described in SYSTEM CONFIGURATION section.</dd>
+<dt><code>MEMKIND_HBW_GBTLB</code></dt>
+<dd> Same as <code>MEMKIND_HBW</code> except the allocation is backed by one gigabyte huge pages. Note that <i>size</i> can take on any value, but full gigabyte pages will allocated for each request, so remainder of the last page will be wasted. A good use case scenario is to grow a buffer in the course of an application with reallocs. In this case, if there is enough memory available within in already allocated gigabyte page, newer pages are not fetched. This is demonstrated in the examples directory with gb_realloc_example.c This kind requires gigabyte pages configuration described in SYSTEM CONFIGURATION section.</dd>
+<dt><code>MEMKIND_HBW_PREFERRED_GBTLB</code></dt>
+<dd> Same as <code>MEMKIND_HBW_GBTLB</code> except that if there is not enough high bandwidth memory to satisfy the request, the allocation will fall back on standard memory. Note: This kind requires gigabyte pages configuration described in SYSTEM CONFIGURATION section.</dd>
+<dt><code>MEMKIND_HBW_INTERLEAVE</code></dt>
+<dd> Same as <code>MEMKIND_HBW</code> except that the pages that support the allocation are interleaved across all high bandwidth nodes and transparent huge pages are disabled.</dd></dl>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>memkind_posix_memalign</code>()</p>
-<dd> returns the one of the POSIX standard error codes <code>EINVAL</code> or <code>ENOMEM</code> as defined in <i>&lt;errno.h&gt;</i> if an error occurs (these have positive values). If the <i>alignment</i> parameter is not a power of two, or is not a multiple of <i>sizoeof(void *)</i>, then <code>EINVAL</code> is returned. If there is insufficient memory to satisfy the request then <code>ENOMEM</code> is returned.</dl>
+<dt><code>memkind_posix_memalign</code>()</dt>
+<dd> returns the one of the POSIX standard error codes <code>EINVAL</code> or <code>ENOMEM</code> as defined in <i>&lt;errno.h&gt;</i> if an error occurs (these have positive values). If the <i>alignment</i> parameter is not a power of two, or is not a multiple of <i>sizoeof(void *)</i>, then <code>EINVAL</code> is returned. If there is insufficient memory to satisfy the request then <code>ENOMEM</code> is returned.</dd></dl>
 <p> All functions other than <code>memkind_posix_memalign</code>() which have an integer return type return one of the negative error codes as defined in <i>&lt;memkind.h&gt;</i> and described below.</p>
 <dl>
-<dt><code>MEMKIND_ERROR_UNAVAILABLE</code></p>
-<dd> Requested memory kind is not available</p>
-<dt><code>MEMKIND_ERROR_MBIND</code></p>
-<dd> Call to <code><a href="/docs/linux/man/2-mbind/">mbind</a></code>(2) failed</p>
-<dt><code>MEMKIND_ERROR_MMAP</code></p>
-<dd> Call to <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) failed</p>
-<dt><code>MEMKIND_ERROR_MEMALIGN (DEPRECATED)</code></p>
-<dd> Call to <code>jemk_posix_memalign</code>() failed</p>
-<dt><code>MEMKIND_ERROR_MALLCTL (DEPRECATED)</code></p>
-<dd> Call to <code>jemk_mallctl</code>() failed</p>
-<dt><code>MEMKIND_ERROR_MALLOC</code></p>
-<dd> Call to <code>jemk_malloc</code>() failed</p>
-<dt><code>MEMKIND_ERROR_GETCPU (DEPRECATED)</code></p>
-<dd> Call to <code>sched_getcpu</code>() returned out of range</p>
-<dt><code>MEMKIND_ERROR_TIEDISTANCE (DEPRECATED)</code></p>
-<dd> Two NUMA memory nodes are equidistant from target cpu node</p>
-<dt><code>MEMKIND_ERROR_ALIGNMENT (DEPRECATED)</code></p>
-<dd> Alignment must be a power of two and larger than sizeof(void *)</p>
-<dt><code>MEMKIND_ERROR_ALLOCM</code></p>
-<dd> Call to <code>jemk_allocm</code>() failed</p>
-<dt><code>MEMKIND_ERROR_ENVIRON</code></p>
-<dd> Error parsing environment variable (MEMKIND_*)</p>
-<dt><code>MEMKIND_ERROR_INVALID</code></p>
-<dd> Invalid input arguments to memkind routine</dl>
+<dt><code>MEMKIND_ERROR_UNAVAILABLE</code></dt>
+<dd> Requested memory kind is not available</dd>
+<dt><code>MEMKIND_ERROR_MBIND</code></dt>
+<dd> Call to <code><a href="/docs/linux/man/2-mbind/">mbind</a></code>(2) failed</dd>
+<dt><code>MEMKIND_ERROR_MMAP</code></dt>
+<dd> Call to <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) failed</dd>
+<dt><code>MEMKIND_ERROR_MEMALIGN (DEPRECATED)</code></dt>
+<dd> Call to <code>jemk_posix_memalign</code>() failed</dd>
+<dt><code>MEMKIND_ERROR_MALLCTL (DEPRECATED)</code></dt>
+<dd> Call to <code>jemk_mallctl</code>() failed</dd>
+<dt><code>MEMKIND_ERROR_MALLOC</code></dt>
+<dd> Call to <code>jemk_malloc</code>() failed</dd>
+<dt><code>MEMKIND_ERROR_GETCPU (DEPRECATED)</code></dt>
+<dd> Call to <code>sched_getcpu</code>() returned out of range</dd>
+<dt><code>MEMKIND_ERROR_TIEDISTANCE (DEPRECATED)</code></dt>
+<dd> Two NUMA memory nodes are equidistant from target cpu node</dd>
+<dt><code>MEMKIND_ERROR_ALIGNMENT (DEPRECATED)</code></dt>
+<dd> Alignment must be a power of two and larger than sizeof(void *)</dd>
+<dt><code>MEMKIND_ERROR_ALLOCM</code></dt>
+<dd> Call to <code>jemk_allocm</code>() failed</dd>
+<dt><code>MEMKIND_ERROR_ENVIRON</code></dt>
+<dd> Error parsing environment variable (MEMKIND_*)</dd>
+<dt><code>MEMKIND_ERROR_INVALID</code></dt>
+<dd> Invalid input arguments to memkind routine</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/usr/bin/memkind-hbw-nodes</i></p>
-<dd> Prints a comma separated list of high bandwidth nodes.</dl>
+<dt><i>/usr/bin/memkind-hbw-nodes</i></dt>
+<dd> Prints a comma separated list of high bandwidth nodes.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>MEMKIND_HBW_NODES</code></p>
-<dd> This environment variable is a comma separated list of NUMA nodes that are treated as high bandwidth. Uses the <i>libnuma</i> routine <code>numa_parse_nodestring</code>() for parsing, so the syntax described in the <code><a href="/docs/linux/man/3-numa/">numa</a></code>(3) man page for this routine applies: e.g 1-3,5 is a valid setting.</p>
-<dt><code>MEMKIND_ARENA_NUM_PER_KIND</code></p>
-<dd> This environment variable allows leveraging internal mechanism of the library for setting number of arenas per kind. Value should be a positive integer (not greater than INT_MAX defined in limits.h). The user should set the value based on the characteristics of application that is using the library. Higher value can provide better performance in extremely multithreaded applications at the cost of memory overhead. See section &quot;IMPLEMENTATION NOTES&quot; of <code><a href="/docs/linux/man/3-jemalloc/">jemalloc</a></code>(3) for more details about arenas.</p>
-<dt><code>MEMKIND_DEBUG</code></p>
-<dd> Controls logging mechanism in memkind. Setting <code>MEMKIND_DEBUG</code> to &quot;1&quot; enables printing messages like errors and general informations about environment to <i>stderr.</i></dl>
+<dt><code>MEMKIND_HBW_NODES</code></dt>
+<dd> This environment variable is a comma separated list of NUMA nodes that are treated as high bandwidth. Uses the <i>libnuma</i> routine <code>numa_parse_nodestring</code>() for parsing, so the syntax described in the <code><a href="/docs/linux/man/3-numa/">numa</a></code>(3) man page for this routine applies: e.g 1-3,5 is a valid setting.</dd>
+<dt><code>MEMKIND_ARENA_NUM_PER_KIND</code></dt>
+<dd> This environment variable allows leveraging internal mechanism of the library for setting number of arenas per kind. Value should be a positive integer (not greater than INT_MAX defined in limits.h). The user should set the value based on the characteristics of application that is using the library. Higher value can provide better performance in extremely multithreaded applications at the cost of memory overhead. See section &quot;IMPLEMENTATION NOTES&quot; of <code><a href="/docs/linux/man/3-jemalloc/">jemalloc</a></code>(3) for more details about arenas.</dd>
+<dt><code>MEMKIND_DEBUG</code></dt>
+<dd> Controls logging mechanism in memkind. Setting <code>MEMKIND_DEBUG</code> to &quot;1&quot; enables printing messages like errors and general informations about environment to <i>stderr.</i></dd></dl>
 <h2>SYSTEM CONFIGURATION</h2>
 <p> Interfaces for obtaining 2MB and 1GB pages (HUGETLB and GBTLB) need allocated huge pages in the kernel&#8217;s huge page pool.</p>
 <dl>
-<dt><code>HUGETLB (huge pages)</code></p>
-<dd> Current number of &quot;persistent&quot; huge pages can be read from /proc/sys/vm/nr_hugepages file. Proposed way of setting hugepages is: &quot;sudo sysctl vm.nr_hugepages=&lt;number_of_hugepages&gt;&quot;. More informations can be found here: <a rel="nofollow" href="https://www.kernel.org/doc/Documentation/vm/hugetlbpage.txt">https://www.kernel.org/doc/Documentation/vm/hugetlbpage.txt</a></p>
-<dt><code>GBTLB (gigabyte pages)</code></p>
-<dd> Number of preallocated gigabyte pages can be read from /proc/cmdline (hugepagesz=1G nr_hugepages=N). Setting gigabyte hugepages is available by kernel commandline. From 3.16 and later kernels, users can allocate gigabyte pages like its done for 2MB pages.</dl>
+<dt><code>HUGETLB (huge pages)</code></dt>
+<dd> Current number of &quot;persistent&quot; huge pages can be read from /proc/sys/vm/nr_hugepages file. Proposed way of setting hugepages is: &quot;sudo sysctl vm.nr_hugepages=&lt;number_of_hugepages&gt;&quot;. More informations can be found here: <a rel="nofollow" href="https://www.kernel.org/doc/Documentation/vm/hugetlbpage.txt">https://www.kernel.org/doc/Documentation/vm/hugetlbpage.txt</a></dd>
+<dt><code>GBTLB (gigabyte pages)</code></dt>
+<dd> Number of preallocated gigabyte pages can be read from /proc/cmdline (hugepagesz=1G nr_hugepages=N). Setting gigabyte hugepages is available by kernel commandline. From 3.16 and later kernels, users can allocate gigabyte pages like its done for 2MB pages.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2014 &#8211; 2016 Intel Corporation. All rights reserved.</p>
 <h2>SEE ALSO</h2>

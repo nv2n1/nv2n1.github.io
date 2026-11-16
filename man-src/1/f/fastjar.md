@@ -17,40 +17,40 @@ description: "fastjar – archive tool for Java archives"
 <h2>OPTIONS</h2>
 <p> Exactly one of the following actions must be specified:</p>
 <dl>
-<dt><code>-c</code></p>
-<dd> Create new archive.</p>
-<dt><code>-t</code></p>
-<dd> List table of contents for archive.</p>
-<dt><code>-x</code></p>
-<dd> Extract named (or all) files from archive.</p>
-<dt><code>-u</code></p>
-<dd> Update existing archive.</dl>
+<dt><code>-c</code></dt>
+<dd> Create new archive.</dd>
+<dt><code>-t</code></dt>
+<dd> List table of contents for archive.</dd>
+<dt><code>-x</code></dt>
+<dd> Extract named (or all) files from archive.</dd>
+<dt><code>-u</code></dt>
+<dd> Update existing archive.</dd></dl>
 <p> The following parameters are optional:</p>
 <dl>
-<dt><code>-@</code></p>
-<dd> Read the names of the files to add to the archive from stdin. This option is supported only in combination with <code>-c</code> or <code>-u</code>. Non standard option added in the <font SIZE="-1">GCC</font> version.</p>
-<dt><code>-C</code> <i>directory</i></p>
-<dd> Change to the <i>directory</i> and include the following file.</p>
-<dt><code>-E</code></p>
-<dd> Prevent fastjar from reading the content of a directory when specifying one (and instead relying on the provided list of files to populate the archive with regard to the directory entry). Non standard option added in the <font SIZE="-1">GCC</font> version.</p>
-<dt><code>-M</code></p>
-<dd> Do not create a manifest file for the entries.</p>
-<dt><code>-i</code></p>
-<dd> Generate an index of the packages in this jar and its Class-Path.</p>
-<dt><code>-J</code></p>
-<dd> All options starting with <code>-J</code> are ignored.</p>
-<dt><code>-0</code></p>
-<dd> Store only; use no <font SIZE="-1">ZIP</font> compression.</p>
-<dt><code>-V</code></p>
+<dt><code>-@</code></dt>
+<dd> Read the names of the files to add to the archive from stdin. This option is supported only in combination with <code>-c</code> or <code>-u</code>. Non standard option added in the <font SIZE="-1">GCC</font> version.</dd>
+<dt><code>-C</code> <i>directory</i></dt>
+<dd> Change to the <i>directory</i> and include the following file.</dd>
+<dt><code>-E</code></dt>
+<dd> Prevent fastjar from reading the content of a directory when specifying one (and instead relying on the provided list of files to populate the archive with regard to the directory entry). Non standard option added in the <font SIZE="-1">GCC</font> version.</dd>
+<dt><code>-M</code></dt>
+<dd> Do not create a manifest file for the entries.</dd>
+<dt><code>-i</code></dt>
+<dd> Generate an index of the packages in this jar and its Class-Path.</dd>
+<dt><code>-J</code></dt>
+<dd> All options starting with <code>-J</code> are ignored.</dd>
+<dt><code>-0</code></dt>
+<dd> Store only; use no <font SIZE="-1">ZIP</font> compression.</dd>
+<dt><code>-V</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Display version information.</p>
-<dt><code>-f</code> <i>archive</i></p>
-<dd> Specify archive file name.</p>
-<dt><code>-m</code> <i>manifest</i></p>
-<dd> Include manifest information from specified <i>manifest</i> file.</p>
-<dt><code>-v</code></p>
-<dd> Generate verbose output on standard output.</dl>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Display version information.</dd>
+<dt><code>-f</code> <i>archive</i></dt>
+<dd> Specify archive file name.</dd>
+<dt><code>-m</code> <i>manifest</i></dt>
+<dd> Include manifest information from specified <i>manifest</i> file.</dd>
+<dt><code>-v</code></dt>
+<dd> Generate verbose output on standard output.</dd></dl>
 <p> Parameters of the form <tt>@option</tt>{@}<i></i><font SIZE="-1"><i>FILE</i></font><i></i> are considered to be names of files, and are expanded with the contents of the file. </p>
 <p> All remaining options are considered to be names of files.</p>
 <h2>SEE ALSO</h2>

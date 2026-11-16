@@ -39,10 +39,10 @@ int fgetgrent_r(FILE *stream, struct group *gbuf, char *buf,
 <p> On success, these functions return 0 and <i>*gbufp</i> is a pointer to the <i>struct group</i>. On error, these functions return an error value and <i>*gbufp</i> is NULL.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOENT</code></p>
-<dd> No more entries.</p>
-<dt><code>ERANGE</code></p>
-<dd> Insufficient buffer space supplied. Try again with larger buffer.</dl>
+<dt><code>ENOENT</code></dt>
+<dd> No more entries.</dd>
+<dt><code>ERANGE</code></dt>
+<dd> Insufficient buffer space supplied. Try again with larger buffer.</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

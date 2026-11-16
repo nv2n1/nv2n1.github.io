@@ -20,81 +20,81 @@ description: "grid-cert-info – Display information about a certificate"
 <p> <code>-help, -usage</code></p>
 <dl>
 <dt>
-<dd> Display the command-line options to <code>grid-cert-info</code> and exit.</dl>
+</dt><dd> Display the command-line options to <code>grid-cert-info</code> and exit.</dd></dl>
 <p> <code>-version, -versions</code></p>
 <dl>
 <dt>
-<dd> Display the version number of the <code>grid-cert-info</code> command. The second form includes more details.</dl>
+</dt><dd> Display the version number of the <code>grid-cert-info</code> command. The second form includes more details.</dd></dl>
 <p> <code>-file </code><i>CERTIFICATE-FILE</i></p>
 <dl>
 <dt>
-<dd> Display information about the first certificate contained in the file named by <i>CERTIFICATE-FILE</i> instead of the default user certificate.</dl>
+</dt><dd> Display information about the first certificate contained in the file named by <i>CERTIFICATE-FILE</i> instead of the default user certificate.</dd></dl>
 <p> <code>-rfc2253</code></p>
 <dl>
 <dt>
-<dd> Display X.509 distinguished names using the string representation defined in RFC 2253 instead of the default OpenSSL <i>oneline</i> format.</dl>
+</dt><dd> Display X.509 distinguished names using the string representation defined in RFC 2253 instead of the default OpenSSL <i>oneline</i> format.</dd></dl>
 <p> <code>-all</code></p>
 <dl>
 <dt>
-<dd> Display the text representation of the entire certificate in addition to any other facts requested by command-line options. This is the default if no fact-specific command-line options are used.</dl>
+</dt><dd> Display the text representation of the entire certificate in addition to any other facts requested by command-line options. This is the default if no fact-specific command-line options are used.</dd></dl>
 <p> <code>-subject, -s</code></p>
 <dl>
 <dt>
-<dd> Display the subject name of the X.509 certificate.</dl>
+</dt><dd> Display the subject name of the X.509 certificate.</dd></dl>
 <p> <code>-issuer, -i</code></p>
 <dl>
 <dt>
-<dd> Display the issuer name of the X.509 certificate.</dl>
+</dt><dd> Display the issuer name of the X.509 certificate.</dd></dl>
 <p> <code>-issuerhash, -ih</code></p>
 <dl>
 <dt>
-<dd> Display the default hash of the issuer name of the X.509 certificate. This can be used to locate which CA certificate in the trusted certificate directory issued the certificate being inspected.</dl>
+</dt><dd> Display the default hash of the issuer name of the X.509 certificate. This can be used to locate which CA certificate in the trusted certificate directory issued the certificate being inspected.</dd></dl>
 <p> <code>-startdate, -sd</code></p>
 <dl>
 <dt>
-<dd> Display a string representation of the date and time when the certificate is valid from. This is displayed in the format used by the OpenSSL <code>x509</code> command.</dl>
+</dt><dd> Display a string representation of the date and time when the certificate is valid from. This is displayed in the format used by the OpenSSL <code>x509</code> command.</dd></dl>
 <p> <code>-enddate, -ed</code></p>
 <dl>
 <dt>
-<dd> Display a string representation of the date and time when the certificate is valid until. This is displayed in the format used by the OpenSSL <code>x509</code> command.</dl>
+</dt><dd> Display a string representation of the date and time when the certificate is valid until. This is displayed in the format used by the OpenSSL <code>x509</code> command.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Display the validity times for the default certificate </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 % grid-cert-info -sd -ed
 Aug 31 12:33:47 2009 GMT
 Aug 31 12:33:47 2010 GMT
 </pre>
-</dl>
+</dd></dl>
 <p> Display the same information about a different certificate specified on the command-line </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 % grid-cert-info -sd -ed -f /etc/grid-security/hostcert.pem
 Jan 21 12:24:48 2003 GMT
 Jul 15 11:30:57 2020 GMT
 </pre>
-</dl>
+</dd></dl>
 <p> Display the subject of a certificate in both the default and the RFC 2253 forms. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 % grid-cert-info -subject
 /DC=org/DC=example/DC=grid/CN=Joe User
 % grid-cert-info -subject -rfc2253
 CN=Joe User,DC=grid,DC=example,DC=org
 </pre>
-</dl>
+</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> The following environment variables affect the execution of <code>grid-cert-info</code>: </p>
 <p> <code>X509_USER_CERT</code></p>
 <dl>
 <dt>
-<dd> Path to the default certificate file to inspect.</dl>
+</dt><dd> Path to the default certificate file to inspect.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Copyright &#169; 1999-2014 University of Chicago </p>
 <h2>Index</h2>

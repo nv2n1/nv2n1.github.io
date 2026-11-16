@@ -13,70 +13,70 @@ description: "mh-tailor, mts.conf – mail transport configuration for nmh messa
 <p> Each option should be given on a single line. Blank lines and lines which begin with `#&#8217; are ignored. The options available along with default values and a description of their meanings are listed below: </p>
 <p> <code>mts</code>:</p>
 <dl>
-<dd>The mail transport method to use. The three acceptable options are <code>smtp</code> (which is the default), <code>sendmail/smtp</code>, and <code>sendmail/pipe</code>. </p>
+<dd>The mail transport method to use. The three acceptable options are <code>smtp</code> (which is the default), <code>sendmail/smtp</code>, and <code>sendmail/pipe</code>. </dd>
 <p> If you use <code>smtp</code>, this will enable a direct SMTP (simple mail transport protocol) interface in <code>nmh</code>. When sending mail, instead of passing the message to the mail transport agent, <code>post</code> will open a socket connection to the mail port on the machine specified in the <code>servers</code> entry. </p>
 <p> If you use <code>sendmail/smtp</code>, then <code>post</code> will send messages by forking a local copy of <code>sendmail</code>. It will still speak SMTP with this local copy of <code>sendmail</code>. For backward compatibility, <code>sendmail/smtp</code> can be abbreviated to <code>sendmail</code>. </p>
 <p> The third alternative, <code>sendmail/pipe</code>, also forks a local copy of <code>sendmail</code> but feeds the message directly to it, using <code>sendmail</code> <code>-t</code>. This replaces the old, undocumented <code>spost</code> mechanism and retains some of its limitations, such as lack of support for the <code>-whom</code> switch and &#8220;Dcc:&#8221; header field.</dl>
 <p> <code>localname</code>:</p>
 <dl>
-<dd>The hostname <code>nmh</code> considers local. It should typically be a fully qualified hostname. If this is not set, depending on the version of UNIX you&#8217;re running, <code>nmh</code> will query the system for this value (e.g. uname, gethostname, etc.), and attempt to fully qualify this value. </p>
+<dd>The hostname <code>nmh</code> considers local. It should typically be a fully qualified hostname. If this is not set, depending on the version of UNIX you&#8217;re running, <code>nmh</code> will query the system for this value (e.g. uname, gethostname, etc.), and attempt to fully qualify this value. </dd>
 <p> If you are using POP to retrieve new messages, you may want to set this value to the name of the POP server, so that outgoing message appear to have originated on the POP server.</dl>
 <p> <code>localdomain</code>:</p>
 <dl>
-<dd>If this is set, a `.&#8217; followed by this string will be appended to your hostname. </p>
+<dd>If this is set, a `.&#8217; followed by this string will be appended to your hostname. </dd>
 <p> This should only be needed, if for some reason <code>nmh</code> is not able to fully qualify the hostname returned by the system (e.g. uname, gethostname, etc.).</dl>
 <p> <code>clientname</code>:</p>
 <dl>
-<dd>This option specifies the host name that <code>nmh</code> will give in the SMTP <code>HELO</code> (and <code>EHLO</code>) command, when posting mail. If not set, the default is to use the host name that <code>nmh</code> considers local (see <code>localname</code> above). If this option is set, but empty, no <code>HELO</code> command will be given. </p>
+<dd>This option specifies the host name that <code>nmh</code> will give in the SMTP <code>HELO</code> (and <code>EHLO</code>) command, when posting mail. If not set, the default is to use the host name that <code>nmh</code> considers local (see <code>localname</code> above). If this option is set, but empty, no <code>HELO</code> command will be given. </dd>
 <p> Although the <code>HELO</code> command is required by RFC 821, many SMTP servers do not require it. Early versions of <i>SendMail</i> will fail if the hostname given in the <code>HELO</code> command is the local host. Later versions of <i>SendMail</i> will complain if you omit the <code>HELO</code> command. If you run <i>SendMail</i>, find out what your system expects and set this field if needed.</dl>
 <p> <code>systemname</code>:</p>
 <dl>
-<dd>This option is only used for UUCP mail. It specifies the name of the local host in the UUCP &#8220;domain&#8221;. If not set, depending on the version of UNIX you&#8217;re running, <code>nmh</code> will query the system for this value. This has no equivalent in the <code>nmh</code> configuration file.</dl>
+<dd>This option is only used for UUCP mail. It specifies the name of the local host in the UUCP &#8220;domain&#8221;. If not set, depending on the version of UNIX you&#8217;re running, <code>nmh</code> will query the system for this value. This has no equivalent in the <code>nmh</code> configuration file.</dd></dl>
 <p> <code>mmdfldir</code>: /var/mail</p>
 <dl>
-<dd>The directory where maildrops are kept. If this option is set, but empty, the user&#8217;s home directory is used. This overrides the default value chosen at the time of compilation.</dl>
+<dd>The directory where maildrops are kept. If this option is set, but empty, the user&#8217;s home directory is used. This overrides the default value chosen at the time of compilation.</dd></dl>
 <p> <code>mmdflfil</code>:</p>
 <dl>
-<dd>The name of the maildrop file in the directory where maildrops are kept. If this is empty, the user&#8217;s login name is used. This overrides the default value (which is empty).</dl>
+<dd>The name of the maildrop file in the directory where maildrops are kept. If this is empty, the user&#8217;s login name is used. This overrides the default value (which is empty).</dd></dl>
 <p> <code>mmdelim1</code>: 
 </p>
 <dl>
-<dd>The beginning-of-message delimiter for maildrops.</dl>
+<dd>The beginning-of-message delimiter for maildrops.</dd></dl>
 <p> <code>mmdelim2</code>: 
 </p>
 <dl>
-<dd>The end-of-message delimiter for maildrops.</dl>
+<dd>The end-of-message delimiter for maildrops.</dd></dl>
 <p> <code>spoollocking</code>: fcntl</p>
 <dl>
-<dd>The locking algorithm to use when opening the maildrop. Can be any one of the following: </p>
+<dd>The locking algorithm to use when opening the maildrop. Can be any one of the following: </dd>
 <dl>
 <dd>
 <pre>fcntl dot flock lockf</pre>
-</dl>
+</dd></dl>
 </dl>
 <p> <code>maildelivery</code>: /usr/libexec/nmh/maildelivery</p>
 <dl>
-<dd>The name of the system-wide default <i>maildelivery</i> file. See <i><a href="/docs/linux/man/1-slocal/">slocal</a></i>(1) for the details.</dl>
+<dd>The name of the system-wide default <i>maildelivery</i> file. See <i><a href="/docs/linux/man/1-slocal/">slocal</a></i>(1) for the details.</dd></dl>
 <p> <code>everyone</code>: 200</p>
 <dl>
-<dd>The highest user-id which should NOT receive mail addressed to &#8220;everyone&#8221;.</dl>
+<dd>The highest user-id which should NOT receive mail addressed to &#8220;everyone&#8221;.</dd></dl>
 <p> <code>noshell</code>:</p>
 <dl>
-<dd>If set, then each user-id greater than &#8220;everyone&#8221; that has a login shell equivalent to the given value (e.g., &#8220;/bin/csh&#8221;) indicates that mail for &#8220;everyone&#8221; should not be sent to them. This is useful for handling admin, dummy, and guest logins.</dl>
+<dd>If set, then each user-id greater than &#8220;everyone&#8221; that has a login shell equivalent to the given value (e.g., &#8220;/bin/csh&#8221;) indicates that mail for &#8220;everyone&#8221; should not be sent to them. This is useful for handling admin, dummy, and guest logins.</dd></dl>
 <h3>SMTP support</h3>
 <p>This option is only available if you set <code>mts</code> to <code>smtp</code>. </p>
 <p> <code>servers</code>: localhost</p>
 <dl>
-<dd>A lists of hosts and networks which to look for SMTP servers when posting non-local mail. It turns out this is a major win for hosts which don&#8217;t run an message transport system. The value of <code>servers</code> should be one or more items. Each item is the name of a host which is (hopefully) running a SMTP server.</dl>
+<dd>A lists of hosts and networks which to look for SMTP servers when posting non-local mail. It turns out this is a major win for hosts which don&#8217;t run an message transport system. The value of <code>servers</code> should be one or more items. Each item is the name of a host which is (hopefully) running a SMTP server.</dd></dl>
 <h3>SendMail</h3>
 <p>This option is only available if you set <code>mts</code> to <code>sendmail</code>. </p>
 <p> <code>sendmail</code>: /usr/sbin/sendmail</p>
 <dl>
-<dd>The pathname to the <code>sendmail</code> program.</dl>
+<dd>The pathname to the <code>sendmail</code> program.</dd></dl>
 <h3>Post Office Protocol</h3>
 <p><code>pophost</code>:</p>
 <dl>
-<dd>The name of the default POP service host. If this is not set, then <code>nmh</code> looks in the standard maildrop areas for waiting mail, otherwise the named POP service host is consulted.</dl>
+<dd>The name of the default POP service host. If this is not set, then <code>nmh</code> looks in the standard maildrop areas for waiting mail, otherwise the named POP service host is consulted.</dd></dl>
 <h3>File Locking</h3>
 <p>A few words on locking: <code>nmh</code> has two main uses for locking: locking the mail spool during mail incorporation, and locking metadata files (sequence files, the context) during updates. These locking methods can be configured separately from each other. </p>
 <p> For locking the mail spool, the <i>spoollocking</i> entry in <i><a href="/docs/linux/man/5-mh-tailor/">mh-tailor</a></i>(5) will control the locking algorithm to use when <code>inc</code> incorporates mail from the spool file. If no entry is given, a default based on the operating system type will be chosen. </p>

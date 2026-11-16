@@ -15,11 +15,11 @@ ipc_update_perm - update the permissions of an ipc object
 <h2>Arguments</h2>
 
 <i>in</i>
-<dl><dd><dd>the permission given as input.</dl>
+<dl><dd></dd><dd>the permission given as input.</dd></dl>
  
 
  <i>out</i>
-<dl><dd>the permission of the ipc to set.</dl>
+<dl><dd>the permission of the ipc to set.</dd></dl>
 
 <h2>Copyright</h2>
 

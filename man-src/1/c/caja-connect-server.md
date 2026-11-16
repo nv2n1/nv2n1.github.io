@@ -18,12 +18,12 @@ description: "Caja-connect-server – Connect to Server dialog for Caja"
 <p> If you desire to mount and access remote servers via console commands, you should use <code>caja</code> directly. See: <code><a href="/docs/linux/man/1-caja/">caja</a></code>(1)</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;display=DISPLAY</code></p>
-<dd> X display to use.</p>
-<dt><code>-?, -h, &#8211;help</code></p>
-<dd> Print standard command line options.</p>
-<dt><code>&#8211;help-all</code></p>
-<dd> Print all command line options.</dl>
+<dt><code>&#8211;display=DISPLAY</code></dt>
+<dd> X display to use.</dd>
+<dt><code>-?, -h, &#8211;help</code></dt>
+<dd> Print standard command line options.</dd>
+<dt><code>&#8211;help-all</code></dt>
+<dd> Print all command line options.</dd></dl>
 <h2>BUGS</h2>
 <h3>Should you encounter any bugs, they may be reported at:</h3>
 <p> <a rel="nofollow" href="http://github.com/mate-desktop/caja/issues">http://github.com/mate-desktop/caja/issues</a></p>

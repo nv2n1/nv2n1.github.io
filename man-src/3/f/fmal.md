@@ -21,7 +21,7 @@ long double fmal(long double x, long double y, long double z);
 <p> <code>fma</code>(), <code>fmaf</code>(), <code>fmal</code>():</p>
 <dl>
 <dt>
-<dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+</dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> These functions compute <i>x</i> * <i>y</i> + <i>z</i>. The result is rounded as one ternary operation according to the current rounding mode (see <code><a href="/docs/linux/man/3-fenv/">fenv</a></code>(3)).</p>
 <h2>RETURN VALUE</h2>
@@ -37,12 +37,12 @@ long double fmal(long double x, long double y, long double z);
 <p> See <code><a href="/docs/linux/man/7-math_error/">math_error</a></code>(7) for information on how to determine whether an error has occurred when calling these functions. </p>
 <p> The following errors can occur:</p>
 <dl>
-<dt>Domain error: <i>x</i> * <i>y</i> + <i>z</i>, or <i>x</i> * <i>y</i> is invalid and <i>z</i> is not a NaN</p>
-<dd> An invalid floating-point exception (<code>FE_INVALID</code>) is raised.</p>
-<dt>Range error: result overflow</p>
-<dd> An overflow floating-point exception (<code>FE_OVERFLOW</code>) is raised.</p>
-<dt>Range error: result underflow</p>
-<dd> An underflow floating-point exception (<code>FE_UNDERFLOW</code>) is raised.</dl>
+<dt>Domain error: <i>x</i> * <i>y</i> + <i>z</i>, or <i>x</i> * <i>y</i> is invalid and <i>z</i> is not a NaN</dt>
+<dd> An invalid floating-point exception (<code>FE_INVALID</code>) is raised.</dd>
+<dt>Range error: result overflow</dt>
+<dd> An overflow floating-point exception (<code>FE_OVERFLOW</code>) is raised.</dd>
+<dt>Range error: result underflow</dt>
+<dd> An underflow floating-point exception (<code>FE_UNDERFLOW</code>) is raised.</dd></dl>
 <p> These functions do not set <i>errno</i>.</p>
 <h2>VERSIONS</h2>
 <p> These functions first appeared in glibc in version 2.1.</p>

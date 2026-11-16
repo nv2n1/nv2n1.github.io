@@ -12,10 +12,8 @@ description: "PCRE – Perl-compatible regular expressions"
 <pre><code>#include &lt;pcre.h&gt;
 int pcre_get_substring_list(const char *subject,
                             int *ovector, int stringcount, const char ***listptr);
-
 int pcre16_get_substring_list(PCRE_SPTR16 subject,
                               int *ovector, int stringcount, PCRE_SPTR16 **listptr);
-
 int pcre32_get_substring_list(PCRE_SPTR32 subject,
                               int *ovector, int stringcount, PCRE_SPTR32 **listptr);</code></pre>
 <h2>Description</h2>

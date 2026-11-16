@@ -10,36 +10,14 @@ description: "QuantLib::PathMultiAssetOption – Base class for path-dependent o
 <p>QuantLib::PathMultiAssetOption &#8211; Base class for path-dependent options on multiple assets. </p>
 <h2>Synopsis</h2>
 <pre><code>PathMultiAssetOption (const boost::shared_ptr&lt; StochasticProcess &gt; &amp;, const boost::shared_ptr&lt; PricingEngine &gt; &amp;engine=boost::shared_ptr&lt; PricingEngine &gt;())
-
-
-
 Instrument interface
 boost::shared_ptr&lt; StochasticProcess &gt; stochasticProcess_
-
-
-
 bool isExpired () const
-
-
 returns whether the instrument is still tradable.
-
-
 void setupArguments (PricingEngine::arguments *) const
-
-
-
 virtual boost::shared_ptr&lt; PathPayoff &gt; pathPayoff () const =0
-
-
-
 virtual std::vector&lt; Date &gt; fixingDates () const =0
-
-
-
 virtual Size numberOfAssets () const =0
-
-
-
 void setupExpired () const</code></pre>
 <p> Inherits <code>QuantLib::Instrument</code>.</p>
 <h3>Classes</h3>
@@ -49,36 +27,14 @@ void setupExpired () const</code></pre>
  <i>Results from multi-asset option calculation </i></p>
 <h3>Public Member Functions</h3>
 <pre><code>PathMultiAssetOption (const boost::shared_ptr&lt; StochasticProcess &gt; &amp;, const boost::shared_ptr&lt; PricingEngine &gt; &amp;engine=boost::shared_ptr&lt; PricingEngine &gt;())
-
-
-
 Instrument interface
 boost::shared_ptr&lt; StochasticProcess &gt; stochasticProcess_
-
-
-
 bool isExpired () const
-
-
 returns whether the instrument is still tradable.
-
-
 void setupArguments (PricingEngine::arguments *) const
-
-
-
 virtual boost::shared_ptr&lt; PathPayoff &gt; pathPayoff () const =0
-
-
-
 virtual std::vector&lt; Date &gt; fixingDates () const =0
-
-
-
 virtual Size numberOfAssets () const =0
-
-
-
 void setupExpired () const</code></pre>
 <h2>Detailed Description</h2>
 <p>Base class for path-dependent options on multiple assets.</p>

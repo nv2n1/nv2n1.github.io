@@ -15,19 +15,19 @@ description: "gThumb – an image viewer and browser for GNOME"
 <p> With <i>gThumb</i> you can browse your hard disk viewing thumbnails of image files. It also lets you view single files (including GIF animations), add comments to images, organize images in catalogs, print images, view slideshows, set your desktop background, and more. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f, &#8211;fullscreen</code></p>
-<dd> Start in fullscreen mode.</p>
-<dt><code>-s, &#8211;slideshow</code></p>
-<dd> Automatically start a slideshow.</p>
-<dt><code>&#8211;import-photos</code></p>
-<dd> Automatically import digital camera photos.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Output help information and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Output version information and exit.</p>
-<dt>Usual other GNOME options apply as well.</p>
+<dt><code>-f, &#8211;fullscreen</code></dt>
+<dd> Start in fullscreen mode.</dd>
+<dt><code>-s, &#8211;slideshow</code></dt>
+<dd> Automatically start a slideshow.</dd>
+<dt><code>&#8211;import-photos</code></dt>
+<dd> Automatically import digital camera photos.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Output help information and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Output version information and exit.</dd>
+<dt>Usual other GNOME options apply as well.</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To run this program the standard way type: </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt><code>gthumb</code></p>

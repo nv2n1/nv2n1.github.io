@@ -11,10 +11,8 @@ std::lock - std::lock
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;mutex&gt;
-
     template &lt;class Lockable1, class Lockable2, class... LockableN&gt;
     (since C++ 11)
-
         void lock(Lockable1 &amp;lock1, Lockable2 &amp;lock2, LockableN &amp;...lockn);</code></pre> 
 Locks the given Lockable objects lock1, lock2, ..., lockn using a deadlock avoidance algorithm to avoid deadlock. 
 The objects are locked by an unspecified series of calls to lock, try_lock, and unlock. If a call to lock or unlock results in an exception, unlock is called for any locked objects before rethrowing. 
@@ -36,17 +34,11 @@ std::scoped_lock offers a RAII wrapper for this function, and is generally prefe
 
 The following example uses std::lock to lock pairs of mutexes without deadlock. 
  // Run this code <pre><code>#include &lt;mutex&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;functional&gt;
-
 #include &lt;chrono&gt;
-
 #include &lt;string&gt;
 struct Employee {
     Employee(std::string id)
@@ -65,13 +57,11 @@ struct Employee {
     }
 };
 void send_mail(Employee &amp;, Employee &amp;)
-
 {
     // simulate a time-consuming messaging operation
     std::this_thread::sleep_for(std::chrono::seconds(1));
 }
 void assign_lunch_partner(Employee &amp;e1, Employee &amp;e2)
-
 {
     static std::mutex io_mutex;
     {
@@ -84,17 +74,11 @@ void assign_lunch_partner(Employee &amp;e1, Employee &amp;e2)
         std::lock(e1.m, e2.m);
         std::lock_guard&lt;std::mutex&gt; lk1(e1.m, std::adopt_lock);
         std::lock_guard&lt;std::mutex&gt; lk2(e2.m, std::adopt_lock);
-
         // Equivalent code (if unique_locks are needed, e.g. for condition variables)
-
         //        std::unique_lock&lt;std::mutex&gt; lk1(e1.m, std::defer_lock);
-
         //        std::unique_lock&lt;std::mutex&gt; lk2(e2.m, std::defer_lock);
-
         //        std::lock(lk1, lk2);
-
         // Superior solution available in C++17
-
         //        std::scoped_lock lk(e1.m, e2.m);
         {
             std::lock_guard&lt;std::mutex&gt; lk(io_mutex);
@@ -107,7 +91,6 @@ void assign_lunch_partner(Employee &amp;e1, Employee &amp;e2)
     send_mail(e2, e1);
 }
 int main()
-
 {
     Employee alice(&quot;alice&quot;), bob(&quot;bob&quot;), christina(&quot;christina&quot;), dave(&quot;dave&quot;);
     // assign in parallel threads because mailing users about lunch assignments

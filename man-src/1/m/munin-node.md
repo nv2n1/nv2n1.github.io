@@ -16,16 +16,16 @@ description: "munin-node – A daemon to gather information in cooperation with 
 <p> It doesn&#8217;t produce these itself, but instead relies on a number of plugins which are responsible for gathering the data they require, and describing how this should be graphed. In fact, it does little more than fielding requests from the Munin master, running the appropriate plugins, and returning the output they produce.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;config &lt;configfile&gt;</code></p>
-<dd> Use &lt;file&gt; as configuration file. [/etc/munin/munin-node.conf]</p>
-<dt><code> &#8211;[no]paranoia </code></p>
-<dd> Only run plugins owned by root. Check permissions as well. [&#8211;noparanoia]</p>
-<dt><code> &#8211;help </code></p>
-<dd> View this help message.</p>
-<dt><code> &#8211;[no]debug </code></p>
-<dd> View debug messages. This can be very verbose.</p>
-<dt><code> &#8211;[no]pidebug </code></p>
-<dd> Plugin debug. Sets the environment variable <font SIZE="-1">MUNIN_DEBUG</font> to 1 so that plugins may enable debugging. [&#8211;nopidebug]</dl>
+<dt><code>&#8211;config &lt;configfile&gt;</code></dt>
+<dd> Use &lt;file&gt; as configuration file. [/etc/munin/munin-node.conf]</dd>
+<dt><code> &#8211;[no]paranoia </code></dt>
+<dd> Only run plugins owned by root. Check permissions as well. [&#8211;noparanoia]</dd>
+<dt><code> &#8211;help </code></dt>
+<dd> View this help message.</dd>
+<dt><code> &#8211;[no]debug </code></dt>
+<dd> View debug messages. This can be very verbose.</dd>
+<dt><code> &#8211;[no]pidebug </code></dt>
+<dd> Plugin debug. Sets the environment variable <font SIZE="-1">MUNIN_DEBUG</font> to 1 so that plugins may enable debugging. [&#8211;nopidebug]</dd></dl>
 <h2>FILES</h2>
 <pre>
     /etc/munin/munin-node.conf

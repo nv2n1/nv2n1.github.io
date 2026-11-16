@@ -62,7 +62,7 @@ Control group /:
 │ └─sleep.service
 │ └─6706 /usr/bin/sleep 30
 ...</pre>
-</dl>
+</dd></dl>
 <p> User with UID 1000 is logged in using <code>gdm</code> (session-4.scope) and <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1) (session-19.scope), and also has a user manager instance running (user [at] 1000.service). User with UID 1001 is logged in using <code>ssh</code> (session-20.scope) and also has a user manager instance running (user [at] 1001.service). Those are all (leaf) system units, and form part of the slice hierarchy, with user-1000.slice and user-1001.slice below user.slice. User units are visible below the user [at] .service instances (pulseaudio.service, gnome-terminal-server.service, init.scope, sleep.service). </p>
 <p> <code>Example 2. Default user resource limits</code> </p>
 <dl>
@@ -75,7 +75,7 @@ Description=User Slice of UID %j
 After=systemd-user-sessions.service
 [Slice]
 TasksMax=33%</pre>
-</dl>
+</dd></dl>
 <p> The user-<i>UID</i>.slice units by default don&#8217;t have a unit file. The resource limits are set through a drop-in, which can be easily replaced or extended following standard drop-in mechanisms discussed in the first section.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-systemd-service/">systemd.service</a></code>(5), <code><a href="/docs/linux/man/5-systemd-slice/">systemd.slice</a></code>(5), <code><a href="/docs/linux/man/5-systemd-resource-control/">systemd.resource-control</a></code>(5), <code><a href="/docs/linux/man/5-systemd-exec/">systemd.exec</a></code>(5), <code><a href="/docs/linux/man/7-systemd-special/">systemd.special</a></code>(7), <code><a href="/docs/linux/man/8-pam/">pam</a></code>(8) </p>

@@ -19,12 +19,12 @@ mmk_m2[options][-gcfile] dimX dimY[ofile] mmk_m3[options][-gcfile] dimX dimY dim
 <p> <code>mmk_m3</code> creates a 3D regular mesh of <i>dimX</i> times <i>dimY</i> times <i>dimZ</i> elements and (<i>dimX</i>+1) times (<i>dimY</i>+1) times (<i>dimZ</i>+1) nodes, such that element (i,j,k) is connected to nodes (i,j,k), (i,j,k+1), (i,j+1,k), (i,j+1,k+1), (i+1,j,k), (i+1,j,k+1), (i+1,j+1,k) and (i+1,j+1,k+1).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-g</code><i>cfile</i></p>
-<dd> Output graph vertex coordinates (that is, geometry data to be used by <code>gout</code>(1)) in file <i>cfile</i>.</p>
-<dt><code>-h</code></p>
-<dd> Display some help.</p>
-<dt><code>-V</code></p>
-<dd> Display program version and copyright.</dl>
+<dt><code>-g</code><i>cfile</i></dt>
+<dd> Output graph vertex coordinates (that is, geometry data to be used by <code>gout</code>(1)) in file <i>cfile</i>.</dd>
+<dt><code>-h</code></dt>
+<dd> Display some help.</dd>
+<dt><code>-V</code></dt>
+<dd> Display program version and copyright.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> Create a mesh of 5&#215;7 elements, along with its geometry: </p>
 <pre>

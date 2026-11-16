@@ -10,9 +10,9 @@ description: "ocf_heartbeat_db2 – Resource Agent that manages an IBM DB2 LUW d
 <p>ocf_heartbeat_db2 &#8211; Resource Agent that manages an IBM DB2 LUW databases in Standard role as primitive or in HADR roles as master/slave configuration. Multiple partitions are supported.</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>db2</code> [start | stop | monitor | promote | demote | meta-data | validate-all]</dl>
+<dt> <code>db2</code> [start | stop | monitor | promote | demote | meta-data | validate-all]</dt></dl>
 <h2>Description</h2>
-<dd>Resource Agent that manages an IBM DB2 LUW databases in Standard role as primitive or in HADR roles in master/slave configuration. Multiple partitions are supported. </p>
+<dd>Resource Agent that manages an IBM DB2 LUW databases in Standard role as primitive or in HADR roles in master/slave configuration. Multiple partitions are supported. </dd>
 <p> Standard mode: </p>
 <p> An instance including all or selected databases is made highly available. Configure each partition as a separate primitive resource. </p>
 <p> HADR mode: </p>
@@ -25,49 +25,49 @@ description: "ocf_heartbeat_db2 – Resource Agent that manages an IBM DB2 LUW d
 <h2>Supported Parameters</h2>
 <p><code>instance</code></p>
 <dl>
-<dd>The instance of the database(s). </p>
+<dd>The instance of the database(s). </dd>
 <p> (unique, required, string, no default)</dl>
 <p> <code>dblist</code></p>
 <dl>
-<dd>List of databases to be managed, e.g &quot;db1 db2&quot;. Defaults to all databases in the instance. Specify one db for HADR mode. </p>
+<dd>List of databases to be managed, e.g &quot;db1 db2&quot;. Defaults to all databases in the instance. Specify one db for HADR mode. </dd>
 <p> (optional, string, no default)</dl>
 <p> <code>admin</code></p>
 <dl>
-<dd>DEPRECATED: The admin user of the instance. </p>
+<dd>DEPRECATED: The admin user of the instance. </dd>
 <p> (optional, string, no default)</dl>
 <p> <code>dbpartitionnum</code></p>
 <dl>
-<dd>The number of the partion (DBPARTITIONNUM) to be managed. </p>
+<dd>The number of the partion (DBPARTITIONNUM) to be managed. </dd>
 <p> (optional, string, default &quot;0&quot;)</dl>
 <h2>Supported Actions</h2>
 <p>This resource agent supports the following actions (operations): </p>
 <p> <code>start</code></p>
 <dl>
-<dd>Starts the resource. Suggested minimum timeout: 120.</dl>
+<dd>Starts the resource. Suggested minimum timeout: 120.</dd></dl>
 <p> <code>stop</code></p>
 <dl>
-<dd>Stops the resource. Suggested minimum timeout: 120.</dl>
+<dd>Stops the resource. Suggested minimum timeout: 120.</dd></dl>
 <p> <code>promote</code></p>
 <dl>
-<dd>Promotes the resource to the Master role. Suggested minimum timeout: 120.</dl>
+<dd>Promotes the resource to the Master role. Suggested minimum timeout: 120.</dd></dl>
 <p> <code>demote</code></p>
 <dl>
-<dd>Demotes the resource to the Slave role. Suggested minimum timeout: 120.</dl>
+<dd>Demotes the resource to the Slave role. Suggested minimum timeout: 120.</dd></dl>
 <p> <code>notify</code></p>
 <dl>
-<dd>Suggested minimum timeout: 10.</dl>
+<dd>Suggested minimum timeout: 10.</dd></dl>
 <p> <code>monitor</code></p>
 <dl>
-<dd>Performs a detailed status check. Suggested minimum timeout: 60. Suggested interval: 20.</dl>
+<dd>Performs a detailed status check. Suggested minimum timeout: 60. Suggested interval: 20.</dd></dl>
 <p> <code>monitor (Master role)</code></p>
 <dl>
-<dd>Performs a detailed status check. Suggested minimum timeout: 60. Suggested interval: 22.</dl>
+<dd>Performs a detailed status check. Suggested minimum timeout: 60. Suggested interval: 22.</dd></dl>
 <p> <code>validate-all</code></p>
 <dl>
-<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 5.</dl>
+<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 5.</dd></dl>
 <p> <code>meta-data</code></p>
 <dl>
-<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dl>
+<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dd></dl>
 <h2>Example Crm Shell</h2>
 <p>The following is an example configuration for a db2 resource using the <code>crm</code>(8) shell: </p>
 <dl>
@@ -77,12 +77,12 @@ description: "ocf_heartbeat_db2 – Resource Agent that manages an IBM DB2 LUW d
  instance=<i>string</i> \
  op monitor depth=&quot;0&quot; timeout=&quot;60&quot; interval=&quot;20&quot; \
  op monitor depth=&quot;0&quot; timeout=&quot;60&quot; role=&quot;Master&quot; interval=&quot;22&quot; </pre>
-</dl>
+</dd></dl>
 <dl>
 <dd>
 <pre>ms ms_db2 p_db2 \
  meta notify=&quot;true&quot; interleave=&quot;true&quot;</pre>
-</dl>
+</dd></dl>
 <h2>Example Pcs</h2>
 <p>The following is an example configuration for a db2 resource using <code><a href="/docs/linux/man/8-pcs/">pcs</a></code>(8) </p>
 <dl>
@@ -91,7 +91,7 @@ description: "ocf_heartbeat_db2 – Resource Agent that manages an IBM DB2 LUW d
  instance=<i>string</i> \
  op monitor depth=&quot;0&quot; timeout=&quot;60&quot; interval=&quot;20&quot; \
  op monitor depth=&quot;0&quot; timeout=&quot;60&quot; role=&quot;Master&quot; interval=&quot;22&quot; --master</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p>m[blue]<code><a rel="nofollow" href="http://www.linux-ha.org/wiki/db2_(resource_agent)">http://www.linux-ha.org/wiki/db2_(resource_agent)</a></code>m[]</p>
 <h2>Author</h2>

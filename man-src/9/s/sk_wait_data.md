@@ -14,13 +14,13 @@ description: "sk_wait_data – wait for data to arrive at sk_receive_queue"
 <p><i>sk</i></p>
 <dl>
 <dd>
-<dd>sock to wait on</dl>
+</dd><dd>sock to wait on</dd></dl>
 <p> <i>timeo</i></p>
 <dl>
-<dd>for how long</dl>
+<dd>for how long</dd></dl>
 <p> <i>skb</i></p>
 <dl>
-<dd>last skb seen on sk_receive_queue</dl>
+<dd>last skb seen on sk_receive_queue</dd></dl>
 <h2>Description</h2>
 <p>Now socket state including sk-&gt;sk_err is changed only under lock, hence we may omit checks after joining wait queue. We check receive queue before <code>schedule</code> only as optimization; it is very likely that <code>release_sock</code> added new data.</p>
 <h2>Copyright</h2>

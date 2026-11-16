@@ -14,10 +14,10 @@ description: "gnutls_x509_ext_export_subject_key_id – API function"
 <p> <code>int gnutls_x509_ext_export_subject_key_id(const gnutls_datum_t * </code><i>id</i><code>, gnutls_datum_t * </code><i>ext</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const gnutls_datum_t * id</p>
-<dd> The key identifier</p>
-<dt>gnutls_datum_t * ext</p>
-<dd> The DER-encoded extension data; must be freed using <code>gnutls_free()</code>.</dl>
+<dt>const gnutls_datum_t * id</dt>
+<dd> The key identifier</dd>
+<dt>gnutls_datum_t * ext</dt>
+<dd> The DER-encoded extension data; must be freed using <code>gnutls_free()</code>.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will convert the provided key identifier to a DER-encoded PKIX SubjectKeyIdentifier extension. The output data in <i>ext</i> will be allocated using <code>gnutls_malloc()</code>.</p>
 <h2>RETURNS</h2>
@@ -33,6 +33,6 @@ description: "gnutls_x509_ext_export_subject_key_id – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

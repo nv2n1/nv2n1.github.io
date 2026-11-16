@@ -16,54 +16,54 @@ description: "picosat – Satisfiability (SAT) solver with proof and core suppor
 <p> The <code>picosat</code> binary is built with options that provide for the greatest speed. A second binary, <code>picosat.trace</code>, is built with proof and core capabilities, which incur some overhead. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> print this command line option summary and exit </p>
-<dt><code>&#8211;version</code></p>
-<dd> print version and exit </p>
-<dt><code>&#8211;config</code></p>
-<dd> print build configuration and exit </p>
-<dt><code>-v</code></p>
-<dd> enable verbose output </p>
-<dt><code>-f</code></p>
-<dd> ignore invalid header </p>
-<dt><code>-n</code></p>
-<dd> do not print satisfying assignment </p>
-<dt><code>-p</code></p>
-<dd> print formula in DIMACS format and exit </p>
-<dt><code>-a</code><i> &lt;lit&gt;</i></p>
-<dd> start with an assumption </p>
-<dt><code>-l</code><i> &lt;limit&gt;</i></p>
-<dd> set decision limit (no limit per default) </p>
-<dt><code>-i</code><i> &lt;0|1&gt;</i></p>
-<dd> force FALSE respectively TRUE as default phase </p>
-<dt><code>-s</code><i> &lt;seed&gt;</i></p>
-<dd> set random number generator seed (default 0) </p>
-<dt><code>-o</code><i> &lt;output&gt;</i></p>
-<dd> set output file (&lt;stdout&gt; per default) </p>
-<dt><code>-t</code><i> &lt;trace&gt;</i></p>
-<dd> generate compact proof trace file (use picosat.trace; see above) </p>
-<dt><code>-T</code><i> &lt;trace&gt;</i></p>
-<dd> generate extended proof trace file (use picosat.trace; see above) </p>
-<dt><code>-r</code><i> &lt;trace&gt;</i></p>
-<dd> generate reverse unit propagation proof file (use picosat.trace; see above) </p>
-<dt><code>-c</code><i> &lt;core&gt;</i></p>
-<dd> generate clausal core file in DIMACS format (use picosat.trace; see above) </p>
-<dt><code>-V</code><i> &lt;core&gt;</i></p>
-<dd> generate file listing core variables </p>
-<dt><code>-U</code><i> &lt;core&gt;</i></p>
-<dd> generate file listing used variables </p>
+<dt><code>-h</code></dt>
+<dd> print this command line option summary and exit </dd>
+<dt><code>&#8211;version</code></dt>
+<dd> print version and exit </dd>
+<dt><code>&#8211;config</code></dt>
+<dd> print build configuration and exit </dd>
+<dt><code>-v</code></dt>
+<dd> enable verbose output </dd>
+<dt><code>-f</code></dt>
+<dd> ignore invalid header </dd>
+<dt><code>-n</code></dt>
+<dd> do not print satisfying assignment </dd>
+<dt><code>-p</code></dt>
+<dd> print formula in DIMACS format and exit </dd>
+<dt><code>-a</code><i> &lt;lit&gt;</i></dt>
+<dd> start with an assumption </dd>
+<dt><code>-l</code><i> &lt;limit&gt;</i></dt>
+<dd> set decision limit (no limit per default) </dd>
+<dt><code>-i</code><i> &lt;0|1&gt;</i></dt>
+<dd> force FALSE respectively TRUE as default phase </dd>
+<dt><code>-s</code><i> &lt;seed&gt;</i></dt>
+<dd> set random number generator seed (default 0) </dd>
+<dt><code>-o</code><i> &lt;output&gt;</i></dt>
+<dd> set output file (&lt;stdout&gt; per default) </dd>
+<dt><code>-t</code><i> &lt;trace&gt;</i></dt>
+<dd> generate compact proof trace file (use picosat.trace; see above) </dd>
+<dt><code>-T</code><i> &lt;trace&gt;</i></dt>
+<dd> generate extended proof trace file (use picosat.trace; see above) </dd>
+<dt><code>-r</code><i> &lt;trace&gt;</i></dt>
+<dd> generate reverse unit propagation proof file (use picosat.trace; see above) </dd>
+<dt><code>-c</code><i> &lt;core&gt;</i></dt>
+<dd> generate clausal core file in DIMACS format (use picosat.trace; see above) </dd>
+<dt><code>-V</code><i> &lt;core&gt;</i></dt>
+<dd> generate file listing core variables </dd>
+<dt><code>-U</code><i> &lt;core&gt;</i></dt>
+<dd> generate file listing used variables </dd>
 </dl>
 <p> If no input filename is given, standard input is used. </p>
 <h2>CONFORMING TO</h2>
 <p> This program uses DIMACS CNF format as input. </p>
 <p> Like many SAT solvers, this program requires that its input be in conjunctive normal form (CNF or cnf) in DIMACS CNF format. CNF is built from these building blocks:</p>
 <dl>
-<dt>*</p>
-<dd> <i>R term :</i> A term is either a boolean variable (e.g., x4) or a negated boolean variable (NOT x4, written here as -x4).</p>
-<dt>*</p>
-<dd> <i>R clause :</i> A clause is a set of one or more terms, connected with OR (written here as |); boolean variables may not repeat inside a clause.</p>
-<dt>*</p>
-<dd> <i>R expression :</i> An expression is a set of one or more clauses, each connected by AND (written here as &amp;). </p>
+<dt>*</dt>
+<dd> <i>R term :</i> A term is either a boolean variable (e.g., x4) or a negated boolean variable (NOT x4, written here as -x4).</dd>
+<dt>*</dt>
+<dd> <i>R clause :</i> A clause is a set of one or more terms, connected with OR (written here as |); boolean variables may not repeat inside a clause.</dd>
+<dt>*</dt>
+<dd> <i>R expression :</i> An expression is a set of one or more clauses, each connected by AND (written here as &amp;). </dd>
 </dl>
 <p> Any boolean expression can be converted into CNF. </p>
 <p> DIMACS CNF format is a simple text format for CNF. Every line beginning &quot;c&quot; is a comment. The first non-comment line must be of the form: </p>

@@ -37,44 +37,44 @@ description: "addr2line – convert addresses into file names and line numbers."
 <h2>OPTIONS</h2>
 <p> The long and short forms of options, shown here as alternatives, are equivalent.</p>
 <dl>
-<dt><code>-a</code></p>
+<dt><code>-a</code></dt>
 <dd>
-<dt><code>&#8211;addresses</code></p>
-<dd> Display the address before the function name, file and line number information. The address is printed with a <code>0x</code> prefix to easily identify it.</p>
-<dt><code>-b</code> <i>bfdname</i></p>
+</dd><dt><code>&#8211;addresses</code></dt>
+<dd> Display the address before the function name, file and line number information. The address is printed with a <code>0x</code> prefix to easily identify it.</dd>
+<dt><code>-b</code> <i>bfdname</i></dt>
 <dd>
-<dt><code>&#8211;target=</code><i>bfdname</i></p>
-<dd> Specify that the object-code format for the object files is <i>bfdname</i>.</p>
-<dt><code>-C</code></p>
+</dd><dt><code>&#8211;target=</code><i>bfdname</i></dt>
+<dd> Specify that the object-code format for the object files is <i>bfdname</i>.</dd>
+<dt><code>-C</code></dt>
 <dd>
-<dt><code>&#8211;demangle[=</code><i>style</i><code>]</code></p>
-<dd> Decode (<i>demangle</i>) low-level symbol names into user-level names. Besides removing any initial underscore prepended by the system, this makes C<font SIZE="-2">++</font> function names readable. Different compilers have different mangling styles. The optional demangling style argument can be used to choose an appropriate demangling style for your compiler.</p>
-<dt><code>-e</code> <i>filename</i></p>
+</dd><dt><code>&#8211;demangle[=</code><i>style</i><code>]</code></dt>
+<dd> Decode (<i>demangle</i>) low-level symbol names into user-level names. Besides removing any initial underscore prepended by the system, this makes C<font SIZE="-2">++</font> function names readable. Different compilers have different mangling styles. The optional demangling style argument can be used to choose an appropriate demangling style for your compiler.</dd>
+<dt><code>-e</code> <i>filename</i></dt>
 <dd>
-<dt><code>&#8211;exe=</code><i>filename</i></p>
-<dd> Specify the name of the executable for which addresses should be translated. The default file is <i>a.out</i>.</p>
-<dt><code>-f</code></p>
+</dd><dt><code>&#8211;exe=</code><i>filename</i></dt>
+<dd> Specify the name of the executable for which addresses should be translated. The default file is <i>a.out</i>.</dd>
+<dt><code>-f</code></dt>
 <dd>
-<dt><code>&#8211;functions</code></p>
-<dd> Display function names as well as file and line number information.</p>
-<dt><code>-s</code></p>
+</dd><dt><code>&#8211;functions</code></dt>
+<dd> Display function names as well as file and line number information.</dd>
+<dt><code>-s</code></dt>
 <dd>
-<dt><code>&#8211;basenames</code></p>
-<dd> Display only the base of each file name.</p>
-<dt><code>-i</code></p>
+</dd><dt><code>&#8211;basenames</code></dt>
+<dd> Display only the base of each file name.</dd>
+<dt><code>-i</code></dt>
 <dd>
-<dt><code>&#8211;inlines</code></p>
-<dd> If the address belongs to a function that was inlined, the source information for all enclosing scopes back to the first non-inlined function will also be printed. For example, if <tt>&quot;main&quot;</tt> inlines <tt>&quot;callee1&quot;</tt> which inlines <tt>&quot;callee2&quot;</tt>, and address is from <tt>&quot;callee2&quot;</tt>, the source information for <tt>&quot;callee1&quot;</tt> and <tt>&quot;main&quot;</tt> will also be printed.</p>
-<dt><code>-j</code></p>
+</dd><dt><code>&#8211;inlines</code></dt>
+<dd> If the address belongs to a function that was inlined, the source information for all enclosing scopes back to the first non-inlined function will also be printed. For example, if <tt>&quot;main&quot;</tt> inlines <tt>&quot;callee1&quot;</tt> which inlines <tt>&quot;callee2&quot;</tt>, and address is from <tt>&quot;callee2&quot;</tt>, the source information for <tt>&quot;callee1&quot;</tt> and <tt>&quot;main&quot;</tt> will also be printed.</dd>
+<dt><code>-j</code></dt>
 <dd>
-<dt><code>&#8211;section</code></p>
-<dd> Read offsets relative to the specified section instead of absolute addresses.</p>
-<dt><code>-p</code></p>
+</dd><dt><code>&#8211;section</code></dt>
+<dd> Read offsets relative to the specified section instead of absolute addresses.</dd>
+<dt><code>-p</code></dt>
 <dd>
-<dt><code>&#8211;pretty-print</code></p>
-<dd> Make the output more human friendly: each location are printed on one line. If option <code>-i</code> is specified, lines for all enclosing scopes are prefixed with <code>(inlined by)</code>.</p>
-<dt><code>@</code><i>file</i></p>
-<dd> Read command-line options from <i>file</i>. The options read are inserted in place of the original @<i>file</i> option. If <i>file</i> does not exist, or cannot be read, then the option will be treated literally, and not removed. </p>
+</dd><dt><code>&#8211;pretty-print</code></dt>
+<dd> Make the output more human friendly: each location are printed on one line. If option <code>-i</code> is specified, lines for all enclosing scopes are prefixed with <code>(inlined by)</code>.</dd>
+<dt><code>@</code><i>file</i></dt>
+<dd> Read command-line options from <i>file</i>. The options read are inserted in place of the original @<i>file</i> option. If <i>file</i> does not exist, or cannot be read, then the option will be treated literally, and not removed. </dd>
 <p> Options in <i>file</i> are separated by whitespace. A whitespace character may be included in an option by surrounding the entire option in either single or double quotes. Any character (including a backslash) may be included by prefixing the character to be included with a backslash. The <i>file</i> may itself contain additional @<i>file</i> options; any such options will be processed recursively.</dl>
 <h2>SEE ALSO</h2>
 <p> Info entries for <i>binutils</i>.</p>
@@ -82,3 +82,4 @@ description: "addr2line – convert addresses into file names and line numbers."
 <p> Copyright (c) 1991-2015 Free Software Foundation, Inc. </p>
 <p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;<font SIZE="-1">GNU</font> Free Documentation License&#8221;. </p>
 <h2>Index</h2>
+</p>

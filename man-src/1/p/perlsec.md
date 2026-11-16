@@ -20,10 +20,10 @@ description: "perlsec – Perl security"
 <p> While in this mode, Perl takes special precautions called <i>taint checks</i> to prevent both obvious and subtle traps. Some of these checks are reasonably simple, such as verifying that path directories aren&#8217;t writable by others; careful programmers have always used checks like these. Other checks, however, are best supported by the language itself, and it is these checks especially that contribute to making a set-id Perl program more secure than the corresponding C program. </p>
 <p> You may not use data derived from outside your program to affect something else outside your program&#8212;at least, not by accident. All command line arguments, environment variables, locale information (see perllocale), results of certain system calls (<tt>&quot;readdir()&quot;</tt>, <tt>&quot;readlink()&quot;</tt>, the variable of <tt>&quot;shmread()&quot;</tt>, the messages returned by <tt>&quot;msgrcv()&quot;</tt>, the password, gcos and shell fields returned by the <tt>&quot;getpwxxx()&quot;</tt> calls), and all file input are marked as &#8220;tainted&#8221;. Tainted data may not be used directly or indirectly in any command that invokes a sub-shell, nor in any command that modifies files, directories, or processes, <code>with the following exceptions</code>:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Arguments to <tt>&quot;print&quot;</tt> and <tt>&quot;syswrite&quot;</tt> are <code>not</code> checked for taintedness.</p>
-<dt>&bull;</p>
-<dd> Symbolic methods </p>
+<dt>&bull;</dt>
+<dd> Arguments to <tt>&quot;print&quot;</tt> and <tt>&quot;syswrite&quot;</tt> are <code>not</code> checked for taintedness.</dd>
+<dt>&bull;</dt>
+<dd> Symbolic methods </dd>
 <pre><code>
 $obj-&gt;$method(@args);
 </code></pre>
@@ -31,8 +31,8 @@ $obj-&gt;$method(@args);
 <p>&amp;{$foo}(@args);<br />
 $foo-&gt;(@args);</p>
 <p> are not checked for taintedness. This requires extra carefulness unless you want external data to affect your control flow. Unless you carefully limit what these symbolic values are, people are able to call functions <code>outside</code> your Perl code, such as POSIX::system, in which case they are able to run arbitrary external code.</p>
-<dt>&bull;</p>
-<dd> Hash keys are <code>never</code> tainted.</dl>
+<dt>&bull;</dt>
+<dd> Hash keys are <code>never</code> tainted.</dd></dl>
 <p> For efficiency reasons, Perl takes a conservative view of whether data is tainted. If an expression contains tainted data, any subexpression may be considered tainted, even if the value of the subexpression is not itself affected by the tainted data. </p>
 <p> Because taintedness is associated with each scalar value, some elements of an array or hash can be tainted and others not. The keys of a hash are <code>never</code> tainted. </p>
 <p> For example: </p>
@@ -208,35 +208,33 @@ int main(int argc, char **argv)
 <h3>Algorithmic Complexity Attacks</h3>
 <p> Certain internal algorithms used in the implementation of Perl can be attacked by choosing the input carefully to consume large amounts of either time or space or both. This can lead into the so-called <i>Denial of Service</i> (DoS) attacks.</p>
 <dl>
-<dt>&bull;</p>
-<dd> Hash Algorithm &#8211; Hash algorithms like the one used in Perl are well known to be vulnerable to collision attacks on their hash function. Such attacks involve constructing a set of keys which collide into the same bucket producing inefficient behavior. Such attacks often depend on discovering the seed of the hash function used to map the keys to buckets. That seed is then used to brute-force a key set which can be used to mount a denial of service attack. In Perl 5.8.1 changes were introduced to harden Perl to such attacks, and then later in Perl 5.18.0 these features were enhanced and additional protections added. </p>
+<dt>&bull;</dt>
+<dd> Hash Algorithm &#8211; Hash algorithms like the one used in Perl are well known to be vulnerable to collision attacks on their hash function. Such attacks involve constructing a set of keys which collide into the same bucket producing inefficient behavior. Such attacks often depend on discovering the seed of the hash function used to map the keys to buckets. That seed is then used to brute-force a key set which can be used to mount a denial of service attack. In Perl 5.8.1 changes were introduced to harden Perl to such attacks, and then later in Perl 5.18.0 these features were enhanced and additional protections added. </dd>
 <p> At the time of this writing, Perl 5.18.0 is considered to be well-hardened against algorithmic complexity attacks on its hash implementation. This is largely owed to the following measures mitigate attacks:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Hash Seed Randomization</p>
-<dd> In order to make it impossible to know what seed to generate an attack key set for, this seed is randomly initialized at process start. This may be overridden by using the <font SIZE="-1">PERL_HASH_SEED</font> environment variable, see &#8220;<font SIZE="-1">PERL_HASH_SEED&#8221;</font> in perlrun. This environment variable controls how items are actually stored, not how they are presented via <tt>&quot;keys&quot;</tt>, <tt>&quot;values&quot;</tt> and <tt>&quot;each&quot;</tt>.</p>
-<dt>Hash Traversal Randomization</p>
-<dd> Independent of which seed is used in the hash function, <tt>&quot;keys&quot;</tt>, <tt>&quot;values&quot;</tt>, and <tt>&quot;each&quot;</tt> return items in a per-hash randomized order. Modifying a hash by insertion will change the iteration order of that hash. This behavior can be overridden by using <tt>&quot;hash_traversal_mask()&quot;</tt> from Hash::Util or by using the <font SIZE="-1">PERL_PERTURB_KEYS</font> environment variable, see &#8220;<font SIZE="-1">PERL_PERTURB_KEYS&#8221;</font> in perlrun. Note that this feature controls the &#8220;visible&#8221; order of the keys, and not the actual order they are stored in.</p>
-<dt>Bucket Order Perturbance</p>
-<dd> When items collide into a given hash bucket the order they are stored in the chain is no longer predictable in Perl 5.18. This has the intention to make it harder to observe a collision. This behavior can be overridden by using the <font SIZE="-1">PERL_PERTURB_KEYS</font> environment variable, see &#8220;<font SIZE="-1">PERL_PERTURB_KEYS&#8221;</font> in perlrun.</p>
-<dt>New Default Hash Function</p>
-<dd> The default hash function has been modified with the intention of making it harder to infer the hash seed.</p>
-<dt>Alternative Hash Functions</p>
-<dd> The source code includes multiple hash algorithms to choose from. While we believe that the default perl hash is robust to attack, we have included the hash function Siphash as a fall-back option. At the time of release of Perl 5.18.0 Siphash is believed to be of cryptographic strength. This is not the default as it is much slower than the default hash.</dl>
+<dt>Hash Seed Randomization</dt>
+<dd> In order to make it impossible to know what seed to generate an attack key set for, this seed is randomly initialized at process start. This may be overridden by using the <font SIZE="-1">PERL_HASH_SEED</font> environment variable, see &#8220;<font SIZE="-1">PERL_HASH_SEED&#8221;</font> in perlrun. This environment variable controls how items are actually stored, not how they are presented via <tt>&quot;keys&quot;</tt>, <tt>&quot;values&quot;</tt> and <tt>&quot;each&quot;</tt>.</dd>
+<dt>Hash Traversal Randomization</dt>
+<dd> Independent of which seed is used in the hash function, <tt>&quot;keys&quot;</tt>, <tt>&quot;values&quot;</tt>, and <tt>&quot;each&quot;</tt> return items in a per-hash randomized order. Modifying a hash by insertion will change the iteration order of that hash. This behavior can be overridden by using <tt>&quot;hash_traversal_mask()&quot;</tt> from Hash::Util or by using the <font SIZE="-1">PERL_PERTURB_KEYS</font> environment variable, see &#8220;<font SIZE="-1">PERL_PERTURB_KEYS&#8221;</font> in perlrun. Note that this feature controls the &#8220;visible&#8221; order of the keys, and not the actual order they are stored in.</dd>
+<dt>Bucket Order Perturbance</dt>
+<dd> When items collide into a given hash bucket the order they are stored in the chain is no longer predictable in Perl 5.18. This has the intention to make it harder to observe a collision. This behavior can be overridden by using the <font SIZE="-1">PERL_PERTURB_KEYS</font> environment variable, see &#8220;<font SIZE="-1">PERL_PERTURB_KEYS&#8221;</font> in perlrun.</dd>
+<dt>New Default Hash Function</dt>
+<dd> The default hash function has been modified with the intention of making it harder to infer the hash seed.</dd>
+<dt>Alternative Hash Functions</dt>
+<dd> The source code includes multiple hash algorithms to choose from. While we believe that the default perl hash is robust to attack, we have included the hash function Siphash as a fall-back option. At the time of release of Perl 5.18.0 Siphash is believed to be of cryptographic strength. This is not the default as it is much slower than the default hash.</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> Without compiling a special Perl, there is no way to get the exact same behavior of any versions prior to Perl 5.18.0. The closest one can get is by setting <font SIZE="-1">PERL_PERTURB_KEYS</font> to 0 and setting the <font SIZE="-1">PERL_HASH_SEED</font> to a known value. We do not advise those settings for production use due to the above security considerations. </p>
 <p> <code>Perl has never guaranteed any ordering of the hash keys</code>, and the ordering has already changed several times during the lifetime of Perl 5. Also, the ordering of hash keys has always been, and continues to be, affected by the insertion order and the history of changes made to the hash over its lifetime. </p>
 <p> Also note that while the order of the hash elements might be randomized, this &#8220;pseudo-ordering&#8221; should <code>not</code> be used for applications like shuffling a list randomly (use <tt>&quot;List::Util::shuffle()&quot;</tt> for that, see List::Util, a standard core module since Perl 5.8.0; or the <font SIZE="-1">CPAN</font> module <tt>&quot;Algorithm::Numerical::Shuffle&quot;</tt>), or for generating permutations (use e.g. the <font SIZE="-1">CPAN</font> modules <tt>&quot;Algorithm::Permute&quot;</tt> or <tt>&quot;Algorithm::FastPermute&quot;</tt>), or for any cryptographic applications. </p>
-<p> Tied hashes may have their own ordering and algorithmic complexity attacks.</dl>
-<dt>&bull;</p>
-<dd> Regular expressions &#8211; Perl&#8217;s regular expression engine is so called <font SIZE="-1">NFA</font> (Non-deterministic Finite Automaton), which among other things means that it can rather easily consume large amounts of both time and space if the regular expression may match in several ways. Careful crafting of the regular expressions can help but quite often there really isn&#8217;t much one can do (the book &#8220;Mastering Regular Expressions&#8221; is required reading, see perlfaq2). Running out of space manifests itself by Perl running out of memory.</p>
-<dt>&bull;</p>
-<dd> Sorting &#8211; the quicksort algorithm used in Perls before 5.8.0 to implement the <code>sort()</code> function was very easy to trick into misbehaving so that it consumes a lot of time. Starting from Perl 5.8.0 a different sorting algorithm, mergesort, is used by default. Mergesort cannot misbehave on any input.</dl>
+<p> Tied hashes may have their own ordering and algorithmic complexity attacks.</dd></dl>
+<dt>&bull;</dt>
+<dd> Regular expressions &#8211; Perl&#8217;s regular expression engine is so called <font SIZE="-1">NFA</font> (Non-deterministic Finite Automaton), which among other things means that it can rather easily consume large amounts of both time and space if the regular expression may match in several ways. Careful crafting of the regular expressions can help but quite often there really isn&#8217;t much one can do (the book &#8220;Mastering Regular Expressions&#8221; is required reading, see perlfaq2). Running out of space manifests itself by Perl running out of memory.</dd>
+<dt>&bull;</dt>
+<dd> Sorting &#8211; the quicksort algorithm used in Perls before 5.8.0 to implement the <code>sort()</code> function was very easy to trick into misbehaving so that it consumes a lot of time. Starting from Perl 5.8.0 a different sorting algorithm, mergesort, is used by default. Mergesort cannot misbehave on any input.</dd></dl>
 <p> See &lt;<a rel="nofollow" href="https://www.usenix.org/legacy/events/sec03/tech/full_papers/crosby/crosby.pdf">https://www.usenix.org/legacy/events/sec03/tech/full_papers/crosby/crosby.pdf</a>&gt; for more information, and any computer science textbook on algorithmic complexity.</p>
 <h3>Using Sudo</h3>
 <p> The popular tool <tt>&quot;sudo&quot;</tt> provides a controlled way for users to be able to run programs as other users. It sanitises the execution environment to some extent, and will avoid the shebang race condition. If you don&#8217;t have the safe version of set-id scripts, then <tt>&quot;sudo&quot;</tt> may be a more convenient way of executing a script as another user than writing a C wrapper would be. </p>

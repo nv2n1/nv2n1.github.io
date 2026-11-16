@@ -11,29 +11,17 @@ std::experimental::split - std::experimental::split
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / simd&gt;
-
     template &lt;std::size_t... Sizes, class T, class Abi&gt;
-
     std::tuple&lt;simd&lt;T, simd_abi::deduce_t&lt;T, Sizes&gt;&gt;...&gt;(1)
-
         split(const simd&lt;T, Abi&gt; &amp;v);
-
 template &lt;std::size_t... Sizes, class T, class Abi&gt;
-
 std::tuple&lt;simd_mask&lt;T, simd_abi::deduce_t&lt;T, Sizes&gt;&gt;...&gt;(2)
-
     split(const simd_mask&lt;T, Abi&gt; &amp;v);
-
 template &lt;class V, class Abi&gt;
-
 std::array&lt;V, simd_size_v&lt;typename V::value_type, Abi&gt; / V::size()&gt;(3)
-
     split(const simd&lt;typename V::value_type, Abi&gt; &amp;v);
-
 template &lt;class V, class Abi&gt;
-
 std::array&lt;V, simd_size_v&lt;typename V::value_type, Abi&gt; / V::size()&gt;(4)
-
     split(const simd_mask&lt;typename V::value_type, Abi&gt; &amp;v);</code></pre> 
 Splits the input simd or simd_mask object into multiple simd or simd_mask objects. 
 1-2) split the input object into potentially different types (e.g. types with different sizes) of objects. These functions do not participate in overloading resolution unless Sizes... sum up to v.size(). 

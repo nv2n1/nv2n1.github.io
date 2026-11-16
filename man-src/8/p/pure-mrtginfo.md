@@ -16,12 +16,12 @@ description: "pure-mrtginfo – provide an MRTG-graphable user count for ftpd"
 <p><code>server port</code> : defaults to 21.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/proc/net/tcp</i></p>
-<dd>is used to count the connectiont to port 21.</p>
-<dt><i>/proc/sys/kernel/hostname</i></p>
-<dd>is used to get the fully qualified hostname.</p>
-<dt><i>/proc/uptime</i></p>
-<dd>is used to get the uptime. </p>
+<dt><i>/proc/net/tcp</i></dt>
+<dd>is used to count the connectiont to port 21.</dd>
+<dt><i>/proc/sys/kernel/hostname</i></dt>
+<dd>is used to get the fully qualified hostname.</dd>
+<dt><i>/proc/uptime</i></dt>
+<dd>is used to get the uptime. </dd>
 </dl>
 <h2>Mrtg</h2>
 <p>MRTG is a really nice package for graphing router traffic. Mrtg can also graph other information is available via SNMP or by running a program such as <code>pure-mrtginfo</code>. The author of this program uses it to graph CPU load, /var usage etc., and naturally the number of users connected to his FTP servers. See </p>

@@ -16,76 +16,76 @@ description: "enblend – manual page for enblend 4.1.1"
 <p> INPUT&#8230; are image filenames or response filenames. Response filenames start with an &quot;@&quot; character.</p>
 <h3>Common options:</h3>
 <dl>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> output version information and exit</p>
-<dt><code>-a</code></p>
-<dd> pre-assemble non-overlapping images</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> print this help message and exit</p>
-<dt><code>-l</code>, <code>&#8211;levels</code>=<i>LEVELS</i></p>
-<dd> limit number of blending LEVELS to use (1 to 29); negative number of LEVELS decreases maximum; &quot;auto&quot; restores the default automatic maximization</p>
-<dt><code>-o</code>, <code>&#8211;output</code>=<i>FILE</i></p>
-<dd> write output to FILE; default: &quot;a.tif&quot;</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code>[=<i>LEVEL</i>]</p>
-<dd> verbosely report progress; repeat to increase verbosity or directly set to LEVEL</p>
-<dt><code>-w</code>, <code>&#8211;wrap</code>[=<i>MODE</i>]</p>
-<dd> wrap around image boundary, where MODE is &quot;none&quot;, &quot;horizontal&quot;, &quot;vertical&quot;, or &quot;both&quot;; default: none; without argument the option selects horizontal wrapping</p>
-<dt><code>-x</code></p>
-<dd> checkpoint partial results</p>
-<dt><code>&#8211;compression</code>=<i>COMPRESSION</i></p>
-<dd> set compression of output image to COMPRESSION, where COMPRESSION is: &quot;deflate&quot;, &quot;jpeg&quot;, &quot;lzw&quot;, &quot;none&quot;, &quot;packbits&quot;, for TIFF files and 0 to 100, or &quot;jpeg&quot;, &quot;jpeg-arith&quot; for JPEG files, where &quot;jpeg&quot; and &quot;jpeg-arith&quot; accept a compression level</p>
-<dt><code>&#8211;layer-selector</code>=<i>ALGORITHM</i></p>
-<dd> set the layer selector ALGORITHM; default: &quot;all-layers&quot;; available algorithms are: &quot;all-layers&quot;: select all layers in all images; &quot;first-layer&quot;: select only first layer in each multi-layer image; &quot;largest-layer&quot;: select largest layer in each multi-layer image; &quot;no-layer&quot;: do not select any layer from any image;</p>
-<dt><code>&#8211;parameter</code>=<i>KEY1[=VALUE1][</i>:KEY2[=VALUE2][:&#8230;]]</p>
-<dd> set one or more KEY-VALUE pairs</dl>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> output version information and exit</dd>
+<dt><code>-a</code></dt>
+<dd> pre-assemble non-overlapping images</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> print this help message and exit</dd>
+<dt><code>-l</code>, <code>&#8211;levels</code>=<i>LEVELS</i></dt>
+<dd> limit number of blending LEVELS to use (1 to 29); negative number of LEVELS decreases maximum; &quot;auto&quot; restores the default automatic maximization</dd>
+<dt><code>-o</code>, <code>&#8211;output</code>=<i>FILE</i></dt>
+<dd> write output to FILE; default: &quot;a.tif&quot;</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code>[=<i>LEVEL</i>]</dt>
+<dd> verbosely report progress; repeat to increase verbosity or directly set to LEVEL</dd>
+<dt><code>-w</code>, <code>&#8211;wrap</code>[=<i>MODE</i>]</dt>
+<dd> wrap around image boundary, where MODE is &quot;none&quot;, &quot;horizontal&quot;, &quot;vertical&quot;, or &quot;both&quot;; default: none; without argument the option selects horizontal wrapping</dd>
+<dt><code>-x</code></dt>
+<dd> checkpoint partial results</dd>
+<dt><code>&#8211;compression</code>=<i>COMPRESSION</i></dt>
+<dd> set compression of output image to COMPRESSION, where COMPRESSION is: &quot;deflate&quot;, &quot;jpeg&quot;, &quot;lzw&quot;, &quot;none&quot;, &quot;packbits&quot;, for TIFF files and 0 to 100, or &quot;jpeg&quot;, &quot;jpeg-arith&quot; for JPEG files, where &quot;jpeg&quot; and &quot;jpeg-arith&quot; accept a compression level</dd>
+<dt><code>&#8211;layer-selector</code>=<i>ALGORITHM</i></dt>
+<dd> set the layer selector ALGORITHM; default: &quot;all-layers&quot;; available algorithms are: &quot;all-layers&quot;: select all layers in all images; &quot;first-layer&quot;: select only first layer in each multi-layer image; &quot;largest-layer&quot;: select largest layer in each multi-layer image; &quot;no-layer&quot;: do not select any layer from any image;</dd>
+<dt><code>&#8211;parameter</code>=<i>KEY1[=VALUE1][</i>:KEY2[=VALUE2][:&#8230;]]</dt>
+<dd> set one or more KEY-VALUE pairs</dd></dl>
 <h3>Extended options:</h3>
 <dl>
-<dt><code>-b</code> BLOCKSIZE</p>
-<dd> image cache BLOCKSIZE in kilobytes; default: 2048KB</p>
-<dt><code>-c</code>, <code>&#8211;ciecam</code></p>
-<dd> use CIECAM02 to blend colors; disable with &quot;&#8211;no-ciecam&quot;</p>
-<dt><code>&#8211;fallback-profile</code>=<i>PROFILE-FILE</i></p>
-<dd> use the ICC profile from PROFILE-FILE instead of sRGB</p>
-<dt><code>-d</code>, <code>&#8211;depth</code>=<i>DEPTH</i></p>
-<dd> set the number of bits per channel of the output image, where DEPTH is &quot;8&quot;, &quot;16&quot;, &quot;32&quot;, &quot;r32&quot;, or &quot;r64&quot;</p>
-<dt><code>-g</code></p>
-<dd> associated-alpha hack for Gimp (before version 2) and Cinepaint</p>
-<dt><code>&#8211;gpu</code></p>
-<dd> use graphics card to accelerate seam-line optimization</p>
-<dt><code>-f</code> WIDTHxHEIGHT[+xXOFFSET+yYOFFSET]</p>
-<dd> manually set the size and position of the output image; useful for cropped and shifted input TIFF images, such as those produced by Nona</p>
-<dt><code>-m</code> CACHESIZE</p>
-<dd> set image CACHESIZE in megabytes; default: 1024MB</dl>
+<dt><code>-b</code> BLOCKSIZE</dt>
+<dd> image cache BLOCKSIZE in kilobytes; default: 2048KB</dd>
+<dt><code>-c</code>, <code>&#8211;ciecam</code></dt>
+<dd> use CIECAM02 to blend colors; disable with &quot;&#8211;no-ciecam&quot;</dd>
+<dt><code>&#8211;fallback-profile</code>=<i>PROFILE-FILE</i></dt>
+<dd> use the ICC profile from PROFILE-FILE instead of sRGB</dd>
+<dt><code>-d</code>, <code>&#8211;depth</code>=<i>DEPTH</i></dt>
+<dd> set the number of bits per channel of the output image, where DEPTH is &quot;8&quot;, &quot;16&quot;, &quot;32&quot;, &quot;r32&quot;, or &quot;r64&quot;</dd>
+<dt><code>-g</code></dt>
+<dd> associated-alpha hack for Gimp (before version 2) and Cinepaint</dd>
+<dt><code>&#8211;gpu</code></dt>
+<dd> use graphics card to accelerate seam-line optimization</dd>
+<dt><code>-f</code> WIDTHxHEIGHT[+xXOFFSET+yYOFFSET]</dt>
+<dd> manually set the size and position of the output image; useful for cropped and shifted input TIFF images, such as those produced by Nona</dd>
+<dt><code>-m</code> CACHESIZE</dt>
+<dd> set image CACHESIZE in megabytes; default: 1024MB</dd></dl>
 <h3>Mask generation options:</h3>
 <dl>
-<dt><code>&#8211;primary-seam-generator</code>=<i>ALGORITHM</i></p>
-<dd> use main seam finder ALGORITHM, where ALGORITHM is &quot;nearest-feature-transform&quot; or &quot;graph-cut&quot;; default: &quot;nearest-feature-transform&quot;</p>
-<dt><code>&#8211;image-difference</code>=<i>ALGORITHM[</i>:LUMINANCE-WEIGHT[:CHROMINANCE-WEIGHT]]</p>
-<dd> use ALGORITHM for calculation of the difference image, where ALGORITHM is &quot;max-hue-luminance&quot; or &quot;delta-e&quot;; LUMINANCE-WEIGHT and CHROMINANCE-WEIGHT define the weights of lightness and color; default: delta-e:1: 1</p>
-<dt><code>&#8211;coarse-mask</code>[=<i>FACTOR</i>] shrink overlap regions by FACTOR to speedup mask</p>
-<dd> generation; this is the default; if omitted FACTOR defaults to 8</p>
-<dt><code>&#8211;fine-mask</code></p>
-<dd> generate mask at full image resolution; use e.g. if overlap regions are very narrow</p>
-<dt><code>&#8211;smooth-difference</code>=<i>RADIUS</i></p>
-<dd> (deprecated) smooth the difference image prior to seam-line optimization with a Gaussian blur of RADIUS; default: 0 pixels</p>
-<dt><code>&#8211;optimize</code></p>
-<dd> turn on mask optimization; this is the default</p>
-<dt><code>&#8211;no-optimize</code></p>
-<dd> turn off mask optimization</p>
-<dt><code>&#8211;optimizer-weights</code>=<i>DISTANCE-WEIGHT[</i>:MISMATCH-WEIGHT]</p>
-<dd> set the optimizer&#8217;s weigths for distance and mismatch; default: 8:1</p>
-<dt><code>&#8211;mask-vectorize</code>=<i>LENGTH</i></p>
-<dd> set LENGTH of single seam segment; append &quot;%&quot; for relative value; defaults: 4 for coarse masks and 20 for fine masks</p>
-<dt><code>&#8211;anneal</code>=<i>TAU[</i>:DELTAE-MAX[:DELTAE-MIN[:K-MAX]]]</p>
-<dd> set annealing parameters of optimizer strategy 1; defaults: 0.75:7000:5:32</p>
-<dt><code>&#8211;dijkstra</code>=<i>RADIUS</i></p>
-<dd> set search RADIUS of optimizer strategy 2; default: 25 pixels</p>
-<dt><code>&#8211;save-masks</code>[=<i>TEMPLATE</i>]</p>
-<dd> save generated masks in TEMPLATE; default: &quot;mask-%n.tif&quot;; conversion chars: &quot;%i&quot;: mask index, &quot;%n&quot;: mask number, &quot;%p&quot;: full path, &quot;%d&quot;: dirname, &quot;%b&quot;: basename, &quot;%f&quot;: filename, &quot;%e&quot;: extension; lowercase characters refer to input images uppercase to the output image</p>
-<dt><code>&#8211;load-masks</code>[=<i>TEMPLATE</i>]</p>
-<dd> use existing masks in TEMPLATE instead of generating them; same template characters as &quot;&#8211;save-masks&quot;; default: &quot;mask-%n.tif&quot;</p>
-<dt><code>&#8211;visualize</code>[=<i>TEMPLATE</i>] save results of optimizer in TEMPLATE; same template</p>
-<dd> characters as &quot;&#8211;save-masks&quot;; default: &quot;vis-%n.tif&quot;</dl>
+<dt><code>&#8211;primary-seam-generator</code>=<i>ALGORITHM</i></dt>
+<dd> use main seam finder ALGORITHM, where ALGORITHM is &quot;nearest-feature-transform&quot; or &quot;graph-cut&quot;; default: &quot;nearest-feature-transform&quot;</dd>
+<dt><code>&#8211;image-difference</code>=<i>ALGORITHM[</i>:LUMINANCE-WEIGHT[:CHROMINANCE-WEIGHT]]</dt>
+<dd> use ALGORITHM for calculation of the difference image, where ALGORITHM is &quot;max-hue-luminance&quot; or &quot;delta-e&quot;; LUMINANCE-WEIGHT and CHROMINANCE-WEIGHT define the weights of lightness and color; default: delta-e:1: 1</dd>
+<dt><code>&#8211;coarse-mask</code>[=<i>FACTOR</i>] shrink overlap regions by FACTOR to speedup mask</dt>
+<dd> generation; this is the default; if omitted FACTOR defaults to 8</dd>
+<dt><code>&#8211;fine-mask</code></dt>
+<dd> generate mask at full image resolution; use e.g. if overlap regions are very narrow</dd>
+<dt><code>&#8211;smooth-difference</code>=<i>RADIUS</i></dt>
+<dd> (deprecated) smooth the difference image prior to seam-line optimization with a Gaussian blur of RADIUS; default: 0 pixels</dd>
+<dt><code>&#8211;optimize</code></dt>
+<dd> turn on mask optimization; this is the default</dd>
+<dt><code>&#8211;no-optimize</code></dt>
+<dd> turn off mask optimization</dd>
+<dt><code>&#8211;optimizer-weights</code>=<i>DISTANCE-WEIGHT[</i>:MISMATCH-WEIGHT]</dt>
+<dd> set the optimizer&#8217;s weigths for distance and mismatch; default: 8:1</dd>
+<dt><code>&#8211;mask-vectorize</code>=<i>LENGTH</i></dt>
+<dd> set LENGTH of single seam segment; append &quot;%&quot; for relative value; defaults: 4 for coarse masks and 20 for fine masks</dd>
+<dt><code>&#8211;anneal</code>=<i>TAU[</i>:DELTAE-MAX[:DELTAE-MIN[:K-MAX]]]</dt>
+<dd> set annealing parameters of optimizer strategy 1; defaults: 0.75:7000:5:32</dd>
+<dt><code>&#8211;dijkstra</code>=<i>RADIUS</i></dt>
+<dd> set search RADIUS of optimizer strategy 2; default: 25 pixels</dd>
+<dt><code>&#8211;save-masks</code>[=<i>TEMPLATE</i>]</dt>
+<dd> save generated masks in TEMPLATE; default: &quot;mask-%n.tif&quot;; conversion chars: &quot;%i&quot;: mask index, &quot;%n&quot;: mask number, &quot;%p&quot;: full path, &quot;%d&quot;: dirname, &quot;%b&quot;: basename, &quot;%f&quot;: filename, &quot;%e&quot;: extension; lowercase characters refer to input images uppercase to the output image</dd>
+<dt><code>&#8211;load-masks</code>[=<i>TEMPLATE</i>]</dt>
+<dd> use existing masks in TEMPLATE instead of generating them; same template characters as &quot;&#8211;save-masks&quot;; default: &quot;mask-%n.tif&quot;</dd>
+<dt><code>&#8211;visualize</code>[=<i>TEMPLATE</i>] save results of optimizer in TEMPLATE; same template</dt>
+<dd> characters as &quot;&#8211;save-masks&quot;; default: &quot;vis-%n.tif&quot;</dd></dl>
 <p> Enblend accepts arguments to any option in uppercase as well as in lowercase letters.</p>
 <h2>AUTHOR</h2>
 <p> Written by Andrew Mihal and others. + cleanup_output</p>
@@ -98,6 +98,6 @@ description: "enblend – manual page for enblend 4.1.1"
 <p> The full documentation for <code>enblend</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>enblend</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info enblend</code></dl>
+</dt><dd> <code>info enblend</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

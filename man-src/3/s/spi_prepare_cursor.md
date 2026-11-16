@@ -16,16 +16,16 @@ description: "SPI_prepare_cursor – prepare a statement, without executing it y
 <h2>Arguments</h2>
 <p>const char * <i>command</i></p>
 <dl COMPACT>
-<dd>command string</dl>
+<dd>command string</dd></dl>
 <p> int <i>nargs</i></p>
 <dl COMPACT>
-<dd>number of input parameters ($1, $2, etc.)</dl>
+<dd>number of input parameters ($1, $2, etc.)</dd></dl>
 <p> Oid * <i>argtypes</i></p>
 <dl COMPACT>
-<dd>pointer to an array containing the OIDs of the data types of the parameters</dl>
+<dd>pointer to an array containing the OIDs of the data types of the parameters</dd></dl>
 <p> int <i>cursorOptions</i></p>
 <dl COMPACT>
-<dd>integer bit mask of cursor options; zero produces default behavior</dl>
+<dd>integer bit mask of cursor options; zero produces default behavior</dd></dl>
 <h2>Return Value</h2>
 <p><code>SPI_prepare_cursor</code> has the same return conventions as <code>SPI_prepare</code>.</p>
 <h2>Notes</h2>

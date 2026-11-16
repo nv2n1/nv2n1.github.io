@@ -18,35 +18,35 @@ description: "qsched, process-scheduler-log – show scheduling information on r
 <p> <code>qsched</code> and <code>process-scheduler-log</code> both potentially need editing to configure for the local installation, particularly the definition of <code>$trim_string</code> in <code>qsched</code>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a&nbsp;</code>|&nbsp;<code>&#8211;all</code></p>
-<dd> View jobs belonging to all users (synonym for <code>-u user</code><i>)</i> View jobs belonging to <i>user</i>.</p>
-<dt><code>-d&nbsp;</code>|&nbsp;<code>&#8211;debug</code></p>
-<dd> Print debugging information.</p>
-<dt><code>-f&nbsp;</code>|&nbsp;<code>&#8211;full</code></p>
-<dd> Print all available data for each job.</p>
-<dt><code>-h&nbsp;</code>|&nbsp;<code>&#8211;help</code></p>
-<dd> Print help information.</p>
-<dt><code>-j&nbsp;</code><i>jid_list&nbsp;</i>| &#8211;jid=<i>jid_list</i></p>
-<dd> <i>jid_list</i> is a comma-separated list of job ids to view.</p>
-<dt><code>-q | &#8211;queues</code></p>
-<dd> Sort output by queue.</p>
-<dt><code>-s j&nbsp;</code>| &#8211;sort=j</p>
-<dd> Sort output by job id.</p>
-<dt><code>-u user&nbsp;</code>| &#8211;user=<i>user</i></p>
-<dd> View jobs belonging to <i>user</i>.</p>
-<dt><code>-v</code></p>
-<dd> Print information on standard output. <code>-u *</code>).</dl>
+<dt><code>-a&nbsp;</code>|&nbsp;<code>&#8211;all</code></dt>
+<dd> View jobs belonging to all users (synonym for <code>-u user</code><i>)</i> View jobs belonging to <i>user</i>.</dd>
+<dt><code>-d&nbsp;</code>|&nbsp;<code>&#8211;debug</code></dt>
+<dd> Print debugging information.</dd>
+<dt><code>-f&nbsp;</code>|&nbsp;<code>&#8211;full</code></dt>
+<dd> Print all available data for each job.</dd>
+<dt><code>-h&nbsp;</code>|&nbsp;<code>&#8211;help</code></dt>
+<dd> Print help information.</dd>
+<dt><code>-j&nbsp;</code><i>jid_list&nbsp;</i>| &#8211;jid=<i>jid_list</i></dt>
+<dd> <i>jid_list</i> is a comma-separated list of job ids to view.</dd>
+<dt><code>-q | &#8211;queues</code></dt>
+<dd> Sort output by queue.</dd>
+<dt><code>-s j&nbsp;</code>| &#8211;sort=j</dt>
+<dd> Sort output by job id.</dd>
+<dt><code>-u user&nbsp;</code>| &#8211;user=<i>user</i></dt>
+<dd> View jobs belonging to <i>user</i>.</dd>
+<dt><code>-v</code></dt>
+<dd> Print information on standard output. <code>-u *</code>).</dd></dl>
 <p> The default is to sort by start time.</p>
 <h2>FILES</h2>
 <dl>
-<dt><i>/var/run/sgeprocschedlog.pid</i></p>
-<dd> Contains the process id of <i>process-scheduler-log</i>.</p>
-<dt><i>${SGE_ROOT}/${SGE_CELL}/common/act_qmaster</i></p>
-<dd> Consulted to check that the qmaster is active.</p>
-<dt><i>${SGE_ROOT}/${SGE_CELL}/common/schedule</i></p>
-<dd> Normal schedule monitoring file.</p>
-<dt><i>${SGE_ROOT}/${SGE_CELL}/common/schedule.last</i></p>
-<dd> Contents of last complete scheduling interval seen in <i>schedule</i> file.</dl>
+<dt><i>/var/run/sgeprocschedlog.pid</i></dt>
+<dd> Contains the process id of <i>process-scheduler-log</i>.</dd>
+<dt><i>${SGE_ROOT}/${SGE_CELL}/common/act_qmaster</i></dt>
+<dd> Consulted to check that the qmaster is active.</dd>
+<dt><i>${SGE_ROOT}/${SGE_CELL}/common/schedule</i></dt>
+<dd> Normal schedule monitoring file.</dd>
+<dt><i>${SGE_ROOT}/${SGE_CELL}/common/schedule.last</i></dt>
+<dd> Contents of last complete scheduling interval seen in <i>schedule</i> file.</dd></dl>
 <h2>SEE ALSO</h2>
 <h2>AUTHOR</h2>
 <p> Mark Dixon &lt;m.c.dixon [at] leeds.ac.uk&gt;<br />

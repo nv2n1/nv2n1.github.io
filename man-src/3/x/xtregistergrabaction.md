@@ -11,19 +11,19 @@ description: "XtRegisterGrabAction – register button and key grabs"
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>void XtRegisterGrabAction(XtActionProc <i>action_proc</i>, Boolean <i>owner_events</i>, unsigned int <i>event_mask</i>, int <i>pointer_mode</i>, int <i>keyboard_mode</i>);</dl>
+<dd>void XtRegisterGrabAction(XtActionProc <i>action_proc</i>, Boolean <i>owner_events</i>, unsigned int <i>event_mask</i>, int <i>pointer_mode</i>, int <i>keyboard_mode</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>action_proc</i></p>
-<dd>Specifies the action procedure to search for in translation tables.</p>
-<dt><i>action</i></p>
+<dt><i>action_proc</i></dt>
+<dd>Specifies the action procedure to search for in translation tables.</dd>
+<dt><i>action</i></dt>
 <dd>
-<dt><i>event</i></p>
+</dd><dt><i>event</i></dt>
 <dd>
-<dt><i>params</i></p>
+</dd><dt><i>params</i></dt>
 <dd>
-<dt><i>num_params</i></p>
-<dd>Specify arguments to <code>XtGrabButton</code> or <code>XtGrabKey</code></dl>
+</dd><dt><i>num_params</i></dt>
+<dd>Specify arguments to <code>XtGrabButton</code> or <code>XtGrabKey</code></dd></dl>
 <h2>Description</h2>
 <p><code>XtRegisterGrabAction</code> adds the specified <i>action_proc</i> to a list known to the translation manager.</p>
 <h2>See Also</h2>

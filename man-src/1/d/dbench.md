@@ -22,24 +22,24 @@ description: "dbench – Measure disk throughput for simulated netbench run"
 <h2>OPTIONS</h2>
 <p> The <code>dbench</code> program takes a number, which indicates the number of clients to run simultaneously. It can also take the following options:</p>
 <dl>
-<dt><code>-c client.txt</code></p>
-<dd> Use this as the full path name of the client.txt file (the default is /usr/share/dbench/client.txt).</p>
-<dt><code>-s</code></p>
-<dd> Use synchronous file IO on all file operations.</p>
-<dt><code>-t TIME</code></p>
-<dd> set the runtime of the benchmark in seconds (default 600)</p>
-<dt><code>-D DIR</code></p>
-<dd> set the base directory to run the filesystem operations in</p>
-<dt><code>-x</code></p>
-<dd> enable xattr support, simulating the xattr operations Samba4 would need to perform to run the load</p>
-<dt><code>-S</code></p>
+<dt><code>-c client.txt</code></dt>
+<dd> Use this as the full path name of the client.txt file (the default is /usr/share/dbench/client.txt).</dd>
+<dt><code>-s</code></dt>
+<dd> Use synchronous file IO on all file operations.</dd>
+<dt><code>-t TIME</code></dt>
+<dd> set the runtime of the benchmark in seconds (default 600)</dd>
+<dt><code>-D DIR</code></dt>
+<dd> set the base directory to run the filesystem operations in</dd>
+<dt><code>-x</code></dt>
+<dd> enable xattr support, simulating the xattr operations Samba4 would need to perform to run the load</dd>
+<dt><code>-S</code></dt>
 <dd> Use synchronous IO for all directory operations (unlink, rmdir, mkdir and rename).<br />
- The <code>tbench</code> program takes a number, which indicates the number of clients to run simultaneously, and a server name: <code>tbench_srv</code> should be invoked on that server before invoking <code>tbench</code>. <code>tbench</code> can also take the following options:</p>
-<dt><code>-c loadfile</code></p>
-<dd> Use this as the full path name of the client.txt file (the default is /usr/share/dbench/client.txt).</p>
-<dt><code>-T option[,&#8230;]</code></p>
+ The <code>tbench</code> program takes a number, which indicates the number of clients to run simultaneously, and a server name: <code>tbench_srv</code> should be invoked on that server before invoking <code>tbench</code>. <code>tbench</code> can also take the following options:</dd>
+<dt><code>-c loadfile</code></dt>
+<dd> Use this as the full path name of the client.txt file (the default is /usr/share/dbench/client.txt).</dd>
+<dt><code>-T option[,&#8230;]</code></dt>
 <dd> This sets the socket options for the connection to the server. The options are a comma-separated list of one or more of the following: <code>SO_KEEPALIVE</code>, <code>SO_REUSEADDR</code>, <code>SO_BROADCAST</code>, <code>SO_NODELAY</code>, <code>SO_LOWDELAY</code>, <code>SO_THROUGHPUT</code>, <code>SO_SNDBUF</code>=number, <code>SO_RCVBUF</code>=number, <code>SO_SNDLOWAT</code>=number, <code>SO_RCVLOWAT</code>=number, <code>SO_SNDTIMEO</code>=number,<code>and</code> <code>SO_RCVTIMEO</code>=number. See <code><a href="/docs/linux/man/7-socket/">socket</a></code>(7) for details about these options.<br />
- The <code>tbench_srv</code> can only take one option: <code>-t option[,&#8230;]</code> as documented above.</dl>
+ The <code>tbench_srv</code> can only take one option: <code>-t option[,&#8230;]</code> as documented above.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i>/usr/share/doc/dbench/README</i> contains the original README by Andrew Tridgell which accompanies the dbench source.</p>
 <h2>AUTHOR</h2>

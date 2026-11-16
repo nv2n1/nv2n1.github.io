@@ -10,7 +10,6 @@ description: "sasl_errdetail – Retrieve detailed information about an error"
 <p>sasl_errdetail &#8211; Retrieve detailed information about an error </p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
 const char *sasl_errdetail(sasl_conn_t *conn);</code></pre>
 <h2>Description</h2>
 <p><code>sasl_errdetail</code> provides more detailed information about the most recent error to occur, beyond the information contained in the SASL result code. <i>conn</i> the connection context to inquire about. </p>

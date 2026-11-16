@@ -14,7 +14,7 @@ description: "ata_sas_port_start – Set port up for dma."
 <p><i>ap</i></p>
 <dl>
 <dd>
-<dd>Port to initialize</dl>
+</dd><dd>Port to initialize</dd></dl>
 <h2>Description</h2>
 <p>Called just after data structures for each port are initialized. </p>
 <p> May be used as the <code>port_start</code> entry in ata_port_operations. </p>
@@ -22,5 +22,5 @@ description: "ata_sas_port_start – Set port up for dma."
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

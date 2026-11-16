@@ -17,21 +17,23 @@ description: "vorbiscomment – List or edit comments in Ogg Vorbis files"
 <p> <code>vorbiscomment</code> Reads, modifies, and appends Ogg Vorbis audio file metadata tags. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-a, &#8211;append</p>
-<dd> Append comments.</p>
-<dt>-c file, &#8211;commentfile file</p>
-<dd> Take comments from a file. The file is the same format as is output by the -l option or given to the -t option: one element per line in &#8216;tag=value&#8217; format. If the file is /dev/null and -w was passed, the existing comments will be removed.</p>
-<dt>-h, &#8211;help</p>
-<dd> Show command help.</p>
-<dt>-l, &#8211;list</p>
-<dd> List the comments in the Ogg Vorbis file.</p>
-<dt>-t &#8216;name=value&#8217;, &#8211;tag &#8216;name=value&#8217;</p>
-<dd> Specify a new tag on the command line. Each tag is given as a single string. The part before the &#8216;=&#8217; is treated as the tag name and the part after as the value.</p>
-<dt>-w, &#8211;write</p>
-<dd> Replace comments with the new set given either on the command line with -t or from a file with -c. If neither -c nor -t is given, the new set will be read from the standard input.</p>
-<dt>-R, &#8211;raw</p>
-<dd> Read and write comments in UTF-8, rather than converting to the user&#8217;s character set.</p>
-<dt>-e, &#8211;escapes</p>
-<dd> Quote/unquote newlines and backslashes in the comments. This ensures every comment is exactly one line in the output (or input), allowing to filter and round-trip them. Without it, you can only write multi-line comments by using -t and you can&#8217;t reliably distinguish them from multiple one-line comments. </p>
+<dt>-a, &#8211;append</dt>
+<dd> Append comments.</dd>
+<dt>-c file, &#8211;commentfile file</dt>
+<dd> Take comments from a file. The file is the same format as is output by the -l option or given to the -t option: one element per line in &#8216;tag=value&#8217; format. If the file is /dev/null and -w was passed, the existing comments will be removed.</dd>
+<dt>-h, &#8211;help</dt>
+<dd> Show command help.</dd>
+<dt>-l, &#8211;list</dt>
+<dd> List the comments in the Ogg Vorbis file.</dd>
+<dt>-t &#8216;name=value&#8217;, &#8211;tag &#8216;name=value&#8217;</dt>
+<dd> Specify a new tag on the command line. Each tag is given as a single string. The part before the &#8216;=&#8217; is treated as the tag name and the part after as the value.</dd>
+<dt>-w, &#8211;write</dt>
+<dd> Replace comments with the new set given either on the command line with -t or from a file with -c. If neither -c nor -t is given, the new set will be read from the standard input.</dd>
+<dt>-R, &#8211;raw</dt>
+<dd> Read and write comments in UTF-8, rather than converting to the user&#8217;s character set.</dd>
+<dt>-e, &#8211;escapes</dt>
+<dd> Quote/unquote newlines and backslashes in the comments. This ensures every comment is exactly one line in the output (or input), allowing to filter and round-trip them. Without it, you can only write multi-line comments by using -t and you can&#8217;t reliably distinguish them from multiple one-line comments. </dd>
 <p> Supported escapes are c-style &quot;
-&quot;, &quot;&quot;, &quot;\&quot; and &quot;
+&quot;, &quot;
+&quot;, &quot;\&quot; and &quot;
+</p></dl>

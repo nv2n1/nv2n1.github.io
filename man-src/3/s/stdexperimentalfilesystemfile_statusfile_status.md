@@ -12,12 +12,9 @@ std::experimental::filesystem::file_status::file_status - std::experimental::fil
 
 <pre><code>file_status(const file_status &amp;) = default;
 (1)(filesystem TS)
-
     file_status(file_status &amp;&amp;) = default;
 (2)(filesystem TS)
-
     explicit file_status(file_type type = file_type::none, (3)(filesystem TS)
-
                                                                perms permissions = perms::unknown);</code></pre> 
 Constructs a new file_status object. 
 1) Default copy constructor. 

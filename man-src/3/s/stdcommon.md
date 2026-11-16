@@ -11,36 +11,21 @@ std::Common - std::Common
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;concepts&gt;
-
     template &lt;class T, class U&gt;
-
     concept Common =
-
         std::Same&lt;std::common_type_t&lt;T, U&gt;, std::common_type_t&lt;U, T&gt;&gt; &amp;&amp;
-
     requires
 {
-
     static_cast&lt;std::common_type_t&lt;T, U&gt;&gt;(std::declval&lt;T&gt;());
-
     static_cast&lt;std::common_type_t&lt;T, U&gt;&gt;(std::declval&lt;U&gt;());
-
 } &amp;&amp;
-
     std::CommonReference&lt;(since C++ 20)
-
                              std::add_lvalue_reference_t&lt;const T&gt;,
-
                          std::add_lvalue_reference_t&lt;const U&gt;&gt; &amp;&amp;
-
     std::CommonReference&lt;
-
         std::add_lvalue_reference_t&lt;std::common_type_t&lt;T, U&gt;&gt;,
-
         std::common_reference_t&lt;
-
             std::add_lvalue_reference_t&lt;const T&gt;,
-
             std::add_lvalue_reference_t&lt;const U&gt;&gt;&gt;;</code></pre> 
 The concept Common&lt;T, U&gt; specifies that two types T and U share a common type (as computed by std::common_type_t) to which both can be converted. 
 T and U model Common&lt;T, U&gt; only if, given equality-preserving expressions t1, t2, u1 and u2 such that decltype((t1)) and decltype((t2)) are both T and decltype((u1)) and decltype((u2)) are both U, 

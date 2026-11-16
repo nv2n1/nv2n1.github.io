@@ -27,14 +27,15 @@ This document was written by Bernd Warken
 <h2>See Also</h2>
 
 <dl><dt>CSTR~#54
-<dd>refers to the 1992 revision of the <i>Nroff/Troff User's Manual</i> by J. F. Ossanna and Brian Kernighan.
-<dt>CSTR~#97
-<dd>refers to <i>A Typesetter-independent TROFF</i>, by Brian Kernighan and is the original documentation of the first multi-device <i>troff</i> (<i>ditroff</i>).
-<dt><i><a HREF="/docs/linux/man/7-roff/">roff</a></i>(7)
-<dd>provides a history and conceptual overview of <i>roff</i> systems.
-<dt><i><a HREF="/docs/linux/man/1-troff/">troff</a></i>(1)
-<dd>describes the GNU implementation of <i>(di)troff</i>.
-<dt><i><a HREF="/docs/linux/man/1-groff/">groff</a></i>(1)
-<dd>documents the GNU <i>roff</i> program and includes pointers to further documentation about <i>groff</i>.
-<dt><i><a HREF="/docs/linux/man/5-groff_out/">groff_out</a></i>(5)
-<dd>describes the <i>groff</i> version of the intermediate output language, the basis for multi-device output. 
+</dt><dd>refers to the 1992 revision of the <i>Nroff/Troff User's Manual</i> by J. F. Ossanna and Brian Kernighan.
+</dd><dt>CSTR~#97
+</dt><dd>refers to <i>A Typesetter-independent TROFF</i>, by Brian Kernighan and is the original documentation of the first multi-device <i>troff</i> (<i>ditroff</i>).
+</dd><dt><i><a HREF="/docs/linux/man/7-roff/">roff</a></i>(7)
+</dt><dd>provides a history and conceptual overview of <i>roff</i> systems.
+</dd><dt><i><a HREF="/docs/linux/man/1-troff/">troff</a></i>(1)
+</dt><dd>describes the GNU implementation of <i>(di)troff</i>.
+</dd><dt><i><a HREF="/docs/linux/man/1-groff/">groff</a></i>(1)
+</dt><dd>documents the GNU <i>roff</i> program and includes pointers to further documentation about <i>groff</i>.
+</dd><dt><i><a HREF="/docs/linux/man/5-groff_out/">groff_out</a></i>(5)
+</dt><dd>describes the <i>groff</i> version of the intermediate output language, the basis for multi-device output. 
+</dd></dl>

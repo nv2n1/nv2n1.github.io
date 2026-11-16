@@ -21,34 +21,34 @@ description: "pkgdata – package data for use by ICU"
 <p> <code>pkgdata</code> builds, packages, installs, or cleans the appropriate data based on the options given without the need to call GNU <code>make</code> anymore.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></p>
-<dd> Print help about usage and exit.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Display extra informative messages during execution.</p>
-<dt><code>-c</code>, <code>&#8211;copyright</code></p>
-<dd> Include a copyright notice in the binary data.</p>
-<dt><code>-C</code>, <code>&#8211;comment</code><i> comment</i></p>
-<dd> Includes the specified <i>comment</i> in the resulting data instead of the ICU copyright notice.</p>
-<dt><code>-m</code>, <code>&#8211;mode</code><i> mode</i></p>
-<dd> Set the packaging <i>mode</i> to be used by <code>pkgdata</code>. The different modes and their meaning are explained in the <code>DESCRIPTION</code> section above. The valid mode names are <code>common</code> (or <code>archive</code>), <code>dll</code> (or <code>library</code>), and <code>files</code>.</p>
-<dt><code>-O</code>, <code>&#8211;bldopt</code><i> options</i></p>
-<dd> Specify options for the builder. The builder is used internally by <code>pkgdata</code> to generate the correct packaged file. Such options include, but are not limited to, setting variables used by <code><a href="/docs/linux/man/1-make/">make</a></code>(1) during the build of the packaged file. Note: If <code>icu-config</code> is available, then this option is not needed.</p>
-<dt><code>-p</code>, <code>&#8211;name</code><i> name</i></p>
-<dd> Set the packaged file name to <i>name</i>. This name is also used as the default entry point name after having been turned into a valid C identifier.</p>
-<dt><code>-e</code>, <code>&#8211;entrypoint</code><i> name</i></p>
-<dd> Set the data entry point (used for linking against the data in a shared library form) to <i>name</i>. The default entry point name is the name set by the <code>-n</code>, <code>&#8211;name</code> option.</p>
-<dt><code>-r</code>, <code>&#8211;revision</code><i> version</i></p>
-<dd> Enable versioning of the shared library produced in <code>dll</code>, or <code>library</code>, mode. The version number has the format <i>major</i>.<i>minor</i>.<i>patchlevel</i> and all parts except for <i>major</i> are optional. If only <i>major</i> is supplied then the version is assumed to be <i>major</i>.0 for versioning purposes.</p>
-<dt><code>-F</code>, <code>&#8211;rebuild</code></p>
-<dd> Force the rebuilding of all data and their repackaging.</p>
-<dt><code>-I</code>, <code>&#8211;install</code></p>
-<dd> Install the packaged file (or all the files in the <code>files</code> mode). If the variable <code>DESTDIR</code> is set it will be used for installation.</p>
-<dt><code>-s</code>, <code>&#8211;sourcedir</code><i> source</i></p>
-<dd> Set the source directory to <i>source</i>. The default source directory is the current directory.</p>
-<dt><code>-d</code>, <code>&#8211;destdir</code><i> destination</i></p>
-<dd> Set the destination directory to <i>destination</i>. The default destination directory is the current directory.</p>
-<dt><code>-T</code>, <code>&#8211;tempdir</code><i> directory</i></p>
-<dd> Set the directory used to generate temporary files to <i>directory</i>. The default temporary directory is the same as the destination directory as set by the <code>-d</code>, <code>&#8211;destdir</code> option.</dl>
+<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></dt>
+<dd> Print help about usage and exit.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Display extra informative messages during execution.</dd>
+<dt><code>-c</code>, <code>&#8211;copyright</code></dt>
+<dd> Include a copyright notice in the binary data.</dd>
+<dt><code>-C</code>, <code>&#8211;comment</code><i> comment</i></dt>
+<dd> Includes the specified <i>comment</i> in the resulting data instead of the ICU copyright notice.</dd>
+<dt><code>-m</code>, <code>&#8211;mode</code><i> mode</i></dt>
+<dd> Set the packaging <i>mode</i> to be used by <code>pkgdata</code>. The different modes and their meaning are explained in the <code>DESCRIPTION</code> section above. The valid mode names are <code>common</code> (or <code>archive</code>), <code>dll</code> (or <code>library</code>), and <code>files</code>.</dd>
+<dt><code>-O</code>, <code>&#8211;bldopt</code><i> options</i></dt>
+<dd> Specify options for the builder. The builder is used internally by <code>pkgdata</code> to generate the correct packaged file. Such options include, but are not limited to, setting variables used by <code><a href="/docs/linux/man/1-make/">make</a></code>(1) during the build of the packaged file. Note: If <code>icu-config</code> is available, then this option is not needed.</dd>
+<dt><code>-p</code>, <code>&#8211;name</code><i> name</i></dt>
+<dd> Set the packaged file name to <i>name</i>. This name is also used as the default entry point name after having been turned into a valid C identifier.</dd>
+<dt><code>-e</code>, <code>&#8211;entrypoint</code><i> name</i></dt>
+<dd> Set the data entry point (used for linking against the data in a shared library form) to <i>name</i>. The default entry point name is the name set by the <code>-n</code>, <code>&#8211;name</code> option.</dd>
+<dt><code>-r</code>, <code>&#8211;revision</code><i> version</i></dt>
+<dd> Enable versioning of the shared library produced in <code>dll</code>, or <code>library</code>, mode. The version number has the format <i>major</i>.<i>minor</i>.<i>patchlevel</i> and all parts except for <i>major</i> are optional. If only <i>major</i> is supplied then the version is assumed to be <i>major</i>.0 for versioning purposes.</dd>
+<dt><code>-F</code>, <code>&#8211;rebuild</code></dt>
+<dd> Force the rebuilding of all data and their repackaging.</dd>
+<dt><code>-I</code>, <code>&#8211;install</code></dt>
+<dd> Install the packaged file (or all the files in the <code>files</code> mode). If the variable <code>DESTDIR</code> is set it will be used for installation.</dd>
+<dt><code>-s</code>, <code>&#8211;sourcedir</code><i> source</i></dt>
+<dd> Set the source directory to <i>source</i>. The default source directory is the current directory.</dd>
+<dt><code>-d</code>, <code>&#8211;destdir</code><i> destination</i></dt>
+<dd> Set the destination directory to <i>destination</i>. The default destination directory is the current directory.</dd>
+<dt><code>-T</code>, <code>&#8211;tempdir</code><i> directory</i></dt>
+<dd> Set the directory used to generate temporary files to <i>directory</i>. The default temporary directory is the same as the destination directory as set by the <code>-d</code>, <code>&#8211;destdir</code> option.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Steven Loomis<br />
  Yves Arrouye</p>

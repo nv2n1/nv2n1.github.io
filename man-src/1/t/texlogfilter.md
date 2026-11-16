@@ -43,10 +43,10 @@ url: "/docs/linux/man/1-texlogfilter/"
 </code></pre>
 <h3><font SIZE="-1">ALTERNATIVES</font></h3>
 <dl>
-<dt>&bull;</p>
-<dd> <code>texlog-extract</code> : &lt;<a rel="nofollow" href="https://www.ctan.org/pkg/texlog-extract">https://www.ctan.org/pkg/texlog-extract</a>&gt;</p>
-<dt>&bull;</p>
-<dd> <code>texloganalyser</code> : &lt;<a rel="nofollow" href="https://www.ctan.org/pkg/texloganalyser">https://www.ctan.org/pkg/texloganalyser</a>&gt;</dl>
+<dt>&bull;</dt>
+<dd> <code>texlog-extract</code> : &lt;<a rel="nofollow" href="https://www.ctan.org/pkg/texlog-extract">https://www.ctan.org/pkg/texlog-extract</a>&gt;</dd>
+<dt>&bull;</dt>
+<dd> <code>texloganalyser</code> : &lt;<a rel="nofollow" href="https://www.ctan.org/pkg/texloganalyser">https://www.ctan.org/pkg/texloganalyser</a>&gt;</dd></dl>
 <h3><font SIZE="-1">AUTHOR</font></h3>
 <p> Written by Julien Labbe. </p>
 <p> Inspired from a script given by Martin Scharrer on Stack Exchange network (see &lt;<a rel="nofollow" href="https://tex.stackexchange.com/a/10564">https://tex.stackexchange.com/a/10564</a>&gt;).</p>
@@ -56,15 +56,15 @@ url: "/docs/linux/man/1-texlogfilter/"
 <p> 1.0</p>
 <h3><font SIZE="-1">HISTORY</font></h3>
 <dl>
-<dt>&bull;</p>
-<dd> 2021, november : version 1.0 (initial version).</dl>
+<dt>&bull;</dt>
+<dd> 2021, november : version 1.0 (initial version).</dd></dl>
 <h3><font SIZE="-1">DOCUMENTATION</font></h3>
 <p> The documentation is integrated, writtent in Plain Old Documentation (<font SIZE="-1">POD</font>) format. Exported versions are available, in the following files:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <i></i><font SIZE="-1"><i>README</i></font><i></i>: created with perldoc.</p>
-<dt>&bull;</p>
-<dd> <i>texlogfilter.html</i>: created with pod2html. </p>
+<dt>&bull;</dt>
+<dd> <i></i><font SIZE="-1"><i>README</i></font><i></i>: created with perldoc.</dd>
+<dt>&bull;</dt>
+<dd> <i>texlogfilter.html</i>: created with pod2html. </dd>
 </dl>
 <h2>Index</h2>
 </dl>

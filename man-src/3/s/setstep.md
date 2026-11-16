@@ -52,15 +52,15 @@ description: "QuantLib::MixedScheme – Mixed (explicit/implicit) scheme for fin
  Operator operator+(const Operator&amp;, const Operator&amp;);</pre>
 <p><code>Warning</code></p>
 <dl>
-<dd>The differential operator must be linear for this evolver to work.</dl>
+<dd>The differential operator must be linear for this evolver to work.</dd></dl>
 <p> <code>Possible enhancements</code></p>
 <dl>
 <dd>
-<dl>
-<dt>*</p>
-<dd>derive variable theta schemes</p>
-<dt>*</p>
-<dd>introduce multi time-level schemes.</dl>
+</dd><dl>
+<dt>*</dt>
+<dd>derive variable theta schemes</dd>
+<dt>*</dt>
+<dd>introduce multi time-level schemes.</dd></dl>
 </dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

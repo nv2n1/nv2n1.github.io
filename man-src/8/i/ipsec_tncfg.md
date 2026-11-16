@@ -10,15 +10,15 @@ description: "ipsec_tncfg – manipulate KLIPS virtual interfaces"
 <p>ipsec_tncfg &#8211; manipulate KLIPS virtual interfaces</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>ipsec</code> tncfg</p>
+<dt> <code>ipsec</code> tncfg</dt>
 <dd>
-<dd>ipsec tncfg &#8211;create <i>virtual</i><br />
+</dd><dd>ipsec tncfg &#8211;create <i>virtual</i><br />
  ipsec tncfg &#8211;delete <i>virtual</i><br />
  ipsec tncfg &#8211;attach &#8211;virtual <i>virtual</i> &#8211;physical <i>physical</i><br />
  ipsec tncfg &#8211;detach &#8211;virtual <i>virtual</i><br />
  ipsec tncfg &#8211;clear<br />
  ipsec tncfg &#8211;version<br />
- ipsec tncfg &#8211;help</dl>
+ ipsec tncfg &#8211;help</dd></dl>
 <h2>Klips</h2>
 <p>Note that tncfg is only supported on the KLIPS stack which uses ipsecX interfaces bound to physical interfaces</p>
 <h2>Description</h2>
@@ -32,13 +32,13 @@ description: "ipsec_tncfg – manipulate KLIPS virtual interfaces"
 <h2>Examples</h2>
 <p><code>ipsec tncfg &#8211;create mast12</code></p>
 <dl>
-<dd>creates the mast12 device.</dl>
+<dd>creates the mast12 device.</dd></dl>
 <p> <code>ipsec tncfg &#8211;create ipsec4</code></p>
 <dl>
-<dd>creates an ipsec4 device, but does not attach it.</dl>
+<dd>creates an ipsec4 device, but does not attach it.</dd></dl>
 <p> <code>ipsec tncfg &#8211;attach &#8211;virtual ipsec0 &#8211;physical eth0</code></p>
 <dl>
-<dd>attaches the <code>ipsec0</code> virtual device to the <code>eth0</code> physical device.</dl>
+<dd>attaches the <code>ipsec0</code> virtual device to the <code>eth0</code> physical device.</dd></dl>
 <h2>Files</h2>
 <p>/proc/net/ipsec_tncfg, /usr/local/bin/ipsec</p>
 <h2>See Also</h2>
@@ -48,4 +48,4 @@ description: "ipsec_tncfg – manipulate KLIPS virtual interfaces"
 <h2>Author</h2>
 <p><code>Paul Wouters</code></p>
 <dl>
-<dd>placeholder to suppress warning</dl>
+<dd>placeholder to suppress warning</dd></dl>

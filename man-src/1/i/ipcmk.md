@@ -18,28 +18,28 @@ description: "ipcmk – make various IPC resources"
 <p> <code>-M</code>, <code>&#8211;shmem</code> <i>size</i></p>
 <dl>
 <dt>
-<dd> Create a shared memory segment of <i>size</i> bytes. The <i>size</i> argument may be followed by the multiplicative suffixes KiB (=1024), MiB (=1024*1024), and so on for GiB, etc. (the &quot;iB&quot; is optional, e.g., &quot;K&quot; has the same meaning as &quot;KiB&quot;) or the suffixes KB (=1000), MB (=1000*1000), and so on for GB, etc.</dl>
+</dt><dd> Create a shared memory segment of <i>size</i> bytes. The <i>size</i> argument may be followed by the multiplicative suffixes KiB (=1024), MiB (=1024*1024), and so on for GiB, etc. (the &quot;iB&quot; is optional, e.g., &quot;K&quot; has the same meaning as &quot;KiB&quot;) or the suffixes KB (=1000), MB (=1000*1000), and so on for GB, etc.</dd></dl>
 <p> <code>-Q</code>, <code>&#8211;queue</code></p>
 <dl>
 <dt>
-<dd> Create a message queue.</dl>
+</dt><dd> Create a message queue.</dd></dl>
 <p> <code>-S</code>, <code>&#8211;semaphore</code> <i>number</i></p>
 <dl>
 <dt>
-<dd> Create a semaphore array with <i>number</i> of elements.</dl>
+</dt><dd> Create a semaphore array with <i>number</i> of elements.</dd></dl>
 <p> Other options are: </p>
 <p> <code>-p</code>, <code>&#8211;mode</code> <i>mode</i></p>
 <dl>
 <dt>
-<dd> Access permissions for the resource. Default is 0644.</dl>
+</dt><dd> Access permissions for the resource. Default is 0644.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit.</dl>
+</dt><dd> Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit.</dl>
+</dt><dd> Display help text and exit.</dd></dl>
 <h2>AUTHORS</h2>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ipcrm/">ipcrm</a></code>(1), <code><a href="/docs/linux/man/1-ipcs/">ipcs</a></code>(1), <code><a href="/docs/linux/man/7-sysvipc/">sysvipc</a></code>(7)</p>

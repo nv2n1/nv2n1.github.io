@@ -15,11 +15,11 @@ snd_interval_refine - refine the interval value of configurator
 <h2>Arguments</h2>
 
 <i>i</i>
-<dl><dd><dd>the interval value to refine</dl>
+<dl><dd></dd><dd>the interval value to refine</dd></dl>
  
 
  <i>v</i>
-<dl><dd>the interval value to refer to</dl>
+<dl><dd>the interval value to refer to</dd></dl>
 
 <h2>Description</h2>
 

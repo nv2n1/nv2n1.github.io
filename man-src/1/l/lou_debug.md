@@ -14,10 +14,10 @@ description: "lou_debug – A debugger for liblouis Braille translation tables"
 <h2>DESCRIPTION</h2>
 <p> Examine and debug Braille translation tables. This program allows you to inspect liblouis translation tables and gather information about them, such as forward and backward rules, characters and dot patterns, specific opcodes, the size of a table, whether a hyphenation table is used, how many passes the translation takes and much more.</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> display version information and exit</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> display version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by John J. Boyer.</p>
 <h2>REPORTING BUGS</h2>
@@ -29,6 +29,6 @@ description: "lou_debug – A debugger for liblouis Braille translation tables"
 <p> The full documentation for <code>lou_debug</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>lou_debug</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info liblouis</code></dl>
+</dt><dd> <code>info liblouis</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

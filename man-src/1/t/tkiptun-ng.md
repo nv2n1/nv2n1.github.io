@@ -15,61 +15,61 @@ description: "tkiptun-ng – inject a few frames into a WPA TKIP network with Qo
 <p> <code>tkiptun-ng</code> is a tool created by Martin Beck aka hirte, a member of aircrack-ng team. This tool is able to inject a few frames into a WPA TKIP network with QoS. He worked with Erik Tews (who created PTW attack) for a conference in PacSec 2008: &quot;Gone in 900 Seconds, Some Crypto Issues with WPA&quot;.</p>
 <h2>OPERATION</h2>
 <dl>
-<dt><i>-H, &#8211;help</i></p>
-<dd> Shows the help screen.</p>
-<dt><code>Filter options:</code></p>
+<dt><i>-H, &#8211;help</i></dt>
+<dd> Shows the help screen.</dd>
+<dt><code>Filter options:</code></dt>
 <dd>
-<dt><i>-d &lt;dmac&gt;</i></p>
-<dd> MAC address of destination.</p>
-<dt><i>-s &lt;smac&gt;</i></p>
-<dd> MAC address of source.</p>
-<dt><i>-m &lt;len&gt;</i></p>
-<dd> Minimum packet length.</p>
-<dt><i>-n &lt;len&gt;</i></p>
-<dd> Maximum packet length.</p>
-<dt><i>-t &lt;tods&gt;</i></p>
-<dd> Frame control, &quot;To&quot; DS bit.</p>
-<dt><i>-f &lt;fromds&gt;</i></p>
-<dd> Frame control, &quot;From&quot; DS bit.</p>
-<dt><i>-D </i></p>
-<dd> Disable AP Detection.</dl>
+</dd><dt><i>-d &lt;dmac&gt;</i></dt>
+<dd> MAC address of destination.</dd>
+<dt><i>-s &lt;smac&gt;</i></dt>
+<dd> MAC address of source.</dd>
+<dt><i>-m &lt;len&gt;</i></dt>
+<dd> Minimum packet length.</dd>
+<dt><i>-n &lt;len&gt;</i></dt>
+<dd> Maximum packet length.</dd>
+<dt><i>-t &lt;tods&gt;</i></dt>
+<dd> Frame control, &quot;To&quot; DS bit.</dd>
+<dt><i>-f &lt;fromds&gt;</i></dt>
+<dd> Frame control, &quot;From&quot; DS bit.</dd>
+<dt><i>-D </i></dt>
+<dd> Disable AP Detection.</dd></dl>
 <dl>
-<dt><code>Replay options:</code></p>
+<dt><code>Replay options:</code></dt>
 <dd>
-<dt><i>-x &lt;nbpps&gt;</i></p>
-<dd> Number of packets per second.</p>
-<dt><i>-p &lt;fctrl&gt;</i></p>
-<dd> Set frame control word (hex).</p>
-<dt><i>-a &lt;bssid&gt;</i></p>
-<dd> Set Access Point MAC address.</p>
-<dt><i>-c &lt;dmac&gt;</i></p>
-<dd> Set destination MAC address.</p>
-<dt><i>-h &lt;smac&gt;</i></p>
-<dd> Set source MAC address.</p>
-<dt><i>-F</i></p>
-<dd> Choose first matching packet.</p>
-<dt><i>-e &lt;essid&gt;</i></p>
-<dd> Set target SSID.</dl>
+</dd><dt><i>-x &lt;nbpps&gt;</i></dt>
+<dd> Number of packets per second.</dd>
+<dt><i>-p &lt;fctrl&gt;</i></dt>
+<dd> Set frame control word (hex).</dd>
+<dt><i>-a &lt;bssid&gt;</i></dt>
+<dd> Set Access Point MAC address.</dd>
+<dt><i>-c &lt;dmac&gt;</i></dt>
+<dd> Set destination MAC address.</dd>
+<dt><i>-h &lt;smac&gt;</i></dt>
+<dd> Set source MAC address.</dd>
+<dt><i>-F</i></dt>
+<dd> Choose first matching packet.</dd>
+<dt><i>-e &lt;essid&gt;</i></dt>
+<dd> Set target SSID.</dd></dl>
 <dl>
-<dt><code>Debug options:</code></p>
+<dt><code>Debug options:</code></dt>
 <dd>
-<dt><i>-K &lt;prga&gt;</i></p>
-<dd> Keystream for continuation.</p>
-<dt><i>-y &lt;file&gt;</i></p>
-<dd> Keystream file for continuation.</p>
-<dt><i>-j</i></p>
-<dd> Inject FromFS packets.</p>
-<dt><i>-P &lt;PMK&gt;</i></p>
-<dd> Pairwise Master key (PMK) for verification or vulnerability testing.</p>
-<dt><i>-p &lt;PSK&gt;</i></p>
-<dd> Preshared key (PSK) to calculate PMK with essid.</dl>
+</dd><dt><i>-K &lt;prga&gt;</i></dt>
+<dd> Keystream for continuation.</dd>
+<dt><i>-y &lt;file&gt;</i></dt>
+<dd> Keystream file for continuation.</dd>
+<dt><i>-j</i></dt>
+<dd> Inject FromFS packets.</dd>
+<dt><i>-P &lt;PMK&gt;</i></dt>
+<dd> Pairwise Master key (PMK) for verification or vulnerability testing.</dd>
+<dt><i>-p &lt;PSK&gt;</i></dt>
+<dd> Preshared key (PSK) to calculate PMK with essid.</dd></dl>
 <dl>
-<dt><code>Source options:</code></p>
+<dt><code>Source options:</code></dt>
 <dd>
-<dt><i>-i &lt;iface&gt;</i></p>
-<dd> Capture packets from this interface.</p>
-<dt><i>-r &lt;file&gt;</i></p>
-<dd> Extract packets from this pcap file.</dl>
+</dd><dt><i>-i &lt;iface&gt;</i></dt>
+<dd> Capture packets from this interface.</dd>
+<dt><i>-r &lt;file&gt;</i></dt>
+<dd> Extract packets from this pcap file.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Thomas d&#8217;Otreppe. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.</p>
 <h2>SEE ALSO</h2>

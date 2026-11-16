@@ -11,7 +11,6 @@ description: "fputwc, putwc – write a wide character to a FILE stream"
 <h2>Synopsis</h2>
 <pre><code>#include &lt;stdio.h&gt;
 #include &lt;wchar.h&gt;
-
 wint_t fputwc(wchar_t wc, FILE *stream);
 wint_t putwc(wchar_t wc, FILE *stream);</code></pre>
 <h2>Description</h2>
@@ -23,8 +22,8 @@ wint_t putwc(wchar_t wc, FILE *stream);</code></pre>
 <h2>Errors</h2>
 <p>Apart from the usual ones, there is</p>
 <dl>
-<dt><code>EILSEQ</code></p>
-<dd>Conversion of <i>wc</i> to the stream&#8217;s encoding fails.</dl>
+<dt><code>EILSEQ</code></dt>
+<dd>Conversion of <i>wc</i> to the stream&#8217;s encoding fails.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

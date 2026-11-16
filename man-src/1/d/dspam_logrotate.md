@@ -15,21 +15,21 @@ description: "dspam_logrotate – Rotate DSPAM logfiles"
 <p> <code>dspam_logrotate</code> can be used to rotate DSPAM system log and/or the user logs. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a age</code></p>
-<dd> All log entries older than &#8216;age&#8217; days will be removed. </p>
-<dt><code>-v</code></p>
-<dd> Print verbose output. </p>
-<dt><code>-l</code><i>&nbsp;<wbr>logfile</i></p>
-<dd> A list of one or more files to process. </p>
-<dt><code>-d</code><i>&nbsp;<wbr>dir</i></p>
-<dd> The home directory of DSPAM or the root path where user logs are located. </p>
+<dt><code>-a age</code></dt>
+<dd> All log entries older than &#8216;age&#8217; days will be removed. </dd>
+<dt><code>-v</code></dt>
+<dd> Print verbose output. </dd>
+<dt><code>-l</code><i>&nbsp;<wbr>logfile</i></dt>
+<dd> A list of one or more files to process. </dd>
+<dt><code>-d</code><i>&nbsp;<wbr>dir</i></dt>
+<dd> The home directory of DSPAM or the root path where user logs are located. </dd>
 </dl>
 <h2>EXIT VALUE</h2>
 <dl>
-<dt><code>0</code></p>
-<dd> Operation was successful.</p>
-<dt><code>other</code></p>
-<dd> Operation resulted in an error. </p>
+<dt><code>0</code></dt>
+<dd> Operation was successful.</dd>
+<dt><code>other</code></dt>
+<dd> Operation resulted in an error. </dd>
 </dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2002-2012 DSPAM Project<br />

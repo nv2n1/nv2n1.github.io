@@ -36,22 +36,22 @@ description: "h5repack – Copy an HDF5 file to a new file with or without compr
 <p> <i>&lt;layout parameters&gt;</i> is present for the chunk case only it is the chunk size of each dimension: <i>&lt;dim_1 x dim_2 x &#8230; dim_n&gt;</i></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>file1</i>,<i>file2</i></p>
-<dd> The input and output HDF5 files</p>
-<dt><code>-h</code></p>
-<dd> Print a help message</p>
-<dt><code>-f</code> <i>filter</i></p>
-<dd> Filter type</p>
-<dt><code>-l</code> <i>layout</i></p>
-<dd> Layout type</p>
-<dt><code>-v</code></p>
-<dd> Verbose mode. Print output (list of objects in the file, filters and layout applied).</p>
-<dt><code>-e</code> <i>file</i></p>
-<dd> File with the <code>-f</code> and <code>-l </code> options (only filter and layout flags)</p>
-<dt><code>-d</code> <i>delta</i></p>
-<dd> Print only differences that are greater than the limit <i>delta</i>. <i>delta </i> must be a positive number. The comparison criterion is whether the absolute value of the difference of two corresponding values is greater than <i>delta</i> (e.g., |<i>a</i>&#8211;<i>b</i>| &gt; <i>delta</i>, where <i>a</i> is a value in <i>file1</i> and <i>b</i> is a value in <i>file2</i>).</p>
-<dt><code>-m</code> <i>number</i></p>
-<dd> Do not apply the filter to objects which size in bytes is smaller than number. If no size is specified a minimum of 1024 bytes is assumed.</dl>
+<dt><i>file1</i>,<i>file2</i></dt>
+<dd> The input and output HDF5 files</dd>
+<dt><code>-h</code></dt>
+<dd> Print a help message</dd>
+<dt><code>-f</code> <i>filter</i></dt>
+<dd> Filter type</dd>
+<dt><code>-l</code> <i>layout</i></dt>
+<dd> Layout type</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose mode. Print output (list of objects in the file, filters and layout applied).</dd>
+<dt><code>-e</code> <i>file</i></dt>
+<dd> File with the <code>-f</code> and <code>-l </code> options (only filter and layout flags)</dd>
+<dt><code>-d</code> <i>delta</i></dt>
+<dd> Print only differences that are greater than the limit <i>delta</i>. <i>delta </i> must be a positive number. The comparison criterion is whether the absolute value of the difference of two corresponding values is greater than <i>delta</i> (e.g., |<i>a</i>&#8211;<i>b</i>| &gt; <i>delta</i>, where <i>a</i> is a value in <i>file1</i> and <i>b</i> is a value in <i>file2</i>).</dd>
+<dt><code>-m</code> <i>number</i></dt>
+<dd> Do not apply the filter to objects which size in bytes is smaller than number. If no size is specified a minimum of 1024 bytes is assumed.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Apply GZIP compression to all objects in <i>file1</i> and save the output in <i>file2</i>: </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>h5repack -i file1 -o file2 -f GZIP=1 -v</p>

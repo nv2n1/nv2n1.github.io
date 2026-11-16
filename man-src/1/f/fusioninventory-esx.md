@@ -41,15 +41,15 @@ url: "/docs/linux/man/1-fusioninventory-esx/"
  Supported systems:
 <dl>
 <dt><i></i><font SIZE="-1"><i>ESX</i></font><i> and ESXi 3.5</i>
-<dd>
-<dt><i></i><font SIZE="-1"><i>ESX</i></font><i> and ESXi 4.1</i>
-<dd>
-<dt><i>ESXi 5.0</i>
-<dd>
-<dt><i>vCenter 4.1</i>
-<dd>
-<dt><i>vCenter 5.0</i>
-<dd></dl>
+</dt><dd>
+</dd><dt><i></i><font SIZE="-1"><i>ESX</i></font><i> and ESXi 4.1</i>
+</dt><dd>
+</dd><dt><i>ESXi 5.0</i>
+</dt><dd>
+</dd><dt><i>vCenter 4.1</i>
+</dt><dd>
+</dd><dt><i>vCenter 5.0</i>
+</dt><dd></dd></dl>
  
 
  Active Directory users, please note the <font SIZE="-1">AD</font> authentication doesn't work. You must create a account on the VMware server.

@@ -15,33 +15,34 @@ description: "bsqldb – batch SQL script processor using DB-Library"
 <p> is a utility program distributed with FreeTDS. is a non-interactive equivalent of the &quot;isql&quot; utility programs distributed by Sybase and Microsoft. Like them, uses the command &quot;go&quot; on a line by itself as a separator between batches. The last batch need not be followed by &quot;go&quot;. makes use of the DB-Library API provided by FreeTDS. This API is of course also available to application developers. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-D </code><i>database</i></p>
-<dd> Database to use.</p>
-<dt><code>-H </code><i>hostname</i></p>
-<dd> hostname Override name of client sent to server.</p>
-<dt><code>-P </code><i>password</i></p>
-<dd> Database server password.</p>
-<dt><code>-S </code><i>servername</i></p>
-<dd> Database server to which to connect.</p>
-<dt><code>-U </code><i>username</i></p>
-<dd> Database server login name. If username is not provided, a domain login is attempted for TDS 7+ connections.</p>
-<dt><code>-e </code><i>error_file</i></p>
-<dd> Name of file for errors.</p>
-<dt><code>-h</code></p>
-<dd> Print column headers with the data to the same file.</p>
-<dt><code>-i </code><i>input_file</i></p>
-<dd> Name of script file, containing SQL.</p>
-<dt><code>-o </code><i>output_file</i></p>
-<dd> Name of output file, holding result data.</p>
-<dt><code>-q</code></p>
-<dd> Do not print column metadata, return status, or rowcount. Overrides &#8211;<code>h </code></p>
-<dt><code>-t </code><i>field_term</i></p>
-<dd> Specifies the field terminator. Default is two spaces (&#8216; &#8216;). Recognized escape sequences are tab (&#8216;	&#8217;), carriage return (&#8216;&#8217;), newline (&#8216;
-&#8217;), and backslash (&#8216;\&#8217;).</p>
-<dt><code>-v</code></p>
-<dd> Verbose mode, for more information about the DB-Library interaction. This also reports the result set metadata, including and return code. All verbose data are written to standard error (or &#8211;<code>e ), so as not to interfere with the data stream.</code></p>
-<dt><code>-R </code><i>pivot_description</i></p>
-<dd> Specify pivot trasformation. The format is Ao Ar down columns Ac Ao Ar across columns Ac Ao Ar function Ac Ao Ar value Ac . Columns are specified but numbers. The format of <i>down columns</i> and <i>across columns</i> is a comma separated list of columns. <i>function</i> is either count, sum, min or max.</dl>
+<dt><code>-D </code><i>database</i></dt>
+<dd> Database to use.</dd>
+<dt><code>-H </code><i>hostname</i></dt>
+<dd> hostname Override name of client sent to server.</dd>
+<dt><code>-P </code><i>password</i></dt>
+<dd> Database server password.</dd>
+<dt><code>-S </code><i>servername</i></dt>
+<dd> Database server to which to connect.</dd>
+<dt><code>-U </code><i>username</i></dt>
+<dd> Database server login name. If username is not provided, a domain login is attempted for TDS 7+ connections.</dd>
+<dt><code>-e </code><i>error_file</i></dt>
+<dd> Name of file for errors.</dd>
+<dt><code>-h</code></dt>
+<dd> Print column headers with the data to the same file.</dd>
+<dt><code>-i </code><i>input_file</i></dt>
+<dd> Name of script file, containing SQL.</dd>
+<dt><code>-o </code><i>output_file</i></dt>
+<dd> Name of output file, holding result data.</dd>
+<dt><code>-q</code></dt>
+<dd> Do not print column metadata, return status, or rowcount. Overrides &#8211;<code>h </code></dd>
+<dt><code>-t </code><i>field_term</i></dt>
+<dd> Specifies the field terminator. Default is two spaces (&#8216; &#8216;). Recognized escape sequences are tab (&#8216;	&#8217;), carriage return (&#8216;
+&#8217;), newline (&#8216;
+&#8217;), and backslash (&#8216;\&#8217;).</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose mode, for more information about the DB-Library interaction. This also reports the result set metadata, including and return code. All verbose data are written to standard error (or &#8211;<code>e ), so as not to interfere with the data stream.</code></dd>
+<dt><code>-R </code><i>pivot_description</i></dt>
+<dd> Specify pivot trasformation. The format is Ao Ar down columns Ac Ao Ar across columns Ac Ao Ar function Ac Ao Ar value Ac . Columns are specified but numbers. The format of <i>down columns</i> and <i>across columns</i> is a comma separated list of columns. <i>function</i> is either count, sum, min or max.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> <code>DSQUERY</code> default <i>servername</i></p>
 <h2>NOTES</h2>

@@ -32,7 +32,7 @@ description: "QwtSyntheticPointData –"
 <p> If the interval is invalid, the points are calculated for the &#8216;rectangle of interest&#8217;, what normally is the displayed area on the plot canvas. In this mode you get different levels of detail, when zooming in/out. </p>
 <p> <code>Example</code></p>
 <dl COMPACT>
-<dd></dl>
+<dd></dd></dl>
 <p> The following example shows how to implement a sinus curve. </p>
 <pre>#include &lt;cmath&gt;
 #include &lt;qwt_series_data.h&gt;
@@ -70,94 +70,94 @@ int main(int argc, char **argv)
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>size</i> Number of points<br />
- <i>interval</i> Bounding interval for the points</dl>
+ <i>interval</i> Bounding interval for the points</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setInterval()</code>, <code>setSize()</code></dl>
+<dd><code>setInterval()</code>, <code>setSize()</code></dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>QRectF QwtSyntheticPointData::boundingRect () const [virtual]</h3>
 <p>Calculate the bounding rectangle. This implementation iterates over all points, what could often be implemented much faster using the characteristics of the series. When there are many points it is recommended to overload and reimplement this method using the characteristics of the series ( if possible ). </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Bounding rectangle</dl>
+<dd>Bounding rectangle</dd></dl>
 <p> Implements <code>QwtSeriesData&lt; QPointF &gt;</code>.</p>
 <h3><code>QwtInterval</code> QwtSyntheticPointData::interval () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Bounding interval</dl>
+<dd>Bounding interval</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setInterval()</code>, <code>size()</code></dl>
+<dd><code>setInterval()</code>, <code>size()</code></dd></dl>
 <h3>QRectF QwtSyntheticPointData::rectOfInterest () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd></dl>
+<dd></dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setRectOfInterest()</code></dl>
+<dd><code>setRectOfInterest()</code></dd></dl>
 <h3>QPointF QwtSyntheticPointData::sample (size_tindex) const [virtual]</h3>
 <p>Calculate the point from an index </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>index</i> Index</dl>
+<dd><i>index</i> Index</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>QPointF(x(index), y(x(index)));</dl>
+<dd>QPointF(x(index), y(x(index)));</dd></dl>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>For invalid indices ( index &lt; 0 || index &gt;= <code>size()</code> ) (0, 0) is returned.</dl>
+<dd>For invalid indices ( index &lt; 0 || index &gt;= <code>size()</code> ) (0, 0) is returned.</dd></dl>
 <p> Implements <code>QwtSeriesData&lt; QPointF &gt;</code>.</p>
 <h3>void QwtSyntheticPointData::setInterval (const <code>QwtInterval</code> &amp;interval)</h3>
 <p>Set the bounding interval </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>interval</i> Interval</dl>
+<dd><i>interval</i> Interval</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>interval()</code>, <code>setSize()</code></dl>
+<dd><code>interval()</code>, <code>setSize()</code></dd></dl>
 <h3>void QwtSyntheticPointData::setRectOfInterest (const QRectF &amp;rect) [virtual]</h3>
 <p>Set a the &#8216;rectangle of interest&#8217; </p>
 <p> <code>QwtPlotSeriesItem</code> defines the current area of the plot canvas as &#8216;rect of interest&#8217; ( <code>QwtPlotSeriesItem::updateScaleDiv()</code> ). </p>
 <p> If <code>interval()</code>.isValid() == false the x values are calculated in the interval rect.left() -&gt; rect.right(). </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>rectOfInterest()</code></dl>
+<dd><code>rectOfInterest()</code></dd></dl>
 <p> Reimplemented from <code>QwtSeriesData&lt; QPointF &gt;</code>.</p>
 <h3>void QwtSyntheticPointData::setSize (size_tsize)</h3>
 <p>Change the number of points </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>size</i> Number of points</dl>
+<dd><i>size</i> Number of points</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>size()</code>, <code>setInterval()</code></dl>
+<dd><code>size()</code>, <code>setInterval()</code></dd></dl>
 <h3>size_t QwtSyntheticPointData::size () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of points</dl>
+<dd>Number of points</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setSize()</code>, <code>interval()</code></dl>
+<dd><code>setSize()</code>, <code>interval()</code></dd></dl>
 <p> Implements <code>QwtSeriesData&lt; QPointF &gt;</code>.</p>
 <h3>double QwtSyntheticPointData::x (uintindex) const [virtual]</h3>
 <p>Calculate a x-value from an index </p>
 <p> x values are calculated by dividing an interval into equidistant steps. If !interval().isValid() the interval is calculated from the &#8216;rectangle of interest&#8217;. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>index</i> Index of the requested point</dl>
+<dd><i>index</i> Index of the requested point</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Calculated x coordinate</dl>
+<dd>Calculated x coordinate</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>interval()</code>, <code>rectOfInterest()</code>, <code>y()</code></dl>
+<dd><code>interval()</code>, <code>rectOfInterest()</code>, <code>y()</code></dd></dl>
 <h3>virtual double QwtSyntheticPointData::y (doublex) const [pure virtual]</h3>
 <p>Calculate a y value for a x value </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>x</i> x value</dl>
+<dd><i>x</i> x value</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Corresponding y value</dl>
+<dd>Corresponding y value</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

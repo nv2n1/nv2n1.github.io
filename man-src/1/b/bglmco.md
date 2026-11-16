@@ -16,15 +16,15 @@ description: "bglmco – produces module checksum object files."
 <h2>OPTIONS</h2>
 <dl>
 <dt>
-<dt><code>-v</code></p>
+</dt><dt><code>-v</code></dt>
 <dd>
-<dd> Verbose mode </p>
-<dt><code>-v</code></p>
-<dd> Verbose mode. </p>
-<dt><code>-s</code></p>
-<dd> Silent mode. </p>
-<dt><code>-o &lt;file&gt;</code></p>
-<dd> The name of the <i>bglmco</i> file to be generated. </p>
+</dd><dd> Verbose mode </dd>
+<dt><code>-v</code></dt>
+<dd> Verbose mode. </dd>
+<dt><code>-s</code></dt>
+<dd> Silent mode. </dd>
+<dt><code>-o &lt;file&gt;</code></dt>
+<dd> The name of the <i>bglmco</i> file to be generated. </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> An bglmco is created by &#8220;bglmco foo.scm -o foo.mco&#8221;. </p>

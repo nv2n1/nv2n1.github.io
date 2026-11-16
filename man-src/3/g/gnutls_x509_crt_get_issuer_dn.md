@@ -14,12 +14,12 @@ description: "gnutls_x509_crt_get_issuer_dn – API function"
 <p> <code>int gnutls_x509_crt_get_issuer_dn(gnutls_x509_crt_t </code><i>cert</i><code>, char * </code><i>buf</i><code>, size_t * </code><i>buf_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t cert</p>
-<dd> should contain a <code>gnutls_x509_crt_t</code> structure</p>
-<dt>char * buf</p>
-<dd> a pointer to a structure to hold the name (may be null)</p>
-<dt>size_t * buf_size</p>
-<dd> initially holds the size of <i>buf</i></dl>
+<dt>gnutls_x509_crt_t cert</dt>
+<dd> should contain a <code>gnutls_x509_crt_t</code> structure</dd>
+<dt>char * buf</dt>
+<dd> a pointer to a structure to hold the name (may be null)</dd>
+<dt>size_t * buf_size</dt>
+<dd> initially holds the size of <i>buf</i></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will copy the name of the Certificate issuer in the provided buffer. The name will be in the form &quot;C=xxxx,O=yyyy,CN=zzzz&quot; as described in RFC4514. The output string will be ASCII or UTF-8 encoded, depending on the certificate data. </p>
 <p> If <i>buf</i> is null then only the size will be filled.</p>
@@ -34,6 +34,6 @@ description: "gnutls_x509_crt_get_issuer_dn – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -21,33 +21,33 @@ description: "Implementing Request Attributes –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>obj</i><br />
+</dt><dd> <i>obj</i><br />
  <i>backlog</i><br />
- <i>port</i></dl>
+ <i>port</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> Returns the <i>obj</i> pointer if the object inherited from the <i>GLOBUS_GASS_OBJECT_TYPE_LISTENERTATTR</i> type and the attribute could be initialized; GLOBUS_NULL otherwise.</dl>
+</dt><dd> Returns the <i>obj</i> pointer if the object inherited from the <i>GLOBUS_GASS_OBJECT_TYPE_LISTENERTATTR</i> type and the attribute could be initialized; GLOBUS_NULL otherwise.</dd></dl>
 <h3>globus_object_t* globus_gass_transfer_requestattr_initialize (globus_object_t *obj, char *proxy_url, globus_size_tblock_size, globus_gass_transfer_file_mode_tfile_mode, globus_bool_tconnection_reuse)</h3>
 <p> Initialize a base request attribute. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>obj</i><br />
+</dt><dd> <i>obj</i><br />
  <i>proxy_url</i><br />
  <i>block_size</i><br />
  <i>file_mode</i><br />
- <i>connection_reuse</i></dl>
+ <i>connection_reuse</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> Returns the <i>obj</i> pointer if the object inherited from the <i>GLOBUS_GASS_OBJECT_TYPE_REQUESTATTR</i> type and the attribute could be initialized; GLOBUS_NULL otherwise.</dl>
+</dt><dd> Returns the <i>obj</i> pointer if the object inherited from the <i>GLOBUS_GASS_OBJECT_TYPE_REQUESTATTR</i> type and the attribute could be initialized; GLOBUS_NULL otherwise.</dd></dl>
 <h3>globus_object_t* globus_gass_transfer_secure_requestattr_initialize (globus_object_t *obj, char *proxy_url, globus_size_tblock_size, globus_gass_transfer_file_mode_tfile_mode, globus_bool_tconnection_reuse, intsndbuf, intrcvbuf, globus_bool_tnodelay, globus_gass_transfer_authorization_tauthorization, char *subject)</h3>
 <p> Initialize a secure request attribute. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>obj</i><br />
+</dt><dd> <i>obj</i><br />
  <i>proxy_url</i><br />
  <i>block_size</i><br />
  <i>file_mode</i><br />
@@ -56,28 +56,28 @@ description: "Implementing Request Attributes –"
  <i>rcvbuf</i><br />
  <i>nodelay</i><br />
  <i>authorization</i><br />
- <i>subject</i></dl>
+ <i>subject</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> Returns the <i>obj</i> pointer if the object inherited from the <i>GLOBUS_GASS_OBJECT_TYPE_SECURE_REQUESTATTR</i> type and the attribute could be initialized; GLOBUS_NULL otherwise.</dl>
+</dt><dd> Returns the <i>obj</i> pointer if the object inherited from the <i>GLOBUS_GASS_OBJECT_TYPE_SECURE_REQUESTATTR</i> type and the attribute could be initialized; GLOBUS_NULL otherwise.</dd></dl>
 <h3>globus_object_t* globus_gass_transfer_socket_requestattr_initialize (globus_object_t *obj, char *proxy_url, globus_size_tblock_size, globus_gass_transfer_file_mode_tfile_mode, globus_bool_tconnection_reuse, intsndbuf, intrcvbuf, globus_bool_tnodelay)</h3>
 <p> Initialize a socket request attribute. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>obj</i><br />
+</dt><dd> <i>obj</i><br />
  <i>proxy_url</i><br />
  <i>block_size</i><br />
  <i>file_mode</i><br />
  <i>connection_reuse</i><br />
  <i>sndbuf</i><br />
  <i>rcvbuf</i><br />
- <i>nodelay</i></dl>
+ <i>nodelay</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> Returns the <i>obj</i> pointer if the object inherited from the <i>GLOBUS_GASS_OBJECT_TYPE_SOCKET_REQUESTATTR</i> type and the attribute could be initialized; GLOBUS_NULL otherwise.</dl>
+</dt><dd> Returns the <i>obj</i> pointer if the object inherited from the <i>GLOBUS_GASS_OBJECT_TYPE_SOCKET_REQUESTATTR</i> type and the attribute could be initialized; GLOBUS_NULL otherwise.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gass_transfer from the source code. </p>
 <h2>Index</h2>

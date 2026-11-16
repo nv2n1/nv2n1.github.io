@@ -32,6 +32,6 @@ description: "QuantLib::ConvergenceStatistics – statistics class with converge
 <p>&nbsp;<wbr>as well as a copy constructor. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>results are tested against known good values.</dl>
+<dd>results are tested against known good values.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

@@ -15,4 +15,4 @@ description: "addgnupghome – Create .gnupg home directories"
 <dl>
 <dd>
 <pre>addgnupghome account1 account2 ... accountn</pre>
-</dl>
+</dd></dl>

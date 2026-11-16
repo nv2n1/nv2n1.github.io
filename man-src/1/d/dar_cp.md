@@ -18,24 +18,24 @@ description: "dar_cp – ‘cp’ clone command that is able to copy data locate
 <p> <code>dar_cp</code> only accepts full filename (not directory) as argument. The reason of its existence in dar package is that you need it if you use Parchive with dar and have a corruption on a CD-R or any other read-only medium. You need to copy the corrupted slice on a read-write filesystem, for Parchive be able to repair it using slice associated redundancy files. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-h</p>
-<dd> Displays help usage.</p>
-<dt>-V</p>
-<dd> Displays version information. </p>
+<dt>-h</dt>
+<dd> Displays help usage.</dd>
+<dt>-V</dt>
+<dd> Displays version information. </dd>
 </dl>
 <h2>EXIT CODES</h2>
 <p> <code>dar_cp</code> exists with the following codes:</p>
 <dl>
-<dt>0</p>
-<dd> upon normal execution (be some corrupted parted skipped or not)</p>
-<dt>1</p>
-<dd> syntax error on command-line</p>
-<dt>2</p>
-<dd> could not open source or destination files</p>
-<dt>3</p>
-<dd> any other system error met during the copy</p>
-<dt>5</p>
-<dd> when some data could not be copied due to I/O error </p>
+<dt>0</dt>
+<dd> upon normal execution (be some corrupted parted skipped or not)</dd>
+<dt>1</dt>
+<dd> syntax error on command-line</dd>
+<dt>2</dt>
+<dd> could not open source or destination files</dd>
+<dt>3</dt>
+<dd> any other system error met during the copy</dd>
+<dt>5</dt>
+<dd> when some data could not be copied due to I/O error </dd>
 </dl>
 <h2>SIGNALS</h2>
 <p> Any signal sent to dar_cp will abort the program immediately, there is no way to have a proper termination before the end of the process </p>

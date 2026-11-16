@@ -18,21 +18,21 @@ description: "QuantLib::AnalyticDigitalAmericanEngine – Analytic pricing engin
 <p>Analytic pricing engine for American vanilla options with digital payoff. </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>add more greeks (as of now only delta and rho available)</dl>
+<dd>add more greeks (as of now only delta and rho available)</dd></dl>
 <p> <code>Tests</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>*</p>
-<dd>the correctness of the returned value in case of cash-or-nothing at-hit digital payoff is tested by reproducing results available in literature.</p>
-<dt>*</p>
-<dd>the correctness of the returned value in case of asset-or-nothing at-hit digital payoff is tested by reproducing results available in literature.</p>
-<dt>*</p>
-<dd>the correctness of the returned value in case of cash-or-nothing at-expiry digital payoff is tested by reproducing results available in literature.</p>
-<dt>*</p>
-<dd>the correctness of the returned value in case of asset-or-nothing at-expiry digital payoff is tested by reproducing results available in literature.</p>
-<dt>*</p>
-<dd>the correctness of the returned greeks in case of cash-or-nothing at-hit digital payoff is tested by reproducing numerical derivatives.</dl>
+</dd><dl COMPACT>
+<dt>*</dt>
+<dd>the correctness of the returned value in case of cash-or-nothing at-hit digital payoff is tested by reproducing results available in literature.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned value in case of asset-or-nothing at-hit digital payoff is tested by reproducing results available in literature.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned value in case of cash-or-nothing at-expiry digital payoff is tested by reproducing results available in literature.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned value in case of asset-or-nothing at-expiry digital payoff is tested by reproducing results available in literature.</dd>
+<dt>*</dt>
+<dd>the correctness of the returned greeks in case of cash-or-nothing at-hit digital payoff is tested by reproducing numerical derivatives.</dd></dl>
 </dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

@@ -11,7 +11,6 @@ std::isprint - std::isprint
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cctype&gt;
-
     int isprint(int ch);</code></pre> 
 Checks if ch is a printable character as classified by the currently installed C locale. In the default, &quot;C&quot; locale, the following characters are printable: 
 * digits (0123456789) 
@@ -51,12 +50,9 @@ Similarly, they should not be directly used with standard algorithms when the it
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cctype&gt;
-
 #include &lt;clocale&gt;
 int main()
-
 {
     unsigned char c = '\xa0'; // the non-breaking space in ISO-8859-1
     std::cout &lt;&lt; &quot;isprint(\'\\xa0\', default C locale) returned &quot;

@@ -14,12 +14,12 @@ description: "gnutls_x509_crq_export2 – API function"
 <p> <code>int gnutls_x509_crq_export2(gnutls_x509_crq_t </code><i>crq</i><code>, gnutls_x509_crt_fmt_t </code><i>format</i><code>, gnutls_datum_t * </code><i>out</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crq_t crq</p>
-<dd> should contain a <code>gnutls_x509_crq_t</code> structure</p>
-<dt>gnutls_x509_crt_fmt_t format</p>
-<dd> the format of output params. One of PEM or DER.</p>
-<dt>gnutls_datum_t * out</p>
-<dd> will contain a certificate request PEM or DER encoded</dl>
+<dt>gnutls_x509_crq_t crq</dt>
+<dd> should contain a <code>gnutls_x509_crq_t</code> structure</dd>
+<dt>gnutls_x509_crt_fmt_t format</dt>
+<dd> the format of output params. One of PEM or DER.</dd>
+<dt>gnutls_datum_t * out</dt>
+<dd> will contain a certificate request PEM or DER encoded</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will export the certificate request to a PEM or DER encoded PKCS10 structure. </p>
 <p> The output buffer is allocated using <code>gnutls_malloc()</code>. </p>
@@ -36,6 +36,6 @@ description: "gnutls_x509_crq_export2 – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

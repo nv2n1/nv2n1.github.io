@@ -38,24 +38,24 @@ spacecmd -s server1 -- softwarechannel_create -n \'My Channel\' \
 </pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-u USERNAME, &#8211;username=USERNAME</code></p>
-<dd> use this username to connect to the server</p>
-<dt><code>-p PASSWORD, &#8211;password=PASSWORD</code></p>
-<dd> use this password to connect to the server</p>
-<dt><code>-s SERVER, &#8211;server=SERVER</code></p>
-<dd> connect to this server [default: localhost]</p>
-<dt><code>&#8211;nossl</code></p>
-<dd> use HTTP instead of HTTPS</p>
-<dt><code>&#8211;nohistory</code></p>
-<dd> do not store command history</p>
-<dt><code>-y, &#8211;yes</code></p>
-<dd> answer yes for all questions</p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd> print only error messages</p>
-<dt><code>-d, &#8211;debug</code></p>
-<dd> print debug messages</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> show this help message and exit</dl>
+<dt><code>-u USERNAME, &#8211;username=USERNAME</code></dt>
+<dd> use this username to connect to the server</dd>
+<dt><code>-p PASSWORD, &#8211;password=PASSWORD</code></dt>
+<dd> use this password to connect to the server</dd>
+<dt><code>-s SERVER, &#8211;server=SERVER</code></dt>
+<dd> connect to this server [default: localhost]</dd>
+<dt><code>&#8211;nossl</code></dt>
+<dd> use HTTP instead of HTTPS</dd>
+<dt><code>&#8211;nohistory</code></dt>
+<dd> do not store command history</dd>
+<dt><code>-y, &#8211;yes</code></dt>
+<dd> answer yes for all questions</dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> print only error messages</dd>
+<dt><code>-d, &#8211;debug</code></dt>
+<dd> print debug messages</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> show this help message and exit</dd></dl>
 <h2>CONFIGURATION FILES</h2>
 <pre>
 Configuration files are loaded from /etc/spacecmd.conf and ~/.spacecmd/config.

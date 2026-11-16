@@ -19,15 +19,15 @@ struct_clk_notifier_data - rate data to pass to the notifier callback
 <h2>Members</h2>
 
 clk
-<dl><dd>struct clk * being changed</dl>
+<dl><dd>struct clk * being changed</dd></dl>
  
 
  old_rate
-<dl><dd>previous rate of this clk</dl>
+<dl><dd>previous rate of this clk</dd></dl>
  
 
  new_rate
-<dl><dd>new rate of this clk</dl>
+<dl><dd>new rate of this clk</dd></dl>
 
 <h2>Description</h2>
 

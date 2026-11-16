@@ -30,11 +30,11 @@ description: "controlchan – Channel-fed control message handler"
 <pre> h2ph machine/*</pre>
 <h2>Options</h2>
 <dl>
-<dt><code>-c</code></p>
-<dd>By default, <code>controlchan</code> does not process articles whose Date: or Injection-Date: header fields are too far in the past (more than <i>artcutoff</i> days, as set in <i>inn.conf</i>) or one day in the future. It allows to prevent a malicious replay of old control articles. </p>
+<dt><code>-c</code></dt>
+<dd>By default, <code>controlchan</code> does not process articles whose Date: or Injection-Date: header fields are too far in the past (more than <i>artcutoff</i> days, as set in <i>inn.conf</i>) or one day in the future. It allows to prevent a malicious replay of old control articles. </dd>
 <p> Using the <code>-c</code> flag disables this check on the cutoff date.</p>
-<dt><code>-h</code></p>
-<dd>Gives usage information.</dl>
+<dt><code>-h</code></dt>
+<dd>Gives usage information.</dd></dl>
 <h2>History</h2>
 <p>Written by Katsuhiro Kondou &lt;kondou [at] nec.co.jp&gt; for InterNetNews. Converted to <font SIZE="-1">POD</font> by Julien Elie. </p>
 <p> <tt>$Id:</tt> controlchan.pod 9241 2011-07-12 09:57:44Z iulius $</p>

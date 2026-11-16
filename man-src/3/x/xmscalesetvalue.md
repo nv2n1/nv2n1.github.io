@@ -16,10 +16,10 @@ description: "XmScaleSetValue — A Scale function that sets a slider value"
 <h2>Description</h2>
 <p><code>XmScaleSetValue</code> sets the slider <i>value</i> within the Scale widget.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the Scale widget ID.</p>
-<dt><i>value</i></p>
-<dd>Specifies the slider position along the scale. This sets the <code>XmNvalue</code> resource.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the Scale widget ID.</dd>
+<dt><i>value</i></dt>
+<dd>Specifies the slider position along the scale. This sets the <code>XmNvalue</code> resource.</dd></dl>
 <p> For a complete definition of Scale and its associated resources, see <code><a href="/docs/linux/man/3-xmscale/">XmScale</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmscale/">XmScale</a></code>(3).</p>

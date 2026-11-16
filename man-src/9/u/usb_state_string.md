@@ -15,7 +15,7 @@ usb_state_string - Returns human readable name for the state.
 <h2>Arguments</h2>
 
 <i>state</i>
-<dl><dd><dd>The state to return a human-readable name for. If it's not any of the states devices in usb_device_state_string enum, the string UNKNOWN will be returned.</dl>
+<dl><dd></dd><dd>The state to return a human-readable name for. If it's not any of the states devices in usb_device_state_string enum, the string UNKNOWN will be returned.</dd></dl>
 
 <h2>Copyright</h2>
 

@@ -24,24 +24,24 @@ description: "nfsidmap – The NFS idmapper upcall program"
 <p> In addition, the <code>-d</code> and <code>-l</code> options are available to help diagnose misconfigurations. They have no effect on the keyring containing ID mapping results.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c </code></p>
-<dd>Clear the keyring of all the keys.</p>
-<dt><code>-d</code></p>
-<dd>Display the system&#8217;s effective NFSv4 domain name on <i>stdout</i>.</p>
-<dt><code>-g user</code></p>
-<dd>Revoke the gid key of the given user.</p>
-<dt><code>-h</code></p>
-<dd>Display usage message.</p>
-<dt><code>-l</code></p>
-<dd>Display on <i>stdout</i> all keys currently in the keyring used to cache ID mapping results. These keys are visible only to the superuser.</p>
-<dt><code>-r user</code></p>
-<dd>Revoke both the uid and gid key of the given user.</p>
-<dt><code>-t timeout</code></p>
-<dd>Set the expiration timer, in seconds, on the key. The default is 600 seconds (10 mins).</p>
-<dt><code>-u user</code></p>
-<dd>Revoke the uid key of the given user.</p>
-<dt><code>-v</code></p>
-<dd>Increases the verbosity of the output to syslog (can be specified multiple times).</dl>
+<dt><code>-c </code></dt>
+<dd>Clear the keyring of all the keys.</dd>
+<dt><code>-d</code></dt>
+<dd>Display the system&#8217;s effective NFSv4 domain name on <i>stdout</i>.</dd>
+<dt><code>-g user</code></dt>
+<dd>Revoke the gid key of the given user.</dd>
+<dt><code>-h</code></dt>
+<dd>Display usage message.</dd>
+<dt><code>-l</code></dt>
+<dd>Display on <i>stdout</i> all keys currently in the keyring used to cache ID mapping results. These keys are visible only to the superuser.</dd>
+<dt><code>-r user</code></dt>
+<dd>Revoke both the uid and gid key of the given user.</dd>
+<dt><code>-t timeout</code></dt>
+<dd>Set the expiration timer, in seconds, on the key. The default is 600 seconds (10 mins).</dd>
+<dt><code>-u user</code></dt>
+<dd>Revoke the uid key of the given user.</dd>
+<dt><code>-v</code></dt>
+<dd>Increases the verbosity of the output to syslog (can be specified multiple times).</dd></dl>
 <h2>Configuring</h2>
 <p>The file <i>/etc/request-key.conf</i> will need to be modified so <i>/sbin/request-key</i> can properly direct the upcall. The following line should be added before a call to keyctl negate: </p>
 <p> create<tt>&nbsp;<wbr></tt>id_resolver<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>*<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>*<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>/usr/sbin/nfsidmap -t 600 %k %d </p>
@@ -57,10 +57,10 @@ description: "nfsidmap – The NFS idmapper upcall program"
 <p> Notice that the new line was added above the line for the generic program. request-key will find the first matching line and run the corresponding program. In this case, /some/other/program will handle all uid lookups, and /usr/sbin/nfsidmap will handle gid, user, and group lookups.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/idmapd.conf</i></p>
-<dd>ID mapping configuration file</p>
-<dt><i>/etc/request-key.conf</i></p>
-<dd>Request key configuration file</dl>
+<dt><i>/etc/idmapd.conf</i></dt>
+<dd>ID mapping configuration file</dd>
+<dt><i>/etc/request-key.conf</i></dt>
+<dd>Request key configuration file</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-idmapd-conf/">idmapd.conf</a></code>(5), <code><a href="/docs/linux/man/8-request-key/">request-key</a></code>(8)</p>
 <h2>Author</h2>

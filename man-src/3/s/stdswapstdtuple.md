@@ -12,14 +12,10 @@ std::swap(std::tuple) - std::swap(std::tuple)
 
 <pre><code>template &lt;class... Types&gt;
 (since C++ 11)
-
     void swap(tuple&lt;Types...&gt; &amp;lhs, tuple&lt;Types...&gt; &amp;rhs) noexcept(/* see below */);
 (until C++ 20)
-
     template &lt;class... Types&gt;
-
     constexpr void(since C++ 20)
-
         swap(tuple&lt;Types...&gt; &amp;lhs, tuple&lt;Types...&gt; &amp;rhs) noexcept(/* see below */);</code></pre> 
 Swaps the contents of lhs and rhs. Equivalent to lhs.swap(rhs). 
 This function does not participate in overload resolution unless std::is_swappable_v&lt;Ti&gt; is true for all i from 0 to sizeof...(Types). <i>(since C++17)</i> 

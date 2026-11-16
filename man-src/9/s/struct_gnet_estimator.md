@@ -18,11 +18,11 @@ struct_gnet_estimator - rate estimator configuration
 <h2>Members</h2>
 
 interval
-<dl><dd>sampling period</dl>
+<dl><dd>sampling period</dd></dl>
  
 
  ewma_log
-<dl><dd>the log of measurement window weight</dl>
+<dl><dd>the log of measurement window weight</dd></dl>
 
 <h2>Copyright</h2>
 

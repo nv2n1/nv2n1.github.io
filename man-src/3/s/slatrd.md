@@ -19,7 +19,7 @@ description: "slatrd.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SLATRD reduces NB rows and columns of a real symmetric matrix A to
  symmetric tridiagonal form by an orthogonal similarity
@@ -31,11 +31,11 @@ description: "slatrd.f –"
  matrix, of which the lower triangle is supplied.
  This is an auxiliary routine called by SSYTRD.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>UPLO</i> </p>
+</dt><dd> <i>UPLO</i> </dd>
 <pre>
           UPLO is CHARACTER*1
           Specifies whether the upper or lower triangular part of the
@@ -102,18 +102,18 @@ the elements below the diagonal
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 If UPLO = 'U', the matrix Q is represented as a product of elementary
                    reflectors
@@ -137,8 +137,9 @@ v(i + 1
                               : n, i),
     and tau in TAU(i).The elements of the vectors v together form the n - by - nb matrix V which is needed, with W, to apply the transformation to the unreduced part of the matrix, using a symmetric rank - 2k update of the form : A : = A - V *W **T - W *V **T.The contents of A on exit are illustrated by the following examples with n = 5 and nb = 2 : if UPLO = 'U' : if UPLO = 'L' : (a a a v4 v5)(d)(a a v4 v5)(1 d)(a 1 v5)(v1 1 a)(d 1)(v1 v2 a a)(d)(v1 v2 a a a)where d denotes a diagonal element of the reduced matrix, a denotes an element of the original matrix that is unchanged, and vi denotes an element of the vector defining H(i).
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 199 of file slatrd.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

@@ -20,69 +20,69 @@ description: "history – GNU History Library"
 <h3>Event Designators</h3>
 <p> An event designator is a reference to a command line entry in the history list. Unless the reference is absolute, events are relative to the current position in the history list. </p>
 <dl>
-<dt><code>!</code></p>
-<dd> Start a history substitution, except when followed by a <code>blank</code>, newline, = or (.</p>
-<dt><code>!</code><i>n</i></p>
-<dd> Refer to command line <i>n</i>.</p>
-<dt><code>!-</code><i>n</i></p>
-<dd> Refer to the current command minus <i>n</i>.</p>
-<dt><code>!!</code></p>
-<dd> Refer to the previous command. This is a synonym for `!-1&#8242;.</p>
-<dt><code>!</code><i>string</i></p>
-<dd> Refer to the most recent command preceding the current position in the history list starting with <i>string</i>.</p>
-<dt><code>!?</code><i>string</i><code>[?]</code></p>
-<dd> Refer to the most recent command preceding the current postition in the history list containing <i>string</i>. The trailing <code>?</code> may be omitted if <i>string</i> is followed immediately by a newline.</p>
-<dt><font SIZE="+2"><code>^</code></font><i>string1</i><font SIZE="+2">^</font><i>string2</i><font SIZE="+2">^</font></p>
-<dd> Quick substitution. Repeat the last command, replacing <i>string1</i> with <i>string2</i>. Equivalent to &#8220;!!:s/<i>string1</i>/<i>string2</i>/&#8221; (see <code>Modifiers</code> below).</p>
-<dt><code>!#</code></p>
-<dd> The entire command line typed so far.</dl>
+<dt><code>!</code></dt>
+<dd> Start a history substitution, except when followed by a <code>blank</code>, newline, = or (.</dd>
+<dt><code>!</code><i>n</i></dt>
+<dd> Refer to command line <i>n</i>.</dd>
+<dt><code>!-</code><i>n</i></dt>
+<dd> Refer to the current command minus <i>n</i>.</dd>
+<dt><code>!!</code></dt>
+<dd> Refer to the previous command. This is a synonym for `!-1&#8242;.</dd>
+<dt><code>!</code><i>string</i></dt>
+<dd> Refer to the most recent command preceding the current position in the history list starting with <i>string</i>.</dd>
+<dt><code>!?</code><i>string</i><code>[?]</code></dt>
+<dd> Refer to the most recent command preceding the current postition in the history list containing <i>string</i>. The trailing <code>?</code> may be omitted if <i>string</i> is followed immediately by a newline.</dd>
+<dt><font SIZE="+2"><code>^</code></font><i>string1</i><font SIZE="+2">^</font><i>string2</i><font SIZE="+2">^</font></dt>
+<dd> Quick substitution. Repeat the last command, replacing <i>string1</i> with <i>string2</i>. Equivalent to &#8220;!!:s/<i>string1</i>/<i>string2</i>/&#8221; (see <code>Modifiers</code> below).</dd>
+<dt><code>!#</code></dt>
+<dd> The entire command line typed so far.</dd></dl>
 <h3>Word Designators</h3>
 <p> Word designators are used to select desired words from the event. A <code>:</code> separates the event specification from the word designator. It may be omitted if the word designator begins with a <code>^</code>, <code>$</code>, <code>*</code>, <code>&#8211;</code>, or <code>%</code>. Words are numbered from the beginning of the line, with the first word being denoted by 0 (zero). Words are inserted into the current line separated by single spaces. </p>
 <dl>
-<dt><code>0 (zero)</code></p>
-<dd> The zeroth word. For the shell, this is the command word.</p>
-<dt><i>n</i></p>
-<dd> The <i>n</i>th word.</p>
-<dt><code>^</code></p>
-<dd> The first argument. That is, word 1.</p>
-<dt><code>$</code></p>
-<dd> The last argument.</p>
-<dt><code>%</code></p>
-<dd> The word matched by the most recent `?<i>string</i>?&#8217; search.</p>
-<dt><i>x</i><code>&#8211;</code>y</p>
-<dd> A range of words; `-<i>y</i>&#8216; abbreviates `0-<i>y</i>&#8216;.</p>
-<dt><code>*</code></p>
-<dd> All of the words but the zeroth. This is a synonym for `<i>1-$</i>&#8216;. It is not an error to use <code>*</code> if there is just one word in the event; the empty string is returned in that case.</p>
-<dt><code>x*</code></p>
-<dd> Abbreviates <i>x-$</i>.</p>
-<dt><code>x-</code></p>
-<dd> Abbreviates <i>x-$</i> like <code>x*</code>, but omits the last word.</dl>
+<dt><code>0 (zero)</code></dt>
+<dd> The zeroth word. For the shell, this is the command word.</dd>
+<dt><i>n</i></dt>
+<dd> The <i>n</i>th word.</dd>
+<dt><code>^</code></dt>
+<dd> The first argument. That is, word 1.</dd>
+<dt><code>$</code></dt>
+<dd> The last argument.</dd>
+<dt><code>%</code></dt>
+<dd> The word matched by the most recent `?<i>string</i>?&#8217; search.</dd>
+<dt><i>x</i><code>&#8211;</code>y</dt>
+<dd> A range of words; `-<i>y</i>&#8216; abbreviates `0-<i>y</i>&#8216;.</dd>
+<dt><code>*</code></dt>
+<dd> All of the words but the zeroth. This is a synonym for `<i>1-$</i>&#8216;. It is not an error to use <code>*</code> if there is just one word in the event; the empty string is returned in that case.</dd>
+<dt><code>x*</code></dt>
+<dd> Abbreviates <i>x-$</i>.</dd>
+<dt><code>x-</code></dt>
+<dd> Abbreviates <i>x-$</i> like <code>x*</code>, but omits the last word.</dd></dl>
 <p> If a word designator is supplied without an event specification, the previous command is used as the event.</p>
 <h3>Modifiers</h3>
 <p> After the optional word designator, there may appear a sequence of one or more of the following modifiers, each preceded by a `:&#8217;. </p>
 <dl>
-<dt><code>h</code></p>
-<dd> Remove a trailing file name component, leaving only the head.</p>
-<dt><code>t</code></p>
-<dd> Remove all leading file name components, leaving the tail.</p>
-<dt><code>r</code></p>
-<dd> Remove a trailing suffix of the form <i>.xxx</i>, leaving the basename.</p>
-<dt><code>e</code></p>
-<dd> Remove all but the trailing suffix.</p>
-<dt><code>p</code></p>
-<dd> Print the new command but do not execute it.</p>
-<dt><code>q</code></p>
-<dd> Quote the substituted words, escaping further substitutions.</p>
-<dt><code>x</code></p>
-<dd> Quote the substituted words as with <code>q</code>, but break into words at <code>blanks</code> and newlines.</p>
-<dt><code>s/</code><i>old</i>/<i>new</i>/</p>
-<dd> Substitute <i>new</i> for the first occurrence of <i>old</i> in the event line. Any delimiter can be used in place of /. The final delimiter is optional if it is the last character of the event line. The delimiter may be quoted in <i>old</i> and <i>new</i> with a single backslash. If &amp; appears in <i>new</i>, it is replaced by <i>old</i>. A single backslash will quote the &amp;. If <i>old</i> is null, it is set to the last <i>old</i> substituted, or, if no previous history substitutions took place, the last <i>string</i> in a <code>!?</code><i>string</i><code>[?]</code> search.</p>
-<dt><code>&amp;</code></p>
-<dd> Repeat the previous substitution.</p>
-<dt><code>g</code></p>
-<dd> Cause changes to be applied over the entire event line. This is used in conjunction with `<code>:s</code>&#8216; (e.g., `<code>:gs/</code><i>old</i>/<i>new</i>/&#8217;) or `<code>:&amp;</code>&#8216;. If used with `<code>:s</code>&#8216;, any delimiter can be used in place of /, and the final delimiter is optional if it is the last character of the event line. An <code>a</code> may be used as a synonym for <code>g</code>.</p>
-<dt><code>G</code></p>
-<dd> Apply the following `<code>s</code>&#8216; modifier once to each word in the event line.</dl>
+<dt><code>h</code></dt>
+<dd> Remove a trailing file name component, leaving only the head.</dd>
+<dt><code>t</code></dt>
+<dd> Remove all leading file name components, leaving the tail.</dd>
+<dt><code>r</code></dt>
+<dd> Remove a trailing suffix of the form <i>.xxx</i>, leaving the basename.</dd>
+<dt><code>e</code></dt>
+<dd> Remove all but the trailing suffix.</dd>
+<dt><code>p</code></dt>
+<dd> Print the new command but do not execute it.</dd>
+<dt><code>q</code></dt>
+<dd> Quote the substituted words, escaping further substitutions.</dd>
+<dt><code>x</code></dt>
+<dd> Quote the substituted words as with <code>q</code>, but break into words at <code>blanks</code> and newlines.</dd>
+<dt><code>s/</code><i>old</i>/<i>new</i>/</dt>
+<dd> Substitute <i>new</i> for the first occurrence of <i>old</i> in the event line. Any delimiter can be used in place of /. The final delimiter is optional if it is the last character of the event line. The delimiter may be quoted in <i>old</i> and <i>new</i> with a single backslash. If &amp; appears in <i>new</i>, it is replaced by <i>old</i>. A single backslash will quote the &amp;. If <i>old</i> is null, it is set to the last <i>old</i> substituted, or, if no previous history substitutions took place, the last <i>string</i> in a <code>!?</code><i>string</i><code>[?]</code> search.</dd>
+<dt><code>&amp;</code></dt>
+<dd> Repeat the previous substitution.</dd>
+<dt><code>g</code></dt>
+<dd> Cause changes to be applied over the entire event line. This is used in conjunction with `<code>:s</code>&#8216; (e.g., `<code>:gs/</code><i>old</i>/<i>new</i>/&#8217;) or `<code>:&amp;</code>&#8216;. If used with `<code>:s</code>&#8216;, any delimiter can be used in place of /, and the final delimiter is optional if it is the last character of the event line. An <code>a</code> may be used as a synonym for <code>g</code>.</dd>
+<dt><code>G</code></dt>
+<dd> Apply the following `<code>s</code>&#8216; modifier once to each word in the event line.</dd></dl>
 <h2>PROGRAMMING WITH HISTORY FUNCTIONS</h2>
 <p> This section describes how to use the History library in other programs.</p>
 <h3>Introduction to History</h3>
@@ -193,17 +193,15 @@ typedef struct _hist_state {
 <p> <i>int</i> <code>history_expand</code> (<i>char *string, char **output</i>)<br />
  Expand <i>string</i>, placing the result into <i>output</i>, a pointer to a string. Returns:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>0</p>
-<dd> If no expansions took place (or, if the only change in the text was the removal of escape characters preceding the history expansion character);</p>
-<dt>1</p>
-<dd> if expansions did take place;</p>
-<dt>-1</p>
-<dd> if there was an error in expansion;</p>
-<dt>2</p>
-<dd> if the returned line should be displayed, but not executed, as with the <code>:p</code> modifier.</dl>
+<dt>0</dt>
+<dd> If no expansions took place (or, if the only change in the text was the removal of escape characters preceding the history expansion character);</dd>
+<dt>1</dt>
+<dd> if expansions did take place;</dd>
+<dt>-1</dt>
+<dd> if there was an error in expansion;</dd>
+<dt>2</dt>
+<dd> if the returned line should be displayed, but not executed, as with the <code>:p</code> modifier.</dd></dl>
 </dl>
 <p> If an error ocurred in expansion, then <i>output</i> contains a descriptive error message. </p>
 <p> <i>char *</i> <code>get_history_event</code> (<i>const char *string, int *cindex, int qchar</i>)<br />
@@ -232,7 +230,8 @@ typedef struct _hist_state {
  The characters that separate tokens for <code>history_tokenize()</code>. The default value is <code>&quot;&nbsp;<wbr>	
 ()&lt;&gt;;&amp;|&quot;</code>. </p>
 <p> <i>char *</i> <code>history_no_expand_chars</code><br />
- The list of characters which inhibit history expansion if found immediately following <code>history_expansion_char</code>. The default is space, tab, newline, <code></code>, and <code>=</code>. </p>
+ The list of characters which inhibit history expansion if found immediately following <code>history_expansion_char</code>. The default is space, tab, newline, <code>
+</code>, and <code>=</code>. </p>
 <p> <i>char *</i> <code>history_search_delimiter_chars</code><br />
  The list of additional characters which can delimit a history search string, in addition to space, tab, <i>:</i> and <i>?</i> in the case of a substring search. The default is empty. </p>
 <p> <i>int</i> <code>history_quotes_inhibit_expansion</code><br />
@@ -241,18 +240,18 @@ typedef struct _hist_state {
  This should be set to the address of a function that takes two arguments: a <code>char *</code> (<i>string</i>) and an <code>int</code> index into that string (<i>i</i>). It should return a non-zero value if the history expansion starting at <i>string[i]</i> should not be performed; zero if the expansion should be done. It is intended for use by applications like <code>bash</code> that use the history expansion character for additional purposes. By default, this variable is set to <code>NULL</code>.</p>
 <h2>FILES</h2>
 <dl>
-<dt> <i>~/.history</i></p>
-<dd> Default filename for reading and writing saved history</dl>
+<dt> <i>~/.history</i></dt>
+<dd> Default filename for reading and writing saved history</dd></dl>
 <h2>SEE ALSO</h2>
 <dl>
-<dt><i>The Gnu Readline Library</i>, Brian Fox and Chet Ramey</p>
+<dt><i>The Gnu Readline Library</i>, Brian Fox and Chet Ramey</dt>
 <dd>
-<dt><i>The Gnu History Library</i>, Brian Fox and Chet Ramey</p>
+</dd><dt><i>The Gnu History Library</i>, Brian Fox and Chet Ramey</dt>
 <dd>
-<dt><i><a href="/docs/linux/man/1-bash/">bash</a></i>(1)</p>
+</dd><dt><i><a href="/docs/linux/man/1-bash/">bash</a></i>(1)</dt>
 <dd>
-<dt><i><a href="/docs/linux/man/3-readline/">readline</a></i>(3)</p>
-<dd></dl>
+</dd><dt><i><a href="/docs/linux/man/3-readline/">readline</a></i>(3)</dt>
+<dd></dd></dl>
 <h2>AUTHORS</h2>
 <p> Brian Fox, Free Software Foundation<br />
  bfox [at] gnu.org </p>

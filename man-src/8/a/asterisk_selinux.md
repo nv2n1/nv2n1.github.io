@@ -55,9 +55,9 @@ description: "asterisk_selinux – Security Enhanced Linux Policy for the asteri
 <p> Policy governs the access confined processes have to these ports. SELinux asterisk policy is very flexible allowing users to setup their asterisk processes in as secure a method as possible. </p>
 <p> The following port types are defined for asterisk: </p>
 <dl>
-<dt><code>asterisk_port_t</code></p>
+<dt><code>asterisk_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 1720 udp 2427,2727,4569</dl>
+</dd><dd>Default Defined Ports: tcp 1720 udp 2427,2727,4569</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type asterisk_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>asterisk_log_t</code> </p>

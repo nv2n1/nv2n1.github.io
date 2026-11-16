@@ -17,38 +17,38 @@ description: "groff_char – groff glyph names"
 <h2>Reference</h2>
 <p>In this section, the glyphs in groff are specified in tabular form. The meaning of the columns is as follows.</p>
 <dl>
-<dt><i>Output</i></p>
-<dd>shows how the glyph is printed for the current device; although this can have quite a different shape on other devices, it always represents the same glyph.</p>
-<dt><i>Input</i></p>
-<dd>specifies how the glyph is input either directly by a key on the keyboard, or by a groff escape sequence.</p>
-<dt><i>Code</i></p>
-<dd>applies to glyphs which can be input with a single character, and gives the ISO latin1 decimal code of that input character. Note that this code is equivalent to the lowest 256 Unicode characters, including 7-bit ASCII in the range 0 to 127.</p>
-<dt><i>PostScript</i></p>
-<dd>gives the usual PostScript name of the glyph.</p>
-<dt><i>Unicode</i></p>
-<dd>is the glyph name used in composite glyph names. The names in the Unicode column look like <code>u0021</code> or <code>u0041_0300</code>. In groff, the corresponding Unicode characters can be constructed by adding a backslash and a pair of square brackets, for example <code>\[u0021]</code> or <code>\[u0041_0300]</code>.</dl>
+<dt><i>Output</i></dt>
+<dd>shows how the glyph is printed for the current device; although this can have quite a different shape on other devices, it always represents the same glyph.</dd>
+<dt><i>Input</i></dt>
+<dd>specifies how the glyph is input either directly by a key on the keyboard, or by a groff escape sequence.</dd>
+<dt><i>Code</i></dt>
+<dd>applies to glyphs which can be input with a single character, and gives the ISO latin1 decimal code of that input character. Note that this code is equivalent to the lowest 256 Unicode characters, including 7-bit ASCII in the range 0 to 127.</dd>
+<dt><i>PostScript</i></dt>
+<dd>gives the usual PostScript name of the glyph.</dd>
+<dt><i>Unicode</i></dt>
+<dd>is the glyph name used in composite glyph names. The names in the Unicode column look like <code>u0021</code> or <code>u0041_0300</code>. In groff, the corresponding Unicode characters can be constructed by adding a backslash and a pair of square brackets, for example <code>\[u0021]</code> or <code>\[u0041_0300]</code>.</dd></dl>
 <h3>7-bit Character Codes 32-126</h3>
 <p>These are the basic glyphs having 7-bit ASCII code values assigned. They are identical to the printable characters of the character standards ISO-8859-1 (latin1) and Unicode (range <i>Basic Latin</i>). The glyph names used in composite glyph names are &#8216;u0020&#8217; up to &#8216;u007E&#8217;. </p>
 <p> Note that input characters in the range 0-31 and character 127 are <i>not</i> printable characters. Most of them are invalid input characters for <code>groff</code> anyway, and the valid ones have special meaning. For EBCDIC, the printable characters are in the range 66-255.</p>
 <dl>
-<dt>48-57</p>
-<dd>Decimal digits 0 to 9 (print as themselves).</p>
-<dt>65-90</p>
-<dd>Upper case letters A-Z (print as themselves).</p>
-<dt>97-122</p>
-<dd>Lower case letters a-z (print as themselves).</dl>
+<dt>48-57</dt>
+<dd>Decimal digits 0 to 9 (print as themselves).</dd>
+<dt>65-90</dt>
+<dd>Upper case letters A-Z (print as themselves).</dd>
+<dt>97-122</dt>
+<dd>Lower case letters a-z (print as themselves).</dd></dl>
 <p> Most of the remaining characters not in the just described ranges print as themselves; the only exceptions are the following characters:</p>
 <dl>
-<dt><code>`</code></p>
-<dd>the ISO latin1 &#8216;Grave Accent&#8217; (code 96) prints as &#8216;, a left single quotation mark (Unicode u2018). The same output glyph can be requested explicitly with &#8216;<tt>\(oq</tt>&#8216;. The original character can be obtained with &#8216;<tt>\`</tt>&#8216; (Unicode u0060).</p>
-<dt><code>&#8216;</code></p>
-<dd>the ISO latin1 &#8216;Apostrophe&#8217; (code 39) prints as &#8216;, a right single quotation mark (Unicode u2019). The same output glyph is commonly used in typography to represent a punctation apostrophe, for example in contractions. It can be requested explicitly with &#8216;<tt>\(cq</tt>&#8216;. The original character can be obtained with &#8216;<tt>\(aq</tt>&#8216; (Unicode u0027).</p>
-<dt><code>&#8211;</code></p>
-<dd>the ISO latin1 &#8216;Hyphen, Minus Sign&#8217; (code 45) prints as a hyphen (Unicode u2010). The same output glyph can be requested explicitly with &#8216;<tt>\(hy</tt>&#8216;. A minus sign can be obtained with &#8216;<tt>\-</tt>&#8216; (Unicode u2212).</p>
-<dt><code>~</code></p>
-<dd>the ISO latin1 &#8216;Tilde&#8217; (code 126) is reduced in size to be usable as a diacritic (Unicode u02DC). A larger glyph can be obtained with &#8216;<tt>\(ti</tt>&#8216; (Unicode u007E).</p>
-<dt><code>^</code></p>
-<dd>the ISO latin1 &#8216;Circumflex Accent&#8217; (code 94) is reduced in size to be usable as a diacritic (Unicode u02C6); a larger glyph can be obtained with &#8216;<tt>\(ha</tt>&#8216; (Unicode u005E).</dl>
+<dt><code>`</code></dt>
+<dd>the ISO latin1 &#8216;Grave Accent&#8217; (code 96) prints as &#8216;, a left single quotation mark (Unicode u2018). The same output glyph can be requested explicitly with &#8216;<tt>\(oq</tt>&#8216;. The original character can be obtained with &#8216;<tt>\`</tt>&#8216; (Unicode u0060).</dd>
+<dt><code>&#8216;</code></dt>
+<dd>the ISO latin1 &#8216;Apostrophe&#8217; (code 39) prints as &#8216;, a right single quotation mark (Unicode u2019). The same output glyph is commonly used in typography to represent a punctation apostrophe, for example in contractions. It can be requested explicitly with &#8216;<tt>\(cq</tt>&#8216;. The original character can be obtained with &#8216;<tt>\(aq</tt>&#8216; (Unicode u0027).</dd>
+<dt><code>&#8211;</code></dt>
+<dd>the ISO latin1 &#8216;Hyphen, Minus Sign&#8217; (code 45) prints as a hyphen (Unicode u2010). The same output glyph can be requested explicitly with &#8216;<tt>\(hy</tt>&#8216;. A minus sign can be obtained with &#8216;<tt>\-</tt>&#8216; (Unicode u2212).</dd>
+<dt><code>~</code></dt>
+<dd>the ISO latin1 &#8216;Tilde&#8217; (code 126) is reduced in size to be usable as a diacritic (Unicode u02DC). A larger glyph can be obtained with &#8216;<tt>\(ti</tt>&#8216; (Unicode u007E).</dd>
+<dt><code>^</code></dt>
+<dd>the ISO latin1 &#8216;Circumflex Accent&#8217; (code 94) is reduced in size to be usable as a diacritic (Unicode u02C6); a larger glyph can be obtained with &#8216;<tt>\(ha</tt>&#8216; (Unicode u005E).</dd></dl>
 <table>
 <tr VALIGN=top>
 <td>Output</td>
@@ -402,10 +402,10 @@ description: "groff_char – groff glyph names"
 <p>They are interpreted as printable characters according to the <i>latin1</i> (<i>ISO-8859-1</i>) code set, being identical to the Unicode range <i>Latin-1 Supplement</i>. </p>
 <p> Input characters in range 128-159 (on non-EBCDIC hosts) are not printable characters.</p>
 <dl>
-<dt>160</p>
-<dd>the ISO latin1 <i>no-break space</i> is mapped to &#8216;<tt>\~</tt>&#8216;, the stretchable space character.</p>
-<dt>173</p>
-<dd>the soft hyphen control character. <code>groff</code> never uses this character for output (thus it is omitted in the table below); the input character 173 is mapped onto &#8216;<tt>\%</tt>&#8216;.</dl>
+<dt>160</dt>
+<dd>the ISO latin1 <i>no-break space</i> is mapped to &#8216;<tt>\~</tt>&#8216;, the stretchable space character.</dd>
+<dt>173</dt>
+<dd>the soft hyphen control character. <code>groff</code> never uses this character for output (thus it is omitted in the table below); the input character 173 is mapped onto &#8216;<tt>\%</tt>&#8216;.</dd></dl>
 <p> The remaining ranges (161-172, 174-255) are printable characters that print as themselves. Although they can be specified directly with the keyboard on systems with a latin1 code page, it is better to use their glyph names; see the next section. </p>
 <table>
 <tr VALIGN=top>
@@ -1272,12 +1272,12 @@ description: "groff_char – groff glyph names"
 <h3>Named Glyphs</h3>
 <p>Glyph names can be embedded into the document text by using escape sequences. <code><a href="/docs/linux/man/7-groff/">groff</a></code>(7) describes how these escape sequences look. Glyph names can consist of quite arbitrary characters from the ASCII or latin1 code set, not only alphanumeric characters. Here some examples:</p>
 <dl>
-<dt><tt>\(</tt><i>ch</i></p>
-<dd>A glyph having the 2-character name <i>ch</i>.</p>
-<dt><tt>\[</tt>,<i>char_name/</i><tt>]</tt></p>
-<dd>A glyph having the name <i>char_name</i> (having length 1, 2, 3, &#8230;). Note that &#8216;<i>c</i>&#8216; is not the same as &#8216;<tt>\[</tt>,<i>c/</i><tt>]</tt>&#8216; (,<i>c</i>&nbsp;a single character): The latter is internally mapped to glyph name &#8216;\<i>c</i>&#8216;. By default, groff defines a single glyph name starting with a backslash, namely &#8216;\-&#8216;, which can be either accessed as &#8216;<tt>\-</tt>&#8216; or &#8216;<tt>\[-]</tt>&#8216;.</p>
-<dt><tt>\[</tt>,<i>base_glyph composite_1 composite_2 &#8230;/</i><tt>]</tt></p>
-<dd>A composite glyph; see below for a more detailed description.</dl>
+<dt><tt>\(</tt><i>ch</i></dt>
+<dd>A glyph having the 2-character name <i>ch</i>.</dd>
+<dt><tt>\[</tt>,<i>char_name/</i><tt>]</tt></dt>
+<dd>A glyph having the name <i>char_name</i> (having length 1, 2, 3, &#8230;). Note that &#8216;<i>c</i>&#8216; is not the same as &#8216;<tt>\[</tt>,<i>c/</i><tt>]</tt>&#8216; (,<i>c</i>&nbsp;a single character): The latter is internally mapped to glyph name &#8216;\<i>c</i>&#8216;. By default, groff defines a single glyph name starting with a backslash, namely &#8216;\-&#8216;, which can be either accessed as &#8216;<tt>\-</tt>&#8216; or &#8216;<tt>\[-]</tt>&#8216;.</dd>
+<dt><tt>\[</tt>,<i>base_glyph composite_1 composite_2 &#8230;/</i><tt>]</tt></dt>
+<dd>A composite glyph; see below for a more detailed description.</dd></dl>
 <p> In groff, each 8-bit input character can also referred to by the construct &#8216;<tt>\[char</tt>,<i>n/</i><tt>]</tt>&#8216; where <i>n</i> is the decimal code of the character, a number between 0 and 255 without leading zeros (those entities are <i>not</i> glyph names). They are normally mapped onto glyphs using the <tt>.trin</tt> request. </p>
 <p> Another special convention is the handling of glyphs with names directly derived from a Unicode code point; this is shown in the &#8216;Unicode&#8217; column of the table below. In general, all glyphs not having a name as listed in this manual page can be accessed with the &#8216;<tt>\[u</tt>,<i>XXXX/</i><tt>]</tt>&#8216; construct. Refer to section &#8220;Using Symbols&#8221; in <i>Groff: The GNU Implementation of troff</i>, the <i>groff</i> Texinfo manual, which describes how <i>groff</i> glyph names are constructed. </p>
 <p> Moreover, new glyph names can be created by the <tt>.char</tt> request; see <code><a href="/docs/linux/man/7-groff/">groff</a></code>(7). </p>
@@ -2294,7 +2294,7 @@ description: "groff_char – groff glyph names"
 <p> <i>Brackets</i> </p>
 <p> The extensible bracket pieces are font-invariant glyphs. In classical troff only one glyph was available to vertically extend brackets, braces, and parentheses: &#8216;bv&#8217;. We map it rather arbitrarily to u23AA. </p>
 <p> Note that not all devices contain extensible bracket pieces which can be piled up with &#8216;<tt></tt>&#8216; due to the restrictions of the escape&#8217;s piling algorithm. A general solution to build brackets out of pieces is the following macro: </p>
-<pre><dl><dt><dd>.\&quot; Make a pile centered vertically 0.5em
+<pre><dl><dt></dt><dd>.\&quot; Make a pile centered vertically 0.5em
 .\&quot; above the baseline.
 .\&quot; The first argument is placed at the top.
 .\&quot; The pile is returned in string 'pile'
@@ -2332,7 +2332,7 @@ description: "groff_char – groff glyph names"
 [pile-wd]u'\&quot;
 ..
 .ec
-</dl></pre>
+</dd></dl></pre>
 <p>Another complication is the fact that some glyphs which represent bracket pieces in original troff can be used for other mathematical symbols also, for example &#8216;lf&#8217; and &#8216;rf&#8217; which provide the &#8216;floor&#8217; operator. Other devices (most notably for DVI output) don&#8217;t unify such glyphs. For this reason, the four glyphs &#8216;lf&#8217;, &#8216;rf&#8217;, &#8216;lc&#8217;, and &#8216;rc&#8217; are not unified with similarly looking bracket pieces. In <code>groff</code>, only glyphs with long names are guaranteed to pile up correctly for all devices (provided those glyphs exist). </p>
 <table>
 <tr VALIGN=top>
@@ -4441,8 +4441,8 @@ description: "groff_char – groff glyph names"
 <h2>See Also</h2>
 <p><i>Groff: The GNU Implementation of troff</i>, by Trent A. Fisher and Werner Lemberg, is the primary <i>groff</i> manual. Section &#8220;Using Symbols&#8221; may be of particular note. You can browse it interactively with &#8220;info &#8216;(groff)Using Symbols'&#8221;.</p>
 <dl>
-<dt><code><a href="/docs/linux/man/1-groff/">groff</a></code>(1)</p>
-<dd>the GNU roff formatter</p>
-<dt><code><a href="/docs/linux/man/7-groff/">groff</a></code>(7)</p>
-<dd>a short reference of the groff formatting language</dl>
+<dt><code><a href="/docs/linux/man/1-groff/">groff</a></code>(1)</dt>
+<dd>the GNU roff formatter</dd>
+<dt><code><a href="/docs/linux/man/7-groff/">groff</a></code>(7)</dt>
+<dd>a short reference of the groff formatting language</dd></dl>
 <p> <i>An extension to the troff character set for Europe</i>, E.G. Keizer, K.J. Simonsen, J. Akkerhuis; EUUG Newsletter, Volume 9, No. 2, Summer 1989 The Unicode Standard </p>

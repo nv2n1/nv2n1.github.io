@@ -12,8 +12,8 @@ description: "Synopsis –"
 <p> Currently must be run out periodically, using cron or something similar.</p>
 <h2>Usage</h2>
 <dl>
-<dt><code>puppetd [-D|&#8211;daemonize|&#8211;no-daemonize] [-d|&#8211;debug] [&#8211;disable] [&#8211;enable]</code></p>
-<dd>[-h|&#8211;help] [&#8211;fqdn &lt;host name&gt;] [-l|&#8211;logdest syslog|&lt;file&gt;|console] [-o|&#8211;onetime] [&#8211;serve &lt;handler&gt;] [-t|&#8211;test] [&#8211;noop] [-V|&#8211;version] [-v|&#8211;verbose] [-w|&#8211;waitforcert &lt;seconds&gt;]</dl>
+<dt><code>puppetd [-D|&#8211;daemonize|&#8211;no-daemonize] [-d|&#8211;debug] [&#8211;disable] [&#8211;enable]</code></dt>
+<dd>[-h|&#8211;help] [&#8211;fqdn &lt;host name&gt;] [-l|&#8211;logdest syslog|&lt;file&gt;|console] [-o|&#8211;onetime] [&#8211;serve &lt;handler&gt;] [-t|&#8211;test] [&#8211;noop] [-V|&#8211;version] [-v|&#8211;verbose] [-w|&#8211;waitforcert &lt;seconds&gt;]</dd></dl>
 <h2>Description</h2>
 <p>This is the main puppet client. Its job is to retrieve the local machineaqs configuration from a remote server and apply it. In order to successfully communicate with the remote server, the client must have a certificate signed by a certificate authority that the server trusts; the recommended method for this, at the moment, is to run a certificate authority as part of the puppet server (which is the default). The client will connect and request a signed certificate, and will continue connecting until it receives one. </p>
 <p> Once the client has a signed certificate, it will retrieve its configuration and apply it.</p>
@@ -28,32 +28,32 @@ description: "Synopsis –"
 <p> no-daemonize: Do not send the process into the background. </p>
 <p> debug: Enable full debugging.</p>
 <dl>
-<dt><code>disable: Disable working on the local system. This puts a lock file</code></p>
-<dd>in place, causing +puppetd+ not to work on the system until the lock file is removed. This is useful if you are testing a configuration and do not want the central configuration to override the local state until everything is tested and committed. </p>
+<dt><code>disable: Disable working on the local system. This puts a lock file</code></dt>
+<dd>in place, causing +puppetd+ not to work on the system until the lock file is removed. This is useful if you are testing a configuration and do not want the central configuration to override the local state until everything is tested and committed. </dd>
 <p> +puppetd+ uses the same lock file while it is running, so no more than one +puppetd+ process is working at a time. </p>
 <p> +puppetd+ exits after executing this.</p>
-<dt><code>enable: Enable working on the local system. This removes any lock</code></p>
-<dd>file, causing +puppetd+ to start managing the local system again (although it will continue to use its normal scheduling, so it might not start for another half hour). </p>
+<dt><code>enable: Enable working on the local system. This removes any lock</code></dt>
+<dd>file, causing +puppetd+ to start managing the local system again (although it will continue to use its normal scheduling, so it might not start for another half hour). </dd>
 <p> +puppetd+ exits after executing this.</p>
-<dt><code>fqdn: Set the fully-qualified domain name of the client. This is</code></p>
-<dd>only used for certificate purposes, but can be used to override the discovered hostname. If you need to use this flag, it is generally an indication of a setup problem. </p>
+<dt><code>fqdn: Set the fully-qualified domain name of the client. This is</code></dt>
+<dd>only used for certificate purposes, but can be used to override the discovered hostname. If you need to use this flag, it is generally an indication of a setup problem. </dd>
 <p> help: Print this help message</p>
-<dt><code>logdest: Where to send messages. Choose between syslog, the</code></p>
-<dd>console, and a log file. Defaults to sending messages to syslog, or the console if debugging or verbosity is enabled.</p>
-<dt><code>no-client: Do not create a config client. This will cause the daemon</code></p>
-<dd>to run without ever checking for its configuration automatically, and only makes sense when used in conjunction with &#8211;listen.</p>
-<dt><code>onetime: Run the configuration once. Runs a single daemonized</code></p>
-<dd>Puppet run. Useful for interactively running puppetd and hence used in conjunction with the &#8211;no-daemonize option.</p>
-<dt><code>serve: Start another type of server. By default, +puppetd+ will</code></p>
-<dd>start a service handler that allows authenticated and authorized remote nodes to trigger the configuration to be pulled down and applied. You can specify any handler here that does not require configuration, e.g., filebucket, ca, or resource. The handlers are in +lib/puppet/network/handler+, and the names must match exactly, both in the call to +serve+ and in +namespaceauth.conf+.</p>
-<dt><code>test: Enable the most common options used for testing. These are</code></p>
-<dd>+onetime+, +verbose+, +ignorecache, +no-daemonize+, and +no-usecacheonfailure+.</p>
-<dt><code>noop: Use +noop+ mode where the daemon runs in a no-op or</code></p>
-<dd>dry-run mode. This is useful for seeing what changes Puppet will make without actually executing the changes. </p>
+<dt><code>logdest: Where to send messages. Choose between syslog, the</code></dt>
+<dd>console, and a log file. Defaults to sending messages to syslog, or the console if debugging or verbosity is enabled.</dd>
+<dt><code>no-client: Do not create a config client. This will cause the daemon</code></dt>
+<dd>to run without ever checking for its configuration automatically, and only makes sense when used in conjunction with &#8211;listen.</dd>
+<dt><code>onetime: Run the configuration once. Runs a single daemonized</code></dt>
+<dd>Puppet run. Useful for interactively running puppetd and hence used in conjunction with the &#8211;no-daemonize option.</dd>
+<dt><code>serve: Start another type of server. By default, +puppetd+ will</code></dt>
+<dd>start a service handler that allows authenticated and authorized remote nodes to trigger the configuration to be pulled down and applied. You can specify any handler here that does not require configuration, e.g., filebucket, ca, or resource. The handlers are in +lib/puppet/network/handler+, and the names must match exactly, both in the call to +serve+ and in +namespaceauth.conf+.</dd>
+<dt><code>test: Enable the most common options used for testing. These are</code></dt>
+<dd>+onetime+, +verbose+, +ignorecache, +no-daemonize+, and +no-usecacheonfailure+.</dd>
+<dt><code>noop: Use +noop+ mode where the daemon runs in a no-op or</code></dt>
+<dd>dry-run mode. This is useful for seeing what changes Puppet will make without actually executing the changes. </dd>
 <p> verbose: Turn on verbose reporting. </p>
 <p> version: Print the puppet version number and exit.</p>
-<dt><code>waitforcert: This option only matters for daemons that do not yet have</code></p>
-<dd>certificates and it is enabled by default, with a value of 120 (seconds). This causes +puppetd+ to connect to the server every 2 minutes and ask it to sign a certificate request. This is useful for the initial setup of a puppet client. You can turn off waiting for certificates by specifying a time of 0.</dl>
+<dt><code>waitforcert: This option only matters for daemons that do not yet have</code></dt>
+<dd>certificates and it is enabled by default, with a value of 120 (seconds). This causes +puppetd+ to connect to the server every 2 minutes and ask it to sign a certificate request. This is useful for the initial setup of a puppet client. You can turn off waiting for certificates by specifying a time of 0.</dd></dl>
 <h2>Example</h2>
 <p>puppetd &#8211;server puppet.domain.com</p>
 <h2>Author</h2>

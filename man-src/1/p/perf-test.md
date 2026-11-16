@@ -36,13 +36,13 @@ perf test[&lt;options&gt;][{list&lt;test - name - fragment&gt; | [&lt;test - nam
  -s, --skip
 <dl>
 <dt>
-<dd> Tests to skip (comma separated numeric list).</dl>
+</dt><dd> Tests to skip (comma separated numeric list).</dd></dl>
  
 
  -v, --verbose
 <dl>
 <dt>
-<dd> Be more verbose.</dl>
+</dt><dd> Be more verbose.</dd></dl>
  
 
 <h2>Index</h2>

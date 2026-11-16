@@ -17,9 +17,9 @@ description: "tcpvmexportd – transcode PVM3 export interface"
 <p> <code>tcpvmexportd</code> This is the frontend for all the activity of export_pvm module: the program is spawned on all cluster hosts and wait to do the encode work.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-s</code></p>
-<dd> Start tcpvmexportd in slave mode (internal use of export_pvm) [default].</p>
-<dt><code> Sub Options for slave mode</code></p>
+<dt><code>-s</code></dt>
+<dd> Start tcpvmexportd in slave mode (internal use of export_pvm) [default].</dd>
+<dt><code> Sub Options for slave mode</code></dt>
 <dd>
 <p> <code>-j</code> Start merger process [off]. </p>
 <p> <code>-L</code> Create only the merge list [off]. </p>
@@ -32,17 +32,17 @@ description: "tcpvmexportd – transcode PVM3 export interface"
 <p> <code>-f name</code> Out file name [/tmp/my_file_name] </p>
 <p> <code>-p number</code> Multipass (0,1,2,3) [0]. </p>
 <p> <code>-M </code> Enable internal multipass [off]. </p>
-<dt><code>-m</code></p>
-<dd> Start tcpvmexportd in master mode [off]. </p>
-<dt><code> Sub Options for master mode</code></p>
+</dd><dt><code>-m</code></dt>
+<dd> Start tcpvmexportd in master mode [off]. </dd>
+<dt><code> Sub Options for master mode</code></dt>
 <dd>
 <p> <code>-j</code> Start the batch merge mode [off]. </p>
 <p> <code>-C</code> Check the config or merge file [off]. </p>
 <p> <code>-f name</code> Input file name [/tmp/my_file_name] </p>
-<dt><code>-h</code></p>
-<dd> Print help.</p>
-<dt><code>-v</code></p>
-<dd> Print the version.</dl>
+</dd><dt><code>-h</code></dt>
+<dd> Print help.</dd>
+<dt><code>-v</code></dt>
+<dd> Print the version.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Command: </p>
 <p> <code>tcpvmexportd -m -j -f mylistfile.lst</code> </p>

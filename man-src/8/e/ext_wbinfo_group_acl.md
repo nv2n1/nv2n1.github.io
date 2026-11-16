@@ -15,12 +15,12 @@ url: "/docs/linux/man/8-ext_wbinfo_group_acl/"
 <p> It reads from the standard input the domain username and a list of groups and tries to match each against the groups membership of the specified username.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd>Write debug info to stderr.</p>
-<dt><code>-h</code></p>
-<dd>Print the help.</p>
-<dt><code>-K</code></p>
-<dd>Downgrade Kerberos credentials to <font SIZE="-1">NTLM.</font></dl>
+<dt><code>-d</code></dt>
+<dd>Write debug info to stderr.</dd>
+<dt><code>-h</code></dt>
+<dd>Print the help.</dd>
+<dt><code>-K</code></dt>
+<dd>Downgrade Kerberos credentials to <font SIZE="-1">NTLM.</font></dd></dl>
 <h2>Configuration</h2>
 <pre> external_acl_type wbinfo_check %LOGIN /path/to/ext_wbinfo_group_acl
  acl allowed_group external wbinfo_check Group1 Group2

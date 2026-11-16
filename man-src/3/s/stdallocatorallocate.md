@@ -11,13 +11,10 @@ description: "std::allocator<T>::allocate – std::allocator<T>::allocate"
 <h2>Synopsis</h2>
 <pre><code>pointer allocate(size_type n, const void *hint = 0);
 (1)(until C++ 17)(since C++ 17)
-
     T *allocate(std::size_t n, const void *hint);
 (1)(deprecated)(removed in C++ 20)
-
     T *allocate(std::size_t n);
 (since C++ 17)(2)(until C++ 20)
-
     [[nodiscard]] T *allocate(std::size_t n);
 (since C++ 20)</code></pre>
 <p>Allocates n * sizeof(T) bytes of uninitialized storage by calling ::operator_new(std::size_t)<br />

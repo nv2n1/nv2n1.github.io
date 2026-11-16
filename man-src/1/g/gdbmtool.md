@@ -29,9 +29,8 @@ description: "gdbmtool – examine and modify a GDBM database"
                   Audible bell character (ASCII 7)
                   Backspace character (ASCII 8)
                   Form-feed character (ASCII 12)
-        
           Newline character (ASCII 10)
-                  Carriage return character (ASCII 13)
+          Carriage return character (ASCII 13)
         	          Horizontal tabulation character (ASCII 9)
                   Vertical tabulation character (ASCII 11)
         \          Single slash
@@ -40,84 +39,84 @@ description: "gdbmtool – examine and modify a GDBM database"
  character effectively removes that character, allowing to split long arguments over several input lines.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code>, <code>&#8211;block-size</code>=<i>SIZE</i></p>
-<dd> Set block size.</p>
-<dt><code>-c</code>, <code>&#8211;cache-size</code>=<i>SIZE</i></p>
-<dd> Set cache size.</p>
-<dt><code>-f</code>, <code>&#8211;file</code>=<i>FILE</i></p>
-<dd> Read commands from <i>FILE</i>, instead of from the standard input.</p>
-<dt><code>-l</code>, <code>&#8211;no-lock</code></p>
-<dd> Disable file locking.</p>
-<dt><code>-m</code>, <code>&#8211;no-mmap</code></p>
-<dd> Do not use <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2).</p>
-<dt><code>-n</code>, <code>&#8211;newdb</code></p>
-<dd> Create the database, truncating it if it already exists.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Don&#8217;t print initial banner.</p>
-<dt><code>-r</code>, <code>&#8211;read-only</code></p>
-<dd> Open database in read-only mode.</p>
-<dt><code>-s</code>, <code>&#8211;synchronize</code></p>
-<dd> Synchronize to disk after each write.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print a short usage summary.</p>
-<dt><code>&#8211;usage</code></p>
-<dd> Print a list of available options.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print program version</dl>
+<dt><code>-b</code>, <code>&#8211;block-size</code>=<i>SIZE</i></dt>
+<dd> Set block size.</dd>
+<dt><code>-c</code>, <code>&#8211;cache-size</code>=<i>SIZE</i></dt>
+<dd> Set cache size.</dd>
+<dt><code>-f</code>, <code>&#8211;file</code>=<i>FILE</i></dt>
+<dd> Read commands from <i>FILE</i>, instead of from the standard input.</dd>
+<dt><code>-l</code>, <code>&#8211;no-lock</code></dt>
+<dd> Disable file locking.</dd>
+<dt><code>-m</code>, <code>&#8211;no-mmap</code></dt>
+<dd> Do not use <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2).</dd>
+<dt><code>-n</code>, <code>&#8211;newdb</code></dt>
+<dd> Create the database, truncating it if it already exists.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Don&#8217;t print initial banner.</dd>
+<dt><code>-r</code>, <code>&#8211;read-only</code></dt>
+<dd> Open database in read-only mode.</dd>
+<dt><code>-s</code>, <code>&#8211;synchronize</code></dt>
+<dd> Synchronize to disk after each write.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print a short usage summary.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> Print a list of available options.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print program version</dd></dl>
 <h2>SHELL COMMANDS</h2>
 <dl>
-<dt><code>avail</code></p>
-<dd> Print the <code>avail list</code>.</p>
-<dt><code>bucket</code> <i>NUM</i></p>
-<dd> Print the bucket number <i>NUM</i> and set is as the current one.</p>
-<dt><code>cache</code></p>
-<dd> Print the bucket cache.</p>
-<dt><code>close</code></p>
-<dd> Close the currently open database.</p>
-<dt><code>count</code></p>
-<dd> Print the number of entries in the database.</p>
-<dt><code>current</code></p>
-<dd> Print the current bucket.</p>
-<dt><code>delete</code> <i>KEY</i></p>
-<dd> Delete record with the given <i>KEY</i>.</p>
-<dt><code>dir</code></p>
-<dd> Print hash directory.</p>
-<dt><code>export</code>, <code>e</code> <i>FILE-NAME</i> [<code>truncate</code>] [<code>binary</code>|<code>ascii</code>]</p>
-<dd> Export the database to the flat file <i>FILE-NAME</i>. This is equivalent to <code><a href="/docs/linux/man/1-gdbm_dump/">gdbm_dump</a></code>(1). </p>
+<dt><code>avail</code></dt>
+<dd> Print the <code>avail list</code>.</dd>
+<dt><code>bucket</code> <i>NUM</i></dt>
+<dd> Print the bucket number <i>NUM</i> and set is as the current one.</dd>
+<dt><code>cache</code></dt>
+<dd> Print the bucket cache.</dd>
+<dt><code>close</code></dt>
+<dd> Close the currently open database.</dd>
+<dt><code>count</code></dt>
+<dd> Print the number of entries in the database.</dd>
+<dt><code>current</code></dt>
+<dd> Print the current bucket.</dd>
+<dt><code>delete</code> <i>KEY</i></dt>
+<dd> Delete record with the given <i>KEY</i>.</dd>
+<dt><code>dir</code></dt>
+<dd> Print hash directory.</dd>
+<dt><code>export</code>, <code>e</code> <i>FILE-NAME</i> [<code>truncate</code>] [<code>binary</code>|<code>ascii</code>]</dt>
+<dd> Export the database to the flat file <i>FILE-NAME</i>. This is equivalent to <code><a href="/docs/linux/man/1-gdbm_dump/">gdbm_dump</a></code>(1). </dd>
 <p> This command will not overwrite an existing file, unless the <code>truncate</code> parameter is also given. Another optional parameter determines the type of the dump (*note Flat files::). By default, ASCII dump will be created.</p>
-<dt><code>fetch</code> <i>KEY</i></p>
-<dd> Fetch and display the record with the given <i>KEY</i>.</p>
-<dt><code>first</code></p>
-<dd> Fetch and display the first record in the database. Subsequent records can be fetched using the <code>next</code> command (see below).</p>
-<dt><code>hash</code> <i>KEY</i></p>
-<dd> Compute and display the hash value for the given <i>KEY</i>.</p>
-<dt><code>header</code></p>
-<dd> Print file header.</p>
-<dt><code>help</code> or <code>?</code></p>
-<dd> Print a concise command summary, showing each command letter and verb with its parameters and a short description of what it does. Optional arguments are enclosed in square brackets.</p>
-<dt><code>import</code> <i>FILE-NAME</i> [<code>replace</code>] [<code>nometa</code>]</p>
-<dd> Import data from a flat dump file <i>FILE-NAME</i>. If the <code>replace</code> argument is given, any records with the same keys as the already existing ones will replace them. The <code>nometa</code> argument turns off restoring meta-information from the dump file.</p>
-<dt><code>list</code></p>
-<dd> List the contents of the database.</p>
-<dt><code>next</code> [<i>KEY</i>]</p>
-<dd> Sequential access: fetch and display the next record. If the <i>KEY</i> is given, the record following the one with this key will be fetched.</p>
-<dt><code>open</code> <i>FILE</i></p>
-<dd> Open the database file <i>FILE</i>. If successful, any previously open database is closed. Otherwise, if the operation fails, the currently opened database remains unchanged. </p>
+<dt><code>fetch</code> <i>KEY</i></dt>
+<dd> Fetch and display the record with the given <i>KEY</i>.</dd>
+<dt><code>first</code></dt>
+<dd> Fetch and display the first record in the database. Subsequent records can be fetched using the <code>next</code> command (see below).</dd>
+<dt><code>hash</code> <i>KEY</i></dt>
+<dd> Compute and display the hash value for the given <i>KEY</i>.</dd>
+<dt><code>header</code></dt>
+<dd> Print file header.</dd>
+<dt><code>help</code> or <code>?</code></dt>
+<dd> Print a concise command summary, showing each command letter and verb with its parameters and a short description of what it does. Optional arguments are enclosed in square brackets.</dd>
+<dt><code>import</code> <i>FILE-NAME</i> [<code>replace</code>] [<code>nometa</code>]</dt>
+<dd> Import data from a flat dump file <i>FILE-NAME</i>. If the <code>replace</code> argument is given, any records with the same keys as the already existing ones will replace them. The <code>nometa</code> argument turns off restoring meta-information from the dump file.</dd>
+<dt><code>list</code></dt>
+<dd> List the contents of the database.</dd>
+<dt><code>next</code> [<i>KEY</i>]</dt>
+<dd> Sequential access: fetch and display the next record. If the <i>KEY</i> is given, the record following the one with this key will be fetched.</dd>
+<dt><code>open</code> <i>FILE</i></dt>
+<dd> Open the database file <i>FILE</i>. If successful, any previously open database is closed. Otherwise, if the operation fails, the currently opened database remains unchanged. </dd>
 <p> This command takes additional information from the variables <code>open</code>, <code>lock</code>, <code>mmap</code>, and <code>sync</code>. See the section <code>VARIABLES</code>, for a detailed description of these.</p>
-<dt><code>quit</code></p>
-<dd> Close the database and quit the utility.</p>
-<dt><code>reorganize</code></p>
-<dd> Reorganize the database. <code>set</code> [<i>VAR</i>=<i>VALUE</i>&#8230;] Without arguments, lists variables and their values. If arguments are specified, sets variables. Boolean variables can be set by specifying variable name, optionally prefixed with <code>no</code>, to set it to <code>false</code>.</p>
-<dt><code>source</code> <i>FILE</i></p>
-<dd> Read commands from the given <i>FILE</i>.</p>
-<dt><code>status</code></p>
-<dd> Print current program status.</p>
-<dt><code>store</code> <i>KEY</i> <i>DATA</i></p>
-<dd> Store the <i>DATA</i> with the given <i>KEY</i> in the database. If the <i>KEY</i> already exists, its data will be replaced.</p>
-<dt><code>unset</code> <i>VARIABLE</i>&#8230;</p>
-<dd> Unsets listed variables.</p>
-<dt><code>version</code></p>
-<dd> Print the version of <code>gdbm</code>.</dl>
+<dt><code>quit</code></dt>
+<dd> Close the database and quit the utility.</dd>
+<dt><code>reorganize</code></dt>
+<dd> Reorganize the database. <code>set</code> [<i>VAR</i>=<i>VALUE</i>&#8230;] Without arguments, lists variables and their values. If arguments are specified, sets variables. Boolean variables can be set by specifying variable name, optionally prefixed with <code>no</code>, to set it to <code>false</code>.</dd>
+<dt><code>source</code> <i>FILE</i></dt>
+<dd> Read commands from the given <i>FILE</i>.</dd>
+<dt><code>status</code></dt>
+<dd> Print current program status.</dd>
+<dt><code>store</code> <i>KEY</i> <i>DATA</i></dt>
+<dd> Store the <i>DATA</i> with the given <i>KEY</i> in the database. If the <i>KEY</i> already exists, its data will be replaced.</dd>
+<dt><code>unset</code> <i>VARIABLE</i>&#8230;</dt>
+<dd> Unsets listed variables.</dd>
+<dt><code>version</code></dt>
+<dd> Print the version of <code>gdbm</code>.</dd></dl>
 <h2>DATA DEFINITIONS</h2>
 <p> The <code>define</code> statement provides a mechanism for defining key or content structures. It is similar to the <code>C</code> <code>struct</code> declaration: </p>
 <pre>
@@ -150,10 +149,10 @@ type meaning char single byte(signed) short signed short integer
 </code></pre>
 <p> The following alignment declarations can be used within <i>defnlist</i>:</p>
 <dl>
-<dt><code>offset</code> <i>N</i></p>
-<dd> The next member begins at offset <i>N</i>.</p>
-<dt><code>pad</code> <i>N</i></p>
-<dd> Add <i>N</i> bytes of padding to the previous member.</dl>
+<dt><code>offset</code> <i>N</i></dt>
+<dd> The next member begins at offset <i>N</i>.</dd>
+<dt><code>pad</code> <i>N</i></dt>
+<dd> Add <i>N</i> bytes of padding to the previous member.</dd></dl>
 <p> For example: </p>
 <pre><code>
 define content
@@ -172,10 +171,10 @@ define content
 <p> <code>NOTE</code>: The <code>string</code> type can reasonably be used only if it is the last or the only member of the data structure. That&#8217;s because it provides no information about the number of elements in the array, so it is interpreted to contain all bytes up to the end of the datum.</p>
 <h2>VARIABLES</h2>
 <dl>
-<dt><code>confirm</code>, boolean</p>
-<dd> Whether to ask for confirmation before certain destructive operations, such as truncating the existing database. Default is <code>true</code>.</p>
-<dt><code>ps1</code>, string</p>
-<dd> Primary prompt string. Its value can contain <i>conversion specifiers</i>, consisting of the <code>%</code> character followed by another character. These specifiers are expanded in the resulting prompt as follows: </p>
+<dt><code>confirm</code>, boolean</dt>
+<dd> Whether to ask for confirmation before certain destructive operations, such as truncating the existing database. Default is <code>true</code>.</dd>
+<dt><code>ps1</code>, string</dt>
+<dd> Primary prompt string. Its value can contain <i>conversion specifiers</i>, consisting of the <code>%</code> character followed by another character. These specifiers are expanded in the resulting prompt as follows: </dd>
 <pre>
         Sequence    Expansion
         <code>%f</code>          name of the db file
@@ -186,43 +185,41 @@ define content
         <code>%%</code>          <code>%</code>
 </pre>
 <p> The default prompt is <code>%p&gt;%_</code>.</p>
-<dt><code>ps2</code>, string</p>
-<dd> Secondary prompt. See <code>ps1</code> for a description of its value. This prompt is displayed before reading the second and subsequent lines of a multi-line command. </p>
+<dt><code>ps2</code>, string</dt>
+<dd> Secondary prompt. See <code>ps1</code> for a description of its value. This prompt is displayed before reading the second and subsequent lines of a multi-line command. </dd>
 <p> The default value is <code>%_&gt;%_</code>.</p>
-<dt><code>delim1</code>, string</p>
-<dd> A string used to delimit fields of a structured datum on output (see the section <code>DATA DEFINITIONS</code>). </p>
+<dt><code>delim1</code>, string</dt>
+<dd> A string used to delimit fields of a structured datum on output (see the section <code>DATA DEFINITIONS</code>). </dd>
 <p> Default is <code>,</code> (a comma). This variable cannot be unset.</p>
-<dt><code>delim2</code>, string</p>
-<dd> A string used to delimit array items when printing a structured datum. </p>
+<dt><code>delim2</code>, string</dt>
+<dd> A string used to delimit array items when printing a structured datum. </dd>
 <p> Default is <code>,</code> (a comma). This variable cannot be unset.</p>
-<dt><code>pager</code>, string</p>
-<dd> The name and command line of the pager program to pipe output to. This program is used in interactive mode when the estimated number of output lines is greater then the number of lines on your screen. </p>
+<dt><code>pager</code>, string</dt>
+<dd> The name and command line of the pager program to pipe output to. This program is used in interactive mode when the estimated number of output lines is greater then the number of lines on your screen. </dd>
 <p> The default value is inherited from the environment variable <code>PAGER</code>. Unsetting this variable disables paging.</p>
-<dt><code>quiet</code>, boolean</p>
-<dd> Whether to display welcome banner at startup. This variable should be set in a startup script file.</dl>
+<dt><code>quiet</code>, boolean</dt>
+<dd> Whether to display welcome banner at startup. This variable should be set in a startup script file.</dd></dl>
 <p> The following variables control how the database is opened:</p>
 <dl>
-<dt><code>cachesize</code>, numeric</p>
-<dd> Sets the cache size. By default this variable is not set.</p>
-<dt><code>blocksize</code>, numeric</p>
-<dd> Sets the block size. Unset by default.</p>
-<dt><code>open</code>, string</p>
-<dd> Open mode. The following values are allowed:</p>
+<dt><code>cachesize</code>, numeric</dt>
+<dd> Sets the cache size. By default this variable is not set.</dd>
+<dt><code>blocksize</code>, numeric</dt>
+<dd> Sets the block size. Unset by default.</dd>
+<dt><code>open</code>, string</dt>
+<dd> Open mode. The following values are allowed:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>newdb</code></p>
-<dd> Truncate the database if it exists or create a new one. Open it in read-write mode.</p>
-<dt><code>wrcreat</code> or <code>rw</code></p>
-<dd> Open the database in read-write mode. Create it if it does not exist. This is the default.</p>
-<dt><code>reader</code> or <code>readonly</code></p>
-<dd> Open the database in read-only mode. Signal an error if it does not exist.</dl>
+<dt><code>newdb</code></dt>
+<dd> Truncate the database if it exists or create a new one. Open it in read-write mode.</dd>
+<dt><code>wrcreat</code> or <code>rw</code></dt>
+<dd> Open the database in read-write mode. Create it if it does not exist. This is the default.</dd>
+<dt><code>reader</code> or <code>readonly</code></dt>
+<dd> Open the database in read-only mode. Signal an error if it does not exist.</dd></dl>
 </dl>
-<dt><code>lock</code>, boolean</p>
-<dd> Lock the database. This is the default.</p>
-<dt><code>mmap</code>, boolean</p>
-<dd> Use memory mapping. This is the default. </p>
+<dt><code>lock</code>, boolean</dt>
+<dd> Lock the database. This is the default.</dd>
+<dt><code>mmap</code>, boolean</dt>
+<dd> Use memory mapping. This is the default. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gdbm_dump/">gdbm_dump</a></code>(1), <code><a href="/docs/linux/man/1-gdbm_load/">gdbm_load</a></code>(1), <code><a href="/docs/linux/man/3-gdbm/">gdbm</a></code>(3).</p>

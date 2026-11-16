@@ -43,14 +43,14 @@ It works with :<br />
 <p>For more information on how to use, please visit the wiki pages on&nbsp;<wbr><a rel="nofollow" href="http://www.cgsecurity.org">www.cgsecurity.org</a></p>
 <h2>Options</h2>
 <dl>
-<dt><code>/log</code></p>
-<dd>create a testdisk.log file</p>
-<dt><code>/debug</code></p>
-<dd>add debug information</p>
-<dt><code>/dump</code></p>
-<dd>dump raw sectors</p>
-<dt><code>/list</code></p>
-<dd>display current partitions</dl>
+<dt><code>/log</code></dt>
+<dd>create a testdisk.log file</dd>
+<dt><code>/debug</code></dt>
+<dd>add debug information</dd>
+<dt><code>/dump</code></dt>
+<dd>dump raw sectors</dd>
+<dt><code>/list</code></dt>
+<dd>display current partitions</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-fdisk/">fdisk</a></code>(8), <code><a href="/docs/linux/man/8-photorec/">photorec</a>(8).</code></p>
 <h2>Author</h2>

@@ -32,59 +32,59 @@ struct_sk_buff - socket buffer
 <h2>Members</h2>
 
 {unnamed_union}
-<dl><dd>anonymous</dl>
+<dl><dd>anonymous</dd></dl>
  
 
  inner_transport_header
-<dl><dd>Inner transport layer header (encapsulation)</dl>
+<dl><dd>Inner transport layer header (encapsulation)</dd></dl>
  
 
  inner_network_header
-<dl><dd>Network layer header (encapsulation)</dl>
+<dl><dd>Network layer header (encapsulation)</dd></dl>
  
 
  inner_mac_header
-<dl><dd>Link layer header (encapsulation)</dl>
+<dl><dd>Link layer header (encapsulation)</dd></dl>
  
 
  protocol
-<dl><dd>Packet protocol from driver</dl>
+<dl><dd>Packet protocol from driver</dd></dl>
  
 
  transport_header
-<dl><dd>Transport layer header</dl>
+<dl><dd>Transport layer header</dd></dl>
  
 
  network_header
-<dl><dd>Network layer header</dl>
+<dl><dd>Network layer header</dd></dl>
  
 
  mac_header
-<dl><dd>Link layer header</dl>
+<dl><dd>Link layer header</dd></dl>
  
 
  tail
-<dl><dd>Tail pointer</dl>
+<dl><dd>Tail pointer</dd></dl>
  
 
  end
-<dl><dd>End pointer</dl>
+<dl><dd>End pointer</dd></dl>
  
 
  head
-<dl><dd>Head of buffer</dl>
+<dl><dd>Head of buffer</dd></dl>
  
 
  data
-<dl><dd>Data head pointer</dl>
+<dl><dd>Data head pointer</dd></dl>
  
 
  truesize
-<dl><dd>Buffer size</dl>
+<dl><dd>Buffer size</dd></dl>
  
 
  users
-<dl><dd>User count - see {datagram,tcp}.c</dl>
+<dl><dd>User count - see {datagram,tcp}.c</dd></dl>
 
 <h2>Copyright</h2>
 

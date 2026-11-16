@@ -18,12 +18,12 @@ description: "pldd – display dynamic shared objects linked into a process"
 <p> The <code>pldd</code> command displays a list of the dynamic shared objects (DSOs) that are linked into the process with the specified process ID (PID). The list includes the libraries that have been dynamically loaded using <code><a href="/docs/linux/man/3-dlopen/">dlopen</a></code>(3).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd> Display a help message and exit.</p>
-<dt><code>&#8211;usage</code></p>
-<dd> Display a short usage message and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Display program version information and exit.</dl>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd> Display a help message and exit.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> Display a short usage message and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Display program version information and exit.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> On success, <code>pldd</code> exits with the status 0. If the specified process does not exist, the user does not have permission to access its dynamic shared object list, or no command-line arguments are supplied, <code>pldd</code> exists with a status of 1. If given an invalid option, it exits with the status 64.</p>
 <h2>VERSIONS</h2>

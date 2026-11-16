@@ -16,46 +16,46 @@ description: "packetforge-ng – forge packets: ARP, UDP, ICMP or custom packets
  To create an encrypted packet, you must have a PRGA (pseudo random genration algorithm) file. This is used to encrypt the packet you create. This is typically obtained from aireplay-ng chopchop or fragmentation attacks.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-H, &#8211;help</i></p>
-<dd> Shows the help screen.</p>
-<dt><i>-p &lt;fctrl&gt;</i></p>
-<dd> Set frame control word (hex)</p>
-<dt><i>-a &lt;bssid&gt;</i></p>
-<dd> Set Access Point MAC addres</p>
-<dt><i>-c &lt;dmac&gt;</i></p>
-<dd> Set Destination MAC address</p>
-<dt><i>-h &lt;smac&gt;</i></p>
-<dd> Set Source MAC address</p>
-<dt><i>-j</i></p>
-<dd> set FromDS bit</p>
-<dt><i>-o</i></p>
-<dd> clear ToDS bit</p>
-<dt><i>-e</i></p>
-<dd> disable WEP encryption</p>
-<dt><i>-k &lt;ip:[port]&gt;</i></p>
-<dd> Set destination IP (and port)</p>
-<dt><i>-l &lt;ip:[port]&gt;</i></p>
-<dd> Set source IP (and port)</p>
-<dt><i>-w &lt;file&gt;</i></p>
-<dd> Write packet to this pcap file</p>
-<dt><i>-r &lt;file&gt;</i></p>
-<dd> Read packet from this pcap file</p>
-<dt><i>-y &lt;file&gt;</i></p>
-<dd> Read PRGA from this file</p>
-<dt><i>-t &lt;ttl&gt;</i></p>
-<dd> Set Time To Live in IP-Header</p>
-<dt><i>-s &lt;size&gt;</i></p>
-<dd> Set size of the generated null packet.</p>
-<dt><i>-0, &#8211;arp</i></p>
-<dd> Forge an ARP packet</p>
-<dt><i>-1, &#8211;udp</i></p>
-<dd> Forge an UDP packet</p>
-<dt><i>-2, &#8211;icmp</i></p>
-<dd> Forge an ICMP packet</p>
-<dt><i>-3, &#8211;null</i></p>
-<dd> Forge a llc null packet</p>
-<dt><i>-9, &#8211;custom</i></p>
-<dd> Build a custom packet, requires -r to read an unencrypted frame out of a pcap file.</dl>
+<dt><i>-H, &#8211;help</i></dt>
+<dd> Shows the help screen.</dd>
+<dt><i>-p &lt;fctrl&gt;</i></dt>
+<dd> Set frame control word (hex)</dd>
+<dt><i>-a &lt;bssid&gt;</i></dt>
+<dd> Set Access Point MAC addres</dd>
+<dt><i>-c &lt;dmac&gt;</i></dt>
+<dd> Set Destination MAC address</dd>
+<dt><i>-h &lt;smac&gt;</i></dt>
+<dd> Set Source MAC address</dd>
+<dt><i>-j</i></dt>
+<dd> set FromDS bit</dd>
+<dt><i>-o</i></dt>
+<dd> clear ToDS bit</dd>
+<dt><i>-e</i></dt>
+<dd> disable WEP encryption</dd>
+<dt><i>-k &lt;ip:[port]&gt;</i></dt>
+<dd> Set destination IP (and port)</dd>
+<dt><i>-l &lt;ip:[port]&gt;</i></dt>
+<dd> Set source IP (and port)</dd>
+<dt><i>-w &lt;file&gt;</i></dt>
+<dd> Write packet to this pcap file</dd>
+<dt><i>-r &lt;file&gt;</i></dt>
+<dd> Read packet from this pcap file</dd>
+<dt><i>-y &lt;file&gt;</i></dt>
+<dd> Read PRGA from this file</dd>
+<dt><i>-t &lt;ttl&gt;</i></dt>
+<dd> Set Time To Live in IP-Header</dd>
+<dt><i>-s &lt;size&gt;</i></dt>
+<dd> Set size of the generated null packet.</dd>
+<dt><i>-0, &#8211;arp</i></dt>
+<dd> Forge an ARP packet</dd>
+<dt><i>-1, &#8211;udp</i></dt>
+<dd> Forge an UDP packet</dd>
+<dt><i>-2, &#8211;icmp</i></dt>
+<dd> Forge an ICMP packet</dd>
+<dt><i>-3, &#8211;null</i></dt>
+<dd> Forge a llc null packet</dd>
+<dt><i>-9, &#8211;custom</i></dt>
+<dd> Build a custom packet, requires -r to read an unencrypted frame out of a pcap file.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> <code>packetforge-ng</code> -y test.xor -a 00:09:5b:12:40:cc -h 00:10:2a:cb:30:14 -k 192.168.1.100 -l 192.168.1.1 -w arp-request.cap</p>
 <h2>AUTHOR</h2>

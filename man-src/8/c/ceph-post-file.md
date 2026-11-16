@@ -17,10 +17,10 @@ description: "ceph-post-file – post files for ceph developers"
 <p>Basic measures are taken to make posted data be visible only to developers with access to ceph.com infrastructure. However, users should think twice and/or take appropriate precautions before posting potentially sensitive data (for example, logs or data directories that contain Ceph secrets).</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d *description*, &#8211;description *description*</code></p>
-<dd>Add a short description for the upload. This is a good opportunity to reference a bug number. There is no default value.</p>
-<dt><code>-u *user*</code></p>
-<dd>Set the user metadata for the upload. This defaults to <i>whoami`@`hostname -f</i>.</dl>
+<dt><code>-d *description*, &#8211;description *description*</code></dt>
+<dd>Add a short description for the upload. This is a good opportunity to reference a bug number. There is no default value.</dd>
+<dt><code>-u *user*</code></dt>
+<dd>Set the user metadata for the upload. This defaults to <i>whoami`@`hostname -f</i>.</dd></dl>
 <h2>Examples</h2>
 <p>To upload a single log: </p>
 <pre>ceph-post-file /var/log/ceph/ceph-mon.`hostname`.log</pre>

@@ -19,7 +19,7 @@ description: "sorgtr.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SORGTR generates a real orthogonal matrix Q which is defined as the
  product of n-1 elementary reflectors of order N, as returned by
@@ -27,11 +27,11 @@ description: "sorgtr.f –"
  if UPLO = 'U', Q = H(n-1) . . . H(2) H(1),
  if UPLO = 'L', Q = H(1) H(2) . . . H(n-1).
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>UPLO</i> </p>
+</dt><dd> <i>UPLO</i> </dd>
 <pre>
           UPLO is CHARACTER*1
           = 'U': Upper triangle of A contains elementary reflectors
@@ -88,14 +88,14 @@ description: "sorgtr.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 124 of file sorgtr.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

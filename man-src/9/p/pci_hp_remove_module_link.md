@@ -15,7 +15,7 @@ pci_hp_remove_module_link - remove symbolic link to the hotplug driver module.
 <h2>Arguments</h2>
 
 <i>pci_slot</i>
-<dl><dd><dd>struct pci_slot</dl>
+<dl><dd></dd><dd>struct pci_slot</dd></dl>
 
 <h2>Description</h2>
 

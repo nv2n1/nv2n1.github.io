@@ -24,19 +24,19 @@ description: "fetchzone – get dns zone from server"
 <p> To obtain the zone example.com from the server 192.168.9.8: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 fetchzone example.com 192.168.9.8 
 </pre>
-</dl>
+</dd></dl>
 <p> To obtain the zone example.org from the server 10.9.8.78 using a query class of 255: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 fetchzone example.com 10.9.8.78 255
 </pre>
-</dl>
+</dd></dl>
 <h2>BUGS</h2>
 <p> Fetchzone will not correctly output host names with utf-8 characters in them.</p>
 <h2>SEE ALSO</h2>

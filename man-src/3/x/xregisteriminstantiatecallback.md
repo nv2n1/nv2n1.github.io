@@ -10,32 +10,32 @@ description: "XOpenIM, XCloseIM, XSetIMValues, XGetIMValues, XDisplayOfIM, XLoca
 <p>XOpenIM, XCloseIM, XSetIMValues, XGetIMValues, XDisplayOfIM, XLocaleOfIM, XRegisterIMInstantiateCallback, XUnregisterIMInstantiateCallback &#8211; open, close, and obtain input method information </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>XIM XOpenIM(Display *<i>display</i>, XrmDatabase <i>db</i>, char *<i>res_name</i>, char *<i>res_class</i>);</p>
-<dd>Status XCloseIM(XIM <i>im</i>);</p>
-<dd>char *XSetIMValues(XIM <i>im</i>, &#8230;);</p>
-<dd>char *XGetIMValues(XIM <i>im</i>, &#8230;);</p>
-<dd>Display *XDisplayOfIM(XIM <i>im</i>);</p>
-<dd>char *XLocaleOfIM(XIM <i>im</i>);</p>
-<dd>Bool XRegisterIMInstantiateCallback(Display *<i>display</i>, XrmDatabase <i>db</i>, char *<i>res_name</i>, char *<i>res_class</i>, XIDProc <i>callback</i>, XPointer <i>client_data</i>);</p>
-<dd>Bool XUnregisterIMInstantiateCallback(Display *<i>display</i>, XrmDatabase <i>db</i>, char *<i>res_name</i>, char *<i>res_class</i>, XIDProc <i>callback</i>, XPointer <i>client_data</i>);</dl>
+<dd>XIM XOpenIM(Display *<i>display</i>, XrmDatabase <i>db</i>, char *<i>res_name</i>, char *<i>res_class</i>);</dd>
+<dd>Status XCloseIM(XIM <i>im</i>);</dd>
+<dd>char *XSetIMValues(XIM <i>im</i>, &#8230;);</dd>
+<dd>char *XGetIMValues(XIM <i>im</i>, &#8230;);</dd>
+<dd>Display *XDisplayOfIM(XIM <i>im</i>);</dd>
+<dd>char *XLocaleOfIM(XIM <i>im</i>);</dd>
+<dd>Bool XRegisterIMInstantiateCallback(Display *<i>display</i>, XrmDatabase <i>db</i>, char *<i>res_name</i>, char *<i>res_class</i>, XIDProc <i>callback</i>, XPointer <i>client_data</i>);</dd>
+<dd>Bool XUnregisterIMInstantiateCallback(Display *<i>display</i>, XrmDatabase <i>db</i>, char *<i>res_name</i>, char *<i>res_class</i>, XIDProc <i>callback</i>, XPointer <i>client_data</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>callback</i></p>
-<dd>Specifies a pointer to the input method instantiate callback.</p>
-<dt><i>client_data</i></p>
-<dd>Specifies the additional client data.</p>
-<dt><i>db</i></p>
-<dd>Specifies a pointer to the resource database.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>im</i></p>
-<dd>Specifies the input method.</p>
-<dt><i>res_class</i></p>
-<dd>Specifies the full class name of the application.</p>
-<dt><i>res_name</i></p>
-<dd>Specifies the full resource name of the application.</p>
-<dt>&#8230;</p>
-<dd>Specifies the variable length argument list to set or get XIM values.</dl>
+<dt><i>callback</i></dt>
+<dd>Specifies a pointer to the input method instantiate callback.</dd>
+<dt><i>client_data</i></dt>
+<dd>Specifies the additional client data.</dd>
+<dt><i>db</i></dt>
+<dd>Specifies a pointer to the resource database.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>im</i></dt>
+<dd>Specifies the input method.</dd>
+<dt><i>res_class</i></dt>
+<dd>Specifies the full class name of the application.</dd>
+<dt><i>res_name</i></dt>
+<dd>Specifies the full resource name of the application.</dd>
+<dt>&#8230;</dt>
+<dd>Specifies the variable length argument list to set or get XIM values.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XOpenIM</code> function opens an input method, matching the current locale and modifiers specification. Current locale and modifiers are bound to the input method at opening time. The locale associated with an input method cannot be changed dynamically. This implies that the strings returned by <code>XmbLookupString</code> or <code>XwcLookupString</code>, for any input context affiliated with a given input method will be encoded in the locale current at the time the input method is opened. </p>
 <p> The specific input method to which this call will be routed is identified on the basis of the current locale. <code>XOpenIM</code> will identify a default input method corresponding to the current locale. That default can be modified using <code>XSetLocaleModifiers</code> for the input method modifier. </p>

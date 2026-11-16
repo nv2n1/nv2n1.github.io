@@ -37,9 +37,9 @@ description: "QuantLib::MCVarianceSwapEngine – Variance-swap pricing engine us
 <p> as described in Demeterfi, Derman, Kamal &amp; Zou, &#8216;A Guide to Volatility and Variance Swaps&#8217;, 1999 </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>define tolerance of numerical integral and incorporate it in errorEstimate</dl>
+<dd>define tolerance of numerical integral and incorporate it in errorEstimate</dd></dl>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>returned fair variances checked for consistency with implied volatility curve.</dl>
+<dd>returned fair variances checked for consistency with implied volatility curve.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

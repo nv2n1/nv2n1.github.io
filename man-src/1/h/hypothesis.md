@@ -17,33 +17,28 @@ url: "/docs/linux/man/1-hypothesis/"
  Think of a normal unit test as being something like the following:
 <dl>
 <dt>1.
-<dd> Set up some data.
-<dt>2.
-<dd> Perform some operations on the data.
-<dt>3.
-<dd> Assert something about the result. 
-
+</dt><dd> Set up some data.
+</dd><dt>2.
+</dt><dd> Perform some operations on the data.
+</dd><dt>3.
+</dt><dd> Assert something about the result. 
  Hypothesis lets you write tests which instead look like this:
-<dt>1.
-<dd> For all data matching some specification.
-<dt>2.
-<dd> Perform some operations on the data.
-<dt>3.
-<dd> Assert something about the result. 
-
+</dd><dt>1.
+</dt><dd> For all data matching some specification.
+</dd><dt>2.
+</dt><dd> Perform some operations on the data.
+</dd><dt>3.
+</dt><dd> Assert something about the result. 
  This is often called property based testing, and was popularised by the Haskell library <i>Quickcheck</i>. 
-
  It works by generating random data matching your specification and checking that your guarantee still holds in that case. If it finds an example where it doesn't, it takes that example and cuts it down to size, simplifying it until it finds a much smaller example that still causes the problem. It then saves that example for later, so that once it has found a problem with your code it will not forget it in the future. 
-
  Writing tests of this form usually consists of deciding on guarantees that your code should make - properties that should always hold true, regardless of what the world throws at you. Examples of such guarantees might be:
-<dt>&bull;
-<dd> Your code shouldn't throw an exception, or should only throw a particular type of exception (this works particularly well if you have a lot of internal assertions).
-<dt>&bull;
-<dd> If you delete an object, it is no longer visible.
-<dt>&bull;
-<dd> If you serialize and then deserialize a value, then you get the same value back. 
-
- Now you know the basics of what Hypothesis does, the rest of this documentation will take you through how and why. It's divided into a number of sections, which you can see in the sidebar (or the menu at the top if you're on mobile), but you probably want to begin with the <b>Quick start guide</b>, which will give you a worked example of how to use Hypothesis and a detailed outline of the things you need to know to begin testing your code with it, or check out some of the <i>introductory articles</i>.</dl>
+</dd><dt>&bull;
+</dt><dd> Your code shouldn't throw an exception, or should only throw a particular type of exception (this works particularly well if you have a lot of internal assertions).
+</dd><dt>&bull;
+</dt><dd> If you delete an object, it is no longer visible.
+</dd><dt>&bull;
+</dt><dd> If you serialize and then deserialize a value, then you get the same value back. 
+ Now you know the basics of what Hypothesis does, the rest of this documentation will take you through how and why. It's divided into a number of sections, which you can see in the sidebar (or the menu at the top if you're on mobile), but you probably want to begin with the <b>Quick start guide</b>, which will give you a worked example of how to use Hypothesis and a detailed outline of the things you need to know to begin testing your code with it, or check out some of the <i>introductory articles</i>.</dd></dl>
 
 <h2>QUICK START GUIDE</h2>
 
@@ -276,13 +271,12 @@ def test_look_tuples_work_too(t):
  If you're stuck for ideas for how to use this sort of test for your code, here are some good starting points:
 <dl>
 <dt>1.
-<dd> Try just calling functions with appropriate random data and see if they crash. You may be surprised how often this works. e.g. note that the first bug we found in the encoding example didn't even get as far as our assertion: It crashed because it couldn't handle the data we gave it, not because it did the wrong thing.
-<dt>2.
-<dd> Look for duplication in your tests. Are there any cases where you're testing the same thing with multiple different examples? Can you generalise that to a single test using Hypothesis?
-<dt>3.
-<dd> <i>This piece is designed for an F# implementation</i>, but is still very good advice which you may find helps give you good ideas for using Hypothesis. 
-
- If you have any trouble getting started, don't feel shy about <b>asking for help</b>.</dl>
+</dt><dd> Try just calling functions with appropriate random data and see if they crash. You may be surprised how often this works. e.g. note that the first bug we found in the encoding example didn't even get as far as our assertion: It crashed because it couldn't handle the data we gave it, not because it did the wrong thing.
+</dd><dt>2.
+</dt><dd> Look for duplication in your tests. Are there any cases where you're testing the same thing with multiple different examples? Can you generalise that to a single test using Hypothesis?
+</dd><dt>3.
+</dt><dd> <i>This piece is designed for an F# implementation</i>, but is still very good advice which you may find helps give you good ideas for using Hypothesis. 
+ If you have any trouble getting started, don't feel shy about <b>asking for help</b>.</dd></dl>
 
 <h2>DETAILS AND ADVANCED FEATURES</h2>
 
@@ -372,21 +366,16 @@ test_even_integers:
 </pre>
 <dl>
 <dt><b>hypothesis.event(value)</b>
-<dd> Record an event that occurred this test. Statistics on number of test runs with each event will be reported at the end if you run Hypothesis in statistics reporting mode. 
-
+</dt><dd> Record an event that occurred this test. Statistics on number of test runs with each event will be reported at the end if you run Hypothesis in statistics reporting mode. 
  Events should be strings or convertable to them. 
-
  You can also mark custom events in a test using the 'event' function: 
-
  <pre>
 from hypothesis import given, event, strategies as st
 @given(st.integers().filter(lambda x: x % 2 == 0))
 def test_even_integers(i):
     event(&quot;i mod 3 = %d&quot; % (i % 3,))
 </pre> 
-
  You will then see output like: 
-
  <pre>
 test_even_integers:
   - 200 passing examples, 0 failing examples, 28 invalid examples
@@ -399,8 +388,7 @@ test_even_integers:
     * 27.63%, i mod 3 = 0
     * 12.28%, Aborted test because unable to satisfy integers().filter(lambda x: x % 2 == 0)
 </pre> 
-
- Arguments to event() can be any hashable type, but two events will be considered the same if they are the same when converted to a string with str().</dl>
+ Arguments to event() can be any hashable type, but two events will be considered the same if they are the same when converted to a string with str().</dd></dl>
 
 <h3>Making assumptions</h3>
 
@@ -409,29 +397,21 @@ test_even_integers:
  Sometimes Hypothesis doesn't give you exactly the right sort of data you want - it's mostly of the right shape, but some examples won't work and you don't want to care about them. You <i>can</i> just ignore these by aborting the test early, but this runs the risk of accidentally testing a lot less than you think you are. Also it would be nice to spend less time on bad examples - if you're running 200 examples per test (the default) and it turns out 150 of those examples don't match your needs, that's a lot of wasted time.
 <dl>
 <dt><b>hypothesis.assume(condition)</b>
-<dd> <b>assume()</b> is like an <i>assert</i> that marks the example as bad, rather than failing the test. 
-
+</dt><dd> <b>assume()</b> is like an <i>assert</i> that marks the example as bad, rather than failing the test. 
  This allows you to specify properties that you <i>assume</i> will be true, and let Hypothesis try to avoid similar examples in future. 
-
  For example suppose had the following test: 
-
  <pre>
 @given(floats())
 def test_negation_is_self_inverse(x):
     assert x == -(-x)
 </pre> 
-
  Running this gives us: 
-
  <pre>
 Falsifying example: test_negation_is_self_inverse(x=float('nan'))
 AssertionError
 </pre> 
-
  This is annoying. We know about NaN and don't really care about it, but as soon as Hypothesis finds a NaN example it will get distracted by that and tell us about it. Also the test will fail and we want it to pass. 
-
  So lets block off this particular example: 
-
  <pre>
 from math import isnan
 @given(floats())
@@ -439,25 +419,19 @@ def test_negation_is_self_inverse_for_non_nan(x):
     assume(not isnan(x))
     assert x == -(-x)
 </pre> 
-
  And this passes without a problem. 
-
  In order to avoid the easy trap where you assume a lot more than you intended, Hypothesis will fail a test when it can't find enough examples passing the assumption. 
-
  If we'd written: 
-
  <pre>
 @given(floats())
 def test_negation_is_self_inverse_for_non_nan(x):
     assume(False)
     assert x == -(-x)
 </pre> 
-
  Then on running we'd have got the exception: 
-
  <pre>
 Unsatisfiable: Unable to satisfy assumptions of hypothesis test_negation_is_self_inverse_for_non_nan. Only 0 examples considered satisfied assumptions
-</pre></dl>
+</pre></dd></dl>
 
 <h3>How good is assume?</h3>
 
@@ -532,14 +506,10 @@ In: test_sum_is_positive()
 
 <dl>
 <dt><b>hypothesis.given(*given_arguments, **given_kwargs)</b>
-<dd> A decorator for turning a test function that accepts arguments into a randomized test. 
-
+</dt><dd> A decorator for turning a test function that accepts arguments into a randomized test. 
  This is the main entry point to Hypothesis. 
-
  The <b>@given</b> decorator may be used to specify what arguments of a function should be parametrized over. You can use either positional or keyword arguments or a mixture of the two. 
-
  For example all of the following are valid uses: 
-
  <pre>
 @given(integers(), integers())
 def a(x, y):
@@ -564,9 +534,7 @@ class SomeTest(TestCase):
     def test_a_thing(self, x):
         pass
 </pre> 
-
  The following are not: 
-
  <pre>
 @given(integers(), integers(), integers())
 def g(x, y):
@@ -581,20 +549,17 @@ def i(x, y):
 def j(x, y):
     pass
 </pre> 
-
  The rules for determining what are valid uses of given are as follows:
-<dt>1.
-<dd> You may pass any keyword argument to given.
-<dt>2.
-<dd> Positional arguments to given are equivalent to the rightmost named arguments for the test function.
-<dt>3.
-<dd> positional arguments may not be used if the underlying test function has varargs or arbitrary keywords.
-<dt>4.
-<dd> Functions tested with given may not have any defaults. 
-
+</dd><dt>1.
+</dt><dd> You may pass any keyword argument to given.
+</dd><dt>2.
+</dt><dd> Positional arguments to given are equivalent to the rightmost named arguments for the test function.
+</dd><dt>3.
+</dt><dd> positional arguments may not be used if the underlying test function has varargs or arbitrary keywords.
+</dd><dt>4.
+</dt><dd> Functions tested with given may not have any defaults. 
  The reason for the &quot;rightmost named arguments&quot; behaviour is so that using <b>@given</b> with instance methods works: <b>self</b> will be passed to the function as normal and not be parametrized over. 
-
- The function returned by given has all the arguments that the original test did , minus the ones that are being filled in by given.</dl>
+ The function returned by given has all the arguments that the original test did , minus the ones that are being filled in by given.</dd></dl>
 
 <h3>Custom function execution</h3>
 
@@ -655,8 +620,7 @@ class TestRunTwice(TestCase):
  You can use Hypothesis's data exploration features to find values satisfying some predicate. This is generally useful for exploring custom strategies defined with <b>@composite</b>, or experimenting with conditions for filtering data.
 <dl>
 <dt><b>hypothesis.find(specifier, condition, settings=None, random=None, database_key=None)</b>
-<dd> Returns the minimal example from the given strategy <b>specifier</b> that matches the predicate function <b>condition</b>. 
-
+</dt><dd> Returns the minimal example from the given strategy <b>specifier</b> that matches the predicate function <b>condition</b>. 
  <pre>
 &gt;&gt;&gt; from hypothesis import find
 &gt;&gt;&gt; from hypothesis.strategies import sets, lists, integers
@@ -667,19 +631,15 @@ class TestRunTwice(TestCase):
 &gt;&gt;&gt; find(sets(integers()), lambda x: sum(x) &gt;= 10 and len(x) &gt;= 3)
 {0, 1, 9}
 </pre> 
-
  The first argument to <b>find()</b> describes data in the usual way for an argument to given, and supports <b>all the same data types</b>. The second is a predicate it must satisfy. 
-
  Of course not all conditions are satisfiable. If you ask Hypothesis for an example to a condition that is always false it will raise an error: 
-
  <pre>
 &gt;&gt;&gt; find(integers(), lambda x: False)
 Traceback (most recent call last):
 ...
 hypothesis.errors.NoSuchExample: No examples of condition lambda x: &lt;unknown&gt;
 </pre> 
-
- (The <b>lambda x: unknown</b> is because Hypothesis can't retrieve the source code of lambdas from the interactive python console. It gives a better error message most of the time which contains the actual condition)</dl>
+ (The <b>lambda x: unknown</b> is because Hypothesis can't retrieve the source code of lambdas from the interactive python console. It gives a better error message most of the time which contains the actual condition)</dd></dl>
 
 <h3>Providing explicit examples</h3>
 
@@ -688,14 +648,10 @@ hypothesis.errors.NoSuchExample: No examples of condition lambda x: &lt;unknown&
  You can explicitly ask Hypothesis to try a particular example, using
 <dl>
 <dt><b>hypothesis.example(*args, **kwargs)</b>
-<dd> A decorator to that ensures a specific example is always tested. 
-
+</dt><dd> A decorator to that ensures a specific example is always tested. 
  Hypothesis will run all examples you've asked for first. If any of them fail it will not go on to look for more examples. 
-
  It doesn't matter whether you put the example decorator before or after given. Any permutation of the decorators in the above will do the same thing. 
-
  Note that examples can be positional or keyword based. If they're positional then they will be filled in from the right when calling, so either of the following styles will work as expected: 
-
  <pre>
 @given(text())
 @example(&quot;Hello world&quot;)
@@ -710,8 +666,7 @@ class TestThings(TestCase):
     def test_some_code(self, x):
         assert True
 </pre> 
-
- It is <i>not</i> permitted for a single example to be a mix of positional and keyword arguments. Either are fine, and you can use one in one example and the other in another example if for some reason you really want to, but a single example must be consistent.</dl>
+ It is <i>not</i> permitted for a single example to be a mix of positional and keyword arguments. Either are fine, and you can use one in one example and the other in another example if for some reason you really want to, but a single example must be consistent.</dd></dl>
 
 <h2>SETTINGS</h2>
 
@@ -747,37 +702,34 @@ def test_this_thoroughly(x):
 
 <dl>
 <dt><b>class hypothesis.settings(parent=None, **kwargs)</b>
-<dd> A settings object controls a variety of parameters that are used in falsification. These may control both the falsification strategy and the details of the data that is generated. 
-
+</dt><dd> A settings object controls a variety of parameters that are used in falsification. These may control both the falsification strategy and the details of the data that is generated. 
  Default values are picked up from the settings.default object and changes made there will be picked up in newly created settings.
-<dt><b>database_file</b>
-<dd> database: An instance of hypothesis.database.ExampleDatabase that will be used to save examples to and load previous examples from. May be None in which case no storage will be used. default value: (dynamically calculated)
-<dt><b>database</b>
-<dd> An ExampleDatabase instance to use for storage of examples. May be None. 
-
+</dd><dt><b>database_file</b>
+</dt><dd> database: An instance of hypothesis.database.ExampleDatabase that will be used to save examples to and load previous examples from. May be None in which case no storage will be used. default value: (dynamically calculated)
+</dd><dt><b>database</b>
+</dt><dd> An ExampleDatabase instance to use for storage of examples. May be None. 
  If this was explicitly set at settings instantiation then that value will be used (even if it was None). If not and the database_file setting is not None this will be lazily loaded as an ExampleDatabase using that file the first time this property is accessed on a particular thread.
-<dt><b>max_examples</b>
-<dd> Once this many satisfying examples have been considered without finding any counter-example, falsification will terminate. default value: 200
-<dt><b>max_iterations</b>
-<dd> Once this many iterations of the example loop have run, including ones which failed to satisfy assumptions and ones which produced duplicates, falsification will terminate. default value: 1000
-<dt><b>min_satisfying_examples</b>
-<dd> Raise Unsatisfiable for any tests which do not produce at least this many values that pass all assume() calls and which have not exhaustively covered the search space. default value: 5
-<dt><b>max_shrinks</b>
-<dd> Once this many successful shrinks have been performed, Hypothesis will assume something has gone a bit wrong and give up rather than continuing to try to shrink the example. default value: 500
-<dt><b>timeout</b>
-<dd> Once this many seconds have passed, falsify will terminate even if it has not found many examples. This is a soft rather than a hard limit - Hypothesis won't e.g. interrupt execution of the called function to stop it. If this value is &lt;= 0 then no timeout will be applied. default value: 60
-<dt><b>strict</b>
-<dd> If set to True, anything that would cause Hypothesis to issue a warning will instead raise an error. Note that new warnings may be added at any time, so running with strict set to True means that new Hypothesis releases may validly break your code. 
-
+</dd><dt><b>max_examples</b>
+</dt><dd> Once this many satisfying examples have been considered without finding any counter-example, falsification will terminate. default value: 200
+</dd><dt><b>max_iterations</b>
+</dt><dd> Once this many iterations of the example loop have run, including ones which failed to satisfy assumptions and ones which produced duplicates, falsification will terminate. default value: 1000
+</dd><dt><b>min_satisfying_examples</b>
+</dt><dd> Raise Unsatisfiable for any tests which do not produce at least this many values that pass all assume() calls and which have not exhaustively covered the search space. default value: 5
+</dd><dt><b>max_shrinks</b>
+</dt><dd> Once this many successful shrinks have been performed, Hypothesis will assume something has gone a bit wrong and give up rather than continuing to try to shrink the example. default value: 500
+</dd><dt><b>timeout</b>
+</dt><dd> Once this many seconds have passed, falsify will terminate even if it has not found many examples. This is a soft rather than a hard limit - Hypothesis won't e.g. interrupt execution of the called function to stop it. If this value is &lt;= 0 then no timeout will be applied. default value: 60
+</dd><dt><b>strict</b>
+</dt><dd> If set to True, anything that would cause Hypothesis to issue a warning will instead raise an error. Note that new warnings may be added at any time, so running with strict set to True means that new Hypothesis releases may validly break your code. 
  You can enable this setting temporarily by setting the HYPOTHESIS_STRICT_MODE environment variable to the string 'true'. default value: False
-<dt><b>stateful_step_count</b>
-<dd> Number of steps to run a stateful program for before giving up on it breaking. default value: 50
-<dt><b>perform_health_check</b>
-<dd> If set to True, Hypothesis will run a preliminary health check before attempting to actually execute your test. default value: True
-<dt><b>suppress_health_check</b>
-<dd> A list of health checks to disable default value: []
-<dt><b>buffer_size</b>
-<dd> The size of the underlying data used to generate examples. If you need to generate really large examples you may want to increase this, but it will make your tests slower. default value: 8192</dl>
+</dd><dt><b>stateful_step_count</b>
+</dt><dd> Number of steps to run a stateful program for before giving up on it breaking. default value: 50
+</dd><dt><b>perform_health_check</b>
+</dt><dd> If set to True, Hypothesis will run a preliminary health check before attempting to actually execute your test. default value: True
+</dd><dt><b>suppress_health_check</b>
+</dt><dd> A list of health checks to disable default value: []
+</dd><dt><b>buffer_size</b>
+</dt><dd> The size of the underlying data used to generate examples. If you need to generate really large examples you may want to increase this, but it will make your tests slower. default value: 8192</dd></dl>
 
 <h3>Seeing intermediate result</h3>
 
@@ -928,190 +880,145 @@ $ py.test tests --hypothesis-profile &lt;profile-name&gt;
  Functions for building strategies are all available in the hypothesis.strategies module. The salient functions from it are as follows:
 <dl>
 <dt><b>hypothesis.strategies.nothing()</b>
-<dd> This strategy never successfully draws a value and will always reject on an attempt to draw.
-<dt><b>hypothesis.strategies.just(value)</b>
-<dd> Return a strategy which only generates value. 
-
+</dt><dd> This strategy never successfully draws a value and will always reject on an attempt to draw.
+</dd><dt><b>hypothesis.strategies.just(value)</b>
+</dt><dd> Return a strategy which only generates value. 
  Note: value is not copied. Be wary of using mutable values.
-<dt><b>hypothesis.strategies.none()</b>
-<dd> Return a strategy which only generates None.
-<dt><b>hypothesis.strategies.one_of(*args)</b>
-<dd> Return a strategy which generates values from any of the argument strategies. 
-
+</dd><dt><b>hypothesis.strategies.none()</b>
+</dt><dd> Return a strategy which only generates None.
+</dd><dt><b>hypothesis.strategies.one_of(*args)</b>
+</dt><dd> Return a strategy which generates values from any of the argument strategies. 
  This may be called with one iterable argument instead of multiple strategy arguments. In which case one_of(x) and one_of(*x) are equivalent.
-<dt><b>hypothesis.strategies.integers(min_value=None, max_value=None)</b>
-<dd> Returns a strategy which generates integers (in Python 2 these may be ints or longs). 
-
+</dd><dt><b>hypothesis.strategies.integers(min_value=None, max_value=None)</b>
+</dt><dd> Returns a strategy which generates integers (in Python 2 these may be ints or longs). 
  If min_value is not None then all values will be &gt;= min_value. If max_value is not None then all values will be &lt;= max_value
-<dt><b>hypothesis.strategies.booleans()</b>
-<dd> Returns a strategy which generates instances of bool.
-<dt><b>hypothesis.strategies.floats(min_value=None, max_value=None, allow_nan=None, allow_infinity=None)</b>
-<dd> Returns a strategy which generates floats.
-<dt>&bull;
-<dd> If min_value is not None, all values will be &gt;= min_value.
-<dt>&bull;
-<dd> If max_value is not None, all values will be &lt;= max_value.
-<dt>&bull;
-<dd> If min_value or max_value is not None, it is an error to enable allow_nan.
-<dt>&bull;
-<dd> If both min_value and max_value are not None, it is an error to enable allow_infinity. 
-
+</dd><dt><b>hypothesis.strategies.booleans()</b>
+</dt><dd> Returns a strategy which generates instances of bool.
+</dd><dt><b>hypothesis.strategies.floats(min_value=None, max_value=None, allow_nan=None, allow_infinity=None)</b>
+</dt><dd> Returns a strategy which generates floats.
+</dd><dt>&bull;
+</dt><dd> If min_value is not None, all values will be &gt;= min_value.
+</dd><dt>&bull;
+</dt><dd> If max_value is not None, all values will be &lt;= max_value.
+</dd><dt>&bull;
+</dt><dd> If min_value or max_value is not None, it is an error to enable allow_nan.
+</dd><dt>&bull;
+</dt><dd> If both min_value and max_value are not None, it is an error to enable allow_infinity. 
  Where not explicitly ruled out by the bounds, all of infinity, -infinity and NaN are possible values generated by this strategy.
-<dt><b>hypothesis.strategies.complex_numbers()</b>
-<dd> Returns a strategy that generates complex numbers.
-<dt><b>hypothesis.strategies.tuples(*args)</b>
-<dd> Return a strategy which generates a tuple of the same length as args by generating the value at index i from args[i]. 
-
+</dd><dt><b>hypothesis.strategies.complex_numbers()</b>
+</dt><dd> Returns a strategy that generates complex numbers.
+</dd><dt><b>hypothesis.strategies.tuples(*args)</b>
+</dt><dd> Return a strategy which generates a tuple of the same length as args by generating the value at index i from args[i]. 
  e.g. tuples(integers(), integers()) would generate a tuple of length two with both values an integer.
-<dt><b>hypothesis.strategies.sampled_from(elements)</b>
-<dd> Returns a strategy which generates any value present in the iterable elements. 
-
+</dd><dt><b>hypothesis.strategies.sampled_from(elements)</b>
+</dt><dd> Returns a strategy which generates any value present in the iterable elements. 
  Note that as with just, values will not be copied and thus you should be careful of using mutable data.
-<dt><b>hypothesis.strategies.lists(elements=None, min_size=None, average_size=None, max_size=None, unique_by=None, unique=False)</b>
-<dd> Returns a list containing values drawn from elements length in the interval [min_size, max_size] (no bounds in that direction if these are None). If max_size is 0 then elements may be None and only the empty list will be drawn. 
-
+</dd><dt><b>hypothesis.strategies.lists(elements=None, min_size=None, average_size=None, max_size=None, unique_by=None, unique=False)</b>
+</dt><dd> Returns a list containing values drawn from elements length in the interval [min_size, max_size] (no bounds in that direction if these are None). If max_size is 0 then elements may be None and only the empty list will be drawn. 
  average_size may be used as a size hint to roughly control the size of list but it may not be the actual average of sizes you get, due to a variety of factors. 
-
  If unique is True (or something that evaluates to True), we compare direct object equality, as if unique_by was <i>lambda x: x</i>. This comparison only works for hashable types. 
-
  if unique_by is not None it must be a function returning a hashable type when given a value drawn from elements. The resulting list will satisfy the condition that for i != j, unique_by(result[i]) != unique_by(result[j]).
-<dt><b>hypothesis.strategies.sets(elements=None, min_size=None, average_size=None, max_size=None)</b>
-<dd> This has the same behaviour as lists, but returns sets instead. 
-
+</dd><dt><b>hypothesis.strategies.sets(elements=None, min_size=None, average_size=None, max_size=None)</b>
+</dt><dd> This has the same behaviour as lists, but returns sets instead. 
  Note that Hypothesis cannot tell if values are drawn from elements are hashable until running the test, so you can define a strategy for sets of an unhashable type but it will fail at test time.
-<dt><b>hypothesis.strategies.frozensets(elements=None, min_size=None, average_size=None, max_size=None)</b>
-<dd> This is identical to the sets function but instead returns frozensets.
-<dt><b>hypothesis.strategies.iterables(elements=None, min_size=None, average_size=None, max_size=None, unique_by=None, unique=False)</b>
-<dd> This has the same behaviour as lists, but returns iterables instead. 
-
+</dd><dt><b>hypothesis.strategies.frozensets(elements=None, min_size=None, average_size=None, max_size=None)</b>
+</dt><dd> This is identical to the sets function but instead returns frozensets.
+</dd><dt><b>hypothesis.strategies.iterables(elements=None, min_size=None, average_size=None, max_size=None, unique_by=None, unique=False)</b>
+</dt><dd> This has the same behaviour as lists, but returns iterables instead. 
  Some iterables cannot be indexed (e.g. sets) and some do not have a fixed length (e.g. generators). This strategy produces iterators, which cannot be indexed and do not have a fixed length. This ensures that you do not accidentally depend on sequence behaviour.
-<dt><b>hypothesis.strategies.fixed_dictionaries(mapping)</b>
-<dd> Generate a dictionary of the same type as mapping with a fixed set of keys mapping to strategies. mapping must be a dict subclass. 
-
+</dd><dt><b>hypothesis.strategies.fixed_dictionaries(mapping)</b>
+</dt><dd> Generate a dictionary of the same type as mapping with a fixed set of keys mapping to strategies. mapping must be a dict subclass. 
  Generated values have all keys present in mapping, with the corresponding values drawn from mapping[key]. If mapping is an instance of OrderedDict the keys will also be in the same order, otherwise the order is arbitrary.
-<dt><b>hypothesis.strategies.dictionaries(keys, values, dict_class=&lt;type 'dict'&gt;, min_size=None, average_size=None, max_size=None)</b>
-<dd> Generates dictionaries of type dict_class with keys drawn from the keys argument and values drawn from the values argument. 
-
+</dd><dt><b>hypothesis.strategies.dictionaries(keys, values, dict_class=&lt;type 'dict'&gt;, min_size=None, average_size=None, max_size=None)</b>
+</dt><dd> Generates dictionaries of type dict_class with keys drawn from the keys argument and values drawn from the values argument. 
  The size parameters have the same interpretation as for lists.
-<dt><b>hypothesis.strategies.streaming(elements)</b>
-<dd> Generates an infinite stream of values where each value is drawn from elements. 
-
+</dd><dt><b>hypothesis.strategies.streaming(elements)</b>
+</dt><dd> Generates an infinite stream of values where each value is drawn from elements. 
  The result is iterable (the iterator will never terminate) and indexable.
-<dt><b>hypothesis.strategies.characters(whitelist_categories=None, blacklist_categories=None, blacklist_characters=None, min_codepoint=None, max_codepoint=None)</b>
-<dd> Generates unicode text type (unicode on python 2, str on python 3) characters following specified filtering rules. 
-
+</dd><dt><b>hypothesis.strategies.characters(whitelist_categories=None, blacklist_categories=None, blacklist_characters=None, min_codepoint=None, max_codepoint=None)</b>
+</dt><dd> Generates unicode text type (unicode on python 2, str on python 3) characters following specified filtering rules. 
  This strategy accepts lists of Unicode categories, characters of which should (<i>whitelist_categories</i>) or should not (<i>blacklist_categories</i>) be produced. 
-
  Also there could be applied limitation by minimal and maximal produced code point of the characters. 
-
  If you know what exactly characters you don't want to be produced, pass them with <i>blacklist_characters</i> argument.
-<dt><b>hypothesis.strategies.text(alphabet=None, min_size=None, average_size=None, max_size=None)</b>
-<dd> Generates values of a unicode text type (unicode on python 2, str on python 3) with values drawn from alphabet, which should be an iterable of length one strings or a strategy generating such. If it is None it will default to generating the full unicode range. If it is an empty collection this will only generate empty strings. 
-
+</dd><dt><b>hypothesis.strategies.text(alphabet=None, min_size=None, average_size=None, max_size=None)</b>
+</dt><dd> Generates values of a unicode text type (unicode on python 2, str on python 3) with values drawn from alphabet, which should be an iterable of length one strings or a strategy generating such. If it is None it will default to generating the full unicode range. If it is an empty collection this will only generate empty strings. 
  min_size, max_size and average_size have the usual interpretations.
-<dt><b>hypothesis.strategies.binary(min_size=None, average_size=None, max_size=None)</b>
-<dd> Generates the appropriate binary type (str in python 2, bytes in python 3). 
-
+</dd><dt><b>hypothesis.strategies.binary(min_size=None, average_size=None, max_size=None)</b>
+</dt><dd> Generates the appropriate binary type (str in python 2, bytes in python 3). 
  min_size, average_size and max_size have the usual interpretations.
-<dt><b>hypothesis.strategies.randoms()</b>
-<dd> Generates instances of Random (actually a Hypothesis specific RandomWithSeed class which displays what it was initially seeded with)
-<dt><b>hypothesis.strategies.random_module()</b>
-<dd> If your code depends on the global random module then you need to use this. 
-
+</dd><dt><b>hypothesis.strategies.randoms()</b>
+</dt><dd> Generates instances of Random (actually a Hypothesis specific RandomWithSeed class which displays what it was initially seeded with)
+</dd><dt><b>hypothesis.strategies.random_module()</b>
+</dt><dd> If your code depends on the global random module then you need to use this. 
  It will explicitly seed the random module at the start of your test so that tests are reproducible. The value it passes you is an opaque object whose only useful feature is that its repr displays the random seed. It is not itself a random number generator. If you want a random number generator you should use the randoms() strategy which will give you one.
-<dt><b>hypothesis.strategies.builds(target, *args, **kwargs)</b>
-<dd> Generates values by drawing from args and kwargs and passing them to target in the appropriate argument position. 
-
+</dd><dt><b>hypothesis.strategies.builds(target, *args, **kwargs)</b>
+</dt><dd> Generates values by drawing from args and kwargs and passing them to target in the appropriate argument position. 
  e.g. builds(target, integers(), flag=booleans()) would draw an integer i and a boolean b and call target(i, flag=b).
-<dt><b>hypothesis.strategies.fractions(min_value=None, max_value=None, max_denominator=None)</b>
-<dd> Returns a strategy which generates Fractions. 
-
+</dd><dt><b>hypothesis.strategies.fractions(min_value=None, max_value=None, max_denominator=None)</b>
+</dt><dd> Returns a strategy which generates Fractions. 
  If min_value is not None then all generated values are no less than min_value. 
-
  If max_value is not None then all generated values are no greater than max_value. 
-
  If max_denominator is not None then the absolute value of the denominator of any generated values is no greater than max_denominator. Note that max_denominator must be at least 1.
-<dt><b>hypothesis.strategies.decimals(min_value=None, max_value=None, allow_nan=None, allow_infinity=None, places=None)</b>
-<dd> Generates instances of decimals.Decimal, which may be:
-<dt>&bull;
-<dd> A finite rational number, between <b>min_value</b> and <b>max_value</b>.
-<dt>&bull;
-<dd> Not a Number, if <b>allow_nan</b> is True. None means &quot;allow NaN, unless <b>min__value</b> and <b>max_value</b> are not None&quot;.
-<dt>&bull;
-<dd> Positive or negative infinity, if <b>max_value</b> and <b>min_value</b> respectively are None, and <b>allow_infinity</b> is not False. None means &quot;allow infinity, unless excluded by the min and max values&quot;. 
-
+</dd><dt><b>hypothesis.strategies.decimals(min_value=None, max_value=None, allow_nan=None, allow_infinity=None, places=None)</b>
+</dt><dd> Generates instances of decimals.Decimal, which may be:
+</dd><dt>&bull;
+</dt><dd> A finite rational number, between <b>min_value</b> and <b>max_value</b>.
+</dd><dt>&bull;
+</dt><dd> Not a Number, if <b>allow_nan</b> is True. None means &quot;allow NaN, unless <b>min__value</b> and <b>max_value</b> are not None&quot;.
+</dd><dt>&bull;
+</dt><dd> Positive or negative infinity, if <b>max_value</b> and <b>min_value</b> respectively are None, and <b>allow_infinity</b> is not False. None means &quot;allow infinity, unless excluded by the min and max values&quot;. 
  Note that where floats have one <i>NaN</i> value, Decimals have four: signed, and either <i>quiet</i> or <i>signalling</i>. See <i>the decimal module docs</i> for more information on special values. 
-
  If <b>places</b> is not None, all finite values drawn from the strategy will have that number of digits after the decimal place.
-<dt><b>hypothesis.strategies.recursive(base, extend, max_leaves=100)</b>
-<dd> base: A strategy to start from. 
-
+</dd><dt><b>hypothesis.strategies.recursive(base, extend, max_leaves=100)</b>
+</dt><dd> base: A strategy to start from. 
  extend: A function which takes a strategy and returns a new strategy. 
-
  max_leaves: The maximum number of elements to be drawn from base on a given run. 
-
  This returns a strategy S such that S = extend(base | S). That is, values maybe drawn from base, or from any strategy reachable by mixing applications of | and extend. 
-
  An example may clarify: recursive(booleans(), lists) would return a strategy that may return arbitrarily nested and mixed lists of booleans. So e.g. False, [True], [False, []], [[[[True]]]], are all valid values to be drawn from that strategy.
-<dt><b>hypothesis.strategies.permutations(values)</b>
-<dd> Return a strategy which returns permutations of the collection &quot;values&quot;.
-<dt><b>hypothesis.strategies.datetimes(min_datetime=datetime.datetime(1, 1, 1, 0, 0), max_datetime=datetime.datetime(9999, 12, 31, 23, 59, 59, 999999), timezones=none())</b>
-<dd> A strategy for generating datetimes, which may be timezone-aware. 
-
+</dd><dt><b>hypothesis.strategies.permutations(values)</b>
+</dt><dd> Return a strategy which returns permutations of the collection &quot;values&quot;.
+</dd><dt><b>hypothesis.strategies.datetimes(min_datetime=datetime.datetime(1, 1, 1, 0, 0), max_datetime=datetime.datetime(9999, 12, 31, 23, 59, 59, 999999), timezones=none())</b>
+</dt><dd> A strategy for generating datetimes, which may be timezone-aware. 
  This strategy works by drawing a naive datetime between <b>min_datetime</b> and <b>max_datetime</b>, which must both be naive (have no timezone). 
-
  <b>timezones</b> must be a strategy that generates tzinfo objects (or None, which is valid for naive datetimes). A value drawn from this strategy will be added to a naive datetime, and the resulting tz-aware datetime returned. 
-
  <b>NOTE:</b> tz-aware datetimes from this strategy may be ambiguous or non-existent due to daylight savings, leap seconds, timezone and calendar adjustments, etc. This is intentional, as malformed timestamps are a common source of bugs. 
-
  <b>hypothesis.extra.timezones()</b> requires the <b>pytz</b> package, but provides all timezones in the Olsen database. If you also want to allow naive datetimes, combine strategies like <b>none() | timezones()</b>. 
-
  Alternatively, you can create a list of the timezones you wish to allow (e.g. from the standard library, <b>datetutil</b>, or <b>pytz</b>) and use <b>sampled_from()</b>. Ensure that simple values such as None or UTC are at the beginning of the list for proper minimisation.
-<dt><b>hypothesis.strategies.dates(min_date=datetime.date(1, 1, 1), max_date=datetime.date(9999, 12, 31))</b>
-<dd> A strategy for dates between <b>min_date</b> and <b>max_date</b>.
-<dt><b>hypothesis.strategies.times(min_time=datetime.time(0, 0), max_time=datetime.time(23, 59, 59, 999999), timezones=none())</b>
-<dd> A strategy for times between <b>min_time</b> and <b>max_time</b>. 
-
+</dd><dt><b>hypothesis.strategies.dates(min_date=datetime.date(1, 1, 1), max_date=datetime.date(9999, 12, 31))</b>
+</dt><dd> A strategy for dates between <b>min_date</b> and <b>max_date</b>.
+</dd><dt><b>hypothesis.strategies.times(min_time=datetime.time(0, 0), max_time=datetime.time(23, 59, 59, 999999), timezones=none())</b>
+</dt><dd> A strategy for times between <b>min_time</b> and <b>max_time</b>. 
  The <b>timezones</b> argument is handled as for <b>datetimes()</b>.
-<dt><b>hypothesis.strategies.timedeltas(min_delta=datetime.timedelta(-999999999), max_delta=datetime.timedelta(999999999, 86399, 999999))</b>
-<dd> A strategy for timedeltas between <b>min_delta</b> and <b>max_delta</b>.
-<dt><b>hypothesis.strategies.composite(f)</b>
-<dd> Defines a strategy that is built out of potentially arbitrarily many other strategies. 
-
+</dd><dt><b>hypothesis.strategies.timedeltas(min_delta=datetime.timedelta(-999999999), max_delta=datetime.timedelta(999999999, 86399, 999999))</b>
+</dt><dd> A strategy for timedeltas between <b>min_delta</b> and <b>max_delta</b>.
+</dd><dt><b>hypothesis.strategies.composite(f)</b>
+</dt><dd> Defines a strategy that is built out of potentially arbitrarily many other strategies. 
  This is intended to be used as a decorator. See <i>the full documentation for more details</i> about how to use this function.
-<dt><b>hypothesis.strategies.shared(base, key=None)</b>
-<dd> Returns a strategy that draws a single shared value per run, drawn from base. Any two shared instances with the same key will share the same value, otherwise the identity of this strategy will be used. That is: 
-
+</dd><dt><b>hypothesis.strategies.shared(base, key=None)</b>
+</dt><dd> Returns a strategy that draws a single shared value per run, drawn from base. Any two shared instances with the same key will share the same value, otherwise the identity of this strategy will be used. That is: 
  <pre>
 &gt;&gt;&gt; s = integers()  # or any other strategy
 &gt;&gt;&gt; x = shared(s)
 &gt;&gt;&gt; y = shared(s)
 </pre> 
-
  In the above x and y may draw different (or potentially the same) values. In the following they will always draw the same: 
-
  <pre>
 &gt;&gt;&gt; x = shared(s, key=&quot;hi&quot;)
 &gt;&gt;&gt; y = shared(s, key=&quot;hi&quot;)
 </pre>
-<dt><b>hypothesis.strategies.choices()</b>
-<dd> Strategy that generates a function that behaves like random.choice. 
-
+</dd><dt><b>hypothesis.strategies.choices()</b>
+</dt><dd> Strategy that generates a function that behaves like random.choice. 
  Will note choices made for reproducibility.
-<dt><b>hypothesis.strategies.uuids()</b>
-<dd> Returns a strategy that generates UUIDs. 
-
+</dd><dt><b>hypothesis.strategies.uuids()</b>
+</dt><dd> Returns a strategy that generates UUIDs. 
  All returned values from this will be unique, so e.g. if you do lists(uuids()) the resulting list will never contain duplicates.
-<dt><b>hypothesis.strategies.runner(default=not_set)</b>
-<dd> A strategy for getting &quot;the current test runner&quot;, whatever that may be. The exact meaning depends on the entry point, but it will usually be the associated 'self' value for it. 
-
+</dd><dt><b>hypothesis.strategies.runner(default=not_set)</b>
+</dt><dd> A strategy for getting &quot;the current test runner&quot;, whatever that may be. The exact meaning depends on the entry point, but it will usually be the associated 'self' value for it. 
  If there is no current test runner and a default is provided, return that default. If no default is provided, raises InvalidArgument.
-<dt><b>hypothesis.strategies.data()</b>
-<dd> This isn't really a normal strategy, but instead gives you an object which can be used to draw data interactively from other strategies. 
-
+</dd><dt><b>hypothesis.strategies.data()</b>
+</dt><dd> This isn't really a normal strategy, but instead gives you an object which can be used to draw data interactively from other strategies. 
  It can only be used within <b>@given</b>, not <b>find()</b>. This is because the lifetime of the object cannot outlast the test body. 
-
- See <i>the rest of the documentation</i> for more complete information.</dl>
+ See <i>the rest of the documentation</i> for more complete information.</dd></dl>
 
 <h3>Choices</h3>
 
@@ -1306,16 +1213,13 @@ hypothesis.errors.NoExamples: Could not find any valid examples in 20 tries
  Sometimes the data you want to generate has a recursive definition. e.g. if you wanted to generate JSON data, valid JSON is:
 <dl>
 <dt>1.
-<dd> Any float, any boolean, any unicode string.
-<dt>2.
-<dd> Any list of valid JSON data
-<dt>3.
-<dd> Any dictionary mapping unicode strings to valid JSON data. 
-
+</dt><dd> Any float, any boolean, any unicode string.
+</dd><dt>2.
+</dt><dd> Any list of valid JSON data
+</dd><dt>3.
+</dt><dd> Any dictionary mapping unicode strings to valid JSON data. 
  The problem is that you cannot call a strategy recursively and expect it to not just blow up and eat all your memory. The other problem here is that not all unicode strings display consistently on different machines, so we'll restrict them in our doctest. 
-
  The way Hypothesis handles this is with the <b>recursive()</b> function which you pass in a base case and a function that given a strategy for your data type returns a new strategy for it. So for example: 
-
  <pre>
 &gt;&gt;&gt; from string import printable; from pprint import pprint
 &gt;&gt;&gt; json = recursive(none() | booleans() | floats() | text(printable),
@@ -1339,11 +1243,8 @@ hypothesis.errors.NoExamples: Could not find any valid examples in 20 tries
 &gt;&gt;&gt; pprint(json.example())
 []
 </pre> 
-
  That is, we start with our leaf data and then we augment it by allowing lists and dictionaries of anything we can generate as JSON data. 
-
  The size control of this works by limiting the maximum number of values that can be drawn from the base strategy. So for example if we wanted to only generate really small JSON we could do this as: 
-
  <pre>
 &gt;&gt;&gt; small_lists = recursive(booleans(), lists, max_leaves=5)
 &gt;&gt;&gt; small_lists.example()
@@ -1352,7 +1253,7 @@ True
 [True, False]
 &gt;&gt;&gt; small_lists.example()
 True
-</pre></dl>
+</pre></dd></dl>
 
 <h3>Composite strategies</h3>
 
@@ -1657,21 +1558,17 @@ hypothesis.errors.InvalidArgument: Missing arguments for mandatory field
  These include detecting and warning about:
 <dl>
 <dt>&bull;
-<dd> Strategies with very slow data generation
-<dt>&bull;
-<dd> Strategies which filter out too much
-<dt>&bull;
-<dd> Recursive strategies which branch too much
-<dt>&bull;
-<dd> Use of the global random module 
-
+</dt><dd> Strategies with very slow data generation
+</dd><dt>&bull;
+</dt><dd> Strategies which filter out too much
+</dd><dt>&bull;
+</dt><dd> Recursive strategies which branch too much
+</dd><dt>&bull;
+</dt><dd> Use of the global random module 
  If any of these scenarios are detected, Hypothesis will emit a warning about them. 
-
  The general goal of these health checks is to warn you about things that you are doing that might appear to work but will either cause Hypothesis to not work correctly or to perform badly. 
-
  To selectively disable health checks, use the suppress_health_check settings. The argument for this parameter is a list with elements drawn from any of the class-level attributes of the HealthCheck class. 
-
- To disable all health checks, set the perform_health_check settings parameter to False.</dl>
+ To disable all health checks, set the perform_health_check settings parameter to False.</dd></dl>
 
 <h2>THE HYPOTHESIS EXAMPLE DATABASE</h2>
 
@@ -1892,10 +1789,8 @@ TestTrees.settings = settings(max_examples=100, stateful_step_count=100)
  While it's possible to use <b>assume()</b> in RuleBasedStateMachine rules, if you use it in only a few rules you can quickly run into a situation where few or none of your rules pass their assumptions. Thus, Hypothesis provides a <b>precondition()</b> decorator to avoid this problem. The <b>precondition()</b> decorator is used on <b>rule</b>-decorated functions, and must be given a function that returns True or False based on the RuleBasedStateMachine instance.
 <dl>
 <dt><b>hypothesis.stateful.precondition(precond)</b>
-<dd> Decorator to apply a precondition for rules in a RuleBasedStateMachine. Specifies a precondition for a rule to be considered as a valid step in the state machine. The given function will be called with the instance of RuleBasedStateMachine and should return True or False. Usually it will need to look at attributes on that instance. 
-
+</dt><dd> Decorator to apply a precondition for rules in a RuleBasedStateMachine. Specifies a precondition for a rule to be considered as a valid step in the state machine. The given function will be called with the instance of RuleBasedStateMachine and should return True or False. Usually it will need to look at attributes on that instance. 
  For example: 
-
  <pre>
 class MyTestMachine(RuleBasedStateMachine):
     state = 1
@@ -1904,9 +1799,7 @@ class MyTestMachine(RuleBasedStateMachine):
     def divide_with(self, numerator):
         self.state = numerator / self.state
 </pre> 
-
  This is better than using assume in your rule since more valid rules should be able to be run. 
-
  <pre>
 from hypothesis.stateful import RuleBasedStateMachine, rule, precondition
 class NumberModifier(RuleBasedStateMachine):
@@ -1919,10 +1812,8 @@ class NumberModifier(RuleBasedStateMachine):
     def divide_with_one(self):
         self.num = 1 / self.num
 </pre> 
-
  By using <b>precondition()</b> here instead of <b>assume()</b>, Hypothesis can filter the inapplicable rules before running them. This makes it much more likely that a useful sequence of steps will be generated. 
-
- Note that currently preconditions can't access bundles; if you need to use preconditions, you should store relevant data on the instance instead.</dl>
+ Note that currently preconditions can't access bundles; if you need to use preconditions, you should store relevant data on the instance instead.</dd></dl>
 
 <h3>Invariant</h3>
 
@@ -1931,10 +1822,8 @@ class NumberModifier(RuleBasedStateMachine):
  Often there are invariants that you want to ensure are met after every step in a process. It would be possible to add these as rules that are run, but they would be run zero or multiple times between other rules. Hypothesis provides a decorator that marks a function to be run after every step.
 <dl>
 <dt><b>hypothesis.stateful.invariant()</b>
-<dd> Decorator to apply an invariant for rules in a RuleBasedStateMachine. The decorated function will be run after every rule and can raise an exception to indicate failed invariants. 
-
+</dt><dd> Decorator to apply an invariant for rules in a RuleBasedStateMachine. The decorated function will be run after every rule and can raise an exception to indicate failed invariants. 
  For example: 
-
  <pre>
 class MyTestMachine(RuleBasedStateMachine):
     state = 1
@@ -1942,7 +1831,6 @@ class MyTestMachine(RuleBasedStateMachine):
     def is_nonzero(self):
         assert self.state != 0
 </pre> 
-
  <pre>
 from hypothesis.stateful import RuleBasedStateMachine, rule, invariant
 class NumberModifier(RuleBasedStateMachine):
@@ -1957,10 +1845,8 @@ class NumberModifier(RuleBasedStateMachine):
         assert self.num % 2 == 0
 NumberTest = NumberModifier.TestCase
 </pre> 
-
  Invariants can also have <b>precondition()</b>s applied to them, in which case they will only be run if the precondition function returns true. 
-
- Note that currently invariants can't access bundles; if you need to use invariants, you should store relevant data on the instance instead.</dl>
+ Note that currently invariants can't access bundles; if you need to use invariants, you should store relevant data on the instance instead.</dd></dl>
 
 <h3>Generic state machines</h3>
 
@@ -2098,15 +1984,14 @@ AssertionError
  In terms of what's actually <i>known</i> to work:
 <dl>
 <dt>&bull;
-<dd> Hypothesis integrates as smoothly with py.test and unittest as I can make it, and this is verified as part of the CI.
-<dt>&bull;
-<dd> py.test fixtures work correctly with Hypothesis based functions, but note that function based fixtures will only run once for the whole function, not once per example.
-<dt>&bull;
-<dd> Nose works fine with hypothesis, and this is tested as part of the CI. yield based tests simply won't work.
-<dt>&bull;
-<dd> Integration with Django's testing requires use of the <i>hypothesis-django</i> package. The issue is that in Django's tests' normal mode of execution it will reset the database one per test rather than once per example, which is not what you want. 
-
- Coverage works out of the box with Hypothesis (and Hypothesis has 100% branch coverage in its own tests). However you should probably not use Coverage, Hypothesis and PyPy together. Because Hypothesis does quite a lot of CPU heavy work compared to normal tests, it really exacerbates the performance problems the two normally have working together.</dl>
+</dt><dd> Hypothesis integrates as smoothly with py.test and unittest as I can make it, and this is verified as part of the CI.
+</dd><dt>&bull;
+</dt><dd> py.test fixtures work correctly with Hypothesis based functions, but note that function based fixtures will only run once for the whole function, not once per example.
+</dd><dt>&bull;
+</dt><dd> Nose works fine with hypothesis, and this is tested as part of the CI. yield based tests simply won't work.
+</dd><dt>&bull;
+</dt><dd> Integration with Django's testing requires use of the <i>hypothesis-django</i> package. The issue is that in Django's tests' normal mode of execution it will reset the database one per test rather than once per example, which is not what you want. 
+ Coverage works out of the box with Hypothesis (and Hypothesis has 100% branch coverage in its own tests). However you should probably not use Coverage, Hypothesis and PyPy together. Because Hypothesis does quite a lot of CPU heavy work compared to normal tests, it really exacerbates the performance problems the two normally have working together.</dd></dl>
 
 <h3>Optional Packages</h3>
 
@@ -2328,12 +2213,10 @@ def sort_nodes(xs):
  The trick here turns out to be twofold:
 <dl>
 <dt>1.
-<dd> We can generate a type that is <i>much larger</i> than an election, extract an election out of that, and rely on minimization to throw away all the extraneous detail.
-<dt>2.
-<dd> We can use assume and rely on Hypothesis's adaptive exploration to focus on the examples that turn out to generate interesting elections 
-
+</dt><dd> We can generate a type that is <i>much larger</i> than an election, extract an election out of that, and rely on minimization to throw away all the extraneous detail.
+</dd><dt>2.
+</dt><dd> We can use assume and rely on Hypothesis's adaptive exploration to focus on the examples that turn out to generate interesting elections 
  Without further ado, here is the code: 
-
  <pre>
 from hypothesis import given, assume
 from hypothesis.strategies import integers, lists
@@ -2395,14 +2278,11 @@ def test_elections_are_transitive(election):
             for z in graph.get(y, ()):
                 assert x not in graph.get(z, ())
 </pre> 
-
  The example Hypothesis gives me on my first run (your mileage may of course vary) is: 
-
  <pre>
 [[3, 1, 4], [4, 3, 1], [1, 4, 3]]
 </pre> 
-
- Which does indeed do the job: The majority (votes 0 and 1) prefer 3 to 1, the majority (votes 0 and 2) prefer 1 to 4 and the majority (votes 1 and 2) prefer 4 to 3. This is in fact basically the canonical example of the voting paradox, modulo variations on the names of candidates.</dl>
+ Which does indeed do the job: The majority (votes 0 and 1) prefer 3 to 1, the majority (votes 0 and 2) prefer 1 to 4 and the majority (votes 1 and 2) prefer 4 to 3. This is in fact basically the canonical example of the voting paradox, modulo variations on the names of candidates.</dd></dl>
 
 <h3>Fuzzing an HTTP API</h3>
 
@@ -2501,11 +2381,10 @@ if __name__ == '__main__':
  The two major places for community discussion are:
 <dl>
 <dt>&bull;
-<dd> <i>The mailing list</i>.
-<dt>&bull;
-<dd> An IRC channel, #hypothesis on freenode, which is more active than the mailing list. 
-
- Feel free to use these to ask for help, provide feedback, or discuss anything remotely Hypothesis related at all.</dl>
+</dt><dd> <i>The mailing list</i>.
+</dd><dt>&bull;
+</dt><dd> An IRC channel, #hypothesis on freenode, which is more active than the mailing list. 
+ Feel free to use these to ask for help, provide feedback, or discuss anything remotely Hypothesis related at all.</dd></dl>
 
 <h3>Code of conduct</h3>
 
@@ -2516,23 +2395,22 @@ if __name__ == '__main__':
  At the high level the code of conduct goes like this:
 <dl>
 <dt>1.
-<dd> Be kind
-<dt>2.
-<dd> Be respectful
-<dt>3.
-<dd> Be helpful 
-
+</dt><dd> Be kind
+</dd><dt>2.
+</dt><dd> Be respectful
+</dd><dt>3.
+</dt><dd> Be helpful 
  While it is impossible to enumerate everything that is unkind, disrespectful or unhelpful, here are some specific things that are definitely against the code of conduct:
-<dt>1.
-<dd> -isms and -phobias (e.g. racism, sexism, transphobia and homophobia) are unkind, disrespectful <i>and</i> unhelpful. Just don't.
-<dt>2.
-<dd> All software is broken. This is not a moral failing on the part of the authors. Don't give people a hard time for bad code.
-<dt>3.
-<dd> It's OK not to know things. Everybody was a beginner once, nobody should be made to feel bad for it.
-<dt>4.
-<dd> It's OK not to <i>want</i> to know something. If you think someone's question is fundamentally flawed, you should still ask permission before explaining what they should actually be asking.
-<dt>5.
-<dd> Note that &quot;I was just joking&quot; is not a valid defence.</dl>
+</dd><dt>1.
+</dt><dd> -isms and -phobias (e.g. racism, sexism, transphobia and homophobia) are unkind, disrespectful <i>and</i> unhelpful. Just don't.
+</dd><dt>2.
+</dt><dd> All software is broken. This is not a moral failing on the part of the authors. Don't give people a hard time for bad code.
+</dd><dt>3.
+</dt><dd> It's OK not to know things. Everybody was a beginner once, nobody should be made to feel bad for it.
+</dd><dt>4.
+</dt><dd> It's OK not to <i>want</i> to know something. If you think someone's question is fundamentally flawed, you should still ask permission before explaining what they should actually be asking.
+</dd><dt>5.
+</dt><dd> Note that &quot;I was just joking&quot; is not a valid defence.</dd></dl>
 
 <h3>What happens when this goes wrong?</h3>
 
@@ -2673,79 +2551,79 @@ if __name__ == '__main__':
  The following is a non-exhaustive list of open source projects I know are using Hypothesis. If you're aware of any others please add them to the list! The only inclusion criterion right now is that if it's a Python library then it should be available on pypi.
 <dl>
 <dt>&bull;
-<dd> <i>aur</i>
-<dt>&bull;
-<dd> <i>axelrod</i>
-<dt>&bull;
-<dd> <i>bidict</i>
-<dt>&bull;
-<dd> <i>binaryornot</i>
-<dt>&bull;
-<dd> <i>brotlipy</i>
-<dt>&bull;
-<dd> <i>chardet</i>
-<dt>&bull;
-<dd> <i>cmph-cffi</i>
-<dt>&bull;
-<dd> <i>cryptography</i>
-<dt>&bull;
-<dd> <i>dbus-signature-pyparsing</i>
-<dt>&bull;
-<dd> <i>fastnumbers</i>
-<dt>&bull;
-<dd> <i>flocker</i>
-<dt>&bull;
-<dd> <i>flownetpy</i>
-<dt>&bull;
-<dd> <i>funsize</i>
-<dt>&bull;
-<dd> <i>fusion-index</i>
-<dt>&bull;
-<dd> <i>hyper-h2</i>
-<dt>&bull;
-<dd> <i>into-dbus-python</i>
-<dt>&bull;
-<dd> <i>justbases</i>
-<dt>&bull;
-<dd> <i>justbytes</i>
-<dt>&bull;
-<dd> <i>mariadb-dyncol</i>
-<dt>&bull;
-<dd> <i>mercurial</i>
-<dt>&bull;
-<dd> <i>natsort</i>
-<dt>&bull;
-<dd> <i>pretext</i>
-<dt>&bull;
-<dd> <i>priority</i>
-<dt>&bull;
-<dd> <i>PyCEbox</i>
-<dt>&bull;
-<dd> <i>PyPy</i>
-<dt>&bull;
-<dd> <i>pyrsistent</i>
-<dt>&bull;
-<dd> <i>pyudev</i>
-<dt>&bull;
-<dd> <i>qutebrowser</i>
-<dt>&bull;
-<dd> <i>RubyMarshal</i>
-<dt>&bull;
-<dd> <i>Segpy</i>
-<dt>&bull;
-<dd> <i>simoa</i>
-<dt>&bull;
-<dd> <i>srt</i>
-<dt>&bull;
-<dd> <i>tchannel</i>
-<dt>&bull;
-<dd> <i>vdirsyncer</i>
-<dt>&bull;
-<dd> <i>wcag-contrast-ratio</i>
-<dt>&bull;
-<dd> <i>yacluster</i>
-<dt>&bull;
-<dd> <i>yturl</i></dl>
+</dt><dd> <i>aur</i>
+</dd><dt>&bull;
+</dt><dd> <i>axelrod</i>
+</dd><dt>&bull;
+</dt><dd> <i>bidict</i>
+</dd><dt>&bull;
+</dt><dd> <i>binaryornot</i>
+</dd><dt>&bull;
+</dt><dd> <i>brotlipy</i>
+</dd><dt>&bull;
+</dt><dd> <i>chardet</i>
+</dd><dt>&bull;
+</dt><dd> <i>cmph-cffi</i>
+</dd><dt>&bull;
+</dt><dd> <i>cryptography</i>
+</dd><dt>&bull;
+</dt><dd> <i>dbus-signature-pyparsing</i>
+</dd><dt>&bull;
+</dt><dd> <i>fastnumbers</i>
+</dd><dt>&bull;
+</dt><dd> <i>flocker</i>
+</dd><dt>&bull;
+</dt><dd> <i>flownetpy</i>
+</dd><dt>&bull;
+</dt><dd> <i>funsize</i>
+</dd><dt>&bull;
+</dt><dd> <i>fusion-index</i>
+</dd><dt>&bull;
+</dt><dd> <i>hyper-h2</i>
+</dd><dt>&bull;
+</dt><dd> <i>into-dbus-python</i>
+</dd><dt>&bull;
+</dt><dd> <i>justbases</i>
+</dd><dt>&bull;
+</dt><dd> <i>justbytes</i>
+</dd><dt>&bull;
+</dt><dd> <i>mariadb-dyncol</i>
+</dd><dt>&bull;
+</dt><dd> <i>mercurial</i>
+</dd><dt>&bull;
+</dt><dd> <i>natsort</i>
+</dd><dt>&bull;
+</dt><dd> <i>pretext</i>
+</dd><dt>&bull;
+</dt><dd> <i>priority</i>
+</dd><dt>&bull;
+</dt><dd> <i>PyCEbox</i>
+</dd><dt>&bull;
+</dt><dd> <i>PyPy</i>
+</dd><dt>&bull;
+</dt><dd> <i>pyrsistent</i>
+</dd><dt>&bull;
+</dt><dd> <i>pyudev</i>
+</dd><dt>&bull;
+</dt><dd> <i>qutebrowser</i>
+</dd><dt>&bull;
+</dt><dd> <i>RubyMarshal</i>
+</dd><dt>&bull;
+</dt><dd> <i>Segpy</i>
+</dd><dt>&bull;
+</dt><dd> <i>simoa</i>
+</dd><dt>&bull;
+</dt><dd> <i>srt</i>
+</dd><dt>&bull;
+</dt><dd> <i>tchannel</i>
+</dd><dt>&bull;
+</dt><dd> <i>vdirsyncer</i>
+</dd><dt>&bull;
+</dt><dd> <i>wcag-contrast-ratio</i>
+</dd><dt>&bull;
+</dt><dd> <i>yacluster</i>
+</dd><dt>&bull;
+</dt><dd> <i>yturl</i></dd></dl>
 
 <h2>PROJECTS EXTENDING HYPOTHESIS</h2>
 
@@ -2754,13 +2632,12 @@ if __name__ == '__main__':
  The following is a non-exhaustive list of open source projects that make Hypothesis strategies available. If you're aware of any others please add them the list! The only inclusion criterion right now is that if it's a Python library then it should be available on pypi.
 <dl>
 <dt>&bull;
-<dd> <i>hs-dbus-signature</i> - strategy to generate arbitrary D-Bus signatures
-<dt>&bull;
-<dd> <i>hypothesis-regex</i> - strategy to generate strings that match given regular expression.
-<dt>&bull;
-<dd> <i>lollipop-hypothesis</i> - strategy to generate data based on <i>Lollipop</i> schema definitions. 
-
- If you're thinking about writing an extension, consider naming it <b>hypothesis-{something}</b> - a standard prefix makes the community more visible and searching for extensions easier.</dl>
+</dt><dd> <i>hs-dbus-signature</i> - strategy to generate arbitrary D-Bus signatures
+</dd><dt>&bull;
+</dt><dd> <i>hypothesis-regex</i> - strategy to generate strings that match given regular expression.
+</dd><dt>&bull;
+</dt><dd> <i>lollipop-hypothesis</i> - strategy to generate data based on <i>Lollipop</i> schema definitions. 
+ If you're thinking about writing an extension, consider naming it <b>hypothesis-{something}</b> - a standard prefix makes the community more visible and searching for extensions easier.</dd></dl>
 
 <h2>CHANGELOG</h2>
 
@@ -2771,13 +2648,12 @@ if __name__ == '__main__':
  Hypothesis APIs come in three flavours:
 <dl>
 <dt>&bull;
-<dd> Public: Hypothesis releases since 1.0 are <i>semantically versioned</i> with respect to these parts of the API. These will not break except between major version bumps. All APIs mentioned in this documentation are public unless explicitly noted otherwise.
-<dt>&bull;
-<dd> Semi-public: These are APIs that are considered ready to use but are not wholly nailed down yet. They will not break in patch releases and will <i>usually</i> not break in minor releases, but when necessary minor releases may break semi-public APIs.
-<dt>&bull;
-<dd> Internal: These may break at any time and you really should not use them at all. 
-
- You should generally assume that an API is internal unless you have specific information to the contrary.</dl>
+</dt><dd> Public: Hypothesis releases since 1.0 are <i>semantically versioned</i> with respect to these parts of the API. These will not break except between major version bumps. All APIs mentioned in this documentation are public unless explicitly noted otherwise.
+</dd><dt>&bull;
+</dt><dd> Semi-public: These are APIs that are considered ready to use but are not wholly nailed down yet. They will not break in patch releases and will <i>usually</i> not break in minor releases, but when necessary minor releases may break semi-public APIs.
+</dd><dt>&bull;
+</dt><dd> Internal: These may break at any time and you really should not use them at all. 
+ You should generally assume that an API is internal unless you have specific information to the contrary.</dd></dl>
 
 <h3>3.12.0 - 2017-07-07</h3>
 
@@ -2788,15 +2664,14 @@ if __name__ == '__main__':
  User facing impact should be fairly mild, but includes:
 <dl>
 <dt>&bull;
-<dd> All existing examples in the database will probably be invalidated. Hypothesis handles this automatically, so you don't need to do anything, but if you see all your examples disappear that's why.
-<dt>&bull;
-<dd> Almost all data distributions have changed significantly. Possibly for the better, possibly for the worse. This may result in new bugs being found, but it may also result in Hypothesis being unable to find bugs it previously did.
-<dt>&bull;
-<dd> Data generation may be somewhat faster if your existing bottleneck was in draw_bytes (which is often the case for large examples).
-<dt>&bull;
-<dd> Shrinking will probably be slower, possibly significantly. 
-
- If you notice any effects you consider to be a significant regression, please open an issue about them.</dl>
+</dt><dd> All existing examples in the database will probably be invalidated. Hypothesis handles this automatically, so you don't need to do anything, but if you see all your examples disappear that's why.
+</dd><dt>&bull;
+</dt><dd> Almost all data distributions have changed significantly. Possibly for the better, possibly for the worse. This may result in new bugs being found, but it may also result in Hypothesis being unable to find bugs it previously did.
+</dd><dt>&bull;
+</dt><dd> Data generation may be somewhat faster if your existing bottleneck was in draw_bytes (which is often the case for large examples).
+</dd><dt>&bull;
+</dt><dd> Shrinking will probably be slower, possibly significantly. 
+ If you notice any effects you consider to be a significant regression, please open an issue about them.</dd></dl>
 
 <h3>3.11.6 - 2017-06-19</h3>
 
@@ -2871,13 +2746,13 @@ if __name__ == '__main__':
  This is feature release, expanding the capabilities of the <b>decimals()</b> strategy.
 <dl>
 <dt>&bull;
-<dd> The new (optional) <b>places</b> argument allows you to generate decimals with a certain number of places (e.g. cents, thousandths, satoshis).
-<dt>&bull;
-<dd> If allow_infinity is None, setting min_bound no longer excludes positive infinity and setting max_value no longer excludes negative infinity.
-<dt>&bull;
-<dd> All of <b>NaN</b>, <b>-Nan</b>, <b>sNaN</b>, and <b>-sNaN</b> may now be drawn if allow_nan is True, or if allow_nan is None and min_value or max_value is None.
-<dt>&bull;
-<dd> min_value and max_value may be given as decimal strings, e.g. <b>&quot;1.234&quot;</b>.</dl>
+</dt><dd> The new (optional) <b>places</b> argument allows you to generate decimals with a certain number of places (e.g. cents, thousandths, satoshis).
+</dd><dt>&bull;
+</dt><dd> If allow_infinity is None, setting min_bound no longer excludes positive infinity and setting max_value no longer excludes negative infinity.
+</dd><dt>&bull;
+</dt><dd> All of <b>NaN</b>, <b>-Nan</b>, <b>sNaN</b>, and <b>-sNaN</b> may now be drawn if allow_nan is True, or if allow_nan is None and min_value or max_value is None.
+</dd><dt>&bull;
+</dt><dd> min_value and max_value may be given as decimal strings, e.g. <b>&quot;1.234&quot;</b>.</dd></dl>
 
 <h3>3.8.5 - 2017-05-16</h3>
 
@@ -2924,7 +2799,7 @@ if __name__ == '__main__':
  This is a bug fix release for a single bug:
 <dl>
 <dt>&bull;
-<dd> In 3.7.3, using <b>@example</b> and a pytest fixture in the same test could cause the test to fail to fill the arguments, and throw a TypeError.</dl>
+</dt><dd> In 3.7.3, using <b>@example</b> and a pytest fixture in the same test could cause the test to fail to fill the arguments, and throw a TypeError.</dd></dl>
 
 <h3>3.7.3 - 2017-04-21</h3>
 
@@ -2945,11 +2820,11 @@ if __name__ == '__main__':
  This is a bug fix and internal improvements release.
 <dl>
 <dt>&bull;
-<dd> In particular Hypothesis now tracks a tree of where it has already explored. This allows it to avoid some classes of duplicate examples, and significantly improves the performance of shrinking failing examples by allowing it to skip some shrinks that it can determine can't possibly work.
-<dt>&bull;
-<dd> Hypothesis will no longer seed the global random arbitrarily unless you have asked it to using <b>random_module()</b>
-<dt>&bull;
-<dd> Shrinking would previously have not worked correctly in some special cases on Python 2, and would have resulted in suboptimal examples.</dl>
+</dt><dd> In particular Hypothesis now tracks a tree of where it has already explored. This allows it to avoid some classes of duplicate examples, and significantly improves the performance of shrinking failing examples by allowing it to skip some shrinks that it can determine can't possibly work.
+</dd><dt>&bull;
+</dt><dd> Hypothesis will no longer seed the global random arbitrarily unless you have asked it to using <b>random_module()</b>
+</dd><dt>&bull;
+</dt><dd> Shrinking would previously have not worked correctly in some special cases on Python 2, and would have resulted in suboptimal examples.</dd></dl>
 
 <h3>3.7.0 - 2017-03-20</h3>
 
@@ -2960,29 +2835,27 @@ if __name__ == '__main__':
  New features:
 <dl>
 <dt>&bull;
-<dd> Rule based stateful testing now has an <b>@invariant</b> decorator that specifies methods that are run after init and after every step, allowing you to encode properties that should be true at all times. Thanks to Tom Prince for this feature.
-<dt>&bull;
-<dd> The <b>decimals()</b> strategy now supports <b>allow_nan</b> and <b>allow_infinity</b> flags.
-<dt>&bull;
-<dd> There are <i>significantly more strategies available for numpy</i>, including for generating arbitrary data types. Thanks to Zac Hatfield Dodds for this feature.
-<dt>&bull;
-<dd> When using the <b>data()</b> strategy you can now add a label as an argument to <b>draw()</b>, which will be printed along with the value when an example fails. Thanks to Peter Inglesby for this feature. 
-
+</dt><dd> Rule based stateful testing now has an <b>@invariant</b> decorator that specifies methods that are run after init and after every step, allowing you to encode properties that should be true at all times. Thanks to Tom Prince for this feature.
+</dd><dt>&bull;
+</dt><dd> The <b>decimals()</b> strategy now supports <b>allow_nan</b> and <b>allow_infinity</b> flags.
+</dd><dt>&bull;
+</dt><dd> There are <i>significantly more strategies available for numpy</i>, including for generating arbitrary data types. Thanks to Zac Hatfield Dodds for this feature.
+</dd><dt>&bull;
+</dt><dd> When using the <b>data()</b> strategy you can now add a label as an argument to <b>draw()</b>, which will be printed along with the value when an example fails. Thanks to Peter Inglesby for this feature. 
  Bug fixes:
-<dt>&bull;
-<dd> Bug fix: <b>composite()</b> now preserves functions' docstrings.
-<dt>&bull;
-<dd> The build is now reproducible and doesn't depend on the path you build it from. Thanks to Chris Lamb for this feature.
-<dt>&bull;
-<dd> numpy strategies for the void data type did not work correctly. Thanks to Zac Hatfield Dodds for this fix. 
-
+</dd><dt>&bull;
+</dt><dd> Bug fix: <b>composite()</b> now preserves functions' docstrings.
+</dd><dt>&bull;
+</dt><dd> The build is now reproducible and doesn't depend on the path you build it from. Thanks to Chris Lamb for this feature.
+</dd><dt>&bull;
+</dt><dd> numpy strategies for the void data type did not work correctly. Thanks to Zac Hatfield Dodds for this fix. 
  There have also been a number of performance optimizations:
-<dt>&bull;
-<dd> The <b>permutations()</b> strategy is now significantly faster to use for large lists (the underlying algorithm has gone from O(n^2) to O(n)).
-<dt>&bull;
-<dd> Shrinking of failing test cases should have got significantly faster in some circumstances where it was previously struggling for a long time.
-<dt>&bull;
-<dd> Example generation now involves less indirection, which results in a small speedup in some cases (small enough that you won't really notice it except in pathological cases).</dl>
+</dd><dt>&bull;
+</dt><dd> The <b>permutations()</b> strategy is now significantly faster to use for large lists (the underlying algorithm has gone from O(n^2) to O(n)).
+</dd><dt>&bull;
+</dt><dd> Shrinking of failing test cases should have got significantly faster in some circumstances where it was previously struggling for a long time.
+</dd><dt>&bull;
+</dt><dd> Example generation now involves less indirection, which results in a small speedup in some cases (small enough that you won't really notice it except in pathological cases).</dd></dl>
 
 <h3>3.6.1 - 2016-12-20</h3>
 
@@ -2991,13 +2864,13 @@ if __name__ == '__main__':
  This release fixes a dependency problem and makes some small behind the scenes improvements.
 <dl>
 <dt>&bull;
-<dd> The fake-factory dependency was renamed to faker. If you were depending on it through hypothesis[django] or hypothesis[fake-factory] without pinning it yourself then it would have failed to install properly. This release changes it so that hypothesis[fakefactory] (which can now also be installed as hypothesis[faker]) will install the renamed faker package instead.
-<dt>&bull;
-<dd> This release also removed the dependency of hypothesis[django] on hypothesis[fakefactory] - it was only being used for emails. These now use a custom strategy that isn't from fakefactory. As a result you should also see performance improvements of tests which generated User objects or other things with email fields, as well as better shrinking of email addresses.
-<dt>&bull;
-<dd> The distribution of code using nested calls to <b>one_of()</b> or the <b>|</b> operator for combining strategies has been improved, as branches are now flattened to give a more uniform distribution.
-<dt>&bull;
-<dd> Examples using <b>composite()</b> or <b>.flatmap</b> should now shrink better. In particular this will affect things which work by first generating a length and then generating that many items, which have historically not shrunk very well.</dl>
+</dt><dd> The fake-factory dependency was renamed to faker. If you were depending on it through hypothesis[django] or hypothesis[fake-factory] without pinning it yourself then it would have failed to install properly. This release changes it so that hypothesis[fakefactory] (which can now also be installed as hypothesis[faker]) will install the renamed faker package instead.
+</dd><dt>&bull;
+</dt><dd> This release also removed the dependency of hypothesis[django] on hypothesis[fakefactory] - it was only being used for emails. These now use a custom strategy that isn't from fakefactory. As a result you should also see performance improvements of tests which generated User objects or other things with email fields, as well as better shrinking of email addresses.
+</dd><dt>&bull;
+</dt><dd> The distribution of code using nested calls to <b>one_of()</b> or the <b>|</b> operator for combining strategies has been improved, as branches are now flattened to give a more uniform distribution.
+</dd><dt>&bull;
+</dt><dd> Examples using <b>composite()</b> or <b>.flatmap</b> should now shrink better. In particular this will affect things which work by first generating a length and then generating that many items, which have historically not shrunk very well.</dd></dl>
 
 <h3>3.6.0 - 2016-10-31</h3>
 
@@ -3022,9 +2895,9 @@ if __name__ == '__main__':
  Bugs fixed:
 <dl>
 <dt>&bull;
-<dd> If the same test was running concurrently in two processes and there were examples already in the test database which no longer failed, Hypothesis would sometimes fail with a FileNotFoundError (IOError on Python 2) because an example it was trying to read was deleted before it was read. (<i>issue #372</i>).
-<dt>&bull;
-<dd> Drawing from an <b>integers()</b> strategy with both a min_value and a max_value would reject too many examples needlessly. Now it repeatedly redraws until satisfied. (<i>pull request #366</i>. Thanks to Calen Pennington for the contribution).</dl>
+</dt><dd> If the same test was running concurrently in two processes and there were examples already in the test database which no longer failed, Hypothesis would sometimes fail with a FileNotFoundError (IOError on Python 2) because an example it was trying to read was deleted before it was read. (<i>issue #372</i>).
+</dd><dt>&bull;
+</dt><dd> Drawing from an <b>integers()</b> strategy with both a min_value and a max_value would reject too many examples needlessly. Now it repeatedly redraws until satisfied. (<i>pull request #366</i>. Thanks to Calen Pennington for the contribution).</dd></dl>
 
 <h3>3.5.2 - 2016-09-24</h3>
 
@@ -3033,7 +2906,7 @@ if __name__ == '__main__':
  This is a bug fix release.
 <dl>
 <dt>&bull;
-<dd> The Hypothesis pytest plugin broke pytest support for doctests. Now it doesn't.</dl>
+</dt><dd> The Hypothesis pytest plugin broke pytest support for doctests. Now it doesn't.</dd></dl>
 
 <h3>3.5.1 - 2016-09-23</h3>
 
@@ -3042,13 +2915,13 @@ if __name__ == '__main__':
  This is a bug fix release.
 <dl>
 <dt>&bull;
-<dd> Hypothesis now runs cleanly in -B and -BB modes, avoiding mixing bytes and unicode.
-<dt>&bull;
-<dd> <b>python:unittest.TestCase</b> tests would not have shown up in the new statistics mode. Now they do.
-<dt>&bull;
-<dd> Similarly, stateful tests would not have shown up in statistics and now they do.
-<dt>&bull;
-<dd> Statistics now print with pytest node IDs (the names you'd get in pytest verbose mode).</dl>
+</dt><dd> Hypothesis now runs cleanly in -B and -BB modes, avoiding mixing bytes and unicode.
+</dd><dt>&bull;
+</dt><dd> <b>python:unittest.TestCase</b> tests would not have shown up in the new statistics mode. Now they do.
+</dd><dt>&bull;
+</dt><dd> Similarly, stateful tests would not have shown up in statistics and now they do.
+</dd><dt>&bull;
+</dt><dd> Statistics now print with pytest node IDs (the names you'd get in pytest verbose mode).</dd></dl>
 
 <h3>3.5.0 - 2016-09-22</h3>
 
@@ -3057,21 +2930,20 @@ if __name__ == '__main__':
  This is a feature release.
 <dl>
 <dt>&bull;
-<dd> <b>fractions()</b> and <b>decimals()</b> strategies now support min_value and max_value parameters. Thanks go to Anne Mulhern for the development of this feature.
-<dt>&bull;
-<dd> The Hypothesis pytest plugin now supports a --hypothesis-show-statistics parameter that gives detailed statistics about the tests that were run. Huge thanks to Jean-Louis Fuchs and Adfinis-SyGroup for funding the development of this feature.
-<dt>&bull;
-<dd> There is a new <b>event()</b> function that can be used to add custom statistics. 
-
+</dt><dd> <b>fractions()</b> and <b>decimals()</b> strategies now support min_value and max_value parameters. Thanks go to Anne Mulhern for the development of this feature.
+</dd><dt>&bull;
+</dt><dd> The Hypothesis pytest plugin now supports a --hypothesis-show-statistics parameter that gives detailed statistics about the tests that were run. Huge thanks to Jean-Louis Fuchs and Adfinis-SyGroup for funding the development of this feature.
+</dd><dt>&bull;
+</dt><dd> There is a new <b>event()</b> function that can be used to add custom statistics. 
  Additionally there have been some minor bug fixes:
-<dt>&bull;
-<dd> In some cases Hypothesis should produce fewer duplicate examples (this will mostly only affect cases with a single parameter).
-<dt>&bull;
-<dd> py.test command line parameters are now under an option group for Hypothesis (thanks to David Keijser for fixing this)
-<dt>&bull;
-<dd> Hypothesis would previously error if you used <i>PEP 3107</i> function annotations on your tests under Python 3.4.
-<dt>&bull;
-<dd> The repr of many strategies using lambdas has been improved to include the lambda body (this was previously supported in many but not all cases).</dl>
+</dd><dt>&bull;
+</dt><dd> In some cases Hypothesis should produce fewer duplicate examples (this will mostly only affect cases with a single parameter).
+</dd><dt>&bull;
+</dt><dd> py.test command line parameters are now under an option group for Hypothesis (thanks to David Keijser for fixing this)
+</dd><dt>&bull;
+</dt><dd> Hypothesis would previously error if you used <i>PEP 3107</i> function annotations on your tests under Python 3.4.
+</dd><dt>&bull;
+</dt><dd> The repr of many strategies using lambdas has been improved to include the lambda body (this was previously supported in many but not all cases).</dd></dl>
 
 <h3>3.4.2 - 2016-07-13</h3>
 
@@ -3080,11 +2952,11 @@ if __name__ == '__main__':
  This is a bug fix release, fixing a number of problems with the settings system:
 <dl>
 <dt>&bull;
-<dd> Test functions defined using <b>@given</b> can now be called from other threads (<i>issue #337</i>)
-<dt>&bull;
-<dd> Attempting to delete a settings property would previously have silently done the wrong thing. Now it raises an AttributeError.
-<dt>&bull;
-<dd> Creating a settings object with a custom database_file parameter was silently getting ignored and the default was being used instead. Now it's not.</dl>
+</dt><dd> Test functions defined using <b>@given</b> can now be called from other threads (<i>issue #337</i>)
+</dd><dt>&bull;
+</dt><dd> Attempting to delete a settings property would previously have silently done the wrong thing. Now it raises an AttributeError.
+</dd><dt>&bull;
+</dt><dd> Creating a settings object with a custom database_file parameter was silently getting ignored and the default was being used instead. Now it's not.</dd></dl>
 
 <h3>3.4.1 - 2016-07-07</h3>
 
@@ -3093,7 +2965,7 @@ if __name__ == '__main__':
  This is a bug fix release for a single bug:
 <dl>
 <dt>&bull;
-<dd> On Windows when running two Hypothesis processes in parallel (e.g. using pytest-xdist) they could race with each other and one would raise an exception due to the non-atomic nature of file renaming on Windows and the fact that you can't rename over an existing file. This is now fixed.</dl>
+</dt><dd> On Windows when running two Hypothesis processes in parallel (e.g. using pytest-xdist) they could race with each other and one would raise an exception due to the non-atomic nature of file renaming on Windows and the fact that you can't rename over an existing file. This is now fixed.</dd></dl>
 
 <h3>3.4.0 - 2016-05-27</h3>
 
@@ -3106,11 +2978,11 @@ if __name__ == '__main__':
  In particular:
 <dl>
 <dt>&bull;
-<dd> The max_length, blank and choices kwargs are now respected.
-<dt>&bull;
-<dd> Add support for DecimalField.
-<dt>&bull;
-<dd> If a field includes validators, the list of validators are used to filter the field strategy.</dl>
+</dt><dd> The max_length, blank and choices kwargs are now respected.
+</dd><dt>&bull;
+</dt><dd> Add support for DecimalField.
+</dd><dt>&bull;
+</dt><dd> If a field includes validators, the list of validators are used to filter the field strategy.</dd></dl>
 
 <h3>3.3.0 - 2016-05-27</h3>
 
@@ -3125,7 +2997,7 @@ if __name__ == '__main__':
  This is a small single-feature release:
 <dl>
 <dt>&bull;
-<dd> All tests using <b>@given</b> now fix the global random seed. This removes the health check for that. If a non-zero seed is required for the final falsifying example, it will be reported. Otherwise Hypothesis will assume randomization was not a significant factor for the test and be silent on the subject. If you use <b>random_module()</b> this will continue to work and will always display the seed.</dl>
+</dt><dd> All tests using <b>@given</b> now fix the global random seed. This removes the health check for that. If a non-zero seed is required for the final falsifying example, it will be reported. Otherwise Hypothesis will assume randomization was not a significant factor for the test and be silent on the subject. If you use <b>random_module()</b> this will continue to work and will always display the seed.</dd></dl>
 
 <h3>3.1.3 - 2016-05-01</h3>
 
@@ -3134,7 +3006,7 @@ if __name__ == '__main__':
  Single bug fix release
 <dl>
 <dt>&bull;
-<dd> Another charmap problem. In 3.1.2 <b>text()</b> and <b>characters()</b> would break on systems which had <b>/tmp</b> mounted on a different partition than the Hypothesis storage directory (usually in home). This fixes that.</dl>
+</dt><dd> Another charmap problem. In 3.1.2 <b>text()</b> and <b>characters()</b> would break on systems which had <b>/tmp</b> mounted on a different partition than the Hypothesis storage directory (usually in home). This fixes that.</dd></dl>
 
 <h3>3.1.2 - 2016-04-30</h3>
 
@@ -3143,7 +3015,7 @@ if __name__ == '__main__':
  Single bug fix release:
 <dl>
 <dt>&bull;
-<dd> Anything which used a <b>text()</b> or <b>characters()</b> strategy was broken on Windows and I hadn't updated appveyor to use the new repository location so I didn't notice. This is now fixed and windows support should work correctly.</dl>
+</dt><dd> Anything which used a <b>text()</b> or <b>characters()</b> strategy was broken on Windows and I hadn't updated appveyor to use the new repository location so I didn't notice. This is now fixed and windows support should work correctly.</dd></dl>
 
 <h3>3.1.1 - 2016-04-29</h3>
 
@@ -3152,81 +3024,81 @@ if __name__ == '__main__':
  Minor bug fix release.
 <dl>
 <dt>&bull;
-<dd> Fix concurrency issue when running tests that use <b>text()</b> from multiple processes at once (<i>issue #302</i>, thanks to Alex Chan).
-<dt>&bull;
-<dd> Improve performance of code using <b>lists()</b> with max_size (thanks to Cristi Cobzarenco).
-<dt>&bull;
-<dd> Fix install on Python 2 with ancient versions of pip so that it installs the enum34 backport (thanks to Donald Stufft for telling me how to do this).
-<dt>&bull;
-<dd> Remove duplicated __all__ exports from hypothesis.strategies (thanks to PiÃ«t Delport).
-<dt>&bull;
-<dd> Update headers to point to new repository location.
-<dt>&bull;
-<dd> Allow use of strategies that can't be used in <b>find()</b> (e.g. <b>choices()</b>) in stateful testing.</dl>
+</dt><dd> Fix concurrency issue when running tests that use <b>text()</b> from multiple processes at once (<i>issue #302</i>, thanks to Alex Chan).
+</dd><dt>&bull;
+</dt><dd> Improve performance of code using <b>lists()</b> with max_size (thanks to Cristi Cobzarenco).
+</dd><dt>&bull;
+</dt><dd> Fix install on Python 2 with ancient versions of pip so that it installs the enum34 backport (thanks to Donald Stufft for telling me how to do this).
+</dd><dt>&bull;
+</dt><dd> Remove duplicated __all__ exports from hypothesis.strategies (thanks to PiÃ«t Delport).
+</dd><dt>&bull;
+</dt><dd> Update headers to point to new repository location.
+</dd><dt>&bull;
+</dt><dd> Allow use of strategies that can't be used in <b>find()</b> (e.g. <b>choices()</b>) in stateful testing.</dd></dl>
 
 <h3>3.1.0 - 2016-03-06</h3>
 
 <dl>
 <dt>&bull;
-<dd> Add a <b>nothing()</b> strategy that never successfully generates values.
-<dt>&bull;
-<dd> <b>sampled_from()</b> and <b>one_of()</b> can both now be called with an empty argument list, in which case they also never generate any values.
-<dt>&bull;
-<dd> <b>one_of()</b> may now be called with a single argument that is a collection of strategies as well as as varargs.
-<dt>&bull;
-<dd> Add a <b>runner()</b> strategy which returns the instance of the current test object if there is one.
-<dt>&bull;
-<dd> 'Bundle' for RuleBasedStateMachine is now a normal(ish) strategy and can be used as such.
-<dt>&bull;
-<dd> Tests using RuleBasedStateMachine should now shrink significantly better.
-<dt>&bull;
-<dd> Hypothesis now uses a pretty-printing library internally, compatible with IPython's pretty printing protocol (actually using the same code). This may improve the quality of output in some cases.
-<dt>&bull;
-<dd> As a 'phases' setting that allows more fine grained control over which parts of the process Hypothesis runs
-<dt>&bull;
-<dd> Add a suppress_health_check setting which allows you to turn off specific health checks in a fine grained manner.
-<dt>&bull;
-<dd> Fix a bug where lists of non fixed size would always draw one more element than they included. This mostly didn't matter, but if would cause problems with empty strategies or ones with side effects.
-<dt>&bull;
-<dd> Add a mechanism to the Django model generator to allow you to explicitly request the default value (thanks to Jeremy Thurgood for this one).</dl>
+</dt><dd> Add a <b>nothing()</b> strategy that never successfully generates values.
+</dd><dt>&bull;
+</dt><dd> <b>sampled_from()</b> and <b>one_of()</b> can both now be called with an empty argument list, in which case they also never generate any values.
+</dd><dt>&bull;
+</dt><dd> <b>one_of()</b> may now be called with a single argument that is a collection of strategies as well as as varargs.
+</dd><dt>&bull;
+</dt><dd> Add a <b>runner()</b> strategy which returns the instance of the current test object if there is one.
+</dd><dt>&bull;
+</dt><dd> 'Bundle' for RuleBasedStateMachine is now a normal(ish) strategy and can be used as such.
+</dd><dt>&bull;
+</dt><dd> Tests using RuleBasedStateMachine should now shrink significantly better.
+</dd><dt>&bull;
+</dt><dd> Hypothesis now uses a pretty-printing library internally, compatible with IPython's pretty printing protocol (actually using the same code). This may improve the quality of output in some cases.
+</dd><dt>&bull;
+</dt><dd> As a 'phases' setting that allows more fine grained control over which parts of the process Hypothesis runs
+</dd><dt>&bull;
+</dt><dd> Add a suppress_health_check setting which allows you to turn off specific health checks in a fine grained manner.
+</dd><dt>&bull;
+</dt><dd> Fix a bug where lists of non fixed size would always draw one more element than they included. This mostly didn't matter, but if would cause problems with empty strategies or ones with side effects.
+</dd><dt>&bull;
+</dt><dd> Add a mechanism to the Django model generator to allow you to explicitly request the default value (thanks to Jeremy Thurgood for this one).</dd></dl>
 
 <h3>3.0.5 - 2016-02-25</h3>
 
 <dl>
 <dt>&bull;
-<dd> Fix a bug where Hypothesis would now error on py.test development versions.</dl>
+</dt><dd> Fix a bug where Hypothesis would now error on py.test development versions.</dd></dl>
 
 <h3>3.0.4 - 2016-02-24</h3>
 
 <dl>
 <dt>&bull;
-<dd> Fix a bug where Hypothesis would error when running on Python 2.7.3 or earlier because it was trying to pass a <b>python:bytearray</b> object to <b>python:struct.unpack()</b> (which is only supported since 2.7.4).</dl>
+</dt><dd> Fix a bug where Hypothesis would error when running on Python 2.7.3 or earlier because it was trying to pass a <b>python:bytearray</b> object to <b>python:struct.unpack()</b> (which is only supported since 2.7.4).</dd></dl>
 
 <h3>3.0.3 - 2016-02-23</h3>
 
 <dl>
 <dt>&bull;
-<dd> Fix version parsing of py.test to work with py.test release candidates
-<dt>&bull;
-<dd> More general handling of the health check problem where things could fail because of a cache miss - now one &quot;free&quot; example is generated before the start of the health check run.</dl>
+</dt><dd> Fix version parsing of py.test to work with py.test release candidates
+</dd><dt>&bull;
+</dt><dd> More general handling of the health check problem where things could fail because of a cache miss - now one &quot;free&quot; example is generated before the start of the health check run.</dd></dl>
 
 <h3>3.0.2 - 2016-02-18</h3>
 
 <dl>
 <dt>&bull;
-<dd> Under certain circumstances, strategies involving <b>text()</b> buried inside some other strategy (e.g. <b>text().filter(...)</b> or <b>recursive(text(), ...))</b> would cause a test to fail its health checks the first time it ran. This was caused by having to compute some related data and cache it to disk. On travis or anywhere else where the <b>.hypothesis</b> directory was recreated this would have caused the tests to fail their health check on every run. This is now fixed for all the known cases, although there could be others lurking.</dl>
+</dt><dd> Under certain circumstances, strategies involving <b>text()</b> buried inside some other strategy (e.g. <b>text().filter(...)</b> or <b>recursive(text(), ...))</b> would cause a test to fail its health checks the first time it ran. This was caused by having to compute some related data and cache it to disk. On travis or anywhere else where the <b>.hypothesis</b> directory was recreated this would have caused the tests to fail their health check on every run. This is now fixed for all the known cases, although there could be others lurking.</dd></dl>
 
 <h3>3.0.1 - 2016-02-18</h3>
 
 <dl>
 <dt>&bull;
-<dd> Fix a case where it was possible to trigger an &quot;Unreachable&quot; assertion when running certain flaky stateful tests.
-<dt>&bull;
-<dd> Improve shrinking of large stateful tests by eliminating a case where it was hard to delete early steps.
-<dt>&bull;
-<dd> Improve efficiency of drawing <b>binary(min_size=n, max_size=n)</b> significantly by provide a custom implementation for fixed size blocks that can bypass a lot of machinery.
-<dt>&bull;
-<dd> Set default home directory based on the current working directory at the point Hypothesis is imported, not whenever the function first happens to be called.</dl>
+</dt><dd> Fix a case where it was possible to trigger an &quot;Unreachable&quot; assertion when running certain flaky stateful tests.
+</dd><dt>&bull;
+</dt><dd> Improve shrinking of large stateful tests by eliminating a case where it was hard to delete early steps.
+</dd><dt>&bull;
+</dt><dd> Improve efficiency of drawing <b>binary(min_size=n, max_size=n)</b> significantly by provide a custom implementation for fixed size blocks that can bypass a lot of machinery.
+</dd><dt>&bull;
+</dt><dd> Set default home directory based on the current working directory at the point Hypothesis is imported, not whenever the function first happens to be called.</dd></dl>
 
 <h3>3.0.0 - 2016-02-17</h3>
 
@@ -3241,39 +3113,31 @@ if __name__ == '__main__':
  New features:
 <dl>
 <dt>&bull;
-<dd> Addition of <b>data()</b> strategy which allows you to draw arbitrary data interactively within the test.
-<dt>&bull;
-<dd> New &quot;exploded&quot; database format which allows you to more easily check the example database into a source repository while supporting merging.
-<dt>&bull;
-<dd> Better management of how examples are saved in the database.
-<dt>&bull;
-<dd> Health checks will now raise as errors when they fail. It was too easy to have the warnings be swallowed entirely. 
-
+</dt><dd> Addition of <b>data()</b> strategy which allows you to draw arbitrary data interactively within the test.
+</dd><dt>&bull;
+</dt><dd> New &quot;exploded&quot; database format which allows you to more easily check the example database into a source repository while supporting merging.
+</dd><dt>&bull;
+</dt><dd> Better management of how examples are saved in the database.
+</dd><dt>&bull;
+</dt><dd> Health checks will now raise as errors when they fail. It was too easy to have the warnings be swallowed entirely. 
  New limitations:
-<dt>&bull;
-<dd> <b>choices()</b> and <b>streaming()</b> strategies may no longer be used with <b>find()</b>. Neither may <b>data()</b> (this is the change that necessitated a major version bump). 
-
+</dd><dt>&bull;
+</dt><dd> <b>choices()</b> and <b>streaming()</b> strategies may no longer be used with <b>find()</b>. Neither may <b>data()</b> (this is the change that necessitated a major version bump). 
  Feature removal:
-<dt>&bull;
-<dd> The ForkingTestCase executor has gone away. It may return in some more working form at a later date. 
-
+</dd><dt>&bull;
+</dt><dd> The ForkingTestCase executor has gone away. It may return in some more working form at a later date. 
  Performance improvements:
-<dt>&bull;
-<dd> A new model which allows flatmap, composite strategies and stateful testing to perform <i>much</i> better. They should also be more reliable.
-<dt>&bull;
-<dd> Filtering may in some circumstances have improved significantly. This will help especially in cases where you have lots of values with individual filters on them, such as lists(x.filter(...)).
-<dt>&bull;
-<dd> Modest performance improvements to the general test runner by avoiding expensive operations 
-
+</dd><dt>&bull;
+</dt><dd> A new model which allows flatmap, composite strategies and stateful testing to perform <i>much</i> better. They should also be more reliable.
+</dd><dt>&bull;
+</dt><dd> Filtering may in some circumstances have improved significantly. This will help especially in cases where you have lots of values with individual filters on them, such as lists(x.filter(...)).
+</dd><dt>&bull;
+</dt><dd> Modest performance improvements to the general test runner by avoiding expensive operations 
  In general your tests should have got faster. If they've instead got significantly slower, I'm interested in hearing about it. 
-
  Data distribution: 
-
  The data distribution should have changed significantly. This may uncover bugs the previous version missed. It may also miss bugs the previous version could have uncovered. Hypothesis is now producing less strongly correlated data than it used to, but the correlations are extended over more of the structure. 
-
  Shrinking: 
-
- Shrinking quality should have improved. In particular Hypothesis can now perform simultaneous shrinking of separate examples within a single test (previously it was only able to do this for elements of a single collection). In some cases performance will have improved, in some cases it will have got worse but generally shouldn't have by much.</dl>
+ Shrinking quality should have improved. In particular Hypothesis can now perform simultaneous shrinking of separate examples within a single test (previously it was only able to do this for elements of a single collection). In some cases performance will have improved, in some cases it will have got worse but generally shouldn't have by much.</dd></dl>
 
 <h3>2.0.0 - 2016-01-10</h3>
 
@@ -3286,33 +3150,32 @@ if __name__ == '__main__':
  In particular:
 <dl>
 <dt>&bull;
-<dd> non-strategy values will no longer be converted to strategies when used in given or find.
-<dt>&bull;
-<dd> FailedHealthCheck is now an error and not a warning.
-<dt>&bull;
-<dd> Handling of non-ascii reprs in user types have been simplified by using raw strings in more places in Python 2.
-<dt>&bull;
-<dd> given no longer allows mixing positional and keyword arguments.
-<dt>&bull;
-<dd> given no longer works with functions with defaults.
-<dt>&bull;
-<dd> given no longer turns provided arguments into defaults - they will not appear in the argspec at all.
-<dt>&bull;
-<dd> the basic() strategy no longer exists.
-<dt>&bull;
-<dd> the n_ary_tree strategy no longer exists.
-<dt>&bull;
-<dd> the average_list_length setting no longer exists. Note: If you're using using recursive() this will cause you a significant slow down. You should pass explicit average_size parameters to collections in recursive calls.
-<dt>&bull;
-<dd> @rule can no longer be applied to the same method twice.
-<dt>&bull;
-<dd> Python 2.6 and 3.3 are no longer officially supported, although in practice they still work fine. 
-
+</dt><dd> non-strategy values will no longer be converted to strategies when used in given or find.
+</dd><dt>&bull;
+</dt><dd> FailedHealthCheck is now an error and not a warning.
+</dd><dt>&bull;
+</dt><dd> Handling of non-ascii reprs in user types have been simplified by using raw strings in more places in Python 2.
+</dd><dt>&bull;
+</dt><dd> given no longer allows mixing positional and keyword arguments.
+</dd><dt>&bull;
+</dt><dd> given no longer works with functions with defaults.
+</dd><dt>&bull;
+</dt><dd> given no longer turns provided arguments into defaults - they will not appear in the argspec at all.
+</dd><dt>&bull;
+</dt><dd> the basic() strategy no longer exists.
+</dd><dt>&bull;
+</dt><dd> the n_ary_tree strategy no longer exists.
+</dd><dt>&bull;
+</dt><dd> the average_list_length setting no longer exists. Note: If you're using using recursive() this will cause you a significant slow down. You should pass explicit average_size parameters to collections in recursive calls.
+</dd><dt>&bull;
+</dt><dd> @rule can no longer be applied to the same method twice.
+</dd><dt>&bull;
+</dt><dd> Python 2.6 and 3.3 are no longer officially supported, although in practice they still work fine. 
  This also includes two non-deprecation changes:
-<dt>&bull;
-<dd> given's keyword arguments no longer have to be the rightmost arguments and can appear anywhere in the method signature.
-<dt>&bull;
-<dd> The max_shrinks setting would sometimes not have been respected.</dl>
+</dd><dt>&bull;
+</dt><dd> given's keyword arguments no longer have to be the rightmost arguments and can appear anywhere in the method signature.
+</dd><dt>&bull;
+</dt><dd> The max_shrinks setting would sometimes not have been respected.</dd></dl>
 
 <h3>1.19.0 - 2016-01-09</h3>
 
@@ -3327,33 +3190,30 @@ if __name__ == '__main__':
  It does have two new features:
 <dl>
 <dt>&bull;
-<dd> New @seed() decorator which allows you to manually seed a test. This may be harmlessly combined with and overrides the derandomize setting.
-<dt>&bull;
-<dd> settings objects may now be used as a decorator to fix those settings to a particular @given test. 
-
+</dt><dd> New @seed() decorator which allows you to manually seed a test. This may be harmlessly combined with and overrides the derandomize setting.
+</dd><dt>&bull;
+</dt><dd> settings objects may now be used as a decorator to fix those settings to a particular @given test. 
  API changes (old usage still works but is deprecated):
-<dt>&bull;
-<dd> Settings has been renamed to settings (lower casing) in order to make the decorator usage more natural.
-<dt>&bull;
-<dd> Functions for the storage directory that were in hypothesis.settings are now in a new hypothesis.configuration module. 
-
+</dd><dt>&bull;
+</dt><dd> Settings has been renamed to settings (lower casing) in order to make the decorator usage more natural.
+</dd><dt>&bull;
+</dt><dd> Functions for the storage directory that were in hypothesis.settings are now in a new hypothesis.configuration module. 
  Additional deprecations:
-<dt>&bull;
-<dd> the average_list_length setting has been deprecated in favour of being explicit.
-<dt>&bull;
-<dd> the basic() strategy has been deprecated as it is impossible to support it under a Conjecture based model, which will hopefully be implemented at some point in the 2.x series.
-<dt>&bull;
-<dd> the n_ary_tree strategy (which was never actually part of the public API) has been deprecated.
-<dt>&bull;
-<dd> Passing settings or random as keyword arguments to given is deprecated (use the new functionality instead) 
-
+</dd><dt>&bull;
+</dt><dd> the average_list_length setting has been deprecated in favour of being explicit.
+</dd><dt>&bull;
+</dt><dd> the basic() strategy has been deprecated as it is impossible to support it under a Conjecture based model, which will hopefully be implemented at some point in the 2.x series.
+</dd><dt>&bull;
+</dt><dd> the n_ary_tree strategy (which was never actually part of the public API) has been deprecated.
+</dd><dt>&bull;
+</dt><dd> Passing settings or random as keyword arguments to given is deprecated (use the new functionality instead) 
  Bug fixes:
-<dt>&bull;
-<dd> No longer emit PendingDeprecationWarning for __iter__ and StopIteration in streaming() values.
-<dt>&bull;
-<dd> When running in health check mode with non strict, don't print quite so many errors for an exception in reify.
-<dt>&bull;
-<dd> When an assumption made in a test or a filter is flaky, tests will now raise Flaky instead of UnsatisfiedAssumption.</dl>
+</dd><dt>&bull;
+</dt><dd> No longer emit PendingDeprecationWarning for __iter__ and StopIteration in streaming() values.
+</dd><dt>&bull;
+</dt><dd> When running in health check mode with non strict, don't print quite so many errors for an exception in reify.
+</dd><dt>&bull;
+</dt><dd> When an assumption made in a test or a filter is flaky, tests will now raise Flaky instead of UnsatisfiedAssumption.</dd></dl>
 
 <h3><i>1.18.1</i> - 2015-12-22</h3>
 
@@ -3362,9 +3222,9 @@ if __name__ == '__main__':
  Two behind the scenes changes:
 <dl>
 <dt>&bull;
-<dd> Hypothesis will no longer write generated code to the file system. This will improve performance on some systems (e.g. if you're using <i>PythonAnywhere</i> which is running your code from NFS) and prevent some annoying interactions with auto-restarting systems.
-<dt>&bull;
-<dd> Hypothesis will cache the creation of some strategies. This can significantly improve performance for code that uses flatmap or composite and thus has to instantiate strategies a lot.</dl>
+</dt><dd> Hypothesis will no longer write generated code to the file system. This will improve performance on some systems (e.g. if you're using <i>PythonAnywhere</i> which is running your code from NFS) and prevent some annoying interactions with auto-restarting systems.
+</dd><dt>&bull;
+</dt><dd> Hypothesis will cache the creation of some strategies. This can significantly improve performance for code that uses flatmap or composite and thus has to instantiate strategies a lot.</dd></dl>
 
 <h3><i>1.18.0</i> - 2015-12-21</h3>
 
@@ -3373,21 +3233,20 @@ if __name__ == '__main__':
  Features:
 <dl>
 <dt>&bull;
-<dd> Tests and find are now explicitly seeded off the global random module. This means that if you nest one inside the other you will now get a health check error. It also means that you can control global randomization by seeding random.
-<dt>&bull;
-<dd> There is a new random_module() strategy which seeds the global random module for you and handles things so that you don't get a health check warning if you use it inside your tests.
-<dt>&bull;
-<dd> floats() now accepts two new arguments: allow_nan and allow_infinity. These default to the old behaviour, but when set to False will do what the names suggest. 
-
+</dt><dd> Tests and find are now explicitly seeded off the global random module. This means that if you nest one inside the other you will now get a health check error. It also means that you can control global randomization by seeding random.
+</dd><dt>&bull;
+</dt><dd> There is a new random_module() strategy which seeds the global random module for you and handles things so that you don't get a health check warning if you use it inside your tests.
+</dd><dt>&bull;
+</dt><dd> floats() now accepts two new arguments: allow_nan and allow_infinity. These default to the old behaviour, but when set to False will do what the names suggest. 
  Bug fixes:
-<dt>&bull;
-<dd> Fix a bug where tests that used text() on Python 3.4+ would not actually be deterministic even when explicitly seeded or using the derandomize mode, because generation depended on dictionary iteration order which was affected by hash randomization.
-<dt>&bull;
-<dd> Fix a bug where with complicated strategies the timing of the initial health check could affect the seeding of the subsequent test, which would also render supposedly deterministic tests non-deterministic in some scenarios.
-<dt>&bull;
-<dd> In some circumstances flatmap() could get confused by two structurally similar things it could generate and would produce a flaky test where the first time it produced an error but the second time it produced the other value, which was not an error. The same bug was presumably also possible in composite().
-<dt>&bull;
-<dd> flatmap() and composite() initial generation should now be moderately faster. This will be particularly noticeable when you have many values drawn from the same strategy in a single run, e.g. constructs like lists(s.flatmap(f)). Shrinking performance <i>may</i> have suffered, but this didn't actually produce an interestingly worse result in any of the standard scenarios tested.</dl>
+</dd><dt>&bull;
+</dt><dd> Fix a bug where tests that used text() on Python 3.4+ would not actually be deterministic even when explicitly seeded or using the derandomize mode, because generation depended on dictionary iteration order which was affected by hash randomization.
+</dd><dt>&bull;
+</dt><dd> Fix a bug where with complicated strategies the timing of the initial health check could affect the seeding of the subsequent test, which would also render supposedly deterministic tests non-deterministic in some scenarios.
+</dd><dt>&bull;
+</dt><dd> In some circumstances flatmap() could get confused by two structurally similar things it could generate and would produce a flaky test where the first time it produced an error but the second time it produced the other value, which was not an error. The same bug was presumably also possible in composite().
+</dd><dt>&bull;
+</dt><dd> flatmap() and composite() initial generation should now be moderately faster. This will be particularly noticeable when you have many values drawn from the same strategy in a single run, e.g. constructs like lists(s.flatmap(f)). Shrinking performance <i>may</i> have suffered, but this didn't actually produce an interestingly worse result in any of the standard scenarios tested.</dd></dl>
 
 <h3><i>1.17.1</i> - 2015-12-16</h3>
 
@@ -3402,7 +3261,7 @@ if __name__ == '__main__':
  This is actually the same release as 1.16.1, but 1.16.1 has been pulled because it contains the following additional change that was not intended to be in a patch release (it's perfectly stable, but is a larger change that should have required a minor version bump):
 <dl>
 <dt>&bull;
-<dd> Hypothesis will now perform a series of &quot;health checks&quot; as part of running your tests. These detect and warn about some common error conditions that people often run into which wouldn't necessarily have caused the test to fail but would cause e.g. degraded performance or confusing results.</dl>
+</dt><dd> Hypothesis will now perform a series of &quot;health checks&quot; as part of running your tests. These detect and warn about some common error conditions that people often run into which wouldn't necessarily have caused the test to fail but would cause e.g. degraded performance or confusing results.</dd></dl>
 
 <h3><i>1.16.1</i> - 2015-12-14</h3>
 
@@ -3419,13 +3278,13 @@ if __name__ == '__main__':
  There are no public API changes in this release but it includes a behaviour change that I wasn't comfortable putting in a patch release.
 <dl>
 <dt>&bull;
-<dd> Functions from hypothesis.strategies will no longer raise InvalidArgument on bad arguments. Instead the same errors will be raised when a test using such a strategy is run. This may improve startup time in some cases, but the main reason for it is so that errors in strategies won't cause errors in loading, and it can interact correctly with things like pytest.mark.skipif.
-<dt>&bull;
-<dd> Errors caused by accidentally invoking the legacy API are now much less confusing, although still throw NotImplementedError.
-<dt>&bull;
-<dd> hypothesis.extra.django is 1.9 compatible.
-<dt>&bull;
-<dd> When tests are run with max_shrinks=0 this will now still rerun the test on failure and will no longer print &quot;Trying example:&quot; before each run. Additionally note() will now work correctly when used with max_shrinks=0.</dl>
+</dt><dd> Functions from hypothesis.strategies will no longer raise InvalidArgument on bad arguments. Instead the same errors will be raised when a test using such a strategy is run. This may improve startup time in some cases, but the main reason for it is so that errors in strategies won't cause errors in loading, and it can interact correctly with things like pytest.mark.skipif.
+</dd><dt>&bull;
+</dt><dd> Errors caused by accidentally invoking the legacy API are now much less confusing, although still throw NotImplementedError.
+</dd><dt>&bull;
+</dt><dd> hypothesis.extra.django is 1.9 compatible.
+</dd><dt>&bull;
+</dt><dd> When tests are run with max_shrinks=0 this will now still rerun the test on failure and will no longer print &quot;Trying example:&quot; before each run. Additionally note() will now work correctly when used with max_shrinks=0.</dd></dl>
 
 <h3><i>1.15.0</i> - 2015-11-24</h3>
 
@@ -3434,9 +3293,9 @@ if __name__ == '__main__':
  A release with two new features.
 <dl>
 <dt>&bull;
-<dd> A 'characters' strategy for more flexible generation of text with particular character ranges and types, kindly contributed by <i>Alexander Shorin</i>.
-<dt>&bull;
-<dd> Add support for preconditions to the rule based stateful testing. Kindly contributed by <i>Christopher Armstrong</i></dl>
+</dt><dd> A 'characters' strategy for more flexible generation of text with particular character ranges and types, kindly contributed by <i>Alexander Shorin</i>.
+</dd><dt>&bull;
+</dt><dd> Add support for preconditions to the rule based stateful testing. Kindly contributed by <i>Christopher Armstrong</i></dd></dl>
 
 <h3><i>1.14.0</i> - 2015-11-01</h3>
 
@@ -3445,17 +3304,16 @@ if __name__ == '__main__':
  New features:
 <dl>
 <dt>&bull;
-<dd> Add 'note' function which lets you include additional information in the final test run's output.
-<dt>&bull;
-<dd> Add 'choices' strategy which gives you a choice function that emulates random.choice.
-<dt>&bull;
-<dd> Add 'uuid' strategy that generates UUIDs'
-<dt>&bull;
-<dd> Add 'shared' strategy that lets you create a strategy that just generates a single shared value for each test run 
-
+</dt><dd> Add 'note' function which lets you include additional information in the final test run's output.
+</dd><dt>&bull;
+</dt><dd> Add 'choices' strategy which gives you a choice function that emulates random.choice.
+</dd><dt>&bull;
+</dt><dd> Add 'uuid' strategy that generates UUIDs'
+</dd><dt>&bull;
+</dt><dd> Add 'shared' strategy that lets you create a strategy that just generates a single shared value for each test run 
  Bugs:
-<dt>&bull;
-<dd> Using strategies of the form streaming(x.flatmap(f)) with find or in stateful testing would have caused InvalidArgument errors when the resulting values were used (because code that expected to only be called within a test context would be invoked).</dl>
+</dd><dt>&bull;
+</dt><dd> Using strategies of the form streaming(x.flatmap(f)) with find or in stateful testing would have caused InvalidArgument errors when the resulting values were used (because code that expected to only be called within a test context would be invoked).</dd></dl>
 
 <h3><i>1.13.0</i> - 2015-10-29</h3>
 
@@ -3464,59 +3322,59 @@ if __name__ == '__main__':
  This is quite a small release, but deprecates some public API functions and removes some internal API functionality so gets a minor version bump.
 <dl>
 <dt>&bull;
-<dd> All calls to the 'strategy' function are now deprecated, even ones which pass just a SearchStrategy instance (which is still a no-op).
-<dt>&bull;
-<dd> Never documented hypothesis.extra entry_points mechanism has now been removed ( it was previously how hypothesis.extra packages were loaded and has been deprecated and unused for some time)
-<dt>&bull;
-<dd> Some corner cases that could previously have produced an OverflowError when simplifying failing cases using hypothesis.extra.datetimes (or dates or times) have now been fixed.
-<dt>&bull;
-<dd> Hypothesis load time for first import has been significantly reduced - it used to be around 250ms (on my SSD laptop) and now is around 100-150ms. This almost never matters but was slightly annoying when using it in the console.
-<dt>&bull;
-<dd> hypothesis.strategies.randoms was previously missing from __all__.</dl>
+</dt><dd> All calls to the 'strategy' function are now deprecated, even ones which pass just a SearchStrategy instance (which is still a no-op).
+</dd><dt>&bull;
+</dt><dd> Never documented hypothesis.extra entry_points mechanism has now been removed ( it was previously how hypothesis.extra packages were loaded and has been deprecated and unused for some time)
+</dd><dt>&bull;
+</dt><dd> Some corner cases that could previously have produced an OverflowError when simplifying failing cases using hypothesis.extra.datetimes (or dates or times) have now been fixed.
+</dd><dt>&bull;
+</dt><dd> Hypothesis load time for first import has been significantly reduced - it used to be around 250ms (on my SSD laptop) and now is around 100-150ms. This almost never matters but was slightly annoying when using it in the console.
+</dd><dt>&bull;
+</dt><dd> hypothesis.strategies.randoms was previously missing from __all__.</dd></dl>
 
 <h3><i>1.12.0</i> - 2015-10-18</h3>
 
 <dl>
 <dt>&bull;
-<dd> Significantly improved performance of creating strategies using the functions from the hypothesis.strategies module by deferring the calculation of their repr until it was needed. This is unlikely to have been an performance issue for you unless you were using flatmap, composite or stateful testing, but for some cases it could be quite a significant impact.
-<dt>&bull;
-<dd> A number of cases where the repr of strategies build from lambdas is improved
-<dt>&bull;
-<dd> Add dates() and times() strategies to hypothesis.extra.datetimes
-<dt>&bull;
-<dd> Add new 'profiles' mechanism to the settings system
-<dt>&bull;
-<dd> Deprecates mutability of Settings, both the Settings.default top level property and individual settings.
-<dt>&bull;
-<dd> A Settings object may now be directly initialized from a parent Settings.
-<dt>&bull;
-<dd> @given should now give a better error message if you attempt to use it with a function that uses destructuring arguments (it still won't work, but it will error more clearly),
-<dt>&bull;
-<dd> A number of spelling corrections in error messages
-<dt>&bull;
-<dd> py.test should no longer display the intermediate modules Hypothesis generates when running in verbose mode
-<dt>&bull;
-<dd> Hypothesis should now correctly handle printing objects with non-ascii reprs on python 3 when running in a locale that cannot handle ascii printing to stdout.
-<dt>&bull;
-<dd> Add a unique=True argument to lists(). This is equivalent to unique_by=lambda x: x, but offers a more convenient syntax.</dl>
+</dt><dd> Significantly improved performance of creating strategies using the functions from the hypothesis.strategies module by deferring the calculation of their repr until it was needed. This is unlikely to have been an performance issue for you unless you were using flatmap, composite or stateful testing, but for some cases it could be quite a significant impact.
+</dd><dt>&bull;
+</dt><dd> A number of cases where the repr of strategies build from lambdas is improved
+</dd><dt>&bull;
+</dt><dd> Add dates() and times() strategies to hypothesis.extra.datetimes
+</dd><dt>&bull;
+</dt><dd> Add new 'profiles' mechanism to the settings system
+</dd><dt>&bull;
+</dt><dd> Deprecates mutability of Settings, both the Settings.default top level property and individual settings.
+</dd><dt>&bull;
+</dt><dd> A Settings object may now be directly initialized from a parent Settings.
+</dd><dt>&bull;
+</dt><dd> @given should now give a better error message if you attempt to use it with a function that uses destructuring arguments (it still won't work, but it will error more clearly),
+</dd><dt>&bull;
+</dt><dd> A number of spelling corrections in error messages
+</dd><dt>&bull;
+</dt><dd> py.test should no longer display the intermediate modules Hypothesis generates when running in verbose mode
+</dd><dt>&bull;
+</dt><dd> Hypothesis should now correctly handle printing objects with non-ascii reprs on python 3 when running in a locale that cannot handle ascii printing to stdout.
+</dd><dt>&bull;
+</dt><dd> Add a unique=True argument to lists(). This is equivalent to unique_by=lambda x: x, but offers a more convenient syntax.</dd></dl>
 
 <h3><i>1.11.4</i> - 2015-09-27</h3>
 
 <dl>
 <dt>&bull;
-<dd> Hide modifications Hypothesis needs to make to sys.path by undoing them after we've imported the relevant modules. This is a workaround for issues cryptography experienced on windows.
-<dt>&bull;
-<dd> Slightly improved performance of drawing from sampled_from on large lists of alternatives.
-<dt>&bull;
-<dd> Significantly improved performance of drawing from one_of or strategies using | (note this includes a lot of strategies internally - floats() and integers() both fall into this category). There turned out to be a massive performance regression introduced in 1.10.0 affecting these which probably would have made tests using Hypothesis significantly slower than they should have been.</dl>
+</dt><dd> Hide modifications Hypothesis needs to make to sys.path by undoing them after we've imported the relevant modules. This is a workaround for issues cryptography experienced on windows.
+</dd><dt>&bull;
+</dt><dd> Slightly improved performance of drawing from sampled_from on large lists of alternatives.
+</dd><dt>&bull;
+</dt><dd> Significantly improved performance of drawing from one_of or strategies using | (note this includes a lot of strategies internally - floats() and integers() both fall into this category). There turned out to be a massive performance regression introduced in 1.10.0 affecting these which probably would have made tests using Hypothesis significantly slower than they should have been.</dd></dl>
 
 <h3><i>1.11.3</i> - 2015-09-23</h3>
 
 <dl>
 <dt>&bull;
-<dd> Better argument validation for datetimes() strategy - previously setting max_year &lt; datetime.MIN_YEAR or min_year &gt; datetime.MAX_YEAR would not have raised an InvalidArgument error and instead would have behaved confusingly.
-<dt>&bull;
-<dd> Compatibility with being run on pytest &lt; 2.7 (achieved by disabling the plugin).</dl>
+</dt><dd> Better argument validation for datetimes() strategy - previously setting max_year &lt; datetime.MIN_YEAR or min_year &gt; datetime.MAX_YEAR would not have raised an InvalidArgument error and instead would have behaved confusingly.
+</dd><dt>&bull;
+</dt><dd> Compatibility with being run on pytest &lt; 2.7 (achieved by disabling the plugin).</dd></dl>
 
 <h3><i>1.11.2</i> - 2015-09-23</h3>
 
@@ -3525,23 +3383,22 @@ if __name__ == '__main__':
  Bug fixes:
 <dl>
 <dt>&bull;
-<dd> Settings(database=my_db) would not be correctly inherited when used as a default setting, so that newly created settings would use the database_file setting and create an SQLite example database.
-<dt>&bull;
-<dd> Settings.default.database = my_db would previously have raised an error and now works.
-<dt>&bull;
-<dd> Timeout could sometimes be significantly exceeded if during simplification there were a lot of examples tried that didn't trigger the bug.
-<dt>&bull;
-<dd> When loading a heavily simplified example using a basic() strategy from the database this could cause Python to trigger a recursion error.
-<dt>&bull;
-<dd> Remove use of deprecated API in pytest plugin so as to not emit warning 
-
+</dt><dd> Settings(database=my_db) would not be correctly inherited when used as a default setting, so that newly created settings would use the database_file setting and create an SQLite example database.
+</dd><dt>&bull;
+</dt><dd> Settings.default.database = my_db would previously have raised an error and now works.
+</dd><dt>&bull;
+</dt><dd> Timeout could sometimes be significantly exceeded if during simplification there were a lot of examples tried that didn't trigger the bug.
+</dd><dt>&bull;
+</dt><dd> When loading a heavily simplified example using a basic() strategy from the database this could cause Python to trigger a recursion error.
+</dd><dt>&bull;
+</dt><dd> Remove use of deprecated API in pytest plugin so as to not emit warning 
  Misc:
-<dt>&bull;
-<dd> hypothesis-pytest is now part of hypothesis core. This should have no externally visible consequences, but you should update your dependencies to remove hypothesis-pytest and depend on only Hypothesis.
-<dt>&bull;
-<dd> Better repr for hypothesis.extra.datetimes() strategies.
-<dt>&bull;
-<dd> Add .close() method to abstract base class for Backend (it was already present in the main implementation).</dl>
+</dd><dt>&bull;
+</dt><dd> hypothesis-pytest is now part of hypothesis core. This should have no externally visible consequences, but you should update your dependencies to remove hypothesis-pytest and depend on only Hypothesis.
+</dd><dt>&bull;
+</dt><dd> Better repr for hypothesis.extra.datetimes() strategies.
+</dd><dt>&bull;
+</dt><dd> Add .close() method to abstract base class for Backend (it was already present in the main implementation).</dd></dl>
 
 <h3><i>1.11.1</i> - 2015-09-16</h3>
 
@@ -3550,23 +3407,23 @@ if __name__ == '__main__':
  Bug fixes:
 <dl>
 <dt>&bull;
-<dd> When running Hypothesis tests in parallel (e.g. using pytest-xdist) there was a race condition caused by code generation.
-<dt>&bull;
-<dd> Example databases are now cached per thread so as to not use sqlite connections from multiple threads. This should make Hypothesis now entirely thread safe.
-<dt>&bull;
-<dd> floats() with only min_value or max_value set would have had a very bad distribution.
-<dt>&bull;
-<dd> Running on 3.5, Hypothesis would have emitted deprecation warnings because of use of inspect.getargspec</dl>
+</dt><dd> When running Hypothesis tests in parallel (e.g. using pytest-xdist) there was a race condition caused by code generation.
+</dd><dt>&bull;
+</dt><dd> Example databases are now cached per thread so as to not use sqlite connections from multiple threads. This should make Hypothesis now entirely thread safe.
+</dd><dt>&bull;
+</dt><dd> floats() with only min_value or max_value set would have had a very bad distribution.
+</dd><dt>&bull;
+</dt><dd> Running on 3.5, Hypothesis would have emitted deprecation warnings because of use of inspect.getargspec</dd></dl>
 
 <h3><i>1.11.0</i> - 2015-08-31</h3>
 
 <dl>
 <dt>&bull;
-<dd> text() with a non-string alphabet would have used the repr() of the the alphabet instead of its contexts. This is obviously silly. It now works with any sequence of things convertible to unicode strings.
-<dt>&bull;
-<dd> @given will now work on methods whose definitions contains no explicit positional arguments, only varargs (<i>bug #118</i>). This may have some knock on effects because it means that @given no longer changes the argspec of functions other than by adding defaults.
-<dt>&bull;
-<dd> Introduction of new @composite feature for more natural definition of strategies you'd previously have used flatmap for.</dl>
+</dt><dd> text() with a non-string alphabet would have used the repr() of the the alphabet instead of its contexts. This is obviously silly. It now works with any sequence of things convertible to unicode strings.
+</dd><dt>&bull;
+</dt><dd> @given will now work on methods whose definitions contains no explicit positional arguments, only varargs (<i>bug #118</i>). This may have some knock on effects because it means that @given no longer changes the argspec of functions other than by adding defaults.
+</dd><dt>&bull;
+</dt><dd> Introduction of new @composite feature for more natural definition of strategies you'd previously have used flatmap for.</dd></dl>
 
 <h3><i>1.10.6</i> - 2015-08-26</h3>
 
@@ -3581,7 +3438,7 @@ if __name__ == '__main__':
  Tiny bug fix release:
 <dl>
 <dt>&bull;
-<dd> If the database_file setting is set to None, this would have resulted in an error when running tests. Now it does the same as setting database to None.</dl>
+</dt><dd> If the database_file setting is set to None, this would have resulted in an error when running tests. Now it does the same as setting database to None.</dd></dl>
 
 <h3><i>1.10.3</i> - 2015-08-19</h3>
 
@@ -3590,9 +3447,9 @@ if __name__ == '__main__':
  Another small bug fix release.
 <dl>
 <dt>&bull;
-<dd> lists(elements, unique_by=some_function, min_size=n) would have raised a ValidationError if n &gt; Settings.default.average_list_length because it would have wanted to use an average list length shorter than the minimum size of the list, which is impossible. Now it instead defaults to twice the minimum size in these circumstances.
-<dt>&bull;
-<dd> basic() strategy would have only ever produced at most ten distinct values per run of the test (which is bad if you e.g. have it inside a list). This was obviously silly. It will now produce a much better distribution of data, both duplicated and non duplicated.</dl>
+</dt><dd> lists(elements, unique_by=some_function, min_size=n) would have raised a ValidationError if n &gt; Settings.default.average_list_length because it would have wanted to use an average list length shorter than the minimum size of the list, which is impossible. Now it instead defaults to twice the minimum size in these circumstances.
+</dd><dt>&bull;
+</dt><dd> basic() strategy would have only ever produced at most ten distinct values per run of the test (which is bad if you e.g. have it inside a list). This was obviously silly. It will now produce a much better distribution of data, both duplicated and non duplicated.</dd></dl>
 
 <h3><i>1.10.2</i> - 2015-08-19</h3>
 
@@ -3601,9 +3458,9 @@ if __name__ == '__main__':
  This is a small bug fix release:
 <dl>
 <dt>&bull;
-<dd> star imports from hypothesis should now work correctly.
-<dt>&bull;
-<dd> example quality for examples using flatmap will be better, as the way it had previously been implemented was causing problems where Hypothesis was erroneously labelling some examples as being duplicates.</dl>
+</dt><dd> star imports from hypothesis should now work correctly.
+</dd><dt>&bull;
+</dt><dd> example quality for examples using flatmap will be better, as the way it had previously been implemented was causing problems where Hypothesis was erroneously labelling some examples as being duplicates.</dd></dl>
 
 <h3><i>1.10.0</i> - 2015-08-04</h3>
 
@@ -3612,25 +3469,25 @@ if __name__ == '__main__':
  This is just a bugfix and performance release, but it changes some semi-public APIs, hence the minor version bump.
 <dl>
 <dt>&bull;
-<dd> Significant performance improvements for strategies which are one_of() many branches. In particular this included recursive() strategies. This should take the case where you use one recursive() strategy as the base strategy of another from unusably slow (tens of seconds per generated example) to reasonably fast.
-<dt>&bull;
-<dd> Better handling of just() and sampled_from() for values which have an incorrect __repr__ implementation that returns non-ASCII unicode on Python 2.
-<dt>&bull;
-<dd> Better performance for flatmap from changing the internal morpher API to be significantly less general purpose.
-<dt>&bull;
-<dd> Introduce a new semi-public BuildContext/cleanup API. This allows strategies to register cleanup activities that should run once the example is complete. Note that this will interact somewhat weirdly with find.
-<dt>&bull;
-<dd> Better simplification behaviour for streaming strategies.
-<dt>&bull;
-<dd> Don't error on lambdas which use destructuring arguments in Python 2.
-<dt>&bull;
-<dd> Add some better reprs for a few strategies that were missing good ones.
-<dt>&bull;
-<dd> The Random instances provided by randoms() are now copyable.
-<dt>&bull;
-<dd> Slightly more debugging information about simplify when using a debug verbosity level.
-<dt>&bull;
-<dd> Support using given for functions with varargs, but not passing arguments to it as positional.</dl>
+</dt><dd> Significant performance improvements for strategies which are one_of() many branches. In particular this included recursive() strategies. This should take the case where you use one recursive() strategy as the base strategy of another from unusably slow (tens of seconds per generated example) to reasonably fast.
+</dd><dt>&bull;
+</dt><dd> Better handling of just() and sampled_from() for values which have an incorrect __repr__ implementation that returns non-ASCII unicode on Python 2.
+</dd><dt>&bull;
+</dt><dd> Better performance for flatmap from changing the internal morpher API to be significantly less general purpose.
+</dd><dt>&bull;
+</dt><dd> Introduce a new semi-public BuildContext/cleanup API. This allows strategies to register cleanup activities that should run once the example is complete. Note that this will interact somewhat weirdly with find.
+</dd><dt>&bull;
+</dt><dd> Better simplification behaviour for streaming strategies.
+</dd><dt>&bull;
+</dt><dd> Don't error on lambdas which use destructuring arguments in Python 2.
+</dd><dt>&bull;
+</dt><dd> Add some better reprs for a few strategies that were missing good ones.
+</dd><dt>&bull;
+</dt><dd> The Random instances provided by randoms() are now copyable.
+</dd><dt>&bull;
+</dt><dd> Slightly more debugging information about simplify when using a debug verbosity level.
+</dd><dt>&bull;
+</dt><dd> Support using given for functions with varargs, but not passing arguments to it as positional.</dd></dl>
 
 <h3><i>1.9.0</i> - 2015-07-27</h3>
 
@@ -3659,9 +3516,9 @@ if __name__ == '__main__':
  Bugs fixed:
 <dl>
 <dt>&bull;
-<dd> When a call to floats() had endpoints which were not floats but merely convertible to one (e.g. integers), these would be included in the generated data which would cause it to generate non-floats.
-<dt>&bull;
-<dd> Splitting lambdas used in the definition of flatmap, map or filter over multiple lines would break the repr, which would in turn break their usage.</dl>
+</dt><dd> When a call to floats() had endpoints which were not floats but merely convertible to one (e.g. integers), these would be included in the generated data which would cause it to generate non-floats.
+</dd><dt>&bull;
+</dt><dd> Splitting lambdas used in the definition of flatmap, map or filter over multiple lines would break the repr, which would in turn break their usage.</dd></dl>
 
 <h3><i>1.8.3</i> - 2015-07-20</h3>
 
@@ -3676,9 +3533,9 @@ if __name__ == '__main__':
  Another small bugfix release:
 <dl>
 <dt>&bull;
-<dd> When using ForkingTestCase you would usually not get the falsifying example printed if the process exited abnormally (e.g. due to os._exit).
-<dt>&bull;
-<dd> Improvements to the distribution of characters when using text() with a default alphabet. In particular produces a better distribution of ascii and whitespace in the alphabet.</dl>
+</dt><dd> When using ForkingTestCase you would usually not get the falsifying example printed if the process exited abnormally (e.g. due to os._exit).
+</dd><dt>&bull;
+</dt><dd> Improvements to the distribution of characters when using text() with a default alphabet. In particular produces a better distribution of ascii and whitespace in the alphabet.</dd></dl>
 
 <h3>1.8.1 - 2015-07-17</h3>
 
@@ -3693,23 +3550,21 @@ if __name__ == '__main__':
  New features:
 <dl>
 <dt>&bull;
-<dd> Much more sensible reprs for strategies, especially ones that come from hypothesis.strategies. These should now have as reprs python code that would produce the same strategy.
-<dt>&bull;
-<dd> lists() accepts a unique_by argument which forces the generated lists to be only contain elements unique according to some function key (which must return a hashable value).
-<dt>&bull;
-<dd> Better error messages from flaky tests to help you debug things. 
-
+</dt><dd> Much more sensible reprs for strategies, especially ones that come from hypothesis.strategies. These should now have as reprs python code that would produce the same strategy.
+</dd><dt>&bull;
+</dt><dd> lists() accepts a unique_by argument which forces the generated lists to be only contain elements unique according to some function key (which must return a hashable value).
+</dd><dt>&bull;
+</dt><dd> Better error messages from flaky tests to help you debug things. 
  Mostly invisible implementation details that may result in finding new bugs in your code:
-<dt>&bull;
-<dd> Sets and dictionary generation should now produce a better range of results.
-<dt>&bull;
-<dd> floats with bounds now focus more on 'critical values', trying to produce values at edge cases.
-<dt>&bull;
-<dd> flatmap should now have better simplification for complicated cases, as well as generally being (I hope) more reliable. 
-
+</dd><dt>&bull;
+</dt><dd> Sets and dictionary generation should now produce a better range of results.
+</dd><dt>&bull;
+</dt><dd> floats with bounds now focus more on 'critical values', trying to produce values at edge cases.
+</dd><dt>&bull;
+</dt><dd> flatmap should now have better simplification for complicated cases, as well as generally being (I hope) more reliable. 
  Bug fixes:
-<dt>&bull;
-<dd> You could not previously use assume() if you were using the forking executor.</dl>
+</dd><dt>&bull;
+</dt><dd> You could not previously use assume() if you were using the forking executor.</dd></dl>
 
 <h3><i>1.7.2</i> - 2015-07-10</h3>
 
@@ -3718,13 +3573,13 @@ if __name__ == '__main__':
  This is purely a bug fix release:
 <dl>
 <dt>&bull;
-<dd> When using floats() with stale data in the database you could sometimes get values in your tests that did not respect min_value or max_value.
-<dt>&bull;
-<dd> When getting a Flaky error from an unreliable test it would have incorrectly displayed the example that caused it.
-<dt>&bull;
-<dd> 2.6 dependency on backports was incorrectly specified. This would only have caused you problems if you were building a universal wheel from Hypothesis, which is not how Hypothesis ships, so unless you're explicitly building wheels for your dependencies and support Python 2.6 plus a later version of Python this probably would never have affected you.
-<dt>&bull;
-<dd> If you use flatmap in a way that the strategy on the right hand side depends sensitively on the left hand side you may have occasionally seen Flaky errors caused by producing unreliable examples when minimizing a bug. This use case may still be somewhat fraught to be honest. This code is due a major rearchitecture for 1.8, but in the meantime this release fixes the only source of this error that I'm aware of.</dl>
+</dt><dd> When using floats() with stale data in the database you could sometimes get values in your tests that did not respect min_value or max_value.
+</dd><dt>&bull;
+</dt><dd> When getting a Flaky error from an unreliable test it would have incorrectly displayed the example that caused it.
+</dd><dt>&bull;
+</dt><dd> 2.6 dependency on backports was incorrectly specified. This would only have caused you problems if you were building a universal wheel from Hypothesis, which is not how Hypothesis ships, so unless you're explicitly building wheels for your dependencies and support Python 2.6 plus a later version of Python this probably would never have affected you.
+</dd><dt>&bull;
+</dt><dd> If you use flatmap in a way that the strategy on the right hand side depends sensitively on the left hand side you may have occasionally seen Flaky errors caused by producing unreliable examples when minimizing a bug. This use case may still be somewhat fraught to be honest. This code is due a major rearchitecture for 1.8, but in the meantime this release fixes the only source of this error that I'm aware of.</dd></dl>
 
 <h3><i>1.7.1</i> - 2015-06-29</h3>
 
@@ -3739,19 +3594,18 @@ if __name__ == '__main__':
  Other minor features
 <dl>
 <dt>&bull;
-<dd> strategies now has a permutations() function which returns a strategy yielding permutations of values from a given collection.
-<dt>&bull;
-<dd> if you have a flaky test it will print the exception that it last saw before failing with Flaky, even if you do not have verbose reporting on.
-<dt>&bull;
-<dd> Slightly experimental git merge script available as &quot;python -m hypothesis.tools.mergedbs&quot;. Instructions on how to use it in the docstring of that file. 
-
+</dt><dd> strategies now has a permutations() function which returns a strategy yielding permutations of values from a given collection.
+</dd><dt>&bull;
+</dt><dd> if you have a flaky test it will print the exception that it last saw before failing with Flaky, even if you do not have verbose reporting on.
+</dd><dt>&bull;
+</dt><dd> Slightly experimental git merge script available as &quot;python -m hypothesis.tools.mergedbs&quot;. Instructions on how to use it in the docstring of that file. 
  Bug fixes:
-<dt>&bull;
-<dd> Better performance from use of filter. In particular tests which involve large numbers of heavily filtered strategies should perform a lot better.
-<dt>&bull;
-<dd> floats() with a negative min_value would not have worked correctly (worryingly, it would have just silently failed to run any examples). This is now fixed.
-<dt>&bull;
-<dd> tests using sampled_from would error if the number of sampled elements was smaller than min_satisfying_examples.</dl>
+</dd><dt>&bull;
+</dt><dd> Better performance from use of filter. In particular tests which involve large numbers of heavily filtered strategies should perform a lot better.
+</dd><dt>&bull;
+</dt><dd> floats() with a negative min_value would not have worked correctly (worryingly, it would have just silently failed to run any examples). This is now fixed.
+</dd><dt>&bull;
+</dt><dd> tests using sampled_from would error if the number of sampled elements was smaller than min_satisfying_examples.</dd></dl>
 
 <h3>1.6.2 - 2015-06-08</h3>
 
@@ -3760,13 +3614,13 @@ if __name__ == '__main__':
  This is just a few small bug fixes:
 <dl>
 <dt>&bull;
-<dd> Size bounds were not validated for values for a binary() strategy when reading examples from the database.
-<dt>&bull;
-<dd> sampled_from is now in __all__ in hypothesis.strategies
-<dt>&bull;
-<dd> floats no longer consider negative integers to be simpler than positive non-integers
-<dt>&bull;
-<dd> Small floating point intervals now correctly count members, so if you have a floating point interval so narrow there are only a handful of values in it, this will no longer cause an error when Hypothesis runs out of values.</dl>
+</dt><dd> Size bounds were not validated for values for a binary() strategy when reading examples from the database.
+</dd><dt>&bull;
+</dt><dd> sampled_from is now in __all__ in hypothesis.strategies
+</dd><dt>&bull;
+</dt><dd> floats no longer consider negative integers to be simpler than positive non-integers
+</dd><dt>&bull;
+</dt><dd> Small floating point intervals now correctly count members, so if you have a floating point interval so narrow there are only a handful of values in it, this will no longer cause an error when Hypothesis runs out of values.</dd></dl>
 
 <h3>1.6.1 - 2015-05-21</h3>
 
@@ -3781,23 +3635,23 @@ if __name__ == '__main__':
  This is a smallish release designed to fix a number of bugs and smooth out some weird behaviours.
 <dl>
 <dt>&bull;
-<dd> Fix a critical bug in flatmap where it would reuse old strategies. If all your flatmap code was pure you're fine. If it's not, I'm surprised it's working at all. In particular if you want to use flatmap with django models, you desperately need to upgrade to this version.
-<dt>&bull;
-<dd> flatmap simplification performance should now be better in some cases where it previously had to redo work.
-<dt>&bull;
-<dd> Fix for a bug where invalid unicode data with surrogates could be generated during simplification (it was already filtered out during actual generation).
-<dt>&bull;
-<dd> The Hypothesis database is now keyed off the name of the test instead of the type of data. This makes much more sense now with the new strategies API and is generally more robust. This means you will lose old examples on upgrade.
-<dt>&bull;
-<dd> The database will now not delete values which fail to deserialize correctly, just skip them. This is to handle cases where multiple incompatible strategies share the same key.
-<dt>&bull;
-<dd> find now also saves and loads values from the database, keyed off a hash of the function you're finding from.
-<dt>&bull;
-<dd> Stateful tests now serialize and load values from the database. They should have before, really. This was a bug.
-<dt>&bull;
-<dd> Passing a different verbosity level into a test would not have worked entirely correctly, leaving off some messages. This is now fixed.
-<dt>&bull;
-<dd> Fix a bug where derandomized tests with unicode characters in the function body would error on Python 2.7.</dl>
+</dt><dd> Fix a critical bug in flatmap where it would reuse old strategies. If all your flatmap code was pure you're fine. If it's not, I'm surprised it's working at all. In particular if you want to use flatmap with django models, you desperately need to upgrade to this version.
+</dd><dt>&bull;
+</dt><dd> flatmap simplification performance should now be better in some cases where it previously had to redo work.
+</dd><dt>&bull;
+</dt><dd> Fix for a bug where invalid unicode data with surrogates could be generated during simplification (it was already filtered out during actual generation).
+</dd><dt>&bull;
+</dt><dd> The Hypothesis database is now keyed off the name of the test instead of the type of data. This makes much more sense now with the new strategies API and is generally more robust. This means you will lose old examples on upgrade.
+</dd><dt>&bull;
+</dt><dd> The database will now not delete values which fail to deserialize correctly, just skip them. This is to handle cases where multiple incompatible strategies share the same key.
+</dd><dt>&bull;
+</dt><dd> find now also saves and loads values from the database, keyed off a hash of the function you're finding from.
+</dd><dt>&bull;
+</dt><dd> Stateful tests now serialize and load values from the database. They should have before, really. This was a bug.
+</dd><dt>&bull;
+</dt><dd> Passing a different verbosity level into a test would not have worked entirely correctly, leaving off some messages. This is now fixed.
+</dd><dt>&bull;
+</dt><dd> Fix a bug where derandomized tests with unicode characters in the function body would error on Python 2.7.</dd></dl>
 
 <h3><i>1.5.0</i> - 2015-05-14</h3>
 
@@ -3814,23 +3668,23 @@ if __name__ == '__main__':
  Other changes:
 <dl>
 <dt>&bull;
-<dd> Mixing keyword and positional arguments in a call to @given is deprecated as well.
-<dt>&bull;
-<dd> There is a new setting called 'strict'. When set to True, Hypothesis will raise warnings instead of merely printing them. Turning it on by default is inadvisable because it means that Hypothesis minor releases can break your code, but it may be useful for making sure you catch all uses of deprecated APIs.
-<dt>&bull;
-<dd> max_examples in settings is now interpreted as meaning the maximum number of unique (ish) examples satisfying assumptions. A new setting max_iterations which defaults to a larger value has the old interpretation.
-<dt>&bull;
-<dd> Example generation should be significantly faster due to a new faster parameter selection algorithm. This will mostly show up for simple data types - for complex ones the parameter selection is almost certainly dominated.
-<dt>&bull;
-<dd> Simplification has some new heuristics that will tend to cut down on cases where it could previously take a very long time.
-<dt>&bull;
-<dd> timeout would previously not have been respected in cases where there were a lot of duplicate examples. You probably wouldn't have previously noticed this because max_examples counted duplicates, so this was very hard to hit in a way that mattered.
-<dt>&bull;
-<dd> A number of internal simplifications to the SearchStrategy API.
-<dt>&bull;
-<dd> You can now access the current Hypothesis version as hypothesis.__version__.
-<dt>&bull;
-<dd> A top level function is provided for running the stateful tests without the TestCase infrastructure.</dl>
+</dt><dd> Mixing keyword and positional arguments in a call to @given is deprecated as well.
+</dd><dt>&bull;
+</dt><dd> There is a new setting called 'strict'. When set to True, Hypothesis will raise warnings instead of merely printing them. Turning it on by default is inadvisable because it means that Hypothesis minor releases can break your code, but it may be useful for making sure you catch all uses of deprecated APIs.
+</dd><dt>&bull;
+</dt><dd> max_examples in settings is now interpreted as meaning the maximum number of unique (ish) examples satisfying assumptions. A new setting max_iterations which defaults to a larger value has the old interpretation.
+</dd><dt>&bull;
+</dt><dd> Example generation should be significantly faster due to a new faster parameter selection algorithm. This will mostly show up for simple data types - for complex ones the parameter selection is almost certainly dominated.
+</dd><dt>&bull;
+</dt><dd> Simplification has some new heuristics that will tend to cut down on cases where it could previously take a very long time.
+</dd><dt>&bull;
+</dt><dd> timeout would previously not have been respected in cases where there were a lot of duplicate examples. You probably wouldn't have previously noticed this because max_examples counted duplicates, so this was very hard to hit in a way that mattered.
+</dd><dt>&bull;
+</dt><dd> A number of internal simplifications to the SearchStrategy API.
+</dd><dt>&bull;
+</dt><dd> You can now access the current Hypothesis version as hypothesis.__version__.
+</dd><dt>&bull;
+</dt><dd> A top level function is provided for running the stateful tests without the TestCase infrastructure.</dd></dl>
 
 <h3><i>1.4.0</i> - 2015-05-04</h3>
 
@@ -3843,41 +3697,37 @@ if __name__ == '__main__':
  Two minor features the were driven out in the course of developing this:
 <dl>
 <dt>&bull;
-<dd> You can now set settings.max_shrinks to limit the number of times Hypothesis will try to shrink arguments to your test. If this is set to &lt;= 0 then Hypothesis will not rerun your test and will just raise the failure directly. Note that due to technical limitations if max_shrinks is &lt;= 0 then Hypothesis will print <i>every</i> example it calls your test with rather than just the failing one. Note also that I don't consider settings max_shrinks to zero a sensible way to run your tests and it should really be considered a debug feature.
-<dt>&bull;
-<dd> There is a new debug level of verbosity which is even <i>more</i> verbose than verbose. You probably don't want this. 
-
+</dt><dd> You can now set settings.max_shrinks to limit the number of times Hypothesis will try to shrink arguments to your test. If this is set to &lt;= 0 then Hypothesis will not rerun your test and will just raise the failure directly. Note that due to technical limitations if max_shrinks is &lt;= 0 then Hypothesis will print <i>every</i> example it calls your test with rather than just the failing one. Note also that I don't consider settings max_shrinks to zero a sensible way to run your tests and it should really be considered a debug feature.
+</dd><dt>&bull;
+</dt><dd> There is a new debug level of verbosity which is even <i>more</i> verbose than verbose. You probably don't want this. 
  Breakage of semi-public SearchStrategy API:
-<dt>&bull;
-<dd> It is now a required invariant of SearchStrategy that if u simplifies to v then it is not the case that strictly_simpler(u, v). i.e. simplifying should not <i>increase</i> the complexity even though it is not required to decrease it. Enforcing this invariant lead to finding some bugs where simplifying of integers, floats and sets was suboptimal.
-<dt>&bull;
-<dd> Integers in basic data are now required to fit into 64 bits. As a result python integer types are now serialized as strings, and some types have stopped using quite so needlessly large random seeds. 
-
+</dd><dt>&bull;
+</dt><dd> It is now a required invariant of SearchStrategy that if u simplifies to v then it is not the case that strictly_simpler(u, v). i.e. simplifying should not <i>increase</i> the complexity even though it is not required to decrease it. Enforcing this invariant lead to finding some bugs where simplifying of integers, floats and sets was suboptimal.
+</dd><dt>&bull;
+</dt><dd> Integers in basic data are now required to fit into 64 bits. As a result python integer types are now serialized as strings, and some types have stopped using quite so needlessly large random seeds. 
  Hypothesis Stateful testing was then turned upon Hypothesis itself, which lead to an amazing number of minor bugs being found in Hypothesis itself. 
-
  Bugs fixed (most but not all from the result of stateful testing) include:
-<dt>&bull;
-<dd> Serialization of streaming examples was flaky in a way that you would probably never notice: If you generate a template, simplify it, serialize it, deserialize it, serialize it again and then deserialize it you would get the original stream instead of the simplified one.
-<dt>&bull;
-<dd> If you reduced max_examples below the number of examples already saved in the database, you would have got a ValueError. Additionally, if you had more than max_examples in the database all of them would have been considered.
-<dt>&bull;
-<dd> @given will no longer count duplicate examples (which it never called your function with) towards max_examples. This may result in your tests running slower, but that's probably just because they're trying more examples.
-<dt>&bull;
-<dd> General improvements to example search which should result in better performance and higher quality examples. In particular parameters which have a history of producing useless results will be more aggressively culled. This is useful both because it decreases the chance of useless examples and also because it's much faster to not check parameters which we were unlikely to ever pick!
-<dt>&bull;
-<dd> integers_from and lists of types with only one value (e.g. [None]) would previously have had a very high duplication rate so you were probably only getting a handful of examples. They now have a much lower duplication rate, as well as the improvements to search making this less of a problem in the first place.
-<dt>&bull;
-<dd> You would sometimes see simplification taking significantly longer than your defined timeout. This would happen because timeout was only being checked after each <i>successful</i> simplification, so if Hypothesis was spending a lot of time unsuccessfully simplifying things it wouldn't stop in time. The timeout is now applied for unsuccessful simplifications too.
-<dt>&bull;
-<dd> In Python 2.7, integers_from strategies would have failed during simplification with an OverflowError if their starting point was at or near to the maximum size of a 64-bit integer.
-<dt>&bull;
-<dd> flatmap and map would have failed if called with a function without a __name__ attribute.
-<dt>&bull;
-<dd> If max_examples was less than min_satisfying_examples this would always error. Now min_satisfying_examples is capped to max_examples. Note that if you have assumptions to satisfy here this will still cause an error. 
-
+</dd><dt>&bull;
+</dt><dd> Serialization of streaming examples was flaky in a way that you would probably never notice: If you generate a template, simplify it, serialize it, deserialize it, serialize it again and then deserialize it you would get the original stream instead of the simplified one.
+</dd><dt>&bull;
+</dt><dd> If you reduced max_examples below the number of examples already saved in the database, you would have got a ValueError. Additionally, if you had more than max_examples in the database all of them would have been considered.
+</dd><dt>&bull;
+</dt><dd> @given will no longer count duplicate examples (which it never called your function with) towards max_examples. This may result in your tests running slower, but that's probably just because they're trying more examples.
+</dd><dt>&bull;
+</dt><dd> General improvements to example search which should result in better performance and higher quality examples. In particular parameters which have a history of producing useless results will be more aggressively culled. This is useful both because it decreases the chance of useless examples and also because it's much faster to not check parameters which we were unlikely to ever pick!
+</dd><dt>&bull;
+</dt><dd> integers_from and lists of types with only one value (e.g. [None]) would previously have had a very high duplication rate so you were probably only getting a handful of examples. They now have a much lower duplication rate, as well as the improvements to search making this less of a problem in the first place.
+</dd><dt>&bull;
+</dt><dd> You would sometimes see simplification taking significantly longer than your defined timeout. This would happen because timeout was only being checked after each <i>successful</i> simplification, so if Hypothesis was spending a lot of time unsuccessfully simplifying things it wouldn't stop in time. The timeout is now applied for unsuccessful simplifications too.
+</dd><dt>&bull;
+</dt><dd> In Python 2.7, integers_from strategies would have failed during simplification with an OverflowError if their starting point was at or near to the maximum size of a 64-bit integer.
+</dd><dt>&bull;
+</dt><dd> flatmap and map would have failed if called with a function without a __name__ attribute.
+</dd><dt>&bull;
+</dt><dd> If max_examples was less than min_satisfying_examples this would always error. Now min_satisfying_examples is capped to max_examples. Note that if you have assumptions to satisfy here this will still cause an error. 
  Some minor quality improvements:
-<dt>&bull;
-<dd> Lists of streams, flatmapped strategies and basic strategies should now now have slightly better simplification.</dl>
+</dd><dt>&bull;
+</dt><dd> Lists of streams, flatmapped strategies and basic strategies should now now have slightly better simplification.</dd></dl>
 
 <h3><i>1.3.0</i> - 2015-05-22</h3>
 
@@ -3886,29 +3736,27 @@ if __name__ == '__main__':
  New features:
 <dl>
 <dt>&bull;
-<dd> New verbosity level API for printing intermediate results and exceptions.
-<dt>&bull;
-<dd> New specifier for strings generated from a specified alphabet.
-<dt>&bull;
-<dd> Better error messages for tests that are failing because of a lack of enough examples. 
-
+</dt><dd> New verbosity level API for printing intermediate results and exceptions.
+</dd><dt>&bull;
+</dt><dd> New specifier for strings generated from a specified alphabet.
+</dd><dt>&bull;
+</dt><dd> Better error messages for tests that are failing because of a lack of enough examples. 
  Bug fixes:
-<dt>&bull;
-<dd> Fix error where use of ForkingTestCase would sometimes result in too many open files.
-<dt>&bull;
-<dd> Fix error where saving a failing example that used flatmap could error.
-<dt>&bull;
-<dd> Implement simplification for sampled_from, which apparently never supported it previously. Oops. 
-
+</dd><dt>&bull;
+</dt><dd> Fix error where use of ForkingTestCase would sometimes result in too many open files.
+</dd><dt>&bull;
+</dt><dd> Fix error where saving a failing example that used flatmap could error.
+</dd><dt>&bull;
+</dt><dd> Implement simplification for sampled_from, which apparently never supported it previously. Oops. 
  General improvements:
-<dt>&bull;
-<dd> Better range of examples when using one_of or sampled_from.
-<dt>&bull;
-<dd> Fix some pathological performance issues when simplifying lists of complex values.
-<dt>&bull;
-<dd> Fix some pathological performance issues when simplifying examples that require unicode strings with high codepoints.
-<dt>&bull;
-<dd> Random will now simplify to more readable examples.</dl>
+</dd><dt>&bull;
+</dt><dd> Better range of examples when using one_of or sampled_from.
+</dd><dt>&bull;
+</dt><dd> Fix some pathological performance issues when simplifying lists of complex values.
+</dd><dt>&bull;
+</dt><dd> Fix some pathological performance issues when simplifying examples that require unicode strings with high codepoints.
+</dd><dt>&bull;
+</dt><dd> Random will now simplify to more readable examples.</dd></dl>
 
 <h3><i>1.2.1</i> - 2015-04-16</h3>
 
@@ -3925,23 +3773,23 @@ if __name__ == '__main__':
  A bunch of new features and improvements.
 <dl>
 <dt>&bull;
-<dd> Provide a mechanism for customizing how your tests are executed.
-<dt>&bull;
-<dd> Provide a test runner that forks before running each example. This allows better support for testing native code which might trigger a segfault or a C level assertion failure.
-<dt>&bull;
-<dd> Support for using Hypothesis to find examples directly rather than as just as a test runner.
-<dt>&bull;
-<dd> New streaming type which lets you generate infinite lazily loaded streams of data - perfect for if you need a number of examples but don't know how many.
-<dt>&bull;
-<dd> Better support for large integer ranges. You can now use integers_in_range with ranges of basically any size. Previously large ranges would have eaten up all your memory and taken forever.
-<dt>&bull;
-<dd> Integers produce a wider range of data than before - previously they would only rarely produce integers which didn't fit into a machine word. Now it's much more common. This percolates to other numeric types which build on integers.
-<dt>&bull;
-<dd> Better validation of arguments to @given. Some situations that would previously have caused silently wrong behaviour will now raise an error.
-<dt>&bull;
-<dd> Include +/- sys.float_info.max in the set of floating point edge cases that Hypothesis specifically tries.
-<dt>&bull;
-<dd> Fix some bugs in floating point ranges which happen when given +/- sys.float_info.max as one of the endpoints... (really any two floats that are sufficiently far apart so that x, y are finite but y - x is infinite). This would have resulted in generating infinite values instead of ones inside the range.</dl>
+</dt><dd> Provide a mechanism for customizing how your tests are executed.
+</dd><dt>&bull;
+</dt><dd> Provide a test runner that forks before running each example. This allows better support for testing native code which might trigger a segfault or a C level assertion failure.
+</dd><dt>&bull;
+</dt><dd> Support for using Hypothesis to find examples directly rather than as just as a test runner.
+</dd><dt>&bull;
+</dt><dd> New streaming type which lets you generate infinite lazily loaded streams of data - perfect for if you need a number of examples but don't know how many.
+</dd><dt>&bull;
+</dt><dd> Better support for large integer ranges. You can now use integers_in_range with ranges of basically any size. Previously large ranges would have eaten up all your memory and taken forever.
+</dd><dt>&bull;
+</dt><dd> Integers produce a wider range of data than before - previously they would only rarely produce integers which didn't fit into a machine word. Now it's much more common. This percolates to other numeric types which build on integers.
+</dd><dt>&bull;
+</dt><dd> Better validation of arguments to @given. Some situations that would previously have caused silently wrong behaviour will now raise an error.
+</dd><dt>&bull;
+</dt><dd> Include +/- sys.float_info.max in the set of floating point edge cases that Hypothesis specifically tries.
+</dd><dt>&bull;
+</dt><dd> Fix some bugs in floating point ranges which happen when given +/- sys.float_info.max as one of the endpoints... (really any two floats that are sufficiently far apart so that x, y are finite but y - x is infinite). This would have resulted in generating infinite values instead of ones inside the range.</dd></dl>
 
 <h3><i>1.1.1</i> - 2015-04-07</h3>
 
@@ -3952,9 +3800,9 @@ if __name__ == '__main__':
  This is just a patch release put out because it fixed some internal bugs that would block the Django integration release but did not actually affect anything anyone could previously have been using. It also contained a minor quality fix for floats that I'd happened to have finished in time.
 <dl>
 <dt>&bull;
-<dd> Fix some internal bugs with object lifecycle management that were impossible to hit with the previously released versions but broke hypothesis-django.
-<dt>&bull;
-<dd> Bias floating point numbers somewhat less aggressively towards very small numbers</dl>
+</dt><dd> Fix some internal bugs with object lifecycle management that were impossible to hit with the previously released versions but broke hypothesis-django.
+</dd><dt>&bull;
+</dt><dd> Bias floating point numbers somewhat less aggressively towards very small numbers</dd></dl>
 
 <h3><i>1.1.0</i> - 2015-04-06</h3>
 
@@ -3963,19 +3811,19 @@ if __name__ == '__main__':
  Codename: No-one mention the M word.
 <dl>
 <dt>&bull;
-<dd> Unicode strings are more strongly biased towards ascii characters. Previously they would generate all over the space. This is mostly so that people who try to shape their unicode strings with assume() have less of a bad time.
-<dt>&bull;
-<dd> A number of fixes to data deserialization code that could theoretically have caused mysterious bugs when using an old version of a Hypothesis example database with a newer version. To the best of my knowledge a change that could have triggered this bug has never actually been seen in the wild. Certainly no-one ever reported a bug of this nature.
-<dt>&bull;
-<dd> Out of the box support for Decimal and Fraction.
-<dt>&bull;
-<dd> new dictionary specifier for dictionaries with variable keys.
-<dt>&bull;
-<dd> Significantly faster and higher quality simplification, especially for collections of data.
-<dt>&bull;
-<dd> New filter() and flatmap() methods on Strategy for better ways of building strategies out of other strategies.
-<dt>&bull;
-<dd> New BasicStrategy class which allows you to define your own strategies from scratch without needing an existing matching strategy or being exposed to the full horror or non-public nature of the SearchStrategy interface.</dl>
+</dt><dd> Unicode strings are more strongly biased towards ascii characters. Previously they would generate all over the space. This is mostly so that people who try to shape their unicode strings with assume() have less of a bad time.
+</dd><dt>&bull;
+</dt><dd> A number of fixes to data deserialization code that could theoretically have caused mysterious bugs when using an old version of a Hypothesis example database with a newer version. To the best of my knowledge a change that could have triggered this bug has never actually been seen in the wild. Certainly no-one ever reported a bug of this nature.
+</dd><dt>&bull;
+</dt><dd> Out of the box support for Decimal and Fraction.
+</dd><dt>&bull;
+</dt><dd> new dictionary specifier for dictionaries with variable keys.
+</dd><dt>&bull;
+</dt><dd> Significantly faster and higher quality simplification, especially for collections of data.
+</dd><dt>&bull;
+</dt><dd> New filter() and flatmap() methods on Strategy for better ways of building strategies out of other strategies.
+</dd><dt>&bull;
+</dt><dd> New BasicStrategy class which allows you to define your own strategies from scratch without needing an existing matching strategy or being exposed to the full horror or non-public nature of the SearchStrategy interface.</dd></dl>
 
 <h3><i>1.0.0</i> - 2015-03-27</h3>
 
@@ -3992,7 +3840,7 @@ if __name__ == '__main__':
  Codename: T-1 days.
 <dl>
 <dt>&bull;
-<dd> floats_in_range would not actually have produced floats_in_range unless that range happened to be (0, 1). Fix this.</dl>
+</dt><dd> floats_in_range would not actually have produced floats_in_range unless that range happened to be (0, 1). Fix this.</dd></dl>
 
 <h3>0.9.1 - 2015-03-25</h3>
 
@@ -4001,9 +3849,9 @@ if __name__ == '__main__':
  Codename: T-2 days.
 <dl>
 <dt>&bull;
-<dd> Fix a bug where if you defined a strategy using map on a lambda then the results would not be saved in the database.
-<dt>&bull;
-<dd> Significant performance improvements when simplifying examples using lists, strings or bounded integer ranges.</dl>
+</dt><dd> Fix a bug where if you defined a strategy using map on a lambda then the results would not be saved in the database.
+</dd><dt>&bull;
+</dt><dd> Significant performance improvements when simplifying examples using lists, strings or bounded integer ranges.</dd></dl>
 
 <h3>0.9.0 - 2015-03-23</h3>
 
@@ -4020,7 +3868,7 @@ if __name__ == '__main__':
  The one tiny bugfix:
 <dl>
 <dt>&bull;
-<dd> Under pypy, databases would fail to close correctly when garbage collected, leading to a memory leak and a confusing error message if you were repeatedly creating databases and not closing them. It is very unlikely you were doing this and the chances of you ever having noticed this bug are very low.</dl>
+</dt><dd> Under pypy, databases would fail to close correctly when garbage collected, leading to a memory leak and a confusing error message if you were repeatedly creating databases and not closing them. It is very unlikely you were doing this and the chances of you ever having noticed this bug are very low.</dd></dl>
 
 <h3>0.7.2 - 2015-03-22</h3>
 
@@ -4029,11 +3877,11 @@ if __name__ == '__main__':
  Codename: Hygienic macros or bust
 <dl>
 <dt>&bull;
-<dd> You can now name an argument to @given 'f' and it won't break (issue #38)
-<dt>&bull;
-<dd> strategy_test_suite is now named strategy_test_suite as the documentation claims and not in fact strategy_test_suitee
-<dt>&bull;
-<dd> Settings objects can now be used as a context manager to temporarily override the default values inside their context.</dl>
+</dt><dd> You can now name an argument to @given 'f' and it won't break (issue #38)
+</dd><dt>&bull;
+</dt><dd> strategy_test_suite is now named strategy_test_suite as the documentation claims and not in fact strategy_test_suitee
+</dd><dt>&bull;
+</dt><dd> Settings objects can now be used as a context manager to temporarily override the default values inside their context.</dd></dl>
 
 <h3>0.7.1 - 2015-03-21</h3>
 
@@ -4042,13 +3890,13 @@ if __name__ == '__main__':
  Codename: Point releases go faster
 <dl>
 <dt>&bull;
-<dd> Better string generation by parametrizing by a limited alphabet
-<dt>&bull;
-<dd> Faster string simplification - previously if simplifying a string with high range unicode characters it would try every unicode character smaller than that. This was pretty pointless. Now it stops after it's a short range (it can still reach smaller ones through recursive calls because of other simplifying operations).
-<dt>&bull;
-<dd> Faster list simplification by first trying a binary chop down the middle
-<dt>&bull;
-<dd> Simultaneous simplification of identical elements in a list. So if a bug only triggers when you have duplicates but you drew e.g. [-17, -17], this will now simplify to [0, 0].</dl>
+</dt><dd> Better string generation by parametrizing by a limited alphabet
+</dd><dt>&bull;
+</dt><dd> Faster string simplification - previously if simplifying a string with high range unicode characters it would try every unicode character smaller than that. This was pretty pointless. Now it stops after it's a short range (it can still reach smaller ones through recursive calls because of other simplifying operations).
+</dd><dt>&bull;
+</dt><dd> Faster list simplification by first trying a binary chop down the middle
+</dd><dt>&bull;
+</dt><dd> Simultaneous simplification of identical elements in a list. So if a bug only triggers when you have duplicates but you drew e.g. [-17, -17], this will now simplify to [0, 0].</dd></dl>
 
 <h3>0.7.0, - 2015-03-20</h3>
 
@@ -4059,15 +3907,15 @@ if __name__ == '__main__':
  This is probably the last minor release prior to 1.0. It consists of stability improvements, a few usability things designed to make Hypothesis easier to try out, and filing off some final rough edges from the API.
 <dl>
 <dt>&bull;
-<dd> Significant speed and memory usage improvements
-<dt>&bull;
-<dd> Add an example() method to strategy objects to give an example of the sort of data that the strategy generates.
-<dt>&bull;
-<dd> Remove .descriptor attribute of strategies
-<dt>&bull;
-<dd> Rename descriptor_test_suite to strategy_test_suite
-<dt>&bull;
-<dd> Rename the few remaining uses of descriptor to specifier (descriptor already has a defined meaning in Python)</dl>
+</dt><dd> Significant speed and memory usage improvements
+</dd><dt>&bull;
+</dt><dd> Add an example() method to strategy objects to give an example of the sort of data that the strategy generates.
+</dd><dt>&bull;
+</dt><dd> Remove .descriptor attribute of strategies
+</dd><dt>&bull;
+</dt><dd> Rename descriptor_test_suite to strategy_test_suite
+</dd><dt>&bull;
+</dt><dd> Rename the few remaining uses of descriptor to specifier (descriptor already has a defined meaning in Python)</dd></dl>
 
 <h3>0.6.0 - 2015-03-13</h3>
 
@@ -4080,27 +3928,25 @@ if __name__ == '__main__':
  In particular:
 <dl>
 <dt>&bull;
-<dd> Stateful testing has been removed from the API
-<dt>&bull;
-<dd> The way the database is used has been rendered less useful (sorry). The feature for reassembling values saved from other tests doesn't currently work. This will probably be brought back in post 1.0.
-<dt>&bull;
-<dd> SpecificationMapper is no longer a thing. Instead there is an ExtMethod called strategy which you extend to specify how to convert other types to strategies.
-<dt>&bull;
-<dd> Settings are now extensible so you can add your own for configuring a strategy
-<dt>&bull;
-<dd> MappedSearchStrategy no longer needs an unpack method
-<dt>&bull;
-<dd> Basically all the SearchStrategy internals have changed massively. If you implemented SearchStrategy directly rather than using MappedSearchStrategy talk to me about fixing it.
-<dt>&bull;
-<dd> Change to the way extra packages work. You now specify the package. This must have a load() method. Additionally any modules in the package will be loaded in under hypothesis.extra 
-
+</dt><dd> Stateful testing has been removed from the API
+</dd><dt>&bull;
+</dt><dd> The way the database is used has been rendered less useful (sorry). The feature for reassembling values saved from other tests doesn't currently work. This will probably be brought back in post 1.0.
+</dd><dt>&bull;
+</dt><dd> SpecificationMapper is no longer a thing. Instead there is an ExtMethod called strategy which you extend to specify how to convert other types to strategies.
+</dd><dt>&bull;
+</dt><dd> Settings are now extensible so you can add your own for configuring a strategy
+</dd><dt>&bull;
+</dt><dd> MappedSearchStrategy no longer needs an unpack method
+</dd><dt>&bull;
+</dt><dd> Basically all the SearchStrategy internals have changed massively. If you implemented SearchStrategy directly rather than using MappedSearchStrategy talk to me about fixing it.
+</dd><dt>&bull;
+</dt><dd> Change to the way extra packages work. You now specify the package. This must have a load() method. Additionally any modules in the package will be loaded in under hypothesis.extra 
  Bug fixes:
-<dt>&bull;
-<dd> Fix for a bug where calling falsify on a lambda with a non-ascii character in its body would error. 
-
+</dd><dt>&bull;
+</dt><dd> Fix for a bug where calling falsify on a lambda with a non-ascii character in its body would error. 
  Hypothesis Extra:
-<dt><b>hypothesis-fakefactory: An extension for using faker data in hypothesis. Depends</b>
-<dd> on fake-factory.</dl>
+</dd><dt><b>hypothesis-fakefactory: An extension for using faker data in hypothesis. Depends</b>
+</dt><dd> on fake-factory.</dd></dl>
 
 <h3>0.5.0 - 2015-02-10</h3>
 
@@ -4111,51 +3957,41 @@ if __name__ == '__main__':
  Core hypothesis:
 <dl>
 <dt>&bull;
-<dd> Add support back in for pypy and python 3.2
-<dt>&bull;
-<dd> @given functions can now be invoked with some arguments explicitly provided. If all arguments that hypothesis would have provided are passed in then no falsification is run.
-<dt>&bull;
-<dd> Related to the above, this means that you can now use pytest fixtures and mark.parametrize with Hypothesis without either interfering with the other.
-<dt>&bull;
-<dd> Breaking change: @given no longer works for functions with varargs (varkwargs are fine). This might be added back in at a later date.
-<dt>&bull;
-<dd> Windows is now fully supported. A limited version (just the tests with none of the extras) of the test suite is run on windows with each commit so it is now a first class citizen of the Hypothesis world.
-<dt>&bull;
-<dd> Fix a bug for fuzzy equality of equal complex numbers with different reprs (this can happen when one coordinate is zero). This shouldn't affect users - that feature isn't used anywhere public facing.
-<dt>&bull;
-<dd> Fix generation of floats on windows and 32-bit builds of python. I was using some struct.pack logic that only worked on certain word sizes.
-<dt>&bull;
-<dd> When a test times out and hasn't produced enough examples this now raises a Timeout subclass of Unfalsifiable.
-<dt>&bull;
-<dd> Small search spaces are better supported. Previously something like a @given(bool, bool) would have failed because it couldn't find enough examples. Hypothesis is now aware of the fact that these are small search spaces and will not error in this case.
-<dt>&bull;
-<dd> Improvements to parameter search in the case of hard to satisfy assume. Hypothesis will now spend less time exploring parameters that are unlikely to provide anything useful.
-<dt>&bull;
-<dd> Increase chance of generating &quot;nasty&quot; floats
-<dt>&bull;
-<dd> Fix a bug that would have caused unicode warnings if you had a sampled_from that was mixing unicode and byte strings.
-<dt>&bull;
-<dd> Added a standard test suite that you can use to validate a custom strategy you've defined is working correctly. 
-
+</dt><dd> Add support back in for pypy and python 3.2
+</dd><dt>&bull;
+</dt><dd> @given functions can now be invoked with some arguments explicitly provided. If all arguments that hypothesis would have provided are passed in then no falsification is run.
+</dd><dt>&bull;
+</dt><dd> Related to the above, this means that you can now use pytest fixtures and mark.parametrize with Hypothesis without either interfering with the other.
+</dd><dt>&bull;
+</dt><dd> Breaking change: @given no longer works for functions with varargs (varkwargs are fine). This might be added back in at a later date.
+</dd><dt>&bull;
+</dt><dd> Windows is now fully supported. A limited version (just the tests with none of the extras) of the test suite is run on windows with each commit so it is now a first class citizen of the Hypothesis world.
+</dd><dt>&bull;
+</dt><dd> Fix a bug for fuzzy equality of equal complex numbers with different reprs (this can happen when one coordinate is zero). This shouldn't affect users - that feature isn't used anywhere public facing.
+</dd><dt>&bull;
+</dt><dd> Fix generation of floats on windows and 32-bit builds of python. I was using some struct.pack logic that only worked on certain word sizes.
+</dd><dt>&bull;
+</dt><dd> When a test times out and hasn't produced enough examples this now raises a Timeout subclass of Unfalsifiable.
+</dd><dt>&bull;
+</dt><dd> Small search spaces are better supported. Previously something like a @given(bool, bool) would have failed because it couldn't find enough examples. Hypothesis is now aware of the fact that these are small search spaces and will not error in this case.
+</dd><dt>&bull;
+</dt><dd> Improvements to parameter search in the case of hard to satisfy assume. Hypothesis will now spend less time exploring parameters that are unlikely to provide anything useful.
+</dd><dt>&bull;
+</dt><dd> Increase chance of generating &quot;nasty&quot; floats
+</dd><dt>&bull;
+</dt><dd> Fix a bug that would have caused unicode warnings if you had a sampled_from that was mixing unicode and byte strings.
+</dd><dt>&bull;
+</dt><dd> Added a standard test suite that you can use to validate a custom strategy you've defined is working correctly. 
  Hypothesis extra: 
-
  First off, introducing Hypothesis extra packages! 
-
  These are packages that are separated out from core Hypothesis because they have one or more dependencies. Every hypothesis-extra package is pinned to a specific point release of Hypothesis and will have some version requirements on its dependency. They use entry_points so you will usually not need to explicitly import them, just have them installed on the path. 
-
  This release introduces two of them: 
-
  hypothesis-datetime: 
-
  Does what it says on the tin: Generates datetimes for Hypothesis. Just install the package and datetime support will start working. 
-
  Depends on pytz for timezone support 
-
  hypothesis-pytest: 
-
  A very rudimentary pytest plugin. All it does right now is hook the display of falsifying examples into pytest reporting. 
-
- Depends on pytest.</dl>
+ Depends on pytest.</dd></dl>
 
 <h3>0.4.3 - 2015-02-05</h3>
 
@@ -4166,7 +4002,7 @@ if __name__ == '__main__':
  This just fixes the one bug.
 <dl>
 <dt>&bull;
-<dd> Apparently there is such a thing as a &quot;narrow python build&quot; and OS X ships with these by default for python 2.7. These are builds where you only have two bytes worth of unicode. As a result, generating unicode was completely broken on OS X. Fix this by only generating unicode codepoints in the range supported by the system.</dl>
+</dt><dd> Apparently there is such a thing as a &quot;narrow python build&quot; and OS X ships with these by default for python 2.7. These are builds where you only have two bytes worth of unicode. As a result, generating unicode was completely broken on OS X. Fix this by only generating unicode codepoints in the range supported by the system.</dd></dl>
 
 <h3>0.4.2 - 2015-02-04</h3>
 
@@ -4177,9 +4013,9 @@ if __name__ == '__main__':
  This is purely a bugfix release:
 <dl>
 <dt>&bull;
-<dd> Provide sensible external hashing for all core types. This will significantly improve performance of tracking seen examples which happens in literally every falsification run. For Hypothesis fixing this cut 40% off the runtime of the test suite. The behaviour is quadratic in the number of examples so if you're running the default configuration this will be less extreme (Hypothesis's test suite runs at a higher number of examples than default), but you should still see a significant improvement.
-<dt>&bull;
-<dd> Fix a bug in formatting of complex numbers where the string could get incorrectly truncated.</dl>
+</dt><dd> Provide sensible external hashing for all core types. This will significantly improve performance of tracking seen examples which happens in literally every falsification run. For Hypothesis fixing this cut 40% off the runtime of the test suite. The behaviour is quadratic in the number of examples so if you're running the default configuration this will be less extreme (Hypothesis's test suite runs at a higher number of examples than default), but you should still see a significant improvement.
+</dd><dt>&bull;
+</dt><dd> Fix a bug in formatting of complex numbers where the string could get incorrectly truncated.</dd></dl>
 
 <h3>0.4.1 - 2015-02-03</h3>
 
@@ -4192,29 +4028,27 @@ if __name__ == '__main__':
  Enhancements:
 <dl>
 <dt>&bull;
-<dd> Has a cool release name
-<dt>&bull;
-<dd> text_type (str in python 3, unicode in python 2) example generation now actually produces interesting unicode instead of boring ascii strings.
-<dt>&bull;
-<dd> floating point numbers are generated over a much wider range, with particular attention paid to generating nasty numbers - nan, infinity, large and small values, etc.
-<dt>&bull;
-<dd> examples can be generated using pieces of examples previously saved in the database. This allows interesting behaviour that has previously been discovered to be propagated to other examples.
-<dt>&bull;
-<dd> improved parameter exploration algorithm which should allow it to more reliably hit interesting edge cases.
-<dt>&bull;
-<dd> Timeout can now be disabled entirely by setting it to any value &lt;= 0. 
-
+</dt><dd> Has a cool release name
+</dd><dt>&bull;
+</dt><dd> text_type (str in python 3, unicode in python 2) example generation now actually produces interesting unicode instead of boring ascii strings.
+</dd><dt>&bull;
+</dt><dd> floating point numbers are generated over a much wider range, with particular attention paid to generating nasty numbers - nan, infinity, large and small values, etc.
+</dd><dt>&bull;
+</dt><dd> examples can be generated using pieces of examples previously saved in the database. This allows interesting behaviour that has previously been discovered to be propagated to other examples.
+</dd><dt>&bull;
+</dt><dd> improved parameter exploration algorithm which should allow it to more reliably hit interesting edge cases.
+</dd><dt>&bull;
+</dt><dd> Timeout can now be disabled entirely by setting it to any value &lt;= 0. 
  Bug fixes:
-<dt>&bull;
-<dd> The descriptor on a OneOfStrategy could be wrong if you had descriptors which were equal but should not be coalesced. e.g. a strategy for one_of((frozenset({int}), {int})) would have reported its descriptor as {int}. This is unlikely to have caused you any problems
-<dt>&bull;
-<dd> If you had strategies that could produce NaN (which float previously couldn't but e.g. a Just(float('nan')) could) then this would have sent hypothesis into an infinite loop that would have only been terminated when it hit the timeout.
-<dt>&bull;
-<dd> Given elements that can take a long time to minimize, minimization of floats or tuples could be quadratic or worse in the that value. You should now see much better performance for simplification, albeit at some cost in quality. 
-
+</dd><dt>&bull;
+</dt><dd> The descriptor on a OneOfStrategy could be wrong if you had descriptors which were equal but should not be coalesced. e.g. a strategy for one_of((frozenset({int}), {int})) would have reported its descriptor as {int}. This is unlikely to have caused you any problems
+</dd><dt>&bull;
+</dt><dd> If you had strategies that could produce NaN (which float previously couldn't but e.g. a Just(float('nan')) could) then this would have sent hypothesis into an infinite loop that would have only been terminated when it hit the timeout.
+</dd><dt>&bull;
+</dt><dd> Given elements that can take a long time to minimize, minimization of floats or tuples could be quadratic or worse in the that value. You should now see much better performance for simplification, albeit at some cost in quality. 
  Other:
-<dt>&bull;
-<dd> A lot of internals have been been rewritten. This shouldn't affect you at all, but it opens the way for certain of hypothesis's oddities to be a lot more extensible by users. Whether this is a good thing may be up for debate...</dl>
+</dd><dt>&bull;
+</dt><dd> A lot of internals have been been rewritten. This shouldn't affect you at all, but it opens the way for certain of hypothesis's oddities to be a lot more extensible by users. Whether this is a good thing may be up for debate...</dd></dl>
 
 <h3>0.4.0 - 2015-01-21</h3>
 
@@ -4227,185 +4061,184 @@ if __name__ == '__main__':
  Enhancements:
 <dl>
 <dt>&bull;
-<dd> Printing of failing examples. I was finding that the pytest runner was not doing a good job of displaying these, and that Hypothesis itself could do much better.
-<dt>&bull;
-<dd> Drop dependency on six for cross-version compatibility. It was easy enough to write the shim for the small set of features that we care about and this lets us avoid a moderately complex dependency.
-<dt>&bull;
-<dd> Some improvements to statistical distribution of selecting from small (&lt;= 3 elements)
-<dt>&bull;
-<dd> Improvements to parameter selection for finding examples. 
-
+</dt><dd> Printing of failing examples. I was finding that the pytest runner was not doing a good job of displaying these, and that Hypothesis itself could do much better.
+</dd><dt>&bull;
+</dt><dd> Drop dependency on six for cross-version compatibility. It was easy enough to write the shim for the small set of features that we care about and this lets us avoid a moderately complex dependency.
+</dd><dt>&bull;
+</dt><dd> Some improvements to statistical distribution of selecting from small (&lt;= 3 elements)
+</dd><dt>&bull;
+</dt><dd> Improvements to parameter selection for finding examples. 
  Bugs fixed:
-<dt>&bull;
-<dd> could_have_produced for lists, dicts and other collections would not have examined the elements and thus when using a union of different types of list this could result in Hypothesis getting confused and passing a value to the wrong strategy. This could potentially result in exceptions being thrown from within simplification.
-<dt>&bull;
-<dd> sampled_from would not work correctly on a single element list.
-<dt>&bull;
-<dd> Hypothesis could get <i>very</i> confused by values which are equal despite having different types being used in descriptors. Hypothesis now has its own more specific version of equality it uses for descriptors and tracking. It is always more fine grained than Python equality: Things considered != are not considered equal by hypothesis, but some things that are considered == are distinguished. If your test suite uses both frozenset and set tests this bug is probably affecting you.</dl>
+</dd><dt>&bull;
+</dt><dd> could_have_produced for lists, dicts and other collections would not have examined the elements and thus when using a union of different types of list this could result in Hypothesis getting confused and passing a value to the wrong strategy. This could potentially result in exceptions being thrown from within simplification.
+</dd><dt>&bull;
+</dt><dd> sampled_from would not work correctly on a single element list.
+</dd><dt>&bull;
+</dt><dd> Hypothesis could get <i>very</i> confused by values which are equal despite having different types being used in descriptors. Hypothesis now has its own more specific version of equality it uses for descriptors and tracking. It is always more fine grained than Python equality: Things considered != are not considered equal by hypothesis, but some things that are considered == are distinguished. If your test suite uses both frozenset and set tests this bug is probably affecting you.</dd></dl>
 
 <h3>0.3.2 - 2015-01-16</h3>
 
 <dl>
 <dt>&bull;
-<dd> Fix a bug where if you specified floats_in_range with integer arguments Hypothesis would error in example simplification.
-<dt>&bull;
-<dd> Improve the statistical distribution of the floats you get for the floats_in_range strategy. I'm not sure whether this will affect users in practice but it took my tests for various conditions from flaky to rock solid so it at the very least improves discovery of the artificial cases I'm looking for.
-<dt>&bull;
-<dd> Improved repr() for strategies and RandomWithSeed instances.
-<dt>&bull;
-<dd> Add detection for flaky test cases where hypothesis managed to find an example which breaks it but on the final invocation of the test it does not raise an error. This will typically happen with too much recursion errors but could conceivably happen in other circumstances too.
-<dt>&bull;
-<dd> Provide a &quot;derandomized&quot; mode. This allows you to run hypothesis with zero real randomization, making your build nice and deterministic. The tests run with a seed calculated from the function they're testing so you should still get a good distribution of test cases.
-<dt>&bull;
-<dd> Add a mechanism for more conveniently defining tests which just sample from some collection.
-<dt>&bull;
-<dd> Fix for a really subtle bug deep in the internals of the strategy table. In some circumstances if you were to define instance strategies for both a parent class and one or more of its subclasses you would under some circumstances get the strategy for the wrong superclass of an instance. It is very unlikely anyone has ever encountered this in the wild, but it is conceivably possible given that a mix of namedtuple and tuple are used fairly extensively inside hypothesis which do exhibit this pattern of strategy.</dl>
+</dt><dd> Fix a bug where if you specified floats_in_range with integer arguments Hypothesis would error in example simplification.
+</dd><dt>&bull;
+</dt><dd> Improve the statistical distribution of the floats you get for the floats_in_range strategy. I'm not sure whether this will affect users in practice but it took my tests for various conditions from flaky to rock solid so it at the very least improves discovery of the artificial cases I'm looking for.
+</dd><dt>&bull;
+</dt><dd> Improved repr() for strategies and RandomWithSeed instances.
+</dd><dt>&bull;
+</dt><dd> Add detection for flaky test cases where hypothesis managed to find an example which breaks it but on the final invocation of the test it does not raise an error. This will typically happen with too much recursion errors but could conceivably happen in other circumstances too.
+</dd><dt>&bull;
+</dt><dd> Provide a &quot;derandomized&quot; mode. This allows you to run hypothesis with zero real randomization, making your build nice and deterministic. The tests run with a seed calculated from the function they're testing so you should still get a good distribution of test cases.
+</dd><dt>&bull;
+</dt><dd> Add a mechanism for more conveniently defining tests which just sample from some collection.
+</dd><dt>&bull;
+</dt><dd> Fix for a really subtle bug deep in the internals of the strategy table. In some circumstances if you were to define instance strategies for both a parent class and one or more of its subclasses you would under some circumstances get the strategy for the wrong superclass of an instance. It is very unlikely anyone has ever encountered this in the wild, but it is conceivably possible given that a mix of namedtuple and tuple are used fairly extensively inside hypothesis which do exhibit this pattern of strategy.</dd></dl>
 
 <h3>0.3.1 - 2015-01-13</h3>
 
 <dl>
 <dt>&bull;
-<dd> Support for generation of frozenset and Random values
-<dt>&bull;
-<dd> Correct handling of the case where a called function mutates it argument. This involved introducing a notion of a strategies knowing how to copy their argument. The default method should be entirely acceptable and the worst case is that it will continue to have the old behaviour if you don't mark your strategy as mutable, so this shouldn't break anything.
-<dt>&bull;
-<dd> Fix for a bug where some strategies did not correctly implement could_have_produced. It is very unlikely that any of these would have been seen in the wild, and the consequences if they had been would have been minor.
-<dt>&bull;
-<dd> Re-export the @given decorator from the main hypothesis namespace. It's still available at the old location too.
-<dt>&bull;
-<dd> Minor performance optimisation for simplifying long lists.</dl>
+</dt><dd> Support for generation of frozenset and Random values
+</dd><dt>&bull;
+</dt><dd> Correct handling of the case where a called function mutates it argument. This involved introducing a notion of a strategies knowing how to copy their argument. The default method should be entirely acceptable and the worst case is that it will continue to have the old behaviour if you don't mark your strategy as mutable, so this shouldn't break anything.
+</dd><dt>&bull;
+</dt><dd> Fix for a bug where some strategies did not correctly implement could_have_produced. It is very unlikely that any of these would have been seen in the wild, and the consequences if they had been would have been minor.
+</dd><dt>&bull;
+</dt><dd> Re-export the @given decorator from the main hypothesis namespace. It's still available at the old location too.
+</dd><dt>&bull;
+</dt><dd> Minor performance optimisation for simplifying long lists.</dd></dl>
 
 <h3>0.3.0 - 2015-01-12</h3>
 
 <dl>
 <dt>&bull;
-<dd> Complete redesign of the data generation system. Extreme breaking change for anyone who was previously writing their own SearchStrategy implementations. These will not work any more and you'll need to modify them.
-<dt>&bull;
-<dd> New settings system allowing more global and modular control of Verifier behaviour.
-<dt>&bull;
-<dd> Decouple SearchStrategy from the StrategyTable. This leads to much more composable code which is a lot easier to understand.
-<dt>&bull;
-<dd> A significant amount of internal API renaming and moving. This may also break your code.
-<dt>&bull;
-<dd> Expanded available descriptors, allowing for generating integers or floats in a specific range.
-<dt>&bull;
-<dd> Significantly more robust. A very large number of small bug fixes, none of which anyone is likely to have ever noticed.
-<dt>&bull;
-<dd> Deprecation of support for pypy and python 3 prior to 3.3. 3.3 and 3.4. Supported versions are 2.7.x, 3.3.x, 3.4.x. I expect all of these to remain officially supported for a very long time. I would not be surprised to add pypy support back in later but I'm not going to do so until I know someone cares about it. In the meantime it will probably still work.</dl>
+</dt><dd> Complete redesign of the data generation system. Extreme breaking change for anyone who was previously writing their own SearchStrategy implementations. These will not work any more and you'll need to modify them.
+</dd><dt>&bull;
+</dt><dd> New settings system allowing more global and modular control of Verifier behaviour.
+</dd><dt>&bull;
+</dt><dd> Decouple SearchStrategy from the StrategyTable. This leads to much more composable code which is a lot easier to understand.
+</dd><dt>&bull;
+</dt><dd> A significant amount of internal API renaming and moving. This may also break your code.
+</dd><dt>&bull;
+</dt><dd> Expanded available descriptors, allowing for generating integers or floats in a specific range.
+</dd><dt>&bull;
+</dt><dd> Significantly more robust. A very large number of small bug fixes, none of which anyone is likely to have ever noticed.
+</dd><dt>&bull;
+</dt><dd> Deprecation of support for pypy and python 3 prior to 3.3. 3.3 and 3.4. Supported versions are 2.7.x, 3.3.x, 3.4.x. I expect all of these to remain officially supported for a very long time. I would not be surprised to add pypy support back in later but I'm not going to do so until I know someone cares about it. In the meantime it will probably still work.</dd></dl>
 
 <h3>0.2.2 - 2015-01-08</h3>
 
 <dl>
 <dt>&bull;
-<dd> Fix an embarrassing complete failure of the installer caused by my being bad at version control</dl>
+</dt><dd> Fix an embarrassing complete failure of the installer caused by my being bad at version control</dd></dl>
 
 <h3>0.2.1 - 2015-01-07</h3>
 
 <dl>
 <dt>&bull;
-<dd> Fix a bug in the new stateful testing feature where you could make __init__ a @requires method. Simplification would not always work if the prune method was able to successfully shrink the test.</dl>
+</dt><dd> Fix a bug in the new stateful testing feature where you could make __init__ a @requires method. Simplification would not always work if the prune method was able to successfully shrink the test.</dd></dl>
 
 <h3>0.2.0 - 2015-01-07</h3>
 
 <dl>
 <dt>&bull;
-<dd> It's aliiive.
-<dt>&bull;
-<dd> Improve python 3 support using six.
-<dt>&bull;
-<dd> Distinguish between byte and unicode types.
-<dt>&bull;
-<dd> Fix issues where FloatStrategy could raise.
-<dt>&bull;
-<dd> Allow stateful testing to request constructor args.
-<dt>&bull;
-<dd> Fix for issue where test annotations would timeout based on when the module was loaded instead of when the test started</dl>
+</dt><dd> It's aliiive.
+</dd><dt>&bull;
+</dt><dd> Improve python 3 support using six.
+</dd><dt>&bull;
+</dt><dd> Distinguish between byte and unicode types.
+</dd><dt>&bull;
+</dt><dd> Fix issues where FloatStrategy could raise.
+</dd><dt>&bull;
+</dt><dd> Allow stateful testing to request constructor args.
+</dd><dt>&bull;
+</dt><dd> Fix for issue where test annotations would timeout based on when the module was loaded instead of when the test started</dd></dl>
 
 <h3>0.1.4 - 2013-12-14</h3>
 
 <dl>
 <dt>&bull;
-<dd> Make verification runs time bounded with a configurable timeout</dl>
+</dt><dd> Make verification runs time bounded with a configurable timeout</dd></dl>
 
 <h3>0.1.3 - 2013-05-03</h3>
 
 <dl>
 <dt>&bull;
-<dd> Bugfix: Stateful testing behaved incorrectly with subclassing.
-<dt>&bull;
-<dd> Complex number support
-<dt>&bull;
-<dd> support for recursive strategies
-<dt>&bull;
-<dd> different error for hypotheses with unsatisfiable assumptions</dl>
+</dt><dd> Bugfix: Stateful testing behaved incorrectly with subclassing.
+</dd><dt>&bull;
+</dt><dd> Complex number support
+</dd><dt>&bull;
+</dt><dd> support for recursive strategies
+</dd><dt>&bull;
+</dt><dd> different error for hypotheses with unsatisfiable assumptions</dd></dl>
 
 <h3>0.1.2 - 2013-03-24</h3>
 
 <dl>
 <dt>&bull;
-<dd> Bugfix: Stateful testing was not minimizing correctly and could throw exceptions.
-<dt>&bull;
-<dd> Better support for recursive strategies.
-<dt>&bull;
-<dd> Support for named tuples.
-<dt>&bull;
-<dd> Much faster integer generation.</dl>
+</dt><dd> Bugfix: Stateful testing was not minimizing correctly and could throw exceptions.
+</dd><dt>&bull;
+</dt><dd> Better support for recursive strategies.
+</dd><dt>&bull;
+</dt><dd> Support for named tuples.
+</dd><dt>&bull;
+</dt><dd> Much faster integer generation.</dd></dl>
 
 <h3>0.1.1 - 2013-03-24</h3>
 
 <dl>
 <dt>&bull;
-<dd> Python 3.x support via 2to3.
-<dt>&bull;
-<dd> Use new style classes (oops).</dl>
+</dt><dd> Python 3.x support via 2to3.
+</dd><dt>&bull;
+</dt><dd> Use new style classes (oops).</dd></dl>
 
 <h3>0.1.0 - 2013-03-23</h3>
 
 <dl>
 <dt>&bull;
-<dd> Introduce stateful testing.
-<dt>&bull;
-<dd> Massive rewrite of internals to add flags and strategies.</dl>
+</dt><dd> Introduce stateful testing.
+</dd><dt>&bull;
+</dt><dd> Massive rewrite of internals to add flags and strategies.</dd></dl>
 
 <h3>0.0.5 - 2013-03-13</h3>
 
 <dl>
 <dt>&bull;
-<dd> No changes except trying to fix packaging</dl>
+</dt><dd> No changes except trying to fix packaging</dd></dl>
 
 <h3>0.0.4 - 2013-03-13</h3>
 
 <dl>
 <dt>&bull;
-<dd> No changes except that I checked in a failing test case for 0.0.3 so had to replace the release. Doh</dl>
+</dt><dd> No changes except that I checked in a failing test case for 0.0.3 so had to replace the release. Doh</dd></dl>
 
 <h3>0.0.3 - 2013-03-13</h3>
 
 <dl>
 <dt>&bull;
-<dd> Improved a few internals.
-<dt>&bull;
-<dd> Opened up creating generators from instances as a general API.
-<dt>&bull;
-<dd> Test integration.</dl>
+</dt><dd> Improved a few internals.
+</dd><dt>&bull;
+</dt><dd> Opened up creating generators from instances as a general API.
+</dd><dt>&bull;
+</dt><dd> Test integration.</dd></dl>
 
 <h3>0.0.2 - 2013-03-12</h3>
 
 <dl>
 <dt>&bull;
-<dd> Starting to tighten up on the internals.
-<dt>&bull;
-<dd> Change API to allow more flexibility in configuration.
-<dt>&bull;
-<dd> More testing.</dl>
+</dt><dd> Starting to tighten up on the internals.
+</dd><dt>&bull;
+</dt><dd> Change API to allow more flexibility in configuration.
+</dd><dt>&bull;
+</dt><dd> More testing.</dd></dl>
 
 <h3>0.0.1 - 2013-03-10</h3>
 
 <dl>
 <dt>&bull;
-<dd> Initial release.
-<dt>&bull;
-<dd> Basic working prototype. Demonstrates idea, probably shouldn't be used.</dl>
+</dt><dd> Initial release.
+</dd><dt>&bull;
+</dt><dd> Basic working prototype. Demonstrates idea, probably shouldn't be used.</dd></dl>
 
 <h2>ONGOING HYPOTHESIS DEVELOPMENT</h2>
 
@@ -4416,19 +4249,18 @@ if __name__ == '__main__':
  <i>However</i>, I no longer do unpaid feature development on Hypothesis. My roles as leader of the project are:
 <dl>
 <dt>1.
-<dd> Helping other people do feature development on Hypothesis
-<dt>2.
-<dd> Fixing bugs and other code health issues
-<dt>3.
-<dd> Improving documentation
-<dt>4.
-<dd> General release management work
-<dt>5.
-<dd> Planning the general roadmap of the project
-<dt>6.
-<dd> Doing sponsored development on tasks that are too large or in depth for other people to take on 
-
- So all new features must either be sponsored or implemented by someone else. That being said, the maintenance team takes an active role in shepherding pull requests and helping people write a new feature (see <i>CONTRIBUTING.rst</i> for details and <i>pull request #154</i> for an example of how the process goes). This isn't &quot;patches welcome&quot;, it's &quot;we will help you write a patch&quot;.</dl>
+</dt><dd> Helping other people do feature development on Hypothesis
+</dd><dt>2.
+</dt><dd> Fixing bugs and other code health issues
+</dd><dt>3.
+</dt><dd> Improving documentation
+</dd><dt>4.
+</dt><dd> General release management work
+</dd><dt>5.
+</dt><dd> Planning the general roadmap of the project
+</dd><dt>6.
+</dt><dd> Doing sponsored development on tasks that are too large or in depth for other people to take on 
+ So all new features must either be sponsored or implemented by someone else. That being said, the maintenance team takes an active role in shepherding pull requests and helping people write a new feature (see <i>CONTRIBUTING.rst</i> for details and <i>pull request #154</i> for an example of how the process goes). This isn't &quot;patches welcome&quot;, it's &quot;we will help you write a patch&quot;.</dd></dl>
 
 <h3>Release Policy</h3>
 
@@ -4447,11 +4279,11 @@ if __name__ == '__main__':
  Hypothesis does not have a long-term release plan. However some visibility into our plans for future <b>compatibility</b> may be useful:
 <dl>
 <dt>&bull;
-<dd> We value compatibility, and maintain it as far as practical. This generally excludes things which are end-of-life upstream, or have an unstable API.
-<dt>&bull;
-<dd> We would like to drop Python 2 support when it it reaches end of life in 2020. Ongoing support is likely to depend on commercial funding.
-<dt>&bull;
-<dd> We intend to support PyPy3 as soon as it supports a recent enough version of Python 3. See <i>issue #602</i>.</dl>
+</dt><dd> We value compatibility, and maintain it as far as practical. This generally excludes things which are end-of-life upstream, or have an unstable API.
+</dd><dt>&bull;
+</dt><dd> We would like to drop Python 2 support when it it reaches end of life in 2020. Ongoing support is likely to depend on commercial funding.
+</dd><dt>&bull;
+</dt><dd> We intend to support PyPy3 as soon as it supports a recent enough version of Python 3. See <i>issue #602</i>.</dd></dl>
 
 <h2>HELP AND SUPPORT</h2>
 
@@ -4494,17 +4326,16 @@ if __name__ == '__main__':
  Hypothesis is designed to work with a range of Python versions. Currently supported are:
 <dl>
 <dt>&bull;
-<dd> pypy-2.6.1 (earlier versions of pypy <i>may</i> work)
-<dt>&bull;
-<dd> CPython 2.7.x
-<dt>&bull;
-<dd> CPython 3.4.x
-<dt>&bull;
-<dd> CPython 3.5.x
-<dt>&bull;
-<dd> CPython 3.6.x 
-
- If you feel the need to have separate Python 3 and Python 2 packages you can, but Hypothesis works unmodified on either.</dl>
+</dt><dd> pypy-2.6.1 (earlier versions of pypy <i>may</i> work)
+</dd><dt>&bull;
+</dt><dd> CPython 2.7.x
+</dd><dt>&bull;
+</dt><dd> CPython 3.4.x
+</dd><dt>&bull;
+</dt><dd> CPython 3.5.x
+</dd><dt>&bull;
+</dt><dd> CPython 3.6.x 
+ If you feel the need to have separate Python 3 and Python 2 packages you can, but Hypothesis works unmodified on either.</dd></dl>
 
 <h3>Other Python libraries</h3>
 
@@ -4513,17 +4344,16 @@ if __name__ == '__main__':
  Hypothesis has <i>optional</i> dependencies on the following libraries:
 <dl>
 <dt>&bull;
-<dd> pytz (almost any version should work)
-<dt>&bull;
-<dd> faker, version 0.7
-<dt>&bull;
-<dd> Django, all supported versions
-<dt>&bull;
-<dd> numpy, 1.10 or later (earlier versions will probably work fine)
-<dt>&bull;
-<dd> py.test (2.7.0 or greater). This is a mandatory dependency for testing Hypothesis itself but optional for users. 
-
- The way this works when installing Hypothesis normally is that these features become available if the relevant library is installed.</dl>
+</dt><dd> pytz (almost any version should work)
+</dd><dt>&bull;
+</dt><dd> faker, version 0.7
+</dd><dt>&bull;
+</dt><dd> Django, all supported versions
+</dd><dt>&bull;
+</dt><dd> numpy, 1.10 or later (earlier versions will probably work fine)
+</dd><dt>&bull;
+</dt><dd> py.test (2.7.0 or greater). This is a mandatory dependency for testing Hypothesis itself but optional for users. 
+ The way this works when installing Hypothesis normally is that these features become available if the relevant library is installed.</dd></dl>
 
 <h3>Testing Hypothesis</h3>
 
@@ -4536,37 +4366,35 @@ if __name__ == '__main__':
  Tests are organised into a number of top level subdirectories of the tests/ directory.
 <dl>
 <dt>&bull;
-<dd> cover: This is a small, reasonably fast, collection of tests designed to give 100% coverage of all but a select subset of the files when run under Python 3.
-<dt>&bull;
-<dd> nocover: This is a much slower collection of tests that should not be run under coverage for performance reasons.
-<dt>&bull;
-<dd> py2: Tests that can only be run under Python 2
-<dt>&bull;
-<dd> py3: Tests that can only be run under Python 3
-<dt>&bull;
-<dd> datetime: This tests the subset of Hypothesis that depends on pytz
-<dt>&bull;
-<dd> fakefactory: This tests the subset of Hypothesis that depends on fakefactory.
-<dt>&bull;
-<dd> django: This tests the subset of Hypothesis that depends on django (this also depends on fakefactory). 
-
+</dt><dd> cover: This is a small, reasonably fast, collection of tests designed to give 100% coverage of all but a select subset of the files when run under Python 3.
+</dd><dt>&bull;
+</dt><dd> nocover: This is a much slower collection of tests that should not be run under coverage for performance reasons.
+</dd><dt>&bull;
+</dt><dd> py2: Tests that can only be run under Python 2
+</dd><dt>&bull;
+</dt><dd> py3: Tests that can only be run under Python 3
+</dd><dt>&bull;
+</dt><dd> datetime: This tests the subset of Hypothesis that depends on pytz
+</dd><dt>&bull;
+</dt><dd> fakefactory: This tests the subset of Hypothesis that depends on fakefactory.
+</dd><dt>&bull;
+</dt><dd> django: This tests the subset of Hypothesis that depends on django (this also depends on fakefactory). 
  An example invocation for running the coverage subset of these tests: 
-
  <pre>
 pip install -e .
 pip install pytest # you will probably want to use your own packaging here
 python -m pytest tests/cover
-</pre></dl>
+</pre></dd></dl>
 
 <h3>Examples</h3>
 
 <dl>
 <dt>&bull;
-<dd> <i>arch linux</i>
-<dt>&bull;
-<dd> <i>fedora</i>
-<dt>&bull;
-<dd> <i>gentoo</i> (slightly behind at the time of this writing)</dl>
+</dt><dd> <i>arch linux</i>
+</dd><dt>&bull;
+</dt><dd> <i>fedora</i>
+</dd><dt>&bull;
+</dt><dd> <i>gentoo</i> (slightly behind at the time of this writing)</dd></dl>
 
 <h2>AUTHOR</h2>
 
@@ -4581,74 +4409,74 @@ python -m pytest tests/cover
 
 
 <dt><a HREF="#lbAI">DETAILS AND ADVANCED FEATURES</a>
-<dd>
+</dt><dd>
 
 
-<dt><a HREF="#lbAS">SETTINGS</a>
-<dd>
+</dd><dt><a HREF="#lbAS">SETTINGS</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbAY">WHAT YOU CAN GENERATE AND HOW</a>
-<dd>
+</dd><dt><a HREF="#lbAY">WHAT YOU CAN GENERATE AND HOW</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbBI">ADDITIONAL PACKAGES</a>
-<dd>
+</dd><dt><a HREF="#lbBI">ADDITIONAL PACKAGES</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbBO">HYPOTHESIS FOR DJANGO USERS</a>
-<dd>
+</dd><dt><a HREF="#lbBO">HYPOTHESIS FOR DJANGO USERS</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbBT">SCIENTIFIC HYPOTHESIS (FOR NUMPY)</a>
-<dd>
-<dt><a HREF="#lbBU">HEALTH CHECKS</a>
-<dd>
-<dt><a HREF="#lbBV">THE HYPOTHESIS EXAMPLE DATABASE</a>
-<dd>
+</dd><dt><a HREF="#lbBT">SCIENTIFIC HYPOTHESIS (FOR NUMPY)</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBU">HEALTH CHECKS</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBV">THE HYPOTHESIS EXAMPLE DATABASE</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbCA">STATEFUL TESTING</a>
-<dd>
+</dd><dt><a HREF="#lbCA">STATEFUL TESTING</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbCG">COMPATIBILITY</a>
-<dd>
+</dd><dt><a HREF="#lbCG">COMPATIBILITY</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbCN">SOME MORE EXAMPLES</a>
-<dd>
+</dd><dt><a HREF="#lbCN">SOME MORE EXAMPLES</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbCS">COMMUNITY</a>
-<dd>
+</dd><dt><a HREF="#lbCS">COMMUNITY</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbCV">THE PURPOSE OF HYPOTHESIS</a>
-<dd>
-<dt><a HREF="#lbCW">TESTIMONIALS</a>
-<dd>
+</dd><dt><a HREF="#lbCV">THE PURPOSE OF HYPOTHESIS</a>
+</dt><dd>
+</dd><dt><a HREF="#lbCW">TESTIMONIALS</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbDJ">OPEN SOURCE PROJECTS USING HYPOTHESIS</a>
-<dd>
-<dt><a HREF="#lbDK">PROJECTS EXTENDING HYPOTHESIS</a>
-<dd>
-<dt><a HREF="#lbDL">CHANGELOG</a>
-<dd>
+</dd><dt><a HREF="#lbDJ">OPEN SOURCE PROJECTS USING HYPOTHESIS</a>
+</dt><dd>
+</dd><dt><a HREF="#lbDK">PROJECTS EXTENDING HYPOTHESIS</a>
+</dt><dd>
+</dd><dt><a HREF="#lbDL">CHANGELOG</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbHV">ONGOING HYPOTHESIS DEVELOPMENT</a>
-<dd>
+</dd><dt><a HREF="#lbHV">ONGOING HYPOTHESIS DEVELOPMENT</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbHY">HELP AND SUPPORT</a>
-<dd>
-<dt><a HREF="#lbHZ">PACKAGING GUIDELINES</a>
-<dd>
+</dd><dt><a HREF="#lbHY">HELP AND SUPPORT</a>
+</dt><dd>
+</dd><dt><a HREF="#lbHZ">PACKAGING GUIDELINES</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbIG">AUTHOR</a>
-<dd>
-<dt><a HREF="#lbIH">COPYRIGHT</a>
-<dd></dl>
+</dd><dt><a HREF="#lbIG">AUTHOR</a>
+</dt><dd>
+</dd><dt><a HREF="#lbIH">COPYRIGHT</a>
+</dt><dd></dd></dl>

@@ -11,9 +11,11 @@ description: "native2ascii – Creates localizable applications by converting a 
 <h2>Synopsis</h2>
 <pre><code>native2ascii</code> [ <i>inputfile</i> ] [ <i>outputfile</i> ]</pre>
 <dl COMPACT>
-<dt><i>inputfile</i></p>
-<dd>The encoded file to be converted to ASCII.</p>
-<dt><i>outputfile</i></p>
-<dd>The converted ASCII file.</dl>
+<dt><i>inputfile</i></dt>
+<dd>The encoded file to be converted to ASCII.</dd>
+<dt><i>outputfile</i></dt>
+<dd>The converted ASCII file.</dd></dl>
 <h2>Description</h2>
 <p>The <code>native2ascii</code> command converts encoded files supported by the Java Runtime Environment (JRE) to files encoded in ASCII, using Unicode escapes (<code>
+</p>
+</code>

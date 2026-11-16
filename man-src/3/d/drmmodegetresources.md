@@ -12,10 +12,10 @@ description: "drmModeGetResources – retrieve current display configuration inf
 <pre>#include &lt;xf86drm.h&gt;</pre>
 <pre>#include &lt;xf86drmMode.h&gt;</pre>
 <dl COMPACT>
-<dt> <code>drmModeResPtr drmModeGetResources(int&nbsp;<wbr></code><i>fd</i><code>);</code></dl>
+<dt> <code>drmModeResPtr drmModeGetResources(int&nbsp;<wbr></code><i>fd</i><code>);</code></dt></dl>
 <h2>Description</h2>
 <p><code>drmModeGetResources</code></p>
-<dd>allocates, populates, and returns a drmModeRes structure containing information about the current display configuration. The structure contains the following fields: </p>
+<dd>allocates, populates, and returns a drmModeRes structure containing information about the current display configuration. The structure contains the following fields: </dd>
 <dl COMPACT>
 <dd>
 <pre>typedef struct _drmModeRes {
@@ -30,7 +30,7 @@ description: "drmModeGetResources – retrieve current display configuration inf
  uint32_t min_width, max_width;
  uint32_t min_height, max_height;
 } drmModeRes, *drmModeResPtr;</pre>
-</dl>
+</dd></dl>
 <p> The <i>count_fbs</i> and <i>fbs</i> fields indicate the number of currently allocated framebuffer objects (i.e., objects that can be attached to a given CRTC or sprite for display). </p>
 <p> The <i>count_crtcs</i> and <i>crtcs</i> fields list the available CRTCs in the configuration. A CRTC is simply an object that can scan out a framebuffer to a display sink, and contains mode timing and relative position information. CRTCs drive encoders, which are responsible for converting the pixel stream into a specific display protocol (e.g., MIPI or HDMI). </p>
 <p> The <i>count_connectors</i> and <i>connectors</i> fields list the available physical connectors on the system. Note that some of these may not be exposed from the chassis (e.g., LVDS or eDP). Connectors are attached to encoders and contain information about the attached display sink (e.g., width and height in mm, subpixel ordering, and various other properties). </p>

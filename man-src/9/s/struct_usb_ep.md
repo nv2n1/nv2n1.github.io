@@ -27,47 +27,47 @@ description: "struct_usb_ep – device side representation of USB endpoint"
 <h2>Members</h2>
 <p>driver_data</p>
 <dl>
-<dd>for use by the gadget driver.</dl>
+<dd>for use by the gadget driver.</dd></dl>
 <p> name</p>
 <dl>
-<dd>identifier for the endpoint, such as &#8220;ep-a&#8221; or &#8220;ep9in-bulk&#8221;</dl>
+<dd>identifier for the endpoint, such as &#8220;ep-a&#8221; or &#8220;ep9in-bulk&#8221;</dd></dl>
 <p> ops</p>
 <dl>
-<dd>Function pointers used to access hardware-specific operations.</dl>
+<dd>Function pointers used to access hardware-specific operations.</dd></dl>
 <p> ep_list</p>
 <dl>
-<dd>the gadget&#8217;s ep_list holds all of its endpoints</dl>
+<dd>the gadget&#8217;s ep_list holds all of its endpoints</dd></dl>
 <p> caps</p>
 <dl>
-<dd>The structure describing types and directions supported by endoint.</dl>
+<dd>The structure describing types and directions supported by endoint.</dd></dl>
 <p> maxpacket</p>
 <dl>
-<dd>The maximum packet size used on this endpoint. The initial value can sometimes be reduced (hardware allowing), according to the endpoint descriptor used to configure the endpoint.</dl>
+<dd>The maximum packet size used on this endpoint. The initial value can sometimes be reduced (hardware allowing), according to the endpoint descriptor used to configure the endpoint.</dd></dl>
 <p> maxpacket_limit</p>
 <dl>
-<dd>The maximum packet size value which can be handled by this endpoint. It&#8217;s set once by UDC driver when endpoint is initialized, and should not be changed. Should not be confused with maxpacket.</dl>
+<dd>The maximum packet size value which can be handled by this endpoint. It&#8217;s set once by UDC driver when endpoint is initialized, and should not be changed. Should not be confused with maxpacket.</dd></dl>
 <p> max_streams</p>
 <dl>
-<dd>The maximum number of streams supported by this EP (0 &#8211; 16, actual number is 2^n)</dl>
+<dd>The maximum number of streams supported by this EP (0 &#8211; 16, actual number is 2^n)</dd></dl>
 <p> mult</p>
 <dl>
-<dd>multiplier, &#8216;mult&#8217; value for SS Isoc EPs</dl>
+<dd>multiplier, &#8216;mult&#8217; value for SS Isoc EPs</dd></dl>
 <p> maxburst</p>
 <dl>
-<dd>the maximum number of bursts supported by this EP (for usb3)</dl>
+<dd>the maximum number of bursts supported by this EP (for usb3)</dd></dl>
 <p> address</p>
 <dl>
-<dd>used to identify the endpoint when finding descriptor that matches connection speed</dl>
+<dd>used to identify the endpoint when finding descriptor that matches connection speed</dd></dl>
 <p> desc</p>
 <dl>
-<dd>endpoint descriptor. This pointer is set before the endpoint is enabled and remains valid until the endpoint is disabled.</dl>
+<dd>endpoint descriptor. This pointer is set before the endpoint is enabled and remains valid until the endpoint is disabled.</dd></dl>
 <p> comp_desc</p>
 <dl>
-<dd>In case of SuperSpeed support, this is the endpoint companion descriptor that is used to configure the endpoint</dl>
+<dd>In case of SuperSpeed support, this is the endpoint companion descriptor that is used to configure the endpoint</dd></dl>
 <h2>Description</h2>
 <p>the bus controller driver lists all the general purpose endpoints in gadget-&gt;ep_list. the control endpoint (gadget-&gt;ep0) is not in that list, and is accessed only in response to a driver <code>setup</code> callback.</p>
 <h2>Author</h2>
 <p><code>David Brownell</code> &lt;dbrownell [at] users.sourceforge.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -14,8 +14,8 @@ description: "aa_image – returns pointer to the framebuffer emulated by AA-lib
 <p> char *aa_image(aa_context *a); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>aa_context *a</code></p>
-<dd> Specifies the AA-lib context to operate on.</dl>
+<dt><code>aa_context *a</code></dt>
+<dd> Specifies the AA-lib context to operate on.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The framebuffer is simple array of characters specifying the brightness value (or palette index depending on the aa_render call). The array is organizated in the aa_imgheight (a) rows of aa_imgwidth(a) characters.</p>
 <h2>RETURNS</h2>

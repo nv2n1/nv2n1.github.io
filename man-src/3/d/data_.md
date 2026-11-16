@@ -61,9 +61,9 @@ description: "QuantLib::Currency – Currency specification"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAJ">Member Function Documentation</a></p>
+<dt><a href="#lbAJ">Member Function Documentation</a></dt>
 <dd>
-<dt><a href="#lbAL">Friends And Related Function Documentation</a></p>
+</dd><dt><a href="#lbAL">Friends And Related Function Documentation</a></dt>
 <dd>
-<dt><a href="#lbAP">Author</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAP">Author</a></dt>
+<dd></dd></dl>

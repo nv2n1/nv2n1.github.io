@@ -17,12 +17,12 @@ description: "krb5_get_credentials krb5_get_credentials_with_flags krb5_get_kdc_
 <p> Fn krb5_get_credentials_with_flags get credentials specified by Fa in_creds-&gt;server and Fa in_creds-&gt;client (the rest of the Fa in_creds structure is ignored) by first looking in the Fa ccache and if doesn&#8217;t exists or is expired, fetch the credential from the KDC using the krbtgt in Fa ccache . The credential is returned in Fa out_creds and should be freed using the function Fn krb5_free_creds . </p>
 <p> Valid flags to pass into Fa options argument are: </p>
 <dl>
-<dt><code>KRB5_GC_CACHED</code></p>
-<dd> Only check the Fa ccache , don&#8217;t got out on network to fetch credential.</p>
-<dt><code>KRB5_GC_USER_USER</code></p>
-<dd> Request a user to user ticket. This option doesn&#8217;t store the resulting user to user credential in the Fa ccache .</p>
-<dt><code>KRB5_GC_EXPIRED_OK</code></p>
-<dd> returns the credential even if it is expired, default behavior is trying to refetch the credential from the KDC.</dl>
+<dt><code>KRB5_GC_CACHED</code></dt>
+<dd> Only check the Fa ccache , don&#8217;t got out on network to fetch credential.</dd>
+<dt><code>KRB5_GC_USER_USER</code></dt>
+<dd> Request a user to user ticket. This option doesn&#8217;t store the resulting user to user credential in the Fa ccache .</dd>
+<dt><code>KRB5_GC_EXPIRED_OK</code></dt>
+<dd> returns the credential even if it is expired, default behavior is trying to refetch the credential from the KDC.</dd></dl>
 <p> Fa Flags are KDCOptions, note the caller must fill in the bit-field and not use the integer associated structure. </p>
 <p> Fn krb5_get_credentials works the same way as Fn krb5_get_credentials_with_flags except that the Fa flags field is missing. </p>
 <p> Fn krb5_get_kdc_cred does the same as the functions above, but the caller must fill in all the information andits closer to the wire protocol. </p>

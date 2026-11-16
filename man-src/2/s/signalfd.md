@@ -18,25 +18,25 @@ description: "signalfd – create a file descriptor for accepting signals"
 <p> If the <i>fd</i> argument is -1, then the call creates a new file descriptor and associates the signal set specified in <i>mask</i> with that file descriptor. If <i>fd</i> is not -1, then it must specify a valid existing signalfd file descriptor, and <i>mask</i> is used to replace the signal set associated with that file descriptor. </p>
 <p> Starting with Linux 2.6.27, the following values may be bitwise ORed in <i>flags</i> to change the behavior of <code>signalfd</code>():</p>
 <dl>
-<dt><code>SFD_NONBLOCK</code></p>
-<dd> Set the <code>O_NONBLOCK</code> file status flag on the open file description (see <code><a href="/docs/linux/man/2-open/">open</a></code>(2)) referred to by the new file descriptor. Using this flag saves extra calls to <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) to achieve the same result.</p>
-<dt><code>SFD_CLOEXEC</code></p>
-<dd> Set the close-on-exec (<code>FD_CLOEXEC</code>) flag on the new file descriptor. See the description of the <code>O_CLOEXEC</code> flag in <code><a href="/docs/linux/man/2-open/">open</a></code>(2) for reasons why this may be useful.</dl>
+<dt><code>SFD_NONBLOCK</code></dt>
+<dd> Set the <code>O_NONBLOCK</code> file status flag on the open file description (see <code><a href="/docs/linux/man/2-open/">open</a></code>(2)) referred to by the new file descriptor. Using this flag saves extra calls to <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2) to achieve the same result.</dd>
+<dt><code>SFD_CLOEXEC</code></dt>
+<dd> Set the close-on-exec (<code>FD_CLOEXEC</code>) flag on the new file descriptor. See the description of the <code>O_CLOEXEC</code> flag in <code><a href="/docs/linux/man/2-open/">open</a></code>(2) for reasons why this may be useful.</dd></dl>
 <p> In Linux up to version 2.6.26, the <i>flags</i> argument is unused, and must be specified as zero. </p>
 <p> <code>signalfd</code>() returns a file descriptor that supports the following operations:</p>
 <dl>
-<dt><code><a href="/docs/linux/man/2-read/">read</a></code>(2)</p>
-<dd> If one or more of the signals specified in <i>mask</i> is pending for the process, then the buffer supplied to <code><a href="/docs/linux/man/2-read/">read</a></code>(2) is used to return one or more <i>signalfd_siginfo</i> structures (see below) that describe the signals. The <code><a href="/docs/linux/man/2-read/">read</a></code>(2) returns information for as many signals as are pending and will fit in the supplied buffer. The buffer must be at least <i>sizeof(struct signalfd_siginfo)</i> bytes. The return value of the <code><a href="/docs/linux/man/2-read/">read</a></code>(2) is the total number of bytes read.</p>
+<dt><code><a href="/docs/linux/man/2-read/">read</a></code>(2)</dt>
+<dd> If one or more of the signals specified in <i>mask</i> is pending for the process, then the buffer supplied to <code><a href="/docs/linux/man/2-read/">read</a></code>(2) is used to return one or more <i>signalfd_siginfo</i> structures (see below) that describe the signals. The <code><a href="/docs/linux/man/2-read/">read</a></code>(2) returns information for as many signals as are pending and will fit in the supplied buffer. The buffer must be at least <i>sizeof(struct signalfd_siginfo)</i> bytes. The return value of the <code><a href="/docs/linux/man/2-read/">read</a></code>(2) is the total number of bytes read.</dd>
 <dt>
-<dd> As a consequence of the <code><a href="/docs/linux/man/2-read/">read</a></code>(2), the signals are consumed, so that they are no longer pending for the process (i.e., will not be caught by signal handlers, and cannot be accepted using <code><a href="/docs/linux/man/2-sigwaitinfo/">sigwaitinfo</a></code>(2)).</p>
+</dt><dd> As a consequence of the <code><a href="/docs/linux/man/2-read/">read</a></code>(2), the signals are consumed, so that they are no longer pending for the process (i.e., will not be caught by signal handlers, and cannot be accepted using <code><a href="/docs/linux/man/2-sigwaitinfo/">sigwaitinfo</a></code>(2)).</dd>
 <dt>
-<dd> If none of the signals in <i>mask</i> is pending for the process, then the <code><a href="/docs/linux/man/2-read/">read</a></code>(2) either blocks until one of the signals in <i>mask</i> is generated for the process, or fails with the error <code>EAGAIN</code> if the file descriptor has been made nonblocking.</p>
-<dt><code><a href="/docs/linux/man/2-poll/">poll</a></code>(2), <code><a href="/docs/linux/man/2-select/">select</a></code>(2) (and similar)</p>
-<dd> The file descriptor is readable (the <code><a href="/docs/linux/man/2-select/">select</a></code>(2) <i>readfds</i> argument; the <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2) <code>POLLIN</code> flag) if one or more of the signals in <i>mask</i> is pending for the process.</p>
+</dt><dd> If none of the signals in <i>mask</i> is pending for the process, then the <code><a href="/docs/linux/man/2-read/">read</a></code>(2) either blocks until one of the signals in <i>mask</i> is generated for the process, or fails with the error <code>EAGAIN</code> if the file descriptor has been made nonblocking.</dd>
+<dt><code><a href="/docs/linux/man/2-poll/">poll</a></code>(2), <code><a href="/docs/linux/man/2-select/">select</a></code>(2) (and similar)</dt>
+<dd> The file descriptor is readable (the <code><a href="/docs/linux/man/2-select/">select</a></code>(2) <i>readfds</i> argument; the <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2) <code>POLLIN</code> flag) if one or more of the signals in <i>mask</i> is pending for the process.</dd>
 <dt>
-<dd> The signalfd file descriptor also supports the other file-descriptor multiplexing APIs: <code><a href="/docs/linux/man/2-pselect/">pselect</a></code>(2), <code><a href="/docs/linux/man/2-ppoll/">ppoll</a></code>(2), and <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7).</p>
-<dt><code><a href="/docs/linux/man/2-close/">close</a></code>(2)</p>
-<dd> When the file descriptor is no longer required it should be closed. When all file descriptors associated with the same signalfd object have been closed, the resources for object are freed by the kernel.</dl>
+</dt><dd> The signalfd file descriptor also supports the other file-descriptor multiplexing APIs: <code><a href="/docs/linux/man/2-pselect/">pselect</a></code>(2), <code><a href="/docs/linux/man/2-ppoll/">ppoll</a></code>(2), and <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7).</dd>
+<dt><code><a href="/docs/linux/man/2-close/">close</a></code>(2)</dt>
+<dd> When the file descriptor is no longer required it should be closed. When all file descriptors associated with the same signalfd object have been closed, the resources for object are freed by the kernel.</dd></dl>
 <h3>The signalfd_siginfo structure</h3>
 <p> The format of the <i>signalfd_siginfo</i> structure(s) returned by <code><a href="/docs/linux/man/2-read/">read</a></code>(2)s from a signalfd file descriptor is as follows: </p>
 <p> struct signalfd_siginfo {<br />
@@ -77,20 +77,20 @@ description: "signalfd – create a file descriptor for accepting signals"
 <p> On success, <code>signalfd</code>() returns a signalfd file descriptor; this is either a new file descriptor (if <i>fd</i> was -1), or <i>fd</i> if <i>fd</i> was a valid signalfd file descriptor. On error, -1 is returned and <i>errno</i> is set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> The <i>fd</i> file descriptor is not a valid file descriptor.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>fd</i> is not a valid signalfd file descriptor.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>flags</i> is invalid; or, in Linux 2.6.26 or earlier, <i>flags</i> is nonzero.</p>
-<dt><code>EMFILE</code></p>
-<dd> The per-process limit on the number of open file descriptors has been reached.</p>
-<dt><code>ENFILE</code></p>
-<dd> The system-wide limit on the total number of open files has been reached.</p>
-<dt><code>ENODEV</code></p>
-<dd> Could not mount (internal) anonymous inode device.</p>
-<dt><code>ENOMEM</code></p>
-<dd> There was insufficient memory to create a new signalfd file descriptor.</dl>
+<dt><code>EBADF</code></dt>
+<dd> The <i>fd</i> file descriptor is not a valid file descriptor.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>fd</i> is not a valid signalfd file descriptor.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>flags</i> is invalid; or, in Linux 2.6.26 or earlier, <i>flags</i> is nonzero.</dd>
+<dt><code>EMFILE</code></dt>
+<dd> The per-process limit on the number of open file descriptors has been reached.</dd>
+<dt><code>ENFILE</code></dt>
+<dd> The system-wide limit on the total number of open files has been reached.</dd>
+<dt><code>ENODEV</code></dt>
+<dd> Could not mount (internal) anonymous inode device.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> There was insufficient memory to create a new signalfd file descriptor.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>signalfd</code>() is available on Linux since kernel 2.6.22. Working support is provided in glibc since version 2.8. The <code>signalfd4</code>() system call (see NOTES) is available on Linux since kernel 2.6.27.</p>
 <h2>CONFORMING TO</h2>

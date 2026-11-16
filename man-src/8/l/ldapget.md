@@ -14,8 +14,8 @@ description: "ldapget – Tool used to fetch URLs via LDAP/LDAPS"
 <p>A tool supplied with the Apache <code>httpd</code> mod_revocator plug-in used to demonstrate how CRLs can be fetched using LDAP/LDAPS without the use of any direct LDAP/LDAPS URLs. The mod_revocator plug-in requires the mod_nss plug-in to also be registered with this Apache <code>httpd</code> process. Prior to <code>mod_revocator-1.0.3-16</code>, this tool was located at <code>/usr/bin/ldapget</code>. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>[NSS database]</code></p>
-<dd>Optionally specifies the destination directory where the NSS databases reside. If this parameter is not provided, the location specified in mod_nss plug-in&#8217;s <code>/etc/httpd/conf.d/nss.conf</code> configuration file will be utilized:</p>
+<dt><code>[NSS database]</code></dt>
+<dd>Optionally specifies the destination directory where the NSS databases reside. If this parameter is not provided, the location specified in mod_nss plug-in&#8217;s <code>/etc/httpd/conf.d/nss.conf</code> configuration file will be utilized:</dd>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -49,8 +49,8 @@ description: "ldapget – Tool used to fetch URLs via LDAP/LDAPS"
 </td>
 </tr>
 </table>
-<dt><code>&lt;url&gt;</code></p>
-<dd>The LDAP/LDAPS URL utilized to fetch the CRL. The following entry in mod_revocator plug-in&#8217;s <code>/etc/httpd/conf.d/revocator.conf</code> configuration file contains a sample utilization of this executable (the line containing <code>ldapget</code> must be uncommented in order to be utilized):</p>
+</dd><dt><code>&lt;url&gt;</code></dt>
+<dd>The LDAP/LDAPS URL utilized to fetch the CRL. The following entry in mod_revocator plug-in&#8217;s <code>/etc/httpd/conf.d/revocator.conf</code> configuration file contains a sample utilization of this executable (the line containing <code>ldapget</code> must be uncommented in order to be utilized):</dd>
 <dd>
 <table>
 <tr VALIGN=top>
@@ -104,7 +104,7 @@ description: "ldapget – Tool used to fetch URLs via LDAP/LDAPS"
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <h2>Bugs</h2>
 <p>Report bugs to <a rel="nofollow" href="http://bugzilla.redhat.com.">http://bugzilla.redhat.com.</a> </p>
 <h2>Authors</h2>

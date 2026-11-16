@@ -10,31 +10,13 @@ description: "QuantLib::IncrementalStatistics – Statistics tool based on incre
 <p>QuantLib::IncrementalStatistics &#8211; Statistics tool based on incremental accumulation. </p>
 <h2>Synopsis</h2>
 <pre><code>void add (Real value, Real weight=1.0)
-
-
 adds a datum to the set, possibly with a weight
-
-
 template&lt;class DataIterator &gt; void addSequence (DataIterator begin, DataIterator end)
-
-
 adds a sequence of data to the set, with default weight
-
-
 template&lt;class DataIterator , class WeightIterator &gt; void addSequence (DataIterator begin, DataIterator end, WeightIterator wbegin)
-
-
 adds a sequence of data to the set, each with its weight
-
-
 void reset ()
-
-
 resets the data to a null set
-
-
-
-
 Protected Attributes</code></pre>
 <h3>Public Types</h3>
 <p>typedef <code>Real</code> <code>value_type</code></p>
@@ -56,31 +38,13 @@ Protected Attributes</code></pre>
 <p> <code>Real</code> <code>downsideDeviation</code> () const<br />
  <code>Modifiers</code> </p>
 <pre><code>void add (Real value, Real weight=1.0)
-
-
 adds a datum to the set, possibly with a weight
-
-
 template&lt;class DataIterator &gt; void addSequence (DataIterator begin, DataIterator end)
-
-
 adds a sequence of data to the set, with default weight
-
-
 template&lt;class DataIterator , class WeightIterator &gt; void addSequence (DataIterator begin, DataIterator end, WeightIterator wbegin)
-
-
 adds a sequence of data to the set, each with its weight
-
-
 void reset ()
-
-
 resets the data to a null set
-
-
-
-
 Protected Attributes</code></pre>
 <p> Size <code>sampleNumber_</code> </p>
 <p> Size <code>downsideSampleNumber_</code> </p>
@@ -98,7 +62,7 @@ Protected Attributes</code></pre>
 <p> It can accumulate a set of data and return statistics (e.g: mean, variance, skewness, kurtosis, error estimation, etc.) </p>
 <p> <code>Warning</code></p>
 <dl>
-<dd>high moments are numerically unstable for high average/standardDeviation ratios.</dl>
+<dd>high moments are numerically unstable for high average/standardDeviation ratios.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3><code>Real</code> mean () const</h3>
 <p>returns the mean, defined as [ </p>
@@ -132,11 +96,11 @@ Protected Attributes</code></pre>
 <p>adds a datum to the set, possibly with a weight </p>
 <p> <code>Precondition:</code></p>
 <dl>
-<dd>weight must be positive or null</dl>
+<dd>weight must be positive or null</dd></dl>
 <h3>void addSequence (DataIterator begin, DataIterator end, WeightIterator wbegin)</h3>
 <p>adds a sequence of data to the set, each with its weight </p>
 <p> <code>Precondition:</code></p>
 <dl>
-<dd>weights must be positive or null</dl>
+<dd>weights must be positive or null</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

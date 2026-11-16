@@ -15,15 +15,15 @@ iterate_supers_type - call function for superblocks of given type
 <h2>Arguments</h2>
 
 <i>type</i>
-<dl><dd><dd>fs type</dl>
+<dl><dd></dd><dd>fs type</dd></dl>
  
 
  <i>f</i>
-<dl><dd>function to call</dl>
+<dl><dd>function to call</dd></dl>
  
 
  <i>arg</i>
-<dl><dd>argument to pass to it</dl>
+<dl><dd>argument to pass to it</dd></dl>
 
 <h2>Description</h2>
 

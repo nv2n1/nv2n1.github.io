@@ -20,10 +20,10 @@ description: "zgeqrt2.f –"
 <dd>
 <pre> ZGEQRT2 computes a QR factorization of a complex M-by-N matrix A, 
  using the compact WY representation of Q. </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>M</i> </p>
+<dd><i>M</i> </dd>
 <pre> M is INTEGER
  The number of rows of the matrix A. M &gt;= N.</pre>
 <p><i>N</i> </p>
@@ -54,13 +54,13 @@ description: "zgeqrt2.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -76,7 +76,8 @@ description: "zgeqrt2.f –"
  block reflector H is then given by
  H = I - V * T * V**H
  where V**H is the conjugate transpose of V.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 128 of file zgeqrt2.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

@@ -15,8 +15,8 @@ void bson_free(void *mem);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>mem</code></p>
-<dd> A memory region.</dl>
+<dt><code>mem</code></dt>
+<dd> A memory region.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function shall free the memory supplied by <code>mem</code> \&amp;. This should be used by functions that require you free the result with <code><a href="/docs/linux/man/3-bson_free/">bson_free</a>(3)</code> \&amp;. </p>
 <h2>COLOPHON</h2>

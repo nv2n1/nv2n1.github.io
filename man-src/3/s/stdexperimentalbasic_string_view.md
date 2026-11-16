@@ -11,14 +11,10 @@ std::experimental::basic_string_view&lt;CharT,Traits&gt;::to_string,std::experim
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class Allocator = allocator&lt;CharT&gt;&gt;
-
 basic_string&lt;CharT, Traits, Allocator&gt;(library fundamentals TS)
-
     to_string(const Allocator &amp;a = Allocator()) const;
-
 template &lt;class Allocator&gt;
 (library fundamentals TS)
-
     explicit
     operator basic_string&lt;CharT, Traits, Allocator&gt;() const;</code></pre> 
 Creates a basic_string with a copy of the content of the current view. 

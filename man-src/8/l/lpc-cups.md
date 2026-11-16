@@ -16,16 +16,16 @@ description: "lpc – line printer control program"
 <h2>Commands</h2>
 <p>The <i>lpc</i> program accepts a subset of commands accepted by the Berkeley <i>lpc</i> program of the same name:</p>
 <dl>
-<dt>exit</p>
-<dd>Exits the command interpreter.</p>
-<dt>help [command]</p>
+<dt>exit</dt>
+<dd>Exits the command interpreter.</dd>
+<dt>help [command]</dt>
 <dd>
-<dt>? [command]</p>
-<dd>Displays a short help message.</p>
-<dt>quit</p>
-<dd>Exits the command interpreter.</p>
-<dt>status [queue]</p>
-<dd>Displays the status of one or more printer or class queues.</dl>
+</dd><dt>? [command]</dt>
+<dd>Displays a short help message.</dd>
+<dt>quit</dt>
+<dd>Exits the command interpreter.</dd>
+<dt>status [queue]</dt>
+<dd>Displays the status of one or more printer or class queues.</dd></dl>
 <h2>Limitations</h2>
 <p>Since <i>lpc</i> is geared towards the Berkeley printing system, it is impossible to use <i>lpc</i> to configure printer or class queues provided by CUPS. To configure printer or class queues you must use the <i><a href="/docs/linux/man/8-lpadmin/">lpadmin</a>(8)</i> command or another CUPS-compatible client with that functionality.</p>
 <h2>Compatibility</h2>

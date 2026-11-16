@@ -15,7 +15,7 @@ register_netdevice_notifier - register a network notifier block
 <h2>Arguments</h2>
 
 <i>nb</i>
-<dl><dd><dd>notifier</dl>
+<dl><dd></dd><dd>notifier</dd></dl>
 
 <h2>Description</h2>
 

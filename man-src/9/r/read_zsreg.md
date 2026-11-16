@@ -10,18 +10,18 @@ description: "read_zsreg – Read a register from a Z85230"
 <p>read_zsreg &#8211; Read a register from a Z85230</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>u8 read_zsreg(struct z8530_channel&nbsp;<wbr>*&nbsp;<wbr></code><i>c</i><code>, u8&nbsp;<wbr></code><i>reg</i><code>);</code></dl>
+<dt> <code>u8 read_zsreg(struct z8530_channel&nbsp;<wbr>*&nbsp;<wbr></code><i>c</i><code>, u8&nbsp;<wbr></code><i>reg</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>c</i></p>
 <dl>
 <dd>
-<dd>Z8530 channel to read from (2 per chip)</dl>
+</dd><dd>Z8530 channel to read from (2 per chip)</dd></dl>
 <p> <i>reg</i></p>
 <dl>
-<dd>Register to read FIXME: Use a spinlock. </p>
+<dd>Register to read FIXME: Use a spinlock. </dd>
 <p> Most of the Z8530 registers are indexed off the control registers. A read is done by writing to the control register and reading the register back. The caller must hold the lock</dl>
 <h2>Author</h2>
 <p><code>Alan Cox</code> &lt;alan [at] lxorguk.ukuu.org.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

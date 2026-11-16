@@ -15,15 +15,15 @@ rpc_clnt_iterate_for_each_xprt - Apply a function to all transports
 <h2>Arguments</h2>
 
 <i>clnt</i>
-<dl><dd><dd>pointer to client</dl>
+<dl><dd></dd><dd>pointer to client</dd></dl>
  
 
  <i>fn</i>
-<dl><dd>function to apply</dl>
+<dl><dd>function to apply</dd></dl>
  
 
  <i>data</i>
-<dl><dd>void pointer to function data</dl>
+<dl><dd>void pointer to function data</dd></dl>
 
 <h2>Description</h2>
 

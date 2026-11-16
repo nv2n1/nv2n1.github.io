@@ -13,20 +13,20 @@ description: "oath_hotp_generate – API function"
 int oath_hotp_generate(const char *secret, size_t secret_length, uint64_t moving_factor, unsigned digits, bool add_checksum, size_t truncation_offset, char *output_otp);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>const char * secret</p>
-<dd>the shared secret string</p>
-<dt>size_t secret_length</p>
-<dd>length of <i>secret</i></p>
-<dt>uint64_t moving_factor</p>
-<dd>a counter indicating the current OTP to generate</p>
-<dt>unsigned digits</p>
-<dd>number of requested digits in the OTP, excluding checksum</p>
-<dt>bool add_checksum</p>
-<dd>whether to add a checksum digit or not</p>
-<dt>size_t truncation_offset</p>
-<dd>use a specific truncation offset</p>
-<dt>char * output_otp</p>
-<dd>output buffer, must have room for the output OTP plus zero</dl>
+<dt>const char * secret</dt>
+<dd>the shared secret string</dd>
+<dt>size_t secret_length</dt>
+<dd>length of <i>secret</i></dd>
+<dt>uint64_t moving_factor</dt>
+<dd>a counter indicating the current OTP to generate</dd>
+<dt>unsigned digits</dt>
+<dd>number of requested digits in the OTP, excluding checksum</dd>
+<dt>bool add_checksum</dt>
+<dd>whether to add a checksum digit or not</dd>
+<dt>size_t truncation_offset</dt>
+<dd>use a specific truncation offset</dd>
+<dt>char * output_otp</dt>
+<dd>output buffer, must have room for the output OTP plus zero</dd></dl>
 <h2>Description</h2>
 <p>Generate a one-time-password using the HOTP algorithm as described in RFC 4226. </p>
 <p> Use a value of <code>OATH_HOTP_DYNAMIC_TRUNCATION</code> for <i>truncation_offset</i> unless you really need a specific truncation offset. </p>

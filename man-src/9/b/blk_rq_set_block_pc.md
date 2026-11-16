@@ -15,7 +15,7 @@ blk_rq_set_block_pc - initialize a request to type BLOCK_PC
 <h2>Arguments</h2>
 
 <i>rq</i>
-<dl><dd><dd>request to be initialized</dl>
+<dl><dd></dd><dd>request to be initialized</dd></dl>
 
 <h2>Copyright</h2>
 

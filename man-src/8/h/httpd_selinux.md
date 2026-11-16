@@ -148,12 +148,12 @@ description: "httpd_selinux – Security Enhanced Linux Policy for the httpd pro
 <p> Policy governs the access confined processes have to these ports. SELinux httpd policy is very flexible allowing users to setup their httpd processes in as secure a method as possible. </p>
 <p> The following port types are defined for httpd: </p>
 <dl>
-<dt><code>http_cache_port_t</code></p>
+<dt><code>http_cache_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 8080,8118,8123,10001-10010 udp 3130 </p>
-<dt><code>http_port_t</code></p>
+</dd><dd>Default Defined Ports: tcp 8080,8118,8123,10001-10010 udp 3130 </dd>
+<dt><code>http_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 80,81,443,488,8008,8009,8443,9000</dl>
+</dd><dd>Default Defined Ports: tcp 80,81,443,488,8008,8009,8443,9000</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type httpd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>abrt_retrace_spool_t</code> </p>
@@ -419,28 +419,28 @@ description: "httpd_selinux – Security Enhanced Linux Policy for the httpd pro
 <p> <code>httpd_cache_t</code> </p>
 <p> &#8211; Set files with the httpd_cache_t type, if you want to store the files under the /var/cache directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/cache/rt(3|4)(/.*)?, /var/cache/ssl.*.sem, /var/cache/mod_.*, /var/cache/php-.*, /var/cache/httpd(/.*)?, /var/cache/mason(/.*)?, /var/cache/mod_ssl(/.*)?, /var/cache/lighttpd(/.*)?, /var/cache/mediawiki(/.*)?, /var/cache/mod_proxy(/.*)?, /var/cache/mod_gnutls(/.*)?, /var/cache/php-mmcache(/.*)?, /var/cache/php-eaccelerator(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/cache/rt(3|4)(/.*)?, /var/cache/ssl.*.sem, /var/cache/mod_.*, /var/cache/php-.*, /var/cache/httpd(/.*)?, /var/cache/mason(/.*)?, /var/cache/mod_ssl(/.*)?, /var/cache/lighttpd(/.*)?, /var/cache/mediawiki(/.*)?, /var/cache/mod_proxy(/.*)?, /var/cache/mod_gnutls(/.*)?, /var/cache/php-mmcache(/.*)?, /var/cache/php-eaccelerator(/.*)? </dd>
 </dl>
 <p> <code>httpd_config_t</code> </p>
 <p> &#8211; Set files with the httpd_config_t type, if you want to treat the files as httpd configuration data, usually stored under the /etc directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/httpd(/.*)?, /etc/nginx(/.*)?, /etc/apache(2)?(/.*)?, /etc/cherokee(/.*)?, /etc/lighttpd(/.*)?, /etc/apache-ssl(2)?(/.*)?, /var/lib/openshift/.httpd.d(/.*)?, /etc/opt/rh/rh-nginx18/nginx(/.*)?, /var/lib/stickshift/.httpd.d(/.*)?, /etc/vhosts, /etc/thttpd.conf </p>
+<dt>Paths:</dt>
+<dd>/etc/httpd(/.*)?, /etc/nginx(/.*)?, /etc/apache(2)?(/.*)?, /etc/cherokee(/.*)?, /etc/lighttpd(/.*)?, /etc/apache-ssl(2)?(/.*)?, /var/lib/openshift/.httpd.d(/.*)?, /etc/opt/rh/rh-nginx18/nginx(/.*)?, /var/lib/stickshift/.httpd.d(/.*)?, /etc/vhosts, /etc/thttpd.conf </dd>
 </dl>
 <p> <code>httpd_exec_t</code> </p>
 <p> &#8211; Set files with the httpd_exec_t type, if you want to transition an executable to the httpd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/httpd(.worker)?, /usr/sbin/apache(2)?, /usr/lib/apache-ssl/.+, /usr/sbin/apache-ssl(2)?, /usr/share/jetty/bin/jetty.sh, /usr/sbin/nginx, /usr/sbin/thttpd, /usr/sbin/php-fpm, /usr/sbin/cherokee, /usr/sbin/lighttpd, /usr/sbin/httpd.event, /usr/bin/mongrel_rails, /usr/sbin/htcacheclean </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/httpd(.worker)?, /usr/sbin/apache(2)?, /usr/lib/apache-ssl/.+, /usr/sbin/apache-ssl(2)?, /usr/share/jetty/bin/jetty.sh, /usr/sbin/nginx, /usr/sbin/thttpd, /usr/sbin/php-fpm, /usr/sbin/cherokee, /usr/sbin/lighttpd, /usr/sbin/httpd.event, /usr/bin/mongrel_rails, /usr/sbin/htcacheclean </dd>
 </dl>
 <p> <code>httpd_helper_exec_t</code> </p>
 <p> &#8211; Set files with the httpd_helper_exec_t type, if you want to transition an executable to the httpd_helper_t domain. </p>
 <p> <code>httpd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the httpd_initrc_exec_t type, if you want to transition an executable to the httpd_initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/init.d/cherokee, /etc/rc.d/init.d/httpd, /etc/rc.d/init.d/lighttpd </p>
+<dt>Paths:</dt>
+<dd>/etc/init.d/cherokee, /etc/rc.d/init.d/httpd, /etc/rc.d/init.d/lighttpd </dd>
 </dl>
 <p> <code>httpd_keytab_t</code> </p>
 <p> &#8211; Set files with the httpd_keytab_t type, if you want to treat the files as kerberos keytab files. </p>
@@ -449,14 +449,14 @@ description: "httpd_selinux – Security Enhanced Linux Policy for the httpd pro
 <p> <code>httpd_log_t</code> </p>
 <p> &#8211; Set files with the httpd_log_t type, if you want to treat the data as httpd log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/srv/([^/]*/)?www/logs(/.*)?, /var/www(/.*)?/logs(/.*)?, /var/log/glpi(/.*)?, /var/log/cacti(/.*)?, /var/log/httpd(/.*)?, /var/log/nginx(/.*)?, /var/log/apache(2)?(/.*)?, /var/log/horizon(/.*)?, /var/log/php-fpm(/.*)?, /var/log/cherokee(/.*)?, /var/log/lighttpd(/.*)?, /var/log/suphp.log.*, /var/log/thttpd.log.*, /var/log/apache-ssl(2)?(/.*)?, /var/log/cgiwrap.log.*, /var/www/stickshift/[^/]*/log(/.*)?, /var/log/graphite-web(/.*)?, /var/www/miq/vmdb/log(/.*)?, /var/log/roundcubemail(/.*)?, /var/log/php_errors.log.*, /var/opt/rh/rh-nginx18/log(/.*)?, /var/log/dirsrv/admin-serv(/.*)?, /var/lib/openshift/.log/httpd(/.*)?, /var/www/openshift/console/log(/.*)?, /var/www/openshift/broker/httpd/logs(/.*)?, /var/www/openshift/console/httpd/logs(/.*)?, /etc/httpd/logs </p>
+<dt>Paths:</dt>
+<dd>/srv/([^/]*/)?www/logs(/.*)?, /var/www(/.*)?/logs(/.*)?, /var/log/glpi(/.*)?, /var/log/cacti(/.*)?, /var/log/httpd(/.*)?, /var/log/nginx(/.*)?, /var/log/apache(2)?(/.*)?, /var/log/horizon(/.*)?, /var/log/php-fpm(/.*)?, /var/log/cherokee(/.*)?, /var/log/lighttpd(/.*)?, /var/log/suphp.log.*, /var/log/thttpd.log.*, /var/log/apache-ssl(2)?(/.*)?, /var/log/cgiwrap.log.*, /var/www/stickshift/[^/]*/log(/.*)?, /var/log/graphite-web(/.*)?, /var/www/miq/vmdb/log(/.*)?, /var/log/roundcubemail(/.*)?, /var/log/php_errors.log.*, /var/opt/rh/rh-nginx18/log(/.*)?, /var/log/dirsrv/admin-serv(/.*)?, /var/lib/openshift/.log/httpd(/.*)?, /var/www/openshift/console/log(/.*)?, /var/www/openshift/broker/httpd/logs(/.*)?, /var/www/openshift/console/httpd/logs(/.*)?, /etc/httpd/logs </dd>
 </dl>
 <p> <code>httpd_modules_t</code> </p>
 <p> &#8211; Set files with the httpd_modules_t type, if you want to treat the files as httpd modules. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/httpd(/.*)?, /usr/lib/apache(/.*)?, /usr/lib/cherokee(/.*)?, /usr/lib/lighttpd(/.*)?, /usr/lib/apache2/modules(/.*)?, /etc/httpd/modules </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/httpd(/.*)?, /usr/lib/apache(/.*)?, /usr/lib/cherokee(/.*)?, /usr/lib/lighttpd(/.*)?, /usr/lib/apache2/modules(/.*)?, /etc/httpd/modules </dd>
 </dl>
 <p> <code>httpd_passwd_exec_t</code> </p>
 <p> &#8211; Set files with the httpd_passwd_exec_t type, if you want to transition an executable to the httpd_passwd_t domain. </p>
@@ -471,16 +471,16 @@ description: "httpd_selinux – Security Enhanced Linux Policy for the httpd pro
 <p> <code>httpd_suexec_exec_t</code> </p>
 <p> &#8211; Set files with the httpd_suexec_exec_t type, if you want to transition an executable to the httpd_suexec_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/apache(2)?/suexec(2)?, /usr/lib/cgi-bin/(nph-)?cgiwrap(d)?, /usr/sbin/suexec </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/apache(2)?/suexec(2)?, /usr/lib/cgi-bin/(nph-)?cgiwrap(d)?, /usr/sbin/suexec </dd>
 </dl>
 <p> <code>httpd_suexec_tmp_t</code> </p>
 <p> &#8211; Set files with the httpd_suexec_tmp_t type, if you want to store httpd suexec temporary files in the /tmp directories. </p>
 <p> <code>httpd_sys_content_t</code> </p>
 <p> &#8211; Set files with the httpd_sys_content_t type, if you want to treat the files as httpd sys content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/srv/([^/]*/)?www(/.*)?, /var/www(/.*)?, /etc/htdig(/.*)?, /srv/gallery2(/.*)?, /var/lib/trac(/.*)?, /var/lib/htdig(/.*)?, /var/www/icons(/.*)?, /usr/share/glpi(/.*)?, /usr/share/htdig(/.*)?, /usr/share/drupal.*, /usr/share/z-push(/.*)?, /var/www/svn/conf(/.*)?, /usr/share/icecast(/.*)?, /var/lib/cacti/rra(/.*)?, /usr/share/ntop/html(/.*)?, /usr/share/nginx/html(/.*)?, /usr/share/doc/ghc/html(/.*)?, /usr/share/openca/htdocs(/.*)?, /usr/share/selinux-policy[^/]*/html(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/srv/([^/]*/)?www(/.*)?, /var/www(/.*)?, /etc/htdig(/.*)?, /srv/gallery2(/.*)?, /var/lib/trac(/.*)?, /var/lib/htdig(/.*)?, /var/www/icons(/.*)?, /usr/share/glpi(/.*)?, /usr/share/htdig(/.*)?, /usr/share/drupal.*, /usr/share/z-push(/.*)?, /var/www/svn/conf(/.*)?, /usr/share/icecast(/.*)?, /var/lib/cacti/rra(/.*)?, /usr/share/ntop/html(/.*)?, /usr/share/nginx/html(/.*)?, /usr/share/doc/ghc/html(/.*)?, /usr/share/openca/htdocs(/.*)?, /usr/share/selinux-policy[^/]*/html(/.*)? </dd>
 </dl>
 <p> <code>httpd_sys_htaccess_t</code> </p>
 <p> &#8211; Set files with the httpd_sys_htaccess_t type, if you want to treat the file as a httpd sys access file. </p>
@@ -489,20 +489,20 @@ description: "httpd_selinux – Security Enhanced Linux Policy for the httpd pro
 <p> <code>httpd_sys_rw_content_t</code> </p>
 <p> &#8211; Set files with the httpd_sys_rw_content_t type, if you want to treat the files as httpd sys read/write content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/glpi(/.*)?, /etc/horde(/.*)?, /etc/drupal.*, /etc/z-push(/.*)?, /var/lib/svn(/.*)?, /var/www/svn(/.*)?, /etc/owncloud(/.*)?, /var/www/html(/.*)?/uploads(/.*)?, /var/www/html(/.*)?/wp-content(/.*)?, /var/www/html(/.*)?/wp_backups(/.*)?, /var/www/html(/.*)?/sites/default/files(/.*)?, /var/www/html(/.*)?/sites/default/settings.php, /etc/mock/koji(/.*)?, /var/lib/drupal.*, /etc/zabbix/web(/.*)?, /var/lib/moodle(/.*)?, /var/log/z-push(/.*)?, /var/spool/gosa(/.*)?, /etc/WebCalendar(/.*)?, /usr/share/joomla(/.*)?, /var/lib/dokuwiki(/.*)?, /var/lib/owncloud(/.*)?, /var/spool/viewvc(/.*)?, /var/lib/pootle/po(/.*)?, /var/www/moodledata(/.*)?, /srv/gallery2/smarty(/.*)?, /var/www/moodle/data(/.*)?, /var/lib/graphite-web(/.*)?, /var/www/gallery/albums(/.*)?, /var/www/html/owncloud/data(/.*)?, /usr/share/wordpress-mu/wp-content(/.*)?, /usr/share/wordpress/wp-content/uploads(/.*)?, /usr/share/wordpress/wp-content/upgrade(/.*)?, /var/www/html/configuration.php </p>
+<dt>Paths:</dt>
+<dd>/etc/glpi(/.*)?, /etc/horde(/.*)?, /etc/drupal.*, /etc/z-push(/.*)?, /var/lib/svn(/.*)?, /var/www/svn(/.*)?, /etc/owncloud(/.*)?, /var/www/html(/.*)?/uploads(/.*)?, /var/www/html(/.*)?/wp-content(/.*)?, /var/www/html(/.*)?/wp_backups(/.*)?, /var/www/html(/.*)?/sites/default/files(/.*)?, /var/www/html(/.*)?/sites/default/settings.php, /etc/mock/koji(/.*)?, /var/lib/drupal.*, /etc/zabbix/web(/.*)?, /var/lib/moodle(/.*)?, /var/log/z-push(/.*)?, /var/spool/gosa(/.*)?, /etc/WebCalendar(/.*)?, /usr/share/joomla(/.*)?, /var/lib/dokuwiki(/.*)?, /var/lib/owncloud(/.*)?, /var/spool/viewvc(/.*)?, /var/lib/pootle/po(/.*)?, /var/www/moodledata(/.*)?, /srv/gallery2/smarty(/.*)?, /var/www/moodle/data(/.*)?, /var/lib/graphite-web(/.*)?, /var/www/gallery/albums(/.*)?, /var/www/html/owncloud/data(/.*)?, /usr/share/wordpress-mu/wp-content(/.*)?, /usr/share/wordpress/wp-content/uploads(/.*)?, /usr/share/wordpress/wp-content/upgrade(/.*)?, /var/www/html/configuration.php </dd>
 </dl>
 <p> <code>httpd_sys_script_exec_t</code> </p>
 <p> &#8211; Set files with the httpd_sys_script_exec_t type, if you want to transition an executable to the httpd_sys_script_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/.*.cgi, /opt/.*.cgi, /var/www/[^/]*/cgi-bin(/.*)?, /var/www/perl(/.*)?, /var/www/html/[^/]*/cgi-bin(/.*)?, /usr/lib/cgi-bin(/.*)?, /var/www/cgi-bin(/.*)?, /var/www/svn/hooks(/.*)?, /usr/share/wordpress/.*.php, /usr/local/nagios/sbin(/.*)?, /usr/share/wordpress/wp-includes/.*.php, /usr/share/wordpress-mu/wp-config.php </p>
+<dt>Paths:</dt>
+<dd>/usr/.*.cgi, /opt/.*.cgi, /var/www/[^/]*/cgi-bin(/.*)?, /var/www/perl(/.*)?, /var/www/html/[^/]*/cgi-bin(/.*)?, /usr/lib/cgi-bin(/.*)?, /var/www/cgi-bin(/.*)?, /var/www/svn/hooks(/.*)?, /usr/share/wordpress/.*.php, /usr/local/nagios/sbin(/.*)?, /usr/share/wordpress/wp-includes/.*.php, /usr/share/wordpress-mu/wp-config.php </dd>
 </dl>
 <p> <code>httpd_tmp_t</code> </p>
 <p> &#8211; Set files with the httpd_tmp_t type, if you want to store httpd temporary files in the /tmp directories. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/user/apache(/.*)?, /var/www/openshift/console/tmp(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/run/user/apache(/.*)?, /var/www/openshift/console/tmp(/.*)? </dd>
 </dl>
 <p> <code>httpd_tmpfs_t</code> </p>
 <p> &#8211; Set files with the httpd_tmpfs_t type, if you want to store httpd files on a tmpfs file system. </p>
@@ -511,8 +511,8 @@ description: "httpd_selinux – Security Enhanced Linux Policy for the httpd pro
 <p> <code>httpd_unit_file_t</code> </p>
 <p> &#8211; Set files with the httpd_unit_file_t type, if you want to treat the files as httpd unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/systemd/system/httpd.*, /usr/lib/systemd/system/jetty.*, /usr/lib/systemd/system/nginx.*, /usr/lib/systemd/system/thttpd.*, /usr/lib/systemd/system/php-fpm.* </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/systemd/system/httpd.*, /usr/lib/systemd/system/jetty.*, /usr/lib/systemd/system/nginx.*, /usr/lib/systemd/system/thttpd.*, /usr/lib/systemd/system/php-fpm.* </dd>
 </dl>
 <p> <code>httpd_user_content_t</code> </p>
 <p> &#8211; Set files with the httpd_user_content_t type, if you want to treat the files as httpd user content. </p>
@@ -527,26 +527,26 @@ description: "httpd_selinux – Security Enhanced Linux Policy for the httpd pro
 <p> <code>httpd_var_lib_t</code> </p>
 <p> &#8211; Set files with the httpd_var_lib_t type, if you want to store the httpd files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/rt(3|4)/data/RT-Shredder(/.*)?, /var/lib/dav(/.*)?, /var/lib/php(/.*)?, /var/lib/glpi(/.*)?, /var/lib/httpd(/.*)?, /var/lib/nginx(/.*)?, /var/lib/z-push(/.*)?, /var/lib/ganglia(/.*)?, /var/lib/ipsilon(/.*)?, /var/lib/cherokee(/.*)?, /var/lib/lighttpd(/.*)?, /var/lib/mod_security(/.*)?, /var/lib/roundcubemail(/.*)?, /var/opt/rh/rh-nginx18/lib/nginx(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/rt(3|4)/data/RT-Shredder(/.*)?, /var/lib/dav(/.*)?, /var/lib/php(/.*)?, /var/lib/glpi(/.*)?, /var/lib/httpd(/.*)?, /var/lib/nginx(/.*)?, /var/lib/z-push(/.*)?, /var/lib/ganglia(/.*)?, /var/lib/ipsilon(/.*)?, /var/lib/cherokee(/.*)?, /var/lib/lighttpd(/.*)?, /var/lib/mod_security(/.*)?, /var/lib/roundcubemail(/.*)?, /var/opt/rh/rh-nginx18/lib/nginx(/.*)? </dd>
 </dl>
 <p> <code>httpd_var_run_t</code> </p>
 <p> &#8211; Set files with the httpd_var_run_t type, if you want to store the httpd files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/wsgi.*, /var/run/mod_.*, /var/run/httpd.*, /var/run/nginx.*, /var/run/apache.*, /var/run/php-fpm(/.*)?, /var/run/lighttpd(/.*)?, /var/lib/php/session(/.*)?, /var/lib/php/wsdlcache(/.*)?, /var/run/dirsrv/admin-serv.*, /var/opt/rh/rh-nginx18/run/nginx(/.*)?, /var/www/openshift/broker/httpd/run(/.*)?, /var/www/openshift/console/httpd/run(/.*)?, /opt/dirsrv/var/run/dirsrv/dsgw/cookies(/.*)?, /var/run/thttpd.pid, /var/run/gcache_port, /var/run/cherokee.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/wsgi.*, /var/run/mod_.*, /var/run/httpd.*, /var/run/nginx.*, /var/run/apache.*, /var/run/php-fpm(/.*)?, /var/run/lighttpd(/.*)?, /var/lib/php/session(/.*)?, /var/lib/php/wsdlcache(/.*)?, /var/run/dirsrv/admin-serv.*, /var/opt/rh/rh-nginx18/run/nginx(/.*)?, /var/www/openshift/broker/httpd/run(/.*)?, /var/www/openshift/console/httpd/run(/.*)?, /opt/dirsrv/var/run/dirsrv/dsgw/cookies(/.*)?, /var/run/thttpd.pid, /var/run/gcache_port, /var/run/cherokee.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Sharing Files</h2>
 <p>If you want to share files with multiple domains (Apache, FTP, rsync, Samba), you can set a file context of public_content_t and public_content_rw_t. These context allow any of the above domains to read the content. If you want a particular domain to write to the public_content_rw_t domain, you must set the appropriate boolean.</p>
 <dl>
-<dt>Allow httpd servers to read the /var/httpd directory by adding the public_content_t file type to the directory and by restoring the file type.</p>
-<dd></dl>
+<dt>Allow httpd servers to read the /var/httpd directory by adding the public_content_t file type to the directory and by restoring the file type.</dt>
+<dd></dd></dl>
 <p> <code>semanage fcontext -a -t public_content_t &quot;/var/httpd(/.*)?&quot;</code><br />
  <code>restorecon -F -R -v /var/httpd</code></p>
 <dl>
-<dt>Allow httpd servers to read and write /var/httpd/incoming by adding the public_content_rw_t type to the directory and by restoring the file type. You also need to turn on the httpd_anon_write boolean.</p>
-<dd></dl>
+<dt>Allow httpd servers to read and write /var/httpd/incoming by adding the public_content_rw_t type to the directory and by restoring the file type. You also need to turn on the httpd_anon_write boolean.</dt>
+<dd></dd></dl>
 <p> <code>semanage fcontext -a -t public_content_rw_t &quot;/var/httpd/incoming(/.*)?&quot;</code><br />
  <code>restorecon -F -R -v /var/httpd/incoming</code><br />
  <code>setsebool -P httpd_anon_write 1</code> </p>

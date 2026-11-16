@@ -19,30 +19,30 @@ description: "join-dctrl – perform relational join on data in dctrl format"
 <p> Every input file must be in ascending order on its join field; this allows the program to work fast. The <code><a href="/docs/linux/man/1-sort-dctrl/">sort-dctrl</a></code>(1) program can be used to make it so.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-1 </code><i>field</i>, <code>&#8211;1st-join-field=</code><i>field</p>
-<dd> Specify the join field</i> of the first input file.</p>
-<dt><code>-2 </code><i>field</i>, <code>&#8211;2nd-join-field=</code><i>field</p>
-<dd> Specify the join field</i> of the second input file.</p>
-<dt><code>-j </code><i>field</i>, <code>&#8211;join-field=</code><i>field</p>
-<dd> Specify a common join field</i> for all files.</p>
-<dt><code>-a </code><i>fileno</i>, <code>&#8211;unpairable-from=</code><i>fileno</p>
-<dd> Specify that unmatched paragraphs from the first (if </i><code>1</code> is given) or the second (if <code>2</code> is given) file are printed.</p>
-<dt><code>-o </code><i>fieldspec</i>, <code>&#8211;output-fields=</code><i>fieldspec</p>
-<dd> Specify which fields are included in the output. Fields are separated by commas (more than one </i><code>-o</code> option can be used, too). Each field is specified in the format <i>fileno</i><code>.</code><i>field</i> in which <i>fileno</i> is the ordinal number of the input file from which the field is drawn (either <code>1</code> or <code>2</code>), and <i>field</i> gives the name of the field to use. As a special case, simple <code>0</code> can be used instead of <i>fileno</i><code>.</code><i>field</i> to refer to the common value of the join fields.</p>
+<dt><code>-1 </code><i>field</i>, <code>&#8211;1st-join-field=</code><i>field</dt>
+<dd> Specify the join field</i> of the first input file.</dd>
+<dt><code>-2 </code><i>field</i>, <code>&#8211;2nd-join-field=</code><i>field</dt>
+<dd> Specify the join field</i> of the second input file.</dd>
+<dt><code>-j </code><i>field</i>, <code>&#8211;join-field=</code><i>field</dt>
+<dd> Specify a common join field</i> for all files.</dd>
+<dt><code>-a </code><i>fileno</i>, <code>&#8211;unpairable-from=</code><i>fileno</dt>
+<dd> Specify that unmatched paragraphs from the first (if </i><code>1</code> is given) or the second (if <code>2</code> is given) file are printed.</dd>
+<dt><code>-o </code><i>fieldspec</i>, <code>&#8211;output-fields=</code><i>fieldspec</dt>
+<dd> Specify which fields are included in the output. Fields are separated by commas (more than one </i><code>-o</code> option can be used, too). Each field is specified in the format <i>fileno</i><code>.</code><i>field</i> in which <i>fileno</i> is the ordinal number of the input file from which the field is drawn (either <code>1</code> or <code>2</code>), and <i>field</i> gives the name of the field to use. As a special case, simple <code>0</code> can be used instead of <i>fileno</i><code>.</code><i>field</i> to refer to the common value of the join fields.</dd>
 <dt>
-<dd> The name of the field (not including the file number) is used in the output as the name of the field. However, a different name for output purposes can be specified by suffixing the field specification by a colon and the preferred visible name.</p>
+</dt><dd> The name of the field (not including the file number) is used in the output as the name of the field. However, a different name for output purposes can be specified by suffixing the field specification by a colon and the preferred visible name.</dd>
 <dt>
-<dd> For example, the option <code>-o 0,1.Version:Old-Version,2.Version</code> specifies that the first field in any output record should be the join field, the second field should be <code>Old-Version</code> drawing its data from the <code>Version</code> field of the first input file, and the third field should be <code>Version</code> drawing its data from the field with the same name in the second input file, and these are the only fields in an output record.</p>
+</dt><dd> For example, the option <code>-o 0,1.Version:Old-Version,2.Version</code> specifies that the first field in any output record should be the join field, the second field should be <code>Old-Version</code> drawing its data from the <code>Version</code> field of the first input file, and the third field should be <code>Version</code> drawing its data from the field with the same name in the second input file, and these are the only fields in an output record.</dd>
 <dt>
-<dd> If no <code>-o</code> option is given, all fields of all the records being joined are included in the output.</p>
-<dt><code>-l </code><i>level</i>, <code>&#8211;errorlevel=</code><i>level</p>
-<dd> Set log level to level</i>. <i>level</i> is one of <code>fatal</code>, <code>important</code>, <code>informational</code> and <code>debug</code>, but the last may not be available, depending on the compile-time options. These categories are given here in order; every message that is emitted when <code>fatal</code> is in effect, will be emitted in the <code>important</code> error level, and so on. The default is <code>important</code>.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print out version information.</p>
-<dt><code>-C</code>, <code>&#8211;copying</code></p>
-<dd> Print out the copyright license. This produces much output; be sure to redirect or pipe it somewhere (such as your favourite pager).</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print out a help summary.</dl>
+</dt><dd> If no <code>-o</code> option is given, all fields of all the records being joined are included in the output.</dd>
+<dt><code>-l </code><i>level</i>, <code>&#8211;errorlevel=</code><i>level</dt>
+<dd> Set log level to level</i>. <i>level</i> is one of <code>fatal</code>, <code>important</code>, <code>informational</code> and <code>debug</code>, but the last may not be available, depending on the compile-time options. These categories are given here in order; every message that is emitted when <code>fatal</code> is in effect, will be emitted in the <code>important</code> error level, and so on. The default is <code>important</code>.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print out version information.</dd>
+<dt><code>-C</code>, <code>&#8211;copying</code></dt>
+<dd> Print out the copyright license. This produces much output; be sure to redirect or pipe it somewhere (such as your favourite pager).</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print out a help summary.</dd></dl>
 <h2>OPERANDS</h2>
 <p> <code>join-dctrl</code> will treat each file named on the command line as a relational database table. A file called <code>&#8211;</code> represents the program&#8217;s standard input stream. Currently, exactly two files must be named.</p>
 <h2>STDIN</h2>

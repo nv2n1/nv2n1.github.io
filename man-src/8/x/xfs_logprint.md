@@ -16,37 +16,37 @@ description: "xfs_logprint – print the log of an XFS filesystem"
 <p> The second mode starts printing out information from the beginning of the log. Some error blocks might print out in the beginning because the last log record usually overlaps the oldest log record. A message is printed when the physical end of the log is reached and when the logical end of the log is reached. A log record view is displayed one record at a time. Transactions that span log records may not be decoded fully.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-b</code></p>
-<dd>Extract and print buffer information. Only used in transactional view.</p>
-<dt><code>-c</code></p>
-<dd>Attempt to continue when an error is detected.</p>
-<dt><code>-C</code><i> filename</i></p>
-<dd>Copy the log from the filesystem to the file <i>filename</i>. The log itself is not printed.</p>
-<dt><code>-d</code></p>
-<dd>Dump the log from front to end, printing where each log record is located on disk.</p>
-<dt><code>-D</code></p>
-<dd>Do not decode anything; just print data.</p>
-<dt><code>-e</code></p>
-<dd>Exit when an error is found in the log. Normally, <code>xfs_logprint</code> tries to continue and unwind from bad logs. However, sometimes it just dies in bad ways. Using this option prevents core dumps.</p>
-<dt><code>-f</code></p>
-<dd>Specifies that the filesystem image to be processed is stored in a regular file at <i>device</i> (see the <code><a href="/docs/linux/man/8-mkfs-xfs/">mkfs.xfs</a></code>(8) <code>-d</code> <i>file</i> option). This might happen if an image copy of a filesystem has been made into an ordinary file with <code><a href="/docs/linux/man/8-xfs_copy/">xfs_copy</a></code>(8).</p>
-<dt><code>-l</code><i> logdev</i></p>
-<dd>External log device. Only for those filesystems which use an external log.</p>
-<dt><code>-i</code></p>
-<dd>Extract and print inode information. Only used in transactional view.</p>
-<dt><code>-q</code></p>
-<dd>Extract and print quota information. Only used in transactional view.</p>
-<dt><code>-n</code></p>
-<dd>Do not try and interpret log data; just interpret log header information.</p>
-<dt><code>-o</code></p>
-<dd>Also print buffer data in hex. Normally, buffer data is just decoded, so better information can be printed.</p>
-<dt><code>-s</code><i> start-block</i></p>
-<dd>Override any notion of where to start printing.</p>
-<dt><code>-t</code></p>
-<dd>Print out the transactional view.</p>
-<dt><code>-v</code></p>
-<dd>Print &quot;overwrite&quot; data.</p>
-<dt><code>-V</code></p>
-<dd>Prints the version number and exits.</dl>
+<dt><code>-b</code></dt>
+<dd>Extract and print buffer information. Only used in transactional view.</dd>
+<dt><code>-c</code></dt>
+<dd>Attempt to continue when an error is detected.</dd>
+<dt><code>-C</code><i> filename</i></dt>
+<dd>Copy the log from the filesystem to the file <i>filename</i>. The log itself is not printed.</dd>
+<dt><code>-d</code></dt>
+<dd>Dump the log from front to end, printing where each log record is located on disk.</dd>
+<dt><code>-D</code></dt>
+<dd>Do not decode anything; just print data.</dd>
+<dt><code>-e</code></dt>
+<dd>Exit when an error is found in the log. Normally, <code>xfs_logprint</code> tries to continue and unwind from bad logs. However, sometimes it just dies in bad ways. Using this option prevents core dumps.</dd>
+<dt><code>-f</code></dt>
+<dd>Specifies that the filesystem image to be processed is stored in a regular file at <i>device</i> (see the <code><a href="/docs/linux/man/8-mkfs-xfs/">mkfs.xfs</a></code>(8) <code>-d</code> <i>file</i> option). This might happen if an image copy of a filesystem has been made into an ordinary file with <code><a href="/docs/linux/man/8-xfs_copy/">xfs_copy</a></code>(8).</dd>
+<dt><code>-l</code><i> logdev</i></dt>
+<dd>External log device. Only for those filesystems which use an external log.</dd>
+<dt><code>-i</code></dt>
+<dd>Extract and print inode information. Only used in transactional view.</dd>
+<dt><code>-q</code></dt>
+<dd>Extract and print quota information. Only used in transactional view.</dd>
+<dt><code>-n</code></dt>
+<dd>Do not try and interpret log data; just interpret log header information.</dd>
+<dt><code>-o</code></dt>
+<dd>Also print buffer data in hex. Normally, buffer data is just decoded, so better information can be printed.</dd>
+<dt><code>-s</code><i> start-block</i></dt>
+<dd>Override any notion of where to start printing.</dd>
+<dt><code>-t</code></dt>
+<dd>Print out the transactional view.</dd>
+<dt><code>-v</code></dt>
+<dd>Print &quot;overwrite&quot; data.</dd>
+<dt><code>-V</code></dt>
+<dd>Prints the version number and exits.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-mkfs-xfs/">mkfs.xfs</a></code>(8), <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8). </p>

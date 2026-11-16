@@ -27,43 +27,43 @@ description: "struct_wimax_dev – Generic WiMAX device"
 <h2>Members</h2>
 <p>net_dev</p>
 <dl>
-<dd>[fill] Pointer to the struct net_device this WiMAX device implements.</dl>
+<dd>[fill] Pointer to the struct net_device this WiMAX device implements.</dd></dl>
 <p> id_table_node</p>
 <dl>
-<dd>[private] link to the list of wimax devices kept by id-table.c. Protected by it&#8217;s own spinlock.</dl>
+<dd>[private] link to the list of wimax devices kept by id-table.c. Protected by it&#8217;s own spinlock.</dd></dl>
 <p> mutex</p>
 <dl>
-<dd>[private] Serializes all concurrent access and execution of operations.</dl>
+<dd>[private] Serializes all concurrent access and execution of operations.</dd></dl>
 <p> mutex_reset</p>
 <dl>
-<dd>[private] Serializes reset operations. Needs to be a different mutex because as part of the reset operation, the driver has to call back into the stack to do things such as state change, that require wimax_dev-&gt;mutex.</dl>
+<dd>[private] Serializes reset operations. Needs to be a different mutex because as part of the reset operation, the driver has to call back into the stack to do things such as state change, that require wimax_dev-&gt;mutex.</dd></dl>
 <p> state</p>
 <dl>
-<dd>[private] Current state of the WiMAX device.</dl>
+<dd>[private] Current state of the WiMAX device.</dd></dl>
 <p> op_msg_from_user</p>
 <dl>
-<dd>[fill] Driver-specific operation to handle a raw message from user space to the driver. The driver can send messages to user space using with <code>wimax_msg_to_user</code>.</dl>
+<dd>[fill] Driver-specific operation to handle a raw message from user space to the driver. The driver can send messages to user space using with <code>wimax_msg_to_user</code>.</dd></dl>
 <p> op_rfkill_sw_toggle</p>
 <dl>
-<dd>[fill] Driver-specific operation to act on userspace (or any other agent) requesting the WiMAX device to change the RF Kill software switch (WIMAX_RF_ON or WIMAX_RF_OFF). If such hardware support is not present, it is assumed the radio cannot be switched off and it is always on (and the stack will error out when trying to switch it off). In such case, this function pointer can be left as NULL.</dl>
+<dd>[fill] Driver-specific operation to act on userspace (or any other agent) requesting the WiMAX device to change the RF Kill software switch (WIMAX_RF_ON or WIMAX_RF_OFF). If such hardware support is not present, it is assumed the radio cannot be switched off and it is always on (and the stack will error out when trying to switch it off). In such case, this function pointer can be left as NULL.</dd></dl>
 <p> op_reset</p>
 <dl>
-<dd>[fill] Driver specific operation to reset the device. This operation should always attempt first a warm reset that does not disconnect the device from the bus and return 0. If that fails, it should resort to some sort of cold or bus reset (even if it implies a bus disconnection and device disappearance). In that case, -ENODEV should be returned to indicate the device is gone. This operation has to be synchronous, and return only when the reset is complete. In case of having had to resort to bus/cold reset implying a device disconnection, the call is allowed to return immediately.</dl>
+<dd>[fill] Driver specific operation to reset the device. This operation should always attempt first a warm reset that does not disconnect the device from the bus and return 0. If that fails, it should resort to some sort of cold or bus reset (even if it implies a bus disconnection and device disappearance). In that case, -ENODEV should be returned to indicate the device is gone. This operation has to be synchronous, and return only when the reset is complete. In case of having had to resort to bus/cold reset implying a device disconnection, the call is allowed to return immediately.</dd></dl>
 <p> rfkill</p>
 <dl>
-<dd>[private] integration into the RF-Kill infrastructure.</dl>
+<dd>[private] integration into the RF-Kill infrastructure.</dd></dl>
 <p> rf_hw</p>
 <dl>
-<dd>[private] State of the hardware radio switch (OFF/ON)</dl>
+<dd>[private] State of the hardware radio switch (OFF/ON)</dd></dl>
 <p> rf_sw</p>
 <dl>
-<dd>[private] State of the software radio switch (OFF/ON)</dl>
+<dd>[private] State of the software radio switch (OFF/ON)</dd></dl>
 <p> name[32]</p>
 <dl>
-<dd>[fill] A way to identify this device. We need to register a name with many subsystems (rfkill, workqueue creation, etc). We can&#8217;t use the network device name as that might change and in some instances we don&#8217;t know it yet (until we don&#8217;t call <code>register_netdev</code>). So we generate an unique one using the driver name and device bus id, place it here and use it across the board. Recommended naming: DRIVERNAME-BUSNAME:BUSID (dev-&gt;bus-&gt;name, dev-&gt;bus_id).</dl>
+<dd>[fill] A way to identify this device. We need to register a name with many subsystems (rfkill, workqueue creation, etc). We can&#8217;t use the network device name as that might change and in some instances we don&#8217;t know it yet (until we don&#8217;t call <code>register_netdev</code>). So we generate an unique one using the driver name and device bus id, place it here and use it across the board. Recommended naming: DRIVERNAME-BUSNAME:BUSID (dev-&gt;bus-&gt;name, dev-&gt;bus_id).</dd></dl>
 <p> debugfs_dentry</p>
 <dl>
-<dd>[private] Used to hook up a debugfs entry. This shows up in the debugfs root as wimax\:DEVICENAME.</dl>
+<dd>[private] Used to hook up a debugfs entry. This shows up in the debugfs root as wimax\:DEVICENAME.</dd></dl>
 <h2>Note</h2>
 <p>wimax_dev-&gt;mutex is NOT locked when this op is being called; however, wimax_dev-&gt;mutex_reset IS locked to ensure serialization of calls to <code>wimax_reset</code>. See <code>wimax_reset</code>&#8216;s documentation.</p>
 <h2>Description</h2>

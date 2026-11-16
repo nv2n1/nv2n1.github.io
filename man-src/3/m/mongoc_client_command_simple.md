@@ -22,26 +22,26 @@ mongoc_client_command_simple (mongoc_client_t           *client,
 <p> <code>NOTE</code></p>
 <dl COMPACT>
 <dt>
-<dd> <code>reply</code> is always set, and should be released with <code><a href="/docs/linux/man/3-bson_destroy/">bson_destroy</a>(3)</code> \&amp;.</dl>
+</dt><dd> <code>reply</code> is always set, and should be released with <code><a href="/docs/linux/man/3-bson_destroy/">bson_destroy</a>(3)</code> \&amp;.</dd></dl>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>client</code></p>
-<dd> A <code>mongoc_client_t</code> \&amp;.</dl>
+<dt><code>client</code></dt>
+<dd> A <code>mongoc_client_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>db_name</code></p>
-<dd> The name of the database to run the command on.</dl>
+<dt><code>db_name</code></dt>
+<dd> The name of the database to run the command on.</dd></dl>
 <dl COMPACT>
-<dt><code>command</code></p>
-<dd> A <code>bson_t</code> containing the command specification.</dl>
+<dt><code>command</code></dt>
+<dd> A <code>bson_t</code> containing the command specification.</dd></dl>
 <dl COMPACT>
-<dt><code>read_prefs</code></p>
-<dd> A <code>mongoc_read_prefs_t</code> \&amp;.</dl>
+<dt><code>read_prefs</code></dt>
+<dd> A <code>mongoc_read_prefs_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>reply</code></p>
-<dd> A location for the resulting document.</dl>
+<dt><code>reply</code></dt>
+<dd> A location for the resulting document.</dd></dl>
 <dl COMPACT>
-<dt><code>error</code></p>
-<dd> An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd> An optional location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <h2>Errors</h2>
 <p> Errors are propagated via the <code>error</code> parameter. </p>
 <h2>Returns</h2>

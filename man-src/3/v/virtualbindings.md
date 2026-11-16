@@ -13,23 +13,23 @@ description: "VirtualBindings — Bindings for virtual mouse and key events"
 <h3>Bindings for osf Keysyms</h3>
 <p>Keysym strings that begin with <code>&lt;osf&gt;</code> are not part of the X server&#8217;s keyboard mapping. Instead, these keysyms are produced on the client side at run time. They are interpreted by the routine <code>XmTranslateKey</code>, and are used by the translation manager when the server delivers an actual key event. For each application, a mapping is maintained between <code>&lt;osf&gt;</code> keysyms and keysyms that correspond to actual keys. This mapping is based on information obtained at application startup from one of the following sources, listed in order of precedence:</p>
 <dl COMPACT>
-<dt> &bull;</p>
-<dd>The <code>XmNdefaultVirtualBindings</code> resource from Display.</p>
-<dt> &bull;</p>
-<dd>A property on the root window, which can be set by <code>mwm</code> on startup, or by the <code>xmbind</code> client, or on prior startup of a Motif application.</p>
-<dt> &bull;</p>
-<dd>The file <code>.motifbind</code> in the user&#8217;s home directory.</p>
-<dt> &bull;</p>
-<dd>A set of bindings based on the vendor string and optionally the vendor release of the X server. Motif searches for these bindings in the following steps:</p>
+<dt> &bull;</dt>
+<dd>The <code>XmNdefaultVirtualBindings</code> resource from Display.</dd>
+<dt> &bull;</dt>
+<dd>A property on the root window, which can be set by <code>mwm</code> on startup, or by the <code>xmbind</code> client, or on prior startup of a Motif application.</dd>
+<dt> &bull;</dt>
+<dd>The file <code>.motifbind</code> in the user&#8217;s home directory.</dd>
+<dt> &bull;</dt>
+<dd>A set of bindings based on the vendor string and optionally the vendor release of the X server. Motif searches for these bindings in the following steps:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> 0.</p>
-<dd>If the file <code>xmbind.alias</code> exists in the user&#8217;s home directory, Motif searches this file for a pathname associated with the vendor string or with the vendor string and vendor release. If it finds such a pathname and if that file exists, Motif loads the bindings contained in that file.</p>
-<dt> 1.</p>
-<dd>If it has found no bindings, Motif next looks for the file <code>xmbind.alias</code> in the directory specified by the environment variable <code>XMBINDDIR</code>, if <code>XMBINDDIR</code> is set, or in the directory <code>/usr/share/X11/bindings</code> if <code>XMBINDDIR</code> is not set. If this file exists Motif searches it for a pathname associated with the vendor string or with the vendor string and vendor release. If it finds such a pathname and if that file exists, Motif loads the bindings contained in that file.</p>
-<dt> 2.</p>
-<dd>If it still has found no bindings, Motif loads a set of hard-coded fallback bindings.</dl>
+</dd><dl COMPACT>
+<dt> 0.</dt>
+<dd>If the file <code>xmbind.alias</code> exists in the user&#8217;s home directory, Motif searches this file for a pathname associated with the vendor string or with the vendor string and vendor release. If it finds such a pathname and if that file exists, Motif loads the bindings contained in that file.</dd>
+<dt> 1.</dt>
+<dd>If it has found no bindings, Motif next looks for the file <code>xmbind.alias</code> in the directory specified by the environment variable <code>XMBINDDIR</code>, if <code>XMBINDDIR</code> is set, or in the directory <code>/usr/share/X11/bindings</code> if <code>XMBINDDIR</code> is not set. If this file exists Motif searches it for a pathname associated with the vendor string or with the vendor string and vendor release. If it finds such a pathname and if that file exists, Motif loads the bindings contained in that file.</dd>
+<dt> 2.</dt>
+<dd>If it still has found no bindings, Motif loads a set of hard-coded fallback bindings.</dd></dl>
 </dl>
 </dl>
 <p> The <code>xmbind.alias</code> file contains zero or more lines of the following form: </p>
@@ -575,36 +575,36 @@ params = string { &quot;,&quot; string }</tt></pre>
 <p> The <i>details</i> field may be used to specify a keysym that will identify a particular key event. For example, <code>&lt;Key&gt;</code> is the name of a type of event, but it must be modified by the <i>details</i> field to name a specific event, such as <code>&lt;Key&gt;</code><code>A</code>. </p>
 <p> <code>Modifier Names</code> The modifier list, which may be empty, consists of a list of modifier keys that must be pressed with the key sequence. The modifier keys may abbreviated with single letters, as in the following list of the familiar modifiers:</p>
 <dl COMPACT>
-<dt>s</p>
-<dd>Shift</p>
-<dt>c or&nbsp;<wbr>^</p>
-<dd>Ctrl (Control)</p>
-<dt>m or&nbsp;<wbr>$</p>
-<dd>Meta</p>
-<dt>a</p>
-<dd>Alt</dl>
+<dt>s</dt>
+<dd>Shift</dd>
+<dt>c or&nbsp;<wbr>^</dt>
+<dd>Ctrl (Control)</dd>
+<dt>m or&nbsp;<wbr>$</dt>
+<dd>Meta</dd>
+<dt>a</dt>
+<dd>Alt</dd></dl>
 <p> Other modifiers are available, such as &quot;Mod5&quot; and &quot;Button2.&quot; These have no abbreviation (although the &quot;Button&quot; modifiers may be abbreviated in combination with events, as outlined below). If a modifier list has no entries, and is not &quot;None&quot;, it means the position of the modifier keys is irrelevant. If modifiers are listed, the designated keys must be in the specified position, but the unlisted modifier keys are irrelevant. If the list begins with an exclamation point (!), however, the unlisted modifiers may not be asserted. In addition, if a modifier name is preceded by a tilde (~), the corresponding key must <i>not</i> be pressed. </p>
 <p> If a modifier list begins with a colon (:), X tries to use the standard modifiers (Shift and Lock), if present, to map the key event code into a recognized keysym. </p>
 <p> Event Types These are a few of the recognized event types.</p>
 <dl COMPACT>
-<dt>Key or KeyDown</p>
-<dd>A keyboard key was pressed.</p>
-<dt>KeyUp</p>
-<dd>A keyboard key was released.</p>
-<dt>BtnDown</p>
-<dd>A mouse button was pressed.</p>
-<dt>BtnUp</p>
-<dd>A mouse button was released.</p>
-<dt>Motion</p>
-<dd>The mouse pointer moved.</p>
-<dt>Enter</p>
-<dd>The pointer entered the widget&#8217;s window.</p>
-<dt>Leave</p>
-<dd>The pointer left the widget&#8217;s window.</p>
-<dt>FocusIn</p>
-<dd>The widget has received focus.</p>
-<dt>FocusOut</p>
-<dd>The widget has lost focus.</dl>
+<dt>Key or KeyDown</dt>
+<dd>A keyboard key was pressed.</dd>
+<dt>KeyUp</dt>
+<dd>A keyboard key was released.</dd>
+<dt>BtnDown</dt>
+<dd>A mouse button was pressed.</dd>
+<dt>BtnUp</dt>
+<dd>A mouse button was released.</dd>
+<dt>Motion</dt>
+<dd>The mouse pointer moved.</dd>
+<dt>Enter</dt>
+<dd>The pointer entered the widget&#8217;s window.</dd>
+<dt>Leave</dt>
+<dd>The pointer left the widget&#8217;s window.</dd>
+<dt>FocusIn</dt>
+<dd>The widget has received focus.</dd>
+<dt>FocusOut</dt>
+<dd>The widget has lost focus.</dd></dl>
 <p> There are some event abbreviations available. For example, <code>&lt;Btn1Motion&gt;</code> is actually a &quot;Motion&quot; event, modified with the &quot;Button1&quot; modifier (<code>Button1&lt;Motion&gt;</code>). Similarly, <code>&lt;Btn3Up&gt;</code> is actually a &quot;BtnUp&quot; event with the &quot;Button3&quot; modifier. These abbreviations are used extensively in the Motif translation tables.</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/1-xmbind/">xmbind</a></code>(1)</p>

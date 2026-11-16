@@ -14,10 +14,10 @@ description: "runc-spec – create a new specification file"
 <p>The <code>spec</code> command creates the new specification file named <i>config.json</i> for the bundle. The spec generated is just a starter file. Editing of the spec is required to achieve desired results. For example, the newly generated spec includes an <code>args</code> parameter that is initially set to call the <code>sh</code> command when the container is started. Calling <code>sh</code> may work for an ubuntu container or busybox, but will not work for containers that do not include the <code>sh</code> binary. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;bundle</code>|<code>-b</code> <i>path</i></p>
-<dd>Set <i>path</i> to the root of the bundle directory. </p>
-<dt><code>&#8211;rootless</code></p>
-<dd>Generate a configuration for a rootless container. Note this option is entirely different from the global <code>&#8211;rootless</code> option. </p>
+<dt><code>&#8211;bundle</code>|<code>-b</code> <i>path</i></dt>
+<dd>Set <i>path</i> to the root of the bundle directory. </dd>
+<dt><code>&#8211;rootless</code></dt>
+<dd>Generate a configuration for a rootless container. Note this option is entirely different from the global <code>&#8211;rootless</code> option. </dd>
 </dl>
 <h2>Examples</h2>
 <p>To run a simple &quot;hello-world&quot; container, one needs to set the <code>args</code> parameter in the spec to call hello. This can be done using <code><a href="/docs/linux/man/1-sed/">sed</a></code>(1), <code><a href="/docs/linux/man/1-jq/">jq</a></code>(1), or a text editor. The following commands will:<br />

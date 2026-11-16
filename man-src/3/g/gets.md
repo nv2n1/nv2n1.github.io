@@ -17,3 +17,4 @@ char *gets(char *s);
 <h2>DESCRIPTION</h2>
 <p> <i>Never use this function</i>. </p>
 <p> <code>gets</code>() reads a line from <i>stdin</i> into the buffer pointed to by <i>s</i> until either a terminating newline or <code>EOF</code>, which it replaces with a null byte (&#8216;
+</p>

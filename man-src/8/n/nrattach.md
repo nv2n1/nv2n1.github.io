@@ -15,12 +15,12 @@ description: "nrattach – Start a NET/ROM interface"
 <p> <code>Nrattach</code> tries to find the first free NET/ROM device in the system. The devices checked are nr0, nr1, nr2 and nr3 in that order. If no free NET/ROM device is available an error is generated and the program terminates.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-i inetaddr</code></p>
-<dd>Set the internet address of the interface. This address may either be a dotted decimal address or a host name.</p>
-<dt><code>-m mtu</code></p>
-<dd>Sets the mtu of the interface. If this value is not given then the value is taken from the paclen parameter in nrports.</p>
-<dt><code>-v</code></p>
-<dd>Display the version.</dl>
+<dt><code>-i inetaddr</code></dt>
+<dd>Set the internet address of the interface. This address may either be a dotted decimal address or a host name.</dd>
+<dt><code>-m mtu</code></dt>
+<dd>Sets the mtu of the interface. If this value is not given then the value is taken from the paclen parameter in nrports.</dd>
+<dt><code>-v</code></dt>
+<dd>Display the version.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/4-netrom/">netrom</a></code>(4), <code>nrparms</code>(4), <code><a href="/docs/linux/man/5-nrports/">nrports</a></code>(5), <code><a href="/docs/linux/man/8-ifconfig/">ifconfig</a></code>(8).</p>
 <h2>Bugs</h2>

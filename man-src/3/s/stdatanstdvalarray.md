@@ -11,9 +11,7 @@ std::atan(std::valarray) - std::atan(std::valarray)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;valarray&gt;
-
     template &lt;class T&gt;
-
     valarray&lt;T&gt; atan(const valarray&lt;T&gt; &amp;va);</code></pre> 
 For each element in va computes arc tangent of the value of the element. 
 
@@ -28,7 +26,6 @@ Value array containing arc tangents of the values in va.
 <h2>Notes</h2>
 
 <pre><code>Unqualified function (atan) is used to perform the computation. If such function is not available, std::atan is used due to argument dependent lookup.
-
 The function can be implemented with the return type different from std::valarray. In this case, the replacement type has the following properties:
 </code></pre> 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;* All const member functions of std::valarray are provided. 

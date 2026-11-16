@@ -10,39 +10,39 @@ description: "ocf_heartbeat_LinuxSCSI – Enables and disables SCSI devices thro
 <p>ocf_heartbeat_LinuxSCSI &#8211; Enables and disables SCSI devices through the kernel SCSI hot-plug subsystem (deprecated)</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>LinuxSCSI</code> [start | stop | status | monitor | meta-data | validate-all]</dl>
+<dt> <code>LinuxSCSI</code> [start | stop | status | monitor | meta-data | validate-all]</dt></dl>
 <h2>Description</h2>
-<dd>Deprecation warning: This agent makes use of Linux SCSI hot-plug functionality which has been superseded by SCSI reservations. It is deprecated and may be removed from a future release. See the scsi2reservation and sfex agents for alternatives. &#8212; This is a resource agent for LinuxSCSI. It manages the availability of a SCSI device from the point of view of the linux kernel. It make Linux believe the device has gone away, and it can make it come back again.</p>
+<dd>Deprecation warning: This agent makes use of Linux SCSI hot-plug functionality which has been superseded by SCSI reservations. It is deprecated and may be removed from a future release. See the scsi2reservation and sfex agents for alternatives. &#8212; This is a resource agent for LinuxSCSI. It manages the availability of a SCSI device from the point of view of the linux kernel. It make Linux believe the device has gone away, and it can make it come back again.</dd>
 <h2>Supported Parameters</h2>
 <p><code>scsi</code></p>
 <dl>
-<dd>The SCSI instance to be managed. (required, string, no default)</dl>
+<dd>The SCSI instance to be managed. (required, string, no default)</dd></dl>
 <p> <code>ignore_deprecation</code></p>
 <dl>
-<dd>If set to true, suppresses the deprecation warning for this agent. (optional, boolean, default false)</dl>
+<dd>If set to true, suppresses the deprecation warning for this agent. (optional, boolean, default false)</dd></dl>
 <h2>Supported Actions</h2>
 <p>This resource agent supports the following actions (operations): </p>
 <p> <code>start</code></p>
 <dl>
-<dd>Starts the resource. Suggested minimum timeout: 20s.</dl>
+<dd>Starts the resource. Suggested minimum timeout: 20s.</dd></dl>
 <p> <code>stop</code></p>
 <dl>
-<dd>Stops the resource. Suggested minimum timeout: 20s.</dl>
+<dd>Stops the resource. Suggested minimum timeout: 20s.</dd></dl>
 <p> <code>methods</code></p>
 <dl>
-<dd>Suggested minimum timeout: 5.</dl>
+<dd>Suggested minimum timeout: 5.</dd></dl>
 <p> <code>status</code></p>
 <dl>
-<dd>Performs a status check. Suggested minimum timeout: 20s. Suggested interval: 10.</dl>
+<dd>Performs a status check. Suggested minimum timeout: 20s. Suggested interval: 10.</dd></dl>
 <p> <code>monitor</code></p>
 <dl>
-<dd>Performs a detailed status check. Suggested minimum timeout: 20s. Suggested interval: 10.</dl>
+<dd>Performs a detailed status check. Suggested minimum timeout: 20s. Suggested interval: 10.</dd></dl>
 <p> <code>meta-data</code></p>
 <dl>
-<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dl>
+<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dd></dl>
 <p> <code>validate-all</code></p>
 <dl>
-<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 5.</dl>
+<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 5.</dd></dl>
 <h2>Example</h2>
 <p>The following is an example configuration for a LinuxSCSI resource using the <code>crm</code>(8) shell: </p>
 <pre><code>primitive example_LinuxSCSI ocf:heartbeat:LinuxSCSI \

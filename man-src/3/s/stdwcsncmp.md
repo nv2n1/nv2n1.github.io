@@ -11,7 +11,6 @@ std::wcsncmp - std::wcsncmp
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwchar&gt;
-
     int wcsncmp(const wchar_t *lhs, const wchar_t *rhs, std::size_t count);</code></pre> 
 Compares at most count wide characters of two null-terminated wide strings. The comparison is done lexicographically. 
 The sign of the result is the sign of the difference between the values of the first pair of wide characters that differ in the strings being compared. 
@@ -31,14 +30,10 @@ Positive value if lhs appears after rhs in lexicographical order.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cwchar&gt;
-
 #include &lt;clocale&gt;
-
 #include &lt;locale&gt;
 void demo(const wchar_t *lhs, const wchar_t *rhs, int sz)
-
 {
     int rc = std::wcsncmp(lhs, rhs, sz);
     if (rc == 0)
@@ -52,7 +47,6 @@ void demo(const wchar_t *lhs, const wchar_t *rhs, int sz)
                    &lt;&lt; lhs &lt;&lt; &quot;] follow [&quot; &lt;&lt; rhs &lt;&lt; &quot;]\n&quot;;
 }
 int main()
-
 {
     const wchar_t str1[] = L&quot;안녕하세요&quot;;
     const wchar_t str2[] = L&quot;안녕히 가십시오&quot;;

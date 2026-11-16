@@ -13,211 +13,66 @@ description: "table_data – Helps you implement a table with datamatted storage
  <i>Helps you implement a table with automatted storage. </i></p>
 <h3>Functions</h3>
 <pre><code>void netsnmp_table_data_generate_index_oid (netsnmp_table_row *row)
-
-
-
 netsnmp_table_data * netsnmp_create_table_data (const char *name)
-
-
 creates and returns a pointer to table data set
-
-
 netsnmp_table_row * netsnmp_create_table_data_row (void)
-
-
 creates and returns a pointer to table data set
-
-
 netsnmp_table_row * netsnmp_table_data_clone_row (netsnmp_table_row *row)
-
-
 clones a data row.
-
-
 void * netsnmp_table_data_delete_row (netsnmp_table_row *row)
-
-
 deletes a row's memory.
-
-
 int netsnmp_table_data_add_row (netsnmp_table_data *table, netsnmp_table_row *row)
-
-
 Adds a row of data to a given table (stored in proper lexographical order).
-
-
 NETSNMP_INLINE void netsnmp_table_data_replace_row (netsnmp_table_data *table, netsnmp_table_row *origrow, netsnmp_table_row *newrow)
-
-
 swaps out origrow with newrow.
-
-
 netsnmp_table_row * netsnmp_table_data_remove_row (netsnmp_table_data *table, netsnmp_table_row *row)
-
-
 removes a row of data to a given table and returns it (no free's called)
-
-
 void * netsnmp_table_data_remove_and_delete_row (netsnmp_table_data *table, netsnmp_table_row *row)
-
-
 removes and frees a row of data to a given table and returns the void *
-
-
 netsnmp_table_data * netsnmp_table_data_create_table (const char *name, long flags)
-
-
-
 void netsnmp_table_data_delete_table (netsnmp_table_data *table)
-
-
-
 netsnmp_table_row * netsnmp_table_data_create_row (void *entry)
-
-
-
 int netsnmp_table_data_copy_row (netsnmp_table_row *old_row, netsnmp_table_row *new_row)
-
-
-
 void * netsnmp_table_data_remove_delete_row (netsnmp_table_data *table, netsnmp_table_row *row)
-
-
-
 netsnmp_mib_handler * netsnmp_get_table_data_handler (netsnmp_table_data *table)
-
-
 Creates a table_data handler and returns it.
-
-
 int netsnmp_register_table_data (netsnmp_handler_registration *reginfo, netsnmp_table_data *table, netsnmp_table_registration_info *table_info)
-
-
 registers a handler as a data table.
-
-
 int netsnmp_register_read_only_table_data (netsnmp_handler_registration *reginfo, netsnmp_table_data *table, netsnmp_table_registration_info *table_info)
-
-
 registers a handler as a read-only data table If table_info != NULL, it registers it as a normal table too.
-
-
 int netsnmp_table_data_helper_handler (netsnmp_mib_handler *handler, netsnmp_handler_registration *reginfo, netsnmp_agent_request_info *reqinfo, netsnmp_request_info *requests)
-
-
-
 netsnmp_table_data * netsnmp_extract_table (netsnmp_request_info *request)
-
-
 extracts the table being accessed passed from the table_data helper
-
-
 netsnmp_table_row * netsnmp_extract_table_row (netsnmp_request_info *request)
-
-
 extracts the row being accessed passed from the table_data helper
-
-
 void * netsnmp_extract_table_row_data (netsnmp_request_info *request)
-
-
 extracts the data from the row being accessed passed from the table_data helper
-
-
 NETSNMP_INLINE void netsnmp_insert_table_row (netsnmp_request_info *request, netsnmp_table_row *row)
-
-
 inserts a newly created table_data row into a request
-
-
 int netsnmp_table_data_build_result (netsnmp_handler_registration *reginfo, netsnmp_agent_request_info *reqinfo, netsnmp_request_info *request, netsnmp_table_row *row, int column, u_char type, u_char *result_data, size_t result_data_len)
-
-
-
 netsnmp_table_row * netsnmp_table_data_get_first_row (netsnmp_table_data *table)
-
-
 returns the first row in the table
-
-
 netsnmp_table_row * netsnmp_table_data_get_next_row (netsnmp_table_data *table, netsnmp_table_row *row)
-
-
 returns the next row in the table
-
-
 netsnmp_table_row * netsnmp_table_data_get (netsnmp_table_data *table, netsnmp_variable_list *indexes)
-
-
 finds the data in 'datalist' stored at 'indexes'
-
-
 netsnmp_table_row * netsnmp_table_data_get_from_oid (netsnmp_table_data *table, oid *searchfor, size_t searchfor_len)
-
-
 finds the data in 'datalist' stored at the searchfor oid
-
-
 int netsnmp_table_data_num_rows (netsnmp_table_data *table)
-
-
-
 netsnmp_table_row * netsnmp_table_data_row_first (netsnmp_table_data *table)
-
-
-
 netsnmp_table_row * netsnmp_table_data_row_get (netsnmp_table_data *table, netsnmp_table_row *row)
-
-
-
 netsnmp_table_row * netsnmp_table_data_row_next (netsnmp_table_data *table, netsnmp_table_row *row)
-
-
-
 netsnmp_table_row * netsnmp_table_data_row_get_byoid (netsnmp_table_data *table, oid *instance, size_t len)
-
-
-
 netsnmp_table_row * netsnmp_table_data_row_next_byoid (netsnmp_table_data *table, oid *instance, size_t len)
-
-
-
 netsnmp_table_row * netsnmp_table_data_row_get_byidx (netsnmp_table_data *table, netsnmp_variable_list *indexes)
-
-
-
 netsnmp_table_row * netsnmp_table_data_row_next_byidx (netsnmp_table_data *table, netsnmp_variable_list *indexes)
-
-
-
 int netsnmp_table_data_row_count (netsnmp_table_data *table)
-
-
-
 void * netsnmp_table_data_entry_first (netsnmp_table_data *table)
-
-
-
 void * netsnmp_table_data_entry_get (netsnmp_table_data *table, netsnmp_table_row *row)
-
-
-
 void * netsnmp_table_data_entry_next (netsnmp_table_data *table, netsnmp_table_row *row)
-
-
-
 void * netsnmp_table_data_entry_get_byidx (netsnmp_table_data *table, netsnmp_variable_list *indexes)
-
-
-
 void * netsnmp_table_data_entry_next_byidx (netsnmp_table_data *table, netsnmp_variable_list *indexes)
-
-
-
 void * netsnmp_table_data_entry_get_byoid (netsnmp_table_data *table, oid *instance, size_t len)
-
-
-
 void * netsnmp_table_data_entry_next_byoid (netsnmp_table_data *table, oid *instance, size_t len)</code></pre>
 <h2>Detailed Description</h2>
 <p>Helps you implement a table with datamatted storage. </p>

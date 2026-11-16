@@ -46,43 +46,36 @@ description: "pmdaEventNewArray, pmdaEventResetArray, pmdaEventReleaseArray, pmd
 int myarray;
 int first = 1;
 pmEventArray eap;
-
 if (first) {
     first = 0;
     if ((myarray = pmdaEventNewArray()) &lt; 0) {
         // report error and fail
     }
 }
-
 pmdaEventResetArray(myarray);
-
 // loop over all event records to be exported
 ...
 {
     struct timeval stamp;
     int flags;
-
     // establish timestamp and set flags to 0 or some combination
     // of PM_EVENT_FLAG_POINT, PM_EVENT_FLAG_START, PM_EVENT_FLAG_ID,
     // etc
     if ((sts = pmdaEventAddRecord(myarray, &amp;stamp, flags)) &lt; 0) {
         // report error and fail
     }
-
     // loop over all parameters for this event record
     ...
     {
         pmID pmid;
         int type;
         pmAtomValue atom;
-
         // construct pmid, type and atom for the parameter and
         // its value
         if ((sts = pmdaEventAddParam(myarray, pmid, type, &amp;atom)) &lt; 0) {
             // report error and fail
         }
     }
-
     // if some event records were missed (could be at the start
     // of the exported set, or at the end, or in the middle, or
     // a combination of multiple missed record episodes)
@@ -90,13 +83,11 @@ pmdaEventResetArray(myarray);
     {
         int nmiss;
         struct timeval stamp;
-
         if ((sts = pmdaEventAddMissedRecord(myarray, &amp;stamp, nmiss)) &lt; 0) {
             // report error and fail
         }
     }
 }
-
 // finish up
 eap = pmdaEventGetAddr(myarray);</code></pre>
 <h2>See Also</h2>

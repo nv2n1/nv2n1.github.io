@@ -14,12 +14,12 @@ description: "z8530_shutdown – Shutdown a Z8530 device"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>The Z8530 chip to shutdown</dl>
+</dd><dd>The Z8530 chip to shutdown</dd></dl>
 <h2>Description</h2>
 <p>We set the interrupt handlers to silence any interrupts. We then reset the chip and wait 100uS to be sure the reset completed. Just in case the caller then tries to do stuff. </p>
 <p> This is called without the lock held</p>
 <h2>Author</h2>
 <p><code>Alan Cox</code> &lt;alan [at] lxorguk.ukuu.org.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

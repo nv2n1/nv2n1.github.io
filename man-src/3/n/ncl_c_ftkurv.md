@@ -10,19 +10,19 @@ c_ftkurv - interpolation for parametric curves
 <h2>Function Prototype</h2>int c_ftkurv (int, float [], float [], int, float [], float [], float []);
 <h2>Synopsis</h2>int c_ftkurv (n, xi, yi, m, t, xo, yo);
 <h2>Description</h2><dl COMPACT><dt>n
-<dd>The number of input data values. (n &gt; 1)
-<dt>xi
-<dd>An array containing the abscissae for the input function.
-<dt>yi
-<dd>An array containing the functional values (y[k] is the functional value at x[k] for k=0,n-1).
-<dt>m
-<dd>The number of desired interpolated values.
-<dt>t
-<dd>Contains an array of values for the parameter mapping onto the interpolated curve.
-<dt>xo
-<dd>An array containing the X values for the interpolated points. t[k] maps to (xo[k],yo[k]) for k=0,m-1.
-<dt>yo
-<dd>An array containing the Y values for the interpolated points. t[k] maps to (xo[k],yo[k]) for k=0,m-1.</dl><h2>Return Value</h2>c_ftkurv returns an error value as per: 
+</dt><dd>The number of input data values. (n &gt; 1)
+</dd><dt>xi
+</dt><dd>An array containing the abscissae for the input function.
+</dd><dt>yi
+</dt><dd>An array containing the functional values (y[k] is the functional value at x[k] for k=0,n-1).
+</dd><dt>m
+</dt><dd>The number of desired interpolated values.
+</dd><dt>t
+</dt><dd>Contains an array of values for the parameter mapping onto the interpolated curve.
+</dd><dt>xo
+</dt><dd>An array containing the X values for the interpolated points. t[k] maps to (xo[k],yo[k]) for k=0,m-1.
+</dd><dt>yo
+</dt><dd>An array containing the Y values for the interpolated points. t[k] maps to (xo[k],yo[k]) for k=0,m-1.</dd></dl><h2>Return Value</h2>c_ftkurv returns an error value as per: 
  
 
  = 0 -- no error. 

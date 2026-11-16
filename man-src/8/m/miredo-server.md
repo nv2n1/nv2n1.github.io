@@ -15,16 +15,16 @@ description: "miredo-server – Teredo server for Unix"
 <p> A Teredo server is required for Teredo clients to setup their IPv6 connectivity through Teredo. A Teredo server must have two global static subsequent IPv4 addresses. It receives packets from Teredo clients and Teredo relays on UDP port 3544.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c config_file</code> or <code>&#8211;config config_file</code></p>
-<dd>Specify an alternate configuration file for Miredo instead of the default, <i>/etc/miredo/miredo-server.conf</i>. </p>
-<dt><code>-f</code> or <code>&#8211;foreground</code></p>
-<dd>Do not detach from the console. Run the program in the foreground. </p>
-<dt><code>-h</code> or <code>&#8211;help</code></p>
-<dd>Display some help and exit. </p>
-<dt><code>-u username</code> or <code>&#8211;user username</code></p>
-<dd>Override the user that the program will run as. By default, it runs as <code>nobody</code>. </p>
-<dt><code>-V</code> or <code>&#8211;version</code></p>
-<dd>Display program version and license and exit. </p>
+<dt><code>-c config_file</code> or <code>&#8211;config config_file</code></dt>
+<dd>Specify an alternate configuration file for Miredo instead of the default, <i>/etc/miredo/miredo-server.conf</i>. </dd>
+<dt><code>-f</code> or <code>&#8211;foreground</code></dt>
+<dd>Do not detach from the console. Run the program in the foreground. </dd>
+<dt><code>-h</code> or <code>&#8211;help</code></dt>
+<dd>Display some help and exit. </dd>
+<dt><code>-u username</code> or <code>&#8211;user username</code></dt>
+<dd>Override the user that the program will run as. By default, it runs as <code>nobody</code>. </dd>
+<dt><code>-V</code> or <code>&#8211;version</code></dt>
+<dd>Display program version and license and exit. </dd>
 </dl>
 <h2>Security</h2>
 <p><code>miredo-server</code> requires <i>root</i> privileges to create open a raw IPv6 socket that is used to emit ICMPv6 Echo Request packets. Once its initialization is complete, it will <i>setgid</i>, <i>chroot</i> into an empty directory and ultimately <i>setuid</i> (see option <i>-u</i>), so as to decrease the system&#8217;s exposure to potential security issues.</p>
@@ -34,10 +34,10 @@ description: "miredo-server – Teredo server for Unix"
 <p> <code>SIGUSR1</code>, <code>SIGUSR2</code> Do nothing, might be used in future versions.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/miredo/miredo-server.conf</i></p>
-<dd>The default configuration file. </p>
-<dt><i>/var/run/miredo-server.pid</i></p>
-<dd>The process-id file. </p>
+<dt><i>/etc/miredo/miredo-server.conf</i></dt>
+<dd>The default configuration file. </dd>
+<dt><i>/var/run/miredo-server.pid</i></dt>
+<dd>The process-id file. </dd>
 </dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/5-miredo-server-conf/">miredo-server.conf</a>(5), <a href="/docs/linux/man/8-miredo/">miredo</a>(8), <a href="/docs/linux/man/7-ipv6/">ipv6</a>(7) </p>

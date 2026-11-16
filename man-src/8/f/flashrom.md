@@ -19,35 +19,35 @@ description: "flashrom – detect, read, write, verify and erase flash chips"
 <p><code>IMPORTANT:</code> Please note that the command line interface for flashrom will change before flashrom 1.0. Do not use flashrom in scripts or other automated tools without checking that your flashrom version won&#8217;t interpret options in a different way. </p>
 <p> You can specify one of <code>-h</code>, <code>-R</code>, <code>-L</code>, <code>-z</code>, <code>-E</code>, <code>-r</code>, <code>-w</code>, <code>-v</code> or no operation. If no operation is specified, flashrom will only probe for flash chips. It is recommended that if you try flashrom the first time on a system, you run it in probe only mode and check the output. Also you are advised to make a backup of your current ROM contents with <code>-r</code> before you try to write a new image.</p>
 <dl>
-<dt><code>-r, &#8211;read &lt;file&gt;</code></p>
-<dd>Read flash ROM contents and save them into the given <code>&lt;file&gt;</code>.</p>
-<dt><code>-w, &#8211;write &lt;file&gt;</code></p>
-<dd>Write <code>&lt;file&gt;</code> into flash ROM. This will first automatically <code>erase</code> the chip, then write to it.</p>
-<dt><code>-n, &#8211;noverify</code></p>
-<dd>Skip the automatic verification of flash ROM contents after writing. Using this option is <code>not</code> recommended, you should only use it if you know what you are doing and if you feel that the time for verification takes too long. </p>
+<dt><code>-r, &#8211;read &lt;file&gt;</code></dt>
+<dd>Read flash ROM contents and save them into the given <code>&lt;file&gt;</code>.</dd>
+<dt><code>-w, &#8211;write &lt;file&gt;</code></dt>
+<dd>Write <code>&lt;file&gt;</code> into flash ROM. This will first automatically <code>erase</code> the chip, then write to it.</dd>
+<dt><code>-n, &#8211;noverify</code></dt>
+<dd>Skip the automatic verification of flash ROM contents after writing. Using this option is <code>not</code> recommended, you should only use it if you know what you are doing and if you feel that the time for verification takes too long. </dd>
 <p> Typical usage is: <code>flashrom -n -w &lt;file&gt;</code> </p>
 <p> This option is only useful in combination with <code>&#8211;write</code>.</p>
-<dt><code>-v, &#8211;verify &lt;file&gt;</code></p>
-<dd>Verify the flash ROM contents against the given <code>&lt;file&gt;</code>.</p>
-<dt><code>-E, &#8211;erase</code></p>
-<dd>Erase the flash ROM chip.</p>
-<dt><code>-V, &#8211;verbose</code></p>
-<dd>More verbose output. This option can be supplied multiple times (max. 2 times, i.e. <code>-VV</code>) for even more debug output.</p>
-<dt><code>-c, &#8211;chip &lt;chipname&gt;</code></p>
-<dd>Probe only for the specified flash ROM chip. This option takes the chip name as printed by <code>flashrom -L</code> without the vendor name as parameter. Please note that the chip name is case sensitive.</p>
-<dt><code>-m, &#8211;mainboard [&lt;vendor&gt;:]&lt;board&gt;</code></p>
-<dd>Override mainboard settings. </p>
+<dt><code>-v, &#8211;verify &lt;file&gt;</code></dt>
+<dd>Verify the flash ROM contents against the given <code>&lt;file&gt;</code>.</dd>
+<dt><code>-E, &#8211;erase</code></dt>
+<dd>Erase the flash ROM chip.</dd>
+<dt><code>-V, &#8211;verbose</code></dt>
+<dd>More verbose output. This option can be supplied multiple times (max. 2 times, i.e. <code>-VV</code>) for even more debug output.</dd>
+<dt><code>-c, &#8211;chip &lt;chipname&gt;</code></dt>
+<dd>Probe only for the specified flash ROM chip. This option takes the chip name as printed by <code>flashrom -L</code> without the vendor name as parameter. Please note that the chip name is case sensitive.</dd>
+<dt><code>-m, &#8211;mainboard [&lt;vendor&gt;:]&lt;board&gt;</code></dt>
+<dd>Override mainboard settings. </dd>
 <p> flashrom reads the coreboot table to determine the current mainboard. If no coreboot table could be read or if you want to override these values, you can specify -m, e.g.: </p>
 <p> <code> flashrom &#8211;mainboard AGAMI:ARUMA -w agami_aruma.rom</code> </p>
 <p> See the &#8216;Known boards&#8217; or &#8216;Known laptops&#8217; section in the output of &#8216;flashrom -L&#8217; for a list of boards which require the specification of the board name, if no coreboot table is found.</p>
-<dt><code>-f, &#8211;force</code></p>
-<dd>Force one or more of the following actions: </p>
+<dt><code>-f, &#8211;force</code></dt>
+<dd>Force one or more of the following actions: </dd>
 <p> * Force chip read and pretend the chip is there. </p>
 <p> * Force chip access even if the chip is bigger than the maximum supported size for the flash bus. </p>
 <p> * Force erase even if erase is known bad. </p>
 <p> * Force write even if write is known bad.</p>
-<dt><code>-l, &#8211;layout &lt;file&gt;</code></p>
-<dd>Read ROM layout from <code>&lt;file&gt;</code>. </p>
+<dt><code>-l, &#8211;layout &lt;file&gt;</code></dt>
+<dd>Read ROM layout from <code>&lt;file&gt;</code>. </dd>
 <p> flashrom supports ROM layouts. This allows you to flash certain parts of the flash chip only. A ROM layout file looks like follows: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>00000000:00008fff gfxrom<br />
 &nbsp;<wbr>&nbsp;<wbr>00009000:0003ffff normal<br />
@@ -60,16 +60,16 @@ description: "flashrom – detect, read, write, verify and erase flash chips"
 <p> <code> flashrom -l rom.layout -i normal<br />
  </code> <code> -i fallback -w agami_aruma.rom</code> </p>
 <p> Currently overlapping sections are not supported.</p>
-<dt><code>-i, &#8211;image &lt;name&gt;</code></p>
-<dd>Only flash image <code>&lt;name&gt;</code> from flash layout.</p>
-<dt><code>-L, &#8211;list-supported</code></p>
-<dd>List the flash chips, chipsets, mainboards, and PCI card &quot;programmers&quot; supported by flashrom. </p>
+<dt><code>-i, &#8211;image &lt;name&gt;</code></dt>
+<dd>Only flash image <code>&lt;name&gt;</code> from flash layout.</dd>
+<dt><code>-L, &#8211;list-supported</code></dt>
+<dd>List the flash chips, chipsets, mainboards, and PCI card &quot;programmers&quot; supported by flashrom. </dd>
 <p> There are many unlisted boards which will work out of the box, without special support in flashrom. Please let us know if you can verify that other boards work or do not work out of the box. </p>
 <p> <code>IMPORTANT:</code> For verification you have to test an ERASE and/or WRITE operation, so make sure you only do that if you have proper means to recover from failure!</p>
-<dt><code>-z, &#8211;list-supported-wiki</code></p>
-<dd>Same as <code>&#8211;list-supported</code>, but outputs the supported hardware in MediaWiki syntax, so that it can be easily pasted into the wiki page at <a rel="nofollow" href="http://www.flashrom.org/.">http://www.flashrom.org/.</a> Please note that MediaWiki output is not compiled in by default.</p>
-<dt><code>-p, &#8211;programmer &lt;name&gt;[:parameter[,parameter[,parameter]]]</code></p>
-<dd>Specify the programmer device. Currently supported are: </p>
+<dt><code>-z, &#8211;list-supported-wiki</code></dt>
+<dd>Same as <code>&#8211;list-supported</code>, but outputs the supported hardware in MediaWiki syntax, so that it can be easily pasted into the wiki page at <a rel="nofollow" href="http://www.flashrom.org/.">http://www.flashrom.org/.</a> Please note that MediaWiki output is not compiled in by default.</dd>
+<dt><code>-p, &#8211;programmer &lt;name&gt;[:parameter[,parameter[,parameter]]]</code></dt>
+<dd>Specify the programmer device. Currently supported are: </dd>
 <p> <code>* internal</code> (default, for in-system flashing in the mainboard) </p>
 <p> <code>* dummy</code> (just prints all operations and accesses) </p>
 <p> <code>* nic3com</code> (for flash ROMs on 3COM network cards) </p>
@@ -88,15 +88,15 @@ description: "flashrom – detect, read, write, verify and erase flash chips"
 <p> <code>* rayer_spi</code> (for SPI flash ROMs attached to a RayeR parport based programmer) </p>
 <p> <code>* nicintel_spi</code> (for SPI flash ROMs attached to an Intel Gigabit network cards) </p>
 <p> Some programmers have optional or mandatory parameters which are described in detail in the <code>PROGRAMMER SPECIFIC INFO</code> section. Support for some programmers can be disabled at compile time. <code>flashrom -h</code> lists all supported programmers.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Show a help text and exit.</p>
-<dt><code>-R, &#8211;version</code></p>
-<dd>Show version information and exit.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Show a help text and exit.</dd>
+<dt><code>-R, &#8211;version</code></dt>
+<dd>Show version information and exit.</dd></dl>
 <h2>Programmer Specific Info</h2>
 <p>Some programmer drivers accept further parameters to set programmer-specific parameters. These parameters are separated from the programmer name by a colon. While some programmers take arguments at fixed positions, other programmers use a key/value interface in which the key and value is separated by an equal sign and different pairs are separated by a comma or a colon.</p>
 <dl>
-<dt><code>internal </code>programmer</p>
-<dd>Some mainboards require to run mainboard specific code to enable flash erase and write support (and probe support on old systems with parallel flash). The mainboard brand and model (if it requires specific code) is usually autodetected using one of the following mechanisms: If your system is running coreboot, the mainboard type is determined from the coreboot table. Otherwise, the mainboard is detected by examining the onboard PCI devices and possibly DMI info. If PCI and DMI do not contain information to uniquely identify the mainboard (which is the exception), it might be necessary to specify the mainboard using the <code>-m</code> switch (see above). </p>
+<dt><code>internal </code>programmer</dt>
+<dd>Some mainboards require to run mainboard specific code to enable flash erase and write support (and probe support on old systems with parallel flash). The mainboard brand and model (if it requires specific code) is usually autodetected using one of the following mechanisms: If your system is running coreboot, the mainboard type is determined from the coreboot table. Otherwise, the mainboard is detected by examining the onboard PCI devices and possibly DMI info. If PCI and DMI do not contain information to uniquely identify the mainboard (which is the exception), it might be necessary to specify the mainboard using the <code>-m</code> switch (see above). </dd>
 <p> Some of these board-specific flash enabling functions (called <code>board enables</code>) in flashrom have not yet been tested. If your mainboard is detected needing an untested board enable function, a warning message is printed and the board enable is not executed, because a wrong board enable function might cause the system to behave erratically, as board enable functions touch the low-level internals of a mainboard. Not executing a board enable function (if one is needed) might cause detection or erasing failure. If your board protects only part of the flash (commonly the top end, called boot block), flashrom might encounter an error only after erasing the unprotected part, so running without the board-enable function might be dangerous for erase and write (which includes erase). </p>
 <p> The suggested procedure for a mainboard with untested board specific code is to first try to probe the ROM (just invoke flashrom and check that it detects your flash chip type) without running the board enable code (i.e. without any parameters). If it finds your chip, fine. Otherwise, retry probing your chip with the board-enable code running, using </p>
 <p> <code> flashrom -p internal:boardenable=force</code> </p>
@@ -110,34 +110,34 @@ description: "flashrom – detect, read, write, verify and erase flash chips"
 <p> <code> flashrom -p internal:laptop=force_I_want_a_brick</code> </p>
 <p> You have been warned. </p>
 <p> We will not help you if you force flashing on a laptop because this is a really dumb idea.</p>
-<dt><code>dummy </code>programmer</p>
-<dd>An optional parameter specifies the bus types it should support. For that you have to use the <code>flashrom -p dummy:bus=[type[+type[+type]]]</code> syntax where <code>type</code> can be any of <code>parallel</code>, <code>lpc</code>, <code>fwh</code>, <code>spi</code> in any order. If you specify bus without type, all buses will be disabled. If you do not specify bus, all buses will be enabled. </p>
+<dt><code>dummy </code>programmer</dt>
+<dd>An optional parameter specifies the bus types it should support. For that you have to use the <code>flashrom -p dummy:bus=[type[+type[+type]]]</code> syntax where <code>type</code> can be any of <code>parallel</code>, <code>lpc</code>, <code>fwh</code>, <code>spi</code> in any order. If you specify bus without type, all buses will be disabled. If you do not specify bus, all buses will be enabled. </dd>
 <p> Example: <code>flashrom -p dummy:bus=lpc+fwh</code></p>
-<dt><code>nic3com</code>,<code> nicrealtek</code>,<code> nicsmc1211</code>,<code> nicnatsemi</code>,<code> gfxnvidia</code>,<code> satasii </code>and<code> atahpt </code>programmers</p>
-<dd>These programmers have an option to specify the PCI address of the card your want to use, which must be specified if more than one card supported by the selected programmer is installed in your system. The syntax is <code>flashrom -p xxxx:pci=bb:dd.f</code>, where <code>xxxx</code> is the name of the programmer <code>bb</code> is the PCI bus number, <code>dd</code> is the PCI device number, and <code>f</code> is the PCI function number of the desired device. </p>
+<dt><code>nic3com</code>,<code> nicrealtek</code>,<code> nicsmc1211</code>,<code> nicnatsemi</code>,<code> gfxnvidia</code>,<code> satasii </code>and<code> atahpt </code>programmers</dt>
+<dd>These programmers have an option to specify the PCI address of the card your want to use, which must be specified if more than one card supported by the selected programmer is installed in your system. The syntax is <code>flashrom -p xxxx:pci=bb:dd.f</code>, where <code>xxxx</code> is the name of the programmer <code>bb</code> is the PCI bus number, <code>dd</code> is the PCI device number, and <code>f</code> is the PCI function number of the desired device. </dd>
 <p> Example: <code>flashrom -p nic3com:pci=05:04.0</code></p>
-<dt><code>it87spi </code>programmer</p>
-<dd>An optional <code>it87spiport</code> parameter sets the I/O base port of the IT87 series SPI controller interface to the port specified in the parameter instead of using the port address set by the BIOS. For that you have to use the </p>
+<dt><code>it87spi </code>programmer</dt>
+<dd>An optional <code>it87spiport</code> parameter sets the I/O base port of the IT87 series SPI controller interface to the port specified in the parameter instead of using the port address set by the BIOS. For that you have to use the </dd>
 <p> <code> flashrom -p it87spi:it87spiport=portnum</code> </p>
 <p> syntax where <code>portnum</code> is an I/O port number which must be a multiple of 8.</p>
-<dt><code>ft2232_spi </code>programmer</p>
-<dd>An optional parameter specifies the controller type and interface/port it should support. For that you have to use the </p>
+<dt><code>ft2232_spi </code>programmer</dt>
+<dd>An optional parameter specifies the controller type and interface/port it should support. For that you have to use the </dd>
 <p> <code> flashrom -p ft2232_spi:type=model,port=interface</code> </p>
 <p> syntax where <code>model</code> can be any of <code>2232H</code>, <code>JTAGkey</code>, or <code>4232H</code> and <code>interface</code> can be any of <code>A</code>, or <code>B</code>. The default model is <code>4232H</code> and the default interface is <code>B</code>.</p>
-<dt><code>serprog </code>programmer</p>
-<dd>A mandatory parameter specifies either a serial device/baud combination or an IP/port combination for communication with the programmer. In the device/baud combination, the device has to start with a slash. For serial, you have to use the </p>
+<dt><code>serprog </code>programmer</dt>
+<dd>A mandatory parameter specifies either a serial device/baud combination or an IP/port combination for communication with the programmer. In the device/baud combination, the device has to start with a slash. For serial, you have to use the </dd>
 <p> <code> flashrom -p serprog:dev=/dev/device:baud</code> </p>
 <p> syntax and for IP, you have to use </p>
 <p> <code> flashrom -p serprog:ip=ipaddr:port</code> </p>
 <p> instead. More information about serprog is available in <code>serprog-protocol.txt</code> in the source distribution.</p>
-<dt><code>buspirate_spi </code>programmer</p>
-<dd>A required <code>dev</code> parameter specifies the Bus Pirate device node and an optional <code>spispeed</code> parameter specifies the frequency of the SPI bus. The parameter delimiter is a comma. Syntax is </p>
+<dt><code>buspirate_spi </code>programmer</dt>
+<dd>A required <code>dev</code> parameter specifies the Bus Pirate device node and an optional <code>spispeed</code> parameter specifies the frequency of the SPI bus. The parameter delimiter is a comma. Syntax is </dd>
 <p> <code>flashrom -p buspirate_spi:dev=/dev/device,spispeed=frequency</code> </p>
 <p> where <code>frequency</code> can be any of <code>30k</code>, <code>125k</code>, <code>250k</code>, <code>1M</code>, <code>2M</code>, <code>2.6M</code>, <code>4M</code>, <code>8M</code> (in Hz). The default is the maximum frequency of 8 MHz.</p>
-<dt><code>dediprog </code>programmer</p>
-<dd>No parameters defined yet.</p>
-<dt><code>rayer_spi </code>programmer</p>
-<dd>The default I/O base address used for the parallel port is 0x378 and you can use the optional <code>iobase</code> parameter to specify an alternate base I/O address with the </p>
+<dt><code>dediprog </code>programmer</dt>
+<dd>No parameters defined yet.</dd>
+<dt><code>rayer_spi </code>programmer</dt>
+<dd>The default I/O base address used for the parallel port is 0x378 and you can use the optional <code>iobase</code> parameter to specify an alternate base I/O address with the </dd>
 <p> <code> flashrom -p rayer_spi:iobase=baseaddr</code> </p>
 <p> syntax where <code>baseaddr</code> is base I/O port address of the parallel port, which must be a multiple of four. Make sure to not forget the &quot;0x&quot; prefix for hexadecimal port addresses. </p>
 <p> More information about the hardware is available at <a rel="nofollow" href="http://rayer.ic.cz/elektro/spipgm.htm">http://rayer.ic.cz/elektro/spipgm.htm</a></dl>
@@ -207,3 +207,4 @@ description: "flashrom – detect, read, write, verify and erase flash chips"
  some others, please see the flashrom svn changelog for details.<br />
  All authors can be reached via e-mail at &lt;flashrom [at] flashrom.org&gt;. </p>
 <p> This manual page was written by Uwe Hermann &lt;uwe [at] hermann-uwe.de&gt; and Carl-Daniel Hailfinger. It is licensed under the terms of the GNU GPL (version 2 or later).</p>
+</p>

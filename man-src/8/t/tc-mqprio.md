@@ -20,31 +20,31 @@ description: "MQPRIO – Multiqueue Priority Qdisc (Offloaded Hardware QOS)"
 <h2>Classification</h2>
 <p>Multiple methods are available to set the SKB priority which MQPRIO uses to select which traffic class to enqueue the packet.</p>
 <dl>
-<dt>From user space</p>
-<dd>A process with sufficient privileges can encode the destination class directly with SO_PRIORITY, see <code><a href="/docs/linux/man/7-socket/">socket</a>(7).</code></p>
-<dt>with iptables/nftables</p>
-<dd>An iptables/nftables rule can be created to match traffic flows and set the priority. <code><a href="/docs/linux/man/8-iptables/">iptables</a>(8)</code></p>
-<dt>with net_prio cgroups</p>
-<dd>The net_prio cgroup can be used to set the priority of all sockets belong to an application. See kernel and cgroup documentation for details. </p>
+<dt>From user space</dt>
+<dd>A process with sufficient privileges can encode the destination class directly with SO_PRIORITY, see <code><a href="/docs/linux/man/7-socket/">socket</a>(7).</code></dd>
+<dt>with iptables/nftables</dt>
+<dd>An iptables/nftables rule can be created to match traffic flows and set the priority. <code><a href="/docs/linux/man/8-iptables/">iptables</a>(8)</code></dd>
+<dt>with net_prio cgroups</dt>
+<dd>The net_prio cgroup can be used to set the priority of all sockets belong to an application. See kernel and cgroup documentation for details. </dd>
 </dl>
 <h2>Qdisc Parameters</h2>
 <dl>
-<dt>num_tc</p>
-<dd>Number of traffic classes to use. Up to 16 classes supported. </p>
-<dt>map</p>
-<dd>The priority to traffic class map. Maps priorities 0..15 to a specified traffic class. </p>
-<dt>queues</p>
-<dd>Provide count and offset of queue range for each traffic class. In the format, <code>count [at] offset.</code> Queue ranges for each traffic classes cannot overlap and must be a contiguous range of queues. </p>
-<dt>hw</p>
-<dd>Set to <code>1</code> to support hardware offload. Set to <code>0</code> to configure user specified values in software only. </p>
-<dt>mode</p>
-<dd>Set to <code>channel</code> for full use of the mqprio options. Use <code>dcb</code> to offload only TC values and use hardware QOS defaults. Supported with &#8216;hw&#8217; set to 1 only. </p>
-<dt>shaper</p>
-<dd>Use <code>bw_rlimit</code> to set bandwidth rate limits for a traffic class. Use <code>dcb</code> for hardware QOS defaults. Supported with &#8216;hw&#8217; set to 1 only. </p>
-<dt>min_rate</p>
-<dd>Minimum value of bandwidth rate limit for a traffic class. </p>
-<dt>max_rate</p>
-<dd>Maximum value of bandwidth rate limit for a traffic class. </p>
+<dt>num_tc</dt>
+<dd>Number of traffic classes to use. Up to 16 classes supported. </dd>
+<dt>map</dt>
+<dd>The priority to traffic class map. Maps priorities 0..15 to a specified traffic class. </dd>
+<dt>queues</dt>
+<dd>Provide count and offset of queue range for each traffic class. In the format, <code>count [at] offset.</code> Queue ranges for each traffic classes cannot overlap and must be a contiguous range of queues. </dd>
+<dt>hw</dt>
+<dd>Set to <code>1</code> to support hardware offload. Set to <code>0</code> to configure user specified values in software only. </dd>
+<dt>mode</dt>
+<dd>Set to <code>channel</code> for full use of the mqprio options. Use <code>dcb</code> to offload only TC values and use hardware QOS defaults. Supported with &#8216;hw&#8217; set to 1 only. </dd>
+<dt>shaper</dt>
+<dd>Use <code>bw_rlimit</code> to set bandwidth rate limits for a traffic class. Use <code>dcb</code> for hardware QOS defaults. Supported with &#8216;hw&#8217; set to 1 only. </dd>
+<dt>min_rate</dt>
+<dd>Minimum value of bandwidth rate limit for a traffic class. </dd>
+<dt>max_rate</dt>
+<dd>Maximum value of bandwidth rate limit for a traffic class. </dd>
 </dl>
 <h2>Authors</h2>
 <p>John Fastabend, &lt;john.r.fastabend [at] intel.com&gt;</p>

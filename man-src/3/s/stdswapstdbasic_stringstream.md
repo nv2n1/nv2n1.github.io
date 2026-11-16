@@ -11,9 +11,7 @@ std::swap(std::basic_stringstream) - std::swap(std::basic_stringstream)
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class CharT, class Traits, class Alloc&gt;
-
 void swap(std::basic_stringstream&lt;CharT, Traits, Alloc&gt; &amp;lhs,
-
           std::basic_stringstream&lt;CharT, Traits, Alloc&gt; &amp;rhs);</code></pre> 
 Specializes the std::swap algorithm for std::basic_stringstream. Exchanges the state of lhs with that of rhs. Effectively calls lhs.swap(rhs). 
 

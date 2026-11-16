@@ -15,14 +15,14 @@ description: "hid2hci – Bluetooth HID to HCI mode switching utility"
 <p> <code><a href="/docs/linux/man/1-hid2hci/">hid2hci</a>(1)</code> is used to set up switch supported Bluetooth devices into the HCI mode and back.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;mode=[</code><i>mode</i>] Sets the mode to the device into. The possible values</p>
-<dd> for <i>mode</i> are <code>hid</code>, <code>hci</code>.</p>
-<dt><code>&#8211;method=[</code><i>method</i>] Which vendor method to use for switching the device.</p>
-<dd> The possible values for <i>method</i> are <code>csr</code>, <code>csr2</code>, <code>logitech-hdi</code>, <code>dell</code>.</p>
-<dt><code>&#8211;devpath</code></p>
-<dd> Specifies the device path in /sys</p>
-<dt><code>&#8211;help</code></p>
-<dd> Gives a list of possible options.</dl>
+<dt><code>&#8211;mode=[</code><i>mode</i>] Sets the mode to the device into. The possible values</dt>
+<dd> for <i>mode</i> are <code>hid</code>, <code>hci</code>.</dd>
+<dt><code>&#8211;method=[</code><i>method</i>] Which vendor method to use for switching the device.</dt>
+<dd> The possible values for <i>method</i> are <code>csr</code>, <code>csr2</code>, <code>logitech-hdi</code>, <code>dell</code>.</dd>
+<dt><code>&#8211;devpath</code></dt>
+<dd> Specifies the device path in /sys</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Gives a list of possible options.</dd></dl>
 <h2>RESOURCES</h2>
 <p> <i><a rel="nofollow" href="http://www.bluez.org">http://www.bluez.org</a></i></p>
 <h2>REPORTING BUGS</h2>

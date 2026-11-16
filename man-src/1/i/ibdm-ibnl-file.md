@@ -15,51 +15,49 @@ description: "ibnl – a generic IB netlist format"
 <h2>1. Main Concepts</h2>
 <p> The described file format for defining generic system <font SIZE="-1">IB</font> connectivity uses the following terminology:</p>
 <dl>
-<dt><font SIZE="-1">NODE</font></p>
-<dd> The instantiation of an <font SIZE="-1">IB</font> device may it be a switch or a channel adapter</p>
-<dt>SUB-SYSTEM</p>
-<dd> The instantiation of a board or module in a system</p>
-<dt><font SIZE="-1">SYSTEM</font></p>
-<dd> A definition of a board or a module</p>
-<dt><font SIZE="-1">TOPSYSTEM</font></p>
-<dd> The top most system defined in the given file</p>
-<dt>SUB-SYSTEM <font SIZE="-1">MODIFIER</font></p>
-<dd> Many systems allow multiple variations of their subsystem such as a 12X version of a leaf board in a <font SIZE="-1">MTS9600</font>. The modifier is a suffix to the board name. The <font SIZE="-1">IBNL</font> format supports assigning multiple names to the same board.</dl>
+<dt><font SIZE="-1">NODE</font></dt>
+<dd> The instantiation of an <font SIZE="-1">IB</font> device may it be a switch or a channel adapter</dd>
+<dt>SUB-SYSTEM</dt>
+<dd> The instantiation of a board or module in a system</dd>
+<dt><font SIZE="-1">SYSTEM</font></dt>
+<dd> A definition of a board or a module</dd>
+<dt><font SIZE="-1">TOPSYSTEM</font></dt>
+<dd> The top most system defined in the given file</dd>
+<dt>SUB-SYSTEM <font SIZE="-1">MODIFIER</font></dt>
+<dd> Many systems allow multiple variations of their subsystem such as a 12X version of a leaf board in a <font SIZE="-1">MTS9600</font>. The modifier is a suffix to the board name. The <font SIZE="-1">IBNL</font> format supports assigning multiple names to the same board.</dd></dl>
 <h2>2. File Format</h2>
 <p> The exact file format is provided in section 4. This section only provides extra information regarding the specific semantics of various sections. </p>
 <p> The <font SIZE="-1">IBNL</font> file is line sensitive as it requires different sections to start on a new line. The file is broken into several <font SIZE="-1">SYSTEM</font> (optional) and one <font SIZE="-1">TOPSYSTEM</font> sections. Each has one or more names. </p>
 <p> Connections are defined inside the <font SIZE="-1">SYSTEM/TOPSYSTEM</font> section only and thus might be of two types:</p>
 <dl>
-<dt>1. Between any node or sub-system to other node or sub-system</p>
+<dt>1. Between any node or sub-system to other node or sub-system</dt>
 <dd>
-<dt>2. From any node or sub-system to a connector of the system.</p>
-<dd></dl>
+</dd><dt>2. From any node or sub-system to a connector of the system.</dt>
+<dd></dd></dl>
 <p> <font SIZE="-1">NOTE-1:</font> The top system can define ports that might be redundant and not connected to any lower level board connector. In these cases the ports are simply omitted from the resulting system. This feature enables defining the front panel ports of a 12X/4X such that if a 12X leaf is selected only the 12X front panel ports are used. </p>
 <p> <font SIZE="-1">NOTE-2:</font> Port width and speed provided at the lowest level have precedence over definitions provided at upper levels of the hierarchy.</p>
 <h2>3. Guidelines for writing a System IBNL File</h2>
 <p> The following procedure should be followed in order to provide a new system <font SIZE="-1">IBNL:</font></p>
 <dl>
-<dt>a)</p>
-<dd> Name the file after the system name: &lt;any sys name (no spaces)&gt;.ibnl</p>
-<dt>b)</p>
-<dd> Define a <font SIZE="-1">SYSTEM</font> section for each board included in the system</p>
-<dt>c)</p>
-<dd> The port names of the boards are just strings, we use the simple format of Pn where N is just a serial number but you can pick any name you want. Just make sure it is unique.</p>
-<dt>d)</p>
-<dd> When different flavors of the boards exists like when you have a 4x and 12x option for a board name the optional boards with a modifier postfix. An example for such system that supports a <font SIZE="-1">LEAF</font> board of 12x and 4x types would be to define two <font SIZE="-1">SYSTEMS:</font></p>
+<dt>a)</dt>
+<dd> Name the file after the system name: &lt;any sys name (no spaces)&gt;.ibnl</dd>
+<dt>b)</dt>
+<dd> Define a <font SIZE="-1">SYSTEM</font> section for each board included in the system</dd>
+<dt>c)</dt>
+<dd> The port names of the boards are just strings, we use the simple format of Pn where N is just a serial number but you can pick any name you want. Just make sure it is unique.</dd>
+<dt>d)</dt>
+<dd> When different flavors of the boards exists like when you have a 4x and 12x option for a board name the optional boards with a modifier postfix. An example for such system that supports a <font SIZE="-1">LEAF</font> board of 12x and 4x types would be to define two <font SIZE="-1">SYSTEMS:</font></dd>
+<dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd> <font SIZE="-1">SYSTEM</font> <font SIZE="-1">LEAF</font>,LEAF:4x,LEAF:4X </p>
+</dt><dd> <font SIZE="-1">SYSTEM</font> <font SIZE="-1">LEAF</font>,LEAF:4x,LEAF:4X </dd>
 <p> &#8230; </p>
 <p> <font SIZE="-1">SYSTEM</font> LEAF:12x,LEAF:12X </p>
 <p> &#8230; </p>
 <p> <font SIZE="-1">NOTE-3:</font> The instantiations of the <font SIZE="-1">LEAF</font> boards in another board or the top system need not specify the postfix and are being decided upon only when the topology file is being parsed. The &#8220;<font SIZE="-1">SYSTEM</font> <font SIZE="-1">LEAF</font>&#8221; with no postfix will be used by default. To continue the example here is how the LEAFs are instantiated in the top system: </p>
 <dl>
 <dt>
-<dd> <font SIZE="-1">TOPSYSTEM</font> MyIbSystem </p>
+</dt><dd> <font SIZE="-1">TOPSYSTEM</font> MyIbSystem </dd>
 <p> <font SIZE="-1">LEAF</font> leaf1 </p>
 <p> &#8230; </p>
 <p> <font SIZE="-1">LEAF</font> leaf2 </p>
@@ -67,21 +65,19 @@ description: "ibnl – a generic IB netlist format"
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> The actual 4x or 12x version of the <font SIZE="-1">LEAF</font> board can then be specified in the topology file <font SIZE="-1">CFG</font> section to select the right combination of optional boards in the system. An example will be: </p>
-<dl>
+</dd><dl>
 <dt>
-<dd> MyIbSystem N001 <font SIZE="-1">CFG:</font> leaf2=12x </p>
+</dt><dd> MyIbSystem N001 <font SIZE="-1">CFG:</font> leaf2=12x </dd>
 <p> In this case leaf1 will be 4x as no special modifier is defined for it (and <font SIZE="-1">LEAF</font> is by default a 4x leaf). Leaf2 will be 12x as defined in the <font SIZE="-1">CFG</font> section.</dl>
 <dl>
-<dt>e)</p>
-<dd> Special considerations should be made to design the top system section when several optional board types exist. Top system section might include multiple definitions for front panel plugs like P1-4x and P1-12x (yes these are just names that should follow the writing on the front or back panels). As the different flavors of the boards are not required to define the same names for their ports including a 12x port might leave some of the top level connections dangling (not connected) and thus the front panel ports of the other flavor will be removed from the final system definition. As an example let us consider a simple board <font SIZE="-1">LEAF</font> with 3 4x port flavor and one 12x port flavors. We recommend connecting it in the top level using the following scheme:</p>
+<dt>e)</dt>
+<dd> Special considerations should be made to design the top system section when several optional board types exist. Top system section might include multiple definitions for front panel plugs like P1-4x and P1-12x (yes these are just names that should follow the writing on the front or back panels). As the different flavors of the boards are not required to define the same names for their ports including a 12x port might leave some of the top level connections dangling (not connected) and thus the front panel ports of the other flavor will be removed from the final system definition. As an example let us consider a simple board <font SIZE="-1">LEAF</font> with 3 4x port flavor and one 12x port flavors. We recommend connecting it in the top level using the following scheme:</dd>
+<dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd> <font SIZE="-1">SYSTEM</font> LEAF:4x </p>
+</dt><dd> <font SIZE="-1">SYSTEM</font> LEAF:4x </dd>
 <p> <font SIZE="-1">NODE</font> U1 </p>
 <p> 1 -4x-&gt; 4XP1 </p>
 <p> 2 -4x-&gt; 4XP2 </p>
@@ -99,13 +95,11 @@ description: "ibnl – a generic IB netlist format"
 <p> 12XP1 -&gt; L1/P1-12x</dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>f)</p>
-<dd> Place the file in the &lt;prefix&gt;/lib/IBDM/ibdm1.0/ibnl directory</p>
-<dt>g)</p>
-<dd> Check the new file syntax by placing it in the ibnl directory as described above, creating a simple topology (<code>ibdm-topo-file</code> file with one such system and running <code>ibdmtr</code> utility to parse it tracing a simple path through it.</dl>
+<dt>f)</dt>
+<dd> Place the file in the &lt;prefix&gt;/lib/IBDM/ibdm1.0/ibnl directory</dd>
+<dt>g)</dt>
+<dd> Check the new file syntax by placing it in the ibnl directory as described above, creating a simple topology (<code>ibdm-topo-file</code> file with one such system and running <code>ibdmtr</code> utility to parse it tracing a simple path through it.</dd></dl>
 </dl>
 </dl>
 </dl>

@@ -30,44 +30,44 @@ description: "src/antlr3ucs2inputstream.c –"
 <h3>static void antlr3UCS2Consume (<code>pANTLR3_INT_STREAM</code> is) [static]</h3>
 <p>Consume the next character in an 8 bit ASCII input stream. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>input</i> Input stream context pointer</dl>
+<dd><i>input</i> Input stream context pointer</dd></dl>
 <p> References ANTLR3_INPUT_STREAM_struct::charPositionInLine, ANTLR3_INPUT_STREAM_struct::currentLine, ANTLR3_INPUT_STREAM_struct::data, ANTLR3_INPUT_STREAM_struct::line, ANTLR3_INPUT_STREAM_struct::newlineChar, ANTLR3_INPUT_STREAM_struct::nextChar, ANTLR3_INPUT_STREAM_struct::sizeBuf, and ANTLR3_INT_STREAM_struct::super. </p>
 <p> Referenced by antlr3UCS2SetupStream().</p>
 <h3>static <code>ANTLR3_MARKER</code> antlr3UCS2Index (<code>pANTLR3_INT_STREAM</code> is) [static]</h3>
 <p>Calculate the current index in the output stream. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>input</i> Input stream context pointer</dl>
+<dd><i>input</i> Input stream context pointer</dd></dl>
 <p> References ANTLR3_INPUT_STREAM_struct::nextChar, and ANTLR3_INT_STREAM_struct::super. </p>
 <p> Referenced by antlr3UCS2SetupStream().</p>
 <h3>static <code>ANTLR3_UCHAR</code> antlr3UCS2LA (<code>pANTLR3_INT_STREAM</code> is, <code>ANTLR3_INT32</code> la) [static]</h3>
 <p>Return the input element assuming an 8 bit ascii input. <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>input</i> Input stream context pointer<br />
- <i>la</i> 1 based offset of next input stream element</dl>
+ <i>la</i> 1 based offset of next input stream element</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Next input character in internal ANTLR3 encoding (UTF32)</dl>
+<dd>Next input character in internal ANTLR3 encoding (UTF32)</dd></dl>
 <p> References ANTLR3_CHARSTREAM_EOF, ANTLR3_INPUT_STREAM_struct::data, ANTLR3_INPUT_STREAM_struct::nextChar, ANTLR3_INPUT_STREAM_struct::sizeBuf, and ANTLR3_INT_STREAM_struct::super. </p>
 <p> Referenced by antlr3UCS2SetupStream().</p>
 <h3>static void antlr3UCS2Seek (<code>pANTLR3_INT_STREAM</code> is, <code>ANTLR3_MARKER</code> seekPoint) [static]</h3>
 <p>Rewind the lexer input to the state specified by the supplied mark. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>input</i> Input stream context pointer</dl>
+<dd><i>input</i> Input stream context pointer</dd></dl>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
-<dd>Assumes ASCII (or at least, 8 Bit) input stream.</dl>
+<dd>Assumes ASCII (or at least, 8 Bit) input stream.</dd></dl>
 <p> References ANTLR3_INT_STREAM_struct::consume, ANTLR3_INPUT_STREAM_struct::nextChar, and ANTLR3_INT_STREAM_struct::super. </p>
 <p> Referenced by antlr3UCS2SetupStream().</p>
 <h3>void antlr3UCS2SetupStream (<code>pANTLR3_INPUT_STREAM</code> input, <code>ANTLR3_UINT32</code> type)</h3>
 <p>Common function to setup function interface for a 16 bit &#8216;UCS2&#8217; input stream. <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>input</i> Input stream context pointer</dl>
+<dd><i>input</i> Input stream context pointer</dd></dl>
 <p> <code>Remarks:</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>*</p>
-<dd>Strictly speaking, there is no such thing as a UCS2 input stream as the term tends to confuse the notions of character encoding, unicode and so on. However because there will possibly be a need for a UTF-16 stream, I needed to identify 16 bit streams that do not support surrogate encodings and UCS2 is how it is mostly referred to. For instance Java, Oracle and others use a 16 bit encoding of characters and so this type of stream is very common. Take it to mean, therefore, a straight 16 bit uncomplicated encoding of Unicode code points.</dl>
+</dd><dl COMPACT>
+<dt>*</dt>
+<dd>Strictly speaking, there is no such thing as a UCS2 input stream as the term tends to confuse the notions of character encoding, unicode and so on. However because there will possibly be a need for a UTF-16 stream, I needed to identify 16 bit streams that do not support surrogate encodings and UCS2 is how it is mostly referred to. For instance Java, Oracle and others use a 16 bit encoding of characters and so this type of stream is very common. Take it to mean, therefore, a straight 16 bit uncomplicated encoding of Unicode code points.</dd></dl>
 </dl>
 <p> References ANTLR3_INT_STREAM_struct::_LA, antlr3GenericSetupStream(), antlr3UCS2Consume(), antlr3UCS2Index(), antlr3UCS2LA(), antlr3UCS2Seek(), antlr3UCS2StringFactoryNew(), antlr3UCS2Substr(), ANTLR3_INPUT_STREAM_struct::charByteSize, ANTLR3_INT_STREAM_struct::consume, ANTLR3_INT_STREAM_struct::index, ANTLR3_INPUT_STREAM_struct::istream, ANTLR3_INT_STREAM_struct::seek, ANTLR3_INPUT_STREAM_struct::strFactory, and ANTLR3_INPUT_STREAM_struct::substr. </p>
 <p> Referenced by antlr3NewUCS2StringInPlaceStream().</p>
@@ -76,7 +76,7 @@ description: "src/antlr3ucs2inputstream.c –"
 <dl COMPACT>
 <dd><i>input</i> Input stream context pointer<br />
  <i>start</i> Offset in input stream where the string starts<br />
- <i>stop</i> Offset in the input stream where the string ends.</dl>
+ <i>stop</i> Offset in the input stream where the string ends.</dd></dl>
 <p> References ANTLR3_UINT32_CAST, ANTLR3_STRING_FACTORY_struct::newPtr, and ANTLR3_INPUT_STREAM_struct::strFactory. </p>
 <p> Referenced by antlr3UCS2SetupStream().</p>
 <h2>Author</h2>

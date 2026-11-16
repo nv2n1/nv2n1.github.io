@@ -11,10 +11,8 @@ std::chrono::floor(std::chrono::duration) - std::chrono::floor(std::chrono::dura
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;chrono&gt;
-
     template &lt;class ToDuration, class Rep, class Period&gt;
     (since C++ 17)
-
         constexpr ToDuration floor(const duration&lt;Rep, Period&gt; &amp;d);</code></pre> 
 Returns the greatest duration t representable in ToDuration that is less or equal to d. 
 The function does not participate in the overload resolution unless ToDuration is an instance of std::chrono::duration. 

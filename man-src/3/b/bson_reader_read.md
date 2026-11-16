@@ -17,11 +17,11 @@ bson_reader_read (bson_reader_t *reader,
 </pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>reader</code></p>
-<dd> A <code>bson_reader_t</code> \&amp;.</dl>
+<dt><code>reader</code></dt>
+<dd> A <code>bson_reader_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>reached_eof</code></p>
-<dd> A UNKNOWN.</dl>
+<dt><code>reached_eof</code></dt>
+<dd> A UNKNOWN.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_reader_read/">bson_reader_read</a>(3)</code> function shall read the next document from the underlying file-descriptor or buffer. </p>
 <p> If there are no further documents or a failure was detected, then NULL is returned. </p>

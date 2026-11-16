@@ -21,17 +21,17 @@ url: "/docs/linux/man/1-xml_merge/"
 
 <dl>
 <dt>-o &lt;output_file&gt;
-<dd> unless this option is used the program output goes to <font SIZE="-1">STDOUT</font>
-<dt>-i
-<dd> the files use XInclude instead of processing instructions (they were created using the <tt>&quot;-i&quot;</tt> option in <tt>&quot;xml_split&quot;</tt>)
-<dt>-v
-<dd> verbose output
-<dt>-V
-<dd> outputs version and exit
-<dt>-h
-<dd> short help
-<dt>-m
-<dd> man (requires pod2text to be in the path)</dl>
+</dt><dd> unless this option is used the program output goes to <font SIZE="-1">STDOUT</font>
+</dd><dt>-i
+</dt><dd> the files use XInclude instead of processing instructions (they were created using the <tt>&quot;-i&quot;</tt> option in <tt>&quot;xml_split&quot;</tt>)
+</dd><dt>-v
+</dt><dd> verbose output
+</dd><dt>-V
+</dt><dd> outputs version and exit
+</dd><dt>-h
+</dt><dd> short help
+</dd><dt>-m
+</dt><dd> man (requires pod2text to be in the path)</dd></dl>
 
 <h2>EXAMPLES</h2>
 

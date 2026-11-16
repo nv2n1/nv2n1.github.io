@@ -21,107 +21,107 @@ description: "ipmiutil_lan – show and configure IPMI LAN parameters, users, an
 <h2>Options</h2>
 <p>Command line options are described below. Note that without options, ipmiutil lan behaves as if option -r were used. To configure IPMI LAN &amp; PEF, use option -e. </p>
 <dl>
-<dt>-a alertnum</p>
-<dd>Specify which PEF alert number is to be used. Default is 1. This would only be used if extra PEF alert destinations had been set.</p>
-<dt>-b authmask</p>
-<dd>Specify a certain authtype mask in hex to use when configuring this channel. The default mask is 0x16, so to include authtype None (bit 0), it would require entering &#8216;-b 17&#8217;.</p>
-<dt>-c</p>
-<dd>Show Canonical output, which shows only interpreted text and streamlines the parameters shown, using a common delimiter.</p>
-<dt>-d</p>
-<dd>This option disables the IPMI LAN and PEF parameters, so as not to allow BMC LAN connections or alerts. This option also sets the IP address to zeros.</p>
-<dt>-e</p>
-<dd>This option enables the BMC LAN configuration and PEF event alerts. The utility will attempt to obtain the default BMC LAN parameters from the OS automatically, or they can be specified with command options below.</p>
-<dt>-f</p>
-<dd>Set the ARP control parameter to 1 = gratuituous ARPs, 2 = ARP responses, or 3 = both grat ARP and ARP responses. The default is 1.</p>
-<dt>-g</p>
-<dd>This specifies the secondary gateway IP address to use for the BMC LAN. The default is to omit this parameter and only use the default gateway. See also -G.</p>
-<dt>-h</p>
-<dd>Set the IPMI VLAN ID to this value. Setting to a value &gt;=4096 disables the VLAN ID. The default behavior is not to set this parameter.</p>
-<dt>-i ethif</p>
-<dd>By default, the eth0 interface is used to find IP and MAC addresses. Sometimes, however, the first ethernet port on the baseboard may be represented by Linux as eth1 or eth2 instead. If so, use this option to indicate the correct ethernet interface to use. By default, ipmiutil lan will scan up to 32 eth interfaces for the onboard one that BMC LAN uses.</p>
-<dt>-j</p>
+<dt>-a alertnum</dt>
+<dd>Specify which PEF alert number is to be used. Default is 1. This would only be used if extra PEF alert destinations had been set.</dd>
+<dt>-b authmask</dt>
+<dd>Specify a certain authtype mask in hex to use when configuring this channel. The default mask is 0x16, so to include authtype None (bit 0), it would require entering &#8216;-b 17&#8217;.</dd>
+<dt>-c</dt>
+<dd>Show Canonical output, which shows only interpreted text and streamlines the parameters shown, using a common delimiter.</dd>
+<dt>-d</dt>
+<dd>This option disables the IPMI LAN and PEF parameters, so as not to allow BMC LAN connections or alerts. This option also sets the IP address to zeros.</dd>
+<dt>-e</dt>
+<dd>This option enables the BMC LAN configuration and PEF event alerts. The utility will attempt to obtain the default BMC LAN parameters from the OS automatically, or they can be specified with command options below.</dd>
+<dt>-f</dt>
+<dd>Set the ARP control parameter to 1 = gratuituous ARPs, 2 = ARP responses, or 3 = both grat ARP and ARP responses. The default is 1.</dd>
+<dt>-g</dt>
+<dd>This specifies the secondary gateway IP address to use for the BMC LAN. The default is to omit this parameter and only use the default gateway. See also -G.</dd>
+<dt>-h</dt>
+<dd>Set the IPMI VLAN ID to this value. Setting to a value &gt;=4096 disables the VLAN ID. The default behavior is not to set this parameter.</dd>
+<dt>-i ethif</dt>
+<dd>By default, the eth0 interface is used to find IP and MAC addresses. Sometimes, however, the first ethernet port on the baseboard may be represented by Linux as eth1 or eth2 instead. If so, use this option to indicate the correct ethernet interface to use. By default, ipmiutil lan will scan up to 32 eth interfaces for the onboard one that BMC LAN uses.</dd>
+<dt>-j</dt>
 <dd>This sets a custom PEF rule as the last PEF entry. The input is a series of 10 hex bytes, forming the PEF entry. For example, this sample PEF entry would perform a power down action if the Baseboard Temp reached its threshold.<br />
-&nbsp;<wbr>&nbsp;<wbr>&quot;ipmiutil lan -e -j020110ffff013001950a&quot;</p>
-<dt>-k</p>
-<dd>This causes ipmiutil lan to also insert two rules to send alerts for transition-to-OK events, including Power Redundancy OK and Temperature OK.</p>
-<dt>-l</p>
-<dd>This option enables the BMC LAN configuration, but not PEF events. The utility will attempt to obtain the default BMC LAN parameters from the OS automatically, or they can be specified with command options below.</p>
-<dt>-n num</p>
-<dd>By default, the new PEF entry for OS Critical Stop is inserted at offset 12 into the table. This can be changed to insert it at an offset &gt; 12 if another entry already exists at offset 12.</p>
-<dt>-o</p>
-<dd>Disable Only SOL. This could be used after the IPMI LAN was configured, to disable Serial-Over-LAN console access but still allow other IPMI LAN access.</p>
-<dt>-p password_to_set</p>
-<dd>This specifies the firmware password to set for BMC LAN access. If not specified, the user and password configuration will not be changed.</p>
-<dt>-q</p>
-<dd>Specify an alternate user number for the LAN username from the -u option. This is normally user number 2, 3, or 4, where 2 is the default. The maximum number of users is 15. Same as -# below.</p>
-<dt>-#</p>
-<dd>Specify an alternate user number for the LAN username from the -u option. Same as -q above.</p>
-<dt>-r</p>
-<dd>This option just reads the configuration without writing any BMC LAN parameters or writing any new entries to the PEF table.</p>
-<dt>-s</p>
-<dd>This option will also display some of the Serial parameters.</p>
-<dt>-t</p>
-<dd>Test if the BMC LAN has already been configured. Returns 0 if so.</p>
-<dt>-u username_to_set</p>
-<dd>This specifies the firmware username to set for BMC LAN access. If a username is specified, user 3 will be set. If not specified, the default user 1 will be used.</p>
-<dt>-v priv</p>
-<dd>Set a specific access priVilege for this user, where priv can be: 1=Callback, 2=User, 3=Operator, 4=Admin, 5=OEM, 15=NoAccess The default if not specified or specified in error, is to use 4=Admin.</p>
-<dt>-w N</p>
-<dd>Set the Gratuitous ARP Interval to N seconds. This has no effect if the firmware does not support Grat-ARP, as shown in Lan Param 10. If not set, the interval remains at the firmware default.</p>
-<dt>-x</p>
-<dd>Causes extra debug messages to be displayed.</p>
-<dt>-y N</p>
-<dd>Set the OEM LAN Failover parameter to N. Values for N with Intel Romley/S2600 baseboards: 1 = enable, 0 = disable. Values for N with SuperMicro baseboards: 2 = failover, 1 = lan1 , 0 = dedicated.</p>
-<dt>-z</p>
-<dd>Also show the IPMI LAN Statistics</p>
-<dt>-A alert_ip_addr</p>
-<dd>This specifies the SNMP Alert Destination IP address to use for the BMC LAN. By default, this utility will attempt to obtain this from the /etc/snmp/snmpd.conf file, via the trapsink parameter. The alert destination will see the BMC LAN traps with the enterprises.3183.1.1 OID. If no alert IP address is specified in either snmpd.conf or this parameter, or if that IP address does not respond, the other SNMP parameters for BMC LAN will be skipped.</p>
-<dt>-B baud_sol</p>
-<dd>This specifies the Baud rate for SerialOverLan. The possible values are: 9600, 19.2k, 38.4k, 57.6k, and 115.2k. The default is 19.2k.</p>
-<dt>-C snmp_community</p>
-<dd>This specifies the SNMP Community name to use for BMC LAN Alerts. The default community string is &quot;public&quot;. This parameter is ignored if there is no Alert IP address.</p>
-<dt>-D</p>
-<dd>This causes the local IP address to be determined by DHCP instead of a static IP address.</p>
-<dt>-E</p>
-<dd>Use the remote password from Environment variable IPMI_PASSWORD.</p>
-<dt>-F drv_t</p>
-<dd>Force the driver type to one of the followng: imb, va, open, gnu, landesk, lan, lan2, lan2i, kcs, smb. Note that lan2i means lan2 with intelplus. The default is to detect any available driver type and use it.</p>
-<dt>-G gwy_ip_addr</p>
-<dd>This specifies the default gateway IP address to use for the BMC LAN. The default is to automatically obtain this from the Linux route table.</p>
-<dt>-H gwy_mac_addr</p>
-<dd>This specifies the default gateway MAC address to use for the BMC LAN. The format can be either 11:22:33:44:55:66 or 11-22-33-44-55-66. The default is to try to automatically obtain this by sending an arp request from an OS LAN eth interface: the default one, or as specified by -i.</p>
-<dt>-K hostname</p>
-<dd>This specifies the IPMI hostname to set, for Kontron servers only. This enables the firmware to properly map the IP address to a hostname, especially with the web interface. The default is not to set this parameter, and use IP address only.</p>
-<dt>-I ip_addr</p>
-<dd>This specifies the local IP address to use for the BMC LAN on eth0. The default is to automatically obtain this from the Linux ifconfig.</p>
-<dt>-J</p>
-<dd>Use the specified LanPlus cipher suite (0 thru 17): 0=none/none/none, 1=sha1/none/none, 2=sha1/sha1/none, 3=sha1/sha1/cbc128, 4=sha1/sha1/xrc4_128, 5=sha1/sha1/xrc4_40, 6=md5/none/none, &#8230; 14=md5/md5/xrc4_40. Default is 3.</p>
-<dt>-L lan_ch_num</p>
-<dd>This specifies the IPMI LAN channel number used for BMC LAN. This varies by platform, and can be found in the platform technical specifications. For instance, Intel platforms usually use channels 1 &amp; 2 for onboard NICs, and channel 3 for optional RMM NICs. By default, ipmiutil lan scans all IPMI channels to find the first LAN channel for BMC LAN. To just list all IPMI channels to see what is available, use the string &#8216;list&#8217; instead of a LAN channel number. This will list the channels and exit.</p>
-<dt>-M mac_addr</p>
-<dd>This specifies the local MAC address to use for the BMC LAN on eth0. The format can be either 11:22:33:44:55:66 or 11-22-33-44-55-66. The default is to automatically obtain this from the Linux ifconfig.</p>
-<dt>-N nodename</p>
-<dd>Nodename or IP address of the remote target system. If a nodename is specified, IPMI LAN interface is used. Otherwise the local system management interface is used.</p>
-<dt>-O</p>
-<dd>Observe security. Disables the default null user and disable cipher 0.</p>
-<dt>-P rmt_pswd</p>
-<dd>Remote password for the nodename given. The default is a null password. Same as -R below.</p>
-<dt>-Q</p>
-<dd>Set the IPMI VLAN Priority. The default priority is 0.</p>
-<dt>-R rmt_pswd</p>
-<dd>Remote password for the nodename given. The default is a null password. Same as -P above.</p>
-<dt>-S subnet</p>
-<dd>This specifies the local subnet mask to use for the BMC LAN on eth0. The default is to automatically obtain this from the Linux ifconfig.</p>
-<dt>-T</p>
-<dd>Use a specified IPMI LAN Authentication Type: 0=None, 1=MD2, 2=MD5, 4=Straight Password, 5=OEM.</p>
-<dt>-U rmt_user</p>
-<dd>Remote username for the nodename given. The default is a null username.</p>
-<dt>-V</p>
-<dd>Use a specified IPMI LAN privilege level. 1=Callback level, 2=User level, 3=Operator level, 4=Administrator level (default), 5=OEM level.</p>
-<dt>-X alert_mac_addr</p>
-<dd>This specifies the SNMP Alert Destinations&#8217;s MAC address to use for the BMC LAN. The format can be either 11:22:33:44:55:66 or 11-22-33-44-55-66. The default is to attempt to obtain this from the Linux arp cache. This parameter is ignored if there is no Alert IP address.</p>
-<dt>-Y</p>
-<dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </p>
+&nbsp;<wbr>&nbsp;<wbr>&quot;ipmiutil lan -e -j020110ffff013001950a&quot;</dd>
+<dt>-k</dt>
+<dd>This causes ipmiutil lan to also insert two rules to send alerts for transition-to-OK events, including Power Redundancy OK and Temperature OK.</dd>
+<dt>-l</dt>
+<dd>This option enables the BMC LAN configuration, but not PEF events. The utility will attempt to obtain the default BMC LAN parameters from the OS automatically, or they can be specified with command options below.</dd>
+<dt>-n num</dt>
+<dd>By default, the new PEF entry for OS Critical Stop is inserted at offset 12 into the table. This can be changed to insert it at an offset &gt; 12 if another entry already exists at offset 12.</dd>
+<dt>-o</dt>
+<dd>Disable Only SOL. This could be used after the IPMI LAN was configured, to disable Serial-Over-LAN console access but still allow other IPMI LAN access.</dd>
+<dt>-p password_to_set</dt>
+<dd>This specifies the firmware password to set for BMC LAN access. If not specified, the user and password configuration will not be changed.</dd>
+<dt>-q</dt>
+<dd>Specify an alternate user number for the LAN username from the -u option. This is normally user number 2, 3, or 4, where 2 is the default. The maximum number of users is 15. Same as -# below.</dd>
+<dt>-#</dt>
+<dd>Specify an alternate user number for the LAN username from the -u option. Same as -q above.</dd>
+<dt>-r</dt>
+<dd>This option just reads the configuration without writing any BMC LAN parameters or writing any new entries to the PEF table.</dd>
+<dt>-s</dt>
+<dd>This option will also display some of the Serial parameters.</dd>
+<dt>-t</dt>
+<dd>Test if the BMC LAN has already been configured. Returns 0 if so.</dd>
+<dt>-u username_to_set</dt>
+<dd>This specifies the firmware username to set for BMC LAN access. If a username is specified, user 3 will be set. If not specified, the default user 1 will be used.</dd>
+<dt>-v priv</dt>
+<dd>Set a specific access priVilege for this user, where priv can be: 1=Callback, 2=User, 3=Operator, 4=Admin, 5=OEM, 15=NoAccess The default if not specified or specified in error, is to use 4=Admin.</dd>
+<dt>-w N</dt>
+<dd>Set the Gratuitous ARP Interval to N seconds. This has no effect if the firmware does not support Grat-ARP, as shown in Lan Param 10. If not set, the interval remains at the firmware default.</dd>
+<dt>-x</dt>
+<dd>Causes extra debug messages to be displayed.</dd>
+<dt>-y N</dt>
+<dd>Set the OEM LAN Failover parameter to N. Values for N with Intel Romley/S2600 baseboards: 1 = enable, 0 = disable. Values for N with SuperMicro baseboards: 2 = failover, 1 = lan1 , 0 = dedicated.</dd>
+<dt>-z</dt>
+<dd>Also show the IPMI LAN Statistics</dd>
+<dt>-A alert_ip_addr</dt>
+<dd>This specifies the SNMP Alert Destination IP address to use for the BMC LAN. By default, this utility will attempt to obtain this from the /etc/snmp/snmpd.conf file, via the trapsink parameter. The alert destination will see the BMC LAN traps with the enterprises.3183.1.1 OID. If no alert IP address is specified in either snmpd.conf or this parameter, or if that IP address does not respond, the other SNMP parameters for BMC LAN will be skipped.</dd>
+<dt>-B baud_sol</dt>
+<dd>This specifies the Baud rate for SerialOverLan. The possible values are: 9600, 19.2k, 38.4k, 57.6k, and 115.2k. The default is 19.2k.</dd>
+<dt>-C snmp_community</dt>
+<dd>This specifies the SNMP Community name to use for BMC LAN Alerts. The default community string is &quot;public&quot;. This parameter is ignored if there is no Alert IP address.</dd>
+<dt>-D</dt>
+<dd>This causes the local IP address to be determined by DHCP instead of a static IP address.</dd>
+<dt>-E</dt>
+<dd>Use the remote password from Environment variable IPMI_PASSWORD.</dd>
+<dt>-F drv_t</dt>
+<dd>Force the driver type to one of the followng: imb, va, open, gnu, landesk, lan, lan2, lan2i, kcs, smb. Note that lan2i means lan2 with intelplus. The default is to detect any available driver type and use it.</dd>
+<dt>-G gwy_ip_addr</dt>
+<dd>This specifies the default gateway IP address to use for the BMC LAN. The default is to automatically obtain this from the Linux route table.</dd>
+<dt>-H gwy_mac_addr</dt>
+<dd>This specifies the default gateway MAC address to use for the BMC LAN. The format can be either 11:22:33:44:55:66 or 11-22-33-44-55-66. The default is to try to automatically obtain this by sending an arp request from an OS LAN eth interface: the default one, or as specified by -i.</dd>
+<dt>-K hostname</dt>
+<dd>This specifies the IPMI hostname to set, for Kontron servers only. This enables the firmware to properly map the IP address to a hostname, especially with the web interface. The default is not to set this parameter, and use IP address only.</dd>
+<dt>-I ip_addr</dt>
+<dd>This specifies the local IP address to use for the BMC LAN on eth0. The default is to automatically obtain this from the Linux ifconfig.</dd>
+<dt>-J</dt>
+<dd>Use the specified LanPlus cipher suite (0 thru 17): 0=none/none/none, 1=sha1/none/none, 2=sha1/sha1/none, 3=sha1/sha1/cbc128, 4=sha1/sha1/xrc4_128, 5=sha1/sha1/xrc4_40, 6=md5/none/none, &#8230; 14=md5/md5/xrc4_40. Default is 3.</dd>
+<dt>-L lan_ch_num</dt>
+<dd>This specifies the IPMI LAN channel number used for BMC LAN. This varies by platform, and can be found in the platform technical specifications. For instance, Intel platforms usually use channels 1 &amp; 2 for onboard NICs, and channel 3 for optional RMM NICs. By default, ipmiutil lan scans all IPMI channels to find the first LAN channel for BMC LAN. To just list all IPMI channels to see what is available, use the string &#8216;list&#8217; instead of a LAN channel number. This will list the channels and exit.</dd>
+<dt>-M mac_addr</dt>
+<dd>This specifies the local MAC address to use for the BMC LAN on eth0. The format can be either 11:22:33:44:55:66 or 11-22-33-44-55-66. The default is to automatically obtain this from the Linux ifconfig.</dd>
+<dt>-N nodename</dt>
+<dd>Nodename or IP address of the remote target system. If a nodename is specified, IPMI LAN interface is used. Otherwise the local system management interface is used.</dd>
+<dt>-O</dt>
+<dd>Observe security. Disables the default null user and disable cipher 0.</dd>
+<dt>-P rmt_pswd</dt>
+<dd>Remote password for the nodename given. The default is a null password. Same as -R below.</dd>
+<dt>-Q</dt>
+<dd>Set the IPMI VLAN Priority. The default priority is 0.</dd>
+<dt>-R rmt_pswd</dt>
+<dd>Remote password for the nodename given. The default is a null password. Same as -P above.</dd>
+<dt>-S subnet</dt>
+<dd>This specifies the local subnet mask to use for the BMC LAN on eth0. The default is to automatically obtain this from the Linux ifconfig.</dd>
+<dt>-T</dt>
+<dd>Use a specified IPMI LAN Authentication Type: 0=None, 1=MD2, 2=MD5, 4=Straight Password, 5=OEM.</dd>
+<dt>-U rmt_user</dt>
+<dd>Remote username for the nodename given. The default is a null username.</dd>
+<dt>-V</dt>
+<dd>Use a specified IPMI LAN privilege level. 1=Callback level, 2=User level, 3=Operator level, 4=Administrator level (default), 5=OEM level.</dd>
+<dt>-X alert_mac_addr</dt>
+<dd>This specifies the SNMP Alert Destinations&#8217;s MAC address to use for the BMC LAN. The format can be either 11:22:33:44:55:66 or 11-22-33-44-55-66. The default is to attempt to obtain this from the Linux arp cache. This parameter is ignored if there is no Alert IP address.</dd>
+<dt>-Y</dt>
+<dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </dd>
 </dl>
 <h2>Examples</h2>
 <p>To read existing settings:<br />

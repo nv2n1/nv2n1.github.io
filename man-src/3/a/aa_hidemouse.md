@@ -14,8 +14,8 @@ description: "aa_hidemouse – hide the mouse cursor."
 <p> void aa_hidemouse(aa_context *c); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>aa_context *c</code></p>
-<dd> Not Documented.</dl>
+<dt><code>aa_context *c</code></dt>
+<dd> Not Documented.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Hide the mouse cursor. This function may be ignored by some drivers.</p>
 <h2>SEE ALSO</h2>

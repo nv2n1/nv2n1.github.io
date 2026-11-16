@@ -31,10 +31,10 @@ description: "Image Object Image Data Functions – Functions that allow you to 
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>obj</i> The given image object.<br />
- <i>to_cspace</i> The colorspace to which the image raw data will be converted.</dl>
+ <i>to_cspace</i> The colorspace to which the image raw data will be converted.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>data A newly allocated data in the format specified by to_cspace.</dl>
+<dd>data A newly allocated data in the format specified by to_cspace.</dd></dl>
 <h3>EAPI void evas_object_image_data_copy_set (<code>Evas_Object</code> * obj, void * data)</h3>
 <p>Replaces the raw image data of the given image object. </p>
 <p> This function lets the application replace an image object&#8217;s internal pixel buffer with a user-allocated one. For best results, you should generally first call <code>evas_object_image_size_set()</code> with the width and height for the new buffer. </p>
@@ -44,7 +44,7 @@ description: "Image Object Image Data Functions – Functions that allow you to 
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>obj</i> The given image object.<br />
- <i>data</i> The raw data.</dl>
+ <i>data</i> The raw data.</dd></dl>
 <h3>EAPI void* evas_object_image_data_get (const <code>Evas_Object</code> * obj, Evas_Bool for_writing)</h3>
 <p>Get a pointer to the raw image data of the given image object. </p>
 <p> This function returns a pointer to an image object&#8217;s internal pixel buffer, for reading only or read/write. If you request it for writing, the image will be marked dirty so that it gets redrawn at the next update. </p>
@@ -52,17 +52,17 @@ description: "Image Object Image Data Functions – Functions that allow you to 
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>obj</i> The given image object.<br />
- <i>for_writing</i> Whether the data being retrieved will be modified.</dl>
+ <i>for_writing</i> Whether the data being retrieved will be modified.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The raw image data.</dl>
+<dd>The raw image data.</dd></dl>
 <h3>EAPI void evas_object_image_data_set (<code>Evas_Object</code> * obj, void * data)</h3>
 <p>Sets the raw image data of the given image object. </p>
 <p> Note that the raw data must be of the same size and colorspace of the image. If data is NULL the current image data will be freed. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>obj</i> The given image object.<br />
- <i>data</i> The raw data, or NULL.</dl>
+ <i>data</i> The raw data, or NULL.</dd></dl>
 <p> References EVAS_LOAD_ERROR_NONE.</p>
 <h3>EAPI void evas_object_image_data_update_add (<code>Evas_Object</code> * obj, int x, int y, int w, int h)</h3>
 <p>Mark a sub-region of the given image object to be redrawn. </p>
@@ -73,7 +73,7 @@ description: "Image Object Image Data Functions – Functions that allow you to 
  <i>x</i> X-offset of the region to be updated.<br />
  <i>y</i> Y-offset of the region to be updated.<br />
  <i>w</i> Width of the region to be updated.<br />
- <i>h</i> Height of the region to be updated.</dl>
+ <i>h</i> Height of the region to be updated.</dd></dl>
 <p> References evas_list_append(). </p>
 <p> Referenced by evas_object_image_alpha_set().</p>
 <h3>EAPI void evas_object_image_preload (const <code>Evas_Object</code> * obj, Evas_Bool cancel)</h3>
@@ -83,6 +83,6 @@ description: "Image Object Image Data Functions – Functions that allow you to 
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>obj</i> The given image object.<br />
- <i>cancel</i> 0 means add to the workqueue, 1 remove it.</dl>
+ <i>cancel</i> 0 means add to the workqueue, 1 remove it.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Evas from the source code.</p>

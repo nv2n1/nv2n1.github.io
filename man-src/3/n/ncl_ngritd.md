@@ -22,15 +22,15 @@ CALL NGRITD (IAXS,ANGL,UCRD,VCRD,WCRD)
 <h2>Description</h2>
 
 <dl><dt>IAXS
-<dd>(an input expression of type INTEGER) specifies the axis about which rotation is to be done (1 for the U axis, 2 for the V axis, and 3 for the W axis).
-<dt>ANGL
-<dd>(an input expression of type REAL) specifies the magnitude, in degrees, of the rotation angle.
-<dt>UCRD
-<dd>(an input/output variable of type REAL) specifies the U coordinate of the point being rotated.
-<dt>VCRD
-<dd>(an input/output variable of type REAL) specifies the V coordinate of the point being rotated.
-<dt>WCRD
-<dd>(an input/output variable of type REAL) specifies the W coordinate of the point being rotated.</dl>
+</dt><dd>(an input expression of type INTEGER) specifies the axis about which rotation is to be done (1 for the U axis, 2 for the V axis, and 3 for the W axis).
+</dd><dt>ANGL
+</dt><dd>(an input expression of type REAL) specifies the magnitude, in degrees, of the rotation angle.
+</dd><dt>UCRD
+</dt><dd>(an input/output variable of type REAL) specifies the U coordinate of the point being rotated.
+</dd><dt>VCRD
+</dt><dd>(an input/output variable of type REAL) specifies the V coordinate of the point being rotated.
+</dd><dt>WCRD
+</dt><dd>(an input/output variable of type REAL) specifies the W coordinate of the point being rotated.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

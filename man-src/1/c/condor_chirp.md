@@ -23,155 +23,130 @@ description: "condor_chirp Access files or job ClassAd from an executing job"
 <p> <code>fetch </code> <i>RemoteFileName LocalFileName</i></p>
 <dl>
 <dt>
-<dd> Copy the <i>RemoteFileName</i> from the submit machine to the execute machine, naming it <i>LocalFileName</i> .</p>
-<dt>
-<dd></dl>
+</dt><dd> Copy the <i>RemoteFileName</i> from the submit machine to the execute machine, naming it <i>LocalFileName</i> .</dd>
+</dl>
 <p> <code>put</code> [ <code>-mode </code> <i>mode</i> ] [ <code>-perm </code> <i>UnixPerm</i> ] <i>LocalFileName</i> <i>RemoteFileName</i></p>
 <dl>
 <dt>
-<dd> Copy the <i>LocalFileName</i> from the execute machine to the submit machine, naming it <i>RemoteFileName</i> . The optional <code>-perm </code> <i>UnixPerm</i> argument describes the file access permissions in a Unix format; 660 is an example Unix format.</p>
+</dt><dd> Copy the <i>LocalFileName</i> from the execute machine to the submit machine, naming it <i>RemoteFileName</i> . The optional <code>-perm </code> <i>UnixPerm</i> argument describes the file access permissions in a Unix format; 660 is an example Unix format.</dd>
 <dt>
-<dd> The optional <code>-mode </code> <i>mode</i> argument is one or more of the following characters describing the <i>RemoteFileName</i> file: w , open for writing; a , force all writes to append; t , truncate before use; c , create the file, if it does not exist; x , fail if c is given and the file already exists.</p>
-<dt>
-<dd></dl>
+</dt><dd> The optional <code>-mode </code> <i>mode</i> argument is one or more of the following characters describing the <i>RemoteFileName</i> file: w , open for writing; a , force all writes to append; t , truncate before use; c , create the file, if it does not exist; x , fail if c is given and the file already exists.</dd>
+</dl>
 <p> <code>remove </code> <i>RemoteFileName</i></p>
 <dl>
 <dt>
-<dd> Remove the <i>RemoteFileName</i> file from the submit machine.</p>
-<dt>
-<dd></dl>
+</dt><dd> Remove the <i>RemoteFileName</i> file from the submit machine.</dd>
+</dl>
 <p> <code>get_job_attr </code> <i>JobAttributeName</i></p>
 <dl>
 <dt>
-<dd> Prints the named job ClassAd attribute to standard output.</p>
-<dt>
-<dd></dl>
+</dt><dd> Prints the named job ClassAd attribute to standard output.</dd>
+</dl>
 <p> <code>set_job_attr </code> <i>JobAttributeName AttributeValue</i></p>
 <dl>
 <dt>
-<dd> Sets the named job ClassAd attribute with the given attribute value.</p>
-<dt>
-<dd></dl>
+</dt><dd> Sets the named job ClassAd attribute with the given attribute value.</dd>
+</dl>
 <p> <code>get_job_attr_delayed </code> <i>JobAttributeName</i></p>
 <dl>
 <dt>
-<dd> Prints the named job ClassAd attribute to standard output, potentially reading the cached value from a recent set_job_attr_delayed.</p>
-<dt>
-<dd></dl>
+</dt><dd> Prints the named job ClassAd attribute to standard output, potentially reading the cached value from a recent set_job_attr_delayed.</dd>
+</dl>
 <p> <code>set_job_attr_delayed </code> <i>JobAttributeName AttributeValue</i></p>
 <dl>
 <dt>
-<dd> Sets the named job ClassAd attribute with the given attribute value, but does not immediately synchronize the value with the submit side. It can take 15 minutes before the synchronization occurs. This has much less overhead than the non delayed version. With this option, jobs do <i>not</i> need ClassAd attribute WantIOProxy set. With this option, job attribute names are restricted to begin with the case sensitive substring Chirp .</p>
-<dt>
-<dd></dl>
+</dt><dd> Sets the named job ClassAd attribute with the given attribute value, but does not immediately synchronize the value with the submit side. It can take 15 minutes before the synchronization occurs. This has much less overhead than the non delayed version. With this option, jobs do <i>not</i> need ClassAd attribute WantIOProxy set. With this option, job attribute names are restricted to begin with the case sensitive substring Chirp .</dd>
+</dl>
 <p> <code>ulog </code> <i>Message</i></p>
 <dl>
 <dt>
-<dd> Appends <i>Message</i> to the job event log.</p>
-<dt>
-<dd></dl>
+</dt><dd> Appends <i>Message</i> to the job event log.</dd>
+</dl>
 <p> <code>read</code> [ <code>-offset </code> <i>offset</i> ] [ <code>-stride </code> <i>length skip</i> ] <i>RemoteFileName</i> <i>Length</i></p>
 <dl>
 <dt>
-<dd> Read <i>Length</i> bytes from <i>RemoteFileName</i> . Optionally, implement a stride by starting the read at <i>offset</i> and reading <i>length</i> bytes with a stride of <i>skip</i> bytes.</p>
-<dt>
-<dd></dl>
+</dt><dd> Read <i>Length</i> bytes from <i>RemoteFileName</i> . Optionally, implement a stride by starting the read at <i>offset</i> and reading <i>length</i> bytes with a stride of <i>skip</i> bytes.</dd>
+</dl>
 <p> <code>write</code> [ <code>-offset </code> <i>offset</i> ] [ <code>-stride </code> <i>length skip</i> ] <i>RemoteFileName</i> <i>LocalFileName</i> [ <i>numbytes</i> ]</p>
 <dl>
 <dt>
-<dd> Write the contents of <i>LocalFileName</i> to <i>RemoteFileName</i> . Optionally, start writing to the remote file at <i>offset</i> and write <i>length</i> bytes with a stride of <i>skip</i> bytes. If the optional <i>numbytes</i> follows <i>LocalFileName</i> , then the write will halt after <i>numbytes</i> input bytes have been written. Otherwise, the entire contents of <i>LocalFileName</i> will be written.</p>
-<dt>
-<dd></dl>
+</dt><dd> Write the contents of <i>LocalFileName</i> to <i>RemoteFileName</i> . Optionally, start writing to the remote file at <i>offset</i> and write <i>length</i> bytes with a stride of <i>skip</i> bytes. If the optional <i>numbytes</i> follows <i>LocalFileName</i> , then the write will halt after <i>numbytes</i> input bytes have been written. Otherwise, the entire contents of <i>LocalFileName</i> will be written.</dd>
+</dl>
 <p> <code>rmdir</code> [ <code>-r</code> ] <i>RemotePath</i></p>
 <dl>
 <dt>
-<dd> Delete the directory specified by <i>RemotePath</i> . If the optional <code>-r</code> is specified, recursively delete the entire directory.</p>
-<dt>
-<dd></dl>
+</dt><dd> Delete the directory specified by <i>RemotePath</i> . If the optional <code>-r</code> is specified, recursively delete the entire directory.</dd>
+</dl>
 <p> <code>getdir</code> [ <code>-l</code> ] <i>RemotePath</i></p>
 <dl>
 <dt>
-<dd> List the contents of the directory specified by <i>RemotePath</i> . If <i>-l</i> is specified, list all metadata as well.</p>
-<dt>
-<dd></dl>
+</dt><dd> List the contents of the directory specified by <i>RemotePath</i> . If <i>-l</i> is specified, list all metadata as well.</dd>
+</dl>
 <p> <code>whoami</code></p>
 <dl>
 <dt>
-<dd> Get the user&#8217;s current identity.</p>
-<dt>
-<dd></dl>
+</dt><dd> Get the user&#8217;s current identity.</dd>
+</dl>
 <p> <code>whoareyou </code> <i>RemoteHost</i></p>
 <dl>
 <dt>
-<dd> Get the identity of <i>RemoteHost</i> .</p>
-<dt>
-<dd></dl>
+</dt><dd> Get the identity of <i>RemoteHost</i> .</dd>
+</dl>
 <p> <code>link</code> [ <code>-s</code> ] <i>OldRemotePath</i> <i>NewRemotePath</i></p>
 <dl>
 <dt>
-<dd> Create a hard link from <i>OldRemotePath</i> to <i>NewRemotePath</i> . If the optional <i>-s</i> is specified, create a symbolic link instead.</p>
-<dt>
-<dd></dl>
+</dt><dd> Create a hard link from <i>OldRemotePath</i> to <i>NewRemotePath</i> . If the optional <i>-s</i> is specified, create a symbolic link instead.</dd>
+</dl>
 <p> <code>readlink </code> <i>RemoteFileName</i></p>
 <dl>
 <dt>
-<dd> Read the contents of the file defined by the symbolic link <i>RemoteFileName</i> .</p>
-<dt>
-<dd></dl>
+</dt><dd> Read the contents of the file defined by the symbolic link <i>RemoteFileName</i> .</dd>
+</dl>
 <p> <code>stat </code> <i>RemotePath</i></p>
 <dl>
 <dt>
-<dd> Get metadata for <i>RemotePath</i> . Examines the target, if it is a symbolic link.</p>
-<dt>
-<dd></dl>
+</dt><dd> Get metadata for <i>RemotePath</i> . Examines the target, if it is a symbolic link.</dd>
+</dl>
 <p> <code>lstat </code> <i>RemotePath</i></p>
 <dl>
 <dt>
-<dd> Get metadata for <i>RemotePath</i> . Examines the file, if it is a symbolic link.</p>
-<dt>
-<dd></dl>
+</dt><dd> Get metadata for <i>RemotePath</i> . Examines the file, if it is a symbolic link.</dd>
+</dl>
 <p> <code>statfs </code> <i>RemotePath</i></p>
 <dl>
 <dt>
-<dd> Get file system metadata for <i>RemotePath</i> .</p>
-<dt>
-<dd></dl>
+</dt><dd> Get file system metadata for <i>RemotePath</i> .</dd>
+</dl>
 <p> <code>access </code> <i>RemotePath Mode</i></p>
 <dl>
 <dt>
-<dd> Check access permissions for <i>RemotePath</i> . <i>Mode</i> is one or more of the characters r , w , x , or f , representing read, write, execute, and existence, respectively.</p>
-<dt>
-<dd></dl>
+</dt><dd> Check access permissions for <i>RemotePath</i> . <i>Mode</i> is one or more of the characters r , w , x , or f , representing read, write, execute, and existence, respectively.</dd>
+</dl>
 <p> <code>chmod </code> <i>RemotePath UnixPerm</i></p>
 <dl>
 <dt>
-<dd> Change the permissions of <i>RemotePath</i> to <i>UnixPerm</i> . <i>UnixPerm</i> describes the file access permissions in a Unix format; 660 is an example Unix format.</p>
-<dt>
-<dd></dl>
+</dt><dd> Change the permissions of <i>RemotePath</i> to <i>UnixPerm</i> . <i>UnixPerm</i> describes the file access permissions in a Unix format; 660 is an example Unix format.</dd>
+</dl>
 <p> <code>chown </code> <i>RemotePath UID GID</i></p>
 <dl>
 <dt>
-<dd> Change the ownership of <i>RemotePath</i> to <i>UID</i> and <i>GID</i> . Changes the target of <i>RemotePath</i> , if it is a symbolic link.</p>
-<dt>
-<dd></dl>
+</dt><dd> Change the ownership of <i>RemotePath</i> to <i>UID</i> and <i>GID</i> . Changes the target of <i>RemotePath</i> , if it is a symbolic link.</dd>
+</dl>
 <p> <code>chown </code> <i>RemotePath UID GID</i></p>
 <dl>
 <dt>
-<dd> Change the ownership of <i>RemotePath</i> to <i>UID</i> and <i>GID</i> . Changes the link, if <i>RemotePath</i> is a symbolic link.</p>
-<dt>
-<dd></dl>
+</dt><dd> Change the ownership of <i>RemotePath</i> to <i>UID</i> and <i>GID</i> . Changes the link, if <i>RemotePath</i> is a symbolic link.</dd>
+</dl>
 <p> <code>truncate </code> <i>RemoteFileName Length</i></p>
 <dl>
 <dt>
-<dd> Truncates <i>RemoteFileName</i> to <i>Length</i> bytes.</p>
-<dt>
-<dd></dl>
+</dt><dd> Truncates <i>RemoteFileName</i> to <i>Length</i> bytes.</dd>
+</dl>
 <p> <code>utime </code> <i>RemotePath AccessTime ModifyTime</i></p>
 <dl>
 <dt>
-<dd> Change the access to <i>AccessTime</i> and modification time to <i>ModifyTime</i> of <i>RemotePath</i> .</p>
-<dt>
-<dd></dl>
+</dt><dd> Change the access to <i>AccessTime</i> and modification time to <i>ModifyTime</i> of <i>RemotePath</i> .</dd>
+</dl>
 <h2>Examples</h2>
 <p> To copy a file from the submit machine to the execute machine while the user job is running, run </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>condor_chirp fetch remotefile localfile </p>

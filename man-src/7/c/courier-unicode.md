@@ -17,14 +17,15 @@ description: "courier-unicode – Courier Unicode Library"
 <h2>Author</h2>
 <p><code>Sam Varshavchik</code></p>
 <dl>
-<dd>Author</dl>
+<dd>Author</dd></dl>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>Unicode Standard</p>
+<dt> 1.</dt>
+<dd>Unicode Standard</dd>
 <dl>
-<dd><a rel="nofollow" href="http://www.unicode.org/standard/standard.html">http://www.unicode.org/standard/standard.html</a></dl>
-<dt> 2.</p>
-<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> <code>iconv</code>(3)</p>
+<dd><a rel="nofollow" href="http://www.unicode.org/standard/standard.html">http://www.unicode.org/standard/standard.html</a></dd></dl>
+<dt> 2.</dt>
+<dd><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> <code>iconv</code>(3)</dd>
 <dl>
-<dd><a rel="nofollow" href="http://manpages.courier-mta.org/htmlman3/iconv.3.html">http://manpages.courier-mta.org/htmlman3/iconv.3.html</a></dl>
+<dd><a rel="nofollow" href="http://manpages.courier-mta.org/htmlman3/iconv.3.html">http://manpages.courier-mta.org/htmlman3/iconv.3.html</a></dd></dl>
+</dl>

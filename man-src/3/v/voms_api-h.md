@@ -11,17 +11,11 @@ description: "voms_api.h –"
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;fstream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;openssl/x509.h&gt;
-
 #include &lt;openssl/bio.h&gt;
-
 #include &lt;sys/types.h&gt;
-
 #include 'newformat.h'</code></pre>
 <h3>Data Structures</h3>
 <p>struct data</p>
@@ -41,13 +35,10 @@ description: "voms_api.h –"
 <pre><code>enum data_type { TYPE_NODATA,
                  TYPE_STD,
                  TYPE_CUSTOM }
-
 The type of data returned.
-
     enum recurse_type { RECURSE_CHAIN,
                         RECURSE_NONE,
                         RECURSE_DEEP }
-
 enum verify_type { VERIFY_FULL = 0xffffffff,
                    VERIFY_NONE = 0x00000000,
                    VERIFY_DATE = 0x00000001,
@@ -57,7 +48,6 @@ enum verify_type { VERIFY_FULL = 0xffffffff,
                    VERIFY_ORDER = 0x00000010,
                    VERIFY_ID = 0x00000020,
                    VERIFY_CERTLIST = 0x00000040 }
-
 enum verror_type { VERR_NONE,
                    VERR_NOSOCKET,
                    VERR_NOIDENT,
@@ -81,14 +71,10 @@ enum verror_type { VERR_NONE,
                    VERR_SERVERCODE,
                    VERR_NOTAVAIL,
                    VERR_FILE }
-
 Error codes.
-
     Functions int
     getVOMSMajorVersionNumber(void)
-
         int getVOMSMinorVersionNumber(void)
-
             int getVOMSPatchVersionNumber(void)</code></pre>
 <h2>Macro Definition Documentation</h2>
 <h3>#define NOGLOBUS</h3>
@@ -105,95 +91,95 @@ Error codes.
 <p>The type of data returned. </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>TYPE_NODATA </i></p>
-<dd>no data</p>
-<dt><i>TYPE_STD </i></p>
-<dd>group, role, capability triplet</p>
-<dt><i>TYPE_CUSTOM </i></p>
-<dd>result of an S command</dl>
+<dt><i>TYPE_NODATA </i></dt>
+<dd>no data</dd>
+<dt><i>TYPE_STD </i></dt>
+<dd>group, role, capability triplet</dd>
+<dt><i>TYPE_CUSTOM </i></dt>
+<dd>result of an S command</dd></dl>
 <p> Definition at line 77 of file voms_api.h.</p>
 <h3>enum <code>recurse_type</code></h3>
 <p><code>Enumerator</code></p>
 <dl>
-<dt><i>RECURSE_CHAIN </i></p>
+<dt><i>RECURSE_CHAIN </i></dt>
 <dd>
-<dt><i>RECURSE_NONE </i></p>
+</dd><dt><i>RECURSE_NONE </i></dt>
 <dd>
-<dt><i>RECURSE_DEEP </i></p>
-<dd></dl>
+</dd><dt><i>RECURSE_DEEP </i></dt>
+<dd></dd></dl>
 <p> Definition at line 143 of file voms_api.h.</p>
 <h3>enum <code>verify_type</code></h3>
 <p><code>Enumerator</code></p>
 <dl>
-<dt><i>VERIFY_FULL </i></p>
+<dt><i>VERIFY_FULL </i></dt>
 <dd>
-<dt><i>VERIFY_NONE </i></p>
+</dd><dt><i>VERIFY_NONE </i></dt>
 <dd>
-<dt><i>VERIFY_DATE </i></p>
+</dd><dt><i>VERIFY_DATE </i></dt>
 <dd>
-<dt><i>VERIFY_TARGET </i></p>
+</dd><dt><i>VERIFY_TARGET </i></dt>
 <dd>
-<dt><i>VERIFY_KEY </i></p>
+</dd><dt><i>VERIFY_KEY </i></dt>
 <dd>
-<dt><i>VERIFY_SIGN </i></p>
+</dd><dt><i>VERIFY_SIGN </i></dt>
 <dd>
-<dt><i>VERIFY_ORDER </i></p>
+</dd><dt><i>VERIFY_ORDER </i></dt>
 <dd>
-<dt><i>VERIFY_ID </i></p>
+</dd><dt><i>VERIFY_ID </i></dt>
 <dd>
-<dt><i>VERIFY_CERTLIST </i></p>
-<dd></dl>
+</dd><dt><i>VERIFY_CERTLIST </i></dt>
+<dd></dd></dl>
 <p> Definition at line 149 of file voms_api.h.</p>
 <h3>enum <code>verror_type</code></h3>
 <p>Error codes. </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>VERR_NONE </i></p>
+<dt><i>VERR_NONE </i></dt>
 <dd>
-<dt><i>VERR_NOSOCKET </i></p>
-<dd>Socket problem</p>
-<dt><i>VERR_NOIDENT </i></p>
-<dd>Cannot identify itself (certificate problem)</p>
-<dt><i>VERR_COMM </i></p>
-<dd>Server problem</p>
-<dt><i>VERR_PARAM </i></p>
-<dd>Wrong parameters</p>
-<dt><i>VERR_NOEXT </i></p>
-<dd>VOMS extension missing</p>
-<dt><i>VERR_NOINIT </i></p>
-<dd>Initialization error</p>
-<dt><i>VERR_TIME </i></p>
-<dd>Error in time checking</p>
-<dt><i>VERR_IDCHECK </i></p>
-<dd>User data in extension different from the real ones</p>
-<dt><i>VERR_EXTRAINFO </i></p>
-<dd>VO name and URI missing</p>
-<dt><i>VERR_FORMAT </i></p>
-<dd>Wrong data format</p>
-<dt><i>VERR_NODATA </i></p>
-<dd>Empty extension</p>
-<dt><i>VERR_PARSE </i></p>
-<dd>Parse error</p>
-<dt><i>VERR_DIR </i></p>
-<dd>Directory error</p>
-<dt><i>VERR_SIGN </i></p>
-<dd>Signature error</p>
-<dt><i>VERR_SERVER </i></p>
-<dd>Unidentifiable VOMS server</p>
-<dt><i>VERR_MEM </i></p>
-<dd>Memory problems</p>
-<dt><i>VERR_VERIFY </i></p>
-<dd>Generic verification error</p>
-<dt><i>VERR_TYPE </i></p>
-<dd>Returned data of unknown type</p>
-<dt><i>VERR_ORDER </i></p>
-<dd>Ordering different than required</p>
-<dt><i>VERR_SERVERCODE </i></p>
-<dd>Error message from the server</p>
-<dt><i>VERR_NOTAVAIL </i></p>
-<dd>Method not available</p>
-<dt><i>VERR_FILE </i></p>
-<dd>Error reading data from file</dl>
+</dd><dt><i>VERR_NOSOCKET </i></dt>
+<dd>Socket problem</dd>
+<dt><i>VERR_NOIDENT </i></dt>
+<dd>Cannot identify itself (certificate problem)</dd>
+<dt><i>VERR_COMM </i></dt>
+<dd>Server problem</dd>
+<dt><i>VERR_PARAM </i></dt>
+<dd>Wrong parameters</dd>
+<dt><i>VERR_NOEXT </i></dt>
+<dd>VOMS extension missing</dd>
+<dt><i>VERR_NOINIT </i></dt>
+<dd>Initialization error</dd>
+<dt><i>VERR_TIME </i></dt>
+<dd>Error in time checking</dd>
+<dt><i>VERR_IDCHECK </i></dt>
+<dd>User data in extension different from the real ones</dd>
+<dt><i>VERR_EXTRAINFO </i></dt>
+<dd>VO name and URI missing</dd>
+<dt><i>VERR_FORMAT </i></dt>
+<dd>Wrong data format</dd>
+<dt><i>VERR_NODATA </i></dt>
+<dd>Empty extension</dd>
+<dt><i>VERR_PARSE </i></dt>
+<dd>Parse error</dd>
+<dt><i>VERR_DIR </i></dt>
+<dd>Directory error</dd>
+<dt><i>VERR_SIGN </i></dt>
+<dd>Signature error</dd>
+<dt><i>VERR_SERVER </i></dt>
+<dd>Unidentifiable VOMS server</dd>
+<dt><i>VERR_MEM </i></dt>
+<dd>Memory problems</dd>
+<dt><i>VERR_VERIFY </i></dt>
+<dd>Generic verification error</dd>
+<dt><i>VERR_TYPE </i></dt>
+<dd>Returned data of unknown type</dd>
+<dt><i>VERR_ORDER </i></dt>
+<dd>Ordering different than required</dd>
+<dt><i>VERR_SERVERCODE </i></dt>
+<dd>Error message from the server</dd>
+<dt><i>VERR_NOTAVAIL </i></dt>
+<dd>Method not available</dd>
+<dt><i>VERR_FILE </i></dt>
+<dd>Error reading data from file</dd></dl>
 <p> Definition at line 163 of file voms_api.h.</p>
 <h2>Function Documentation</h2>
 <h3>int getVOMSMajorVersionNumber (void)</h3>

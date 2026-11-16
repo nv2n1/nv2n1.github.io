@@ -10,7 +10,6 @@ description: "sem_init – initialize an unnamed semaphore"
 <p>sem_init &#8211; initialize an unnamed semaphore</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;semaphore.h&gt;
-
 int sem_init(sem_t *sem, int pshared, unsigned int value);</code></pre>
 <p> Link with <i>-pthread</i>.</p>
 <h2>Description</h2>
@@ -23,10 +22,10 @@ int sem_init(sem_t *sem, int pshared, unsigned int value);</code></pre>
 <p><code>sem_init</code>() returns 0 on success; on error, -1 is returned, and <i>errno</i> is set to indicate the error.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd><i>value</i> exceeds <code>SEM_VALUE_MAX</code>.</p>
-<dt><code>ENOSYS</code></p>
-<dd><i>pshared</i> is nonzero, but the system does not support process-shared semaphores (see <code><a href="/docs/linux/man/7-sem_overview/">sem_overview</a></code>(7)).</dl>
+<dt><code>EINVAL</code></dt>
+<dd><i>value</i> exceeds <code>SEM_VALUE_MAX</code>.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd><i>pshared</i> is nonzero, but the system does not support process-shared semaphores (see <code><a href="/docs/linux/man/7-sem_overview/">sem_overview</a></code>(7)).</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

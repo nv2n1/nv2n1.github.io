@@ -11,9 +11,7 @@ std::cauchy_distribution - std::cauchy_distribution
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;random&gt;
-
 template&lt; class RealType = double &gt;  (since C++11)
-
 class cauchy_distribution;</code></pre> 
 Produces random numbers according to a Cauchy distribution (also called Lorentz distribution): <pre><code>f(x; a,b) = ⎛
 ⎜

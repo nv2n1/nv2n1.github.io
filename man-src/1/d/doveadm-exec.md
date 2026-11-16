@@ -16,16 +16,16 @@ description: "doveadm-exec – easily execute commands from Dovecot’s libexec_
 <h2>OPTIONS</h2>
 <p> Global <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) <i>options</i>:</p>
 <dl>
-<dt><code>-D</code></p>
-<dd> Enables verbosity and debug messages.</p>
-<dt><code>-v</code></p>
-<dd> Enables verbosity, including progress counter.</dl>
+<dt><code>-D</code></dt>
+<dd> Enables verbosity and debug messages.</dd>
+<dt><code>-v</code></dt>
+<dd> Enables verbosity, including progress counter.</dd></dl>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><i>binary</i></p>
-<dd> the name of an executable located in <i>/usr/libexec/dovecot</i>.</p>
-<dt><i>binary arguments</i></p>
-<dd> options and arguments, wich will be passed through to the <i>binary</i>.</dl>
+<dt><i>binary</i></dt>
+<dd> the name of an executable located in <i>/usr/libexec/dovecot</i>.</dd>
+<dt><i>binary arguments</i></dt>
+<dd> options and arguments, wich will be passed through to the <i>binary</i>.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> This example demonstrates how to deliver a message from a file to a user&#8217;s mailbox. </p>
 <pre><code>

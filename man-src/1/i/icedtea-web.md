@@ -14,29 +14,29 @@ description: "icedtea-web provides a Free Software web browser plugin running ap
 <p><a rel="nofollow" href="http://www.java.com/en/download/testjava.jsp)">http://www.java.com/en/download/testjava.jsp)</a> within web browsers. </p>
 <dl>
 <dt>
-<dd> Names and email addresses of contributors to this project can be found in the file AUTHORS in the IcedTea-Web root directory.</p>
+</dt><dd> Names and email addresses of contributors to this project can be found in the file AUTHORS in the IcedTea-Web root directory.</dd>
 <dt>
-<dd> The full GPLv2 license of this project can be found in the file COPYING in the IcedTea-Web root directory.</p>
+</dt><dd> The full GPLv2 license of this project can be found in the file COPYING in the IcedTea-Web root directory.</dd>
 <dt>
-<dd> News about releases of this project can be found in the file NEWS in the IcedTea-Web root directory. </p>
+</dt><dd> News about releases of this project can be found in the file NEWS in the IcedTea-Web root directory. </dd>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> <code>NetX features: </code> </p>
 <dl>
-<dt>Modular</p>
-<dd> Easily add JNLP capabilities to an application.</p>
-<dt>Saves Memory</p>
-<dd> Launch programs in a shared JVM.</p>
-<dt>Fast startup</p>
-<dd> Runs applications from a cache for fast starting.</p>
-<dt>Security</p>
-<dd> Run any application in a sandbox or log its activities.</p>
-<dt>Auto-Update</p>
-<dd> Applications can auto-update without special code.</p>
-<dt>Network Deployment</p>
-<dd> Deploy to the internet, not with installers.</p>
-<dt>Open Source</p>
-<dd> GNU Lesser General Public License. </p>
+<dt>Modular</dt>
+<dd> Easily add JNLP capabilities to an application.</dd>
+<dt>Saves Memory</dt>
+<dd> Launch programs in a shared JVM.</dd>
+<dt>Fast startup</dt>
+<dd> Runs applications from a cache for fast starting.</dd>
+<dt>Security</dt>
+<dd> Run any application in a sandbox or log its activities.</dd>
+<dt>Auto-Update</dt>
+<dd> Applications can auto-update without special code.</dd>
+<dt>Network Deployment</dt>
+<dd> Deploy to the internet, not with installers.</dd>
+<dt>Open Source</dt>
+<dd> GNU Lesser General Public License. </dd>
 </dl>
 <p> Visit the IcedTea project wiki (<a rel="nofollow" href="http://icedtea.classpath.org/wiki/Main_Page)">http://icedtea.classpath.org/wiki/Main_Page)</a> or specifically the IcedTea-Web home (<a href="http://icedtea.classpath.org/wiki/IcedTea-Web)">http://icedtea.classpath.org/wiki/IcedTea-Web)</a> pages for more information.<br />
  Help with common issues with IcedTea-Web can be found here (<a rel="nofollow" href="http://icedtea.classpath.org/wiki/IcedTea-Web#Common_Issues)">http://icedtea.classpath.org/wiki/IcedTea-Web#Common_Issues)</a> . </p>

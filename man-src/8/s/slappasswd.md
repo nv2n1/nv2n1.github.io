@@ -14,29 +14,29 @@ description: "slappasswd – OpenLDAP password utility"
 <p><code>Slappasswd</code> is used to generate an userPassword value suitable for use with <code><a href="/docs/linux/man/1-ldapmodify/">ldapmodify</a></code>(1), <code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5) <i>rootpw</i> configuration directive or the <code><a href="/docs/linux/man/5-slapd-config/">slapd-config</a></code>(5) <i>olcRootPW</i> configuration directive.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-v</code></p>
-<dd>enable verbose mode.</p>
-<dt><code>-u</code></p>
-<dd>Generate RFC 2307 userPassword values (the default). Future versions of this program may generate alternative syntaxes by default. This option is provided for forward compatibility.</p>
-<dt><code>-s</code><i>&nbsp;<wbr>secret</i></p>
-<dd>The secret to hash. If this, <code>-g</code> and <code>-T</code> are absent, the user will be prompted for the secret to hash. <code>-s</code>, <code>-g</code> and <code>-T</code> are mutually exclusive flags.</p>
-<dt><code>-g</code></p>
-<dd>Generate the secret. If this, <code>-s</code> and <code>-T</code> are absent, the user will be prompted for the secret to hash. <code>-s</code>, <code>-g</code> and <code>-T</code> are mutually exclusive flags. If this is present, <i>{CLEARTEXT}</i> is used as scheme. <code>-g</code> and <code>-h</code> are mutually exclusive flags.</p>
-<dt><code>-T</code><i>&nbsp;<wbr>file</i></p>
-<dd>Hash the contents of the file. If this, <code>-g</code> and <code>-s</code> are absent, the user will be prompted for the secret to hash. <code>-s</code>, <code>-g</code> and <code>-T</code> and mutually exclusive flags.</p>
-<dt><code>-h</code><i>&nbsp;<wbr>scheme</i></p>
-<dd>If <code>-h</code> is specified, one of the following RFC 2307 schemes may be specified: <code>{CRYPT}</code>, <code>{MD5}</code>, <code>{SMD5}</code>, <code>{SSHA}</code>, and <code>{SHA}</code>. The default is <code>{SSHA}</code>. </p>
+<dt><code>-v</code></dt>
+<dd>enable verbose mode.</dd>
+<dt><code>-u</code></dt>
+<dd>Generate RFC 2307 userPassword values (the default). Future versions of this program may generate alternative syntaxes by default. This option is provided for forward compatibility.</dd>
+<dt><code>-s</code><i>&nbsp;<wbr>secret</i></dt>
+<dd>The secret to hash. If this, <code>-g</code> and <code>-T</code> are absent, the user will be prompted for the secret to hash. <code>-s</code>, <code>-g</code> and <code>-T</code> are mutually exclusive flags.</dd>
+<dt><code>-g</code></dt>
+<dd>Generate the secret. If this, <code>-s</code> and <code>-T</code> are absent, the user will be prompted for the secret to hash. <code>-s</code>, <code>-g</code> and <code>-T</code> are mutually exclusive flags. If this is present, <i>{CLEARTEXT}</i> is used as scheme. <code>-g</code> and <code>-h</code> are mutually exclusive flags.</dd>
+<dt><code>-T</code><i>&nbsp;<wbr>file</i></dt>
+<dd>Hash the contents of the file. If this, <code>-g</code> and <code>-s</code> are absent, the user will be prompted for the secret to hash. <code>-s</code>, <code>-g</code> and <code>-T</code> and mutually exclusive flags.</dd>
+<dt><code>-h</code><i>&nbsp;<wbr>scheme</i></dt>
+<dd>If <code>-h</code> is specified, one of the following RFC 2307 schemes may be specified: <code>{CRYPT}</code>, <code>{MD5}</code>, <code>{SMD5}</code>, <code>{SSHA}</code>, and <code>{SHA}</code>. The default is <code>{SSHA}</code>. </dd>
 <p> Note that scheme names may need to be protected, due to <code>{</code> and <code>}</code>, from expansion by the user&#8217;s command interpreter. </p>
 <p> <code>{SHA}</code> and <code>{SSHA}</code> use the SHA-1 algorithm (FIPS 160-1), the latter with a seed. </p>
 <p> <code>{MD5}</code> and <code>{SMD5}</code> use the MD5 algorithm (RFC 1321), the latter with a seed. </p>
 <p> <code>{CRYPT}</code> uses the <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3). </p>
 <p> <code>{CLEARTEXT}</code> indicates that the new password should be added to userPassword as clear text. Unless <i>{CLEARTEXT}</i> is used, this flag is incompatible with option <code>-g</code>.</p>
-<dt><code>-c</code><i>&nbsp;<wbr>crypt-salt-format</i></p>
-<dd>Specify the format of the salt passed to <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3) when generating {CRYPT} passwords. This string needs to be in <code><a href="/docs/linux/man/3-sprintf/">sprintf</a></code>(3) format and may include one (and only one) <code>%s</code> conversion. This conversion will be substituted with a string of random characters from [A-Za-z0-9./]. For example, &#8216;<code>%.2s</code>&#8216; provides a two character salt and &#8216;<code>$1$%.8s</code>&#8216; tells some versions of <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3) to use an MD5 algorithm and provides 8 random characters of salt. The default is &#8216;<code>%s</code>&#8216;<code>,</code> which provides 31 characters of salt.</p>
-<dt><code>-n</code></p>
-<dd>Omit the trailing newline; useful to pipe the credentials into a command.</p>
-<dt><code>-o</code><i>&nbsp;<wbr>option</i>[<code>=</code><i>value</i>]</p>
-<dd>Specify an <i>option</i> with a(n optional) <i>value</i>. Possible generic options/values are:</dl>
+<dt><code>-c</code><i>&nbsp;<wbr>crypt-salt-format</i></dt>
+<dd>Specify the format of the salt passed to <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3) when generating {CRYPT} passwords. This string needs to be in <code><a href="/docs/linux/man/3-sprintf/">sprintf</a></code>(3) format and may include one (and only one) <code>%s</code> conversion. This conversion will be substituted with a string of random characters from [A-Za-z0-9./]. For example, &#8216;<code>%.2s</code>&#8216; provides a two character salt and &#8216;<code>$1$%.8s</code>&#8216; tells some versions of <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3) to use an MD5 algorithm and provides 8 random characters of salt. The default is &#8216;<code>%s</code>&#8216;<code>,</code> which provides 31 characters of salt.</dd>
+<dt><code>-n</code></dt>
+<dd>Omit the trailing newline; useful to pipe the credentials into a command.</dd>
+<dt><code>-o</code><i>&nbsp;<wbr>option</i>[<code>=</code><i>value</i>]</dt>
+<dd>Specify an <i>option</i> with a(n optional) <i>value</i>. Possible generic options/values are:</dd></dl>
 <pre> module-path=&lt;pathspec&gt; (see `<code>modulepath</code>' in slapd.conf(5))
  module-load=&lt;filename&gt; (see `<code>moduleload</code>' in slapd.conf(5))
 You can load a dynamically loadable password hash module by

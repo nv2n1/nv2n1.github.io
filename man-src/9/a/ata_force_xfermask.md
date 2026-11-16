@@ -14,12 +14,12 @@ description: "ata_force_xfermask – force xfermask according to libata.force"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>ATA device of interest</dl>
+</dd><dd>ATA device of interest</dd></dl>
 <h2>Description</h2>
 <p>Force xfer_mask according to libata.force and whine about it. For consistency with link selection, device number 15 selects the first device connected to the host link. </p>
 <p> LOCKING: EH context.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -15,38 +15,38 @@ description: "texexec – TeXExec"
 <p> <code>TeXExec</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;make</code></p>
-<dd> make formats</p>
-<dt><code>&#8211;check</code></p>
-<dd> check versions</p>
-<dt><code>&#8211;process</code></p>
-<dd> process file</p>
-<dt><code>&#8211;mptex</code></p>
-<dd> process mp file</p>
-<dt><code>&#8211;mpxtex</code></p>
-<dd> process mpx file</p>
-<dt><code>&#8211;mpgraphic</code></p>
-<dd> process mp file to stand-alone graphics</p>
-<dt><code>&#8211;mpstatic</code></p>
-<dd> process mp/ctx file to stand-alone graphics</p>
-<dt><code>&#8211;listing</code></p>
-<dd> list of file content</p>
-<dt><code>&#8211;figures</code></p>
-<dd> generate overview of figures</p>
-<dt><code>&#8211;modules</code></p>
-<dd> generate module documentation</p>
-<dt><code>&#8211;pdfarrange</code></p>
-<dd> impose pages (booklets)</p>
-<dt><code>&#8211;pdfselect</code></p>
-<dd> select pages from file(s)</p>
-<dt><code>&#8211;pdfcopy</code></p>
-<dd> copy pages from file(s)</p>
-<dt><code>&#8211;pdftrim</code></p>
-<dd> trim pages from file(s)</p>
-<dt><code>&#8211;pdfcombine</code></p>
-<dd> combine multiple pages</p>
-<dt><code>&#8211;pdfsplit</code></p>
-<dd> split file in pages</dl>
+<dt><code>&#8211;make</code></dt>
+<dd> make formats</dd>
+<dt><code>&#8211;check</code></dt>
+<dd> check versions</dd>
+<dt><code>&#8211;process</code></dt>
+<dd> process file</dd>
+<dt><code>&#8211;mptex</code></dt>
+<dd> process mp file</dd>
+<dt><code>&#8211;mpxtex</code></dt>
+<dd> process mpx file</dd>
+<dt><code>&#8211;mpgraphic</code></dt>
+<dd> process mp file to stand-alone graphics</dd>
+<dt><code>&#8211;mpstatic</code></dt>
+<dd> process mp/ctx file to stand-alone graphics</dd>
+<dt><code>&#8211;listing</code></dt>
+<dd> list of file content</dd>
+<dt><code>&#8211;figures</code></dt>
+<dd> generate overview of figures</dd>
+<dt><code>&#8211;modules</code></dt>
+<dd> generate module documentation</dd>
+<dt><code>&#8211;pdfarrange</code></dt>
+<dd> impose pages (booklets)</dd>
+<dt><code>&#8211;pdfselect</code></dt>
+<dd> select pages from file(s)</dd>
+<dt><code>&#8211;pdfcopy</code></dt>
+<dd> copy pages from file(s)</dd>
+<dt><code>&#8211;pdftrim</code></dt>
+<dd> trim pages from file(s)</dd>
+<dt><code>&#8211;pdfcombine</code></dt>
+<dd> combine multiple pages</dd>
+<dt><code>&#8211;pdfsplit</code></dt>
+<dd> split file in pages</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

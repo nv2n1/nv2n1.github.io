@@ -36,13 +36,13 @@ while (&lt;ARGV&gt;) {
  Where:
 <dl>
 <dt><i></i><font SIZE="-1"><i>OK</i></font><i></i>
-<dd> will be some defined value if the open succeeds, but <tt>&quot;undef&quot;</tt> if it fails;
-<dt><i></i><font SIZE="-1"><i>HANDLE</i></font><i></i>
-<dd> should be an undefined scalar variable to be filled in by the <tt>&quot;open&quot;</tt> function if it succeeds;
-<dt><i></i><font SIZE="-1"><i>MODE</i></font><i></i>
-<dd> is the access mode and the encoding format to open the file with;
-<dt><i></i><font SIZE="-1"><i>PATHNAME</i></font><i></i>
-<dd> is the external name of the file you want opened.</dl>
+</dt><dd> will be some defined value if the open succeeds, but <tt>&quot;undef&quot;</tt> if it fails;
+</dd><dt><i></i><font SIZE="-1"><i>HANDLE</i></font><i></i>
+</dt><dd> should be an undefined scalar variable to be filled in by the <tt>&quot;open&quot;</tt> function if it succeeds;
+</dd><dt><i></i><font SIZE="-1"><i>MODE</i></font><i></i>
+</dt><dd> is the access mode and the encoding format to open the file with;
+</dd><dt><i></i><font SIZE="-1"><i>PATHNAME</i></font><i></i>
+</dt><dd> is the external name of the file you want opened.</dd></dl>
  
 
  Most of the complexity of the <tt>&quot;open&quot;</tt> function lies in the many possible values that the <i></i><font SIZE="-1"><i>MODE</i></font><i></i> parameter can take on. 

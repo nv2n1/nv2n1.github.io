@@ -12,7 +12,6 @@ std::experimental::filesystem::directory_iterator::operator= - std::experimental
 
 <pre><code>directory_iterator&amp; operator++();
 (filesystem TS)
-
 directory_iterator&amp; increment( error_code&amp; ec ) noexcept;</code></pre> 
 Advances the iterator to the next entry. 
 &nbsp;This section is incomplete 

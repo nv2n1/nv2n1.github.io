@@ -12,13 +12,10 @@ std::chrono::weekday::operator+=,std::chrono::weekday::operator-= - std::chrono:
 
 <pre><code>constexpr std::chrono::weekday &amp;operator+=(const std::chrono::days &amp;d) noexcept;
 (1)(since C++ 20)
-
     constexpr std::chrono::weekday &amp;
     operator-=(const std::chrono::days &amp;d) noexcept; (2) (since C++20)
 Adds or subtracts d.count() from the weekday value, reducing the result modulo 7 to an integer in the range [0, 6].
-
 1) Performs *this = *this + d;
-
 2) Performs *this = *this - d;
 </code></pre>
 

@@ -16,107 +16,97 @@ description: "kcc – Kanji code coverter with encoding auto detection"
 <p> Available kanji encodings are <font SIZE="-1">JIS (7 bit and/or 8 bit), Shift</font> <font SIZE="-1">JIS</font><font SIZE="-1">EUC</font><font SIZE="-1">DEC</font>. For input encoding, you can mix when these are pair of one of <font SIZE="-1">EUC</font> <font SIZE="-1">DEC</font> or Shift <font SIZE="-1">JIS</font> and 7 bit <font SIZE="-1">JIS.</font> <font SIZE="-1"><code>SI</code></font>/<font SIZE="-1"><code>SO</code></font><font SIZE="-1">ESC</font>(I are recognized as halfwidth of <font SIZE="-1">JIS</font>.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;</code><i>O</i></p>
+<dt><code>&#8211;</code><i>O</i></dt>
 <dd>
-<dt><code>&#8211;</code><i>IO</i></p>
-<dd> <i>I</i> for input kanji encoding¡¤<i>O</i> for output kanji encoding. When no input encoding specified, it will be detected automatically, and if both of input/output aren&#8217;t specified, output encoding is 7 bit <font SIZE="-1">JIS.</font></p>
+</dd><dt><code>&#8211;</code><i>IO</i></dt>
+<dd> <i>I</i> for input kanji encoding¡¤<i>O</i> for output kanji encoding. When no input encoding specified, it will be detected automatically, and if both of input/output aren&#8217;t specified, output encoding is 7 bit <font SIZE="-1">JIS.</font></dd>
 <dt>
-<dd> You can specify one of the followings for the input encoding option, <i>I.</i></dl>
+</dt><dd> You can specify one of the followings for the input encoding option, <i>I.</i></dd></dl>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>e</code></p>
-<dd> <font SIZE="-1">EUC</font>(available with 7 bit <font SIZE="-1">JIS</font> )</p>
-<dt><code>d</code></p>
-<dd> <font SIZE="-1">DEC</font>(available with 7 bit <font SIZE="-1">JIS</font> )</p>
-<dt><code>s</code></p>
-<dd> Shift <font SIZE="-1">JIS</font>(available with 7 bit <font SIZE="-1">JIS</font> )</p>
-<dt><code>j</code>7<code> or </code>k</p>
-<dd> 7 bit <font SIZE="-1">JIS</font></p>
-<dt><code>8</code></p>
-<dd> 8 bit <font SIZE="-1">JIS</font></dl>
+<dt><code>e</code></dt>
+<dd> <font SIZE="-1">EUC</font>(available with 7 bit <font SIZE="-1">JIS</font> )</dd>
+<dt><code>d</code></dt>
+<dd> <font SIZE="-1">DEC</font>(available with 7 bit <font SIZE="-1">JIS</font> )</dd>
+<dt><code>s</code></dt>
+<dd> Shift <font SIZE="-1">JIS</font>(available with 7 bit <font SIZE="-1">JIS</font> )</dd>
+<dt><code>j</code>7<code> or </code>k</dt>
+<dd> 7 bit <font SIZE="-1">JIS</font></dd>
+<dt><code>8</code></dt>
+<dd> 8 bit <font SIZE="-1">JIS</font></dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> You can specify one of the followings for output encoding option, <i>O.</i></dl>
+</dt><dd> You can specify one of the followings for output encoding option, <i>O.</i></dd></dl>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>e</code></p>
-<dd> <font SIZE="-1">EUC</font></p>
-<dt><code>d</code></p>
-<dd> <font SIZE="-1">DEC</font></p>
-<dt><code>s</code></p>
-<dd> Shift <font SIZE="-1">JIS</font></p>
-<dt><code>j</code><i>XY</i> or <code>7</code><i>XY</i></p>
-<dd> 7 bit <font SIZE="-1">JIS</font>(using<font SIZE="-1"><code>SI</code></font>/<font SIZE="-1"><code>SO</code></font> for <font SIZE="-1">JIS</font> kana designation)</p>
-<dt><code>k</code><i>XY</i></p>
-<dd> 7 bit <font SIZE="-1">JIS</font>(using<font SIZE="-1"><code>ESC</code></font><code>(I</code> for <font SIZE="-1">JIS</font> kana designation)</p>
-<dt><code>8</code><i>XY</i></p>
-<dd> 8 bit <font SIZE="-1">JIS</font></dl>
+<dt><code>e</code></dt>
+<dd> <font SIZE="-1">EUC</font></dd>
+<dt><code>d</code></dt>
+<dd> <font SIZE="-1">DEC</font></dd>
+<dt><code>s</code></dt>
+<dd> Shift <font SIZE="-1">JIS</font></dd>
+<dt><code>j</code><i>XY</i> or <code>7</code><i>XY</i></dt>
+<dd> 7 bit <font SIZE="-1">JIS</font>(using<font SIZE="-1"><code>SI</code></font>/<font SIZE="-1"><code>SO</code></font> for <font SIZE="-1">JIS</font> kana designation)</dd>
+<dt><code>k</code><i>XY</i></dt>
+<dd> 7 bit <font SIZE="-1">JIS</font>(using<font SIZE="-1"><code>ESC</code></font><code>(I</code> for <font SIZE="-1">JIS</font> kana designation)</dd>
+<dt><code>8</code><i>XY</i></dt>
+<dd> 8 bit <font SIZE="-1">JIS</font></dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> By <i>XY</i> in <i>O</i> option, You can specify which escape sequence used in <font SIZE="-1">JIS</font> encoding. <code>BJ</code> is default. Supplimental kanji designation is fixed to <font SIZE="-1"><code>ESC</code></font><code>$(D</code></dl>
+</dt><dd> By <i>XY</i> in <i>O</i> option, You can specify which escape sequence used in <font SIZE="-1">JIS</font> encoding. <code>BJ</code> is default. Supplimental kanji designation is fixed to <font SIZE="-1"><code>ESC</code></font><code>$(D</code></dd></dl>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><i>X</i></p>
-<dd> Kanji is designated by:</p>
+<dt><i>X</i></dt>
+<dd> Kanji is designated by:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>B</code></p>
-<dd> <font SIZE="-1"><code>ESC</code></font><code>$B</code>(JIS X0208-1983)</p>
-<dt><code>@</code></p>
-<dd> <font SIZE="-1"><code>ESC</code></font><code>$@</code>(JIS X0208-1978)</p>
-<dt><code>+</code></p>
-<dd> <font SIZE="-1"><code>ESC</code></font><code>&amp;@</code><font SIZE="-1"><code>ESC</code></font><code>$B</code>(JIS X0212-1990)</dl>
+<dt><code>B</code></dt>
+<dd> <font SIZE="-1"><code>ESC</code></font><code>$B</code>(JIS X0208-1983)</dd>
+<dt><code>@</code></dt>
+<dd> <font SIZE="-1"><code>ESC</code></font><code>$@</code>(JIS X0208-1978)</dd>
+<dt><code>+</code></dt>
+<dd> <font SIZE="-1"><code>ESC</code></font><code>&amp;@</code><font SIZE="-1"><code>ESC</code></font><code>$B</code>(JIS X0212-1990)</dd></dl>
 </dl>
-<dt><i>Y</i></p>
-<dd> Alpha Numerical is designated by:</p>
+<dt><i>Y</i></dt>
+<dd> Alpha Numerical is designated by:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>B</code></p>
-<dd> <font SIZE="-1"><code>ESC</code></font><code>(B</code>(ASCII)</p>
-<dt><code>J</code></p>
-<dd> <font SIZE="-1"><code>ESC</code></font><code>(J</code>(JIS Roman; JIS X0201)</p>
-<dt><code>H</code></p>
-<dd> <font SIZE="-1"><code>ESC</code></font><code>(H</code>(Swedish; strongly deprecated)</dl>
+<dt><code>B</code></dt>
+<dd> <font SIZE="-1"><code>ESC</code></font><code>(B</code>(ASCII)</dd>
+<dt><code>J</code></dt>
+<dd> <font SIZE="-1"><code>ESC</code></font><code>(J</code>(JIS Roman; JIS X0201)</dd>
+<dt><code>H</code></dt>
+<dd> <font SIZE="-1"><code>ESC</code></font><code>(H</code>(Swedish; strongly deprecated)</dd></dl>
 </dl>
 </dl>
 </dl>
 <dl>
-<dt><code>-v</code></p>
-<dd> outputs result of input encoding detection to stderr.</p>
-<dt><code>-x</code></p>
-<dd> Extension mode. By auto detection of input encodings, recognize user-defined characters and extended character region ( out of range of <font SIZE="-1">EUC</font>, undefined halfwidth kana, control character, <font SIZE="-1">C1</font> area and/or extended character region Shift <font SIZE="-1">C1</font> <font SIZE="-1">JIS</font> ). Distinguish between <font SIZE="-1">DEC</font> and <font SIZE="-1">EUC</font> is done in this mode.</p>
-<dt><code>-z</code></p>
-<dd> Shrink mode. Don&#8217;t recognize halfwidth kana (except 7 bit <font SIZE="-1">JIS</font> ) with input encoding detection. With this option, accuracy of auto detection of input encodings becomes much better for file without halfwidth kana.</p>
-<dt><code>-h</code></p>
-<dd> Normally, When converted halfwidth kana to <font SIZE="-1">DEC</font> , it becomes fullwidth Katakana. With this option, it becomes Hiragana.</p>
-<dt><code>-n</code></p>
-<dd> user-defined characters, extended characters and supplimental kanji characters areconverted to fullwidth white box, and undefined region of halfwidth kana are converted to halfwidth centered dot.</p>
-<dt><code>-b</code><i> bufsize</i></p>
-<dd> specify buffer size. 8kbytes is default.</p>
-<dt><code>-c</code></p>
-<dd> don&#8217;t convert but check input encoding and print result to stdout. Different with normal auto-detection, whole contents of file is checked. However, when inconsistency of encodings is found, abort reading and print &quot;data&quot;. Options except <code>-x</code>¡¤<code>-z</code> are ignored.</dl>
+<dt><code>-v</code></dt>
+<dd> outputs result of input encoding detection to stderr.</dd>
+<dt><code>-x</code></dt>
+<dd> Extension mode. By auto detection of input encodings, recognize user-defined characters and extended character region ( out of range of <font SIZE="-1">EUC</font>, undefined halfwidth kana, control character, <font SIZE="-1">C1</font> area and/or extended character region Shift <font SIZE="-1">C1</font> <font SIZE="-1">JIS</font> ). Distinguish between <font SIZE="-1">DEC</font> and <font SIZE="-1">EUC</font> is done in this mode.</dd>
+<dt><code>-z</code></dt>
+<dd> Shrink mode. Don&#8217;t recognize halfwidth kana (except 7 bit <font SIZE="-1">JIS</font> ) with input encoding detection. With this option, accuracy of auto detection of input encodings becomes much better for file without halfwidth kana.</dd>
+<dt><code>-h</code></dt>
+<dd> Normally, When converted halfwidth kana to <font SIZE="-1">DEC</font> , it becomes fullwidth Katakana. With this option, it becomes Hiragana.</dd>
+<dt><code>-n</code></dt>
+<dd> user-defined characters, extended characters and supplimental kanji characters areconverted to fullwidth white box, and undefined region of halfwidth kana are converted to halfwidth centered dot.</dd>
+<dt><code>-b</code><i> bufsize</i></dt>
+<dd> specify buffer size. 8kbytes is default.</dd>
+<dt><code>-c</code></dt>
+<dd> don&#8217;t convert but check input encoding and print result to stdout. Different with normal auto-detection, whole contents of file is checked. However, when inconsistency of encodings is found, abort reading and print &quot;data&quot;. Options except <code>-x</code>¡¤<code>-z</code> are ignored.</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt><code>% kcc -e </code><i>file</p>
-<dd> Input encoding are detect automatically, and output is in </i><font SIZE="-1"><i>EUC</i></font><i> encoding.</p>
-<dt></i><code>% kcc -sj </code><i>file1 file2</p>
-<dd> Two files in Shift </i><font SIZE="-1"><i>JIS</i></font><i> concatinated with converting to </i><font SIZE="-1"><i>JIS.</i></font><i></p>
-<dt></i><code>% </code><i>command</i><code> | kcc -k+J</p>
-<dd> output of </code><i>command are converted to </i> <font SIZE="-1">JIS</font>(<font SIZE="-1">JIS</font> JIS X0208 <font SIZE="-1">JIS</font> JIS Roman¡¤<font SIZE="-1"><code>ESC</code></font><code>(I</code> Halfwidth Kana <font SIZE="-1">JIS</font> )</p>
-<dt><code>% kcc -c </code><i>file</p>
-<dd> Encoding of contents of file</i> is detected(no conversion)</dl>
+<dt><code>% kcc -e </code><i>file</dt>
+<dd> Input encoding are detect automatically, and output is in </i><font SIZE="-1"><i>EUC</i></font><i> encoding.</dd>
+<dt></i><code>% kcc -sj </code><i>file1 file2</dt>
+<dd> Two files in Shift </i><font SIZE="-1"><i>JIS</i></font><i> concatinated with converting to </i><font SIZE="-1"><i>JIS.</i></font><i></dd>
+<dt></i><code>% </code><i>command</i><code> | kcc -k+J</dt>
+<dd> output of </code><i>command are converted to </i> <font SIZE="-1">JIS</font>(<font SIZE="-1">JIS</font> JIS X0208 <font SIZE="-1">JIS</font> JIS Roman¡¤<font SIZE="-1"><code>ESC</code></font><code>(I</code> Halfwidth Kana <font SIZE="-1">JIS</font> )</dd>
+<dt><code>% kcc -c </code><i>file</dt>
+<dd> Encoding of contents of file</i> is detected(no conversion)</dd></dl>
 <h2>BUG</h2>
 <p> Auto detection of input encoding is well done for normal case, however, it has the following problems. </p>
 <p> 7 bit <font SIZE="-1">JIS</font> is recognized by escape sequence in certain. <font SIZE="-1">EUC</font> and <font SIZE="-1">DEC</font> are the same (refered as <font SIZE="-1">EUC</font> series). Halfwidth kana of 8 bit <font SIZE="-1">JIS</font> is the same as halfwidth kana of Shift <font SIZE="-1">JIS</font> (refered as Shift <font SIZE="-1">JIS</font> series). However, <font SIZE="-1">EUC</font> series and <font SIZE="-1">JIS</font> , which are both 8 bit encoding, are sharing the same regions widely. So, the problem in auto detection is detection of these 2 encodings. </p>

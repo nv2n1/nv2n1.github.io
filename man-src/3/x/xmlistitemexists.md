@@ -16,10 +16,10 @@ description: "XmListItemExists — A List function that checks if a specified it
 <h2>Description</h2>
 <p><code>XmListItemExists</code> is a Boolean function that checks if a specified item is present in the list.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ID of the List widget</p>
-<dt><i>item</i></p>
-<dd>Specifies the item whose presence is checked</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the List widget</dd>
+<dt><i>item</i></dt>
+<dd>Specifies the item whose presence is checked</dd></dl>
 <p> For a complete definition of List and its associated resources, see <code><a href="/docs/linux/man/3-xmlist/">XmList</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns True if the specified item is present in the list.</p>

@@ -65,8 +65,8 @@ description: "passenger_selinux – Security Enhanced Linux Policy for the passe
 <p> <code>passenger_exec_t</code> </p>
 <p> &#8211; Set files with the passenger_exec_t type, if you want to transition an executable to the passenger_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/share/.*/gems/.*/helper-scripts/prespawn, /usr/lib/gems/.*/Passenger.*, /usr/lib/gems/.*/ApplicationPoolServerExecutable, /usr/share/gems/.*/Passenger.*, /usr/share/gems/.*/ApplicationPoolServerExecutable </p>
+<dt>Paths:</dt>
+<dd>/usr/share/.*/gems/.*/helper-scripts/prespawn, /usr/lib/gems/.*/Passenger.*, /usr/lib/gems/.*/ApplicationPoolServerExecutable, /usr/share/gems/.*/Passenger.*, /usr/share/gems/.*/ApplicationPoolServerExecutable </dd>
 </dl>
 <p> <code>passenger_log_t</code> </p>
 <p> &#8211; Set files with the passenger_log_t type, if you want to treat the data as passenger log data, usually stored under the /var/log directory. </p>

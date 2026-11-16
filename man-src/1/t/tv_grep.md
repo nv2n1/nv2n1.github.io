@@ -83,9 +83,9 @@ description: "tv_grep – Filter programmes and channels from an XMLTV listings 
 <p> The simple usage is the only way to match against all a programme&#8217;s content because some things (like &lt;credits&gt;) do not have programme content tests defined. It actually works by stringifying the whole programme and regexp matching that, which means that it could give wrong results for regular expressions containing quote characters or some punctuation symbols. This is not particularly likely to happen in practice. </p>
 <p> Some listings sources generate timeslots containing two or more programmes in succession. This is represented in <font SIZE="-1">XMLTV</font> with the &#8216;clumpidx&#8217; attribute. If tv_grep selects only some of the programmes from a clump, then it will alter the clumpidx of those remaining to make it consistent. This is maybe not ideal, perhaps the clumpidx should be left unchanged so it&#8217;s obvious that something is missing, but at least it prevents complaints from other <font SIZE="-1">XMLTV</font> tools about badly formed clumps. The clumpidx handling does mean that tv_grep is not always idempotent. </p>
 <h2>Index</h2>
-<dt><a href="#lbAK">SEE ALSO</a></p>
+<dt><a href="#lbAK">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAL">AUTHOR</a></p>
+</dd><dt><a href="#lbAL">AUTHOR</a></dt>
 <dd>
-<dt><a href="#lbAM">BUGS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAM">BUGS</a></dt>
+<dd></dd></dl>

@@ -37,11 +37,12 @@ description: "getlogin, getlogin_r, cuserid – get username"
 <h2>ERRORS</h2>
 <p> POSIX specifies:</p>
 <dl>
-<dt><code>EMFILE</code></p>
-<dd> The per-process limit on the number of open file descriptors has been reached.</p>
-<dt><code>ENFILE</code></p>
-<dd> The system-wide limit on the total number of open files has been reached.</p>
-<dt><code>ENXIO</code></p>
-<dd> The calling process has no controlling terminal.</p>
-<dt><code>ERANGE</code></p>
+<dt><code>EMFILE</code></dt>
+<dd> The per-process limit on the number of open file descriptors has been reached.</dd>
+<dt><code>ENFILE</code></dt>
+<dd> The system-wide limit on the total number of open files has been reached.</dd>
+<dt><code>ENXIO</code></dt>
+<dd> The calling process has no controlling terminal.</dd>
+<dt><code>ERANGE</code></dt>
 <dd> (getlogin_r) The length of the username, including the terminating null byte (&#8216;
+</dd></dl>

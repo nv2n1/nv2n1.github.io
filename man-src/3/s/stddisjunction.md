@@ -11,10 +11,8 @@ std::disjunction - std::disjunction
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class... B&gt;
     (1)(since C++ 17)
-
         struct disjunction;</code></pre> 
 Forms the logical_disjunction of the type traits B..., effectively performing a logical OR on the sequence of traits. 
 The specialization std::disjunction&lt;B1, ..., BN&gt; has a public and unambiguous base that is 
@@ -54,10 +52,8 @@ The short-circuit instantiation differentiates disjunction from fold expressions
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;type_traits&gt;
-
 #include &lt;string&gt;
 // checking if Foo is constructible from double will cause a hard error
-
 struct Foo {
     template &lt;class T&gt;
     struct sfinae_unfriendly_check {
@@ -67,7 +63,6 @@ struct Foo {
     Foo(T, sfinae_unfriendly_check&lt;T&gt; = {});
 };
 template &lt;class... Ts&gt;
-
 struct first_constructible {
     template &lt;class T, class... Args&gt;
     struct is_constructible_x : std::is_constructible&lt;T, Args...&gt; {
@@ -82,14 +77,11 @@ struct first_constructible {
                                            fallback&gt;::type;
 };
 // OK, is_constructible&lt;Foo, double&gt; not instantiated
-
 static_assert(std::is_same_v&lt;first_constructible&lt;std::string, int, Foo&gt;::with&lt;double&gt;,
                              int&gt;);
 static_assert(std::is_same_v&lt;first_constructible&lt;std::string, int&gt;::with&lt;&gt;, std::string&gt;);
-
 static_assert(std::is_same_v&lt;first_constructible&lt;std::string, int&gt;::with&lt;const char *&gt;,
                              std::string&gt;);
-
 static_assert(std::is_same_v&lt;first_constructible&lt;std::string, int&gt;::with&lt;void *&gt;, void&gt;);
 int main()
 {

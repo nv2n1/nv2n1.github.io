@@ -109,7 +109,7 @@ description: "QuantLib::Matrix – Matrix used in linear algebra."
 <p> <code>Precondition:</code></p>
 <dl>
 <dt>
-<dd> all matrices involved in an algebraic expression must have the same size.</dl>
+</dt><dd> all matrices involved in an algebraic expression must have the same size.</dd></dl>
 <h2>Friends And Related Function Documentation</h2>
 <h3>const <code>Disposable</code>&lt; <code>Matrix</code> &gt; operator+ (const <code>Matrix</code> &amp;, const <code>Matrix</code> &amp;) [related]</h3>
 <h3>const <code>Disposable</code>&lt; <code>Matrix</code> &gt; operator- (const <code>Matrix</code> &amp;, const <code>Matrix</code> &amp;) [related]</h3>
@@ -135,20 +135,18 @@ description: "QuantLib::Matrix – Matrix used in linear algebra."
 <p> <code>Precondition:</code></p>
 <dl>
 <dt>
-<dd> the given matrix must be symmetric.</dl>
+</dt><dd> the given matrix must be symmetric.</dd></dl>
 <p> <code>Warning</code></p>
 <dl>
 <dt>
-<dd> Higham algorithm only works for correlation matrices.</dl>
+</dt><dd> Higham algorithm only works for correlation matrices.</dd></dl>
 <p> <code>Tests</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> the correctness of the results is tested by reproducing known good data.</p>
-<dt>*</p>
-<dd> the correctness of the results is tested by checking returned values against numerical calculations.</dl>
+<dt>*</dt>
+<dd> the correctness of the results is tested by reproducing known good data.</dd>
+<dt>*</dt>
+<dd> the correctness of the results is tested by checking returned values against numerical calculations.</dd></dl>
 </dl>
 <h3>const <code>Disposable</code>&lt; <code>Matrix</code> &gt; rankReducedSqrt (const <code>Matrix</code> &amp;, Size maxRank, Real componentRetainedPercentage, SalvagingAlgorithm::Type) [related]</h3>
 <p> Returns the rank-reduced pseudo square root of a real symmetric matrix. </p>
@@ -157,11 +155,11 @@ description: "QuantLib::Matrix – Matrix used in linear algebra."
 <p> <code>Precondition:</code></p>
 <dl>
 <dt>
-<dd> the given matrix must be symmetric.</dl>
+</dt><dd> the given matrix must be symmetric.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAJ">Friends And Related Function Documentation</a></p>
+<dt><a href="#lbAJ">Friends And Related Function Documentation</a></dt>
 <dd>
-<dt><a href="#lbBC">Author</a></p>
-<dd></dl>
+</dd><dt><a href="#lbBC">Author</a></dt>
+<dd></dd></dl>

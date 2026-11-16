@@ -10,23 +10,14 @@ description: "std::basic_ostringstream – std::basic_ostringstream"
 <p>std::basic_ostringstream &#8211; std::basic_ostringstream</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;sstream&gt;
-
 template&lt;
-
 class CharT,                             (until C++11)
-
 class Traits = std::char_traits&lt;CharT&gt;
-
 &gt; class basic_ostringstream;
-
 template&lt;
-
 class CharT,
-
 class Traits = std::char_traits&lt;CharT&gt;,  (since C++11)
-
 class Allocator = std::allocator&lt;CharT&gt;
-
 &gt; class basic_ostringstream;</code></pre>
 <p>The class template std::basic_ostringstream implements output operations on memory (std::basic_string) based streams. It essentially wraps a raw string device implementation (std::basic_stringbuf) into a higher-level interface (std::basic_ostream). The complete interface to unique std::basic_stringbuf members is provided.<br />
 &nbsp;std-basic ostringstream-inheritance.svg<br />

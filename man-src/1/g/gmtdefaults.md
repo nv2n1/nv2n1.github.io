@@ -18,18 +18,18 @@ description: "gmtdefaults – List current GMT default parameters"
 <p> None.</p>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><code>-D</code></p>
-<dd> Print the system GMT defaults to standard output. Append <code>u</code> for US defaults or <code>s</code> for SI defaults. [<code>-D</code> alone gives the version selected at compile time; If <code>-D</code> is omitted, the user&#8217;s currently active defaults are printed.]</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit. </p>
+<dt><code>-D</code></dt>
+<dd> Print the system GMT defaults to standard output. Append <code>u</code> for US defaults or <code>s</code> for SI defaults. [<code>-D</code> alone gives the version selected at compile time; If <code>-D</code> is omitted, the user&#8217;s currently active defaults are printed.]</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit. </dd>
 <p> Your currently active defaults come from the <code>gmt.conf</code> file in the current working directory, if present; else from the <code>gmt.conf</code> file in your home directory, if present; else from the file <code>~/.gmt/gmt.conf</code> if present; else from the system defaults set at the time GMT was compiled.</dl>
 <h2>GMT PARAMETERS</h2>
 <p> Read the <code>gmt.conf</code> man page for a full list of the parameters that are user-definable in GMT.</p>
@@ -46,3 +46,4 @@ gmt defaults -D &gt; ~/gmt.conf
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
 <h2>Index</h2>
+</p>

@@ -11,7 +11,6 @@ std::chrono::month_weekday_last::month_weekday_last - std::chrono::month_weekday
 <h2>Synopsis</h2>
 
 <pre><code>constexpr month_weekday_last(const std::chrono::month &amp;m, (since C++ 20)
-
                                                               const std::chrono::weekday_last &amp;wdl) noexcept;</code></pre> 
 Constructs a month_weekday_last object that stores the month m and the weekday_last wdl. 
 

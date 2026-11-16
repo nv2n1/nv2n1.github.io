@@ -11,43 +11,24 @@ std::ranges::all_of,std::ranges::any_of,std::ranges::none_of - std::ranges::all_
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 Call signature
-
 template&lt; InputIterator I, Sentinel&lt;I&gt; S, class Proj = std::identity,
-
 IndirectUnaryPredicate&lt;projected&lt;I, Proj&gt;&gt; Pred &gt;                     (1) (since C++20)
-
 bool all_of( I first, S last, Pred pred, Proj proj = {} );
-
 template&lt; InputRange R, class Proj = std::identity,
-
 IndirectUnaryPredicate&lt;projected&lt;ranges::iterator_t&lt;R&gt;, Proj&gt;&gt; Pred &gt; (2) (since C++20)
-
 bool all_of( R&amp;&amp; r, Pred pred, Proj proj = {} );
-
 template&lt; InputIterator I, Sentinel&lt;I&gt; S, class Proj = std::identity,
-
 IndirectUnaryPredicate&lt;projected&lt;I, Proj&gt;&gt; Pred &gt;                     (3) (since C++20)
-
 bool any_of( I first, S last, Pred pred, Proj proj = {} );
-
 template&lt; InputRange R, class Proj = std::identity,
-
 IndirectUnaryPredicate&lt;projected&lt;ranges::iterator_t&lt;R&gt;, Proj&gt;&gt; Pred &gt; (4) (since C++20)
-
 bool any_of( R&amp;&amp; r, Pred pred, Proj proj = {} );
-
 template&lt; InputIterator I, Sentinel&lt;I&gt; S, class Proj = std::identity,
-
 IndirectUnaryPredicate&lt;projected&lt;I, Proj&gt;&gt; Pred &gt;                     (5) (since C++20)
-
 bool none_of( I first, S last, Pred pred, Proj proj = {} );
-
 template&lt; InputRange R, class Proj = std::identity,
-
 IndirectUnaryPredicate&lt;projected&lt;ranges::iterator_t&lt;R&gt;, Proj&gt;&gt; Pred &gt; (6) (since C++20)
-
 bool none_of( R&amp;&amp; r, Pred pred, Proj proj = {} );</code></pre> 
 1) Checks if unary predicate pred returns true for all elements in the range [first, last) (after projecting with the projection proj). 
 3) Checks if unary predicate pred returns true for at least one element in the range [first, last) (after projecting with the projection proj). 
@@ -149,21 +130,14 @@ Third version
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;vector&gt;
-
 #include &lt;numeric&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;functional&gt;
 namespace ranges = std::ranges;
 int main()
-
 {
     std::vector&lt;int&gt; v(10, 2);
     std::partial_sum(v.cbegin(), v.cend(), v.begin());

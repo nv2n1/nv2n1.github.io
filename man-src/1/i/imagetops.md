@@ -15,23 +15,23 @@ description: "imagetops – generic image to ps filter"
 <p> <code>imagetops</code> is a generic image to ps filter. It can be used as print filter in KDE. </p>
 <p> <code>imagetops</code> works in two steps:</p>
 <dl>
-<dt> 1.</p>
-<dd> the given file is converted to PNM format by analyzing the file format and calling the appropriate conversion program.</p>
-<dt> 2.</p>
-<dd> the file in PNM format is converted to PS format by calling <code>pnmtops</code>.</dl>
+<dt> 1.</dt>
+<dd> the given file is converted to PNM format by analyzing the file format and calling the appropriate conversion program.</dd>
+<dt> 2.</dt>
+<dd> the file in PNM format is converted to PS format by calling <code>pnmtops</code>.</dd></dl>
 <p> The supported mime types are: jpeg, png, x-png, bmp, x-bmp, gif and tiff. </p>
 <p> <code>imagetops</code> supports reading the parameters via stdin. A temporary file in <i>$TMPDIR</i> (or <i>/tmp</i> if unset) is created then.</p>
 <h2>OPTIONS</h2>
 <h3>Options:</h3>
 <dl>
-<dt><code>-gray</code></p>
-<dd> convert image to grayscale</dl>
+<dt><code>-gray</code></dt>
+<dd> convert image to grayscale</dd></dl>
 <h3>Arguments:</h3>
 <dl>
-<dt><code>arguments for pnmtops</code></p>
-<dd> arguments passed to pnmtops</p>
-<dt><i>filename</i></p>
-<dd> image file to convert</dl>
+<dt><code>arguments for pnmtops</code></dt>
+<dd> arguments passed to pnmtops</dd>
+<dt><i>filename</i></dt>
+<dd> image file to convert</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-bmptoppm/">bmptoppm</a></code>(1),&nbsp;<code><a href="/docs/linux/man/1-giftopnm/">giftopnm</a></code>(1),&nbsp;<code><a href="/docs/linux/man/1-jpegtopnm/">jpegtopnm</a></code>(1),&nbsp;<code><a href="/docs/linux/man/1-pngtopnm/">pngtopnm</a></code>(1),&nbsp;<code><a href="/docs/linux/man/1-ppmtopgm/">ppmtopgm</a></code>(1),&nbsp; <code><a href="/docs/linux/man/1-pnmtops/">pnmtops</a></code>(1)</p>
 <h2>AUTHORS</h2>

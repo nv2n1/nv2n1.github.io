@@ -10,15 +10,10 @@ description: "getservent, getservbyname, getservbyport, setservent, endservent â
 <p>getservent, getservbyname, getservbyport, setservent, endservent &#8211; get service entry</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;netdb.h&gt;
-
 struct servent *getservent(void);
-
 struct servent *getservbyname(const char *name, const char *proto);
-
 struct servent *getservbyport(int port, const char *proto);
-
 void setservent(int stayopen);
-
 void endservent(void);</code></pre>
 <h2>Description</h2>
 <p>The <code>getservent</code>() function reads the next entry from the services database (see <code><a href="/docs/linux/man/5-services/">services</a></code>(5)) and returns a <i>servent</i> structure containing the broken-out fields from the entry. A connection is opened to the database if necessary. The <code>getservbyname</code>() function returns a <i>servent</i> structure for the entry from the database that matches the service <i>name</i> using protocol <i>proto</i>. If <i>proto</i> is NULL, any protocol will be matched. A connection is opened to the database if necessary. The <code>getservbyport</code>() function returns a <i>servent</i> structure for the entry from the database that matches the port <i>port</i> (given in network byte order) using protocol <i>proto</i>. If <i>proto</i> is NULL, any protocol will be matched. A connection is opened to the database if necessary. The <code>setservent</code>() function opens a connection to the database, and sets the next entry to the first entry. If <i>stayopen</i> is nonzero, then the connection to the database will not be closed between calls to one of the <code>getserv*</code>() functions. The <code>endservent</code>() function closes the connection to the database. The <i>servent</i> structure is defined in <i>&lt;netdb.h&gt;</i> as follows: </p>
@@ -30,20 +25,20 @@ void endservent(void);</code></pre>
 }</code></pre>
 <p> The members of the <i>servent</i> structure are:</p>
 <dl>
-<dt><i>s_name</i></p>
-<dd>The official name of the service.</p>
-<dt><i>s_aliases</i></p>
-<dd>A NULL-terminated list of alternative names for the service.</p>
-<dt><i>s_port</i></p>
-<dd>The port number for the service given in network byte order.</p>
-<dt><i>s_proto</i></p>
-<dd>The name of the protocol to use with this service.</dl>
+<dt><i>s_name</i></dt>
+<dd>The official name of the service.</dd>
+<dt><i>s_aliases</i></dt>
+<dd>A NULL-terminated list of alternative names for the service.</dd>
+<dt><i>s_port</i></dt>
+<dd>The port number for the service given in network byte order.</dd>
+<dt><i>s_proto</i></dt>
+<dd>The name of the protocol to use with this service.</dd></dl>
 <h2>Return Value</h2>
 <p>The <code>getservent</code>(), <code>getservbyname</code>(), and <code>getservbyport</code>() functions return a pointer to a statically allocated <i>servent</i> structure, or NULL if an error occurs or the end of the file is reached.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/services</i></p>
-<dd>services database file</dl>
+<dt><i>/etc/services</i></dt>
+<dd>services database file</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

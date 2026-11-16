@@ -37,37 +37,34 @@ url: "/docs/linux/man/3-fribidi_log2vis/"
 
 <dl>
 <dt><b>const FriBidiChar *str</b>
-<dd> Input logical string.
-<dt><b>const FriBidiStrIndex len</b>
-<dd> Input string length.
-<dt><b>FriBidiParType *pbase_dir</b>
-<dd> Requested and resolved paragraph base direction. 
-
+</dt><dd> Input logical string.
+</dd><dt><b>const FriBidiStrIndex len</b>
+</dt><dd> Input string length.
+</dd><dt><b>FriBidiParType *pbase_dir</b>
+</dt><dd> Requested and resolved paragraph base direction. 
  Possible values for a <b>FriBidiParType</b> are as follows:
-<dl>
-<dt>
-<dd>
+</dd><dl>
 <dl>
 <dt><b>FRIBIDI_PAR_LTR</b>
-<dd> Left-To-Right paragraph.
-<dt><b>FRIBIDI_PAR_RTL</b>
-<dd> Right-To-Left paragraph.
-<dt><b>FRIBIDI_PAR_ON</b>
-<dd> DirectiOn-Neutral paragraph.
-<dt><b>FRIBIDI_PAR_WLTR</b>
-<dd> Weak Left To Right paragraph.
-<dt><b>FRIBIDI_PAR_WRTL</b>
-<dd> Weak Right To Left paragraph.</dl>
+</dt><dd> Left-To-Right paragraph.
+</dd><dt><b>FRIBIDI_PAR_RTL</b>
+</dt><dd> Right-To-Left paragraph.
+</dd><dt><b>FRIBIDI_PAR_ON</b>
+</dt><dd> DirectiOn-Neutral paragraph.
+</dd><dt><b>FRIBIDI_PAR_WLTR</b>
+</dt><dd> Weak Left To Right paragraph.
+</dd><dt><b>FRIBIDI_PAR_WRTL</b>
+</dt><dd> Weak Right To Left paragraph.</dd></dl>
 </dl>
 
 <dt><b>FriBidiChar *visual_str</b>
-<dd> Output visual string.
-<dt><b>FriBidiStrIndex *positions_L_to_V</b>
-<dd> Output mapping from logical to visual string positions.
-<dt><b>FriBidiStrIndex *positions_V_to_L</b>
-<dd> Output mapping from visual string back to the logical string positions.
-<dt><b>FriBidiLevel *embedding_levels</b>
-<dd> Output list of embedding levels.</dl>
+</dt><dd> Output visual string.
+</dd><dt><b>FriBidiStrIndex *positions_L_to_V</b>
+</dt><dd> Output mapping from logical to visual string positions.
+</dd><dt><b>FriBidiStrIndex *positions_V_to_L</b>
+</dt><dd> Output mapping from visual string back to the logical string positions.
+</dd><dt><b>FriBidiLevel *embedding_levels</b>
+</dt><dd> Output list of embedding levels.</dd></dl>
 
 <h2>DESCRIPTION</h2>
 

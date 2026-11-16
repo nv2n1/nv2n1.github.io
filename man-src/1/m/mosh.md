@@ -23,54 +23,54 @@ description: "mosh – mobile shell with roaming and intelligent local echo"
 <h2>OPTIONS</h2>
 <p> Options named <code> &#8211;experimental-*</code> are subject to change or removal in future versions of Mosh; their design or function is not yet final. </p>
 <dl>
-<dt><i>command</i></p>
-<dd> Command to run on remote host. By default, <code>mosh</code> executes a login shell. </p>
-<dt><code>&#8211;client=</code><i>PATH</i></p>
-<dd> path to client helper on local machine (default: &quot;mosh-client&quot;) </p>
-<dt><code>&#8211;server=</code><i>COMMAND</i></p>
-<dd> command to run server helper on remote machine (default: &quot;mosh-server&quot;) </p>
+<dt><i>command</i></dt>
+<dd> Command to run on remote host. By default, <code>mosh</code> executes a login shell. </dd>
+<dt><code>&#8211;client=</code><i>PATH</i></dt>
+<dd> path to client helper on local machine (default: &quot;mosh-client&quot;) </dd>
+<dt><code>&#8211;server=</code><i>COMMAND</i></dt>
+<dd> command to run server helper on remote machine (default: &quot;mosh-server&quot;) </dd>
 <p> The server helper is unprivileged and can be installed in the user&#8217;s home directory. </p>
 <p> This option can be used to set environment variables for the server by using the <code><a href="/docs/linux/man/1-env/">env</a></code>(1) command to wrap the actual server command. See <code><a href="/docs/linux/man/1-mosh-server/">mosh-server</a></code>(1) for available environment variables. </p>
-<dt><code>&#8211;ssh=</code><i>COMMAND</i></p>
-<dd> OpenSSH command to remotely execute mosh-server on remote machine (default: &quot;ssh&quot;) </p>
+<dt><code>&#8211;ssh=</code><i>COMMAND</i></dt>
+<dd> OpenSSH command to remotely execute mosh-server on remote machine (default: &quot;ssh&quot;) </dd>
 <p> An alternate ssh port can be specified with, <i>e.g.</i>, &#8211;ssh=&quot;ssh -p 2222&quot;. </p>
-<dt><code>&#8211;predict=</code><i>WHEN</i></p>
-<dd> Controls use of speculative local echo. WHEN defaults to `adaptive&#8217; (show predictions on slower links and to smooth out network glitches) and can also be `always` or `never&#8217;. </p>
+<dt><code>&#8211;predict=</code><i>WHEN</i></dt>
+<dd> Controls use of speculative local echo. WHEN defaults to `adaptive&#8217; (show predictions on slower links and to smooth out network glitches) and can also be `always` or `never&#8217;. </dd>
 <p> The MOSH_PREDICTION_DISPLAY environment variable controls this setting permanently and can adopt the same three values. </p>
 <p> Even on `always&#8217;, <code>mosh</code> will only show predictions when it is confident. This generally means a previous prediction on the same row of the terminal has been confirmed by the server, without any intervening control character keystrokes. </p>
-<dt><code>-a</code></p>
-<dd> Synonym for &#8211;predict=always </p>
-<dt><code>-n</code></p>
-<dd> Synonym for &#8211;predict=never </p>
-<dt><code>&#8211;family=inet</code></p>
-<dd> Only use IPv4 for the SSH connection and Mosh session. </p>
-<dt><code>&#8211;family=inet6</code></p>
-<dd> Only use IPv6 for the SSH connection and Mosh session. This and the following modes require Perl&#8217;s IO::Socket::IP or IO::Socket::INET6 modules. </p>
-<dt><code>&#8211;family=auto</code></p>
-<dd> Autodetect IPv4 or IPv6 for hosts that only have addresses in a single family. Hosts with both IPv4 and IPv6 addresses will raise an error, and require re-invocation of <code>mosh</code> with another <code>&#8211;family</code> option. </p>
-<dt><code>&#8211;family=all</code></p>
-<dd> Choose an address from all available IPv4 or IPv6 address, even for dual-stack hosts. This is the most convenient option, but requires dual-stack connectivity, and Mosh 1.2.5 or later on the server, when roaming with dual-stack servers. </p>
-<dt><code>&#8211;family=prefer-inet</code></p>
-<dd> Similar to <code>&#8211;family=all</code>, but attempt connects to the IPv4 addresses first. This is the default. </p>
-<dt><code>&#8211;family=prefer-inet6</code></p>
-<dd> Similar to <code>&#8211;family=all</code>, but attempt connects to the IPv6 addresses first. </p>
-<dt><code>-4</code></p>
-<dd> Synonym for &#8211;family=inet </p>
-<dt><code>-6</code></p>
-<dd> Synonym for &#8211;family=inet6 </p>
-<dt><code>-p </code><i>PORT</i>[:<i>PORT2</i>], &#8211;port=<i>PORT</i>[:<i>PORT2</i>]</p>
-<dd> Use a particular server-side UDP port or port range, for example, if this is the only port that is forwarded through a firewall to the server. Otherwise, <code>mosh</code> will choose a port between 60000 and 61000. </p>
-<dt><code>&#8211;bind-server={ssh|any|</code><i>IP</i>}</p>
-<dd> Control the IP address that the <code>mosh-server</code> binds to. </p>
+<dt><code>-a</code></dt>
+<dd> Synonym for &#8211;predict=always </dd>
+<dt><code>-n</code></dt>
+<dd> Synonym for &#8211;predict=never </dd>
+<dt><code>&#8211;family=inet</code></dt>
+<dd> Only use IPv4 for the SSH connection and Mosh session. </dd>
+<dt><code>&#8211;family=inet6</code></dt>
+<dd> Only use IPv6 for the SSH connection and Mosh session. This and the following modes require Perl&#8217;s IO::Socket::IP or IO::Socket::INET6 modules. </dd>
+<dt><code>&#8211;family=auto</code></dt>
+<dd> Autodetect IPv4 or IPv6 for hosts that only have addresses in a single family. Hosts with both IPv4 and IPv6 addresses will raise an error, and require re-invocation of <code>mosh</code> with another <code>&#8211;family</code> option. </dd>
+<dt><code>&#8211;family=all</code></dt>
+<dd> Choose an address from all available IPv4 or IPv6 address, even for dual-stack hosts. This is the most convenient option, but requires dual-stack connectivity, and Mosh 1.2.5 or later on the server, when roaming with dual-stack servers. </dd>
+<dt><code>&#8211;family=prefer-inet</code></dt>
+<dd> Similar to <code>&#8211;family=all</code>, but attempt connects to the IPv4 addresses first. This is the default. </dd>
+<dt><code>&#8211;family=prefer-inet6</code></dt>
+<dd> Similar to <code>&#8211;family=all</code>, but attempt connects to the IPv6 addresses first. </dd>
+<dt><code>-4</code></dt>
+<dd> Synonym for &#8211;family=inet </dd>
+<dt><code>-6</code></dt>
+<dd> Synonym for &#8211;family=inet6 </dd>
+<dt><code>-p </code><i>PORT</i>[:<i>PORT2</i>], &#8211;port=<i>PORT</i>[:<i>PORT2</i>]</dt>
+<dd> Use a particular server-side UDP port or port range, for example, if this is the only port that is forwarded through a firewall to the server. Otherwise, <code>mosh</code> will choose a port between 60000 and 61000. </dd>
+<dt><code>&#8211;bind-server={ssh|any|</code><i>IP</i>}</dt>
+<dd> Control the IP address that the <code>mosh-server</code> binds to. </dd>
 <p> The default is `ssh&#8217;, in which case the server will reply from the IP address that the SSH connection came from (as found in the <code>SSH_CONNECTION</code> environment variable). This is useful for multihomed servers. </p>
 <p> With &#8211;bind-server=any, the server will reply on the default interface and will not bind to a particular IP address. This can be useful if the connection is made through <code>sslh</code> or another tool that makes the SSH connection appear to come from localhost. </p>
 <p> With &#8211;bind-server=<i>IP</i>, the server will attempt to bind to the specified IP address. </p>
-<dt><code>&#8211;no-init</code></p>
-<dd> Do not send the <code>smcup</code> initialization string and <code>rmcup</code> deinitialization string to the client&#8217;s terminal. On many terminals this disables alternate screen mode. </p>
-<dt><code>&#8211;local</code></p>
-<dd> Invoke <code>mosh-server</code> locally, without using <code>ssh</code>. This option requires the <code>host</code> argument to be a local, numeric IPv4/IPv6 address. This option is useful for testing. </p>
-<dt><code>&#8211;experimental-remote-ip={proxy|local|remote}</code></p>
-<dd> Select the method used to discover the IP address that the <code>mosh-client</code> connects to. </p>
+<dt><code>&#8211;no-init</code></dt>
+<dd> Do not send the <code>smcup</code> initialization string and <code>rmcup</code> deinitialization string to the client&#8217;s terminal. On many terminals this disables alternate screen mode. </dd>
+<dt><code>&#8211;local</code></dt>
+<dd> Invoke <code>mosh-server</code> locally, without using <code>ssh</code>. This option requires the <code>host</code> argument to be a local, numeric IPv4/IPv6 address. This option is useful for testing. </dd>
+<dt><code>&#8211;experimental-remote-ip={proxy|local|remote}</code></dt>
+<dd> Select the method used to discover the IP address that the <code>mosh-client</code> connects to. </dd>
 <p> The default is <code>proxy</code>, which uses SSH&#8217;s <code>&#8211;ssh-proxy-command</code> option to generate and report the exact address that <code>ssh</code> uses to connect to the remote host. This option is generally the most compatible with hosts and other options configured in <code>ssh</code> configuration files. However, this may not work for some configurations, or for environments where a <code>ssh</code> bastion host forwards to a remote machine. It only works with <code>OpenSSH</code>. </p>
 <p> With <code>remote</code>, the server&#8217;s <code>SSH_CONNECTION</code> environment variable will be used. This is useful for environments where <code>ssh</code> forwarding is used, or the <code>&#8211;ssh-proxy-command</code> option is used for other purposes. </p>
 <p> With <code>local</code>, Mosh resolves the hostname given on its command line, and uses that address for both <code>ssh</code> and Mosh connections. This option ignores any configuration in <code>ssh_config</code> for the same hostname. </p>
@@ -84,12 +84,12 @@ description: "mosh – mobile shell with roaming and intelligent local echo"
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> These variables are not actually interpreted by <code><a href="/docs/linux/man/1-mosh/">mosh</a></code>(1) itself, but are passed through to <code><a href="/docs/linux/man/1-mosh-server/">mosh-server</a></code>(1). They are described here for ease of use. </p>
 <dl>
-<dt><code>MOSH_ESCAPE_KEY</code></p>
-<dd> When set, this configures the escape character used for local commands. The escape character may be set to any ASCII character in the range 1-127. The variable must be set with a single literal ASCII character. Control characters are set with the actual ASCII control character, not with a printable representation such as &quot;^B&quot;. </p>
-<dt><code>MOSH_PREDICTION_DISPLAY</code></p>
-<dd> Controls local echo as described above. The command-line flag overrides this variable. </p>
-<dt><code>MOSH_TITLE_NOPREFIX</code></p>
-<dd> When set, inhibits prepending &quot;[mosh]&quot; to window title. </p>
+<dt><code>MOSH_ESCAPE_KEY</code></dt>
+<dd> When set, this configures the escape character used for local commands. The escape character may be set to any ASCII character in the range 1-127. The variable must be set with a single literal ASCII character. Control characters are set with the actual ASCII control character, not with a printable representation such as &quot;^B&quot;. </dd>
+<dt><code>MOSH_PREDICTION_DISPLAY</code></dt>
+<dd> Controls local echo as described above. The command-line flag overrides this variable. </dd>
+<dt><code>MOSH_TITLE_NOPREFIX</code></dt>
+<dd> When set, inhibits prepending &quot;[mosh]&quot; to window title. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mosh-client/">mosh-client</a></code>(1), <code><a href="/docs/linux/man/1-mosh-server/">mosh-server</a></code>(1). </p>

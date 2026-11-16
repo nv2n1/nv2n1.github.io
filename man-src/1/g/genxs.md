@@ -36,34 +36,34 @@ description: "genxs – Mono’s Xml Serializer Generator"
 </pre>
 <p> A configuration file can have multiple &quot;serializer&quot; elements, each of which specifies the class for which to generate a serializer together with several generation options. The source class is specified in the following attributes: </p>
 <dl>
-<dt> *</p>
-<dd> <i>class</i> : name of the class (including namespace).</p>
-<dt> *</p>
-<dd> <i>assembly</i> : assembly name. It can include the complete path.</dl>
+<dt> *</dt>
+<dd> <i>class</i> : name of the class (including namespace).</dd>
+<dt> *</dt>
+<dd> <i>assembly</i> : assembly name. It can include the complete path.</dd></dl>
 <p> Generation options are specified in child elements: </p>
 <dl>
-<dt> *</p>
-<dd> <i>reader</i> : name of the reader class.</p>
-<dt> *</p>
-<dd> <i>noReader</i> : if &quot;true&quot;, it does not generate reader class.</p>
-<dt> *</p>
-<dd> <i>writer</i> : name of the writer class.</p>
-<dt> *</p>
-<dd> <i>baseSerializer</i> : name of the base xml serializer class. This item is 2.0 only.</p>
-<dt> *</p>
-<dd> <i>implementation</i> : name of the serializer implementation class. This item is 2.0 only.</p>
-<dt> *</p>
-<dd> <i>noWriter</i> : if &quot;true&quot;, it does not generate writer class.</p>
-<dt> *</p>
-<dd> <i>namespace</i> : namespace of the reader and writer classes.</p>
-<dt> *</p>
-<dd> <i>generateAsInternal</i> : if &quot;true&quot;, it generates classes as internal.</p>
-<dt> *</p>
-<dd> <i>outFileName</i> : name of the generated file.</p>
-<dt> *</p>
-<dd> <i>readerHooks</i> : a list of hooks to apply to the reader.</p>
-<dt> *</p>
-<dd> <i>writerHooks</i> : a list of hooks to apply to the writer.</dl>
+<dt> *</dt>
+<dd> <i>reader</i> : name of the reader class.</dd>
+<dt> *</dt>
+<dd> <i>noReader</i> : if &quot;true&quot;, it does not generate reader class.</dd>
+<dt> *</dt>
+<dd> <i>writer</i> : name of the writer class.</dd>
+<dt> *</dt>
+<dd> <i>baseSerializer</i> : name of the base xml serializer class. This item is 2.0 only.</dd>
+<dt> *</dt>
+<dd> <i>implementation</i> : name of the serializer implementation class. This item is 2.0 only.</dd>
+<dt> *</dt>
+<dd> <i>noWriter</i> : if &quot;true&quot;, it does not generate writer class.</dd>
+<dt> *</dt>
+<dd> <i>namespace</i> : namespace of the reader and writer classes.</dd>
+<dt> *</dt>
+<dd> <i>generateAsInternal</i> : if &quot;true&quot;, it generates classes as internal.</dd>
+<dt> *</dt>
+<dd> <i>outFileName</i> : name of the generated file.</dd>
+<dt> *</dt>
+<dd> <i>readerHooks</i> : a list of hooks to apply to the reader.</dd>
+<dt> *</dt>
+<dd> <i>writerHooks</i> : a list of hooks to apply to the writer.</dd></dl>
 <h2>SPECIFYING HOOKS</h2>
 <p> Using hooks you can customize the behavior of readers and writers. A hook specification follows this grammar: </p>
 <pre>
@@ -80,48 +80,48 @@ description: "genxs – Mono’s Xml Serializer Generator"
 </pre>
 <p> The &quot;type&quot; attribute specifies the context in which the hook is applied. It can be one of the following: </p>
 <dl>
-<dt> *</p>
-<dd> <i>attributes</i> : hook is applied where attributes are serialized/deserialized.</p>
-<dt> *</p>
-<dd> <i>elements</i> : hook is applied where elements are serialized/deserialized.</p>
-<dt> *</p>
-<dd> <i>unknownAttribute</i> : hook is applied where unknown attributes are processed.</p>
-<dt> *</p>
-<dd> <i>unknownElement</i> : hook is applied where unknown elements are processed.</p>
-<dt> *</p>
-<dd> <i>member</i> : hook is applied where a member is serialized/deserialized.</p>
-<dt> *</p>
-<dd> <i>type</i> : hook is applied for the whole type.</dl>
+<dt> *</dt>
+<dd> <i>attributes</i> : hook is applied where attributes are serialized/deserialized.</dd>
+<dt> *</dt>
+<dd> <i>elements</i> : hook is applied where elements are serialized/deserialized.</dd>
+<dt> *</dt>
+<dd> <i>unknownAttribute</i> : hook is applied where unknown attributes are processed.</dd>
+<dt> *</dt>
+<dd> <i>unknownElement</i> : hook is applied where unknown elements are processed.</dd>
+<dt> *</dt>
+<dd> <i>member</i> : hook is applied where a member is serialized/deserialized.</dd>
+<dt> *</dt>
+<dd> <i>type</i> : hook is applied for the whole type.</dd></dl>
 <p> The &quot;select&quot; element specifies the classes and members to which the hook has to be added. It can contain the following elements: </p>
 <dl>
-<dt> *</p>
-<dd> <i>typeName</i> : the class with that name will be selected (must include namespace)</p>
-<dt> *</p>
-<dd> <i>typeAttribute</i> : all classes which have that attribute applied will be selected (specify the full attribute class name, including namespace). Several attribute names can be specified.</p>
-<dt> *</p>
-<dd> <i>typeMember</i> : name of the class member for which the hook must be added.</dl>
+<dt> *</dt>
+<dd> <i>typeName</i> : the class with that name will be selected (must include namespace)</dd>
+<dt> *</dt>
+<dd> <i>typeAttribute</i> : all classes which have that attribute applied will be selected (specify the full attribute class name, including namespace). Several attribute names can be specified.</dd>
+<dt> *</dt>
+<dd> <i>typeMember</i> : name of the class member for which the hook must be added.</dd></dl>
 <p> The hook source code can be specified using any of the following elements: </p>
 <dl>
-<dt> *</p>
-<dd> <i>replace</i> : the provided source code will replace all serialization/deserialization operations in the hook context.</p>
-<dt> *</p>
-<dd> <i>insertBefore</i> : the source code will be added before the hook context.</p>
-<dt> *</p>
-<dd> <i>insertAfter</i> : the source code will be added after the hook context.</dl>
+<dt> *</dt>
+<dd> <i>replace</i> : the provided source code will replace all serialization/deserialization operations in the hook context.</dd>
+<dt> *</dt>
+<dd> <i>insertBefore</i> : the source code will be added before the hook context.</dd>
+<dt> *</dt>
+<dd> <i>insertAfter</i> : the source code will be added after the hook context.</dd></dl>
 <p> When writing the code for a hook you can use some special variables that are defined during the code generation process. The variables are the following: </p>
 <dl>
-<dt> *</p>
-<dd> <i>$TYPE:</i> name of the class being generated, without namespace.</p>
-<dt> *</p>
-<dd> <i>$FULLTYPE:</i> full name of the class being generated, including namespace.</p>
-<dt> *</p>
-<dd> <i>$OBJECT:</i> the object being serialized or deserialized. When using a replace reader hook of type &quot;type&quot;, the hook code must assign the deserialized object to this variable.</p>
-<dt> *</p>
-<dd> -I $ELEMENT: name of the element of the object being serialized/deserialized.</p>
-<dt> *</p>
-<dd> <i>$NAMESPACE:</i> namespace of the element of the object being serialized/deserialized.</p>
-<dt> *</p>
-<dd> <i>$MEMBER:</i> name of the member being serialized/deserialized. Only valid in the &quot;member&quot; context.</dl>
+<dt> *</dt>
+<dd> <i>$TYPE:</i> name of the class being generated, without namespace.</dd>
+<dt> *</dt>
+<dd> <i>$FULLTYPE:</i> full name of the class being generated, including namespace.</dd>
+<dt> *</dt>
+<dd> <i>$OBJECT:</i> the object being serialized or deserialized. When using a replace reader hook of type &quot;type&quot;, the hook code must assign the deserialized object to this variable.</dd>
+<dt> *</dt>
+<dd> -I $ELEMENT: name of the element of the object being serialized/deserialized.</dd>
+<dt> *</dt>
+<dd> <i>$NAMESPACE:</i> namespace of the element of the object being serialized/deserialized.</dd>
+<dt> *</dt>
+<dd> <i>$MEMBER:</i> name of the member being serialized/deserialized. Only valid in the &quot;member&quot; context.</dd></dl>
 <h2>HOOK EXAMPLES</h2>
 <p> The following example adds a call to a Validate method after the deserialization of any object: </p>
 <pre>

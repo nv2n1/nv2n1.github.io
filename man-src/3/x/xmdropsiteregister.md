@@ -18,12 +18,12 @@ description: "XmDropSiteRegister — A Drag and Drop function that identifies a 
 <p><code>XmDropSiteRegister</code> identifies the specified widget or gadget as a drop site and sets resource values that define the drop site&#8217;s behavior. The routine assigns default values to any resources that are not specified in the argument list. The toolkit generates a warning message if a drop site is registered with <code>XmNdropSiteActivity</code> set to <code>XmDROP_SITE_ACTIVE</code> and the <code>XmNdropProc</code> resource is NULL. </p>
 <p> If the drop site is a descendant of a widget that is registered as a drop site, the <code>XmNdropSiteType</code> resource of the ancestor drop site must be specified as <code>XmDROP_SITE_COMPOSITE</code>. The ancestor must be registered before the descendant. The drop site is stacked above all other sibling drop sites already registered.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ID of the widget to be registered.</p>
-<dt><i>arglist</i></p>
-<dd>Specifies the argument list.</p>
-<dt><i>argcount</i></p>
-<dd>Specifies the number of attribute/value pairs in the argument list (<i>arglist</i>).</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the widget to be registered.</dd>
+<dt><i>arglist</i></dt>
+<dd>Specifies the argument list.</dd>
+<dt><i>argcount</i></dt>
+<dd>Specifies the number of attribute/value pairs in the argument list (<i>arglist</i>).</dd></dl>
 <p> For a complete definition of DropSite and its associated resources, see <code><a href="/docs/linux/man/3-xmdropsite/">XmDropSite</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmdisplay/">XmDisplay</a></code>(3), <code><a href="/docs/linux/man/3-xmdropsite/">XmDropSite</a></code>(3), <code><a href="/docs/linux/man/3-xmdropsiteendupdate/">XmDropSiteEndUpdate</a></code>(3), <code><a href="/docs/linux/man/3-xmdropsitestartupdate/">XmDropSiteStartUpdate</a></code>(3), <code><a href="/docs/linux/man/3-xmdropsiteupdate/">XmDropSiteUpdate</a></code>(3), <code><a href="/docs/linux/man/3-xmdropsiteunregister/">XmDropSiteUnregister</a></code>(3), and <code><a href="/docs/linux/man/3-xmscreen/">XmScreen</a></code>(3).</p>

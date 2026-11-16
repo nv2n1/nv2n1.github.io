@@ -18,80 +18,80 @@ description: "Data Types –"
 <p> Enumerator used to keep track of input/output types of filenames </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>GLOBUS_PROXY_FILE_INPUT </i></p>
-<dd> The proxy filename is intended for reading (it should already exist)</p>
-<dt><i>GLOBUS_PROXY_FILE_OUTPUT </i></p>
-<dd> The proxy filename is intended for writing (it does not need to exist)</dl>
+<dt><i>GLOBUS_PROXY_FILE_INPUT </i></dt>
+<dd> The proxy filename is intended for reading (it should already exist)</dd>
+<dt><i>GLOBUS_PROXY_FILE_OUTPUT </i></dt>
+<dd> The proxy filename is intended for writing (it does not need to exist)</dd></dl>
 <h3>enum <code>globus_gsi_sysconfig_error_t</code></h3>
 <p> GSI System Config Error codes </p>
 <p> <code>Enumerator</code></p>
 <dl>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_SUCCESS </i></p>
-<dd> Success &#8211; never used</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_CERT_DIR </i></p>
-<dd> Unable to determine trusted certificates directory</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_CERT_STRING </i></p>
-<dd> Error while generating certificate filename</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_KEY_STRING </i></p>
-<dd> Error while generating private key filename</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_HOME_DIR </i></p>
-<dd> Unable to determine user&#8217;s home directory</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_ERRNO </i></p>
-<dd> System Error &#8212; see underlying error for details</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_CHECKING_FILE_EXISTS </i></p>
-<dd> Unable to determine whether file exists</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_CERT_FILENAME </i></p>
-<dd> Unable to determine the location of the certificate file</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_PROXY_FILENAME </i></p>
-<dd> Unable to determine the location of the proxy file</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_DELEG_FILENAME </i></p>
-<dd> Unable to determine the location of the delegated proxy file</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_CA_CERT_FILENAMES </i></p>
-<dd> Unable to generate a list of CA certificate filenames</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_CWD </i></p>
-<dd> Error while discovering the current working directory</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_REMOVING_OWNED_FILES </i></p>
-<dd> Failed to remove all proxy files</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_GRIDMAP_FILENAME </i></p>
-<dd> Unable to determine the location of the grid map file</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_CHECKING_SUPERUSER </i></p>
-<dd> Failure while checking whether the current user is the super user</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_SETTING_PERMS </i></p>
-<dd> Error while trying to set file permissions</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_SIGNING_POLICY </i></p>
-<dd> Unable to determine the location of a signing policy file</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_PW_ENTRY </i></p>
-<dd> Could not find password entry for user</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_AUTHZ_FILENAME </i></p>
-<dd> Failed to locate the authorization callout configuration file</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_FILE_NOT_REGULAR </i></p>
-<dd> File is not a regular file</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_FILE_DOES_NOT_EXIST </i></p>
-<dd> File does not exist</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_FILE_BAD_PERMISSIONS </i></p>
-<dd> File has incorrect permissions for operation</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_FILE_NOT_OWNED </i></p>
-<dd> File is not owned by current user</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_FILE_IS_DIR </i></p>
-<dd> File is a directory</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_FILE_ZERO_LENGTH </i></p>
-<dd> File has zero length</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_INVALID_ARG </i></p>
-<dd> Invalid argument</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_FILE_HAS_LINKS </i></p>
-<dd> File has more than one link</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_FILE_HAS_CHANGED </i></p>
-<dd> File has changed in the meantime</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_AUTHZ_LIB_FILENAME </i></p>
-<dd> Failed to locate the authorization callout library configuration file</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_GAA_FILENAME </i></p>
-<dd> Failed to locate the GAA configuration file</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_FILE_NOT_DIR </i></p>
-<dd> File is not a directory</p>
-<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_LAST </i></p>
-<dd> Last marker &#8211; never used</dl>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_SUCCESS </i></dt>
+<dd> Success &#8211; never used</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_CERT_DIR </i></dt>
+<dd> Unable to determine trusted certificates directory</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_CERT_STRING </i></dt>
+<dd> Error while generating certificate filename</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_KEY_STRING </i></dt>
+<dd> Error while generating private key filename</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_HOME_DIR </i></dt>
+<dd> Unable to determine user&#8217;s home directory</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_ERRNO </i></dt>
+<dd> System Error &#8212; see underlying error for details</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_CHECKING_FILE_EXISTS </i></dt>
+<dd> Unable to determine whether file exists</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_CERT_FILENAME </i></dt>
+<dd> Unable to determine the location of the certificate file</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_PROXY_FILENAME </i></dt>
+<dd> Unable to determine the location of the proxy file</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_DELEG_FILENAME </i></dt>
+<dd> Unable to determine the location of the delegated proxy file</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_CA_CERT_FILENAMES </i></dt>
+<dd> Unable to generate a list of CA certificate filenames</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_CWD </i></dt>
+<dd> Error while discovering the current working directory</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_REMOVING_OWNED_FILES </i></dt>
+<dd> Failed to remove all proxy files</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_GRIDMAP_FILENAME </i></dt>
+<dd> Unable to determine the location of the grid map file</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_CHECKING_SUPERUSER </i></dt>
+<dd> Failure while checking whether the current user is the super user</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_SETTING_PERMS </i></dt>
+<dd> Error while trying to set file permissions</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_SIGNING_POLICY </i></dt>
+<dd> Unable to determine the location of a signing policy file</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_PW_ENTRY </i></dt>
+<dd> Could not find password entry for user</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_AUTHZ_FILENAME </i></dt>
+<dd> Failed to locate the authorization callout configuration file</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_FILE_NOT_REGULAR </i></dt>
+<dd> File is not a regular file</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_FILE_DOES_NOT_EXIST </i></dt>
+<dd> File does not exist</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_FILE_BAD_PERMISSIONS </i></dt>
+<dd> File has incorrect permissions for operation</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_FILE_NOT_OWNED </i></dt>
+<dd> File is not owned by current user</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_FILE_IS_DIR </i></dt>
+<dd> File is a directory</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_FILE_ZERO_LENGTH </i></dt>
+<dd> File has zero length</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_INVALID_ARG </i></dt>
+<dd> Invalid argument</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_FILE_HAS_LINKS </i></dt>
+<dd> File has more than one link</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_FILE_HAS_CHANGED </i></dt>
+<dd> File has changed in the meantime</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_AUTHZ_LIB_FILENAME </i></dt>
+<dd> Failed to locate the authorization callout library configuration file</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_GETTING_GAA_FILENAME </i></dt>
+<dd> Failed to locate the GAA configuration file</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_FILE_NOT_DIR </i></dt>
+<dd> File is not a directory</dd>
+<dt><i>GLOBUS_GSI_SYSCONFIG_ERROR_LAST </i></dt>
+<dd> Last marker &#8211; never used</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gsi_sysconfig from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAH">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAH">Author</a></dt>
+<dd></dd></dl>

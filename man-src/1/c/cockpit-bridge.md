@@ -11,23 +11,23 @@ description: "cockpit-bridge – Cockpit Host Bridge"
 <p> cockpit-bridge &#8211; Cockpit Host Bridge </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>cockpit-bridge</code> [<code>&#8211;help</code>] [<code>&#8211;packages</code>]</dl>
+<dt> <code>cockpit-bridge</code> [<code>&#8211;help</code>] [<code>&#8211;packages</code>]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>The <code>cockpit-bridge</code> program is used by Cockpit to relay messages and commands from the Web front end to the server. Among other things it relays DBus, and spawns processes on behalf of the Web user interface. </p>
+<dd>The <code>cockpit-bridge</code> program is used by Cockpit to relay messages and commands from the Web front end to the server. Among other things it relays DBus, and spawns processes on behalf of the Web user interface. </dd>
 <p> This program is not routinely run by users or administrators. It is in the $PATH so that Cockpit can find it when connecting between hosts. However there are some diagnostics available when running from the command line.</p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Show help options.</dl>
+</dt><dd> Show help options.</dd></dl>
 <p> <code>&#8211;interact=boundary</code></p>
 <dl>
 <dt>
-<dd> Interact with the raw cockpit1 protocol. Useful for debugging and testing. Specify a <code>boundary</code> which should be on an empty line between messages.</dl>
+</dt><dd> Interact with the raw cockpit1 protocol. Useful for debugging and testing. Specify a <code>boundary</code> which should be on an empty line between messages.</dd></dl>
 <p> <code>&#8211;packages</code></p>
 <dl>
 <dt>
-<dd> List all available Cockpit packages and exit. Note this includes packages available to the user running this command.</dl>
+</dt><dd> List all available Cockpit packages and exit. Note this includes packages available to the user running this command.</dd></dl>
 <h2>BUGS</h2>
 <p> Please send bug reports to either the distribution bug tracker or the m[blue]<code>upstream bug tracker</code>m[]<font SIZE="-2">[1]</font>.</p>
 <h2>AUTHOR</h2>
@@ -36,15 +36,15 @@ description: "cockpit-bridge – Cockpit Host Bridge"
 <p> <code><a href="/docs/linux/man/8-cockpit-ws/">cockpit-ws</a></code>(8)</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> upstream bug tracker</p>
+<dt> 1.</dt>
+<dd> upstream bug tracker</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="https://github.com/cockpit-project/cockpit/issues/new">https://github.com/cockpit-project/cockpit/issues/new</a></dl>
-<dt> 2.</p>
-<dd> contributors</p>
+</dt><dd> <a rel="nofollow" href="https://github.com/cockpit-project/cockpit/issues/new">https://github.com/cockpit-project/cockpit/issues/new</a></dd></dl>
+<dt> 2.</dt>
+<dd> contributors</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="https://github.com/cockpit-project/cockpit/">https://github.com/cockpit-project/cockpit/</a></dl>
+</dt><dd> <a rel="nofollow" href="https://github.com/cockpit-project/cockpit/">https://github.com/cockpit-project/cockpit/</a></dd></dl>
 </dl>
 <h2>Index</h2>

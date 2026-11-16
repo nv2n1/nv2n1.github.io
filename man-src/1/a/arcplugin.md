@@ -15,16 +15,16 @@ description: "arcplugin – ARC plugin management utility"
 <p> <code>arcplugin [-c] [-r] [-p priority,regex] [-h] plugin_path [plugin_path [&#8230;]]</code> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&nbsp;<wbr>-h </code></p>
-<dd> Prints help message and exits.</p>
-<dt><code>&nbsp;<wbr>-c </code></p>
-<dd> If specified then APD file is created using same name as ARC plugin with suffix. replaced with .apd.</p>
-<dt><code>&nbsp;<wbr>-r </code></p>
-<dd> If specified operation is fully recursive.</p>
-<dt><code>&nbsp;<wbr>-p </code></p>
-<dd> Defines which priority to be assigned for each plugin. Each plugin&#8217;s kind and name attributes are matched specified regex. One which matches gets specified This option can be specified multiple times. Priority is 32 bit positive integer. Default value is 128.</p>
-<dt><code>&nbsp;<wbr>plugin_path </code></p>
-<dd> full path to ARC plugin loadable module file or directory containing such modules. In last case operation will recurse once into that directory. For fully recursive operation use -r.</dl>
+<dt><code>&nbsp;<wbr>-h </code></dt>
+<dd> Prints help message and exits.</dd>
+<dt><code>&nbsp;<wbr>-c </code></dt>
+<dd> If specified then APD file is created using same name as ARC plugin with suffix. replaced with .apd.</dd>
+<dt><code>&nbsp;<wbr>-r </code></dt>
+<dd> If specified operation is fully recursive.</dd>
+<dt><code>&nbsp;<wbr>-p </code></dt>
+<dd> Defines which priority to be assigned for each plugin. Each plugin&#8217;s kind and name attributes are matched specified regex. One which matches gets specified This option can be specified multiple times. Priority is 32 bit positive integer. Default value is 128.</dd>
+<dt><code>&nbsp;<wbr>plugin_path </code></dt>
+<dd> full path to ARC plugin loadable module file or directory containing such modules. In last case operation will recurse once into that directory. For fully recursive operation use -r.</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to <a rel="nofollow" href="http://bugzilla.nordugrid.org">http://bugzilla.nordugrid.org</a> </p>
 <h2>COPYRIGHT</h2>

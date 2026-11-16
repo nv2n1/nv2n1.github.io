@@ -15,7 +15,7 @@ description: "XmRemoveTabGroup — A function that removes a tab group"
 <h2>Description</h2>
 <p>This function is obsolete and its behavior is replaced by setting <code>XmNnavigationType</code> to <code>XmNONE</code>. <code>XmRemoveTabGroup</code> removes a widget from the list of tab groups associated with a particular widget hierarchy and sets the widget&#8217;s <code>XmNnavigationType</code> to <code>XmNONE</code>.</p>
 <dl COMPACT>
-<dt><i>tab_group</i></p>
-<dd>Specifies the widget ID</dl>
+<dt><i>tab_group</i></dt>
+<dd>Specifies the widget ID</dd></dl>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmaddtabgroup/">XmAddTabGroup</a></code>(3), <code><a href="/docs/linux/man/3-xmmanager/">XmManager</a></code>(3), and <code><a href="/docs/linux/man/3-xmprimitive/">XmPrimitive</a></code>(3).</p>

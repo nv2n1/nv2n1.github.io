@@ -28,27 +28,27 @@ description: "iodbctest, iodbctestw – iODBC Demonstration programs"
 <p> If the SQL command returns one or more result sets, each result set is fetched using character buffers and displayed in a table. </p>
 <p> Additionally, the <code>iodbctest</code> program understands a few special commands: </p>
 <dl>
-<dt><code>qualifiers</code></p>
+<dt><code>qualifiers</code></dt>
 <dd>
- Show a list of qualifiers using the SQLTables catalog call. </p>
-<dt><code>owners</code></p>
+ Show a list of qualifiers using the SQLTables catalog call. </dd>
+<dt><code>owners</code></dt>
 <dd>
- Show a list of owners using the SQLTables catalog call. </p>
-<dt><code>tables</code></p>
+ Show a list of owners using the SQLTables catalog call. </dd>
+<dt><code>tables</code></dt>
 <dd>
- Show a list of tables using the SQLTables catalog call. </p>
-<dt><code>types</code></p>
+ Show a list of tables using the SQLTables catalog call. </dd>
+<dt><code>types</code></dt>
 <dd>
- Show a list of tables types using the SQLTables catalog call. </p>
-<dt><code>datatypes</code></p>
+ Show a list of tables types using the SQLTables catalog call. </dd>
+<dt><code>datatypes</code></dt>
 <dd>
- Show a list of data types using the SQLGetTypeInfo catalog call. </p>
-<dt><code>reconnect</code></p>
+ Show a list of data types using the SQLGetTypeInfo catalog call. </dd>
+<dt><code>reconnect</code></dt>
 <dd>
- Perform a disconnect/reconnect with the information saved during the first SQLDriverConnect. </p>
-<dt><code>quit (or exit)</code></p>
+ Perform a disconnect/reconnect with the information saved during the first SQLDriverConnect. </dd>
+<dt><code>quit (or exit)</code></dt>
 <dd>
- Exit the program and return to the shell. </p>
+ Exit the program and return to the shell. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> Start the iodbctest program and get a list of DSNs before making a connection: </p>

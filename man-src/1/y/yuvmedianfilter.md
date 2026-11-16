@@ -17,29 +17,29 @@ description: "yuvmedianfilter – A filter for yuv images produced by the mjpeg 
 <h2>OPTIONS</h2>
 <p> <code>yuvmedianfilter</code> accepts the following options: </p>
 <dl>
-<dt><code>-r</code><i> num</i></p>
-<dd> Radius for luma median (default: 2 pixels)</p>
-<dt><code>-R</code><i> num</i></p>
-<dd> Radius for chroma median (default: 2 pixels)</p>
-<dt><code>-t</code><i> num</i></p>
-<dd> Trigger threshold for luma (default: 2 [0=disable])</p>
-<dt><code>-T</code><i> num</i></p>
-<dd> Trigger threshold for chroma (default: 2 [0=disable])</p>
-<dt><code>-I</code><i> num</i></p>
-<dd> Interlacing type (0=no, 1=yes, default: taken from yuv stream)</p>
-<dt><code>-f</code></p>
-<dd> Fast mode, i.e. the threshold is ignored, and a simple mean of the surrounding values is calculated.</p>
-<dt><code>-w</code><i> num</i></p>
+<dt><code>-r</code><i> num</i></dt>
+<dd> Radius for luma median (default: 2 pixels)</dd>
+<dt><code>-R</code><i> num</i></dt>
+<dd> Radius for chroma median (default: 2 pixels)</dd>
+<dt><code>-t</code><i> num</i></dt>
+<dd> Trigger threshold for luma (default: 2 [0=disable])</dd>
+<dt><code>-T</code><i> num</i></dt>
+<dd> Trigger threshold for chroma (default: 2 [0=disable])</dd>
+<dt><code>-I</code><i> num</i></dt>
+<dd> Interlacing type (0=no, 1=yes, default: taken from yuv stream)</dd>
+<dt><code>-f</code></dt>
+<dd> Fast mode, i.e. the threshold is ignored, and a simple mean of the surrounding values is calculated.</dd>
+<dt><code>-w</code><i> num</i></dt>
 <dd> In fast mode, the weight given to the current value versus the surrounding values. Default is 8.<br />
- Note that certain combinations of radii and weights have been optimized to be even faster &#8212; radius 1 and weight 2.667, radius 1 and weight 8, and radius 2 and weight 8.</p>
-<dt><code>-c</code><i> num</i></p>
-<dd> In slow mode, more than this fraction of the pixels must be within the threshold; otherwise the pixel is simply the weighted mean of pixels within a radius of 1. Default is 0.33333.</p>
-<dt><code>-s</code><i> num</i></p>
-<dd> Number of beginning frames to skip. The first num frames are written to stdout unfiltered. This is useful for resuming an interrupted job without having to duplicate work.</p>
-<dt><code>-v</code><i> num</i></p>
-<dd> Verbosity level (0, 1 or 2)</p>
-<dt><code>-h</code></p>
-<dd> Print out a help message </p>
+ Note that certain combinations of radii and weights have been optimized to be even faster &#8212; radius 1 and weight 2.667, radius 1 and weight 8, and radius 2 and weight 8.</dd>
+<dt><code>-c</code><i> num</i></dt>
+<dd> In slow mode, more than this fraction of the pixels must be within the threshold; otherwise the pixel is simply the weighted mean of pixels within a radius of 1. Default is 0.33333.</dd>
+<dt><code>-s</code><i> num</i></dt>
+<dd> Number of beginning frames to skip. The first num frames are written to stdout unfiltered. This is useful for resuming an interrupted job without having to duplicate work.</dd>
+<dt><code>-v</code><i> num</i></dt>
+<dd> Verbosity level (0, 1 or 2)</dd>
+<dt><code>-h</code></dt>
+<dd> Print out a help message </dd>
 </dl>
 <h2>BUGS</h2>
 <p> It is slow. Using a radius greater than the default of 2 is painfully slow. </p>
@@ -49,8 +49,8 @@ description: "yuvmedianfilter – A filter for yuv images produced by the mjpeg 
 <p> If you have questions, remarks, problems or you just want to contact the developers, the main mailing list for the MJPEG-tools is:<br />
 &nbsp;<wbr>&nbsp;<wbr><i>mjpeg-users [at] lists.sourceforge.net</i> </p>
 <dl>
-<dt>For more info, see our website at</p>
-<dd> <i><a rel="nofollow" href="http://mjpeg.sourceforge.net">http://mjpeg.sourceforge.net</a></i> </p>
+<dt>For more info, see our website at</dt>
+<dd> <i><a rel="nofollow" href="http://mjpeg.sourceforge.net">http://mjpeg.sourceforge.net</a></i> </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mjpegtools/">mjpegtools</a></code>(1), <code><a href="/docs/linux/man/1-jpeg2yuv/">jpeg2yuv</a></code>(1), <code><a href="/docs/linux/man/1-lav2yuv/">lav2yuv</a></code>(1), <code><a href="/docs/linux/man/1-mpeg2enc/">mpeg2enc</a></code>(1), <code><a href="/docs/linux/man/1-ppmtoy4m/">ppmtoy4m</a></code>(1), <code><a href="/docs/linux/man/1-yuv2lav/">yuv2lav</a></code>(1), <code><a href="/docs/linux/man/1-yuvdenoise/">yuvdenoise</a></code>(1), <code><a href="/docs/linux/man/1-yuvscaler/">yuvscaler</a></code>(1) </p>

@@ -23,29 +23,21 @@ test Auth-Type := Digest, User-Password = &quot;test&quot;
  Reply-Message = &quot;Hello, test with digest&quot;
 <br>
 #---</pre>
-</dl>
+</dd></dl>
 <p> Once the server has been started (debugging mode is recommended), use &#8216;<i>radclient</i> to send the following packet to the server:</p>
 <dl>
 <dd>
 <pre>$ radclient -f digest localhost auth testing123</pre>
-</dl>
+</dd></dl>
 <p> Where &#8216;digest&#8217; is a file containing: </p>
 <pre><code>User-Name = &quot;test&quot;,
-
 Digest-Response = &quot;631d6d73147add2f9e437f59bbc3aeb7&quot;,
-
 Digest-Realm = &quot;testrealm&quot;,
-
 Digest-Nonce = &quot;1234abcd&quot;,
-
 Digest-Method = &quot;INVITE&quot;,
-
 Digest-URI = &quot;sip:5555551212 [at] example.com&quot;,
-
 Digest-Algorithm = &quot;MD5&quot;,
-
 Digest-User-Name = &quot;test&quot;,
-
 Message-Authenticator = &quot;&quot;
 </code></pre>
 <p> You should see the authentication succeed. </p>

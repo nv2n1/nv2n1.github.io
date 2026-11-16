@@ -17,21 +17,21 @@ description: "pam-script – a PAM module that can invoke scripts within the PAM
 <h2>Options</h2>
 <p>A summary of options is included below.</p>
 <dl>
-<dt><code>onerr=(success|fail)</code></p>
-<dd>the default behavior if the module can not find or execute the script. The default is to fail if the option is not given.</p>
-<dt><code>dir=/some/path/</code></p>
-<dd>where to find the pam-scripts to invoke for each of the various module-types as described below. The default is dir=/etc if not given. </p>
+<dt><code>onerr=(success|fail)</code></dt>
+<dd>the default behavior if the module can not find or execute the script. The default is to fail if the option is not given.</dd>
+<dt><code>dir=/some/path/</code></dt>
+<dd>where to find the pam-scripts to invoke for each of the various module-types as described below. The default is dir=/etc if not given. </dd>
 <p> List of scripts</p>
-<dt><code>pam_script_auth</code></p>
-<dd>Executed under <i>auth</i> which handles the authentication stage of establishing the user via some challenge-response (i.e. username/password)</p>
-<dt><code>pam_script_acct</code></p>
-<dd>invoked under <i>account</i> module-type for non-authentication based account management.</p>
-<dt><code>pam_script_passwd</code></p>
-<dd>invoked under <i>passwd</i> for changing the password tokens.</p>
-<dt><code>pam_script_ses_open</code></p>
-<dd>invoked when a <i>session</i> is first opened.</p>
-<dt><code>pam_script_ses_close</code></p>
-<dd>run after a <i>session</i> is first closed. </p>
+<dt><code>pam_script_auth</code></dt>
+<dd>Executed under <i>auth</i> which handles the authentication stage of establishing the user via some challenge-response (i.e. username/password)</dd>
+<dt><code>pam_script_acct</code></dt>
+<dd>invoked under <i>account</i> module-type for non-authentication based account management.</dd>
+<dt><code>pam_script_passwd</code></dt>
+<dd>invoked under <i>passwd</i> for changing the password tokens.</dd>
+<dt><code>pam_script_ses_open</code></dt>
+<dd>invoked when a <i>session</i> is first opened.</dd>
+<dt><code>pam_script_ses_close</code></dt>
+<dd>run after a <i>session</i> is first closed. </dd>
 <p> All the scripts will be passed several environment variables: PAM_USER, PAM_RUSER, PAM_RHOST, PAM_SERVICE, PAM_AUTHTOK, PAM_TTY, and PAM_TYPE referring to the module-type. The pam_script.so arguments in the pam.conf will be passed on the command line, which can be used to modify the script behavior. </p>
 </dl>
 <h2>Files</h2>

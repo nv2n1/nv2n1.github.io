@@ -13,10 +13,10 @@ description: "pskc_set_key_data_timeinterval – API function"
 void pskc_set_key_data_timeinterval(pskc_key_t *key, uint32_t timeinterval);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</p>
-<dt>uint32_t timeinterval</p>
-<dd>time interval value to set.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd>
+<dt>uint32_t timeinterval</dt>
+<dd>time interval value to set.</dd></dl>
 <h2>Description</h2>
 <p>Set the PSKC KeyPackage Key Data TimeInterval value. This element carries the time interval value for time-based OTP algorithms in seconds (a typical value for this would be 30, indicating a time interval of 30 seconds).</p>
 <h2>Since</h2>

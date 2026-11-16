@@ -17,10 +17,12 @@ bson_strndup(const char *str,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>str</code></p>
-<dd> A string to copy.</dl>
+<dt><code>str</code></dt>
+<dd> A string to copy.</dd></dl>
 <dl>
-<dt><code>n_bytes</code></p>
-<dd> A size_t.</dl>
+<dt><code>n_bytes</code></dt>
+<dd> A size_t.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Allocates a new string and copies up to <code>n_bytes</code> from <code>str</code> into it. A trailing <code>
+</p>
+</code>

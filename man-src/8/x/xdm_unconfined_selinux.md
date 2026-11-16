@@ -59,8 +59,8 @@ description: "xdm_unconfined_selinux – Security Enhanced Linux Policy for the 
 <p> <code>xdm_unconfined_exec_t</code> </p>
 <p> &#8211; Set files with the xdm_unconfined_exec_t type, if you want to transition an executable to the xdm_unconfined_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/[mg]dm/Init(/.*)?, /etc/[mg]dm/PostLogin(/.*)?, /etc/[mg]dm/PreSession(/.*)?, /etc/[mg]dm/PostSession(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/[mg]dm/Init(/.*)?, /etc/[mg]dm/PostLogin(/.*)?, /etc/[mg]dm/PreSession(/.*)?, /etc/[mg]dm/PostSession(/.*)? </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

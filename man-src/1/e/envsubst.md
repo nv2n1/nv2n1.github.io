@@ -15,14 +15,14 @@ description: "envsubst – substitutes environment variables in shell format str
 <p> Substitutes the values of environment variables.</p>
 <h3>Operation mode:</h3>
 <dl>
-<dt><code>-v</code>, <code>&#8211;variables</code></p>
-<dd> output the variables occurring in SHELL-FORMAT</dl>
+<dt><code>-v</code>, <code>&#8211;variables</code></dt>
+<dd> output the variables occurring in SHELL-FORMAT</dd></dl>
 <h3>Informative output:</h3>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> In normal operation mode, standard input is copied to standard output, with references to environment variables of the form $VARIABLE or ${VARIABLE} being replaced with the corresponding values. If a SHELL-FORMAT is given, only those environment variables that are referenced in SHELL-FORMAT are substituted; otherwise all environment variables references occurring in standard input are substituted. </p>
 <p> When <code>&#8211;variables</code> is used, standard input is ignored, and the output consists of the environment variables that are referenced in SHELL-FORMAT, one per line.</p>
 <h2>AUTHOR</h2>
@@ -36,6 +36,6 @@ description: "envsubst – substitutes environment variables in shell format str
 <p> The full documentation for <code>envsubst</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>envsubst</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info envsubst</code></dl>
+</dt><dd> <code>info envsubst</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

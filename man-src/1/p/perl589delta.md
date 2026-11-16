@@ -33,22 +33,22 @@ description: "perl589delta – what is new for perl v5.8.9"
 <p> There is now <i>Configure</i> support for creating a perl tree that is relocatable at run time. see &#8220;Relocatable installations&#8221;.</p>
 <h3>New internal variables</h3>
 <dl>
-<dt>&quot;${^CHILD_ERROR_NATIVE}&quot;</p>
-<dd> This variable gives the native status returned by the last pipe close, backtick command, successful call to <tt>&quot;wait&quot;</tt> or <tt>&quot;waitpid&quot;</tt>, or from the <tt>&quot;system&quot;</tt> operator. See perlvar for details. (Contributed by Gisle Aas.)</p>
-<dt>&quot;${^UTF8CACHE}&quot;</p>
-<dd> This variable controls the state of the internal <font SIZE="-1">UTF-8</font> offset caching code. 1 for on (the default), 0 for off, -1 to debug the caching code by checking all its results against linear scans, and panicking on any discrepancy.</dl>
+<dt>&quot;${^CHILD_ERROR_NATIVE}&quot;</dt>
+<dd> This variable gives the native status returned by the last pipe close, backtick command, successful call to <tt>&quot;wait&quot;</tt> or <tt>&quot;waitpid&quot;</tt>, or from the <tt>&quot;system&quot;</tt> operator. See perlvar for details. (Contributed by Gisle Aas.)</dd>
+<dt>&quot;${^UTF8CACHE}&quot;</dt>
+<dd> This variable controls the state of the internal <font SIZE="-1">UTF-8</font> offset caching code. 1 for on (the default), 0 for off, -1 to debug the caching code by checking all its results against linear scans, and panicking on any discrepancy.</dd></dl>
 <h3>readpipe is now overridable</h3>
 <p> The built-in function <tt>&quot;readpipe&quot;</tt> is now overridable. Overriding it permits also to override its operator counterpart, <tt>&quot;qx//&quot;</tt> (also known as <tt>&quot;``&quot;</tt>).</p>
 <h3>simple exception handling macros</h3>
 <p> Perl 5.8.9 (and 5.10.0 onwards) now provides a couple of macros to do very basic exception handling in <font SIZE="-1">XS</font> modules. You can use these macros if you call code that may <tt>&quot;croak&quot;</tt>, but you need to do some cleanup before giving control back to Perl. See &#8220;Exception Handling&#8221; in perlguts for more details.</p>
 <h3>-D option enhancements</h3>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;-Dq&quot;</tt> suppresses the <i></i><font SIZE="-1"><i>EXECUTING&#8230;</i></font><i></i> message when running under <tt>&quot;-D&quot;</tt></p>
-<dt>&bull;</p>
-<dd> <tt>&quot;-Dl&quot;</tt> logs runops loop entry and exit, and jump level popping.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;-Dv&quot;</tt> displays the process id as part of the trace output.</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;-Dq&quot;</tt> suppresses the <i></i><font SIZE="-1"><i>EXECUTING&#8230;</i></font><i></i> message when running under <tt>&quot;-D&quot;</tt></dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;-Dl&quot;</tt> logs runops loop entry and exit, and jump level popping.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;-Dv&quot;</tt> displays the process id as part of the trace output.</dd></dl>
 <h3>XS-assisted <font SIZE="-1">SWASHGET</font></h3>
 <p> Some pure-perl code that the regexp engine was using to retrieve Unicode properties and transliteration mappings has been reimplemented in <font SIZE="-1">XS</font> for faster execution. (<font SIZE="-1">SADAHIRO</font> Tomoyuki)</p>
 <h3>Constant subroutines</h3>
@@ -58,627 +58,555 @@ description: "perl589delta – what is new for perl v5.8.9"
 <h2>New Platforms</h2>
 <p> Compile support added for:</p>
 <dl>
-<dt>&bull;</p>
-<dd> DragonFlyBSD</p>
-<dt>&bull;</p>
-<dd> MidnightBSD</p>
-<dt>&bull;</p>
-<dd> MirOS <font SIZE="-1">BSD</font></p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">RISC OS</font></p>
-<dt>&bull;</p>
-<dd> Cray XT4/Catamount</dl>
+<dt>&bull;</dt>
+<dd> DragonFlyBSD</dd>
+<dt>&bull;</dt>
+<dd> MidnightBSD</dd>
+<dt>&bull;</dt>
+<dd> MirOS <font SIZE="-1">BSD</font></dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">RISC OS</font></dd>
+<dt>&bull;</dt>
+<dd> Cray XT4/Catamount</dd></dl>
 <h2>Modules and Pragmata</h2>
 <h3>New Modules</h3>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Module::Pluggable&quot;</tt> is a simple framework to create modules that accept pluggable sub-modules. The bundled version is 3.8</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Module::CoreList&quot;</tt> is a hash of hashes that is keyed on perl version as indicated in <tt>$]</tt>. The bundled version is 2.17</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Win32API::File&quot;</tt> now available in core on Microsoft Windows. The bundled version is 0.1001_01</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Devel::InnerPackage&quot;</tt> finds all the packages defined by a single file. It is part of the <tt>&quot;Module::Pluggable&quot;</tt> distribution. The bundled version is 0.3</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Module::Pluggable&quot;</tt> is a simple framework to create modules that accept pluggable sub-modules. The bundled version is 3.8</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Module::CoreList&quot;</tt> is a hash of hashes that is keyed on perl version as indicated in <tt>$]</tt>. The bundled version is 2.17</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Win32API::File&quot;</tt> now available in core on Microsoft Windows. The bundled version is 0.1001_01</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Devel::InnerPackage&quot;</tt> finds all the packages defined by a single file. It is part of the <tt>&quot;Module::Pluggable&quot;</tt> distribution. The bundled version is 0.3</dd></dl>
 <h3>Updated Modules</h3>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;attributes&quot;</tt> upgraded to version 0.09</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;AutoLoader&quot;</tt> upgraded to version 5.67</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;AutoSplit&quot;</tt> upgraded to 1.06</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;autouse&quot;</tt> upgraded to version 1.06</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;B&quot;</tt> upgraded from 1.09_01 to 1.19</p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;attributes&quot;</tt> upgraded to version 0.09</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;AutoLoader&quot;</tt> upgraded to version 5.67</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;AutoSplit&quot;</tt> upgraded to 1.06</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;autouse&quot;</tt> upgraded to version 1.06</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;B&quot;</tt> upgraded from 1.09_01 to 1.19</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> provides new pad related abstraction macros <tt>&quot;B::NV::COP_SEQ_RANGE_LOW&quot;</tt>, <tt>&quot;B::NV::COP_SEQ_RANGE_HIGH&quot;</tt>, <tt>&quot;B::NV::PARENT_PAD_INDEX&quot;</tt>, <tt>&quot;B::NV::PARENT_FAKELEX_FLAGS&quot;</tt>, which hides the difference in storage in 5.10.0 and later.</p>
-<dt>&bull;</p>
-<dd> provides <tt>&quot;B::sub_generation&quot;</tt>, which exposes <tt>&quot;PL_sub_generation&quot;</tt></p>
-<dt>&bull;</p>
-<dd> provides <tt>&quot;B::GV::isGV_with_GP&quot;</tt>, which on pre-5.10 perls always returns true.</p>
-<dt>&bull;</p>
-<dd> New type <tt>&quot;B::HE&quot;</tt> added with methods <tt>&quot;VAL&quot;</tt>, <tt>&quot;HASH&quot;</tt> and <tt>&quot;SVKEY_force&quot;</tt></p>
-<dt>&bull;</p>
-<dd> The <tt>&quot;B::GVf_IMPORTED_CV&quot;</tt> flag is now set correctly when a proxy constant subroutine is imported.</p>
-<dt>&bull;</p>
-<dd> bugs fixed in the handling of <tt>&quot;PMOP&quot;</tt>s.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;B::BM::PREVIOUS&quot;</tt> returns now <tt>&quot;U32&quot;</tt>, not <tt>&quot;U16&quot;</tt>. <tt>&quot;B::CV::START&quot;</tt> and <tt>&quot;B:CV::ROOT&quot;</tt> return now <tt>&quot;NULL&quot;</tt> on an <font SIZE="-1">XSUB,</font> <tt>&quot;B::CV::XSUB&quot;</tt> and <tt>&quot;B::CV::XSUBANY&quot;</tt> return 0 on a non-XSUB.</dl>
+<dt>&bull;</dt>
+<dd> provides new pad related abstraction macros <tt>&quot;B::NV::COP_SEQ_RANGE_LOW&quot;</tt>, <tt>&quot;B::NV::COP_SEQ_RANGE_HIGH&quot;</tt>, <tt>&quot;B::NV::PARENT_PAD_INDEX&quot;</tt>, <tt>&quot;B::NV::PARENT_FAKELEX_FLAGS&quot;</tt>, which hides the difference in storage in 5.10.0 and later.</dd>
+<dt>&bull;</dt>
+<dd> provides <tt>&quot;B::sub_generation&quot;</tt>, which exposes <tt>&quot;PL_sub_generation&quot;</tt></dd>
+<dt>&bull;</dt>
+<dd> provides <tt>&quot;B::GV::isGV_with_GP&quot;</tt>, which on pre-5.10 perls always returns true.</dd>
+<dt>&bull;</dt>
+<dd> New type <tt>&quot;B::HE&quot;</tt> added with methods <tt>&quot;VAL&quot;</tt>, <tt>&quot;HASH&quot;</tt> and <tt>&quot;SVKEY_force&quot;</tt></dd>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;B::GVf_IMPORTED_CV&quot;</tt> flag is now set correctly when a proxy constant subroutine is imported.</dd>
+<dt>&bull;</dt>
+<dd> bugs fixed in the handling of <tt>&quot;PMOP&quot;</tt>s.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;B::BM::PREVIOUS&quot;</tt> returns now <tt>&quot;U32&quot;</tt>, not <tt>&quot;U16&quot;</tt>. <tt>&quot;B::CV::START&quot;</tt> and <tt>&quot;B:CV::ROOT&quot;</tt> return now <tt>&quot;NULL&quot;</tt> on an <font SIZE="-1">XSUB,</font> <tt>&quot;B::CV::XSUB&quot;</tt> and <tt>&quot;B::CV::XSUBANY&quot;</tt> return 0 on a non-XSUB.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;B::C&quot;</tt> upgraded to 1.05</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;B::Concise&quot;</tt> upgraded to 0.76</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;B::C&quot;</tt> upgraded to 1.05</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;B::Concise&quot;</tt> upgraded to 0.76</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> new option <tt>&quot;-src&quot;</tt> causes the rendering of each statement (starting with the nextstate <font SIZE="-1">OP</font>) to be preceded by the first line of source code that generates it.</p>
-<dt>&bull;</p>
-<dd> new option <tt>&quot;-stash=&quot;somepackage&quot;&quot;</tt>, <tt>&quot;require&quot;</tt>s &#8220;somepackage&#8221;, and then renders each function defined in its namespace.</p>
-<dt>&bull;</p>
-<dd> now has documentation of detailed hint symbols.</dl>
+<dt>&bull;</dt>
+<dd> new option <tt>&quot;-src&quot;</tt> causes the rendering of each statement (starting with the nextstate <font SIZE="-1">OP</font>) to be preceded by the first line of source code that generates it.</dd>
+<dt>&bull;</dt>
+<dd> new option <tt>&quot;-stash=&quot;somepackage&quot;&quot;</tt>, <tt>&quot;require&quot;</tt>s &#8220;somepackage&#8221;, and then renders each function defined in its namespace.</dd>
+<dt>&bull;</dt>
+<dd> now has documentation of detailed hint symbols.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;B::Debug&quot;</tt> upgraded to version 1.05</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;B::Deparse&quot;</tt> upgraded to version 0.87</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;B::Debug&quot;</tt> upgraded to version 1.05</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;B::Deparse&quot;</tt> upgraded to version 0.87</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> properly deparse <tt>&quot;print readpipe $x, $y&quot;</tt>.</p>
-<dt>&bull;</p>
-<dd> now handles <tt>&quot;''-&gt;()&quot;</tt>, <tt>&quot;::()&quot;</tt>, <tt>&quot;sub :: {}&quot;</tt>, <i>etc.</i> correctly [<font SIZE="-1">RT</font> #43010]. All bugs in parsing these kinds of syntax are now fixed: </p>
+<dt>&bull;</dt>
+<dd> properly deparse <tt>&quot;print readpipe $x, $y&quot;</tt>.</dd>
+<dt>&bull;</dt>
+<dd> now handles <tt>&quot;''-&gt;()&quot;</tt>, <tt>&quot;::()&quot;</tt>, <tt>&quot;sub :: {}&quot;</tt>, <i>etc.</i> correctly [<font SIZE="-1">RT</font> #43010]. All bugs in parsing these kinds of syntax are now fixed: </dd>
 <pre><code>
 perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' perl - MO = Deparse - e 'sub :: {}' perl - MO = Deparse - e 'package a; sub a::b::c {}' perl - MO = Deparse - e 'sub the::main::road {}'
 </code></pre>
-<dt>&bull;</p>
-<dd> does <code>not</code> deparse <tt>$^H{v_string}</tt>, which is automatically set by the internals.</dl>
+<dt>&bull;</dt>
+<dd> does <code>not</code> deparse <tt>$^H{v_string}</tt>, which is automatically set by the internals.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;B::Lint&quot;</tt> upgraded to version 1.11</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;B::Terse&quot;</tt> upgraded to version 1.05</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;base&quot;</tt> upgraded to version 2.13</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;B::Lint&quot;</tt> upgraded to version 1.11</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;B::Terse&quot;</tt> upgraded to version 1.05</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;base&quot;</tt> upgraded to version 2.13</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> loading a module via base.pm would mask a global <tt>$SIG{__DIE__}</tt> in that module.</p>
-<dt>&bull;</p>
-<dd> push all classes at once in <tt>@ISA</tt></dl>
+<dt>&bull;</dt>
+<dd> loading a module via base.pm would mask a global <tt>$SIG{__DIE__}</tt> in that module.</dd>
+<dt>&bull;</dt>
+<dd> push all classes at once in <tt>@ISA</tt></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Benchmark&quot;</tt> upgraded to version 1.10</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;bigint&quot;</tt> upgraded to 0.23</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;bignum&quot;</tt> upgraded to 0.23</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;bigrat&quot;</tt> upgraded to 0.23</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;blib&quot;</tt> upgraded to 0.04</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Carp&quot;</tt> upgraded to version 1.10 </p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Benchmark&quot;</tt> upgraded to version 1.10</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;bigint&quot;</tt> upgraded to 0.23</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;bignum&quot;</tt> upgraded to 0.23</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;bigrat&quot;</tt> upgraded to 0.23</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;blib&quot;</tt> upgraded to 0.04</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Carp&quot;</tt> upgraded to version 1.10 </dd>
 <p> The argument backtrace code now shows <tt>&quot;undef&quot;</tt> as <tt>&quot;undef&quot;</tt>, instead of a string <i>&#8220;undef&#8221;</i>.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;CGI&quot;</tt> upgraded to version 3.42</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;charnames&quot;</tt> upgraded to 1.06</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;constant&quot;</tt> upgraded to version 1.17</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;CPAN&quot;</tt> upgraded to version 1.9301</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Cwd&quot;</tt> upgraded to version 3.29 with some platform specific improvements (including for <font SIZE="-1">VMS</font>).</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Data::Dumper&quot;</tt> upgraded to version 2.121_17</p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;CGI&quot;</tt> upgraded to version 3.42</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;charnames&quot;</tt> upgraded to 1.06</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;constant&quot;</tt> upgraded to version 1.17</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;CPAN&quot;</tt> upgraded to version 1.9301</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Cwd&quot;</tt> upgraded to version 3.29 with some platform specific improvements (including for <font SIZE="-1">VMS</font>).</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Data::Dumper&quot;</tt> upgraded to version 2.121_17</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Fixes hash iterator current position with the pure Perl version [<font SIZE="-1">RT</font> #40668]</p>
-<dt>&bull;</p>
-<dd> Performance enhancements, which will be most evident on platforms where repeated calls to C&#8217;s <tt>&quot;realloc()&quot;</tt> are slow, such as Win32.</dl>
+<dt>&bull;</dt>
+<dd> Fixes hash iterator current position with the pure Perl version [<font SIZE="-1">RT</font> #40668]</dd>
+<dt>&bull;</dt>
+<dd> Performance enhancements, which will be most evident on platforms where repeated calls to C&#8217;s <tt>&quot;realloc()&quot;</tt> are slow, such as Win32.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;DB_File&quot;</tt> upgraded to version 1.817</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;DB_Filter&quot;</tt> upgraded to version 0.02</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Devel::DProf&quot;</tt> upgraded to version 20080331.00</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Devel::Peek&quot;</tt> upgraded to version 1.04</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Devel::PPPort&quot;</tt> upgraded to version 3.14</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;diagnostics&quot;</tt> upgraded to version 1.16</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Digest&quot;</tt> upgraded to version 1.15</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Digest::MD5&quot;</tt> upgraded to version 2.37</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;DirHandle&quot;</tt> upgraded to version 1.02</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;DB_File&quot;</tt> upgraded to version 1.817</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;DB_Filter&quot;</tt> upgraded to version 0.02</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Devel::DProf&quot;</tt> upgraded to version 20080331.00</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Devel::Peek&quot;</tt> upgraded to version 1.04</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Devel::PPPort&quot;</tt> upgraded to version 3.14</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;diagnostics&quot;</tt> upgraded to version 1.16</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Digest&quot;</tt> upgraded to version 1.15</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Digest::MD5&quot;</tt> upgraded to version 2.37</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;DirHandle&quot;</tt> upgraded to version 1.02</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> now localises <tt>$.</tt>, <tt>$@</tt>, <tt>$!</tt>, <tt>$^E</tt>, and <tt>$?</tt> before closing the directory handle to suppress leaking any side effects of warnings about it already being closed.</dl>
+<dt>&bull;</dt>
+<dd> now localises <tt>$.</tt>, <tt>$@</tt>, <tt>$!</tt>, <tt>$^E</tt>, and <tt>$?</tt> before closing the directory handle to suppress leaking any side effects of warnings about it already being closed.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;DynaLoader&quot;</tt> upgraded to version 1.09 </p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;DynaLoader&quot;</tt> upgraded to version 1.09 </dd>
 <p> <tt>&quot;DynaLoader&quot;</tt> can now dynamically load a loadable object from a file with a non-default file extension.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Encode&quot;</tt> upgraded to version 2.26 </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Encode&quot;</tt> upgraded to version 2.26 </dd>
 <p> <tt>&quot;Encode::Alias&quot;</tt> includes a fix for encoding &#8220;646&#8221; on Solaris (better known as <font SIZE="-1">ASCII</font>).</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;English&quot;</tt> upgraded to version 1.03</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Errno&quot;</tt> upgraded to version 1.10</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Exporter&quot;</tt> upgraded to version 5.63</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;ExtUtils::Command&quot;</tt> upgraded to version 1.15</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;ExtUtils::Constant&quot;</tt> upgraded to version 0.21</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;ExtUtils::Embed&quot;</tt> upgraded to version 1.28</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;ExtUtils::Install&quot;</tt> upgraded to version 1.50_01</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;ExtUtils::Installed&quot;</tt> upgraded to version 1.43</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;ExtUtils::MakeMaker&quot;</tt> upgraded to version 6.48</p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;English&quot;</tt> upgraded to version 1.03</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Errno&quot;</tt> upgraded to version 1.10</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Exporter&quot;</tt> upgraded to version 5.63</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;ExtUtils::Command&quot;</tt> upgraded to version 1.15</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;ExtUtils::Constant&quot;</tt> upgraded to version 0.21</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;ExtUtils::Embed&quot;</tt> upgraded to version 1.28</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;ExtUtils::Install&quot;</tt> upgraded to version 1.50_01</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;ExtUtils::Installed&quot;</tt> upgraded to version 1.43</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;ExtUtils::MakeMaker&quot;</tt> upgraded to version 6.48</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> support for <tt>&quot;INSTALLSITESCRIPT&quot;</tt> and <tt>&quot;INSTALLVENDORSCRIPT&quot;</tt> configuration.</dl>
+<dt>&bull;</dt>
+<dd> support for <tt>&quot;INSTALLSITESCRIPT&quot;</tt> and <tt>&quot;INSTALLVENDORSCRIPT&quot;</tt> configuration.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;ExtUtils::Manifest&quot;</tt> upgraded to version 1.55</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;ExtUtils::ParseXS&quot;</tt> upgraded to version 2.19</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Fatal&quot;</tt> upgraded to version 1.06</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;ExtUtils::Manifest&quot;</tt> upgraded to version 1.55</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;ExtUtils::ParseXS&quot;</tt> upgraded to version 2.19</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Fatal&quot;</tt> upgraded to version 1.06</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> allows built-ins in <tt>&quot;CORE::GLOBAL&quot;</tt> to be made fatal.</dl>
+<dt>&bull;</dt>
+<dd> allows built-ins in <tt>&quot;CORE::GLOBAL&quot;</tt> to be made fatal.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Fcntl&quot;</tt> upgraded to version 1.06</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;fields&quot;</tt> upgraded to version 2.12</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;File::Basename&quot;</tt> upgraded to version 2.77</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;FileCache&quot;</tt> upgraded to version 1.07</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;File::Compare&quot;</tt> upgraded to 1.1005</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;File::Copy&quot;</tt> upgraded to 2.13</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Fcntl&quot;</tt> upgraded to version 1.06</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;fields&quot;</tt> upgraded to version 2.12</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;File::Basename&quot;</tt> upgraded to version 2.77</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;FileCache&quot;</tt> upgraded to version 1.07</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;File::Compare&quot;</tt> upgraded to 1.1005</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;File::Copy&quot;</tt> upgraded to 2.13</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> now uses 3-arg open.</dl>
+<dt>&bull;</dt>
+<dd> now uses 3-arg open.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;File::DosGlob&quot;</tt> upgraded to 1.01</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;File::Find&quot;</tt> upgraded to version 1.13</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;File::Glob&quot;</tt> upgraded to version 1.06</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;File::DosGlob&quot;</tt> upgraded to 1.01</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;File::Find&quot;</tt> upgraded to version 1.13</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;File::Glob&quot;</tt> upgraded to version 1.06</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> fixes spurious results with brackets inside braces.</dl>
+<dt>&bull;</dt>
+<dd> fixes spurious results with brackets inside braces.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;File::Path&quot;</tt> upgraded to version 2.07_02</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;File::Spec&quot;</tt> upgraded to version 3.29</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;File::Path&quot;</tt> upgraded to version 2.07_02</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;File::Spec&quot;</tt> upgraded to version 3.29</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> improved handling of bad arguments.</p>
-<dt>&bull;</p>
-<dd> some platform specific improvements (including for <font SIZE="-1">VMS</font> and Cygwin), with an optimisation on <tt>&quot;abs2rel&quot;</tt> when handling both relative arguments.</dl>
+<dt>&bull;</dt>
+<dd> improved handling of bad arguments.</dd>
+<dt>&bull;</dt>
+<dd> some platform specific improvements (including for <font SIZE="-1">VMS</font> and Cygwin), with an optimisation on <tt>&quot;abs2rel&quot;</tt> when handling both relative arguments.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;File::stat&quot;</tt> upgraded to version 1.01</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;File::Temp&quot;</tt> upgraded to version 0.20</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;filetest&quot;</tt> upgraded to version 1.02</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Filter::Util::Call&quot;</tt> upgraded to version 1.07</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Filter::Simple&quot;</tt> upgraded to version 0.83</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;FindBin&quot;</tt> upgraded to version 1.49</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;GDBM_File&quot;</tt> upgraded to version 1.09</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Getopt::Long&quot;</tt> upgraded to version 2.37</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Getopt::Std&quot;</tt> upgraded to version 1.06</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Hash::Util&quot;</tt> upgraded to version 0.06</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;if&quot;</tt> upgraded to version 0.05</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;IO&quot;</tt> upgraded to version 1.23 </p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;File::stat&quot;</tt> upgraded to version 1.01</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;File::Temp&quot;</tt> upgraded to version 0.20</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;filetest&quot;</tt> upgraded to version 1.02</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Filter::Util::Call&quot;</tt> upgraded to version 1.07</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Filter::Simple&quot;</tt> upgraded to version 0.83</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;FindBin&quot;</tt> upgraded to version 1.49</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;GDBM_File&quot;</tt> upgraded to version 1.09</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Getopt::Long&quot;</tt> upgraded to version 2.37</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Getopt::Std&quot;</tt> upgraded to version 1.06</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Hash::Util&quot;</tt> upgraded to version 0.06</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;if&quot;</tt> upgraded to version 0.05</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;IO&quot;</tt> upgraded to version 1.23 </dd>
 <p> Reduced number of calls to <tt>&quot;getpeername&quot;</tt> in <tt>&quot;IO::Socket&quot;</tt></p>
-<dt>&bull;</p>
-<dd> <tt>&quot;IPC::Open&quot;</tt> upgraded to version 1.03</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;IPC::Open3&quot;</tt> upgraded to version 1.03</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;IPC::SysV&quot;</tt> upgraded to version 2.00</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;lib&quot;</tt> upgraded to version 0.61</p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;IPC::Open&quot;</tt> upgraded to version 1.03</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;IPC::Open3&quot;</tt> upgraded to version 1.03</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;IPC::SysV&quot;</tt> upgraded to version 2.00</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;lib&quot;</tt> upgraded to version 0.61</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> avoid warning about loading <i>.par</i> files.</dl>
+<dt>&bull;</dt>
+<dd> avoid warning about loading <i>.par</i> files.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;libnet&quot;</tt> upgraded to version 1.22</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;List::Util&quot;</tt> upgraded to 1.19</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Locale::Maketext&quot;</tt> upgraded to 1.13</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Math::BigFloat&quot;</tt> upgraded to version 1.60</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Math::BigInt&quot;</tt> upgraded to version 1.89</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Math::BigRat&quot;</tt> upgraded to version 0.22</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;libnet&quot;</tt> upgraded to version 1.22</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;List::Util&quot;</tt> upgraded to 1.19</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Locale::Maketext&quot;</tt> upgraded to 1.13</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Math::BigFloat&quot;</tt> upgraded to version 1.60</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Math::BigInt&quot;</tt> upgraded to version 1.89</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Math::BigRat&quot;</tt> upgraded to version 0.22</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> implements new <tt>&quot;as_float&quot;</tt> method.</dl>
+<dt>&bull;</dt>
+<dd> implements new <tt>&quot;as_float&quot;</tt> method.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Math::Complex&quot;</tt> upgraded to version 1.54.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Math::Trig&quot;</tt> upgraded to version 1.18.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;NDBM_File&quot;</tt> upgraded to version 1.07</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Math::Complex&quot;</tt> upgraded to version 1.54.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Math::Trig&quot;</tt> upgraded to version 1.18.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;NDBM_File&quot;</tt> upgraded to version 1.07</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> improve <i>g++</i> handling for systems using <font SIZE="-1">GDBM</font> compatibility headers.</dl>
+<dt>&bull;</dt>
+<dd> improve <i>g++</i> handling for systems using <font SIZE="-1">GDBM</font> compatibility headers.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Net::Ping&quot;</tt> upgraded to version 2.35</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;NEXT&quot;</tt> upgraded to version 0.61</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Net::Ping&quot;</tt> upgraded to version 2.35</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;NEXT&quot;</tt> upgraded to version 0.61</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> fix several bugs with <tt>&quot;NEXT&quot;</tt> when working with <tt>&quot;AUTOLOAD&quot;</tt>, <tt>&quot;eval&quot;</tt> block, and within overloaded stringification.</dl>
+<dt>&bull;</dt>
+<dd> fix several bugs with <tt>&quot;NEXT&quot;</tt> when working with <tt>&quot;AUTOLOAD&quot;</tt>, <tt>&quot;eval&quot;</tt> block, and within overloaded stringification.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;ODBM_File&quot;</tt> upgraded to 1.07</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;open&quot;</tt> upgraded to 1.06</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;ops&quot;</tt> upgraded to 1.02</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;PerlIO::encoding&quot;</tt> upgraded to version 0.11</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;PerlIO::scalar&quot;</tt> upgraded to version 0.06</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;ODBM_File&quot;</tt> upgraded to 1.07</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;open&quot;</tt> upgraded to 1.06</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;ops&quot;</tt> upgraded to 1.02</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;PerlIO::encoding&quot;</tt> upgraded to version 0.11</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;PerlIO::scalar&quot;</tt> upgraded to version 0.06</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> [<font SIZE="-1">RT</font> #40267] <tt>&quot;PerlIO::scalar&quot;</tt> doesn&#8217;t respect readonly-ness.</dl>
+<dt>&bull;</dt>
+<dd> [<font SIZE="-1">RT</font> #40267] <tt>&quot;PerlIO::scalar&quot;</tt> doesn&#8217;t respect readonly-ness.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;PerlIO::via&quot;</tt> upgraded to version 0.05</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Pod::Html&quot;</tt> upgraded to version 1.09</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Pod::Parser&quot;</tt> upgraded to version 1.35</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Pod::Usage&quot;</tt> upgraded to version 1.35</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;POSIX&quot;</tt> upgraded to version 1.15</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;PerlIO::via&quot;</tt> upgraded to version 0.05</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Pod::Html&quot;</tt> upgraded to version 1.09</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Pod::Parser&quot;</tt> upgraded to version 1.35</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Pod::Usage&quot;</tt> upgraded to version 1.35</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;POSIX&quot;</tt> upgraded to version 1.15</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;POSIX&quot;</tt> constants that duplicate those in <tt>&quot;Fcntl&quot;</tt> are now imported from <tt>&quot;Fcntl&quot;</tt> and re-exported, rather than being duplicated by <tt>&quot;POSIX&quot;</tt></p>
-<dt>&bull;</p>
-<dd> <tt>&quot;POSIX::remove&quot;</tt> can remove empty directories.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;POSIX::setlocale&quot;</tt> safer to call multiple times.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;POSIX::SigRt&quot;</tt> added, which provides access to <font SIZE="-1">POSIX</font> realtime signal functionality on systems that support it.</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;POSIX&quot;</tt> constants that duplicate those in <tt>&quot;Fcntl&quot;</tt> are now imported from <tt>&quot;Fcntl&quot;</tt> and re-exported, rather than being duplicated by <tt>&quot;POSIX&quot;</tt></dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;POSIX::remove&quot;</tt> can remove empty directories.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;POSIX::setlocale&quot;</tt> safer to call multiple times.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;POSIX::SigRt&quot;</tt> added, which provides access to <font SIZE="-1">POSIX</font> realtime signal functionality on systems that support it.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;re&quot;</tt> upgraded to version 0.06_01</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Safe&quot;</tt> upgraded to version 2.16</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Scalar::Util&quot;</tt> upgraded to 1.19</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;SDBM_File&quot;</tt> upgraded to version 1.06</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;SelfLoader&quot;</tt> upgraded to version 1.17</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Shell&quot;</tt> upgraded to version 0.72</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;sigtrap&quot;</tt> upgraded to version 1.04</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Socket&quot;</tt> upgraded to version 1.81</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;re&quot;</tt> upgraded to version 0.06_01</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Safe&quot;</tt> upgraded to version 2.16</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Scalar::Util&quot;</tt> upgraded to 1.19</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;SDBM_File&quot;</tt> upgraded to version 1.06</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;SelfLoader&quot;</tt> upgraded to version 1.17</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Shell&quot;</tt> upgraded to version 0.72</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;sigtrap&quot;</tt> upgraded to version 1.04</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Socket&quot;</tt> upgraded to version 1.81</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> this fixes an optimistic use of <tt>&quot;gethostbyname&quot;</tt></dl>
+<dt>&bull;</dt>
+<dd> this fixes an optimistic use of <tt>&quot;gethostbyname&quot;</tt></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Storable&quot;</tt> upgraded to 2.19</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Switch&quot;</tt> upgraded to version 2.13</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Sys::Syslog&quot;</tt> upgraded to version 0.27</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Term::ANSIColor&quot;</tt> upgraded to version 1.12</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Term::Cap&quot;</tt> upgraded to version 1.12</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Term::ReadLine&quot;</tt> upgraded to version 1.03</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Test::Builder&quot;</tt> upgraded to version 0.80</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Test::Harness&quot;</tt> upgraded version to 2.64</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Storable&quot;</tt> upgraded to 2.19</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Switch&quot;</tt> upgraded to version 2.13</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Sys::Syslog&quot;</tt> upgraded to version 0.27</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Term::ANSIColor&quot;</tt> upgraded to version 1.12</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Term::Cap&quot;</tt> upgraded to version 1.12</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Term::ReadLine&quot;</tt> upgraded to version 1.03</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Test::Builder&quot;</tt> upgraded to version 0.80</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Test::Harness&quot;</tt> upgraded version to 2.64</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> this makes it able to handle newlines.</dl>
+<dt>&bull;</dt>
+<dd> this makes it able to handle newlines.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Test::More&quot;</tt> upgraded to version 0.80</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Test::Simple&quot;</tt> upgraded to version 0.80</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Text::Balanced&quot;</tt> upgraded to version 1.98</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Text::ParseWords&quot;</tt> upgraded to version 3.27</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Text::Soundex&quot;</tt> upgraded to version 3.03</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Text::Tabs&quot;</tt> upgraded to version 2007.1117</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Text::Wrap&quot;</tt> upgraded to version 2006.1117</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Thread&quot;</tt> upgraded to version 2.01</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Thread::Semaphore&quot;</tt> upgraded to version 2.09</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Thread::Queue&quot;</tt> upgraded to version 2.11</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Test::More&quot;</tt> upgraded to version 0.80</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Test::Simple&quot;</tt> upgraded to version 0.80</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Text::Balanced&quot;</tt> upgraded to version 1.98</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Text::ParseWords&quot;</tt> upgraded to version 3.27</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Text::Soundex&quot;</tt> upgraded to version 3.03</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Text::Tabs&quot;</tt> upgraded to version 2007.1117</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Text::Wrap&quot;</tt> upgraded to version 2006.1117</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Thread&quot;</tt> upgraded to version 2.01</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Thread::Semaphore&quot;</tt> upgraded to version 2.09</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Thread::Queue&quot;</tt> upgraded to version 2.11</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> added capability to add complex structures (e.g., hash of hashes) to queues.</p>
-<dt>&bull;</p>
-<dd> added capability to dequeue multiple items at once.</p>
-<dt>&bull;</p>
-<dd> added new methods to inspect and manipulate queues: <tt>&quot;peek&quot;</tt>, <tt>&quot;insert&quot;</tt> and <tt>&quot;extract&quot;</tt></dl>
+<dt>&bull;</dt>
+<dd> added capability to add complex structures (e.g., hash of hashes) to queues.</dd>
+<dt>&bull;</dt>
+<dd> added capability to dequeue multiple items at once.</dd>
+<dt>&bull;</dt>
+<dd> added new methods to inspect and manipulate queues: <tt>&quot;peek&quot;</tt>, <tt>&quot;insert&quot;</tt> and <tt>&quot;extract&quot;</tt></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Tie::Handle&quot;</tt> upgraded to version 4.2</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Tie::Hash&quot;</tt> upgraded to version 1.03</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Tie::Memoize&quot;</tt> upgraded to version 1.1</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Tie::Handle&quot;</tt> upgraded to version 4.2</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Tie::Hash&quot;</tt> upgraded to version 1.03</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Tie::Memoize&quot;</tt> upgraded to version 1.1</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Tie::Memoize::EXISTS&quot;</tt> now correctly caches its results.</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Tie::Memoize::EXISTS&quot;</tt> now correctly caches its results.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Tie::RefHash&quot;</tt> upgraded to version 1.38</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Tie::Scalar&quot;</tt> upgraded to version 1.01</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Tie::StdHandle&quot;</tt> upgraded to version 4.2</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Time::gmtime&quot;</tt> upgraded to version 1.03</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Time::Local&quot;</tt> upgraded to version 1.1901</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Time::HiRes&quot;</tt> upgraded to version 1.9715 with various build improvements (including <font SIZE="-1">VMS</font>) and minor platform-specific bug fixes (including for HP-UX 11 ia64).</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;threads&quot;</tt> upgraded to 1.71</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Tie::RefHash&quot;</tt> upgraded to version 1.38</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Tie::Scalar&quot;</tt> upgraded to version 1.01</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Tie::StdHandle&quot;</tt> upgraded to version 4.2</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Time::gmtime&quot;</tt> upgraded to version 1.03</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Time::Local&quot;</tt> upgraded to version 1.1901</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Time::HiRes&quot;</tt> upgraded to version 1.9715 with various build improvements (including <font SIZE="-1">VMS</font>) and minor platform-specific bug fixes (including for HP-UX 11 ia64).</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;threads&quot;</tt> upgraded to 1.71</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> new thread state information methods: <tt>&quot;is_running&quot;</tt>, <tt>&quot;is_detached&quot;</tt> and <tt>&quot;is_joinable&quot;</tt>. <tt>&quot;list&quot;</tt> method enhanced to return running or joinable threads.</p>
-<dt>&bull;</p>
-<dd> new thread signal method: <tt>&quot;kill&quot;</tt></p>
-<dt>&bull;</p>
-<dd> added capability to specify thread stack size.</p>
-<dt>&bull;</p>
-<dd> added capability to control thread exiting behavior. Added a new <tt>&quot;exit&quot;</tt> method.</dl>
+<dt>&bull;</dt>
+<dd> new thread state information methods: <tt>&quot;is_running&quot;</tt>, <tt>&quot;is_detached&quot;</tt> and <tt>&quot;is_joinable&quot;</tt>. <tt>&quot;list&quot;</tt> method enhanced to return running or joinable threads.</dd>
+<dt>&bull;</dt>
+<dd> new thread signal method: <tt>&quot;kill&quot;</tt></dd>
+<dt>&bull;</dt>
+<dd> added capability to specify thread stack size.</dd>
+<dt>&bull;</dt>
+<dd> added capability to control thread exiting behavior. Added a new <tt>&quot;exit&quot;</tt> method.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;threads::shared&quot;</tt> upgraded to version 1.27</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;threads::shared&quot;</tt> upgraded to version 1.27</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> smaller and faster implementation that eliminates one internal structure and the consequent level of indirection.</p>
-<dt>&bull;</p>
-<dd> user locks are now stored in a safer manner.</p>
-<dt>&bull;</p>
-<dd> new function <tt>&quot;shared_clone&quot;</tt> creates a copy of an object leaving shared elements as-is and deep-cloning non-shared elements.</p>
-<dt>&bull;</p>
-<dd> added new <tt>&quot;is_shared&quot;</tt> method.</dl>
+<dt>&bull;</dt>
+<dd> smaller and faster implementation that eliminates one internal structure and the consequent level of indirection.</dd>
+<dt>&bull;</dt>
+<dd> user locks are now stored in a safer manner.</dd>
+<dt>&bull;</dt>
+<dd> new function <tt>&quot;shared_clone&quot;</tt> creates a copy of an object leaving shared elements as-is and deep-cloning non-shared elements.</dd>
+<dt>&bull;</dt>
+<dd> added new <tt>&quot;is_shared&quot;</tt> method.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;Unicode::Normalize&quot;</tt> upgraded to version 1.02</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Unicode::UCD&quot;</tt> upgraded to version 0.25</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;warnings&quot;</tt> upgraded to version 1.05_01</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;Win32&quot;</tt> upgraded to version 0.38</p>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Unicode::Normalize&quot;</tt> upgraded to version 1.02</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Unicode::UCD&quot;</tt> upgraded to version 0.25</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;warnings&quot;</tt> upgraded to version 1.05_01</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;Win32&quot;</tt> upgraded to version 0.38</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> added new function <tt>&quot;GetCurrentProcessId&quot;</tt> which returns the regular Windows process identifier of the current process, even when called from within a fork.</dl>
+<dt>&bull;</dt>
+<dd> added new function <tt>&quot;GetCurrentProcessId&quot;</tt> which returns the regular Windows process identifier of the current process, even when called from within a fork.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;XSLoader&quot;</tt> upgraded to version 0.10</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;XS::APItest&quot;</tt> and <tt>&quot;XS::Typemap&quot;</tt> are for internal use only and hence no longer installed. Many more tests have been added to <tt>&quot;XS::APItest&quot;</tt>.</dl>
+</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;XSLoader&quot;</tt> upgraded to version 0.10</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;XS::APItest&quot;</tt> and <tt>&quot;XS::Typemap&quot;</tt> are for internal use only and hence no longer installed. Many more tests have been added to <tt>&quot;XS::APItest&quot;</tt>.</dd></dl>
 <h2>Utility Changes</h2>
 <h3>debugger upgraded to version 1.31</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Andreas König contributed two functions to save and load the debugger history.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;NEXT::AUTOLOAD&quot;</tt> no longer emits warnings under the debugger.</p>
-<dt>&bull;</p>
-<dd> The debugger should now correctly find tty the device on <font SIZE="-1">OS X 10.5</font> and <font SIZE="-1">VMS</font> when the program <tt>&quot;fork&quot;</tt>s.</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">LVALUE</font> subs now work inside the debugger.</dl>
+<dt>&bull;</dt>
+<dd> Andreas König contributed two functions to save and load the debugger history.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;NEXT::AUTOLOAD&quot;</tt> no longer emits warnings under the debugger.</dd>
+<dt>&bull;</dt>
+<dd> The debugger should now correctly find tty the device on <font SIZE="-1">OS X 10.5</font> and <font SIZE="-1">VMS</font> when the program <tt>&quot;fork&quot;</tt>s.</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">LVALUE</font> subs now work inside the debugger.</dd></dl>
 <h3><i>perlthanks</i></h3>
 <p> Perl 5.8.9 adds a new utility <i>perlthanks</i>, which is a variant of <i>perlbug</i>, but for sending non-bug-reports to the authors and maintainers of Perl. Getting nothing but bug reports can become a bit demoralising &#8211; we&#8217;ll see if this changes things.</p>
 <h3><i>perlbug</i></h3>
 <p> <i>perlbug</i> now checks if you&#8217;re reporting about a non-core module and suggests you report it to the <font SIZE="-1">CPAN</font> author instead.</p>
 <h3><i>h2xs</i></h3>
 <dl>
-<dt>&bull;</p>
-<dd> won&#8217;t define an empty string as a constant [<font SIZE="-1">RT</font> #25366]</p>
-<dt>&bull;</p>
-<dd> has examples for <tt>&quot;h2xs -X&quot;</tt></dl>
+<dt>&bull;</dt>
+<dd> won&#8217;t define an empty string as a constant [<font SIZE="-1">RT</font> #25366]</dd>
+<dt>&bull;</dt>
+<dd> has examples for <tt>&quot;h2xs -X&quot;</tt></dd></dl>
 <h3><i>h2ph</i></h3>
 <dl>
-<dt>&bull;</p>
-<dd> now attempts to deal sensibly with the difference in path implications between <tt>&quot;&quot;</tt> and <tt>&quot;&lt;&gt;&quot;</tt> quoting in <tt>&quot;#include&quot;</tt> statements.</p>
-<dt>&bull;</p>
-<dd> now generates correct code for <tt>&quot;#if defined A || defined B&quot;</tt> [<font SIZE="-1">RT</font> #39130]</dl>
+<dt>&bull;</dt>
+<dd> now attempts to deal sensibly with the difference in path implications between <tt>&quot;&quot;</tt> and <tt>&quot;&lt;&gt;&quot;</tt> quoting in <tt>&quot;#include&quot;</tt> statements.</dd>
+<dt>&bull;</dt>
+<dd> now generates correct code for <tt>&quot;#if defined A || defined B&quot;</tt> [<font SIZE="-1">RT</font> #39130]</dd></dl>
 <h2>New Documentation</h2>
 <p> As usual, the documentation received its share of corrections, clarifications and other nitfixes. More <tt>&quot;&quot;</tt> tags were added for indexing. </p>
 <p> perlunitut is a tutorial written by Juerd Waalboer on Unicode-related terminology and how to correctly handle Unicode in Perl scripts. </p>
@@ -696,14 +624,14 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <p> perlfork documents the limitation of <tt>&quot;exec&quot;</tt> inside pseudo-processes. </p>
 <p> perlfunc:</p>
 <dl>
-<dt>&bull;</p>
-<dd> Documentation is fixed in section <tt>&quot;caller&quot;</tt> and <tt>&quot;pop&quot;</tt>.</p>
-<dt>&bull;</p>
-<dd> Function <tt>&quot;alarm&quot;</tt> now mentions <tt>&quot;Time::HiRes::ualarm&quot;</tt> in preference to <tt>&quot;select&quot;</tt>.</p>
-<dt>&bull;</p>
-<dd> Regarding precedence in <tt>&quot;-X&quot;</tt>, filetest operators are the same as unary operators, but not regarding parsing and parentheses (spotted by Eirik Berg Hanssen).</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;reverse&quot;</tt> function documentation received scalar context examples.</dl>
+<dt>&bull;</dt>
+<dd> Documentation is fixed in section <tt>&quot;caller&quot;</tt> and <tt>&quot;pop&quot;</tt>.</dd>
+<dt>&bull;</dt>
+<dd> Function <tt>&quot;alarm&quot;</tt> now mentions <tt>&quot;Time::HiRes::ualarm&quot;</tt> in preference to <tt>&quot;select&quot;</tt>.</dd>
+<dt>&bull;</dt>
+<dd> Regarding precedence in <tt>&quot;-X&quot;</tt>, filetest operators are the same as unary operators, but not regarding parsing and parentheses (spotted by Eirik Berg Hanssen).</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;reverse&quot;</tt> function documentation received scalar context examples.</dd></dl>
 <p> perllocale documentation is adjusted for number localization and <tt>&quot;POSIX::setlocale&quot;</tt> to fix Debian bug #379463. </p>
 <p> perlmodlib is updated with <tt>&quot;CPAN::API::HOWTO&quot;</tt> and <tt>&quot;Sys::Syslog::win32::Win32&quot;</tt> </p>
 <p> perlre documentation updated to reflect the differences between <tt>&quot;[[:xxxxx:]]&quot;</tt> and <tt>&quot;\p{IsXxxxx}&quot;</tt> matches. Also added section on <tt>&quot;/g&quot;</tt> and <tt>&quot;/c&quot;</tt> modifiers. </p>
@@ -720,21 +648,21 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <p> <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> has been updated and modernised.</p>
 <h2>Performance Enhancements</h2>
 <dl>
-<dt>&bull;</p>
-<dd> The default since perl 5.000 has been for perl to create an empty scalar with every new typeglob. The increased use of lexical variables means that most are now unused. Thanks to Nicholas Clark&#8217;s efforts, Perl can now be compiled with <tt>&quot;-DPERL_DONT_CREATE_GVSV&quot;</tt> to avoid creating these empty scalars. This will significantly decrease the number of scalars allocated for all configurations, and the number of scalars that need to be copied for ithread creation. Whilst this option is binary compatible with existing perl installations, it does change a long-standing assumption about the internals, hence it is not enabled by default, as some third party code may rely on the old behaviour. </p>
+<dt>&bull;</dt>
+<dd> The default since perl 5.000 has been for perl to create an empty scalar with every new typeglob. The increased use of lexical variables means that most are now unused. Thanks to Nicholas Clark&#8217;s efforts, Perl can now be compiled with <tt>&quot;-DPERL_DONT_CREATE_GVSV&quot;</tt> to avoid creating these empty scalars. This will significantly decrease the number of scalars allocated for all configurations, and the number of scalars that need to be copied for ithread creation. Whilst this option is binary compatible with existing perl installations, it does change a long-standing assumption about the internals, hence it is not enabled by default, as some third party code may rely on the old behaviour. </dd>
 <p> We would recommend testing with this configuration on new deployments of perl, particularly for multi-threaded servers, to see whether all third party code is compatible with it, as this configuration may give useful performance improvements. For existing installations we would not recommend changing to this configuration unless thorough testing is performed before deployment.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;diagnostics&quot;</tt> no longer uses <tt>$&amp;</tt>, which results in large speedups for regexp matching in all code using it.</p>
-<dt>&bull;</p>
-<dd> Regular expressions classes of a single character are now treated the same as if the character had been used as a literal, meaning that code that uses char-classes as an escaping mechanism will see a speedup. (Yves Orton)</p>
-<dt>&bull;</p>
-<dd> Creating anonymous array and hash references (ie. <tt>&quot;[]&quot;</tt> and <tt>&quot;{}&quot;</tt>) now incurs no more overhead than creating an anonymous list or hash. Nicholas Clark provided changes with a saving of two ops and one stack push, which was measured as a slightly better than 5% improvement for these operations.</p>
-<dt>&bull;</p>
-<dd> Many calls to <tt>&quot;strlen()&quot;</tt> have been eliminated, either because the length was already known, or by adopting or enhancing APIs that pass lengths. This has been aided by the adoption of a <tt>&quot;my_sprintf()&quot;</tt> wrapper, which returns the correct C89 value &#8211; the length of the formatted string. Previously we could not rely on the return value of <tt>&quot;sprintf()&quot;</tt>, because on some ancient but extant platforms it still returns <tt>&quot;char *&quot;</tt>.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;index&quot;</tt> is now faster if the search string is stored in <font SIZE="-1">UTF-8</font> but only contains characters in the Latin-1 range.</p>
-<dt>&bull;</p>
-<dd> The Unicode swatch cache inside the regexp engine is now used. (the lookup had a key mismatch, present since the initial implementation). [<font SIZE="-1">RT</font> #42839]</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;diagnostics&quot;</tt> no longer uses <tt>$&amp;</tt>, which results in large speedups for regexp matching in all code using it.</dd>
+<dt>&bull;</dt>
+<dd> Regular expressions classes of a single character are now treated the same as if the character had been used as a literal, meaning that code that uses char-classes as an escaping mechanism will see a speedup. (Yves Orton)</dd>
+<dt>&bull;</dt>
+<dd> Creating anonymous array and hash references (ie. <tt>&quot;[]&quot;</tt> and <tt>&quot;{}&quot;</tt>) now incurs no more overhead than creating an anonymous list or hash. Nicholas Clark provided changes with a saving of two ops and one stack push, which was measured as a slightly better than 5% improvement for these operations.</dd>
+<dt>&bull;</dt>
+<dd> Many calls to <tt>&quot;strlen()&quot;</tt> have been eliminated, either because the length was already known, or by adopting or enhancing APIs that pass lengths. This has been aided by the adoption of a <tt>&quot;my_sprintf()&quot;</tt> wrapper, which returns the correct C89 value &#8211; the length of the formatted string. Previously we could not rely on the return value of <tt>&quot;sprintf()&quot;</tt>, because on some ancient but extant platforms it still returns <tt>&quot;char *&quot;</tt>.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;index&quot;</tt> is now faster if the search string is stored in <font SIZE="-1">UTF-8</font> but only contains characters in the Latin-1 range.</dd>
+<dt>&bull;</dt>
+<dd> The Unicode swatch cache inside the regexp engine is now used. (the lookup had a key mismatch, present since the initial implementation). [<font SIZE="-1">RT</font> #42839]</dd></dl>
 <h2>Installation and Configuration Improvements</h2>
 <h3>Relocatable installations</h3>
 <p> There is now <i>Configure</i> support for creating a relocatable perl tree. If you <i>Configure</i> with <tt>&quot;-Duserelocatableinc&quot;</tt>, then the paths in <tt>@INC</tt> (and everything else in <tt>%Config</tt>) can be optionally located via the path of the <i>perl</i> executable. </p>
@@ -752,57 +680,58 @@ perl - MO = Deparse - e '"my %h = "-&gt;()' perl - MO = Deparse - e '::-&gt;()' 
 <p> <i>installman</i> now works with <tt>&quot;-Duserelocatableinc&quot;</tt> and <tt>&quot;DESTDIR&quot;</tt>. </p>
 <p> <i>installperl</i> no longer installs:</p>
 <dl>
-<dt>&bull;</p>
-<dd> static library files of statically linked extensions when a shared perl library is being used. (They are not needed. See &#8220;Windows&#8221; below).</p>
-<dt>&bull;</p>
-<dd> <i></i><font SIZE="-1"><i>SIGNATURE</i></font><i></i> and <i>PAUSE*.pub</i> (<font SIZE="-1">CPAN</font> files)</p>
-<dt>&bull;</p>
-<dd> <i></i><font SIZE="-1"><i>NOTES</i></font><i></i> and <i></i><font SIZE="-1"><i>PATCHING</i></font><i></i> (ExtUtils files)</p>
-<dt>&bull;</p>
-<dd> <i>perlld</i> and <i>ld2</i> (Cygwin files)</dl>
+<dt>&bull;</dt>
+<dd> static library files of statically linked extensions when a shared perl library is being used. (They are not needed. See &#8220;Windows&#8221; below).</dd>
+<dt>&bull;</dt>
+<dd> <i></i><font SIZE="-1"><i>SIGNATURE</i></font><i></i> and <i>PAUSE*.pub</i> (<font SIZE="-1">CPAN</font> files)</dd>
+<dt>&bull;</dt>
+<dd> <i></i><font SIZE="-1"><i>NOTES</i></font><i></i> and <i></i><font SIZE="-1"><i>PATCHING</i></font><i></i> (ExtUtils files)</dd>
+<dt>&bull;</dt>
+<dd> <i>perlld</i> and <i>ld2</i> (Cygwin files)</dd></dl>
 <h3>Platform Specific Changes</h3>
 <p> There are improved hints for <font SIZE="-1">AIX,</font> Cygwin, <font SIZE="-1">DEC/OSF,</font> FreeBSD, <font SIZE="-1">HP/UX,</font> Irix 6 Linux, MachTen, NetBSD, <font SIZE="-1">OS/390, QNX, SCO,</font> Solaris, SunOS, System V Release 5.x (UnixWare 7, OpenUNIX 8), Ultrix, <font SIZE="-1">UMIPS,</font> uts and <font SIZE="-1">VOS.</font> </p>
 <p> <i>FreeBSD</i></p>
 <dl>
-<dt>&bull;</p>
-<dd> Drop <tt>&quot;-std=c89&quot;</tt> and <tt>&quot;-ansi&quot;</tt> if using <tt>&quot;long long&quot;</tt> as the main integral type, else in FreeBSD 6.2 (and perhaps other releases), system headers do not declare some functions required by perl.</dl>
+<dt>&bull;</dt>
+<dd> Drop <tt>&quot;-std=c89&quot;</tt> and <tt>&quot;-ansi&quot;</tt> if using <tt>&quot;long long&quot;</tt> as the main integral type, else in FreeBSD 6.2 (and perhaps other releases), system headers do not declare some functions required by perl.</dd></dl>
 <p> <i>Solaris</i></p>
 <dl>
-<dt>&bull;</p>
-<dd> Starting with Solaris 10, we do not want versioned shared libraries, because those often indicate a private use only library. These problems could often be triggered when SUNWbdb (Berkeley <font SIZE="-1">DB</font>) was installed. Hence if Solaris 10 is detected set <tt>&quot;ignore_versioned_solibs=y&quot;</tt>.</dl>
+<dt>&bull;</dt>
+<dd> Starting with Solaris 10, we do not want versioned shared libraries, because those often indicate a private use only library. These problems could often be triggered when SUNWbdb (Berkeley <font SIZE="-1">DB</font>) was installed. Hence if Solaris 10 is detected set <tt>&quot;ignore_versioned_solibs=y&quot;</tt>.</dd></dl>
 <p> <i></i><font SIZE="-1"><i>VMS</i></font><i></i></p>
 <dl>
-<dt>&bull;</p>
-<dd> Allow <font SIZE="-1">IEEE</font> math to be deselected on OpenVMS I64 (but it remains the default).</p>
-<dt>&bull;</p>
-<dd> Record <font SIZE="-1">IEEE</font> usage in <tt>&quot;config.h&quot;</tt></p>
-<dt>&bull;</p>
-<dd> Help older <font SIZE="-1">VMS</font> compilers by using <tt>&quot;ccflags&quot;</tt> when building <tt>&quot;munchconfig.exe&quot;</tt>.</p>
-<dt>&bull;</p>
-<dd> Don&#8217;t try to build old <tt>&quot;Thread&quot;</tt> extension on <font SIZE="-1">VMS</font> when <tt>&quot;-Duseithreads&quot;</tt> has been chosen.</p>
-<dt>&bull;</p>
-<dd> Passing a raw string of &#8220;NaN&#8221; to <i>nawk</i> causes a core dump &#8211; so the string has been changed to &#8220;*NaN*&#8221;</p>
-<dt>&bull;</p>
-<dd> <i>t/op/stat.t</i> tests will now test hard links on <font SIZE="-1">VMS</font> if they are supported.</dl>
+<dt>&bull;</dt>
+<dd> Allow <font SIZE="-1">IEEE</font> math to be deselected on OpenVMS I64 (but it remains the default).</dd>
+<dt>&bull;</dt>
+<dd> Record <font SIZE="-1">IEEE</font> usage in <tt>&quot;config.h&quot;</tt></dd>
+<dt>&bull;</dt>
+<dd> Help older <font SIZE="-1">VMS</font> compilers by using <tt>&quot;ccflags&quot;</tt> when building <tt>&quot;munchconfig.exe&quot;</tt>.</dd>
+<dt>&bull;</dt>
+<dd> Don&#8217;t try to build old <tt>&quot;Thread&quot;</tt> extension on <font SIZE="-1">VMS</font> when <tt>&quot;-Duseithreads&quot;</tt> has been chosen.</dd>
+<dt>&bull;</dt>
+<dd> Passing a raw string of &#8220;NaN&#8221; to <i>nawk</i> causes a core dump &#8211; so the string has been changed to &#8220;*NaN*&#8221;</dd>
+<dt>&bull;</dt>
+<dd> <i>t/op/stat.t</i> tests will now test hard links on <font SIZE="-1">VMS</font> if they are supported.</dd></dl>
 <p> <i>Windows</i></p>
 <dl>
-<dt>&bull;</p>
-<dd> When using a shared perl library <i>installperl</i> no longer installs static library files, import library files and export library files (of statically linked extensions) and empty bootstrap files (of dynamically linked extensions). This fixes a problem building PAR-Packer on Win32 with a debug build of perl.</p>
-<dt>&bull;</p>
-<dd> Various improvements to the win32 build process, including support for Visual C<font SIZE="-2">++</font> 2005 Express Edition (aka Visual C<font SIZE="-2">++</font> 8.x).</p>
-<dt>&bull;</p>
-<dd> <i>perl.exe</i> will now have an icon if built with MinGW or Borland.</p>
-<dt>&bull;</p>
-<dd> Improvements to the perl-static.exe build process.</p>
-<dt>&bull;</p>
-<dd> Add Win32 makefile option to link all extensions statically.</p>
-<dt>&bull;</p>
-<dd> The <i>WinCE</i> directory has been merged into the <i>Win32</i> directory.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;setlocale&quot;</tt> tests have been re-enabled for Windows <font SIZE="-1">XP</font> onwards.</dl>
+<dt>&bull;</dt>
+<dd> When using a shared perl library <i>installperl</i> no longer installs static library files, import library files and export library files (of statically linked extensions) and empty bootstrap files (of dynamically linked extensions). This fixes a problem building PAR-Packer on Win32 with a debug build of perl.</dd>
+<dt>&bull;</dt>
+<dd> Various improvements to the win32 build process, including support for Visual C<font SIZE="-2">++</font> 2005 Express Edition (aka Visual C<font SIZE="-2">++</font> 8.x).</dd>
+<dt>&bull;</dt>
+<dd> <i>perl.exe</i> will now have an icon if built with MinGW or Borland.</dd>
+<dt>&bull;</dt>
+<dd> Improvements to the perl-static.exe build process.</dd>
+<dt>&bull;</dt>
+<dd> Add Win32 makefile option to link all extensions statically.</dd>
+<dt>&bull;</dt>
+<dd> The <i>WinCE</i> directory has been merged into the <i>Win32</i> directory.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;setlocale&quot;</tt> tests have been re-enabled for Windows <font SIZE="-1">XP</font> onwards.</dd></dl>
 <h2>Selected Bug Fixes</h2>
 <h3>Unicode</h3>
 <p> Many many bugs related to the internal Unicode implementation (<font SIZE="-1">UTF-8</font>) have been fixed. In particular, long standing bugs related to returning Unicode via <tt>&quot;tie&quot;</tt>, overloading or <tt>$@</tt> are now gone, some of which were never reported. </p>
 <p> <tt>&quot;unpack&quot;</tt> will internally convert the string back from <font SIZE="-1">UTF-8</font> on numeric types. This is a compromise between the full consistency now in 5.10, and the current behaviour, which is often used as a &#8220;feature&#8221; on string types. </p>
 <p> Using <tt>&quot;:crlf&quot;</tt> and <tt>&quot;UTF-16&quot;</tt> <font SIZE="-1">IO</font> layers together will now work. </p>
 <p> Fixed problems with <tt>&quot;split&quot;</tt>, Unicode <tt>&quot;/\s+/&quot;</tt> and <tt>&quot;/ 
+</p>

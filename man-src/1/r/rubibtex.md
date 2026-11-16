@@ -17,12 +17,9 @@ description: "rubibtex – make a bibliography for (La)TeX using Russian letters
 <p> <code>rubibtex</code> assumes that the <code><a href="/docs/linux/man/1-bibtex/">bibtex</a></code>(1) database (<tt>bib</tt>) files are encoded with the KOI8-R encoding. </p>
 <h2>FILES</h2>
 <dl>
-<dt>
-<dd>
-<dt><i>basename.aux</i></p>
-<dd> LaTeX auxiliary file</p>
-<dt>
-<dd></dl>
+<dt><i>basename.aux</i></dt>
+<dd> LaTeX auxiliary file</dd>
+</dl>
 <h2>BUGS</h2>
 <p> None known, but report any bugs found to the authors. </p>
 <h2>COPYRIGHT</h2>

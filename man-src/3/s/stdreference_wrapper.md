@@ -11,9 +11,7 @@ std::reference_wrapper - std::reference_wrapper
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;functional&gt;
-
 template&lt; class T &gt;             (since C++11)
-
 class reference_wrapper;</code></pre> 
 std::reference_wrapper is a class template that wraps a reference in a copyable, assignable object. It is frequently used as a mechanism to store references inside standard containers (like std::vector) which cannot normally hold references. 
 Specifically, std::reference_wrapper is a CopyConstructible and CopyAssignable wrapper around a reference to object or reference to function of type T. Instances of std::reference_wrapper are objects (they can be copied or stored in containers) but they are implicitly convertible to T&amp;, so that they can be used as arguments with the functions that take the underlying type by reference. 
@@ -109,20 +107,13 @@ Deduction_guides<i>(since C++17)</i>
 
 Demonstrates the use of reference_wrapper as a container of references, which makes it possible to access the same container using multiple indexes 
  // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;list&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;numeric&gt;
-
 #include &lt;random&gt;
-
 #include &lt;functional&gt;
 int main()
-
 {
     std::list&lt;int&gt; l(10);
     std::iota(l.begin(), l.end(), -4);

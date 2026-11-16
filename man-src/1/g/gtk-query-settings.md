@@ -11,8 +11,8 @@ description: "gtk-query-settings – Utility to print name and value of all GtkS
 <p> gtk-query-settings &#8211; Utility to print name and value of all GtkSettings properties </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>gtk-query-settings</code> [<i>PATTERN</i>]</dl>
+<dt> <code>gtk-query-settings</code> [<i>PATTERN</i>]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>gtk-query-settings</code></p>
-<dd>prints both name and value of all properties available in the GtkSettings class. Optionally, you can filter which properties to list by specifying a PATTERN. </p>
+<dd>prints both name and value of all properties available in the GtkSettings class. Optionally, you can filter which properties to list by specifying a PATTERN. </dd>
 <h2>Index</h2>

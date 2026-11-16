@@ -16,21 +16,21 @@ description: "sccmap – extract strongly connected components of directed graph
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
 <dl>
-<dt><code>-d</code></p>
-<dd> Preserve degenerate components of only one node.</p>
-<dt><code>-s</code></p>
-<dd> Do not print the resulting graphs. Only the statistics are important.</p>
-<dt><code>-S</code></p>
-<dd> Just print the resulting graphs. No statistics are printed.</p>
-<dt><code>-o</code><i>output</i></p>
-<dd> Prints output to the file <i>output</i>. If not given, <code>sccmap</code> uses stdout.</p>
-<dt><code>-v</code></p>
-<dd> Generate additional statistics. In particular, <code>sccmap</code> prints the number of nodes, edges, connected components, and strongly connected components, followed by the fraction of nodes in a non-trivial strongly connected components, the maximum degree of the graph, and fraction of non-tree edges in the graph.</dl>
+<dt><code>-d</code></dt>
+<dd> Preserve degenerate components of only one node.</dd>
+<dt><code>-s</code></dt>
+<dd> Do not print the resulting graphs. Only the statistics are important.</dd>
+<dt><code>-S</code></dt>
+<dd> Just print the resulting graphs. No statistics are printed.</dd>
+<dt><code>-o</code><i>output</i></dt>
+<dd> Prints output to the file <i>output</i>. If not given, <code>sccmap</code> uses stdout.</dd>
+<dt><code>-v</code></dt>
+<dd> Generate additional statistics. In particular, <code>sccmap</code> prints the number of nodes, edges, connected components, and strongly connected components, followed by the fraction of nodes in a non-trivial strongly connected components, the maximum degree of the graph, and fraction of non-tree edges in the graph.</dd></dl>
 <h2>OPERANDS</h2>
 <p> The following operand is supported:</p>
 <dl>
-<dt><i>files</i></p>
-<dd> Names of files containing 1 or more graphs in dot format. If no <i>files</i> operand is specified, the standard input will be used.</dl>
+<dt><i>files</i></dt>
+<dd> Names of files containing 1 or more graphs in dot format. If no <i>files</i> operand is specified, the standard input will be used.</dd></dl>
 <h2>DIAGNOSTICS</h2>
 <p> <code>sccmap</code> emits a warning if it encounters an undirected graph, and ignores it.</p>
 <h2>AUTHORS</h2>

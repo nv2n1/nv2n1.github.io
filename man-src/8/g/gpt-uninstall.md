@@ -14,18 +14,18 @@ description: "gpt-uninstall – Uninstall any GPT package."
 <p><code>gpt-uninstall</code> will uninstall a package from the system.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-force</code></p>
-<dd>This will force actions to take place.</p>
-<dt><code>-native</code></p>
-<dd>Use native package manager (Only works with rpm).</p>
-<dt><code>pkgname-flavor-pkgtype</code></p>
-<dd>Expression describing the packages that should be removed.</p>
-<dt><code>-help</code></p>
-<dd>Print a brief help message and exits.</p>
-<dt><code>-man</code></p>
-<dd>Prints the manual page and exits.</p>
-<dt><code>-version</code></p>
-<dd>Prints the version of <font SIZE="-1">GPT</font> and exits.</dl>
+<dt><code>-force</code></dt>
+<dd>This will force actions to take place.</dd>
+<dt><code>-native</code></dt>
+<dd>Use native package manager (Only works with rpm).</dd>
+<dt><code>pkgname-flavor-pkgtype</code></dt>
+<dd>Expression describing the packages that should be removed.</dd>
+<dt><code>-help</code></dt>
+<dd>Print a brief help message and exits.</dd>
+<dt><code>-man</code></dt>
+<dd>Prints the manual page and exits.</dd>
+<dt><code>-version</code></dt>
+<dd>Prints the version of <font SIZE="-1">GPT</font> and exits.</dd></dl>
 <h2>Examples</h2>
 <pre> gpt-uninstall -name=foo</pre>
 <p>removes all flavors and package types with the name &#8220;foo&#8221;. </p>

@@ -11,9 +11,7 @@ std::unique_lock - std::unique_lock
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;mutex&gt;
-
 template&lt; class Mutex &gt;    (since C++11)
-
 class unique_lock;</code></pre> 
 The class unique_lock is a general-purpose mutex ownership wrapper allowing deferred locking, time-constrained attempts at locking, recursive locking, transfer of lock ownership, and use with condition variables. 
 The class unique_lock is movable, but not copyable -- it meets the requirements of MoveConstructible and MoveAssignable but not of CopyConstructible or CopyAssignable. 
@@ -75,9 +73,7 @@ std::swap(std::unique_lock) specialization of std::swap for unique_lock
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;mutex&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;chrono&gt;
 struct Box {
     explicit Box(int num)
@@ -88,7 +84,6 @@ struct Box {
     std::mutex m;
 };
 void transfer(Box &amp;from, Box &amp;to, int num)
-
 {
     // don't actually take the locks yet
     std::unique_lock&lt;std::mutex&gt; lock1(from.m, std::defer_lock);
@@ -100,7 +95,6 @@ void transfer(Box &amp;from, Box &amp;to, int num)
     // 'from.m' and 'to.m' mutexes unlocked in 'unique_lock' dtors
 }
 int main()
-
 {
     Box acc1(100);
     Box acc2(50);

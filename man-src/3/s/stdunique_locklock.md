@@ -40,16 +40,11 @@ Locks the associated mutex. Effectively calls mutex()-&gt;lock().
 
 The following example uses lock to re-acquire a mutex that was unlocked. 
  // Run this code <pre><code>#include &lt;mutex&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;chrono&gt;
 int main()
-
 {
     int counter = 0;
     std::mutex counter_mutex;

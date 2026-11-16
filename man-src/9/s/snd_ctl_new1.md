@@ -14,10 +14,10 @@ description: "snd_ctl_new1 – create a control instance from the template"
 <p><i>ncontrol</i></p>
 <dl>
 <dd>
-<dd>the initialization record</dl>
+</dd><dd>the initialization record</dd></dl>
 <p> <i>private_data</i></p>
 <dl>
-<dd>the private data to set</dl>
+<dd>the private data to set</dd></dl>
 <h2>Description</h2>
 <p>Allocates a new struct snd_kcontrol instance and initialize from the given template. When the access field of ncontrol is 0, it&#8217;s assumed as READWRITE access. When the count field is 0, it&#8217;s assumes as one.</p>
 <h2>Return</h2>

@@ -14,26 +14,26 @@ description: "kgdb_arch_handle_exception – Handle architecture specific GDB pa
 <p><i>vector</i></p>
 <dl>
 <dd>
-<dd>The error vector of the exception that happened.</dl>
+</dd><dd>The error vector of the exception that happened.</dd></dl>
 <p> <i>signo</i></p>
 <dl>
-<dd>The signal number of the exception that happened.</dl>
+<dd>The signal number of the exception that happened.</dd></dl>
 <p> <i>err_code</i></p>
 <dl>
-<dd>The error code of the exception that happened.</dl>
+<dd>The error code of the exception that happened.</dd></dl>
 <p> <i>remcom_in_buffer</i></p>
 <dl>
-<dd>The buffer of the packet we have read.</dl>
+<dd>The buffer of the packet we have read.</dd></dl>
 <p> <i>remcom_out_buffer</i></p>
 <dl>
-<dd>The buffer of <code>BUFMAX</code> bytes to write a packet into.</dl>
+<dd>The buffer of <code>BUFMAX</code> bytes to write a packet into.</dd></dl>
 <p> <i>regs</i></p>
 <dl>
-<dd>The struct pt_regs of the current process.</dl>
+<dd>The struct pt_regs of the current process.</dd></dl>
 <h2>Description</h2>
 <p>This function MUST handle the &#8216;c&#8217; and &#8216;s&#8217; command packets, as well packets to set / remove a hardware breakpoint, if used. If there are additional packets which the hardware needs to handle, they are handled here. The code should return -1 if it wants to process more packets, and a <code>0</code> or <code>1</code> if it wants to exit from the kgdb callback.</p>
 <h2>Author</h2>
 <p><code>Jason Wessel</code> &lt;jason.wessel [at] windriver.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

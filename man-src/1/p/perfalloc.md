@@ -18,16 +18,16 @@ description: "perfalloc – notify pmdaperfevent(1) to disable hardware counter 
 <p> If a commandline is given, this is executed as a subprocess of the agent. When the command dies, so does the agent. </p>
 <p> A brief description of the command line options follows:</p>
 <dl>
-<dt><code>-D</code></p>
-<dd> run in the foreground (the default)</p>
-<dt><code>-d</code></p>
-<dd> run in the background</p>
-<dt><code>-f FILE</code></p>
-<dd> use FILE as the lock file (default $PCP_PMDAS_DIR/perfevent/perflock)</p>
-<dt><code>-h</code></p>
-<dd> display a help message and exit</p>
-<dt><code>-v</code></p>
-<dd> output version number and exit</dl>
+<dt><code>-D</code></dt>
+<dd> run in the foreground (the default)</dd>
+<dt><code>-d</code></dt>
+<dd> run in the background</dd>
+<dt><code>-f FILE</code></dt>
+<dd> use FILE as the lock file (default $PCP_PMDAS_DIR/perfevent/perflock)</dd>
+<dt><code>-h</code></dt>
+<dd> display a help message and exit</dd>
+<dt><code>-v</code></dt>
+<dd> output version number and exit</dd></dl>
 <h2>BUGS</h2>
 <p> There may be a delay of up to 100 miliseconds between perfalloc requesting the hardware counter disabling and the perfevent pmda processing the request. </p>
 <p> The perfalloc process does not check the status of the request and therefore is not able to provide a positive confirmation that the request succeeded and the hardware counters are disabled.</p>

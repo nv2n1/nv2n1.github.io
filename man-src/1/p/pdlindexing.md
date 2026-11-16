@@ -18,47 +18,47 @@ description: "PDL::Indexing – Introduction to indexing and slicing piddles."
 <p>A piddle (<font SIZE="-1">PDL</font> variable), in general, is an N-dimensional array where N can be 0 (for a scalar), 1 (e.g. for a sound sample), or higher values for images and more complex structures. Each dimension of the piddle has a positive integer size. The <tt>&quot;perl&quot;</tt> interpreter treats each piddle as a special type of Perl scalar (a blessed Perl object, actually &#8212; but you don&#8217;t have to know that to use them) that can be used anywhere you can put a normal scalar. </p>
 <p> You can access the dimensions of a piddle as a Perl list and otherwise determine the size of a piddle with several methods. The important ones are:</p>
 <dl>
-<dt>nelem &#8211; the total number of elements in a <font SIZE="-1">PDL</font></p>
+<dt>nelem &#8211; the total number of elements in a <font SIZE="-1">PDL</font></dt>
 <dd>
-<dt>ndims &#8211; returns the number of dimensions in a <font SIZE="-1">PDL</font></p>
+</dd><dt>ndims &#8211; returns the number of dimensions in a <font SIZE="-1">PDL</font></dt>
 <dd>
-<dt>dims &#8211; returns the dimension list of a <font SIZE="-1">PDL</font> as a Perl list</p>
+</dd><dt>dims &#8211; returns the dimension list of a <font SIZE="-1">PDL</font> as a Perl list</dt>
 <dd>
-<dt>dim &#8211; returns the size of a particular dimension of a <font SIZE="-1">PDL</font></p>
-<dd></dl>
+</dd><dt>dim &#8211; returns the size of a particular dimension of a <font SIZE="-1">PDL</font></dt>
+<dd></dd></dl>
 <h3>Indexing and Dataflow</h3>
 <p><font SIZE="-1">PDL</font> maintains a notion of &#8220;dataflow&#8221; between a piddle and indexed subfields of that piddle. When you produce an indexed subfield or single element of a parent piddle, the child and parent remain attached until you manually disconnect them. This lets you represent the same data different ways within your code &#8212; for example, you can consider an <font SIZE="-1">RGB</font> image simultaneously as a collection of (R,G,B) values in a 3 x 1000 x 1000 image, and as three separate 1000 x 1000 color planes stored in different variables. Modifying any of the variables changes the underlying memory, and the changes are reflected in all representations of the data. </p>
 <p> There are two important methods that let you control dataflow connections between a child and parent <font SIZE="-1">PDL:</font></p>
 <dl>
-<dt>copy &#8211; forces an explicit copy of a <font SIZE="-1">PDL</font></p>
+<dt>copy &#8211; forces an explicit copy of a <font SIZE="-1">PDL</font></dt>
 <dd>
-<dt>sever &#8211; breaks the dataflow connection between a <font SIZE="-1">PDL</font> and its parents (if any)</p>
-<dd></dl>
+</dd><dt>sever &#8211; breaks the dataflow connection between a <font SIZE="-1">PDL</font> and its parents (if any)</dt>
+<dd></dd></dl>
 <h3>Threading and Dimension Order</h3>
 <p>Most <font SIZE="-1">PDL</font> operations act on the first few dimensions of their piddle arguments. For example, <tt>&quot;sumover&quot;</tt> sums all elements along the first dimension in the list (dimension 0). If you feed in a three-dimensional piddle, then the first dimension is considered the &#8220;active&#8221; dimension and the later dimensions are &#8220;thread&#8221; dimensions because they are simply looped over. There are several ways to transpose or re-order the dimension list of a <font SIZE="-1">PDL.</font> Those techniques are very fast since they don&#8217;t touch the underlying data, only change the way that <font SIZE="-1">PDL</font> accesses the data. The main dimension ordering functions are:</p>
 <dl>
-<dt>mv &#8211; moves a particular dimension somewhere else in the dimension list</p>
+<dt>mv &#8211; moves a particular dimension somewhere else in the dimension list</dt>
 <dd>
-<dt>xchg &#8211; exchanges two dimensions in the dimension list, leaving the rest alone</p>
+</dd><dt>xchg &#8211; exchanges two dimensions in the dimension list, leaving the rest alone</dt>
 <dd>
-<dt>reorder &#8211; allows wholesale mixing of the dimensions</p>
+</dd><dt>reorder &#8211; allows wholesale mixing of the dimensions</dt>
 <dd>
-<dt>clump &#8211; clumps together two or more small dimensions into one larger one</p>
+</dd><dt>clump &#8211; clumps together two or more small dimensions into one larger one</dt>
 <dd>
-<dt>squeeze &#8211; eliminates any dimensions of size 1</p>
-<dd></dl>
+</dd><dt>squeeze &#8211; eliminates any dimensions of size 1</dt>
+<dd></dd></dl>
 <h3>Physical and Dummy Dimensions</h3>
 <dl>
-<dt>&bull;</p>
-<dd>document Perl level threading</p>
-<dt>&bull;</p>
-<dd>threadids</p>
-<dt>&bull;</p>
-<dd>update and correct description of slice</p>
-<dt>&bull;</p>
-<dd>new functions in slice.pd (affine, lag, splitdim)</p>
-<dt>&bull;</p>
-<dd>reworking of paragraph on explicit threading</dl>
+<dt>&bull;</dt>
+<dd>document Perl level threading</dd>
+<dt>&bull;</dt>
+<dd>threadids</dd>
+<dt>&bull;</dt>
+<dd>update and correct description of slice</dd>
+<dt>&bull;</dt>
+<dd>new functions in slice.pd (affine, lag, splitdim)</dd>
+<dt>&bull;</dt>
+<dd>reworking of paragraph on explicit threading</dd></dl>
 <h2>Indexing and threading with PDL</h2>
 <p>A lot of the flexibility and power of <font SIZE="-1">PDL</font> relies on the indexing and looping features of the Perl extension. Indexing allows access to the data of a pdl object in a very flexible way. Threading provides efficient implicit looping functionality (since the loops are implemented as optimized C code). </p>
 <p> Pdl objects (later often called &#8220;pdls&#8221;) are Perl objects that represent multidimensional arrays and operations on those. In contrast to simple Perl <tt>@x</tt> style lists the array data is compactly stored in a single block of memory thus taking up a lot less memory and enabling use of fast C code to implement operations (e.g. addition, etc) on pdls.</p>
@@ -125,10 +125,10 @@ description: "PDL::Indexing – Introduction to indexing and slicing piddles."
 <pre> $vpdl = $a-&gt;slice('ind0,ind1...')</pre>
 <p>where <tt>&quot;ind0&quot;</tt> specifies what to do with index No 0 of the pdl <tt>$a</tt>, etc. Each element of the comma separated list can have one of the following forms:</p>
 <dl>
-<dt>&#8216;:&#8217;</p>
-<dd>Use the whole dimension</p>
-<dt>&#8216;n&#8217;</p>
-<dd>Use only index <tt>&quot;n&quot;</tt>. The dimension of this index in the resulting virtual pdl is 1. An example involving those first two index formats: </p>
+<dt>&#8216;:&#8217;</dt>
+<dd>Use the whole dimension</dd>
+<dt>&#8216;n&#8217;</dt>
+<dd>Use only index <tt>&quot;n&quot;</tt>. The dimension of this index in the resulting virtual pdl is 1. An example involving those first two index formats: </dd>
 <pre> pdl&gt; $column = $im-&gt;slice('2,:')
  pdl&gt; $row = $im-&gt;slice(':,0')
  pdl&gt; p $column
@@ -147,23 +147,23 @@ description: "PDL::Indexing – Introduction to indexing and slicing piddles."
  This variable is Double D [1,5] VC 0.00Kb
  pdl&gt; help $row
  This variable is Double D [5,1] VC 0.00Kb</pre>
-<dt>&#8216;(n)&#8217;</p>
-<dd>Use only index <tt>&quot;n&quot;</tt>. This dimension is removed from the resulting pdl (relying on the fact that a dimension of size 1 can always be removed). The distinction between this case and the previous one becomes important in assignments where left and right hand side have to have appropriate dimensions. </p>
+<dt>&#8216;(n)&#8217;</dt>
+<dd>Use only index <tt>&quot;n&quot;</tt>. This dimension is removed from the resulting pdl (relying on the fact that a dimension of size 1 can always be removed). The distinction between this case and the previous one becomes important in assignments where left and right hand side have to have appropriate dimensions. </dd>
 <pre> pdl&gt; $line = $im-&gt;slice(':,(0)')
  pdl&gt; help $line
  This variable is Double D [5] -C 0.00Kb
  pdl&gt; p $line
  [1 2 3 4 5]</pre>
 <p>Spot the difference to the previous example?</p>
-<dt>&#8216;n1:n2&#8217; or &#8216;n1:n2:n3&#8217;</p>
-<dd>Take the range of indices from <tt>&quot;n1&quot;</tt> to <tt>&quot;n2&quot;</tt> or (second form) take the range of indices from <tt>&quot;n1&quot;</tt> to <tt>&quot;n2&quot;</tt> with step <tt>&quot;n3&quot;</tt>. An example for the use of this format is the previous definition of the sub-image composed of even lines. </p>
+<dt>&#8216;n1:n2&#8217; or &#8216;n1:n2:n3&#8217;</dt>
+<dd>Take the range of indices from <tt>&quot;n1&quot;</tt> to <tt>&quot;n2&quot;</tt> or (second form) take the range of indices from <tt>&quot;n1&quot;</tt> to <tt>&quot;n2&quot;</tt> with step <tt>&quot;n3&quot;</tt>. An example for the use of this format is the previous definition of the sub-image composed of even lines. </dd>
 <pre> pdl&gt; $even = $im-&gt;slice(':,1:-1:2')</pre>
 <p>This example also demonstrates that negative indices work like they do for normal Perl style arrays by counting backwards from the end of the dimension. If <tt>&quot;n2&quot;</tt> is smaller than <tt>&quot;n1&quot;</tt> (in the example -1 is equivalent to index 4) the elements in the virtual pdl are effectively reverted with respect to its parent.</p>
-<dt>&#8216;*[n]&#8217;</p>
-<dd>Add a dummy dimension. The size of this dimension will be 1 by default or equal to <tt>&quot;n&quot;</tt> if the optional numerical argument is given. </p>
+<dt>&#8216;*[n]&#8217;</dt>
+<dd>Add a dummy dimension. The size of this dimension will be 1 by default or equal to <tt>&quot;n&quot;</tt> if the optional numerical argument is given. </dd>
 <p> Now, this is really something a bit strange on first sight. What is a dummy dimension? A dummy dimension inserts a dimension where there wasn&#8217;t one before. How is that done ? Well, in the case of the new dimension having size 1 it can be easily explained by the way in which you can identify a vector (with <tt>&quot;m&quot;</tt> elements) with an <tt>&quot;(1,m)&quot;</tt> or <tt>&quot;(m,1)&quot;</tt> matrix. The same holds obviously for higher dimensional objects. More interesting is the case of a dummy dimensions of size greater than one (e.g. <tt>&quot;slice('*5,:')&quot;</tt>). This works in the same way as a call to the dummy function creates a new dummy dimension. So read on and check its explanation below.</p>
-<dt>&#8216;([n1:n2[:n3]]=i)&#8217;</p>
-<dd>[Not yet implemented ??????] With an argument like this you make <i>generalised diagonals</i>. The <i>diagonal</i> will be dimension no. <tt>&quot;i&quot;</tt> of the new output pdl and (if optional part in brackets specified) will extend along the range of indices specified of the respective parent pdl&#8217;s dimension. In general an argument like this only makes sense if there are other arguments like this in the same call to slice. The part in brackets is optional for this type of argument. All arguments of this type that specify the same target dimension <tt>&quot;i&quot;</tt> have to relate to the same number of indices in their parent dimension. The best way to explain it is probably to give an example, here we make a pdl that refers to the elements along the space diagonal of its parent pdl (a cube): </p>
+<dt>&#8216;([n1:n2[:n3]]=i)&#8217;</dt>
+<dd>[Not yet implemented ??????] With an argument like this you make <i>generalised diagonals</i>. The <i>diagonal</i> will be dimension no. <tt>&quot;i&quot;</tt> of the new output pdl and (if optional part in brackets specified) will extend along the range of indices specified of the respective parent pdl&#8217;s dimension. In general an argument like this only makes sense if there are other arguments like this in the same call to slice. The part in brackets is optional for this type of argument. All arguments of this type that specify the same target dimension <tt>&quot;i&quot;</tt> have to relate to the same number of indices in their parent dimension. The best way to explain it is probably to give an example, here we make a pdl that refers to the elements along the space diagonal of its parent pdl (a cube): </dd>
 <pre> $cube = zeroes(5,5,5);
  $sdiag = $cube-&gt;slice('(=0),(=0),(=0)');</pre>
 <p>The above command creates a virtual pdl that represents the diagonal along the parents&#8217; dimension no. 0, 1 and 2 and makes its dimension 0 (the only dimension) of it. You use the extended syntax if the dimension sizes of the parent dimensions you want to build the diagonal from have different sizes or you want to reverse the sequence of elements in the diagonal, e.g. </p>
@@ -223,8 +223,8 @@ description: "PDL::Indexing – Introduction to indexing and slicing piddles."
 <h3>Other functions that manipulate dimensions</h3>
 <p>Having talked extensively about the slice function it should be noted that this is not the only <font SIZE="-1">PDL</font> indexing function. There are additional indexing functions which are also useful (especially in the context of threading which we will talk about later). Here are a list and some examples how to use them.</p>
 <dl>
-<dt>&quot;dummy&quot;</p>
-<dd>inserts a dummy dimension of the size you specify (default 1) at the chosen location. You can&#8217;t wait to hear how that is achieved? Well, all elements with index <tt>&quot;(X,x,Y)&quot;</tt> (<tt>&quot;0&lt;=x&lt;size_of_dummy_dim&quot;</tt>) just map to the element with index <tt>&quot;(X,Y)&quot;</tt> of the parent pdl (where <tt>&quot;X&quot;</tt> and <tt>&quot;Y&quot;</tt> refer to the group of indices before and after the location where the dummy dimension was inserted.) </p>
+<dt>&quot;dummy&quot;</dt>
+<dd>inserts a dummy dimension of the size you specify (default 1) at the chosen location. You can&#8217;t wait to hear how that is achieved? Well, all elements with index <tt>&quot;(X,x,Y)&quot;</tt> (<tt>&quot;0&lt;=x&lt;size_of_dummy_dim&quot;</tt>) just map to the element with index <tt>&quot;(X,Y)&quot;</tt> of the parent pdl (where <tt>&quot;X&quot;</tt> and <tt>&quot;Y&quot;</tt> refer to the group of indices before and after the location where the dummy dimension was inserted.) </dd>
 <p> This example calculates the x coordinate of the centroid of an image (later we will learn that we didn&#8217;t actually need the dummy dimension thanks to the magic of implicit threading; but using dummy dimensions the code would also work in a thread-less world; though once you have worked with <font SIZE="-1">PDL</font> threads you wouldn&#8217;t want to live without them again). </p>
 <pre> # centroid
  ($xd,$yd) = $im-&gt;dims;
@@ -243,8 +243,8 @@ description: "PDL::Indexing – Introduction to indexing and slicing piddles."
 <pre> $a = zeroes(10000);
  $b = $a-&gt;dummy(1,10000);</pre>
 <p>is made physical by some routine, you will find that the memory usage of your program has suddenly grown by 100Mb.</p>
-<dt>&quot;diagonal&quot;</p>
-<dd>replaces two dimensions (which have to be of equal size) by one dimension that references all the elements along the &#8220;diagonal&#8221; along those two dimensions. Here, we have two examples which should appear familiar to anyone who has ever done some linear algebra. Firstly, make a unity matrix: </p>
+<dt>&quot;diagonal&quot;</dt>
+<dd>replaces two dimensions (which have to be of equal size) by one dimension that references all the elements along the &#8220;diagonal&#8221; along those two dimensions. Here, we have two examples which should appear familiar to anyone who has ever done some linear algebra. Firstly, make a unity matrix: </dd>
 <pre> # unity matrix
  $e = zeroes(float, 3, 3); # make everything zero
  ($tmp = $e-&gt;diagonal(0,1)) .= 1; # set the elements along the diagonal to 1
@@ -255,8 +255,8 @@ description: "PDL::Indexing – Introduction to indexing and slicing piddles."
 <p>(Did you notice how we used the slice function to revert the sequence of lines before setting the diagonal of the new child, thereby setting the cross diagonal of the parent ?) Or a mapping from the space of diagonal matrices to the field over which the matrices are defined, the trace of a matrix: </p>
 <pre> # trace of a matrix
  $trace = sum($mat-&gt;diagonal(0,1)); # sum all the diagonal elements</pre>
-<dt>&quot;xchg&quot; and &quot;mv&quot;</p>
-<dd>xchg exchanges or &#8220;transposes&#8221; the two specified dimensions. A straightforward example: </p>
+<dt>&quot;xchg&quot; and &quot;mv&quot;</dt>
+<dd>xchg exchanges or &#8220;transposes&#8221; the two specified dimensions. A straightforward example: </dd>
 <pre> # transpose a matrix (without explicitly reshuffling data and
  # making a copy)
  $prod = $a x $a-&gt;xchg(0,1);</pre>
@@ -265,8 +265,8 @@ description: "PDL::Indexing – Introduction to indexing and slicing piddles."
 <pre> $b = $a-&gt;mv(4,0); # make the 5th dimension of $a the first in the
  # new child $b</pre>
 <p>The difference between <tt>&quot;xchg&quot;</tt> and <tt>&quot;mv&quot;</tt> is that <tt>&quot;xchg&quot;</tt> only changes the position of two dimensions with each other, whereas <tt>&quot;mv&quot;</tt> inserts the first dimension to the place of second, moving the other dimensions around accordingly.</p>
-<dt>&quot;clump&quot;</p>
-<dd>collapses several dimensions into one. Its only argument specifies how many dimensions of the source pdl should be collapsed (starting from the first). An (admittedly unrealistic) example is a 3D pdl which holds data from a stack of image files that you have just read in. However, the data from each image really represents a 1D time series and has only been arranged that way because it was digitized with a frame grabber. So to have it again as an array of time sequences you say </p>
+<dt>&quot;clump&quot;</dt>
+<dd>collapses several dimensions into one. Its only argument specifies how many dimensions of the source pdl should be collapsed (starting from the first). An (admittedly unrealistic) example is a 3D pdl which holds data from a stack of image files that you have just read in. However, the data from each image really represents a 1D time series and has only been arranged that way because it was digitized with a frame grabber. So to have it again as an array of time sequences you say </dd>
 <pre> pdl&gt; $seqs = $stack-&gt;clump(2)
  pdl&gt; help vars
  PDL variables in package main::
@@ -352,18 +352,18 @@ description: "PDL::Indexing – Introduction to indexing and slicing piddles."
 <h3>How to figure out the loop dimensions</h3>
 <p>There are a couple of rules that allow you to figure out number and size of loop dimensions (and if the size of your input pdls comply with the threading rules). Dimensions of any pdl argument are broken down into two groups in the following: Core dimensions (as defined by the PP-function, see <code>Appendix B</code> for a list of <font SIZE="-1">PDL</font> primitives) and extra dimensions which comprises all remaining dimensions of that pdl. For example calling a function <tt>&quot;func&quot;</tt> with the signature <tt>&quot;func((n,m),[o](n))&quot;</tt> with a pdl <tt>&quot;a(2,4,7,1,3)&quot;</tt> as <tt>&quot;f($a,($o = null))&quot;</tt> results in the semantic splitting of a&#8217;s dimensions into: core dimensions <tt>&quot;(2,4)&quot;</tt> and extra dimensions <tt>&quot;(7,1,3)&quot;</tt>.</p>
 <dl>
-<dt>R0</p>
-<dd>Core dimensions are identified with the first N dimensions of the respective pdl argument (and are required). Any further dimensions are extra dimensions and used to determine the loop dimensions.</p>
-<dt>R1</p>
-<dd>The number of (implicit) loop dimensions is equal to the maximal number of extra dimensions taken over the set of pdl arguments.</p>
-<dt>R2</p>
-<dd>The size of each of the loop dimensions is derived from the size of the respective dimensions of the pdl arguments. The size of a loop dimension is given by the maximal size found in any of the pdls having this extra dimension.</p>
-<dt>R3</p>
-<dd>For all pdls that have a given extra dimension the size must be equal to the size of the loop dimension (as determined by the previous rule) or 1; otherwise you raise a runtime exception. If the size of the extra dimension in a pdl is one it is implicitly treated as a dummy dimension of size equal to that loop dim size when performing the thread loop.</p>
-<dt>R4</p>
-<dd>If a pdl doesn&#8217;t have a loop dimension, in the thread loop this pdl is treated as if having a dummy dimension of size equal to the size of that loop dimension.</p>
-<dt>R5</p>
-<dd>If output auto-creation is used (by setting the relevant pdl to <tt>&quot;PDL-&gt;null&quot;</tt> before invocation) the number of dimensions of the created pdl is equal to the sum of the number of core output dimensions + number of loop dimensions. The size of the core output dimensions is derived from the relevant dimension of input pdls (as specified in the function definition) and the sizes of the other dimensions are equal to the size of the loop dimension it is derived from. The automatically created pdl will be physical (unless dataflow is in operation).</dl>
+<dt>R0</dt>
+<dd>Core dimensions are identified with the first N dimensions of the respective pdl argument (and are required). Any further dimensions are extra dimensions and used to determine the loop dimensions.</dd>
+<dt>R1</dt>
+<dd>The number of (implicit) loop dimensions is equal to the maximal number of extra dimensions taken over the set of pdl arguments.</dd>
+<dt>R2</dt>
+<dd>The size of each of the loop dimensions is derived from the size of the respective dimensions of the pdl arguments. The size of a loop dimension is given by the maximal size found in any of the pdls having this extra dimension.</dd>
+<dt>R3</dt>
+<dd>For all pdls that have a given extra dimension the size must be equal to the size of the loop dimension (as determined by the previous rule) or 1; otherwise you raise a runtime exception. If the size of the extra dimension in a pdl is one it is implicitly treated as a dummy dimension of size equal to that loop dim size when performing the thread loop.</dd>
+<dt>R4</dt>
+<dd>If a pdl doesn&#8217;t have a loop dimension, in the thread loop this pdl is treated as if having a dummy dimension of size equal to the size of that loop dimension.</dd>
+<dt>R5</dt>
+<dd>If output auto-creation is used (by setting the relevant pdl to <tt>&quot;PDL-&gt;null&quot;</tt> before invocation) the number of dimensions of the created pdl is equal to the sum of the number of core output dimensions + number of loop dimensions. The size of the core output dimensions is derived from the relevant dimension of input pdls (as specified in the function definition) and the sizes of the other dimensions are equal to the size of the loop dimension it is derived from. The automatically created pdl will be physical (unless dataflow is in operation).</dd></dl>
 <p> In this context, note that you can run into the problem with assignment to pdls containing greater-than-one dummy dimensions (see above). Although your output pdl(s) didn&#8217;t contain any dummy dimensions in the first place they may end up with implicitly created dummy dimensions according to <i>R4</i>. </p>
 <p> As an example, suppose we have a (here unspecified) PP-function with the signature: </p>
 <pre> func((m,n),(m,n,o),(m),[o](m,o))</pre>
@@ -460,24 +460,24 @@ description: "PDL::Indexing – Introduction to indexing and slicing piddles."
 <pre> $b = $a-&gt;thread(2,1)</pre>
 <p>creates a new virtual pdl of dimension <tt>&quot;b(4,8)&quot;</tt> (which we call the remaining dims) that also has 2 thread dimensions of size <tt>&quot;(2,7)&quot;</tt>. For the purposes of this document we write that symbolically as <tt>&quot;b(4,8){2,7}&quot;</tt>. An important difference to the previous examples where only implicit threading was used is the fact that the core dimensions are matched against the <i>remaining dimensions</i> which are not necessarily the first dimensions of the pdl. We will now specify how the presence of thread dimensions changes the rules R1-R5 for thread loops (which apply to the special case where none of the pdl arguments has any thread dimensions).</p>
 <dl>
-<dt>T0</p>
-<dd>Core dimensions are matched against the first n <i>remaining dimensions</i> of the pdl argument (note the difference to R1). Any further <i>remaining dimensions</i> are <i>extra dimensions</i> and are used to determine the <i>implicit loop dimensions</i>.</p>
-<dt>T1a</p>
-<dd>The number of <i>implicit loop dimensions</i> is equal to the maximal number of extra dimensions taken over the set of pdl arguments.</p>
-<dt>T1b</p>
-<dd>The number of <i>explicit loop dimensions</i> is equal to the maximal number of thread dimensions taken over the set of pdl arguments.</p>
-<dt>T1c</p>
-<dd>The total number of <i>loop dimensions</i> is equal to the sum of <i>explicit loop dimensions</i> and <i>implicit loop dimensions</i>. In the thread loop, <i>explicit loop dimensions</i> are threaded over first followed by <i>implicit loop dimensions</i>.</p>
-<dt>T2</p>
-<dd>The size of each of the <i>loop dimensions</i> is derived from the size of the respective dimensions of the pdl arguments. It is given by the maximal size found in any pdls having this thread dimension (for <i>explicit loop dimensions</i>) or extra dimension (for <i>implicit loop dimensions</i>).</p>
-<dt>T3</p>
-<dd>This rule applies to any <i>explicit loop dimension</i> as well as any <i>implicit loop dimension</i>. For all pdls that have a given <i>thread/extra dimension</i> the size must be equal to the size of the respective <i>explicit/implicit loop dimension</i> or 1; otherwise you raise a runtime exception. If the size of a <i>thread/extra dimension</i> of a pdl is one it is implicitly treated as a dummy dimension of size equal to the <i>explicit/implicit loop dimension</i>.</p>
-<dt>T4</p>
-<dd>If a pdl doesn&#8217;t have a <i>thread/extra dimension</i> that corresponds to an <i>explicit/implicit loop dimension</i>, in the thread loop this pdl is treated as if having a dummy dimension of size equal to the size of that loop dimension.</p>
-<dt>T4a</p>
-<dd>All pdls that do have <i>thread dimensions</i> must have the same number of thread dimensions.</p>
-<dt>T5</p>
-<dd>Output auto-creation cannot be used if any of the pdl arguments has any <i>thread dimensions</i>. Otherwise R5 applies.</dl>
+<dt>T0</dt>
+<dd>Core dimensions are matched against the first n <i>remaining dimensions</i> of the pdl argument (note the difference to R1). Any further <i>remaining dimensions</i> are <i>extra dimensions</i> and are used to determine the <i>implicit loop dimensions</i>.</dd>
+<dt>T1a</dt>
+<dd>The number of <i>implicit loop dimensions</i> is equal to the maximal number of extra dimensions taken over the set of pdl arguments.</dd>
+<dt>T1b</dt>
+<dd>The number of <i>explicit loop dimensions</i> is equal to the maximal number of thread dimensions taken over the set of pdl arguments.</dd>
+<dt>T1c</dt>
+<dd>The total number of <i>loop dimensions</i> is equal to the sum of <i>explicit loop dimensions</i> and <i>implicit loop dimensions</i>. In the thread loop, <i>explicit loop dimensions</i> are threaded over first followed by <i>implicit loop dimensions</i>.</dd>
+<dt>T2</dt>
+<dd>The size of each of the <i>loop dimensions</i> is derived from the size of the respective dimensions of the pdl arguments. It is given by the maximal size found in any pdls having this thread dimension (for <i>explicit loop dimensions</i>) or extra dimension (for <i>implicit loop dimensions</i>).</dd>
+<dt>T3</dt>
+<dd>This rule applies to any <i>explicit loop dimension</i> as well as any <i>implicit loop dimension</i>. For all pdls that have a given <i>thread/extra dimension</i> the size must be equal to the size of the respective <i>explicit/implicit loop dimension</i> or 1; otherwise you raise a runtime exception. If the size of a <i>thread/extra dimension</i> of a pdl is one it is implicitly treated as a dummy dimension of size equal to the <i>explicit/implicit loop dimension</i>.</dd>
+<dt>T4</dt>
+<dd>If a pdl doesn&#8217;t have a <i>thread/extra dimension</i> that corresponds to an <i>explicit/implicit loop dimension</i>, in the thread loop this pdl is treated as if having a dummy dimension of size equal to the size of that loop dimension.</dd>
+<dt>T4a</dt>
+<dd>All pdls that do have <i>thread dimensions</i> must have the same number of thread dimensions.</dd>
+<dt>T5</dt>
+<dd>Output auto-creation cannot be used if any of the pdl arguments has any <i>thread dimensions</i>. Otherwise R5 applies.</dd></dl>
 <p> The same restrictions apply with regard to implicit dummy dimensions (created by application of T4) as already mentioned in the section on implicit threading: if any of the output pdls has an (explicit or implicitly created) greater-than-one dummy dimension a runtime exception will be raised. </p>
 <p> Let us demonstrate these rules at work in a generic case. Suppose we have a (here unspecified) PP-function with the signature: </p>
 <pre> func((m,n),(m),(),[o](m))</pre>

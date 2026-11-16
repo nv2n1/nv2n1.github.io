@@ -15,11 +15,11 @@ bpf_prog_create - create an unattached filter
 <h2>Arguments</h2>
 
 <i>pfp</i>
-<dl><dd><dd>the unattached filter that is created</dl>
+<dl><dd></dd><dd>the unattached filter that is created</dd></dl>
  
 
  <i>fprog</i>
-<dl><dd>the filter program</dl>
+<dl><dd>the filter program</dd></dl>
 
 <h2>Description</h2>
 

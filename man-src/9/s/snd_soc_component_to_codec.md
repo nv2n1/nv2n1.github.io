@@ -15,7 +15,7 @@ snd_soc_component_to_codec - Casts a component to the CODEC it is embedded in
 <h2>Arguments</h2>
 
 <i>component</i>
-<dl><dd><dd>The component to cast to a CODEC</dl>
+<dl><dd></dd><dd>The component to cast to a CODEC</dd></dl>
 
 <h2>Description</h2>
 

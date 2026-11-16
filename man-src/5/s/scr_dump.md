@@ -19,17 +19,17 @@ description: "scr_dump – format of curses screen-dumps."
 <dl>
 <dd>Because ncurses6 uses a new format, that requires a new magic number was unused by other applications. This 16-bit number was unused:<br />
 &nbsp;.sp<br />
-&nbsp;.in&nbsp;+4 </p>
+&nbsp;.in&nbsp;+4 </dd>
 <pre>0x8888 (octal ``\210\210'')</pre>
 <p>&nbsp;.in -4</p>
 <dd>but to be more certain, this 32-bit number was chosen:<br />
 &nbsp;.sp<br />
-&nbsp;.in&nbsp;+4 </p>
+&nbsp;.in&nbsp;+4 </dd>
 <pre>0x88888888 (octal ``\210\210\210\210'')</pre>
 <p>&nbsp;.in -4</p>
 <dd>This is the pattern submitted to the maintainers of the <code>file</code> program:<br />
 &nbsp;.sp<br />
-&nbsp;.in&nbsp;+4 </p>
+&nbsp;.in&nbsp;+4 </dd>
 <pre>#
 # ncurses5 (and before) did not use a magic number,
 # making screen dumps &quot;data&quot;.
@@ -41,7 +41,7 @@ description: "scr_dump – format of curses screen-dumps."
 &nbsp;.IP&nbsp;&bull;&nbsp;4 The screen dumps are written in textual form, so that internal data sizes are not directly related to the dump-format, and enabling the library to read dumps from either narrow- or wide-character- configurations.</p>
 <dd>The <i>narrow</i> library configuration holds characters and video attributes in a 32-bit <code>chtype</code>, while the <i>wide-character</i> library stores this information in the <code>cchar_t</code> structure, which is much larger than 32-bits.<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 It is possible to read a screen dump into a terminal with a different screen-size, because the library truncates or fills the screen as necessary.<br />
-&nbsp;.IP&nbsp;&bull;&nbsp;4 The ncurses6 <code>getwin</code> reads the legacy screen dumps from ncurses5.</dl>
+&nbsp;.IP&nbsp;&bull;&nbsp;4 The ncurses6 <code>getwin</code> reads the legacy screen dumps from ncurses5.</dd></dl>
 <h3>ncurses5 (legacy)</h3>
 <p>The screen-dump feature was added to ncurses in June 1995. While there were fixes and improvements in succeeding years, the basic scheme was unchanged:<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 The <code>WINDOW</code> structure was written in binary form.<br />
@@ -54,11 +54,11 @@ description: "scr_dump – format of curses screen-dumps."
 <p>Refer to <i>X/Open Curses, Issue 7</i> (2009). </p>
 <p> X/Open&#8217;s documentation for <i>enhanced curses</i> says only:</p>
 <dl>
-<dd>The <i>getwin(&nbsp;) </i>function reads window-related data stored in the file by <i>putwin(&nbsp;)</i>. The function then creates and initializes a new window using that data. </p>
+<dd>The <i>getwin(&nbsp;) </i>function reads window-related data stored in the file by <i>putwin(&nbsp;)</i>. The function then creates and initializes a new window using that data. </dd>
 <p> The <i>putwin(&nbsp;)</i> function writes all data associated with <i>win</i> into the <i>stdio</i> stream to which <i>filep</i> points, using an <code>unspecified format</code>. This information can be retrieved later using <i>getwin(&nbsp;)</i>.</dl>
 <p> In the mid-1990s when the X/Open Curses document was written, there were still systems using older, less capable curses libraries (aside from the BSD curses library which was not relevant to X/Open because it did not meet the criteria for <i>base curses</i>). The document explained the term &#8220;enhanced&#8221; as follows:</p>
 <dl>
-<dd>&nbsp;.IP&nbsp;&bull;&nbsp;4 Shading is used to identify <i>X/Open Enhanced Curses</i> material, relating to interfaces included to provide enhanced capabilities for applications originally written to be compiled on systems based on the UNIX operating system. Therefore, the features described may not be present on systems that conform to <code>XPG4 or to earlier XPG releases</code>. The relevant reference pages may provide additional or more specific portability warnings about use of the material.</dl>
+<dd>&nbsp;.IP&nbsp;&bull;&nbsp;4 Shading is used to identify <i>X/Open Enhanced Curses</i> material, relating to interfaces included to provide enhanced capabilities for applications originally written to be compiled on systems based on the UNIX operating system. Therefore, the features described may not be present on systems that conform to <code>XPG4 or to earlier XPG releases</code>. The relevant reference pages may provide additional or more specific portability warnings about use of the material.</dd></dl>
 <p> In the foregoing, emphasis was added to <code>unspecified format</code> and to <code>XPG4 or to earlier XPG releases</code>, for clarity.</p>
 <h3>Unix SystemV</h3>
 <p>Unix SystemV curses identified the file format by writing a &#8220;magic number&#8221; at the beginning of the dump. The <code>WINDOW</code> data and the lines of text follow, all in binary form. </p>
@@ -93,8 +93,8 @@ description: "scr_dump – format of curses screen-dumps."
 &nbsp;.IP&nbsp;&bull;&nbsp;4 The default curses library uses the SVr3 magic number.<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 There is an alternate curses library in <code>/usr/xpg4</code>. This uses a textual format with no magic number.</p>
 <dl>
-<dd>According to the copyright notice, the <i>xpg4</i> Solaris curses library was developed by MKS (Mortice Kern Systems) from 1990 to 1995.</p>
-<dd>Like ncurses6, there is a file-header with parameters. Unlike ncurses6, the contents of the window are written piecemeal, with coordinates and attributes for each chunk of text rather than writing the whole window from top to bottom.</dl>
+<dd>According to the copyright notice, the <i>xpg4</i> Solaris curses library was developed by MKS (Mortice Kern Systems) from 1990 to 1995.</dd>
+<dd>Like ncurses6, there is a file-header with parameters. Unlike ncurses6, the contents of the window are written piecemeal, with coordinates and attributes for each chunk of text rather than writing the whole window from top to bottom.</dd></dl>
 <h3>PDCurses</h3>
 <p>PDCurses added support for screen dumps in version 2.7 (2005). Like Unix SystemV and ncurses5, it writes the <code>WINDOW</code> structure in binary, but begins the file with its three-byte identifier &#8220;PDC&#8221;, followed by a one-byte version, e.g.,<br />
 &nbsp;.sp<br />
@@ -111,15 +111,9 @@ description: "scr_dump – format of curses screen-dumps."
 <h2>Example</h2>
 <pre><code>Given a simple program which writes text to the screen
 (and for the sake of example, limiting the screen-size to 10x20):
-
-
  .sp
-
-
  .in +4
-
 #include &lt;curses.h&gt;
-
 int
 main(void)
 {
@@ -142,7 +136,6 @@ main(void)
     endwin();
     return 0;
 }
-
 .in - 4</code></pre>
 <p> When run using ncurses6, the output looks like this:<br />
 &nbsp;.sp<br />

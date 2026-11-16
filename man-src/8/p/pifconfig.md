@@ -19,11 +19,11 @@ This script mimic ifconfig behavior, but is written purely in python and python 
 <h2>Options</h2>
 
 INTERFACE
-<dl><dd>Display information about only the listed interfaces. If no interface is given all interfaces are displayed.</dl>
+<dl><dd>Display information about only the listed interfaces. If no interface is given all interfaces are displayed.</dd></dl>
  
 
  -h, --help
-<dl><dd>Show help message and exit.</dl>
+<dl><dd>Show help message and exit.</dd></dl>
 
 <h2>See Also</h2>
 

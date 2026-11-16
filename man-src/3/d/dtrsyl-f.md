@@ -29,10 +29,10 @@ description: "dtrsyl.f –"
  is, block upper triangular with 1-by-1 and 2-by-2 diagonal blocks;
  each 2-by-2 diagonal block has its diagonal elements equal and its
  off-diagonal elements of opposite sign.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>TRANA</i> </p>
+<dd><i>TRANA</i> </dd>
 <pre> TRANA is CHARACTER*1
  Specifies the option op(A):
  = 'N': op(A) = A (No transpose)
@@ -89,13 +89,13 @@ description: "dtrsyl.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 164 of file dtrsyl.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

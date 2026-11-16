@@ -19,18 +19,18 @@ description: "rcsfreeze – freeze a configuration of sources checked in under R
 <p> The shell script works only on all <font SIZE="-1">RCS</font> files at one time. All changed files must be checked in already. Run <i><a href="/docs/linux/man/1-rcsclean/">rcsclean</a></i>(1) first and see whether any sources remain in the current directory.</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>RCS/.rcsfreeze.ver</code></p>
-<dd> version number</p>
-<dt><code>RCS/.rcsfreeze.log</code></p>
-<dd> log messages, most recent first</dl>
+<dt><code>RCS/.rcsfreeze.ver</code></dt>
+<dd> version number</dd>
+<dt><code>RCS/.rcsfreeze.log</code></dt>
+<dd> log messages, most recent first</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>RCSINIT</code></font></p>
-<dd> Options prepended to the argument list, separated by spaces. A backslash escapes spaces within an option. The <font SIZE="-1"><code>RCSINIT</code></font> options are prepended to the argument lists of most <font SIZE="-1">RCS</font> commands. Useful <font SIZE="-1"><code>RCSINIT</code></font> options include <code>-q</code>, <code>-V</code>, <code>-x</code>, and <code>-z</code>.</p>
-<dt><font SIZE="-1"><code>RCS_MEM_LIMIT</code></font></p>
-<dd> An integer <i>lim</i>, measured in kilobytes, specifying the threshold under which commands will try to use memory-based operations for processing the <font SIZE="-1">RCS</font> file. (For <font SIZE="-1">RCS</font> files of size <i>lim</i> kilobytes or greater, RCS will use the slower standard input/output routines.) Default value is 256.</p>
-<dt><font SIZE="-1"><code>TMPDIR</code></font></p>
-<dd> Name of the temporary directory. If not set, the environment variables <font SIZE="-1"><code>TMP</code></font> and <font SIZE="-1"><code>TEMP</code></font> are inspected instead and the first value found is taken; if none of them are set, a host-dependent default is used, typically <code>/tmp</code>.</dl>
+<dt><font SIZE="-1"><code>RCSINIT</code></font></dt>
+<dd> Options prepended to the argument list, separated by spaces. A backslash escapes spaces within an option. The <font SIZE="-1"><code>RCSINIT</code></font> options are prepended to the argument lists of most <font SIZE="-1">RCS</font> commands. Useful <font SIZE="-1"><code>RCSINIT</code></font> options include <code>-q</code>, <code>-V</code>, <code>-x</code>, and <code>-z</code>.</dd>
+<dt><font SIZE="-1"><code>RCS_MEM_LIMIT</code></font></dt>
+<dd> An integer <i>lim</i>, measured in kilobytes, specifying the threshold under which commands will try to use memory-based operations for processing the <font SIZE="-1">RCS</font> file. (For <font SIZE="-1">RCS</font> files of size <i>lim</i> kilobytes or greater, RCS will use the slower standard input/output routines.) Default value is 256.</dd>
+<dt><font SIZE="-1"><code>TMPDIR</code></font></dt>
+<dd> Name of the temporary directory. If not set, the environment variables <font SIZE="-1"><code>TMP</code></font> and <font SIZE="-1"><code>TEMP</code></font> are inspected instead and the first value found is taken; if none of them are set, a host-dependent default is used, typically <code>/tmp</code>.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Stephan v. Bechtolsheim</p>
 <h2>SEE ALSO</h2>
@@ -39,11 +39,11 @@ description: "rcsfreeze – freeze a configuration of sources checked in under R
 <p> The full documentation for <font SIZE="-1">RCS</font> is maintained as a Texinfo manual. If the <code><a href="/docs/linux/man/1-info/">info</a></code>(1) and <font SIZE="-1">RCS</font> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info rcs</code></dl>
+</dt><dd> <code>info rcs</code></dd></dl>
 <p> should give you access to the complete manual. Additionally, the <font SIZE="-1">RCS</font> homepage:</p>
 <dl>
 <dt>
-<dd> <code><a rel="nofollow" href="http://www.gnu.org/software/rcs/">http://www.gnu.org/software/rcs/</a></code></dl>
+</dt><dd> <code><a rel="nofollow" href="http://www.gnu.org/software/rcs/">http://www.gnu.org/software/rcs/</a></code></dd></dl>
 <p> has news and links to the latest release, development site, etc.</p>
 <h2>BUGS</h2>
 <p> <code>rcsfreeze</code> does not check whether any sources are checked out and modified. </p>

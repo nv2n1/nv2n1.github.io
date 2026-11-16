@@ -15,8 +15,8 @@ description: "XmDragCancel — A Drag and Drop function that terminates a drag t
 <h2>Description</h2>
 <p><code>XmDragCancel</code> terminates a drag operation and cancels any pending actions of the specified DragContext. This routine can only be called by the initiator client.</p>
 <dl COMPACT>
-<dt><i>dragcontext</i></p>
-<dd>Specifies the ID of the DragContext widget associated with the drag and drop transaction to be terminated</dl>
+<dt><i>dragcontext</i></dt>
+<dd>Specifies the ID of the DragContext widget associated with the drag and drop transaction to be terminated</dd></dl>
 <p> For a complete definition of DragContext and its associated resources, see <code><a href="/docs/linux/man/3-xmdragcontext/">XmDragContext</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmdragcontext/">XmDragContext</a></code>(3) and <code><a href="/docs/linux/man/3-xmdragstart/">XmDragStart</a></code>(3).</p>

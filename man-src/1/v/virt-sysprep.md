@@ -22,36 +22,36 @@ virt - sysprep[--options] - d domname virt - sysprep[--options] - a disk.img[-a 
 <p> &#8220;Sysprep&#8221; stands for &#8220;system preparation&#8221; tool. The name comes from the Microsoft program <i>sysprep.exe</i> which is used to unconfigure Windows machines in preparation for cloning them. Having said that, virt-sysprep does <i>not</i> currently work on Microsoft Windows guests. We plan to support Windows sysprepping in a future version, and we already have code to do it.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display brief help.</p>
-<dt><code>-a</code> file</p>
+<dt><code>&#8211;help</code></dt>
+<dd> Display brief help.</dd>
+<dt><code>-a</code> file</dt>
 <dd>
-<dt><code>&#8211;add</code> file</p>
-<dd> Add <i>file</i> which should be a disk image from a virtual machine. </p>
+</dd><dt><code>&#8211;add</code> file</dt>
+<dd> Add <i>file</i> which should be a disk image from a virtual machine. </dd>
 <p> The format of the disk image is auto-detected. To override this and force a particular format use the <i>&#8211;format</i> option.</p>
-<dt><code>-a</code> <font SIZE="-1">URI</font></p>
+<dt><code>-a</code> <font SIZE="-1">URI</font></dt>
 <dd>
-<dt><code>&#8211;add</code> <font SIZE="-1">URI</font></p>
-<dd> Add a remote disk. The <font SIZE="-1">URI</font> format is compatible with guestfish. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</p>
-<dt><code>&#8211;colors</code></p>
+</dd><dt><code>&#8211;add</code> <font SIZE="-1">URI</font></dt>
+<dd> Add a remote disk. The <font SIZE="-1">URI</font> format is compatible with guestfish. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</dd>
+<dt><code>&#8211;colors</code></dt>
 <dd>
-<dt><code>&#8211;colours</code></p>
-<dd> Use <font SIZE="-1">ANSI</font> colour sequences to colourize messages. This is the default when the output is a tty. If the output of the program is redirected to a file, <font SIZE="-1">ANSI</font> colour sequences are disabled unless you use this option.</p>
-<dt><code>-c</code> <font SIZE="-1">URI</font></p>
+</dd><dt><code>&#8211;colours</code></dt>
+<dd> Use <font SIZE="-1">ANSI</font> colour sequences to colourize messages. This is the default when the output is a tty. If the output of the program is redirected to a file, <font SIZE="-1">ANSI</font> colour sequences are disabled unless you use this option.</dd>
+<dt><code>-c</code> <font SIZE="-1">URI</font></dt>
 <dd>
-<dt><code>&#8211;connect</code> <font SIZE="-1">URI</font></p>
-<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </p>
+</dd><dt><code>&#8211;connect</code> <font SIZE="-1">URI</font></dt>
+<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
 <p> If you specify guest block devices directly (<i>-a</i>), then libvirt is not used at all.</p>
-<dt><code>-d</code> guest</p>
+<dt><code>-d</code> guest</dt>
 <dd>
-<dt><code>&#8211;domain</code> guest</p>
-<dd> Add all the disks from the named libvirt guest. Domain UUIDs can be used instead of names.</p>
-<dt><code>-n</code></p>
+</dd><dt><code>&#8211;domain</code> guest</dt>
+<dd> Add all the disks from the named libvirt guest. Domain UUIDs can be used instead of names.</dd>
+<dt><code>-n</code></dt>
 <dd>
-<dt><code>&#8211;dry-run</code></p>
-<dd> Perform a read-only &#8220;dry run&#8221; on the guest. This runs the sysprep operation, but throws away any changes to the disk at the end.</p>
-<dt><code>&#8211;enable</code> operations</p>
-<dd> Choose which sysprep operations to perform. Give a comma-separated list of operations, for example: </p>
+</dd><dt><code>&#8211;dry-run</code></dt>
+<dd> Perform a read-only &#8220;dry run&#8221; on the guest. This runs the sysprep operation, but throws away any changes to the disk at the end.</dd>
+<dt><code>&#8211;enable</code> operations</dt>
+<dd> Choose which sysprep operations to perform. Give a comma-separated list of operations, for example: </dd>
 <pre>
  --enable ssh-hostkeys,udev-persistent-net
 </pre>
@@ -60,10 +60,10 @@ virt - sysprep[--options] - d domname virt - sysprep[--options] - a disk.img[-a 
 <p> Regardless of the <i>&#8211;enable</i> option, sysprep operations are skipped for some guest types. </p>
 <p> Use <i>&#8211;list-operations</i> to list operations supported by a particular version of virt-sysprep. </p>
 <p> See &#8220;<font SIZE="-1">OPERATIONS&#8221;</font> below for a list and an explanation of each operation.</p>
-<dt><code>&#8211;operation</code> operations</p>
+<dt><code>&#8211;operation</code> operations</dt>
 <dd>
-<dt><code>&#8211;operations</code> operations</p>
-<dd> Choose which sysprep operations to perform. Give a comma-separated list of operations, for example: </p>
+</dd><dt><code>&#8211;operations</code> operations</dt>
+<dd> Choose which sysprep operations to perform. Give a comma-separated list of operations, for example: </dd>
 <pre>
  --operations ssh-hostkeys,udev-persistent-net
 </pre>
@@ -78,10 +78,10 @@ virt - sysprep[--options] - d domname virt - sysprep[--options] - a disk.img[-a 
 <p> Regardless of the <i>&#8211;operations</i> option, sysprep operations are skipped for some guest types. </p>
 <p> Use <i>&#8211;list-operations</i> to list operations supported by a particular version of virt-sysprep. </p>
 <p> See &#8220;<font SIZE="-1">OPERATIONS&#8221;</font> below for a list and an explanation of each operation.</p>
-<dt><code>&#8211;format</code> raw|qcow2|..</p>
+<dt><code>&#8211;format</code> raw|qcow2|..</dt>
 <dd>
-<dt><code>&#8211;format</code> auto</p>
-<dd> The default for the <i>-a</i> option is to auto-detect the format of the disk image. Using this forces the disk format for <i>-a</i> options which follow on the command line. Using <i>&#8211;format auto</i> switches back to auto-detection for subsequent <i>-a</i> options. </p>
+</dd><dt><code>&#8211;format</code> auto</dt>
+<dd> The default for the <i>-a</i> option is to auto-detect the format of the disk image. Using this forces the disk format for <i>-a</i> options which follow on the command line. Using <i>&#8211;format auto</i> switches back to auto-detection for subsequent <i>-a</i> options. </dd>
 <p> For example: </p>
 <pre>
  virt-sysprep --format raw -a disk.img
@@ -92,8 +92,8 @@ virt - sysprep[--options] - d domname virt - sysprep[--options] - a disk.img[-a 
 </pre>
 <p> forces raw format (no auto-detection) for <i>disk.img</i> and reverts to auto-detection for <i>another.img</i>. </p>
 <p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (<font SIZE="-1">CVE-2010-3851</font>).</p>
-<dt><code>&#8211;list-operations</code></p>
-<dd> List the operations supported by the virt-sysprep program. </p>
+<dt><code>&#8211;list-operations</code></dt>
+<dd> List the operations supported by the virt-sysprep program. </dd>
 <p> These are listed one per line, with one or more single-space-separated fields, eg: </p>
 <pre>
  $ virt-sysprep --list-operations
@@ -105,8 +105,8 @@ virt - sysprep[--options] - d domname virt - sysprep[--options] - a disk.img[-a 
 </pre>
 <p> The first field is the operation name, which can be supplied to <i>&#8211;enable</i>. The second field is a <tt>&quot;*&quot;</tt> character if the operation is enabled by default or blank if not. Subsequent fields on the same line are the description of the operation. </p>
 <p> Before libguestfs 1.17.33 only the first (operation name) field was shown and all operations were enabled by default.</p>
-<dt><code>&#8211;mount-options</code> mp:opts[;mp:opts;&#8230;]</p>
-<dd> Set the mount options used when libguestfs opens the disk image. Note this has no effect on the guest. It is used when opening certain guests such as ones using the <font SIZE="-1">UFS </font>(<font SIZE="-1">BSD</font>) filesystem. </p>
+<dt><code>&#8211;mount-options</code> mp:opts[;mp:opts;&#8230;]</dt>
+<dd> Set the mount options used when libguestfs opens the disk image. Note this has no effect on the guest. It is used when opening certain guests such as ones using the <font SIZE="-1">UFS </font>(<font SIZE="-1">BSD</font>) filesystem. </dd>
 <p> Use a semicolon-separated list of <tt>&quot;mountpoint:options&quot;</tt> pairs. You may need to quote this list to protect it from the shell. </p>
 <p> For example: </p>
 <pre>
@@ -117,32 +117,32 @@ virt - sysprep[--options] - d domname virt - sysprep[--options] - a disk.img[-a 
  --mount-options &quot;/:noatime;/var:rw,nodiratime&quot;
 </pre>
 <p> will do the same, plus mount <i>/var</i> with <tt>&quot;rw,nodiratime&quot;</tt>.</p>
-<dt><code>-q</code></p>
+<dt><code>-q</code></dt>
 <dd>
-<dt><code>&#8211;quiet</code></p>
-<dd> Don&#8217;t print log messages. </p>
+</dd><dt><code>&#8211;quiet</code></dt>
+<dd> Don&#8217;t print log messages. </dd>
 <p> To enable detailed logging of individual file operations, use <i>-x</i>.</p>
-<dt><code>&#8211;network</code></p>
+<dt><code>&#8211;network</code></dt>
 <dd>
-<dt><code>&#8211;no-network</code></p>
-<dd> Enable or disable network access from the guest during the installation. </p>
+</dd><dt><code>&#8211;no-network</code></dt>
+<dd> Enable or disable network access from the guest during the installation. </dd>
 <p> In virt-sysprep, the network is <i>disabled</i> by default. You must use <i>&#8211;network</i> to enable it, in order that options such as <i>&#8211;install</i> or <i>&#8211;update</i> will work. </p>
 <p> <i><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></i>(1) has more information about the security advantages of disabling the network.</p>
-<dt><code>-v</code></p>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;verbose</code></p>
-<dd> Enable verbose messages for debugging.</p>
-<dt><code>-V</code></p>
+</dd><dt><code>&#8211;verbose</code></dt>
+<dd> Enable verbose messages for debugging.</dd>
+<dt><code>-V</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Display version number and exit.</p>
-<dt><code>-x</code></p>
-<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</p>
-<dt><code>&#8211;chmod</code> <font SIZE="-1">PERMISSIONS:FILE </font>(see &quot;customize&quot; below)</p>
-<dd> Change the permissions of <tt>&quot;FILE&quot;</tt> to <tt>&quot;PERMISSIONS&quot;</tt>. </p>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Display version number and exit.</dd>
+<dt><code>-x</code></dt>
+<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</dd>
+<dt><code>&#8211;chmod</code> <font SIZE="-1">PERMISSIONS:FILE </font>(see &quot;customize&quot; below)</dt>
+<dd> Change the permissions of <tt>&quot;FILE&quot;</tt> to <tt>&quot;PERMISSIONS&quot;</tt>. </dd>
 <p> <i>Note</i>: <tt>&quot;PERMISSIONS&quot;</tt> by default would be decimal, unless you prefix it with <tt>0</tt> to get octal, ie. use <tt>0700</tt> not <tt>700</tt>.</p>
-<dt><code>&#8211;commands-from-file</code> <font SIZE="-1">FILENAME </font>(see &quot;customize&quot; below)</p>
-<dd> Read the customize commands from a file, one (and its arguments) each line. </p>
+<dt><code>&#8211;commands-from-file</code> <font SIZE="-1">FILENAME </font>(see &quot;customize&quot; below)</dt>
+<dd> Read the customize commands from a file, one (and its arguments) each line. </dd>
 <p> Each line contains a single customization command and its arguments, for example: </p>
 <pre>
  delete /some/file
@@ -155,157 +155,154 @@ virt - sysprep[--options] - d domname virt - sysprep[--options] - a disk.img[-a 
    s/^OPT=.*/OPT=ok/
 </pre>
 <p> The commands are handled in the same order as they are in the file, as if they were specified as <i>&#8211;delete /some/file</i> on the command line.</p>
-<dt><code>&#8211;copy</code> <font SIZE="-1">SOURCE:DEST </font>(see &quot;customize&quot; below)</p>
-<dd> Copy files or directories recursively inside the guest. </p>
+<dt><code>&#8211;copy</code> <font SIZE="-1">SOURCE:DEST </font>(see &quot;customize&quot; below)</dt>
+<dd> Copy files or directories recursively inside the guest. </dd>
 <p> Wildcards cannot be used.</p>
-<dt><code>&#8211;copy-in</code> <font SIZE="-1">LOCALPATH:REMOTEDIR </font>(see &quot;customize&quot; below)</p>
-<dd> Copy local files or directories recursively into the disk image, placing them in the directory <tt>&quot;REMOTEDIR&quot;</tt> (which must exist). </p>
+<dt><code>&#8211;copy-in</code> <font SIZE="-1">LOCALPATH:REMOTEDIR </font>(see &quot;customize&quot; below)</dt>
+<dd> Copy local files or directories recursively into the disk image, placing them in the directory <tt>&quot;REMOTEDIR&quot;</tt> (which must exist). </dd>
 <p> Wildcards cannot be used.</p>
-<dt><code>&#8211;delete</code> <font SIZE="-1">PATH </font>(see &quot;customize&quot; below)</p>
-<dd> Delete a file from the guest. Or delete a directory (and all its contents, recursively). </p>
+<dt><code>&#8211;delete</code> <font SIZE="-1">PATH </font>(see &quot;customize&quot; below)</dt>
+<dd> Delete a file from the guest. Or delete a directory (and all its contents, recursively). </dd>
 <p> You can use shell glob characters in the specified path. Be careful to escape glob characters from the host shell, if that is required. For example: </p>
 <pre>
  virt-customize --delete '/var/log/*.log'.
 </pre>
 <p> See also: <i>&#8211;upload</i>, <i>&#8211;scrub</i>.</p>
-<dt><code>&#8211;edit</code> <font SIZE="-1">FILE:EXPR </font>(see &quot;customize&quot; below)</p>
-<dd> Edit <tt>&quot;FILE&quot;</tt> using the Perl expression <tt>&quot;EXPR&quot;</tt>. </p>
+<dt><code>&#8211;edit</code> <font SIZE="-1">FILE:EXPR </font>(see &quot;customize&quot; below)</dt>
+<dd> Edit <tt>&quot;FILE&quot;</tt> using the Perl expression <tt>&quot;EXPR&quot;</tt>. </dd>
 <p> Be careful to properly quote the expression to prevent it from being altered by the shell. </p>
 <p> Note that this option is only available when Perl 5 is installed. </p>
 <p> See &#8220;NON-INTERACTIVE <font SIZE="-1">EDITING&#8221;</font> in <i><a href="/docs/linux/man/1-virt-edit/">virt-edit</a></i>(1).</p>
-<dt><code>&#8211;firstboot</code> <font SIZE="-1">SCRIPT </font>(see &quot;customize&quot; below)</p>
-<dd> Install <tt>&quot;SCRIPT&quot;</tt> inside the guest, so that when the guest first boots up, the script runs (as root, late in the boot process). </p>
+<dt><code>&#8211;firstboot</code> <font SIZE="-1">SCRIPT </font>(see &quot;customize&quot; below)</dt>
+<dd> Install <tt>&quot;SCRIPT&quot;</tt> inside the guest, so that when the guest first boots up, the script runs (as root, late in the boot process). </dd>
 <p> The script is automatically chmod +x after installation in the guest. </p>
 <p> The alternative version <i>&#8211;firstboot-command</i> is the same, but it conveniently wraps the command up in a single line script for you. </p>
 <p> You can have multiple <i>&#8211;firstboot</i> options. They run in the same order that they appear on the command line. </p>
 <p> Please take a look at &#8220;<font SIZE="-1">FIRST BOOT SCRIPTS&#8221;</font> in <i><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></i>(1) for more information and caveats about the first boot scripts. </p>
 <p> See also <i>&#8211;run</i>.</p>
-<dt><code>&#8211;firstboot-command</code> &#8216;<font SIZE="-1">CMD+ARGS</font>&#8216; (see &quot;customize&quot; below)</p>
-<dd> Run command (and arguments) inside the guest when the guest first boots up (as root, late in the boot process). </p>
+<dt><code>&#8211;firstboot-command</code> &#8216;<font SIZE="-1">CMD+ARGS</font>&#8216; (see &quot;customize&quot; below)</dt>
+<dd> Run command (and arguments) inside the guest when the guest first boots up (as root, late in the boot process). </dd>
 <p> You can have multiple <i>&#8211;firstboot</i> options. They run in the same order that they appear on the command line. </p>
 <p> Please take a look at &#8220;<font SIZE="-1">FIRST BOOT SCRIPTS&#8221;</font> in <i><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></i>(1) for more information and caveats about the first boot scripts. </p>
 <p> See also <i>&#8211;run</i>.</p>
-<dt><code>&#8211;firstboot-install</code> <font SIZE="-1">PKG,PKG.. </font>(see &quot;customize&quot; below)</p>
-<dd> Install the named packages (a comma-separated list). These are installed when the guest first boots using the guest&#8217;s package manager (eg. apt, yum, etc.) and the guest&#8217;s network connection. </p>
+<dt><code>&#8211;firstboot-install</code> <font SIZE="-1">PKG,PKG.. </font>(see &quot;customize&quot; below)</dt>
+<dd> Install the named packages (a comma-separated list). These are installed when the guest first boots using the guest&#8217;s package manager (eg. apt, yum, etc.) and the guest&#8217;s network connection. </dd>
 <p> For an overview on the different ways to install packages, see &#8220;<font SIZE="-1">INSTALLING PACKAGES&#8221;</font> in <i><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></i>(1).</p>
-<dt><code>&#8211;hostname</code> <font SIZE="-1">HOSTNAME </font>(see &quot;customize&quot; below)</p>
-<dd> Set the hostname of the guest to <tt>&quot;HOSTNAME&quot;</tt>. You can use a dotted hostname.domainname (<font SIZE="-1">FQDN</font>) if you want.</p>
-<dt><code>&#8211;install</code> <font SIZE="-1">PKG,PKG.. </font>(see &quot;customize&quot; below)</p>
-<dd> Install the named packages (a comma-separated list). These are installed during the image build using the guest&#8217;s package manager (eg. apt, yum, etc.) and the host&#8217;s network connection. </p>
+<dt><code>&#8211;hostname</code> <font SIZE="-1">HOSTNAME </font>(see &quot;customize&quot; below)</dt>
+<dd> Set the hostname of the guest to <tt>&quot;HOSTNAME&quot;</tt>. You can use a dotted hostname.domainname (<font SIZE="-1">FQDN</font>) if you want.</dd>
+<dt><code>&#8211;install</code> <font SIZE="-1">PKG,PKG.. </font>(see &quot;customize&quot; below)</dt>
+<dd> Install the named packages (a comma-separated list). These are installed during the image build using the guest&#8217;s package manager (eg. apt, yum, etc.) and the host&#8217;s network connection. </dd>
 <p> For an overview on the different ways to install packages, see &#8220;<font SIZE="-1">INSTALLING PACKAGES&#8221;</font> in <i><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></i>(1). </p>
 <p> See also <i>&#8211;update</i>, <i>&#8211;uninstall</i>.</p>
-<dt><code>&#8211;keep-user-accounts</code> <font SIZE="-1">USERS </font>(see &quot;user-account&quot; below)</p>
-<dd> The user accounts to be kept in the guest. The value of this option is a list of user names separated by comma, where specifying an user means it is going to be kept. For example: </p>
+<dt><code>&#8211;keep-user-accounts</code> <font SIZE="-1">USERS </font>(see &quot;user-account&quot; below)</dt>
+<dd> The user accounts to be kept in the guest. The value of this option is a list of user names separated by comma, where specifying an user means it is going to be kept. For example: </dd>
 <pre>
  --keep-user-accounts mary
 </pre>
 <p> would keep the user account <tt>&quot;mary&quot;</tt>. </p>
 <p> This option can be specified multiple times.</p>
-<dt><code>&#8211;link</code> TARGET:LINK[:LINK..] (see &quot;customize&quot; below)</p>
-<dd> Create symbolic link(s) in the guest, starting at <tt>&quot;LINK&quot;</tt> and pointing at <tt>&quot;TARGET&quot;</tt>.</p>
-<dt><code>&#8211;mkdir</code> <font SIZE="-1">DIR </font>(see &quot;customize&quot; below)</p>
-<dd> Create a directory in the guest. </p>
+<dt><code>&#8211;link</code> TARGET:LINK[:LINK..] (see &quot;customize&quot; below)</dt>
+<dd> Create symbolic link(s) in the guest, starting at <tt>&quot;LINK&quot;</tt> and pointing at <tt>&quot;TARGET&quot;</tt>.</dd>
+<dt><code>&#8211;mkdir</code> <font SIZE="-1">DIR </font>(see &quot;customize&quot; below)</dt>
+<dd> Create a directory in the guest. </dd>
 <p> This uses <tt>&quot;mkdir -p&quot;</tt> so any intermediate directories are created, and it also works if the directory already exists.</p>
-<dt><code>&#8211;move</code> <font SIZE="-1">SOURCE:DEST </font>(see &quot;customize&quot; below)</p>
-<dd> Move files or directories inside the guest. </p>
+<dt><code>&#8211;move</code> <font SIZE="-1">SOURCE:DEST </font>(see &quot;customize&quot; below)</dt>
+<dd> Move files or directories inside the guest. </dd>
 <p> Wildcards cannot be used.</p>
-<dt><code>&#8211;no-logfile</code> (see &quot;customize&quot; below)</p>
-<dd> Scrub <tt>&quot;builder.log&quot;</tt> (log file from build commands) from the image after building is complete. If you don&#8217;t want to reveal precisely how the image was built, use this option. </p>
+<dt><code>&#8211;no-logfile</code> (see &quot;customize&quot; below)</dt>
+<dd> Scrub <tt>&quot;builder.log&quot;</tt> (log file from build commands) from the image after building is complete. If you don&#8217;t want to reveal precisely how the image was built, use this option. </dd>
 <p> See also: &#8220;<font SIZE="-1">LOG FILE&#8221;</font>.</p>
-<dt><code>&#8211;password</code> <font SIZE="-1">USER:SELECTOR </font>(see &quot;customize&quot; below)</p>
-<dd> Set the password for <tt>&quot;USER&quot;</tt>. (Note this option does <i>not</i> create the user account). </p>
+<dt><code>&#8211;password</code> <font SIZE="-1">USER:SELECTOR </font>(see &quot;customize&quot; below)</dt>
+<dd> Set the password for <tt>&quot;USER&quot;</tt>. (Note this option does <i>not</i> create the user account). </dd>
 <p> See &#8220;<font SIZE="-1">USERS AND PASSWORDS&#8221;</font> in <i><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></i>(1) for the format of the <tt>&quot;SELECTOR&quot;</tt> field, and also how to set up user accounts.</p>
-<dt><code>&#8211;password-crypto</code> md5|sha256|sha512 (see &quot;customize&quot; below)</p>
-<dd> When the virt tools change or set a password in the guest, this option sets the password encryption of that password to <tt>&quot;md5&quot;</tt>, <tt>&quot;sha256&quot;</tt> or <tt>&quot;sha512&quot;</tt>. </p>
+<dt><code>&#8211;password-crypto</code> md5|sha256|sha512 (see &quot;customize&quot; below)</dt>
+<dd> When the virt tools change or set a password in the guest, this option sets the password encryption of that password to <tt>&quot;md5&quot;</tt>, <tt>&quot;sha256&quot;</tt> or <tt>&quot;sha512&quot;</tt>. </dd>
 <p> <tt>&quot;sha256&quot;</tt> and <tt>&quot;sha512&quot;</tt> require glibc ≥ 2.7 (check <i><a href="/docs/linux/man/3-crypt/">crypt</a></i>(3) inside the guest). </p>
 <p> <tt>&quot;md5&quot;</tt> will work with relatively old Linux guests (eg. <font SIZE="-1">RHEL 3</font>), but is not secure against modern attacks. </p>
 <p> The default is <tt>&quot;sha512&quot;</tt> unless libguestfs detects an old guest that didn&#8217;t have support for <font SIZE="-1">SHA-512,</font> in which case it will use <tt>&quot;md5&quot;</tt>. You can override libguestfs by specifying this option. </p>
 <p> Note this does not change the default password encryption used by the guest when you create new user accounts inside the guest. If you want to do that, then you should use the <i>&#8211;edit</i> option to modify <tt>&quot;/etc/sysconfig/authconfig&quot;</tt> (Fedora, <font SIZE="-1">RHEL</font>) or <tt>&quot;/etc/pam.d/common-password&quot;</tt> (Debian, Ubuntu).</p>
-<dt><code>&#8211;remove-user-accounts</code> <font SIZE="-1">USERS </font>(see &quot;user-account&quot; below)</p>
-<dd> The user accounts to be removed from the guest. The value of this option is a list of user names separated by comma, where specifying an user means it is going to be removed. For example: </p>
+<dt><code>&#8211;remove-user-accounts</code> <font SIZE="-1">USERS </font>(see &quot;user-account&quot; below)</dt>
+<dd> The user accounts to be removed from the guest. The value of this option is a list of user names separated by comma, where specifying an user means it is going to be removed. For example: </dd>
 <pre>
  --remove-user-accounts bob,eve
 </pre>
 <p> would only remove the user accounts <tt>&quot;bob&quot;</tt> and <tt>&quot;eve&quot;</tt>. </p>
 <p> This option can be specified multiple times.</p>
-<dt><code>&#8211;root-password</code> <font SIZE="-1">SELECTOR </font>(see &quot;customize&quot; below)</p>
-<dd> Set the root password. </p>
+<dt><code>&#8211;root-password</code> <font SIZE="-1">SELECTOR </font>(see &quot;customize&quot; below)</dt>
+<dd> Set the root password. </dd>
 <p> See &#8220;<font SIZE="-1">USERS AND PASSWORDS&#8221;</font> in <i><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></i>(1) for the format of the <tt>&quot;SELECTOR&quot;</tt> field, and also how to set up user accounts. </p>
 <p> Note: In virt-builder, if you <i>don&#8217;t</i> set <i>&#8211;root-password</i> then the guest is given a <i>random</i> root password.</p>
-<dt><code>&#8211;run</code> <font SIZE="-1">SCRIPT </font>(see &quot;customize&quot; below)</p>
-<dd> Run the shell script (or any program) called <tt>&quot;SCRIPT&quot;</tt> on the disk image. The script runs virtualized inside a small appliance, chrooted into the guest filesystem. </p>
+<dt><code>&#8211;run</code> <font SIZE="-1">SCRIPT </font>(see &quot;customize&quot; below)</dt>
+<dd> Run the shell script (or any program) called <tt>&quot;SCRIPT&quot;</tt> on the disk image. The script runs virtualized inside a small appliance, chrooted into the guest filesystem. </dd>
 <p> The script is automatically chmod +x. </p>
 <p> If libguestfs supports it then a limited network connection is available but it only allows outgoing network connections. You can also attach data disks (eg. <font SIZE="-1">ISO</font> files) as another way to provide data (eg. software packages) to the script without needing a network connection (<i>&#8211;attach</i>). You can also upload data files (<i>&#8211;upload</i>). </p>
 <p> You can have multiple <i>&#8211;run</i> options. They run in the same order that they appear on the command line. </p>
 <p> See also: <i>&#8211;firstboot</i>, <i>&#8211;attach</i>, <i>&#8211;upload</i>.</p>
-<dt><code>&#8211;run-command</code> &#8216;<font SIZE="-1">CMD+ARGS</font>&#8216; (see &quot;customize&quot; below)</p>
-<dd> Run the command and arguments on the disk image. The command runs virtualized inside a small appliance, chrooted into the guest filesystem. </p>
+<dt><code>&#8211;run-command</code> &#8216;<font SIZE="-1">CMD+ARGS</font>&#8216; (see &quot;customize&quot; below)</dt>
+<dd> Run the command and arguments on the disk image. The command runs virtualized inside a small appliance, chrooted into the guest filesystem. </dd>
 <p> If libguestfs supports it then a limited network connection is available but it only allows outgoing network connections. You can also attach data disks (eg. <font SIZE="-1">ISO</font> files) as another way to provide data (eg. software packages) to the script without needing a network connection (<i>&#8211;attach</i>). You can also upload data files (<i>&#8211;upload</i>). </p>
 <p> You can have multiple <i>&#8211;run-command</i> options. They run in the same order that they appear on the command line. </p>
 <p> See also: <i>&#8211;firstboot</i>, <i>&#8211;attach</i>, <i>&#8211;upload</i>.</p>
-<dt><code>&#8211;script</code> <font SIZE="-1">SCRIPT </font>(see &quot;script&quot; below)</p>
-<dd> Run the named <tt>&quot;SCRIPT&quot;</tt> (a shell script or program) against the guest. The script can be any program on the host. The script&#8217;s current directory will be the guest&#8217;s root directory. </p>
+<dt><code>&#8211;script</code> <font SIZE="-1">SCRIPT </font>(see &quot;script&quot; below)</dt>
+<dd> Run the named <tt>&quot;SCRIPT&quot;</tt> (a shell script or program) against the guest. The script can be any program on the host. The script&#8217;s current directory will be the guest&#8217;s root directory. </dd>
 <p> <code>Note:</code> If the script is not on the <tt>$PATH</tt>, then you must give the full absolute path to the script.</p>
-<dt><code>&#8211;scriptdir</code> <font SIZE="-1">SCRIPTDIR </font>(see &quot;script&quot; below)</p>
-<dd> The mount point (an empty directory on the host) used when the <tt>&quot;script&quot;</tt> operation is enabled and one or more scripts are specified using <i>&#8211;script</i> parameter(s). </p>
+<dt><code>&#8211;scriptdir</code> <font SIZE="-1">SCRIPTDIR </font>(see &quot;script&quot; below)</dt>
+<dd> The mount point (an empty directory on the host) used when the <tt>&quot;script&quot;</tt> operation is enabled and one or more scripts are specified using <i>&#8211;script</i> parameter(s). </dd>
 <p> <code>Note:</code> <tt>&quot;SCRIPTDIR&quot;</tt> <code>must</code> be an absolute path. </p>
 <p> If <i>&#8211;scriptdir</i> is not specified then a temporary mountpoint will be created.</p>
-<dt><code>&#8211;scrub</code> <font SIZE="-1">FILE </font>(see &quot;customize&quot; below)</p>
-<dd> Scrub a file from the guest. This is like <i>&#8211;delete</i> except that:</p>
+<dt><code>&#8211;scrub</code> <font SIZE="-1">FILE </font>(see &quot;customize&quot; below)</dt>
+<dd> Scrub a file from the guest. This is like <i>&#8211;delete</i> except that:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> It scrubs the data so a guest could not recover it.</p>
-<dt>&bull;</p>
-<dd> It cannot delete directories, only regular files.</dl>
+<dt>&bull;</dt>
+<dd> It scrubs the data so a guest could not recover it.</dd>
+<dt>&bull;</dt>
+<dd> It cannot delete directories, only regular files.</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;selinux-relabel</code> (see &quot;customize&quot; below)</p>
-<dd> Relabel files in the guest so that they have the correct SELinux label. </p>
+</dl>
+<dt><code>&#8211;selinux-relabel</code> (see &quot;customize&quot; below)</dt>
+<dd> Relabel files in the guest so that they have the correct SELinux label. </dd>
 <p> This will attempt to relabel files immediately, but if the operation fails this will instead touch <i>/.autorelabel</i> on the image to schedule a relabel operation for the next time the image boots. </p>
 <p> You should only use this option for guests which support SELinux.</p>
-<dt><code>&#8211;sm-attach</code> <font SIZE="-1">SELECTOR </font>(see &quot;customize&quot; below)</p>
-<dd> Attach to a pool using <tt>&quot;subscription-manager&quot;</tt>. </p>
+<dt><code>&#8211;sm-attach</code> <font SIZE="-1">SELECTOR </font>(see &quot;customize&quot; below)</dt>
+<dd> Attach to a pool using <tt>&quot;subscription-manager&quot;</tt>. </dd>
 <p> See &#8220;SUBSCRIPTION-MANAGER&#8221; in <i><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></i>(1) for the format of the <tt>&quot;SELECTOR&quot;</tt> field.</p>
-<dt><code>&#8211;sm-credentials</code> <font SIZE="-1">SELECTOR </font>(see &quot;customize&quot; below)</p>
-<dd> Set the credentials for <tt>&quot;subscription-manager&quot;</tt>. </p>
+<dt><code>&#8211;sm-credentials</code> <font SIZE="-1">SELECTOR </font>(see &quot;customize&quot; below)</dt>
+<dd> Set the credentials for <tt>&quot;subscription-manager&quot;</tt>. </dd>
 <p> See &#8220;SUBSCRIPTION-MANAGER&#8221; in <i><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></i>(1) for the format of the <tt>&quot;SELECTOR&quot;</tt> field.</p>
-<dt><code>&#8211;sm-register</code> (see &quot;customize&quot; below)</p>
-<dd> Register the guest using <tt>&quot;subscription-manager&quot;</tt>. </p>
+<dt><code>&#8211;sm-register</code> (see &quot;customize&quot; below)</dt>
+<dd> Register the guest using <tt>&quot;subscription-manager&quot;</tt>. </dd>
 <p> This requires credentials being set using <i>&#8211;sm-credentials</i>.</p>
-<dt><code>&#8211;sm-remove</code> (see &quot;customize&quot; below)</p>
-<dd> Remove all the subscriptions from the guest using <tt>&quot;subscription-manager&quot;</tt>.</p>
-<dt><code>&#8211;sm-unregister</code> (see &quot;customize&quot; below)</p>
-<dd> Unregister the guest using <tt>&quot;subscription-manager&quot;</tt>.</p>
-<dt><code>&#8211;ssh-inject</code> USER[:SELECTOR] (see &quot;customize&quot; below)</p>
-<dd> Inject an ssh key so the given <tt>&quot;USER&quot;</tt> will be able to log in over ssh without supplying a password. The <tt>&quot;USER&quot;</tt> must exist already in the guest. </p>
+<dt><code>&#8211;sm-remove</code> (see &quot;customize&quot; below)</dt>
+<dd> Remove all the subscriptions from the guest using <tt>&quot;subscription-manager&quot;</tt>.</dd>
+<dt><code>&#8211;sm-unregister</code> (see &quot;customize&quot; below)</dt>
+<dd> Unregister the guest using <tt>&quot;subscription-manager&quot;</tt>.</dd>
+<dt><code>&#8211;ssh-inject</code> USER[:SELECTOR] (see &quot;customize&quot; below)</dt>
+<dd> Inject an ssh key so the given <tt>&quot;USER&quot;</tt> will be able to log in over ssh without supplying a password. The <tt>&quot;USER&quot;</tt> must exist already in the guest. </dd>
 <p> See &#8220;<font SIZE="-1">SSH KEYS&#8221;</font> in <i><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></i>(1) for the format of the <tt>&quot;SELECTOR&quot;</tt> field. </p>
 <p> You can have multiple <i>&#8211;ssh-inject</i> options, for different users and also for more keys for each user.</p>
-<dt><code>&#8211;timezone</code> <font SIZE="-1">TIMEZONE </font>(see &quot;customize&quot; below)</p>
-<dd> Set the default timezone of the guest to <tt>&quot;TIMEZONE&quot;</tt>. Use a location string like <tt>&quot;Europe/London&quot;</tt></p>
-<dt><code>&#8211;touch</code> <font SIZE="-1">FILE </font>(see &quot;customize&quot; below)</p>
-<dd> This command performs a <i><a href="/docs/linux/man/1-touch/">touch</a></i>(1)-like operation on <tt>&quot;FILE&quot;</tt>.</p>
-<dt><code>&#8211;truncate</code> <font SIZE="-1">FILE </font>(see &quot;customize&quot; below)</p>
-<dd> This command truncates <tt>&quot;FILE&quot;</tt> to a zero-length file. The file must exist already.</p>
-<dt><code>&#8211;truncate-recursive</code> <font SIZE="-1">PATH </font>(see &quot;customize&quot; below)</p>
-<dd> This command recursively truncates all files under <tt>&quot;PATH&quot;</tt> to zero-length.</p>
-<dt><code>&#8211;uninstall</code> <font SIZE="-1">PKG,PKG.. </font>(see &quot;customize&quot; below)</p>
-<dd> Uninstall the named packages (a comma-separated list). These are removed during the image build using the guest&#8217;s package manager (eg. apt, yum, etc.). Dependent packages may also need to be uninstalled to satisfy the request. </p>
+<dt><code>&#8211;timezone</code> <font SIZE="-1">TIMEZONE </font>(see &quot;customize&quot; below)</dt>
+<dd> Set the default timezone of the guest to <tt>&quot;TIMEZONE&quot;</tt>. Use a location string like <tt>&quot;Europe/London&quot;</tt></dd>
+<dt><code>&#8211;touch</code> <font SIZE="-1">FILE </font>(see &quot;customize&quot; below)</dt>
+<dd> This command performs a <i><a href="/docs/linux/man/1-touch/">touch</a></i>(1)-like operation on <tt>&quot;FILE&quot;</tt>.</dd>
+<dt><code>&#8211;truncate</code> <font SIZE="-1">FILE </font>(see &quot;customize&quot; below)</dt>
+<dd> This command truncates <tt>&quot;FILE&quot;</tt> to a zero-length file. The file must exist already.</dd>
+<dt><code>&#8211;truncate-recursive</code> <font SIZE="-1">PATH </font>(see &quot;customize&quot; below)</dt>
+<dd> This command recursively truncates all files under <tt>&quot;PATH&quot;</tt> to zero-length.</dd>
+<dt><code>&#8211;uninstall</code> <font SIZE="-1">PKG,PKG.. </font>(see &quot;customize&quot; below)</dt>
+<dd> Uninstall the named packages (a comma-separated list). These are removed during the image build using the guest&#8217;s package manager (eg. apt, yum, etc.). Dependent packages may also need to be uninstalled to satisfy the request. </dd>
 <p> See also <i>&#8211;install</i>, <i>&#8211;update</i>.</p>
-<dt><code>&#8211;update</code> (see &quot;customize&quot; below)</p>
-<dd> Do the equivalent of <tt>&quot;yum update&quot;</tt>, <tt>&quot;apt-get upgrade&quot;</tt>, or whatever command is required to update the packages already installed in the template to their latest versions. </p>
+<dt><code>&#8211;update</code> (see &quot;customize&quot; below)</dt>
+<dd> Do the equivalent of <tt>&quot;yum update&quot;</tt>, <tt>&quot;apt-get upgrade&quot;</tt>, or whatever command is required to update the packages already installed in the template to their latest versions. </dd>
 <p> See also <i>&#8211;install</i>, <i>&#8211;uninstall</i>.</p>
-<dt><code>&#8211;upload</code> <font SIZE="-1">FILE:DEST </font>(see &quot;customize&quot; below)</p>
-<dd> Upload local file <tt>&quot;FILE&quot;</tt> to destination <tt>&quot;DEST&quot;</tt> in the disk image. File owner and permissions from the original are preserved, so you should set them to what you want them to be in the disk image. </p>
+<dt><code>&#8211;upload</code> <font SIZE="-1">FILE:DEST </font>(see &quot;customize&quot; below)</dt>
+<dd> Upload local file <tt>&quot;FILE&quot;</tt> to destination <tt>&quot;DEST&quot;</tt> in the disk image. File owner and permissions from the original are preserved, so you should set them to what you want them to be in the disk image. </dd>
 <p> <tt>&quot;DEST&quot;</tt> could be the final filename. This can be used to rename the file on upload. </p>
 <p> If <tt>&quot;DEST&quot;</tt> is a directory name (which must already exist in the guest) then the file is uploaded into that directory, and it keeps the same name as on the local filesystem. </p>
 <p> See also: <i>&#8211;mkdir</i>, <i>&#8211;delete</i>, <i>&#8211;scrub</i>.</p>
-<dt><code>&#8211;write</code> <font SIZE="-1">FILE:CONTENT </font>(see &quot;customize&quot; below)</p>
-<dd> Write <tt>&quot;CONTENT&quot;</tt> to <tt>&quot;FILE&quot;</tt>.</dl>
+<dt><code>&#8211;write</code> <font SIZE="-1">FILE:CONTENT </font>(see &quot;customize&quot; below)</dt>
+<dd> Write <tt>&quot;CONTENT&quot;</tt> to <tt>&quot;FILE&quot;</tt>.</dd></dl>
 <h2>OPERATIONS</h2>
 <p> If the <i>&#8211;enable</i>/<i>&#8211;operations</i> option is <i>not</i> given, then most sysprep operations are enabled. </p>
 <p> Use <tt>&quot;virt-sysprep --list-operations&quot;</tt> to list all operations for your virt-sysprep binary. The ones which are enabled by default are marked with a <tt>&quot;*&quot;</tt> character. Regardless of the <i>&#8211;enable</i>/<i>&#8211;operations</i> options, sysprep operations are skipped for some guest types. </p>
@@ -510,46 +507,40 @@ virt - sysprep[--options] - d domname virt - sysprep[--options] - a disk.img[-a 
 <p> Virt-sysprep can be used as part of a process of cloning guests, or to prepare a template from which guests can be cloned. There are many different ways to achieve this using the virt tools, and this section is just an introduction. </p>
 <p> A virtual machine (when switched off) consists of two parts:</p>
 <dl>
-<dt><i>configuration</i></p>
-<dd> The configuration or description of the guest. eg. The libvirt <font SIZE="-1">XML </font>(see <tt>&quot;virsh dumpxml&quot;</tt>), the running configuration of the guest, or another external format like <font SIZE="-1">OVF.</font> </p>
+<dt><i>configuration</i></dt>
+<dd> The configuration or description of the guest. eg. The libvirt <font SIZE="-1">XML </font>(see <tt>&quot;virsh dumpxml&quot;</tt>), the running configuration of the guest, or another external format like <font SIZE="-1">OVF.</font> </dd>
 <p> Some configuration items that might need to be changed:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> name</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">UUID</font></p>
-<dt>&bull;</p>
-<dd> path to block device(s)</p>
-<dt>&bull;</p>
-<dd> network card <font SIZE="-1">MAC</font> address</dl>
+<dt>&bull;</dt>
+<dd> name</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">UUID</font></dd>
+<dt>&bull;</dt>
+<dd> path to block device(s)</dd>
+<dt>&bull;</dt>
+<dd> network card <font SIZE="-1">MAC</font> address</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><i>block device(s)</i></p>
-<dd> One or more hard disk images, themselves containing files, directories, applications, kernels, configuration, etc. </p>
+</dl>
+<dt><i>block device(s)</i></dt>
+<dd> One or more hard disk images, themselves containing files, directories, applications, kernels, configuration, etc. </dd>
 <p> Some things inside the block devices that might need to be changed:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> hostname and other net configuration</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">UUID</font></p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">SSH</font> host keys</p>
-<dt>&bull;</p>
-<dd> Windows unique security <font SIZE="-1">ID </font>(<font SIZE="-1">SID</font>)</p>
-<dt>&bull;</p>
-<dd> Puppet registration</dl>
+<dt>&bull;</dt>
+<dd> hostname and other net configuration</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">UUID</font></dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">SSH</font> host keys</dd>
+<dt>&bull;</dt>
+<dd> Windows unique security <font SIZE="-1">ID </font>(<font SIZE="-1">SID</font>)</dd>
+<dt>&bull;</dt>
+<dd> Puppet registration</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <h3><font SIZE="-1">COPYING THE BLOCK DEVICE</font></h3>
 <p> Starting with an original guest, you probably wish to copy the guest block device and its configuration to make a template. Then once you are happy with the template, you will want to make many clones from it. </p>
@@ -576,22 +567,22 @@ virt - sysprep[--options] - d domname virt - sysprep[--options] - a disk.img[-a 
         original guest&#8211; &#8212; &gt; template &#8212; &#8212; &#8212; &#8212;&gt;copied&#8211; &#8212; &#8212; &gt; custom<br />
         template guest</p>
 <dl>
-<dt>&bull;</p>
-<dd> Create a snapshot using qemu-img: </p>
+<dt>&bull;</dt>
+<dd> Create a snapshot using qemu-img: </dd>
 <pre>
  qemu-img create -f qcow2 -o backing_file=original snapshot.qcow
 </pre>
 <p> The advantage is that you don&#8217;t need to copy the original (very fast) and only changes are stored (less storage required). </p>
 <p> Note that writing to the backing file once you have created guests on top of it is not possible: you will corrupt the guests.</p>
-<dt>&bull;</p>
-<dd> Create a snapshot using <tt>&quot;lvcreate --snapshot&quot;</tt>.</p>
-<dt>&bull;</p>
-<dd> Other ways to create snapshots include using filesystems-level tools (for filesystems such as btrfs). </p>
+<dt>&bull;</dt>
+<dd> Create a snapshot using <tt>&quot;lvcreate --snapshot&quot;</tt>.</dd>
+<dt>&bull;</dt>
+<dd> Other ways to create snapshots include using filesystems-level tools (for filesystems such as btrfs). </dd>
 <p> Most Network Attached Storage (<font SIZE="-1">NAS</font>) devices can also create cheap snapshots from files or LUNs.</p>
-<dt>&bull;</p>
-<dd> Get your <font SIZE="-1">NAS</font> to duplicate the <font SIZE="-1">LUN. </font> Most <font SIZE="-1">NAS</font> devices can also duplicate LUNs very cheaply (they copy them on-demand in the background).</p>
-<dt>&bull;</p>
-<dd> Prepare your template using <i><a href="/docs/linux/man/1-virt-sparsify/">virt-sparsify</a></i>(1). See below.</dl>
+<dt>&bull;</dt>
+<dd> Get your <font SIZE="-1">NAS</font> to duplicate the <font SIZE="-1">LUN. </font> Most <font SIZE="-1">NAS</font> devices can also duplicate LUNs very cheaply (they copy them on-demand in the background).</dd>
+<dt>&bull;</dt>
+<dd> Prepare your template using <i><a href="/docs/linux/man/1-virt-sparsify/">virt-sparsify</a></i>(1). See below.</dd></dl>
 <h3>VIRT-CLONE</h3>
 <p> A separate tool, <i><a href="/docs/linux/man/1-virt-clone/">virt-clone</a></i>(1), can be used to duplicate the block device and/or modify the external libvirt configuration of a guest. It will reset the name, <font SIZE="-1">UUID</font> and <font SIZE="-1">MAC</font> address of the guest in the libvirt <font SIZE="-1">XML.</font> </p>
 <p> <i><a href="/docs/linux/man/1-virt-clone/">virt-clone</a></i>(1) does not use libguestfs and cannot look inside the disk image. This was the original motivation to write virt-sysprep.</p>
@@ -637,21 +628,18 @@ virt - resize template -- -- -- -- -- &gt;
 <p> This program returns 0 on success, or 1 if there was an error.</p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt>&quot;VIRT_TOOLS_DATA_DIR&quot;</p>
-<dd> This can point to the directory containing data files used for Windows firstboot installation. </p>
+<dt>&quot;VIRT_TOOLS_DATA_DIR&quot;</dt>
+<dd> This can point to the directory containing data files used for Windows firstboot installation. </dd>
 <p> Normally you do not need to set this. If not set, a compiled-in default will be used (something like <i>/usr/share/virt-tools</i>). </p>
 <p> This directory may contain the following files:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><i>rhsrvany.exe</i></p>
-<dd> This is the RHSrvAny Windows binary, used to install a &#8220;firstboot&#8221; script in Windows guests. It is required if you intend to use the <i>&#8211;firstboot</i> or <i>&#8211;firstboot-command</i> options with Windows guests. </p>
+<dt><i>rhsrvany.exe</i></dt>
+<dd> This is the RHSrvAny Windows binary, used to install a &#8220;firstboot&#8221; script in Windows guests. It is required if you intend to use the <i>&#8211;firstboot</i> or <i>&#8211;firstboot-command</i> options with Windows guests. </dd>
 <p> See also: <tt>&quot;<a rel="nofollow" href="https://github.com/rwmjones/rhsrvany">https://github.com/rwmjones/rhsrvany</a>&quot;</tt></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
 <p> For other environment variables, see &#8220;<font SIZE="-1">ENVIRONMENT VARIABLES&#8221;</font> in <i>guestfs</i>(3).</p>
 <h2>SEE ALSO</h2>
@@ -671,37 +659,37 @@ virt - resize template -- -- -- -- -- &gt;
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> When reporting a bug, please supply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The version of libguestfs.</p>
-<dt>&bull;</p>
-<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</p>
-<dt>&bull;</p>
-<dd> Describe the bug accurately and give a way to reproduce it.</p>
-<dt>&bull;</p>
-<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
 <h2>Index</h2>
-<dt><a href="#lbBT">COPYING AND CLONING</a></p>
+<dt><a href="#lbBT">COPYING AND CLONING</a></dt>
 <dd>
-<dt><a href="#lbBY">FIRSTBOOT VS SCRIPT</a></p>
+</dd><dt><a href="#lbBY">FIRSTBOOT VS SCRIPT</a></dt>
 <dd>
-<dt><a href="#lbBZ">SECURITY</a></p>
+</dd><dt><a href="#lbBZ">SECURITY</a></dt>
 <dd>
-<dt><a href="#lbCB">SELINUX</a></p>
+</dd><dt><a href="#lbCB">SELINUX</a></dt>
 <dd>
-<dt><a href="#lbCC">WINDOWS 8</a></p>
+</dd><dt><a href="#lbCC">WINDOWS 8</a></dt>
 <dd>
-<dt><a href="#lbCD">EXIT STATUS</a></p>
+</dd><dt><a href="#lbCD">EXIT STATUS</a></dt>
 <dd>
-<dt><a href="#lbCE">ENVIRONMENT VARIABLES</a></p>
+</dd><dt><a href="#lbCE">ENVIRONMENT VARIABLES</a></dt>
 <dd>
-<dt><a href="#lbCF">SEE ALSO</a></p>
+</dd><dt><a href="#lbCF">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbCG">AUTHORS</a></p>
+</dd><dt><a href="#lbCG">AUTHORS</a></dt>
 <dd>
-<dt><a href="#lbCH">COPYRIGHT</a></p>
+</dd><dt><a href="#lbCH">COPYRIGHT</a></dt>
 <dd>
-<dt><a href="#lbCI">LICENSE</a></p>
+</dd><dt><a href="#lbCI">LICENSE</a></dt>
 <dd>
-<dt><a href="#lbCJ">BUGS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbCJ">BUGS</a></dt>
+<dd></dd></dl>

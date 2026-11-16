@@ -24,10 +24,10 @@ description: "dlahr2.f –"
  Q**T * A * Q. The routine returns the matrices V and T which determine
  Q as a block reflector I - V*T*V**T, and also the matrix Y = A * V * T.
  This is an auxiliary routine called by DGEHRD.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>N</i> </p>
+<dd><i>N</i> </dd>
 <pre> N is INTEGER
  The order of the matrix A.</pre>
 <p><i>K</i> </p>
@@ -69,13 +69,13 @@ description: "dlahr2.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
@@ -107,11 +107,11 @@ description: "dlahr2.f –"
  Gejin. Note that the entries of A(1:K,2:NB) differ from those
  returned by the original LAPACK-3.0's DLAHRD routine. (This
  subroutine is not backward compatible with LAPACK-3.0's DLAHRD.)</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>References: </code></p>
 <dl COMPACT>
 <dd>Gregorio Quintana-Orti and Robert van de Geijn, &#8216;Improving the<br />
-&nbsp;<wbr>&nbsp;<wbr>performance of reduction to Hessenberg form,&#8217;&nbsp;<wbr>ACM Transactions on Mathematical Software,&nbsp;<wbr>32(2):180-194, June 2006.&nbsp;<wbr></dl>
+&nbsp;<wbr>&nbsp;<wbr>performance of reduction to Hessenberg form,&#8217;&nbsp;<wbr>ACM Transactions on Mathematical Software,&nbsp;<wbr>32(2):180-194, June 2006.&nbsp;<wbr></dd></dl>
 <p> Definition at line 182 of file dlahr2.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

@@ -19,10 +19,10 @@ description: "vimtutor – the Vim tutor"
 <p> <code>Vim</code> is always started in Vi compatible mode.</p>
 <h2>FILES</h2>
 <dl>
-<dt>/usr/share/vim/vim81/tutor/tutor[.language]</p>
-<dd> The <code>Vimtutor</code> text file(s).</p>
-<dt>/usr/share/vim/vim81/tutor/tutor.vim</p>
-<dd> The Vim script used to copy the <code>Vimtutor</code> text file.</dl>
+<dt>/usr/share/vim/vim81/tutor/tutor[.language]</dt>
+<dd> The <code>Vimtutor</code> text file(s).</dd>
+<dt>/usr/share/vim/vim81/tutor/tutor.vim</dt>
+<dd> The Vim script used to copy the <code>Vimtutor</code> text file.</dd></dl>
 <h2>AUTHOR</h2>
 <p> The <code>Vimtutor</code> was originally written for Vi by Michael C. Pierce and Robert K. Ware, Colorado School of Mines using ideas supplied by Charles Smith, Colorado State University. E-mail: bware [at] mines.colorado.edu.<br />
  It was modified for <code>Vim</code> by Bram Moolenaar. For the names of the translators see the tutor files.</p>

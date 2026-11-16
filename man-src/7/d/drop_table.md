@@ -15,14 +15,14 @@ description: "DROP TABLE – remove a table"
 <p> <code>DROP TABLE</code> always removes any indexes, rules, triggers, and constraints that exist for the target table. However, to drop a table that is referenced by a view or a foreign-key constraint of another table, CASCADE must be specified. (CASCADE will remove a dependent view entirely, but in the foreign-key case it will only remove the foreign-key constraint, not the other table entirely.)</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>IF EXISTS</code></p>
-<dd>Do not throw an error if the table does not exist. A notice is issued in this case.</p>
-<dt><i>name</i></p>
-<dd>The name (optionally schema-qualified) of the table to drop.</p>
-<dt><code>CASCADE</code></p>
-<dd>Automatically drop objects that depend on the table (such as views).</p>
-<dt><code>RESTRICT</code></p>
-<dd>Refuse to drop the table if any objects depend on it. This is the default.</dl>
+<dt><code>IF EXISTS</code></dt>
+<dd>Do not throw an error if the table does not exist. A notice is issued in this case.</dd>
+<dt><i>name</i></dt>
+<dd>The name (optionally schema-qualified) of the table to drop.</dd>
+<dt><code>CASCADE</code></dt>
+<dd>Automatically drop objects that depend on the table (such as views).</dd>
+<dt><code>RESTRICT</code></dt>
+<dd>Refuse to drop the table if any objects depend on it. This is the default.</dd></dl>
 <h2>Examples</h2>
 <p>To destroy two tables, films and distributors: </p>
 <pre>DROP TABLE films, distributors;</pre>

@@ -17,7 +17,7 @@ url: "/docs/linux/man/1-fi_pingpong/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 &amp;nbsp;
 fi_pingpong &amp;nbsp;
 [OPTIONS] &amp; nbsp;
@@ -52,7 +52,7 @@ fi_pingpong &amp;nbsp;
 &amp;nbsp;
 &amp;nbsp;
 connect to server
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -74,17 +74,17 @@ connect to server
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 server$&nbsp;fi_pingpong
-</pre></dl>
+</pre></dd></dl>
 
 <h3>Start the client</h3>
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 client$&nbsp;fi_pingpong&nbsp;&lt;server address&gt;
-</pre></dl>
+</pre></dd></dl>
 
 <h2>OPTIONS</h2>
 
@@ -161,13 +161,13 @@ client$&nbsp;fi_pingpong&nbsp;&lt;server address&gt;
  Specifically, this will run a pingpong test with:
 <dl>
 <dt>&bull;
-<dd> usNIC provider
-<dt>&bull;
-<dd> 1000 iterations
-<dt>&bull;
-<dd> 1024 bytes message size
-<dt>&bull;
-<dd> server node as 192.168.0.123</dl>
+</dt><dd> usNIC provider
+</dd><dt>&bull;
+</dt><dd> 1000 iterations
+</dd><dt>&bull;
+</dt><dd> 1024 bytes message size
+</dd><dt>&bull;
+</dt><dd> server node as 192.168.0.123</dd></dl>
 
 <h3>A longer test</h3>
 
@@ -200,21 +200,21 @@ client$&nbsp;fi_pingpong&nbsp;&lt;server address&gt;
  Each test generates data messages which are accounted for. Specifically, the displayed statistics at the end are :
 <dl>
 <dt>&bull;
-<dd> bytes : number of bytes per message sent
-<dt>&bull;
-<dd> #sent : number of messages (ping) sent from the client to the server
-<dt>&bull;
-<dd> #ack : number of replies (pong) of the server received by the client
-<dt>&bull;
-<dd> total : amount of memory exchanged between the processes
-<dt>&bull;
-<dd> time : duration of this single test
-<dt>&bull;
-<dd> MB/sec : throughput computed from total and time
-<dt>&bull;
-<dd> usec/xfer : average time for transferring a message outbound (ping or pong) in microseconds
-<dt>&bull;
-<dd> Mxfers/sec : average amount of transfers of message outbound per second</dl>
+</dt><dd> bytes : number of bytes per message sent
+</dd><dt>&bull;
+</dt><dd> #sent : number of messages (ping) sent from the client to the server
+</dd><dt>&bull;
+</dt><dd> #ack : number of replies (pong) of the server received by the client
+</dd><dt>&bull;
+</dt><dd> total : amount of memory exchanged between the processes
+</dd><dt>&bull;
+</dt><dd> time : duration of this single test
+</dd><dt>&bull;
+</dt><dd> MB/sec : throughput computed from total and time
+</dd><dt>&bull;
+</dt><dd> usec/xfer : average time for transferring a message outbound (ping or pong) in microseconds
+</dd><dt>&bull;
+</dt><dd> Mxfers/sec : average amount of transfers of message outbound per second</dd></dl>
 
 <h2>SEE ALSO</h2>
 

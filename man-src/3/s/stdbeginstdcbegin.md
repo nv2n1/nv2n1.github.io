@@ -11,46 +11,31 @@ std::begin,std::cbegin - std::begin,std::cbegin
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;iterator&gt;
-
     template &lt;class C&gt;
     (since C++ 11)
-
         auto begin(C &amp;c) -&gt; decltype(c.begin());
 (until C++ 17)
-
     template &lt;class C&gt;
     (since C++ 17)
-
         constexpr auto begin(C &amp;c) -&gt; decltype(c.begin());
-
 template &lt;class C&gt;
 (since C++ 11)
-
     auto begin(const C &amp;c) -&gt; decltype(c.begin());
 (until C++ 17)
-
     template &lt;class C&gt;
     (since C++ 17)
-
         constexpr auto begin(const C &amp;c) -&gt; decltype(c.begin());
 (1)
-
     template &lt;class T, std::size_t N&gt;
     (since C++ 11)
-
         T *begin(T (&amp;array)[N]);
 (1)(until C++ 14)
-
     template &lt;class T, std::size_t N&gt;
     (since C++ 14)
-
         constexpr T *begin(T (&amp;array)[N]) noexcept;
 (2)
-
     template &lt;class C&gt;
-
     constexpr auto cbegin(const C &amp;c) noexcept(/* see below */)(3)(since C++ 14)
-
         -&gt; decltype(std::begin(c));</code></pre> 
 Returns an iterator to the beginning of the given container c or array array. These templates rely on C::begin() having a reasonable implementation. 
 1) Returns exactly c.begin(), which is typically an iterator to the beginning of the sequence represented by c. If C is a standard Container, this returns C::iterator when c is not const-qualified, and C::const_iterator otherwise. 
@@ -114,12 +99,9 @@ void for_each(Container &amp;&amp;cont, Function f)
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;iterator&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v = {3, 1, 4};
     auto vi = std::begin(v);

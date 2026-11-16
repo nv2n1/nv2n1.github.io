@@ -21,10 +21,10 @@ long move_pages(int pid, unsigned long count, void **pages,
 <p> <i>pid</i> is the ID of the process in which pages are to be moved. If <i>pid</i> is 0, then <code>move_pages</code>() moves pages of the calling process. </p>
 <p> To move pages in another process requires the following privileges:</p>
 <dl>
-<dt>*</p>
-<dd> In kernels up to and including Linux 4.12: the caller must be privileged (<code>CAP_SYS_NICE</code>) or the real or effective user ID of the calling process must match the real or saved-set user ID of the target process.</p>
-<dt>*</p>
-<dd> The older rules allowed the caller to discover various virtual address choices made by the kernel that could lead to the defeat of address-space-layout randomization for a process owned by the same UID as the caller, the rules were changed starting with Linux 4.13. Since Linux 4.13, permission is governed by a ptrace access mode <code>PTRACE_MODE_READ_REALCREDS</code> check with respect to the target process; see <code><a href="/docs/linux/man/2-ptrace/">ptrace</a></code>(2).</dl>
+<dt>*</dt>
+<dd> In kernels up to and including Linux 4.12: the caller must be privileged (<code>CAP_SYS_NICE</code>) or the real or effective user ID of the calling process must match the real or saved-set user ID of the target process.</dd>
+<dt>*</dt>
+<dd> The older rules allowed the caller to discover various virtual address choices made by the kernel that could lead to the defeat of address-space-layout randomization for a process owned by the same UID as the caller, the rules were changed starting with Linux 4.13. Since Linux 4.13, permission is governed by a ptrace access mode <code>PTRACE_MODE_READ_REALCREDS</code> check with respect to the target process; see <code><a href="/docs/linux/man/2-ptrace/">ptrace</a></code>(2).</dd></dl>
 <p> <i>count</i> is the number of pages to move. It defines the size of the three arrays <i>pages</i>, <i>nodes</i>, and <i>status</i>. </p>
 <p> <i>pages</i> is an array of pointers to the pages that should be moved. These are pointers that should be aligned to page boundaries. Addresses are specified as seen by the process specified by <i>pid</i>. </p>
 <p> <i>nodes</i> is an array of integers that specify the desired location for each page. Each element in the array is a node number. <i>nodes</i> can also be NULL, in which case <code>move_pages</code>() does not move any pages but instead will return the node where each page currently resides, in the <i>status</i> array. Obtaining the status of each page may be necessary to determine pages that need to be moved. </p>
@@ -33,40 +33,40 @@ long move_pages(int pid, unsigned long count, void **pages,
 <h3>Page states in the status array</h3>
 <p> The following values can be returned in each element of the <i>status</i> array.</p>
 <dl>
-<dt><code>0..MAX_NUMNODES</code></p>
-<dd> Identifies the node on which the page resides.</p>
-<dt><code>-EACCES</code></p>
-<dd> The page is mapped by multiple processes and can be moved only if <code>MPOL_MF_MOVE_ALL</code> is specified.</p>
-<dt><code>-EBUSY</code></p>
-<dd> The page is currently busy and cannot be moved. Try again later. This occurs if a page is undergoing I/O or another kernel subsystem is holding a reference to the page.</p>
-<dt><code>-EFAULT</code></p>
-<dd> This is a zero page or the memory area is not mapped by the process.</p>
-<dt><code>-EIO</code></p>
-<dd> Unable to write back a page. The page has to be written back in order to move it since the page is dirty and the filesystem does not provide a migration function that would allow the move of dirty pages.</p>
-<dt><code>-EINVAL</code></p>
-<dd> A dirty page cannot be moved. The filesystem does not provide a migration function and has no ability to write back pages.</p>
-<dt><code>-ENOENT</code></p>
-<dd> The page is not present.</p>
-<dt><code>-ENOMEM</code></p>
-<dd> Unable to allocate memory on target node.</dl>
+<dt><code>0..MAX_NUMNODES</code></dt>
+<dd> Identifies the node on which the page resides.</dd>
+<dt><code>-EACCES</code></dt>
+<dd> The page is mapped by multiple processes and can be moved only if <code>MPOL_MF_MOVE_ALL</code> is specified.</dd>
+<dt><code>-EBUSY</code></dt>
+<dd> The page is currently busy and cannot be moved. Try again later. This occurs if a page is undergoing I/O or another kernel subsystem is holding a reference to the page.</dd>
+<dt><code>-EFAULT</code></dt>
+<dd> This is a zero page or the memory area is not mapped by the process.</dd>
+<dt><code>-EIO</code></dt>
+<dd> Unable to write back a page. The page has to be written back in order to move it since the page is dirty and the filesystem does not provide a migration function that would allow the move of dirty pages.</dd>
+<dt><code>-EINVAL</code></dt>
+<dd> A dirty page cannot be moved. The filesystem does not provide a migration function and has no ability to write back pages.</dd>
+<dt><code>-ENOENT</code></dt>
+<dd> The page is not present.</dd>
+<dt><code>-ENOMEM</code></dt>
+<dd> Unable to allocate memory on target node.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> On success <code>move_pages</code>() returns zero. On error, it returns -1, and sets <i>errno</i> to indicate the error. If positive value is returned, it is the number of nonmigrated pages.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>Positive value</code></p>
-<dd> The number of nonmigrated pages if they were the result of nonfatal reasons (since Linux 4.17). <code>E2BIG</code> Too many pages to move. Since Linux 2.6.29, the kernel no longer generates this error.</p>
-<dt><code>EACCES</code></p>
-<dd> One of the target nodes is not allowed by the current cpuset.</p>
-<dt><code>EFAULT</code></p>
-<dd> Parameter array could not be accessed.</p>
-<dt><code>EINVAL</code></p>
-<dd> Flags other than <code>MPOL_MF_MOVE</code> and <code>MPOL_MF_MOVE_ALL</code> was specified or an attempt was made to migrate pages of a kernel thread.</p>
-<dt><code>ENODEV</code></p>
-<dd> One of the target nodes is not online.</p>
-<dt><code>EPERM</code></p>
-<dd> The caller specified <code>MPOL_MF_MOVE_ALL</code> without sufficient privileges (<code>CAP_SYS_NICE</code>). Or, the caller attempted to move pages of a process belonging to another user but did not have privilege to do so (<code>CAP_SYS_NICE</code>).</p>
-<dt><code>ESRCH</code></p>
-<dd> Process does not exist.</dl>
+<dt><code>Positive value</code></dt>
+<dd> The number of nonmigrated pages if they were the result of nonfatal reasons (since Linux 4.17). <code>E2BIG</code> Too many pages to move. Since Linux 2.6.29, the kernel no longer generates this error.</dd>
+<dt><code>EACCES</code></dt>
+<dd> One of the target nodes is not allowed by the current cpuset.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> Parameter array could not be accessed.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Flags other than <code>MPOL_MF_MOVE</code> and <code>MPOL_MF_MOVE_ALL</code> was specified or an attempt was made to migrate pages of a kernel thread.</dd>
+<dt><code>ENODEV</code></dt>
+<dd> One of the target nodes is not online.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The caller specified <code>MPOL_MF_MOVE_ALL</code> without sufficient privileges (<code>CAP_SYS_NICE</code>). Or, the caller attempted to move pages of a process belonging to another user but did not have privilege to do so (<code>CAP_SYS_NICE</code>).</dd>
+<dt><code>ESRCH</code></dt>
+<dd> Process does not exist.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>move_pages</code>() first appeared on Linux in version 2.6.18.</p>
 <h2>CONFORMING TO</h2>

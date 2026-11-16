@@ -10,7 +10,6 @@ description: "std::setprecision – std::setprecision"
 <p>std::setprecision &#8211; std::setprecision</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;iomanip&gt;
-
 /*unspecified*/ setprecision(int n);</code></pre>
 <p>When used in an expression out &lt;&lt; setprecision(n) or in &gt;&gt; setprecision(n), sets the precision parameter of the stream out or in to exactly n. </p>
 <h2>Parameters</h2>
@@ -21,15 +20,10 @@ description: "std::setprecision – std::setprecision"
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;limits&gt;
-
 int main()
-
 {
     const long double pi = std::acos(-1.L);
     std::cout &lt;&lt; &quot;default precision (6): &quot; &lt;&lt; pi &lt;&lt; '

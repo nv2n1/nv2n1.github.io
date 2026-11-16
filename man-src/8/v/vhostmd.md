@@ -15,18 +15,18 @@ description: "vhostmd – A metrics gathering daemon."
 <p> vhostmd will periodically write metrics to a disk. The metrics to write, how often, and where to write them are all adjustable via the /etc/vhostmd/vhostmd.conf configuration file. The disk can then be surfaced read-only to virtual machines using tools provided by the host&#8217;s virtualization platform.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd>Verbose messages</p>
-<dt><code>-d, &#8211;no-daemonize</code></p>
-<dd>Process will not daemonize</p>
-<dt><code>-c, &#8211;connect &lt;uri&gt;</code></p>
-<dd>Set the libvirt URI. If unspecified then we connect to the default libvirt hypervisor. It is recommended that you specify this since libvirt&#8217;s method for choosing the default hypervisor can give unexpected results.</p>
-<dt><code>-u, &#8211;user &lt;user&gt;</code></p>
-<dd>Drop root privileges and run as the named non-root user.</p>
-<dt><code>-p, &#8211;pid-file &lt;file&gt;</code></p>
-<dd>Specify an alternate path for vhostmd to record its process-id in. Normally /var/run/vhostmd.pid</p>
-<dt><code>-f, &#8211;config &lt;file&gt;</code></p>
-<dd>Specify a different configuration file. Normally /etc/vhostmd/vhostmd.conf</dl>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd>Verbose messages</dd>
+<dt><code>-d, &#8211;no-daemonize</code></dt>
+<dd>Process will not daemonize</dd>
+<dt><code>-c, &#8211;connect &lt;uri&gt;</code></dt>
+<dd>Set the libvirt URI. If unspecified then we connect to the default libvirt hypervisor. It is recommended that you specify this since libvirt&#8217;s method for choosing the default hypervisor can give unexpected results.</dd>
+<dt><code>-u, &#8211;user &lt;user&gt;</code></dt>
+<dd>Drop root privileges and run as the named non-root user.</dd>
+<dt><code>-p, &#8211;pid-file &lt;file&gt;</code></dt>
+<dd>Specify an alternate path for vhostmd to record its process-id in. Normally /var/run/vhostmd.pid</dd>
+<dt><code>-f, &#8211;config &lt;file&gt;</code></dt>
+<dd>Specify a different configuration file. Normally /etc/vhostmd/vhostmd.conf</dd></dl>
 <h2>Config File</h2>
 <p>At startup, vhostmd reads <i>/etc/vhostmd/vhostmd.conf,</i> if it exists.<br />
 &nbsp;<wbr>(See the&nbsp;<wbr> <code>-f</code> option.) </p>

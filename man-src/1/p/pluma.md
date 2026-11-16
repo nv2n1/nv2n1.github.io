@@ -17,40 +17,40 @@ description: "Pluma – The MATE Text Editor"
 <p> This manual page briefly documents the <code>pluma</code> command. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>filename(s)&#8230;</code></p>
-<dd> Specifies the file to open when <code>pluma</code> starts. If this is not specified, <code>pluma</code> will start a new, blank file with an &quot;Unsaved Document&quot; label. Multiple files can be loaded if they are separated by spaces. <code>pluma</code> also supports handling of remote files.</p>
-<dt><code>&#8211;display=DISPLAY</code></p>
-<dd> X display to use.</p>
-<dt><code>&#8211;encoding</code></p>
-<dd> Set the character encoding to be used for opening the files listed on the command line.</p>
-<dt><code>&#8211;new-window</code></p>
-<dd> Create a new toplevel window in an existing instance of <code>pluma</code>.</p>
-<dt><code>&#8211;new-document</code></p>
-<dd> Create a new document in an existing instance of <code>pluma</code>, on the last Pluma window that had focus.</p>
-<dt><code>+[num]</code></p>
-<dd> For the first file, go to the line specified by &quot;num&quot; (do not insert a space between the &quot;+&quot; sign and the number). If &quot;num&quot; is missing, go to the last line.</p>
-<dt><code>&#8211;list-encodings</code></p>
-<dd> Display list of possible values for the encoding option and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> Output version information and exit</p>
-<dt><code>-?, -h, &#8211;help</code></p>
-<dd> Print standard command line options.</p>
-<dt><code>&#8211;help-all</code></p>
-<dd> Print all command line options.</dl>
+<dt><code>filename(s)&#8230;</code></dt>
+<dd> Specifies the file to open when <code>pluma</code> starts. If this is not specified, <code>pluma</code> will start a new, blank file with an &quot;Unsaved Document&quot; label. Multiple files can be loaded if they are separated by spaces. <code>pluma</code> also supports handling of remote files.</dd>
+<dt><code>&#8211;display=DISPLAY</code></dt>
+<dd> X display to use.</dd>
+<dt><code>&#8211;encoding</code></dt>
+<dd> Set the character encoding to be used for opening the files listed on the command line.</dd>
+<dt><code>&#8211;new-window</code></dt>
+<dd> Create a new toplevel window in an existing instance of <code>pluma</code>.</dd>
+<dt><code>&#8211;new-document</code></dt>
+<dd> Create a new document in an existing instance of <code>pluma</code>, on the last Pluma window that had focus.</dd>
+<dt><code>+[num]</code></dt>
+<dd> For the first file, go to the line specified by &quot;num&quot; (do not insert a space between the &quot;+&quot; sign and the number). If &quot;num&quot; is missing, go to the last line.</dd>
+<dt><code>&#8211;list-encodings</code></dt>
+<dd> Display list of possible values for the encoding option and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Output version information and exit</dd>
+<dt><code>-?, -h, &#8211;help</code></dt>
+<dd> Print standard command line options.</dd>
+<dt><code>&#8211;help-all</code></dt>
+<dd> Print all command line options.</dd></dl>
 <p> This program also accepts the standard GTK options. </p>
 <h2>EXAMPLES</h2>
 <p> <code>pluma &#8211;encoding WINDOWS-1252 <a href="ftp://ftp.kernel.org/pub/linux/kernel/README">ftp://ftp.kernel.org/pub/linux/kernel/README</a></code></p>
 <dl>
 <dt>
-<dd> Open the Linux Kernel README file from kernel.org&#8217;s FTP server using Windows-1252 character encoding.</dl>
+</dt><dd> Open the Linux Kernel README file from kernel.org&#8217;s FTP server using Windows-1252 character encoding.</dd></dl>
 <p> <code>pluma +156 <a rel="nofollow" href="http://mate-desktop.org/">http://mate-desktop.org/</a></code></p>
 <dl>
 <dt>
-<dd> Open the main web page of mate-desktop.org and jump to line 156.</dl>
+</dt><dd> Open the main web page of mate-desktop.org and jump to line 156.</dd></dl>
 <p> <code>pluma &#8211;new-window ~/.bashrc ~/.bash_history</code></p>
 <dl>
 <dt>
-<dd> Open the current users .bashrc and .bash_history files in a new Pluma window. </p>
+</dt><dd> Open the current users .bashrc and .bash_history files in a new Pluma window. </dd>
 </dl>
 <h2>BUGS</h2>
 <h3>Should you encounter any bugs, they may be reported at:</h3>

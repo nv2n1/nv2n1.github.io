@@ -22,24 +22,24 @@ description: "marco-theme-viewer – Marco Theme Previewer"
 <p> <code>marco-theme-viewer Crux</code></p>
 <dl>
 <dt>
-<dd> Preview the Crux theme if it is installed.</dl>
+</dt><dd> Preview the Crux theme if it is installed.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt>~/.themes</p>
-<dd> user themes directory</p>
-<dt>/usr/share/themes</p>
-<dd> system themes directory</p>
-<dt>/usr/share/themes/*/metacity-1/metacity-theme-1.xml</p>
+<dt>~/.themes</dt>
+<dd> user themes directory</dd>
+<dt>/usr/share/themes</dt>
+<dd> system themes directory</dd>
+<dt>/usr/share/themes/*/metacity-1/metacity-theme-1.xml</dt>
 <dd>
+</dd><dl>
+<dt>
+</dt><dd> <code>OR</code></dd></dl>
 <dl>
 <dt>
-<dd> <code>OR</code></dl>
+</dt><dd> /usr/share/themes/*/marco-1/marco-theme-1.xml</dd>
 <dl>
 <dt>
-<dd> /usr/share/themes/*/marco-1/marco-theme-1.xml</p>
-<dl>
-<dt>
-<dd> theme specification files</dl>
+</dt><dd> theme specification files</dd></dl>
 </dl>
 </dl>
 <h2>BUGS</h2>

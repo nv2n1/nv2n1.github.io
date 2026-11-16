@@ -70,13 +70,13 @@ Logging can be controlled using the FI_LOG_LEVEL, FI_LOG_PROV, and FI_LOG_SUBSYS
 
  FI_LOG_LEVEL : FI_LOG_LEVEL controls the amount of logging data that is output. The following log levels are defined.
 <dl><dt>&bull;
-<dd>Warn : Warn is the least verbose setting and is intended for reporting errors or warnings.
-<dt>&bull;
-<dd>Trace : Trace is more verbose and is meant to include non-detailed output helpful to tracing program execution.
-<dt>&bull;
-<dd>Info : Info is high traffic and meant for detailed output.
-<dt>&bull;
-<dd>Debug : Debug is high traffic and is likely to impact application performance. Debug output is only available if the library has been compiled with debugging enabled.</dl>
+</dt><dd>Warn : Warn is the least verbose setting and is intended for reporting errors or warnings.
+</dd><dt>&bull;
+</dt><dd>Trace : Trace is more verbose and is meant to include non-detailed output helpful to tracing program execution.
+</dd><dt>&bull;
+</dt><dd>Info : Info is high traffic and meant for detailed output.
+</dd><dt>&bull;
+</dt><dd>Debug : Debug is high traffic and is likely to impact application performance. Debug output is only available if the library has been compiled with debugging enabled.</dd></dl>
  
 
  FI_LOG_PROV : The FI_LOG_PROV environment variable enables or disables logging from specific providers. Providers can be enabled by listing them in a comma separated fashion. If the list begins with the '^' symbol, then the list will be negated. By default all providers are enabled. 
@@ -87,23 +87,23 @@ Logging can be controlled using the FI_LOG_LEVEL, FI_LOG_PROV, and FI_LOG_SUBSYS
 
  FI_LOG_SUBSYS : The FI_LOG_SUBSYS environment variable enables or disables logging at the subsystem level. The syntax for enabling or disabling subsystems is similar to that used for FI_LOG_PROV. The following subsystems are defined.
 <dl><dt>&bull;
-<dd>core : Provides output related to the core framework and its management of providers.
-<dt>&bull;
-<dd>fabric : Provides output specific to interactions associated with the fabric object.
-<dt>&bull;
-<dd>domain : Provides output specific to interactions associated with the domain object.
-<dt>&bull;
-<dd>ep_ctrl : Provides output specific to endpoint non-data transfer operations, such as CM operations.
-<dt>&bull;
-<dd>ep_data : Provides output specific to endpoint data transfer operations.
-<dt>&bull;
-<dd>av : Provides output specific to address vector operations.
-<dt>&bull;
-<dd>cq : Provides output specific to completion queue operations.
-<dt>&bull;
-<dd>eq : Provides output specific to event queue operations.
-<dt>&bull;
-<dd>mr : Provides output specific to memory registration.</dl>
+</dt><dd>core : Provides output related to the core framework and its management of providers.
+</dd><dt>&bull;
+</dt><dd>fabric : Provides output specific to interactions associated with the fabric object.
+</dd><dt>&bull;
+</dt><dd>domain : Provides output specific to interactions associated with the domain object.
+</dd><dt>&bull;
+</dt><dd>ep_ctrl : Provides output specific to endpoint non-data transfer operations, such as CM operations.
+</dd><dt>&bull;
+</dt><dd>ep_data : Provides output specific to endpoint data transfer operations.
+</dd><dt>&bull;
+</dt><dd>av : Provides output specific to address vector operations.
+</dd><dt>&bull;
+</dt><dd>cq : Provides output specific to completion queue operations.
+</dd><dt>&bull;
+</dt><dd>eq : Provides output specific to event queue operations.
+</dd><dt>&bull;
+</dt><dd>mr : Provides output specific to memory registration.</dd></dl>
 
 <h2>Notes</h2>
 

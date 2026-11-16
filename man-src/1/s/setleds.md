@@ -24,12 +24,12 @@ description: "setleds – set the keyboard leds"
  done</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-num +num</p>
-<dd> Clear or set NumLock. (At present, the NumLock setting influences the interpretation of keypad keys. Pressing the NumLock key complements the NumLock setting.)</p>
-<dt>-caps +caps</p>
-<dd> Clear or set CapsLock. (At present, the CapsLock setting complements the Shift key when applied to letters. Pressing the CapsLock key complements the CapsLock setting.)</p>
-<dt>-scroll +scroll</p>
-<dd> Clear or set ScrollLock. (At present, pressing the ScrollLock key (or ^S/^Q) stops/starts console output.)</dl>
+<dt>-num +num</dt>
+<dd> Clear or set NumLock. (At present, the NumLock setting influences the interpretation of keypad keys. Pressing the NumLock key complements the NumLock setting.)</dd>
+<dt>-caps +caps</dt>
+<dd> Clear or set CapsLock. (At present, the CapsLock setting complements the Shift key when applied to letters. Pressing the CapsLock key complements the CapsLock setting.)</dd>
+<dt>-scroll +scroll</dt>
+<dd> Clear or set ScrollLock. (At present, pressing the ScrollLock key (or ^S/^Q) stops/starts console output.)</dd></dl>
 <h2>BUGS</h2>
 <p> In keyboard application mode the NumLock key does not influence the NumLock flag setting.</p>
 <h2>SEE ALSO</h2>

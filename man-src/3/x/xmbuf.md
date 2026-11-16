@@ -144,18 +144,18 @@ typedef struct {
 <dl COMPACT><dd><pre><i>MultibufferUpdateActionUndefined</i>
 <i>MultibufferUpdateActionBackground</i>
 <i>MultibufferUpdateActionUntouched</i>
-<i>MultibufferUpdateActionCopied</i></pre></dl>
+<i>MultibufferUpdateActionCopied</i></pre></dd></dl>
  
 
  Update_hint field:
 <dl COMPACT><dd><pre><i>MultibufferUpdateHintFrequent</i>
 <i>MultibufferUpdateHintIntermittent</i>
-<i>MultibufferUpdateHintStatic</i></pre></dl>
+<i>MultibufferUpdateHintStatic</i></pre></dd></dl>
  
 
  Valuemask fields:
 <dl COMPACT><dd><pre><i>MultibufferWindowUpdateHint</i>
-<i>MultibufferBufferEventMask</i></pre></dl>
+<i>MultibufferBufferEventMask</i></pre></dd></dl>
  
 
  Mono vs. stereo and left vs. right:
@@ -163,13 +163,13 @@ typedef struct {
 <i>MultibufferModeStereo</i>
 <i>MultibufferSideMono</i>
 <i>MultibufferSideLeft</i>
-<i>MultibufferSideRight</i></pre></dl>
+<i>MultibufferSideRight</i></pre></dd></dl>
  
 
  Clobber state:
 <dl COMPACT><dd><pre><i>MultibufferUnclobbered</i>
 <i>MultibufferPartiallyClobbered</i>
-<i>MultibufferFullyClobbered</i></pre></dl>
+<i>MultibufferFullyClobbered</i></pre></dd></dl>
  
 
  Event stuff:
@@ -179,5 +179,5 @@ typedef struct {
 <i>MultibufferUpdateNotify</i>
 <i>MultibufferNumberEvents</i>
 <i>MultibufferBadBuffer</i>
-<i>MultibufferNumberErrors</i></pre></dl><h2>Bugs</h2>This manual page needs more work.
+<i>MultibufferNumberErrors</i></pre></dd></dl><h2>Bugs</h2>This manual page needs more work.
 <h2>See Also</h2><i>Extending X for Double Buffering, Multi-Buffering, and Stereo</i>

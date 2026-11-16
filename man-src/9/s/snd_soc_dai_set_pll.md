@@ -15,23 +15,23 @@ snd_soc_dai_set_pll - configure DAI PLL.
 <h2>Arguments</h2>
 
 <i>dai</i>
-<dl><dd><dd>DAI</dl>
+<dl><dd></dd><dd>DAI</dd></dl>
  
 
  <i>pll_id</i>
-<dl><dd>DAI specific PLL ID</dl>
+<dl><dd>DAI specific PLL ID</dd></dl>
  
 
  <i>source</i>
-<dl><dd>DAI specific source for the PLL</dl>
+<dl><dd>DAI specific source for the PLL</dd></dl>
  
 
  <i>freq_in</i>
-<dl><dd>PLL input clock frequency in Hz</dl>
+<dl><dd>PLL input clock frequency in Hz</dd></dl>
  
 
  <i>freq_out</i>
-<dl><dd>requested PLL output clock frequency in Hz</dl>
+<dl><dd>requested PLL output clock frequency in Hz</dd></dl>
 
 <h2>Description</h2>
 

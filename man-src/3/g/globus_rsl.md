@@ -23,22 +23,22 @@ description: "Globus RSL –"
 <p> Resource Specification Language. </p>
 <p> The Globus RSL library is provides the following functionality:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>RSL Predicates</code></p>
-<dt>&bull;</p>
-<dd> <code>RSL Constructors</code></p>
-<dt>&bull;</p>
-<dd> <code>RSL Memory Management</code></p>
-<dt>&bull;</p>
-<dd> <code>RSL Accessor Functions</code></p>
-<dt>&bull;</p>
-<dd> <code>RSL Value Accessors</code></p>
-<dt>&bull;</p>
-<dd> <code>RSL Display</code></p>
-<dt>&bull;</p>
-<dd> <code>globus_rsl_parse</code></p>
-<dt>&bull;</p>
-<dd> <code>List Functions</code></dl>
+<dt>&bull;</dt>
+<dd> <code>RSL Predicates</code></dd>
+<dt>&bull;</dt>
+<dd> <code>RSL Constructors</code></dd>
+<dt>&bull;</dt>
+<dd> <code>RSL Memory Management</code></dd>
+<dt>&bull;</dt>
+<dd> <code>RSL Accessor Functions</code></dd>
+<dt>&bull;</dt>
+<dd> <code>RSL Value Accessors</code></dd>
+<dt>&bull;</dt>
+<dd> <code>RSL Display</code></dd>
+<dt>&bull;</dt>
+<dd> <code>globus_rsl_parse</code></dd>
+<dt>&bull;</dt>
+<dd> <code>List Functions</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_rsl from the source code. </p>
 <h2>Index</h2>

@@ -14,13 +14,13 @@ description: "relay_late_setup_files – triggers file creation"
 <p><i>chan</i></p>
 <dl>
 <dd>
-<dd>channel to operate on</dl>
+</dd><dd>channel to operate on</dd></dl>
 <p> <i>base_filename</i></p>
 <dl>
-<dd>base name of files to create</dl>
+<dd>base name of files to create</dd></dl>
 <p> <i>parent</i></p>
 <dl>
-<dd>dentry of parent directory, <code>NULL</code> for root directory</dl>
+<dd>dentry of parent directory, <code>NULL</code> for root directory</dd></dl>
 <h2>Description</h2>
 <p>Returns 0 if successful, non-zero otherwise. </p>
 <p> Use to setup files for a previously buffer-only channel created by <code>relay_open</code> with a NULL parent dentry. </p>

@@ -41,11 +41,9 @@ flags, mask &#8211; scientific generate floating point types using scientific no
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
 const double PI = 3.1415926535;
 int main()
-
 {
     const int WIDTH = 15;
     std::cout.setf(std::ios::right); // equivalent: cout &lt;&lt; right;

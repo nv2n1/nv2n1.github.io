@@ -24,37 +24,37 @@ url: "/docs/linux/man/1-abrt-upload-watch/"
  -v, --verbose
 <dl>
 <dt>
-<dd> Be more verbose. Can be given multiple times.</dl>
+</dt><dd> Be more verbose. Can be given multiple times.</dd></dl>
  
 
  -s
 <dl>
 <dt>
-<dd> Log to syslog</dl>
+</dt><dd> Log to syslog</dd></dl>
  
 
  -d
 <dl>
 <dt>
-<dd> Daemonize</dl>
+</dt><dd> Daemonize</dd></dl>
  
 
  -w NUM_WORKERS
 <dl>
 <dt>
-<dd> Number of concurrent workers. Default is 10</dl>
+</dt><dd> Number of concurrent workers. Default is 10</dd></dl>
  
 
  -c CACHE_SIZE_MIB
 <dl>
 <dt>
-<dd> Maximal cache size in MiB. Default is 4</dl>
+</dt><dd> Maximal cache size in MiB. Default is 4</dd></dl>
  
 
  UPLOAD_DIRECTORY
 <dl>
 <dt>
-<dd> Watched directory. Default is a value of WatchCrashdumpArchiveDir option from abrt.conf</dl>
+</dt><dd> Watched directory. Default is a value of WatchCrashdumpArchiveDir option from abrt.conf</dd></dl>
 
 <h2>FILES</h2>
 
@@ -65,19 +65,19 @@ url: "/docs/linux/man/1-abrt-upload-watch/"
  WatchCrashdumpArchiveDir
 <dl>
 <dt>
-<dd> Default upload directory</dl>
+</dt><dd> Default upload directory</dd></dl>
  
 
  DumpLocation
 <dl>
 <dt>
-<dd> Place where uploaded archives are unpacked</dl>
+</dt><dd> Place where uploaded archives are unpacked</dd></dl>
  
 
  DeleteUploaded
 <dl>
 <dt>
-<dd> Specifies if uploaded archives are deleted after unpacking</dl>
+</dt><dd> Specifies if uploaded archives are deleted after unpacking</dd></dl>
 
 <h2>SEE ALSO</h2>
 
@@ -91,7 +91,7 @@ url: "/docs/linux/man/1-abrt-upload-watch/"
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

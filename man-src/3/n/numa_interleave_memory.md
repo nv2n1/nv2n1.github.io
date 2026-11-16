@@ -78,7 +78,6 @@ void numa_free_cpumask();</p>
  <code>void copy_bitmask_to_bitmask(struct bitmask *</code><i>bmpfrom</i><code>, struct bitmask *</code><i>bmpto</i><code>)</code><br />
  <code>unsigned int numa_bitmask_weight(const struct bitmask *bmp )</code> </p>
 <pre><code>int numa_move_pages(int pid, unsigned long count, void **pages, const int *nodes, int *status, int flags);
-
 int numa_migrate_pages(int pid, struct bitmask *fromnodes, struct bitmask *tonodes);
 void numa_error(char *where);</code></pre>
 <p> <code>extern int </code><i>numa_exit_on_error</i><code>;</code><br />

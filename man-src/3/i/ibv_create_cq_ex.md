@@ -51,7 +51,7 @@ enum ibv_create_cq_attr_flags {<br />
 <h2>Polling an extended CQ</h2>
 <p> In order to poll an extended CQ efficiently, a user could use the following functions. </p>
 <dl>
-<dt><code>Completion iterator functions</code></p>
+<dt><code>Completion iterator functions</code></dt>
 <dd>
 <p> <code>int ibv_start_poll(struct ibv_cq_ex </code><i>*cq</i><code>, struct ibv_poll_cq_attr </code><i>*attr)</i><br />
  Start polling a batch of work completions. <i>attr</i> is given in order to make this function easily extensible in the future. This function either returns 0 on success or an error code otherwise. When no completions are available on the CQ, ENOENT is returned, but the CQ remains in a valid state. On success, querying the completion&#8217;s attribute could be done using the query functions described below. If an error code is given, end_poll shouldn&#8217;t be called. </p>
@@ -59,8 +59,8 @@ enum ibv_create_cq_attr_flags {<br />
  This function is called in order to get the next work completion. It has to be called after <i>start_poll</i> and before <i>end_poll</i> are called. This function either returns 0 on success or an error code otherwise. When no completions are available on the CQ, ENOENT is returned, but the CQ remains in a valid state. On success, querying the completion&#8217;s attribute could be done using the query functions described below. If an error code is given, end_poll should still be called, indicating this is the end of the polled batch. </p>
 <p> <code>void ibv_end_poll(struct ibv_cq_ex </code><i>*cq)</i><br />
  This function indicates the end of polling batch of work completions. After calling this function, the user should start a new batch by calling <i>start_poll.</i> </p>
-<dt><code>Polling fields in the completion</code></p>
-<dd> Below members and functions are used in order to poll the current completion. The current completion is the completion which the iterator points to (start_poll and next_poll advances this iterator). Only fields that the user requested via wc_flags in ibv_create_cq_ex could be queried. In addition, some fields are only valid in certain opcodes and status codes. </p>
+</dd><dt><code>Polling fields in the completion</code></dt>
+<dd> Below members and functions are used in order to poll the current completion. The current completion is the completion which the iterator points to (start_poll and next_poll advances this iterator). Only fields that the user requested via wc_flags in ibv_create_cq_ex could be queried. In addition, some fields are only valid in certain opcodes and status codes. </dd>
 <p> <code>uint64_t wr_id &#8211; Can be accessed directly from struct ibv_cq_ex.</code> </p>
 <p> <code>enum ibv_wc_status &#8211; Can be accessed directly from struct ibv_cq_ex.</code> </p>
 <p> <code>enum ibv_wc_opcode ibv_wc_read_opcode(struct ibv_cq_ex </code><i>*cq);</i><br />
@@ -111,7 +111,8 @@ struct ibv_wc_tm_info {
 <p> <code>ibv_create_cq</code>(3), <code>ibv_destroy_cq</code>(3), <code>ibv_resize_cq</code>(3), <code>ibv_req_notify_cq</code>(3), <code>ibv_ack_cq_events</code>(3), <code>ibv_create_qp</code>(3)</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>Matan Barak &lt;matanb [at] mellanox.com&gt;</p>
+<dt>Matan Barak &lt;matanb [at] mellanox.com&gt;</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>Index</h2>
+</dl>

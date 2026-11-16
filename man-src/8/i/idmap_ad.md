@@ -17,23 +17,21 @@ The idmap_ad plugin provides a way for Winbind to read id mappings from an AD se
 <h2>Idmap Options</h2>
 
 range = low - high
-<dl><dd>Defines the available matching UID and GID range for which the backend is authoritative. Note that the range acts as a filter. If specified any UID or GID stored in AD that fall outside the range is ignored and the corresponding map is discarded. It is intended as a way to avoid accidental UID/GID overlaps between local and remotely defined IDs.</dl>
+<dl><dd>Defines the available matching UID and GID range for which the backend is authoritative. Note that the range acts as a filter. If specified any UID or GID stored in AD that fall outside the range is ignored and the corresponding map is discarded. It is intended as a way to avoid accidental UID/GID overlaps between local and remotely defined IDs.</dd></dl>
  
 
  schema_mode = &lt;rfc2307 | sfu | sfu20&gt;
-<dl><dd>Defines the schema that idmap_ad should use when querying Active Directory regarding user and group information. This can be either the RFC2307 schema support included in Windows 2003 R2 or the Service for Unix (SFU) schema. For SFU 3.0 or 3.5 please choose &quot;sfu&quot;, for SFU 2.0 please choose &quot;sfu20&quot;. Please note that the behavior of primary group membership is controlled by the <i>unix_primary_group</i> option.</dl>
+<dl><dd>Defines the schema that idmap_ad should use when querying Active Directory regarding user and group information. This can be either the RFC2307 schema support included in Windows 2003 R2 or the Service for Unix (SFU) schema. For SFU 3.0 or 3.5 please choose &quot;sfu&quot;, for SFU 2.0 please choose &quot;sfu20&quot;. Please note that the behavior of primary group membership is controlled by the <i>unix_primary_group</i> option.</dd></dl>
  
 
  unix_primary_group = yes/no
 <dl><dd>Defines whether the user's primary group is fetched from the SFU attributes or the AD primary group. If set to <i>yes</i> the primary group membership is fetched from the LDAP attributes (gidNumber). If set to <i>no</i> the primary group membership is calculated via the &quot;primaryGroupID&quot; LDAP attribute. 
-
- Default: no</dl>
+ Default: no</dd></dl>
  
 
  unix_nss_info = yes/no
 <dl><dd>If set to <i>yes</i> winbind will retrieve the login shell and home directory from the LDAP attributes. If set to <i>no</i> the or the AD LDAP entry lacks the SFU attributes the options <i>template shell</i> and <i>template homedir</i> are used. 
-
- Default: no</dl>
+ Default: no</dd></dl>
 
 <h2>Examples</h2>
 
@@ -44,7 +42,7 @@ The following example shows how to retrieve idmappings from our principal and tr
  idmap config * : backend = tdb
  idmap config * : range = 1000000-1999999
  idmap config CORP : backend = ad
- idmap config CORP : range = 1000-999999</pre></dl>
+ idmap config CORP : range = 1000-999999</pre></dd></dl>
 
 <h2>Author</h2>
 

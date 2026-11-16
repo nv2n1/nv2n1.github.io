@@ -21,10 +21,10 @@ description: "dlarzb.f –"
 <pre> DLARZB applies a real block reflector H or its transpose H**T to
  a real distributed M-by-N C from the left or the right.
  Currently, only STOREV = 'R' and DIRECT = 'B' are supported.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>SIDE</i> </p>
+<dd><i>SIDE</i> </dd>
 <pre> SIDE is CHARACTER*1
  = 'L': apply H or H**T from the Left
  = 'R': apply H or H**T from the Right</pre>
@@ -90,19 +90,19 @@ description: "dlarzb.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl COMPACT>
-<dd>A. Petitet, Computer Science Dept., Univ. of Tenn., Knoxville, USA</dl>
+<dd>A. Petitet, Computer Science Dept., Univ. of Tenn., Knoxville, USA</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
-<dd>&nbsp;<wbr></dl>
+<dd>&nbsp;<wbr></dd></dl>
 <p> Definition at line 183 of file dlarzb.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

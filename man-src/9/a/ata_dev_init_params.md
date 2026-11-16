@@ -14,13 +14,13 @@ description: "ata_dev_init_params – Issue INIT DEV PARAMS command"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>Device to which command will be sent</dl>
+</dd><dd>Device to which command will be sent</dd></dl>
 <p> <i>heads</i></p>
 <dl>
-<dd>Number of heads (taskfile parameter)</dl>
+<dd>Number of heads (taskfile parameter)</dd></dl>
 <p> <i>sectors</i></p>
 <dl>
-<dd>Number of sectors (taskfile parameter)</dl>
+<dd>Number of sectors (taskfile parameter)</dd></dl>
 <h2>Description</h2>
 <p>LOCKING: Kernel thread context (may sleep)</p>
 <h2>Return</h2>
@@ -28,5 +28,5 @@ description: "ata_dev_init_params – Issue INIT DEV PARAMS command"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -16,34 +16,34 @@ description: "nilfs_cleanerd – NILFS2 garbage collector"
 <p> This program can be invoked either automatically by <code>mount.nilfs2</code>(8) or manually by an administrator. However, users are recommended to invoke <code>nilfs_cleanerd</code> through <code>mount.nilfs2</code>(8) or <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8) and shutdown it through <code>umount.nilfs2</code>(8) or <code><a href="/docs/linux/man/8-umount/">umount</a></code>(8) in order to avoid state inconsistencies among administration tools.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c</code></p>
-<dd>Specify configuration file.</p>
-<dt><code>-h</code></p>
-<dd>Display help message and exit.</p>
-<dt><code>-n</code></p>
-<dd>invoke cleanerd without forking process. This option is intended for internal use from <code>mount.nilfs2</code>(8).</p>
-<dt><code>-p</code></p>
-<dd>Override protection period with the specified number of seconds.</dl>
+<dt><code>-c</code></dt>
+<dd>Specify configuration file.</dd>
+<dt><code>-h</code></dt>
+<dd>Display help message and exit.</dd>
+<dt><code>-n</code></dt>
+<dd>invoke cleanerd without forking process. This option is intended for internal use from <code>mount.nilfs2</code>(8).</dd>
+<dt><code>-p</code></dt>
+<dd>Override protection period with the specified number of seconds.</dd></dl>
 <h2>Signals</h2>
 <p><code>nilfs_cleanerd</code> reacts to a set of signals. You may send a signal to <code>nilfs_cleanerd</code> using the <i>PID</i> shown by the mount command (or in <i>/etc/mtab</i>):</p>
 <dl>
 <dd>
-<dl>
-<dt><code># mount -t nilfs2</code></p>
+</dd><dl>
+<dt><code># mount -t nilfs2</code></dt>
 <dd>/dev/sdb1 on /nilfs type nilfs2 (rw,gcpid=<i>PID</i>)<br />
- <code># kill &#8211;</code><i>SIGNAL</i> <i>PID</i></dl>
+ <code># kill &#8211;</code><i>SIGNAL</i> <i>PID</i></dd></dl>
 </dl>
 <dl>
-<dt><code>SIGHUP</code></p>
-<dd>This lets <code>nilfs_cleanerd</code> perform a re-initialization. The configuration file (default is <i>/etc/nilfs_cleanerd.conf</i>) will be reread.</p>
-<dt><code>SIGTERM</code></p>
-<dd>The <code>nilfs_cleanerd</code> will exit cleanly.</p>
-<dt><code>SIGUSR1, SIGUSR2</code></p>
-<dd>Reserved for future use. These let <code>nilfs_cleanerd</code> die at present.</dl>
+<dt><code>SIGHUP</code></dt>
+<dd>This lets <code>nilfs_cleanerd</code> perform a re-initialization. The configuration file (default is <i>/etc/nilfs_cleanerd.conf</i>) will be reread.</dd>
+<dt><code>SIGTERM</code></dt>
+<dd>The <code>nilfs_cleanerd</code> will exit cleanly.</dd>
+<dt><code>SIGUSR1, SIGUSR2</code></dt>
+<dd>Reserved for future use. These let <code>nilfs_cleanerd</code> die at present.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/nilfs_cleanerd.conf</i></p>
-<dd>Configuration file for <code>nilfs_cleanerd</code>. See <code>nilfs_cleanerd.conf</code>(5) for details.</dl>
+<dt><i>/etc/nilfs_cleanerd.conf</i></dt>
+<dd>Configuration file for <code>nilfs_cleanerd</code>. See <code>nilfs_cleanerd.conf</code>(5) for details.</dd></dl>
 <h2>Author</h2>
 <p>Koji Sato &lt;koji [at] osrg.net&gt;</p>
 <h2>Availability</h2>

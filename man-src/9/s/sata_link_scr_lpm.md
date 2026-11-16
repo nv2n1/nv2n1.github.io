@@ -14,13 +14,13 @@ description: "sata_link_scr_lpm – manipulate SControl IPM and SPM fields"
 <p><i>link</i></p>
 <dl>
 <dd>
-<dd>ATA link to manipulate SControl for</dl>
+</dd><dd>ATA link to manipulate SControl for</dd></dl>
 <p> <i>policy</i></p>
 <dl>
-<dd>LPM policy to configure</dl>
+<dd>LPM policy to configure</dd></dl>
 <p> <i>spm_wakeup</i></p>
 <dl>
-<dd>initiate LPM transition to active state</dl>
+<dd>initiate LPM transition to active state</dd></dl>
 <h2>Description</h2>
 <p>Manipulate the IPM field of the SControl register of <i>link</i> according to <i>policy</i>. If <i>policy</i> is ATA_LPM_MAX_POWER and <i>spm_wakeup</i> is <code>true</code>, the SPM field is manipulated to wake up the link. This function also clears PHYRDY_CHG before returning. </p>
 <p> LOCKING: EH context.</p>
@@ -29,5 +29,5 @@ description: "sata_link_scr_lpm – manipulate SControl IPM and SPM fields"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -13,8 +13,8 @@ description: "tuned-profiles-oracle – description of profiles provided for the
 <h2>Profiles</h2>
 <p>The following profiles are provided: </p>
 <dl>
-<dt><code>oracle</code></p>
-<dd>Profile optimized for Oracle databases based on throughput-performance profile. It additionaly disables transparent huge pages and modifies some other performance related kernel parameters. </p>
+<dt><code>oracle</code></dt>
+<dd>Profile optimized for Oracle databases based on throughput-performance profile. It additionaly disables transparent huge pages and modifies some other performance related kernel parameters. </dd>
 </dl>
 <h2>Files</h2>
 <p><i>/etc/tuned/*</i> <i>/usr/lib/tuned/*</i></p>

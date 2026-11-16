@@ -15,29 +15,29 @@ description: "getcert"
 <p> Queries <i>certmonger</i> for a status of a particular certificate request and sets an exit status to reflect that status. </p>
 <h2>SELECTION OPTIONS</h2>
 <dl>
-<dt><code>-d</code> DIR</p>
-<dd> Check that status of a certificate in the named NSS database. Must be specified with the <code>-n</code> option.</p>
-<dt><code>-n</code> NAME</p>
-<dd> Check that status of a certificate in with the specified nickname. Must be specified with the <code>-d</code> option.</p>
-<dt><code>-f</code> FILE</p>
-<dd> Check that status of a certificate stored in the specified PEM file.</p>
-<dt><code>-i</code> NAME</p>
-<dd> Check that status of a certificate with the specified request nickname. </p>
+<dt><code>-d</code> DIR</dt>
+<dd> Check that status of a certificate in the named NSS database. Must be specified with the <code>-n</code> option.</dd>
+<dt><code>-n</code> NAME</dt>
+<dd> Check that status of a certificate in with the specified nickname. Must be specified with the <code>-d</code> option.</dd>
+<dt><code>-f</code> FILE</dt>
+<dd> Check that status of a certificate stored in the specified PEM file.</dd>
+<dt><code>-i</code> NAME</dt>
+<dd> Check that status of a certificate with the specified request nickname. </dd>
 </dl>
 <h2>EXIT STATUS</h2>
 <dl>
-<dt>0</p>
-<dd> Certificate is issued and valid.</p>
-<dt>1</p>
-<dd> There was an error communicating with the <code><a href="/docs/linux/man/8-certmonger/">certmonger</a></code>(8) daemon, or there is no such certificate known to it.</p>
-<dt>2.</p>
-<dd> Certificate signing request was rejected by the CA.</p>
-<dt>3.</p>
-<dd> CA could not be reached, but attempts to communicate with it will be retried.</p>
-<dt>4.</p>
-<dd> Configuration error.</p>
-<dt>5.</p>
-<dd> Client is working on the request, or waiting for the server. </p>
+<dt>0</dt>
+<dd> Certificate is issued and valid.</dd>
+<dt>1</dt>
+<dd> There was an error communicating with the <code><a href="/docs/linux/man/8-certmonger/">certmonger</a></code>(8) daemon, or there is no such certificate known to it.</dd>
+<dt>2.</dt>
+<dd> Certificate signing request was rejected by the CA.</dd>
+<dt>3.</dt>
+<dd> CA could not be reached, but attempts to communicate with it will be retried.</dd>
+<dt>4.</dt>
+<dd> Configuration error.</dd>
+<dt>5.</dt>
+<dd> Client is working on the request, or waiting for the server. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> Please file tickets for any that you find at <a rel="nofollow" href="https://fedorahosted.org/certmonger/">https://fedorahosted.org/certmonger/</a> </p>

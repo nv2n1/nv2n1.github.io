@@ -10,7 +10,6 @@ description: "wctob – try to represent a wide character as a single byte"
 <p>wctob &#8211; try to represent a wide character as a single byte</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;wchar.h&gt;
-
 int wctob(wint_t c);</code></pre>
 <h2>Description</h2>
 <p>The <code>wctob</code>() function tests whether the multibyte representation of the wide character <i>c</i>, starting in the initial state, consists of a single byte. If so, it is returned as an <i>unsigned char</i>. </p>

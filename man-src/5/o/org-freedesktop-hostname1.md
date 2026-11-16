@@ -66,7 +66,7 @@ description: "org.freedesktop.hostname1 – The D-Bus interface of systemd-hostn
  interface org.freedesktop.DBus.Introspectable { ... };
  interface org.freedesktop.DBus.Properties { ... };
 };</pre>
-</dl>
+</dd></dl>
 <p> Whenever the hostname or other metadata is changed via the daemon, <code>PropertyChanged</code> signals are sent out to subscribed clients. Changing a hostname using this interface is authenticated via m[blue]<code>polkit</code>m[]<font SIZE="-2">[1]</font>.</p>
 <h2>Semantics</h2>
 <p>The <i>StaticHostname</i> property exposes the &quot;static&quot; hostname configured in /etc/hostname. It is not always in sync with the current hostname as returned by the <code>gethostname</code>(3) system call. If no static hostname is configured this property will be the empty string. </p>
@@ -95,41 +95,41 @@ description: "org.freedesktop.hostname1 – The D-Bus interface of systemd-hostn
 <h2>Recommendations</h2>
 <p>Here are three examples that show how the pretty hostname and the icon name should be used: </p>
 <dl>
-<dd>&bull; When registering DNS-SD services: use the pretty hostname in the service name, and pass the icon name in the TXT data, if there is an icon name. Browsing clients can then show the server icon on each service. This is especially useful for WebDAV applications or UPnP media sharing.</dl>
+<dd>&bull; When registering DNS-SD services: use the pretty hostname in the service name, and pass the icon name in the TXT data, if there is an icon name. Browsing clients can then show the server icon on each service. This is especially useful for WebDAV applications or UPnP media sharing.</dd></dl>
 <dl>
-<dd>&bull; Set the bluetooth name to the pretty hostname.</dl>
+<dd>&bull; Set the bluetooth name to the pretty hostname.</dd></dl>
 <dl>
-<dd>&bull; When your file browser has a &quot;Computer&quot; icon, replace the name with the pretty hostname if set, and the icon with the icon name, if it is set.</dl>
+<dd>&bull; When your file browser has a &quot;Computer&quot; icon, replace the name with the pretty hostname if set, and the icon with the icon name, if it is set.</dd></dl>
 <p> To properly handle name lookups with changing local hostnames without having to edit /etc/hosts, we recommend using systemd-hostnamed in combination with <code>nss-myhostname</code>(3). </p>
 <p> Here are some recommendations to follow when generating a static (internet) hostname from a pretty name: </p>
 <dl>
-<dd>&bull; Generate a single DNS label only, not an FQDN. That means no dots allowed. Strip them, or replace them with &quot;-&quot;.</dl>
+<dd>&bull; Generate a single DNS label only, not an FQDN. That means no dots allowed. Strip them, or replace them with &quot;-&quot;.</dd></dl>
 <dl>
-<dd>&bull; It&#8217;s probably safer to not use any non-ASCII chars, even if DNS allows this in some way these days. In fact, restrict your charset to &quot;a-zA-Z0-9&quot; and &quot;-&quot;. Strip other chars, or try to replace them in some smart way with chars from this set, for example &quot;ä&quot; → &quot;ae&quot;, and use &quot;-&quot; as the replacement for all punctuation characters and whitespace.</dl>
+<dd>&bull; It&#8217;s probably safer to not use any non-ASCII chars, even if DNS allows this in some way these days. In fact, restrict your charset to &quot;a-zA-Z0-9&quot; and &quot;-&quot;. Strip other chars, or try to replace them in some smart way with chars from this set, for example &quot;ä&quot; → &quot;ae&quot;, and use &quot;-&quot; as the replacement for all punctuation characters and whitespace.</dd></dl>
 <dl>
-<dd>&bull; Try to avoid creating repeated &quot;-&quot;, as well as &quot;-&quot; as the first or last char.</dl>
+<dd>&bull; Try to avoid creating repeated &quot;-&quot;, as well as &quot;-&quot; as the first or last char.</dd></dl>
 <dl>
-<dd>&bull; Limit the hostname to 63 chars, which is the length of a DNS label.</dl>
+<dd>&bull; Limit the hostname to 63 chars, which is the length of a DNS label.</dd></dl>
 <dl>
-<dd>&bull; If after stripping special chars the empty string is the result, you can pass this as-is to systemd-hostnamed in which case it will automatically use a suitable fallback.</dl>
+<dd>&bull; If after stripping special chars the empty string is the result, you can pass this as-is to systemd-hostnamed in which case it will automatically use a suitable fallback.</dd></dl>
 <dl>
-<dd>&bull; Uppercase charaacters should be replaced with their lowercase equivalents.</dl>
+<dd>&bull; Uppercase charaacters should be replaced with their lowercase equivalents.</dd></dl>
 <p> Note that while systemd-hostnamed applies some checks to the hostname you pass they are much looser than the recommendations above. For example, systemd-hostnamed will also accept &quot;_&quot; in the hostname, but we recommend not using this to avoid clashes with DNS-SD service types. Also systemd-hostnamed allows longer hostnames, but because of the DNS label limitations, we recommend not making use of this. </p>
 <p> Here are a couple of example conversions: </p>
 <dl>
-<dd>&bull; &quot;Lennart&#8217;s PC&quot; → &quot;lennarts-pc&quot;</dl>
+<dd>&bull; &quot;Lennart&#8217;s PC&quot; → &quot;lennarts-pc&quot;</dd></dl>
 <dl>
-<dd>&bull; &quot;Müllers Computer&quot; → &quot;muellers-computer&quot;</dl>
+<dd>&bull; &quot;Müllers Computer&quot; → &quot;muellers-computer&quot;</dd></dl>
 <dl>
-<dd>&bull; &quot;Voran!&quot; → &quot;voran&quot;</dl>
+<dd>&bull; &quot;Voran!&quot; → &quot;voran&quot;</dd></dl>
 <dl>
-<dd>&bull; &quot;Es war einmal ein Männlein&quot; → &quot;es-war-einmal-ein-maennlein&quot;</dl>
+<dd>&bull; &quot;Es war einmal ein Männlein&quot; → &quot;es-war-einmal-ein-maennlein&quot;</dd></dl>
 <dl>
-<dd>&bull; &quot;Jawoll. Ist doch wahr!&quot; → &quot;jawoll-ist-doch-wahr&quot;</dl>
+<dd>&bull; &quot;Jawoll. Ist doch wahr!&quot; → &quot;jawoll-ist-doch-wahr&quot;</dd></dl>
 <dl>
-<dd>&bull; &quot;レナート&quot; → &quot;localhost&quot;</dl>
+<dd>&bull; &quot;レナート&quot; → &quot;localhost&quot;</dd></dl>
 <dl>
-<dd>&bull; &quot;&#8230;zack!!! zack!&#8230;&quot; → &quot;zack-zack&quot;</dl>
+<dd>&bull; &quot;&#8230;zack!!! zack!&#8230;&quot; → &quot;zack-zack&quot;</dd></dl>
 <p> Of course, an already valid internet hostname label you enter and pass through this conversion should stay unmodified, so that users have direct control of it, if they want &#8212; by simply ignoring the fact that the pretty hostname is pretty and just edit it as if it was the normal internet name.</p>
 <h2>Versioning</h2>
 <p>These D-Bus interfaces follow m[blue]<code>the usual interface versioning guidelines</code>m[]<font SIZE="-2">[2]</font>.</p>
@@ -140,20 +140,21 @@ description: "org.freedesktop.hostname1 – The D-Bus interface of systemd-hostn
 <pre>$ gdbus introspect --system \
  --dest org.freedesktop.hostname1 \
  --object-path /org/freedesktop/hostname1</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p>David Zeuthen&#8217;s original Fedora m[blue]<code>Feature page about xdg-hostname</code>m[]<font SIZE="-2">[3]</font></p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>polkit</p>
+<dt> 1.</dt>
+<dd>polkit</dd>
 <dl>
-<dd><a rel="nofollow" href="https://www.freedesktop.org/software/polkit/docs/latest/">https://www.freedesktop.org/software/polkit/docs/latest/</a></dl>
-<dt> 2.</p>
-<dd>the usual interface versioning guidelines</p>
+<dd><a rel="nofollow" href="https://www.freedesktop.org/software/polkit/docs/latest/">https://www.freedesktop.org/software/polkit/docs/latest/</a></dd></dl>
+<dt> 2.</dt>
+<dd>the usual interface versioning guidelines</dd>
 <dl>
-<dd><a rel="nofollow" href="http://0pointer.de/blog/projects/versioning-dbus.html">http://0pointer.de/blog/projects/versioning-dbus.html</a></dl>
-<dt> 3.</p>
-<dd>Feature page about xdg-hostname</p>
+<dd><a rel="nofollow" href="http://0pointer.de/blog/projects/versioning-dbus.html">http://0pointer.de/blog/projects/versioning-dbus.html</a></dd></dl>
+<dt> 3.</dt>
+<dd>Feature page about xdg-hostname</dd>
 <dl>
-<dd><a rel="nofollow" href="https://fedoraproject.org/wiki/Features/BetterHostname">https://fedoraproject.org/wiki/Features/BetterHostname</a></dl>
+<dd><a rel="nofollow" href="https://fedoraproject.org/wiki/Features/BetterHostname">https://fedoraproject.org/wiki/Features/BetterHostname</a></dd></dl>
+</dl>

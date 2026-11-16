@@ -10,17 +10,8 @@ description: "QuantLib::GenericSequenceStatistics – Statistics analysis of N-d
 <p>QuantLib::GenericSequenceStatistics &#8211; Statistics analysis of N-dimensional (sequence) data. </p>
 <h2>Synopsis</h2>
 <pre><code>void reset (Size dimension=0)
-
-
-
 template&lt;class Sequence &gt; void add (const Sequence &amp;sample, Real weight=1.0)
-
-
-
 template&lt;class Iterator &gt; void add (Iterator begin, Iterator end, Real weight=1.0)
-
-
-
 Protected Attributes</code></pre>
 <h3>Public Types</h3>
 <p>typedef StatisticsType <code>statistics_type</code> </p>
@@ -66,17 +57,8 @@ Protected Attributes</code></pre>
 <p> std::vector&lt; Real &gt; <code>averageShortfall</code> (Real target) const<br />
  <code>Modifiers</code> </p>
 <pre><code>void reset (Size dimension=0)
-
-
-
 template&lt;class Sequence &gt; void add (const Sequence &amp;sample, Real weight=1.0)
-
-
-
 template&lt;class Iterator &gt; void add (Iterator begin, Iterator end, Real weight=1.0)
-
-
-
 Protected Attributes</code></pre>
 <p> Size <code>dimension_</code> </p>
 <p> std::vector&lt; statistics_type &gt; <code>stats_</code> </p>
@@ -89,6 +71,6 @@ Protected Attributes</code></pre>
 <p> For most of the statistics this class relies on the StatisticsType underlying class to provide 1-D methods that will be iterated for all the components of the N-D data. These lifted methods are the union of all the methods that might be requested to the 1-D underlying StatisticsType class, with the usual compile-time checks provided by the template approach. </p>
 <p> <code>Tests</code></p>
 <dl>
-<dd>the correctness of the returned values is tested by checking them against numerical calculations.</dl>
+<dd>the correctness of the returned values is tested by checking them against numerical calculations.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

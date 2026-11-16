@@ -110,8 +110,8 @@ description: "avahi_selinux – Security Enhanced Linux Policy for the avahi pro
 <p> <code>avahi_exec_t</code> </p>
 <p> &#8211; Set files with the avahi_exec_t type, if you want to transition an executable to the avahi_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/avahi-daemon, /usr/sbin/avahi-autoipd, /usr/sbin/avahi-dnsconfd </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/avahi-daemon, /usr/sbin/avahi-autoipd, /usr/sbin/avahi-dnsconfd </dd>
 </dl>
 <p> <code>avahi_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the avahi_initrc_exec_t type, if you want to transition an executable to the avahi_initrc_t domain. </p>

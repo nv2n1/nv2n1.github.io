@@ -34,40 +34,40 @@ description: "sip2ncid – Inject CID info by snooping SIP invites"
 <p> The configuration file for </code><i>sip2ncid</i> is /etc/ncid/sip2ncid.conf.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-C &lt;filename&gt; | &#8211;config &lt;filename&gt;</code></p>
+<dt><code>-C &lt;filename&gt; | &#8211;config &lt;filename&gt;</code></dt>
 <dd>Configuration file.<br />
- Default: /etc/ncid/sip2ncid.conf</p>
-<dt><code>-D | &#8211;debug</code></p>
-<dd>Debug mode, <i>sip2ncid</i> stays attached to the terminal.</p>
-<dt><code>-h | &#8211;help</code></p>
-<dd>Prints this help</p>
-<dt><code>-i &lt;interface&gt; | &#8211;interface=&lt;interface&gt;</code></p>
-<dd>Specifies the network interface to snoop on. If this is not specified then libpcap will pick a network interface. This will generally be the first ethernet interface found.</p>
-<dt><code>-l | &#8211;listdevs</code></p>
-<dd>Returns a list of all network device names that can be used.</p>
-<dt><code>-L &lt;filename&gt; | &#8211;logfile=&lt;filename&gt;</code></p>
+ Default: /etc/ncid/sip2ncid.conf</dd>
+<dt><code>-D | &#8211;debug</code></dt>
+<dd>Debug mode, <i>sip2ncid</i> stays attached to the terminal.</dd>
+<dt><code>-h | &#8211;help</code></dt>
+<dd>Prints this help</dd>
+<dt><code>-i &lt;interface&gt; | &#8211;interface=&lt;interface&gt;</code></dt>
+<dd>Specifies the network interface to snoop on. If this is not specified then libpcap will pick a network interface. This will generally be the first ethernet interface found.</dd>
+<dt><code>-l | &#8211;listdevs</code></dt>
+<dd>Returns a list of all network device names that can be used.</dd>
+<dt><code>-L &lt;filename&gt; | &#8211;logfile=&lt;filename&gt;</code></dt>
 <dd>Specifies the logfile name to use. The logfile must exist before it is used.<br />
- Default log filename: /var/log/sip2ncid.log</p>
-<dt><code>-n &lt;[host][:port]&gt; | &#8211;ncid=&lt;[host][:port]&gt;</code></p>
-<dd>Specifies the NCID server to connect to. Port may be specified by suffixing the hostname with &lt;:port&gt;, or if you only want to change the port, just &lt;:port&gt;. By default it will connect to port 3333 on &quot;127.0.0.1&quot;.</p>
-<dt><code>-P &lt;filename&gt; | &#8211;pidfile=&lt;filename&gt;</code></p>
-<dd>Specifies the pidfile name to write. Set to <i>/var/run/ncidd.pid</i><code> in a rc or init script when used as a service. The program will still run if it does not have permission to write a pidfile. There is no default. If pidfile is not set, no pid file will be used.</p>
-<dt>-r &lt;dumpfile&gt; | &#8211;readfile &lt;dumpfile&gt;</code></p>
-<dd>Read packets from a libpcap capture file instead of the network. This also sets the testudp option, verbose to level 3, and no filter is applied. Mostly only useful for development and debug purposes.</p>
-<dt><code>-s &lt;[host][:port]&gt; | &#8211;sip=&lt;[host][:port]&gt;</code></p>
-<dd>Specifies the hostname of the SIP devie to snoop. You may also specify the UDP port by suffixing the hostname with :&lt;port&gt;, or if no hostname is wanted, just &lt;:port&gt;. If you do not specify a host, it defaults to the network interface. If you do not specify a port, it defaults to &lt;5061&gt; (Vonage default). Other Vonage ports are 5060 and 10000. The new Vonage default appears to be &lt;10000&gt;.</p>
-<dt><code>-T | &#8211;testall</code></p>
-<dd>Test for all packets. This option is used to check for IP packets without starting the NCID server. It will display a packet count and the packet type. It will not send any CID data to NCID. It also sets the debug option.</p>
-<dt><code>-t | &#8211;testudp</code></p>
-<dd>Test for SIP packets. This option is used to check if SIP packets exist without starting the NCID server. It will display the Caller ID line generated when a call comes in, and a CANCEL line if cancel was generated. It will not send any CID data to NCID. It also sets the debug option. <code>-u | &#8211;usage</code> Prints this help</p>
-<dt><code>-V | &#8211;version</code></p>
-<dd>Displays the version</p>
-<dt><code>-v &lt;1-9&gt; | &#8211;verbose &lt;1-9&gt;</code></p>
+ Default log filename: /var/log/sip2ncid.log</dd>
+<dt><code>-n &lt;[host][:port]&gt; | &#8211;ncid=&lt;[host][:port]&gt;</code></dt>
+<dd>Specifies the NCID server to connect to. Port may be specified by suffixing the hostname with &lt;:port&gt;, or if you only want to change the port, just &lt;:port&gt;. By default it will connect to port 3333 on &quot;127.0.0.1&quot;.</dd>
+<dt><code>-P &lt;filename&gt; | &#8211;pidfile=&lt;filename&gt;</code></dt>
+<dd>Specifies the pidfile name to write. Set to <i>/var/run/ncidd.pid</i><code> in a rc or init script when used as a service. The program will still run if it does not have permission to write a pidfile. There is no default. If pidfile is not set, no pid file will be used.</dd>
+<dt>-r &lt;dumpfile&gt; | &#8211;readfile &lt;dumpfile&gt;</code></dt>
+<dd>Read packets from a libpcap capture file instead of the network. This also sets the testudp option, verbose to level 3, and no filter is applied. Mostly only useful for development and debug purposes.</dd>
+<dt><code>-s &lt;[host][:port]&gt; | &#8211;sip=&lt;[host][:port]&gt;</code></dt>
+<dd>Specifies the hostname of the SIP devie to snoop. You may also specify the UDP port by suffixing the hostname with :&lt;port&gt;, or if no hostname is wanted, just &lt;:port&gt;. If you do not specify a host, it defaults to the network interface. If you do not specify a port, it defaults to &lt;5061&gt; (Vonage default). Other Vonage ports are 5060 and 10000. The new Vonage default appears to be &lt;10000&gt;.</dd>
+<dt><code>-T | &#8211;testall</code></dt>
+<dd>Test for all packets. This option is used to check for IP packets without starting the NCID server. It will display a packet count and the packet type. It will not send any CID data to NCID. It also sets the debug option.</dd>
+<dt><code>-t | &#8211;testudp</code></dt>
+<dd>Test for SIP packets. This option is used to check if SIP packets exist without starting the NCID server. It will display the Caller ID line generated when a call comes in, and a CANCEL line if cancel was generated. It will not send any CID data to NCID. It also sets the debug option. <code>-u | &#8211;usage</code> Prints this help</dd>
+<dt><code>-V | &#8211;version</code></dt>
+<dd>Displays the version</dd>
+<dt><code>-v &lt;1-9&gt; | &#8211;verbose &lt;1-9&gt;</code></dt>
 <dd>Verbose mode. Output information, used for the logfile and the -D option. Set higher number for more information.<br />
  Default: verbose = 1<br />
- Most Useful: verbose = 3 (displays payload of all packets that matched the libpcap filter.</p>
-<dt><code>-w &lt;dumpfile&gt; | &#8211;writefile &lt;dumpfile&gt;</code></p>
-<dd>Write packets to a libpcap capture file. This also sets the debug option, verbose to level 3, and no filter is applied. Mostly only useful for development and debug purposes.</dl>
+ Most Useful: verbose = 3 (displays payload of all packets that matched the libpcap filter.</dd>
+<dt><code>-w &lt;dumpfile&gt; | &#8211;writefile &lt;dumpfile&gt;</code></dt>
+<dd>Write packets to a libpcap capture file. This also sets the debug option, verbose to level 3, and no filter is applied. Mostly only useful for development and debug purposes.</dd></dl>
 <h2>Files</h2>
 <p>/etc/ncid/sip2ncid.conf</p>
 <h2>Messages Format</h2>

@@ -15,14 +15,14 @@ description: "chroot – run command or interactive shell with special root dire
 <h2>DESCRIPTION</h2>
 <p> Run COMMAND with root directory set to NEWROOT.</p>
 <dl>
-<dt><code>&#8211;userspec</code>=<i>USER</i>:GROUP</p>
-<dd> specify user and group (ID or name) to use</p>
-<dt><code>&#8211;groups</code>=<i>G_LIST</i></p>
-<dd> specify supplementary groups as g1,g2,..,gN</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>&#8211;userspec</code>=<i>USER</i>:GROUP</dt>
+<dd> specify user and group (ID or name) to use</dd>
+<dt><code>&#8211;groups</code>=<i>G_LIST</i></dt>
+<dd> specify supplementary groups as g1,g2,..,gN</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> If no command is given, run &#8216;${SHELL} <code>-i</code>&#8216; (default: &#8216;/bin/sh <code>-i</code>&#8216;). </p>
 <p> GNU coreutils online help: &lt;<a rel="nofollow" href="http://www.gnu.org/software/coreutils/">http://www.gnu.org/software/coreutils/</a>&gt; Report chroot translation bugs to &lt;<a rel="nofollow" href="http://translationproject.org/team/">http://translationproject.org/team/</a>&gt;</p>
 <h2>AUTHOR</h2>
@@ -35,6 +35,6 @@ description: "chroot – run command or interactive shell with special root dire
 <p> The full documentation for <code>chroot</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>chroot</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info coreutils &#8216;chroot invocation&#8217;</code></dl>
+</dt><dd> <code>info coreutils &#8216;chroot invocation&#8217;</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

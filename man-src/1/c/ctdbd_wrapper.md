@@ -11,9 +11,9 @@ description: "ctdbd_wrapper – Wrapper for ctdbd"
 <p> ctdbd_wrapper &#8211; Wrapper for ctdbd </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>ctdbd_wrapper</code> {<i>PIDFILE</i>} {start | stop}</dl>
+<dt> <code>ctdbd_wrapper</code> {<i>PIDFILE</i>} {start | stop}</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>ctdbd_wrapper is used to start or stop the main CTDB daemon. </p>
+<dd>ctdbd_wrapper is used to start or stop the main CTDB daemon. </dd>
 <p> <i>PIDFILE</i> specifies the location of the file containing the PID of the main CTDB daemon. </p>
 <p> ctdbd_wrapper constructs command-line options for ctdbd from configuration variables specified in <code><a href="/docs/linux/man/5-ctdbd-conf/">ctdbd.conf</a></code>(5). </p>
 <p> See <code><a href="/docs/linux/man/7-ctdb/">ctdb</a></code>(7) for an overview of CTDB.</p>

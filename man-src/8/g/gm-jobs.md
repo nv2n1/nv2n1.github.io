@@ -14,38 +14,38 @@ description: "gm-jobs – displays information and manages current jobs handled 
 <p>gm-jobs [OPTION&#8230;] </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Show help for available options</p>
-<dt><code>-l, &#8211;longlist</code></p>
-<dd>display more information about each job</p>
-<dt><code>-c, &#8211;conffile=file</code></p>
-<dd>use specified configuration file</p>
-<dt><code>-d, &#8211;controldir=dir</code></p>
-<dd>read information from specified control directory</p>
-<dt><code>-s, &#8211;showshares</code></p>
-<dd>print summary of jobs in each transfer share. Shows for input (preparing) and output (finishing) files the number of files being copied and the number queued per transfer share</p>
-<dt><code>-J, &#8211;notshowjobs</code></p>
-<dd>do not print list of jobs (printed by default)</p>
-<dt><code>-S, &#8211;notshowstates</code></p>
-<dd>do not print number of jobs in each state (printed by default)</p>
-<dt><code>-w, &#8211;showservice</code></p>
-<dd>print state of the service</p>
-<dt><code>-f, &#8211;filteruser=dn</code></p>
-<dd>show only jobs of user(s) with specified subject name(s)</p>
-<dt><code>-k, &#8211;killjob=id</code></p>
-<dd>request to cancel job(s) with specified ID(s)</p>
-<dt><code>-K, &#8211;killuser=dn</code></p>
-<dd>request to cancel jobs belonging to user(s) with specified subject name(s)</p>
-<dt><code>-r, &#8211;remjob=id</code></p>
-<dd>request to clean job(s) with specified ID(s)</p>
-<dt><code>-R, &#8211;remuser=dn</code></p>
-<dd>request to clean jobs belonging to user(s) with specified subject name(s)</p>
-<dt><code>-j, &#8211;filterjob=id</code></p>
-<dd>show only jobs with specified ID(s)</p>
-<dt><code>-e, &#8211;listdelegs</code></p>
-<dd>print list of available delegation IDs</p>
-<dt><code>-E, &#8211;showdeleg=id</code></p>
-<dd>print delegation token of specified ID(s) </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Show help for available options</dd>
+<dt><code>-l, &#8211;longlist</code></dt>
+<dd>display more information about each job</dd>
+<dt><code>-c, &#8211;conffile=file</code></dt>
+<dd>use specified configuration file</dd>
+<dt><code>-d, &#8211;controldir=dir</code></dt>
+<dd>read information from specified control directory</dd>
+<dt><code>-s, &#8211;showshares</code></dt>
+<dd>print summary of jobs in each transfer share. Shows for input (preparing) and output (finishing) files the number of files being copied and the number queued per transfer share</dd>
+<dt><code>-J, &#8211;notshowjobs</code></dt>
+<dd>do not print list of jobs (printed by default)</dd>
+<dt><code>-S, &#8211;notshowstates</code></dt>
+<dd>do not print number of jobs in each state (printed by default)</dd>
+<dt><code>-w, &#8211;showservice</code></dt>
+<dd>print state of the service</dd>
+<dt><code>-f, &#8211;filteruser=dn</code></dt>
+<dd>show only jobs of user(s) with specified subject name(s)</dd>
+<dt><code>-k, &#8211;killjob=id</code></dt>
+<dd>request to cancel job(s) with specified ID(s)</dd>
+<dt><code>-K, &#8211;killuser=dn</code></dt>
+<dd>request to cancel jobs belonging to user(s) with specified subject name(s)</dd>
+<dt><code>-r, &#8211;remjob=id</code></dt>
+<dd>request to clean job(s) with specified ID(s)</dd>
+<dt><code>-R, &#8211;remuser=dn</code></dt>
+<dd>request to clean jobs belonging to user(s) with specified subject name(s)</dd>
+<dt><code>-j, &#8211;filterjob=id</code></dt>
+<dd>show only jobs with specified ID(s)</dd>
+<dt><code>-e, &#8211;listdelegs</code></dt>
+<dd>print list of available delegation IDs</dd>
+<dt><code>-E, &#8211;showdeleg=id</code></dt>
+<dd>print delegation token of specified ID(s) </dd>
 </dl>
 <h2>Author</h2>
 <p>Aleksandr Konstantinov &lt;aleksandr dot konstantinov at fys dot uio dot no&gt;</p>

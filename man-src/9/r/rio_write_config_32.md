@@ -14,17 +14,17 @@ description: "rio_write_config_32 – Write 32 bits to configuration space"
 <p><i>rdev</i></p>
 <dl>
 <dd>
-<dd>RIO device</dl>
+</dd><dd>RIO device</dd></dl>
 <p> <i>offset</i></p>
 <dl>
-<dd>Offset into device configuration space</dl>
+<dd>Offset into device configuration space</dd></dl>
 <p> <i>data</i></p>
 <dl>
-<dd>Data to be written</dl>
+<dd>Data to be written</dd></dl>
 <h2>Description</h2>
 <p>Writes 32 bits of data to the specified offset within the RIO device&#8217;s configuration space.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -14,14 +14,14 @@ description: "DROP TEXT SEARCH CONFIGURATION – remove a text search configurat
 <p><code>DROP TEXT SEARCH CONFIGURATION</code> drops an existing text search configuration. To execute this command you must be the owner of the configuration.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>IF EXISTS</code></p>
-<dd>Do not throw an error if the text search configuration does not exist. A notice is issued in this case.</p>
-<dt><i>name</i></p>
-<dd>The name (optionally schema-qualified) of an existing text search configuration.</p>
-<dt><code>CASCADE</code></p>
-<dd>Automatically drop objects that depend on the text search configuration.</p>
-<dt><code>RESTRICT</code></p>
-<dd>Refuse to drop the text search configuration if any objects depend on it. This is the default.</dl>
+<dt><code>IF EXISTS</code></dt>
+<dd>Do not throw an error if the text search configuration does not exist. A notice is issued in this case.</dd>
+<dt><i>name</i></dt>
+<dd>The name (optionally schema-qualified) of an existing text search configuration.</dd>
+<dt><code>CASCADE</code></dt>
+<dd>Automatically drop objects that depend on the text search configuration.</dd>
+<dt><code>RESTRICT</code></dt>
+<dd>Refuse to drop the text search configuration if any objects depend on it. This is the default.</dd></dl>
 <h2>Examples</h2>
 <p>Remove the text search configuration my_english: </p>
 <pre>DROP TEXT SEARCH CONFIGURATION my_english;</pre>

@@ -11,7 +11,6 @@ description: "sc::OneBodyIntV3 –"
 <p> This implements most one body integrals in the IntV3 library.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;obintv3.h&gt;</code></pre>
 <p> Inherits <code>sc::OneBodyInt</code>.</p>
 <h3>Public Member Functions</h3>

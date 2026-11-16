@@ -16,36 +16,36 @@ description: "mii-tool – view, manipulate media-independent interface status"
 <p> The default short output reports the negotiated link speed and link status for each interface.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
 <dd>Display more detailed MII status information. If used twice, also display raw MII register contents.<br />
- <code>Alert:</code> If used three times, will force reading all MII registers, including non standard ones. It&#8217;s not guaranteed any valid answer from PHY while PHY communication can even hang. With driver e1000e will fail while reading register 0x07.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Display program version information.</p>
-<dt><code>-R</code>, <code>&#8211;reset</code></p>
-<dd>Reset the MII to its default configuration.</p>
-<dt><code>-r</code>, <code>&#8211;restart</code></p>
-<dd>Restart autonegotiation.</p>
-<dt><code>-w</code>, <code>&#8211;watch</code></p>
-<dd>Watch interface(s) and report changes in link status. The MII interfaces are polled at one second intervals.</p>
-<dt><code>-l</code>, <code>&#8211;log</code></p>
-<dd>Used with <code>-w</code>, records link status changes in the system log instead of printing on standard output.</p>
-<dt><code>-F</code><i> media</i>, <code>&#8211;force=</code><i>media</i></p>
-<dd>Disable autonegotiation, and force the MII to either <code>100baseTx-FD</code>, <code>100baseTx-HD</code>, <code>10baseT-FD</code>, or <code>10baseT-HD</code> operation.</p>
-<dt><code>-A</code><i> media,&#8230;</i>, <code>&#8211;advertise=</code><i>media,&#8230;</i></p>
-<dd>Enable and restart autonegotiation, and advertise only the specified media technologies. Multiple technologies should be separated by commas. Valid media are <code>100baseT4</code>, <code>100baseTx-FD</code>, <code>100baseTx-HD</code>, <code>10baseT-FD</code>, and <code>10baseT-HD</code>.</p>
-<dt><code>-p</code><i> addr</i>, <code>&#8211;phy=</code><i>addr</i></p>
-<dd>Override the MII address provided by kernel with value <code>addr</code>. </p>
+ <code>Alert:</code> If used three times, will force reading all MII registers, including non standard ones. It&#8217;s not guaranteed any valid answer from PHY while PHY communication can even hang. With driver e1000e will fail while reading register 0x07.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Display program version information.</dd>
+<dt><code>-R</code>, <code>&#8211;reset</code></dt>
+<dd>Reset the MII to its default configuration.</dd>
+<dt><code>-r</code>, <code>&#8211;restart</code></dt>
+<dd>Restart autonegotiation.</dd>
+<dt><code>-w</code>, <code>&#8211;watch</code></dt>
+<dd>Watch interface(s) and report changes in link status. The MII interfaces are polled at one second intervals.</dd>
+<dt><code>-l</code>, <code>&#8211;log</code></dt>
+<dd>Used with <code>-w</code>, records link status changes in the system log instead of printing on standard output.</dd>
+<dt><code>-F</code><i> media</i>, <code>&#8211;force=</code><i>media</i></dt>
+<dd>Disable autonegotiation, and force the MII to either <code>100baseTx-FD</code>, <code>100baseTx-HD</code>, <code>10baseT-FD</code>, or <code>10baseT-HD</code> operation.</dd>
+<dt><code>-A</code><i> media,&#8230;</i>, <code>&#8211;advertise=</code><i>media,&#8230;</i></dt>
+<dd>Enable and restart autonegotiation, and advertise only the specified media technologies. Multiple technologies should be separated by commas. Valid media are <code>100baseT4</code>, <code>100baseTx-FD</code>, <code>100baseTx-HD</code>, <code>10baseT-FD</code>, and <code>10baseT-HD</code>.</dd>
+<dt><code>-p</code><i> addr</i>, <code>&#8211;phy=</code><i>addr</i></dt>
+<dd>Override the MII address provided by kernel with value <code>addr</code>. </dd>
 </dl>
 <h2>Diagnostics</h2>
 <dl>
-<dt>SIOCGMIIPHY on &#8216;eth?&#8217; failed: Invalid argument</p>
-<dd>If the interface is not running (up), kernel will refuse to report its link state.</p>
-<dt>SIOCGMIIPHY on &#8216;eth?&#8217; failed: Operation not permitted</p>
-<dd>Most kernels restrict access to root.</p>
-<dt>SIOCGMIIPHY on &#8216;eth?&#8217; failed: No such device</p>
-<dd>This error is shown, if the kernel does not know about the named device.</p>
-<dt>SIOCGMIIPHY on &#8216;eth?&#8217; failed: Operation not supported</p>
-<dd>The interface in question does not support MII queries. Most likely, it does not have MII transceivers, at all. </p>
+<dt>SIOCGMIIPHY on &#8216;eth?&#8217; failed: Invalid argument</dt>
+<dd>If the interface is not running (up), kernel will refuse to report its link state.</dd>
+<dt>SIOCGMIIPHY on &#8216;eth?&#8217; failed: Operation not permitted</dt>
+<dd>Most kernels restrict access to root.</dd>
+<dt>SIOCGMIIPHY on &#8216;eth?&#8217; failed: No such device</dt>
+<dd>This error is shown, if the kernel does not know about the named device.</dd>
+<dt>SIOCGMIIPHY on &#8216;eth?&#8217; failed: Operation not supported</dt>
+<dd>The interface in question does not support MII queries. Most likely, it does not have MII transceivers, at all. </dd>
 </dl>
 <h2>Authors</h2>
 <p>David Hinds &#8211; dhinds [at] pcmcia.sourceforge.org<br />

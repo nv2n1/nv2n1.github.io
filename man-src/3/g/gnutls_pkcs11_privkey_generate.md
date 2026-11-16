@@ -14,16 +14,16 @@ description: "gnutls_pkcs11_privkey_generate – API function"
 <p> <code>int gnutls_pkcs11_privkey_generate(const char * </code><i>url</i><code>, gnutls_pk_algorithm_t </code><i>pk</i><code>, unsigned int </code><i>bits</i><code>, const char * </code><i>label</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const char * url</p>
-<dd> a token URL</p>
-<dt>gnutls_pk_algorithm_t pk</p>
-<dd> the public key algorithm</p>
-<dt>unsigned int bits</p>
-<dd> the security bits</p>
-<dt>const char * label</p>
-<dd> a label</p>
-<dt>unsigned int flags</p>
-<dd> should be zero</dl>
+<dt>const char * url</dt>
+<dd> a token URL</dd>
+<dt>gnutls_pk_algorithm_t pk</dt>
+<dd> the public key algorithm</dd>
+<dt>unsigned int bits</dt>
+<dd> the security bits</dd>
+<dt>const char * label</dt>
+<dd> a label</dd>
+<dt>unsigned int flags</dt>
+<dd> should be zero</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will generate a private key in the specified by the <i>url</i> token. The private key will be generate within the token and will not be exportable.</p>
 <h2>RETURNS</h2>
@@ -39,6 +39,6 @@ description: "gnutls_pkcs11_privkey_generate – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

@@ -35,7 +35,7 @@ Initially, X will not report any of these events. Events are
 reported relative to a window. If a window is not interested in
 a device event, it usually propagates to the closest ancestor
 that is interested, unless the do_not_propagate mask prohibits
-it.</pre></dl><dl COMPACT><dd><pre>Multiple clients can select for the same events on the same
+it.</pre></dd></dl><dl COMPACT><dd><pre>Multiple clients can select for the same events on the same
 window with the following restrictions:
  * Multiple clients can select events on the same window
  because their event masks are disjoint. When the X server
@@ -46,7 +46,7 @@ window with the following restrictions:
  associated with the event class DeviceButtonPressGrab. To
  receive DeviceButtonPress events without automatic passive
  grabbing, use event class DeviceButtonPress but do not
- specify event class DeviceButtonPressGrab.</pre></dl><dl COMPACT><dd><pre>The server reports the event to all interested clients.</pre></dl><dl COMPACT><dd><pre>Information contained in the XDevice structure returned by
+ specify event class DeviceButtonPressGrab.</pre></dd></dl><dl COMPACT><dd><pre>The server reports the event to all interested clients.</pre></dd></dl><dl COMPACT><dd><pre>Information contained in the XDevice structure returned by
 XOpenDevice is used by macros to obtain the event classes that
 clients use in making XSelectExtensionEvent requests. Currently
 defined macros include DeviceKeyPress, DeviceKeyRelease,
@@ -56,11 +56,11 @@ DeviceStateNotify, DeviceMappingNotify, ChangeDeviceNotify,
 DevicePointerMotionHint, DeviceButton1Motion,
 DeviceButton2Motion, DeviceButton3Motion, DeviceButton4Motion,
 DeviceButton5Motion, DeviceButtonMotion, DeviceOwnerGrabButton,
-DeviceButtonPressGrab, and NoExtensionEvent.</pre></dl><dl COMPACT><dd><pre>To obtain the proper event class for a particular device, one
+DeviceButtonPressGrab, and NoExtensionEvent.</pre></dd></dl><dl COMPACT><dd><pre>To obtain the proper event class for a particular device, one
 of the above macros is invoked using the XDevice structure for
 that device. For example,
- DeviceKeyPress (*device, type, eventclass);</pre></dl><dl COMPACT><dd><pre>returns the DeviceKeyPress event type and the eventclass for
-selecting DeviceKeyPress events from this device.</pre></dl><dl COMPACT><dd><pre>XSelectExtensionEvent can generate a BadWindow or BadClass
+ DeviceKeyPress (*device, type, eventclass);</pre></dd></dl><dl COMPACT><dd><pre>returns the DeviceKeyPress event type and the eventclass for
+selecting DeviceKeyPress events from this device.</pre></dd></dl><dl COMPACT><dd><pre>XSelectExtensionEvent can generate a BadWindow or BadClass
 error. The XGetSelectedExtensionEvents request reports the
 extension events selected by this client and all clients for
 the specified window. This request returns pointers to two
@@ -68,7 +68,7 @@ XEventClass arrays. One lists the input extension events
 selected by this client from the specified window. The other
 lists the event classes selected by all clients from the
 specified window. You should use XFree to free these two
-arrays.</pre></dl><dl COMPACT><dd><pre>XGetSelectedExtensionEvents can generate a BadWindow error.</pre></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadWindow
+arrays.</pre></dd></dl><dl COMPACT><dd><pre>XGetSelectedExtensionEvents can generate a BadWindow error.</pre></dd></dl><h2>Diagnostics</h2><dl COMPACT><dd><pre>BadWindow
  A value for a Window argument does not name a defined
- window.</pre></dl><dl COMPACT><dd><pre>BadClass
- A value for an XEventClass is invalid.</pre></dl>
+ window.</pre></dd></dl><dl COMPACT><dd><pre>BadClass
+ A value for an XEventClass is invalid.</pre></dd></dl>

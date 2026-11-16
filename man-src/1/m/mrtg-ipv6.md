@@ -50,7 +50,7 @@ description: "mrtg-ipv6 – IPv6 support in MRTG"
 <h2>AUTHOR</h2>
 <p> Lorenzo Colitti &lt;lorenzo location colitti.com&gt; </p>
 <h2>Index</h2>
-<dt><a href="#lbAH">IPv6 LIBRARIES</a></p>
+<dt><a href="#lbAH">IPv6 LIBRARIES</a></dt>
 <dd>
-<dt><a href="#lbAK">AUTHOR</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAK">AUTHOR</a></dt>
+<dd></dd></dl>

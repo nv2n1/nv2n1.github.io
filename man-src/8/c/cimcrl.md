@@ -21,37 +21,37 @@ description: "cimcrl – Add, remove or list X509 Certificate Revocation Lists i
 <p><code>cimcrl </code> recognizes the following options:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>-a</code></p>
-<dd>Adds a CRL to the truststore. If the specified <code>file </code> does not contain a valid X509 CRL an error message is returned and no action is taken. If the CRL for the specified issuer already exists in the CRL store, it is replaced with the CRL in the specified <code>file</code></p>
-<dt><code>-r</code></p>
-<dd>Removes a CRL from the truststore. If no CRL exists for the specified <code>issuer </code> , an error message is returned and no action is taken.</p>
-<dt><code>-l</code></p>
-<dd>Displays the X509 CRLs in the truststore.</p>
-<dt><code>-f file</code></p>
-<dd>Specifies a PEM format file containing an X509 CRL.</p>
-<dt><code>-i issuer</code></p>
-<dd>Specifies the issuer name of the CRL.</p>
-<dt><code>&#8211;help</code></p>
-<dd>Displays the command help message.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Displays the CIM Server version.</dl>
+</dd><dl>
+<dt><code>-a</code></dt>
+<dd>Adds a CRL to the truststore. If the specified <code>file </code> does not contain a valid X509 CRL an error message is returned and no action is taken. If the CRL for the specified issuer already exists in the CRL store, it is replaced with the CRL in the specified <code>file</code></dd>
+<dt><code>-r</code></dt>
+<dd>Removes a CRL from the truststore. If no CRL exists for the specified <code>issuer </code> , an error message is returned and no action is taken.</dd>
+<dt><code>-l</code></dt>
+<dd>Displays the X509 CRLs in the truststore.</dd>
+<dt><code>-f file</code></dt>
+<dd>Specifies a PEM format file containing an X509 CRL.</dd>
+<dt><code>-i issuer</code></dt>
+<dd>Specifies the issuer name of the CRL.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>Displays the command help message.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Displays the CIM Server version.</dd></dl>
 </dl>
 <h2>Exit Status</h2>
 <p>When an error occurs, an error message is written to the standard error stream and a non-zero exit status value is returned. The following exit status values are defined:</p>
 <dl>
 <dd>
-<dl>
-<dt><code>0</code></p>
-<dd>Success</p>
-<dt><code>1</code></p>
-<dd>General error</p>
-<dt><code>2</code></p>
-<dd>Connection failed</p>
-<dt><code>3</code></p>
-<dd>Connection timed out</p>
-<dt><code>4</code></p>
-<dd>CRL does not exist</dl>
+</dd><dl>
+<dt><code>0</code></dt>
+<dd>Success</dd>
+<dt><code>1</code></dt>
+<dd>General error</dd>
+<dt><code>2</code></dt>
+<dd>Connection failed</dd>
+<dt><code>3</code></dt>
+<dd>Connection timed out</dd>
+<dt><code>4</code></dt>
+<dd>CRL does not exist</dd></dl>
 </dl>
 <h2>Examples</h2>
 <p>Add the CRL in class1crl.pem to the CRL store: cimcrl -a -f class1crl.pem Remove the CRL for a specified issuer:  List all the X509 CRLs in the trust store: cimcrl -l </p>

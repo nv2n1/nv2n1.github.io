@@ -16,25 +16,25 @@ description: "ccze-cssdump – Dump CCZE color setup into CSS format"
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>-F, &#8211;rcfile </code><i>rcfile</i></p>
-<dd> Read <i>rcfile</i> as a configuration file upon startup.</p>
-<dt><code>-l, &#8211;load</code></p>
-<dd> Load the default configuration files upon startup.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show summary of options and exit.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Show version of program.</dl>
+<dt><code>-F, &#8211;rcfile </code><i>rcfile</i></dt>
+<dd> Read <i>rcfile</i> as a configuration file upon startup.</dd>
+<dt><code>-l, &#8211;load</code></dt>
+<dd> Load the default configuration files upon startup.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show summary of options and exit.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Show version of program.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/colorizerc</i>, <i>$HOME/.colorizerc</i></p>
+<dt><i>/etc/colorizerc</i>, <i>$HOME/.colorizerc</i></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> These files are the default configuration files for <code>colorize</code>, and are parsed by <code>ccze</code> for the sake of full compatibility.</dl>
+</dt><dd> These files are the default configuration files for <code>colorize</code>, and are parsed by <code>ccze</code> for the sake of full compatibility.</dd></dl>
 <p> <i>/etc/cczerc</i>, <i>$HOME/.cczerc</i></p>
 <dl>
 <dt>
-<dd> This two are the main configuration files, in which one can change the colors used by the program to his liking. See the comments in the beginning of <i>/etc/cczerc</i> for a description on the files&#8217; structure.</dl>
+</dt><dd> This two are the main configuration files, in which one can change the colors used by the program to his liking. See the comments in the beginning of <i>/etc/cczerc</i> for a description on the files&#8217; structure.</dd></dl>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ccze/">ccze</a></code>(1)</p>

@@ -16,22 +16,22 @@ description: "deb-split – Debian multi-part binary package format"
 <p>The file is an <code>ar</code> archive with a magic value of <code>!&lt;arch&gt;</code>. The file names might contain a trailing slash (since dpkg 1.15.6). </p>
 <p> The first member is named <code>debian-split</code> and contains a series of lines, separated by newlines. Currently eight lines are present:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The format version number, <code>2.1</code> at the time this manual page was written.</p>
-<dt>&bull;</p>
-<dd>The package name.</p>
-<dt>&bull;</p>
-<dd>The package version.</p>
-<dt>&bull;</p>
-<dd>The md5sum of the package.</p>
-<dt>&bull;</p>
-<dd>The total size of the package.</p>
-<dt>&bull;</p>
-<dd>The maximum part size.</p>
-<dt>&bull;</p>
-<dd>The current part number, followed by a slash and the total amount of parts (as in &#8216;1/10&#8217;).</p>
-<dt>&bull;</p>
-<dd>The package architecture (since dpkg 1.16.1).</dl>
+<dt>&bull;</dt>
+<dd>The format version number, <code>2.1</code> at the time this manual page was written.</dd>
+<dt>&bull;</dt>
+<dd>The package name.</dd>
+<dt>&bull;</dt>
+<dd>The package version.</dd>
+<dt>&bull;</dt>
+<dd>The md5sum of the package.</dd>
+<dt>&bull;</dt>
+<dd>The total size of the package.</dd>
+<dt>&bull;</dt>
+<dd>The maximum part size.</dd>
+<dt>&bull;</dt>
+<dd>The current part number, followed by a slash and the total amount of parts (as in &#8216;1/10&#8217;).</dd>
+<dt>&bull;</dt>
+<dd>The package architecture (since dpkg 1.16.1).</dd></dl>
 <p> Programs which read multi-part archives should be prepared for the minor format version number to be increased and additional lines to be present, and should ignore these if this is the case. </p>
 <p> If the major format version number has changed, an incompatible change has been made and the program should stop. If it has not, then the program should be able to safely continue, unless it encounters an unexpected member in the archive (except at the end), as described below. </p>
 <p> The second, last required member is named <code>data.</code><i>N</i>, where <i>N</i> denotes the part number. It contains the raw part data. </p>

@@ -15,7 +15,7 @@ usb_deregister_device_driver - unregister a USB device (not interface) driver
 <h2>Arguments</h2>
 
 <i>udriver</i>
-<dl><dd><dd>USB operations of the device driver to unregister</dl>
+<dl><dd></dd><dd>USB operations of the device driver to unregister</dd></dl>
 
 <h2>Context</h2>
 

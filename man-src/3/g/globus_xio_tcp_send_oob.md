@@ -18,13 +18,13 @@ description: "Types –"
 <p>Invalid handle type </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>GLOBUS_XIO_TCP_SET_HANDLE</code></dl>
+<dd><code>GLOBUS_XIO_TCP_SET_HANDLE</code></dd></dl>
 <h2>Enumeration Type Documentation</h2>
 <h3>enum <code>globus_xio_tcp_send_flags_t</code></h3>
 <p>TCP driver specific types </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>GLOBUS_XIO_TCP_SEND_OOB </i></p>
-<dd>Use this with <code>GLOBUS_XIO_TCP_SET_SEND_FLAGS</code> to send a TCP message out of band (Urgent data flag set)</dl>
+<dt><i>GLOBUS_XIO_TCP_SEND_OOB </i></dt>
+<dd>Use this with <code>GLOBUS_XIO_TCP_SET_SEND_FLAGS</code> to send a TCP message out of band (Urgent data flag set)</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_xio from the source code.</p>

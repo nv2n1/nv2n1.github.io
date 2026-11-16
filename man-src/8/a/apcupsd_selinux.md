@@ -55,9 +55,9 @@ description: "apcupsd_selinux – Security Enhanced Linux Policy for the apcupsd
 <p> Policy governs the access confined processes have to these ports. SELinux apcupsd policy is very flexible allowing users to setup their apcupsd processes in as secure a method as possible. </p>
 <p> The following port types are defined for apcupsd: </p>
 <dl>
-<dt><code>apcupsd_port_t</code></p>
+<dt><code>apcupsd_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 3551 udp 3551</dl>
+</dd><dd>Default Defined Ports: tcp 3551 udp 3551</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type apcupsd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>apcupsd_lock_t</code> </p>
@@ -153,28 +153,28 @@ description: "apcupsd_selinux – Security Enhanced Linux Policy for the apcupsd
 <p> <code>apcupsd_cgi_script_exec_t</code> </p>
 <p> &#8211; Set files with the apcupsd_cgi_script_exec_t type, if you want to transition an executable to the apcupsd_cgi_script_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/www/cgi-bin/apcgui(/.*)?, /var/www/apcupsd/multimon.cgi, /var/www/apcupsd/upsimage.cgi, /var/www/apcupsd/upsstats.cgi, /var/www/apcupsd/upsfstats.cgi </p>
+<dt>Paths:</dt>
+<dd>/var/www/cgi-bin/apcgui(/.*)?, /var/www/apcupsd/multimon.cgi, /var/www/apcupsd/upsimage.cgi, /var/www/apcupsd/upsstats.cgi, /var/www/apcupsd/upsfstats.cgi </dd>
 </dl>
 <p> <code>apcupsd_exec_t</code> </p>
 <p> &#8211; Set files with the apcupsd_exec_t type, if you want to transition an executable to the apcupsd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/apcupsd, /usr/sbin/apcupsd </p>
+<dt>Paths:</dt>
+<dd>/sbin/apcupsd, /usr/sbin/apcupsd </dd>
 </dl>
 <p> <code>apcupsd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the apcupsd_initrc_exec_t type, if you want to transition an executable to the apcupsd_initrc_t domain. </p>
 <p> <code>apcupsd_lock_t</code> </p>
 <p> &#8211; Set files with the apcupsd_lock_t type, if you want to treat the files as apcupsd lock data, stored under the /var/lock directory </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lock/LCK.., /var/lock/subsys/apcupsd </p>
+<dt>Paths:</dt>
+<dd>/var/lock/LCK.., /var/lock/subsys/apcupsd </dd>
 </dl>
 <p> <code>apcupsd_log_t</code> </p>
 <p> &#8211; Set files with the apcupsd_log_t type, if you want to treat the data as apcupsd log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/apcupsd.events.*, /var/log/apcupsd.status.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/apcupsd.events.*, /var/log/apcupsd.status.* </dd>
 </dl>
 <p> <code>apcupsd_power_t</code> </p>
 <p> &#8211; Set files with the apcupsd_power_t type, if you want to treat the files as apcupsd power data. </p>

@@ -14,8 +14,8 @@ description: "ROLLBACK PREPARED – cancel a transaction that was earlier prepar
 <p><code>ROLLBACK PREPARED</code> rolls back a transaction that is in prepared state.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>transaction_id</i></p>
-<dd>The transaction identifier of the transaction that is to be rolled back.</dl>
+<dt><i>transaction_id</i></dt>
+<dd>The transaction identifier of the transaction that is to be rolled back.</dd></dl>
 <h2>Notes</h2>
 <p>To roll back a prepared transaction, you must be either the same user that executed the transaction originally, or a superuser. But you do not have to be in the same session that executed the transaction. </p>
 <p> This command cannot be executed inside a transaction block. The prepared transaction is rolled back immediately. </p>

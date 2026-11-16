@@ -80,18 +80,18 @@ Tcl_DriverHandlerProc *
 <code>Tcl_ChannelHandlerProc</code>(<i>typePtr</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>const Tcl_ChannelType <i>*typePtr</i> (in) Points to a structure containing the addresses of procedures that can be called to perform I/O and other functions on the channel.</p>
-<dd>const char <i>*channelName</i> (in) The name of this channel, such as <code>file3</code>; must not be in use by any other channel. Can be NULL, in which case the channel is created without a name.</p>
-<dd>ClientData <i>instanceData</i> (in) Arbitrary one-word value to be associated with this channel. This value is passed to procedures in <i>typePtr</i> when they are invoked.</p>
-<dd>int <i>mask</i> (in) OR-ed combination of <code>TCL_READABLE</code> and <code>TCL_WRITABLE</code> to indicate whether a channel is readable and writable.</p>
-<dd>Tcl_Channel <i>channel</i> (in) The channel to operate on.</p>
-<dd>int <i>direction</i> (in) <code>TCL_READABLE</code> means the input handle is wanted; <code>TCL_WRITABLE</code> means the output handle is wanted.</p>
-<dd>ClientData <i>*handlePtr</i> (out) Points to the location where the desired OS-specific handle should be stored.</p>
-<dd>int <i>size</i> (in) The size, in bytes, of buffers to allocate in this channel.</p>
-<dd>int <i>mask</i> (in) An OR-ed combination of <code>TCL_READABLE</code>, <code>TCL_WRITABLE</code> and <code>TCL_EXCEPTION</code> that indicates events that have occurred on this channel.</p>
-<dd>Tcl_Interp <i>*interp</i> (in) Current interpreter. (can be NULL)</p>
-<dd>const char <i>*optionName</i> (in) Name of the invalid option.</p>
-<dd>const char <i>*optionList</i> (in) Specific options list (space separated words, without &#8220;-&#8221;) to append to the standard generic options list. Can be NULL for generic options error message only. </p>
+<dd>const Tcl_ChannelType <i>*typePtr</i> (in) Points to a structure containing the addresses of procedures that can be called to perform I/O and other functions on the channel.</dd>
+<dd>const char <i>*channelName</i> (in) The name of this channel, such as <code>file3</code>; must not be in use by any other channel. Can be NULL, in which case the channel is created without a name.</dd>
+<dd>ClientData <i>instanceData</i> (in) Arbitrary one-word value to be associated with this channel. This value is passed to procedures in <i>typePtr</i> when they are invoked.</dd>
+<dd>int <i>mask</i> (in) OR-ed combination of <code>TCL_READABLE</code> and <code>TCL_WRITABLE</code> to indicate whether a channel is readable and writable.</dd>
+<dd>Tcl_Channel <i>channel</i> (in) The channel to operate on.</dd>
+<dd>int <i>direction</i> (in) <code>TCL_READABLE</code> means the input handle is wanted; <code>TCL_WRITABLE</code> means the output handle is wanted.</dd>
+<dd>ClientData <i>*handlePtr</i> (out) Points to the location where the desired OS-specific handle should be stored.</dd>
+<dd>int <i>size</i> (in) The size, in bytes, of buffers to allocate in this channel.</dd>
+<dd>int <i>mask</i> (in) An OR-ed combination of <code>TCL_READABLE</code>, <code>TCL_WRITABLE</code> and <code>TCL_EXCEPTION</code> that indicates events that have occurred on this channel.</dd>
+<dd>Tcl_Interp <i>*interp</i> (in) Current interpreter. (can be NULL)</dd>
+<dd>const char <i>*optionName</i> (in) Name of the invalid option.</dd>
+<dd>const char <i>*optionList</i> (in) Specific options list (space separated words, without &#8220;-&#8221;) to append to the standard generic options list. Can be NULL for generic options error message only. </dd>
 </dl>
 <h2>Description</h2>
 <p>Tcl uses a two-layered channel architecture. It provides a generic upper layer to enable C and Tcl programs to perform input and output using the same APIs for a variety of files, devices, sockets etc. The generic C APIs are described in the manual entry for <code>Tcl_OpenFileChannel</code>. </p>
@@ -143,7 +143,7 @@ Tcl_DriverHandlerProc *
  Tcl_DriverThreadActionProc *<i>threadActionProc</i>;
  Tcl_DriverTruncateProc *<i>truncateProc</i>;
 } Tcl_ChannelType;</pre>
-</dl>
+</dd></dl>
 <p> It is not necessary to provide implementations for all channel operations. Those which are not necessary may be set to NULL in the struct: <i>blockModeProc</i>, <i>seekProc</i>, <i>setOptionProc</i>, <i>getOptionProc</i>, and <i>close2Proc</i>, in addition to <i>flushProc</i>, <i>handlerProc</i>, <i>threadActionProc</i>, and <i>truncateProc</i>. Other functions that cannot be implemented in a meaningful way should return <code>EINVAL</code> when called, to indicate that the operations they represent are not available. Also note that <i>wideSeekProc</i> can be NULL if <i>seekProc</i> is. </p>
 <p> The user should only use the above structure for <code>Tcl_ChannelType</code> instantiation. When referencing fields in a <code>Tcl_ChannelType</code> structure, the following functions should be used to obtain the values: <code>Tcl_ChannelName</code>, <code>Tcl_ChannelVersion</code>, <code>Tcl_ChannelBlockModeProc</code>, <code>Tcl_ChannelCloseProc</code>, <code>Tcl_ChannelClose2Proc</code>, <code>Tcl_ChannelInputProc</code>, <code>Tcl_ChannelOutputProc</code>, <code>Tcl_ChannelSeekProc</code>, <code>Tcl_ChannelWideSeekProc</code>, <code>Tcl_ChannelThreadActionProc</code>, <code>Tcl_ChannelTruncateProc</code>, <code>Tcl_ChannelSetOptionProc</code>, <code>Tcl_ChannelGetOptionProc</code>, <code>Tcl_ChannelWatchProc</code>, <code>Tcl_ChannelGetHandleProc</code>, <code>Tcl_ChannelFlushProc</code>, or <code>Tcl_ChannelHandlerProc</code>. </p>
 <p> The change to the structures was made in such a way that standard channel types are binary compatible. However, channel types that use stacked channels (i.e. TLS, Trf) have new versions to correspond to the above change since the previous code for stacked channels had problems.</p>
@@ -160,7 +160,7 @@ Tcl_DriverHandlerProc *
 <pre>typedef int Tcl_DriverBlockModeProc(
  ClientData <i>instanceData</i>,
  int <i>mode</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>instanceData</i> is the same as the value passed to <code>Tcl_CreateChannel</code> when this channel was created. The <i>mode</i> argument is either <code>TCL_MODE_BLOCKING</code> or <code>TCL_MODE_NONBLOCKING</code> to set the device into blocking or nonblocking mode. The function should return zero if the operation was successful, or a nonzero POSIX error code if the operation failed. </p>
 <p> If the operation is successful, the function can modify the supplied <i>instanceData</i> to record that the channel entered blocking or nonblocking mode and to implement the blocking or nonblocking behavior. For some device types, the blocking and nonblocking behavior can be implemented by the underlying operating system; for other device types, the behavior must be emulated in the channel driver. </p>
 <p> This value can be retrieved with <code>Tcl_ChannelBlockModeProc</code>, which returns a pointer to the function. </p>
@@ -172,7 +172,7 @@ Tcl_DriverHandlerProc *
 <pre>typedef int Tcl_DriverCloseProc(
  ClientData <i>instanceData</i>,
  Tcl_Interp *<i>interp</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>instanceData</i> argument is the same as the value provided to <code>Tcl_CreateChannel</code> when the channel was created. The function should release any storage maintained by the channel driver for this channel, and close the input and output devices encapsulated by this channel. All queued output will have been flushed to the device before this function is called, and no further driver operations will be invoked on this instance after calling the <i>closeProc</i>. If the close operation is successful, the procedure should return zero; otherwise it should return a nonzero POSIX error code. In addition, if an error occurs and <i>interp</i> is not NULL, the procedure should store an error message in the interpreter&#8217;s result. </p>
 <p> Alternatively, channels that support closing the read and write sides independently may set <i>closeProc</i> to <code>TCL_CLOSE2PROC</code> and set <i>close2Proc</i> to the address of a function that matches the following prototype: </p>
 <dl COMPACT>
@@ -181,7 +181,7 @@ Tcl_DriverHandlerProc *
  ClientData <i>instanceData</i>,
  Tcl_Interp *<i>interp</i>,
  int <i>flags</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>close2Proc</i> will be called with <i>flags</i> set to an OR&#8217;ed combination of <code>TCL_CLOSE_READ</code> or <code>TCL_CLOSE_WRITE</code> to indicate that the driver should close the read and/or write side of the channel. The channel driver may be invoked to perform additional operations on the channel after <i>close2Proc</i> is called to close one or both sides of the channel. If <i>flags</i> is <code>0</code> (zero), the driver should close the channel in the manner described above for <i>closeProc</i>. No further operations will be invoked on this instance after <i>close2Proc</i> is called with all flags cleared. In all cases, the <i>close2Proc</i> function should return zero if the close operation was successful; otherwise it should return a nonzero POSIX error code. In addition, if an error occurs and <i>interp</i> is not NULL, the procedure should store an error message in the interpreter&#8217;s result. </p>
 <p> The <i>closeProc</i> and <i>close2Proc</i> values can be retrieved with <code>Tcl_ChannelCloseProc</code> or <code>Tcl_ChannelClose2Proc</code>, which return a pointer to the respective function.</p>
 <h3>Inputproc</h3>
@@ -193,7 +193,7 @@ Tcl_DriverHandlerProc *
  char *<i>buf</i>,
  int <i>bufSize</i>,
  int *<i>errorCodePtr</i>);</pre>
-</dl>
+</dd></dl>
 <p> <i>InstanceData</i> is the same as the value passed to <code>Tcl_CreateChannel</code> when the channel was created. The <i>buf</i> argument points to an array of bytes in which to store input from the device, and the <i>bufSize</i> argument indicates how many bytes are available at <i>buf</i>. </p>
 <p> The <i>errorCodePtr</i> argument points to an integer variable provided by the generic layer. If an error occurs, the function should set the variable to a POSIX error code that identifies the error that occurred. </p>
 <p> The function should read data from the input device encapsulated by the channel and store it at <i>buf</i>. On success, the function should return a nonnegative integer indicating how many bytes were read from the input device and stored at <i>buf</i>. On error, the function should return -1. If an error occurs after some data has been read from the device, that data is lost. </p>
@@ -208,7 +208,7 @@ Tcl_DriverHandlerProc *
  const char *<i>buf</i>,
  int <i>toWrite</i>,
  int *<i>errorCodePtr</i>);</pre>
-</dl>
+</dd></dl>
 <p> <i>InstanceData</i> is the same as the value passed to <code>Tcl_CreateChannel</code> when the channel was created. The <i>buf</i> argument contains an array of bytes to be written to the device, and the <i>toWrite</i> argument indicates how many bytes are to be written from the <i>buf</i> argument. </p>
 <p> The <i>errorCodePtr</i> argument points to an integer variable provided by the generic layer. If an error occurs, the function should set this variable to a POSIX error code that identifies the error. </p>
 <p> The function should write the data at <i>buf</i> to the output device encapsulated by the channel. On success, the function should return a nonnegative integer indicating how many bytes were written to the output device. The return value is normally the same as <i>toWrite</i>, but may be less in some cases such as if the output operation is interrupted by a signal. If an error occurs the function should return -1. In case of error, some data may have been written to the device. </p>
@@ -223,7 +223,7 @@ Tcl_DriverHandlerProc *
  long <i>offset</i>,
  int <i>seekMode</i>,
  int *<i>errorCodePtr</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>instanceData</i> argument is the same as the value given to <code>Tcl_CreateChannel</code> when this channel was created. <i>Offset</i> and <i>seekMode</i> have the same meaning as for the <code>Tcl_Seek</code> procedure (described in the manual entry for <code>Tcl_OpenFileChannel</code>). </p>
 <p> The <i>errorCodePtr</i> argument points to an integer variable provided by the generic layer for returning <code>errno</code> values from the function. The function should set this variable to a POSIX error code if an error occurs. The function should store an <code>EINVAL</code> error code if the channel type does not implement seeking. </p>
 <p> The return value is the new access point or -1 in case of error. If an error occurred, the function should not move the access point. </p>
@@ -235,7 +235,7 @@ Tcl_DriverHandlerProc *
  Tcl_WideInt <i>offset</i>,
  int <i>seekMode</i>,
  int *<i>errorCodePtr</i>);</pre>
-</dl>
+</dd></dl>
 <p> The arguments and return values mean the same thing as with <i>seekProc</i> above, except that the type of offsets and the return type are different. </p>
 <p> The <i>seekProc</i> value can be retrieved with <code>Tcl_ChannelSeekProc</code>, which returns a pointer to the function, and similarly the <i>wideSeekProc</i> can be retrieved with <code>Tcl_ChannelWideSeekProc</code>.</p>
 <h3>Setoptionproc</h3>
@@ -247,7 +247,7 @@ Tcl_DriverHandlerProc *
  Tcl_Interp *<i>interp</i>,
  const char *<i>optionName</i>,
  const char *<i>newValue</i>);</pre>
-</dl>
+</dd></dl>
 <p> <i>optionName</i> is the name of an option to set, and <i>newValue</i> is the new value for that option, as a string. The <i>instanceData</i> is the same as the value given to <code>Tcl_CreateChannel</code> when this channel was created. The function should do whatever channel type specific action is required to implement the new value of the option. </p>
 <p> Some options are handled by the generic code and this function is never called to set them, e.g. <code>-blockmode</code>. Other options are specific to each channel type and the <i>setOptionProc</i> procedure of the channel driver will get called to implement them. The <i>setOptionProc</i> field can be NULL, which indicates that this channel type supports no type specific options. </p>
 <p> If the option value is successfully modified to the new value, the function returns <code>TCL_OK</code>. It should call <code>Tcl_BadChannelOption</code> which itself returns <code>TCL_ERROR</code> if the <i>optionName</i> is unrecognized. If <i>newValue</i> specifies a value for the option that is not supported or if a system call error occurs, the function should leave an error message in the <i>result</i> field of <i>interp</i> if <i>interp</i> is not NULL. The function should also call <code>Tcl_SetErrno</code> to store an appropriate POSIX error code. </p>
@@ -261,7 +261,7 @@ Tcl_DriverHandlerProc *
  Tcl_Interp *<i>interp</i>,
  const char *<i>optionName</i>,
  Tcl_DString *<i>optionValue</i>);</pre>
-</dl>
+</dd></dl>
 <p> <i>OptionName</i> is the name of an option supported by this type of channel. If the option name is not NULL, the function stores its current value, as a string, in the Tcl dynamic string <i>optionValue</i>. If <i>optionName</i> is NULL, the function stores in <i>optionValue</i> an alternating list of all supported options and their current values. On success, the function returns <code>TCL_OK</code>. It should call <code>Tcl_BadChannelOption</code> which itself returns <code>TCL_ERROR</code> if the <i>optionName</i> is unrecognized. If a system call error occurs, the function should leave an error message in the result of <i>interp</i> if <i>interp</i> is not NULL. The function should also call <code>Tcl_SetErrno</code> to store an appropriate POSIX error code. </p>
 <p> Some options are handled by the generic code and this function is never called to retrieve their value, e.g. <code>-blockmode</code>. Other options are specific to each channel type and the <i>getOptionProc</i> procedure of the channel driver will get called to implement them. The <i>getOptionProc</i> field can be NULL, which indicates that this channel type supports no type specific options. </p>
 <p> This value can be retrieved with <code>Tcl_ChannelGetOptionProc</code>, which returns a pointer to the function.</p>
@@ -272,7 +272,7 @@ Tcl_DriverHandlerProc *
 <pre>typedef void Tcl_DriverWatchProc(
  ClientData <i>instanceData</i>,
  int <i>mask</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>instanceData</i> is the same as the value passed to <code>Tcl_CreateChannel</code> when this channel was created. The <i>mask</i> argument is an OR-ed combination of <code>TCL_READABLE</code>, <code>TCL_WRITABLE</code> and <code>TCL_EXCEPTION</code>; it indicates events the caller is interested in noticing on this channel. </p>
 <p> The function should initialize device type specific mechanisms to notice when an event of interest is present on the channel. When one or more of the designated events occurs on the channel, the channel driver is responsible for calling <code>Tcl_NotifyChannel</code> to inform the generic channel module. The driver should take care not to starve other channel drivers or sources of callbacks by invoking Tcl_NotifyChannel too frequently. Fairness can be insured by using the Tcl event queue to allow the channel event to be scheduled in sequence with other events. See the description of <code>Tcl_QueueEvent</code> for details on how to queue an event. </p>
 <p> This value can be retrieved with <code>Tcl_ChannelWatchProc</code>, which returns a pointer to the function.</p>
@@ -284,7 +284,7 @@ Tcl_DriverHandlerProc *
  ClientData <i>instanceData</i>,
  int <i>direction</i>,
  ClientData *<i>handlePtr</i>);</pre>
-</dl>
+</dd></dl>
 <p> <i>InstanceData</i> is the same as the value passed to <code>Tcl_CreateChannel</code> when this channel was created. The <i>direction</i> argument is either <code>TCL_READABLE</code> to retrieve the handle used for input, or <code>TCL_WRITABLE</code> to retrieve the handle used for output. </p>
 <p> If the channel implementation has device-specific handles, the function should retrieve the appropriate handle associated with the channel, according the <i>direction</i> argument. The handle should be stored in the location referred to by <i>handlePtr</i>, and <code>TCL_OK</code> should be returned. If the channel is not open for the specified direction, or if the channel implementation does not use device handles, the function should return <code>TCL_ERROR</code>. </p>
 <p> This value can be retrieved with <code>Tcl_ChannelGetHandleProc</code>, which returns a pointer to the function.</p>
@@ -294,7 +294,7 @@ Tcl_DriverHandlerProc *
 <dd>
 <pre>typedef int Tcl_DriverFlushProc(
  ClientData <i>instanceData</i>);</pre>
-</dl>
+</dd></dl>
 <p> This value can be retrieved with <code>Tcl_ChannelFlushProc</code>, which returns a pointer to the function.</p>
 <h3>Handlerproc</h3>
 <p>The <i>handlerProc</i> field contains the address of a function called by the generic layer to notify the channel that an event occurred. It should be defined for stacked channel drivers that wish to be notified of events that occur on the underlying (stacked) channel. <i>HandlerProc</i> should match the following prototype: </p>
@@ -303,7 +303,7 @@ Tcl_DriverHandlerProc *
 <pre>typedef int Tcl_DriverHandlerProc(
  ClientData <i>instanceData</i>,
  int <i>interestMask</i>);</pre>
-</dl>
+</dd></dl>
 <p> <i>InstanceData</i> is the same as the value passed to <code>Tcl_CreateChannel</code> when this channel was created. The <i>interestMask</i> is an OR-ed combination of <code>TCL_READABLE</code> or <code>TCL_WRITABLE</code>; it indicates what type of event occurred on this channel. </p>
 <p> This value can be retrieved with <code>Tcl_ChannelHandlerProc</code>, which returns a pointer to the function. </p>
 <h3>Threadactionproc</h3>
@@ -314,7 +314,7 @@ Tcl_DriverHandlerProc *
 <pre>typedef void Tcl_DriverThreadActionProc(
  ClientData <i>instanceData</i>,
  int <i>action</i>);</pre>
-</dl>
+</dd></dl>
 <p> <i>InstanceData</i> is the same as the value passed to <code>Tcl_CreateChannel</code> when this channel was created. </p>
 <p> These values can be retrieved with <code>Tcl_ChannelThreadActionProc</code>, which returns a pointer to the function.</p>
 <h3>Truncateproc</h3>
@@ -324,7 +324,7 @@ Tcl_DriverHandlerProc *
 <pre>typedef int Tcl_DriverTruncateProc(
  ClientData <i>instanceData</i>,
  Tcl_WideInt <i>length</i>);</pre>
-</dl>
+</dd></dl>
 <p> <i>InstanceData</i> is the same as the value passed to <code>Tcl_CreateChannel</code> when this channel was created, and <i>length</i> is the new length of the underlying file, which should not be negative. The result should be 0 on success or an errno code (suitable for use with <code>Tcl_SetErrno</code>) on failure. </p>
 <p> These values can be retrieved with <code>Tcl_ChannelTruncateProc</code>, which returns a pointer to the function.</p>
 <h2>Tcl_Badchanneloption</h2>
@@ -335,14 +335,14 @@ Tcl_DriverHandlerProc *
 <dd>
 <pre> bad option &quot;blah&quot;: should be one of 
  &lt;...generic options...&gt;+&lt;...specific options...&gt;</pre>
-</dl>
+</dd></dl>
 <p> so you get for instance:</p>
 <dl COMPACT>
 <dd>
 <pre> bad option &quot;-blah&quot;: should be one of -blocking,
  -buffering, -buffersize, -eofchar, -translation,
  -peername, or -sockname</pre>
-</dl>
+</dd></dl>
 <p> when called with <i>optionList</i> equal to &#8220;peername sockname&#8221; </p>
 <p> &#8220;blah&#8221; is the <i>optionName</i> argument and &#8220;&lt;specific options&gt;&#8221; is a space separated list of specific option words. The function takes good care of inserting minus signs before each option, commas after, and an &#8220;or&#8221; before the last option.</p>
 <h2>Old Channel Types</h2>
@@ -362,7 +362,7 @@ Tcl_DriverHandlerProc *
  Tcl_DriverGetHandleProc *<i>getHandleProc</i>;
  Tcl_DriverClose2Proc *<i>close2Proc</i>;
 } Tcl_ChannelType;</pre>
-</dl>
+</dd></dl>
 <p> It is still possible to create channel with the above structure. The internal channel code will determine the version. It is imperative to use the new <code>Tcl_ChannelType</code> structure if you are creating a stacked channel driver, due to problems with the earlier stacked channel implementation (in 8.2.0 to 8.3.1). </p>
 <p> Prior to 8.4.0 (i.e. during the later releases of 8.3 and early part of the 8.4 development cycle) the <code>Tcl_ChannelType</code> structure contained the following fields: </p>
 <dl COMPACT>
@@ -384,7 +384,7 @@ Tcl_DriverHandlerProc *
  Tcl_DriverHandlerProc *<i>handlerProc</i>;
  Tcl_DriverTruncateProc *<i>truncateProc</i>;
 } Tcl_ChannelType;</pre>
-</dl>
+</dd></dl>
 <p> When the above structure is registered as a channel type, the <i>version</i> field should always be <code>TCL_CHANNEL_VERSION_2</code>. </p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-tcl_close/">Tcl_Close</a>(3), <a href="/docs/linux/man/3-tcl_openfilechannel/">Tcl_OpenFileChannel</a>(3), <a href="/docs/linux/man/3-tcl_seterrno/">Tcl_SetErrno</a>(3), <a href="/docs/linux/man/3-tcl_queueevent/">Tcl_QueueEvent</a>(3), <a href="/docs/linux/man/3-tcl_stackchannel/">Tcl_StackChannel</a>(3), <a href="/docs/linux/man/3-tcl_getstdchannel/">Tcl_GetStdChannel</a>(3) </p>

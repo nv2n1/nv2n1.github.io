@@ -21,53 +21,53 @@ description: "dchroot – enter a chroot environment"
 <p> <code>dchroot</code> accepts the following options:</p>
 <h3>Basic options</h3>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show help summary.</p>
-<dt><code>-a</code>, <code>&#8211;all</code></p>
-<dd> Select all chroots.</p>
-<dt><code>-c</code>, <code>&#8211;chroot=</code><i>chroot</i></p>
-<dd> Specify a chroot to use. This option may be used multiple times to specify more than one chroot, in which case its effect is similar to <i>&#8211;all</i>.</p>
-<dt><code>-l</code>, <code>&#8211;list</code></p>
-<dd> List all available chroots.</p>
-<dt><code>-i</code>, <code>&#8211;info</code></p>
-<dd> Print detailed information about the specified chroots. Note that earlier versions of dchroot did not include this option.</p>
-<dt><code>-p</code>, <code>&#8211;path</code></p>
-<dd> Print location (path) of the specified chroots.</p>
-<dt><code>&#8211;config</code></p>
-<dd> Print configuration of the specified chroots. This is useful for testing that the configuration in use is the same as the configuration file. Any comments in the original file will be missing. Note that earlier versions of dchroot did not include this option.</p>
-<dt><code>&#8211;directory=</code><i>directory</i></p>
-<dd> Change to <i>directory</i> inside the chroot before running the command or login shell. If <i>directory</i> is not available, dchroot will exit with an error status.</p>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show help summary.</dd>
+<dt><code>-a</code>, <code>&#8211;all</code></dt>
+<dd> Select all chroots.</dd>
+<dt><code>-c</code>, <code>&#8211;chroot=</code><i>chroot</i></dt>
+<dd> Specify a chroot to use. This option may be used multiple times to specify more than one chroot, in which case its effect is similar to <i>&#8211;all</i>.</dd>
+<dt><code>-l</code>, <code>&#8211;list</code></dt>
+<dd> List all available chroots.</dd>
+<dt><code>-i</code>, <code>&#8211;info</code></dt>
+<dd> Print detailed information about the specified chroots. Note that earlier versions of dchroot did not include this option.</dd>
+<dt><code>-p</code>, <code>&#8211;path</code></dt>
+<dd> Print location (path) of the specified chroots.</dd>
+<dt><code>&#8211;config</code></dt>
+<dd> Print configuration of the specified chroots. This is useful for testing that the configuration in use is the same as the configuration file. Any comments in the original file will be missing. Note that earlier versions of dchroot did not include this option.</dd>
+<dt><code>&#8211;directory=</code><i>directory</i></dt>
+<dd> Change to <i>directory</i> inside the chroot before running the command or login shell. If <i>directory</i> is not available, dchroot will exit with an error status.</dd>
 <dt>
-<dd> The default behaviour is as follows (all directory paths are inside the chroot). Unless the <i>&#8211;preserve-environment</i> option is used to preserve the environment, the login shell or command will run in the user&#8217;s home directory, or <i>/</i> if the home directory is not available. When the <i>&#8211;preserve-environment</i> option is used, it will attempt to use the current working directory, again falling back to <i>/</i> if it is not accessible. If none of the directories are available, dchroot will exit with an error status.</p>
-<dt><code>-d</code>, <code>&#8211;preserve-environment</code></p>
-<dd> Preserve the user&#8217;s environment inside the chroot environment. The default is to use a clean environment; this option copies the entire user environment and sets it in the session.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Print only essential messages.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Print all messages. Note that earlier versions of dchroot did not include this option.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print version information.</dl>
+</dt><dd> The default behaviour is as follows (all directory paths are inside the chroot). Unless the <i>&#8211;preserve-environment</i> option is used to preserve the environment, the login shell or command will run in the user&#8217;s home directory, or <i>/</i> if the home directory is not available. When the <i>&#8211;preserve-environment</i> option is used, it will attempt to use the current working directory, again falling back to <i>/</i> if it is not accessible. If none of the directories are available, dchroot will exit with an error status.</dd>
+<dt><code>-d</code>, <code>&#8211;preserve-environment</code></dt>
+<dd> Preserve the user&#8217;s environment inside the chroot environment. The default is to use a clean environment; this option copies the entire user environment and sets it in the session.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Print only essential messages.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Print all messages. Note that earlier versions of dchroot did not include this option.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print version information.</dd></dl>
 <p> Note that earlier versions of dchroot did not provide long options.</p>
 <h2>INCOMPATIBILITIES</h2>
 <h3>Debian dchroot prior to version 0.99.0</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Log messages are worded and formatted differently.</p>
-<dt>&bull;</p>
-<dd> <code><a href="/docs/linux/man/1-su/">su</a></code>(1) is no longer used to run commands in the chroot; this is done by dchroot internally. This change may cause subtle differences. If you find an incompatibility, please report it so it may be corrected.</p>
-<dt>&bull;</p>
-<dd> dchroot provides a restricted subset of the functionality implemented by <code>schroot</code>, but is still schroot underneath. Thus dchroot is still subject to schroot security checking, including PAM authentication and authorisation, and session management, for example, and hence may behave slightly differently to older dchroot versions in some circumstances.</dl>
+<dt>&bull;</dt>
+<dd> Log messages are worded and formatted differently.</dd>
+<dt>&bull;</dt>
+<dd> <code><a href="/docs/linux/man/1-su/">su</a></code>(1) is no longer used to run commands in the chroot; this is done by dchroot internally. This change may cause subtle differences. If you find an incompatibility, please report it so it may be corrected.</dd>
+<dt>&bull;</dt>
+<dd> dchroot provides a restricted subset of the functionality implemented by <code>schroot</code>, but is still schroot underneath. Thus dchroot is still subject to schroot security checking, including PAM authentication and authorisation, and session management, for example, and hence may behave slightly differently to older dchroot versions in some circumstances.</dd></dl>
 <h3>Debian dchroot prior to version 1.5.1</h3>
 <dl>
-<dt>&bull;</p>
-<dd> This version of dchroot uses <i>schroot.conf</i> to store the configuration for available chroots, rather than the <i>dchroot.conf</i> file used historically. dchroot supported automatic migration of <i>dchroot.conf</i> to the <i>schroot.conf</i> keyfile format with its <i>&#8211;config</i> option from versions 0.2.2 to 1.5.0; support for the old format is now no longer available.</dl>
+<dt>&bull;</dt>
+<dd> This version of dchroot uses <i>schroot.conf</i> to store the configuration for available chroots, rather than the <i>dchroot.conf</i> file used historically. dchroot supported automatic migration of <i>dchroot.conf</i> to the <i>schroot.conf</i> keyfile format with its <i>&#8211;config</i> option from versions 0.2.2 to 1.5.0; support for the old format is now no longer available.</dd></dl>
 <h3>DSA dchroot</h3>
 <p> Machines run by the Debian System Administrators for the Debian Project have a <code>dchroot-dsa</code> package which provides an alternate dchroot implementation.</p>
 <dl>
-<dt>&bull;</p>
-<dd> All the above incompatibilities apply.</p>
-<dt>&bull;</p>
-<dd> This version of dchroot has incompatible command-line options, and while some of those options are supported or have equivalent options by a different name, the <i>-c</i> option is not required to specify a chroot, and this version of dchroot cannot implement this behaviour in a backward-compatible manner (because if <i>-c</i> is omitted, the default chroot is used). DSA dchroot uses the first non-option as the chroot to use, only allowing one chroot to be used at once.</dl>
+<dt>&bull;</dt>
+<dd> All the above incompatibilities apply.</dd>
+<dt>&bull;</dt>
+<dd> This version of dchroot has incompatible command-line options, and while some of those options are supported or have equivalent options by a different name, the <i>-c</i> option is not required to specify a chroot, and this version of dchroot cannot implement this behaviour in a backward-compatible manner (because if <i>-c</i> is omitted, the default chroot is used). DSA dchroot uses the first non-option as the chroot to use, only allowing one chroot to be used at once.</dd></dl>
 <h2>DIRECTORY FALLBACKS</h2>
 <p> dchroot will select an appropriate directory to use within the chroot based upon whether the <i>&#8211;directory</i> or <i>&#8211;preserve-environment</i> options are used. When explicitly specifying a directory, only one directory will be used for safety and consistency, while for a login shell or command several possibilities may be tried. Note that due to multiple fallbacks being considered for commands, it is dangerous to run commands using dchroot; use schroot instead. The following subsections list the fallback sequence for each case. CWD is the current working directory, DIR is the directory specified with <i>&#8211;directory</i>.</p>
 <h3>Login shell or command</h3>
@@ -196,7 +196,7 @@ description: "dchroot – enter a chroot environment"
 <h2>FILES</h2>
 <dl>
 <dt>
-<dd> The system-wide <code>schroot</code> definition file. This file must be owned by the root user, and not be writable by other.</dl>
+</dt><dd> The system-wide <code>schroot</code> definition file. This file must be owned by the root user, and not be writable by other.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Roger Leigh. </p>
 <p> This implementation of dchroot uses the same command-line options as the original <code>dchroot</code> by David Kimdon &lt;dwhedon [at] debian.org&gt;, but is an independent implementation.</p>

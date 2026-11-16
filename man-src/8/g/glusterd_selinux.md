@@ -59,9 +59,9 @@ description: "glusterd_selinux – Security Enhanced Linux Policy for the gluste
 <p> Policy governs the access confined processes have to these ports. SELinux glusterd policy is very flexible allowing users to setup their glusterd processes in as secure a method as possible. </p>
 <p> The following port types are defined for glusterd: </p>
 <dl>
-<dt><code>gluster_port_t</code></p>
+<dt><code>gluster_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 38465-38469,24007-24027 udp 24007-24027</dl>
+</dd><dd>Default Defined Ports: tcp 38465-38469,24007-24027 udp 24007-24027</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type glusterd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_var_lib_t</code> </p>
@@ -121,26 +121,26 @@ description: "glusterd_selinux – Security Enhanced Linux Policy for the gluste
 <p> <code>glusterd_conf_t</code> </p>
 <p> &#8211; Set files with the glusterd_conf_t type, if you want to treat the files as glusterd configuration data, usually stored under the /etc directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/glusterd(/.*)?, /etc/glusterfs(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/glusterd(/.*)?, /etc/glusterfs(/.*)? </dd>
 </dl>
 <p> <code>glusterd_exec_t</code> </p>
 <p> &#8211; Set files with the glusterd_exec_t type, if you want to transition an executable to the glusterd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/opt/glusterfs/[^/]+/sbin/glusterfsd, /usr/bin/ganesha.nfsd, /usr/libexec/glusterfs/peer_eventsapi.py, /usr/libexec/glusterfs/events/glustereventsd.py, /usr/sbin/glusterfsd, /usr/sbin/glustereventsd, /usr/sbin/gluster-eventsapi </p>
+<dt>Paths:</dt>
+<dd>/opt/glusterfs/[^/]+/sbin/glusterfsd, /usr/bin/ganesha.nfsd, /usr/libexec/glusterfs/peer_eventsapi.py, /usr/libexec/glusterfs/events/glustereventsd.py, /usr/sbin/glusterfsd, /usr/sbin/glustereventsd, /usr/sbin/gluster-eventsapi </dd>
 </dl>
 <p> <code>glusterd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the glusterd_initrc_exec_t type, if you want to transition an executable to the glusterd_initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/rc.d/init.d/gluster.*, /usr/sbin/glusterd </p>
+<dt>Paths:</dt>
+<dd>/etc/rc.d/init.d/gluster.*, /usr/sbin/glusterd </dd>
 </dl>
 <p> <code>glusterd_log_t</code> </p>
 <p> &#8211; Set files with the glusterd_log_t type, if you want to treat the data as glusterd log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/ganesha.log, /var/log/glusterfs(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/log/ganesha.log, /var/log/glusterfs(/.*)? </dd>
 </dl>
 <p> <code>glusterd_tmp_t</code> </p>
 <p> &#8211; Set files with the glusterd_tmp_t type, if you want to store glusterd temporary files in the /tmp directories. </p>
@@ -149,20 +149,20 @@ description: "glusterd_selinux – Security Enhanced Linux Policy for the gluste
 <p> <code>glusterd_var_run_t</code> </p>
 <p> &#8211; Set files with the glusterd_var_run_t type, if you want to store the glusterd files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/ganesha.*, /var/run/gluster(/.*)?, /var/run/glusterd.*, /var/run/glusterd.*, /var/run/glusterd(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/run/ganesha.*, /var/run/gluster(/.*)?, /var/run/glusterd.*, /var/run/glusterd.*, /var/run/glusterd(/.*)? </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Sharing Files</h2>
 <p>If you want to share files with multiple domains (Apache, FTP, rsync, Samba), you can set a file context of public_content_t and public_content_rw_t. These context allow any of the above domains to read the content. If you want a particular domain to write to the public_content_rw_t domain, you must set the appropriate boolean.</p>
 <dl>
-<dt>Allow glusterd servers to read the /var/glusterd directory by adding the public_content_t file type to the directory and by restoring the file type.</p>
-<dd></dl>
+<dt>Allow glusterd servers to read the /var/glusterd directory by adding the public_content_t file type to the directory and by restoring the file type.</dt>
+<dd></dd></dl>
 <p> <code>semanage fcontext -a -t public_content_t &quot;/var/glusterd(/.*)?&quot;</code><br />
  <code>restorecon -F -R -v /var/glusterd</code></p>
 <dl>
-<dt>Allow glusterd servers to read and write /var/glusterd/incoming by adding the public_content_rw_t type to the directory and by restoring the file type. You also need to turn on the glusterd_anon_write boolean.</p>
-<dd></dl>
+<dt>Allow glusterd servers to read and write /var/glusterd/incoming by adding the public_content_rw_t type to the directory and by restoring the file type. You also need to turn on the glusterd_anon_write boolean.</dt>
+<dd></dd></dl>
 <p> <code>semanage fcontext -a -t public_content_rw_t &quot;/var/glusterd/incoming(/.*)?&quot;</code><br />
  <code>restorecon -F -R -v /var/glusterd/incoming</code><br />
  <code>setsebool -P glusterd_anon_write 1</code> </p>

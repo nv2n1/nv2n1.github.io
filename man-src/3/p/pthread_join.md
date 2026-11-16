@@ -10,7 +10,6 @@ description: "pthread_join – join with a terminated thread"
 <p>pthread_join &#8211; join with a terminated thread</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
-
 int pthread_join(pthread_t thread, void **retval);</code></pre>
 <p> Compile and link with <i>-pthread</i>.</p>
 <h2>Description</h2>
@@ -21,14 +20,14 @@ int pthread_join(pthread_t thread, void **retval);</code></pre>
 <p>On success, <code>pthread_join</code>() returns 0; on error, it returns an error number.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EDEADLK</code></p>
-<dd>A deadlock was detected (e.g., two threads tried to join with each other); or <i>thread</i> specifies the calling thread.</p>
-<dt><code>EINVAL</code></p>
-<dd><i>thread</i> is not a joinable thread.</p>
-<dt><code>EINVAL</code></p>
-<dd>Another thread is already waiting to join with this thread.</p>
-<dt><code>ESRCH</code></p>
-<dd>No thread with the ID <i>thread</i> could be found.</dl>
+<dt><code>EDEADLK</code></dt>
+<dd>A deadlock was detected (e.g., two threads tried to join with each other); or <i>thread</i> specifies the calling thread.</dd>
+<dt><code>EINVAL</code></dt>
+<dd><i>thread</i> is not a joinable thread.</dd>
+<dt><code>EINVAL</code></dt>
+<dd>Another thread is already waiting to join with this thread.</dd>
+<dt><code>ESRCH</code></dt>
+<dd>No thread with the ID <i>thread</i> could be found.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

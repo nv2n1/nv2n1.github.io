@@ -384,27 +384,27 @@ description: "XmPanedWindow — The PanedWindow widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNmarginHeight</code></p>
-<dd>Specifies the distance between the top and bottom edges of the PanedWindow and its children.</p>
-<dt><code>XmNmarginWidth</code></p>
-<dd>Specifies the distance between the left and right edges of the PanedWindow and its children.</p>
-<dt><code>XmNorientation</code></p>
-<dd>Specifies the layout as either vertical (with the <code>XmVERTICAL</code> value) or horizontal (with the <code>XmHORIZONTAL</code> value). In the vertical layout, the children are laid out in a vertically tiled format. In the horizontal layout, the children are laid out in a horizontal layout, with the sash moveable along the horizontal axis.</p>
-<dt><code>XmNrefigureMode</code></p>
-<dd>Determines whether the panes&#8217; positions are recomputed and repositioned when programmatic changes are being made to the PanedWindow. Setting this resource to True resets the children to their appropriate positions.</p>
-<dt><code>XmNsashHeight</code></p>
-<dd>Specifies the height of the sash.</p>
-<dt><code>XmNsashIndent</code></p>
-<dd>Specifies the horizontal placement of the sash along each pane. A positive value causes the sash to be offset from the near (left) side of the PanedWindow, and a negative value causes the sash to be offset from the far (right) side of the PanedWindow. If the offset is greater than the width of the PanedWindow minus the width of the sash, the sash is placed flush against the near side of the PanedWindow.</p>
-<dd>Whether the placement actually corresponds to the left or right side of the PanedWindow depends on the <code>XmNlayoutDirection</code> resource of the widget.</p>
-<dt><code>XmNsashShadowThickness</code></p>
-<dd>Specifies the thickness of the shadows of the sashes.</p>
-<dt><code>XmNsashWidth</code></p>
-<dd>Specifies the width of the sash.</p>
-<dt><code>XmNseparatorOn</code></p>
-<dd>Determines whether a separator is created between each of the panes. Setting this resource to True creates a Separator at the midpoint between each of the panes.</p>
-<dt><code>XmNspacing</code></p>
-<dd>Specifies the distance between each child pane.</p>
+<dt><code>XmNmarginHeight</code></dt>
+<dd>Specifies the distance between the top and bottom edges of the PanedWindow and its children.</dd>
+<dt><code>XmNmarginWidth</code></dt>
+<dd>Specifies the distance between the left and right edges of the PanedWindow and its children.</dd>
+<dt><code>XmNorientation</code></dt>
+<dd>Specifies the layout as either vertical (with the <code>XmVERTICAL</code> value) or horizontal (with the <code>XmHORIZONTAL</code> value). In the vertical layout, the children are laid out in a vertically tiled format. In the horizontal layout, the children are laid out in a horizontal layout, with the sash moveable along the horizontal axis.</dd>
+<dt><code>XmNrefigureMode</code></dt>
+<dd>Determines whether the panes&#8217; positions are recomputed and repositioned when programmatic changes are being made to the PanedWindow. Setting this resource to True resets the children to their appropriate positions.</dd>
+<dt><code>XmNsashHeight</code></dt>
+<dd>Specifies the height of the sash.</dd>
+<dt><code>XmNsashIndent</code></dt>
+<dd>Specifies the horizontal placement of the sash along each pane. A positive value causes the sash to be offset from the near (left) side of the PanedWindow, and a negative value causes the sash to be offset from the far (right) side of the PanedWindow. If the offset is greater than the width of the PanedWindow minus the width of the sash, the sash is placed flush against the near side of the PanedWindow.</dd>
+<dd>Whether the placement actually corresponds to the left or right side of the PanedWindow depends on the <code>XmNlayoutDirection</code> resource of the widget.</dd>
+<dt><code>XmNsashShadowThickness</code></dt>
+<dd>Specifies the thickness of the shadows of the sashes.</dd>
+<dt><code>XmNsashWidth</code></dt>
+<dd>Specifies the width of the sash.</dd>
+<dt><code>XmNseparatorOn</code></dt>
+<dd>Determines whether a separator is created between each of the panes. Setting this resource to True creates a Separator at the midpoint between each of the panes.</dd>
+<dt><code>XmNspacing</code></dt>
+<dd>Specifies the distance between each child pane.</dd>
 <dd>
 <table BORDER>
 <tr>
@@ -566,17 +566,17 @@ description: "XmPanedWindow — The PanedWindow widget class"
 </tr>
 </table>
 </table>
-<dt><code>XmNallowResize</code></p>
-<dd>Allows an application to specify whether the PanedWindow should allow a pane to request to be resized. This flag has an effect only after the PanedWindow and its children have been realized. If this flag is set to True, the PanedWindow tries to honor requests to alter the height of the pane. If False, it always denies pane requests to resize.</p>
-<dt><code>XmNpaneMaximum</code></p>
-<dd>Allows an application to specify the maximum size to which a pane may be resized. This value must be greater than the specified minimum.</p>
-<dt><code>XmNpaneMinimum</code></p>
-<dd>Allows an application to specify the minimum size to which a pane may be resized. This value must be greater than 0 (zero).</p>
-<dt><code>XmNpositionIndex</code></p>
-<dd>Specifies the position of the widget in its parent&#8217;s list of children (the list of pane children, not including sashes). The value is an integer that is no less than 0 (zero) and no greater than the number of children in the list at the time the value is specified. A value of 0 means that the child is placed at the beginning of the list. The value can also be specified as <code>XmLAST_POSITION</code> (the default), which means that the child is placed at the end of the list. Any other value is ignored. <code>XtGetValues</code> returns the position of the widget in its parent&#8217;s child list at the time of the call to <code>XtGetValues</code>.</p>
-<dd>When a widget is inserted into its parent&#8217;s child list, the positions of any existing children that are greater than or equal to the specified widget&#8217;s <code>XmNpositionIndex</code> are increased by 1. The effect of a call to <code>XtSetValues</code> for <code>XmNpositionIndex</code> is to remove the specified widget from its parent&#8217;s child list, decrease by one the positions of any existing children that are greater than the specified widget&#8217;s former position in the list, and then insert the specified widget into its parent&#8217;s child list as described in the preceding sentence.</p>
-<dt><code>XmNskipAdjust</code></p>
-<dd>When set to True, this Boolean resource allows an application to specify that the PanedWindow should not automatically resize this pane.</dl>
+</dd><dt><code>XmNallowResize</code></dt>
+<dd>Allows an application to specify whether the PanedWindow should allow a pane to request to be resized. This flag has an effect only after the PanedWindow and its children have been realized. If this flag is set to True, the PanedWindow tries to honor requests to alter the height of the pane. If False, it always denies pane requests to resize.</dd>
+<dt><code>XmNpaneMaximum</code></dt>
+<dd>Allows an application to specify the maximum size to which a pane may be resized. This value must be greater than the specified minimum.</dd>
+<dt><code>XmNpaneMinimum</code></dt>
+<dd>Allows an application to specify the minimum size to which a pane may be resized. This value must be greater than 0 (zero).</dd>
+<dt><code>XmNpositionIndex</code></dt>
+<dd>Specifies the position of the widget in its parent&#8217;s list of children (the list of pane children, not including sashes). The value is an integer that is no less than 0 (zero) and no greater than the number of children in the list at the time the value is specified. A value of 0 means that the child is placed at the beginning of the list. The value can also be specified as <code>XmLAST_POSITION</code> (the default), which means that the child is placed at the end of the list. Any other value is ignored. <code>XtGetValues</code> returns the position of the widget in its parent&#8217;s child list at the time of the call to <code>XtGetValues</code>.</dd>
+<dd>When a widget is inserted into its parent&#8217;s child list, the positions of any existing children that are greater than or equal to the specified widget&#8217;s <code>XmNpositionIndex</code> are increased by 1. The effect of a call to <code>XtSetValues</code> for <code>XmNpositionIndex</code> is to remove the specified widget from its parent&#8217;s child list, decrease by one the positions of any existing children that are greater than the specified widget&#8217;s former position in the list, and then insert the specified widget into its parent&#8217;s child list as described in the preceding sentence.</dd>
+<dt><code>XmNskipAdjust</code></dt>
+<dd>When set to True, this Boolean resource allows an application to specify that the PanedWindow should not automatically resize this pane.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>PanedWindow inherits behavior and resources from the superclasses described in the following tables. For a complete description of each resource, refer to the reference page for that superclass. </p>
 <table BORDER>
@@ -1664,66 +1664,66 @@ description: "XmPanedWindow — The PanedWindow widget class"
 <p> The translations for sashes within the PanedWindow are described in the following table. </p>
 <p> The following key names are listed in the X standard key event translation table syntax. This format is the one used by Motif to specify the widget actions corresponding to a given key. A brief overview of the format is provided under <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3). For a complete description of the format, please refer to the X Toolkit Instrinsics Documentation.</p>
 <dl COMPACT>
-<dt><code>&asymp;c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn1Down&gt;</code>:</p>
-<dd>SashAction(<code>Start</code>)</p>
-<dt><code>&asymp;c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn1Motion&gt;</code>:</p>
-<dd>SashAction(<code>Move</code>)</p>
-<dt><code>&asymp;c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn1Up&gt;</code>:</p>
-<dd>SashAction(<code>Commit</code>)</p>
-<dt><code>&asymp;c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn2Down&gt;</code>:</p>
-<dd>SashAction(<code>Start</code>)</p>
-<dt><code>&asymp;c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn2Motion&gt;</code>:</p>
-<dd>SashAction(<code>Move</code>)</p>
-<dt><code>&asymp;c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn2Up&gt;</code>:</p>
-<dd>SashAction(<code>Commit</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</p>
-<dd>PrimitiveParentActivate()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</p>
-<dd>PrimitiveParentCancel()</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfHelp&gt;</code>:</p>
-<dd>Help()</p>
-<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfUp&gt;</code>:</p>
-<dd>SashAction(<code>Key,LargeIncr,Up</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfUp&gt;</code>:</p>
-<dd>SashAction(<code>Key,DefaultIncr,Up</code>)</p>
-<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfRight&gt;</code>:</p>
-<dd>SashAction(<code>Key,LargeIncr,Right</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfRight&gt;</code>:</p>
-<dd>SashAction(<code>Key,DefaultIncr,Right</code>)</p>
-<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfDown&gt;</code>:</p>
-<dd>SashAction(<code>Key,LargeIncr,Down</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfDown&gt;</code>:</p>
-<dd>SashAction(<code>Key,DefaultIncr,Down</code>)</p>
-<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfLeft&gt;</code>:</p>
-<dd>SashAction(<code>Key,LargeIncr,Left</code>)</p>
-<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfLeft&gt;</code>:</p>
-<dd>SashAction(<code>Key,DefaultIncr,Left</code>)</p>
-<dt><code>&asymp;s &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>Return</code>:</p>
-<dd>PrimitiveParentActivate()</p>
-<dt><code>s &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>Tab</code>:</p>
-<dd>PrevTabGroup()</p>
-<dt><code>&asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>Tab</code>:</p>
-<dd>NextTabGroup()</dl>
+<dt><code>&asymp;c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn1Down&gt;</code>:</dt>
+<dd>SashAction(<code>Start</code>)</dd>
+<dt><code>&asymp;c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn1Motion&gt;</code>:</dt>
+<dd>SashAction(<code>Move</code>)</dd>
+<dt><code>&asymp;c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn1Up&gt;</code>:</dt>
+<dd>SashAction(<code>Commit</code>)</dd>
+<dt><code>&asymp;c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn2Down&gt;</code>:</dt>
+<dd>SashAction(<code>Start</code>)</dd>
+<dt><code>&asymp;c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn2Motion&gt;</code>:</dt>
+<dd>SashAction(<code>Move</code>)</dd>
+<dt><code>&asymp;c &asymp;s &asymp;m &asymp;a</code> <code>&lt;Btn2Up&gt;</code>:</dt>
+<dd>SashAction(<code>Commit</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfActivate&gt;</code>:</dt>
+<dd>PrimitiveParentActivate()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfCancel&gt;</code>:</dt>
+<dd>PrimitiveParentCancel()</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfHelp&gt;</code>:</dt>
+<dd>Help()</dd>
+<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfUp&gt;</code>:</dt>
+<dd>SashAction(<code>Key,LargeIncr,Up</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfUp&gt;</code>:</dt>
+<dd>SashAction(<code>Key,DefaultIncr,Up</code>)</dd>
+<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfRight&gt;</code>:</dt>
+<dd>SashAction(<code>Key,LargeIncr,Right</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfRight&gt;</code>:</dt>
+<dd>SashAction(<code>Key,DefaultIncr,Right</code>)</dd>
+<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfDown&gt;</code>:</dt>
+<dd>SashAction(<code>Key,LargeIncr,Down</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfDown&gt;</code>:</dt>
+<dd>SashAction(<code>Key,DefaultIncr,Down</code>)</dd>
+<dt><code>:c</code> <code>&lt;Key&gt;</code><code>&lt;osfLeft&gt;</code>:</dt>
+<dd>SashAction(<code>Key,LargeIncr,Left</code>)</dd>
+<dt><code>:</code><code>&lt;Key&gt;</code><code>&lt;osfLeft&gt;</code>:</dt>
+<dd>SashAction(<code>Key,DefaultIncr,Left</code>)</dd>
+<dt><code>&asymp;s &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>Return</code>:</dt>
+<dd>PrimitiveParentActivate()</dd>
+<dt><code>s &asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>Tab</code>:</dt>
+<dd>PrevTabGroup()</dd>
+<dt><code>&asymp;m &asymp;a</code> <code>&lt;Key&gt;</code><code>Tab</code>:</dt>
+<dd>NextTabGroup()</dd></dl>
 <h3>Action Routines</h3>
 <p>The <code>XmPanedWindow</code> action routines are</p>
 <dl COMPACT>
-<dt>Help():</p>
-<dd>Calls the callbacks for <code>XmNhelpCallback</code> if any exist. If there are no help callbacks for this widget, this action calls the help callbacks for the nearest ancestor that has them.</p>
-<dt>NextTabGroup():</p>
-<dd>Moves the keyboard focus to the next tab group. By default, each pane and sash is a tab group.</p>
-<dt>PrevTabGroup():</p>
-<dd>Moves the keyboard focus to the previous tab group. By default, each pane and sash is a tab group.</p>
-<dt>SashAction(<i>action</i><code>)</code>&nbsp;<wbr>or SashAction(<code>Key,</code><i>increment</i><code>,</code><i>direction</i><code>)</code>:</p>
-<dd>The <code>Start</code> action activates the interactive placement of the pane&#8217;s borders. The <code>Move</code> action causes the sash to track the position of the pointer. If one of the panes reaches its minimum or maximum size, adjustment continues with the next adjustable pane. The <code>Commit</code> action ends sash motion.</p>
-<dd>When sash action is caused by a keyboard event, the sash with the keyboard focus is moved according to the <i>increment</i> and <i>direction</i> specified. <code>DefaultIncr</code> adjusts the sash by one line. <code>LargeIncr</code> adjusts the sash by one view region. The <i>direction</i> is specified as either <code>Up</code>, <code>Down</code>, <code>Left</code>, or <code>Right</code>.</p>
-<dd>Note that the SashAction action routine is not a direct action routine of the <code>XmPanedWindow,</code> but rather an action of the Sash control created by the <code>XmPanedWindow</code>.</dl>
+<dt>Help():</dt>
+<dd>Calls the callbacks for <code>XmNhelpCallback</code> if any exist. If there are no help callbacks for this widget, this action calls the help callbacks for the nearest ancestor that has them.</dd>
+<dt>NextTabGroup():</dt>
+<dd>Moves the keyboard focus to the next tab group. By default, each pane and sash is a tab group.</dd>
+<dt>PrevTabGroup():</dt>
+<dd>Moves the keyboard focus to the previous tab group. By default, each pane and sash is a tab group.</dd>
+<dt>SashAction(<i>action</i><code>)</code>&nbsp;<wbr>or SashAction(<code>Key,</code><i>increment</i><code>,</code><i>direction</i><code>)</code>:</dt>
+<dd>The <code>Start</code> action activates the interactive placement of the pane&#8217;s borders. The <code>Move</code> action causes the sash to track the position of the pointer. If one of the panes reaches its minimum or maximum size, adjustment continues with the next adjustable pane. The <code>Commit</code> action ends sash motion.</dd>
+<dd>When sash action is caused by a keyboard event, the sash with the keyboard focus is moved according to the <i>increment</i> and <i>direction</i> specified. <code>DefaultIncr</code> adjusts the sash by one line. <code>LargeIncr</code> adjusts the sash by one view region. The <i>direction</i> is specified as either <code>Up</code>, <code>Down</code>, <code>Left</code>, or <code>Right</code>.</dd>
+<dd>Note that the SashAction action routine is not a direct action routine of the <code>XmPanedWindow,</code> but rather an action of the Sash control created by the <code>XmPanedWindow</code>.</dd></dl>
 <h3>Additional Behavior</h3>
 <p>This widget has the following additional behavior:</p>
 <dl COMPACT>
-<dt><code>&lt;FocusIn&gt;</code>:</p>
-<dd>Moves the keyboard focus to the sash and highlights it</p>
-<dt><code>&lt;FocusOut&gt;</code>:</p>
-<dd>Unsets the keyboard focus in the sash and unhighlights it</dl>
+<dt><code>&lt;FocusIn&gt;</code>:</dt>
+<dd>Moves the keyboard focus to the sash and highlights it</dd>
+<dt><code>&lt;FocusOut&gt;</code>:</dt>
+<dd>Unsets the keyboard focus in the sash and unhighlights it</dd></dl>
 <h3>Virtual Bindings</h3>
 <p>The bindings for virtual keys are vendor specific. For information about bindings for virtual buttons and keys, see <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3).</p>
 <h2>Related</h2>

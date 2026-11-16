@@ -530,112 +530,112 @@ description: "XmGadget — The Gadget widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNbackground</code></p>
-<dd>Specifies the background color for the gadget.</p>
-<dt><code>XmNbackgroundPixmap</code></p>
-<dd>Specifies a pixmap for tiling the background. The first tile is placed at the upper left corner of the widget&#8217;s window.</p>
-<dt><code>XmNbottomShadowColor</code></p>
-<dd>Contains the color to use to draw the bottom and right sides of the border shadow.</p>
-<dt><code>XmNbottomShadowPixmap</code></p>
-<dd>Specifies the pixmap to use to draw the bottom and right sides of the border shadow.</p>
-<dt><code>XmNforeground</code></p>
-<dd>Specifies the foreground drawing color used by Primitive widgets.</p>
-<dt><code>XmNhelpCallback</code></p>
-<dd>Specifies the list of callbacks that is called when the help key sequence is pressed. The reason sent by the callback is <code>XmCR_HELP</code>.</p>
-<dt><code>XmNhighlightColor</code></p>
-<dd>Contains the color of the highlighting rectangle.</p>
-<dt><code>XmNhighlightOnEnter</code></p>
-<dd>Specifies if the highlighting rectangle is drawn when the cursor moves into the widget. If the shell&#8217;s focus policy is <code>XmEXPLICIT</code>, this resource is ignored, and the widget is highlighted when it has the focus. If the shell&#8217;s focus policy is <code>XmPOINTER</code> and if this resource is True, the highlighting rectangle is drawn when the the cursor moves into the widget. If the shell&#8217;s focus policy is <code>XmPOINTER</code> and if this resource is False, the highlighting rectangle is not drawn when the the cursor moves into the widget. The default is False.</p>
-<dt><code>XmNhighlightPixmap</code></p>
-<dd>Specifies the pixmap used to draw the highlighting rectangle.</p>
-<dt><code>XmNhighlightThickness</code></p>
-<dd>Specifies the thickness of the highlighting rectangle.</p>
-<dt><code>XmNlayoutDirection</code></p>
-<dd>Specifies the direction in which components of the manager (including strings) are laid out. The values are of type <code>XmDirection</code>. If the widget&#8217;s parent is a manager or shell, the value is inherited from the widget&#8217;s parent. Otherwise, it is inherited from the closest ancestor vendor or menu shell.</p>
-<dt><code>XmNnavigationType</code></p>
-<dd>Determines whether the widget is a tab group.</p>
+<dt><code>XmNbackground</code></dt>
+<dd>Specifies the background color for the gadget.</dd>
+<dt><code>XmNbackgroundPixmap</code></dt>
+<dd>Specifies a pixmap for tiling the background. The first tile is placed at the upper left corner of the widget&#8217;s window.</dd>
+<dt><code>XmNbottomShadowColor</code></dt>
+<dd>Contains the color to use to draw the bottom and right sides of the border shadow.</dd>
+<dt><code>XmNbottomShadowPixmap</code></dt>
+<dd>Specifies the pixmap to use to draw the bottom and right sides of the border shadow.</dd>
+<dt><code>XmNforeground</code></dt>
+<dd>Specifies the foreground drawing color used by Primitive widgets.</dd>
+<dt><code>XmNhelpCallback</code></dt>
+<dd>Specifies the list of callbacks that is called when the help key sequence is pressed. The reason sent by the callback is <code>XmCR_HELP</code>.</dd>
+<dt><code>XmNhighlightColor</code></dt>
+<dd>Contains the color of the highlighting rectangle.</dd>
+<dt><code>XmNhighlightOnEnter</code></dt>
+<dd>Specifies if the highlighting rectangle is drawn when the cursor moves into the widget. If the shell&#8217;s focus policy is <code>XmEXPLICIT</code>, this resource is ignored, and the widget is highlighted when it has the focus. If the shell&#8217;s focus policy is <code>XmPOINTER</code> and if this resource is True, the highlighting rectangle is drawn when the the cursor moves into the widget. If the shell&#8217;s focus policy is <code>XmPOINTER</code> and if this resource is False, the highlighting rectangle is not drawn when the the cursor moves into the widget. The default is False.</dd>
+<dt><code>XmNhighlightPixmap</code></dt>
+<dd>Specifies the pixmap used to draw the highlighting rectangle.</dd>
+<dt><code>XmNhighlightThickness</code></dt>
+<dd>Specifies the thickness of the highlighting rectangle.</dd>
+<dt><code>XmNlayoutDirection</code></dt>
+<dd>Specifies the direction in which components of the manager (including strings) are laid out. The values are of type <code>XmDirection</code>. If the widget&#8217;s parent is a manager or shell, the value is inherited from the widget&#8217;s parent. Otherwise, it is inherited from the closest ancestor vendor or menu shell.</dd>
+<dt><code>XmNnavigationType</code></dt>
+<dd>Determines whether the widget is a tab group.</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmNONE</code></p>
-<dd>Indicates that the widget is not a tab group.</p>
-<dt><code>XmTAB_GROUP</code></p>
-<dd>Indicates that the widget is a tab group, unless the <code>XmNnavigationType</code> of another widget in the hierarchy is <code>XmEXCLUSIVE_TAB_GROUP</code>.</p>
-<dt><code>XmSTICKY_TAB_GROUP</code></p>
-<dd>Indicates that the widget is a tab group, even if the <code>XmNnavigationType</code> of another widget in the hierarchy is <code>XmEXCLUSIVE_TAB_GROUP</code>.</p>
-<dt><code>XmEXCLUSIVE_TAB_GROUP</code></p>
-<dd>Indicates that the widget is a tab group and that widgets in the hierarchy whose <code>XmNnavigationType</code> is <code>XmTAB_GROUP</code> are not tab groups.</p>
-<dd>When a parent widget has an <code>XmNnavigationType</code> of <code>XmEXCLUSIVE_TAB_GROUP</code>, traversal of non-tab-group widgets within the group is based on the order of those widgets in their parent&#8217;s <code>XmNchildren</code> list.</p>
-<dd>When the <code>XmNnavigationType</code> of any widget in a hierarchy is <code>XmEXCLUSIVE_TAB_GROUP</code>, traversal of tab groups in the hierarchy proceeds to widgets in the order in which their <code>XmNnavigationType</code> resources were specified as <code>XmEXCLUSIVE_TAB_GROUP</code> or <code>XmSTICKY_TAB_GROUP</code>, whether by creating the widgets with that value, by calling <code>XtSetValues</code>, or by calling <code>XmAddTabGroup</code>.</dl>
+</dd><dl COMPACT>
+<dt><code>XmNONE</code></dt>
+<dd>Indicates that the widget is not a tab group.</dd>
+<dt><code>XmTAB_GROUP</code></dt>
+<dd>Indicates that the widget is a tab group, unless the <code>XmNnavigationType</code> of another widget in the hierarchy is <code>XmEXCLUSIVE_TAB_GROUP</code>.</dd>
+<dt><code>XmSTICKY_TAB_GROUP</code></dt>
+<dd>Indicates that the widget is a tab group, even if the <code>XmNnavigationType</code> of another widget in the hierarchy is <code>XmEXCLUSIVE_TAB_GROUP</code>.</dd>
+<dt><code>XmEXCLUSIVE_TAB_GROUP</code></dt>
+<dd>Indicates that the widget is a tab group and that widgets in the hierarchy whose <code>XmNnavigationType</code> is <code>XmTAB_GROUP</code> are not tab groups.</dd>
+<dd>When a parent widget has an <code>XmNnavigationType</code> of <code>XmEXCLUSIVE_TAB_GROUP</code>, traversal of non-tab-group widgets within the group is based on the order of those widgets in their parent&#8217;s <code>XmNchildren</code> list.</dd>
+<dd>When the <code>XmNnavigationType</code> of any widget in a hierarchy is <code>XmEXCLUSIVE_TAB_GROUP</code>, traversal of tab groups in the hierarchy proceeds to widgets in the order in which their <code>XmNnavigationType</code> resources were specified as <code>XmEXCLUSIVE_TAB_GROUP</code> or <code>XmSTICKY_TAB_GROUP</code>, whether by creating the widgets with that value, by calling <code>XtSetValues</code>, or by calling <code>XmAddTabGroup</code>.</dd></dl>
 </dl>
-<dt><code>XmNshadowThickness</code></p>
-<dd>Specifies the size of the drawn border shadow.</p>
-<dt><code>XmNtopShadowColor</code></p>
-<dd>Contains the color to use to draw the top and left sides of the border shadow.</p>
-<dt><code>XmNtopShadowPixmap</code></p>
-<dd>Specifies the pixmap to use to draw the top and left sides of the border shadow.</p>
-<dt><code>XmNtraversalOn</code></p>
-<dd>Specifies traversal activation for this gadget.</p>
-<dt><code>XmNunitType</code></p>
-<dd>Provides the basic support for resolution independence. It defines the type of units a widget uses with sizing and positioning resources. If the widget&#8217;s parent is a subclass of <code>XmManager</code> and if the <code>XmNunitType</code> resource is not explicitly set, it defaults to the unit type of the parent widget. If the widget&#8217;s parent is not a subclass of <code>XmManager</code>, the resource has a default unit type of <code>XmPIXELS</code>.</p>
-<dd>The unit type can also be specified in resource files, with the following format:</dl>
+<dt><code>XmNshadowThickness</code></dt>
+<dd>Specifies the size of the drawn border shadow.</dd>
+<dt><code>XmNtopShadowColor</code></dt>
+<dd>Contains the color to use to draw the top and left sides of the border shadow.</dd>
+<dt><code>XmNtopShadowPixmap</code></dt>
+<dd>Specifies the pixmap to use to draw the top and left sides of the border shadow.</dd>
+<dt><code>XmNtraversalOn</code></dt>
+<dd>Specifies traversal activation for this gadget.</dd>
+<dt><code>XmNunitType</code></dt>
+<dd>Provides the basic support for resolution independence. It defines the type of units a widget uses with sizing and positioning resources. If the widget&#8217;s parent is a subclass of <code>XmManager</code> and if the <code>XmNunitType</code> resource is not explicitly set, it defaults to the unit type of the parent widget. If the widget&#8217;s parent is not a subclass of <code>XmManager</code>, the resource has a default unit type of <code>XmPIXELS</code>.</dd>
+<dd>The unit type can also be specified in resource files, with the following format:</dd></dl>
 <pre><tt></tt><i>&lt;floating value&gt;&lt;unit&gt;</i></pre>
 <dl COMPACT>
-<dd>where:</p>
+<dd>where:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><i>unit</i></p>
-<dd>is &lt;&quot; &quot;, pixels, inches, centimeters, millimeters, points, font units&gt;</p>
-<dt><i>pixels</i></p>
-<dd>is &lt;<i>pix</i>, <i>pixel</i>, <i>pixels</i>&gt;</p>
-<dt><i>inches</i></p>
-<dd>is &lt;<i>in</i>, <i>inch</i>, <i>inches</i>&gt;</p>
-<dt><i>centimeter</i></p>
-<dd>is &lt;<i>cm</i>, <i>centimeter</i>, <i>centimeters</i>&gt;</p>
-<dt><i>millimeters</i></p>
-<dd>is &lt;<i>mm</i>, <i>millimeter</i>, <i>millimeters</i>&gt;</p>
-<dt><code>points</code></p>
-<dd>is &lt;<i>pt</i>, <i>point</i>, <i>points</i>&gt;</p>
-<dt><code>font units</code></p>
-<dd>is &lt;<i>fu</i>, <code>font_unit</code>, <code>font_units</code>&gt;</p>
-<dt><i>float</i></p>
-<dd>is {&quot;+&quot;|&quot;-&quot;}&#123;&#123;&lt;&quot;0&quot;-&quot;9&quot;&gt;*}.}&lt;&quot;0&quot;-&quot;9&quot;&gt;*</p>
-<dd>Note that the type Dimension must always be positive.</dl>
+</dd><dl COMPACT>
+<dt><i>unit</i></dt>
+<dd>is &lt;&quot; &quot;, pixels, inches, centimeters, millimeters, points, font units&gt;</dd>
+<dt><i>pixels</i></dt>
+<dd>is &lt;<i>pix</i>, <i>pixel</i>, <i>pixels</i>&gt;</dd>
+<dt><i>inches</i></dt>
+<dd>is &lt;<i>in</i>, <i>inch</i>, <i>inches</i>&gt;</dd>
+<dt><i>centimeter</i></dt>
+<dd>is &lt;<i>cm</i>, <i>centimeter</i>, <i>centimeters</i>&gt;</dd>
+<dt><i>millimeters</i></dt>
+<dd>is &lt;<i>mm</i>, <i>millimeter</i>, <i>millimeters</i>&gt;</dd>
+<dt><code>points</code></dt>
+<dd>is &lt;<i>pt</i>, <i>point</i>, <i>points</i>&gt;</dd>
+<dt><code>font units</code></dt>
+<dd>is &lt;<i>fu</i>, <code>font_unit</code>, <code>font_units</code>&gt;</dd>
+<dt><i>float</i></dt>
+<dd>is {&quot;+&quot;|&quot;-&quot;}&#123;&#123;&lt;&quot;0&quot;-&quot;9&quot;&gt;*}.}&lt;&quot;0&quot;-&quot;9&quot;&gt;*</dd>
+<dd>Note that the type Dimension must always be positive.</dd></dl>
 </dl>
-<dd>For example,</dl>
+<dd>For example,</dd></dl>
 <pre><tt>xmfonts*XmMainWindow.height: 10.4cm
 *PostIn.width: 3inches</tt></pre>
 <dl COMPACT>
-<dd><code>XmNunitType</code> can have the following values:</p>
+<dd><code>XmNunitType</code> can have the following values:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmPIXELS</code></p>
-<dd>All values provided to the widget are treated as normal pixel values.</p>
-<dt><code>XmMILLIMETERS</code></p>
-<dd>All values provided to the widget are treated as normal millimeter values.</p>
-<dt><code>Xm100TH_MILLIMETERS</code></p>
-<dd>All values provided to the widget are treated as 1/100 of a millimeter.</p>
-<dt><code>XmCENTIMETERS</code></p>
-<dd>All values provided to the widget are treated as normal centimeter values.</p>
-<dt><code>XmINCHES</code></p>
-<dd>All values provided to the widget are treated as normal inch values.</p>
-<dt><code>Xm1000TH_INCHES</code></p>
-<dd>All values provided to the widget are treated as 1/1000 of an inch.</p>
-<dt><code>XmPOINTS</code></p>
-<dd>All values provided to the widget are treated as normal point values. A point is a unit used in text processing applications and is defined as 1/72 of an inch.</p>
-<dt><code>Xm100TH_POINTS</code></p>
-<dd>All values provided to the widget are treated as 1/100 of a point. A point is a unit used in text processing applications and is defined as 1/72 inch.</p>
-<dt><code>XmFONT_UNITS</code></p>
-<dd>All values provided to the widget are treated as normal font units. A font unit has horizontal and vertical components. These are the values of the XmScreen resources <code>XmNhorizontalFontUnit</code> and <code>XmNverticalFontUnit</code>.</p>
-<dt><code>Xm100TH_FONT_UNITS</code></p>
-<dd>All values provided to the widget are treated as 1/100 of a font unit. A font unit has horizontal and vertical components. These are the values of the XmScreen resources <code>XmNhorizontalFontUnit</code> and <code>XmNverticalFontUnit</code>.</dl>
+</dd><dl COMPACT>
+<dt><code>XmPIXELS</code></dt>
+<dd>All values provided to the widget are treated as normal pixel values.</dd>
+<dt><code>XmMILLIMETERS</code></dt>
+<dd>All values provided to the widget are treated as normal millimeter values.</dd>
+<dt><code>Xm100TH_MILLIMETERS</code></dt>
+<dd>All values provided to the widget are treated as 1/100 of a millimeter.</dd>
+<dt><code>XmCENTIMETERS</code></dt>
+<dd>All values provided to the widget are treated as normal centimeter values.</dd>
+<dt><code>XmINCHES</code></dt>
+<dd>All values provided to the widget are treated as normal inch values.</dd>
+<dt><code>Xm1000TH_INCHES</code></dt>
+<dd>All values provided to the widget are treated as 1/1000 of an inch.</dd>
+<dt><code>XmPOINTS</code></dt>
+<dd>All values provided to the widget are treated as normal point values. A point is a unit used in text processing applications and is defined as 1/72 of an inch.</dd>
+<dt><code>Xm100TH_POINTS</code></dt>
+<dd>All values provided to the widget are treated as 1/100 of a point. A point is a unit used in text processing applications and is defined as 1/72 inch.</dd>
+<dt><code>XmFONT_UNITS</code></dt>
+<dd>All values provided to the widget are treated as normal font units. A font unit has horizontal and vertical components. These are the values of the XmScreen resources <code>XmNhorizontalFontUnit</code> and <code>XmNverticalFontUnit</code>.</dd>
+<dt><code>Xm100TH_FONT_UNITS</code></dt>
+<dd>All values provided to the widget are treated as 1/100 of a font unit. A font unit has horizontal and vertical components. These are the values of the XmScreen resources <code>XmNhorizontalFontUnit</code> and <code>XmNverticalFontUnit</code>.</dd></dl>
 </dl>
-<dt><code>XmNuserData</code></p>
-<dd>Allows the application to attach any necessary specific data to the gadget. This is an internally unused resource. </p>
-<dt><code>XmNtoolTipString</code></p>
-<dd>The XmString to display as the toolTip. If this resource is NULL, no tip will be displayed. ToolTips are described in <a href="/docs/linux/man/3-vendorshell/">VendorShell</a>(3) </p>
+<dt><code>XmNuserData</code></dt>
+<dd>Allows the application to attach any necessary specific data to the gadget. This is an internally unused resource. </dd>
+<dt><code>XmNtoolTipString</code></dt>
+<dd>The XmString to display as the toolTip. If this resource is NULL, no tip will be displayed. ToolTips are described in <a href="/docs/linux/man/3-vendorshell/">VendorShell</a>(3) </dd>
 </dl>
 <h3>Inherited Resources</h3>
 <p>Gadget inherits resources from the superclass described in the following table. For a complete description of each resource, refer to the reference page for that superclass. </p>
@@ -917,10 +917,10 @@ description: "XmGadget — The Gadget widget class"
  XEvent <i>* event</i>;
 } XmAnyCallbackStruct;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked. For this callback, <i>reason</i> is set to <code>XmCR_HELP</code>.</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback.</dl>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked. For this callback, <i>reason</i> is set to <code>XmCR_HELP</code>.</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback.</dd></dl>
 <h3>Behavior</h3>
 <p>Gadgets cannot have translations associated with them. Because of this, a Gadget&#8217;s behavior is determined by the Manager widget into which the Gadget is placed. If focus is on a Gadget, events are passed to the Gadget by its Manager.</p>
 <h2>Related</h2>

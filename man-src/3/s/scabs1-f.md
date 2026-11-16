@@ -22,21 +22,18 @@ REAL function <b>scabs1</b> (Z)
 <h3>REAL function scabs1 (complexZ)</h3>
 
 <b>SCABS1</b> <b>Purpose: </b>
-<dl><dd><pre> SCABS1 computes absolute value of a complex number</pre>&nbsp;<wbr></dl>
+<dl><dd><pre> SCABS1 computes absolute value of a complex number</pre>&nbsp;<wbr></dd></dl>
  
 
  <b>Author:</b>
 <dl><dd>Univ. of Tennessee 
-
  Univ. of California Berkeley 
-
  Univ. of Colorado Denver 
-
- NAG Ltd.</dl>
+ NAG Ltd.</dd></dl>
  
 
  <b>Date:</b>
-<dl><dd>November 2011</dl>
+<dl><dd>November 2011</dd></dl>
  
 
  

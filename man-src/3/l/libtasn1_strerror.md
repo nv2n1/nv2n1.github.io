@@ -14,8 +14,8 @@ description: "libtasn1_strerror – Returns a string with a description of an er
 <p> <code>const char * libtasn1_strerror(asn1_retCode </code><i>error</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>asn1_retCode error</p>
-<dd> is an error returned by a libtasn1 function.</dl>
+<dt>asn1_retCode error</dt>
+<dd> is an error returned by a libtasn1 function.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function is similar to strerror. The only difference is that it accepts an error (number) returned by a libtasn1 function.</p>
 <h2>RETURNS</h2>
@@ -29,6 +29,6 @@ description: "libtasn1_strerror – Returns a string with a description of an er
 <p> The full documentation for <code>libtasn1</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libtasn1</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info libtasn1</code></dl>
+</dt><dd> <code>info libtasn1</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

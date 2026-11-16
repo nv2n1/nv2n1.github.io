@@ -16,8 +16,8 @@ description: "rwho – who is logged in on local machines"
 <p> If a users hasn&#8217;t typed to the system for a minute or more, then <code>rwho</code> reports this idle time. If a user hasn&#8217;t typed to the system for an hour or more, then the user will be omitted from the output of <code>rwho</code> unless the &#8211;<code>a</code> flag is given.</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>/var/spool/rwho/whod.* </code></p>
-<dd> information about other machines</dl>
+<dt><code>/var/spool/rwho/whod.* </code></dt>
+<dd> information about other machines</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-finger/">finger</a>(1), rup(1), <a href="/docs/linux/man/1-ruptime/">ruptime</a>(1), rusers(1), <a href="/docs/linux/man/1-who/">who</a>(1), <a href="/docs/linux/man/8-rwhod/">rwhod</a>(8)</p>
 <h2>HISTORY</h2>

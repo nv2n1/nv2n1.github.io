@@ -22,10 +22,10 @@ description: "ztgsna.f –"
  eigenvalues and/or eigenvectors of a matrix pair (A, B).
  (A, B) must be in generalized Schur canonical form, that is, A and
  B are both upper triangular.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>JOB</i> </p>
+<dd><i>JOB</i> </dd>
 <pre> JOB is CHARACTER*1
  Specifies whether condition numbers are required for
  eigenvalues (S) or eigenvectors (DIF):
@@ -123,13 +123,13 @@ description: "ztgsna.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -167,10 +167,10 @@ description: "ztgsna.f –"
  VR(i) is given by
  EPS * norm(A, B) / DIF(i).
  See ref. [2-3] for more details and further references.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
-<dd>Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dl>
+<dd>Bo Kagstrom and Peter Poromaa, Department of Computing Science, Umea University, S-901 87 Umea, Sweden.</dd></dl>
 <p> <code>References: </code></p>
 <dl>
 <dd>
@@ -191,7 +191,8 @@ description: "ztgsna.f –"
  Sweden, December 1993, Revised April 1994, Also as LAPACK Working
  Note 75.
  To appear in ACM Trans. on Math. Software, Vol 22, No 1, 1996.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 310 of file ztgsna.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

@@ -10,7 +10,7 @@ description: "vfs_btrfs – Utilize features provided by the Btrfs filesystem"
 <p>vfs_btrfs &#8211; Utilize features provided by the Btrfs filesystem</p>
 <h2>Synopsis</h2>
 <dl>
-<dd>vfs objects = btrfs</dl>
+<dd>vfs objects = btrfs</dd></dl>
 <h2>Description</h2>
 <p>This VFS module is part of the <code><a href="/docs/linux/man/8-samba/">samba</a></code>(8) suite. </p>
 <p> The vfs_btrfs VFS module exposes Btrfs specific features for use by Samba. </p>
@@ -21,7 +21,7 @@ description: "vfs_btrfs – Utilize features provided by the Btrfs filesystem"
 <h2>Options</h2>
 <p>btrfs: manipulate snapshots = [yes|no]</p>
 <dl>
-<dd>When set to <i>yes</i>, experimental support for the creation and deletion of snapshots via corresponding Btrfs IOCTLs will be enabled. The default is <i>no</i>, which means that such requests are passed through to any underlying VFS module.</dl>
+<dd>When set to <i>yes</i>, experimental support for the creation and deletion of snapshots via corresponding Btrfs IOCTLs will be enabled. The default is <i>no</i>, which means that such requests are passed through to any underlying VFS module.</dd></dl>
 <h2>Configuration</h2>
 <p>vfs_btrfs requires that the underlying share path is a Btrfs subvolume. </p>
 <dl>
@@ -29,7 +29,7 @@ description: "vfs_btrfs – Utilize features provided by the Btrfs filesystem"
 <pre> <i>[share]</i>
  m[blue]<code>vfs objects = btrfs</code>m[]
  m[blue]<code>btrfs: manipulate snapshots = no</code>m[]</pre>
-</dl>
+</dd></dl>
 <p> To use the experimental snapshot manipulation functionality provided by this module, it must be explicity enabled, and Samba&#8217;s FSRVP server must be running. </p>
 <p> The vfs_shadow_copy module can be used to expose snapshots created by vfs_btrfs to Windows Explorer as file / directory &quot;previous versions&quot;. </p>
 <dl>
@@ -41,7 +41,7 @@ description: "vfs_btrfs – Utilize features provided by the Btrfs filesystem"
  <i>[share]</i>
  m[blue]<code>vfs objects = btrfs shadow_copy</code>m[]
  m[blue]<code>btrfs: manipulate snapshots = yes</code>m[]</pre>
-</dl>
+</dd></dl>
 <h2>Version</h2>
 <p>This man page is correct for version 4.3.0 of the Samba suite.</p>
 <h2>Author</h2>

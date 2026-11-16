@@ -18,4 +18,4 @@ This configuration file provides definition of formatting for new Bugzilla bugs 
 
 <h2>Author</h2>
 
-<dl><dd>&bull; ABRT Team</dl>
+<dl><dd>&bull; ABRT Team</dd></dl>

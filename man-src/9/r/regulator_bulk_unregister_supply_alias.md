@@ -14,22 +14,22 @@ description: "regulator_bulk_unregister_supply_alias – unregister multiple ali
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device that will be given as the regulator &#8220;consumer&#8221;</dl>
+</dd><dd>device that will be given as the regulator &#8220;consumer&#8221;</dd></dl>
 <p> <i>id</i></p>
 <dl>
-<dd>List of supply names or regulator IDs</dl>
+<dd>List of supply names or regulator IDs</dd></dl>
 <p> <i>num_id</i></p>
 <dl>
-<dd>Number of aliases to unregister</dl>
+<dd>Number of aliases to unregister</dd></dl>
 <h2>Description</h2>
 <p>This helper function allows drivers to unregister several supply aliases in one operation.</p>
 <h2>Authors</h2>
 <p><code>Liam Girdwood</code> &lt;lrg [at] slimlogic.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Mark Brown</code> &lt;broonie [at] opensource.wolfsonmicro.com&gt;<br />
  Wolfson Microelectronics, </p>
 <p>&nbsp;<wbr>&nbsp;<wbr></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

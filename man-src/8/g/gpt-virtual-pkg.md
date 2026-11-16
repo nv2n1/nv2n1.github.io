@@ -14,19 +14,19 @@ description: "gpt-virtual-pkg – Link external software into a GPT managed inst
 <p><code>gpt-virtual-pkg</code> Link external packages into a globus site installation. The script uses a description file to create the softlinks. The format of this file is defined in the file virtual_package.dtd.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-installpath</code></p>
-<dd>Overrides <tt>$GLOBUS_LOCATION</tt> to point to a globus site installation.</p>
-<dt><code>-prefix</code></p>
-<dd>Specifies the installation location of the external package</p>
-<dt><code>-flavor</code></p>
-<dd>Specifies the build flavor of the external package.</p>
-<dt><code>-filelist=file</code></p>
-<dd>Specifies the file containing the list of installed files..</p>
-<dt><code>-gptfile=file</code></p>
-<dd>Specifies the file containing the <font SIZE="-1">GPT</font> packaging data.</p>
-<dt><code>-help</code></p>
-<dd>Print a brief help message and exits.</p>
-<dt><code>-man</code></p>
-<dd>Prints the manual page and exits.</dl>
+<dt><code>-installpath</code></dt>
+<dd>Overrides <tt>$GLOBUS_LOCATION</tt> to point to a globus site installation.</dd>
+<dt><code>-prefix</code></dt>
+<dd>Specifies the installation location of the external package</dd>
+<dt><code>-flavor</code></dt>
+<dd>Specifies the build flavor of the external package.</dd>
+<dt><code>-filelist=file</code></dt>
+<dd>Specifies the file containing the list of installed files..</dd>
+<dt><code>-gptfile=file</code></dt>
+<dd>Specifies the file containing the <font SIZE="-1">GPT</font> packaging data.</dd>
+<dt><code>-help</code></dt>
+<dd>Print a brief help message and exits.</dd>
+<dt><code>-man</code></dt>
+<dd>Prints the manual page and exits.</dd></dl>
 <h2>Author</h2>
 <p>Michael Bletzinger &lt;mbletzin.ncsa.uiuc.edu&gt; and Eric Blau &lt;eblau.ncsa.uiuc.edu&gt;</p>

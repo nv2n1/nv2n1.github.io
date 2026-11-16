@@ -18,7 +18,7 @@ description: "zmq_msg_set – set message property"
 <h2>Errors</h2>
 <p><code>EINVAL</code></p>
 <dl>
-<dd>The requested property <i>property</i> is unknown.</dl>
+<dd>The requested property <i>property</i> is unknown.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-zmq_msg_get/">zmq_msg_get</a></code>(3) <code><a href="/docs/linux/man/7-zmq/">zmq</a></code>(7)</p>
 <h2>Authors</h2>

@@ -12,35 +12,33 @@ description: "npm-uninstall – Remove a package"
 <h3>Synopsis</h3>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 npm uninstall[&lt;@scope&gt; / ]&lt;pkg&gt;[@&lt;version&gt;]...[-S | --save | -D | --save - dev | -O | --save - optional | --no - save] aliases : remove, rm, r, un, unlink
 </code></pre>
-</dl>
+</dd></dl>
 <h3>Description</h3>
 <p> This uninstalls a package, completely removing everything npm installed on its behalf. </p>
 <p> Example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 npm uninstall sax
 </pre>
-</dl>
+</dd></dl>
 <p> In global mode (ie, with <code>-g</code> or <code>&#8211;global</code> appended to the command), it uninstalls the current package context as a global package. </p>
 <p> <code>npm uninstall</code> takes 3 exclusive, optional flags which save or update the package version in your main package.json:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> <code>-S, &#8211;save</code>: Package will be removed from your <code>dependencies</code>.</p>
-<dt>&bull;</p>
-<dd> <code>-D, &#8211;save-dev</code>: Package will be removed from your <code>devDependencies</code>.</p>
-<dt>&bull;</p>
-<dd> <code>-O, &#8211;save-optional</code>: Package will be removed from your <code>optionalDependencies</code>.</p>
-<dt>&bull;</p>
-<dd> <code>&#8211;no-save</code>: Package will not be removed from your <code>package.json</code> file. </p>
+<dt>&bull;</dt>
+<dd> <code>-S, &#8211;save</code>: Package will be removed from your <code>dependencies</code>.</dd>
+<dt>&bull;</dt>
+<dd> <code>-D, &#8211;save-dev</code>: Package will be removed from your <code>devDependencies</code>.</dd>
+<dt>&bull;</dt>
+<dd> <code>-O, &#8211;save-optional</code>: Package will be removed from your <code>optionalDependencies</code>.</dd>
+<dt>&bull;</dt>
+<dd> <code>&#8211;no-save</code>: Package will not be removed from your <code>package.json</code> file. </dd>
 </dl>
 </dl>
 <p> Further, if you have an <code>npm-shrinkwrap.json</code> then it will be updated as well. </p>
@@ -48,7 +46,7 @@ npm uninstall sax
 <p> Examples: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 npm uninstall sax-- save
             npm uninstall @myorg /
@@ -56,22 +54,20 @@ npm uninstall sax-- save
             npm uninstall node -
     tap-- save - dev npm uninstall dtrace - provider-- save - optional npm uninstall lodash-- no - save
 </code></pre>
-</dl>
+</dd></dl>
 <h3>See Also</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> npm help prune</p>
-<dt>&bull;</p>
-<dd> npm help install</p>
-<dt>&bull;</p>
-<dd> npm help folders</p>
-<dt>&bull;</p>
-<dd> npm help config</p>
-<dt>&bull;</p>
-<dd> npm help npmrc </p>
+<dt>&bull;</dt>
+<dd> npm help prune</dd>
+<dt>&bull;</dt>
+<dd> npm help install</dd>
+<dt>&bull;</dt>
+<dd> npm help folders</dd>
+<dt>&bull;</dt>
+<dd> npm help config</dd>
+<dt>&bull;</dt>
+<dd> npm help npmrc </dd>
 </dl>
 </dl>
 <h2>Index</h2>

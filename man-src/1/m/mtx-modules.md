@@ -15,14 +15,14 @@ description: "mtx-modules – ConTeXt Module Documentation Generators"
 <p> <code>ConTeXt Module Documentation Generators</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;convert</code></p>
-<dd> convert source files (tex, mkii, mkiv, mp, etc.) to &#8216;ted&#8217; files</p>
-<dt><code>&#8211;process</code></p>
-<dd> process source files (tex, mkii, mkiv, mp, etc.) to &#8216;pdf&#8217; files</p>
-<dt><code>&#8211;prep</code></p>
-<dd> use original name with suffix &#8216;prep&#8217; appended</p>
-<dt><code>&#8211;direct</code></p>
-<dd> use old method instead of extra</dl>
+<dt><code>&#8211;convert</code></dt>
+<dd> convert source files (tex, mkii, mkiv, mp, etc.) to &#8216;ted&#8217; files</dd>
+<dt><code>&#8211;process</code></dt>
+<dd> process source files (tex, mkii, mkiv, mp, etc.) to &#8216;pdf&#8217; files</dd>
+<dt><code>&#8211;prep</code></dt>
+<dd> use original name with suffix &#8216;prep&#8217; appended</dd>
+<dt><code>&#8211;direct</code></dt>
+<dd> use old method instead of extra</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

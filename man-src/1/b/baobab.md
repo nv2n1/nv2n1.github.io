@@ -15,12 +15,12 @@ description: "baobab – A graphical disk usage analyzer for the GNOME desktop"
 <p> <code>baobab</code> (a.k.a. <code>Disk Usage Analyzer</code>) is able to scan either specific folders (local and remote) or devices, in order to give the user a tree representation including each directory size or percentage in the branch. It also auto-detects any mounted/unmounted device. A graphical representation is also provided for any selected folder. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code>, <code>&#8211;all-file-systems</code></p>
-<dd> Do not skip directories on different file systems. Ignored if DIRECTORY is not specified.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show command line options.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Output version information and exit. </p>
+<dt><code>-a</code>, <code>&#8211;all-file-systems</code></dt>
+<dd> Do not skip directories on different file systems. Ignored if DIRECTORY is not specified.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show command line options.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Output version information and exit. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> Bugs should be reported to the GNOME issue tracker at m[blue]<code><a rel="nofollow" href="http://gitlab.gnome.org/GNOME/baobab/issues">http://gitlab.gnome.org/GNOME/baobab/issues</a></code>m[]. </p>

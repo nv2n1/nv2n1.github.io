@@ -20,79 +20,79 @@ description: "grotty – groff driver for typewriter-like devices"
 <p> For SGR support, it is necessary to use the <code>-R</code> option of <code><a href="/docs/linux/man/1-less/">less</a></code>(1) to disable the interpretation of <code>grotty</code>&#8216;s old output format. Consequently, all programs which use <code>less</code> as the pager program have to pass this option to it. For <code><a href="/docs/linux/man/1-man/">man</a></code>(1) in particular, either add <code>-R</code> to the <i>PAGER</i> environment variable, e.g.</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> <code>PAGER=/usr/bin/less -R</code><br />
- <code>export PAGER</code></dl>
+ <code>export PAGER</code></dd></dl>
 <p> or use the <code>-P</code> option of <code>man</code> to set the pager executable and its options, or modify the configuration file of <code>man</code> in a similar fashion. Note that with some <code><a href="/docs/linux/man/1-man/">man</a></code>(1) versions, you have to use the <i>MANPAGER</i> environment variable instead. </p>
 <p> <code>grotty</code>&#8216;s old output format can be displayed on a terminal by piping through <code><a href="/docs/linux/man/1-ul/">ul</a></code>(1). Pagers such as <code><a href="/docs/linux/man/1-more/">more</a></code>(1) or <code><a href="/docs/linux/man/1-less/">less</a></code>(1) are also able to display these sequences. Use either <code>-B</code> or <code>-U</code> when piping into <code><a href="/docs/linux/man/1-less/">less</a></code>(1); use <code>-b</code> when piping into <code><a href="/docs/linux/man/1-more/">more</a></code>(1). There is no need to filter the output through <code><a href="/docs/linux/man/1-col/">col</a></code>(1) since <code>grotty</code> never outputs reverse line feeds. </p>
 <p> The font description file may contain a command</p>
 <dl>
 <dt>
-<dd> <code>internalname&nbsp;</code><i>n</i></dl>
+</dt><dd> <code>internalname&nbsp;</code><i>n</i></dd></dl>
 <p> where <i>n</i> is a decimal integer. If the 01 bit in <i>n</i> is set, then the font is treated as an italic font; if the 02 bit is set, then it is treated as a bold font. The code field in the font description field gives the code which is used to output the character. This code can also be used in the <code>\N</code> escape sequence in <code>troff</code>. </p>
 <p> If the <i>DESC</i> file contains the keyword <code>unicode</code>, <code>grotty</code> emits Unicode characters in UTF-8 encoding. Otherwise, it emits characters in a single-byte encoding depending on the data in the font description files. See the <code><a href="/docs/linux/man/5-groff_font/">groff_font</a></code>(5) man page for more details.</p>
 <h2>OPTIONS</h2>
 <p> Whitespace is permitted between a command-line option and its argument.</p>
 <dl>
-<dt><code>-b</code></p>
-<dd> Suppress the use of overstriking for bold characters. Ignored if <code>-c</code> isn&#8217;t used.</p>
-<dt><code>-B</code></p>
-<dd> Use only overstriking for bold-italic characters. Ignored if <code>-c</code> isn&#8217;t used.</p>
-<dt><code>-c</code></p>
-<dd> Use <code>grotty</code>&#8216;s old output format (see above). This also disables color output. (Debian-specific: This option is enabled by default when using the <code>man</code> and <code>mdoc</code> macro packages. It can be disabled by default permanently by editing <i>/etc/groff/man.local</i> and <i>/etc/groff/mdoc.local</i>, or temporarily by setting the <i>GROFF_SGR</i> environment variable to something non-empty.)</p>
-<dt><code>-d</code></p>
-<dd> Ignore all <code>\D</code> commands. Without this <code>grotty</code> renders <code>\D&#8217;l&#8230;&#8217;</code> commands that have at least one zero argument (and so are either horizontal or vertical) using <code>&#8211;</code>, <code>|</code>, and <code>+</code> characters. In a similar way, <code>grotty</code> handles <code>\D&#8217;p&#8230;&#8217;</code> commands which consist entirely of horizontal and vertical lines.</p>
-<dt><code>-f</code></p>
-<dd> Use form feeds in the output. A form feed is output at the end of each page that has no output on its last line.</p>
-<dt><code>-F</code><i>dir</i></p>
-<dd> Prepend directory dir<i>/dev</i>name to the search path for font and device description files; <i>name</i> is the name of the device, usually <code>ascii</code>, <code>latin1</code>, <code>utf8</code>, or <code>cp1047</code>.</p>
-<dt><code>-h</code></p>
-<dd> Use horizontal tabs in the output. Tabs are assumed to be set every 8 columns.</p>
-<dt><code>-i</code></p>
-<dd> Use escape sequences to set the italic text attribute instead of the underline attribute for italic fonts (&#8216;I&#8217; and &#8216;BI&#8217;). Note that most terminals (including xterm) don&#8217;t support this. Ignored if <code>-c</code> is active.</p>
-<dt><code>-o</code></p>
-<dd> Suppress overstriking (other than for bold or underlined characters in case the old output format has been activated with <code>-c</code>).</p>
-<dt><code>-r</code></p>
-<dd> Use escape sequences to set the reverse text attribute instead of the underline attribute for italic fonts (&#8216;I&#8217; and &#8216;BI&#8217;). Ignored if <code>-c</code> is active.</p>
-<dt><code>-u</code></p>
-<dd> Suppress the use of underlining for italic characters. Ignored if <code>-c</code> isn&#8217;t used.</p>
-<dt><code>-U</code></p>
-<dd> Use only underlining for bold-italic characters. Ignored if <code>-c</code> isn&#8217;t used.</p>
-<dt><code>-v</code></p>
-<dd> Print the version number.</dl>
+<dt><code>-b</code></dt>
+<dd> Suppress the use of overstriking for bold characters. Ignored if <code>-c</code> isn&#8217;t used.</dd>
+<dt><code>-B</code></dt>
+<dd> Use only overstriking for bold-italic characters. Ignored if <code>-c</code> isn&#8217;t used.</dd>
+<dt><code>-c</code></dt>
+<dd> Use <code>grotty</code>&#8216;s old output format (see above). This also disables color output. (Debian-specific: This option is enabled by default when using the <code>man</code> and <code>mdoc</code> macro packages. It can be disabled by default permanently by editing <i>/etc/groff/man.local</i> and <i>/etc/groff/mdoc.local</i>, or temporarily by setting the <i>GROFF_SGR</i> environment variable to something non-empty.)</dd>
+<dt><code>-d</code></dt>
+<dd> Ignore all <code>\D</code> commands. Without this <code>grotty</code> renders <code>\D&#8217;l&#8230;&#8217;</code> commands that have at least one zero argument (and so are either horizontal or vertical) using <code>&#8211;</code>, <code>|</code>, and <code>+</code> characters. In a similar way, <code>grotty</code> handles <code>\D&#8217;p&#8230;&#8217;</code> commands which consist entirely of horizontal and vertical lines.</dd>
+<dt><code>-f</code></dt>
+<dd> Use form feeds in the output. A form feed is output at the end of each page that has no output on its last line.</dd>
+<dt><code>-F</code><i>dir</i></dt>
+<dd> Prepend directory dir<i>/dev</i>name to the search path for font and device description files; <i>name</i> is the name of the device, usually <code>ascii</code>, <code>latin1</code>, <code>utf8</code>, or <code>cp1047</code>.</dd>
+<dt><code>-h</code></dt>
+<dd> Use horizontal tabs in the output. Tabs are assumed to be set every 8 columns.</dd>
+<dt><code>-i</code></dt>
+<dd> Use escape sequences to set the italic text attribute instead of the underline attribute for italic fonts (&#8216;I&#8217; and &#8216;BI&#8217;). Note that most terminals (including xterm) don&#8217;t support this. Ignored if <code>-c</code> is active.</dd>
+<dt><code>-o</code></dt>
+<dd> Suppress overstriking (other than for bold or underlined characters in case the old output format has been activated with <code>-c</code>).</dd>
+<dt><code>-r</code></dt>
+<dd> Use escape sequences to set the reverse text attribute instead of the underline attribute for italic fonts (&#8216;I&#8217; and &#8216;BI&#8217;). Ignored if <code>-c</code> is active.</dd>
+<dt><code>-u</code></dt>
+<dd> Suppress the use of underlining for italic characters. Ignored if <code>-c</code> isn&#8217;t used.</dd>
+<dt><code>-U</code></dt>
+<dd> Use only underlining for bold-italic characters. Ignored if <code>-c</code> isn&#8217;t used.</dd>
+<dt><code>-v</code></dt>
+<dd> Print the version number.</dd></dl>
 <h2>USAGE</h2>
 <p> <code>grotty</code> understands a single X command produced using the <code>\X</code> escape sequence.</p>
 <dl>
-<dt><code>\X&#8217;tty: sgr&nbsp;</code><i>n</i><code>&#8216;</code></p>
-<dd> If <i>n</i> is non-zero or missing, enable SGR output (this is the default), otherwise use the old drawing scheme for bold and underline.</dl>
+<dt><code>\X&#8217;tty: sgr&nbsp;</code><i>n</i><code>&#8216;</code></dt>
+<dd> If <i>n</i> is non-zero or missing, enable SGR output (this is the default), otherwise use the old drawing scheme for bold and underline.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><i>GROFF_NO_SGR</i></p>
-<dd> If set, the old drawing scheme for bold and underline (using the backspace character) is active. Colors are disabled.</p>
-<dt><i>GROFF_FONT_PATH</i></p>
-<dd> A list of directories in which to search for the <i>dev</i>name directory in addition to the default ones. See <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1) and <code><a href="/docs/linux/man/5-groff_font/">groff_font</a></code>(5) for more details.</dl>
+<dt><i>GROFF_NO_SGR</i></dt>
+<dd> If set, the old drawing scheme for bold and underline (using the backspace character) is active. Colors are disabled.</dd>
+<dt><i>GROFF_FONT_PATH</i></dt>
+<dd> A list of directories in which to search for the <i>dev</i>name directory in addition to the default ones. See <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1) and <code><a href="/docs/linux/man/5-groff_font/">groff_font</a></code>(5) for more details.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/usr/share/groff/1.22.4/font/devascii/DESC</i></p>
-<dd> Device description file for the <code>ascii</code> device.</p>
-<dt><i>/usr/share/groff/1.22.4/font/devascii/</i>F</p>
-<dd> Font description file for font <i>F</i> of the <code>ascii</code> device.</p>
-<dt><i>/usr/share/groff/1.22.4/font/devlatin1/DESC</i></p>
-<dd> Device description file for the <code>latin1</code> device.</p>
-<dt><i>/usr/share/groff/1.22.4/font/devlatin1/</i>F</p>
-<dd> Font description file for font <i>F</i> of the <code>latin1</code> device.</p>
-<dt><i>/usr/share/groff/1.22.4/font/devutf8/DESC</i></p>
-<dd> Device description file for the <code>utf8</code> device.</p>
-<dt><i>/usr/share/groff/1.22.4/font/devutf8/</i>F</p>
-<dd> Font description file for font <i>F</i> of the <code>utf8</code> device.</p>
-<dt><i>/usr/share/groff/1.22.4/font/devcp1047/DESC</i></p>
-<dd> Device description file for the <code>cp1047</code> device.</p>
-<dt><i>/usr/share/groff/1.22.4/font/devcp1047/</i>F</p>
-<dd> Font description file for font <i>F</i> of the <code>cp1047</code> device.</p>
-<dt><i>/usr/share/groff/1.22.4/tmac/tty.tmac</i></p>
-<dd> Macros for use with <code>grotty</code>.</p>
-<dt><i>/usr/share/groff/1.22.4/tmac/tty-char.tmac</i></p>
-<dd> Additional character definitions for use with <code>grotty</code>.</dl>
+<dt><i>/usr/share/groff/1.22.4/font/devascii/DESC</i></dt>
+<dd> Device description file for the <code>ascii</code> device.</dd>
+<dt><i>/usr/share/groff/1.22.4/font/devascii/</i>F</dt>
+<dd> Font description file for font <i>F</i> of the <code>ascii</code> device.</dd>
+<dt><i>/usr/share/groff/1.22.4/font/devlatin1/DESC</i></dt>
+<dd> Device description file for the <code>latin1</code> device.</dd>
+<dt><i>/usr/share/groff/1.22.4/font/devlatin1/</i>F</dt>
+<dd> Font description file for font <i>F</i> of the <code>latin1</code> device.</dd>
+<dt><i>/usr/share/groff/1.22.4/font/devutf8/DESC</i></dt>
+<dd> Device description file for the <code>utf8</code> device.</dd>
+<dt><i>/usr/share/groff/1.22.4/font/devutf8/</i>F</dt>
+<dd> Font description file for font <i>F</i> of the <code>utf8</code> device.</dd>
+<dt><i>/usr/share/groff/1.22.4/font/devcp1047/DESC</i></dt>
+<dd> Device description file for the <code>cp1047</code> device.</dd>
+<dt><i>/usr/share/groff/1.22.4/font/devcp1047/</i>F</dt>
+<dd> Font description file for font <i>F</i> of the <code>cp1047</code> device.</dd>
+<dt><i>/usr/share/groff/1.22.4/tmac/tty.tmac</i></dt>
+<dd> Macros for use with <code>grotty</code>.</dd>
+<dt><i>/usr/share/groff/1.22.4/tmac/tty-char.tmac</i></dt>
+<dd> Additional character definitions for use with <code>grotty</code>.</dd></dl>
 <p> Note that on EBCDIC hosts, only files for the <code>cp1047</code> device is installed.</p>
 <h2>BUGS</h2>
 <p> <code>grotty</code> is intended only for simple documents. </p>

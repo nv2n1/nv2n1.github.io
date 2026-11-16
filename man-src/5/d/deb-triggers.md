@@ -15,19 +15,19 @@ description: "deb-triggers – package triggers"
 <p> This file contains directives, one per line. Leading and trailing whitespace and everything after the first <code>#</code> on any line will be trimmed, and empty lines will be ignored. </p>
 <p> The trigger control directives currently supported are:</p>
 <dl>
-<dt><code>interest</code> <i>trigger-name</i></p>
+<dt><code>interest</code> <i>trigger-name</i></dt>
 <dd>
-<dt><code>interest-await</code> <i>trigger-name</i></p>
+</dd><dt><code>interest-await</code> <i>trigger-name</i></dt>
 <dd>
-<dt><code>interest-noawait</code> <i>trigger-name</i></p>
-<dd>Specifies that the package is interested in the named trigger. All triggers in which a package is interested must be listed using this directive in the triggers control file. </p>
+</dd><dt><code>interest-noawait</code> <i>trigger-name</i></dt>
+<dd>Specifies that the package is interested in the named trigger. All triggers in which a package is interested must be listed using this directive in the triggers control file. </dd>
 <p> The &#8220;await&#8221; variants put the triggering package in triggers-awaited state depending on how the trigger was activated. The &#8220;noawait&#8221; variant does not put the triggering packages in triggers-awaited state, even if the triggering package declared an &#8220;await&#8221; activation (either with an <code>activate-await</code> or <code>activate</code> directive, or by using the <code>dpkg-trigger</code> <code>&#8211;no-await</code> command-line option). The &#8220;noawait&#8221; variant should be used when the functionality provided by the trigger is not crucial.</p>
-<dt><code>activate</code> <i>trigger-name</i></p>
+<dt><code>activate</code> <i>trigger-name</i></dt>
 <dd>
-<dt><code>activate-await</code> <i>trigger-name</i></p>
+</dd><dt><code>activate-await</code> <i>trigger-name</i></dt>
 <dd>
-<dt><code>activate-noawait</code> <i>trigger-name</i></p>
-<dd>Arranges that changes to this package&#8217;s state will activate the specified trigger. The trigger will be activated at the start of the following operations: unpack, configure, remove (including for the benefit of a conflicting package), purge and deconfigure. </p>
+</dd><dt><code>activate-noawait</code> <i>trigger-name</i></dt>
+<dd>Arranges that changes to this package&#8217;s state will activate the specified trigger. The trigger will be activated at the start of the following operations: unpack, configure, remove (including for the benefit of a conflicting package), purge and deconfigure. </dd>
 <p> The &#8220;await&#8221; variants only put the triggering package in triggers-awaited state if the interest directive is also &#8220;await&#8221;. The &#8220;noawait&#8221; variant never puts the triggering packages in triggers-awaited state. The &#8220;noawait&#8221; variant should be used when the functionality provided by the trigger is not crucial. </p>
 <p> If this package disappears during the unpacking of another package the trigger will be activated when the disappearance is noted towards the end of the unpack. Trigger processing, and transition from triggers-awaited to installed, does not cause activations. In the case of unpack, triggers mentioned in both the old and new versions of the package will be activated.</dl>
 <p> Unknown directives are an error which will prevent installation of the package. </p>
@@ -37,3 +37,4 @@ description: "deb-triggers – package triggers"
 <p> When a package provides an <code>interest-noawait</code> directive, any activation will set the triggering package into &#8220;noawait&#8221; mode, regardless of the awaiting mode requested by the activation (either &#8220;await&#8221; or &#8220;noawait&#8221;). When a package provides an <code>interest</code> or <code>interest-await</code> directive, any activation will set the triggering package into &#8220;await&#8221; or &#8220;noawait&#8221; depending on how it was activated.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-dpkg-trigger/">dpkg-trigger</a></code>(1), <code><a href="/docs/linux/man/1-dpkg/">dpkg</a></code>(1), <code>/usr/share/doc/dpkg/triggers.txt.gz</code>. </p>
+</p>

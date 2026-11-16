@@ -20,83 +20,83 @@ description: "eject – eject removable media"
 <p> <code>-a</code>, <code>&#8211;auto on</code>|<code>off</code></p>
 <dl>
 <dt>
-<dd> This option controls the auto-eject mode, supported by some devices. When enabled, the drive automatically ejects when the device is closed.</dl>
+</dt><dd> This option controls the auto-eject mode, supported by some devices. When enabled, the drive automatically ejects when the device is closed.</dd></dl>
 <p> <code>-c</code>, <code>&#8211;changerslot</code> <i>slot</i></p>
 <dl>
 <dt>
-<dd> With this option a CD slot can be selected from an ATAPI/IDE CD-ROM changer. The CD-ROM drive cannot be in use (mounted data CD or playing a music CD) for a change request to work. Please also note that the first slot of the changer is referred to as 0, not 1.</dl>
+</dt><dd> With this option a CD slot can be selected from an ATAPI/IDE CD-ROM changer. The CD-ROM drive cannot be in use (mounted data CD or playing a music CD) for a change request to work. Please also note that the first slot of the changer is referred to as 0, not 1.</dd></dl>
 <p> <code>-d</code>, <code>&#8211;default</code></p>
 <dl>
 <dt>
-<dd> List the default device name.</dl>
+</dt><dd> List the default device name.</dd></dl>
 <p> <code>-F</code>, <code>&#8211;force</code></p>
 <dl>
 <dt>
-<dd> Force eject, don&#8217;t check device type, don&#8217;t open device with exclusive lock. The successful result may be false positive on non hot-pluggable devices.</dl>
+</dt><dd> Force eject, don&#8217;t check device type, don&#8217;t open device with exclusive lock. The successful result may be false positive on non hot-pluggable devices.</dd></dl>
 <p> <code>-f</code>, <code>&#8211;floppy</code></p>
 <dl>
 <dt>
-<dd> This option specifies that the drive should be ejected using a removable floppy disk eject command.</dl>
+</dt><dd> This option specifies that the drive should be ejected using a removable floppy disk eject command.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit.</dl>
+</dt><dd> Display help text and exit.</dd></dl>
 <p> <code>-i</code>, <code>&#8211;manualeject on</code>|<code>off</code></p>
 <dl>
 <dt>
-<dd> This option controls locking of the hardware eject button. When enabled, the drive will not be ejected when the button is pressed. This is useful when you are carrying a laptop in a bag or case and don&#8217;t want it to eject if the button is inadvertently pressed.</dl>
+</dt><dd> This option controls locking of the hardware eject button. When enabled, the drive will not be ejected when the button is pressed. This is useful when you are carrying a laptop in a bag or case and don&#8217;t want it to eject if the button is inadvertently pressed.</dd></dl>
 <p> <code>-M</code>, <code>&#8211;no-partitions-unmount</code></p>
 <dl>
 <dt>
-<dd> The option tells eject to not try to unmount other partitions on partitioned devices. If another partition is still mounted, the program will not attempt to eject the media. It will attempt to unmount only the device or mountpoint given on the command line.</dl>
+</dt><dd> The option tells eject to not try to unmount other partitions on partitioned devices. If another partition is still mounted, the program will not attempt to eject the media. It will attempt to unmount only the device or mountpoint given on the command line.</dd></dl>
 <p> <code>-m</code>, <code>&#8211;no-unmount</code></p>
 <dl>
 <dt>
-<dd> The option tells eject to not try to unmount at all. If this option is not specified than <code>eject</code> opens the device with <code>O_EXCL</code> flag to be sure that the device is not used (since v2.35).</dl>
+</dt><dd> The option tells eject to not try to unmount at all. If this option is not specified than <code>eject</code> opens the device with <code>O_EXCL</code> flag to be sure that the device is not used (since v2.35).</dd></dl>
 <p> <code>-n</code>, <code>&#8211;noop</code></p>
 <dl>
 <dt>
-<dd> With this option the selected device is displayed but no action is performed.</dl>
+</dt><dd> With this option the selected device is displayed but no action is performed.</dd></dl>
 <p> <code>-p</code>, <code>&#8211;proc</code></p>
 <dl>
 <dt>
-<dd> This option allows you to use <i>/proc/mounts</i> instead <i>/etc/mtab</i>. It also passes the <code>-n</code> option to <code><a href="/docs/linux/man/8-umount/">umount</a></code>(8).</dl>
+</dt><dd> This option allows you to use <i>/proc/mounts</i> instead <i>/etc/mtab</i>. It also passes the <code>-n</code> option to <code><a href="/docs/linux/man/8-umount/">umount</a></code>(8).</dd></dl>
 <p> <code>-q</code>, <code>&#8211;tape</code></p>
 <dl>
 <dt>
-<dd> This option specifies that the drive should be ejected using a tape drive offline command.</dl>
+</dt><dd> This option specifies that the drive should be ejected using a tape drive offline command.</dd></dl>
 <p> <code>-r</code>, <code>&#8211;cdrom</code></p>
 <dl>
 <dt>
-<dd> This option specifies that the drive should be ejected using a CDROM eject command.</dl>
+</dt><dd> This option specifies that the drive should be ejected using a CDROM eject command.</dd></dl>
 <p> <code>-s</code>, <code>&#8211;scsi</code></p>
 <dl>
 <dt>
-<dd> This option specifies that the drive should be ejected using SCSI commands.</dl>
+</dt><dd> This option specifies that the drive should be ejected using SCSI commands.</dd></dl>
 <p> <code>-T</code>, <code>&#8211;traytoggle</code></p>
 <dl>
 <dt>
-<dd> With this option the drive is given a CD-ROM tray close command if it&#8217;s opened, and a CD-ROM tray eject command if it&#8217;s closed. Not all devices support this command, because it uses the above CD-ROM tray close command.</dl>
+</dt><dd> With this option the drive is given a CD-ROM tray close command if it&#8217;s opened, and a CD-ROM tray eject command if it&#8217;s closed. Not all devices support this command, because it uses the above CD-ROM tray close command.</dd></dl>
 <p> <code>-t</code>, <code>&#8211;trayclose</code></p>
 <dl>
 <dt>
-<dd> With this option the drive is given a CD-ROM tray close command. Not all devices support this command.</dl>
+</dt><dd> With this option the drive is given a CD-ROM tray close command. Not all devices support this command.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit.</dl>
+</dt><dd> Display version information and exit.</dd></dl>
 <p> <code>-v</code>, <code>&#8211;verbose</code></p>
 <dl>
 <dt>
-<dd> Run in verbose mode; more information is displayed about what the command is doing.</dl>
+</dt><dd> Run in verbose mode; more information is displayed about what the command is doing.</dd></dl>
 <p> <code>-X</code>, <code>&#8211;listspeed</code></p>
 <dl>
 <dt>
-<dd> With this option the CD-ROM drive will be probed to detect the available speeds. The output is a list of speeds which can be used as an argument of the <code>-x</code> option. This only works with Linux 2.6.13 or higher, on previous versions solely the maximum speed will be reported. Also note that some drives may not correctly report the speed and therefore this option does not work with them.</dl>
+</dt><dd> With this option the CD-ROM drive will be probed to detect the available speeds. The output is a list of speeds which can be used as an argument of the <code>-x</code> option. This only works with Linux 2.6.13 or higher, on previous versions solely the maximum speed will be reported. Also note that some drives may not correctly report the speed and therefore this option does not work with them.</dd></dl>
 <p> <code>-x</code>, <code>&#8211;cdspeed</code> <i>speed</i></p>
 <dl>
 <dt>
-<dd> With this option the drive is given a CD-ROM select speed command. The <i>speed</i> argument is a number indicating the desired speed (e.g., 8 for 8X speed), or 0 for maximum data rate. Not all devices support this command and you can only specify speeds that the drive is capable of. Every time the media is changed this option is cleared. This option can be used alone, or with the <code>-t</code> and <code>-c</code> options.</dl>
+</dt><dd> With this option the drive is given a CD-ROM select speed command. The <i>speed</i> argument is a number indicating the desired speed (e.g., 8 for 8X speed), or 0 for maximum data rate. Not all devices support this command and you can only specify speeds that the drive is capable of. Every time the media is changed this option is cleared. This option can be used alone, or with the <code>-t</code> and <code>-c</code> options.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> Returns 0 if operation was successful, 1 if operation failed or command syntax was not valid.</p>
 <h2>NOTES</h2>

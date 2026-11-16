@@ -11,29 +11,19 @@ std::make_heap - std::make_heap
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class RandomIt&gt;
     (until C++ 20)
-
         void make_heap(RandomIt first, RandomIt last);
-
 template &lt;class RandomIt&gt;
 (since C++ 20)
-
     constexpr void make_heap(RandomIt first, RandomIt last);
-
 template &lt;class RandomIt, class Compare&gt;
 (1)
-
     void make_heap(RandomIt first, RandomIt last, (until C++ 20)
-
                                                       Compare comp);
 (2)
-
     template &lt;class RandomIt, class Compare&gt;
-
     constexpr void make_heap(RandomIt first, RandomIt last, (since C++ 20)
-
                                                                 Compare comp);</code></pre> 
 Constructs a max heap in the range [first, last). The first version of the function uses operator&lt; to compare the elements, the second uses the given comparison function comp. 
 
@@ -70,12 +60,9 @@ A max heap is a range of elements [f,l) that has the following properties:
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;vector&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v{3, 1, 4, 1, 5, 9};
     std::cout &lt;&lt; &quot;initially, v: &quot;;

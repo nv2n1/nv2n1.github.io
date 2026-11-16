@@ -17,18 +17,18 @@ description: "systemd-binfmt.service, systemd-binfmt – Configure additional bi
 <h2>Options</h2>
 <p><code>&#8211;unregister</code></p>
 <dl>
-<dd>If passed, instead of registering configured binary formats in the kernel, the reverse operation is executed: all currently registered binary formats are unregistered from the kernel.</dl>
+<dd>If passed, instead of registering configured binary formats in the kernel, the reverse operation is executed: all currently registered binary formats are unregistered from the kernel.</dd></dl>
 <p> <code>&#8211;cat-config</code></p>
 <dl>
-<dd>Copy the contents of config files to standard output. Before each file, the filename is printed as a comment.</dl>
+<dd>Copy the contents of config files to standard output. Before each file, the filename is printed as a comment.</dd></dl>
 <p> <code>&#8211;no-pager</code></p>
 <dl>
-<dd>Do not pipe output into a pager.</dl>
+<dd>Do not pipe output into a pager.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Print a short help text and exit.</dl>
+<dd>Print a short help text and exit.</dd></dl>
 <p> <code>&#8211;version</code></p>
 <dl>
-<dd>Print a short version string and exit.</dl>
+<dd>Print a short version string and exit.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/5-binfmt-d/">binfmt.d</a></code>(5), <code>wine</code>(8) </p>

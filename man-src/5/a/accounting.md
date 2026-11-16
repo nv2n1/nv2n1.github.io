@@ -79,28 +79,28 @@ description: "accounting – xxQS_NAMExx accounting file format"
 <h3><code>40. category</code></h3>
 <p>A string specifying the job category. This contains a space-separated pseudo options list for the job, with components as follows:</p>
 <dl>
-<dt><code>-U</code> <i>user_list</i></p>
-<dd>An owner/group ACL list composed from And <code>user_lists</code>/<code>xuser_lists</code> entries. Entries from are not considered since they can only cause a job to be accepted/rejected at submit time. Omitted if there are no such configuration entries.</p>
-<dt><code>-P</code> <i>project_list</i></p>
-<dd>Like <code>-U</code>, but for <code>project</code>/<code>xproject</code> entries.</p>
-<dt><code>-u</code> <i>owner</i></p>
-<dd>The owner&#8217;s user name, if it was referenced in any RQS (see Omitted if there was no such reference.</p>
-<dt><code>-q</code> <i>queue_list</i></p>
-<dd>The hard queue list (only if one was specified).</p>
-<dt><code>-masterq</code> <i>queue_list</i></p>
-<dd>The master queue list (only if one was specified).</p>
-<dt><code>-l</code> <i>resource_list</i></p>
-<dd>The hard resource list (only if hard resources were specified).</p>
-<dt><code>-soft -l</code> <i>resource_list</i></p>
-<dd>The soft resource list (only if soft resources were specified).</p>
-<dt><code>-pe</code> <i>pe_name pe_range</i></p>
-<dd>The parallel environment specified for the job (only for parallel jobs).</p>
-<dt><code>-ckpt </code><i>ckpt_name</i></p>
-<dd>The job&#8217;s checkpointing environment (only if one was specified).</p>
-<dt><code>-I </code><i>y</i></p>
-<dd>Present only for interactive jobs.</p>
-<dt><code>-ar </code><i>ar_id</i></p>
-<dd>The advance reservation into which the job was submitted (only if one was specified).</dl>
+<dt><code>-U</code> <i>user_list</i></dt>
+<dd>An owner/group ACL list composed from And <code>user_lists</code>/<code>xuser_lists</code> entries. Entries from are not considered since they can only cause a job to be accepted/rejected at submit time. Omitted if there are no such configuration entries.</dd>
+<dt><code>-P</code> <i>project_list</i></dt>
+<dd>Like <code>-U</code>, but for <code>project</code>/<code>xproject</code> entries.</dd>
+<dt><code>-u</code> <i>owner</i></dt>
+<dd>The owner&#8217;s user name, if it was referenced in any RQS (see Omitted if there was no such reference.</dd>
+<dt><code>-q</code> <i>queue_list</i></dt>
+<dd>The hard queue list (only if one was specified).</dd>
+<dt><code>-masterq</code> <i>queue_list</i></dt>
+<dd>The master queue list (only if one was specified).</dd>
+<dt><code>-l</code> <i>resource_list</i></dt>
+<dd>The hard resource list (only if hard resources were specified).</dd>
+<dt><code>-soft -l</code> <i>resource_list</i></dt>
+<dd>The soft resource list (only if soft resources were specified).</dd>
+<dt><code>-pe</code> <i>pe_name pe_range</i></dt>
+<dd>The parallel environment specified for the job (only for parallel jobs).</dd>
+<dt><code>-ckpt </code><i>ckpt_name</i></dt>
+<dd>The job&#8217;s checkpointing environment (only if one was specified).</dd>
+<dt><code>-I </code><i>y</i></dt>
+<dd>Present only for interactive jobs.</dd>
+<dt><code>-ar </code><i>ar_id</i></dt>
+<dd>The advance reservation into which the job was submitted (only if one was specified).</dd></dl>
 <h3><code>41. iow</code></h3>
 <p>The input/output wait time in seconds (if available, otherwise 0).</p>
 <h3><code>42. pe_taskid</code></h3>

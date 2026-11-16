@@ -17,64 +17,64 @@ description: "ipcs – show information on IPC facilities"
 <p> <code>-i</code>, <code>&#8211;id</code> <i>id</i></p>
 <dl>
 <dt>
-<dd> Show full details on just the one resource element identified by <i>id</i>. This option needs to be combined with one of the three resource options: <code>-m</code>, <code>-q</code> or <code>-s</code>.</dl>
+</dt><dd> Show full details on just the one resource element identified by <i>id</i>. This option needs to be combined with one of the three resource options: <code>-m</code>, <code>-q</code> or <code>-s</code>.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit.</dl>
+</dt><dd> Display help text and exit.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit.</dl>
+</dt><dd> Display version information and exit.</dd></dl>
 <h3>Resource options</h3>
 <p> <code>-m</code>, <code>&#8211;shmems</code></p>
 <dl>
 <dt>
-<dd> Write information about active shared memory segments.</dl>
+</dt><dd> Write information about active shared memory segments.</dd></dl>
 <p> <code>-q</code>, <code>&#8211;queues</code></p>
 <dl>
 <dt>
-<dd> Write information about active message queues.</dl>
+</dt><dd> Write information about active message queues.</dd></dl>
 <p> <code>-s</code>, <code>&#8211;semaphores</code></p>
 <dl>
 <dt>
-<dd> Write information about active semaphore sets.</dl>
+</dt><dd> Write information about active semaphore sets.</dd></dl>
 <p> <code>-a</code>, <code>&#8211;all</code></p>
 <dl>
 <dt>
-<dd> Write information about all three resources (default).</dl>
+</dt><dd> Write information about all three resources (default).</dd></dl>
 <h3>Output formats</h3>
 <p> Of these options only one takes effect: the last one specified. </p>
 <p> <code>-c</code>, <code>&#8211;creator</code></p>
 <dl>
 <dt>
-<dd> Show creator and owner.</dl>
+</dt><dd> Show creator and owner.</dd></dl>
 <p> <code>-l</code>, <code>&#8211;limits</code></p>
 <dl>
 <dt>
-<dd> Show resource limits.</dl>
+</dt><dd> Show resource limits.</dd></dl>
 <p> <code>-p</code>, <code>&#8211;pid</code></p>
 <dl>
 <dt>
-<dd> Show PIDs of creator and last operator.</dl>
+</dt><dd> Show PIDs of creator and last operator.</dd></dl>
 <p> <code>-t</code>, <code>&#8211;time</code></p>
 <dl>
 <dt>
-<dd> Write time information. The time of the last control operation that changed the access permissions for all facilities, the time of the last <code><a href="/docs/linux/man/2-msgsnd/">msgsnd</a></code>(2) and <code><a href="/docs/linux/man/2-msgrcv/">msgrcv</a></code>(2) operations on message queues, the time of the last <code><a href="/docs/linux/man/2-shmat/">shmat</a></code>(2) and <code><a href="/docs/linux/man/2-shmdt/">shmdt</a></code>(2) operations on shared memory, and the time of the last <code><a href="/docs/linux/man/2-semop/">semop</a></code>(2) operation on semaphores.</dl>
+</dt><dd> Write time information. The time of the last control operation that changed the access permissions for all facilities, the time of the last <code><a href="/docs/linux/man/2-msgsnd/">msgsnd</a></code>(2) and <code><a href="/docs/linux/man/2-msgrcv/">msgrcv</a></code>(2) operations on message queues, the time of the last <code><a href="/docs/linux/man/2-shmat/">shmat</a></code>(2) and <code><a href="/docs/linux/man/2-shmdt/">shmdt</a></code>(2) operations on shared memory, and the time of the last <code><a href="/docs/linux/man/2-semop/">semop</a></code>(2) operation on semaphores.</dd></dl>
 <p> <code>-u</code>, <code>&#8211;summary</code></p>
 <dl>
 <dt>
-<dd> Show status summary.</dl>
+</dt><dd> Show status summary.</dd></dl>
 <h3>Representation</h3>
 <p> These affect only the <code>-l</code> (<code>&#8211;limits</code>) option. </p>
 <p> <code>-b</code>, <code>&#8211;bytes</code></p>
 <dl>
 <dt>
-<dd> Print sizes in bytes.</dl>
+</dt><dd> Print sizes in bytes.</dd></dl>
 <p> <code>&#8211;human</code></p>
 <dl>
 <dt>
-<dd> Print sizes in human-readable format.</dl>
+</dt><dd> Print sizes in human-readable format.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> The Linux <code>ipcs</code> utility is not fully compatible to the POSIX <code>ipcs</code> utility. The Linux version does not support the POSIX <code>-a</code>, <code>-b</code> and <code>-o</code> options, but does support the <code>-l</code> and <code>-u</code> options not defined by POSIX. A portable application shall not use the <code>-a</code>, <code>-b</code>, <code>-o</code>, <code>-l</code>, and <code>-u</code> options.</p>
 <h2>NOTES</h2>

@@ -39,12 +39,12 @@ text2html-- paras-- urls-- email-- bold-- underline
 <p> <i><a href="/docs/linux/man/1-perl/">perl</a></i>(1), <i>HTML::FromText</i>(3).</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>&bull;</p>
-<dd> Ricardo <font SIZE="-1">SIGNES</font> &lt;rjbs [at] cpan.org&gt;</p>
-<dt>&bull;</p>
-<dd> Casey West &lt;casey [at] geeknest.com&gt;</p>
-<dt>&bull;</p>
-<dd> Gareth Rees &lt;garethr [at] cre.canon.co.uk&gt;</dl>
+<dt>&bull;</dt>
+<dd> Ricardo <font SIZE="-1">SIGNES</font> &lt;rjbs [at] cpan.org&gt;</dd>
+<dt>&bull;</dt>
+<dd> Casey West &lt;casey [at] geeknest.com&gt;</dd>
+<dt>&bull;</dt>
+<dd> Gareth Rees &lt;garethr [at] cre.canon.co.uk&gt;</dd></dl>
 <h2>COPYRIGHT AND LICENSE</h2>
 <p> This software is copyright (c) 2003 by Casey West. </p>
 <p> This is free software; you can redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself. </p>

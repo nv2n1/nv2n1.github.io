@@ -17,20 +17,20 @@ description: "avisync – adjust audio synchronisation"
 <p> <code>avisync</code> shift audio on frame basis.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-o</code> <i>name</i></p>
-<dd> Specify the name of the output file.</p>
-<dt><code>-i</code> <i>file</i></p>
-<dd> Specify the name of the input file.</p>
-<dt><code>-q</code></p>
-<dd> be less verbose.</p>
-<dt><code>-n</code> <i>count</i></p>
-<dd> shift audio by <i>count</i> frames. If <i>count</i> is positive, audio starts with audio frame <i>count</i> at the beginning of the AVI-file. If <i>count</i> is negative, audio is prepended <i>count</i> padding frames.</p>
-<dt><code>-a</code> <i>track</i></p>
-<dd> Specify the number of the audio channel to shift.</p>
-<dt><code>-b</code> <i>num</i></p>
-<dd> Specify if avisync should write an VBR mp3 header into the AVI file. Default is 1 because it does not hurt. <i>num</i> is either 1 or 0.</p>
-<dt><code>-f</code> <i>commentfile</i></p>
-<dd> Read AVI tombstone data for header comments from <i>commentfile</i>. See /docs/avi_comments.txt for a sample.</dl>
+<dt><code>-o</code> <i>name</i></dt>
+<dd> Specify the name of the output file.</dd>
+<dt><code>-i</code> <i>file</i></dt>
+<dd> Specify the name of the input file.</dd>
+<dt><code>-q</code></dt>
+<dd> be less verbose.</dd>
+<dt><code>-n</code> <i>count</i></dt>
+<dd> shift audio by <i>count</i> frames. If <i>count</i> is positive, audio starts with audio frame <i>count</i> at the beginning of the AVI-file. If <i>count</i> is negative, audio is prepended <i>count</i> padding frames.</dd>
+<dt><code>-a</code> <i>track</i></dt>
+<dd> Specify the number of the audio channel to shift.</dd>
+<dt><code>-b</code> <i>num</i></dt>
+<dd> Specify if avisync should write an VBR mp3 header into the AVI file. Default is 1 because it does not hurt. <i>num</i> is either 1 or 0.</dd>
+<dt><code>-f</code> <i>commentfile</i></dt>
+<dd> Read AVI tombstone data for header comments from <i>commentfile</i>. See /docs/avi_comments.txt for a sample.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> The command </p>
 <p> <code>avisync -i my_file1.avi -o out.avi -n -10</code> </p>

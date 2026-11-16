@@ -13,7 +13,7 @@ nnrpd.track - file to specify hosts to be tracked by nnrpd.
 This file, which is located in <i>&lt;pathetc in inn.conf&gt;,</i> specifies which hosts are to have their activities recorded during an <i>nnrpd</i> session. The <i>nnrpd</i> server reads it when first spawned by <i>innd</i>, provided <i>readertrack</i> in <i>inn.conf</i> is true; otherwise this file is not used. 
 
  Entries consist of one host specification per line, each line having two fields, separated by a colon:
-<dl><dd><pre>host:identity</pre></dl>
+<dl><dd><pre>host:identity</pre></dd></dl>
  
 
  The first field is either the FQDN of a host, or a domain name (in the form *.domain.com). 
@@ -22,7 +22,7 @@ This file, which is located in <i>&lt;pathetc in inn.conf&gt;,</i> specifies whi
 
  For example:
 <dl><dd><pre>nasty.foo.com:nasty [at] foo.com
-*.bar.com:VeryNastyClient</pre></dl>
+*.bar.com:VeryNastyClient</pre></dd></dl>
  
 
  Written by Steve Carrie &lt;stephenc [at] uk.uu.net&gt; for InterNetNews. This is revision 5909, dated 2002-12-03.

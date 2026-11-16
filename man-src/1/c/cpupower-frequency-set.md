@@ -15,17 +15,17 @@ description: "cpupower frequency-set – A small tool which allows to modify cpu
 <p> cpupower frequency-set allows you to modify cpufreq settings without having to type e.g. &quot;/sys/devices/system/cpu/cpu0/cpufreq/scaling_set_speed&quot; all the time.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code> <code>&#8211;min</code> &lt;FREQ&gt;</p>
-<dd> new minimum CPU frequency the governor may select.</p>
-<dt><code>-u</code> <code>&#8211;max</code> &lt;FREQ&gt;</p>
-<dd> new maximum CPU frequency the governor may select.</p>
-<dt><code>-g</code> <code>&#8211;governor</code> &lt;GOV&gt;</p>
-<dd> new cpufreq governor.</p>
-<dt><code>-f</code> <code>&#8211;freq</code> &lt;FREQ&gt;</p>
-<dd> specific frequency to be set. Requires userspace governor to be available and loaded.</p>
-<dt><code>-r</code> <code>&#8211;related</code></p>
-<dd> modify all hardware-related CPUs at the same time</p>
-<dt></dl>
+<dt><code>-d</code> <code>&#8211;min</code> &lt;FREQ&gt;</dt>
+<dd> new minimum CPU frequency the governor may select.</dd>
+<dt><code>-u</code> <code>&#8211;max</code> &lt;FREQ&gt;</dt>
+<dd> new maximum CPU frequency the governor may select.</dd>
+<dt><code>-g</code> <code>&#8211;governor</code> &lt;GOV&gt;</dt>
+<dd> new cpufreq governor.</dd>
+<dt><code>-f</code> <code>&#8211;freq</code> &lt;FREQ&gt;</dt>
+<dd> specific frequency to be set. Requires userspace governor to be available and loaded.</dd>
+<dt><code>-r</code> <code>&#8211;related</code></dt>
+<dd> modify all hardware-related CPUs at the same time</dd>
+<dt></dt></dl>
 <h2>REMARKS</h2>
 <dd>
 <p> By default values are applied on all cores. How to modify single core configurations is described in the <a href="/docs/linux/man/1-cpupower/">cpupower</a>(1) manpage in the &#8211;cpu option section. </p>
@@ -45,3 +45,4 @@ Dominik Brodowski&lt;linux[at] brodo.de&gt; - author Mattia Dongili&lt;malattia[
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-cpupower-frequency-info/">cpupower-frequency-info</a>(1), <a href="/docs/linux/man/1-cpupower/">cpupower</a>(1) </p>
 <h2>Index</h2>
+</dd>

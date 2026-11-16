@@ -14,19 +14,19 @@ description: "securityfs_create_file – create a file in the securityfs filesys
 <p><i>name</i></p>
 <dl>
 <dd>
-<dd>a pointer to a string containing the name of the file to create.</dl>
+</dd><dd>a pointer to a string containing the name of the file to create.</dd></dl>
 <p> <i>mode</i></p>
 <dl>
-<dd>the permission that the file should have</dl>
+<dd>the permission that the file should have</dd></dl>
 <p> <i>parent</i></p>
 <dl>
-<dd>a pointer to the parent dentry for this file. This should be a directory dentry if set. If this parameter is <code>NULL</code>, then the file will be created in the root of the securityfs filesystem.</dl>
+<dd>a pointer to the parent dentry for this file. This should be a directory dentry if set. If this parameter is <code>NULL</code>, then the file will be created in the root of the securityfs filesystem.</dd></dl>
 <p> <i>data</i></p>
 <dl>
-<dd>a pointer to something that the caller will want to get to later on. The inode.i_private pointer will point to this value on the <code>open</code> call.</dl>
+<dd>a pointer to something that the caller will want to get to later on. The inode.i_private pointer will point to this value on the <code>open</code> call.</dd></dl>
 <p> <i>fops</i></p>
 <dl>
-<dd>a pointer to a struct file_operations that should be used for this file.</dl>
+<dd>a pointer to a struct file_operations that should be used for this file.</dd></dl>
 <h2>Description</h2>
 <p>This is the basic &#8220;create a file&#8221; function for securityfs. It allows for a wide range of flexibility in creating a file, or a directory (if you want to create a directory, the <code>securityfs_create_dir</code> function is recommended to be used instead). </p>
 <p> This function returns a pointer to a dentry if it succeeds. This pointer must be passed to the <code>securityfs_remove</code> function when the file is to be removed (no automatic cleanup happens if your module is unloaded, you are responsible here). If an error occurs, the function will return the error value (via ERR_PTR). </p>

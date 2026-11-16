@@ -21,15 +21,15 @@ CALL SFGETC (CNP,CVP)
 <h2>Description</h2>
 
 <dl><dt>CNP
-<dd>(an input expression of type CHARACTER) is the name of an internal parameter of SOFTFILL. Currently, the only legal value is 'CH' (or any longer string beginning with 'CH'), which stands for &quot;CHaracter&quot;.
-<dt>CVP
-<dd>(an output variable of type CHARACTER) is the name of a variable into which the value of the parameter specified by CNP is to be retrieved.</dl>
+</dt><dd>(an input expression of type CHARACTER) is the name of an internal parameter of SOFTFILL. Currently, the only legal value is 'CH' (or any longer string beginning with 'CH'), which stands for &quot;CHaracter&quot;.
+</dd><dt>CVP
+</dt><dd>(an output variable of type CHARACTER) is the name of a variable into which the value of the parameter specified by CNP is to be retrieved.</dd></dl>
 
 <h2>C-Binding Description</h2>
 
 The C-binding argument descriptions are the same as the FORTRAN argument descriptions with the following exception:
 <dl><dt>len
-<dd>Size of cvp as dimensioned in the calling program.</dl>
+</dt><dd>Size of cvp as dimensioned in the calling program.</dd></dl>
 
 <h2>Usage</h2>
 

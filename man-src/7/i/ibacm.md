@@ -27,9 +27,9 @@ Th IB ACM provides scalable address and route resolution services over InfiniBan
 <h2>Return Codes</h2>
 
 <dl><dt>== 0
-<dd>success
-<dt>!= 0
-<dd>error</dl>
+</dt><dd>success
+</dd><dt>!= 0
+</dt><dd>error</dd></dl>
 
 <h2>See Also</h2>
 

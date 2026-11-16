@@ -16,10 +16,10 @@ description: "shtool fixperm – GNU shtool file permission fixing command"
 <h2>OPTIONS</h2>
 <p> The following command line options are available.</p>
 <dl>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Display some processing information.</p>
-<dt><code>-t</code>, <code>&#8211;trace</code></p>
-<dd> Enable the output of the essential shell commands which are executed.</dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Display some processing information.</dd>
+<dt><code>-t</code>, <code>&#8211;trace</code></dt>
+<dd> Enable the output of the essential shell commands which are executed.</dd></dl>
 <h2>EXAMPLE</h2>
 <pre>
  #   Makefile.in

@@ -17,12 +17,12 @@ url: "/docs/linux/man/3-ibv_get_pkey_index/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 int ibv_get_pkey_index(struct ibv_context *context,
                        uint8_t port_num,
                        __be16 pkey);
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 

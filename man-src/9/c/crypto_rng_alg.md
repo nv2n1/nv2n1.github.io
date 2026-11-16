@@ -14,7 +14,7 @@ description: "crypto_rng_alg – obtain name of RNG"
 <p><i>tfm</i></p>
 <dl>
 <dd>
-<dd>cipher handle</dl>
+</dd><dd>cipher handle</dd></dl>
 <h2>Description</h2>
 <p>Return the generic name (cra_name) of the initialized random number generator</p>
 <h2>Return</h2>
@@ -22,8 +22,8 @@ description: "crypto_rng_alg – obtain name of RNG"
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

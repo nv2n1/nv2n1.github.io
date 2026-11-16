@@ -15,11 +15,11 @@ blk_rq_count_integrity_sg - Count number of integrity scatterlist elements
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>request queue</dl>
+<dl><dd></dd><dd>request queue</dd></dl>
  
 
  <i>bio</i>
-<dl><dd>bio with integrity metadata attached</dl>
+<dl><dd>bio with integrity metadata attached</dd></dl>
 
 <h2>Description</h2>
 

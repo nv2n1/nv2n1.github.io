@@ -17,14 +17,14 @@ bool bson_iter_find_descendant(bson_iter_t *iter,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>dotkey</code></p>
-<dd> A dot-notation key like <code>a.b.c.d</code> \&amp;.</dl>
+<dt><code>dotkey</code></dt>
+<dd> A dot-notation key like <code>a.b.c.d</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>descendant</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>descendant</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_find_descendant/">bson_iter_find_descendant</a>(3)</code> function shall follow standard MongoDB dot notation to recurse into subdocuments. <code>descendant</code> will be initialized and advanced to the descendant. If false is returned, both <code>iter</code> and <code>descendant</code> should be considered invalid. </p>
 <h2>RETURNS</h2>

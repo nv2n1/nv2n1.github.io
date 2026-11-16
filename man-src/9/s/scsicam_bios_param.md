@@ -14,13 +14,13 @@ description: "scsicam_bios_param – Determine geometry of a disk in cylinders/h
 <p><i>bdev</i></p>
 <dl>
 <dd>
-<dd>which device</dl>
+</dd><dd>which device</dd></dl>
 <p> <i>capacity</i></p>
 <dl>
-<dd>size of the disk in sectors</dl>
+<dd>size of the disk in sectors</dd></dl>
 <p> <i>ip</i></p>
 <dl>
-<dd>return value: ip[0]=heads, ip[1]=sectors, ip[2]=cylinders</dl>
+<dd>return value: ip[0]=heads, ip[1]=sectors, ip[2]=cylinders</dd></dl>
 <h2>Description</h2>
 <p>determine the BIOS mapping/geometry used for a drive in a SCSI-CAM system, storing the results in ip as required by the HDIO_GETGEO <code>ioctl</code>.</p>
 <h2>Return</h2>
@@ -28,8 +28,8 @@ description: "scsicam_bios_param – Determine geometry of a disk in cylinders/h
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

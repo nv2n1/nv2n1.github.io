@@ -10,14 +10,14 @@ description: "sssd – System Security Services Daemon"
 <p>sssd &#8211; System Security Services Daemon</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>sssd</code> [<i>options</i>]</dl>
+<dt> <code>sssd</code> [<i>options</i>]</dt></dl>
 <h2>Description</h2>
 <p><code>SSSD</code></p>
-<dd>provides a set of daemons to manage access to remote directories and authentication mechanisms. It provides an NSS and PAM interface toward the system and a pluggable backend system to connect to multiple different account sources as well as D-Bus interface. It is also the basis to provide client auditing and policy services for projects like FreeIPA. It provides a more robust database to store local users as well as extended user data.</p>
+<dd>provides a set of daemons to manage access to remote directories and authentication mechanisms. It provides an NSS and PAM interface toward the system and a pluggable backend system to connect to multiple different account sources as well as D-Bus interface. It is also the basis to provide client auditing and policy services for projects like FreeIPA. It provides a more robust database to store local users as well as extended user data.</dd>
 <h2>Options</h2>
 <p><code>-d</code>,<code>&#8211;debug-level</code> <i>LEVEL</i></p>
 <dl>
-<dd>SSSD supports two representations for specifying the debug level. The simplest is to specify a decimal value from 0-9, which represents enabling that level and all lower-level debug messages. The more comprehensive option is to specify a hexadecimal bitmask to enable or disable specific levels (such as if you wish to suppress a level). </p>
+<dd>SSSD supports two representations for specifying the debug level. The simplest is to specify a decimal value from 0-9, which represents enabling that level and all lower-level debug messages. The more comprehensive option is to specify a hexadecimal bitmask to enable or disable specific levels (such as if you wish to suppress a level). </dd>
 <p> Please note that each SSSD service logs into its own log file. Also please note that enabling &#8220;debug_level&#8221; in the &#8220;[sssd]&#8221; section only enables debugging just for the sssd process itself, not for the responder or provider processes. The &#8220;debug_level&#8221; parameter should be added to all sections that you wish to produce debug logs from. </p>
 <p> In addition to changing the log level in the config file using the &#8220;debug_level&#8221; parameter, which is persistent, but requires SSSD restart, it is also possible to change the debug level on the fly using the <code><a href="/docs/linux/man/8-sss_debuglevel/">sss_debuglevel</a></code>(8) tool. </p>
 <p> Currently supported debug levels: </p>
@@ -38,45 +38,45 @@ description: "sssd – System Security Services Daemon"
 <p> <i>Default</i>: 0</dl>
 <p> <code>&#8211;debug-timestamps=</code><i>mode</i></p>
 <dl>
-<dd><i>1</i>: Add a timestamp to the debug messages </p>
+<dd><i>1</i>: Add a timestamp to the debug messages </dd>
 <p> <i>0</i>: Disable timestamp in the debug messages </p>
 <p> Default: 1</dl>
 <p> <code>&#8211;debug-microseconds=</code><i>mode</i></p>
 <dl>
-<dd><i>1</i>: Add microseconds to the timestamp in debug messages </p>
+<dd><i>1</i>: Add microseconds to the timestamp in debug messages </dd>
 <p> <i>0</i>: Disable microseconds in timestamp </p>
 <p> Default: 0</dl>
 <p> <code>-f</code>,<code>&#8211;debug-to-files</code></p>
 <dl>
-<dd>Send the debug output to files instead of stderr. By default, the log files are stored in /var/log/sssd and there are separate log files for every SSSD service and domain.</dl>
+<dd>Send the debug output to files instead of stderr. By default, the log files are stored in /var/log/sssd and there are separate log files for every SSSD service and domain.</dd></dl>
 <p> <code>-D</code>,<code>&#8211;daemon</code></p>
 <dl>
-<dd>Become a daemon after starting up.</dl>
+<dd>Become a daemon after starting up.</dd></dl>
 <p> <code>-i</code>,<code>&#8211;interactive</code></p>
 <dl>
-<dd>Run in the foreground, don&#8217;t become a daemon.</dl>
+<dd>Run in the foreground, don&#8217;t become a daemon.</dd></dl>
 <p> <code>-c</code>,<code>&#8211;config</code></p>
 <dl>
-<dd>Specify a non-default config file. The default is /etc/sssd/sssd.conf. For reference on the config file syntax and options, consult the <code><a href="/docs/linux/man/5-sssd-conf/">sssd.conf</a></code>(5) manual page.</dl>
+<dd>Specify a non-default config file. The default is /etc/sssd/sssd.conf. For reference on the config file syntax and options, consult the <code><a href="/docs/linux/man/5-sssd-conf/">sssd.conf</a></code>(5) manual page.</dd></dl>
 <p> <code>-?</code>,<code>&#8211;help</code></p>
 <dl>
-<dd>Display help message and exit.</dl>
+<dd>Display help message and exit.</dd></dl>
 <p> <code>&#8211;version</code></p>
 <dl>
-<dd>Print version number and exit.</dl>
+<dd>Print version number and exit.</dd></dl>
 <h2>Signals</h2>
 <p>SIGTERM/SIGINT</p>
 <dl>
-<dd>Informs the SSSD to gracefully terminate all of its child processes and then shut down the monitor.</dl>
+<dd>Informs the SSSD to gracefully terminate all of its child processes and then shut down the monitor.</dd></dl>
 <p> SIGHUP</p>
 <dl>
-<dd>Tells the SSSD to stop writing to its current debug file descriptors and to close and reopen them. This is meant to facilitate log rolling with programs like logrotate.</dl>
+<dd>Tells the SSSD to stop writing to its current debug file descriptors and to close and reopen them. This is meant to facilitate log rolling with programs like logrotate.</dd></dl>
 <p> SIGUSR1</p>
 <dl>
-<dd>Tells the SSSD to simulate offline operation for the duration of the &#8220;offline_timeout&#8221; parameter. This is useful for testing. The signal can be sent to either the sssd process or any sssd_be process directly.</dl>
+<dd>Tells the SSSD to simulate offline operation for the duration of the &#8220;offline_timeout&#8221; parameter. This is useful for testing. The signal can be sent to either the sssd process or any sssd_be process directly.</dd></dl>
 <p> SIGUSR2</p>
 <dl>
-<dd>Tells the SSSD to go online immediately. This is useful for testing. The signal can be sent to either the sssd process or any sssd_be process directly.</dl>
+<dd>Tells the SSSD to go online immediately. This is useful for testing. The signal can be sent to either the sssd process or any sssd_be process directly.</dd></dl>
 <h2>Notes</h2>
 <p>If the environment variable SSS_NSS_USE_MEMCACHE is set to &quot;NO&quot;, client applications will not use the fast in memory cache.</p>
 <h2>See Also</h2>

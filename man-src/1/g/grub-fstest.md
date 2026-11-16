@@ -15,53 +15,53 @@ description: "grub-fstest – debug tool for GRUB filesystem drivers"
 <p> Debug tool for filesystem driver.</p>
 <dl>
 <dt>
-<dd> Commands:</p>
-<dt>blocklist FILE</p>
-<dd> Display blocklist of FILE.</p>
-<dt>cat FILE</p>
-<dd> Copy FILE to standard output.</p>
-<dt>cmp FILE LOCAL</p>
-<dd> Compare FILE with local file LOCAL.</p>
-<dt>cp FILE LOCAL</p>
-<dd> Copy FILE to local file LOCAL.</p>
-<dt>crc FILE</p>
-<dd> Get crc32 checksum of FILE.</p>
-<dt>hex FILE</p>
-<dd> Show contents of FILE in hex.</p>
-<dt>ls PATH</p>
-<dd> List files in PATH.</p>
-<dt>xnu_uuid DEVICE</p>
-<dd> Compute XNU UUID of the device.</p>
-<dt><code>-c</code>, <code>&#8211;diskcount</code>=<i>,NUM/</i></p>
-<dd> Specify the number of input files.</p>
-<dt><code>-C</code>, <code>&#8211;crypto</code></p>
-<dd> Mount crypto devices.</p>
-<dt><code>-d</code>, <code>&#8211;debug</code>=<i>,STRING/</i></p>
-<dd> Set debug environment variable.</p>
-<dt><code>-K</code>, <code>&#8211;zfs-key</code>=<i>,FILE/</i>|prompt</p>
-<dd> Load zfs crypto key.</p>
-<dt><code>-n</code>, <code>&#8211;length</code>=<i>,NUM/</i></p>
-<dd> Handle N bytes in output file.</p>
-<dt><code>-r</code>, <code>&#8211;root</code>=<i>,DEVICE_NAME/</i></p>
-<dd> Set root device.</p>
-<dt><code>-s</code>, <code>&#8211;skip</code>=<i>,NUM/</i></p>
-<dd> Skip N bytes from output file.</p>
-<dt><code>-u</code>, <code>&#8211;uncompress</code></p>
-<dd> Uncompress data.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> print verbose messages.</p>
-<dt>-?, <code>&#8211;help</code></p>
-<dd> give this help list</p>
-<dt><code>&#8211;usage</code></p>
-<dd> give a short usage message</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> print program version</dl>
+</dt><dd> Commands:</dd>
+<dt>blocklist FILE</dt>
+<dd> Display blocklist of FILE.</dd>
+<dt>cat FILE</dt>
+<dd> Copy FILE to standard output.</dd>
+<dt>cmp FILE LOCAL</dt>
+<dd> Compare FILE with local file LOCAL.</dd>
+<dt>cp FILE LOCAL</dt>
+<dd> Copy FILE to local file LOCAL.</dd>
+<dt>crc FILE</dt>
+<dd> Get crc32 checksum of FILE.</dd>
+<dt>hex FILE</dt>
+<dd> Show contents of FILE in hex.</dd>
+<dt>ls PATH</dt>
+<dd> List files in PATH.</dd>
+<dt>xnu_uuid DEVICE</dt>
+<dd> Compute XNU UUID of the device.</dd>
+<dt><code>-c</code>, <code>&#8211;diskcount</code>=<i>,NUM/</i></dt>
+<dd> Specify the number of input files.</dd>
+<dt><code>-C</code>, <code>&#8211;crypto</code></dt>
+<dd> Mount crypto devices.</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code>=<i>,STRING/</i></dt>
+<dd> Set debug environment variable.</dd>
+<dt><code>-K</code>, <code>&#8211;zfs-key</code>=<i>,FILE/</i>|prompt</dt>
+<dd> Load zfs crypto key.</dd>
+<dt><code>-n</code>, <code>&#8211;length</code>=<i>,NUM/</i></dt>
+<dd> Handle N bytes in output file.</dd>
+<dt><code>-r</code>, <code>&#8211;root</code>=<i>,DEVICE_NAME/</i></dt>
+<dd> Set root device.</dd>
+<dt><code>-s</code>, <code>&#8211;skip</code>=<i>,NUM/</i></dt>
+<dd> Skip N bytes from output file.</dd>
+<dt><code>-u</code>, <code>&#8211;uncompress</code></dt>
+<dd> Uncompress data.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> print verbose messages.</dd>
+<dt>-?, <code>&#8211;help</code></dt>
+<dd> give this help list</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> give a short usage message</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> print program version</dd></dl>
 <p> Mandatory or optional arguments to long options are also mandatory or optional for any corresponding short options.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-grub-probe/">grub-probe</a></code>(8) </p>
 <p> The full documentation for <code>grub-fstest</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>grub-fstest</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info grub-fstest</code></dl>
+</dt><dd> <code>info grub-fstest</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

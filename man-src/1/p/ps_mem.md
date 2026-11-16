@@ -16,19 +16,19 @@ description: "ps_mem – Memory profiling tool"
 <p> In detail it reports: </p>
 <dl>
 <dt>
-<dd> sum(private RAM for program processes) + sum(Shared RAM for program processes).
-</dl>
+</dt><dd> sum(private RAM for program processes) + sum(Shared RAM for program processes).
+</dd></dl>
 <p> The shared RAM is problematic to calculate, and the tool automatically selects the most accurate method available for the running kernel.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-h &#8211;help</p>
-<dd> Show this help</p>
-<dt>-s &#8211;show-cmdline</p>
-<dd> Show complete program path with options</p>
-<dt>-p &lt;pid&gt;[,pid2,&#8230;pidN]</p>
-<dd> Only show memory usage PIDs in the specified list</p>
-<dt>-w N</p>
-<dd> Measure and show process memory every N seconds</dl>
+<dt>-h &#8211;help</dt>
+<dd> Show this help</dd>
+<dt>-s &#8211;show-cmdline</dt>
+<dd> Show complete program path with options</dd>
+<dt>-p &lt;pid&gt;[,pid2,&#8230;pidN]</dt>
+<dd> Only show memory usage PIDs in the specified list</dd>
+<dt>-w N</dt>
+<dd> Measure and show process memory every N seconds</dd></dl>
 <h2>AUTHOR</h2>
 <p> Pádraig Brady &lt;P@draigBrady.com&gt; </p>
 <h2>Index</h2>

@@ -15,12 +15,12 @@ description: "arcperftest – ARC service performance tester"
 <p> The <code>arcperftest</code> command test the performance of an ARC service specified by its <i>url</i> sending <i>threads</i> number of concurrent requests for a duration of <i>duration</i> seconds. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code> <i>config</i></p>
-<dd> The file containing client chain XML configuration with &#8216;soap&#8217; entry point and HOSTNAME, PORTNUMBER and PATH keyword for hostname, port and HTTP path of &#8216;echo&#8217; service. </p>
-<dt><code>-d</code> <i>debuglevel</i></p>
-<dd> FATAL, ERROR, WARNING, INFO, VERBOSE or DEBUG</p>
-<dt><code>-r</code></p>
-<dd> If specified close connection and reconnect after every request. </p>
+<dt><code>-c</code> <i>config</i></dt>
+<dd> The file containing client chain XML configuration with &#8216;soap&#8217; entry point and HOSTNAME, PORTNUMBER and PATH keyword for hostname, port and HTTP path of &#8216;echo&#8217; service. </dd>
+<dt><code>-d</code> <i>debuglevel</i></dt>
+<dd> FATAL, ERROR, WARNING, INFO, VERBOSE or DEBUG</dd>
+<dt><code>-r</code></dt>
+<dd> If specified close connection and reconnect after every request. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p>&nbsp;<wbr>&nbsp;<wbr>Axis2C:<br />

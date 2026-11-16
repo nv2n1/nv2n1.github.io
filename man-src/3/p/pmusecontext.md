@@ -21,5 +21,5 @@ description: "pmUseContext – change current PMAPI context"
 <h2>Diagnostics</h2>
 <p><code>PM_ERR_NOCONTEXT</code></p>
 <dl>
-<dd><i>handle</i> does not identify a valid PMAPI context </p>
+<dd><i>handle</i> does not identify a valid PMAPI context </dd>
 </dl>

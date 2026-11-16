@@ -15,12 +15,12 @@ description: "fgconsole – print the number of the active VT."
 <p> If the active Virtual Terminal is <i>/dev/ttyN</i>, then prints <i>N</i> on standard output. </p>
 <p> If the console is a serial console, then &quot;serial&quot; is printed instead.</p>
 <dl>
-<dt><i>-h &#8211;help</i></p>
-<dd> Prints short usage message and exits.</p>
-<dt><i>-V &#8211;version</i></p>
-<dd> Prints version number and exits.</p>
-<dt><i>&#8211;next-available</i></p>
-<dd> Will show the next unallocated virtual terminal. Normally 6 virtual terminals are allocated, with number 7 used for X; this will return &quot;8&quot; in this case. </p>
+<dt><i>-h &#8211;help</i></dt>
+<dd> Prints short usage message and exits.</dd>
+<dt><i>-V &#8211;version</i></dt>
+<dd> Prints version number and exits.</dd>
+<dt><i>&#8211;next-available</i></dt>
+<dd> Will show the next unallocated virtual terminal. Normally 6 virtual terminals are allocated, with number 7 used for X; this will return &quot;8&quot; in this case. </dd>
 </dl>
 <h2>NOTES</h2>
 <p> Under <i>devfs</i>, the consoles are in <i>/dev/vc/N</i>. <i>devfsd</i> may maintain symlinks for compatibility.</p>

@@ -14,12 +14,12 @@ description: "unpack200 – Transforms a packed file produced by pack200(1) into
 <code>unpack200</code> [ <i>options</i> ] input-file <i>JAR-file</i>
 </pre>
 <dl>
-<dt><i>options</i></p>
-<dd> The command-line options. See Options.</p>
-<dt><i>input-file</i></p>
-<dd> Name of the input file, which can be a pack200 gzip file or a pack200 file. The input can also be JAR file produced by <code><a href="/docs/linux/man/1-pack200/">pack200</a></code>(1) with an effort of <code>0</code>, in which case the contents of the input file are copied to the output JAR file with the Pack200 marker.</p>
-<dt><i>JAR-file</i></p>
-<dd> Name of the output JAR file.</dl>
+<dt><i>options</i></dt>
+<dd> The command-line options. See Options.</dd>
+<dt><i>input-file</i></dt>
+<dd> Name of the input file, which can be a pack200 gzip file or a pack200 file. The input can also be JAR file produced by <code><a href="/docs/linux/man/1-pack200/">pack200</a></code>(1) with an effort of <code>0</code>, in which case the contents of the input file are copied to the output JAR file with the Pack200 marker.</dd>
+<dt><i>JAR-file</i></dt>
+<dd> Name of the output JAR file.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>unpack200</code> command is a native implementation that transforms a packed file produced by <code><a href="/docs/linux/man/1-pack200/">pack200</a></code><code>(1)</code> into a JAR file. A typical usage follows. In the following example, the <code>myarchive.jar</code> file is produced from <code>myarchive.pack.gz</code> with the default <code>unpack200</code> command settings. </p>
 <pre>
@@ -29,30 +29,30 @@ description: "unpack200 – Transforms a packed file produced by pack200(1) into
 </pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-Hvalue &#8211;deflate-hint=<i>value</i></p>
+<dt>-Hvalue &#8211;deflate-hint=<i>value</i></dt>
 <dd>
- Sets the deflation to be <code>true</code>, <code>false</code>, or <code>keep</code> on all entries within a JAR file. The default mode is <code>keep</code>. If the value is <code>true</code> or <code>false</code>, then the <code>&#8211;deflate=hint</code> option overrides the default behavior and sets the deflation mode on all entries within the output JAR file.</p>
-<dt>-r &#8211;remove-pack-file</p>
+ Sets the deflation to be <code>true</code>, <code>false</code>, or <code>keep</code> on all entries within a JAR file. The default mode is <code>keep</code>. If the value is <code>true</code> or <code>false</code>, then the <code>&#8211;deflate=hint</code> option overrides the default behavior and sets the deflation mode on all entries within the output JAR file.</dd>
+<dt>-r &#8211;remove-pack-file</dt>
 <dd>
- Removes the input pack file.</p>
-<dt>-v &#8211;verbose</p>
+ Removes the input pack file.</dd>
+<dt>-v &#8211;verbose</dt>
 <dd>
- Displays minimal messages. Multiple specifications of this option displays more verbose messages.</p>
-<dt>-q &#8211;quiet</p>
+ Displays minimal messages. Multiple specifications of this option displays more verbose messages.</dd>
+<dt>-q &#8211;quiet</dt>
 <dd>
- Specifies quiet operation with no messages.</p>
-<dt>-lfilename &#8211;log-file=<i>filename</i></p>
+ Specifies quiet operation with no messages.</dd>
+<dt>-lfilename &#8211;log-file=<i>filename</i></dt>
 <dd>
- Specifies a log file where output messages are logged.</p>
-<dt>-? -h &#8211;help</p>
+ Specifies a log file where output messages are logged.</dd>
+<dt>-? -h &#8211;help</dt>
 <dd>
- Prints help information about the <code>unpack200</code> command.</p>
-<dt>-V &#8211;version</p>
+ Prints help information about the <code>unpack200</code> command.</dd>
+<dt>-V &#8211;version</dt>
 <dd>
- Prints version information about the <code>unpack200</code> command.</p>
-<dt>-J<i>option</i></p>
+ Prints version information about the <code>unpack200</code> command.</dd>
+<dt>-J<i>option</i></dt>
 <dd>
- Passes option to the Java Virtual Machine, where <code>option</code> is one of the options described on the reference page for the Java application launcher. For example, <code>-J-Xms48m</code> sets the startup memory to 48 MB. See <a href="/docs/linux/man/1-java/">java</a>(1).</dl>
+ Passes option to the Java Virtual Machine, where <code>option</code> is one of the options described on the reference page for the Java application launcher. For example, <code>-J-Xms48m</code> sets the startup memory to 48 MB. See <a href="/docs/linux/man/1-java/">java</a>(1).</dd></dl>
 <h2>NOTES</h2>
 <p> This command should not be confused with the <code>unpack</code> command. They are distinctly separate products. </p>
 <p> The Java SE API Specification provided with the JDK is the superseding authority in case of discrepancies.</p>
@@ -60,15 +60,15 @@ description: "unpack200 – Transforms a packed file produced by pack200(1) into
 <p> The following exit values are returned: 0 for successful completion, and a value that is greater than 0 when an error occurred.</p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>&bull;</p>
-<dd> <a href="/docs/linux/man/1-pack200/">pack200</a>(1)</p>
-<dt>&bull;</p>
-<dd> <a href="/docs/linux/man/1-jar/">jar</a>(1)</p>
-<dt>&bull;</p>
-<dd> <a href="/docs/linux/man/1-jarsigner/">jarsigner</a>(1)</p>
-<dt>&bull;</p>
-<dd> Pack200 and Compression at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/technotes/guides/deployment/deployment-guide/pack200.html">http://docs.oracle.com/javase/8/docs/technotes/guides/deployment/deployment-guide/pack200.html</a></p>
-<dt>&bull;</p>
-<dd> The Java SE Technical Documentation page at <a rel="nofollow" href="http://docs.oracle.com/javase/">http://docs.oracle.com/javase/</a> </p>
+<dt>&bull;</dt>
+<dd> <a href="/docs/linux/man/1-pack200/">pack200</a>(1)</dd>
+<dt>&bull;</dt>
+<dd> <a href="/docs/linux/man/1-jar/">jar</a>(1)</dd>
+<dt>&bull;</dt>
+<dd> <a href="/docs/linux/man/1-jarsigner/">jarsigner</a>(1)</dd>
+<dt>&bull;</dt>
+<dd> Pack200 and Compression at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/technotes/guides/deployment/deployment-guide/pack200.html">http://docs.oracle.com/javase/8/docs/technotes/guides/deployment/deployment-guide/pack200.html</a></dd>
+<dt>&bull;</dt>
+<dd> The Java SE Technical Documentation page at <a rel="nofollow" href="http://docs.oracle.com/javase/">http://docs.oracle.com/javase/</a> </dd>
 </dl>
 <h2>Index</h2>

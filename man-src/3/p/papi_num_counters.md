@@ -16,12 +16,12 @@ description: "PAPI_num_counters –"
 int PAPI_num_counters( void );</pre>
 <p><code>Postcondition:</code></p>
 <dl COMPACT>
-<dd>Initializes the library to PAPI_HIGH_LEVEL_INITED if necessary.</dl>
+<dd>Initializes the library to PAPI_HIGH_LEVEL_INITED if necessary.</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>PAPI_EINVAL</i> <code>papi.h</code> is different from the version used to compile the PAPI library.<br />
  <i>PAPI_ENOMEM</i> Insufficient memory to complete the operation.<br />
- <i>PAPI_ESYS</i> A system or C library call failed inside PAPI, see the errno variable.</dl>
+ <i>PAPI_ESYS</i> A system or C library call failed inside PAPI, see the errno variable.</dd></dl>
 <p> <code>Examples:</code></p>
 <dl COMPACT>
 <dd>
@@ -33,10 +33,10 @@ int PAPI_num_counters( void );</pre>
 * if ((num_hwcntrs = PAPI_num_counters()) == 0 )
 * fprintf(stderr,&quot;Info:: This machine does not provide hardware counters.);
 * </pre>
-</dl>
+</dd></dl>
 <p> <code>PAPI_num_counters()</code> returns the optimal length of the values array for the high level functions. This value corresponds to the number of hardware counters supported by the current CPU component. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>This function only works for the CPU component. To determine the number of counters on another component, use the low level <code>PAPI_num_cmp_hwctrs()</code>.</dl>
+<dd>This function only works for the CPU component. To determine the number of counters on another component, use the low level <code>PAPI_num_cmp_hwctrs()</code>.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

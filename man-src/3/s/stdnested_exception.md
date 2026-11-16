@@ -35,20 +35,13 @@ nested_ptr <i>(public member function)</i></p>
 <p>Demonstrates construction and recursion through a nested exception object<br />
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;stdexcept&gt;
-
 #include &lt;exception&gt;
-
 #include &lt;string&gt;
-
 #include &lt;fstream&gt;
 // prints the explanatory string of an exception. If the exception is nested,
-
 // recurses to print the explanatory of the exception it holds
-
 void print_exception(const std::exception &amp;e, int level = 0)
-
 {
     std::cerr &lt;&lt; std::string(level, ' ') &lt;&lt; &quot;exception: &quot; &lt;&lt; e.what() &lt;&lt; '
 ';
@@ -60,9 +53,7 @@ void print_exception(const std::exception &amp;e, int level = 0)
     }
 }
 // sample function that catches an exception and wraps it in a nested exception
-
 void open_file(const std::string &amp;s)
-
 {
     try {
         std::ifstream file(s);
@@ -72,9 +63,7 @@ void open_file(const std::string &amp;s)
     }
 }
 // sample function that catches an exception and wraps it in a nested exception
-
 void run()
-
 {
     try {
         open_file(&quot;nonexistent.file&quot;);
@@ -83,9 +72,7 @@ void run()
     }
 }
 // runs the sample function above and prints the caught exception
-
 int main()
-
 {
     try {
         run();

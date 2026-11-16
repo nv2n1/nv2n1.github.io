@@ -19,11 +19,11 @@ description: "List Functions –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>orig</i> A pointer to the list to copy.</dl>
+</dt><dd> <i>orig</i> A pointer to the list to copy.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> Upon success, <code>globus_list_copy_reverse()</code> returns a new list containing the same elements as the list pointed to by <i>orig</i> in reverse order. If an error occurs, <code>globus_list_copy_reverse()</code> returns NULL.</dl>
+</dt><dd> Upon success, <code>globus_list_copy_reverse()</code> returns a new list containing the same elements as the list pointed to by <i>orig</i> in reverse order. If an error occurs, <code>globus_list_copy_reverse()</code> returns NULL.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_rsl from the source code. </p>
 <h2>Index</h2>

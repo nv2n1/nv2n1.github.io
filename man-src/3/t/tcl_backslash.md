@@ -14,8 +14,8 @@ char
 <code>Tcl_Backslash</code>(<i>src, countPtr</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>char <i>*src</i> (in) Pointer to a string starting with a backslash.</p>
-<dd>int <i>*countPtr</i> (out) If <i>countPtr</i> is not NULL, <i>*countPtr</i> gets filled in with number of characters in the backslash sequence, including the backslash character. </p>
+<dd>char <i>*src</i> (in) Pointer to a string starting with a backslash.</dd>
+<dd>int <i>*countPtr</i> (out) If <i>countPtr</i> is not NULL, <i>*countPtr</i> gets filled in with number of characters in the backslash sequence, including the backslash character. </dd>
 </dl>
 <h2>Description</h2>
 <p>The use of <code>Tcl_Backslash</code> is deprecated in favor of <code>Tcl_UtfBackslash</code>. </p>

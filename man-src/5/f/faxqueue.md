@@ -16,32 +16,32 @@ description: "faxqueue – sendfax fax spool queue control files"
 <p>The format of the JOB file is as follows: </p>
 <p> Each line consists of a leading keyword and associated data (rest of the line). Some are required, some others are optional. The currently implemented keywords are:</p>
 <dl>
-<dt><code>phone &lt;number&gt;</code></p>
-<dd>The telephone number to send the fax to. Required.</p>
-<dt><code>user &lt;user&gt;</code></p>
-<dd>The originating user name (on the local machine). If no &quot;mail&quot; field is present, this user will get the status mail about the fax. Required.</p>
-<dt><code>mail &lt;email&gt;</code></p>
-<dd>If this field is present, <a href="/docs/linux/man/1-faxrunq/">faxrunq</a>(1) will send its status mail to the address given here. If not, <a href="/docs/linux/man/1-faxrunq/">faxrunq</a>(1) will use the &quot;user&quot; field. Optional.</p>
-<dt><code>input &lt;file(s)&gt;</code></p>
-<dd>The file names passed to <a href="/docs/linux/man/1-faxspool/">faxspool</a>(1). Optional, used only by <a href="/docs/linux/man/1-faxq/">faxq</a>(1).</p>
-<dt><code>pages &lt;file(s)&gt;</code></p>
-<dd>The file names, relative to the directory where the JOB file is found, that are to be sent with <a href="/docs/linux/man/8-sendfax/">sendfax</a>(8). The files have to exist, and be readable by the user that runs <a href="/docs/linux/man/1-faxrunq/">faxrunq</a>(1). Required, except if &quot;poll&quot; is used, then it&#8217;s optional.</p>
-<dt><code>priority &lt;0-9&gt;</code></p>
-<dd>This can be used to set the priority for this job in the fax queue (higher priority jobs get sent before all lower-pri jobs). So far, only <i>faxrunqd</i> uses this field, <i>faxrunq</i> does NOT. 9 is the highest, 0 the lowest priority. 5 is the default.</p>
-<dt><code>Status &lt;message&gt;</code></p>
-<dd>Automatically appended by <a href="/docs/linux/man/1-faxrunq/">faxrunq</a>(1) after each run, tells the reader about successful and unsuccessful tries to send this job. If more than five &quot;FATAL&quot; errors are listed, the fax job is removed from the queue.</p>
-<dt><code>verbose_to &lt;blurb&gt;</code></p>
-<dd>A plain-text description of the receiver of the fax. Is returned, if present, in the mail messages &quot;your fax to &lt;blurb&gt;&quot;. Optional.</p>
-<dt><code>time &lt;hhmm&gt;</code></p>
-<dd>If present, <i>faxrunq</i> won&#8217;t send this job before the given time. The format must be exactly &quot;hhmm&quot;, in 24-hr-format, otherwise faxrunq won&#8217;t understand it. Optional.</p>
-<dt><code>poll</code></p>
-<dd>Flag token. If present, faxrunq will try to poll the given phone number for documents (see &quot;sendfax -p&quot;).</p>
-<dt><code>normal_res</code></p>
-<dd>Flag token. If present, faxrunq will transmit all pages using normal resolution (see &quot;sendfax -n&quot;).</p>
-<dt><code>acct_handle &lt;arbitrary string&gt;</code></p>
-<dd>This is a pure comment field, but <a href="/docs/linux/man/8-sendfax/">sendfax</a>(8) will log it into its transaction log file. So this can be used as a customer handle, a job number, whatever you need to get the phone bills charged to the customer (the programs won&#8217;t look at it, just pass it through). Optional.</p>
-<dt><code>subject &lt;arbitrary string&gt;</code></p>
-<dd>This is also a pure comment field, used only for informational purposes. <i>faxrunq</i> will return it in the sucess/failure mail. If you use <i>faxspool -s &lt;subj&gt;,</i> it will put this string on the cover page and in the JOB file. </p>
+<dt><code>phone &lt;number&gt;</code></dt>
+<dd>The telephone number to send the fax to. Required.</dd>
+<dt><code>user &lt;user&gt;</code></dt>
+<dd>The originating user name (on the local machine). If no &quot;mail&quot; field is present, this user will get the status mail about the fax. Required.</dd>
+<dt><code>mail &lt;email&gt;</code></dt>
+<dd>If this field is present, <a href="/docs/linux/man/1-faxrunq/">faxrunq</a>(1) will send its status mail to the address given here. If not, <a href="/docs/linux/man/1-faxrunq/">faxrunq</a>(1) will use the &quot;user&quot; field. Optional.</dd>
+<dt><code>input &lt;file(s)&gt;</code></dt>
+<dd>The file names passed to <a href="/docs/linux/man/1-faxspool/">faxspool</a>(1). Optional, used only by <a href="/docs/linux/man/1-faxq/">faxq</a>(1).</dd>
+<dt><code>pages &lt;file(s)&gt;</code></dt>
+<dd>The file names, relative to the directory where the JOB file is found, that are to be sent with <a href="/docs/linux/man/8-sendfax/">sendfax</a>(8). The files have to exist, and be readable by the user that runs <a href="/docs/linux/man/1-faxrunq/">faxrunq</a>(1). Required, except if &quot;poll&quot; is used, then it&#8217;s optional.</dd>
+<dt><code>priority &lt;0-9&gt;</code></dt>
+<dd>This can be used to set the priority for this job in the fax queue (higher priority jobs get sent before all lower-pri jobs). So far, only <i>faxrunqd</i> uses this field, <i>faxrunq</i> does NOT. 9 is the highest, 0 the lowest priority. 5 is the default.</dd>
+<dt><code>Status &lt;message&gt;</code></dt>
+<dd>Automatically appended by <a href="/docs/linux/man/1-faxrunq/">faxrunq</a>(1) after each run, tells the reader about successful and unsuccessful tries to send this job. If more than five &quot;FATAL&quot; errors are listed, the fax job is removed from the queue.</dd>
+<dt><code>verbose_to &lt;blurb&gt;</code></dt>
+<dd>A plain-text description of the receiver of the fax. Is returned, if present, in the mail messages &quot;your fax to &lt;blurb&gt;&quot;. Optional.</dd>
+<dt><code>time &lt;hhmm&gt;</code></dt>
+<dd>If present, <i>faxrunq</i> won&#8217;t send this job before the given time. The format must be exactly &quot;hhmm&quot;, in 24-hr-format, otherwise faxrunq won&#8217;t understand it. Optional.</dd>
+<dt><code>poll</code></dt>
+<dd>Flag token. If present, faxrunq will try to poll the given phone number for documents (see &quot;sendfax -p&quot;).</dd>
+<dt><code>normal_res</code></dt>
+<dd>Flag token. If present, faxrunq will transmit all pages using normal resolution (see &quot;sendfax -n&quot;).</dd>
+<dt><code>acct_handle &lt;arbitrary string&gt;</code></dt>
+<dd>This is a pure comment field, but <a href="/docs/linux/man/8-sendfax/">sendfax</a>(8) will log it into its transaction log file. So this can be used as a customer handle, a job number, whatever you need to get the phone bills charged to the customer (the programs won&#8217;t look at it, just pass it through). Optional.</dd>
+<dt><code>subject &lt;arbitrary string&gt;</code></dt>
+<dd>This is also a pure comment field, used only for informational purposes. <i>faxrunq</i> will return it in the sucess/failure mail. If you use <i>faxspool -s &lt;subj&gt;,</i> it will put this string on the cover page and in the JOB file. </dd>
 </dl>
 <h2>Permissions</h2>
 <p>Starting with mgetty 1.1.29, the fax spool directory /var/spool/fax/outgoing is no longer world-writeable. It should be owned by the user &#8216;fax&#8217; and be mode 755. The <a href="/docs/linux/man/1-faxrunq/">faxrunq</a>(1) and faxrunqd(1) programs should also be run under that user ID if possible. </p>

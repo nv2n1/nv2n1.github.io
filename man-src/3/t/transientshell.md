@@ -81,8 +81,8 @@ description: "TransientShell — The TransientShell widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNtransientFor</code></p>
-<dd>Specifies a widget that the shell acts as a pop-up for. If this resource is NULL or is a widget that has not been realized, the <code>XmNwindowGroup</code> is used instead.</dl>
+<dt><code>XmNtransientFor</code></dt>
+<dd>Specifies a widget that the shell acts as a pop-up for. If this resource is NULL or is a widget that has not been realized, the <code>XmNwindowGroup</code> is used instead.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>TransientShell inherits behavior and resources from the superclasses described in the following tables, which define sets of widget resources used by the programmer to specify data. For a complete description of each resource, refer to the reference page for that superclass. </p>
 <p> The programmer can also set the resource values for the inherited classes to set attributes for this widget. To reference a resource by name or by class in a <code>.Xdefaults</code> file, remove the <code>XmN</code> or <code>XmC</code> prefix and use the remaining letters. To specify one of the defined values for a resource in a <code>.Xdefaults</code> file, remove the <code>Xm</code> prefix and use the remaining letters (in either lowercase or uppercase, but include any underscores between words). The codes in the access column indicate if the given resource can be set at creation time (C), set by using <code>XtSetValues</code> (S), retrieved by using <code>XtGetValues</code> (G), or is not applicable (N/A). </p>

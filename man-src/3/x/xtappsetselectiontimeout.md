@@ -11,14 +11,14 @@ description: "XtAppGetSelectionTimeout, XtAppSetSelectionTimeout – set and obt
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>unsigned long XtAppGetSelectionTimeout(XtAppContext <i>app_context</i>);</p>
-<dd>void XtAppSetSelectionTimeout(XtAppContext <i>app_context</i>, unsigned long <i>timeout</i>);</dl>
+<dd>unsigned long XtAppGetSelectionTimeout(XtAppContext <i>app_context</i>);</dd>
+<dd>void XtAppSetSelectionTimeout(XtAppContext <i>app_context</i>, unsigned long <i>timeout</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>app_context</i></p>
-<dd>Specifies the application context.</p>
-<dt><i>timeout</i></p>
-<dd>Specifies the selection timeout in milliseconds.</dl>
+<dt><i>app_context</i></dt>
+<dd>Specifies the application context.</dd>
+<dt><i>timeout</i></dt>
+<dd>Specifies the selection timeout in milliseconds.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XtAppGetSelectionTimeout</code> function returns the current selection timeout value, in milliseconds. The selection timeout is the time within which the two communicating applications must respond to one another. The initial timeout value is set by the <code>selectionTimeout</code> application resource, or, if <code>selectionTimeout</code> is not specified, it defaults to five seconds. </p>
 <p> The <code>XtAppSetSelectionTimeout</code> function sets the Intrinsics&#8217;s selection timeout mechanism. Note that most applications should not set the selection timeout.</p>

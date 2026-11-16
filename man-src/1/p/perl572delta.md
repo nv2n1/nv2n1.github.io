@@ -38,164 +38,164 @@ description: "perl572delta – what’s new for perl v5.7.2"
 <h2>Core Enhancements</h2>
 <p> In general a lot of fixing has happened in the area of Perl&#8217;s understanding of numbers, both integer and floating point. Since in many systems the standard number parsing functions like <tt>&quot;strtoul()&quot;</tt> and <tt>&quot;atof()&quot;</tt> seem to have bugs, Perl tries to work around their deficiencies. This results hopefully in more accurate numbers.</p>
 <dl>
-<dt>&bull;</p>
-<dd> The rules for allowing underscores (underbars) in numeric constants have been relaxed and simplified: now you can have an underscore <code>between digits</code>.</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">GMAGIC</font> (right-hand side magic) could in many cases such as string concatenation be invoked too many times.</p>
-<dt>&bull;</p>
-<dd> Lexicals I: lexicals outside an eval &quot;&#8220; weren&#8217;t resolved correctly inside a subroutine definition inside the eval &#8221;&#8220; if they were not already referenced in the top level of the eval&#8221;&quot;ed code.</p>
-<dt>&bull;</p>
-<dd> Lexicals <font SIZE="-1">II:</font> lexicals leaked at file scope into subroutines that were declared before the lexicals.</p>
-<dt>&bull;</p>
-<dd> Lvalue subroutines can now return <tt>&quot;undef&quot;</tt> in list context.</p>
-<dt>&bull;</p>
-<dd> The <tt>&quot;op_clear&quot;</tt> and <tt>&quot;op_null&quot;</tt> are now exported.</p>
-<dt>&bull;</p>
-<dd> A new special regular expression variable has been introduced: <tt>$^N</tt>, which contains the most-recently closed group (submatch).</p>
-<dt>&bull;</p>
-<dd> utime now supports <tt>&quot;utime undef, undef, @files&quot;</tt> to change the file timestamps to the current time.</p>
-<dt>&bull;</p>
-<dd> The Perl parser has been stress tested using both random input and Markov chain input.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;eval &quot;v200&quot;&quot;</tt> now works.</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">VMS</font> now works under PerlIO.</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">END</font> blocks are now run even if you exit/die in a <font SIZE="-1">BEGIN</font> block. The execution of <font SIZE="-1">END</font> blocks is now controlled by PL_exit_flags &amp; <font SIZE="-1">PERL_EXIT_DESTRUCT_END</font>. This enables the new behaviour for perl embedders. This will default in 5.10. See perlembed.</dl>
+<dt>&bull;</dt>
+<dd> The rules for allowing underscores (underbars) in numeric constants have been relaxed and simplified: now you can have an underscore <code>between digits</code>.</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">GMAGIC</font> (right-hand side magic) could in many cases such as string concatenation be invoked too many times.</dd>
+<dt>&bull;</dt>
+<dd> Lexicals I: lexicals outside an eval &quot;&#8220; weren&#8217;t resolved correctly inside a subroutine definition inside the eval &#8221;&#8220; if they were not already referenced in the top level of the eval&#8221;&quot;ed code.</dd>
+<dt>&bull;</dt>
+<dd> Lexicals <font SIZE="-1">II:</font> lexicals leaked at file scope into subroutines that were declared before the lexicals.</dd>
+<dt>&bull;</dt>
+<dd> Lvalue subroutines can now return <tt>&quot;undef&quot;</tt> in list context.</dd>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;op_clear&quot;</tt> and <tt>&quot;op_null&quot;</tt> are now exported.</dd>
+<dt>&bull;</dt>
+<dd> A new special regular expression variable has been introduced: <tt>$^N</tt>, which contains the most-recently closed group (submatch).</dd>
+<dt>&bull;</dt>
+<dd> utime now supports <tt>&quot;utime undef, undef, @files&quot;</tt> to change the file timestamps to the current time.</dd>
+<dt>&bull;</dt>
+<dd> The Perl parser has been stress tested using both random input and Markov chain input.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;eval &quot;v200&quot;&quot;</tt> now works.</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">VMS</font> now works under PerlIO.</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">END</font> blocks are now run even if you exit/die in a <font SIZE="-1">BEGIN</font> block. The execution of <font SIZE="-1">END</font> blocks is now controlled by PL_exit_flags &amp; <font SIZE="-1">PERL_EXIT_DESTRUCT_END</font>. This enables the new behaviour for perl embedders. This will default in 5.10. See perlembed.</dd></dl>
 <h2>Modules and Pragmata</h2>
 <h3>New Modules and Distributions</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Attribute::Handlers &#8211; Simpler definition of attribute handlers</p>
-<dt>&bull;</p>
-<dd> ExtUtils::Constant &#8211; generate <font SIZE="-1">XS</font> code to import C header constants</p>
-<dt>&bull;</p>
-<dd> I18N::Langinfo &#8211; query locale information</p>
-<dt>&bull;</p>
-<dd> I18N::LangTags &#8211; functions for dealing with RFC3066-style language tags</p>
-<dt>&bull;</p>
-<dd> libnet &#8211; a collection of perl5 modules related to network programming </p>
+<dt>&bull;</dt>
+<dd> Attribute::Handlers &#8211; Simpler definition of attribute handlers</dd>
+<dt>&bull;</dt>
+<dd> ExtUtils::Constant &#8211; generate <font SIZE="-1">XS</font> code to import C header constants</dd>
+<dt>&bull;</dt>
+<dd> I18N::Langinfo &#8211; query locale information</dd>
+<dt>&bull;</dt>
+<dd> I18N::LangTags &#8211; functions for dealing with RFC3066-style language tags</dd>
+<dt>&bull;</dt>
+<dd> libnet &#8211; a collection of perl5 modules related to network programming </dd>
 <p> Perl installation leaves libnet unconfigured, use <i>libnetcfg</i> to configure.</p>
-<dt>&bull;</p>
-<dd> List::Util &#8211; selection of general-utility list subroutines</p>
-<dt>&bull;</p>
-<dd> Locale::Maketext &#8211; framework for localization</p>
-<dt>&bull;</p>
-<dd> Memoize &#8211; Make your functions faster by trading space for time</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">NEXT</font> &#8211; pseudo-class for method redispatch</p>
-<dt>&bull;</p>
-<dd> Scalar::Util &#8211; selection of general-utility scalar subroutines</p>
-<dt>&bull;</p>
-<dd> Test::More &#8211; yet another framework for writing test scripts</p>
-<dt>&bull;</p>
-<dd> Test::Simple &#8211; Basic utilities for writing tests</p>
-<dt>&bull;</p>
-<dd> Time::HiRes &#8211; high resolution ualarm, usleep, and gettimeofday</p>
-<dt>&bull;</p>
-<dd> Time::Piece &#8211; Object Oriented time objects </p>
+<dt>&bull;</dt>
+<dd> List::Util &#8211; selection of general-utility list subroutines</dd>
+<dt>&bull;</dt>
+<dd> Locale::Maketext &#8211; framework for localization</dd>
+<dt>&bull;</dt>
+<dd> Memoize &#8211; Make your functions faster by trading space for time</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">NEXT</font> &#8211; pseudo-class for method redispatch</dd>
+<dt>&bull;</dt>
+<dd> Scalar::Util &#8211; selection of general-utility scalar subroutines</dd>
+<dt>&bull;</dt>
+<dd> Test::More &#8211; yet another framework for writing test scripts</dd>
+<dt>&bull;</dt>
+<dd> Test::Simple &#8211; Basic utilities for writing tests</dd>
+<dt>&bull;</dt>
+<dd> Time::HiRes &#8211; high resolution ualarm, usleep, and gettimeofday</dd>
+<dt>&bull;</dt>
+<dd> Time::Piece &#8211; Object Oriented time objects </dd>
 <p> (Previously known as Time::Object.)</p>
-<dt>&bull;</p>
-<dd> Time::Seconds &#8211; a simple <font SIZE="-1">API</font> to convert seconds to other date values</p>
-<dt>&bull;</p>
-<dd> UnicodeCD &#8211; Unicode Character Database</dl>
+<dt>&bull;</dt>
+<dd> Time::Seconds &#8211; a simple <font SIZE="-1">API</font> to convert seconds to other date values</dd>
+<dt>&bull;</dt>
+<dd> UnicodeCD &#8211; Unicode Character Database</dd></dl>
 <h3>Updated And Improved Modules and Pragmata</h3>
 <dl>
-<dt>&bull;</p>
-<dd> B::Deparse module has been significantly enhanced. It now can deparse almost all of the standard test suite (so that the tests still succeed). There is a make target &#8220;test.deparse&#8221; for trying this out.</p>
-<dt>&bull;</p>
-<dd> Class::Struct now assigns the array/hash element if the accessor is called with an array/hash element as the <code>sole</code> argument.</p>
-<dt>&bull;</p>
-<dd> Cwd extension is now (even) faster.</p>
-<dt>&bull;</p>
-<dd> DB_File extension has been updated to version 1.77.</p>
-<dt>&bull;</p>
-<dd> Fcntl, Socket, and Sys::Syslog have been rewritten to use the new-style constant dispatch section (see ExtUtils::Constant).</p>
-<dt>&bull;</p>
-<dd> File::Find is now (again) reentrant. It also has been made more portable.</p>
-<dt>&bull;</p>
-<dd> File::Glob now supports <tt>&quot;GLOB_LIMIT&quot;</tt> constant to limit the size of the returned list of filenames.</p>
-<dt>&bull;</p>
-<dd> IO::Socket::INET now supports <tt>&quot;LocalPort&quot;</tt> of zero (usually meaning that the operating system will make one up.)</p>
-<dt>&bull;</p>
-<dd> The vars pragma now supports declaring fully qualified variables. (Something that <tt>&quot;our()&quot;</tt> does not and will not support.)</dl>
+<dt>&bull;</dt>
+<dd> B::Deparse module has been significantly enhanced. It now can deparse almost all of the standard test suite (so that the tests still succeed). There is a make target &#8220;test.deparse&#8221; for trying this out.</dd>
+<dt>&bull;</dt>
+<dd> Class::Struct now assigns the array/hash element if the accessor is called with an array/hash element as the <code>sole</code> argument.</dd>
+<dt>&bull;</dt>
+<dd> Cwd extension is now (even) faster.</dd>
+<dt>&bull;</dt>
+<dd> DB_File extension has been updated to version 1.77.</dd>
+<dt>&bull;</dt>
+<dd> Fcntl, Socket, and Sys::Syslog have been rewritten to use the new-style constant dispatch section (see ExtUtils::Constant).</dd>
+<dt>&bull;</dt>
+<dd> File::Find is now (again) reentrant. It also has been made more portable.</dd>
+<dt>&bull;</dt>
+<dd> File::Glob now supports <tt>&quot;GLOB_LIMIT&quot;</tt> constant to limit the size of the returned list of filenames.</dd>
+<dt>&bull;</dt>
+<dd> IO::Socket::INET now supports <tt>&quot;LocalPort&quot;</tt> of zero (usually meaning that the operating system will make one up.)</dd>
+<dt>&bull;</dt>
+<dd> The vars pragma now supports declaring fully qualified variables. (Something that <tt>&quot;our()&quot;</tt> does not and will not support.)</dd></dl>
 <h2>Utility Changes</h2>
 <dl>
-<dt>&bull;</p>
-<dd> The <i>emacs/e2ctags.pl</i> is now much faster.</p>
-<dt>&bull;</p>
-<dd> h2ph now supports C trigraphs.</p>
-<dt>&bull;</p>
-<dd> h2xs uses the new ExtUtils::Constant module which will affect newly created extensions that define constants. Since the new code is more correct (if you have two constants where the first one is a prefix of the second one, the first constant <code>never</code> gets defined), less lossy (it uses integers for integer constant, as opposed to the old code that used floating point numbers even for integer constants), and slightly faster, you might want to consider regenerating your extension code (the new scheme makes regenerating easy). h2xs now also supports C trigraphs.</p>
-<dt>&bull;</p>
-<dd> libnetcfg has been added to configure the libnet.</p>
-<dt>&bull;</p>
-<dd> The <i>Pod::Html</i> (and thusly pod2html) now allows specifying a cache directory.</dl>
+<dt>&bull;</dt>
+<dd> The <i>emacs/e2ctags.pl</i> is now much faster.</dd>
+<dt>&bull;</dt>
+<dd> h2ph now supports C trigraphs.</dd>
+<dt>&bull;</dt>
+<dd> h2xs uses the new ExtUtils::Constant module which will affect newly created extensions that define constants. Since the new code is more correct (if you have two constants where the first one is a prefix of the second one, the first constant <code>never</code> gets defined), less lossy (it uses integers for integer constant, as opposed to the old code that used floating point numbers even for integer constants), and slightly faster, you might want to consider regenerating your extension code (the new scheme makes regenerating easy). h2xs now also supports C trigraphs.</dd>
+<dt>&bull;</dt>
+<dd> libnetcfg has been added to configure the libnet.</dd>
+<dt>&bull;</dt>
+<dd> The <i>Pod::Html</i> (and thusly pod2html) now allows specifying a cache directory.</dd></dl>
 <h2>New Documentation</h2>
 <dl>
-<dt>&bull;</p>
-<dd> Locale::Maketext::TPJ13 is an article about software localization, originally published in The Perl Journal #13, republished here with kind permission.</p>
-<dt>&bull;</p>
-<dd> More <font SIZE="-1">README</font>.$PLATFORM files have been converted into pod, which also means that they also be installed as perl$PLATFORM documentation files. The new files are perlapollo, perlbeos, perldgux, perlhurd, perlmint, perlnetware, perlplan9, perlqnx, and perltru64.</p>
-<dt>&bull;</p>
-<dd> The <i>Todo</i> and <i>Todo-5.6</i> files have been merged into perltodo.</p>
-<dt>&bull;</p>
-<dd> Use of the <i>gprof</i> tool to profile Perl has been documented in perlhack. There is a make target &#8220;perl.gprof&#8221; for generating a gprofiled Perl executable.</dl>
+<dt>&bull;</dt>
+<dd> Locale::Maketext::TPJ13 is an article about software localization, originally published in The Perl Journal #13, republished here with kind permission.</dd>
+<dt>&bull;</dt>
+<dd> More <font SIZE="-1">README</font>.$PLATFORM files have been converted into pod, which also means that they also be installed as perl$PLATFORM documentation files. The new files are perlapollo, perlbeos, perldgux, perlhurd, perlmint, perlnetware, perlplan9, perlqnx, and perltru64.</dd>
+<dt>&bull;</dt>
+<dd> The <i>Todo</i> and <i>Todo-5.6</i> files have been merged into perltodo.</dd>
+<dt>&bull;</dt>
+<dd> Use of the <i>gprof</i> tool to profile Perl has been documented in perlhack. There is a make target &#8220;perl.gprof&#8221; for generating a gprofiled Perl executable.</dd></dl>
 <h2>Installation and Configuration Improvements</h2>
 <h3>New Or Improved Platforms</h3>
 <dl>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">AIX</font> should now work better with gcc, threads, and 64-bitness. Also the long doubles support in <font SIZE="-1">AIX</font> should be better now. See perlaix.</p>
-<dt>&bull;</p>
-<dd> AtheOS ( <a rel="nofollow" href="http://www.atheos.cx/">http://www.atheos.cx/</a> ) is a new platform.</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">DG/UX</font> platform now supports the 5.005-style threads. See perldgux.</p>
-<dt>&bull;</p>
-<dd> DYNIX/ptx platform (a.k.a. dynixptx) is supported at or near osvers 4.5.2.</p>
-<dt>&bull;</p>
-<dd> Several Mac <font SIZE="-1">OS</font> (Classic) portability patches have been applied. We hope to get a fully working port by 5.8.0. (The remaining problems relate to the changed <font SIZE="-1">IO</font> model of Perl.) See perlmacos.</p>
-<dt>&bull;</p>
-<dd> Mac <font SIZE="-1">OS</font> X (or Darwin) should now be able to build Perl even on <font SIZE="-1">HFS+</font> filesystems. (The case-insensitivity confused the Perl build process.)</p>
-<dt>&bull;</p>
-<dd> NetWare from Novell is now supported. See perlnetware.</p>
-<dt>&bull;</p>
-<dd> The Amdahl <font SIZE="-1">UTS</font> Unix mainframe platform is now supported.</dl>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">AIX</font> should now work better with gcc, threads, and 64-bitness. Also the long doubles support in <font SIZE="-1">AIX</font> should be better now. See perlaix.</dd>
+<dt>&bull;</dt>
+<dd> AtheOS ( <a rel="nofollow" href="http://www.atheos.cx/">http://www.atheos.cx/</a> ) is a new platform.</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">DG/UX</font> platform now supports the 5.005-style threads. See perldgux.</dd>
+<dt>&bull;</dt>
+<dd> DYNIX/ptx platform (a.k.a. dynixptx) is supported at or near osvers 4.5.2.</dd>
+<dt>&bull;</dt>
+<dd> Several Mac <font SIZE="-1">OS</font> (Classic) portability patches have been applied. We hope to get a fully working port by 5.8.0. (The remaining problems relate to the changed <font SIZE="-1">IO</font> model of Perl.) See perlmacos.</dd>
+<dt>&bull;</dt>
+<dd> Mac <font SIZE="-1">OS</font> X (or Darwin) should now be able to build Perl even on <font SIZE="-1">HFS+</font> filesystems. (The case-insensitivity confused the Perl build process.)</dd>
+<dt>&bull;</dt>
+<dd> NetWare from Novell is now supported. See perlnetware.</dd>
+<dt>&bull;</dt>
+<dd> The Amdahl <font SIZE="-1">UTS</font> Unix mainframe platform is now supported.</dd></dl>
 <h3>Generic Improvements</h3>
 <dl>
-<dt>&bull;</p>
-<dd> In <font SIZE="-1">AFS</font> installations one can configure the root of the <font SIZE="-1">AFS</font> to be somewhere else than the default <i>/afs</i> by using the Configure parameter <tt>&quot;-Dafsroot=/some/where/else&quot;</tt>.</p>
-<dt>&bull;</p>
-<dd> The version of Berkeley <font SIZE="-1">DB</font> used when the Perl (and, presumably, the DB_File extension) was built is now available as <tt>@Config{qw(db_version_major db_version_minor db_version_patch)}</tt> from Perl and as <tt>&quot;DB_VERSION_MAJOR_CFG DB_VERSION_MINOR_CFG DB_VERSION_PATCH_CFG&quot;</tt> from C.</p>
-<dt>&bull;</p>
-<dd> The Thread extension is now not built at all under ithreads (<tt>&quot;Configure -Duseithreads&quot;</tt>) because it wouldn&#8217;t work anyway (the Thread extension requires being Configured with <tt>&quot;-Duse5005threads&quot;</tt>).</p>
-<dt>&bull;</p>
-<dd> The <tt>&quot;B::Deparse&quot;</tt> compiler backend has been so significantly improved that almost the whole Perl test suite passes after being deparsed. A make target has been added to help in further testing: <tt>&quot;make test.deparse&quot;</tt>.</dl>
+<dt>&bull;</dt>
+<dd> In <font SIZE="-1">AFS</font> installations one can configure the root of the <font SIZE="-1">AFS</font> to be somewhere else than the default <i>/afs</i> by using the Configure parameter <tt>&quot;-Dafsroot=/some/where/else&quot;</tt>.</dd>
+<dt>&bull;</dt>
+<dd> The version of Berkeley <font SIZE="-1">DB</font> used when the Perl (and, presumably, the DB_File extension) was built is now available as <tt>@Config{qw(db_version_major db_version_minor db_version_patch)}</tt> from Perl and as <tt>&quot;DB_VERSION_MAJOR_CFG DB_VERSION_MINOR_CFG DB_VERSION_PATCH_CFG&quot;</tt> from C.</dd>
+<dt>&bull;</dt>
+<dd> The Thread extension is now not built at all under ithreads (<tt>&quot;Configure -Duseithreads&quot;</tt>) because it wouldn&#8217;t work anyway (the Thread extension requires being Configured with <tt>&quot;-Duse5005threads&quot;</tt>).</dd>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;B::Deparse&quot;</tt> compiler backend has been so significantly improved that almost the whole Perl test suite passes after being deparsed. A make target has been added to help in further testing: <tt>&quot;make test.deparse&quot;</tt>.</dd></dl>
 <h2>Selected Bug Fixes</h2>
 <dl>
-<dt>&bull;</p>
-<dd> The autouse pragma didn&#8217;t work for Multi::Part::Function::Names.</p>
-<dt>&bull;</p>
-<dd> The behaviour of non-decimal but numeric string constants such as &#8220;0x23&#8221; was platform-dependent: in some platforms that was seen as 35, in some as 0, in some as a floating point number (don&#8217;t ask). This was caused by Perl using the operating system libraries in a situation where the result of the string to number conversion is undefined: now Perl consistently handles such strings as zero in numeric contexts.</p>
-<dt>&bull;</p>
-<dd> dprofpp -R didn&#8217;t work.</p>
-<dt>&bull;</p>
-<dd> <font SIZE="-1">PERL5OPT</font> with embedded spaces didn&#8217;t work.</p>
-<dt>&bull;</p>
-<dd> Sys::Syslog ignored the <tt>&quot;LOG_AUTH&quot;</tt> constant.</dl>
+<dt>&bull;</dt>
+<dd> The autouse pragma didn&#8217;t work for Multi::Part::Function::Names.</dd>
+<dt>&bull;</dt>
+<dd> The behaviour of non-decimal but numeric string constants such as &#8220;0x23&#8221; was platform-dependent: in some platforms that was seen as 35, in some as 0, in some as a floating point number (don&#8217;t ask). This was caused by Perl using the operating system libraries in a situation where the result of the string to number conversion is undefined: now Perl consistently handles such strings as zero in numeric contexts.</dd>
+<dt>&bull;</dt>
+<dd> dprofpp -R didn&#8217;t work.</dd>
+<dt>&bull;</dt>
+<dd> <font SIZE="-1">PERL5OPT</font> with embedded spaces didn&#8217;t work.</dd>
+<dt>&bull;</dt>
+<dd> Sys::Syslog ignored the <tt>&quot;LOG_AUTH&quot;</tt> constant.</dd></dl>
 <h3>Platform Specific Changes and Fixes</h3>
 <dl>
-<dt>&bull;</p>
-<dd> Some versions of glibc have a broken <i>modfl()</i>. This affects builds with <tt>&quot;-Duselongdouble&quot;</tt>. This version of Perl detects this brokenness and has a workaround for it. The glibc release 2.2.2 is known to have fixed the <i>modfl()</i> bug.</dl>
+<dt>&bull;</dt>
+<dd> Some versions of glibc have a broken <i>modfl()</i>. This affects builds with <tt>&quot;-Duselongdouble&quot;</tt>. This version of Perl detects this brokenness and has a workaround for it. The glibc release 2.2.2 is known to have fixed the <i>modfl()</i> bug.</dd></dl>
 <h2>New or Changed Diagnostics</h2>
 <dl>
-<dt>&bull;</p>
-<dd> In the regular expression diagnostics the <tt>&quot;&lt;&lt; HERE&quot;</tt> marker introduced in 5.7.0 has been changed to be <tt>&quot;&lt;-- HERE&quot;</tt> since too many people found the <tt>&quot;&lt;&lt;&quot;</tt> to be too similar to here-document starters.</p>
-<dt>&bull;</p>
-<dd> If you try to &#8220;pack&#8221; in perlfunc a number less than 0 or larger than 255 using the <tt>&quot;C&quot;</tt> format you will get an optional warning. Similarly for the <tt>&quot;c&quot;</tt> format and a number less than -128 or more than 127.</p>
-<dt>&bull;</p>
-<dd> Certain regex modifiers such as <tt>&quot;(?o)&quot;</tt> make sense only if applied to the entire regex. You will an optional warning if you try to do otherwise.</p>
-<dt>&bull;</p>
-<dd> Using arrays or hashes as references (e.g. <tt>&quot;%foo-&gt;{bar}&quot;</tt> has been deprecated for a while. Now you will get an optional warning.</dl>
+<dt>&bull;</dt>
+<dd> In the regular expression diagnostics the <tt>&quot;&lt;&lt; HERE&quot;</tt> marker introduced in 5.7.0 has been changed to be <tt>&quot;&lt;-- HERE&quot;</tt> since too many people found the <tt>&quot;&lt;&lt;&quot;</tt> to be too similar to here-document starters.</dd>
+<dt>&bull;</dt>
+<dd> If you try to &#8220;pack&#8221; in perlfunc a number less than 0 or larger than 255 using the <tt>&quot;C&quot;</tt> format you will get an optional warning. Similarly for the <tt>&quot;c&quot;</tt> format and a number less than -128 or more than 127.</dd>
+<dt>&bull;</dt>
+<dd> Certain regex modifiers such as <tt>&quot;(?o)&quot;</tt> make sense only if applied to the entire regex. You will an optional warning if you try to do otherwise.</dd>
+<dt>&bull;</dt>
+<dd> Using arrays or hashes as references (e.g. <tt>&quot;%foo-&gt;{bar}&quot;</tt> has been deprecated for a while. Now you will get an optional warning.</dd></dl>
 <h2>Source Code Enhancements</h2>
 <h3><font SIZE="-1">MAGIC</font> constants</h3>
 <p> The <font SIZE="-1">MAGIC</font> constants (e.g. <tt>'P'</tt>) have been macrofied (e.g. <tt>&quot;PERL_MAGIC_TIED&quot;</tt>) for better source code readability and maintainability.</p>
@@ -212,10 +212,10 @@ description: "perl572delta – what’s new for perl v5.7.2"
 <p> Note that unlike other sections in this document (which describe changes since 5.7.0) this section is cumulative containing known problems for all the 5.7 releases.</p>
 <h3><font SIZE="-1">AIX</font></h3>
 <dl>
-<dt>&bull;</p>
-<dd> In <font SIZE="-1">AIX</font> 4.2 Perl extensions that use C<font SIZE="-2">++</font> functions that use statics may have problems in that the statics are not getting initialized. In newer <font SIZE="-1">AIX</font> releases this has been solved by linking Perl with the libC_r library, but unfortunately in <font SIZE="-1">AIX</font> 4.2 the said library has an obscure bug where the various functions related to time (such as <i>time()</i> and <i>gettimeofday()</i>) return broken values, and therefore in <font SIZE="-1">AIX</font> 4.2 Perl is not linked against the libC_r.</p>
-<dt>&bull;</p>
-<dd> vac 5.0.0.0 May Produce Buggy Code For Perl </p>
+<dt>&bull;</dt>
+<dd> In <font SIZE="-1">AIX</font> 4.2 Perl extensions that use C<font SIZE="-2">++</font> functions that use statics may have problems in that the statics are not getting initialized. In newer <font SIZE="-1">AIX</font> releases this has been solved by linking Perl with the libC_r library, but unfortunately in <font SIZE="-1">AIX</font> 4.2 the said library has an obscure bug where the various functions related to time (such as <i>time()</i> and <i>gettimeofday()</i>) return broken values, and therefore in <font SIZE="-1">AIX</font> 4.2 Perl is not linked against the libC_r.</dd>
+<dt>&bull;</dt>
+<dd> vac 5.0.0.0 May Produce Buggy Code For Perl </dd>
 <p> The <font SIZE="-1">AIX</font> C compiler vac version 5.0.0.0 may produce buggy code, resulting in few random tests failing, but when the failing tests are run by hand, they succeed. We suggest upgrading to at least vac version 5.0.1.0, that has been known to compile Perl correctly. &#8220;lslpp -L|grep vac.C&#8221; will tell you the vac version.</dl>
 <h3>Amiga Perl Invoking Mystery</h3>
 <p> One cannot call Perl using the <tt>&quot;volume:&quot;</tt> syntax, that is, <tt>&quot;perl -v&quot;</tt> works, but for example <tt>&quot;bin:perl -v&quot;</tt> doesn&#8217;t. The exact reason is known but the current suspect is the <i>ixemul</i> library.</p>
@@ -245,12 +245,12 @@ Failed Test Stat Wstat Total Fail Failed List of Failed-- -- -- -- -- -- -- -- -
 </pre>
 <h3><font SIZE="-1">UNICOS</font></h3>
 <dl>
-<dt>&bull;</p>
-<dd> ext/POSIX/sigaction subtests 6 and 13 may fail.</p>
-<dt>&bull;</p>
-<dd> lib/ExtUtils may spuriously claim that subtest 28 failed, which is interesting since the test only has 27 tests.</p>
-<dt>&bull;</p>
-<dd> Numerous numerical test failures </p>
+<dt>&bull;</dt>
+<dd> ext/POSIX/sigaction subtests 6 and 13 may fail.</dd>
+<dt>&bull;</dt>
+<dd> lib/ExtUtils may spuriously claim that subtest 28 failed, which is interesting since the test only has 27 tests.</dd>
+<dt>&bull;</dt>
+<dd> Numerous numerical test failures </dd>
 <pre>
   op/numconvert                 209,210,217,218
   op/override                   7
@@ -323,29 +323,29 @@ tie my % tie_hash = &gt; 'Tie::StdHash';
 <p> Written by Jarkko Hietaniemi &lt;<i>jhi [at] iki.fi</i>&gt;, with many contributions from The Perl Porters and Perl Users submitting feedback and patches. </p>
 <p> Send omissions or corrections to &lt;<i>perlbug [at] perl.org</i>&gt;. </p>
 <h2>Index</h2>
-<dt><a href="#lbAK">Core Enhancements</a></p>
+<dt><a href="#lbAK">Core Enhancements</a></dt>
 <dd>
-<dt><a href="#lbAL">Modules and Pragmata</a></p>
+</dd><dt><a href="#lbAL">Modules and Pragmata</a></dt>
 <dd>
-<dt><a href="#lbAO">Utility Changes</a></p>
+</dd><dt><a href="#lbAO">Utility Changes</a></dt>
 <dd>
-<dt><a href="#lbAP">New Documentation</a></p>
+</dd><dt><a href="#lbAP">New Documentation</a></dt>
 <dd>
-<dt><a href="#lbAQ">Installation and Configuration Improvements</a></p>
+</dd><dt><a href="#lbAQ">Installation and Configuration Improvements</a></dt>
 <dd>
-<dt><a href="#lbAT">Selected Bug Fixes</a></p>
+</dd><dt><a href="#lbAT">Selected Bug Fixes</a></dt>
 <dd>
-<dt><a href="#lbAV">New or Changed Diagnostics</a></p>
+</dd><dt><a href="#lbAV">New or Changed Diagnostics</a></dt>
 <dd>
-<dt><a href="#lbAW">Source Code Enhancements</a></p>
+</dd><dt><a href="#lbAW">Source Code Enhancements</a></dt>
 <dd>
-<dt><a href="#lbBB">New Tests</a></p>
+</dd><dt><a href="#lbBB">New Tests</a></dt>
 <dd>
-<dt><a href="#lbBC">Known Problems</a></p>
+</dd><dt><a href="#lbBC">Known Problems</a></dt>
 <dd>
-<dt><a href="#lbBX">Reporting Bugs</a></p>
+</dd><dt><a href="#lbBX">Reporting Bugs</a></dt>
 <dd>
-<dt><a href="#lbBY">SEE ALSO</a></p>
+</dd><dt><a href="#lbBY">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbBZ">HISTORY</a></p>
-<dd></dl>
+</dd><dt><a href="#lbBZ">HISTORY</a></dt>
+<dd></dd></dl>

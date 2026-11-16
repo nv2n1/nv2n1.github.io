@@ -17,66 +17,66 @@ description: "fax2tiff – create a TIFF Class F fax file from raw fax data"
 <h2>OPTIONS</h2>
 <p> Options that affect the interpretation of input data are:</p>
 <dl>
-<dt><code>-3</code></p>
-<dd> Assume input data is <font SIZE="-1">CCITT</font> Group 3 encoded (default).</p>
-<dt><code>-4</code></p>
-<dd> Assume input data is <font SIZE="-1">CCITT</font> Group 4 encoded.</p>
-<dt><code>-U</code></p>
-<dd> Assume input data is uncompressed (Group 3 or Group 4).</p>
-<dt><code>-1</code></p>
-<dd> Assume input data is encoded with the 1-dimensional version of the <font SIZE="-1">CCITT</font> Group 3 Huffman encoding algorithm (default).</p>
-<dt><code>-2</code></p>
-<dd> Assume input data is 2-dimensional version of the <font SIZE="-1">CCITT</font> Group 3 Huffman encoding algorithm.</p>
-<dt><code>-P</code></p>
-<dd> Assume input data is <code>not</code> EOL-aligned (default). This option has effect with Group 3 encoded input only.</p>
-<dt><code>-A</code></p>
-<dd> Assume input data is EOL-aligned. This option has effect with Group 3 encoded input only.</p>
-<dt><code>-M</code></p>
-<dd> Treat input data as having bits filled from most significant bit (<font SIZE="-1">MSB</font>) to most least bit (<font SIZE="-1">LSB</font>).</p>
-<dt><code>-L</code></p>
-<dd> Treat input data as having bits filled from least significant bit (<font SIZE="-1">LSB</font>) to most significant bit (<font SIZE="-1">MSB</font>) (default).</p>
-<dt><code>-B</code></p>
-<dd> Assume input data was encoded with black as 0 and white as 1.</p>
-<dt><code>-W</code></p>
-<dd> Assume input data was encoded with black as 1 and white as 0 (default).</p>
-<dt><code>-R</code></p>
-<dd> Specify the vertical resolution, in lines/inch, of the input images. By default input are assumed to have a vertical resolution of 196 lines/inch. If images are low resolution facsimile, a value of 98 lines/inch should be specified.</p>
-<dt><code>-X</code></p>
-<dd> Specify the width, in pixels, of the input images. By default input are assumed to have a width of 1728 pixels.</dl>
+<dt><code>-3</code></dt>
+<dd> Assume input data is <font SIZE="-1">CCITT</font> Group 3 encoded (default).</dd>
+<dt><code>-4</code></dt>
+<dd> Assume input data is <font SIZE="-1">CCITT</font> Group 4 encoded.</dd>
+<dt><code>-U</code></dt>
+<dd> Assume input data is uncompressed (Group 3 or Group 4).</dd>
+<dt><code>-1</code></dt>
+<dd> Assume input data is encoded with the 1-dimensional version of the <font SIZE="-1">CCITT</font> Group 3 Huffman encoding algorithm (default).</dd>
+<dt><code>-2</code></dt>
+<dd> Assume input data is 2-dimensional version of the <font SIZE="-1">CCITT</font> Group 3 Huffman encoding algorithm.</dd>
+<dt><code>-P</code></dt>
+<dd> Assume input data is <code>not</code> EOL-aligned (default). This option has effect with Group 3 encoded input only.</dd>
+<dt><code>-A</code></dt>
+<dd> Assume input data is EOL-aligned. This option has effect with Group 3 encoded input only.</dd>
+<dt><code>-M</code></dt>
+<dd> Treat input data as having bits filled from most significant bit (<font SIZE="-1">MSB</font>) to most least bit (<font SIZE="-1">LSB</font>).</dd>
+<dt><code>-L</code></dt>
+<dd> Treat input data as having bits filled from least significant bit (<font SIZE="-1">LSB</font>) to most significant bit (<font SIZE="-1">MSB</font>) (default).</dd>
+<dt><code>-B</code></dt>
+<dd> Assume input data was encoded with black as 0 and white as 1.</dd>
+<dt><code>-W</code></dt>
+<dd> Assume input data was encoded with black as 1 and white as 0 (default).</dd>
+<dt><code>-R</code></dt>
+<dd> Specify the vertical resolution, in lines/inch, of the input images. By default input are assumed to have a vertical resolution of 196 lines/inch. If images are low resolution facsimile, a value of 98 lines/inch should be specified.</dd>
+<dt><code>-X</code></dt>
+<dd> Specify the width, in pixels, of the input images. By default input are assumed to have a width of 1728 pixels.</dd></dl>
 <p> Options that affect the output file format are:</p>
 <dl>
-<dt><code>-o</code></p>
-<dd> Specify the name of the output file.</p>
-<dt><code>-7</code></p>
-<dd> Force output to be compressed with the <font SIZE="-1">CCITT</font> Group 3 Huffman encoding algorithm (default).</p>
-<dt><code>-8</code></p>
-<dd> Force output to be compressed with the <font SIZE="-1">CCITT</font> Group 4 Huffman encoding.</p>
-<dt><code>-u</code></p>
-<dd> Force output to be uncompressed (Group 3 or Group 4).</p>
-<dt><code>-5</code></p>
-<dd> Force output to be encoded with the 1-dimensional version of the <font SIZE="-1">CCITT</font> Group 3 Huffman encoding algorithm.</p>
-<dt><code>-6</code></p>
-<dd> Force output to be encoded with the 2-dimensional version of the <font SIZE="-1">CCITT</font> Group 3 Huffman encoding algorithm (default).</p>
-<dt><code>-a</code></p>
-<dd> Force the last bit of each <i>End Of Line</i> (<font SIZE="-1">EOL</font>) code to land on a byte boundary (default). This &#8220;zero padding&#8221; will be reflected in the contents of the <i>Group3Options</i> tag of the resultant <font SIZE="-1">TIFF</font> file. This option has effect with Group 3 encoded output only.</p>
-<dt><code>-p</code></p>
-<dd> Do not EOL-align output. This option has effect with Group 3 encoded output only.</p>
-<dt><code>-c</code></p>
-<dd> Generate &quot;classic&quot; Group 3 TIFF format.</p>
-<dt><code>-f</code></p>
-<dd> Generate TIFF Class F (TIFF/F) format (default).</p>
-<dt><code>-m</code></p>
-<dd> Force output data to have bits filled from most significant bit (<font SIZE="-1">MSB</font>) to most least bit (<font SIZE="-1">LSB</font>).</p>
-<dt><code>-l</code></p>
-<dd> Force output data to have bits filled from least significant bit (<font SIZE="-1">LSB</font>) to most significant bit (<font SIZE="-1">MSB</font>) (default).</p>
-<dt><code>-r</code></p>
-<dd> Specify the number of rows (scanlines) in each strip of data written to the output file. By default (or when value <code>0</code> is specified), <i>tiffcp</i> attempts to set the rows/strip that no more than 8 kilobytes of data appear in a strip (with except of G3/G4 compression schemes). If you specify special value <code>-1</code> it will results in infinite number of the rows per strip. The entire image will be the one strip in that case. This is default in case of G3/G4 output compression schemes.</p>
-<dt><code>-s</code></p>
-<dd> Stretch the input image vertically by writing each input row of data twice to the output file.</p>
-<dt><code>-v</code></p>
-<dd> Force <i>fax2tiff</i> to print the number of rows of data it retrieved from the input file.</p>
-<dt><code>-z</code></p>
-<dd> Force output to be compressed with the LZW encoding.</dl>
+<dt><code>-o</code></dt>
+<dd> Specify the name of the output file.</dd>
+<dt><code>-7</code></dt>
+<dd> Force output to be compressed with the <font SIZE="-1">CCITT</font> Group 3 Huffman encoding algorithm (default).</dd>
+<dt><code>-8</code></dt>
+<dd> Force output to be compressed with the <font SIZE="-1">CCITT</font> Group 4 Huffman encoding.</dd>
+<dt><code>-u</code></dt>
+<dd> Force output to be uncompressed (Group 3 or Group 4).</dd>
+<dt><code>-5</code></dt>
+<dd> Force output to be encoded with the 1-dimensional version of the <font SIZE="-1">CCITT</font> Group 3 Huffman encoding algorithm.</dd>
+<dt><code>-6</code></dt>
+<dd> Force output to be encoded with the 2-dimensional version of the <font SIZE="-1">CCITT</font> Group 3 Huffman encoding algorithm (default).</dd>
+<dt><code>-a</code></dt>
+<dd> Force the last bit of each <i>End Of Line</i> (<font SIZE="-1">EOL</font>) code to land on a byte boundary (default). This &#8220;zero padding&#8221; will be reflected in the contents of the <i>Group3Options</i> tag of the resultant <font SIZE="-1">TIFF</font> file. This option has effect with Group 3 encoded output only.</dd>
+<dt><code>-p</code></dt>
+<dd> Do not EOL-align output. This option has effect with Group 3 encoded output only.</dd>
+<dt><code>-c</code></dt>
+<dd> Generate &quot;classic&quot; Group 3 TIFF format.</dd>
+<dt><code>-f</code></dt>
+<dd> Generate TIFF Class F (TIFF/F) format (default).</dd>
+<dt><code>-m</code></dt>
+<dd> Force output data to have bits filled from most significant bit (<font SIZE="-1">MSB</font>) to most least bit (<font SIZE="-1">LSB</font>).</dd>
+<dt><code>-l</code></dt>
+<dd> Force output data to have bits filled from least significant bit (<font SIZE="-1">LSB</font>) to most significant bit (<font SIZE="-1">MSB</font>) (default).</dd>
+<dt><code>-r</code></dt>
+<dd> Specify the number of rows (scanlines) in each strip of data written to the output file. By default (or when value <code>0</code> is specified), <i>tiffcp</i> attempts to set the rows/strip that no more than 8 kilobytes of data appear in a strip (with except of G3/G4 compression schemes). If you specify special value <code>-1</code> it will results in infinite number of the rows per strip. The entire image will be the one strip in that case. This is default in case of G3/G4 output compression schemes.</dd>
+<dt><code>-s</code></dt>
+<dd> Stretch the input image vertically by writing each input row of data twice to the output file.</dd>
+<dt><code>-v</code></dt>
+<dd> Force <i>fax2tiff</i> to print the number of rows of data it retrieved from the input file.</dd>
+<dt><code>-z</code></dt>
+<dd> Force output to be compressed with the LZW encoding.</dd></dl>
 <h2>DIAGNOSTICS</h2>
 <p> The following warnings and errors come from the decoding routines in the library. </p>
 <p> <code>Warning, %s: Premature EOL at scanline %d (x %d).

@@ -14,13 +14,13 @@ description: "iscsi_find_flashnode_sess – finds flashnode session entry"
 <p><i>shost</i></p>
 <dl>
 <dd>
-<dd>pointer to host data</dl>
+</dd><dd>pointer to host data</dd></dl>
 <p> <i>data</i></p>
 <dl>
-<dd>pointer to data containing value to use for comparison</dl>
+<dd>pointer to data containing value to use for comparison</dd></dl>
 <p> <i>fn</i></p>
 <dl>
-<dd>function pointer that does actual comparison</dl>
+<dd>function pointer that does actual comparison</dd></dl>
 <h2>Description</h2>
 <p>Finds the flashnode session object comparing the data passed using logic defined in passed function pointer</p>
 <h2>Return</h2>
@@ -28,8 +28,8 @@ description: "iscsi_find_flashnode_sess – finds flashnode session entry"
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

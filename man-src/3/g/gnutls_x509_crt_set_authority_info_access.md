@@ -14,12 +14,12 @@ description: "gnutls_x509_crt_set_authority_info_access – API function"
 <p> <code>int gnutls_x509_crt_set_authority_info_access(gnutls_x509_crt_t </code><i>crt</i><code>, int </code><i>what</i><code>, gnutls_datum_t * </code><i>data</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t crt</p>
-<dd> Holds the certificate</p>
-<dt>int what</p>
-<dd> what data to get, a <code>gnutls_info_access_what_t</code> type.</p>
-<dt>gnutls_datum_t * data</p>
-<dd> output data to be freed with <code>gnutls_free()</code>.</dl>
+<dt>gnutls_x509_crt_t crt</dt>
+<dd> Holds the certificate</dd>
+<dt>int what</dt>
+<dd> what data to get, a <code>gnutls_info_access_what_t</code> type.</dd>
+<dt>gnutls_datum_t * data</dt>
+<dd> output data to be freed with <code>gnutls_free()</code>.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function sets the Authority Information Access (AIA) extension, see RFC 5280 section 4.2.2.1 for more information. </p>
 <p> The type of data stored in <i>data</i> is specified via <i>what</i> which should be <code>gnutls_info_access_what_t</code> values. </p>
@@ -37,6 +37,6 @@ description: "gnutls_x509_crt_set_authority_info_access – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

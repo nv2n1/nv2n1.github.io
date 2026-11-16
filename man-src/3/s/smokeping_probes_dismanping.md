@@ -35,31 +35,31 @@ description: "Smokeping::probes::DismanPing – DISMAN-PING-MIB Probe for SmokeP
 <h2>Variables</h2>
 <p>Supported probe-specific variables:</p>
 <dl COMPACT>
-<dt>offset</p>
-<dd>If you run many probes concurrently you may want to prevent them from hitting your network all at the same time. Using the probe-specific offset parameter you can change the point in time when each probe will be run. Offset is specified in % of total interval, or alternatively as &#8216;random&#8217;, and the offset from the &#8216;General&#8217; section is used if nothing is specified here. Note that this does <font SIZE="-1">NOT</font> influence the rrds itself, it is just a matter of when data acqusition is initiated. (This variable is only applicable if the variable &#8216;concurrentprobes&#8217; is set in the &#8216;General&#8217; section.) </p>
+<dt>offset</dt>
+<dd>If you run many probes concurrently you may want to prevent them from hitting your network all at the same time. Using the probe-specific offset parameter you can change the point in time when each probe will be run. Offset is specified in % of total interval, or alternatively as &#8216;random&#8217;, and the offset from the &#8216;General&#8217; section is used if nothing is specified here. Note that this does <font SIZE="-1">NOT</font> influence the rrds itself, it is just a matter of when data acqusition is initiated. (This variable is only applicable if the variable &#8216;concurrentprobes&#8217; is set in the &#8216;General&#8217; section.) </dd>
 <p> Example value: 50%</p>
-<dt>pings</p>
-<dd>How many pings should be sent to each target. Note that the maximum value for DismanPing <font SIZE="-1">MIP</font> is 15, which is less than the SmokePing default, so this class has its own default value. If your Database section specifies a value less than 15, you must also set it for this probe. Note that the number of pings in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change this parameter afterwards, you&#8217;ll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. </p>
+<dt>pings</dt>
+<dd>How many pings should be sent to each target. Note that the maximum value for DismanPing <font SIZE="-1">MIP</font> is 15, which is less than the SmokePing default, so this class has its own default value. If your Database section specifies a value less than 15, you must also set it for this probe. Note that the number of pings in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change this parameter afterwards, you&#8217;ll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. </dd>
 <p> Example value: 15 </p>
 <p> Default value: 15</p>
-<dt>step</p>
-<dd>Duration of the base interval that this probe should use, if different from the one specified in the &#8216;Database&#8217; section. Note that the step in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change the step parameter afterwards, you&#8217;ll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. (This variable is only applicable if the variable &#8216;concurrentprobes&#8217; is set in the &#8216;General&#8217; section.) </p>
+<dt>step</dt>
+<dd>Duration of the base interval that this probe should use, if different from the one specified in the &#8216;Database&#8217; section. Note that the step in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change the step parameter afterwards, you&#8217;ll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. (This variable is only applicable if the variable &#8216;concurrentprobes&#8217; is set in the &#8216;General&#8217; section.) </dd>
 <p> Example value: 300</dl>
 <p> Supported target-specific variables:</p>
 <dl COMPACT>
-<dt>ownerindex</p>
-<dd>The <font SIZE="-1">SNMP</font> OwnerIndex to use when setting up the test. When using <font SIZE="-1">VACM,</font> can map to a Security Name or Group Name of the entity running the test. </p>
+<dt>ownerindex</dt>
+<dd>The <font SIZE="-1">SNMP</font> OwnerIndex to use when setting up the test. When using <font SIZE="-1">VACM,</font> can map to a Security Name or Group Name of the entity running the test. </dd>
 <p> By default this will be set to </p>
 <p> Example value: smokeping</p>
-<dt>packetsize</p>
-<dd>The packetsize parameter lets you configure the packet size for the pings sent. The minimum is 8, the maximum 65507. Use the same number as with fping if you want the same packet sizes being used on the network. </p>
+<dt>packetsize</dt>
+<dd>The packetsize parameter lets you configure the packet size for the pings sent. The minimum is 8, the maximum 65507. Use the same number as with fping if you want the same packet sizes being used on the network. </dd>
 <p> Default value: 56</p>
-<dt>pinghost</p>
-<dd>The (mandatory) pinghost parameter specifies the remote system which will execute the pings, as well as the <font SIZE="-1">SNMP</font> community string on the device. </p>
+<dt>pinghost</dt>
+<dd>The (mandatory) pinghost parameter specifies the remote system which will execute the pings, as well as the <font SIZE="-1">SNMP</font> community string on the device. </dd>
 <p> Example value: pinger [at] router.example.com </p>
 <p> This setting is mandatory.</p>
-<dt>pingsrc</p>
-<dd>The (optional) pingsrc parameter specifies the source address to be used for pings. If specified, this parameter must identify an <font SIZE="-1">IP</font> address assigned to pinghost. </p>
+<dt>pingsrc</dt>
+<dd>The (optional) pingsrc parameter specifies the source address to be used for pings. If specified, this parameter must identify an <font SIZE="-1">IP</font> address assigned to pinghost. </dd>
 <p> Example value: 192.0.2.9</dl>
 <h2>Authors</h2>
 <p>Bill Fenner &lt;fenner [at] research.att.com&gt;, Tobi Oetiker &lt;tobi [at] oetiker.ch&gt;</p>
@@ -84,3 +84,4 @@ description: "Smokeping::probes::DismanPing – DISMAN-PING-MIB Probe for SmokeP
  }</pre>
 <h3><font SIZE="-1">SAMPLE CONFIGURATIONS NOTE</font></h3>
 <p>This configuration allows the &#8220;pinger&#8221; community full access to the DISMAN-PING-MIB. There is information in the description of <code>pingCtlOwnerIndex</code> in <font SIZE="-1">RFC 4560 </font>(&lt;<a rel="nofollow" href="http://tools.ietf.org/html/rfc4560">http://tools.ietf.org/html/rfc4560</a>&gt;) about using the vacmViewTreeFamilyTable to further restrict access. The author has not tried this method.</p>
+</p>

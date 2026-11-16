@@ -14,10 +14,10 @@ description: "call_netdevice_notifiers – call all network notifier blocks"
 <p><i>val</i></p>
 <dl>
 <dd>
-<dd>value passed unmodified to notifier function</dl>
+</dd><dd>value passed unmodified to notifier function</dd></dl>
 <p> <i>dev</i></p>
 <dl>
-<dd>net_device pointer passed unmodified to notifier function</dl>
+<dd>net_device pointer passed unmodified to notifier function</dd></dl>
 <h2>Description</h2>
 <p>Call all network notifier blocks. Parameters and return value are as for <code>raw_notifier_call_chain</code>.</p>
 <h2>Copyright</h2>

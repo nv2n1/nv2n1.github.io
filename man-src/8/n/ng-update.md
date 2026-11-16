@@ -16,18 +16,18 @@ description: "ng-update – Initng runlevel configuration tool."
 <p>ng-update allows you to control/show which services are started by initng. Yo can add and delete services to/from different runlevels. To find out which services are available take a look at /etc/initng/[daemon|net|system].</p>
 <h2>Options</h2>
 <dl>
-<dt><code>a, add</code></p>
-<dd>Add one or more scripts to one or more runlevels. If runlevel is left blank the script will be added to every runlevel.</p>
-<dt><code>d, del</code></p>
-<dd>Delete one or more scripts from one or more runlevels. If runlevel is left blank the script will be deleted from every runlevel.</p>
-<dt><code>s, show, view</code></p>
-<dd>Shows the scripts started in the passed runlevel(s).</p>
-<dt><code>script</code></p>
+<dt><code>a, add</code></dt>
+<dd>Add one or more scripts to one or more runlevels. If runlevel is left blank the script will be added to every runlevel.</dd>
+<dt><code>d, del</code></dt>
+<dd>Delete one or more scripts from one or more runlevels. If runlevel is left blank the script will be deleted from every runlevel.</dd>
+<dt><code>s, show, view</code></dt>
+<dd>Shows the scripts started in the passed runlevel(s).</dd>
+<dt><code>script</code></dt>
 <dd>A script found in /etc/initng/[daemon|net|system] which should be added/removed.<br />
- The form is [daemon|net|system]/script_without_i. Take a look in the examples section.</p>
-<dt><code>runlevel</code></p>
+ The form is [daemon|net|system]/script_without_i. Take a look in the examples section.</dd>
+<dt><code>runlevel</code></dt>
 <dd>The runlevel the script(s) should be added to/deleted from. Normally this should be <i>&quot;default&quot;</i>, some times <i>&quot;system&quot;</i>.<br />
- Take a look at <i>/etc/initng/*.runlevel</i></dl>
+ Take a look at <i>/etc/initng/*.runlevel</i></dd></dl>
 <h2>Examples</h2>
 <p>Use <code>ng-update add system/alsasound default</code> to add <i>alsasound</i> to the runlevel default.<br />
  Use <code>ng-update del system/alsasound</code> to remove <i>alsasound</i> from every runlevel.<br />

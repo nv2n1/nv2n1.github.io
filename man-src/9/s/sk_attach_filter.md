@@ -15,11 +15,11 @@ sk_attach_filter - attach a socket filter
 <h2>Arguments</h2>
 
 <i>fprog</i>
-<dl><dd><dd>the filter program</dl>
+<dl><dd></dd><dd>the filter program</dd></dl>
  
 
  <i>sk</i>
-<dl><dd>the socket to use</dl>
+<dl><dd>the socket to use</dd></dl>
 
 <h2>Description</h2>
 

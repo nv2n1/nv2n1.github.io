@@ -15,7 +15,7 @@ netdev_reset_queue - reset the packets and bytes count of a network device
 <h2>Arguments</h2>
 
 <i>dev_queue</i>
-<dl><dd><dd>network device</dl>
+<dl><dd></dd><dd>network device</dd></dl>
 
 <h2>Description</h2>
 

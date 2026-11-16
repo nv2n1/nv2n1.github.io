@@ -14,10 +14,10 @@ description: "Tcl_Main, Tcl_SetMainLoop – main program and event loop definiti
 <code>Tcl_SetMainLoop</code>(<i>mainLoopProc</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>int <i>argc</i> (in) Number of elements in <i>argv</i>.</p>
-<dd>char <i>*argv[]</i> (in) Array of strings containing command-line arguments.</p>
-<dd>Tcl_AppInitProc <i>*appInitProc</i> (in) Address of an application-specific initialization procedure. The value for this argument is usually <code>Tcl_AppInit</code>.</p>
-<dd>Tcl_MainLoopProc <i>*mainLoopProc</i> (in) Address of an application-specific event loop procedure. </p>
+<dd>int <i>argc</i> (in) Number of elements in <i>argv</i>.</dd>
+<dd>char <i>*argv[]</i> (in) Array of strings containing command-line arguments.</dd>
+<dd>Tcl_AppInitProc <i>*appInitProc</i> (in) Address of an application-specific initialization procedure. The value for this argument is usually <code>Tcl_AppInit</code>.</dd>
+<dd>Tcl_MainLoopProc <i>*mainLoopProc</i> (in) Address of an application-specific event loop procedure. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>Tcl_Main</code> can serve as the main program for Tcl-based shell applications. A &#8220;shell application&#8221; is a program like tclsh or wish that supports both interactive interpretation of Tcl and evaluation of a script contained in a file given as a command line argument. <code>Tcl_Main</code> is offered as a convenience to developers of shell applications, so they do not have to reproduce all of the code for proper initialization of the Tcl library and interactive shell operation. Other styles of embedding Tcl in an application are not supported by <code>Tcl_Main</code>. Those must be achieved by calling lower level functions in the Tcl library directly. </p>
@@ -32,14 +32,14 @@ description: "Tcl_Main, Tcl_SetMainLoop – main program and event loop definiti
 <dl COMPACT>
 <dd>
 <pre>typedef int Tcl_AppInitProc(Tcl_Interp *<i>interp</i>);</pre>
-</dl>
+</dd></dl>
 <p> <i>AppInitProc</i> is almost always a pointer to <code>Tcl_AppInit</code>; for more details on this procedure, see the documentation for <code>Tcl_AppInit</code>. </p>
 <p> When the <i>appInitProc</i> is finished, <code>Tcl_Main</code> enters one of its two modes. If a startup script has been provided, <code>Tcl_Main</code> attempts to evaluate it. Otherwise, interactive mode begins with examination of the variable <i>tcl_rcFileName</i> in the master interpreter. If that variable exists and holds the name of a readable file, the contents of that file are evaluated in the master interpreter. Then interactive operations begin, with prompts and command evaluation results written to the standard output channel, and commands read from the standard input channel and then evaluated. The prompts written to the standard output channel may be customized by defining the Tcl variables <i>tcl_prompt1</i> and <i>tcl_prompt2</i> as described in the documentation for <code>tclsh</code>. The prompts and command evaluation results are written to the standard output channel only if the Tcl variable <i>tcl_interactive</i> in the master interpreter holds a non-zero integer value. </p>
 <p> <code>Tcl_SetMainLoop</code> allows setting an event loop procedure to be run. This allows, for example, Tk to be dynamically loaded and set its event loop. The event loop will run following the startup script. If you are in interactive mode, setting the main loop procedure will cause the prompt to become fileevent based and then the loop procedure is called. When the loop procedure returns in interactive mode, interactive operation will continue. The main loop procedure must have an interface that matches the type <code>Tcl_MainLoopProc</code>:</p>
 <dl COMPACT>
 <dd>
 <pre>typedef void Tcl_MainLoopProc(void);</pre>
-</dl>
+</dd></dl>
 <p> <code>Tcl_Main</code> does not return. Normally a program based on <code>Tcl_Main</code> will terminate when the <code>exit</code> command is evaluated. In interactive mode, if an EOF or channel error is encountered on the standard input channel, then <code>Tcl_Main</code> itself will evaluate the <code>exit</code> command after the main loop procedure (if any) returns. In non-interactive mode, after <code>Tcl_Main</code> evaluates the startup script, and the main loop procedure (if any) returns, <code>Tcl_Main</code> will also evaluate the <code>exit</code> command. </p>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/1-tclsh/">tclsh</a>(1), <a href="/docs/linux/man/3-tcl_getstdchannel/">Tcl_GetStdChannel</a>(3), <a href="/docs/linux/man/3-tcl_standardchannels/">Tcl_StandardChannels</a>(3), <a href="/docs/linux/man/3-tcl_appinit/">Tcl_AppInit</a>(3), exit(n) </p>

@@ -10,15 +10,11 @@ description: "std::clamp – std::clamp"
 <p>std::clamp &#8211; std::clamp</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class T&gt;
     (1)(since C++ 17)
-
         constexpr const T &amp;clamp(const T &amp;v, const T &amp;lo, const T &amp;hi);
-
 template &lt;class T, class Compare&gt;
 (2)(since C++ 17)
-
     constexpr const T &amp;clamp(const T &amp;v, const T &amp;lo, const T &amp;hi, Compare comp);</code></pre>
 <p>1) If v compares less than lo, returns lo; otherwise if hi compares less than v, returns hi; otherwise returns v. Uses operator&lt; to compare the values.<br />
 2) Same as <code>(1)</code>, but uses comp to compare the values.<br />
@@ -63,16 +59,11 @@ Only works for floating-point T if NaNs are avoided. </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cstdint&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;random&gt;
 int main()
-
 {
     std::mt19937 g(std::random_device{}());
     std::uniform_int_distribution&lt;&gt; d(-300, 300);

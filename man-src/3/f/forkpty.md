@@ -31,8 +31,8 @@ Link with - lutil.
 <h2>ERRORS</h2>
 <p> <code>openpty</code>() fails if:</p>
 <dl>
-<dt><code>ENOENT</code></p>
-<dd> There are no available terminals.</dl>
+<dt><code>ENOENT</code></dt>
+<dd> There are no available terminals.</dd></dl>
 <p> <code>login_tty</code>() fails if <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) fails to set <i>fd</i> to the controlling terminal of the calling process. </p>
 <p> <code>forkpty</code>() fails if either <code>openpty</code>() or <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) fails.</p>
 <h2>ATTRIBUTES</h2>

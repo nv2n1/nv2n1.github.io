@@ -14,9 +14,9 @@ description: "gadget_is_zlp_supported – return true iff the hardware supports 
 <p><i>g</i></p>
 <dl>
 <dd>
-<dd>controller to check for quirk</dl>
+</dd><dd>controller to check for quirk</dd></dl>
 <h2>Author</h2>
 <p><code>David Brownell</code> &lt;dbrownell [at] users.sourceforge.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

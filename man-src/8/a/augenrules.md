@@ -17,10 +17,10 @@ description: "augenrules – a script that merges component audit rule files"
 <p> The generated file is only copied to <i>/etc/audit/audit.rules</i>, if it differs.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;check</code></p>
-<dd>test if rules have changed and need updating without overwriting audit.rules.</p>
-<dt><code>&#8211;load</code></p>
-<dd>load old or newly built rules into the kernel. </p>
+<dt><code>&#8211;check</code></dt>
+<dd>test if rules have changed and need updating without overwriting audit.rules.</dd>
+<dt><code>&#8211;load</code></dt>
+<dd>load old or newly built rules into the kernel. </dd>
 </dl>
 <h2>Files</h2>
 <p>/etc/audit/rules.d/ /etc/audit/audit.rules</p>

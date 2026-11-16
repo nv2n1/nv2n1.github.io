@@ -10,32 +10,32 @@ description: "XGetWindowAttributes, XGetGeometry, XWindowAttributes – get curr
 <p>XGetWindowAttributes, XGetGeometry, XWindowAttributes &#8211; get current window attribute or geometry and current window attributes structure </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>Status XGetWindowAttributes(Display *<i>display</i>, Window <i>w</i>, XWindowAttributes *<i>window_attributes_return</i>);</p>
-<dd>Status XGetGeometry(Display *<i>display</i>, Drawable <i>d</i>, Window *<i>root_return</i>, int *<i>x_return</i>, int *<i>y_return</i>, unsigned int *<i>width_return</i>, unsigned int *<i>height_return</i>, unsigned int *<i>border_width_return</i>, unsigned int *<i>depth_return</i>);</dl>
+<dd>Status XGetWindowAttributes(Display *<i>display</i>, Window <i>w</i>, XWindowAttributes *<i>window_attributes_return</i>);</dd>
+<dd>Status XGetGeometry(Display *<i>display</i>, Drawable <i>d</i>, Window *<i>root_return</i>, int *<i>x_return</i>, int *<i>y_return</i>, unsigned int *<i>width_return</i>, unsigned int *<i>height_return</i>, unsigned int *<i>border_width_return</i>, unsigned int *<i>depth_return</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>border_width_return</i></p>
-<dd>Returns the border width in pixels.</p>
-<dt><i>d</i></p>
-<dd>Specifies the drawable, which can be a window or a pixmap.</p>
-<dt><i>depth_return</i></p>
-<dd>Returns the depth of the drawable (bits per pixel for the object).</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>root_return</i></p>
-<dd>Returns the root window.</p>
-<dt><i>w</i></p>
-<dd>Specifies the window whose current attributes you want to obtain.</p>
-<dt><i>width_return</i></p>
+<dt><i>border_width_return</i></dt>
+<dd>Returns the border width in pixels.</dd>
+<dt><i>d</i></dt>
+<dd>Specifies the drawable, which can be a window or a pixmap.</dd>
+<dt><i>depth_return</i></dt>
+<dd>Returns the depth of the drawable (bits per pixel for the object).</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>root_return</i></dt>
+<dd>Returns the root window.</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the window whose current attributes you want to obtain.</dd>
+<dt><i>width_return</i></dt>
 <dd>
-<dt><i>height_return</i></p>
-<dd>Return the drawable&#8217;s dimensions (width and height).</p>
-<dt><i>window_attributes_return</i></p>
-<dd>Returns the specified window&#8217;s attributes in the <code>XWindowAttributes</code> structure.</p>
-<dt><i>x_return</i></p>
+</dd><dt><i>height_return</i></dt>
+<dd>Return the drawable&#8217;s dimensions (width and height).</dd>
+<dt><i>window_attributes_return</i></dt>
+<dd>Returns the specified window&#8217;s attributes in the <code>XWindowAttributes</code> structure.</dd>
+<dt><i>x_return</i></dt>
 <dd>
-<dt><i>y_return</i></p>
-<dd>Return the x and y coordinates that define the location of the drawable. For a window, these coordinates specify the upper-left outer corner relative to its parent&#8217;s origin. For pixmaps, these coordinates are always zero.</dl>
+</dd><dt><i>y_return</i></dt>
+<dd>Return the x and y coordinates that define the location of the drawable. For a window, these coordinates specify the upper-left outer corner relative to its parent&#8217;s origin. For pixmaps, these coordinates are always zero.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XGetWindowAttributes</code> function returns the current attributes for the specified window to an <code>XWindowAttributes</code> structure. It returns a nonzero status on success; otherwise, it returns a zero status. </p>
 <p> <code>XGetWindowAttributes</code> can generate <code>BadDrawable</code> and <code>BadWindow</code> errors. </p>
@@ -129,10 +129,10 @@ description: "XGetWindowAttributes, XGetGeometry, XWindowAttributes – get curr
 <p> The screen member is set to a screen pointer that gives you a back pointer to the correct screen. This makes it easier to obtain the screen information without having to loop over the root window fields to see which field matches.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadDrawable</code></p>
-<dd>A value for a Drawable argument does not name a defined Window or Pixmap.</p>
-<dt><code>BadWindow</code></p>
-<dd>A value for a Window argument does not name a defined Window.</dl>
+<dt><code>BadDrawable</code></dt>
+<dd>A value for a Drawable argument does not name a defined Window or Pixmap.</dd>
+<dt><code>BadWindow</code></dt>
+<dd>A value for a Window argument does not name a defined Window.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xquerypointer/">XQueryPointer</a>(3), <a href="/docs/linux/man/3-xquerytree/">XQueryTree</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

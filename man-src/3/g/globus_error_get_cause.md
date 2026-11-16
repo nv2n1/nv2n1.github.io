@@ -38,109 +38,109 @@ description: "Error Data Accessors and Modifiers –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>error</i> The error from which to retrieve the causative error.</dl>
+</dt><dd> <i>error</i> The error from which to retrieve the causative error.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The underlying error object if it exists, NULL if it doesn&#8217;t.</dl>
+</dt><dd> The underlying error object if it exists, NULL if it doesn&#8217;t.</dd></dl>
 <h3>char* globus_error_get_long_desc (globus_object_t *error)</h3>
 <p> Retrieve the long error description from a generic globus error object. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>error</i> The error from which to retrieve the description</dl>
+</dt><dd> <i>error</i> The error from which to retrieve the description</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The long error description of the object</dl>
+</dt><dd> The long error description of the object</dd></dl>
 <h3>char* globus_error_get_short_desc (globus_object_t *error)</h3>
 <p> Retrieve the short error description from a generic globus error object. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>error</i> The error from which to retrieve the description</dl>
+</dt><dd> <i>error</i> The error from which to retrieve the description</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The short error description of the object</dl>
+</dt><dd> The short error description of the object</dd></dl>
 <h3><code>globus_module_descriptor_t</code>* globus_error_get_source (globus_object_t *error)</h3>
 <p> Retrieve the originating module descriptor from a error object. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>error</i> The error from which to retrieve the module descriptor</dl>
+</dt><dd> <i>error</i> The error from which to retrieve the module descriptor</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The originating module descriptor.</dl>
+</dt><dd> The originating module descriptor.</dd></dl>
 <h3>int globus_error_get_type (globus_object_t *error)</h3>
 <p> Retrieve the error type from a generic globus error object. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>error</i> The error from which to retrieve the error type</dl>
+</dt><dd> <i>error</i> The error from which to retrieve the error type</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The error type of the object</dl>
+</dt><dd> The error type of the object</dd></dl>
 <h3>void globus_error_set_cause (globus_object_t *error, globus_object_t *causal_error)</h3>
 <p> Set the causative error in a error object. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>error</i> The error object for which to set the causative error.<br />
- <i>causal_error</i> The causative error.</dl>
+</dt><dd> <i>error</i> The error object for which to set the causative error.<br />
+ <i>causal_error</i> The causative error.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> void</dl>
+</dt><dd> void</dd></dl>
 <h3>void globus_error_set_long_desc (globus_object_t *error, const char *long_desc_format, &#8230;)</h3>
 <p> Set the long error description in a generic globus error object. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>error</i> The error object for which to set the description<br />
- <i>long_desc_format</i> Longer format string giving a more detailed explanation of the error.</dl>
+</dt><dd> <i>error</i> The error object for which to set the description<br />
+ <i>long_desc_format</i> Longer format string giving a more detailed explanation of the error.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> void</dl>
+</dt><dd> void</dd></dl>
 <h3>void globus_error_set_short_desc (globus_object_t *error, const char *short_desc_format, &#8230;)</h3>
 <p> Set the short error description in a generic globus error object. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>error</i> The error object for which to set the description<br />
+</dt><dd> <i>error</i> The error object for which to set the description<br />
  <i>short_desc_format</i> Short format string giving a succinct description of the error. To be passed on to the user.<br />
- <i>&#8230;</i> Arguments for the format string.</dl>
+ <i>&#8230;</i> Arguments for the format string.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> void</dl>
+</dt><dd> void</dd></dl>
 <h3>void globus_error_set_source (globus_object_t *error, <code>globus_module_descriptor_t</code> *source_module)</h3>
 <p> Set the originating module descriptor in a error object. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>error</i> The error object for which to set the causative error<br />
- <i>source_module</i> The originating module descriptor</dl>
+</dt><dd> <i>error</i> The error object for which to set the causative error<br />
+ <i>source_module</i> The originating module descriptor</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> void</dl>
+</dt><dd> void</dd></dl>
 <h3>void globus_error_set_type (globus_object_t *error, const inttype)</h3>
 <p> Set the error type in a generic globus error object. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>error</i> The error object for which to set the error type<br />
- <i>type</i> The error type</dl>
+</dt><dd> <i>error</i> The error object for which to set the error type<br />
+ <i>type</i> The error type</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> void</dl>
+</dt><dd> void</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAY">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAY">Author</a></dt>
+<dd></dd></dl>

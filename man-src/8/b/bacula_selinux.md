@@ -63,9 +63,9 @@ description: "bacula_selinux – Security Enhanced Linux Policy for the bacula p
 <p> Policy governs the access confined processes have to these ports. SELinux bacula policy is very flexible allowing users to setup their bacula processes in as secure a method as possible. </p>
 <p> The following port types are defined for bacula: </p>
 <dl>
-<dt><code>bacula_port_t</code></p>
+<dt><code>bacula_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 9103 udp 9103</dl>
+</dd><dd>Default Defined Ports: tcp 9103 udp 9103</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type bacula_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>bacula_spool_t</code> </p>
@@ -123,8 +123,8 @@ description: "bacula_selinux – Security Enhanced Linux Policy for the bacula p
 <p> <code>bacula_admin_exec_t</code> </p>
 <p> &#8211; Set files with the bacula_admin_exec_t type, if you want to transition an executable to the bacula_admin_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/bat, /usr/sbin/bconsole </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/bat, /usr/sbin/bconsole </dd>
 </dl>
 <p> <code>bacula_etc_t</code> </p>
 <p> &#8211; Set files with the bacula_etc_t type, if you want to store bacula files in the /etc directories. </p>
@@ -139,8 +139,8 @@ description: "bacula_selinux – Security Enhanced Linux Policy for the bacula p
 <p> <code>bacula_store_t</code> </p>
 <p> &#8211; Set files with the bacula_store_t type, if you want to treat the files as bacula store data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/bacula(/.*)?, /var/bacula(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/bacula(/.*)?, /var/bacula(/.*)? </dd>
 </dl>
 <p> <code>bacula_tmp_t</code> </p>
 <p> &#8211; Set files with the bacula_tmp_t type, if you want to store bacula temporary files in the /tmp directories. </p>

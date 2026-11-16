@@ -19,52 +19,52 @@ description: "setarch – change reported architecture in new program environmen
 <h2>Options</h2>
 <p><code>&#8211;list</code></p>
 <dl>
-<dd>List the architectures that <code>setarch</code> knows about. Whether <code>setarch</code> can actually set each of these architectures depends on the running kernel.</dl>
+<dd>List the architectures that <code>setarch</code> knows about. Whether <code>setarch</code> can actually set each of these architectures depends on the running kernel.</dd></dl>
 <p> <code>&#8211;uname-2.6</code></p>
 <dl>
-<dd>Causes the <i>program</i> to see a kernel version number beginning with 2.6. Turns on <code>UNAME26</code>.</dl>
+<dd>Causes the <i>program</i> to see a kernel version number beginning with 2.6. Turns on <code>UNAME26</code>.</dd></dl>
 <p> <code>-v</code>, <code>&#8211;verbose</code></p>
 <dl>
-<dd>Be verbose.</dl>
+<dd>Be verbose.</dd></dl>
 <p> <code>-3</code>, <code>&#8211;3gb</code></p>
 <dl>
-<dd>Specifies <i>program</i> should use a maximum of 3GB of address space. Supported on x86. Turns on <code>ADDR_LIMIT_3GB</code>.</dl>
+<dd>Specifies <i>program</i> should use a maximum of 3GB of address space. Supported on x86. Turns on <code>ADDR_LIMIT_3GB</code>.</dd></dl>
 <p> <code>&#8211;4gb</code></p>
 <dl>
-<dd>This option has no effect. It is retained for backward compatibility only, and may be removed in future releases.</dl>
+<dd>This option has no effect. It is retained for backward compatibility only, and may be removed in future releases.</dd></dl>
 <p> <code>-B</code>, <code>&#8211;32bit</code></p>
 <dl>
-<dd>Limit the address space to 32 bits to emulate hardware. Supported on ARM and Alpha. Turns on <code>ADDR_LIMIT_32BIT</code>.</dl>
+<dd>Limit the address space to 32 bits to emulate hardware. Supported on ARM and Alpha. Turns on <code>ADDR_LIMIT_32BIT</code>.</dd></dl>
 <p> <code>-F</code>, <code>&#8211;fdpic-funcptrs</code></p>
 <dl>
-<dd>Treat user-space function pointers to signal handlers as pointers to address descriptors. This option has no effect on architectures that do not support <code>FDPIC</code> ELF binaries. In kernel v4.14 support is limited to ARM, Blackfin, Fujitsu FR-V, and SuperH CPU architectures.</dl>
+<dd>Treat user-space function pointers to signal handlers as pointers to address descriptors. This option has no effect on architectures that do not support <code>FDPIC</code> ELF binaries. In kernel v4.14 support is limited to ARM, Blackfin, Fujitsu FR-V, and SuperH CPU architectures.</dd></dl>
 <p> <code>-I</code>, <code>&#8211;short-inode</code></p>
 <dl>
-<dd>Obsolete bug emulation flag. Turns on <code>SHORT_INODE</code>.</dl>
+<dd>Obsolete bug emulation flag. Turns on <code>SHORT_INODE</code>.</dd></dl>
 <p> <code>-L</code>, <code>&#8211;addr-compat-layout</code></p>
 <dl>
-<dd>Provide legacy virtual address space layout. Use when the <i>program</i> binary does not have <code>PT_GNU_STACK</code> ELF header. Turns on <code>ADDR_COMPAT_LAYOUT</code>.</dl>
+<dd>Provide legacy virtual address space layout. Use when the <i>program</i> binary does not have <code>PT_GNU_STACK</code> ELF header. Turns on <code>ADDR_COMPAT_LAYOUT</code>.</dd></dl>
 <p> <code>-R</code>, <code>&#8211;addr-no-randomize</code></p>
 <dl>
-<dd>Disables randomization of the virtual address space. Turns on <code>ADDR_NO_RANDOMIZE</code>.</dl>
+<dd>Disables randomization of the virtual address space. Turns on <code>ADDR_NO_RANDOMIZE</code>.</dd></dl>
 <p> <code>-S</code>, <code>&#8211;whole-seconds</code></p>
 <dl>
-<dd>Obsolete bug emulation flag. Turns on <code>WHOLE_SECONDS</code>.</dl>
+<dd>Obsolete bug emulation flag. Turns on <code>WHOLE_SECONDS</code>.</dd></dl>
 <p> <code>-T</code>, <code>&#8211;sticky-timeouts</code></p>
 <dl>
-<dd>This makes <code><a href="/docs/linux/man/2-select/">select</a></code>(2), <code><a href="/docs/linux/man/2-pselect/">pselect</a></code>(2), and <code><a href="/docs/linux/man/2-ppoll/">ppoll</a></code>(2) system calls preserve the timeout value instead of modifying it to reflect the amount of time not slept when interrupted by a signal handler. Use when <i>program</i> depends on this behavior. For more details see the timeout description in <code><a href="/docs/linux/man/2-select/">select</a></code>(2) manual page. Turns on <code>STICKY_TIMEOUTS</code>.</dl>
+<dd>This makes <code><a href="/docs/linux/man/2-select/">select</a></code>(2), <code><a href="/docs/linux/man/2-pselect/">pselect</a></code>(2), and <code><a href="/docs/linux/man/2-ppoll/">ppoll</a></code>(2) system calls preserve the timeout value instead of modifying it to reflect the amount of time not slept when interrupted by a signal handler. Use when <i>program</i> depends on this behavior. For more details see the timeout description in <code><a href="/docs/linux/man/2-select/">select</a></code>(2) manual page. Turns on <code>STICKY_TIMEOUTS</code>.</dd></dl>
 <p> <code>-X</code>, <code>&#8211;read-implies-exec</code></p>
 <dl>
-<dd>If this is set then <code>mmap</code>(3p) <code>PROT_READ</code> will also add the <code>PROT_EXEC</code> bit &#8211; as expected by legacy x86 binaries. Notice that the ELF loader will automatically set this bit when it encounters a legacy binary. Turns on <code>READ_IMPLIES_EXEC</code>.</dl>
+<dd>If this is set then <code>mmap</code>(3p) <code>PROT_READ</code> will also add the <code>PROT_EXEC</code> bit &#8211; as expected by legacy x86 binaries. Notice that the ELF loader will automatically set this bit when it encounters a legacy binary. Turns on <code>READ_IMPLIES_EXEC</code>.</dd></dl>
 <p> <code>-Z</code>, <code>&#8211;mmap-page-zero</code></p>
 <dl>
-<dd>SVr4 bug emulation that will set <code>mmap</code>(3p) page zero as read-only. Use when <i>program</i> depends on this behavior, and the source code is not available to be fixed. Turns on <code>MMAP_PAGE_ZERO</code>.</dl>
+<dd>SVr4 bug emulation that will set <code>mmap</code>(3p) page zero as read-only. Use when <i>program</i> depends on this behavior, and the source code is not available to be fixed. Turns on <code>MMAP_PAGE_ZERO</code>.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
-<dd>Display version information and exit.</dl>
+<dd>Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Display help text and exit.</dl>
+<dd>Display help text and exit.</dd></dl>
 <h2>Example</h2>
 <dl>
 <dd>
@@ -72,7 +72,7 @@ description: "setarch – change reported architecture in new program environmen
 setarch ppc32 rpmbuild --target=ppc --rebuild foo.src.rpm
 setarch ppc32 -v -vL3 rpmbuild --target=ppc --rebuild bar.src.rpm
 setarch ppc32 --32bit rpmbuild --target=ppc --rebuild foo.src.rpm</pre>
-</dl>
+</dd></dl>
 <h2>Authors</h2>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/2-personality/">personality</a></code>(2), <code><a href="/docs/linux/man/2-select/">select</a></code>(2)</p>

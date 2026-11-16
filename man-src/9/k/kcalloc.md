@@ -15,15 +15,15 @@ kcalloc - allocate memory for an array. The memory is set to zero.
 <h2>Arguments</h2>
 
 <i>n</i>
-<dl><dd><dd>number of elements.</dl>
+<dl><dd></dd><dd>number of elements.</dd></dl>
  
 
  <i>size</i>
-<dl><dd>element size.</dl>
+<dl><dd>element size.</dd></dl>
  
 
  <i>flags</i>
-<dl><dd>the type of memory to allocate (see kmalloc).</dl>
+<dl><dd>the type of memory to allocate (see kmalloc).</dd></dl>
 
 <h2>Copyright</h2>
 

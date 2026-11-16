@@ -15,10 +15,10 @@ description: "picomus – Minimal Unsatisfiable Core (MUS) generator"
 <p> PicoMUS is a satisfiability (SAT) solver that generates a minimal unsatisfiable core, using the PicoSAT library. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> print this command line option summary and exit </p>
-<dt><code>-v</code></p>
-<dd> enable verbose output </p>
+<dt><code>-h</code></dt>
+<dd> print this command line option summary and exit </dd>
+<dt><code>-v</code></dt>
+<dd> enable verbose output </dd>
 </dl>
 <p> If no input filename is given, or the input filename is &quot;-&quot;, then standard input is used. If the output filename is &quot;-&quot;, then standard output is used. If no output filename is given, then the MUS is computed but not printed. </p>
 <h2>CONFORMING TO</h2>

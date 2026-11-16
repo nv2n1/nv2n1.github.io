@@ -16,42 +16,42 @@ description: "stap-merge – systemtap per-cpu binary merger"
 <h2>OPTIONS</h2>
 <p> The systemtap merge executable supports the following options.</p>
 <dl>
-<dt><code>-v</code></p>
-<dd> Verbose mode, displays three extra fields per set of collected data. </p>
+<dt><code>-v</code></dt>
+<dd> Verbose mode, displays three extra fields per set of collected data. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>[cpu</code>number,<code>sequence</code>number<code>of</code>data,<code>the</code>length<code>of</code>the<code>data</code>set]
 </pre>
-</dl>
-<dt><code>-o</code><i> OUTPUT_FILENAME</i></p>
+</dd></dl>
+<dt><code>-o</code><i> OUTPUT_FILENAME</i></dt>
 <dd>
 <p> Specify the name of the file you would like the output to be redirected into. If this option is not specified than the output will be pushed to standard out. </p>
-</dl>
+</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ stap -v -b -e 'probe syscall.open { printf(&quot;%s(%d) open
 &quot;,
 execname(), pid()) }' 
 </pre>
-</dl>
+</dd></dl>
 <p> This should result in several <i>stpd_cpu</i> files (each labled with a number representing which cpu the file was produced from). </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ stap-merge -v stpd_cpu0 stpd_cpu1
 </pre>
-</dl>
+</dd></dl>
 <p> Running the stap-merge program in the same directory as the stap script earlier in the example, will produce an ordered sequence of packets with the three part label for each set of data. This result will be pushed through the standard output. An output file could have been specified using the &quot;-o&quot; option. </p>
 <h2>FILES</h2>
 <dl>
-<dt>Important files and their corresponding paths can be located in the</p>
-<dd> stappaths (7) manual page. </p>
+<dt>Important files and their corresponding paths can be located in the</dt>
+<dd> stappaths (7) manual page. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <pre>

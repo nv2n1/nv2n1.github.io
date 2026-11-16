@@ -15,8 +15,8 @@ description: "XmTextGetEditable — A Text function that accesses the edit permi
 <h2>Description</h2>
 <p><code>XmTextGetEditable</code> accesses the edit permission state of the Text widget.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the Text widget ID</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the Text widget ID</dd></dl>
 <p> For a complete definition of Text and its associated resources, see <code><a href="/docs/linux/man/3-xmtext/">XmText</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns a Boolean value that indicates the state of the <code>XmNeditable</code> resource.</p>

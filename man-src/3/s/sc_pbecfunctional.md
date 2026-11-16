@@ -11,7 +11,6 @@ description: "sc::PBECFunctional –"
 <p> Implements the Perdew-Burke-Ernzerhof (PBE) correlation functional.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;functional.h&gt;</code></pre>
 <p> Inherits <code>sc::DenFunctional</code>.</p>
 <h3>Public Member Functions</h3>
@@ -24,17 +23,8 @@ description: "sc::PBECFunctional –"
 <p> void <code>set_spin_polarized</code> (int)</p>
 <h3>Protected Member Functions</h3>
 <pre><code>void init_constants ()
-
-
-
 double rho_deriv (double rho_a, double rho_b, double mdr, double ec_local, double ec_local_dra)
-
-
-
 double gab_deriv (double rho, double phi, double mdr, double ec_local)
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Ref</code>&lt; <code>LSDACFunctional</code> &gt; <code>local_</code> </p>
 <p> double <code>gamma</code> </p>

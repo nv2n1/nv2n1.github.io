@@ -98,8 +98,8 @@ description: "pcp_pmlogger_selinux – Security Enhanced Linux Policy for the pc
 <p> <code>pcp_pmlogger_exec_t</code> </p>
 <p> &#8211; Set files with the pcp_pmlogger_exec_t type, if you want to transition an executable to the pcp_pmlogger_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/pmlogger, /usr/share/pcp/lib/pmlogger, /usr/libexec/pcp/bin/pmlogger </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/pmlogger, /usr/share/pcp/lib/pmlogger, /usr/libexec/pcp/bin/pmlogger </dd>
 </dl>
 <p> <code>pcp_pmlogger_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the pcp_pmlogger_initrc_exec_t type, if you want to transition an executable to the pcp_pmlogger_initrc_t domain. </p>

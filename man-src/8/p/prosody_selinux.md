@@ -57,9 +57,9 @@ description: "prosody_selinux – Security Enhanced Linux Policy for the prosody
 <p> Policy governs the access confined processes have to these ports. SELinux prosody policy is very flexible allowing users to setup their prosody processes in as secure a method as possible. </p>
 <p> The following port types are defined for prosody: </p>
 <dl>
-<dt><code>prosody_port_t</code></p>
+<dt><code>prosody_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 5280-5281</dl>
+</dd><dd>Default Defined Ports: tcp 5280-5281</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type prosody_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -107,8 +107,8 @@ description: "prosody_selinux – Security Enhanced Linux Policy for the prosody
 <p> <code>prosody_exec_t</code> </p>
 <p> &#8211; Set files with the prosody_exec_t type, if you want to transition an executable to the prosody_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/prosody, /usr/bin/prosodyctl </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/prosody, /usr/bin/prosodyctl </dd>
 </dl>
 <p> <code>prosody_log_t</code> </p>
 <p> &#8211; Set files with the prosody_log_t type, if you want to treat the data as prosody log data, usually stored under the /var/log directory. </p>

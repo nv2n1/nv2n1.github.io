@@ -17,34 +17,34 @@ description: "mm3d – Misfit Model 3D"
 <h2>OPTIONS</h2>
 <p> These programs follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below. For a complete description, see the Info files.</p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Print command line help and exit</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Print version information and exit</p>
-<dt><code>-b, &#8211;batch</code></p>
-<dd> Batch mode (exit after processing command line)</p>
-<dt><code>-s, &#8211;save</code></p>
-<dd> Save command line changes to model files</p>
-<dt><code>&#8211;convert [format]</code></p>
-<dd> Save models to format [format]</p>
-<dt><code>&#8211;no-plugins</code></p>
-<dd> Disable all plugins</p>
-<dt><code>&#8211;no-plugin [foo]</code></p>
-<dd> Disable plugin [foo]</p>
-<dt><code>&#8211;sysinfo</code></p>
-<dd> Display system information (for bug reports)</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Display debug messages in console</p>
-<dt><code>&#8211;warnings</code></p>
-<dd> Display warning messages in console</p>
-<dt><code>&#8211;errors</code></p>
-<dd> Display error messages in console</p>
-<dt><code>&#8211;no-debug</code></p>
-<dd> Do not display debug messages in console</p>
-<dt><code>&#8211;no-warnings</code></p>
-<dd> Do not display warning messages in console</p>
-<dt><code>&#8211;no-errors</code></p>
-<dd> Do not display error messages in console</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print command line help and exit</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Print version information and exit</dd>
+<dt><code>-b, &#8211;batch</code></dt>
+<dd> Batch mode (exit after processing command line)</dd>
+<dt><code>-s, &#8211;save</code></dt>
+<dd> Save command line changes to model files</dd>
+<dt><code>&#8211;convert [format]</code></dt>
+<dd> Save models to format [format]</dd>
+<dt><code>&#8211;no-plugins</code></dt>
+<dd> Disable all plugins</dd>
+<dt><code>&#8211;no-plugin [foo]</code></dt>
+<dd> Disable plugin [foo]</dd>
+<dt><code>&#8211;sysinfo</code></dt>
+<dd> Display system information (for bug reports)</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Display debug messages in console</dd>
+<dt><code>&#8211;warnings</code></dt>
+<dd> Display warning messages in console</dd>
+<dt><code>&#8211;errors</code></dt>
+<dd> Display error messages in console</dd>
+<dt><code>&#8211;no-debug</code></dt>
+<dd> Do not display debug messages in console</dd>
+<dt><code>&#8211;no-warnings</code></dt>
+<dd> Do not display warning messages in console</dd>
+<dt><code>&#8211;no-errors</code></dt>
+<dd> Do not display error messages in console</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-blender/">blender</a></code>(1), <code>wings3d</code>(1).</p>
 <h2>AUTHOR</h2>

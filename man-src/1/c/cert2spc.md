@@ -15,12 +15,12 @@ description: "cert2spc – Transform multiple X.509 certificates to a Software P
 <p> Combine a list of X.509 certificates or X.509 CRL (Certificate Revocation List) into a Software Publisher Certificate (PKCS#7 file). The SPC file is required for signing a PE file (like an assembly) using signcode.</p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><i>certificate</i></p>
-<dd> One (or more) X.509 certificate to add (space separated).</p>
-<dt><i>crl</i></p>
-<dd> One (or more) X.509 CRL to add (space separated).</p>
-<dt><i>output.spc</i></p>
-<dd> Software Publisher Certificate to output. If the specified file exists it will be overwritten.</dl>
+<dt><i>certificate</i></dt>
+<dd> One (or more) X.509 certificate to add (space separated).</dd>
+<dt><i>crl</i></dt>
+<dd> One (or more) X.509 CRL to add (space separated).</dd>
+<dt><i>output.spc</i></dt>
+<dd> Software Publisher Certificate to output. If the specified file exists it will be overwritten.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Sebastien Pouliot</p>
 <h2>COPYRIGHT</h2>

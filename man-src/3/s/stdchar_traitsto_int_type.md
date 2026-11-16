@@ -11,7 +11,6 @@ std::char_traits&lt;CharT&gt;::to_int_type - std::char_traits&lt;CharT&gt;::to_i
 <h2>Synopsis</h2>
 
 <pre><code>static int_type to_int_type( char_type c );                     (until C++11)
-
 static constexpr int_type to_int_type( char_type c ) noexcept;  (since C++11)</code></pre> 
 Converts a value of char_type to int_type. 
 

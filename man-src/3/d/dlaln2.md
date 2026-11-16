@@ -19,7 +19,7 @@ description: "dlaln2.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 DLALN2 solves a system of the form(ca A - w D) X = s B
                                                    or (ca A * *T - w D) X = s B with possible scaling("s") and
@@ -34,11 +34,11 @@ is less
     of(ca A - w D) are less than SMIN,
     SMIN *identity will be used instead of(ca A - w D).If only one singular value is less than SMIN, one element of(ca A - w D) will be perturbed enough to make the smallest singular value roughly SMIN.If both singular values are at least SMIN, (ca A - w D) will not be perturbed.In any case, the perturbation will be at most some small multiple of max(SMIN, ulp *norm(ca A - w D)).The singular values are computed by infinity - norm approximations, and thus will only be correct to a factor of 2 or so.Note : all input quantities are assumed to be smaller than overflow by a reasonable factor.(See BIGNUM.)
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>LTRANS</i> </p>
+</dt><dd> <i>LTRANS</i> </dd>
 <pre>
           LTRANS is LOGICAL
           =.TRUE.:  A-transpose will be used.
@@ -155,14 +155,14 @@ is less
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 218 of file dlaln2.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

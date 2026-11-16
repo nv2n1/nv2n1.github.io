@@ -15,24 +15,24 @@ description: "HTMLLinker – tool to fix up href references in HTML files"
 <p> <code>HTMLLinker</code> accepts the following options (multiple <i>input files</i>, <i>-l</i> and <i>-d</i> options are allowed): </p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd>Prints a short list of available options.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Displays version information.</p>
-<dt><code>&#8211;verbose</code></p>
-<dd>Prints additional information while processing.</p>
-<dt><code>-Warn</code><i> [YES|NO]</i></p>
-<dd>Print additional information about unresolved links.</p>
-<dt><code>-LinksMarker</code><i> [xxx]</i></p>
-<dd>Only fix links with attribute <code>rel=</code><i>xxx</i></p>
-<dt><code>-FixupAllLinks YES</code></p>
-<dd>Attempt to fix all links (not only those that are marked with <i>-LinksMarker</i>.</p>
-<dt><code>-PathMappingsFile </code><i>file</i></p>
-<dd>Read the relocation mappings from <i>file</i> (in dictionary format).</p>
-<dt><code>-PathMappings &#8216;{</code><i>path</i><code>=</code><i>another_path</i><code>;}&#8217;</code></p>
-<dd>Use the specified path mappings.</p>
-<dt><code>-BuildRelocationFileForDir</code><i> dir</i></p>
-<dd>Build a relocation file for the directory <i>dir</i> and save it into <i>dir</i>/table.htmlink. This option is special and prevents any other processing by the linker. </p>
+<dt><code>&#8211;help</code></dt>
+<dd>Prints a short list of available options.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Displays version information.</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd>Prints additional information while processing.</dd>
+<dt><code>-Warn</code><i> [YES|NO]</i></dt>
+<dd>Print additional information about unresolved links.</dd>
+<dt><code>-LinksMarker</code><i> [xxx]</i></dt>
+<dd>Only fix links with attribute <code>rel=</code><i>xxx</i></dd>
+<dt><code>-FixupAllLinks YES</code></dt>
+<dd>Attempt to fix all links (not only those that are marked with <i>-LinksMarker</i>.</dd>
+<dt><code>-PathMappingsFile </code><i>file</i></dt>
+<dd>Read the relocation mappings from <i>file</i> (in dictionary format).</dd>
+<dt><code>-PathMappings &#8216;{</code><i>path</i><code>=</code><i>another_path</i><code>;}&#8217;</code></dt>
+<dd>Use the specified path mappings.</dd>
+<dt><code>-BuildRelocationFileForDir</code><i> dir</i></dt>
+<dd>Build a relocation file for the directory <i>dir</i> and save it into <i>dir</i>/table.htmlink. This option is special and prevents any other processing by the linker. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-autogsdoc/">autogsdoc</a></code>(1), <code><a href="/docs/linux/man/7-gnustep/">GNUstep</a></code>(7). </p>

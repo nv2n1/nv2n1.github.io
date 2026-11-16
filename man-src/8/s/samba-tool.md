@@ -10,55 +10,55 @@ description: "samba-tool – Main Samba administration tool."
 <p>samba-tool &#8211; Main Samba administration tool.</p>
 <h2>Synopsis</h2>
 <dl>
-<dd>samba-tool [-h] [-W myworkgroup] [-U user] [-d debuglevel] [&#8211;v]</dl>
+<dd>samba-tool [-h] [-W myworkgroup] [-U user] [-d debuglevel] [&#8211;v]</dd></dl>
 <h2>Description</h2>
 <p>This tool is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite.</p>
 <h2>Options</h2>
 <p>-h|&#8211;help</p>
 <dl>
-<dd>Show this help message and exit</dl>
+<dd>Show this help message and exit</dd></dl>
 <p> &#8211;realm=REALM</p>
 <dl>
-<dd>Set the realm name</dl>
+<dd>Set the realm name</dd></dl>
 <p> &#8211;simple-bind-dn=DN</p>
 <dl>
-<dd>DN to use for a simple bind</dl>
+<dd>DN to use for a simple bind</dd></dl>
 <p> &#8211;password=PASSWORD</p>
 <dl>
-<dd>Password</dl>
+<dd>Password</dd></dl>
 <p> -U USERNAME|&#8211;username=USERNAME</p>
 <dl>
-<dd>Username</dl>
+<dd>Username</dd></dl>
 <p> -W WORKGROUP|&#8211;workgroup=WORKGROUP</p>
 <dl>
-<dd>Workgroup</dl>
+<dd>Workgroup</dd></dl>
 <p> -N|&#8211;no-pass</p>
 <dl>
-<dd>Don&#8217;t ask for a password</dl>
+<dd>Don&#8217;t ask for a password</dd></dl>
 <p> -k KERBEROS|&#8211;kerberos=KERBEROS</p>
 <dl>
-<dd>Use Kerberos</dl>
+<dd>Use Kerberos</dd></dl>
 <p> &#8211;ipaddress=IPADDRESS</p>
 <dl>
-<dd>IP address of the server</dl>
+<dd>IP address of the server</dd></dl>
 <p> -d|&#8211;debuglevel=level</p>
 <dl>
-<dd><i>level</i> is an integer from 0 to 10. The default value if this parameter is not specified is 1. </p>
+<dd><i>level</i> is an integer from 0 to 10. The default value if this parameter is not specified is 1. </dd>
 <p> The higher this value, the more detail will be logged to the log files about the activities of the server. At level 0, only critical errors and serious warnings will be logged. Level 1 is a reasonable level for day-to-day running &#8211; it generates a small amount of information about operations carried out. </p>
 <p> Levels above 1 will generate considerable amounts of log data, and should only be used when investigating a problem. Levels above 3 are designed for use only by developers and generate HUGE amounts of log data, most of which is extremely cryptic. </p>
 <p> Note that specifying this parameter here will override the m[blue]<code>log level</code>m[] parameter in the smb.conf file.</dl>
 <p> -V|&#8211;version</p>
 <dl>
-<dd>Prints the program version number.</dl>
+<dd>Prints the program version number.</dd></dl>
 <p> -s|&#8211;configfile=&lt;configuration file&gt;</p>
 <dl>
-<dd>The file specified contains the configuration details required by the server. The information in this file includes server-specific information such as what printcap file to use, as well as descriptions of all the services that the server is to provide. See smb.conf for more information. The default configuration file name is determined at compile time.</dl>
+<dd>The file specified contains the configuration details required by the server. The information in this file includes server-specific information such as what printcap file to use, as well as descriptions of all the services that the server is to provide. See smb.conf for more information. The default configuration file name is determined at compile time.</dd></dl>
 <p> -l|&#8211;log-basename=logdirectory</p>
 <dl>
-<dd>Base directory name for log/debug files. The extension <code>&quot;.progname&quot;</code> will be appended (e.g. log.smbclient, log.smbd, etc&#8230;). The log file is never removed by the client.</dl>
+<dd>Base directory name for log/debug files. The extension <code>&quot;.progname&quot;</code> will be appended (e.g. log.smbclient, log.smbd, etc&#8230;). The log file is never removed by the client.</dd></dl>
 <p> &#8211;option=&lt;name&gt;=&lt;value&gt;</p>
 <dl>
-<dd>Set the <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) option &quot;&lt;name&gt;&quot; to value &quot;&lt;value&gt;&quot; from the command line. This overrides compiled-in defaults and options read from the configuration file.</dl>
+<dd>Set the <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) option &quot;&lt;name&gt;&quot; to value &quot;&lt;value&gt;&quot; from the command line. This overrides compiled-in defaults and options read from the configuration file.</dd></dl>
 <h2>Commands</h2>
 <h3>dbcheck</h3>
 <p>Check the local AD database for errors.</p>

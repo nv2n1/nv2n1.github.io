@@ -15,7 +15,7 @@ init_dummy_netdev - init a dummy network device for NAPI
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device to init</dl>
+<dl><dd></dd><dd>device to init</dd></dl>
 
 <h2>Description</h2>
 

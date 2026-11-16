@@ -15,31 +15,31 @@ snd_mpu401_uart_new - create an MPU401-UART instance
 <h2>Arguments</h2>
 
 <i>card</i>
-<dl><dd><dd>the card instance</dl>
+<dl><dd></dd><dd>the card instance</dd></dl>
  
 
  <i>device</i>
-<dl><dd>the device index, zero-based</dl>
+<dl><dd>the device index, zero-based</dd></dl>
  
 
  <i>hardware</i>
-<dl><dd>the hardware type, MPU401_HW_XXXX</dl>
+<dl><dd>the hardware type, MPU401_HW_XXXX</dd></dl>
  
 
  <i>port</i>
-<dl><dd>the base address of MPU401 port</dl>
+<dl><dd>the base address of MPU401 port</dd></dl>
  
 
  <i>info_flags</i>
-<dl><dd>bitflags MPU401_INFO_XXX</dl>
+<dl><dd>bitflags MPU401_INFO_XXX</dd></dl>
  
 
  <i>irq</i>
-<dl><dd>the ISA irq number, -1 if not to be allocated</dl>
+<dl><dd>the ISA irq number, -1 if not to be allocated</dd></dl>
  
 
  <i>rrawmidi</i>
-<dl><dd>the pointer to store the new rawmidi instance</dl>
+<dl><dd>the pointer to store the new rawmidi instance</dd></dl>
 
 <h2>Description</h2>
 

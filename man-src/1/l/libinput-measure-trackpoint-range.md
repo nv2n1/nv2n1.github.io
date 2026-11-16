@@ -18,8 +18,8 @@ description: "libinput-measure-trackpoint-range – measure the delta range of a
 <h2>OPTIONS</h2>
 <p> If a device node is given, this tool opens that device node. Otherwise, this tool searches for the first node that looks like a trackpoint and uses that node.</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Print help</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Print help</dd></dl>
 <h2>LIBINPUT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-libinput/">libinput</a>(1)</code> suite </p>
 <h2>Index</h2>

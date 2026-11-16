@@ -10,13 +10,12 @@ description: "remquo, remquof, remquol – remainder and part of quotient"
 <p>remquo, remquof, remquol &#8211; remainder and part of quotient</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;math.h&gt;
-
 double remquo(double x, double y, int *quo);
 float remquof(float x, float y, int *quo);
 long double remquol(long double x, long double y, int *quo);</code></pre>
 <p> Link with <i>-lm</i>. Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>remquo</code>(), <code>remquof</code>(), <code>remquol</code>():</p>
 <dl>
-<dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+<dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <h2>Description</h2>
 <p>These functions compute the remainder and part of the quotient upon division of <i>x</i> by <i>y</i>. A few bits of the quotient are stored via the <i>quo</i> pointer. The remainder is returned as the function result. </p>
 <p> The value of the remainder is the same as that computed by the <code><a href="/docs/linux/man/3-remainder/">remainder</a></code>(3) function. </p>
@@ -31,8 +30,8 @@ long double remquol(long double x, long double y, int *quo);</code></pre>
 <p>See <code><a href="/docs/linux/man/7-math_error/">math_error</a></code>(7) for information on how to determine whether an error has occurred when calling these functions. </p>
 <p> The following errors can occur:</p>
 <dl>
-<dt>Domain error: <i>x</i> is an infinity or <i>y</i> is 0, and the other argument is not a NaN</p>
-<dd>An invalid floating-point exception (<code>FE_INVALID</code>) is raised.</dl>
+<dt>Domain error: <i>x</i> is an infinity or <i>y</i> is 0, and the other argument is not a NaN</dt>
+<dd>An invalid floating-point exception (<code>FE_INVALID</code>) is raised.</dd></dl>
 <p> These functions do not set <i>errno</i>.</p>
 <h2>Versions</h2>
 <p>These functions first appeared in glibc in version 2.1.</p>

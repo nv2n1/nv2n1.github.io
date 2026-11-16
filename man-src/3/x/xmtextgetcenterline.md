@@ -15,8 +15,8 @@ description: "XmTextGetCenterline — Return the height (length) of a character 
 <h2>Description</h2>
 <p><code>XmTextGetCenterline</code> accesses the x position of the centerline in the <code>Text</code> widget, relative to the x position of the top of the widget.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the <code>Text</code> widget ID.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the <code>Text</code> widget ID.</dd></dl>
 <h2>Return Value</h2>
 <p>In the case of horizontal writing, this function accesses 0. </p>
 <p> In the case of vertical writing, this function accesses the x position of the first centerline in the Text widget, relative to the x position of the left of the widget. The calculation takes into account the margin width, shadow thickness, highlight thickness, and a half of font width of the first font(set) in the fontlist used for drawing text.</p>

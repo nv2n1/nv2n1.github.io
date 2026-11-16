@@ -17,27 +17,27 @@ description: "r.what.color – Queries colors for a raster map layer."
  <code>r.what.color</code> [-<code>i</code>] <code>input</code>=<i>string</i> [<code>value</code>=<i>float</i>[,<i>float</i>,&#8230;]] [<code>format</code>=<i>string</i>] [&#8211;<code>verbose</code>] [&#8211;<code>quiet</code>]</p>
 <h3>Flags:</h3>
 <dl>
-<dt><code>-i</code></p>
+<dt><code>-i</code></dt>
 <dd>
- Read values from stdin</p>
-<dt><code>&#8211;verbose</code></p>
+ Read values from stdin</dd>
+<dt><code>&#8211;verbose</code></dt>
 <dd>
- Verbose module output</p>
-<dt><code>&#8211;quiet</code></p>
+ Verbose module output</dd>
+<dt><code>&#8211;quiet</code></dt>
 <dd>
- Quiet module output</dl>
+ Quiet module output</dd></dl>
 <h3>Parameters:</h3>
 <dl>
-<dt><code>input</code>=<i>string</i></p>
+<dt><code>input</code>=<i>string</i></dt>
 <dd>
- Name of existing raster map to query colors</p>
-<dt><code>value</code>=<i>float[,float</i>,&#8230;]</p>
+ Name of existing raster map to query colors</dd>
+<dt><code>value</code>=<i>float[,float</i>,&#8230;]</dt>
 <dd>
- Values to query colors for</p>
-<dt><code>format</code>=<i>string</i></p>
+ Values to query colors for</dd>
+<dt><code>format</code>=<i>string</i></dt>
 <dd>
  Output format (printf-style)<br />
- Default: <i>%d:%d:%d</i></dl>
+ Default: <i>%d:%d:%d</i></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <i>r.what.color</i> outputs the color associated with user-specified category values in a raster input map. </p>
 <p> Values may be specified either using the <code>values=</code> option, or by specifying the <code>-i</code> flag and passing the values on stdin, one per line. </p>
@@ -59,13 +59,11 @@ description: "r.what.color – Queries colors for a raster map layer."
  1500: 1f:7f:df </p>
 <p> Common formats: </p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd> Tcl/Tk: format=&quot;#%02x%02x%02x&quot;</p>
+</dt><dd> Tcl/Tk: format=&quot;#%02x%02x%02x&quot;</dd>
 <dt>
-<dd> WxPython: format=&#8217;&quot;#%02x%02x%02x&quot;&#8217; or format=&#8217;&quot;(%d,%d,%d)&quot;&#8217;</dl>
+</dt><dd> WxPython: format=&#8217;&quot;#%02x%02x%02x&quot;&#8217; or format=&#8217;&quot;(%d,%d,%d)&quot;&#8217;</dd></dl>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <i> r.what </i></p>

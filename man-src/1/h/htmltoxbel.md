@@ -14,9 +14,9 @@ description: "htmlToXBel – a tool to convert bookmarks stored in the html form
 <p><code>htmlToXBel</code> is a tool to convert bookmarks stored in the html format into the xbel format. Many browser have the ability to export their bookmarks as a html file. htmlToXBel takes that file as an input and will output those bookmarks in the XML Bookmark Exchange Language (XBEL) format. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-o outFile</code></p>
-<dd>Write the resulting XBEL to the file <code>outFile</code></p>
-<dd></dl>
+<dt><code>-o outFile</code></dt>
+<dd>Write the resulting XBEL to the file <code>outFile</code></dd>
+<dd></dd></dl>
 <h2>Bugs</h2>
 <p>Please report bugs to <i><a rel="nofollow" href="http://code.google.com/p/arora/issues/list">http://code.google.com/p/arora/issues/list</a></i>. </p>
 <h2>Author</h2>

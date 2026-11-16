@@ -28,10 +28,10 @@ The principle format of the <i>qtask</i> file is that of a tabulated list. Each 
 
 The following <i>qtask</i> file 
 
- <pre><dl><dt><dd>netscape -l a=sol-sparc64 -v DISPLAY=myhost:0
+ <pre><dl><dt></dt><dd>netscape -l a=sol-sparc64 -v DISPLAY=myhost:0
 grep -l h=filesurfer
 verilog -l veri_lic=1
-</dl></pre>designates the applications netscape, grep and verilog for interactive remote execution through Grid Engine. Netscape is requested to run only on Solaris64 architectures with the DISPLAY environment variable set to 'myhost:0', grep only runs on the host named 'filesurfer' and verilog requests availability of a verilog license in order to get executed remotely.
+</dd></dl></pre>designates the applications netscape, grep and verilog for interactive remote execution through Grid Engine. Netscape is requested to run only on Solaris64 architectures with the DISPLAY environment variable set to 'myhost:0', grep only runs on the host named 'filesurfer' and verilog requests availability of a verilog license in order to get executed remotely.
 
 <h2>See Also</h2>
 

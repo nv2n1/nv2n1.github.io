@@ -11,11 +11,9 @@ std::allocator_arg_t - std::allocator_arg_t
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;memory&gt;
-
     struct allocator_arg_t {
 };
 (since C++ 11)(until C++ 17)
-
     struct allocator_arg_t {
     explicit allocator_arg_t() = default;
 };

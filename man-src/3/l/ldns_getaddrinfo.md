@@ -16,8 +16,8 @@ description: "ldns_getaddrinfo"
 <p> uint16_t ldns_getaddrinfo(ldns_resolver *res, ldns_rdf *node, ldns_rr_class c, ldns_rr_list **list); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_getaddrinfo</i>()</p>
-<dd>This function is a wrapper function for ldns_get_rr_list_name_by_addr and ldns_get_rr_list_addr_by_name. It&#8217;s name is from the getaddrinfo() library call. It tries to mimic that call, but without the lowlevel stuff. .br <code>res</code>: The resolver. If this value is NULL then a resolver will be created by ldns_getaddrinfo. .br <code>node</code>: the name or ip address to look up .br <code>c</code>: the class to look in .br <code>list</code>: put the found RR&#8217;s in this list .br Returns the number of RR found.</dl>
+<dt> <i>ldns_getaddrinfo</i>()</dt>
+<dd>This function is a wrapper function for ldns_get_rr_list_name_by_addr and ldns_get_rr_list_addr_by_name. It&#8217;s name is from the getaddrinfo() library call. It tries to mimic that call, but without the lowlevel stuff. .br <code>res</code>: The resolver. If this value is NULL then a resolver will be created by ldns_getaddrinfo. .br <code>node</code>: the name or ip address to look up .br <code>c</code>: the class to look in .br <code>list</code>: put the found RR&#8217;s in this list .br Returns the number of RR found.</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

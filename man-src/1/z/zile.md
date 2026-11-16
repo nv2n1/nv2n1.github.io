@@ -16,22 +16,22 @@ description: "Zile – Zile Is Lossy Emacs"
 <p> Run Zile, the lightweight Emacs clone. </p>
 <p> Initialization options:</p>
 <dl>
-<dt><code>&#8211;no-init-file</code>, <code>-q</code></p>
-<dd> do not load ~/.zile</p>
-<dt><code>&#8211;funcall</code>, <code>-f</code> FUNC</p>
-<dd> call Zile Lisp function FUNC with no arguments</p>
-<dt><code>&#8211;load</code>, <code>-l</code> FILE</p>
-<dd> load Zile Lisp FILE using the load function</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help message and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> display version information and exit</dl>
+<dt><code>&#8211;no-init-file</code>, <code>-q</code></dt>
+<dd> do not load ~/.zile</dd>
+<dt><code>&#8211;funcall</code>, <code>-f</code> FUNC</dt>
+<dd> call Zile Lisp function FUNC with no arguments</dd>
+<dt><code>&#8211;load</code>, <code>-l</code> FILE</dt>
+<dd> load Zile Lisp FILE using the load function</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help message and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> display version information and exit</dd></dl>
 <p> Action options:</p>
 <dl>
-<dt>FILE</p>
-<dd> visit FILE using find-file</p>
-<dt>+LINE FILE</p>
-<dd> visit FILE using find-file, then go to line LINE</dl>
+<dt>FILE</dt>
+<dd> visit FILE using find-file</dd>
+<dt>+LINE FILE</dt>
+<dd> visit FILE using find-file, then go to line LINE</dd></dl>
 <p> Exit status is 0 if OK, 1 if it cannot start up, for example because of an invalid command-line argument, and 2 if it crashes or runs out of memory.</p>
 <h2>FILES</h2>
 <p> ~/.zile &#8212; user&#8217;s Zile init file </p>

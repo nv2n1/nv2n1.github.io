@@ -28,34 +28,34 @@ description: "docker-container-exec – Run a command in a running container"
 <p> <i>126</i> if the <i>contained command</i> cannot be invoked </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker exec busybox /etc; echo $?
 # exec: &quot;/etc&quot;: permission denied
   docker: Error response from daemon: Contained command could not be invoked
   126
 </pre>
-</dl>
+</dd></dl>
 <p> <i>127</i> if the <i>contained command</i> cannot be found </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker exec busybox foo; echo $?
 # exec: &quot;foo&quot;: executable file not found in $PATH
   docker: Error response from daemon: Contained command not found or does not exist
   127
 </pre>
-</dl>
+</dd></dl>
 <p> <i>Exit code</i> of <i>contained command</i> otherwise </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ docker exec busybox /bin/sh -c 'exit 3' 
 # 3
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-d</code>, <code>&#8211;detach</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Detached mode: run command in the background</p>
 <p> <code>&#8211;detach-keys</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Override the key sequence for detaching a container</p>

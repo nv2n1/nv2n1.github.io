@@ -17,22 +17,22 @@ description: "itpp-config – script to get information about intalled IT++ libr
 <h2>OPTIONS</h2>
 <p> <i>itpp-config</i> accepts the following options: </p>
 <dl>
-<dt><code>&#8211;prefix</code></p>
-<dd> output libitpp installation prefix</p>
-<dt><code>&#8211;exec-prefix</code></p>
-<dd> output libitpp installation exec prefix</p>
-<dt><code>&#8211;debug</code></p>
-<dd> use debugging pre-processor, compiler and linker flags (needs to be used in front of <code>&#8211;cflags</code> and <code>&#8211;libs</code>)</p>
-<dt><code>&#8211;static</code></p>
-<dd> use static linker flags (needs to be used in front of <code>&#8211;libs</code>)</p>
-<dt><code>&#8211;cflags</code></p>
-<dd> output pre-processor and compiler flags</p>
-<dt><code>&#8211;libs</code></p>
-<dd> output linker flags</p>
-<dt><code>&#8211;help</code></p>
-<dd> display brief help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version number </p>
+<dt><code>&#8211;prefix</code></dt>
+<dd> output libitpp installation prefix</dd>
+<dt><code>&#8211;exec-prefix</code></dt>
+<dd> output libitpp installation exec prefix</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> use debugging pre-processor, compiler and linker flags (needs to be used in front of <code>&#8211;cflags</code> and <code>&#8211;libs</code>)</dd>
+<dt><code>&#8211;static</code></dt>
+<dd> use static linker flags (needs to be used in front of <code>&#8211;libs</code>)</dd>
+<dt><code>&#8211;cflags</code></dt>
+<dd> output pre-processor and compiler flags</dd>
+<dt><code>&#8211;libs</code></dt>
+<dd> output linker flags</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display brief help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version number </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Adam Piatyszek &lt;ediap [at] users.sourceforge.net&gt; as a text file, then converted to man format by txt2tags. </p>

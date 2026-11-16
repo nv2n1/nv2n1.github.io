@@ -10,74 +10,74 @@ description: "amadmin – administrative interface to control Amanda backups"
 <p>amadmin &#8211; administrative interface to control Amanda backups</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>amadmin</code> [&#8211;version] [&#8211;no-default] [&#8211;print-source] [&#8211;exact-match] [<code>-o</code>&nbsp;<wbr><i>configoption</i>&#8230;] <i>config</i> <i>command</i> [<i>command_options</i>&#8230;]</dl>
+<dt> <code>amadmin</code> [&#8211;version] [&#8211;no-default] [&#8211;print-source] [&#8211;exact-match] [<code>-o</code>&nbsp;<wbr><i>configoption</i>&#8230;] <i>config</i> <i>command</i> [<i>command_options</i>&#8230;]</dt></dl>
 <h2>Description</h2>
 <p><code>Amadmin</code></p>
-<dd>performs various administrative tasks on the <i>config</i> Amanda configuration. </p>
+<dd>performs various administrative tasks on the <i>config</i> Amanda configuration. </dd>
 <p> See the <code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8) man page for more details about Amanda.</p>
 <h2>Options</h2>
 <p><code>&#8211;version</code></p>
 <dl>
-<dd>Print the version and exit.</dl>
+<dd>Print the version and exit.</dd></dl>
 <p> <code>&#8211;no-default</code></p>
 <dl>
-<dd>Do not print default values for <code>config</code> and <code>disklist</code> commands.</dl>
+<dd>Do not print default values for <code>config</code> and <code>disklist</code> commands.</dd></dl>
 <p> <code>&#8211;print-source</code></p>
 <dl>
-<dd>Print where a value is defined for <code>config</code> and <code>disklist</code> commands.</dl>
+<dd>Print where a value is defined for <code>config</code> and <code>disklist</code> commands.</dd></dl>
 <p> <code>&#8211;exact-match</code></p>
 <dl>
-<dd>The host and disk are parsed as exact values</dl>
+<dd>The host and disk are parsed as exact values</dd></dl>
 <h2>Commands</h2>
 <p>Commands that take a <i>hostname</i> [ <i>disks</i> ] parameter pair operate on all disks in the <code><a href="/docs/linux/man/5-disklist/">disklist</a></code>(5) for that <i>hostname</i> if no disks are specified. Where <i>hostname</i> is also marked as being optional, the command operates on all hosts and disks in the <code><a href="/docs/linux/man/5-disklist/">disklist</a></code>(5) when no hostname is given. Both <i>hostname</i> and <i>disks</i> are match expressions; see <code><a href="/docs/linux/man/7-amanda-match/">amanda-match</a></code>(7) for a description. </p>
 <p> <code>version</code></p>
 <dl>
-<dd>Show the current version and some compile time and runtime parameters. The <i>config</i> parameter must be present but is ignored.</dl>
+<dd>Show the current version and some compile time and runtime parameters. The <i>config</i> parameter must be present but is ignored.</dd></dl>
 <p> <code>estimate</code> [ <i>hostname</i> [ <i>disks</i> ]* ]*</p>
 <dl>
-<dd>Print the server estimate for the dles, each output lines have the following format: </p>
+<dd>Print the server estimate for the dles, each output lines have the following format: </dd>
 <pre> hostname diskname level size</pre>
 <p>hostname</p>
 <dl>
-<dd>The quoted hostname</dl>
+<dd>The quoted hostname</dd></dl>
 <p> diskname</p>
 <dl>
-<dd>The quoted diskname</dl>
+<dd>The quoted diskname</dd></dl>
 <p> level</p>
 <dl>
-<dd>The level of the estimate</dl>
+<dd>The level of the estimate</dd></dl>
 <p> size</p>
 <dl>
-<dd>The estimate size in kbytes</dl>
+<dd>The estimate size in kbytes</dd></dl>
 </dl>
 <p> <code>force-bump</code> [ <i>hostname</i> [ <i>disks</i> ]* ]+</p>
 <dl>
-<dd>Force the <i>disks</i> on <i>hostname</i> to bump to a new incremental level during the next Amanda run.</dl>
+<dd>Force the <i>disks</i> on <i>hostname</i> to bump to a new incremental level during the next Amanda run.</dd></dl>
 <p> <code>force-no-bump</code> [ <i>hostname</i> [ <i>disks</i> ]* ]+</p>
 <dl>
-<dd>Force the <i>disks</i> on <i>hostname</i> to not bump to a new incremental level during the next Amanda run.</dl>
+<dd>Force the <i>disks</i> on <i>hostname</i> to not bump to a new incremental level during the next Amanda run.</dd></dl>
 <p> <code>unforce-bump</code> [ <i>hostname</i> [ <i>disks</i> ]* ]+</p>
 <dl>
-<dd>Undo a previous <code>force-bump</code> or <code>force-no-bump</code> command.</dl>
+<dd>Undo a previous <code>force-bump</code> or <code>force-no-bump</code> command.</dd></dl>
 <p> <code>force</code> [ <i>hostname</i> [ <i>disks</i> ]* ]+</p>
 <dl>
-<dd>Force the <i>disks</i> on <i>hostname</i> to do a full (level 0) backup during the next Amanda run.</dl>
+<dd>Force the <i>disks</i> on <i>hostname</i> to do a full (level 0) backup during the next Amanda run.</dd></dl>
 <p> <code>unforce</code> [ <i>hostname</i> [ <i>disks</i> ]* ]+</p>
 <dl>
-<dd>Undo a previous <code>force</code> command.</dl>
+<dd>Undo a previous <code>force</code> command.</dd></dl>
 <p> <code>reuse</code> <i>tapelabel</i> [ &#8230; ]</p>
 <dl>
-<dd>The tapes listed will be available for reuse at their point in the tape cycle.</dl>
+<dd>The tapes listed will be available for reuse at their point in the tape cycle.</dd></dl>
 <p> <code>no-reuse</code> <i>tapelabel</i> [ &#8230; ]</p>
 <dl>
-<dd>The tapes listed will not be reused when their turn comes up again in the tape cycle. Note that if this causes the number of reusable tapes to drop below the <code>amanda.conf</code> <i>tapecycle</i> value, Amanda will request new tapes until the count is satisfied again. </p>
+<dd>The tapes listed will not be reused when their turn comes up again in the tape cycle. Note that if this causes the number of reusable tapes to drop below the <code>amanda.conf</code> <i>tapecycle</i> value, Amanda will request new tapes until the count is satisfied again. </dd>
 <p> Tape marked <i>no-reuse</i> are available for recovery, marking them <i>no-reuse</i> is a security to be sure amanda will not overwrite them.</dl>
 <p> <code>due</code> [ <i>hostname</i> [ <i>disks</i> ]* ]*</p>
 <dl>
-<dd>Show when the next full dump is due.</dl>
+<dd>Show when the next full dump is due.</dd></dl>
 <p> <code>find</code> [ <code>&#8211;sort</code> <i>hkdlpbfw</i> ] [ <i>hostname</i> [ <i>disks</i> ]* ]*</p>
 <dl>
-<dd>Display all backups currently on tape or in the holding disk. The tape label or holding disk filename, file number, and status are displayed. </p>
+<dd>Display all backups currently on tape or in the holding disk. The tape label or holding disk filename, file number, and status are displayed. </dd>
 <p> The <code>&#8211;sort</code> option changes the sort order using the following flags: </p>
 <pre><i>h</i>: host name
 <i>k</i>: disk name
@@ -90,49 +90,49 @@ description: "amadmin – administrative interface to control Amanda backups"
 <p>An uppercase letter reverses the sort order for that key. The default sort order is <code>hkdlpbfw</code>.</dl>
 <p> <code>holding delete</code> <i>hostname</i> [ <i>disk</i> [ <i>datestamp</i> [ .. ] ] ]</p>
 <dl>
-<dd>Delete holding files matching the given specification. At least a hostname must be provided.</dl>
+<dd>Delete holding files matching the given specification. At least a hostname must be provided.</dd></dl>
 <p> <code>holding list</code> [-l] [-d] [ <i>hostname</i> [ <i>disk</i> [ <i>datestamp</i> [ .. ] ] ] ]</p>
 <dl>
-<dd>List holding files matching the given dump specification, or all holding files if no specification is provided. See <code><a href="/docs/linux/man/7-amanda-match/">amanda-match</a></code>(7) for more information on dump specifications. With &#8216;-l&#8217;, additional information (size, level, and whether the dump is outdated) is provided. With &#8216;-d&#8217;, only outdated dumps are shown. </p>
+<dd>List holding files matching the given dump specification, or all holding files if no specification is provided. See <code><a href="/docs/linux/man/7-amanda-match/">amanda-match</a></code>(7) for more information on dump specifications. With &#8216;-l&#8217;, additional information (size, level, and whether the dump is outdated) is provided. With &#8216;-d&#8217;, only outdated dumps are shown. </dd>
 <p> An outdated holding file is one which is not required for a restore of the <i>most recent</i> dump. Note that outdated dumps may still be required for restores at earlier dates. For example, assume that a DLE had a level 0 on Monday, level 1&#8217;s Tuesday through Thursday, and a level 2 on Friday. Then the files required for a restore of Fridays (the most recent) dump are those from Monday (level 0), Thursday (level 1), and Friday (level 2). Tuesday and Wednesday&#8217;s files are outdated.</dl>
 <p> <code>delete</code> [ <i>hostname</i> [ <i>disks</i> ]* ]+</p>
 <dl>
-<dd>Delete the specified <i>disks</i> on <i>hostname</i> from the Amanda database. </p>
+<dd>Delete the specified <i>disks</i> on <i>hostname</i> from the Amanda database. </dd>
 <dl>
 <dd><font SIZE="+1"> <code>Note</code> </font><br />
- If you do not also remove the disk from the <code><a href="/docs/linux/man/5-disklist/">disklist</a></code>(5) file, Amanda will treat it as a new disk during the next run. </p>
+ If you do not also remove the disk from the <code><a href="/docs/linux/man/5-disklist/">disklist</a></code>(5) file, Amanda will treat it as a new disk during the next run. </dd>
 </dl>
 </dl>
 <p> <code>tape</code></p>
 <dl>
-<dd>Display the tape(s) Amanda expects to write to during the next run. See also <code><a href="/docs/linux/man/8-amcheck/">amcheck</a></code>(8).</dl>
+<dd>Display the tape(s) Amanda expects to write to during the next run. See also <code><a href="/docs/linux/man/8-amcheck/">amcheck</a></code>(8).</dd></dl>
 <p> <code>bumpsize</code></p>
 <dl>
-<dd>Display the current bump threshold parameters, calculated for all backup levels.</dl>
+<dd>Display the current bump threshold parameters, calculated for all backup levels.</dd></dl>
 <p> <code>balance</code> [ <code>&#8211;days</code> <i>&lt;num&gt;</i> ]</p>
 <dl>
-<dd>Display the distribution of full backups throughout the dump schedule.</dl>
+<dd>Display the distribution of full backups throughout the dump schedule.</dd></dl>
 <p> <code>export</code> [ <i>hostname</i> [ <i>disks</i> ]* ]*</p>
 <dl>
-<dd>Convert records from the Amanda database to a text format that may be transmitted to another Amanda machine and <code>import</code>ed.</dl>
+<dd>Convert records from the Amanda database to a text format that may be transmitted to another Amanda machine and <code>import</code>ed.</dd></dl>
 <p> <code>import</code></p>
 <dl>
-<dd>Convert <code>export</code>ed records read from standard input to a form Amanda uses and insert them into the database on this machine.</dl>
+<dd>Convert <code>export</code>ed records read from standard input to a form Amanda uses and insert them into the database on this machine.</dd></dl>
 <p> <code>disklist</code> [ <i>hostname</i> [ <i>disks</i> ]* ]*</p>
 <dl>
-<dd>Display the <code><a href="/docs/linux/man/5-disklist/">disklist</a></code>(5) information for each of the <i>disks</i> on <i>hostname</i> (or all hosts). Mostly used for debugging.</dl>
+<dd>Display the <code><a href="/docs/linux/man/5-disklist/">disklist</a></code>(5) information for each of the <i>disks</i> on <i>hostname</i> (or all hosts). Mostly used for debugging.</dd></dl>
 <p> <code>hosts</code></p>
 <dl>
-<dd>Output a list of distinct hosts in the <code><a href="/docs/linux/man/5-disklist/">disklist</a></code>(5), one per line, for easy use in shell scripts.</dl>
+<dd>Output a list of distinct hosts in the <code><a href="/docs/linux/man/5-disklist/">disklist</a></code>(5), one per line, for easy use in shell scripts.</dd></dl>
 <p> <code>dles</code></p>
 <dl>
-<dd>Output a list of distinct DLEs in the <code><a href="/docs/linux/man/5-disklist/">disklist</a></code>(5), one per line with host and diskname separated by a space, for easy use in shell scripts.</dl>
+<dd>Output a list of distinct DLEs in the <code><a href="/docs/linux/man/5-disklist/">disklist</a></code>(5), one per line with host and diskname separated by a space, for easy use in shell scripts.</dd></dl>
 <p> <code>info</code> [ <i>hostname</i> [ <i>disks</i> ]* ]*</p>
 <dl>
-<dd>Display the database record for each of the <i>disks</i> on <i>hostname</i> (or all hosts). Mostly used for debugging.</dl>
+<dd>Display the database record for each of the <i>disks</i> on <i>hostname</i> (or all hosts). Mostly used for debugging.</dd></dl>
 <p> <code>-o </code><i>configoption</i></p>
 <dl>
-<dd>See the &quot;CONFIGURATION OVERRIDE&quot; section in <code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8).</dl>
+<dd>See the &quot;CONFIGURATION OVERRIDE&quot; section in <code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8).</dd></dl>
 <h2>Examples</h2>
 <p>Request three specific file systems on <i>machine-a</i> get a full level 0 backup during the next Amanda run. </p>
 <pre>$ amadmin daily force machine-a / /var /usr

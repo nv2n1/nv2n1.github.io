@@ -14,14 +14,14 @@ description: "rio_request_inb_pwrite – request inbound port-write message serv
 <p><i>rdev</i></p>
 <dl>
 <dd>
-<dd>RIO device to which register inbound port-write callback routine</dl>
+</dd><dd>RIO device to which register inbound port-write callback routine</dd></dl>
 <p> <i>pwcback</i></p>
 <dl>
-<dd>Callback routine to execute when port-write is received</dl>
+<dd>Callback routine to execute when port-write is received</dd></dl>
 <h2>Description</h2>
 <p>Binds a port-write callback function to the RapidIO device. Returns 0 if the request has been satisfied.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

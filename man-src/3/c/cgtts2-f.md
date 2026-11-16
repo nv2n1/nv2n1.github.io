@@ -22,10 +22,10 @@ description: "cgtts2.f –"
  A * X = B, A**T * X = B, or A**H * X = B,
  with a tridiagonal matrix A using the LU factorization computed
  by CGTTRF.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ITRANS</i> </p>
+<dd><i>ITRANS</i> </dd>
 <pre> ITRANS is INTEGER
  Specifies the form of the system of equations.
  = 0: A * X = B (No transpose)
@@ -68,13 +68,13 @@ description: "cgtts2.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> Definition at line 129 of file cgtts2.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

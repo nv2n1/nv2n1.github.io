@@ -14,16 +14,16 @@ description: "crypto_blkcipher_encrypt_iv – encrypt plaintext with dedicated I
 <p><i>desc</i></p>
 <dl>
 <dd>
-<dd>reference to the block cipher handle with meta data</dl>
+</dd><dd>reference to the block cipher handle with meta data</dd></dl>
 <p> <i>dst</i></p>
 <dl>
-<dd>scatter/gather list that is filled by the cipher operation with the ciphertext</dl>
+<dd>scatter/gather list that is filled by the cipher operation with the ciphertext</dd></dl>
 <p> <i>src</i></p>
 <dl>
-<dd>scatter/gather list that holds the plaintext</dl>
+<dd>scatter/gather list that holds the plaintext</dd></dl>
 <p> <i>nbytes</i></p>
 <dl>
-<dd>number of bytes of the plaintext to encrypt.</dl>
+<dd>number of bytes of the plaintext to encrypt.</dd></dl>
 <h2>Description</h2>
 <p>Encrypt plaintext data with the use of an IV that is solely used for this cipher operation. Any previously set IV is not used. </p>
 <p> The blkcipher_desc data structure must be filled by the caller and can reside on the stack. The caller must fill desc as follows: desc.tfm is filled with the block cipher handle; desc.info is filled with the IV to be used for the current operation; desc.flags is filled with either CRYPTO_TFM_REQ_MAY_SLEEP or 0.</p>
@@ -32,8 +32,8 @@ description: "crypto_blkcipher_encrypt_iv – encrypt plaintext with dedicated I
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

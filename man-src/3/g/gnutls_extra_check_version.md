@@ -14,8 +14,8 @@ description: "gnutls_extra_check_version – checks the libgnutls-extra version"
 <p> <code>const char * gnutls_extra_check_version(const char * </code><i>req_version</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>const char * req_version</p>
-<dd> version string to compare with, or <code>NULL</code>.</dl>
+<dt>const char * req_version</dt>
+<dd> version string to compare with, or <code>NULL</code>.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Check GnuTLS Extra Library version. </p>
 <p> See <code>GNUTLS_EXTRA_VERSION</code> for a suitable <i>req_version</i> string.</p>
@@ -30,6 +30,6 @@ description: "gnutls_extra_check_version – checks the libgnutls-extra version"
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gnutls</code></dl>
+</dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

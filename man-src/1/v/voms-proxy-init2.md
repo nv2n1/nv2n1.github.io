@@ -11,10 +11,10 @@ description: "voms-proxy-init – create a proxy with VOMS extensions"
 <p> voms-proxy-init &#8211; create a proxy with VOMS extensions</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>voms-proxy-init</code> [options] </p>
+<dt> <code>voms-proxy-init</code> [options] </dt>
 </dl>
 <h2>DESCRIPTION</h2>
-<dd>The voms-proxy-init generates a proxy with the VOMS information included in a non critical extension. </p>
+<dd>The voms-proxy-init generates a proxy with the VOMS information included in a non critical extension. </dd>
 <h2>OPTIONS</h2>
 <p> Options may be specified indifferently with either a &quot;-&quot; or &quot;&#8211;&quot; prefix. The options from -help to -out are present for compatibility with grid-proxy-init, and have the exact same meaning. The meaning of the other ones is the following. </p>
 <p> <code>-help</code> </p>

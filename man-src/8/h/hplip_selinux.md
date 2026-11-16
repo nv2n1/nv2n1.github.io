@@ -20,8 +20,8 @@ description: "hplip_selinux – Security Enhanced Linux Policy for the hplip pro
 <p> <code>hplip_exec_t </code> </p>
 <p> &#8211; Set files with the hplip_exec_t type, if you want to transition an executable to the hplip_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/hpijs, /usr/share/hplip/.*.py, /usr/sbin/hp-[^/]+, /usr/lib/cups/backend/hp.*, /usr/sbin/hpiod </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/hpijs, /usr/share/hplip/.*.py, /usr/sbin/hp-[^/]+, /usr/lib/cups/backend/hp.*, /usr/sbin/hpiod </dd>
 </dl>
 <p> <code>hplip_tmp_t </code> </p>
 <p> &#8211; Set files with the hplip_tmp_t type, if you want to store hplip temporary files in the /tmp directories. </p>
@@ -30,8 +30,8 @@ description: "hplip_selinux – Security Enhanced Linux Policy for the hplip pro
 <p> <code>hplip_var_run_t </code> </p>
 <p> &#8211; Set files with the hplip_var_run_t type, if you want to store the hplip files under the /run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/hp.*.pid, /var/run/hp.*.port </p>
+<dt>Paths:</dt>
+<dd>/var/run/hp.*.pid, /var/run/hp.*.port </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanantly change the file context you need to use the <code>semanage fcontext </code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Port Types</h2>
@@ -41,9 +41,9 @@ description: "hplip_selinux – Security Enhanced Linux Policy for the hplip pro
 <p> Policy governs the access confined processes have to these ports. SELinux hplip policy is very flexible allowing users to setup their hplip processes in as secure a method as possible. </p>
 <p> The following port types are defined for hplip: </p>
 <dl>
-<dt><code>hplip_port_t </code></p>
+<dt><code>hplip_port_t </code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 1782,2207,2208,8290,50000,50002,8292,9100,9101,9102,9220,9221,9222,9280,9281,9282,9290,9291</dl>
+</dd><dd>Default Defined Ports: tcp 1782,2207,2208,8290,50000,50002,8292,9100,9101,9102,9220,9221,9222,9280,9281,9282,9290,9291</dd></dl>
 <h2>Process Types</h2>
 <p>SELinux defines process types (domains) for each process running on the system </p>
 <p> You can see the context of a process using the <code>-Z</code> option to <code>psP Policy governs the access confined processes have to files. SELinux hplip policy is very flexible allowing users to setup their hplip processes in as secure a method as possible. </p>

@@ -15,24 +15,24 @@ description: "dspam_admin – Alter DSPAM users preferences"
 <p> <code>dspam_admin</code> is used to alter DSPAM user&#8217;s preferences. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>Add a Preference:</p>
-<dd><code>add preference&nbsp;<wbr></code>[<i>user</i>] [<i>attrib</i>] [<i>value</i>]</p>
-<dt>Set/change a Preference:</p>
-<dd><code>change preference&nbsp;<wbr></code>[<i>user</i>] [<i>attrib</i>] [<i>value</i>]</p>
-<dt>Delete a Preference:</p>
-<dd><code>delete preference&nbsp;<wbr></code>[<i>user</i>] [<i>attrib</i>] [<i>value</i>]</p>
-<dt>List Preferences:</p>
-<dd><code>list preference&nbsp;<wbr></code>[<i>user</i>] [<i>attrib</i>] [<i>value</i>]</p>
-<dt>Aggregate Preferences:</p>
-<dd><code>aggregate preference&nbsp;<wbr></code>[<i>user</i>]</p>
+<dt>Add a Preference:</dt>
+<dd><code>add preference&nbsp;<wbr></code>[<i>user</i>] [<i>attrib</i>] [<i>value</i>]</dd>
+<dt>Set/change a Preference:</dt>
+<dd><code>change preference&nbsp;<wbr></code>[<i>user</i>] [<i>attrib</i>] [<i>value</i>]</dd>
+<dt>Delete a Preference:</dt>
+<dd><code>delete preference&nbsp;<wbr></code>[<i>user</i>] [<i>attrib</i>] [<i>value</i>]</dd>
+<dt>List Preferences:</dt>
+<dd><code>list preference&nbsp;<wbr></code>[<i>user</i>] [<i>attrib</i>] [<i>value</i>]</dd>
+<dt>Aggregate Preferences:</dt>
+<dd><code>aggregate preference&nbsp;<wbr></code>[<i>user</i>]</dd>
 </dl>
 <p> Use&nbsp;<wbr><code>default&nbsp;<wbr></code>as username to modify the default (uid 0) user preference. </p>
 <h2>EXIT VALUE</h2>
 <dl>
-<dt><code>0</code></p>
-<dd> Operation was successful.</p>
-<dt><code>other</code></p>
-<dd> Operation resulted in an error. </p>
+<dt><code>0</code></dt>
+<dd> Operation was successful.</dd>
+<dt><code>other</code></dt>
+<dd> Operation resulted in an error. </dd>
 </dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2002-2012 DSPAM Project<br />

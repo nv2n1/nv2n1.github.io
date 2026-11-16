@@ -17,16 +17,16 @@ description: "po2debconf – merge master templates file and PO files"
 <p> Lines beginning with a number sign (<tt>&quot;#&quot;</tt>) are comments in templates files. They are useful to give hints to translators, and are discarded by <code>po2debconf</code>. Special comments have been introduced in <tt>&quot;po-debconf&quot;</tt> 1.0. They are in the form <tt>&quot;#flag:</tt>directive<tt>&quot;</tt>. The <tt>&quot;#flag:partial&quot;</tt> is the only directive interpreted by <code>po2debconf</code>. Normally when a field is composed of several paragraphs (like <tt>&quot;__Choices&quot;</tt> and <tt>&quot;_Description&quot;</tt>), it is translated if all paragraphs are translated. When a field contains <tt>&quot;#flag:partial&quot;</tt>, translated strings may be mixed with untranslated strings.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display a usage summary and exit.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Process in verbose mode.</p>
-<dt><code>&#8211;podir=</code><font SIZE="-1">DIR</font></p>
-<dd> Set directory for <font SIZE="-1">PO</font> files. Default is to search <font SIZE="-1">PO</font> files in the <i>po</i> subdirectory below the location of the master file.</p>
-<dt><code>-o</code>, <code>&#8211;output=</code><font SIZE="-1">FILE</font></p>
-<dd> Set output filename (default is standard output).</p>
-<dt><code>-e</code>, <code>&#8211;encoding=</code><font SIZE="-1">STRING</font></p>
-<dd> Convert encoding. Argument can take 3 values: <tt>&quot;utf8&quot;</tt> (convert to <font SIZE="-1">UTF-8</font>), <tt>&quot;po&quot;</tt> (do not change encoding) and <tt>&quot;popular&quot;</tt> (convert encoding of input files depending on their language; the <tt>&quot;PODEBCONF_ENCODINGS&quot;</tt> environment variable must point to a name of a file containing the encoding map). </p>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display a usage summary and exit.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Process in verbose mode.</dd>
+<dt><code>&#8211;podir=</code><font SIZE="-1">DIR</font></dt>
+<dd> Set directory for <font SIZE="-1">PO</font> files. Default is to search <font SIZE="-1">PO</font> files in the <i>po</i> subdirectory below the location of the master file.</dd>
+<dt><code>-o</code>, <code>&#8211;output=</code><font SIZE="-1">FILE</font></dt>
+<dd> Set output filename (default is standard output).</dd>
+<dt><code>-e</code>, <code>&#8211;encoding=</code><font SIZE="-1">STRING</font></dt>
+<dd> Convert encoding. Argument can take 3 values: <tt>&quot;utf8&quot;</tt> (convert to <font SIZE="-1">UTF-8</font>), <tt>&quot;po&quot;</tt> (do not change encoding) and <tt>&quot;popular&quot;</tt> (convert encoding of input files depending on their language; the <tt>&quot;PODEBCONF_ENCODINGS&quot;</tt> environment variable must point to a name of a file containing the encoding map). </dd>
 <p> Such a filename looks like: </p>
 <pre>
   #
@@ -54,3 +54,4 @@ description: "po2debconf – merge master templates file and PO files"
   Denis Barbier &lt;barbier [at] linuxfr.org&gt;
 </pre>
 <h2>Index</h2>
+</p>

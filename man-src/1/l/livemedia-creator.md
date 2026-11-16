@@ -38,108 +38,108 @@ description: "livemedia-creator – Create live install media"
 <p> &#8211;make-iso to create a final bootable .iso &#8211;iso to specify the Anaconda install media to use with virt-install &#8211;ks is the kickstart to use to install the system </p>
 <h2>OPTIONAL ARGUMENTS:</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> show this help message and exit </p>
-<dt><code>&#8211;make-iso</code></p>
-<dd> Build a live iso </p>
-<dt><code>&#8211;make-disk</code></p>
-<dd> Build a partitioned disk image </p>
-<dt><code>&#8211;make-fsimage</code></p>
-<dd> Build a filesystem image </p>
-<dt><code>&#8211;make-appliance</code></p>
-<dd> Build an appliance image and XML description </p>
-<dt><code>&#8211;make-ami</code></p>
-<dd> Build an ami image </p>
-<dt><code>&#8211;make-tar</code></p>
-<dd> Build a tar of the root filesystem. Defaults to root.tar.xz </p>
-<dt><code>&#8211;make-pxe-live</code></p>
-<dd> Build a live pxe boot squashfs image </p>
-<dt><code>&#8211;make-ostree-live</code></p>
-<dd> Build a live pxe boot squashfs image of Atomic Host </p>
-<dt><code>&#8211;iso ISO</code></p>
-<dd> Anaconda installation .iso path to use for virt-install </p>
-<dt><code>&#8211;disk-image DISK_IMAGE</code></p>
-<dd> Path to disk image to use for creating final image </p>
-<dt><code>&#8211;fs-image FS_IMAGE</code></p>
-<dd> Path to existing filesystem image to use for creating final image. </p>
-<dt><code>&#8211;qcow2</code></p>
-<dd> Create qcow2 image instead of raw sparse image when making disk images. </p>
-<dt><code>&#8211;qcow2-arg</code></p>
-<dd> Arguments to pass to qemu-img. Pass once for each argument &gt;&gt;&gt;&gt;&gt;&gt;&gt; d04a99e&#8230; livemedia-creator: Add support for making tarfiles </p>
-<dt><code>&#8211;compression</code></p>
-<dd> Compression binary for make-tar. xz, lzma, gzip, and bzip2 are supported. xz is the default. </p>
-<dt><code>&#8211;compress-arg</code></p>
-<dd> Arguments to pass to compression. Pass once for each argument </p>
-<dt><code>&#8211;ks KS</code></p>
-<dd> Kickstart file defining the install. </p>
-<dt><code>&#8211;image-name IMAGE_NAME</code></p>
-<dd> Name of fs/disk image to create. Default is a random name. </p>
-<dt><code>&#8211;image-only</code></p>
-<dd> Exit after creating fs/disk image. </p>
-<dt><code>&#8211;keep-image</code></p>
-<dd> Keep raw disk image after .iso creation </p>
-<dt><code>&#8211;no-virt</code></p>
-<dd> Use Anaconda&#8217;s image install instead of virt-install </p>
-<dt><code>&#8211;proxy PROXY</code></p>
-<dd> proxy URL to use for the install </p>
-<dt><code>&#8211;anaconda-arg ANACONDA_ARGS</code></p>
-<dd> Additional argument to pass to anaconda (no-virt mode). Pass once for eachargument </p>
-<dt><code>&#8211;armplatform ARMPLATFORM</code></p>
-<dd> the platform to use when creating images for ARM, i.e., highbank, mvebu, omap,tegra, etc. </p>
-<dt><code>&#8211;location LOCATION</code></p>
-<dd> location of iso directory tree with initrd.img and vmlinuz. Used to run virt-install with a newer initrd than the iso. </p>
-<dt><code>&#8211;logfile LOGFILE</code></p>
-<dd> Path to logfile </p>
-<dt><code>&#8211;lorax-templates LORAX_TEMPLATES</code></p>
-<dd> Path to mako templates for lorax </p>
-<dt><code>&#8211;tmp TMP</code></p>
-<dd> Top level temporary directory </p>
-<dt><code>&#8211;resultdir RESULT_DIR</code></p>
-<dd> Directory to copy the resulting images and iso into. Defaults to the temporaryworking directory </p>
-<dt><code>&#8211;title TITLE</code></p>
-<dd> Substituted for @TITLE@ in bootloader config files </p>
-<dt><code>&#8211;project PROJECT</code></p>
-<dd> substituted for @PROJECT@ in bootloader config files </p>
-<dt><code>&#8211;releasever RELEASEVER</code></p>
-<dd> substituted for @VERSION@ in bootloader config files </p>
-<dt><code>&#8211;volid VOLID</code></p>
-<dd> volume id </p>
-<dt><code>&#8211;squashfs_args SQUASHFS_ARGS</code></p>
-<dd> additional squashfs args </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> show this help message and exit </dd>
+<dt><code>&#8211;make-iso</code></dt>
+<dd> Build a live iso </dd>
+<dt><code>&#8211;make-disk</code></dt>
+<dd> Build a partitioned disk image </dd>
+<dt><code>&#8211;make-fsimage</code></dt>
+<dd> Build a filesystem image </dd>
+<dt><code>&#8211;make-appliance</code></dt>
+<dd> Build an appliance image and XML description </dd>
+<dt><code>&#8211;make-ami</code></dt>
+<dd> Build an ami image </dd>
+<dt><code>&#8211;make-tar</code></dt>
+<dd> Build a tar of the root filesystem. Defaults to root.tar.xz </dd>
+<dt><code>&#8211;make-pxe-live</code></dt>
+<dd> Build a live pxe boot squashfs image </dd>
+<dt><code>&#8211;make-ostree-live</code></dt>
+<dd> Build a live pxe boot squashfs image of Atomic Host </dd>
+<dt><code>&#8211;iso ISO</code></dt>
+<dd> Anaconda installation .iso path to use for virt-install </dd>
+<dt><code>&#8211;disk-image DISK_IMAGE</code></dt>
+<dd> Path to disk image to use for creating final image </dd>
+<dt><code>&#8211;fs-image FS_IMAGE</code></dt>
+<dd> Path to existing filesystem image to use for creating final image. </dd>
+<dt><code>&#8211;qcow2</code></dt>
+<dd> Create qcow2 image instead of raw sparse image when making disk images. </dd>
+<dt><code>&#8211;qcow2-arg</code></dt>
+<dd> Arguments to pass to qemu-img. Pass once for each argument &gt;&gt;&gt;&gt;&gt;&gt;&gt; d04a99e&#8230; livemedia-creator: Add support for making tarfiles </dd>
+<dt><code>&#8211;compression</code></dt>
+<dd> Compression binary for make-tar. xz, lzma, gzip, and bzip2 are supported. xz is the default. </dd>
+<dt><code>&#8211;compress-arg</code></dt>
+<dd> Arguments to pass to compression. Pass once for each argument </dd>
+<dt><code>&#8211;ks KS</code></dt>
+<dd> Kickstart file defining the install. </dd>
+<dt><code>&#8211;image-name IMAGE_NAME</code></dt>
+<dd> Name of fs/disk image to create. Default is a random name. </dd>
+<dt><code>&#8211;image-only</code></dt>
+<dd> Exit after creating fs/disk image. </dd>
+<dt><code>&#8211;keep-image</code></dt>
+<dd> Keep raw disk image after .iso creation </dd>
+<dt><code>&#8211;no-virt</code></dt>
+<dd> Use Anaconda&#8217;s image install instead of virt-install </dd>
+<dt><code>&#8211;proxy PROXY</code></dt>
+<dd> proxy URL to use for the install </dd>
+<dt><code>&#8211;anaconda-arg ANACONDA_ARGS</code></dt>
+<dd> Additional argument to pass to anaconda (no-virt mode). Pass once for eachargument </dd>
+<dt><code>&#8211;armplatform ARMPLATFORM</code></dt>
+<dd> the platform to use when creating images for ARM, i.e., highbank, mvebu, omap,tegra, etc. </dd>
+<dt><code>&#8211;location LOCATION</code></dt>
+<dd> location of iso directory tree with initrd.img and vmlinuz. Used to run virt-install with a newer initrd than the iso. </dd>
+<dt><code>&#8211;logfile LOGFILE</code></dt>
+<dd> Path to logfile </dd>
+<dt><code>&#8211;lorax-templates LORAX_TEMPLATES</code></dt>
+<dd> Path to mako templates for lorax </dd>
+<dt><code>&#8211;tmp TMP</code></dt>
+<dd> Top level temporary directory </dd>
+<dt><code>&#8211;resultdir RESULT_DIR</code></dt>
+<dd> Directory to copy the resulting images and iso into. Defaults to the temporaryworking directory </dd>
+<dt><code>&#8211;title TITLE</code></dt>
+<dd> Substituted for @TITLE@ in bootloader config files </dd>
+<dt><code>&#8211;project PROJECT</code></dt>
+<dd> substituted for @PROJECT@ in bootloader config files </dd>
+<dt><code>&#8211;releasever RELEASEVER</code></dt>
+<dd> substituted for @VERSION@ in bootloader config files </dd>
+<dt><code>&#8211;volid VOLID</code></dt>
+<dd> volume id </dd>
+<dt><code>&#8211;squashfs_args SQUASHFS_ARGS</code></dt>
+<dd> additional squashfs args </dd>
 </dl>
 <h2>APPLIANCE ARGUMENTS:</h2>
 <dl>
-<dt><code>&#8211;app-name APP_NAME</code></p>
-<dd> Name of appliance to pass to template </p>
-<dt><code>&#8211;app-template APP_TEMPLATE</code></p>
-<dd> Path to template to use for appliance data. </p>
-<dt><code>&#8211;app-file APP_FILE</code></p>
-<dd> Appliance template results file. </p>
+<dt><code>&#8211;app-name APP_NAME</code></dt>
+<dd> Name of appliance to pass to template </dd>
+<dt><code>&#8211;app-template APP_TEMPLATE</code></dt>
+<dd> Path to template to use for appliance data. </dd>
+<dt><code>&#8211;app-file APP_FILE</code></dt>
+<dd> Appliance template results file. </dd>
 </dl>
 <h2>PXE-LIVE ARGUMENTS:</h2>
 <dl>
-<dt><code>&#8211;live-rootfs-size</code></p>
-<dd> Size of root filesystem of live image in GiB. By default approximate size of space used in root filesystem is used. </p>
-<dt><code>&#8211;live-rootfs-keep-size</code></p>
-<dd> Keep the size of original root filesystem (rounded down to GiB) in live image </p>
+<dt><code>&#8211;live-rootfs-size</code></dt>
+<dd> Size of root filesystem of live image in GiB. By default approximate size of space used in root filesystem is used. </dd>
+<dt><code>&#8211;live-rootfs-keep-size</code></dt>
+<dd> Keep the size of original root filesystem (rounded down to GiB) in live image </dd>
 </dl>
 <h2>VIRT-INSTALL ARGUMENTS:</h2>
 <dl>
-<dt><code>&#8211;ram MEMORY</code></p>
-<dd> Memory to allocate for installer in megabytes. </p>
-<dt><code>&#8211;vcpus VCPUS</code></p>
-<dd> Passed to &#8211;vcpus command </p>
-<dt><code>&#8211;vnc VNC</code></p>
-<dd> Passed to &#8211;graphics command </p>
-<dt><code>&#8211;arch ARCH</code></p>
-<dd> Passed to &#8211;arch command </p>
-<dt><code>&#8211;kernel-args KERNEL_ARGS</code></p>
-<dd> Additional argument to pass to the installation kernel </p>
+<dt><code>&#8211;ram MEMORY</code></dt>
+<dd> Memory to allocate for installer in megabytes. </dd>
+<dt><code>&#8211;vcpus VCPUS</code></dt>
+<dd> Passed to &#8211;vcpus command </dd>
+<dt><code>&#8211;vnc VNC</code></dt>
+<dd> Passed to &#8211;graphics command </dd>
+<dt><code>&#8211;arch ARCH</code></dt>
+<dd> Passed to &#8211;arch command </dd>
+<dt><code>&#8211;kernel-args KERNEL_ARGS</code></dt>
+<dd> Additional argument to pass to the installation kernel </dd>
 </dl>
 <h2>DRACUT ARGUMENTS:</h2>
 <dl>
-<dt><code>&#8211;dracut-arg DRACUT_ARGS</code></p>
-<dd> Argument to pass to dracut when rebuilding the initramfs. Pass this once foreach argument. NOTE: this overrides the default. </p>
+<dt><code>&#8211;dracut-arg DRACUT_ARGS</code></dt>
+<dd> Argument to pass to dracut when rebuilding the initramfs. Pass this once foreach argument. NOTE: this overrides the default. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> Documentation in /usr/share/docs/lorax/README.livemedia-creator </p>

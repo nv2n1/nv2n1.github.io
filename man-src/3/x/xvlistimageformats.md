@@ -14,12 +14,12 @@ description: "XvListImageFormats – return list of image formats supported by a
 <code> XvPortID </code><i>port</i><code>, int *</code><i>p_num_formats</i><code>);</code></pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>dpy</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>port</i></p>
-<dd>Specifies the port whose adaptor is to be queried for its list of attributes.</p>
-<dt><i>p_num_formats</i></p>
-<dd>A pointer to where the number of formats returned in the array is written.</dl>
+<dt><i>dpy</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>port</i></dt>
+<dd>Specifies the port whose adaptor is to be queried for its list of attributes.</dd>
+<dt><i>p_num_formats</i></dt>
+<dd>A pointer to where the number of formats returned in the array is written.</dd></dl>
 <h2>Description</h2>
 <p><code><a href="/docs/linux/man/3-xvlistimageformats/">XvListImageFormats</a></code>(3) returns the XvImageFormatValues supported by the specified port. This list should be freed with <code><a href="/docs/linux/man/3-xfree/">XFree</a></code>(3).</p>
 <h2>Return Values</h2>
@@ -51,37 +51,37 @@ char component_order[32];&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wb
 int scanline_order;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>/*&nbsp;<wbr>XvTopToBottom, XvBottomToTop&nbsp;<wbr>*/<br />
 &nbsp;<wbr>}&nbsp;<wbr>XvImageFormatValues; </p>
 <dl COMPACT>
-<dt><i>id</i></p>
-<dd>A unique descriptor for the format. This is often the FOURCC for the format, when applicable. This id is used to describe the format during XvImage creation.</p>
-<dt><i>type</i></p>
-<dd>XvRGB or XvYUV.</p>
-<dt><i>byte_order</i></p>
-<dd>The byte order of the image. It is either LSBFirst or MSBFirst.</p>
-<dt><i>guid</i></p>
-<dd>The Globally Unique IDentifier (also known as Universally Unique IDentifier). When not applicable, all characters are NULL.</p>
-<dt><i>bits_per_pixel</i></p>
-<dd>The bits taken up (but not necessarily used) by each pixel. Note that for some planar formats which have fractional bits per pixel (such as IF09) this number may be rounded _down_.</p>
-<dt><i>format</i></p>
-<dd>XvPacked or XvPlanar.</p>
-<dt><i>num_planes</i></p>
-<dd>The number of planes in planar formats.</p>
-<dt><i>depth</i></p>
-<dd>Significant bits per pixel.</p>
-<dt><i>red_mask, green_mask, blue_mask</i></p>
-<dd>The red, green and blue bitmasks (RGB formats only).</p>
-<dt><i>?_sample_bits</i></p>
-<dd>The size of each sample in bits (YUV formats only).</p>
-<dt><i>horz_?_period, vert_?_period</i></p>
-<dd>The period (in pixels) on which samples occur in the horizontal and vertical directions (YUV formats only).</p>
-<dt><i>component_order</i></p>
-<dd>Upper case ascii characters representing the order that samples are stored within packed formats. For planar formats this represents the ordering of the planes.</p>
-<dt><i>scanline_order</i></p>
-<dd>XvTopToBottom or XvBottomToTop.</dl>
+<dt><i>id</i></dt>
+<dd>A unique descriptor for the format. This is often the FOURCC for the format, when applicable. This id is used to describe the format during XvImage creation.</dd>
+<dt><i>type</i></dt>
+<dd>XvRGB or XvYUV.</dd>
+<dt><i>byte_order</i></dt>
+<dd>The byte order of the image. It is either LSBFirst or MSBFirst.</dd>
+<dt><i>guid</i></dt>
+<dd>The Globally Unique IDentifier (also known as Universally Unique IDentifier). When not applicable, all characters are NULL.</dd>
+<dt><i>bits_per_pixel</i></dt>
+<dd>The bits taken up (but not necessarily used) by each pixel. Note that for some planar formats which have fractional bits per pixel (such as IF09) this number may be rounded _down_.</dd>
+<dt><i>format</i></dt>
+<dd>XvPacked or XvPlanar.</dd>
+<dt><i>num_planes</i></dt>
+<dd>The number of planes in planar formats.</dd>
+<dt><i>depth</i></dt>
+<dd>Significant bits per pixel.</dd>
+<dt><i>red_mask, green_mask, blue_mask</i></dt>
+<dd>The red, green and blue bitmasks (RGB formats only).</dd>
+<dt><i>?_sample_bits</i></dt>
+<dd>The size of each sample in bits (YUV formats only).</dd>
+<dt><i>horz_?_period, vert_?_period</i></dt>
+<dd>The period (in pixels) on which samples occur in the horizontal and vertical directions (YUV formats only).</dd>
+<dt><i>component_order</i></dt>
+<dd>Upper case ascii characters representing the order that samples are stored within packed formats. For planar formats this represents the ordering of the planes.</dd>
+<dt><i>scanline_order</i></dt>
+<dd>XvTopToBottom or XvBottomToTop.</dd></dl>
 <h2>Notes</h2>
 <p>Since some formats (particularly some planar YUV formats) may not be completely defined by the parameters above, the guid, when available, should provide the most accurate description of the format.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt>[XvBadPort]</p>
-<dd>Generated if the requested port does not exist.</dl>
+<dt>[XvBadPort]</dt>
+<dd>Generated if the requested port does not exist.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-xvcreateimage/">XvCreateImage</a></code>(3), <code>XvCreateShmImage</code>(3)</p>

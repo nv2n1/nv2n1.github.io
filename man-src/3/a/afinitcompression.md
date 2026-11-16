@@ -20,36 +20,36 @@ description: "afInitCompression – initialize compression for a track in an aud
 <p> The following compression types are currently supported: </p>
 <p> AF_COMPRESSION_NONE</p>
 <dl COMPACT>
-<dd>no compression</dl>
+<dd>no compression</dd></dl>
 <p> AF_COMPRESSION_G711_ULAW</p>
 <dl COMPACT>
-<dd>CCITT G.711 mu-law encoding</dl>
+<dd>CCITT G.711 mu-law encoding</dd></dl>
 <p> AF_COMPRESSION_G711_ALAW</p>
 <dl COMPACT>
-<dd>CCITT G.711 A-law encoding</dl>
+<dd>CCITT G.711 A-law encoding</dd></dl>
 <p> AF_COMPRESSION_IMA</p>
 <dl COMPACT>
-<dd>IMA ADPCM encoding</dl>
+<dd>IMA ADPCM encoding</dd></dl>
 <p> AF_COMPRESSION_MS_ADPCM</p>
 <dl COMPACT>
-<dd>MS ADPCM encoding</dl>
+<dd>MS ADPCM encoding</dd></dl>
 <p> AF_COMPRESSION_FLAC</p>
 <dl COMPACT>
-<dd>FLAC</dl>
+<dd>FLAC</dd></dl>
 <p> AF_COMPRESSION_ALAC</p>
 <dl COMPACT>
-<dd>Apple Lossless Audio Codec</dl>
+<dd>Apple Lossless Audio Codec</dd></dl>
 <h2>Errors</h2>
 <p>afInitCompression can produce the following errors: </p>
 <p> AF_BAD_FILESETUP</p>
 <dl COMPACT>
-<dd>setup represents an invalid file setup.</dl>
+<dd>setup represents an invalid file setup.</dd></dl>
 <p> AF_BAD_TRACKID</p>
 <dl COMPACT>
-<dd>track represents an invalid track identifier.</dl>
+<dd>track represents an invalid track identifier.</dd></dl>
 <p> AF_BAD_COMPTYPE</p>
 <dl COMPACT>
-<dd>compression represents an invalid compression type.</dl>
+<dd>compression represents an invalid compression type.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-afnewfilesetup/">afNewFileSetup</a></code>(3), <code><a href="/docs/linux/man/3-afinitsampleformat/">afInitSampleFormat</a></code>(3)</p>
 <h2>Author</h2>

@@ -11,27 +11,27 @@ description: "XkbBellEvent – Provides a function that initiates a bell event f
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Bool XkbBellEvent</code> <code>(Display *</code><i>display</i><code>,</code> <code>Window </code><i>window</i><code>,</code> <code>int </code><i>percent</i><code>,</code> <code>Atom </code><i>name</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; display</i></p>
+<dt><i>&#8211; display</i></dt>
 <dd>
-<dd>connection to the X server</p>
-<dt><i>&#8211; window</i></p>
-<dd>the event window, or None</p>
-<dt><i>&#8211; percent,</i></p>
-<dd>relative volume, which can range from -100 to 100 inclusive</p>
-<dt><i>&#8211; name</i></p>
-<dd>a bell name, or NULL</dl>
+</dd><dd>connection to the X server</dd>
+<dt><i>&#8211; window</i></dt>
+<dd>the event window, or None</dd>
+<dt><i>&#8211; percent,</i></dt>
+<dd>relative volume, which can range from -100 to 100 inclusive</dd>
+<dt><i>&#8211; name</i></dt>
+<dd>a bell name, or NULL</dd></dl>
 <h2>Description</h2>
 <p>The core X protocol allows only applications to explicitly sound the system bell with a given duration, pitch, and volume. Xkb extends this capability by allowing clients to attach symbolic names to bells, disable audible bells, and receive an event whenever the keyboard bell is rung. For the purposes of this document, the <i>audible </i> bell is defined to be the system bell, or the default keyboard bell, as opposed to any other audible sound generated elsewhere in the system. You can ask to receive XkbBellNotify events when any client rings any one of the following: </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>The default bell</p>
-<dt>&bull;</p>
-<dd>Any bell on an input device that can be specified by a bell_class and bell_id pair</p>
-<dt>&bull;</p>
-<dd>Any bell specified only by an arbitrary name. (This is, from the server&#8217;s point of view, merely a name, and not connected with any physical sound-generating device. Some client application must generate the sound, or visual feedback, if any, that is associated with the name.) </p>
+<dt>&bull;</dt>
+<dd>The default bell</dd>
+<dt>&bull;</dt>
+<dd>Any bell on an input device that can be specified by a bell_class and bell_id pair</dd>
+<dt>&bull;</dt>
+<dd>Any bell specified only by an arbitrary name. (This is, from the server&#8217;s point of view, merely a name, and not connected with any physical sound-generating device. Some client application must generate the sound, or visual feedback, if any, that is associated with the name.) </dd>
 <p> You can also ask to receive XkbBellNotify events when the server rings the default bell or if any client has requested events only (without the bell sounding) for any of the bell types previously listed. </p>
 <p> You can disable audible bells on a global basis. For example, a client that replaces the keyboard bell with some other audible cue might want to turn off the AudibleBell control to prevent the server from also generating a sound and avoid cacophony. If you disable audible bells and request to receive XkbBellNotify events, you can generate feedback different from the default bell. </p>
 <p> You can, however, override the AudibleBell control by calling one of the functions that force the ringing of a bell in spite of the setting of the AudibleBell control &#8211; <i>XkbForceDeviceBell or </i> <i>XkbForceBell. </i> In this case the server does not generate a bell event. </p>
@@ -233,8 +233,8 @@ description: "XkbBellEvent – Provides a function that initiates a bell event f
 <p> You can call <i>XkbBellEvent </i> without first initializing the keyboard extension.</dl>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>False</p>
-<dd>The <i>XkbBellEvent</i> immediately returns False, if a compatible keyboard extension isn&#8217;t present in the X server.</dl>
+<dt>False</dt>
+<dd>The <i>XkbBellEvent</i> immediately returns False, if a compatible keyboard extension isn&#8217;t present in the X server.</dd></dl>
 <h2>Structures</h2>
 <p>Xkb generates XkbBellNotify events for all bells except for those resulting from calls to <i>XkbForceDeviceBell </i> and <i>XkbForceBell. </i> To receive XkbBellNotify events under all possible conditions, pass XkbBellNotifyMask in both the <i>bits_to_change </i> and <i>values_for_bits </i> parameters to <i>XkbSelectEvents.</i> </p>
 <p> The XkbBellNotify event has no event details. It is either selected or it is not. However, you can call <i>XkbSelectEventDetails </i> using XkbBellNotify as the <i>event_type </i> and specifying XkbAllBellEventsMask in <i>bits_to_change </i> and <i>values_for_bits. </i> This has the same effect as a call to <i>XkbSelectEvents.</i> </p>

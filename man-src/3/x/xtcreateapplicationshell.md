@@ -11,15 +11,15 @@ description: "XtCreateApplicationShell – create top-level widget instance"
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>Widget XtCreateApplicationShell(const char *<i>name</i>, WidgetClass <i>widget_class</i>, ArgList <i>args</i>, Cardinal <i>num_args</i>);</dl>
+<dd>Widget XtCreateApplicationShell(const char *<i>name</i>, WidgetClass <i>widget_class</i>, ArgList <i>args</i>, Cardinal <i>num_args</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>name</i></p>
-<dd>Specifies the name of the shell.</p>
-<dt><i>args</i></p>
-<dd>Specifies the argument list to override any other resource specifications.</p>
-<dt><i>num_args</i></p>
-<dd>Specifies the number of arguments in the argument list.</dl>
+<dt><i>name</i></dt>
+<dd>Specifies the name of the shell.</dd>
+<dt><i>args</i></dt>
+<dd>Specifies the argument list to override any other resource specifications.</dd>
+<dt><i>num_args</i></dt>
+<dd>Specifies the number of arguments in the argument list.</dd></dl>
 <h2>Description</h2>
 <p>The procedure <code>XtCreateApplicationShell</code> calls <code>XtAppCreateShell</code> with the <i>application</i> NULL, the application class passed to <code>XtInitialize</code>, and the default application context created by <code>XtInitialize</code>. This routine has been replaced by <code>XtAppCreateShell</code>.</p>
 <h2>See Also</h2>

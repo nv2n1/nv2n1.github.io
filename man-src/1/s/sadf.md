@@ -19,112 +19,104 @@ description: "sadf – Display data collected by sar in multiple formats."
 <p> All the activity flags of <code>sar</code> may be entered on the command line to indicate which activities are to be reported. Before specifying them, put a pair of dashes (<code>&#8212;</code>) on the command line in order not to confuse the flags with those of <code>sadf.</code> Not specifying any flags selects only CPU activity. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-C</code></p>
-<dd> Tell <code>sadf </code>to display comments present in file.</p>
-<dt><code>-c</code></p>
-<dd> Convert an old system activity binary datafile (version 9.1.6 and later) to current up-to-date format. Use the following syntax: </p>
+<dt><code>-C</code></dt>
+<dd> Tell <code>sadf </code>to display comments present in file.</dd>
+<dt><code>-c</code></dt>
+<dd> Convert an old system activity binary datafile (version 9.1.6 and later) to current up-to-date format. Use the following syntax: </dd>
 <p> <code>sadf -c </code><i>old_datafile </i><code>&gt; </code><i>new_datafile</i> </p>
 <p> Conversion can be controlled using option <code>-O </code>(see below).</p>
-<dt><code>-d</code></p>
-<dd> Print the contents of the data file in a format that can easily be ingested by a relational database system. The output consists of fields separated by a semicolon. Each record contains the hostname of the host where the file was created, the interval value (or -1 if not applicable), the timestamp in a form easily acceptable by most databases, and additional semicolon separated data fields as specified by <i>sar_options </i>command line options. Note that timestamp output can be controlled by options <code>-T</code>, <code>-t </code>and <code>-U</code>.</p>
-<dt><code>&#8211;dev=</code><i>dev_list</i></p>
-<dd> Specify the block devices for which statistics are to be displayed by <code>sadf</code>. <i>dev_list</i> is a list of comma-separated device names. Useful with option <code>-d </code>from <code>sar</code>.</p>
-<dt><code>-e [ </code><i>hh</i><code>:</code><i>mm</i><code>[:</code><i>ss</i><code>] ]</code></p>
-<dd> Set the ending time of the report. The default ending time is 18:00:00. Hours must be given in 24-hour format.</p>
-<dt><code>&#8211;fs=</code><i>fs_list</i></p>
-<dd> Specify the filesystems for which statistics are to be displayed by <code>sadf</code>. <i>fs_list</i> is a list of comma-separated filesystem names or mountpoints. Useful with option <code>-F </code>from <code>sar</code>.</p>
-<dt><code>-g</code></p>
-<dd> Print the contents of the data file in SVG (Scalable Vector Graphics) format. This option enables you to display some fancy graphs in your web browser. Use the following syntax: </p>
+<dt><code>-d</code></dt>
+<dd> Print the contents of the data file in a format that can easily be ingested by a relational database system. The output consists of fields separated by a semicolon. Each record contains the hostname of the host where the file was created, the interval value (or -1 if not applicable), the timestamp in a form easily acceptable by most databases, and additional semicolon separated data fields as specified by <i>sar_options </i>command line options. Note that timestamp output can be controlled by options <code>-T</code>, <code>-t </code>and <code>-U</code>.</dd>
+<dt><code>&#8211;dev=</code><i>dev_list</i></dt>
+<dd> Specify the block devices for which statistics are to be displayed by <code>sadf</code>. <i>dev_list</i> is a list of comma-separated device names. Useful with option <code>-d </code>from <code>sar</code>.</dd>
+<dt><code>-e [ </code><i>hh</i><code>:</code><i>mm</i><code>[:</code><i>ss</i><code>] ]</code></dt>
+<dd> Set the ending time of the report. The default ending time is 18:00:00. Hours must be given in 24-hour format.</dd>
+<dt><code>&#8211;fs=</code><i>fs_list</i></dt>
+<dd> Specify the filesystems for which statistics are to be displayed by <code>sadf</code>. <i>fs_list</i> is a list of comma-separated filesystem names or mountpoints. Useful with option <code>-F </code>from <code>sar</code>.</dd>
+<dt><code>-g</code></dt>
+<dd> Print the contents of the data file in SVG (Scalable Vector Graphics) format. This option enables you to display some fancy graphs in your web browser. Use the following syntax: </dd>
 <p> <code>sadf -g </code><i>your_datafile </i><code>[ &#8212; </code><i>sar_options </i><code>] &gt; </code><i>output.svg</i> </p>
 <p> and open the resulting SVG file in your favorite web browser. Output can be controlled using option <code>-O </code>(see below).</p>
-<dt><code>-H</code></p>
-<dd> Display only the header of the report (when applicable). If no format has been specified, then the header data (metadata) of the data file are displayed.</p>
-<dt><code>-h</code></p>
-<dd> When used in conjunction with option <code>-d</code>, all activities will be displayed horizontally on a single line.</p>
-<dt><code>&#8211;iface=</code><i>iface_list</i></p>
-<dd> Specify the network interfaces for which statistics are to be displayed by <code>sadf</code>. <i>iface_list</i> is a list of comma-separated interface names. Useful with options <code>-n DEV </code>and <code>-n EDEV </code>from <code>sar</code>.</p>
-<dt><code>-j</code></p>
-<dd> Print the contents of the data file in JSON (JavaScript Object Notation) format. Timestamps can be controlled by options <code>-T </code>and <code>-t</code>.</p>
-<dt><code>-l</code></p>
-<dd> Export the contents of the data file to a PCP (Performance Co-Pilot) archive. The name of the archive can be specified using the keyword <code>pcparchive= </code>with option <code>-O</code>.</p>
-<dt><code>-O </code><i>opts</i><code>[,&#8230;]</code></p>
-<dd> Use the specified options to control the output of <code>sadf</code>. The following options are used to control SVG output displayed by <code>sadf -g</code>:</p>
+<dt><code>-H</code></dt>
+<dd> Display only the header of the report (when applicable). If no format has been specified, then the header data (metadata) of the data file are displayed.</dd>
+<dt><code>-h</code></dt>
+<dd> When used in conjunction with option <code>-d</code>, all activities will be displayed horizontally on a single line.</dd>
+<dt><code>&#8211;iface=</code><i>iface_list</i></dt>
+<dd> Specify the network interfaces for which statistics are to be displayed by <code>sadf</code>. <i>iface_list</i> is a list of comma-separated interface names. Useful with options <code>-n DEV </code>and <code>-n EDEV </code>from <code>sar</code>.</dd>
+<dt><code>-j</code></dt>
+<dd> Print the contents of the data file in JSON (JavaScript Object Notation) format. Timestamps can be controlled by options <code>-T </code>and <code>-t</code>.</dd>
+<dt><code>-l</code></dt>
+<dd> Export the contents of the data file to a PCP (Performance Co-Pilot) archive. The name of the archive can be specified using the keyword <code>pcparchive= </code>with option <code>-O</code>.</dd>
+<dt><code>-O </code><i>opts</i><code>[,&#8230;]</code></dt>
+<dd> Use the specified options to control the output of <code>sadf</code>. The following options are used to control SVG output displayed by <code>sadf -g</code>:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>autoscale</p>
-<dd> Draw all the graphs of a given view as large as possible based on current view&#8217;s scale. To do this, a factor (10, 100, 1000&#8230;) is used to enlarge the graph drawing. This option may be interesting when several graphs are drawn on the same view, some with only very small values, and others with high ones, the latter making the former hardly visible.</p>
-<dt>bwcol</p>
-<dd> Use a black and white palette to draw the graphs.</p>
-<dt>customcol</p>
-<dd> Use a customizable color palette instead of the default one to draw the graphs. See environment variable <code>S_COLORS_PALETTE</code> below to know how to customize that palette.</p>
-<dt>height=<i>value</i></p>
-<dd> Set SVG canvas height to <i>value</i>.</p>
-<dt>oneday</p>
-<dd> Display graphs data over a period of 24 hours. Note that hours are still printed in UTC by default: You should use option <code>-T </code>to print them in local time and get a time window starting from midnight.</p>
-<dt>packed</p>
-<dd> Group all views from the same activity (and for the same device) on the same row.</p>
-<dt>showidle</p>
-<dd> Also display %idle state in graphs for CPU statistics.</p>
-<dt>showinfo</p>
-<dd> Display additional information (such as the date and the host name) on each view.</p>
-<dt>showtoc</p>
-<dd> Add a table of contents at the beginning of the SVG output, consisting of links pointing at the first graph of each activity.</p>
-<dt>skipempty</p>
-<dd> Do not display views where all graphs have only zero values.</dl>
+<dt>autoscale</dt>
+<dd> Draw all the graphs of a given view as large as possible based on current view&#8217;s scale. To do this, a factor (10, 100, 1000&#8230;) is used to enlarge the graph drawing. This option may be interesting when several graphs are drawn on the same view, some with only very small values, and others with high ones, the latter making the former hardly visible.</dd>
+<dt>bwcol</dt>
+<dd> Use a black and white palette to draw the graphs.</dd>
+<dt>customcol</dt>
+<dd> Use a customizable color palette instead of the default one to draw the graphs. See environment variable <code>S_COLORS_PALETTE</code> below to know how to customize that palette.</dd>
+<dt>height=<i>value</i></dt>
+<dd> Set SVG canvas height to <i>value</i>.</dd>
+<dt>oneday</dt>
+<dd> Display graphs data over a period of 24 hours. Note that hours are still printed in UTC by default: You should use option <code>-T </code>to print them in local time and get a time window starting from midnight.</dd>
+<dt>packed</dt>
+<dd> Group all views from the same activity (and for the same device) on the same row.</dd>
+<dt>showidle</dt>
+<dd> Also display %idle state in graphs for CPU statistics.</dd>
+<dt>showinfo</dt>
+<dd> Display additional information (such as the date and the host name) on each view.</dd>
+<dt>showtoc</dt>
+<dd> Add a table of contents at the beginning of the SVG output, consisting of links pointing at the first graph of each activity.</dd>
+<dt>skipempty</dt>
+<dd> Do not display views where all graphs have only zero values.</dd></dl>
 </dl>
 <dt>
-<dd> The following option may be used when converting an old system activity binary datafile to current up-to-date format:</p>
+</dt><dd> The following option may be used when converting an old system activity binary datafile to current up-to-date format:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>hz=<i>value</i></p>
-<dd> Specify the number of ticks per second for the machine where the old datafile has been created.</dl>
+<dt>hz=<i>value</i></dt>
+<dd> Specify the number of ticks per second for the machine where the old datafile has been created.</dd></dl>
 </dl>
 <dt>
-<dd> The following option may be used when data are exported to a PCP archive:</p>
+</dt><dd> The following option may be used when data are exported to a PCP archive:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>pcparchive=<i>name</i></p>
-<dd> Specify the name of the PCP archive to create.</dl>
+<dt>pcparchive=<i>name</i></dt>
+<dd> Specify the name of the PCP archive to create.</dd></dl>
 </dl>
 <dt>
-<dd> The following option is used to control raw output displayed by <code>sadf -r</code>:</p>
+</dt><dd> The following option is used to control raw output displayed by <code>sadf -r</code>:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>debug</p>
-<dd> Display additional information, mainly useful for debugging purpose.</dl>
+<dt>debug</dt>
+<dd> Display additional information, mainly useful for debugging purpose.</dd></dl>
 </dl>
-<dt><code>-P { </code><i>cpu_list </i><code>| ALL }</code></p>
-<dd> Tell <code>sadf</code> that processor dependent statistics are to be reported only for the specified processor or processors. <i>cpu_list</i> is a list of comma-separated values or range of values (e.g., <code>0,2,4-7,12-</code>). Note that processor 0 is the first processor, and processor <code>all </code>is the global average among all processors. Specifying the <code>ALL</code> keyword reports statistics for each individual processor, and globally for all processors.</p>
-<dt><code>-p</code></p>
-<dd> Print the contents of the data file in a format that can easily be handled by pattern processing commands like <code>awk</code>. The output consists of fields separated by a tab. Each record contains the hostname of the host where the file was created, the interval value (or -1 if not applicable), the timestamp, the device name (or &#8211; if not applicable), the field name and its value. Note that timestamp output can be controlled by options <code>-T</code>, <code>-t </code>and <code>-U</code>.</p>
-<dt><code>-r</code></p>
-<dd> Print the raw contents of the data file. With this format, the values for all the counters are displayed as read from the kernel, which means e.g., that no average values are calculated over the elapsed time interval. Output can be controlled using option <code>-O </code>(see above).</p>
-<dt><code>-s [ </code><i>hh</i><code>:</code><i>mm</i><code>[:</code><i>ss</i><code>] ]</code></p>
-<dd> Set the starting time of the data, causing the <code>sadf</code> command to extract records time-tagged at, or following, the time specified. The default starting time is 08:00:00. Hours must be given in 24-hour format.</p>
-<dt><code>-T</code></p>
-<dd> Display timestamp in local time instead of UTC (Coordinated Universal Time).</p>
-<dt><code>-t</code></p>
-<dd> Display timestamp in the original local time of the data file creator instead of UTC (Coordinated Universal Time).</p>
-<dt><code>-U</code></p>
-<dd> Display timestamp (UTC &#8211; Coordinated Universal Time) in seconds from the epoch.</p>
-<dt><code>-V</code></p>
-<dd> Print version number then exit.</p>
-<dt><code>-x</code></p>
-<dd> Print the contents of the data file in XML format. Timestamps can be controlled by options <code>-T </code>and <code>-t</code>. The corresponding DTD (Document Type Definition) and XML Schema are included in the sysstat source package. They are also available at <i><a rel="nofollow" href="http://pagesperso-orange.fr/sebastien.godard/download.html">http://pagesperso-orange.fr/sebastien.godard/download.html</a></i>. </p>
+<dt><code>-P { </code><i>cpu_list </i><code>| ALL }</code></dt>
+<dd> Tell <code>sadf</code> that processor dependent statistics are to be reported only for the specified processor or processors. <i>cpu_list</i> is a list of comma-separated values or range of values (e.g., <code>0,2,4-7,12-</code>). Note that processor 0 is the first processor, and processor <code>all </code>is the global average among all processors. Specifying the <code>ALL</code> keyword reports statistics for each individual processor, and globally for all processors.</dd>
+<dt><code>-p</code></dt>
+<dd> Print the contents of the data file in a format that can easily be handled by pattern processing commands like <code>awk</code>. The output consists of fields separated by a tab. Each record contains the hostname of the host where the file was created, the interval value (or -1 if not applicable), the timestamp, the device name (or &#8211; if not applicable), the field name and its value. Note that timestamp output can be controlled by options <code>-T</code>, <code>-t </code>and <code>-U</code>.</dd>
+<dt><code>-r</code></dt>
+<dd> Print the raw contents of the data file. With this format, the values for all the counters are displayed as read from the kernel, which means e.g., that no average values are calculated over the elapsed time interval. Output can be controlled using option <code>-O </code>(see above).</dd>
+<dt><code>-s [ </code><i>hh</i><code>:</code><i>mm</i><code>[:</code><i>ss</i><code>] ]</code></dt>
+<dd> Set the starting time of the data, causing the <code>sadf</code> command to extract records time-tagged at, or following, the time specified. The default starting time is 08:00:00. Hours must be given in 24-hour format.</dd>
+<dt><code>-T</code></dt>
+<dd> Display timestamp in local time instead of UTC (Coordinated Universal Time).</dd>
+<dt><code>-t</code></dt>
+<dd> Display timestamp in the original local time of the data file creator instead of UTC (Coordinated Universal Time).</dd>
+<dt><code>-U</code></dt>
+<dd> Display timestamp (UTC &#8211; Coordinated Universal Time) in seconds from the epoch.</dd>
+<dt><code>-V</code></dt>
+<dd> Print version number then exit.</dd>
+<dt><code>-x</code></dt>
+<dd> Print the contents of the data file in XML format. Timestamps can be controlled by options <code>-T </code>and <code>-t</code>. The corresponding DTD (Document Type Definition) and XML Schema are included in the sysstat source package. They are also available at <i><a rel="nofollow" href="http://pagesperso-orange.fr/sebastien.godard/download.html">http://pagesperso-orange.fr/sebastien.godard/download.html</a></i>. </dd>
 </dl>
 <h2>ENVIRONMENT</h2>
 <p> The <code>sadf</code> command takes into account the following environment variables:</p>
 <dl>
-<dt><code>S_COLORS_PALETTE</code></p>
-<dd> Specify the colors used by <code>sadf -g</code> to render the SVG output. This environment variable is taken into account only when the custom color palette has been selected with the option <code>customcol </code>(see option <code>-O</code>). Its value is a colon-separated list of capabilities associated with six-digit, three-byte hexadecimal numbers (hex triplets) representing colors that defaults to </p>
+<dt><code>S_COLORS_PALETTE</code></dt>
+<dd> Specify the colors used by <code>sadf -g</code> to render the SVG output. This environment variable is taken into account only when the custom color palette has been selected with the option <code>customcol </code>(see option <code>-O</code>). Its value is a colon-separated list of capabilities associated with six-digit, three-byte hexadecimal numbers (hex triplets) representing colors that defaults to </dd>
 <p> <code>0=000000:1=1a1aff:2=1affb2:3=b21aff:</code><br />
  <code>4=1ab2ff:5=ff1a1a:6=ffb31a:7=b2ff1a:</code><br />
  <code>8=efefef:9=000000:A=1a1aff:B=1affb2:</code><br />
@@ -134,35 +126,33 @@ description: "sadf – Display data collected by sar in multiple formats."
 <p> Capabilities consisting of an hexadecimal digit (<code>0 </code>through <code>F</code>) are used to specify the first sixteen colors in the palette (these colors are used to draw the graphs), e.g., 3=ffffff would indicate that the third color in the palette is white (0xffffff).<br />
  Other capabilities are:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>G=</code></p>
-<dd> Specify the color used to draw the grid lines.</p>
-<dt><code>H=</code></p>
-<dd> Specify the color used to display the report header.</p>
-<dt><code>I=</code></p>
-<dd> Specify the color used to display additional information (e.g., date, hostname&#8230;)</p>
-<dt><code>K=</code></p>
-<dd> Specify the color used for the graphs background.</p>
-<dt><code>L=</code></p>
-<dd> Specify the default color (which is for example used to display the table of contents).</p>
-<dt><code>T=</code></p>
-<dd> Specify the color used to display the graphs title.</p>
-<dt><code>W=</code></p>
-<dd> Specify the color used to display warning and error messages.</p>
-<dt><code>X=</code></p>
-<dd> Specify the color used to draw the axes and display the graduations.</dl>
+<dt><code>G=</code></dt>
+<dd> Specify the color used to draw the grid lines.</dd>
+<dt><code>H=</code></dt>
+<dd> Specify the color used to display the report header.</dd>
+<dt><code>I=</code></dt>
+<dd> Specify the color used to display additional information (e.g., date, hostname&#8230;)</dd>
+<dt><code>K=</code></dt>
+<dd> Specify the color used for the graphs background.</dd>
+<dt><code>L=</code></dt>
+<dd> Specify the default color (which is for example used to display the table of contents).</dd>
+<dt><code>T=</code></dt>
+<dd> Specify the color used to display the graphs title.</dd>
+<dt><code>W=</code></dt>
+<dd> Specify the color used to display warning and error messages.</dd>
+<dt><code>X=</code></dt>
+<dd> Specify the color used to draw the axes and display the graduations.</dd></dl>
 </dl>
-<dt><code>S_TIME_DEF_TIME</code></p>
-<dd> If this variable exists and its value is <code>UTC </code>then <code>sadf</code> will use UTC time instead of local time to determine the current daily data file located in the <i>/var/log/sysstat</i> directory. </p>
+<dt><code>S_TIME_DEF_TIME</code></dt>
+<dd> If this variable exists and its value is <code>UTC </code>then <code>sadf</code> will use UTC time instead of local time to determine the current daily data file located in the <i>/var/log/sysstat</i> directory. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt><code>sadf -d /var/log/sysstat/sa21 &#8212; -r -n DEV</code></p>
-<dd> Extract memory and network statistics from system activity file <i>sa21</i>, and display them in a format that can be ingested by a database.</p>
-<dt><code>sadf -p -P 1</code></p>
-<dd> Extract CPU statistics for processor 1 (the second processor) from current daily data file, and display them in a format that can easily be handled by a pattern processing command. </p>
+<dt><code>sadf -d /var/log/sysstat/sa21 &#8212; -r -n DEV</code></dt>
+<dd> Extract memory and network statistics from system activity file <i>sa21</i>, and display them in a format that can be ingested by a database.</dd>
+<dt><code>sadf -p -P 1</code></dt>
+<dd> Extract CPU statistics for processor 1 (the second processor) from current daily data file, and display them in a format that can easily be handled by a pattern processing command. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> SVG output (as created by option <code>-g</code>) is fully compliant with SVG 1.1 standard. Graphics have been successfully displayed in various web browsers, including Firefox, Chrome and Opera. Yet SVG rendering is broken on Microsoft browsers (tested on Internet Explorer 11 and Edge 13.1): So please don&#8217;t use them. </p>
@@ -171,7 +161,7 @@ description: "sadf – Display data collected by sar in multiple formats."
  <i>/var/log/sysstat/saYYYYMMDD</i></p>
 <dl>
 <dt>
-<dd> The standard system activity daily data files and their default location. <i>YYYY </i>stands for the current year, <i>MM </i>for the current month and <i>DD</i> for the current day.</dl>
+</dt><dd> The standard system activity daily data files and their default location. <i>YYYY </i>stands for the current year, <i>MM </i>for the current month and <i>DD</i> for the current day.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Sebastien Godard (sysstat &lt;at&gt; orange.fr) </p>
 <h2>SEE ALSO</h2>

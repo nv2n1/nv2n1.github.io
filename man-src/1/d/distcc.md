@@ -27,39 +27,39 @@ description: "distcc – distributed C/C++/ObjC compiler with distcc-pump extens
 <p> It is strongly recommended that you install the same compiler version on all machines participating in a build. Incompatible compilers may cause mysterious compile or link failures.</p>
 <h2>QUICKSTART</h2>
 <dl>
-<dt>1</p>
-<dd> For each machine, download distcc, unpack, and install.</p>
-<dt>2</p>
-<dd> On each of the servers, run <code>distccd &#8211;daemon</code> with <code>&#8211;allow</code> options to restrict access.</p>
-<dt>3</p>
-<dd> Put the names of the servers in your environment:</p>
+<dt>1</dt>
+<dd> For each machine, download distcc, unpack, and install.</dd>
+<dt>2</dt>
+<dd> On each of the servers, run <code>distccd &#8211;daemon</code> with <code>&#8211;allow</code> options to restrict access.</dd>
+<dt>3</dt>
+<dd> Put the names of the servers in your environment:</dd>
 <dl>
 <dt>
-<dd> $ export DISTCC_HOSTS=&#8217;localhost red green blue&#8217;</dl>
-<dt>4</p>
-<dd> Build!</p>
+</dt><dd> $ export DISTCC_HOSTS=&#8217;localhost red green blue&#8217;</dd></dl>
+<dt>4</dt>
+<dd> Build!</dd>
 <dl>
 <dt>
-<dd> $ make -j8 CC=distcc</dl>
+</dt><dd> $ make -j8 CC=distcc</dd></dl>
 </dl>
 <h2>QUICKSTART FOR DISTCC-PUMP MODE</h2>
 <p> Proceed as above, but in Step 3, specify that the remote hosts are to carry the burden of preprocessing and that the files sent over the network should be compressed: </p>
 <dl>
 <dt>
-<dd> $ export DISTCC_HOSTS=&#8217;&#8211;randomize localhost red,cpp,lzo green,cpp,lzo blue,cpp,lzo&#8217;</dl>
+</dt><dd> $ export DISTCC_HOSTS=&#8217;&#8211;randomize localhost red,cpp,lzo green,cpp,lzo blue,cpp,lzo&#8217;</dd></dl>
 <p> The <code>&#8211;randomize</code> option enforces a uniform usage of compile servers. While you will get some benefit from distcc&#8217;s pump mode with only a few servers, you get increasing benefit with more server CPUs (up to the hundreds!). Wrap your build inside the pump command, here assuming 10 servers: </p>
 <dl>
 <dt>
-<dd> $ pump make -j20 CC=distcc</dl>
+</dt><dd> $ pump make -j20 CC=distcc</dd></dl>
 <h2>QUICKSTART FOR DISTCC-GSSAPI MODE</h2>
 <p> Proceed as per the <code>QUICKSTART</code> but in Step 3, specify that the remote hosts are to mutually authenticate with the client: </p>
 <dl>
 <dt>
-<dd> $ export DISTCC_HOSTS=&#8217;&#8211;randomize localhost red,auth green,auth blue,auth&#8217;</dl>
+</dt><dd> $ export DISTCC_HOSTS=&#8217;&#8211;randomize localhost red,auth green,auth blue,auth&#8217;</dd></dl>
 <p> If distccd runs under a specific principal name then execute the following command prior to step 4: </p>
 <dl>
 <dt>
-<dd> export DISTCC_PRINICIPAL=&lt;name&gt;</dl>
+</dt><dd> export DISTCC_PRINICIPAL=&lt;name&gt;</dd></dl>
 <h2>HOW PLAIN (NON-PUMP) DISTCC WORKS</h2>
 <p> distcc only ever runs the compiler and assembler remotely. With plain distcc, the preprocessor must always run locally because it needs to access various header files on the local machine which may not be present, or may not be the same, on the volunteer. The linker similarly needs to examine libraries and object files, and so must run locally. </p>
 <p> The compiler and assembler take only a single input file (the preprocessed source) and produce a single output (the object file). distcc ships these two files across the network and can therefore run the compiler/assembler remotely. </p>
@@ -84,52 +84,52 @@ description: "distcc – distributed C/C++/ObjC compiler with distcc-pump extens
 <h2>OPTION SUMMARY</h2>
 <p> Most options passed to distcc are interpreted as compiler options. The following options are understood by distcc itself. If any of these options are specified, distcc will not invoke the compiler. </p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Displays summary instructions.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Displays summary instructions.</dd></dl>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> Displays the distcc client version.</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> Displays the distcc client version.</dd></dl>
 <dl>
-<dt><code>&#8211;show-hosts</code></p>
-<dd> Displays the host list that distcc would use. See the Host Specifications section.</dl>
+<dt><code>&#8211;show-hosts</code></dt>
+<dd> Displays the host list that distcc would use. See the Host Specifications section.</dd></dl>
 <dl>
-<dt><code>&#8211;scan-includes</code></p>
-<dd> Displays the list of files that distcc would send to the remote machine, as computed by the include server. This is a conservative (over-)approximation of the files that would be read by the C compiler. This option only works in pump mode. See the &quot;How Distcc-pump Mode Works&quot; section for details on how this is computed.</p>
+<dt><code>&#8211;scan-includes</code></dt>
+<dd> Displays the list of files that distcc would send to the remote machine, as computed by the include server. This is a conservative (over-)approximation of the files that would be read by the C compiler. This option only works in pump mode. See the &quot;How Distcc-pump Mode Works&quot; section for details on how this is computed.</dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> The list output by <code>distcc &#8211;scan-includes</code> will contain one entry per line. Each line contains a category followed by a path. The category is one of FILE, SYMLINK, DIRECTORY, or SYSTEMDIR:</p>
-<dl>
+</dd><dl>
 <dt>
-<dd> <code>FILE</code> indicates a source file or header file that would be sent to the distcc server host.</p>
+</dt><dd> <code>FILE</code> indicates a source file or header file that would be sent to the distcc server host.</dd>
 <dt>
-<dd> <code>SYMLINK</code> indicates a symbolic link that would be sent to the distcc server host.</p>
+</dt><dd> <code>SYMLINK</code> indicates a symbolic link that would be sent to the distcc server host.</dd>
 <dt>
-<dd> <code>DIRECTORY</code> indicates a directory that may be needed in order to compile the source file. For example, a directory &quot;foo&quot; may be needed because of an include of the form #include &quot;foo/../bar.h&quot;. Such directories would be created on the distcc server host.</p>
+</dt><dd> <code>DIRECTORY</code> indicates a directory that may be needed in order to compile the source file. For example, a directory &quot;foo&quot; may be needed because of an include of the form #include &quot;foo/../bar.h&quot;. Such directories would be created on the distcc server host.</dd>
 <dt>
-<dd> <code>SYSTEMDIR</code> indicates a system include directory, i.e. a directory which is on the compiler&#8217;s default include path, such as &quot;/usr/include&quot;; such directories are assumed to be present on the distcc server host, and so would not be sent to the distcc server host.</dl>
+</dt><dd> <code>SYSTEMDIR</code> indicates a system include directory, i.e. a directory which is on the compiler&#8217;s default include path, such as &quot;/usr/include&quot;; such directories are assumed to be present on the distcc server host, and so would not be sent to the distcc server host.</dd></dl>
 </dl>
-<dt><code>-j</code></p>
-<dd> Displays distcc&#8217;s concurrency level, as calculated from the host list; it is the maximum number of outstanding jobs issued by this client to all servers. By default this will be four times the number of hosts in the host list, unless the /LIMIT option was used in the host list. See the Host Specifications section.</dl>
+<dt><code>-j</code></dt>
+<dd> Displays distcc&#8217;s concurrency level, as calculated from the host list; it is the maximum number of outstanding jobs issued by this client to all servers. By default this will be four times the number of hosts in the host list, unless the /LIMIT option was used in the host list. See the Host Specifications section.</dd></dl>
 <dl>
-<dt><code>&#8211;show-principal</code></p>
-<dd> Displays the name of the distccd security principal extracted from the environment. <code>This option is only available if distcc was compiled with</code> <code>the &#8211;with-auth configure option.</code> </p>
+<dt><code>&#8211;show-principal</code></dt>
+<dd> Displays the name of the distccd security principal extracted from the environment. <code>This option is only available if distcc was compiled with</code> <code>the &#8211;with-auth configure option.</code> </dd>
 </dl>
 <h2>INSTALLING DISTCC</h2>
 <p> There are three different ways to call distcc, to suit different circumstances:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> distcc can be installed under the name of the real compiler, to intercept calls to it and run them remotely. This &quot;masqueraded&quot; compiler has the widest compatibility with existing source trees, and is convenient when you want to use distcc for all compilation. The fact that distcc is being used is transparent to the makefiles. </p>
 <p> distcc can be prepended to compiler command lines, such as &quot;distcc cc -c hello.c&quot; or CC=&quot;distcc gcc&quot;. This is convenient when you want to use distcc for only some compilations or to try it out, but can cause trouble with some makefiles or versions of libtool that assume $CC does not contain a space. </p>
-<p> Finally, distcc can be used directly as a compiler. &quot;cc&quot; is always used as the name of the real compiler in this &quot;implicit&quot; mode. This can be convenient for interactive use when &quot;explicit&quot; mode does not work but is not really recommended for new use.</dl>
+<p> Finally, distcc can be used directly as a compiler. &quot;cc&quot; is always used as the name of the real compiler in this &quot;implicit&quot; mode. This can be convenient for interactive use when &quot;explicit&quot; mode does not work but is not really recommended for new use.</dd></dl>
 <p> Remember that you should not use two methods for calling distcc at the same time. If you are using a masquerade directory, don&#8217;t change CC and/or CXX, just put the directory early on your PATH. If you&#8217;re not using a masquerade directory, you&#8217;ll need to either change CC and/or CXX, or modify the makefile(s) to call distcc explicitly.</p>
 <h2>MASQUERADING</h2>
 <p> The basic idea is to create a &quot;masquerade directory&quot; which contains links from the name of the real compiler to the distcc binary. This directory is inserted early on the PATH, so that calls to the compiler are intercepted and distcc is run instead. distcc then removes itself from the PATH to find the real compiler. </p>
 <p> For example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # mkdir /usr/lib/distcc/bin
 # cd /usr/lib/distcc/bin
@@ -138,31 +138,31 @@ description: "distcc – distributed C/C++/ObjC compiler with distcc-pump extens
 # ln -s ../../../bin/distcc g++
 # ln -s ../../../bin/distcc c++
 </pre>
-</dl>
+</dd></dl>
 <p> Then, to use distcc, a user just needs to put the directory /usr/lib/distcc/bin early in the PATH, and have set a host list in DISTCC_HOSTS or a file. distcc will handle the rest. </p>
 <p> Note that this masquerade directory must occur on the PATH earlier than the directory that contains the actual compilers of the same names, and that any auxiliary programs that these compilers call (such as as or ld) must also be found on the PATH in a directory after the masquerade directory since distcc calls out to the real compiler with a PATH value that has all directory up to and including the masquerade directory trimmed off. </p>
 <p> It is possible to get a &quot;recursion error&quot; in masquerade mode, which means that distcc is somehow finding itself again, not the real compiler. This can indicate that you have two masquerade directories on the PATH, possibly because of having two distcc installations in different locations. It can also indicate that you&#8217;re trying to mix &quot;masqueraded&quot; and &quot;explicit&quot; operation. </p>
 <p> Recursion errors can be avoided by using shell scripts instead of links. For example, in /usr/lib/distcc/bin create a file cc which contains: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 #!/bin/sh 
 distcc /usr/bin/gcc &quot;$@&quot;
 </pre>
-</dl>
+</dd></dl>
 <p> In this way, we are not dependent on distcc having to locate the real gcc by investigating the PATH variable. Instead, the compiler location is explicitly provided. </p>
 <h2>USING DISTCC WITH CCACHE</h2>
 <p> ccache is a program that speeds software builds by caching the results of compilations. ccache is normally called before distcc, so that results are retrieved from a normal cache. Some experimentation may be required for idiosyncratic makefiles to make everything work together. </p>
 <p> The most reliable method is to set</p>
 <dl>
 <dt>
-<dd> <code>CCACHE_PREFIX=distcc</code></dl>
+</dt><dd> <code>CCACHE_PREFIX=distcc</code></dd></dl>
 <p> This tells ccache to run distcc as a wrapper around the real compiler. ccache still uses the real compiler to detect compiler upgrades. </p>
 <p> ccache can then be run using either a masquerade directory <i>or </i> by setting</p>
 <dl>
 <dt>
-<dd> <code>CC=ccache gcc</code></dl>
+</dt><dd> <code>CC=ccache gcc</code></dd></dl>
 <p> As of version 2.2, ccache does not cache compilation from preprocessed source and so will never get a cache hit if it is run from distccd or distcc. It must be run only on the client side and before distcc to be any use. </p>
 <p> distcc&#8217;s pump mode is not compatible with ccache.</p>
 <h2>HOST SPECIFICATIONS</h2>
@@ -170,7 +170,7 @@ distcc /usr/bin/gcc &quot;$@&quot;
 <p> The host list is a simple whitespace separated list of host specifications. The simplest and most common form is a host names, such as </p>
 <dl>
 <dt>
-<dd> <code>localhost red green blue</code></dl>
+</dt><dd> <code>localhost red green blue</code></dd></dl>
 <p> distcc prefers hosts towards the start of the list, so machines should be listed in descending order of speed. In particular, when only a single compilation can be run (such as from a configure script), the first machine listed is used (but see <i>&#8211;randomize</i> below). </p>
 <p> Placing <i>localhost</i> at the right point in the list is important to getting good performance. Because overhead for running jobs locally is low, localhost should normally be first. However, it is important that the client have enough cycles free to run the local jobs and the distcc client. If the client is slower than the volunteers, or if there are many volunteers, then the client should be put later in the list or not at all. As a general rule, if the aggregate CPU speed of the client is less than one fifth of the total, then the client should be left out of the list. </p>
 <p> If you have a large shared build cluster and a single shared hosts file, the above rules would cause the first few machines in the hosts file to be tried first even though they are likely to be busier than machines later in the list. To avoid this, place the keyword <i>&#8211;randomize</i> into the host list. This will cause the host list to be randomized, which should improve performance slightly for large build clusters. </p>
@@ -187,44 +187,44 @@ DISTCC_HOSTS = HOSTSPEC... HOSTSPEC = LOCAL_HOST | SSH_HOST | TCP_HOST | OLDSTYL
 </code></pre>
 <p> Here are some individual examples of the syntax:</p>
 <dl>
-<dt><code>localhost</code></p>
-<dd> The literal word &quot;localhost&quot; is interpreted specially to cause compilations to be directly executed, rather than passed to a daemon on the local machine. If you do want to connect to a daemon on the local machine for testing, then give the machine&#8217;s IP address or real hostname. (This will be slower.)</p>
-<dt><code>IPV6</code></p>
-<dd> A literal IPv6 address enclosed in square brackets, such as <code>[::1]</code></p>
-<dt><code>IPV4</code></p>
-<dd> A literal IPv4 address, such as <code>10.0.0.1</code></p>
-<dt><code>HOSTNAME</code></p>
-<dd> A hostname to be looked up using the resolver.</p>
-<dt><code>:PORT</code></p>
-<dd> Connect to a specified decimal port number, rather than the default of 3632.</p>
-<dt><code>@HOSTID</code></p>
-<dd> Connect to the host over SSH, rather than TCP. Options for the SSH connection can be set in <code>~/.ssh/config</code></p>
-<dt><code>USER@</code></p>
-<dd> Connect to the host over SSH as a specified username.</p>
-<dt><code>:COMMAND </code></p>
-<dd> Connect over SSH, and use a specified path to find the distccd server. This is normally only needed if for some reason you can&#8217;t install distccd into a directory on the default PATH for SSH connections. Use this if you get errors like &quot;distccd: command not found&quot; in SSH mode.</p>
-<dt><code>/LIMIT</code></p>
-<dd> A decimal limit can be added to any host specification to restrict the number of jobs that this client will send to the machine. The limit defaults to four per host (two for localhost), but may be further restricted by the server. You should only need to increase this for servers with more than two processors.</p>
-<dt><code>,lzo</code></p>
-<dd> Enables LZO compression for this TCP or SSH host.</p>
-<dt><code>,cpp</code></p>
-<dd> Enables distcc-pump mode for this host. Note: the build command must be wrapped in the pump script in order to start the include server.</p>
-<dt><code>,auth</code></p>
-<dd> Enables GSSAPI-based mutual authentication for this host.</p>
-<dt><code>&#8211;randomize</code></p>
-<dd> Randomize the order of the host list before execution.</p>
-<dt><code>+zeroconf</code></p>
-<dd> <code>This option is only available if distcc was compiled with Avahi support enabled at configure time.</code> When this special entry is present in the hosts list, distcc will use Avahi Zeroconf DNS Service Discovery (DNS-SD) to locate any available distccd servers on the local network. This avoids the need to explicitly list the host names or IP addresses of the distcc server machines. The distccd servers must have been started with the &quot;&#8211;zeroconf&quot; option to distccd. An important caveat is that in the current implementation, pump mode (&quot;,cpp&quot;) and compression (&quot;,lzo&quot;) will never be used for hosts located via zeroconf.</dl>
+<dt><code>localhost</code></dt>
+<dd> The literal word &quot;localhost&quot; is interpreted specially to cause compilations to be directly executed, rather than passed to a daemon on the local machine. If you do want to connect to a daemon on the local machine for testing, then give the machine&#8217;s IP address or real hostname. (This will be slower.)</dd>
+<dt><code>IPV6</code></dt>
+<dd> A literal IPv6 address enclosed in square brackets, such as <code>[::1]</code></dd>
+<dt><code>IPV4</code></dt>
+<dd> A literal IPv4 address, such as <code>10.0.0.1</code></dd>
+<dt><code>HOSTNAME</code></dt>
+<dd> A hostname to be looked up using the resolver.</dd>
+<dt><code>:PORT</code></dt>
+<dd> Connect to a specified decimal port number, rather than the default of 3632.</dd>
+<dt><code>@HOSTID</code></dt>
+<dd> Connect to the host over SSH, rather than TCP. Options for the SSH connection can be set in <code>~/.ssh/config</code></dd>
+<dt><code>USER@</code></dt>
+<dd> Connect to the host over SSH as a specified username.</dd>
+<dt><code>:COMMAND </code></dt>
+<dd> Connect over SSH, and use a specified path to find the distccd server. This is normally only needed if for some reason you can&#8217;t install distccd into a directory on the default PATH for SSH connections. Use this if you get errors like &quot;distccd: command not found&quot; in SSH mode.</dd>
+<dt><code>/LIMIT</code></dt>
+<dd> A decimal limit can be added to any host specification to restrict the number of jobs that this client will send to the machine. The limit defaults to four per host (two for localhost), but may be further restricted by the server. You should only need to increase this for servers with more than two processors.</dd>
+<dt><code>,lzo</code></dt>
+<dd> Enables LZO compression for this TCP or SSH host.</dd>
+<dt><code>,cpp</code></dt>
+<dd> Enables distcc-pump mode for this host. Note: the build command must be wrapped in the pump script in order to start the include server.</dd>
+<dt><code>,auth</code></dt>
+<dd> Enables GSSAPI-based mutual authentication for this host.</dd>
+<dt><code>&#8211;randomize</code></dt>
+<dd> Randomize the order of the host list before execution.</dd>
+<dt><code>+zeroconf</code></dt>
+<dd> <code>This option is only available if distcc was compiled with Avahi support enabled at configure time.</code> When this special entry is present in the hosts list, distcc will use Avahi Zeroconf DNS Service Discovery (DNS-SD) to locate any available distccd servers on the local network. This avoids the need to explicitly list the host names or IP addresses of the distcc server machines. The distccd servers must have been started with the &quot;&#8211;zeroconf&quot; option to distccd. An important caveat is that in the current implementation, pump mode (&quot;,cpp&quot;) and compression (&quot;,lzo&quot;) will never be used for hosts located via zeroconf.</dd></dl>
 <p> Here is an example demonstrating some possibilities: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>localhost/2 @bigman/16:/opt/bin/distccd oldmachine:4200/1</code>
 <code># cartman is down</code>
 <code>distant/3,lzo</code>
 </pre>
-</dl>
+</dd></dl>
 <p> Comments are allowed in host specifications. Comments start with a hash/pound sign (<code>#</code>) and run to the end of the line. </p>
 <p> If a host in the list is not reachable distcc will emit a warning and ignore that host for about one minute.</p>
 <h2>COMPRESSION</h2>
@@ -236,7 +236,7 @@ DISTCC_HOSTS = HOSTSPEC... HOSTSPEC = LOCAL_HOST | SSH_HOST | TCP_HOST | OLDSTYL
 <p> If the compiler name is an absolute path, it is passed verbatim to the server and the compiler is run from that directory. For example: </p>
 <dl>
 <dt>
-<dd> <code>distcc /usr/local/bin/gcc-3.1415 -c hello.c</code></dl>
+</dt><dd> <code>distcc /usr/local/bin/gcc-3.1415 -c hello.c</code></dd></dl>
 <p> If the compiler name is not absolute, or not fully qualified, distccd&#8217;s PATH is searched. When distcc is run from a masquerade directory, only the base name of the compiler is used. The client&#8217;s PATH is used only to run the preprocessor and has no effect on the server&#8217;s path.</p>
 <h2>TIMEOUTS</h2>
 <p> Both the distcc client and server impose timeouts on transfer of data across the network. This is intended to detect hosts which are down or unreachable, and to prevent compiles hanging indefinitely if a server is disconnected while in use. If a client-side timeout expires, the job will be re-run locally. </p>
@@ -250,44 +250,44 @@ DISTCC_HOSTS = HOSTSPEC... HOSTSPEC = LOCAL_HOST | SSH_HOST | TCP_HOST | OLDSTYL
 <p> If the compiler exits with a signal, distcc returns an exit code of 128 plus the signal number. </p>
 <p> distcc internal errors cause an exit code between 100 and 127. In particular</p>
 <dl>
-<dt>100</p>
-<dd> General distcc failure.</p>
-<dt>101</p>
-<dd> Bad arguments.</p>
-<dt>102</p>
-<dd> Bind failed.</p>
-<dt>103</p>
-<dd> Connect failed.</p>
-<dt>104</p>
-<dd> Compiler crashed.</p>
-<dt>105</p>
-<dd> Out of memory.</p>
-<dt>106</p>
-<dd> Bad Host SPEC</p>
-<dt>107</p>
-<dd> I/O Error</p>
-<dt>108</p>
-<dd> Truncated.</p>
-<dt>109</p>
-<dd> Protocol Error.</p>
-<dt>110</p>
-<dd> The given compiler was not found on the remote host. Check that $CC is set appropriately and that it&#8217;s installed in a directory on the search path for distccd.</p>
-<dt>111</p>
-<dd> Recursive call to distcc.</p>
-<dt>112</p>
-<dd> Failed to discard privileges.</p>
-<dt>113</p>
-<dd> Network access denied.</p>
-<dt>114</p>
-<dd> In use by another process.</p>
-<dt>115</p>
-<dd> No such file.</p>
-<dt>116</p>
-<dd> No hosts defined and fallbacks disabled.</p>
-<dt>118</p>
-<dd> Timeout.</p>
-<dt>119</p>
-<dd> GSS-API &#8211; Catchall error code for GSS-API related errors. </p>
+<dt>100</dt>
+<dd> General distcc failure.</dd>
+<dt>101</dt>
+<dd> Bad arguments.</dd>
+<dt>102</dt>
+<dd> Bind failed.</dd>
+<dt>103</dt>
+<dd> Connect failed.</dd>
+<dt>104</dt>
+<dd> Compiler crashed.</dd>
+<dt>105</dt>
+<dd> Out of memory.</dd>
+<dt>106</dt>
+<dd> Bad Host SPEC</dd>
+<dt>107</dt>
+<dd> I/O Error</dd>
+<dt>108</dt>
+<dd> Truncated.</dd>
+<dt>109</dt>
+<dd> Protocol Error.</dd>
+<dt>110</dt>
+<dd> The given compiler was not found on the remote host. Check that $CC is set appropriately and that it&#8217;s installed in a directory on the search path for distccd.</dd>
+<dt>111</dt>
+<dd> Recursive call to distcc.</dd>
+<dt>112</dt>
+<dd> Failed to discard privileges.</dd>
+<dt>113</dt>
+<dd> Network access denied.</dd>
+<dt>114</dt>
+<dd> In use by another process.</dd>
+<dt>115</dt>
+<dd> No such file.</dd>
+<dt>116</dt>
+<dd> No hosts defined and fallbacks disabled.</dd>
+<dt>118</dt>
+<dd> Timeout.</dd>
+<dt>119</dt>
+<dd> GSS-API &#8211; Catchall error code for GSS-API related errors. </dd>
 </dl>
 <h2>FILES</h2>
 <p> If $DISTCC_HOSTS is not set, distcc reads a host list from either <code>$DISTCC_DIR/hosts</code> or a system-wide configuration file set at compile time. The file locations are shown in the output from <code>distcc &#8211;help</code> </p>
@@ -295,38 +295,38 @@ DISTCC_HOSTS = HOSTSPEC... HOSTSPEC = LOCAL_HOST | SSH_HOST | TCP_HOST | OLDSTYL
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> distcc&#8217;s behaviour is controlled by a number of environment variables. For most cases nothing need be set if the host list is stored in a file.</p>
 <dl>
-<dt><code>DISTCC_HOSTS</code></p>
-<dd> Space-separated list of volunteer host specifications.</p>
-<dt><code>DISTCC_VERBOSE</code></p>
-<dd> If set to 1, distcc produces explanatory messages on the standard error stream or in the log file. This can be helpful in debugging problems. Bug reports should include verbose output.</p>
-<dt><code>DISTCC_LOG</code></p>
-<dd> Log file to receive messages from distcc itself, rather than stderr.</p>
-<dt><code>DISTCC_FALLBACK</code></p>
-<dd> By default distcc will compile locally if it fails to distribute a job to the intended machine, or if no host list can be found. If this variable is set to 0 then fallbacks are disabled and those compilations will simply fail. Note that this does not affect jobs which must always be local such as linking.</p>
-<dt><code>DISTCC_IO_TIMEOUT</code></p>
-<dd> Specifies how long (in seconds) distcc will wait before deciding a distributed job has timed out. If a distributed job is expected to takes a long time, consider increasing this value so the job does not time out and fallback to a local compile. By default set to 300 seconds.</p>
-<dt><code>DISTCC_SAVE_TEMPS</code></p>
-<dd> If set to 1, temporary files are not deleted after use. Good for debugging, or if your disks are too empty.</p>
-<dt><code>DISTCC_TCP_CORK</code></p>
-<dd> If set to 0, disable use of &quot;TCP corks&quot;, even if they&#8217;re present on this system. Using corks normally helps pack requests into fewer packets and aids performance. This should normally be left enabled.</p>
-<dt><code>DISTCC_SSH</code></p>
-<dd> Specifies the command used for opening SSH connections. Defaults to &quot;ssh&quot; but may be set to a different connection command such as &quot;lsh&quot; or &quot;tsocks-ssh&quot; that accepts a similar command line. The command is not split into words and is not executed through the shell.</p>
-<dt><code>DISTCC_SKIP_LOCAL_RETRY</code></p>
-<dd> If set, when a remote compile fails, distcc will no longer try to recompile that file locally.</p>
-<dt><code>DISTCC_DIR</code></p>
-<dd> Per-user configuration directory to store lock files and state files. By default <code>~/.distcc/ </code> is used.</p>
-<dt><code>TMPDIR</code></p>
-<dd> Directory for temporary files such as preprocessor output. By default /tmp/ is used.</p>
-<dt><code>UNCACHED_ERR_FD</code></p>
-<dd> If set and if DISTCC_LOG is not set, distcc errors are written to the file descriptor identified by this variable. This variable is intended mainly for automatic use by ccache, which sets it to avoid caching transient errors such as network problems.</p>
-<dt><code>DISTCC_ENABLE_DISCREPANCY_EMAIL</code></p>
-<dd> If set, distcc sends an email when a compilation failed remotely, but succeeded locally. Built-in heuristics prevent some such discrepancy email from being sent if the problem is that a local file changed between the failing remote compilation and the succeeding local compilation.</p>
-<dt><code>DISTCC_MAX_DISCREPANCY</code></p>
-<dd> The maximum number of remote compilation failures allowed in pump mode before distcc switches to plain distcc mode. By default set to 1.</p>
-<dt><code>DCC_EMAILLOG_WHOM_TO_BLAME</code></p>
-<dd> The email address for discrepancy email; the default is &quot;distcc-pump-errors&quot;.</p>
-<dt><code>DISTCC_PRINCIPAL</code></p>
-<dd> If set, specifies the name of the principal that distccd runs under, and is used to authenticate the server to the client. <code>This environment variable is only used if distcc was compiled with</code> <code>the &#8211;with-auth configure option and the ,auth per host option is specified.</code></dl>
+<dt><code>DISTCC_HOSTS</code></dt>
+<dd> Space-separated list of volunteer host specifications.</dd>
+<dt><code>DISTCC_VERBOSE</code></dt>
+<dd> If set to 1, distcc produces explanatory messages on the standard error stream or in the log file. This can be helpful in debugging problems. Bug reports should include verbose output.</dd>
+<dt><code>DISTCC_LOG</code></dt>
+<dd> Log file to receive messages from distcc itself, rather than stderr.</dd>
+<dt><code>DISTCC_FALLBACK</code></dt>
+<dd> By default distcc will compile locally if it fails to distribute a job to the intended machine, or if no host list can be found. If this variable is set to 0 then fallbacks are disabled and those compilations will simply fail. Note that this does not affect jobs which must always be local such as linking.</dd>
+<dt><code>DISTCC_IO_TIMEOUT</code></dt>
+<dd> Specifies how long (in seconds) distcc will wait before deciding a distributed job has timed out. If a distributed job is expected to takes a long time, consider increasing this value so the job does not time out and fallback to a local compile. By default set to 300 seconds.</dd>
+<dt><code>DISTCC_SAVE_TEMPS</code></dt>
+<dd> If set to 1, temporary files are not deleted after use. Good for debugging, or if your disks are too empty.</dd>
+<dt><code>DISTCC_TCP_CORK</code></dt>
+<dd> If set to 0, disable use of &quot;TCP corks&quot;, even if they&#8217;re present on this system. Using corks normally helps pack requests into fewer packets and aids performance. This should normally be left enabled.</dd>
+<dt><code>DISTCC_SSH</code></dt>
+<dd> Specifies the command used for opening SSH connections. Defaults to &quot;ssh&quot; but may be set to a different connection command such as &quot;lsh&quot; or &quot;tsocks-ssh&quot; that accepts a similar command line. The command is not split into words and is not executed through the shell.</dd>
+<dt><code>DISTCC_SKIP_LOCAL_RETRY</code></dt>
+<dd> If set, when a remote compile fails, distcc will no longer try to recompile that file locally.</dd>
+<dt><code>DISTCC_DIR</code></dt>
+<dd> Per-user configuration directory to store lock files and state files. By default <code>~/.distcc/ </code> is used.</dd>
+<dt><code>TMPDIR</code></dt>
+<dd> Directory for temporary files such as preprocessor output. By default /tmp/ is used.</dd>
+<dt><code>UNCACHED_ERR_FD</code></dt>
+<dd> If set and if DISTCC_LOG is not set, distcc errors are written to the file descriptor identified by this variable. This variable is intended mainly for automatic use by ccache, which sets it to avoid caching transient errors such as network problems.</dd>
+<dt><code>DISTCC_ENABLE_DISCREPANCY_EMAIL</code></dt>
+<dd> If set, distcc sends an email when a compilation failed remotely, but succeeded locally. Built-in heuristics prevent some such discrepancy email from being sent if the problem is that a local file changed between the failing remote compilation and the succeeding local compilation.</dd>
+<dt><code>DISTCC_MAX_DISCREPANCY</code></dt>
+<dd> The maximum number of remote compilation failures allowed in pump mode before distcc switches to plain distcc mode. By default set to 1.</dd>
+<dt><code>DCC_EMAILLOG_WHOM_TO_BLAME</code></dt>
+<dd> The email address for discrepancy email; the default is &quot;distcc-pump-errors&quot;.</dd>
+<dt><code>DISTCC_PRINCIPAL</code></dt>
+<dd> If set, specifies the name of the principal that distccd runs under, and is used to authenticate the server to the client. <code>This environment variable is only used if distcc was compiled with</code> <code>the &#8211;with-auth configure option and the ,auth per host option is specified.</code></dd></dl>
 <h2>CROSS COMPILING</h2>
 <p> Cross compilation means building programs to run on a machine with a different processor, architecture, or operating system to where they were compiled. distcc supports cross compilation, including teams of mixed-architecture machines, although some changes to the compilation commands may be required. </p>
 <p> The compilation command passed to distcc must be one that will execute properly on every volunteer machine to produce an object file of the appropriate type. If the machines have different processors, then simply using <code>distcc cc</code> will probably not work, because that will normally invoke the volunteer&#8217;s native compiler. </p>

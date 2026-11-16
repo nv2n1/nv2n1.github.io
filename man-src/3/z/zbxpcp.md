@@ -20,7 +20,7 @@ description: "zbxpcp – Zabbix Agent Loadable PCP Module"
 <dd>
 <pre>LoadModulePath=/usr/lib64/zabbix/agent/
 LoadModule=zbxpcp.so</pre>
-</dl>
+</dd></dl>
 <p> After restarting the Zabbix agent all the PCP metrics will be available with the &#8220;<code>pcp.</code>&#8221; prefix like all the other agent items. This can be verified with the commands: </p>
 <dl>
 <dd>
@@ -28,16 +28,16 @@ LoadModule=zbxpcp.so</pre>
 $ zabbix_agentd -p
 $ pminfo -f kernel.all.sysfork
 $ zabbix_get -s 127.0.0.1 -p 10050 -k pcp.kernel.all.sysfork</pre>
-</dl>
+</dd></dl>
 <p> Then to collect PCP metrics from Zabbix agents, the Zabbix server side configuration is as usual (see Zabbix documentation if needed). </p>
 <p> The PCP <code>pmcd</code> service must always be running when starting up a <code>zbxpcp</code> enabled Zabbix agent, otherwise the module will fail to load and the PCP metrics will not become available. Special care must be taken to make sure this happens also when rebooting the system.</p>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/zabbix/zabbix_agentd.conf</code></p>
-<dd>Typical Zabbix agent configuration file location.</p>
-<dt><code>/etc/zabbix/zbxpcp-derived-metrics.conf</code></p>
-<dd>Optional PCP derived metrics configuration file for <code>zbxpcp</code>. See <code><a href="/docs/linux/man/3-pmloadderivedconfig/">pmLoadDerivedConfig</a></code>(3) for more info on derived metrics.</p>
-<dt><code>$(PCP_LIB_DIR)/zabbix/agent/zbxpcp.so</code></p>
-<dd>Zabbix agent loadable PCP module.</dl>
+<dt><code>/etc/zabbix/zabbix_agentd.conf</code></dt>
+<dd>Typical Zabbix agent configuration file location.</dd>
+<dt><code>/etc/zabbix/zbxpcp-derived-metrics.conf</code></dt>
+<dd>Optional PCP derived metrics configuration file for <code>zbxpcp</code>. See <code><a href="/docs/linux/man/3-pmloadderivedconfig/">pmLoadDerivedConfig</a></code>(3) for more info on derived metrics.</dd>
+<dt><code>$(PCP_LIB_DIR)/zabbix/agent/zbxpcp.so</code></dt>
+<dd>Zabbix agent loadable PCP module.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1), <code><a href="/docs/linux/man/1-pminfo/">pminfo</a></code>(1), <code><a href="/docs/linux/man/1-pmrep/">pmrep</a></code>(1), <code>zabbix_get</code>(1), <code><a href="/docs/linux/man/3-pmloadderivedconfig/">pmLoadDerivedConfig</a></code>(3) and <code>zabbix_agentd</code>(8). </p>

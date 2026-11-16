@@ -17,7 +17,6 @@ description: "fixtan – Fixed point tangent of binary angles. Allegro game prog
 <pre><code>
 fixed angle, res_a, res_b;
 float dif;
-
 angle = itofix(37);
 /* Prove that tan(angle) == sin(angle) / cos(angle). */
 res_a = fixdiv(fixsin(angle), fixcos(angle));

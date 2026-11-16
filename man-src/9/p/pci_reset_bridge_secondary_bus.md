@@ -15,7 +15,7 @@ pci_reset_bridge_secondary_bus - Reset the secondary bus on a PCI bridge.
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>Bridge device</dl>
+<dl><dd></dd><dd>Bridge device</dd></dl>
 
 <h2>Description</h2>
 

@@ -37,18 +37,12 @@ If the implementation supports IEEE floating-point arithmetic (IEC 60559), </p>
 <p>For the IEEE-compatible type double, if |arg| &gt; 710.5, then cosh(arg) overflows. </p>
 <h2>Example</h2>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;cerrno&gt;
-
 #include &lt;cstring&gt;
-
 #include &lt;cfenv&gt;
 #pragma STDC FENV_ACCESS ON
-
 int main()
-
 {
     std::cout &lt;&lt; &quot;cosh(1) = &quot; &lt;&lt; std::cosh(1) &lt;&lt; '
 '

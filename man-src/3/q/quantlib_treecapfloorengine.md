@@ -16,7 +16,7 @@ description: "QuantLib::TreeCapFloorEngine – Numerical lattice engine for cap/
 <p> <code>Constructors</code><br />
  <code>Note:</code></p>
 <dl COMPACT>
-<dd>the term structure is only needed when the short-rate model cannot provide one itself.</dl>
+<dd>the term structure is only needed when the short-rate model cannot provide one itself.</dd></dl>
 <p> <code>TreeCapFloorEngine</code> (const boost::shared_ptr&lt; <code>ShortRateModel</code> &gt; &amp;model, Size timeSteps, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;termStructure=<code>Handle</code>&lt; <code>YieldTermStructure</code> &gt;()) </p>
 <p> <code>TreeCapFloorEngine</code> (const boost::shared_ptr&lt; <code>ShortRateModel</code> &gt; &amp;model, const <code>TimeGrid</code> &amp;timeGrid, const <code>Handle</code>&lt; <code>YieldTermStructure</code> &gt; &amp;termStructure=<code>Handle</code>&lt; <code>YieldTermStructure</code> &gt;()) </p>
 <h2>Detailed Description</h2>

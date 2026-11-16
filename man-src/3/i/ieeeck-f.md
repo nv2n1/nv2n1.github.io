@@ -20,10 +20,10 @@ description: "ieeeck.f –"
 <dd>
 <pre> IEEECK is called from the ILAENV to verify that Infinity and
  possibly NaN arithmetic is safe (i.e. will not trap).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ISPEC</i> </p>
+<dd><i>ISPEC</i> </dd>
 <pre> ISPEC is INTEGER
  Specifies whether to test just for inifinity arithmetic
  or whether to test for infinity and NaN arithmetic.
@@ -45,13 +45,13 @@ description: "ieeeck.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 83 of file ieeeck.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

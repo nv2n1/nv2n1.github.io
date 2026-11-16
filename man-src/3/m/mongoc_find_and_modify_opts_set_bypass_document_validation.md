@@ -14,22 +14,22 @@ mongoc_find_and_modify_opts_set_bypass_document_validation (mongoc_find_and_modi
  bool bypass);</pre>
 <p><code>NOTE</code></p>
 <dl COMPACT>
-<dd>New in MongoDB 3.2 and mongoc 1.3.0</dl>
+<dd>New in MongoDB 3.2 and mongoc 1.3.0</dd></dl>
 <p> <code>NOTE</code></p>
 <dl COMPACT>
-<dd>This option is only available when talking to MongoDB 3.2 and later.</dl>
+<dd>This option is only available when talking to MongoDB 3.2 and later.</dd></dl>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>opts</code></p>
-<dd>A <code>mongoc_find_and_modify_opts_t</code> \&amp;.</dl>
+<dt><code>opts</code></dt>
+<dd>A <code>mongoc_find_and_modify_opts_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>bypass</code></p>
-<dd>If the schema validation rules should be ignored.</dl>
+<dt><code>bypass</code></dt>
+<dd>If the schema validation rules should be ignored.</dd></dl>
 <h2>Description</h2>
 <p>Adds bypassDocumentValidation argument to the builder. </p>
 <p> <code>NOTE</code></p>
 <dl COMPACT>
-<dd>When authentication is enabled, the authenticated user must have either the &quot;dbadmin&quot; or &quot;restore&quot; roles to bypass document validation.</dl>
+<dd>When authentication is enabled, the authenticated user must have either the &quot;dbadmin&quot; or &quot;restore&quot; roles to bypass document validation.</dd></dl>
 <h2>Returns</h2>
 <p>Returns true if it successfully added the option to the builder. </p>
 <h2>Setting Bypassdocumentvalidation</h2>

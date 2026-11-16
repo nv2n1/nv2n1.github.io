@@ -23,6 +23,6 @@ description: "Radial_Gradient Object Fill Functions – Functions that deal with
  <i>cx</i> The X coordinate of the start point.<br />
  <i>cy</i> The Y coordinate of the start point.<br />
  <i>rx</i> The length of the x-cordinate radius.<br />
- <i>ry</i> The length of the y-coordinate radius.</dl>
+ <i>ry</i> The length of the y-coordinate radius.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Evas from the source code.</p>

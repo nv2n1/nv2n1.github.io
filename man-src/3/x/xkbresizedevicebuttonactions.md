@@ -11,14 +11,14 @@ description: "XkbResizeDeviceButtonActions – Allocate additional space for but
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>Status XkbResizeDeviceButtonActions</code> <code>(XkbDeviceInfoPtr </code><i>device_info</i><code>,</code> <code>unsigned int </code><i>new_total</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; device_info</i></p>
+<dt><i>&#8211; device_info</i></dt>
 <dd>
-<dd>structure in which to allocate button actions</p>
-<dt><i>&#8211; new_total</i></p>
-<dd>new total number of button actions needed</dl>
+</dd><dd>structure in which to allocate button actions</dd>
+<dt><i>&#8211; new_total</i></dt>
+<dd>new total number of button actions needed</dd></dl>
 <h2>Description</h2>
 <p><i>XkbResizeDeviceButtonActions </i> reallocates space, if necessary, to make sure there is room for a total of <i>new_total </i> button actions in the <i>device_info </i> structure. Any new entries allocated are zeroed. If successful, <i>XkbResizeDeviceButtonActions </i> returns Success. If <i>new_total </i> is zero, all button actions are deleted, <i>device_info-&gt;num_btns </i> is set to zero, and <i>device_info-&gt;btn_acts </i> is set to NULL. If <i>device_info </i> is invalid or <i>new_total </i> is greater than 255, BadValue is returned. If a memory allocation failure occurs, a BadAlloc is returned. </p>
 <p> To free an XkbDeviceInfoRec structure, use <i>XkbFreeDeviceInfo.</i></p>
@@ -41,9 +41,9 @@ description: "XkbResizeDeviceButtonActions – Allocate additional space for but
  } XkbDeviceInfoRec, *XkbDeviceInfoPtr;</pre>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>Unable to allocate storage</p>
-<dt><code>BadValue</code></p>
-<dd>An argument is out of range</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>Unable to allocate storage</dd>
+<dt><code>BadValue</code></dt>
+<dd>An argument is out of range</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-xkbfreedeviceinfo/">XkbFreeDeviceInfo</a></code>(3)</p>

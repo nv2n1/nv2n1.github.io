@@ -23,10 +23,10 @@ description: "FvwmScroll – the fvwm scroll-bar module"
 <p>FvwmScroll can be invoked by binding the action &#8216;Module FvwmScroll x y&#8217; to a menu or key-stroke in the .fvwm2rc file. The parameter x and y are either integers or integers immediately followed by a p, which describe the horizontal and vertical size modification of the window. An integer describe a size reduction. An integer followed by a p describe a size as a percentage of the height or the width of a full screen but the size is never larger than the original window size (0p will do nothing). Fvwm will search directory specified in the ModulePath configuration option to attempt to locate FvwmScroll. Although nothing keeps you from launching FvwmScroll at start-up time, you probably don&#8217;t want to. </p>
 <h2>Configuration Options</h2>
 <dl>
-<dt>*FvwmScroll: Colorset <i>n</i></p>
-<dd>Tells the module to use colorset <i>n</i>. See FvwmTheme. </p>
-<dt>*FvwmScroll: Back <i>color</i></p>
-<dd>Tells the module to use <i>color</i> instead of black for the window background. Switches off the Colorset option. </p>
+<dt>*FvwmScroll: Colorset <i>n</i></dt>
+<dd>Tells the module to use colorset <i>n</i>. See FvwmTheme. </dd>
+<dt>*FvwmScroll: Back <i>color</i></dt>
+<dd>Tells the module to use <i>color</i> instead of black for the window background. Switches off the Colorset option. </dd>
 </dl>
 <h2>Bugs</h2>
 <p>When the scroll bars are removed by clicking on the button in the lower right corner, the window does not restore its location correctly. </p>

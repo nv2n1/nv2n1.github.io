@@ -31,74 +31,74 @@ description: "k5start – Obtain and optionally keep active a Kerberos ticket"
 <p> If a running <code>k5start</code> receives an <font SIZE="-1">ALRM</font> signal, it immediately refreshes the ticket cache regardless of whether it is in danger of expiring.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code></p>
-<dd> After starting, detach from the controlling terminal and run in the background. This option only makes sense in combination with <code>-K</code> or a command that <code>k5start</code> will be running and can only be used if a keytab is specified with <i>-f</i>. <code>k5start</code> will not background itself until after it does the initial authentication, so that any initial errors will be reported, but it will then redirect output to <i>/dev/null</i> and no subsequent errors will be reported. </p>
+<dt><code>-b</code></dt>
+<dd> After starting, detach from the controlling terminal and run in the background. This option only makes sense in combination with <code>-K</code> or a command that <code>k5start</code> will be running and can only be used if a keytab is specified with <i>-f</i>. <code>k5start</code> will not background itself until after it does the initial authentication, so that any initial errors will be reported, but it will then redirect output to <i>/dev/null</i> and no subsequent errors will be reported. </dd>
 <p> If this flag is given, <code>k5start</code> will also change directories to <tt>&quot;/&quot;</tt>. All paths (such as to a command to run or a <font SIZE="-1">PID</font> file) should therefore be given as absolute, not relative, paths. </p>
 <p> If used in conjunction with a command to run, that command will also run in the background and will also have its input and output redirected to <i>/dev/null</i>. It will have to report any errors via some other mechanism for the errors to be seen. </p>
 <p> Note that on Mac <font SIZE="-1">OS</font> X, the default ticket cache type is per-session and using the <code>-b</code> flag will disassociate <code>k5start</code> from the existing ticket cache. When using <code>-b</code> in conjunction with <code>-K</code> on Mac <font SIZE="-1">OS</font> X, you probably also want to use the <code>-k</code> flag to specify a ticket cache file and force the use of a file cache. </p>
 <p> When using this option, consider also using <code>-L</code> to report <code>k5start</code> errors to syslog.</p>
-<dt><code>-c</code> <i>child pid file</i></p>
-<dd> Save the process <font SIZE="-1">ID</font> (<font SIZE="-1">PID</font>) of the child process into <i>child pid file</i>. <i>child pid file</i> is created if it doesn&#8217;t exist and overwritten if it does exist. This option is only allowed when a command was given on the command line and is most useful in conjunction with <code>-b</code> to allow management of the running child process. </p>
+<dt><code>-c</code> <i>child pid file</i></dt>
+<dd> Save the process <font SIZE="-1">ID</font> (<font SIZE="-1">PID</font>) of the child process into <i>child pid file</i>. <i>child pid file</i> is created if it doesn&#8217;t exist and overwritten if it does exist. This option is only allowed when a command was given on the command line and is most useful in conjunction with <code>-b</code> to allow management of the running child process. </dd>
 <p> Note that, when used with <code>-b</code>, the <font SIZE="-1">PID</font> file is written out after <code>k5start</code> is backgrounded and changes its working directory to <i>/</i>, so relative paths for the <font SIZE="-1">PID</font> file will be relative to <i>/</i> (probably not what you want).</p>
-<dt><code>-F</code></p>
-<dd> Do not get forwardable tickets even if the local configuration says to get forwardable tickets by default. Without this flag, <code>k5start</code> does whatever the library default is.</p>
-<dt><code>-f</code> <i>keytab</i></p>
-<dd> Authenticate using the keytab <i>keytab</i> rather than asking for a password. A key for the client principal must be present in <i>keytab</i>.</p>
-<dt><code>-g</code> <i>group</i></p>
-<dd> After creating the ticket cache, change its group ownership to <i>group</i>, which may be either the name of a group or a numeric group <font SIZE="-1">ID</font>. Ticket caches are created with <tt>0600</tt> permissions by default, so this will have no useful effect unless used with <code>-m</code>.</p>
-<dt><code>-H</code> <i>minutes</i></p>
-<dd> Check for a happy ticket, defined as one that has a remaining lifetime of at least <i>minutes</i> minutes. If such a ticket is found, do not attempt authentication. Instead, just run the command (if one was specified) or exit immediately with status 0 (if none was). Otherwise, try to obtain a new ticket and then run the command, if any. Cannot be used with <code>-K</code>. </p>
+<dt><code>-F</code></dt>
+<dd> Do not get forwardable tickets even if the local configuration says to get forwardable tickets by default. Without this flag, <code>k5start</code> does whatever the library default is.</dd>
+<dt><code>-f</code> <i>keytab</i></dt>
+<dd> Authenticate using the keytab <i>keytab</i> rather than asking for a password. A key for the client principal must be present in <i>keytab</i>.</dd>
+<dt><code>-g</code> <i>group</i></dt>
+<dd> After creating the ticket cache, change its group ownership to <i>group</i>, which may be either the name of a group or a numeric group <font SIZE="-1">ID</font>. Ticket caches are created with <tt>0600</tt> permissions by default, so this will have no useful effect unless used with <code>-m</code>.</dd>
+<dt><code>-H</code> <i>minutes</i></dt>
+<dd> Check for a happy ticket, defined as one that has a remaining lifetime of at least <i>minutes</i> minutes. If such a ticket is found, do not attempt authentication. Instead, just run the command (if one was specified) or exit immediately with status 0 (if none was). Otherwise, try to obtain a new ticket and then run the command, if any. Cannot be used with <code>-K</code>. </dd>
 <p> If <code>-H</code> is used with <code>-t</code>, the external program will always be run even if a ticket with a sufficient remaining lifetime was found.</p>
-<dt><code>-h</code></p>
-<dd> Display a usage message and exit.</p>
-<dt><code>-I</code> <i>service instance</i></p>
-<dd> The instance portion of the service principal. The default is the default realm of the machine. Note that unlike the client principal, a non-default service principal must be specified with <code>-I</code> and <code>-S</code>; one cannot provide the instance portion as part of the argument to <code>-S</code>.</p>
-<dt><code>-i</code> <i>client instance</i></p>
-<dd> Specifies the instance portion of the principal. This option doesn&#8217;t make sense except in combination with <code>-u</code>. Note that the instance can be specified as part of <i>username</i> through the normal convention of appending a slash and then the instance, so one never has to use this option.</p>
-<dt><code>-K</code> <i>minutes</i></p>
-<dd> Run in daemon mode to keep a ticket alive indefinitely. The program reawakens after <i>minutes</i> minutes, checks if the ticket will expire before or less than two minutes after the next scheduled check, and gets a new ticket if needed. If this option is not given but a command was given on the command line, an interval appropriate for the ticket lifetime will be used. </p>
+<dt><code>-h</code></dt>
+<dd> Display a usage message and exit.</dd>
+<dt><code>-I</code> <i>service instance</i></dt>
+<dd> The instance portion of the service principal. The default is the default realm of the machine. Note that unlike the client principal, a non-default service principal must be specified with <code>-I</code> and <code>-S</code>; one cannot provide the instance portion as part of the argument to <code>-S</code>.</dd>
+<dt><code>-i</code> <i>client instance</i></dt>
+<dd> Specifies the instance portion of the principal. This option doesn&#8217;t make sense except in combination with <code>-u</code>. Note that the instance can be specified as part of <i>username</i> through the normal convention of appending a slash and then the instance, so one never has to use this option.</dd>
+<dt><code>-K</code> <i>minutes</i></dt>
+<dd> Run in daemon mode to keep a ticket alive indefinitely. The program reawakens after <i>minutes</i> minutes, checks if the ticket will expire before or less than two minutes after the next scheduled check, and gets a new ticket if needed. If this option is not given but a command was given on the command line, an interval appropriate for the ticket lifetime will be used. </dd>
 <p> If an error occurs in refreshing the ticket cache, the wake-up interval will be shortened to one minute and the operation retried at that interval for as long as the error persists.</p>
-<dt><code>-k</code> <i>ticket cache</i></p>
-<dd> Use <i>ticket cache</i> as the ticket cache rather than the contents of the environment variable <font SIZE="-1">KRB5CCNAME</font> or the library default. <i>ticket cache</i> may be any ticket cache identifier recognized by the underlying Kerberos libraries. This generally supports a path to a file, with or without a leading <tt>&quot;FILE:&quot;</tt> string, but may also support other ticket cache types. </p>
+<dt><code>-k</code> <i>ticket cache</i></dt>
+<dd> Use <i>ticket cache</i> as the ticket cache rather than the contents of the environment variable <font SIZE="-1">KRB5CCNAME</font> or the library default. <i>ticket cache</i> may be any ticket cache identifier recognized by the underlying Kerberos libraries. This generally supports a path to a file, with or without a leading <tt>&quot;FILE:&quot;</tt> string, but may also support other ticket cache types. </dd>
 <p> If any of <code>-o</code>, <code>-g</code>, or <code>-m</code> are given, <i>ticket cache</i> must be either a simple path to a file or start with <tt>&quot;FILE:&quot;</tt> or <tt>&quot;WRFILE:&quot;</tt>.</p>
-<dt><code>-L</code></p>
-<dd> Report messages to syslog as well as to standard output or standard error. All messages will be logged with facility <font SIZE="-1">LOG_DAEMON</font>. Regular messages that are displayed on standard output are logged with level <font SIZE="-1">LOG_NOTICE</font>. Errors that don&#8217;t cause <code>k5start</code> to terminate are logged with level <font SIZE="-1">LOG_WARNING</font>. Fatal errors are logged with level <font SIZE="-1">LOG_ERR</font>. </p>
+<dt><code>-L</code></dt>
+<dd> Report messages to syslog as well as to standard output or standard error. All messages will be logged with facility <font SIZE="-1">LOG_DAEMON</font>. Regular messages that are displayed on standard output are logged with level <font SIZE="-1">LOG_NOTICE</font>. Errors that don&#8217;t cause <code>k5start</code> to terminate are logged with level <font SIZE="-1">LOG_WARNING</font>. Fatal errors are logged with level <font SIZE="-1">LOG_ERR</font>. </dd>
 <p> This is useful when debugging problems in combination with <code>-b</code>.</p>
-<dt><code>-l</code> <i>time string</i></p>
-<dd> Set the ticket lifetime. <i>time string</i> should be in a format recognized by the Kerberos libraries for specifying times, such as <tt>&quot;10h&quot;</tt> (ten hours) or <tt>&quot;10m&quot;</tt> (ten minutes). Known units are <tt>&quot;s&quot;</tt>, <tt>&quot;m&quot;</tt>, <tt>&quot;h&quot;</tt>, and <tt>&quot;d&quot;</tt>. For more information, see <i><a href="/docs/linux/man/1-kinit/">kinit</a></i>(1).</p>
-<dt><code>-m</code> <i>mode</i></p>
-<dd> After creating the ticket cache, change its file permissions to <i>mode</i>, which must be a file mode in octal (<tt>640</tt> or <tt>444</tt>, for example). </p>
+<dt><code>-l</code> <i>time string</i></dt>
+<dd> Set the ticket lifetime. <i>time string</i> should be in a format recognized by the Kerberos libraries for specifying times, such as <tt>&quot;10h&quot;</tt> (ten hours) or <tt>&quot;10m&quot;</tt> (ten minutes). Known units are <tt>&quot;s&quot;</tt>, <tt>&quot;m&quot;</tt>, <tt>&quot;h&quot;</tt>, and <tt>&quot;d&quot;</tt>. For more information, see <i><a href="/docs/linux/man/1-kinit/">kinit</a></i>(1).</dd>
+<dt><code>-m</code> <i>mode</i></dt>
+<dd> After creating the ticket cache, change its file permissions to <i>mode</i>, which must be a file mode in octal (<tt>640</tt> or <tt>444</tt>, for example). </dd>
 <p> Setting a <i>mode</i> that does not allow <code>k5start</code> to read or write to the ticket cache will cause <code>k5start</code> to fail and exit when using the <code>-K</code> option or running a command.</p>
-<dt><code>-n</code></p>
-<dd> Ignored, present for option compatibility with the now-obsolete <code>k4start</code>.</p>
-<dt><code>-o</code> <i>owner</i></p>
-<dd> After creating the ticket cache, change its ownership to <i>owner</i>, which may be either the name of a user or a numeric user <font SIZE="-1">ID</font>. If <i>owner</i> is the name of a user and <code>-g</code> was not also given, also change the group ownership of the ticket cache to the default group for that user.</p>
-<dt><code>-P</code></p>
-<dd> Do not get proxiable tickets even if the local configuration says to get proxiable tickets by default. Without this flag, <code>k5start</code> does whatever the library default is.</p>
-<dt><code>-p</code> <i>pid file</i></p>
-<dd> Save the process <font SIZE="-1">ID</font> (<font SIZE="-1">PID</font>) of the running <code>k5start</code> process into <i>pid file</i>. <i>pid file</i> is created if it doesn&#8217;t exist and overwritten if it does exist. This option is most useful in conjunction with <code>-b</code> to allow management of the running <code>k5start</code> daemon. </p>
+<dt><code>-n</code></dt>
+<dd> Ignored, present for option compatibility with the now-obsolete <code>k4start</code>.</dd>
+<dt><code>-o</code> <i>owner</i></dt>
+<dd> After creating the ticket cache, change its ownership to <i>owner</i>, which may be either the name of a user or a numeric user <font SIZE="-1">ID</font>. If <i>owner</i> is the name of a user and <code>-g</code> was not also given, also change the group ownership of the ticket cache to the default group for that user.</dd>
+<dt><code>-P</code></dt>
+<dd> Do not get proxiable tickets even if the local configuration says to get proxiable tickets by default. Without this flag, <code>k5start</code> does whatever the library default is.</dd>
+<dt><code>-p</code> <i>pid file</i></dt>
+<dd> Save the process <font SIZE="-1">ID</font> (<font SIZE="-1">PID</font>) of the running <code>k5start</code> process into <i>pid file</i>. <i>pid file</i> is created if it doesn&#8217;t exist and overwritten if it does exist. This option is most useful in conjunction with <code>-b</code> to allow management of the running <code>k5start</code> daemon. </dd>
 <p> Note that, when used with <code>-b</code> the <font SIZE="-1">PID</font> file is written out after <code>k5start</code> is backgrounded and changes its working directory to <i>/</i>, so relative paths for the <font SIZE="-1">PID</font> file will be relative to <i>/</i> (probably not what you want).</p>
-<dt><code>-q</code></p>
-<dd> Quiet. Suppresses the printing of the initial banner message saying what Kerberos principal tickets are being obtained for, and also suppresses the password prompt when the <code>-s</code> option is given.</p>
-<dt><code>-r</code> <i>service realm</i></p>
-<dd> The realm for the service principal. This defaults to the default local realm.</p>
-<dt><code>-S</code> <i>service name</i></p>
-<dd> Specifies the principal for which <code>k5start</code> is getting a service ticket. The default value is <tt>&quot;krbtgt&quot;</tt>, to obtain a ticket-granting ticket. This option (along with <code>-I</code>) may be used if one only needs access to a single service. Note that unlike the client principal, a non-default service principal must be specified with both <code>-S</code> and <code>-I</code>; one cannot provide the instance portion as part of the argument to <code>-S</code>.</p>
-<dt><code>-s</code></p>
-<dd> Read the password from standard input. This bypasses the normal password prompt, which means echo isn&#8217;t suppressed and input isn&#8217;t forced to be from the controlling terminal. Most uses of this option are a security risk. You normally want to use a keytab and the <code>-f</code> option instead.</p>
-<dt><code>-t</code></p>
-<dd> Run an external program after getting a ticket. The default use of this is to run <code>aklog</code> to get a token. If the environment variable <font SIZE="-1">KINIT_PROG</font> is set, it overrides the compiled-in default. </p>
+<dt><code>-q</code></dt>
+<dd> Quiet. Suppresses the printing of the initial banner message saying what Kerberos principal tickets are being obtained for, and also suppresses the password prompt when the <code>-s</code> option is given.</dd>
+<dt><code>-r</code> <i>service realm</i></dt>
+<dd> The realm for the service principal. This defaults to the default local realm.</dd>
+<dt><code>-S</code> <i>service name</i></dt>
+<dd> Specifies the principal for which <code>k5start</code> is getting a service ticket. The default value is <tt>&quot;krbtgt&quot;</tt>, to obtain a ticket-granting ticket. This option (along with <code>-I</code>) may be used if one only needs access to a single service. Note that unlike the client principal, a non-default service principal must be specified with both <code>-S</code> and <code>-I</code>; one cannot provide the instance portion as part of the argument to <code>-S</code>.</dd>
+<dt><code>-s</code></dt>
+<dd> Read the password from standard input. This bypasses the normal password prompt, which means echo isn&#8217;t suppressed and input isn&#8217;t forced to be from the controlling terminal. Most uses of this option are a security risk. You normally want to use a keytab and the <code>-f</code> option instead.</dd>
+<dt><code>-t</code></dt>
+<dd> Run an external program after getting a ticket. The default use of this is to run <code>aklog</code> to get a token. If the environment variable <font SIZE="-1">KINIT_PROG</font> is set, it overrides the compiled-in default. </dd>
 <p> If <code>k5start</code> has been built with <font SIZE="-1">AFS</font> <i>setpag()</i> support and a command was given on the command line, <code>k5start</code> will create a new <font SIZE="-1">PAG</font> before obtaining <font SIZE="-1">AFS</font> tokens. Otherwise, it will obtain tokens in the current <font SIZE="-1">PAG</font>.</p>
-<dt><code>-U</code></p>
-<dd> Rather than requiring the authentication principal be given on the command line, read it from the keytab specified with <code>-f</code>. The principal will be taken from the first entry in the keytab. <code>-f</code> must be specified if this option is used. </p>
+<dt><code>-U</code></dt>
+<dd> Rather than requiring the authentication principal be given on the command line, read it from the keytab specified with <code>-f</code>. The principal will be taken from the first entry in the keytab. <code>-f</code> must be specified if this option is used. </dd>
 <p> When <code>-U</code> is given, <code>k5start</code> will not expect a principal name to be given on the command line, and any arguments after the options will be taken as a command to run.</p>
-<dt><code>-u</code> <i>client principal</i></p>
-<dd> This specifies the principal to obtain credentials as. The entire principal may be specified here, or alternatively just the first portion may be specified with this flag and the instance specified with <code>-i</code>. </p>
+<dt><code>-u</code> <i>client principal</i></dt>
+<dd> This specifies the principal to obtain credentials as. The entire principal may be specified here, or alternatively just the first portion may be specified with this flag and the instance specified with <code>-i</code>. </dd>
 <p> Note that there&#8217;s normally no reason to use this flag rather than simply giving the principal on the command line as the first regular argument.</p>
-<dt><code>-v</code></p>
-<dd> Be verbose. This will print out a bit of additional information about what is being attempted and what the results are.</p>
-<dt><code>-x</code></p>
-<dd> Exit immediately on any error. Normally, when running a command or when run with the <code>-K</code> option, <code>k5start</code> keeps running even if it fails to refresh the ticket cache and will try again at the next check interval. With this option, <code>k5start</code> will instead exit.</dl>
+<dt><code>-v</code></dt>
+<dd> Be verbose. This will print out a bit of additional information about what is being attempted and what the results are.</dd>
+<dt><code>-x</code></dt>
+<dd> Exit immediately on any error. Normally, when running a command or when run with the <code>-K</code> option, <code>k5start</code> keeps running even if it fails to refresh the ticket cache and will try again at the next check interval. With this option, <code>k5start</code> will instead exit.</dd></dl>
 <h2>RETURN VALUES</h2>
 <p> The program exits with status 0 if it successfully gets a ticket or has a happy ticket (see <code>-H</code>). If <code>k5start</code> runs aklog or some other program <code>k5start</code> returns the exit status of that program.</p>
 <h2>EXAMPLE</h2>

@@ -15,11 +15,11 @@ clk_set_parent - set the parent clock source for this clock
 <h2>Arguments</h2>
 
 <i>clk</i>
-<dl><dd><dd>clock source</dl>
+<dl><dd></dd><dd>clock source</dd></dl>
  
 
  <i>parent</i>
-<dl><dd>parent clock source</dl>
+<dl><dd>parent clock source</dd></dl>
 
 <h2>Description</h2>
 

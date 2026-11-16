@@ -11,113 +11,59 @@ std::mismatch - std::mismatch
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class InputIt1, class InputIt2 &gt;
-
 std::pair&lt;InputIt1,InputIt2&gt;                                                                         (until C++20)
-
 mismatch( InputIt1 first1, InputIt1 last1,
-
 InputIt2 first2 );
-
 template&lt; class InputIt1, class InputIt2 &gt;
-
 constexpr std::pair&lt;InputIt1,InputIt2&gt;                                                               (since C++20)
-
 mismatch( InputIt1 first1, InputIt1 last1,
-
 InputIt2 first2 );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2 &gt;
-
 std::pair&lt;ForwardIt1,ForwardIt2&gt;                                                                 (2) (since C++17)
-
 mismatch( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first1, ForwardIt1 last1,
-
 ForwardIt2 first2 );
-
 template&lt; class InputIt1, class InputIt2, class BinaryPredicate &gt;
-
 std::pair&lt;InputIt1,InputIt2&gt;
-
 mismatch( InputIt1 first1, InputIt1 last1,                                                                         (until C++20)
-
 InputIt2 first2,
-
 BinaryPredicate p );
-
 template&lt; class InputIt1, class InputIt2, class BinaryPredicate &gt;
-
 constexpr std::pair&lt;InputIt1,InputIt2&gt;
-
 mismatch( InputIt1 first1, InputIt1 last1,                                                                         (since C++20)
-
 InputIt2 first2,
-
 BinaryPredicate p );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2, class BinaryPredicate &gt;
-
 std::pair&lt;ForwardIt1,ForwardIt2&gt;
-
 mismatch( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first1, ForwardIt1 last1,                             (4)           (since C++17)
-
 ForwardIt2 first2,
-
 BinaryPredicate p );                                                                         (1)
-
 template&lt; class InputIt1, class InputIt2 &gt;
-
 std::pair&lt;InputIt1,InputIt2&gt;                                                                                                     (since C++14)
-
 mismatch( InputIt1 first1, InputIt1 last1,                                                                                       (until C++20)
-
 InputIt2 first2, InputIt2 last2 );
-
 template&lt; class InputIt1, class InputIt2 &gt;
-
 constexpr std::pair&lt;InputIt1,InputIt2&gt;                                                           (3)                             (since C++20)
-
 mismatch( InputIt1 first1, InputIt1 last1,
-
 InputIt2 first2, InputIt2 last2 );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2 &gt;
-
 std::pair&lt;ForwardIt1,ForwardIt2&gt;                                                                                   (6)           (since C++17)
-
 mismatch( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first1, ForwardIt1 last1,
-
 ForwardIt2 first2, ForwardIt2 last2 );
-
 template&lt; class InputIt1, class InputIt2, class BinaryPredicate &gt;
-
 std::pair&lt;InputIt1,InputIt2&gt;                                                                         (5)                                        (since C++14)
-
 mismatch( InputIt1 first1, InputIt1 last1,                                                                                                      (until C++20)
-
 InputIt2 first2, InputIt2 last2,
-
 BinaryPredicate p );
-
 template&lt; class InputIt1, class InputIt2, class BinaryPredicate &gt;
-
 constexpr std::pair&lt;InputIt1,InputIt2&gt;
-
 mismatch( InputIt1 first1, InputIt1 last1,                                                                         (7)                          (since C++20)
-
 InputIt2 first2, InputIt2 last2,
-
 BinaryPredicate p );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2, class BinaryPredicate &gt;
-
 std::pair&lt;ForwardIt1,ForwardIt2&gt;
-
 mismatch( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first1, ForwardIt1 last1,                                                         (8)            (since C++17)
-
 ForwardIt2 first2, ForwardIt2 last2,
-
 BinaryPredicate p );</code></pre> 
 Returns the first mismatching pair of elements from two ranges: one defined by [first1, last1) and another defined by [first2,last2). If last2 is not provided (overloads (1-4)), it denotes first2 + (last1 - first1). 
 1,5) Elements are compared using operator==. 
@@ -227,18 +173,14 @@ Fourth version
 
 This program determines the longest substring that is simultaneously found at the very beginning of the given string and at the very end of it, in reverse order (possibly overlapping) 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;algorithm&gt;
 std::string mirror_ends(const std::string &amp;in)
-
 {
     return std::string(in.begin(),
                        std::mismatch(in.begin(), in.end(), in.rbegin()).first);
 }
 int main()
-
 {
     std::cout &lt;&lt; mirror_ends(&quot;abXYZba&quot;) &lt;&lt; '\n'
               &lt;&lt; mirror_ends(&quot;abca&quot;) &lt;&lt; '\n'

@@ -17,19 +17,19 @@ description: "upsc – example lightweight UPS client"
 <h2>Options</h2>
 <p><code>-l</code> <i>host</i></p>
 <dl>
-<dd>List all UPS names configured at <i>host</i>, one name per line. The hostname defaults to &quot;localhost&quot;. You may optionally add a colon and a port number.</dl>
+<dd>List all UPS names configured at <i>host</i>, one name per line. The hostname defaults to &quot;localhost&quot;. You may optionally add a colon and a port number.</dd></dl>
 <p> <code>-L</code> <i>host</i></p>
 <dl>
-<dd>As above, list all UPS names configured at <i>host</i>, including their description provided by the remote <a href="/docs/linux/man/8-upsd/">upsd</a>(8) from <a href="/docs/linux/man/5-ups-conf/">ups.conf</a>(5). The hostname defaults to &quot;localhost&quot;. You may optionally add a colon and a port number to override the default port.</dl>
+<dd>As above, list all UPS names configured at <i>host</i>, including their description provided by the remote <a href="/docs/linux/man/8-upsd/">upsd</a>(8) from <a href="/docs/linux/man/5-ups-conf/">ups.conf</a>(5). The hostname defaults to &quot;localhost&quot;. You may optionally add a colon and a port number to override the default port.</dd></dl>
 <p> <code>-c</code> <i>ups</i></p>
 <dl>
-<dd>Lists each client connected on <i>ups</i>, one name per line.</dl>
+<dd>Lists each client connected on <i>ups</i>, one name per line.</dd></dl>
 <p> <i>ups</i></p>
 <dl>
-<dd>Display the status of that UPS. The format for this option is <i>upsname[@hostname[:port]]</i>. The default hostname is &quot;localhost&quot;.</dl>
+<dd>Display the status of that UPS. The format for this option is <i>upsname[@hostname[:port]]</i>. The default hostname is &quot;localhost&quot;.</dd></dl>
 <p> <i>variable</i></p>
 <dl>
-<dd>Display the value of this variable only. By default, upsc retrieves the list of variables from the server and then displays the value for each. This may be useful in shell scripts to save an additional pipe into grep.</dl>
+<dd>Display the value of this variable only. By default, upsc retrieves the list of variables from the server and then displays the value for each. This may be useful in shell scripts to save an additional pipe into grep.</dd></dl>
 <h2>Examples</h2>
 <p>To list all variables on an UPS named &quot;myups&quot; on a host called &quot;mybox&quot;, with <a href="/docs/linux/man/8-upsd/">upsd</a>(8) running on port 1234: </p>
 <dl>
@@ -39,21 +39,21 @@ battery.charge: 100.0
 battery.voltage: 13.9
 battery.voltage.nominal: 13.6
 . . .</pre>
-</dl>
+</dd></dl>
 <p> To list the UPSes configured on this system, along with their descriptions: </p>
 <dl>
 <dd>
 <pre>$ upsc -L
 apc: Back-UPS 500
 ppro2: Patriot Pro II</pre>
-</dl>
+</dd></dl>
 <p> To retrieve the status for all UPSes connected to mybox, using Bourne-shell syntax: </p>
 <dl>
 <dd>
 <pre>$ for UPS in `upsc -l mybox:1234`; do
  upsc $UPS ups.status
 done</pre>
-</dl>
+</dd></dl>
 <p> To list clients connected on &quot;myups&quot;: </p>
 <dl>
 <dd>
@@ -61,7 +61,7 @@ done</pre>
 127.0.0.1
 ::1
 192.168.1.2</pre>
-</dl>
+</dd></dl>
 <h2>Scripted Mode</h2>
 <p>If you run this program inside a shell script or similar to get the list of devices and variables, you should only consider using output from stdout, not stderr.</p>
 <h2>Diagnostics</h2>

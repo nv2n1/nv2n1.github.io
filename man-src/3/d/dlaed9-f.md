@@ -22,10 +22,10 @@ description: "dlaed9.f –"
  values in D, Z, and RHO, between KSTART and KSTOP. It makes the
  appropriate calls to DLAED4 and then stores the new matrix of
  eigenvectors for use in calculating the next level of Z vectors.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>K</i> </p>
+<dd><i>K</i> </dd>
 <pre> K is INTEGER
  The number of terms in the rational function to be solved by
  DLAED4. K &gt;= 0.</pre>
@@ -78,16 +78,16 @@ description: "dlaed9.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl COMPACT>
-<dd>Jeff Rutter, Computer Science Division, University of California at Berkeley, USA</dl>
+<dd>Jeff Rutter, Computer Science Division, University of California at Berkeley, USA</dd></dl>
 <p> Definition at line 156 of file dlaed9.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

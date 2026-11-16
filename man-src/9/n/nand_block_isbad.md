@@ -14,12 +14,12 @@ description: "nand_block_isbad – [MTD Interface] Check if block at offset is b
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>offs</i></p>
 <dl>
-<dd>offset relative to mtd start</dl>
+<dd>offset relative to mtd start</dd></dl>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

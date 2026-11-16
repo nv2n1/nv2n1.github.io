@@ -20,29 +20,30 @@ description: "catdoc – reads MS-Word file and puts its content as plain text o
 &nbsp;<wbr> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a </code></p>
-<dd> &#8211; shortcut for -f ascii. Produces ASCII text as output. Separates table columns with TAB</p>
-<dt><code>-b</code></p>
-<dd> &#8211; process broken MS-Word file. Normally, <code>catdoc checks if first 8 bytes</code> of file is Microsoft OLE signature. If so, it processes file, otherwise it just copies it to stdin. It is intended to use <code>catdoc </code> as filter for viewing all files with <i>.doc</i> extension.</p>
-<dt><code>-d</code><i>charset</i></p>
-<dd> &#8211; specifies destination charset name. Charset file has format described in CHARACTER SETS below and should have <code>.txt</code> extension and reside in <code>catdoc library directory ( /usr/lib64/catdoc). By default, current</code> locale charset is used if langinfo support compiled in.</p>
-<dt><code>-f</code><i>format</i></p>
-<dd> &#8211; specifies output format as described in CHARACTER SUBSTITUTION below. <code>catdoc</code> comes with two output formats &#8211; ascii and tex. You can add your own if you wish.</p>
-<dt><code>-l</code></p>
-<dd> Causes <code>catdoc</code> to list names of available charsets to the stdout and exit successfully.</p>
-<dt><code>-m</code><i>number</i></p>
-<dd> Specifies right margin for text (default 72). <code>-m 0</code> is equivalent to <code>-w</code></p>
-<dt><code>-s</code><i>charset</i></p>
-<dd> Specifies source charset. (one used in Word document), if Word document doesn&#8217;t contain UTF-16 text. When reading rtf documents, it is typically not necessary, because rtf documents contain ansicpg specification. But it can be set wrong by Word (I&#8217;ve seen RTF documents on Russian, where cp1252 was specified). In this case this option would take precedence over charset, specified in the document. But source_charset statement in the configuration file have less priority than charset in the document.</p>
-<dt><code>-t</code></p>
+<dt><code>-a </code></dt>
+<dd> &#8211; shortcut for -f ascii. Produces ASCII text as output. Separates table columns with TAB</dd>
+<dt><code>-b</code></dt>
+<dd> &#8211; process broken MS-Word file. Normally, <code>catdoc checks if first 8 bytes</code> of file is Microsoft OLE signature. If so, it processes file, otherwise it just copies it to stdin. It is intended to use <code>catdoc </code> as filter for viewing all files with <i>.doc</i> extension.</dd>
+<dt><code>-d</code><i>charset</i></dt>
+<dd> &#8211; specifies destination charset name. Charset file has format described in CHARACTER SETS below and should have <code>.txt</code> extension and reside in <code>catdoc library directory ( /usr/lib64/catdoc). By default, current</code> locale charset is used if langinfo support compiled in.</dd>
+<dt><code>-f</code><i>format</i></dt>
+<dd> &#8211; specifies output format as described in CHARACTER SUBSTITUTION below. <code>catdoc</code> comes with two output formats &#8211; ascii and tex. You can add your own if you wish.</dd>
+<dt><code>-l</code></dt>
+<dd> Causes <code>catdoc</code> to list names of available charsets to the stdout and exit successfully.</dd>
+<dt><code>-m</code><i>number</i></dt>
+<dd> Specifies right margin for text (default 72). <code>-m 0</code> is equivalent to <code>-w</code></dd>
+<dt><code>-s</code><i>charset</i></dt>
+<dd> Specifies source charset. (one used in Word document), if Word document doesn&#8217;t contain UTF-16 text. When reading rtf documents, it is typically not necessary, because rtf documents contain ansicpg specification. But it can be set wrong by Word (I&#8217;ve seen RTF documents on Russian, where cp1252 was specified). In this case this option would take precedence over charset, specified in the document. But source_charset statement in the configuration file have less priority than charset in the document.</dd>
+<dt><code>-t</code></dt>
 <dd> &#8211; shortcut for <code>-f tex</code><br />
-&nbsp;<wbr>converts all printable chars, which have special meaning for&nbsp;<wbr> <code><a href="/docs/linux/man/1-latex/">LaTeX</a></code>(1) into appropriate control sequences. Separates table columns by <code>&amp;.</code></p>
-<dt><code>-u</code></p>
-<dd> &#8211; declares that Word document contain UNICODE (UTF-16) representation of text (as some Word-97 documents). If catdoc fails to correct Word document with default charset, try this option.</p>
-<dt><code>-8</code></p>
+&nbsp;<wbr>converts all printable chars, which have special meaning for&nbsp;<wbr> <code><a href="/docs/linux/man/1-latex/">LaTeX</a></code>(1) into appropriate control sequences. Separates table columns by <code>&amp;.</code></dd>
+<dt><code>-u</code></dt>
+<dd> &#8211; declares that Word document contain UNICODE (UTF-16) representation of text (as some Word-97 documents). If catdoc fails to correct Word document with default charset, try this option.</dd>
+<dt><code>-8</code></dt>
 <dd> &#8211; declares is Word document is 8 bit. Just in case that catdoc<br />
-&nbsp;<wbr>recognizes file format incorrectly.</p>
-<dt><code>-w</code></p>
-<dd> disables word wrapping. By default <code>catdoc</code> output is splitted into lines not longer than 72 (or number, specified by -m option) characters and paragraphs are separated by blank line. With this option each paragraph is one long line.</p>
-<dt><code>-x</code></p>
+&nbsp;<wbr>recognizes file format incorrectly.</dd>
+<dt><code>-w</code></dt>
+<dd> disables word wrapping. By default <code>catdoc</code> output is splitted into lines not longer than 72 (or number, specified by -m option) characters and paragraphs are separated by blank line. With this option each paragraph is one long line.</dd>
+<dt><code>-x</code></dt>
 <dd> causes catdoc to output unknown UNICODE character as 
+</dd></dl>

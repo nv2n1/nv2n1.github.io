@@ -15,11 +15,11 @@ write_inode_now - write an inode to disk
 <h2>Arguments</h2>
 
 <i>inode</i>
-<dl><dd><dd>inode to write to disk</dl>
+<dl><dd></dd><dd>inode to write to disk</dd></dl>
  
 
  <i>sync</i>
-<dl><dd>whether the write should be synchronous or not</dl>
+<dl><dd>whether the write should be synchronous or not</dd></dl>
 
 <h2>Description</h2>
 

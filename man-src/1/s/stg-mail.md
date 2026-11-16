@@ -23,7 +23,7 @@ stg mail[options][--][&lt;patch1&gt;][&lt;patch2&gt;][&lt;patch3&gt;..&lt;patch4
 <p> The following variables are accepted by both the preamble and the patch e-mail templates: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 %(diffstat)s     - diff statistics
 %(number)s       - empty if only one patch is sent or 'patchnr/totalnr'
@@ -35,19 +35,19 @@ stg mail[options][--][&lt;patch1&gt;][&lt;patch2&gt;][&lt;patch3&gt;..&lt;patch4
 %(version)s      - 'version' string passed on the command line (or empty)
 %(vspace)s       - ' ' if %(version)s is non-empty, otherwise empty string
 </pre>
-</dl>
+</dd></dl>
 <p> In addition to the common variables, the preamble e-mail template accepts the following: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 %(shortlog)s     - first line of each patch description, listed by author
 </pre>
-</dl>
+</dd></dl>
 <p> In addition to the common variables, the patch e-mail template accepts the following: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 %(authdate)s     - patch creation date
 %(authemail)s    - author's email
@@ -56,7 +56,6 @@ stg mail[options][--][&lt;patch1&gt;][&lt;patch2&gt;][&lt;patch3&gt;..&lt;patch4
 %(commname)s     - committer's name
 %(diff)s         - unified diff of the patch
 %(fromauth)s     - 'From: author
-
 ' if different from sender
 %(longdescr)s    - the rest of the patch description, after the first line
 %(patch)s        - patch name
@@ -64,108 +63,108 @@ stg mail[options][--][&lt;patch1&gt;][&lt;patch2&gt;][&lt;patch3&gt;..&lt;patch4
 %(pspace)s       - ' ' if %(prefix)s is non-empty, otherwise empty string
 %(shortdescr)s   - the first line of the patch description
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> -a, &#8211;all</p>
 <dl>
 <dt>
-<dd> E-mail all the applied patches.</dl>
+</dt><dd> E-mail all the applied patches.</dd></dl>
 <p> &#8211;to TO</p>
 <dl>
 <dt>
-<dd> Add TO to the To: list.</dl>
+</dt><dd> Add TO to the To: list.</dd></dl>
 <p> &#8211;cc CC</p>
 <dl>
 <dt>
-<dd> Add CC to the Cc: list.</dl>
+</dt><dd> Add CC to the Cc: list.</dd></dl>
 <p> &#8211;bcc BCC</p>
 <dl>
 <dt>
-<dd> Add BCC to the Bcc: list.</dl>
+</dt><dd> Add BCC to the Bcc: list.</dd></dl>
 <p> &#8211;auto</p>
 <dl>
 <dt>
-<dd> Automatically cc the patch signers.</dl>
+</dt><dd> Automatically cc the patch signers.</dd></dl>
 <p> &#8211;no-thread</p>
 <dl>
 <dt>
-<dd> Do not send subsequent messages as replies.</dl>
+</dt><dd> Do not send subsequent messages as replies.</dd></dl>
 <p> &#8211;unrelated</p>
 <dl>
 <dt>
-<dd> Send patches without sequence numbering.</dl>
+</dt><dd> Send patches without sequence numbering.</dd></dl>
 <p> &#8211;attach</p>
 <dl>
 <dt>
-<dd> Send a patch as attachment.</dl>
+</dt><dd> Send a patch as attachment.</dd></dl>
 <p> &#8211;attach-inline</p>
 <dl>
 <dt>
-<dd> Send a patch inline and as an attachment.</dl>
+</dt><dd> Send a patch inline and as an attachment.</dd></dl>
 <p> -v VERSION, &#8211;version VERSION</p>
 <dl>
 <dt>
-<dd> Add VERSION to the [PATCH &#8230;] prefix.</dl>
+</dt><dd> Add VERSION to the [PATCH &#8230;] prefix.</dd></dl>
 <p> &#8211;prefix PREFIX</p>
 <dl>
 <dt>
-<dd> Add PREFIX to the [&#8230; PATCH &#8230;] prefix.</dl>
+</dt><dd> Add PREFIX to the [&#8230; PATCH &#8230;] prefix.</dd></dl>
 <p> -t FILE, &#8211;template FILE</p>
 <dl>
 <dt>
-<dd> Use FILE as the message template.</dl>
+</dt><dd> Use FILE as the message template.</dd></dl>
 <p> -c FILE, &#8211;cover FILE</p>
 <dl>
 <dt>
-<dd> Send FILE as the cover message.</dl>
+</dt><dd> Send FILE as the cover message.</dd></dl>
 <p> -e, &#8211;edit-cover</p>
 <dl>
 <dt>
-<dd> Edit the cover message before sending.</dl>
+</dt><dd> Edit the cover message before sending.</dd></dl>
 <p> -E, &#8211;edit-patches</p>
 <dl>
 <dt>
-<dd> Edit each patch before sending.</dl>
+</dt><dd> Edit each patch before sending.</dd></dl>
 <p> -s SECONDS, &#8211;sleep SECONDS</p>
 <dl>
 <dt>
-<dd> Sleep for SECONDS between e-mails sending.</dl>
+</dt><dd> Sleep for SECONDS between e-mails sending.</dd></dl>
 <p> &#8211;in-reply-to REFID</p>
 <dl>
 <dt>
-<dd> Use REFID as the reference id.</dl>
+</dt><dd> Use REFID as the reference id.</dd></dl>
 <p> &#8211;smtp-server HOST[:PORT] or &quot;/path/to/sendmail -t -i&quot;</p>
 <dl>
 <dt>
-<dd> SMTP server or command to use for sending mail.</dl>
+</dt><dd> SMTP server or command to use for sending mail.</dd></dl>
 <p> -u USER, &#8211;smtp-user USER</p>
 <dl>
 <dt>
-<dd> Username for SMTP authentication.</dl>
+</dt><dd> Username for SMTP authentication.</dd></dl>
 <p> -p PASSWORD, &#8211;smtp-password PASSWORD</p>
 <dl>
 <dt>
-<dd> Password for SMTP authentication.</dl>
+</dt><dd> Password for SMTP authentication.</dd></dl>
 <p> -T, &#8211;smtp-tls</p>
 <dl>
 <dt>
-<dd> Use SMTP with TLS encryption.</dl>
+</dt><dd> Use SMTP with TLS encryption.</dd></dl>
 <p> -b BRANCH, &#8211;branch BRANCH</p>
 <dl>
 <dt>
-<dd> Use BRANCH instead of the default branch.</dl>
+</dt><dd> Use BRANCH instead of the default branch.</dd></dl>
 <p> -m, &#8211;mbox</p>
 <dl>
 <dt>
-<dd> Generate an mbox file instead of sending.</dl>
+</dt><dd> Generate an mbox file instead of sending.</dd></dl>
 <p> &#8211;git</p>
 <dl>
 <dt>
-<dd> Use git send-email (EXPERIMENTAL).</dl>
+</dt><dd> Use git send-email (EXPERIMENTAL).</dd></dl>
 <p> -O OPTIONS, &#8211;diff-opts OPTIONS</p>
 <dl>
 <dt>
-<dd> Extra options to pass to &quot;git diff&quot;.</dl>
+</dt><dd> Extra options to pass to &quot;git diff&quot;.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
 <h2>Index</h2>

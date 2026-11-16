@@ -18,16 +18,16 @@ description: "jbigtopnm – JBIG to PNM image file converter"
 <p> A JBIG encoded image can be stored in several resolutions in one or several BIEs. All resolution layers except the lowest one are stored efficiently as differences to the next lower resolution layer. You can use options <code>-x</code> and <code>-y</code> to stop the decompression at a specified maximal output image size. The input file can consist of several concatenated BIEs which contain different increasing resolution layers of the same image. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-x</code> <i>number</i></p>
-<dd> Decode only up to the largest resolution layer which is still not more than <i>number</i> pixels wide. If no such resolution layer exists, then use the smallest one available. </p>
-<dt><code>-y</code><i> number</i></p>
-<dd> Decode only up to the largest resolution layer which is still not more than <i>number</i> pixels high. If no such resolution layer exists, then use the smallest one available. You can also use options <code>-x</code> and <code>-y</code> together which selects the largest layer that satisfies both limits. </p>
-<dt><code>-b</code></p>
-<dd> Use binary values instead of Gray code words in order to decode pixel values from multiple bitplanes. This option has effect only if the input has more than one bitplane and you don&#8217;t select just one of those bitplanes. Note that the decoder has to be used in the same mode as the encoder and cannot determine from the BIE, whether Gray or binary code words were used by the encoder. </p>
-<dt><code>-d</code></p>
-<dd> Diagnose a BIE. With this option, <code>jbigtopnm</code> only prints a summary of the header information found in the input file and then exits. </p>
-<dt><code>-p</code><i> number</i></p>
-<dd> If the input contains multiple bitplanes, then extract only the specified single plane as a PBM file. The first plane has number 0. </p>
+<dt><code>-x</code> <i>number</i></dt>
+<dd> Decode only up to the largest resolution layer which is still not more than <i>number</i> pixels wide. If no such resolution layer exists, then use the smallest one available. </dd>
+<dt><code>-y</code><i> number</i></dt>
+<dd> Decode only up to the largest resolution layer which is still not more than <i>number</i> pixels high. If no such resolution layer exists, then use the smallest one available. You can also use options <code>-x</code> and <code>-y</code> together which selects the largest layer that satisfies both limits. </dd>
+<dt><code>-b</code></dt>
+<dd> Use binary values instead of Gray code words in order to decode pixel values from multiple bitplanes. This option has effect only if the input has more than one bitplane and you don&#8217;t select just one of those bitplanes. Note that the decoder has to be used in the same mode as the encoder and cannot determine from the BIE, whether Gray or binary code words were used by the encoder. </dd>
+<dt><code>-d</code></dt>
+<dd> Diagnose a BIE. With this option, <code>jbigtopnm</code> only prints a summary of the header information found in the input file and then exits. </dd>
+<dt><code>-p</code><i> number</i></dt>
+<dd> If the input contains multiple bitplanes, then extract only the specified single plane as a PBM file. The first plane has number 0. </dd>
 </dl>
 <h2>STANDARDS</h2>
 <p> This program implements the JBIG image coding algorithm as specified in ISO/IEC 11544:1993 and ITU-T T.82(1993). </p>

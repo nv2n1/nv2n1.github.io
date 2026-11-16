@@ -13,10 +13,10 @@ description: "pskc_get_key_policy_pinminlength – API function"
 <p> <code>uint32_t pskc_get_key_policy_pinminlength(pskc_key_t * </code><i>key</i><code>, int * </code><i>present</i><code>);</code></p>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</p>
-<dt>int * present</p>
-<dd>output variable indicating whether data was provided or not.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd>
+<dt>int * present</dt>
+<dd>output variable indicating whether data was provided or not.</dd></dl>
 <h2>Description</h2>
 <p>Get the PSKC KeyPackage Key Policy PINPolicy MinLength value. This attribute indicates the minimum length of a PIN that can be set to protect the associated key. It MUST NOT be possible to set a PIN shorter than this value. If the &#8216;PINFormat&#8217; attribute is set to &#8216;DECIMAL&#8217;, &#8216;HEXADECIMAL&#8217;, or &#8216;ALPHANUMERIC&#8217;, this value indicates the number of digits/ characters. If the &#8216;PINFormat&#8217; attribute is set to &#8216;BASE64&#8217; or &#8216;BINARY&#8217;, this value indicates the number of bytes of the unencoded value. </p>
 <p> If <i>present</i> is non-NULL, it will be 0 if the field is not present or 1 if it was present.</p>

@@ -10,7 +10,6 @@ description: "wcscmp – compare two wide-character strings"
 <p>wcscmp &#8211; compare two wide-character strings</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;wchar.h&gt;
-
 int wcscmp(const wchar_t *s1, const wchar_t *s2);</code></pre>
 <h2>Description</h2>
 <p>The <code>wcscmp</code>() function is the wide-character equivalent of the <code><a href="/docs/linux/man/3-strcmp/">strcmp</a></code>(3) function. It compares the wide-character string pointed to by <i>s1</i> and the wide-character string pointed to by <i>s2</i>.</p>

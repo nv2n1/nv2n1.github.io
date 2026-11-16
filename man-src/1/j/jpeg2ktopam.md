@@ -26,10 +26,10 @@ description: "jpeg2ktopam – convert JPEG-2000 code stream to PAM/PNM"
 <p> The program <code>jasper</code>, which is packaged with the Jasper JPEG-2000 library, also converts between JPEG-2000 and PNM formats. Because it&#8217;s packaged with the library, it may exploit it better, especially recently added features. However, since it does not use the Netpbm library to read and write the Netpbm formats, it doesn&#8217;t do as good a job on that side. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-verbose</code></p>
-<dd> This option causes <code>jpeg2ktopam</code> to issue informational messages about the conversion process. </p>
-<dt><code>-debuglevel</code>=<i>number</i></p>
-<dd> This option controls debug messages from the Jasper library. <code>jpeg2ktopam</code> passes <i>number</i> as the debug level to the Jasper JPEG-2000 decoder. </p>
+<dt><code>-verbose</code></dt>
+<dd> This option causes <code>jpeg2ktopam</code> to issue informational messages about the conversion process. </dd>
+<dt><code>-debuglevel</code>=<i>number</i></dt>
+<dd> This option controls debug messages from the Jasper library. <code>jpeg2ktopam</code> passes <i>number</i> as the debug level to the Jasper JPEG-2000 decoder. </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr></dl>
 <h2>EXAMPLES</h2>
 <pre>
@@ -44,3 +44,4 @@ description: "jpeg2ktopam – convert JPEG-2000 code stream to PAM/PNM"
 <p> <code>jpeg2ktopam</code> was added to Netpbm in Release 10.12 (November 2002). </p>
 <p> Before Netpbm 10.49 (December 2009), <code>jpeg2ktopam</code> could not convert a JP2 file &#8212; only JPC. </p>
 <h2>Index</h2>
+</p>

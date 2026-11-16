@@ -16,18 +16,18 @@ description: "Lintian::Inspect::Changelog — Parse a literal version string int
 <p>A class for parsing literal version strings</p>
 <h2>Class Methods</h2>
 <dl COMPACT>
-<dt>new ()</p>
-<dd>Creates a new Lintian::Inspect::Changelog object.</p>
-<dt>find_closes</p>
-<dd>Takes one string as argument and finds &#8220;Closes: #123456, #654321&#8221; statements as supported by the Debian Archive software in it. Returns all closed bug numbers in an array reference.</dl>
+<dt>new ()</dt>
+<dd>Creates a new Lintian::Inspect::Changelog object.</dd>
+<dt>find_closes</dt>
+<dd>Takes one string as argument and finds &#8220;Closes: #123456, #654321&#8221; statements as supported by the Debian Archive software in it. Returns all closed bug numbers in an array reference.</dd></dl>
 <h2>Instance Methods</h2>
 <dl COMPACT>
-<dt>parse (<font SIZE="-1">STRING</font>)</p>
-<dd>Parses <font SIZE="-1">STRING</font> as the content of a debian/changelog file.</p>
-<dt>errors</p>
+<dt>parse (<font SIZE="-1">STRING</font>)</dt>
+<dd>Parses <font SIZE="-1">STRING</font> as the content of a debian/changelog file.</dd>
+<dt>errors</dt>
 <dd>
-<dt>entries</p>
-<dd></dl>
+</dd><dt>entries</dt>
+<dd></dd></dl>
 <h2>Author</h2>
 <p>Originally written by Felix Lechner &lt;felix.lechner [at] lease-up.com&gt; for Lintian.</p>
 <h2>See Also</h2>

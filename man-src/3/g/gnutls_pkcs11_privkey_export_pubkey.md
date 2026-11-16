@@ -14,14 +14,14 @@ description: "gnutls_pkcs11_privkey_export_pubkey – API function"
 <p> <code>int gnutls_pkcs11_privkey_export_pubkey(gnutls_pkcs11_privkey_t </code><i>pkey</i><code>, gnutls_x509_crt_fmt_t </code><i>fmt</i><code>, gnutls_datum_t * </code><i>data</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pkcs11_privkey_t pkey</p>
-<dd> The private key</p>
-<dt>gnutls_x509_crt_fmt_t fmt</p>
-<dd> the format of output params. PEM or DER.</p>
-<dt>gnutls_datum_t * data</p>
-<dd> will hold the public key</p>
-<dt>unsigned int flags</p>
-<dd> should be zero</dl>
+<dt>gnutls_pkcs11_privkey_t pkey</dt>
+<dd> The private key</dd>
+<dt>gnutls_x509_crt_fmt_t fmt</dt>
+<dd> the format of output params. PEM or DER.</dd>
+<dt>gnutls_datum_t * data</dt>
+<dd> will hold the public key</dd>
+<dt>unsigned int flags</dt>
+<dd> should be zero</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will extract the public key (modulus and public exponent) from the private key specified by the <i>url</i> private key. This public key will be stored in <i>pubkey</i> in the format specified by <i>fmt</i> . <i>pubkey</i> should be deinitialized using <code>gnutls_free()</code>.</p>
 <h2>RETURNS</h2>
@@ -37,6 +37,6 @@ description: "gnutls_pkcs11_privkey_export_pubkey – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

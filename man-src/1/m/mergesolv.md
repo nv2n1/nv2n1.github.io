@@ -16,7 +16,7 @@ description: "mergesolv – merge multiple files in solv format into a single on
 <p> <code>-X</code></p>
 <dl>
 <dt>
-<dd> Autoexpand SUSE pattern and product provides into packages.</dl>
+</dt><dd> Autoexpand SUSE pattern and product provides into packages.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Michael Schroeder &lt;mls [at] suse.de&gt; </p>
 <h2>Index</h2>

@@ -15,20 +15,20 @@ description: "upgradedb – Directory Server script for upgrading the database"
 <h2>Options</h2>
 <p>A summary of options is included below:</p>
 <dl>
-<dt><code>-n</code> <i>Backend Name</i></p>
-<dd>The name of the LDBM database to reindex. Example: userRoot</p>
-<dt><code>-a</code> <i>Database directory</i></p>
-<dd>The full path to the database directory.</p>
-<dt><code>-Z</code> <i>Server Identifier</i></p>
-<dd>The server ID of the Directory Server instance. If there is only one instance on the system, this option can be skipped.</p>
-<dt><code>-N</code></p>
-<dd>Only checks whether any DNs in the database need to be updated.</p>
-<dt><code>-h</code></p>
-<dd>Display the usage.</dl>
+<dt><code>-n</code> <i>Backend Name</i></dt>
+<dd>The name of the LDBM database to reindex. Example: userRoot</dd>
+<dt><code>-a</code> <i>Database directory</i></dt>
+<dd>The full path to the database directory.</dd>
+<dt><code>-Z</code> <i>Server Identifier</i></dt>
+<dd>The server ID of the Directory Server instance. If there is only one instance on the system, this option can be skipped.</dd>
+<dt><code>-N</code></dt>
+<dd>Only checks whether any DNs in the database need to be updated.</dd>
+<dt><code>-h</code></dt>
+<dd>Display the usage.</dd></dl>
 <h2>Example</h2>
 <dl>
-<dt>upgradedb -Z instance2</p>
-<dd></dl>
+<dt>upgradedb -Z instance2</dt>
+<dd></dd></dl>
 <h2>Diagnostics</h2>
 <p>Exit status is zero if no errors occur. Errors result in a non-zero exit status and a diagnostic message being written to standard error.</p>
 <h2>Author</h2>

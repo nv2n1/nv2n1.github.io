@@ -14,14 +14,14 @@ description: "srcpd – SRCP speaking daemon"
 <p>This is not a complete manual. You have to consult the project home page at <a rel="nofollow" href="http://srcpd.sourceforge.net/">http://srcpd.sourceforge.net/</a> for full documentation! <code>srcpd</code> is a UNIX daemon speaking the Simple Railroad Command Protocol (SRCP). Upon start up it reads in the system wide configuration file named <code>srcpd.conf</code>. Contents and structure of this XML-file is explained in detail in the <code>srcpd.conf (5)</code> man page. The SRCP specification is published on <a rel="nofollow" href="http://srcpd.sourceforge.net/srcp.">http://srcpd.sourceforge.net/srcp.</a> </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd>Prints some useful help about command line options and exit</p>
-<dt><code>-n</code></p>
-<dd>Do not daemonize upon start-up. The srcpd does not switch into background mode. This option can be used with the Ubuntu upstart system.</p>
-<dt><code>-v</code></p>
-<dd>Print program version, SRCP level and exit</p>
-<dt><code>-f&nbsp;<wbr>&lt;filename&gt;</code></p>
-<dd>Use the specified filename as the configuration file. The default value will be defined at compile time and can be displayed using the <code>-h</code> parameter. </p>
+<dt><code>-h</code></dt>
+<dd>Prints some useful help about command line options and exit</dd>
+<dt><code>-n</code></dt>
+<dd>Do not daemonize upon start-up. The srcpd does not switch into background mode. This option can be used with the Ubuntu upstart system.</dd>
+<dt><code>-v</code></dt>
+<dd>Print program version, SRCP level and exit</dd>
+<dt><code>-f&nbsp;<wbr>&lt;filename&gt;</code></dt>
+<dd>Use the specified filename as the configuration file. The default value will be defined at compile time and can be displayed using the <code>-h</code> parameter. </dd>
 </dl>
 <h2>Notes</h2>
 <h3>Getting started</h3>
@@ -31,27 +31,27 @@ description: "srcpd – SRCP speaking daemon"
 <dl>
 <dd>
 <pre>/etc/init.d/srcpd start</pre>
-</dl>
+</dd></dl>
 <p> If the <code>srcpd</code> is already running, the daemon first must be stopped to get it aware of the new setup. Stopping the daemon is executed in analogy to the start command:</p>
 <dl>
 <dd>
 <pre>/etc/init.d/srcpd stop</pre>
-</dl>
+</dd></dl>
 <p> Under certain conditions it is also possible to get the daemon re-read its configuration file without stopping it. With respect to hardware access rules under UNIXlike systems, the group and/or user rights must be properly set in <i>srcpd.conf</i> to let the daemon access the appropriate hardware resources at any time. Common model railway interfaces will require access rights for serial lines (RS232, USB), which can be achieved using the proper group rights (e.g. <code>dialout</code>). The <code>ddl-s88</code> module uses a special system function (ioperm) which always needs root rights to perform successfully. To let srcpd re-read its configuration file, assumed the setup mentioned before is correct, the following command can be used:</p>
 <dl>
 <dd>
 <pre>/etc/init.d/srcpd reload</pre>
-</dl>
+</dd></dl>
 <p> The log file <i>/var/log/messages</i> or <i>/var/log/syslog</i> of the syslog daemon can be used to monitor occurring errors on daemon start or during current operation. With root rights the upcoming messages can be continuously watched in a separate terminal:</p>
 <dl>
 <dd>
 <pre>tail -f /var/log/messages</pre>
-</dl>
+</dd></dl>
 <p> or</p>
 <dl>
 <dd>
 <pre>tail -f /var/log/syslog</pre>
-</dl>
+</dd></dl>
 <p> The verbosity of these messages can be adjusted using the configuration file <i>srcpd.conf</i>. For more information refer to the adequate man page. </p>
 <h2>See Also</h2>
 <p>srcpd.conf (5) </p>

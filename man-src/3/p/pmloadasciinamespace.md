@@ -22,8 +22,8 @@ description: "pmLoadASCIINameSpace – establish a local PMNS for an application
 <p> <code>pmLoadASCIINameSpace</code> returns zero on success.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>$PCP_VAR_DIR/pmns/root</i></p>
-<dd>the default local PMNS, when the environment variable <code>PMNS_DEFAULT</code> is unset</dl>
+<dt><i>$PCP_VAR_DIR/pmns/root</i></dt>
+<dd>the default local PMNS, when the environment variable <code>PMNS_DEFAULT</code> is unset</dd></dl>
 <h2>Pcp Environment</h2>
 <p>Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <i>/etc/pcp.conf</i> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5). Values for these variables may be obtained programmatically using the <i><a href="/docs/linux/man/3-pmgetconfig/">pmGetConfig</a></i>(3) function.</p>
 <h2>See Also</h2>
@@ -32,8 +32,8 @@ description: "pmLoadASCIINameSpace – establish a local PMNS for an application
 <p>Syntax and other errors in the parsing of the PMNS are reported on <i>stderr</i> with a message of the form &#8220;Error Parsing ASCII PMNS: &#8230;&#8221;. </p>
 <p> <code>PM_ERR_DUPPMNS</code></p>
 <dl>
-<dd>It is an error to try to load more than one PMNS, or to call either <code>pmLoadASCIINameSpace</code> and/or <code><a href="/docs/linux/man/3-pmloadnamespace/">pmLoadNameSpace</a></code>(3) more than once.</dl>
+<dd>It is an error to try to load more than one PMNS, or to call either <code>pmLoadASCIINameSpace</code> and/or <code><a href="/docs/linux/man/3-pmloadnamespace/">pmLoadNameSpace</a></code>(3) more than once.</dd></dl>
 <p> <code>PM_ERR_PMNS</code></p>
 <dl>
-<dd>Syntax error in an ASCII format PMNS. </p>
+<dd>Syntax error in an ASCII format PMNS. </dd>
 </dl>

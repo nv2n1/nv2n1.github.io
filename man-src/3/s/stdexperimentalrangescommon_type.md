@@ -11,10 +11,8 @@ std::experimental::ranges::common_type - std::experimental::ranges::common_type
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / ranges / type_traits&gt;
-
     template &lt;class... T&gt;
     (ranges TS)
-
         struct common_type;</code></pre> 
 Determines the common type among all types T..., that is the type all T... can be implicitly converted to. If such a type exists (as determined according to the rules below), the member type names that type. Otherwise, there is no member type. The behavior is undefined if any of the types in T... is an incomplete type other than (possibly cv-qualified) void. 
 * If sizeof...(T) is zero, there is no member type. 

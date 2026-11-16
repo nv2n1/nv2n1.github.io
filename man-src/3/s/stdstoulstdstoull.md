@@ -10,22 +10,15 @@ description: "std::stoul,std::stoull – std::stoul,std::stoull"
 <p>std::stoul,std::stoull &#8211; std::stoul,std::stoull</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;string&gt;
-
     unsigned long stoul(const std::string &amp;str, std::size_t *pos = 0, int base = 10);
 (1)(since C++ 11)
-
     unsigned long stoul(const std::wstring &amp;str, std::size_t *pos = 0, int base = 10);
-
 unsigned long long stoull(const std::string &amp;str, std::size_t *pos = 0, int base = 10);
 (2)(since C++ 11)
-
     unsigned long long stoull(const std::wstring &amp;str, std::size_t *pos = 0, int base = 10);
 Interprets an unsigned integer value in the string str.
-
 1) calls std::strtoul(str.c_str(), &amp;ptr, base) or std::wcstoul(str.c_str(), &amp;ptr, base)
-
 2) calls std::strtoull(str.c_str(), &amp;ptr, base) or std::wcstoull(str.c_str(), &amp;ptr, base)
-
 Discards any whitespace characters (as identified by calling isspace()) until the first non-whitespace character is found, then takes as many characters as possible to form a valid base-n (where n=base) unsigned integer number representation and converts them to an integer value. The valid unsigned integer value consists of the following parts:</code></pre>
 <p>* (optional) plus or minus sign<br />
 * (optional) prefix <code>(0)</code> indicating octal base (applies only when the base is 8 or 0)<br />

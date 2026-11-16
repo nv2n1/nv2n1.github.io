@@ -21,39 +21,39 @@ description: "fmio – small utility to manipulate fm radio card"
 <p> Also, it can control the output volume of a sound card through /dev/mixer </p>
 <p> The options are as follows:</p>
 <dl>
-<dt><code>-d </code><i>driver</i></p>
-<dd> Use driver <i>driver</i> See list of currently known drivers in section Sx DRIVERS . If no driver was specified, default one will be used.</p>
-<dt><code>-f </code><i>freq</i></p>
-<dd> Set fm card frequency (in MHz )</p>
-<dt><code>-i</code></p>
-<dd> Show all available information about a driver and a card.</p>
-<dt><code>-m</code></p>
-<dd> Set output of a card to mono. Works only in conjunction with option &#8211;<code>f</code> Note, that not all drivers support this option.</p>
-<dt><code>-s</code></p>
-<dd> Show current signal status of a radio card.</p>
-<dt><code>-v </code><i>volume</i></p>
-<dd> Set volume of a card. Option &#8211;<code>v </code><i>0</i> will mute a card. Each driver has its own maximal volume.</p>
-<dt><code>-x </code><i>volume</i></p>
-<dd> Set volume of an arbitrary mixer line of a sound card thru /dev/mixer The <i>volume</i> has following format: </p>
+<dt><code>-d </code><i>driver</i></dt>
+<dd> Use driver <i>driver</i> See list of currently known drivers in section Sx DRIVERS . If no driver was specified, default one will be used.</dd>
+<dt><code>-f </code><i>freq</i></dt>
+<dd> Set fm card frequency (in MHz )</dd>
+<dt><code>-i</code></dt>
+<dd> Show all available information about a driver and a card.</dd>
+<dt><code>-m</code></dt>
+<dd> Set output of a card to mono. Works only in conjunction with option &#8211;<code>f</code> Note, that not all drivers support this option.</dd>
+<dt><code>-s</code></dt>
+<dd> Show current signal status of a radio card.</dd>
+<dt><code>-v </code><i>volume</i></dt>
+<dd> Set volume of a card. Option &#8211;<code>v </code><i>0</i> will mute a card. Each driver has its own maximal volume.</dd>
+<dt><code>-x </code><i>volume</i></dt>
+<dd> Set volume of an arbitrary mixer line of a sound card thru /dev/mixer The <i>volume</i> has following format: </dd>
 <blockquote><p><tt>&lt;line name&gt;=[+-]&lt;left channel&gt;,[+-]&lt;right channel&gt;.</tt></p></blockquote>
 <p> For the line names see </p>
 <blockquote><p><tt>under OpenBSD and NetBSD: /usr/include/sys/audioio.h </tt></p></blockquote>
 <blockquote><p><tt>under Linux and FreeBSD: /usr/include/sys/soundcard.h </tt></p></blockquote>
 <p> Some examples of the option &#8211;<code>x</code> usage are in the section Sx EXAMPLES below.</p>
-<dt><code>-X </code><i>volume</i></p>
-<dd> Set volume of the sound card master output through /dev/mixer Format of this option is similar to option &#8211;<code>x</code> except there is no need to specify &lt;line name&gt;.</p>
-<dt><code>-D</code></p>
-<dd> Detection mode. All known cards will be probed and results will be printed to standard output. Note, this procedure is very slow.</p>
-<dt><code>-S</code></p>
-<dd> Scan mode. If some of the listed below parameters were not specified the FM maximal and minimal frequencies are used. Measured data is dumped to standard output.</p>
-<dt><code>-l </code><i>begin</i></p>
-<dd> Lower border of scan range (in MHz ) If it is less than the FM minimal frequency (87.5 MHz , ) it is set to the FM minimal frequency.</p>
-<dt><code>-h </code><i>end</i></p>
-<dd> Upper border of scan range (in MHz ) If it is greater than the FM maximal frequency (108.0 MHz , ) it is set to the FM maximal frequency.</p>
-<dt><code>-c </code><i>count</i></p>
-<dd> Number of probes for each frequency. The higher this number is the more precise will be results. Since stereo signal has weight 3, none &#8211; weight 0 and mono is in between, the strongest signal will have value 3 * <i>count</i> If not set, each frequency will be probed only once.</p>
-<dt><code>-W </code><i>frequency</i></p>
-<dd> Search mode. Nearest to <i>frequency</i> station is searched and, if found, tuned to. The search direction is determined by <i>frequency</i> sign. If <i>frequency</i> has negative value, the station is searched downward. If <i>frequency</i> is positive the search is performed upward.</dl>
+<dt><code>-X </code><i>volume</i></dt>
+<dd> Set volume of the sound card master output through /dev/mixer Format of this option is similar to option &#8211;<code>x</code> except there is no need to specify &lt;line name&gt;.</dd>
+<dt><code>-D</code></dt>
+<dd> Detection mode. All known cards will be probed and results will be printed to standard output. Note, this procedure is very slow.</dd>
+<dt><code>-S</code></dt>
+<dd> Scan mode. If some of the listed below parameters were not specified the FM maximal and minimal frequencies are used. Measured data is dumped to standard output.</dd>
+<dt><code>-l </code><i>begin</i></dt>
+<dd> Lower border of scan range (in MHz ) If it is less than the FM minimal frequency (87.5 MHz , ) it is set to the FM minimal frequency.</dd>
+<dt><code>-h </code><i>end</i></dt>
+<dd> Upper border of scan range (in MHz ) If it is greater than the FM maximal frequency (108.0 MHz , ) it is set to the FM maximal frequency.</dd>
+<dt><code>-c </code><i>count</i></dt>
+<dd> Number of probes for each frequency. The higher this number is the more precise will be results. Since stereo signal has weight 3, none &#8211; weight 0 and mono is in between, the strongest signal will have value 3 * <i>count</i> If not set, each frequency will be probed only once.</dd>
+<dt><code>-W </code><i>frequency</i></dt>
+<dd> Search mode. Nearest to <i>frequency</i> station is searched and, if found, tuned to. The search direction is determined by <i>frequency</i> sign. If <i>frequency</i> has negative value, the station is searched downward. If <i>frequency</i> is positive the search is performed upward.</dd></dl>
 <h2>DRIVERS</h2>
 <p> <i>Aztech/PackardBell FM Radio Card</i> (ISA) `az&#8217; </p>
 <blockquote><p><tt>port 0x350 - az1</tt></p></blockquote>
@@ -196,94 +196,94 @@ description: "fmio – small utility to manipulate fm radio card"
 <blockquote><p><tt>Software search</tt></p></blockquote>
 <h2>EXAMPLES</h2>
 <dl>
-<dt><code>Set frequency to 104.5 MHz:</code></p>
+<dt><code>Set frequency to 104.5 MHz:</code></dt>
 <dd>
 <blockquote>
 <pre>
 # fmio -f 104.5
 </pre>
 </blockquote>
-<dt><code>Set frequency to 104.5 MHz and show signal state on this frequency:</code></p>
+</dd><dt><code>Set frequency to 104.5 MHz and show signal state on this frequency:</code></dt>
 <dd>
 <blockquote>
 <pre>
 # fmio -f 104.5 -s
 </pre>
 </blockquote>
-<dt><code>Set frequency to 104.5 MHz, hardware volume to 4:</code></p>
+</dd><dt><code>Set frequency to 104.5 MHz, hardware volume to 4:</code></dt>
 <dd>
 <blockquote>
 <pre>
 # fmio -v 4 -f 104.5
 </pre>
 </blockquote>
-<dt><code>Set volume of both channels of line input to 9:</code></p>
+</dd><dt><code>Set volume of both channels of line input to 9:</code></dt>
 <dd>
 <blockquote>
 <pre>
 # fmio -x line=9
 </pre>
 </blockquote>
-<dt><code>For line1, increase volume of left channel by 2, set volume of right channel</code></p>
-<dd> to 10: </p>
+</dd><dt><code>For line1, increase volume of left channel by 2, set volume of right channel</code></dt>
+<dd> to 10: </dd>
 <blockquote>
 <pre>
 # fmio -x line1=+2,10
 </pre>
 </blockquote>
-<dt><code>For master output, increase volume of left channel by 2 and decrease volume</code></p>
-<dd> of right channel by 1: </p>
+<dt><code>For master output, increase volume of left channel by 2 and decrease volume</code></dt>
+<dd> of right channel by 1: </dd>
 <blockquote>
 <pre>
 # fmio -X +2,-1
 </pre>
 </blockquote>
-<dt><code>Decrease volume of both channels by 2:</code></p>
+<dt><code>Decrease volume of both channels by 2:</code></dt>
 <dd>
 <blockquote>
 <pre>
 # fmio -X -2
 </pre>
 </blockquote>
-<dt><code>Scan range [100.0&#8230;107.6] using driver</code></p>
-<dd> `bktr&#8217; </p>
+</dd><dt><code>Scan range [100.0&#8230;107.6] using driver</code></dt>
+<dd> `bktr&#8217; </dd>
 <blockquote>
 <pre>
 # fmio -d bktr -S -l 100.0 -h 107.6
 </pre>
 </blockquote>
-<dt><code>Search station below 104.3 MHz using driver</code></p>
-<dd> `sf2r&#8217; </p>
+<dt><code>Search station below 104.3 MHz using driver</code></dt>
+<dd> `sf2r&#8217; </dd>
 <blockquote>
 <pre>
 # fmio -d sf2r -W -104.3
 </pre>
 </blockquote>
-<dt><code>Detect all available cards:</code></p>
+<dt><code>Detect all available cards:</code></dt>
 <dd>
 <blockquote>
 <pre>
 # fmio -D
 </pre>
 </blockquote>
-</dl>
+</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>/dev/mixer </code></p>
-<dd> mixer audio device</p>
-<dt><code>/dev/tuner </code></p>
-<dd> radio tuner device used by the BSD bktr driver.</p>
-<dt><code>/dev/radio </code></p>
-<dd> radio tuner device used by `v4l&#8217; driver (Linux) and `br&#8217; driver (OpenBSD and NetBSD)</dl>
+<dt><code>/dev/mixer </code></dt>
+<dd> mixer audio device</dd>
+<dt><code>/dev/tuner </code></dt>
+<dd> radio tuner device used by the BSD bktr driver.</dd>
+<dt><code>/dev/radio </code></dt>
+<dd> radio tuner device used by `v4l&#8217; driver (Linux) and `br&#8217; driver (OpenBSD and NetBSD)</dd></dl>
 <h2>ENVIROMENT</h2>
 <p> The following environment variables affect the execution of <code>fmio</code></p>
 <dl>
-<dt><code>FMTUNER</code></p>
-<dd> The driver that should be used as default.</p>
-<dt><code>RADIODEVICE</code></p>
-<dd> The radio tuner device (OpenBSD, NetBSD and Linux)</p>
-<dt><code>MIXERDEVICE</code></p>
-<dd> The audio mixer device to use.</dl>
+<dt><code>FMTUNER</code></dt>
+<dd> The driver that should be used as default.</dd>
+<dt><code>RADIODEVICE</code></dt>
+<dd> The radio tuner device (OpenBSD, NetBSD and Linux)</dd>
+<dt><code>MIXERDEVICE</code></dt>
+<dd> The audio mixer device to use.</dd></dl>
 <h2>BUGS</h2>
 <p> Frequency and hardware volume should be absolute. They cannot be increased or decreased relatively to the current value. </p>
 <p> The Gemtek PCI card implementation has some flaw. Namely, when turning a card off, don&#8217;t use option &#8211;<code>f</code> </p>

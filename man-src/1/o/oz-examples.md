@@ -41,7 +41,7 @@ url: "/docs/linux/man/1-oz-examples/"
 
 <dl>
 <dt>
-<dd> # oz-install -h</dl>
+</dt><dd> # oz-install -h</dd></dl>
  
 
  /template/os/install tells Oz where to get the installation media from. In this example, we set type to 'iso' which means that we need an &lt;iso&gt; element in the XML pointing to the ISO install media (install methods other than ISO are supported, and described in other examples). 
@@ -52,7 +52,7 @@ url: "/docs/linux/man/1-oz-examples/"
 
 <dl>
 <dt>
-<dd> # oz-install /path/to/fedora13.tdl</dl>
+</dt><dd> # oz-install /path/to/fedora13.tdl</dd></dl>
  
 
  Running this command will download and prepare the installation media, then run an automated install in a KVM guest. Assuming the install succeeds, the minimal operating system will be installed on a file in /var/lib/libvirt/images/fedora13_x86_64.dsk (by default, the output location can be overridden in the configuration file). 
@@ -84,7 +84,7 @@ url: "/docs/linux/man/1-oz-examples/"
 
 <dl>
 <dt>
-<dd> # oz-install -u /path/to/fedora14.tdl</dl>
+</dt><dd> # oz-install -u /path/to/fedora14.tdl</dd></dl>
  
 
  Running this command will download and prepare the installation media, then run an automated install in a KVM guest. 
@@ -119,7 +119,7 @@ url: "/docs/linux/man/1-oz-examples/"
 
 <dl>
 <dt>
-<dd> # oz-install -g /path/to/rhel5.tdl</dl>
+</dt><dd> # oz-install -g /path/to/rhel5.tdl</dd></dl>
  
 
  Running this command will download and prepare the installation media, then run an automated install in a KVM guest. 
@@ -161,7 +161,7 @@ url: "/docs/linux/man/1-oz-examples/"
 
 <dl>
 <dt>
-<dd> # oz-install -u /path/to/rhel6_ccache.tdl</dl>
+</dt><dd> # oz-install -u /path/to/rhel6_ccache.tdl</dd></dl>
  
 
  Running this command will download and prepare the installation media, then run an automated install in a KVM guest. 
@@ -197,7 +197,7 @@ url: "/docs/linux/man/1-oz-examples/"
 
 <dl>
 <dt>
-<dd> # oz-install -u /path/to/rhel6_testout.tdl</dl>
+</dt><dd> # oz-install -u /path/to/rhel6_testout.tdl</dd></dl>
  
 
  Running this command will download and prepare the installation media, then run an automated install in a KVM guest. 
@@ -233,7 +233,7 @@ url: "/docs/linux/man/1-oz-examples/"
 
 <dl>
 <dt>
-<dd> # oz-install -u /path/to/rhel6_testout.tdl</dl>
+</dt><dd> # oz-install -u /path/to/rhel6_testout.tdl</dd></dl>
  
 
  Running this command will download and prepare the installation media, then run an automated install in a KVM guest. 
@@ -269,7 +269,7 @@ url: "/docs/linux/man/1-oz-examples/"
 
 <dl>
 <dt>
-<dd> # oz-install -u /path/to/rhel6_testout.tdl</dl>
+</dt><dd> # oz-install -u /path/to/rhel6_testout.tdl</dd></dl>
  
 
  Running this command will download and prepare the installation media, then run an automated install in a KVM guest. 

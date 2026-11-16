@@ -16,8 +16,8 @@ description: "octave-bug – report a bug in GNU Octave"
 <p> Please read the `Bugs&#8217; chapter in the Octave manual to find out how to submit a bug report that will enable the Octave maintainers to fix the problem. If you are unable to use the bug_report command, send your message to the bug-octave mailing list, bug [at] octave.org.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-s&nbsp;<wbr></code><i>subject</i></p>
-<dd> Specify a subject line for the bug report. Spaces in the subject must be quoted.</dl>
+<dt><code>-s&nbsp;<wbr></code><i>subject</i></dt>
+<dd> Specify a subject line for the bug report. Spaces in the subject must be quoted.</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> <code>octave-bug </code> uses the environment variables <code>USER,</code> <code>EDITOR,</code> and <code>PAGER </code> which can be used for customization.</p>
 <h2>VERSION</h2>

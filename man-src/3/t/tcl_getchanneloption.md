@@ -74,39 +74,39 @@ int
 <code>Tcl_SetChannelOption</code>(<i>interp, channel, optionName, newValue</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Used for error reporting and to look up a channel registered in it.</p>
-<dd>const char <i>*fileName</i> (in) The name of a local or network file.</p>
-<dd>const char <i>*mode</i> (in) Specifies how the file is to be accessed. May have any of the values allowed for the <i>mode</i> argument to the Tcl <code>open</code> command.</p>
-<dd>int <i>permissions</i> (in) POSIX-style permission flags such as 0644. If a new file is created, these permissions will be set on the created file.</p>
-<dd>int <i>argc</i> (in) The number of elements in <i>argv</i>.</p>
-<dd>const char <i>**argv</i> (in) Arguments for constructing a command pipeline. These values have the same meaning as the non-switch arguments to the Tcl <code>exec</code> command.</p>
-<dd>int <i>flags</i> (in) Specifies the disposition of the stdio handles in pipeline: OR-ed combination of <code>TCL_STDIN</code>, <code>TCL_STDOUT</code>, <code>TCL_STDERR</code>, and <code>TCL_ENFORCE_MODE</code>. If <code>TCL_STDIN</code> is set, stdin for the first child in the pipe is the pipe channel, otherwise it is the same as the standard input of the invoking process; likewise for <code>TCL_STDOUT</code> and <code>TCL_STDERR</code>. If <code>TCL_ENFORCE_MODE</code> is not set, then the pipe can redirect stdio handles to override the stdio handles for which <code>TCL_STDIN</code>, <code>TCL_STDOUT</code> and <code>TCL_STDERR</code> have been set. If it is set, then such redirections cause an error.</p>
-<dd>ClientData <i>handle</i> (in) Operating system specific handle for I/O to a file. For Unix this is a file descriptor, for Windows it is a HANDLE.</p>
-<dd>int <i>readOrWrite</i> (in) OR-ed combination of <code>TCL_READABLE</code> and <code>TCL_WRITABLE</code> to indicate what operations are valid on <i>handle</i>.</p>
-<dd>const char <i>*channelName</i> (in) The name of the channel.</p>
-<dd>int <i>*modePtr</i> (out) Points at an integer variable that will receive an OR-ed combination of <code>TCL_READABLE</code> and <code>TCL_WRITABLE</code> denoting whether the channel is open for reading and writing.</p>
-<dd>const char <i>*pattern</i> (in) The pattern to match on, passed to Tcl_StringMatch, or NULL.</p>
-<dd>Tcl_Channel <i>channel</i> (in) A Tcl channel for input or output. Must have been the return value from a procedure such as <code>Tcl_OpenFileChannel</code>.</p>
-<dd>Tcl_Obj <i>*readObjPtr</i> (in/out) A pointer to a Tcl Object in which to store the characters read from the channel.</p>
-<dd>int <i>charsToRead</i> (in) The number of characters to read from the channel. If the channel&#8217;s encoding is <code>binary</code>, this is equivalent to the number of bytes to read from the channel.</p>
-<dd>int <i>appendFlag</i> (in) If non-zero, data read from the channel will be appended to the object. Otherwise, the data will replace the existing contents of the object.</p>
-<dd>char <i>*readBuf</i> (out) A buffer in which to store the bytes read from the channel.</p>
-<dd>int <i>bytesToRead</i> (in) The number of bytes to read from the channel. The buffer <i>readBuf</i> must be large enough to hold this many bytes.</p>
-<dd>Tcl_Obj <i>*lineObjPtr</i> (in/out) A pointer to a Tcl object in which to store the line read from the channel. The line read will be appended to the current value of the object.</p>
-<dd>Tcl_DString <i>*lineRead</i> (in/out) A pointer to a Tcl dynamic string in which to store the line read from the channel. Must have been initialized by the caller. The line read will be appended to any data already in the dynamic string.</p>
-<dd>const char <i>*input</i> (in) The input to add to a channel buffer.</p>
-<dd>int <i>inputLen</i> (in) Length of the input</p>
-<dd>int <i>addAtEnd</i> (in) Flag indicating whether the input should be added to the end or beginning of the channel buffer.</p>
-<dd>Tcl_Obj <i>*writeObjPtr</i> (in) A pointer to a Tcl Object whose contents will be output to the channel.</p>
-<dd>const char <i>*charBuf</i> (in) A buffer containing the characters to output to the channel.</p>
-<dd>const char <i>*byteBuf</i> (in) A buffer containing the bytes to output to the channel.</p>
-<dd>int <i>bytesToWrite</i> (in) The number of bytes to consume from <i>charBuf</i> or <i>byteBuf</i> and output to the channel.</p>
-<dd>Tcl_WideInt <i>offset</i> (in) How far to move the access point in the channel at which the next input or output operation will be applied, measured in bytes from the position given by <i>seekMode</i>. May be either positive or negative.</p>
-<dd>int <i>seekMode</i> (in) Relative to which point to seek; used with <i>offset</i> to calculate the new access point for the channel. Legal values are <code>SEEK_SET</code>, <code>SEEK_CUR</code>, and <code>SEEK_END</code>.</p>
-<dd>Tcl_WideInt <i>length</i> (in) The (non-negative) length to truncate the channel the channel to.</p>
-<dd>const char <i>*optionName</i> (in) The name of an option applicable to this channel, such as <code>-blocking</code>. May have any of the values accepted by the <code>fconfigure</code> command.</p>
-<dd>Tcl_DString <i>*optionValue</i> (in) Where to store the value of an option or a list of all options and their values. Must have been initialized by the caller.</p>
-<dd>const char <i>*newValue</i> (in) New value for the option given by <i>optionName</i>. </p>
+<dd>Tcl_Interp <i>*interp</i> (in) Used for error reporting and to look up a channel registered in it.</dd>
+<dd>const char <i>*fileName</i> (in) The name of a local or network file.</dd>
+<dd>const char <i>*mode</i> (in) Specifies how the file is to be accessed. May have any of the values allowed for the <i>mode</i> argument to the Tcl <code>open</code> command.</dd>
+<dd>int <i>permissions</i> (in) POSIX-style permission flags such as 0644. If a new file is created, these permissions will be set on the created file.</dd>
+<dd>int <i>argc</i> (in) The number of elements in <i>argv</i>.</dd>
+<dd>const char <i>**argv</i> (in) Arguments for constructing a command pipeline. These values have the same meaning as the non-switch arguments to the Tcl <code>exec</code> command.</dd>
+<dd>int <i>flags</i> (in) Specifies the disposition of the stdio handles in pipeline: OR-ed combination of <code>TCL_STDIN</code>, <code>TCL_STDOUT</code>, <code>TCL_STDERR</code>, and <code>TCL_ENFORCE_MODE</code>. If <code>TCL_STDIN</code> is set, stdin for the first child in the pipe is the pipe channel, otherwise it is the same as the standard input of the invoking process; likewise for <code>TCL_STDOUT</code> and <code>TCL_STDERR</code>. If <code>TCL_ENFORCE_MODE</code> is not set, then the pipe can redirect stdio handles to override the stdio handles for which <code>TCL_STDIN</code>, <code>TCL_STDOUT</code> and <code>TCL_STDERR</code> have been set. If it is set, then such redirections cause an error.</dd>
+<dd>ClientData <i>handle</i> (in) Operating system specific handle for I/O to a file. For Unix this is a file descriptor, for Windows it is a HANDLE.</dd>
+<dd>int <i>readOrWrite</i> (in) OR-ed combination of <code>TCL_READABLE</code> and <code>TCL_WRITABLE</code> to indicate what operations are valid on <i>handle</i>.</dd>
+<dd>const char <i>*channelName</i> (in) The name of the channel.</dd>
+<dd>int <i>*modePtr</i> (out) Points at an integer variable that will receive an OR-ed combination of <code>TCL_READABLE</code> and <code>TCL_WRITABLE</code> denoting whether the channel is open for reading and writing.</dd>
+<dd>const char <i>*pattern</i> (in) The pattern to match on, passed to Tcl_StringMatch, or NULL.</dd>
+<dd>Tcl_Channel <i>channel</i> (in) A Tcl channel for input or output. Must have been the return value from a procedure such as <code>Tcl_OpenFileChannel</code>.</dd>
+<dd>Tcl_Obj <i>*readObjPtr</i> (in/out) A pointer to a Tcl Object in which to store the characters read from the channel.</dd>
+<dd>int <i>charsToRead</i> (in) The number of characters to read from the channel. If the channel&#8217;s encoding is <code>binary</code>, this is equivalent to the number of bytes to read from the channel.</dd>
+<dd>int <i>appendFlag</i> (in) If non-zero, data read from the channel will be appended to the object. Otherwise, the data will replace the existing contents of the object.</dd>
+<dd>char <i>*readBuf</i> (out) A buffer in which to store the bytes read from the channel.</dd>
+<dd>int <i>bytesToRead</i> (in) The number of bytes to read from the channel. The buffer <i>readBuf</i> must be large enough to hold this many bytes.</dd>
+<dd>Tcl_Obj <i>*lineObjPtr</i> (in/out) A pointer to a Tcl object in which to store the line read from the channel. The line read will be appended to the current value of the object.</dd>
+<dd>Tcl_DString <i>*lineRead</i> (in/out) A pointer to a Tcl dynamic string in which to store the line read from the channel. Must have been initialized by the caller. The line read will be appended to any data already in the dynamic string.</dd>
+<dd>const char <i>*input</i> (in) The input to add to a channel buffer.</dd>
+<dd>int <i>inputLen</i> (in) Length of the input</dd>
+<dd>int <i>addAtEnd</i> (in) Flag indicating whether the input should be added to the end or beginning of the channel buffer.</dd>
+<dd>Tcl_Obj <i>*writeObjPtr</i> (in) A pointer to a Tcl Object whose contents will be output to the channel.</dd>
+<dd>const char <i>*charBuf</i> (in) A buffer containing the characters to output to the channel.</dd>
+<dd>const char <i>*byteBuf</i> (in) A buffer containing the bytes to output to the channel.</dd>
+<dd>int <i>bytesToWrite</i> (in) The number of bytes to consume from <i>charBuf</i> or <i>byteBuf</i> and output to the channel.</dd>
+<dd>Tcl_WideInt <i>offset</i> (in) How far to move the access point in the channel at which the next input or output operation will be applied, measured in bytes from the position given by <i>seekMode</i>. May be either positive or negative.</dd>
+<dd>int <i>seekMode</i> (in) Relative to which point to seek; used with <i>offset</i> to calculate the new access point for the channel. Legal values are <code>SEEK_SET</code>, <code>SEEK_CUR</code>, and <code>SEEK_END</code>.</dd>
+<dd>Tcl_WideInt <i>length</i> (in) The (non-negative) length to truncate the channel the channel to.</dd>
+<dd>const char <i>*optionName</i> (in) The name of an option applicable to this channel, such as <code>-blocking</code>. May have any of the values accepted by the <code>fconfigure</code> command.</dd>
+<dd>Tcl_DString <i>*optionValue</i> (in) Where to store the value of an option or a list of all options and their values. Must have been initialized by the caller.</dd>
+<dd>const char <i>*newValue</i> (in) New value for the option given by <i>optionName</i>. </dd>
 </dl>
 <h2>Description</h2>
 <p>The Tcl channel mechanism provides a device-independent and platform-independent mechanism for performing buffered input and output operations on a variety of file, socket, and device types. The channel mechanism is extensible to new channel types, by providing a low-level channel driver for the new type; the channel driver interface is described in the manual entry for <code>Tcl_CreateChannel</code>. The channel mechanism provides a buffering scheme modeled after Unix&#8217;s standard I/O, and it also allows for nonblocking I/O on channels. </p>

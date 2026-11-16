@@ -12,9 +12,9 @@ description: "memcached_strerror – libmemcached Documentation"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
-<dt><code>const char * memcached_strerror(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, memcached_return_t<i>&nbsp;<wbr>rc</i>)</p>
+<dt><code>const char * memcached_strerror(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, memcached_return_t<i>&nbsp;<wbr>rc</i>)</dt>
 <dd>
-<p> Compile and link with -lmemcached</dl>
+<p> Compile and link with -lmemcached</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <i>memcached_strerror()</i> takes a <code>memcached_return_t</code> value and returns a string describing the error. </p>
 <p> This string must not be modified by the application. </p>
@@ -31,3 +31,4 @@ description: "memcached_strerror – libmemcached Documentation"
 <h2>COPYRIGHT</h2>
 <p> 2011-2013, Brian Aker DataDifferential, <a rel="nofollow" href="http://datadifferential.com/">http://datadifferential.com/</a> </p>
 <h2>Index</h2>
+</p>

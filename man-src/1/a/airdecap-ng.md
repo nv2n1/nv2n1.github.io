@@ -15,20 +15,20 @@ description: "airdecap-ng – decrypt a WEP/WPA crypted pcap file"
 <p> <code>airdecap-ng</code> decrypts a WEP/WPA crypted pcap file to a uncrypted one by using the right WEP/WPA keys.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-H, &#8211;help</i></p>
-<dd> Shows the help screen.</p>
-<dt><i>-l</i></p>
-<dd> Do not remove the 802.11 header.</p>
-<dt><i>-b &lt;bssid&gt;</i></p>
-<dd> Access point MAC address filter.</p>
-<dt><i>-k &lt;pmk&gt;</i></p>
-<dd> WPA Pairwise Master Key in hex.</p>
-<dt><i>-e &lt;essid&gt;</i></p>
-<dd> Target network SSID. For SSID containing special characters, see <a rel="nofollow" href="http://www.aircrack-ng.org/doku.php?id=faq#how_to_use_spaces_double_quote_and_single_quote_etc._in_ap_names">http://www.aircrack-ng.org/doku.php?id=faq#how_to_use_spaces_double_quote_and_single_quote_etc._in_ap_names</a></p>
-<dt><i>-p &lt;pass&gt;</i></p>
-<dd> Target network WPA passphrase.</p>
-<dt><i>-w &lt;key&gt;</i></p>
-<dd> Target network WEP key in hex.</dl>
+<dt><i>-H, &#8211;help</i></dt>
+<dd> Shows the help screen.</dd>
+<dt><i>-l</i></dt>
+<dd> Do not remove the 802.11 header.</dd>
+<dt><i>-b &lt;bssid&gt;</i></dt>
+<dd> Access point MAC address filter.</dd>
+<dt><i>-k &lt;pmk&gt;</i></dt>
+<dd> WPA Pairwise Master Key in hex.</dd>
+<dt><i>-e &lt;essid&gt;</i></dt>
+<dd> Target network SSID. For SSID containing special characters, see <a rel="nofollow" href="http://www.aircrack-ng.org/doku.php?id=faq#how_to_use_spaces_double_quote_and_single_quote_etc._in_ap_names">http://www.aircrack-ng.org/doku.php?id=faq#how_to_use_spaces_double_quote_and_single_quote_etc._in_ap_names</a></dd>
+<dt><i>-p &lt;pass&gt;</i></dt>
+<dd> Target network WPA passphrase.</dd>
+<dt><i>-w &lt;key&gt;</i></dt>
+<dd> Target network WEP key in hex.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> airdecap-ng -b 00:09:5B:10:BC:5A open-network.cap<br />
  airdecap-ng -w 11A3E229084349BC25D97E2939 wep.cap<br />

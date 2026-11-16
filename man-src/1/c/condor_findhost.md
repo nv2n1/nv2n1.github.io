@@ -18,39 +18,33 @@ description: "condor_findhost find machine(s) in the pool that can be used with 
 <p> <code>-help</code></p>
 <dl>
 <dt>
-<dd> Display usage information and exit</p>
-<dt>
-<dd></dl>
+</dt><dd> Display usage information and exit</dd>
+</dl>
 <p> <code>-m</code></p>
 <dl>
 <dt>
-<dd> Only search for entire machines. Slots within an entire machine are not considered.</p>
-<dt>
-<dd></dl>
+</dt><dd> Only search for entire machines. Slots within an entire machine are not considered.</dd>
+</dl>
 <p> <code>-n </code> <i>num</i></p>
 <dl>
 <dt>
-<dd> Find and list up to <i>num</i> machines that fulfill the specification. <i>num</i> is an integer greater than zero.</p>
-<dt>
-<dd></dl>
+</dt><dd> Find and list up to <i>num</i> machines that fulfill the specification. <i>num</i> is an integer greater than zero.</dd>
+</dl>
 <p> <code>-c </code> <i>c_expr</i></p>
 <dl>
 <dt>
-<dd> Constrain the search to only consider machines that result from the evaluation of <i>c_expr</i> . <i>c_expr</i> is a ClassAd expression.</p>
-<dt>
-<dd></dl>
+</dt><dd> Constrain the search to only consider machines that result from the evaluation of <i>c_expr</i> . <i>c_expr</i> is a ClassAd expression.</dd>
+</dl>
 <p> <code>-r </code> <i>r_expr</i></p>
 <dl>
 <dt>
-<dd> <i>r_expr</i> is the rank expression evaluated to use as a basis for machine selection. <i>r_expr</i> is a ClassAd expression.</p>
-<dt>
-<dd></dl>
+</dt><dd> <i>r_expr</i> is the rank expression evaluated to use as a basis for machine selection. <i>r_expr</i> is a ClassAd expression.</dd>
+</dl>
 <p> <code>-p </code> <i>centralmanagerhostname</i></p>
 <dl>
 <dt>
-<dd> Specify the pool to be searched by giving the central manager&#8217;s host name. Without this option, the current pool is searched.</p>
-<dt>
-<dd></dl>
+</dt><dd> Specify the pool to be searched by giving the central manager&#8217;s host name. Without this option, the current pool is searched.</dd>
+</dl>
 <h2>General Remarks</h2>
 <p> <i>condor_findhost</i> is used to locate a machine within a pool that can be taken out of the pool with the least disturbance of the pool. </p>
 <p> An administrator should set preemption requirements for the HTCondor pool. The expression </p>

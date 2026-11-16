@@ -16,7 +16,7 @@ description: "repomdxml2solv – convert a repomd.xml file into a solv file"
 <p> <code>-q</code> <i>WHAT</i></p>
 <dl>
 <dt>
-<dd> Data query mode: instead of writing a solv file, select the <i>WHAT</i> element in the input data and write it to standard output. Examples for <i>WHAT</i> are <code>type</code> to get a list of all types, and <code>primary:location</code> to get the location of the element with type <code>primary</code>.</dl>
+</dt><dd> Data query mode: instead of writing a solv file, select the <i>WHAT</i> element in the input data and write it to standard output. Examples for <i>WHAT</i> are <code>type</code> to get a list of all types, and <code>primary:location</code> to get the location of the element with type <code>primary</code>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-rpmmd2solv/">rpmmd2solv</a>(1), <a href="/docs/linux/man/1-mergesolv/">mergesolv</a>(1), <a href="/docs/linux/man/8-createrepo/">createrepo</a>(8)</p>
 <h2>AUTHOR</h2>

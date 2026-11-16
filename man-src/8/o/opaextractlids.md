@@ -21,19 +21,16 @@ opaextractlids [--help] [opareport <i>options</i>]
 <h2>Options</h2>
 
 <dl><dt>--help
-<dd>Produces full help text. 
-
-<dt>opareport <i>options</i>
-<dd>Options are passed to opareport. See <i>opareport</i> for the full set of options. 
-
-</dl>
+</dt><dd>Produces full help text. 
+</dd><dt>opareport <i>options</i>
+</dt><dd>Options are passed to opareport. See <i>opareport</i> for the full set of options. 
+</dd></dl>
 
 <h2>Examples</h2>
 
 # List all the lids in the fabric: 
  opaextractlids 
  <pre><code># List all the lids of end-nodes:
-
 opaextractlids -F &quot;nodetype:FI&quot;</code></pre> 
  # List all the lids on the 2nd HFI's fabric of a multi-plane fabric: 
  opaextractlids -h 2 

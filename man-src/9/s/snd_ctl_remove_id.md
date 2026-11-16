@@ -15,11 +15,11 @@ snd_ctl_remove_id - remove the control of the given id and release it
 <h2>Arguments</h2>
 
 <i>card</i>
-<dl><dd><dd>the card instance</dl>
+<dl><dd></dd><dd>the card instance</dd></dl>
  
 
  <i>id</i>
-<dl><dd>the control id to remove</dl>
+<dl><dd>the control id to remove</dd></dl>
 
 <h2>Description</h2>
 

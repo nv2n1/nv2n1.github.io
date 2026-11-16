@@ -12,39 +12,35 @@ description: "jar-The Java Archive Tool"
 <p> <code>jar</code> combines multiple files into a single JAR archive file.</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Create jar file</p>
-<dd> <tt>jar c</tt><i>[v0Mmfe] [</i><i>manifest</i><i>] [</i><i>jarfile</i><i>] [</i><i>entrypoint</i><i>] [-C</i> <i>dir</i><i>]</i> <i>inputfiles</i> <i>[-J</i><i>option</i><i>]</i></p>
-<dt>Update jar file</p>
-<dd> <tt>jar u</tt><i>[v0Mmfe] [</i><i>manifest</i><i>] [</i><i>jarfile</i><i>] [</i><i>entrypoint</i><i>] [-C</i> <i>dir</i><i>]</i> <i>inputfiles</i> <i>[-J</i><i>option</i><i>]</i></p>
-<dt>Extract jar file</p>
-<dd> <tt>jar x</tt><i>[vf] [</i><i>jarfile</i><i>] [</i><i>inputfiles</i><i>] [-J</i><i>option</i><i>]</i></p>
-<dt>List table of contents of jar file</p>
-<dd> <tt>jar t</tt><i>[vf] [</i><i>jarfile</i><i>] [</i><i>inputfiles</i><i>] [-J</i><i>option</i><i>]</i></p>
-<dt>Add index to jar file</p>
-<dd> <tt>jar i</tt> <i>jarfile</i> <i>[-J</i><i>option</i><i>]</i></dl>
+<dt>Create jar file</dt>
+<dd> <tt>jar c</tt><i>[v0Mmfe] [</i><i>manifest</i><i>] [</i><i>jarfile</i><i>] [</i><i>entrypoint</i><i>] [-C</i> <i>dir</i><i>]</i> <i>inputfiles</i> <i>[-J</i><i>option</i><i>]</i></dd>
+<dt>Update jar file</dt>
+<dd> <tt>jar u</tt><i>[v0Mmfe] [</i><i>manifest</i><i>] [</i><i>jarfile</i><i>] [</i><i>entrypoint</i><i>] [-C</i> <i>dir</i><i>]</i> <i>inputfiles</i> <i>[-J</i><i>option</i><i>]</i></dd>
+<dt>Extract jar file</dt>
+<dd> <tt>jar x</tt><i>[vf] [</i><i>jarfile</i><i>] [</i><i>inputfiles</i><i>] [-J</i><i>option</i><i>]</i></dd>
+<dt>List table of contents of jar file</dt>
+<dd> <tt>jar t</tt><i>[vf] [</i><i>jarfile</i><i>] [</i><i>inputfiles</i><i>] [-J</i><i>option</i><i>]</i></dd>
+<dt>Add index to jar file</dt>
+<dd> <tt>jar i</tt> <i>jarfile</i> <i>[-J</i><i>option</i><i>]</i></dd></dl>
 </dl>
 <p> where: </p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>cuxtiv0Mmfe</p>
-<dd> Options that control the <i>jar</i> command.</p>
-<dt>jarfile</p>
-<dd> Jar file to be created (<i>c</i>), updated (<i>u</i>), extracted (<i>x</i>), or have its table of contents viewed (<i>t</i>). The <i>-f</i> option and filename <i>jarfile</i> are a pair &#8212; if either is present, they must both appear. Note that omitting <i>f</i> and <i>jarfile</i> accepts a &quot;jar file&quot; from standard input (for x and t) or sends the &quot;jar file&quot; to standard output (for c and u).</p>
-<dt>inputfiles</p>
-<dd> Files or directories, separated by spaces, to be combined into <i>jarfile</i> (for c and u), or to be extracted (for x) or listed (for t) from <i>jarfile</i>. All directories are processed recursively. The files are compressed unless option <i>0</i> (zero) is used.</p>
-<dt>manifest</p>
-<dd> Pre-existing manifest file whose <i>name</i><i>:</i> <i>value</i> pairs are to be included in MANIFEST.MF in the jar file. The <i>-m</i> option and filename <i>manifest</i> are a pair &#8212; if either is present, they must both appear. The letters <code>m</code>, <code>f</code> and <code>e</code> must appear in the same order that <i>manifest</i>, <i>jarfile</i>, <i>entrypoint</i> appear.</p>
-<dt>entrypoint</p>
-<dd> The name of the class that set as the application entry point for stand-alone applications bundled into executable jar file. The <i>-e</i> option and entrypoint are a pair &#8212; if either is present, they must both appear. The letters <code>m</code>, <code>f</code> and <code>e</code> must appear in the same order that <i>manifest</i>, <i>jarfile</i>, <i>entrypoint</i> appear.</p>
-<dt>-C dir</p>
-<dd> Temporarily changes directories to <i>dir</i> while processing the following <i>inputfiles</i> argument. Multiple <i>-C&nbsp;<wbr></i><i>dir</i> <i>inputfiles</i> sets are allowed.</p>
-<dt>-Joption</p>
-<dd> Option to be passed into the Java runtime environment. (There must be no space between <i>-J</i> and <i>option</i>).</dl>
+<dt>cuxtiv0Mmfe</dt>
+<dd> Options that control the <i>jar</i> command.</dd>
+<dt>jarfile</dt>
+<dd> Jar file to be created (<i>c</i>), updated (<i>u</i>), extracted (<i>x</i>), or have its table of contents viewed (<i>t</i>). The <i>-f</i> option and filename <i>jarfile</i> are a pair &#8212; if either is present, they must both appear. Note that omitting <i>f</i> and <i>jarfile</i> accepts a &quot;jar file&quot; from standard input (for x and t) or sends the &quot;jar file&quot; to standard output (for c and u).</dd>
+<dt>inputfiles</dt>
+<dd> Files or directories, separated by spaces, to be combined into <i>jarfile</i> (for c and u), or to be extracted (for x) or listed (for t) from <i>jarfile</i>. All directories are processed recursively. The files are compressed unless option <i>0</i> (zero) is used.</dd>
+<dt>manifest</dt>
+<dd> Pre-existing manifest file whose <i>name</i><i>:</i> <i>value</i> pairs are to be included in MANIFEST.MF in the jar file. The <i>-m</i> option and filename <i>manifest</i> are a pair &#8212; if either is present, they must both appear. The letters <code>m</code>, <code>f</code> and <code>e</code> must appear in the same order that <i>manifest</i>, <i>jarfile</i>, <i>entrypoint</i> appear.</dd>
+<dt>entrypoint</dt>
+<dd> The name of the class that set as the application entry point for stand-alone applications bundled into executable jar file. The <i>-e</i> option and entrypoint are a pair &#8212; if either is present, they must both appear. The letters <code>m</code>, <code>f</code> and <code>e</code> must appear in the same order that <i>manifest</i>, <i>jarfile</i>, <i>entrypoint</i> appear.</dd>
+<dt>-C dir</dt>
+<dd> Temporarily changes directories to <i>dir</i> while processing the following <i>inputfiles</i> argument. Multiple <i>-C&nbsp;<wbr></i><i>dir</i> <i>inputfiles</i> sets are allowed.</dd>
+<dt>-Joption</dt>
+<dd> Option to be passed into the Java runtime environment. (There must be no space between <i>-J</i> and <i>option</i>).</dd></dl>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>jar</code> tool combines multiple files into a single JAR archive file. <code>jar</code> is a general-purpose archiving and compression tool, based on ZIP and the <i>ZLIB</i> @ <a rel="nofollow" href="http://www.gzip.org/zlib/">http://www.gzip.org/zlib/</a> compression format. However, <code>jar</code> was designed mainly package java applets or applications into a single archive. When the components of an applet or application (files, images and sounds) are combined into a single archive, they can be downloaded by a java agent (like a browser) in a single HTTP transaction, rather than requiring a new connection for each piece. This dramatically improves download times. <code>jar</code> also compresses files and so further improves download time. In addition, it allows individual entries in a file to be signed by the applet author so that their origin can be authenticated. The syntax for the jar tool is almost identical to the syntax for the <i>tar</i> command. A <code>jar</code> archive can be used as a class path entry, whether or not it is compressed. </p>
@@ -84,13 +80,11 @@ description: "jar-The Java Archive Tool"
 <p> To review command samples which use <i>jar</i> to opeate on jar files and jar file manifests, see Examples, below. Also refer to the jar trail of the <i>Java Tutorial</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/tutorial/deployment/jar.">http://docs.oracle.com/javase/tutorial/deployment/jar.</a> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>c</p>
-<dd> Creates a new archive file named <i>jarfile</i> (if <i>f</i> is specified) or to standard output (if <i>f</i> and <i>jarfile</i> are omitted). Add to it the files and directories specified by <i>inputfiles</i>.</p>
-<dt>u</p>
-<dd> Updates an existing file <i>jarfile</i> (when <i>f</i> is specified) by adding to it files and directories specified by <i>inputfiles</i>. For example: </p>
+<dt>c</dt>
+<dd> Creates a new archive file named <i>jarfile</i> (if <i>f</i> is specified) or to standard output (if <i>f</i> and <i>jarfile</i> are omitted). Add to it the files and directories specified by <i>inputfiles</i>.</dd>
+<dt>u</dt>
+<dd> Updates an existing file <i>jarfile</i> (when <i>f</i> is specified) by adding to it files and directories specified by <i>inputfiles</i>. For example: </dd>
 <pre>
 <code>jar uf foo.jar foo.class</code>
 </pre>
@@ -99,35 +93,35 @@ description: "jar-The Java Archive Tool"
 <code>jar umf manifest foo.jar</code>
 </pre>
 <p> updates the <i>foo.jar</i> manifest with the <i>name : value</i> pairs in <i>manifest</i>.</p>
-<dt>x</p>
-<dd> Extracts files and directories from <i>jarfile</i> (if <i>f</i> is specified) or standard input (if <i>f</i> and <i>jarfile</i> are omitted). If <i>inputfiles</i> is specified, only those specified files and directories are extracted. Otherwise, all files and directories are extracted. The time and date of the extracted files are those given in the archive.</p>
-<dt>t</p>
-<dd> Lists the table of contents from <i>jarfile</i> (if <i>f</i> is specified) or standard input (if <i>f</i> and <i>jarfile</i> are omitted). If <i>inputfiles</i> is specified, only those specified files and directories are listed. Otherwise, all files and directories are listed.</p>
-<dt>i</p>
-<dd> Generate index information for the specified <i>jarfile</i> and its dependent jar files. For example: </p>
+<dt>x</dt>
+<dd> Extracts files and directories from <i>jarfile</i> (if <i>f</i> is specified) or standard input (if <i>f</i> and <i>jarfile</i> are omitted). If <i>inputfiles</i> is specified, only those specified files and directories are extracted. Otherwise, all files and directories are extracted. The time and date of the extracted files are those given in the archive.</dd>
+<dt>t</dt>
+<dd> Lists the table of contents from <i>jarfile</i> (if <i>f</i> is specified) or standard input (if <i>f</i> and <i>jarfile</i> are omitted). If <i>inputfiles</i> is specified, only those specified files and directories are listed. Otherwise, all files and directories are listed.</dd>
+<dt>i</dt>
+<dd> Generate index information for the specified <i>jarfile</i> and its dependent jar files. For example: </dd>
 <pre>
 <code>jar i foo.jar</code>
 </pre>
 </dl>
 <p> would generate an <i>INDEX.LIST</i> file in <i>foo.jar</i> which contains location information for each package in <i>foo.jar</i> and all the jar files specified in the <i>Class-Path</i> attribute of <i>foo.jar</i>. See the index example.</p>
 <dl>
-<dt>f</p>
-<dd> Specifies the file <i>jarfile</i> to be created (<i>c</i>), updated (<i>u</i>), extracted (<i>x</i>), indexed (<i>i</i>), or viewed (<i>t</i>). The <i>-f</i> option and filename <i>jarfile</i> are a pair &#8212; if present, they must both appear. Omitting <i>f</i> and <i>jarfile</i> accepts a jar file name from <i>stdin</i>(for x and t) or sends jar file to <i>stdout</i> (for c and u).</p>
-<dt>v</p>
-<dd> Generates verbose output to standard output. Examples shown below.</p>
-<dt>0</p>
-<dd> (zero) Store without using ZIP compression.</p>
-<dt>M</p>
-<dd> Do not create a manifest file entry (for c and u), or delete a manifest file entry if one exists (for u).</p>
-<dt>m</p>
-<dd> Includes <i>name : value</i> attribute pairs from the specified manifest file <i>manifest</i> in the file at <i>META-INF/MANIFEST.MF</i>. <i>jar</i> adds a <i>name : value</i> pair unless an entry already exists with the same name, in which case <i>jar</i> updates its value. </p>
+<dt>f</dt>
+<dd> Specifies the file <i>jarfile</i> to be created (<i>c</i>), updated (<i>u</i>), extracted (<i>x</i>), indexed (<i>i</i>), or viewed (<i>t</i>). The <i>-f</i> option and filename <i>jarfile</i> are a pair &#8212; if present, they must both appear. Omitting <i>f</i> and <i>jarfile</i> accepts a jar file name from <i>stdin</i>(for x and t) or sends jar file to <i>stdout</i> (for c and u).</dd>
+<dt>v</dt>
+<dd> Generates verbose output to standard output. Examples shown below.</dd>
+<dt>0</dt>
+<dd> (zero) Store without using ZIP compression.</dd>
+<dt>M</dt>
+<dd> Do not create a manifest file entry (for c and u), or delete a manifest file entry if one exists (for u).</dd>
+<dt>m</dt>
+<dd> Includes <i>name : value</i> attribute pairs from the specified manifest file <i>manifest</i> in the file at <i>META-INF/MANIFEST.MF</i>. <i>jar</i> adds a <i>name : value</i> pair unless an entry already exists with the same name, in which case <i>jar</i> updates its value. </dd>
 <p> On the command line, the letters <code>m</code> and <code>f</code> must appear in the same order that <i>manifest</i> and <i>jarfile</i> appear. Example use: </p>
 <pre>
 <code>jar cmf myManifestFile myFile.jar *.class</code>
 </pre>
 <p> You can add special-purpose <i>name : value</i> attribute pairs to the manifest that aren&#8217;t contained in the default manifest. For example, you can add attributes specifying vendor information, version information, package sealing, or to make JAR-bundled applications executable. See the <i>JAR Files</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/tutorial/deployment/jar/">http://docs.oracle.com/javase/tutorial/deployment/jar/</a> trail in the Java Tutorial for examples of using the <tt>-m</tt> option.</p>
-<dt>e</p>
-<dd> Sets <i>entrypoint</i> as the application entry point for stand-alone applications bundled into executable jar file. The use of this option creates or overrides the <i>Main-Class</i> attribute value in the manifest file. This option can be used during creation of jar file or while updating the jar file. This option specifies the application entry point without editing or creating the manifest file. </p>
+<dt>e</dt>
+<dd> Sets <i>entrypoint</i> as the application entry point for stand-alone applications bundled into executable jar file. The use of this option creates or overrides the <i>Main-Class</i> attribute value in the manifest file. This option can be used during creation of jar file or while updating the jar file. This option specifies the application entry point without editing or creating the manifest file. </dd>
 <p> For example, this command creates <i>Main.jar</i> where the <i>Main-Class</i> attribute value in the manifest is set to <i>Main</i>: </p>
 <pre>
 <code>jar cfe Main.jar Main Main.class</code>
@@ -145,8 +139,8 @@ description: "jar-The Java Archive Tool"
 <code>jar -cfe Main.jar foo.Main foo/Main.class</code>
 </pre>
 <p> <code>Note:&nbsp;<wbr></code> specifying both <i>-m</i> and <i>-e</i> options together when the given manifest also contains the <i>Main-Class</i> attribute results in an ambigous <i>Main.class</i> specification, leading to an error and the jar creation or update operation is aborted.</p>
-<dt>-C dir</p>
-<dd> Temporarily changes directories (<i>cd</i>&nbsp;<wbr><i>dir</i>) during execution of the <i>jar</i> command while processing the following <i>inputfiles</i> argument. Its operation is intended to be similar to the <i>-C</i> option of the UNIX <i>tar</i> utility. </p>
+<dt>-C dir</dt>
+<dd> Temporarily changes directories (<i>cd</i>&nbsp;<wbr><i>dir</i>) during execution of the <i>jar</i> command while processing the following <i>inputfiles</i> argument. Its operation is intended to be similar to the <i>-C</i> option of the UNIX <i>tar</i> utility. </dd>
 <p> For example, this command changes to the <i>classes</i> directory and adds the <i>bar.class</i> from that directory to <i>foo.jar</i>: </p>
 <pre>
 <code>jar uf foo.jar -C classes bar.class</code>
@@ -165,8 +159,8 @@ xyz.class</code>
 </pre>
 </dl>
 <dl>
-<dt>-Joption</p>
-<dd> Pass <i>option</i> to the Java runtime environment, where <i>option</i> is one of the options described on the reference page for the java application launcher. For example, <tt>-J-Xmx48M</tt> sets the maximum memory to 48 megabytes. It is a common convention for <i>-J</i> to pass options to the underlying runtime environment.</dl>
+<dt>-Joption</dt>
+<dd> Pass <i>option</i> to the Java runtime environment, where <i>option</i> is one of the options described on the reference page for the java application launcher. For example, <tt>-J-Xmx48M</tt> sets the maximum memory to 48 megabytes. It is a common convention for <i>-J</i> to pass options to the underlying runtime environment.</dd></dl>
 </dl>
 <h2>COMMAND LINE ARGUMENT FILES</h2>
 <p> To shorten or simplify the jar command line, you can specify one or more files that themselves contain arguments to the <i>jar</i> command (except <i>-J</i> options). This enables you to create jar commands of any length, overcoming command line limits imposed by the operating system. </p>

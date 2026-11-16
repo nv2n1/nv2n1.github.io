@@ -25,8 +25,8 @@ void if_freenameindex(struct if_nameindex *ptr);
 <h2>ERRORS</h2>
 <p> <code>if_nameindex</code>() may fail and set <i>errno</i> if:</p>
 <dl>
-<dt><code>ENOBUFS</code></p>
-<dd> Insufficient resources available.</dl>
+<dt><code>ENOBUFS</code></dt>
+<dd> Insufficient resources available.</dd></dl>
 <p> <code>if_nameindex</code>() may also fail for any of the errors specified for <code><a href="/docs/linux/man/2-socket/">socket</a></code>(2), <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2), <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2), <code><a href="/docs/linux/man/2-getsockname/">getsockname</a></code>(2), <code><a href="/docs/linux/man/2-recvmsg/">recvmsg</a></code>(2), <code><a href="/docs/linux/man/2-sendto/">sendto</a></code>(2), or <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3).</p>
 <h2>VERSIONS</h2>
 <p> The <code>if_nameindex</code>() function first appeared in glibc 2.1, but before glibc 2.3.4, the implementation supported only interfaces with IPv4 addresses. Support of interfaces that don&#8217;t have IPv4 addresses is available only on kernels that support netlink.</p>

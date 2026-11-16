@@ -112,19 +112,19 @@ description: "globus_gass_copy.h – GASS Copy Library."
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>handle</i> Handle which will contain a cached connection to the URL server.<br />
- <i>url</i> The URL of the FTP or GSIFTP server to cache.</dl>
+ <i>url</i> The URL of the FTP or GSIFTP server to cache.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>This function returns GLOBUS_SUCCESS if successful, or a globus_result_t indicating the error that occurred.</dl>
+<dd>This function returns GLOBUS_SUCCESS if successful, or a globus_result_t indicating the error that occurred.</dd></dl>
 <h3>globus_result_t globus_gass_copy_flush_url_state (<code>globus_gass_copy_handle_t</code> *handle, char *url)</h3>
 <p>Remove an FTP or GridFTP cached connection. Explicitly remove a cached connection to an FTP or GSIFTP server. If an idle connection to an FTP server exists, it will be closed. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>handle</i> Handle which contains a cached connection to the URL server.<br />
- <i>url</i> The URL of the FTP or GSIFTP server to remove.</dl>
+ <i>url</i> The URL of the FTP or GSIFTP server to remove.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>This function returns GLOBUS_SUCCESS if successful, or a globus_result_t indicating the error that occurred.</dl>
+<dd>This function returns GLOBUS_SUCCESS if successful, or a globus_result_t indicating the error that occurred.</dd></dl>
 <h3>globus_result_t globus_gass_copy_handle_to_url (<code>globus_gass_copy_handle_t</code> *handle, globus_io_handle_t *source_handle, char *dest_url, <code>globus_gass_copy_attr_t</code> *dest_attr)</h3>
 <p>Blocking transfer from an IO handle to an URL. </p>
 <p> <code>Parameters:</code></p>
@@ -132,17 +132,17 @@ description: "globus_gass_copy.h – GASS Copy Library."
 <dd><i>handle</i> The handle to perform the copy operation<br />
  <i>source_handle</i> transfer data from this IO handle<br />
  <i>dest_url</i> transfer data to this URL<br />
- <i>dest_attr</i> Attributes describing how the transfer to the destination should be done</dl>
+ <i>dest_attr</i> Attributes describing how the transfer to the destination should be done</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>This function returns GLOBUS_SUCCESS if the transfer was completed successfully, or a result pointing to an object of one of the the following error types:</dl>
+<dd>This function returns GLOBUS_SUCCESS if the transfer was completed successfully, or a result pointing to an object of one of the the following error types:</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>GLOBUS_GASS_COPY_ERROR_TYPE_NULL_PARAMETER</i> The handle was equal to GLOBUS_NULL, so the transfer could not processed.<br />
- <i>GLOBUS_GASS_COPY_ERROR_TYPE_next_error</i> next error description</dl>
+ <i>GLOBUS_GASS_COPY_ERROR_TYPE_next_error</i> next error description</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>globus_gass_copy_url_to_url()</code> <code>globus_gass_copy_url_to_handle()</code></dl>
+<dd><code>globus_gass_copy_url_to_url()</code> <code>globus_gass_copy_url_to_handle()</code></dd></dl>
 <h3>globus_result_t globus_gass_copy_register_handle_to_url (<code>globus_gass_copy_handle_t</code> *handle, globus_io_handle_t *source_handle, char *dest_url, <code>globus_gass_copy_attr_t</code> *dest_attr, <code>globus_gass_copy_callback_t</code>callback_func, void *callback_arg)</h3>
 <p>Nonblocking Transfer From an IO handle to an URL </p>
 <p> This functions initiates a transfer from an IO handle to destination URL, then returns immediately. </p>
@@ -154,17 +154,17 @@ description: "globus_gass_copy.h – GASS Copy Library."
  <i>dest_url</i> transfer data to this URL<br />
  <i>dest_attr</i> Attributes describing how the transfer to the destination should be done<br />
  <i>callback_func</i> Callback to be invoked once the transfer is completed.<br />
- <i>callback_arg</i> Argument to be passed to the callback_func.</dl>
+ <i>callback_arg</i> Argument to be passed to the callback_func.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>This function returns GLOBUS_SUCCESS if the transfer was initiated successfully, or a result pointing to an object of one of the the following error types:</dl>
+<dd>This function returns GLOBUS_SUCCESS if the transfer was initiated successfully, or a result pointing to an object of one of the the following error types:</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>GLOBUS_GASS_COPY_ERROR_TYPE_NULL_PARAMETER</i> The handle was equal to GLOBUS_NULL, so the transfer could not processed.<br />
- <i>GLOBUS_GASS_COPY_ERROR_TYPE_next_error</i> next error description</dl>
+ <i>GLOBUS_GASS_COPY_ERROR_TYPE_next_error</i> next error description</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>globus_gass_copy_register_url_to_url()</code>, <code>globus_gass_copy_register_url_to_handle()</code></dl>
+<dd><code>globus_gass_copy_register_url_to_url()</code>, <code>globus_gass_copy_register_url_to_handle()</code></dd></dl>
 <h3>globus_result_t globus_gass_copy_register_url_to_handle (<code>globus_gass_copy_handle_t</code> *handle, char *source_url, <code>globus_gass_copy_attr_t</code> *source_attr, globus_io_handle_t *dest_handle, <code>globus_gass_copy_callback_t</code>callback_func, void *callback_arg)</h3>
 <p>Nonblocking transfer from an URL to an IO handle. This functions initiates a transfer from source URL to an IO handle, then returns immediately. </p>
 <p> When the transfer is completed or if the transfer is aborted, the callback_func will be invoked with the final status of the transfer. </p>
@@ -175,17 +175,17 @@ description: "globus_gass_copy.h – GASS Copy Library."
  <i>source_attr</i> Attributes describing how the transfer form the source should be done<br />
  <i>dest_handle</i> transfer data to this IO handle<br />
  <i>callback_func</i> Callback to be invoked once the transfer is completed.<br />
- <i>callback_arg</i> Argument to be passed to the callback_func.</dl>
+ <i>callback_arg</i> Argument to be passed to the callback_func.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>This function returns GLOBUS_SUCCESS if the transfer was initiated successfully, or a result pointing to an object of one of the the following error types:</dl>
+<dd>This function returns GLOBUS_SUCCESS if the transfer was initiated successfully, or a result pointing to an object of one of the the following error types:</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>GLOBUS_GASS_COPY_ERROR_TYPE_NULL_PARAMETER</i> The handle was equal to GLOBUS_NULL, so the transfer could not processed.<br />
- <i>GLOBUS_GASS_COPY_ERROR_TYPE_next_error</i> next error description</dl>
+ <i>GLOBUS_GASS_COPY_ERROR_TYPE_next_error</i> next error description</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>globus_gass_copy_register_url_to_url()</code>, <code>globus_gass_copy_register_handle_to_url()</code></dl>
+<dd><code>globus_gass_copy_register_url_to_url()</code>, <code>globus_gass_copy_register_handle_to_url()</code></dd></dl>
 <h3>globus_result_t globus_gass_copy_register_url_to_url (<code>globus_gass_copy_handle_t</code> *handle, char *source_url, <code>globus_gass_copy_attr_t</code> *source_attr, char *dest_url, <code>globus_gass_copy_attr_t</code> *dest_attr, <code>globus_gass_copy_callback_t</code>callback_func, void *callback_arg)</h3>
 <p>Nonblocking Transfer between URLs </p>
 <p> This functions initiates a transfer from source URL to destination URL, then returns immediately. </p>
@@ -198,17 +198,17 @@ description: "globus_gass_copy.h – GASS Copy Library."
  <i>dest_url</i> transfer data to this URL<br />
  <i>dest_attr</i> Attributes describing how the transfer to the destination should be done<br />
  <i>callback_func</i> Callback to be invoked once the transfer is completed.<br />
- <i>callback_arg</i> Argument to be passed to the callback_func.</dl>
+ <i>callback_arg</i> Argument to be passed to the callback_func.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>This function returns GLOBUS_SUCCESS if the transfer was initiated successfully, or a result pointing to an object of one of the the following error types:</dl>
+<dd>This function returns GLOBUS_SUCCESS if the transfer was initiated successfully, or a result pointing to an object of one of the the following error types:</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>GLOBUS_GASS_COPY_ERROR_TYPE_NULL_PARAMETER</i> The handle was equal to GLOBUS_NULL, so the transfer could not processed.<br />
- <i>GLOBUS_GASS_COPY_ERROR_TYPE_next_error</i> next error description</dl>
+ <i>GLOBUS_GASS_COPY_ERROR_TYPE_next_error</i> next error description</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>globus_gass_copy_register_url_to_handle()</code>, <code>globus_gass_copy_register_handle_to_url()</code></dl>
+<dd><code>globus_gass_copy_register_url_to_handle()</code>, <code>globus_gass_copy_register_handle_to_url()</code></dd></dl>
 <h3>globus_result_t globus_gass_copy_url_to_handle (<code>globus_gass_copy_handle_t</code> *handle, char *source_url, <code>globus_gass_copy_attr_t</code> *source_attr, globus_io_handle_t *dest_handle)</h3>
 <p>Blocking Transfer from an URL to an IO handle. </p>
 <p> <code>Parameters:</code></p>
@@ -216,17 +216,17 @@ description: "globus_gass_copy.h – GASS Copy Library."
 <dd><i>handle</i> The handle to perform the copy operation<br />
  <i>source_url</i> transfer data from this URL<br />
  <i>source_attr</i> Attributes describing how the transfer form the source should be done<br />
- <i>dest_handle</i> transfer data to this IO handle</dl>
+ <i>dest_handle</i> transfer data to this IO handle</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>This function returns GLOBUS_SUCCESS if the transfer was completed successfully, or a result pointing to an object of one of the the following error types:</dl>
+<dd>This function returns GLOBUS_SUCCESS if the transfer was completed successfully, or a result pointing to an object of one of the the following error types:</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>GLOBUS_GASS_COPY_ERROR_TYPE_NULL_PARAMETER</i> The handle was equal to GLOBUS_NULL, so the transfer could not processed.<br />
- <i>GLOBUS_GASS_COPY_ERROR_TYPE_next_error</i> next error description</dl>
+ <i>GLOBUS_GASS_COPY_ERROR_TYPE_next_error</i> next error description</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>globus_gass_copy_url_to_url()</code> <code>globus_gass_copy_handle_to_url()</code></dl>
+<dd><code>globus_gass_copy_url_to_url()</code> <code>globus_gass_copy_handle_to_url()</code></dd></dl>
 <h3>globus_result_t globus_gass_copy_url_to_url (<code>globus_gass_copy_handle_t</code> *handle, char *source_url, <code>globus_gass_copy_attr_t</code> *source_attr, char *dest_url, <code>globus_gass_copy_attr_t</code> *dest_attr)</h3>
 <p>Blocking Transfer between URLs. </p>
 <p> <code>Parameters:</code></p>
@@ -235,16 +235,16 @@ description: "globus_gass_copy.h – GASS Copy Library."
  <i>source_url</i> transfer data from this URL<br />
  <i>source_attr</i> Attributes describing how the transfer form the source should be done<br />
  <i>dest_url</i> transfer data to this URL<br />
- <i>dest_attr</i> Attributes describing how the transfer to the destination should be done</dl>
+ <i>dest_attr</i> Attributes describing how the transfer to the destination should be done</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>This function returns GLOBUS_SUCCESS if the transfer was completed successfully, or a result pointing to an object of one of the the following error types:</dl>
+<dd>This function returns GLOBUS_SUCCESS if the transfer was completed successfully, or a result pointing to an object of one of the the following error types:</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
 <dd><i>GLOBUS_GASS_COPY_ERROR_TYPE_NULL_PARAMETER</i> The handle was equal to GLOBUS_NULL, so the transfer could not processed.<br />
- <i>GLOBUS_GASS_COPY_ERROR_TYPE_next_error</i> next error description</dl>
+ <i>GLOBUS_GASS_COPY_ERROR_TYPE_next_error</i> next error description</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>globus_gass_copy_url_to_handle()</code> <code>globus_gass_copy_handle_to_url()</code></dl>
+<dd><code>globus_gass_copy_url_to_handle()</code> <code>globus_gass_copy_handle_to_url()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_gass_copy from the source code.</p>

@@ -20,12 +20,12 @@ description: "perlform – Perl formats"
 </pre>
 <p> If the name is omitted, format &#8220;<font SIZE="-1">STDOUT&#8221;</font> is defined. A single &#8220;.&#8221; in column 1 is used to terminate a format. <font SIZE="-1">FORMLIST</font> consists of a sequence of lines, each of which may be one of three types:</p>
 <dl>
-<dt>1.</p>
-<dd> A comment, indicated by putting a &#8216;#&#8217; in the first column.</p>
-<dt>2.</p>
-<dd> A &#8220;picture&#8221; line giving the format for one output line.</p>
-<dt>3.</p>
-<dd> An argument line supplying values to plug into the previous picture line.</dl>
+<dt>1.</dt>
+<dd> A comment, indicated by putting a &#8216;#&#8217; in the first column.</dd>
+<dt>2.</dt>
+<dd> A &#8220;picture&#8221; line giving the format for one output line.</dd>
+<dt>3.</dt>
+<dd> An argument line supplying values to plug into the previous picture line.</dd></dl>
 <p> Picture lines contain output field definitions, intermingled with literal text. These lines do not undergo any kind of variable interpolation. Field definitions are made up from a set of characters, for starting and extending a field to its desired width. This is the complete set of characters for field definitions: </p>
 <pre><code>
    @    start of regular field
@@ -89,7 +89,8 @@ line 3&quot;;
 <h3>Specifying Values</h3>
 <p> The values are specified on the following format line in the same order as the picture fields. The expressions providing the values must be separated by commas. They are all evaluated in a list context before the line is processed, so a single list expression could produce multiple list elements. The expressions may be spread out to more than one line if enclosed in braces. If so, the opening brace must be the first token on the first line. If an expression evaluates to a number with a decimal part, and if the corresponding picture specifies that the decimal part should appear in the output (that is, any picture except multiple &#8220;#&#8221; characters <code>without</code> an embedded &#8220;.&#8221;), the character used for the decimal point is determined by the current <font SIZE="-1">LC_NUMERIC</font> locale if <tt>&quot;use locale&quot;</tt> is in effect. This means that, if, for example, the run-time environment happens to specify a German locale, &#8220;,&#8221; will be used instead of the default &#8220;.&#8221;. See perllocale and &#8220;<font SIZE="-1">WARNINGS&#8221;</font> for more information.</p>
 <h3>Using Fill Mode</h3>
-<p> On text fields the caret enables a kind of fill mode. Instead of an arbitrary expression, the value supplied must be a scalar variable that contains a text string. Perl puts the next portion of the text into the field, and then chops off the front of the string so that the next time the variable is referenced, more of the text can be printed. (Yes, this means that the variable itself is altered during execution of the <code>write()</code> call, and is not restored.) The next portion of text is determined by a crude line-breaking algorithm. You may use the carriage return character (<tt>&quot;&quot;</tt>) to force a line break. You can change which characters are legal to break on by changing the variable <tt>$:</tt> (that&#8217;s <tt>$FORMAT_LINE_BREAK_CHARACTERS</tt> if you&#8217;re using the English module) to a list of the desired characters. </p>
+<p> On text fields the caret enables a kind of fill mode. Instead of an arbitrary expression, the value supplied must be a scalar variable that contains a text string. Perl puts the next portion of the text into the field, and then chops off the front of the string so that the next time the variable is referenced, more of the text can be printed. (Yes, this means that the variable itself is altered during execution of the <code>write()</code> call, and is not restored.) The next portion of text is determined by a crude line-breaking algorithm. You may use the carriage return character (<tt>&quot;
+&quot;</tt>) to force a line break. You can change which characters are legal to break on by changing the variable <tt>$:</tt> (that&#8217;s <tt>$FORMAT_LINE_BREAK_CHARACTERS</tt> if you&#8217;re using the English module) to a list of the desired characters. </p>
 <p> Normally you would use a sequence of fields in a vertical stack associated with the same scalar variable to print out a block of text. You might wish to end the final field with the text &#8220;&#8230;&#8221;, which will appear in the output if the text was too long to appear in its entirety.</p>
 <h3>Suppressing Lines Where All Fields Are Void</h3>
 <p> Using caret fields can produce lines where all fields are blank. You can suppress such lines by putting a &#8220;~&#8221; (tilde) character anywhere in the line. The tilde will be translated to a space upon output.</p>
@@ -227,5 +228,6 @@ Check me out
 <p> The lone dot that ends a format can also prematurely end a mail message passing through a misconfigured Internet mailer (and based on experience, such misconfiguration is the rule, not the exception). So when sending format code through mail, you should indent it so that the format-ending dot is not on the left margin; this will prevent <font SIZE="-1">SMTP</font> cutoff. </p>
 <p> Lexical variables (declared with &#8220;my&#8221;) are not visible within a format unless the format is declared within the scope of the lexical variable. </p>
 <p> If a program&#8217;s environment specifies an <font SIZE="-1">LC_NUMERIC</font> locale and <tt>&quot;use locale&quot;</tt> is in effect when the format is declared, the locale is used to specify the decimal point character in formatted output. Formatted output cannot be controlled by <tt>&quot;use locale&quot;</tt> at the time when <code>write()</code> is called. See perllocale for further discussion of locale handling. </p>
-<p> Within strings that are to be displayed in a fixed-length text field, each control character is substituted by a space. (But remember the special meaning of <tt>&quot;&quot;</tt> when using fill mode.) This is done to avoid misalignment when control characters &#8220;disappear&#8221; on some output media. </p>
+<p> Within strings that are to be displayed in a fixed-length text field, each control character is substituted by a space. (But remember the special meaning of <tt>&quot;
+&quot;</tt> when using fill mode.) This is done to avoid misalignment when control characters &#8220;disappear&#8221; on some output media. </p>
 <h2>Index</h2>

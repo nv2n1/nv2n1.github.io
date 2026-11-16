@@ -16,25 +16,25 @@ description: "sanlk-reset – host reset program"
  &#8211; use /proc/sysrq-trigger to reboot the host Both hosts must be operational and have continued access to a common lockspace for the reset request to succeed. After setting the event, the sanlk-reset program monitors the host status in the sanlock lockspace until the target host is dead. The sanlk-reset program can also be run on the same host as sanlk-resetd to update which lockspaces the local sanlk-resetd is watching for events. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;version, -V</code></p>
-<dd>Print version. </p>
-<dt><code>&#8211;help, -h</code></p>
-<dd>Print usage. </p>
+<dt><code>&#8211;version, -V</code></dt>
+<dd>Print version. </dd>
+<dt><code>&#8211;help, -h</code></dt>
+<dd>Print usage. </dd>
 </dl>
 <h3>Reset another host</h3>
 <p>The event is set in each lockspace specified. The target host may have a different host id in each lockspace. </p>
 <p> <code>sanlk-reset reset</code> <i>lockspace_name:host_id</i> &#8230; </p>
 <dl>
-<dt><code>&#8211;host-id, -i </code><i>num</i></p>
-<dd>Host id to reset. (Use only with single lockspace name.) </p>
-<dt><code>&#8211;generation, -g </code><i>num</i></p>
-<dd>Generation of host. (Use only with single lockspace name.) </p>
-<dt><code>&#8211;sysrq-reboot, -b 0|1</code></p>
-<dd>Enable/Disable (1/0) use of /proc/sysrq-trigger to reboot. </p>
-<dt><code>&#8211;resource-mode, -R 0|1</code></p>
-<dd>Resource leases are used (1) or not used (0) to protect storage. </p>
-<dt><code>&#8211;native-timeout, -t num</code></p>
-<dd>Disable native timeout by setting to 0. </p>
+<dt><code>&#8211;host-id, -i </code><i>num</i></dt>
+<dd>Host id to reset. (Use only with single lockspace name.) </dd>
+<dt><code>&#8211;generation, -g </code><i>num</i></dt>
+<dd>Generation of host. (Use only with single lockspace name.) </dd>
+<dt><code>&#8211;sysrq-reboot, -b 0|1</code></dt>
+<dd>Enable/Disable (1/0) use of /proc/sysrq-trigger to reboot. </dd>
+<dt><code>&#8211;resource-mode, -R 0|1</code></dt>
+<dd>Resource leases are used (1) or not used (0) to protect storage. </dd>
+<dt><code>&#8211;native-timeout, -t num</code></dt>
+<dd>Disable native timeout by setting to 0. </dd>
 </dl>
 <h3>Update the local sanlk-resetd</h3>
 <p>to watch new lockspaces for reset events: </p>

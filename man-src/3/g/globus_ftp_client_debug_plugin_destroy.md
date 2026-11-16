@@ -29,45 +29,45 @@ description: "Debugging Plugin –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>plugin</i> A pointer to a GridFTP debugging plugin, previously initialized by calling <code>globus_ftp_client_debug_plugin_init()</code></dl>
+</dt><dd> <i>plugin</i> A pointer to a GridFTP debugging plugin, previously initialized by calling <code>globus_ftp_client_debug_plugin_init()</code></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> This function returns an error if</p>
+</dt><dd> This function returns an error if</dd>
 <dl>
-<dt>&bull;</p>
-<dd> plugin is null</p>
-<dt>&bull;</p>
-<dd> plugin is not a debugging plugin</dl>
+<dt>&bull;</dt>
+<dd> plugin is null</dd>
+<dt>&bull;</dt>
+<dd> plugin is not a debugging plugin</dd></dl>
 </dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_ftp_client_debug_plugin_init()</code>, <code>globus_ftp_client_handleattr_add_plugin()</code>, globus_ftp_client_handleattr_remove_plugin(), <code>globus_ftp_client_handle_init()</code></dl>
+</dt><dd> <code>globus_ftp_client_debug_plugin_init()</code>, <code>globus_ftp_client_handleattr_add_plugin()</code>, globus_ftp_client_handleattr_remove_plugin(), <code>globus_ftp_client_handle_init()</code></dd></dl>
 <h3>globus_result_t globus_ftp_client_debug_plugin_init (<code>globus_ftp_client_plugin_t</code> *plugin, FILE *stream, const char *text)</h3>
 <p> Initialize an instance of the GridFTP debugging plugin </p>
 <p> This function will initialize the debugging plugin-specific instance data for this plugin, and will make the plugin usable for ftp client handle attribute and handle creation. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>plugin</i> A pointer to an uninitialized plugin. The plugin will be configured as a debugging plugin, with the default of sending debugging messages to stderr.<br />
+</dt><dd> <i>plugin</i> A pointer to an uninitialized plugin. The plugin will be configured as a debugging plugin, with the default of sending debugging messages to stderr.<br />
  <i>stream</i><br />
- <i>text</i></dl>
+ <i>text</i></dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> This function returns an error if</p>
+</dt><dd> This function returns an error if</dd>
 <dl>
-<dt>&bull;</p>
-<dd> plugin is null</dl>
+<dt>&bull;</dt>
+<dd> plugin is null</dd></dl>
 </dl>
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_ftp_client_debug_plugin_destroy()</code>, <code>globus_ftp_client_handleattr_add_plugin()</code>, globus_ftp_client_handleattr_remove_plugin(), <code>globus_ftp_client_handle_init()</code></dl>
+</dt><dd> <code>globus_ftp_client_debug_plugin_destroy()</code>, <code>globus_ftp_client_handleattr_add_plugin()</code>, globus_ftp_client_handleattr_remove_plugin(), <code>globus_ftp_client_handle_init()</code></dd></dl>
 <p> <code>Examples: </code> <code>globus_ftp_client_debug_plugin.example</code>.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_ftp_client from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAK">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAK">Author</a></dt>
+<dd></dd></dl>

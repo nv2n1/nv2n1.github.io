@@ -308,50 +308,50 @@ description: "XmDragIcon — The DragIcon widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNattachment</code></p>
-<dd>Specifies a relative location on the source icon for the attachment of the state or operation icon. The origin of the state and operation icons is aligned with the specified compass point on the source icon. The <code>XmNoffsetX</code> and <code>XmNoffsetY</code> resources can be used to further refine the icon positions. The possible values are</p>
+<dt><code>XmNattachment</code></dt>
+<dd>Specifies a relative location on the source icon for the attachment of the state or operation icon. The origin of the state and operation icons is aligned with the specified compass point on the source icon. The <code>XmNoffsetX</code> and <code>XmNoffsetY</code> resources can be used to further refine the icon positions. The possible values are</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmATTACH_NORTH_WEST</code></p>
-<dd>Attaches the origin of the state or operation icon to the northwest point on the source icon.</p>
-<dt><code>XmATTACH_NORTH</code></p>
-<dd>Attaches the origin of the state or operation icon to the north point on the source icon.</p>
-<dt><code>XmATTACH_NORTH_EAST</code></p>
-<dd>Attaches the origin of the state or operation icon to the northeast point on the source icon.</p>
-<dt><code>XmATTACH_EAST</code></p>
-<dd>Attaches the origin of the state or operation icon to the east point on the source icon.</p>
-<dt><code>XmATTACH_SOUTH_EAST</code></p>
-<dd>Attaches the origin of the state or operation icon to the southeast point on the source icon.</p>
-<dt><code>XmATTACH_SOUTH</code></p>
-<dd>Attaches the origin of the state or operation icon to the south point on the source icon.</p>
-<dt><code>XmATTACH_SOUTH_WEST</code></p>
-<dd>Attaches the origin of the state or operation icon to the southwest point on the source icon.</p>
-<dt><code>XmATTACH_WEST</code></p>
-<dd>Attaches the origin of the state or operation icon to the west point on the source icon.</p>
-<dt><code>XmATTACH_CENTER</code></p>
-<dd>Attaches the origin of the state or operation icon to the center of the source icon. The <code>XmNoffsetX</code> and <code>XmNoffsetY</code> resources may be used to center the attached icon.</p>
-<dt><code>XmATTACH_HOT</code></p>
-<dd>Attaches the hotspot coordinates of a state or operation DragIcon to an x,y position on the source icon. The x,y coordinate is taken from the event passed to the <code>XmDragStart</code> function, and made relative to the widget passed as an argument to the same function.</dl>
+</dd><dl COMPACT>
+<dt><code>XmATTACH_NORTH_WEST</code></dt>
+<dd>Attaches the origin of the state or operation icon to the northwest point on the source icon.</dd>
+<dt><code>XmATTACH_NORTH</code></dt>
+<dd>Attaches the origin of the state or operation icon to the north point on the source icon.</dd>
+<dt><code>XmATTACH_NORTH_EAST</code></dt>
+<dd>Attaches the origin of the state or operation icon to the northeast point on the source icon.</dd>
+<dt><code>XmATTACH_EAST</code></dt>
+<dd>Attaches the origin of the state or operation icon to the east point on the source icon.</dd>
+<dt><code>XmATTACH_SOUTH_EAST</code></dt>
+<dd>Attaches the origin of the state or operation icon to the southeast point on the source icon.</dd>
+<dt><code>XmATTACH_SOUTH</code></dt>
+<dd>Attaches the origin of the state or operation icon to the south point on the source icon.</dd>
+<dt><code>XmATTACH_SOUTH_WEST</code></dt>
+<dd>Attaches the origin of the state or operation icon to the southwest point on the source icon.</dd>
+<dt><code>XmATTACH_WEST</code></dt>
+<dd>Attaches the origin of the state or operation icon to the west point on the source icon.</dd>
+<dt><code>XmATTACH_CENTER</code></dt>
+<dd>Attaches the origin of the state or operation icon to the center of the source icon. The <code>XmNoffsetX</code> and <code>XmNoffsetY</code> resources may be used to center the attached icon.</dd>
+<dt><code>XmATTACH_HOT</code></dt>
+<dd>Attaches the hotspot coordinates of a state or operation DragIcon to an x,y position on the source icon. The x,y coordinate is taken from the event passed to the <code>XmDragStart</code> function, and made relative to the widget passed as an argument to the same function.</dd></dl>
 </dl>
-<dt><code>XmNdepth</code></p>
-<dd>Specifies the depth of the pixmap.</p>
-<dt><code>XmNheight</code></p>
-<dd>Specifies the height of the pixmap.</p>
-<dt><code>XmNhotX</code></p>
-<dd>Specifies the x-coordinate of the hotspot of a cursor DragIcon in relation to the origin of the pixmap bounding box.</p>
-<dt><code>XmNhotY</code></p>
-<dd>Specifies the y-coordinate of the hotspot of a cursor DragIcon in relation to the origin of the pixmap bounding box.</p>
-<dt><code>XmNmask</code></p>
-<dd>Specifies a pixmap of depth 1 to use as the DragIcon mask pixmap.</p>
-<dt><code>XmNoffsetX</code></p>
-<dd>Specifies a horizontal offset (in pixels) of the origin of the state or operation icon relative to the attachment point on the source icon. A positive offset value moves the origin to the right; a negative value moves the origin to the left.</p>
-<dt><code>XmNoffsetY</code></p>
-<dd>Specifies a vertical offset (in pixels) of the origin of the state or operation icon relative to the attachment point on the source icon. A positive offset value moves the origin down; a negative value moves the origin up.</p>
-<dt><code>XmNpixmap</code></p>
-<dd>Specifies a pixmap to use as the DragIcon pixmap.</p>
-<dt><code>XmNwidth</code></p>
-<dd>Specifies the width of the pixmap.</dl>
+<dt><code>XmNdepth</code></dt>
+<dd>Specifies the depth of the pixmap.</dd>
+<dt><code>XmNheight</code></dt>
+<dd>Specifies the height of the pixmap.</dd>
+<dt><code>XmNhotX</code></dt>
+<dd>Specifies the x-coordinate of the hotspot of a cursor DragIcon in relation to the origin of the pixmap bounding box.</dd>
+<dt><code>XmNhotY</code></dt>
+<dd>Specifies the y-coordinate of the hotspot of a cursor DragIcon in relation to the origin of the pixmap bounding box.</dd>
+<dt><code>XmNmask</code></dt>
+<dd>Specifies a pixmap of depth 1 to use as the DragIcon mask pixmap.</dd>
+<dt><code>XmNoffsetX</code></dt>
+<dd>Specifies a horizontal offset (in pixels) of the origin of the state or operation icon relative to the attachment point on the source icon. A positive offset value moves the origin to the right; a negative value moves the origin to the left.</dd>
+<dt><code>XmNoffsetY</code></dt>
+<dd>Specifies a vertical offset (in pixels) of the origin of the state or operation icon relative to the attachment point on the source icon. A positive offset value moves the origin down; a negative value moves the origin up.</dd>
+<dt><code>XmNpixmap</code></dt>
+<dd>Specifies a pixmap to use as the DragIcon pixmap.</dd>
+<dt><code>XmNwidth</code></dt>
+<dd>Specifies the width of the pixmap.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>DragIcon inherits behavior and a resource from <code>Object</code>. For a complete description of this resource, refer to the <code>Object</code> reference page. </p>
 <table BORDER>

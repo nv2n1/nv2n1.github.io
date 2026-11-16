@@ -18,40 +18,40 @@ description: "Planimeter — compute the area of geodesic polygons"
 <p> Only simple (i.e., non-self-intersecting) polygons are supported for the area computation. Polygons may include one or both poles. There is no need to close the polygon.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-r</code></p>
-<dd>toggle whether counter-clockwise traversal of the polygon returns a positive (the default) or negative result.</p>
-<dt><code>-s</code></p>
-<dd>toggle whether to return a signed result (the default) or not.</p>
-<dt><code>-l</code></p>
-<dd>toggle whether the vertices represent a polygon (the default) or a polyline. For a polyline, the number of points and the length of the path joining them is returned; the path is not closed and the area is not reported.</p>
-<dt><code>-e</code></p>
-<dd>specify the ellipsoid via <i>a</i> <i>f</i>; the equatorial radius is <i>a</i> and the flattening is <i>f</i>. Setting <i>f</i> = 0 results in a sphere. Specify <i>f</i> &lt; 0 for a prolate ellipsoid. A simple fraction, e.g., 1/297, is allowed for <i>f</i>. (Also, if <i>f</i> &gt; 1, the flattening is set to 1/<i>f</i>.) By default, the <font SIZE="-1">WGS84</font> ellipsoid is used, <i>a</i> = 6378137 m, <i>f</i> = 1/298.257223563. If entering vertices as <font SIZE="-1">UTM/UPS</font> or <font SIZE="-1">MGRS</font> coordinates, use the default ellipsoid, since the conversion of these coordinates to latitude and longitude always uses the <font SIZE="-1">WGS84</font> parameters.</p>
-<dt><code>-p</code></p>
-<dd>set the output precision to <i>prec</i> (default 6); the perimeter is given (in meters) with <i>prec</i> digits after the decimal point; the area is given (in meters^2) with (<i>prec</i> &#8211; 5) digits after the decimal point.</p>
-<dt><code>-G</code></p>
-<dd>use the series formulation for the geodesics. This is the default option and is recommended for terrestrial applications. This option, <code>-G</code>, and the following three options, <code>-E</code>, <code>-Q</code>, and <code>-R</code>, are mutually exclusive.</p>
-<dt><code>-E</code></p>
-<dd>use &#8220;exact&#8221; algorithms (based on elliptic integrals) for the geodesic calculations. These are more accurate than the (default) series expansions for |<i>f</i>| &gt; 0.02. (But note that the implementation of areas in GeodesicExact uses a high order series and this is only accurate for modest flattenings.)</p>
-<dt><code>-Q</code></p>
-<dd>perform the calculation on the authalic sphere. The area calculation is accurate even if the flattening is large, <i>provided</i> the edges are sufficiently short. The perimeter calculation is not accurate.</p>
-<dt><code>-R</code></p>
-<dd>The lines joining the vertices are rhumb lines instead of geodesics.</p>
-<dt><code>&#8211;comment-delimiter</code></p>
-<dd>set the comment delimiter to <i>commentdelim</i> (e.g., &#8220;#&#8221; or &#8220;//&#8221;). If set, the input lines will be scanned for this delimiter and, if found, the delimiter and the rest of the line will be removed prior to processing. For a given polygon, the last such string found will be appended to the output line (separated by a space).</p>
-<dt><code>&#8211;version</code></p>
-<dd>print version and exit.</p>
-<dt><code>-h</code></p>
-<dd>print usage and exit.</p>
-<dt><code>&#8211;help</code></p>
-<dd>print full documentation and exit.</p>
-<dt><code>&#8211;input-file</code></p>
-<dd>read input from the file <i>infile</i> instead of from standard input; a file name of &#8220;-&#8221; stands for standard input.</p>
-<dt><code>&#8211;input-string</code></p>
-<dd>read input from the string <i>instring</i> instead of from standard input. All occurrences of the line separator character (default is a semicolon) in <i>instring</i> are converted to newlines before the reading begins.</p>
-<dt><code>&#8211;line-separator</code></p>
-<dd>set the line separator character to <i>linesep</i>. By default this is a semicolon.</p>
-<dt><code>&#8211;output-file</code></p>
-<dd>write output to the file <i>outfile</i> instead of to standard output; a file name of &#8220;-&#8221; stands for standard output.</dl>
+<dt><code>-r</code></dt>
+<dd>toggle whether counter-clockwise traversal of the polygon returns a positive (the default) or negative result.</dd>
+<dt><code>-s</code></dt>
+<dd>toggle whether to return a signed result (the default) or not.</dd>
+<dt><code>-l</code></dt>
+<dd>toggle whether the vertices represent a polygon (the default) or a polyline. For a polyline, the number of points and the length of the path joining them is returned; the path is not closed and the area is not reported.</dd>
+<dt><code>-e</code></dt>
+<dd>specify the ellipsoid via <i>a</i> <i>f</i>; the equatorial radius is <i>a</i> and the flattening is <i>f</i>. Setting <i>f</i> = 0 results in a sphere. Specify <i>f</i> &lt; 0 for a prolate ellipsoid. A simple fraction, e.g., 1/297, is allowed for <i>f</i>. (Also, if <i>f</i> &gt; 1, the flattening is set to 1/<i>f</i>.) By default, the <font SIZE="-1">WGS84</font> ellipsoid is used, <i>a</i> = 6378137 m, <i>f</i> = 1/298.257223563. If entering vertices as <font SIZE="-1">UTM/UPS</font> or <font SIZE="-1">MGRS</font> coordinates, use the default ellipsoid, since the conversion of these coordinates to latitude and longitude always uses the <font SIZE="-1">WGS84</font> parameters.</dd>
+<dt><code>-p</code></dt>
+<dd>set the output precision to <i>prec</i> (default 6); the perimeter is given (in meters) with <i>prec</i> digits after the decimal point; the area is given (in meters^2) with (<i>prec</i> &#8211; 5) digits after the decimal point.</dd>
+<dt><code>-G</code></dt>
+<dd>use the series formulation for the geodesics. This is the default option and is recommended for terrestrial applications. This option, <code>-G</code>, and the following three options, <code>-E</code>, <code>-Q</code>, and <code>-R</code>, are mutually exclusive.</dd>
+<dt><code>-E</code></dt>
+<dd>use &#8220;exact&#8221; algorithms (based on elliptic integrals) for the geodesic calculations. These are more accurate than the (default) series expansions for |<i>f</i>| &gt; 0.02. (But note that the implementation of areas in GeodesicExact uses a high order series and this is only accurate for modest flattenings.)</dd>
+<dt><code>-Q</code></dt>
+<dd>perform the calculation on the authalic sphere. The area calculation is accurate even if the flattening is large, <i>provided</i> the edges are sufficiently short. The perimeter calculation is not accurate.</dd>
+<dt><code>-R</code></dt>
+<dd>The lines joining the vertices are rhumb lines instead of geodesics.</dd>
+<dt><code>&#8211;comment-delimiter</code></dt>
+<dd>set the comment delimiter to <i>commentdelim</i> (e.g., &#8220;#&#8221; or &#8220;//&#8221;). If set, the input lines will be scanned for this delimiter and, if found, the delimiter and the rest of the line will be removed prior to processing. For a given polygon, the last such string found will be appended to the output line (separated by a space).</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>print version and exit.</dd>
+<dt><code>-h</code></dt>
+<dd>print usage and exit.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>print full documentation and exit.</dd>
+<dt><code>&#8211;input-file</code></dt>
+<dd>read input from the file <i>infile</i> instead of from standard input; a file name of &#8220;-&#8221; stands for standard input.</dd>
+<dt><code>&#8211;input-string</code></dt>
+<dd>read input from the string <i>instring</i> instead of from standard input. All occurrences of the line separator character (default is a semicolon) in <i>instring</i> are converted to newlines before the reading begins.</dd>
+<dt><code>&#8211;line-separator</code></dt>
+<dd>set the line separator character to <i>linesep</i>. By default this is a semicolon.</dd>
+<dt><code>&#8211;output-file</code></dt>
+<dd>write output to the file <i>outfile</i> instead of to standard output; a file name of &#8220;-&#8221; stands for standard output.</dd></dl>
 <h2>Examples</h2>
 <p>Example (the area of the 100km <font SIZE="-1">MGRS</font> square 18SWK) </p>
 <pre> Planimeter &lt;&lt;EOF
@@ -64,7 +64,8 @@ description: "Planimeter — compute the area of geodesic polygons"
 <p>The following code takes the output from gdalinfo and reports the area covered by the data (assuming the edges of the image are geodesics). </p>
 <pre> #! /bin/sh
  egrep '^((Upper|Lower) (Left|Right)|Center) ' |
- sed -e 's/d /d/g' -e &quot;s/' /'/g&quot; | tr -s '(),	' ' ' | awk '{
+ sed -e 's/d /d/g' -e &quot;s/' /'/g&quot; | tr -s '(),
+	' ' ' | awk '{
  if ($1 $2 == &quot;UpperLeft&quot;)
  ul = $6 &quot; &quot; $5;
  else if ($1 $2 == &quot;LowerLeft&quot;)
@@ -78,7 +79,6 @@ description: "Planimeter — compute the area of geodesic polygons"
 %s
 %s
 %s
-
 &quot;, ul, ll, lr, ur;
  ul = ll = ur = lr = &quot;&quot;;
  }

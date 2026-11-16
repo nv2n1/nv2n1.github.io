@@ -33,10 +33,10 @@ description: "Tspi_TPM_TakeOwnership – take ownership of a TPM"
 <h2>Return Codes</h2>
 <p><code>Tspi_TPM_TakeOwnership</code> returns TSS_SUCCESS on success, otherwise one of the following values is returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></p>
-<dd>Either the TPM or one of the key handles is not valid. </p>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></p>
-<dd>An internal SW error has been detected. </p>
+<dt><font SIZE="-1">TSS_E_INVALID_HANDLE</font></dt>
+<dd>Either the TPM or one of the key handles is not valid. </dd>
+<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR</font></dt>
+<dd>An internal SW error has been detected. </dd>
 </dl>
 <h2>Conforming To</h2>
 <p><code>Tspi_TPM_TakeOwnership</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden </p>

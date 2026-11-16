@@ -28,17 +28,17 @@ It is assumed that TDPARA has been called to define the reference parallelogram 
 
  The arguments of TDLBLA are as follows:
 <dl><dt>IAXS
-<dd>(an input expression of type INTEGER) - says which edge of the face is being labelled (1 =&gt; left, 2 =&gt; right, 3 =&gt; bottom, and 4 =&gt; top, where the meanings of &quot;left&quot;, &quot;right&quot;, &quot;bottom&quot;, and &quot;top&quot; are defined by the orientation of the reference parallelogram).
-<dt>ILBL
-<dd>(input, of type CHARACTER) - a string to be used as an informational label. If the string is blank, no informational label is written.
-<dt>NLBL
-<dd>(input, of type CHARACTER) - a string containing numeric labels. The labels need not be in any particular order, but they have to be separated by blanks and each has to be readable using a FORTRAN format of the form &quot;En.0&quot;, where &quot;n&quot; is the length of the label. If the string is blank, no informational label is written.
-<dt>XAT0 and XAT1
-<dd>(input expressions of type REAL) - the values of &quot;X&quot; associated with the left and right edges of the face being labelled, where &quot;left&quot; and &quot;right&quot; are defined in terms of the current reference parallelogram.
-<dt>YAT0 and YAT1
-<dd>(input expressions of type REAL) - the values of &quot;Y&quot; associated with the bottom and top edges of the face being labelled, where &quot;bottom&quot; and &quot;top&quot; are defined in terms of the current reference parallelogram.
-<dt>ANGD
-<dd>(an input expression of type REAL) - specifies the angle, in degrees, at which the labels are to be written. This angle is defined with reference to the current reference parallelogram.</dl>
+</dt><dd>(an input expression of type INTEGER) - says which edge of the face is being labelled (1 =&gt; left, 2 =&gt; right, 3 =&gt; bottom, and 4 =&gt; top, where the meanings of &quot;left&quot;, &quot;right&quot;, &quot;bottom&quot;, and &quot;top&quot; are defined by the orientation of the reference parallelogram).
+</dd><dt>ILBL
+</dt><dd>(input, of type CHARACTER) - a string to be used as an informational label. If the string is blank, no informational label is written.
+</dd><dt>NLBL
+</dt><dd>(input, of type CHARACTER) - a string containing numeric labels. The labels need not be in any particular order, but they have to be separated by blanks and each has to be readable using a FORTRAN format of the form &quot;En.0&quot;, where &quot;n&quot; is the length of the label. If the string is blank, no informational label is written.
+</dd><dt>XAT0 and XAT1
+</dt><dd>(input expressions of type REAL) - the values of &quot;X&quot; associated with the left and right edges of the face being labelled, where &quot;left&quot; and &quot;right&quot; are defined in terms of the current reference parallelogram.
+</dd><dt>YAT0 and YAT1
+</dt><dd>(input expressions of type REAL) - the values of &quot;Y&quot; associated with the bottom and top edges of the face being labelled, where &quot;bottom&quot; and &quot;top&quot; are defined in terms of the current reference parallelogram.
+</dd><dt>ANGD
+</dt><dd>(an input expression of type REAL) - specifies the angle, in degrees, at which the labels are to be written. This angle is defined with reference to the current reference parallelogram.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

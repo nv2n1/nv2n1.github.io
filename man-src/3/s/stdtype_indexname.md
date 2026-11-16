@@ -12,7 +12,6 @@ std::type_index::name - std::type_index::name
 
 <pre><code>const char *name() const;
 (since C++ 11)(until C++ 14)
-
     const char *name() const noexcept;
 (since C++ 14)</code></pre> 
 Returns the name of the associated std::type_info object. Equivalent to calling std::type_info::name() directly. 

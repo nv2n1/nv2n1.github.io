@@ -11,7 +11,6 @@ description: "std::atomic<T>::is_lock_free – std::atomic<T>::is_lock_free"
 <h2>Synopsis</h2>
 <pre><code>bool is_lock_free() const noexcept;
 (since C++ 11)
-
     bool is_lock_free() const volatile noexcept;</code></pre>
 <p>Checks whether the atomic operations on all objects of this type are lock-free. </p>
 <h2>Parameters</h2>
@@ -24,20 +23,15 @@ The C++ standard recommends (but does not require) that lock-free atomic operati
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;utility&gt;
-
 #include &lt;atomic&gt;
 struct A {
     int a[100];
 };
-
 struct B {
     int x, y;
 };
-
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha
               &lt;&lt; &quot;std::atomic&lt;A&gt; is lock free? &quot;

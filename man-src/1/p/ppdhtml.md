@@ -16,10 +16,10 @@ description: "ppdhtml – cups html summary generator (deprecated)"
 <h2>OPTIONS</h2>
 <p> <code>ppdhtml</code> supports the following options:</p>
 <dl>
-<dt><code>-D </code><i>name</i>[<code>=</code><i>value</i>]</p>
-<dd> Sets the named variable for use in the source file. It is equivalent to using the <i>#define</i> directive in the source file.</p>
-<dt><code>-I </code><i>include-directory</i></p>
-<dd> Specifies an alternate include directory. Multiple <i>-I</i> options can be supplied to add additional directories.</dl>
+<dt><code>-D </code><i>name</i>[<code>=</code><i>value</i>]</dt>
+<dd> Sets the named variable for use in the source file. It is equivalent to using the <i>#define</i> directive in the source file.</dd>
+<dt><code>-I </code><i>include-directory</i></dt>
+<dd> Specifies an alternate include directory. Multiple <i>-I</i> options can be supplied to add additional directories.</dd></dl>
 <h2>NOTES</h2>
 <p> PPD files are deprecated and will no longer be supported in a future feature release of CUPS. Printers that do not support IPP can be supported using applications such as <code><a href="/docs/linux/man/1-ippeveprinter/">ippeveprinter</a></code>(1).</p>
 <h2>SEE ALSO</h2>

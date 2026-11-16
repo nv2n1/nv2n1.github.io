@@ -15,17 +15,17 @@ description: "heif-convert – convert HEIC/HEIF image"
 <p> <code>heif-convert</code> Convert HEIC/HEIF image to a different image format.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-q</code>&nbsp;<i>QUALITY</i></p>
-<dd> Defines quality level between 0 and 100 for the generated output file.</dl>
+<dt><code>-q</code>&nbsp;<i>QUALITY</i></dt>
+<dd> Defines quality level between 0 and 100 for the generated output file.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> <code>0</code></p>
 <dl>
 <dt>
-<dd> Success</dl>
+</dt><dd> Success</dd></dl>
 <p> <code>1</code></p>
 <dl>
 <dt>
-<dd> Failure (syntax or usage error; error while loading, converting or writing image).</dl>
+</dt><dd> Failure (syntax or usage error; error while loading, converting or writing image).</dd></dl>
 <h2>NOTES</h2>
 <p> The available output formats depend on the libraries that were available at compile time. Supported are JPEG, PNG and Y4M, the file type is determined based on the extension of the output file.</p>
 <h2>BUGS</h2>

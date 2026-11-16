@@ -25,9 +25,6 @@ description: "qbipc_common.h –"
  enum <code>qb_ipc_type</code> { <code>QB_IPC_SOCKET</code>, <code>QB_IPC_SHM</code>, <code>QB_IPC_POSIX_MQ</code>, <code>QB_IPC_SYSV_MQ</code>, <code>QB_IPC_NATIVE</code> }</p>
 <h3>Functions</h3>
 <pre><code>struct qb_ipc_request_header __attribute__ ((aligned(8)))
-
-
-
 Variables</code></pre>
 <p> enum <code>qb_ipc_type</code> <code>__attribute__</code></p>
 <h2>Detailed Description</h2>
@@ -42,16 +39,16 @@ Variables</code></pre>
 <h3>enum <code>qb_ipc_type</code></h3>
 <p><code>Enumerator</code></p>
 <dl>
-<dt><i>QB_IPC_SOCKET </i></p>
+<dt><i>QB_IPC_SOCKET </i></dt>
 <dd>
-<dt><i>QB_IPC_SHM </i></p>
+</dd><dt><i>QB_IPC_SHM </i></dt>
 <dd>
-<dt><i>QB_IPC_POSIX_MQ </i></p>
+</dd><dt><i>QB_IPC_POSIX_MQ </i></dt>
 <dd>
-<dt><i>QB_IPC_SYSV_MQ </i></p>
+</dd><dt><i>QB_IPC_SYSV_MQ </i></dt>
 <dd>
-<dt><i>QB_IPC_NATIVE </i></p>
-<dd></dl>
+</dd><dt><i>QB_IPC_NATIVE </i></dt>
+<dd></dd></dl>
 <h2>Function Documentation</h2>
 <h3>struct <code>qb_ipc_request_header</code> __attribute__ ((aligned(8)))</h3>
 <h2>Variable Documentation</h2>

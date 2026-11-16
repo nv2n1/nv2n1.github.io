@@ -22,20 +22,20 @@ description: "aio_cancel – cancel an outstanding asynchronous I/O request"
 <h2>RETURN VALUE</h2>
 <p> The <code>aio_cancel</code>() function returns one of the following values:</p>
 <dl>
-<dt><code>AIO_CANCELED</code></p>
-<dd> All requests were successfully canceled.</p>
-<dt><code>AIO_NOTCANCELED</code></p>
-<dd> At least one of the requests specified was not canceled because it was in progress. In this case, one may check the status of individual requests using <code><a href="/docs/linux/man/3-aio_error/">aio_error</a></code>(3).</p>
-<dt><code>AIO_ALLDONE</code></p>
-<dd> All requests had already been completed before the call.</p>
-<dt>-1</p>
-<dd> An error occurred. The cause of the error can be found by inspecting <i>errno</i>.</dl>
+<dt><code>AIO_CANCELED</code></dt>
+<dd> All requests were successfully canceled.</dd>
+<dt><code>AIO_NOTCANCELED</code></dt>
+<dd> At least one of the requests specified was not canceled because it was in progress. In this case, one may check the status of individual requests using <code><a href="/docs/linux/man/3-aio_error/">aio_error</a></code>(3).</dd>
+<dt><code>AIO_ALLDONE</code></dt>
+<dd> All requests had already been completed before the call.</dd>
+<dt>-1</dt>
+<dd> An error occurred. The cause of the error can be found by inspecting <i>errno</i>.</dd></dl>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>fd</i> is not a valid file descriptor.</p>
-<dt><code>ENOSYS</code></p>
-<dd> <code>aio_cancel</code>() is not implemented.</dl>
+<dt><code>EBADF</code></dt>
+<dd> <i>fd</i> is not a valid file descriptor.</dd>
+<dt><code>ENOSYS</code></dt>
+<dd> <code>aio_cancel</code>() is not implemented.</dd></dl>
 <h2>VERSIONS</h2>
 <p> The <code>aio_cancel</code>() function is available since glibc 2.1.</p>
 <h2>ATTRIBUTES</h2>

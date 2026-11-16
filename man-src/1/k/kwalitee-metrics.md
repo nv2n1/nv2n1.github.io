@@ -25,17 +25,17 @@ url: "/docs/linux/man/1-kwalitee-metrics/"
 
 <dl>
 <dt>&bull;
-<dd> Test::Kwalitee
-<dt>&bull;
-<dd> Module::CPANTS::Analyse</dl>
+</dt><dd> Test::Kwalitee
+</dd><dt>&bull;
+</dt><dd> Module::CPANTS::Analyse</dd></dl>
 
 <h2>AUTHORS</h2>
 
 <dl>
 <dt>&bull;
-<dd> chromatic &lt;chromatic [at] wgz.org&gt;
-<dt>&bull;
-<dd> Karen Etheridge &lt;ether [at] cpan.org&gt;</dl>
+</dt><dd> chromatic &lt;chromatic [at] wgz.org&gt;
+</dd><dt>&bull;
+</dt><dd> Karen Etheridge &lt;ether [at] cpan.org&gt;</dd></dl>
 
 <h2>COPYRIGHT AND LICENSE</h2>
 

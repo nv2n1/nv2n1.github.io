@@ -17,8 +17,8 @@ description: "passenger-memory-stats – reports a snapshot of the Apache and Ph
 <p> When you run this tool the <i>Private</i> or <i>private dirty RSS</i> field shows the real memory usage of processes.</p>
 <h2>Environment Variables</h2>
 <dl>
-<dt><code>HTTPD</code></p>
-<dd>The full filename to the Apache executable. By default, Passenger will attempt to autodetect the Apache executable. If autodetection fails for whatever reason, then Apache processes will not be shown in the memory statistics. In that case, you may manually specify the location to the Apache executable using this environment variable.</dl>
+<dt><code>HTTPD</code></dt>
+<dd>The full filename to the Apache executable. By default, Passenger will attempt to autodetect the Apache executable. If autodetection fails for whatever reason, then Apache processes will not be shown in the memory statistics. In that case, you may manually specify the location to the Apache executable using this environment variable.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/8-passenger-status/">passenger-status</a>(8), <a href="/docs/linux/man/1-ps/">ps</a>(1), <a href="/docs/linux/man/1-top/">top</a>(1), </p>
 <p> User guide at <a rel="nofollow" href="https://www.phusionpassenger.com/documentation_and_support">https://www.phusionpassenger.com/documentation_and_support</a></p>

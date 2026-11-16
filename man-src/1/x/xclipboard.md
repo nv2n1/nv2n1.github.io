@@ -16,25 +16,25 @@ description: "xclipboard – X clipboard client"
 <p> Since <i>xclipboard</i> uses a Text Widget to display the contents of the clipboard, text sent to the CLIPBOARD may be re-selected for use in other applications. <i>xclipboard</i> also responds to requests for the CLIPBOARD selection from other clients by sending the entire contents of the currently displayed buffer. </p>
 <p> An <i>xclipboard</i> window has the following buttons across the top:</p>
 <dl>
-<dt><i>quit</i></p>
-<dd> When this button is pressed, <i>xclipboard</i> exits.</p>
-<dt><i>delete</i></p>
-<dd> When this button is pressed, the current buffer is deleted and the next one displayed.</p>
-<dt><i>new</i></p>
-<dd> Creates a new buffer with no contents. Useful in constructing a new CLIPBOARD selection by hand.</p>
-<dt><i>save</i></p>
-<dd> Displays a File Save dialog box. Pressing the Accept button saves the currently displayed buffer to the file specified in the text field.</p>
-<dt><i>next</i></p>
-<dd> Displays the next buffer in the list.</p>
-<dt><i>previous</i></p>
-<dd> Displays the previous buffer.</dl>
+<dt><i>quit</i></dt>
+<dd> When this button is pressed, <i>xclipboard</i> exits.</dd>
+<dt><i>delete</i></dt>
+<dd> When this button is pressed, the current buffer is deleted and the next one displayed.</dd>
+<dt><i>new</i></dt>
+<dd> Creates a new buffer with no contents. Useful in constructing a new CLIPBOARD selection by hand.</dd>
+<dt><i>save</i></dt>
+<dd> Displays a File Save dialog box. Pressing the Accept button saves the currently displayed buffer to the file specified in the text field.</dd>
+<dt><i>next</i></dt>
+<dd> Displays the next buffer in the list.</dd>
+<dt><i>previous</i></dt>
+<dd> Displays the previous buffer.</dd></dl>
 <h2>OPTIONS</h2>
 <p> The <i>xclipboard</i> program accepts all of the standard X Toolkit command line options as well as the following:</p>
 <dl>
-<dt><code>-w</code></p>
-<dd> This option indicates that lines of text that are too long to be displayed on one line in the clipboard should wrap around to the following lines.</p>
-<dt><code>-nw</code></p>
-<dd> This option indicates that long lines of text should not wrap around. This is the default behavior.</dl>
+<dt><code>-w</code></dt>
+<dd> This option indicates that lines of text that are too long to be displayed on one line in the clipboard should wrap around to the following lines.</dd>
+<dt><code>-nw</code></dt>
+<dd> This option indicates that long lines of text should not wrap around. This is the default behavior.</dd></dl>
 <h2>WIDGETS</h2>
 <p> In order to specify resources, it is useful to know the hierarchy of the widgets which compose <i>xclipboard</i>. In the notation below, indentation indicates hierarchical structure. The widget class name is given first, followed by the widget instance name. </p>
 <pre>
@@ -73,14 +73,14 @@ XClipboard  xclipboard
 <p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-xcutsel/">xcutsel</a>(1), <a href="/docs/linux/man/1-xterm/">xterm</a>(1), individual client documentation for how to make a selection and send it to the CLIPBOARD.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>DISPLAY</code></p>
-<dd> to get the default host and display number.</p>
-<dt><code>XENVIRONMENT</code></p>
-<dd> to get the name of a resource file that overrides the global resources stored in the RESOURCE_MANAGER property.</dl>
+<dt><code>DISPLAY</code></dt>
+<dd> to get the default host and display number.</dd>
+<dt><code>XENVIRONMENT</code></dt>
+<dd> to get the name of a resource file that overrides the global resources stored in the RESOURCE_MANAGER property.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/X11/app-defaults/XClipboard</i></p>
-<dd> specifies required resources</dl>
+<dt><i>/etc/X11/app-defaults/XClipboard</i></dt>
+<dd> specifies required resources</dd></dl>
 <h2>AUTHOR</h2>
 <p> Ralph R. Swick, DEC/MIT Project Athena<br />
  Chris D. Peterson, MIT X Consortium<br />

@@ -21,15 +21,9 @@ afReadMisc, afWriteMisc, afSeekMisc - access miscellaneous metadata in an audio 
 <h2>Errors</h2>afReadMisc, afWriteMisc, and afSeekMisc can produce the following error codes: 
 
 <dl COMPACT><dd>&bull; 
-
- AF_BAD_READ</dl><dl COMPACT><dd>&bull; 
-
- AF_BAD_WRITE</dl><dl COMPACT><dd>&bull; 
-
- AF_BAD_MISCSEEK</dl><dl COMPACT><dd>&bull; 
-
- AF_BAD_MISCID</dl><dl COMPACT><dd>&bull; 
-
- AF_BAD_TRACKID</dl><dl COMPACT><dd>&bull; 
-
- AF_BAD_FILEHANDLE</dl><h2>Author</h2>Michael Pruett &lt;michael [at] 68k.org&gt;
+ AF_BAD_READ</dd></dl><dl COMPACT><dd>&bull; 
+ AF_BAD_WRITE</dd></dl><dl COMPACT><dd>&bull; 
+ AF_BAD_MISCSEEK</dd></dl><dl COMPACT><dd>&bull; 
+ AF_BAD_MISCID</dd></dl><dl COMPACT><dd>&bull; 
+ AF_BAD_TRACKID</dd></dl><dl COMPACT><dd>&bull; 
+ AF_BAD_FILEHANDLE</dd></dl><h2>Author</h2>Michael Pruett &lt;michael [at] 68k.org&gt;

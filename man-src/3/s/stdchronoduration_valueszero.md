@@ -10,7 +10,6 @@ description: "std::chrono::duration_values<Rep>::zero – std::chrono::duration_
 <p>std::chrono::duration_values&lt;Rep&gt;::zero &#8211; std::chrono::duration_values&lt;Rep&gt;::zero</p>
 <h2>Synopsis</h2>
 <pre><code>static constexpr Rep zero();           (until C++20)
-
 static constexpr Rep zero() noexcept;  (since C++20)</code></pre>
 <p>Returns a zero-length representation. </p>
 <h2>Parameters</h2>

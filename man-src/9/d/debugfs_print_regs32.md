@@ -15,23 +15,23 @@ debugfs_print_regs32 - use seq_print to describe a set of registers
 <h2>Arguments</h2>
 
 <i>s</i>
-<dl><dd><dd>the seq_file structure being used to generate output</dl>
+<dl><dd></dd><dd>the seq_file structure being used to generate output</dd></dl>
  
 
  <i>regs</i>
-<dl><dd>an array if struct debugfs_reg32 structures</dl>
+<dl><dd>an array if struct debugfs_reg32 structures</dd></dl>
  
 
  <i>nregs</i>
-<dl><dd>the length of the above array</dl>
+<dl><dd>the length of the above array</dd></dl>
  
 
  <i>base</i>
-<dl><dd>the base address to be used in reading the registers</dl>
+<dl><dd>the base address to be used in reading the registers</dd></dl>
  
 
  <i>prefix</i>
-<dl><dd>a string to be prefixed to every output line</dl>
+<dl><dd>a string to be prefixed to every output line</dd></dl>
 
 <h2>Description</h2>
 

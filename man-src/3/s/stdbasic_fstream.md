@@ -32,7 +32,6 @@ other - stream to exchange the state with
 
 <pre><code>operator= moves the file stream
 (public member function)
-
 (C++11)</code></pre> 
 swap swaps two basic_filebuf objects 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(public member function of std::basic_filebuf&lt;CharT,Traits&gt;)</i> 

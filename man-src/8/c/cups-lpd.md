@@ -14,12 +14,12 @@ description: "cups-lpd – receive print jobs and report printer status to lpd c
 <p><code>cups-lpd</code> is the CUPS Line Printer Daemon (&quot;LPD&quot;) mini-server that supports legacy client systems that use the LPD protocol. <code>cups-lpd</code> does not act as a standalone network daemon but instead operates using any of the Internet &quot;super-servers&quot; such as <code>inetd</code>(8), <code>launchd</code>(8), and <code>systemd</code>(8).</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h </code><i>hostname</i>[<code>:</code><i>port</i>]</p>
-<dd>Sets the CUPS server (and port) to use.</p>
-<dt><code>-n</code></p>
-<dd>Disables reverse address lookups; normally <code>cups-lpd</code> will try to discover the hostname of the client via a reverse DNS lookup.</p>
-<dt><code>-o </code><i>name=value</i></p>
-<dd>Inserts options for all print queues. Most often this is used to disable the &quot;l&quot; filter so that remote print jobs are filtered as needed for printing; the <code>inetd</code>(8) example below sets the &quot;document-format&quot; option to &quot;application/octet-stream&quot; which forces autodetection of the print file format.</dl>
+<dt><code>-h </code><i>hostname</i>[<code>:</code><i>port</i>]</dt>
+<dd>Sets the CUPS server (and port) to use.</dd>
+<dt><code>-n</code></dt>
+<dd>Disables reverse address lookups; normally <code>cups-lpd</code> will try to discover the hostname of the client via a reverse DNS lookup.</dd>
+<dt><code>-o </code><i>name=value</i></dt>
+<dd>Inserts options for all print queues. Most often this is used to disable the &quot;l&quot; filter so that remote print jobs are filtered as needed for printing; the <code>inetd</code>(8) example below sets the &quot;document-format&quot; option to &quot;application/octet-stream&quot; which forces autodetection of the print file format.</dd></dl>
 <h2>Conforming To</h2>
 <p><code>cups-lpd</code> does not enforce the restricted source port number specified in RFC 1179, as using restricted ports does not prevent users from submitting print jobs. While this behavior is different than standard Berkeley LPD implementations, it should not affect normal client operations. </p>
 <p> The output of the status requests follows RFC 2569, Mapping between LPD and IPP Protocols. Since many LPD implementations stray from this definition, remote status reporting to LPD clients may be unreliable.</p>

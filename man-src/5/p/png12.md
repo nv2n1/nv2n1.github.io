@@ -19,14 +19,14 @@ PNG (Portable Network Graphics) is an extensible file format for the lossless, p
 
  PNG specification (second edition), November 2003:
 <dl><dd>&nbsp;<wbr>&nbsp;<wbr>&lt;<a rel="nofollow" HREF="http://www.w3.org/TR/2003/REC-PNG-20031110/">http://www.w3.org/TR/2003/REC-PNG-20031110/</a> PNG 1.2 specification, July 1999:
-<dd><a rel="nofollow" HREF="http://www.libpng.org/pub/png">http://www.libpng.org/pub/png</a></dl>
+</dd><dd><a rel="nofollow" HREF="http://www.libpng.org/pub/png">http://www.libpng.org/pub/png</a></dd></dl>
  
 
  PNG 1.0 specification, October 1996:
 <dl><dd>RFC 2083
-<dd><a HREF="ftp://ftp.rfc-editor.org:/in-notes/rfc2083.txt">ftp://ftp.rfc-editor.org:/in-notes/rfc2083.txt</a> 
+</dd><dd><a HREF="ftp://ftp.rfc-editor.org:/in-notes/rfc2083.txt">ftp://ftp.rfc-editor.org:/in-notes/rfc2083.txt</a> 
  or (as a W3C Recommendation) at 
- <a rel="nofollow" HREF="http://www.w3.org/TR/REC-png.html">http://www.w3.org/TR/REC-png.html</a></dl>
+ <a rel="nofollow" HREF="http://www.w3.org/TR/REC-png.html">http://www.w3.org/TR/REC-png.html</a></dd></dl>
 
 <h2>Authors</h2>
 

@@ -76,19 +76,14 @@ guestmount[--options] - a disk.img - m device[--ro] mountpoint guestmount[--opti
 <p> The solution is to use the <i>&#8211;pid-file</i> option to write the guestmount <font SIZE="-1">PID</font> to a file, then after guestunmount spin waiting for this <font SIZE="-1">PID</font> to exit. </p>
 <pre><code>
 guestmount - a disk.img - i-- pid - file guestmount.pid / mnt
-
 #...
 #...
-
 #Save the PID of guestmount *before *calling guestunmount.
                                                               pid = "$(cat guestmount.pid)"
-
 #Unmount the filesystem.
                                                                     guestunmount /
                                                                     mnt
-
                                                                         timeout = 10
-
     count = $timeout while kill - 0 "$pid" 2 &gt; / dev / null &amp;&amp; [$count - gt 0];
 do
     sleep 1((count--))
@@ -96,137 +91,133 @@ do
         if[$count - eq 0];
 then
     echo "$0: wait for guestmount to exit failed after $timeout seconds" exit 1 fi
-
 #Now it is safe to use the disk image.
 </code></pre>
 <p> Note that if you use the <tt>&quot;guestfs_mount_local&quot;</tt> <font SIZE="-1">API</font> directly (see &#8220;<font SIZE="-1">MOUNT LOCAL&#8221;</font> in <i>guestfs</i>(3)) then it is much easier to write a safe, race-free program.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a image</code></p>
+<dt><code>-a image</code></dt>
 <dd>
-<dt><code>&#8211;add image</code></p>
-<dd> Add a block device or virtual machine image. </p>
+</dd><dt><code>&#8211;add image</code></dt>
+<dd> Add a block device or virtual machine image. </dd>
 <p> The format of the disk image is auto-detected. To override this and force a particular format use the <i>&#8211;format=..</i> option.</p>
-<dt><code>-a </code><font SIZE="-1"><code>URI</code></font></p>
+<dt><code>-a </code><font SIZE="-1"><code>URI</code></font></dt>
 <dd>
-<dt><code>&#8211;add </code><font SIZE="-1"><code>URI</code></font></p>
-<dd> Add a remote disk. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</p>
-<dt><code>-c </code><font SIZE="-1"><code>URI</code></font></p>
+</dd><dt><code>&#8211;add </code><font SIZE="-1"><code>URI</code></font></dt>
+<dd> Add a remote disk. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</dd>
+<dt><code>-c </code><font SIZE="-1"><code>URI</code></font></dt>
 <dd>
-<dt><code>&#8211;connect </code><font SIZE="-1"><code>URI</code></font></p>
-<dd> When used in conjunction with the <i>-d</i> option, this specifies the libvirt <font SIZE="-1">URI</font> to use. The default is to use the default libvirt connection.</p>
-<dt><code>-d libvirt-domain</code></p>
+</dd><dt><code>&#8211;connect </code><font SIZE="-1"><code>URI</code></font></dt>
+<dd> When used in conjunction with the <i>-d</i> option, this specifies the libvirt <font SIZE="-1">URI</font> to use. The default is to use the default libvirt connection.</dd>
+<dt><code>-d libvirt-domain</code></dt>
 <dd>
-<dt><code>&#8211;domain libvirt-domain</code></p>
-<dd> Add disks from the named libvirt domain. If the <i>&#8211;ro</i> option is also used, then any libvirt domain can be used. However in write mode, only libvirt domains which are shut down can be named here. </p>
+</dd><dt><code>&#8211;domain libvirt-domain</code></dt>
+<dd> Add disks from the named libvirt domain. If the <i>&#8211;ro</i> option is also used, then any libvirt domain can be used. However in write mode, only libvirt domains which are shut down can be named here. </dd>
 <p> Domain UUIDs can be used instead of names.</p>
-<dt><code>&#8211;dir-cache-timeout N</code></p>
-<dd> Set the readdir cache timeout to <i>N</i> seconds, the default being 60 seconds. The readdir cache [actually, there are several semi-independent caches] is populated after a <i><a href="/docs/linux/man/2-readdir/">readdir</a></i>(2) call with the stat and extended attributes of the files in the directory, in anticipation that they will be requested soon after. </p>
+<dt><code>&#8211;dir-cache-timeout N</code></dt>
+<dd> Set the readdir cache timeout to <i>N</i> seconds, the default being 60 seconds. The readdir cache [actually, there are several semi-independent caches] is populated after a <i><a href="/docs/linux/man/2-readdir/">readdir</a></i>(2) call with the stat and extended attributes of the files in the directory, in anticipation that they will be requested soon after. </dd>
 <p> There is also a different attribute cache implemented by <font SIZE="-1">FUSE </font>(see the <font SIZE="-1">FUSE</font> option <i>-o attr_timeout</i>), but the <font SIZE="-1">FUSE</font> cache does not anticipate future requests, only cache existing ones.</p>
-<dt><code>&#8211;echo-keys</code></p>
-<dd> When prompting for keys and passphrases, guestfish normally turns echoing off so you cannot see what you are typing. If you are not worried about Tempest attacks and there is no one else in the room you can specify this flag to see what you are typing.</p>
-<dt><code>&#8211;fd=FD</code></p>
-<dd> Specify a pipe or eventfd file descriptor. When the mountpoint is ready to be used, guestmount writes a single byte to this file descriptor. This can be used in conjunction with <i>&#8211;no-fork</i> in order to run guestmount captive under another process.</p>
-<dt><code>&#8211;format=raw|qcow2|..</code></p>
+<dt><code>&#8211;echo-keys</code></dt>
+<dd> When prompting for keys and passphrases, guestfish normally turns echoing off so you cannot see what you are typing. If you are not worried about Tempest attacks and there is no one else in the room you can specify this flag to see what you are typing.</dd>
+<dt><code>&#8211;fd=FD</code></dt>
+<dd> Specify a pipe or eventfd file descriptor. When the mountpoint is ready to be used, guestmount writes a single byte to this file descriptor. This can be used in conjunction with <i>&#8211;no-fork</i> in order to run guestmount captive under another process.</dd>
+<dt><code>&#8211;format=raw|qcow2|..</code></dt>
 <dd>
-<dt><code>&#8211;format</code></p>
-<dd> The default for the <i>-a</i> option is to auto-detect the format of the disk image. Using this forces the disk format for <i>-a</i> options which follow on the command line. Using <i>&#8211;format</i> with no argument switches back to auto-detection for subsequent <i>-a</i> options. </p>
+</dd><dt><code>&#8211;format</code></dt>
+<dd> The default for the <i>-a</i> option is to auto-detect the format of the disk image. Using this forces the disk format for <i>-a</i> options which follow on the command line. Using <i>&#8211;format</i> with no argument switches back to auto-detection for subsequent <i>-a</i> options. </dd>
 <p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (<font SIZE="-1">CVE-2010-3851</font>). See also &#8220;guestfs_add_drive_opts&#8221; in <i>guestfs</i>(3).</p>
-<dt><code>&#8211;fuse-help</code></p>
-<dd> Display help on special <font SIZE="-1">FUSE</font> options (see <i>-o</i> below).</p>
-<dt><code>&#8211;help</code></p>
-<dd> Display brief help and exit.</p>
-<dt><code>-i</code></p>
+<dt><code>&#8211;fuse-help</code></dt>
+<dd> Display help on special <font SIZE="-1">FUSE</font> options (see <i>-o</i> below).</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display brief help and exit.</dd>
+<dt><code>-i</code></dt>
 <dd>
-<dt><code>&#8211;inspector</code></p>
-<dd> Using <i><a href="/docs/linux/man/1-virt-inspector/">virt-inspector</a></i>(1) code, inspect the disks looking for an operating system and mount filesystems as they would be mounted on the real virtual machine.</p>
-<dt><code>&#8211;keys-from-stdin</code></p>
-<dd> Read key or passphrase parameters from stdin. The default is to try to read passphrases from the user by opening <i>/dev/tty</i>.</p>
-<dt><code>&#8211;live</code></p>
-<dd> Connect to a live virtual machine. (Experimental, see &#8220;<font SIZE="-1">ATTACHING TO RUNNING DAEMONS&#8221;</font> in <i>guestfs</i>(3)).</p>
-<dt><code>-m dev[:mountpoint[:options[:fstype]]</code></p>
+</dd><dt><code>&#8211;inspector</code></dt>
+<dd> Using <i><a href="/docs/linux/man/1-virt-inspector/">virt-inspector</a></i>(1) code, inspect the disks looking for an operating system and mount filesystems as they would be mounted on the real virtual machine.</dd>
+<dt><code>&#8211;keys-from-stdin</code></dt>
+<dd> Read key or passphrase parameters from stdin. The default is to try to read passphrases from the user by opening <i>/dev/tty</i>.</dd>
+<dt><code>&#8211;live</code></dt>
+<dd> Connect to a live virtual machine. (Experimental, see &#8220;<font SIZE="-1">ATTACHING TO RUNNING DAEMONS&#8221;</font> in <i>guestfs</i>(3)).</dd>
+<dt><code>-m dev[:mountpoint[:options[:fstype]]</code></dt>
 <dd>
-<dt><code>&#8211;mount dev[:mountpoint[:options[:fstype]]]</code></p>
-<dd> Mount the named partition or logical volume on the given mountpoint <code>in the guest</code> (this has nothing to do with mountpoints in the host). </p>
+</dd><dt><code>&#8211;mount dev[:mountpoint[:options[:fstype]]]</code></dt>
+<dd> Mount the named partition or logical volume on the given mountpoint <code>in the guest</code> (this has nothing to do with mountpoints in the host). </dd>
 <p> If the mountpoint is omitted, it defaults to <i>/</i>. You have to mount something on <i>/</i>. </p>
 <p> The third (and rarely used) part of the mount parameter is the list of mount options used to mount the underlying filesystem. If this is not given, then the mount options are either the empty string or <tt>&quot;ro&quot;</tt> (the latter if the <i>&#8211;ro</i> flag is used). By specifying the mount options, you override this default choice. Probably the only time you would use this is to enable ACLs and/or extended attributes if the filesystem can support them: </p>
 <pre>
  -m /dev/sda1:/:acl,user_xattr
 </pre>
 <p> The fourth part of the parameter is the filesystem driver to use, such as <tt>&quot;ext3&quot;</tt> or <tt>&quot;ntfs&quot;</tt>. This is rarely needed, but can be useful if multiple drivers are valid for a filesystem (eg: <tt>&quot;ext2&quot;</tt> and <tt>&quot;ext3&quot;</tt>), or if libguestfs misidentifies a filesystem.</p>
-<dt><code>&#8211;no-fork</code></p>
-<dd> Don&#8217;t daemonize (or fork into the background).</p>
-<dt><code>-n</code></p>
+<dt><code>&#8211;no-fork</code></dt>
+<dd> Don&#8217;t daemonize (or fork into the background).</dd>
+<dt><code>-n</code></dt>
 <dd>
-<dt><code>&#8211;no-sync</code></p>
-<dd> By default, we attempt to sync the guest disk when the <font SIZE="-1">FUSE</font> mountpoint is unmounted. If you specify this option, then we don&#8217;t attempt to sync the disk. See the discussion of autosync in the <i>guestfs</i>(3) manpage.</p>
-<dt><code>-o option</code></p>
+</dd><dt><code>&#8211;no-sync</code></dt>
+<dd> By default, we attempt to sync the guest disk when the <font SIZE="-1">FUSE</font> mountpoint is unmounted. If you specify this option, then we don&#8217;t attempt to sync the disk. See the discussion of autosync in the <i>guestfs</i>(3) manpage.</dd>
+<dt><code>-o option</code></dt>
 <dd>
-<dt><code>&#8211;option option</code></p>
-<dd> Pass extra options to <font SIZE="-1">FUSE.</font> </p>
+</dd><dt><code>&#8211;option option</code></dt>
+<dd> Pass extra options to <font SIZE="-1">FUSE.</font> </dd>
 <p> To get a list of all the extra options supported by <font SIZE="-1">FUSE,</font> use the command below. Note that only the <font SIZE="-1">FUSE </font><i>-o</i> options can be passed, and only some of them are a good idea. </p>
 <pre>
  guestmount --fuse-help
 </pre>
 <p> Some potentially useful <font SIZE="-1">FUSE</font> options:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-o allow_other</code></p>
-<dd> Allow other users to see the filesystem.</p>
-<dt><code>-o attr_timeout=N</code></p>
-<dd> Enable attribute caching by <font SIZE="-1">FUSE,</font> and set the timeout to <i>N</i> seconds.</p>
-<dt><code>-o kernel_cache</code></p>
-<dd> Allow the kernel to cache files (reduces the number of reads that have to go through the <i>guestfs</i>(3) <font SIZE="-1">API</font>). This is generally a good idea if you can afford the extra memory usage.</p>
-<dt><code>-o uid=N</code> <code>-o gid=N</code></p>
-<dd> Use these options to map all UIDs and GIDs inside the guest filesystem to the chosen values.</p>
-<dt><code>-o use_ino</code></p>
-<dd> Preserve inode numbers from the underlying filesystem. </p>
+<dt><code>-o allow_other</code></dt>
+<dd> Allow other users to see the filesystem.</dd>
+<dt><code>-o attr_timeout=N</code></dt>
+<dd> Enable attribute caching by <font SIZE="-1">FUSE,</font> and set the timeout to <i>N</i> seconds.</dd>
+<dt><code>-o kernel_cache</code></dt>
+<dd> Allow the kernel to cache files (reduces the number of reads that have to go through the <i>guestfs</i>(3) <font SIZE="-1">API</font>). This is generally a good idea if you can afford the extra memory usage.</dd>
+<dt><code>-o uid=N</code> <code>-o gid=N</code></dt>
+<dd> Use these options to map all UIDs and GIDs inside the guest filesystem to the chosen values.</dd>
+<dt><code>-o use_ino</code></dt>
+<dd> Preserve inode numbers from the underlying filesystem. </dd>
 <p> Without this option, <font SIZE="-1">FUSE</font> makes up its own inode numbers. The inode numbers you see in <i><a href="/docs/linux/man/2-stat/">stat</a></i>(2), <tt>&quot;ls -i&quot;</tt> etc aren&#8217;t the inode numbers of the underlying filesystem. </p>
 <p> <code>Note</code> this option is potentially dangerous if the underlying filesystem consists of multiple mountpoints, as you may see duplicate inode numbers appearing through <font SIZE="-1">FUSE. </font> Use of this option can confuse some software.</dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt><code>&#8211;pid-file filename</code></p>
-<dd> Write the <font SIZE="-1">PID</font> of the guestmount worker process to <tt>&quot;filename&quot;</tt>.</p>
-<dt><code>-r</code></p>
+</dl>
+<dt><code>&#8211;pid-file filename</code></dt>
+<dd> Write the <font SIZE="-1">PID</font> of the guestmount worker process to <tt>&quot;filename&quot;</tt>.</dd>
+<dt><code>-r</code></dt>
 <dd>
-<dt><code>&#8211;ro</code></p>
-<dd> Add devices and mount everything read-only. Also disallow writes and make the disk appear read-only to <font SIZE="-1">FUSE.</font> </p>
+</dd><dt><code>&#8211;ro</code></dt>
+<dd> Add devices and mount everything read-only. Also disallow writes and make the disk appear read-only to <font SIZE="-1">FUSE.</font> </dd>
 <p> This is highly recommended if you are not going to edit the guest disk. If the guest is running and this option is <i>not</i> supplied, then there is a strong risk of disk corruption in the guest. We try to prevent this from happening, but it is not always possible. </p>
 <p> See also &#8220;<font SIZE="-1">OPENING DISKS FOR READ AND WRITE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</p>
-<dt><code>&#8211;selinux</code></p>
-<dd> This option is provided for backwards compatibility and does nothing.</p>
-<dt><code>-v</code></p>
+<dt><code>&#8211;selinux</code></dt>
+<dd> This option is provided for backwards compatibility and does nothing.</dd>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;verbose</code></p>
-<dd> Enable verbose messages from underlying libguestfs.</p>
-<dt><code>-V</code></p>
+</dd><dt><code>&#8211;verbose</code></dt>
+<dd> Enable verbose messages from underlying libguestfs.</dd>
+<dt><code>-V</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Display the program version and exit.</p>
-<dt><code>-w</code></p>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Display the program version and exit.</dd>
+<dt><code>-w</code></dt>
 <dd>
-<dt><code>&#8211;rw</code></p>
-<dd> This changes the <i>-a</i>, <i>-d</i> and <i>-m</i> options so that disks are added and mounts are done read-write. </p>
+</dd><dt><code>&#8211;rw</code></dt>
+<dd> This changes the <i>-a</i>, <i>-d</i> and <i>-m</i> options so that disks are added and mounts are done read-write. </dd>
 <p> See &#8220;<font SIZE="-1">OPENING DISKS FOR READ AND WRITE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</p>
-<dt><code>-x</code></p>
+<dt><code>-x</code></dt>
 <dd>
-<dt><code>&#8211;trace</code></p>
-<dd> Trace libguestfs calls and entry into each <font SIZE="-1">FUSE</font> function. </p>
+</dd><dt><code>&#8211;trace</code></dt>
+<dd> Trace libguestfs calls and entry into each <font SIZE="-1">FUSE</font> function. </dd>
 <p> This also stops the daemon from forking into the background (see <i>&#8211;no-fork</i>).</dl>
 <h2>FILES</h2>
 <dl>
-<dt>$XDG_CONFIG_HOME/libguestfs/libguestfs-tools.conf</p>
+<dt>$XDG_CONFIG_HOME/libguestfs/libguestfs-tools.conf</dt>
 <dd>
-<dt>$HOME/.libguestfs-tools.rc</p>
+</dd><dt>$HOME/.libguestfs-tools.rc</dt>
 <dd>
-<dt>$XDG_CONFIG_DIRS/libguestfs/libguestfs-tools.conf</p>
+</dd><dt>$XDG_CONFIG_DIRS/libguestfs/libguestfs-tools.conf</dt>
 <dd>
-<dt>/etc/libguestfs-tools.conf</p>
-<dd> This configuration file controls the default read-only or read-write mode (<i>&#8211;ro</i> or <i>&#8211;rw</i>). </p>
+</dd><dt>/etc/libguestfs-tools.conf</dt>
+<dd> This configuration file controls the default read-only or read-write mode (<i>&#8211;ro</i> or <i>&#8211;rw</i>). </dd>
 <p> See <i><a href="/docs/linux/man/5-libguestfs-tools-conf/">libguestfs-tools.conf</a></i>(5).</dl>
 <h2>EXIT STATUS</h2>
 <p> This program returns 0 if successful, or non-zero if there was an error.</p>
@@ -245,29 +236,29 @@ then
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> When reporting a bug, please supply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The version of libguestfs.</p>
-<dt>&bull;</p>
-<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</p>
-<dt>&bull;</p>
-<dd> Describe the bug accurately and give a way to reproduce it.</p>
-<dt>&bull;</p>
-<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
 <h2>Index</h2>
-<dt><a href="#lbAL">OPTIONS</a></p>
+<dt><a href="#lbAL">OPTIONS</a></dt>
 <dd>
-<dt><a href="#lbAM">FILES</a></p>
+</dd><dt><a href="#lbAM">FILES</a></dt>
 <dd>
-<dt><a href="#lbAN">EXIT STATUS</a></p>
+</dd><dt><a href="#lbAN">EXIT STATUS</a></dt>
 <dd>
-<dt><a href="#lbAO">SEE ALSO</a></p>
+</dd><dt><a href="#lbAO">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAP">AUTHORS</a></p>
+</dd><dt><a href="#lbAP">AUTHORS</a></dt>
 <dd>
-<dt><a href="#lbAQ">COPYRIGHT</a></p>
+</dd><dt><a href="#lbAQ">COPYRIGHT</a></dt>
 <dd>
-<dt><a href="#lbAR">LICENSE</a></p>
+</dd><dt><a href="#lbAR">LICENSE</a></dt>
 <dd>
-<dt><a href="#lbAS">BUGS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAS">BUGS</a></dt>
+<dd></dd></dl>

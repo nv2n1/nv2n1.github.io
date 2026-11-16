@@ -15,7 +15,7 @@ d_inode - Get the actual inode of this dentry
 <h2>Arguments</h2>
 
 <i>dentry</i>
-<dl><dd><dd>The dentry to query</dl>
+<dl><dd></dd><dd>The dentry to query</dd></dl>
 
 <h2>Description</h2>
 

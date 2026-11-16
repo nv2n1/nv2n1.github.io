@@ -92,8 +92,8 @@ description: "ccs_selinux – Security Enhanced Linux Policy for the ccs process
 <p> <code>ccs_exec_t</code> </p>
 <p> &#8211; Set files with the ccs_exec_t type, if you want to transition an executable to the ccs_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/ccsd, /usr/sbin/ccsd </p>
+<dt>Paths:</dt>
+<dd>/sbin/ccsd, /usr/sbin/ccsd </dd>
 </dl>
 <p> <code>ccs_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the ccs_initrc_exec_t type, if you want to transition an executable to the ccs_initrc_t domain. </p>
@@ -108,8 +108,8 @@ description: "ccs_selinux – Security Enhanced Linux Policy for the ccs process
 <p> <code>ccs_var_run_t</code> </p>
 <p> &#8211; Set files with the ccs_var_run_t type, if you want to store the ccs files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/cluster/((ccs)|(ccsd)).pid, /var/run/cluster/((ccs)|(ccsd)).sock </p>
+<dt>Paths:</dt>
+<dd>/var/run/cluster/((ccs)|(ccsd)).pid, /var/run/cluster/((ccs)|(ccsd)).sock </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

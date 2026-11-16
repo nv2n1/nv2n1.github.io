@@ -11,8 +11,8 @@ description: "XtProcessLock, XtProcessUnlock – lock and unlock process"
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>void XtProcessLock(void);</p>
-<dd>void XtProcessUnlock(void);</dl>
+<dd>void XtProcessLock(void);</dd>
+<dd>void XtProcessUnlock(void);</dd></dl>
 <h2>Description</h2>
 <p><code>XtProcessLock</code> is used to lock all process global data. </p>
 <p> <code>XtProcessUnlock</code> unlocks the process.</p>

@@ -23,20 +23,20 @@ description: "vomsdir – The structure of the vomsdir VOMS server trust anchor 
  |
  |--vo3
  |</pre>
-</dl>
+</dd></dl>
 <p> A subdirectory is created for each of the trusted VOs. Inside each VO directory two types of files can be found: </p>
 <dl>
-<dd>&bull; </p>
+<dd>&bull; </dd>
 <p> <code>LSC files</code> An LSC file contains a description of the certificate chain of the certificate used by a VOMS server to sign VOMS attributes.</dl>
 <dl>
-<dd>&bull; </p>
+<dd>&bull; </dd>
 <p> <code>X509 certificates</code> The certificate used by a VOMS server to sign attributes.</dl>
 <p> These files are commonly named using the following pattern: </p>
 <dl>
 <dd>
 <pre>&lt;hostname&gt;.lsc
 &lt;hostname&gt;.pem</pre>
-</dl>
+</dd></dl>
 <p> Where hostname is the host where the VOMS server is running. </p>
 <p> When both lsc and pem files are present for a given VO and hostname, the lsc file takes precedence.</p>
 <h3>LSC file syntax</h3>
@@ -45,7 +45,7 @@ description: "vomsdir – The structure of the vomsdir VOMS server trust anchor 
 <dd>
 <pre>/C=IT/O=INFN/OU=Host/L=CNAF/CN=voms.cnaf.infn.it
 /C=IT/O=INFN/CN=INFN CA</pre>
-</dl>
+</dd></dl>
 <h2>Examples</h2>
 <p>Assuming locally two VOs are trusted, the <code>cms</code> VO and the <code>cdf</code> VO, the <code>/etc/grid-security/vomsdir</code> directory will be structured as follows: </p>
 <dl>
@@ -53,20 +53,20 @@ description: "vomsdir – The structure of the vomsdir VOMS server trust anchor 
 <pre>/etc/grid-security/vomsdir
 /etc/grid-security/vomsdir/cms
 /etc/grid-security/vomsdir/cdf</pre>
-</dl>
+</dd></dl>
 <p> The <code>/etc/grid-security/vomsdir/cms</code> directory will contain the following files: </p>
 <dl>
 <dd>
 <pre>lcg-voms.cern.ch.lsc
 voms.cern.ch.lsc</pre>
-</dl>
+</dd></dl>
 <p> The <code>/etc/grid-security/vomsdir/cdf</code> directory will contain the following files: </p>
 <dl>
 <dd>
 <pre>voms-01.pd.infn.it.lsc
 voms.cnaf.infn.it.lsc
 voms.fnal.gov.lsc</pre>
-</dl>
+</dd></dl>
 <p> The LSC files will contain descriptions of the certificate chains used by VOMS servers to sign attribute certificates.</p>
 <h2>Bugs</h2>
 <p>To report bugs or ask for support, use GGUS: <a rel="nofollow" href="https://ggus.eu/pages/home.php">https://ggus.eu/pages/home.php</a></p>
@@ -82,5 +82,5 @@ voms.fnal.gov.lsc</pre>
 <dl>
 <dd>
 <pre><a rel="nofollow" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></pre>
-</dl>
+</dd></dl>
 <p> Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</p>

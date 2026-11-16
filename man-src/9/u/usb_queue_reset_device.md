@@ -14,7 +14,7 @@ description: "usb_queue_reset_device – Reset a USB device from an atomic conte
 <p><i>iface</i></p>
 <dl>
 <dd>
-<dd>USB interface belonging to the device to reset</dl>
+</dd><dd>USB interface belonging to the device to reset</dd></dl>
 <h2>Description</h2>
 <p>This function can be used to reset a USB device from an atomic context, where <code>usb_reset_device</code> won&#8217;t work (as it blocks). </p>
 <p> Doing a reset via this method is functionally equivalent to calling <code>usb_reset_device</code>, except for the fact that it is delayed to a workqueue. This means that any drivers bound to other interfaces might be unbound, as well as users from usbfs in user space. </p>

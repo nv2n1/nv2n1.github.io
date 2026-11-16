@@ -15,16 +15,16 @@ description: "CHECK_LFT_BALANCE –"
 <p>check_lft_balance.sh is a script which checks for balancing in Infiniband unicast forwarding tables. It analyzes the output of <code>dump_lfts(8)</code> and <code><a href="/docs/linux/man/8-iblinkinfo/">iblinkinfo</a>(8)</code></p>
 <h3>Options</h3>
 <dl>
-<dt><code>-h</code></p>
-<dd>show help</p>
-<dt><code>-R</code></p>
-<dd>Recalculate dump_lfts information, ie do not use the cached information. This option is slower but should be used if the diag tools have not been used for some time or if there are other reasons to believe that the fabric has changed.</p>
-<dt><code>-v</code></p>
-<dd>verbose output</dl>
+<dt><code>-h</code></dt>
+<dd>show help</dd>
+<dt><code>-R</code></dt>
+<dd>Recalculate dump_lfts information, ie do not use the cached information. This option is slower but should be used if the diag tools have not been used for some time or if there are other reasons to believe that the fabric has changed.</dd>
+<dt><code>-v</code></dt>
+<dd>verbose output</dd></dl>
 <h3>See Also</h3>
 <p><code>dump_lfts(8)</code> <code><a href="/docs/linux/man/8-iblinkinfo/">iblinkinfo</a>(8)</code></p>
 <h3>Authors</h3>
 <dl>
-<dt><code>Albert Chu</code></p>
-<dd>&lt; <i>chu11 [at] llnl.gov</i> &gt; </p>
+<dt><code>Albert Chu</code></dt>
+<dd>&lt; <i>chu11 [at] llnl.gov</i> &gt; </dd>
 </dl>

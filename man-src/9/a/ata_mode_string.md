@@ -14,7 +14,7 @@ description: "ata_mode_string – convert xfer_mask to string"
 <p><i>xfer_mask</i></p>
 <dl>
 <dd>
-<dd>mask of bits supported; only highest bit counts.</dl>
+</dd><dd>mask of bits supported; only highest bit counts.</dd></dl>
 <h2>Description</h2>
 <p>Determine string which represents the highest speed (highest bit in <i>modemask</i>). </p>
 <p> LOCKING: None.</p>
@@ -23,5 +23,5 @@ description: "ata_mode_string – convert xfer_mask to string"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

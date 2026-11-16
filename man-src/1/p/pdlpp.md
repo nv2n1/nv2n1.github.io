@@ -144,12 +144,12 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
 <p>In my example script (called test.pd), line 15 is exactly the line at which I made my typo: <tt>&quot;rmp&quot;</tt> instead of <tt>&quot;tmp&quot;</tt>. </p>
 <p> So, after this quick overview of the general flavour of programming <font SIZE="-1">PDL</font> routines using <font SIZE="-1">PDL::PP</font> let&#8217;s summarise in which circumstances you should actually use this preprocessor/precompiler. You should use <font SIZE="-1">PDL::PP</font> if you want to</p>
 <dl>
-<dt>&bull;</p>
-<dd>interface <font SIZE="-1">PDL</font> to some external library</p>
-<dt>&bull;</p>
-<dd>write some algorithm that would be slow if coded in Perl (this is not as often as you think; take a look at threading and dataflow first).</p>
-<dt>&bull;</p>
-<dd>be a <font SIZE="-1">PDL</font> developer (and even then it&#8217;s not obligatory)</dl>
+<dt>&bull;</dt>
+<dd>interface <font SIZE="-1">PDL</font> to some external library</dd>
+<dt>&bull;</dt>
+<dd>write some algorithm that would be slow if coded in Perl (this is not as often as you think; take a look at threading and dataflow first).</dd>
+<dt>&bull;</dt>
+<dd>be a <font SIZE="-1">PDL</font> developer (and even then it&#8217;s not obligatory)</dd></dl>
 <h2>Warning</h2>
 <p>Because of its architecture, <font SIZE="-1">PDL::PP</font> can be both flexible and easy to use on the one hand, yet exuberantly complicated at the same time. Currently, part of the problem is that error messages are not very informative and if something goes wrong, you&#8217;d better know what you are doing and be able to hack your way through the internals (or be able to figure out by trial and error what is wrong with your args to <tt>&quot;pp_def&quot;</tt>). Although work is being done to produce better warnings, do not be afraid to send your questions to the mailing list if you run into trouble.</p>
 <h2>Description</h2>
@@ -287,13 +287,13 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
 <p>If you do not have bad-value support compiled into <font SIZE="-1">PDL</font> you can ignore this section and the related keys: <tt>&quot;BadCode&quot;</tt>, <tt>&quot;HandleBad&quot;</tt>, &#8230; (try printing out the value of <tt>$PDL::Bad::Status</tt> &#8211; if it equals 0 then move straight on). </p>
 <p> There are several keys and macros used when writing code to handle bad values. The first one is the <tt>&quot;HandleBad&quot;</tt> key:</p>
 <dl>
-<dt>HandleBad =&gt; 0</p>
-<dd>This flags a pp-routine as <i></i><font SIZE="-1"><i>NOT</i></font><i></i> handling bad values. If this routine is sent piddles with their <tt>&quot;badflag&quot;</tt> set, then a warning message is printed to <font SIZE="-1">STDOUT</font> and the piddles are processed as if the value used to represent bad values is a valid number. The <tt>&quot;badflag&quot;</tt> value is not propogated to the output piddles. </p>
+<dt>HandleBad =&gt; 0</dt>
+<dd>This flags a pp-routine as <i></i><font SIZE="-1"><i>NOT</i></font><i></i> handling bad values. If this routine is sent piddles with their <tt>&quot;badflag&quot;</tt> set, then a warning message is printed to <font SIZE="-1">STDOUT</font> and the piddles are processed as if the value used to represent bad values is a valid number. The <tt>&quot;badflag&quot;</tt> value is not propogated to the output piddles. </dd>
 <p> An example of when this is used is for <font SIZE="-1">FFT</font> routines, which generally do not have a way of ignoring part of the data.</p>
-<dt>HandleBad =&gt; 1</p>
-<dd>This causes <font SIZE="-1">PDL::PP</font> to write extra code that ensures the BadCode section is used, and that the <tt>&quot;$ISBAD()&quot;</tt> macro (and its brethren) work.</p>
-<dt>HandleBad is not given</p>
-<dd>If any of the input piddles have their <tt>&quot;badflag&quot;</tt> set, then the output piddles will have their <tt>&quot;badflag&quot;</tt> set, but any supplied BadCode is ignored.</dl>
+<dt>HandleBad =&gt; 1</dt>
+<dd>This causes <font SIZE="-1">PDL::PP</font> to write extra code that ensures the BadCode section is used, and that the <tt>&quot;$ISBAD()&quot;</tt> macro (and its brethren) work.</dd>
+<dt>HandleBad is not given</dt>
+<dd>If any of the input piddles have their <tt>&quot;badflag&quot;</tt> set, then the output piddles will have their <tt>&quot;badflag&quot;</tt> set, but any supplied BadCode is ignored.</dd></dl>
 <p> The value of <tt>&quot;HandleBad&quot;</tt> is used to define the contents of the <tt>&quot;BadDoc&quot;</tt> key, if it is not given. </p>
 <p> To handle bad values, code must be written somewhat differently; for instance, </p>
 <pre> $c() = $a() + $b();</pre>
@@ -316,23 +316,23 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
 <p>This approach means that there is virtually no overhead when bad values are not present (i.e. the badflag routine returns 0). </p>
 <p> The BadCode section can use the same macros and looping constructs as the Code section. However, it wouldn&#8217;t be much use without the following additional macros:</p>
 <dl>
-<dt>$ISBAD(var)</p>
-<dd>To check whether a piddle&#8217;s value is bad, use the <tt>$ISBAD</tt> macro: </p>
+<dt>$ISBAD(var)</dt>
+<dd>To check whether a piddle&#8217;s value is bad, use the <tt>$ISBAD</tt> macro: </dd>
 <pre> if ( $ISBAD(a()) ) { printf(&quot;a() is bad
 &quot;); }</pre>
 <p>You can also access given elements of a piddle: </p>
 <pre> if ( $ISBAD(a(n=&gt;l)) ) { printf(&quot;element %d of a() is bad
 &quot;, l); }</pre>
-<dt>$ISGOOD(var)</p>
-<dd>This is the opposite of the <tt>$ISBAD</tt> macro.</p>
-<dt>$SETBAD(var)</p>
-<dd>For when you want to set an element of a piddle bad.</p>
-<dt>$ISBADVAR(c_var,pdl)</p>
-<dd>If you have cached the value of a piddle <tt>&quot;$a()&quot;</tt> into a c-variable (<tt>&quot;foo&quot;</tt> say), then to check whether it is bad, use <tt>&quot;$ISBADVAR(foo,a)&quot;</tt>.</p>
-<dt>$ISGOODVAR(c_var,pdl)</p>
-<dd>As above, but this time checking that the cached value isn&#8217;t bad.</p>
-<dt>$SETBADVAR(c_var,pdl)</p>
-<dd>To copy the bad value for a piddle into a c variable, use <tt>&quot;$SETBADVAR(foo,a)&quot;</tt>.</dl>
+<dt>$ISGOOD(var)</dt>
+<dd>This is the opposite of the <tt>$ISBAD</tt> macro.</dd>
+<dt>$SETBAD(var)</dt>
+<dd>For when you want to set an element of a piddle bad.</dd>
+<dt>$ISBADVAR(c_var,pdl)</dt>
+<dd>If you have cached the value of a piddle <tt>&quot;$a()&quot;</tt> into a c-variable (<tt>&quot;foo&quot;</tt> say), then to check whether it is bad, use <tt>&quot;$ISBADVAR(foo,a)&quot;</tt>.</dd>
+<dt>$ISGOODVAR(c_var,pdl)</dt>
+<dd>As above, but this time checking that the cached value isn&#8217;t bad.</dd>
+<dt>$SETBADVAR(c_var,pdl)</dt>
+<dd>To copy the bad value for a piddle into a c variable, use <tt>&quot;$SETBADVAR(foo,a)&quot;</tt>.</dd></dl>
 <p> <i></i><font SIZE="-1"><i>TODO:</i></font><i></i> mention <tt>&quot;$PPISBAD()&quot;</tt> etc macros. </p>
 <p> Using these macros, the above code could be specified as: </p>
 <pre> Code =&gt; '$c() = $a() + $b();',
@@ -351,14 +351,14 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
  }',</pre>
 <p>If you want access to the value of the badflag for a given piddle, you can use the <tt>&quot;$PDLSTATExxxx()&quot;</tt> macros:</p>
 <dl>
-<dt>$PDLSTATEISBAD(pdl)</p>
+<dt>$PDLSTATEISBAD(pdl)</dt>
 <dd>
-<dt>$PDLSTATEISGOOD(pdl)</p>
+</dd><dt>$PDLSTATEISGOOD(pdl)</dt>
 <dd>
-<dt>$PDLSTATESETBAD(pdl)</p>
+</dd><dt>$PDLSTATESETBAD(pdl)</dt>
 <dd>
-<dt>$PDLSTATESETGOOD(pdl)</p>
-<dd></dl>
+</dd><dt>$PDLSTATESETGOOD(pdl)</dt>
+<dd></dd></dl>
 <p> <i></i><font SIZE="-1"><i>TODO:</i></font><i></i> mention the <tt>&quot;FindBadStatusCode&quot;</tt> and <tt>&quot;CopyBadStatusCode&quot;</tt> options to <tt>&quot;pp_def&quot;</tt>, as well as the <tt>&quot;BadDoc&quot;</tt> key.</p>
 <h3>Interfacing your own/library functions using <font SIZE="-1">PP</font></h3>
 <p>Now, consider the following: you have your own C function (that may in fact be part of some library you want to interface to <font SIZE="-1">PDL</font>) which takes as arguments two pointers to vectors of double: </p>
@@ -392,8 +392,8 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
 <h3>Other macros and functions in the Code section</h3>
 <p>Macros: So far we have encountered the <tt>$SIZE</tt>, <tt>$GENERIC</tt> and <tt>$P</tt> macros. Now we are going to quickly explain the other macros that are expanded in the <tt>&quot;Code&quot;</tt> section of <font SIZE="-1">PDL::PP</font> along with examples of their usage.</p>
 <dl>
-<dt>$T</p>
-<dd>The <tt>$T</tt> macro is used for type switches. This is very useful when you have to use different external (e.g. library) functions depending on the input type of arguments. The general syntax is </p>
+<dt>$T</dt>
+<dd>The <tt>$T</tt> macro is used for type switches. This is very useful when you have to use different external (e.g. library) functions depending on the input type of arguments. The general syntax is </dd>
 <pre> $Ttypeletters(type_alternatives)</pre>
 <p>where <tt>&quot;typeletters&quot;</tt> is a permutation of a subset of the letters <tt>&quot;BSULFD&quot;</tt> which stand for Byte, Short, Ushort, etc. and <tt>&quot;type_alternatives&quot;</tt> are the expansions when the type of the <font SIZE="-1">PP</font> operation is equal to that indicated by the respective letter. Let&#8217;s illustrate this incomprehensible description by an example. Assuming you have two C functions with prototypes </p>
 <pre> void float_func(float *in, float *out);
@@ -409,10 +409,10 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
 <p>since the <tt>$T</tt> macro expands with trailing spaces, analogously to C preprocessor macros. The slightly longer form illustrated above is correct. If you really want brevity, you can of course do </p>
 <pre> '$TBSULFD('.(join ',',map {&quot;long_identifier_name_$_&quot;}
  qw/byt short unseigned lounge flotte dubble/).');'</pre>
-<dt>$PP</p>
-<dd>The <tt>$PP</tt> macro is used for a so called <i>physical pointer access</i>. The <i>physical</i> refers to some internal optimisations of <font SIZE="-1">PDL </font>(for those who are familiar with the <font SIZE="-1">PDL</font> core we are talking about the vaffine optimisations). This macro is mainly for internal use and you shouldn&#8217;t need to use it in any of your normal code.</p>
-<dt>$COMP (and the &quot;OtherPars&quot; section)</p>
-<dd>The <tt>$COMP</tt> macro is used to access non-pdl values in the code section. Its name is derived from the implementation of transformations in <font SIZE="-1">PDL.</font> The variables you can refer to using <tt>$COMP</tt> are members of the &#8220;compiled&#8221; structure that represents the <font SIZE="-1">PDL</font> transformation in question but does not yet contain any information about dimensions (for further details check PDL::Internals). However, you can treat <tt>$COMP</tt> just as a black box without knowing anything about the implementation of transformations in <font SIZE="-1">PDL.</font> So when would you use this macro? Its main usage is to access values of arguments that are declared in the <tt>&quot;OtherPars&quot;</tt> section of a <tt>&quot;pp_def&quot;</tt> definition. But then you haven&#8217;t heard about the <tt>&quot;OtherPars&quot;</tt> key yet?! Let&#8217;s have another example that illustrates typical usage of both new features: </p>
+<dt>$PP</dt>
+<dd>The <tt>$PP</tt> macro is used for a so called <i>physical pointer access</i>. The <i>physical</i> refers to some internal optimisations of <font SIZE="-1">PDL </font>(for those who are familiar with the <font SIZE="-1">PDL</font> core we are talking about the vaffine optimisations). This macro is mainly for internal use and you shouldn&#8217;t need to use it in any of your normal code.</dd>
+<dt>$COMP (and the &quot;OtherPars&quot; section)</dt>
+<dd>The <tt>$COMP</tt> macro is used to access non-pdl values in the code section. Its name is derived from the implementation of transformations in <font SIZE="-1">PDL.</font> The variables you can refer to using <tt>$COMP</tt> are members of the &#8220;compiled&#8221; structure that represents the <font SIZE="-1">PDL</font> transformation in question but does not yet contain any information about dimensions (for further details check PDL::Internals). However, you can treat <tt>$COMP</tt> just as a black box without knowing anything about the implementation of transformations in <font SIZE="-1">PDL.</font> So when would you use this macro? Its main usage is to access values of arguments that are declared in the <tt>&quot;OtherPars&quot;</tt> section of a <tt>&quot;pp_def&quot;</tt> definition. But then you haven&#8217;t heard about the <tt>&quot;OtherPars&quot;</tt> key yet?! Let&#8217;s have another example that illustrates typical usage of both new features: </dd>
 <pre> pp_def('pnmout',
  Pars =&gt; 'a(m)',
  OtherPars =&gt; &quot;char* fd&quot;,
@@ -445,8 +445,8 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
 <p>That should do it.</dl>
 <p> The only <font SIZE="-1">PP</font> function that we have used in the examples so far is <tt>&quot;loop&quot;</tt>. Additionally, there are currently two other functions which are recognised in the <tt>&quot;Code&quot;</tt> section:</p>
 <dl>
-<dt>threadloop</p>
-<dd>As we heard above the signature of a <font SIZE="-1">PP</font> defined function defines the dimensions of all the pdl arguments involved in a <i>primitive</i> operation. However, you often call the functions that you defined with <font SIZE="-1">PP</font> with pdls that have more dimensions than those specified in the signature. In this case the primitive operation is performed on all subslices of appropriate dimensionality in what is called a <i>thread loop</i> (see also overview above and PDL::Indexing). Assuming you have some notion of this concept you will probably appreciate that the operation specified in the code section should be optimised since this is the tightest loop inside a thread loop. However, if you revisit the example where we define the <tt>&quot;pnmout&quot;</tt> function, you will quickly realise that looking up the <tt>&quot;IO&quot;</tt> file descriptor in the inner thread loop is not very efficient when writing a pdl with many rows. A better approach would be to look up the <tt>&quot;IO&quot;</tt> descriptor once outside the thread loop and use its value then inside the tightest thread loop. This is exactly where the <tt>&quot;threadloop&quot;</tt> function comes in handy. Here is an improved definition of <tt>&quot;pnmout&quot;</tt> which uses this function: </p>
+<dt>threadloop</dt>
+<dd>As we heard above the signature of a <font SIZE="-1">PP</font> defined function defines the dimensions of all the pdl arguments involved in a <i>primitive</i> operation. However, you often call the functions that you defined with <font SIZE="-1">PP</font> with pdls that have more dimensions than those specified in the signature. In this case the primitive operation is performed on all subslices of appropriate dimensionality in what is called a <i>thread loop</i> (see also overview above and PDL::Indexing). Assuming you have some notion of this concept you will probably appreciate that the operation specified in the code section should be optimised since this is the tightest loop inside a thread loop. However, if you revisit the example where we define the <tt>&quot;pnmout&quot;</tt> function, you will quickly realise that looking up the <tt>&quot;IO&quot;</tt> file descriptor in the inner thread loop is not very efficient when writing a pdl with many rows. A better approach would be to look up the <tt>&quot;IO&quot;</tt> descriptor once outside the thread loop and use its value then inside the tightest thread loop. This is exactly where the <tt>&quot;threadloop&quot;</tt> function comes in handy. Here is an improved definition of <tt>&quot;pnmout&quot;</tt> which uses this function: </dd>
 <pre> pp_def('pnmout',
  Pars =&gt; 'a(m)',
  OtherPars =&gt; &quot;char* fd&quot;,
@@ -486,8 +486,8 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
  croak(&quot;unknown mode&quot;);
  }'
  );</pre>
-<dt>types</p>
-<dd>The types function works similar to the <tt>$T</tt> macro. However, with the <tt>&quot;types&quot;</tt> function the code in the following block (delimited by <tt>&quot;%{&quot;</tt> and <tt>&quot;%}&quot;</tt> as usual) is executed for all those cases in which the datatype of the operation is <i>any of</i> the types represented by the letters in the argument to <tt>&quot;type&quot;</tt>, e.g. </p>
+<dt>types</dt>
+<dd>The types function works similar to the <tt>$T</tt> macro. However, with the <tt>&quot;types&quot;</tt> function the code in the following block (delimited by <tt>&quot;%{&quot;</tt> and <tt>&quot;%}&quot;</tt> as usual) is executed for all those cases in which the datatype of the operation is <i>any of</i> the types represented by the letters in the argument to <tt>&quot;type&quot;</tt>, e.g. </dd>
 <pre> Code =&gt; '...
  types(BSUL) %{
  /* do integer type operation */
@@ -549,20 +549,20 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
 <p> One thing that is strongly being planned is variable number of arguments, which will be a little tricky. </p>
 <p> An incomplete list of the available keys:</p>
 <dl>
-<dt>Inplace</p>
-<dd>Setting this key marks the routine as working inplace &#8211; ie the input and output piddles are the same. An example is <tt>&quot;$a-&gt;inplace-&gt;sqrt()&quot;</tt> (or <tt>&quot;sqrt(inplace($a))&quot;</tt>).</p>
+<dt>Inplace</dt>
+<dd>Setting this key marks the routine as working inplace &#8211; ie the input and output piddles are the same. An example is <tt>&quot;$a-&gt;inplace-&gt;sqrt()&quot;</tt> (or <tt>&quot;sqrt(inplace($a))&quot;</tt>).</dd>
 <dl>
 <dd>
-<dl>
-<dt>Inplace =&gt; 1</p>
-<dd>Use when the routine is a unary function, such as <tt>&quot;sqrt&quot;</tt>.</p>
-<dt>Inplace =&gt; [&#8216;a&#8217;]</p>
-<dd>If there are more than one input piddles, specify the name of the one that can be changed inplace using an array reference.</p>
-<dt>Inplace =&gt; [&#8216;a&#8217;,&#8217;b&#8217;]</p>
-<dd>If there are more than one output piddle, specify the name of the input piddle and output piddle in a 2-element array reference. This probably isn&#8217;t needed, but left in for completeness.</dl>
+</dd><dl>
+<dt>Inplace =&gt; 1</dt>
+<dd>Use when the routine is a unary function, such as <tt>&quot;sqrt&quot;</tt>.</dd>
+<dt>Inplace =&gt; [&#8216;a&#8217;]</dt>
+<dd>If there are more than one input piddles, specify the name of the one that can be changed inplace using an array reference.</dd>
+<dt>Inplace =&gt; [&#8216;a&#8217;,&#8217;b&#8217;]</dt>
+<dd>If there are more than one output piddle, specify the name of the input piddle and output piddle in a 2-element array reference. This probably isn&#8217;t needed, but left in for completeness.</dd></dl>
 </dl>
 <dl>
-<dd>If bad values are being used, care must be taken to ensure the propagation of the badflag when inplace is being used; consider this excerpt from <i>Basic/Bad/bad.pd</i>: </p>
+<dd>If bad values are being used, care must be taken to ensure the propagation of the badflag when inplace is being used; consider this excerpt from <i>Basic/Bad/bad.pd</i>: </dd>
 <pre> pp_def('replacebad',HandleBad =&gt; 1,
  Pars =&gt; 'a(); [o]b();',
  OtherPars =&gt; 'double newval',
@@ -708,10 +708,10 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
 <h2>Useful Routines</h2>
 <p>The <font SIZE="-1">PDL </font><tt>&quot;Core&quot;</tt> structure, defined in <i>Basic/Core/pdlcore.h.PL</i>, contains pointers to a number of routines that may be useful to you. The majority of these routines deal with manipulating piddles, but some are more general:</p>
 <dl>
-<dt><font SIZE="-1">PDL-</font>&gt;qsort_B( PDL_Byte *xx, int a, int b )</p>
-<dd>Sort the array <tt>&quot;xx&quot;</tt> between the indices <tt>&quot;a&quot;</tt> and <tt>&quot;b&quot;</tt>. There are also versions for the other <font SIZE="-1">PDL</font> datatypes, with postfix <tt>&quot;_S&quot;</tt>, <tt>&quot;_U&quot;</tt>, <tt>&quot;_L&quot;</tt>, <tt>&quot;_F&quot;</tt>, and <tt>&quot;_D&quot;</tt>. Any module using this must ensure that <tt>&quot;PDL::Ufunc&quot;</tt> is loaded.</p>
-<dt><font SIZE="-1">PDL-</font>&gt;qsort_ind_B( PDL_Byte *xx, int *ix, int a, int b )</p>
-<dd>As for <tt>&quot;PDL-&gt;qsort_B&quot;</tt>, but this time sorting the indices rather than the data.</dl>
+<dt><font SIZE="-1">PDL-</font>&gt;qsort_B( PDL_Byte *xx, int a, int b )</dt>
+<dd>Sort the array <tt>&quot;xx&quot;</tt> between the indices <tt>&quot;a&quot;</tt> and <tt>&quot;b&quot;</tt>. There are also versions for the other <font SIZE="-1">PDL</font> datatypes, with postfix <tt>&quot;_S&quot;</tt>, <tt>&quot;_U&quot;</tt>, <tt>&quot;_L&quot;</tt>, <tt>&quot;_F&quot;</tt>, and <tt>&quot;_D&quot;</tt>. Any module using this must ensure that <tt>&quot;PDL::Ufunc&quot;</tt> is loaded.</dd>
+<dt><font SIZE="-1">PDL-</font>&gt;qsort_ind_B( PDL_Byte *xx, int *ix, int a, int b )</dt>
+<dd>As for <tt>&quot;PDL-&gt;qsort_B&quot;</tt>, but this time sorting the indices rather than the data.</dd></dl>
 <p> The routine <tt>&quot;med2d&quot;</tt> in <i>Lib/Image2D/image2d.pd</i> shows how such routines are used.</p>
 <h2>Makefiles For Pp Files</h2>
 <p>If you are going to generate a package from your <font SIZE="-1">PP</font> file (typical file extensions are <tt>&quot;.pd&quot;</tt> or <tt>&quot;.pp&quot;</tt> for the files containing <font SIZE="-1">PP</font> code) it is easiest and safest to leave generation of the appropriate commands to the Makefile. In the following we will outline the typical format of a Perl Makefile to automatically build and install your package from a description in a <font SIZE="-1">PP</font> file. Most of the rules to build the xs, pm and other required files from the <font SIZE="-1">PP</font> file are already predefined in the PDL::Core::Dev package. We just have to tell MakeMaker to use it. </p>
@@ -768,18 +768,18 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
 <h2>Appendix A: Some keys recognised by PDL::PP</h2>
 <p>Unless otherwise specified, the arguments are strings. Keys marked with (bad) are only used if bad-value support is compiled into <font SIZE="-1">PDL.</font></p>
 <dl>
-<dt>Pars</p>
-<dd>define the signature of your function</p>
-<dt>OtherPars</p>
-<dd>arguments which are not pdls. Default: nothing. This is a semi-colon separated list of arguments, e.g., <tt>&quot;OtherPars=&gt;'int k; double value; char* fd'&quot;</tt>. See <tt>$COMP(x)</tt> and also the same entry in Appendix B.</p>
-<dt>Code</p>
-<dd>the actual code that implements the functionality; several <font SIZE="-1">PP</font> macros and <font SIZE="-1">PP</font> functions are recognised in the string value</p>
-<dt>HandleBad (bad)</p>
-<dd>If set to 1, the routine is assumed to support bad values and the code in the BadCode key is used if bad values are present; it also sets things up so that the <tt>&quot;$ISBAD()&quot;</tt> etc macros can be used. If set to 0, cause the routine to print a warning if any of the input piddles have their bad flag set.</p>
-<dt>BadCode (bad)</p>
-<dd>Give the code to be used if bad values may be present in the input piddles. Only used if <tt>&quot;HandleBad =&gt; 1&quot;</tt>.</p>
-<dt>GenericTypes</p>
-<dd>An array reference. The array may contain any subset of the one-character strings `B&#8217;, `S&#8217;, `U&#8217;, `L&#8217;, `Q&#8217;, `F&#8217; and `D&#8217;, which specify which types your operation will accept. The meaning of each type is: </p>
+<dt>Pars</dt>
+<dd>define the signature of your function</dd>
+<dt>OtherPars</dt>
+<dd>arguments which are not pdls. Default: nothing. This is a semi-colon separated list of arguments, e.g., <tt>&quot;OtherPars=&gt;'int k; double value; char* fd'&quot;</tt>. See <tt>$COMP(x)</tt> and also the same entry in Appendix B.</dd>
+<dt>Code</dt>
+<dd>the actual code that implements the functionality; several <font SIZE="-1">PP</font> macros and <font SIZE="-1">PP</font> functions are recognised in the string value</dd>
+<dt>HandleBad (bad)</dt>
+<dd>If set to 1, the routine is assumed to support bad values and the code in the BadCode key is used if bad values are present; it also sets things up so that the <tt>&quot;$ISBAD()&quot;</tt> etc macros can be used. If set to 0, cause the routine to print a warning if any of the input piddles have their bad flag set.</dd>
+<dt>BadCode (bad)</dt>
+<dd>Give the code to be used if bad values may be present in the input piddles. Only used if <tt>&quot;HandleBad =&gt; 1&quot;</tt>.</dd>
+<dt>GenericTypes</dt>
+<dd>An array reference. The array may contain any subset of the one-character strings `B&#8217;, `S&#8217;, `U&#8217;, `L&#8217;, `Q&#8217;, `F&#8217; and `D&#8217;, which specify which types your operation will accept. The meaning of each type is: </dd>
 <pre> B - signed byte (i.e. signed char)
  S - signed short (two-byte integer)
  U - unsigned short
@@ -788,26 +788,26 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
  F - float
  D - double</pre>
 <p>This is very useful (and important!) when interfacing an external library. Default: [qw/B S U L Q F D/]</p>
-<dt>Inplace</p>
-<dd>Mark a function as being able to work inplace. </p>
+<dt>Inplace</dt>
+<dd>Mark a function as being able to work inplace. </dd>
 <pre> Inplace =&gt; 1 if Pars =&gt; 'a(); [o]b();'
  Inplace =&gt; ['a'] if Pars =&gt; 'a(); b(); [o]c();'
  Inplace =&gt; ['a','b'] if Pars =&gt; 'a(); b(); [o]c(); [o]d();'</pre>
 <p>If bad values are being used, care must be taken to ensure the propagation of the badflag when inplace is being used; for instance see the code for <tt>&quot;replacebad&quot;</tt> in <i>Basic/Bad/bad.pd</i>.</p>
-<dt>Doc</p>
-<dd>Used to specify a documentation string in Pod format. See PDL::Doc for information on <font SIZE="-1">PDL</font> documentation conventions. Note: in the special case where the <font SIZE="-1">PP </font>&#8216;Doc&#8217; string is one line this is implicitly used for the quick reference <font SIZE="-1">AND</font> the documentation! </p>
+<dt>Doc</dt>
+<dd>Used to specify a documentation string in Pod format. See PDL::Doc for information on <font SIZE="-1">PDL</font> documentation conventions. Note: in the special case where the <font SIZE="-1">PP </font>&#8216;Doc&#8217; string is one line this is implicitly used for the quick reference <font SIZE="-1">AND</font> the documentation! </dd>
 <p> If the Doc field is omitted <font SIZE="-1">PP</font> will generate default documentation (after all it knows about the Signature). </p>
 <p> If you really want the function <font SIZE="-1">NOT</font> to be documented in any way at this point (e.g. for an internal routine, or because you are doing it elsewhere in the code) explicitly specify <tt>&quot;Doc=&gt;undef&quot;</tt>.</p>
-<dt>BadDoc (bad)</p>
-<dd>Contains the text returned by the <tt>&quot;badinfo&quot;</tt> command (in <tt>&quot;perldl&quot;</tt>) or the <tt>&quot;-b&quot;</tt> switch to the <tt>&quot;pdldoc&quot;</tt> shell script. In many cases, you will not need to specify this, since the information can be automatically created by <font SIZE="-1">PDL::PP.</font> However, as befits computer-generated text, it&#8217;s rather stilted; it may be much better to do it yourself!</p>
-<dt>NoPthread</p>
-<dd>Optional flag to indicate the <font SIZE="-1">PDL</font> function should <code>not</code> use processor threads (i.e. pthreads or <font SIZE="-1">POSIX</font> threads) to split up work across mutliple <font SIZE="-1">CPU</font> cores. This option is typically set to 1 if the underlying <font SIZE="-1">PDL</font> function is not threadsafe. If this option isn&#8217;t present, then the function is assumed to be threadsafe. This option only applies if <font SIZE="-1">PDL</font> has been compiled with <font SIZE="-1">POSIX</font> threads enabled.</p>
-<dt>PMCode</p>
-<dd><font SIZE="-1">PDL</font> functions allow you to pass in a piddle into which you want the output saved. This is handy because you can allocate an output piddle once and reuse it many times; the alternative would be for <font SIZE="-1">PDL</font> to create a new piddle each time, which may waste compute cycles or, more likely, <font SIZE="-1">RAM.</font> This added flexibility comes at the cost of more complexity: <font SIZE="-1">PDL::PP</font> has to write functions that are smart enough to count the arguments passed to it and create new piddles on the fly, but only if you want them. </p>
+<dt>BadDoc (bad)</dt>
+<dd>Contains the text returned by the <tt>&quot;badinfo&quot;</tt> command (in <tt>&quot;perldl&quot;</tt>) or the <tt>&quot;-b&quot;</tt> switch to the <tt>&quot;pdldoc&quot;</tt> shell script. In many cases, you will not need to specify this, since the information can be automatically created by <font SIZE="-1">PDL::PP.</font> However, as befits computer-generated text, it&#8217;s rather stilted; it may be much better to do it yourself!</dd>
+<dt>NoPthread</dt>
+<dd>Optional flag to indicate the <font SIZE="-1">PDL</font> function should <code>not</code> use processor threads (i.e. pthreads or <font SIZE="-1">POSIX</font> threads) to split up work across mutliple <font SIZE="-1">CPU</font> cores. This option is typically set to 1 if the underlying <font SIZE="-1">PDL</font> function is not threadsafe. If this option isn&#8217;t present, then the function is assumed to be threadsafe. This option only applies if <font SIZE="-1">PDL</font> has been compiled with <font SIZE="-1">POSIX</font> threads enabled.</dd>
+<dt>PMCode</dt>
+<dd><font SIZE="-1">PDL</font> functions allow you to pass in a piddle into which you want the output saved. This is handy because you can allocate an output piddle once and reuse it many times; the alternative would be for <font SIZE="-1">PDL</font> to create a new piddle each time, which may waste compute cycles or, more likely, <font SIZE="-1">RAM.</font> This added flexibility comes at the cost of more complexity: <font SIZE="-1">PDL::PP</font> has to write functions that are smart enough to count the arguments passed to it and create new piddles on the fly, but only if you want them. </dd>
 <p> <font SIZE="-1">PDL::PP</font> is smart enough to do that, but there are restrictions on argument order and the like. If you want a more flexible function, you can write your own Perl-side wrapper and specify it in the PMCode key. The string that you supply must (should) define a Perl function with a name that matches what you gave to pp_def in the first place. When you wish to eventually invoke the PP-generated function, you will need to supply all piddles in the exact order specified in the signature: output piddles are not optional, and the PP-generated function will not return anything. The obfuscated name that you will call is _&lt;funcname&gt;_int. </p>
 <p> I believe this documentation needs further clarification, but this will have to do. :-(</p>
-<dt>PMFunc</p>
-<dd>When pp_def generates functions, it typically defines them in the <font SIZE="-1">PDL</font> package. Then, in the .pm file that it generates for your module, it typically adds a line that essentially copies that function into your current package&#8217;s symbol table with code that looks like this: </p>
+<dt>PMFunc</dt>
+<dd>When pp_def generates functions, it typically defines them in the <font SIZE="-1">PDL</font> package. Then, in the .pm file that it generates for your module, it typically adds a line that essentially copies that function into your current package&#8217;s symbol table with code that looks like this: </dd>
 <pre> *func_name = \&amp;PDL::func_name;</pre>
 <p>It&#8217;s a little bit smarter than that (it knows when to wrap that sort of thing in a <font SIZE="-1">BEGIN</font> block, for example, and if you specified something different for pp_bless), but that&#8217;s the gist of it. If you don&#8217;t care to import the function into your current package&#8217;s symbol table, you can specify </p>
 <pre> PMFunc =&gt; '',</pre>
@@ -816,98 +816,94 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
 <h3>Macros</h3>
 <p>Macros labeled by (bad) are only used if bad-value support is compiled into <font SIZE="-1">PDL.</font></p>
 <dl>
-<dt>$<i>variablename_from_sig</i>()</p>
-<dd>access a pdl (by its name) that was specified in the signature</p>
-<dt>$COMP(x)</p>
-<dd>access a value in the private data structure of this transformation (mainly used to use an argument that is specified in the <tt>&quot;OtherPars&quot;</tt> section)</p>
-<dt>$SIZE(n)</p>
-<dd>replaced at runtime by the actual size of a <i>named</i> dimension (as specified in the <i>signature</i>)</p>
-<dt>$<i>GENERIC()</i></p>
-<dd>replaced by the C type that is equal to the runtime type of the operation</p>
-<dt>$P(a)</p>
-<dd>a pointer access to the <font SIZE="-1">PDL</font> named <tt>&quot;a&quot;</tt> in the signature. Useful for interfacing to C functions</p>
-<dt>$PP(a)</p>
-<dd>a physical pointer access to pdl <tt>&quot;a&quot;</tt>; mainly for internal use</p>
-<dt>$TXXX(Alternative,Alternative)</p>
-<dd>expansion alternatives according to runtime type of operation, where <font SIZE="-1">XXX</font> is some string that is matched by <tt>&quot;/[BSULFD+]/&quot;</tt>.</p>
-<dt>$PDL(a)</p>
-<dd>return a pointer to the pdl data structure (pdl *) of piddle <tt>&quot;a&quot;</tt></p>
-<dt>$ISBAD(a()) (bad)</p>
-<dd>returns true if the value stored in <tt>&quot;a()&quot;</tt> equals the bad value for this piddle. Requires <tt>&quot;HandleBad&quot;</tt> being set to 1.</p>
-<dt>$ISGOOD(a()) (bad)</p>
-<dd>returns true if the value stored in <tt>&quot;a()&quot;</tt> does not equal the bad value for this piddle. Requires <tt>&quot;HandleBad&quot;</tt> being set to 1.</p>
-<dt>$SETBAD(a()) (bad)</p>
-<dd>Sets <tt>&quot;a()&quot;</tt> to equal the bad value for this piddle. Requires <tt>&quot;HandleBad&quot;</tt> being set to 1.</dl>
+<dt>$<i>variablename_from_sig</i>()</dt>
+<dd>access a pdl (by its name) that was specified in the signature</dd>
+<dt>$COMP(x)</dt>
+<dd>access a value in the private data structure of this transformation (mainly used to use an argument that is specified in the <tt>&quot;OtherPars&quot;</tt> section)</dd>
+<dt>$SIZE(n)</dt>
+<dd>replaced at runtime by the actual size of a <i>named</i> dimension (as specified in the <i>signature</i>)</dd>
+<dt>$<i>GENERIC()</i></dt>
+<dd>replaced by the C type that is equal to the runtime type of the operation</dd>
+<dt>$P(a)</dt>
+<dd>a pointer access to the <font SIZE="-1">PDL</font> named <tt>&quot;a&quot;</tt> in the signature. Useful for interfacing to C functions</dd>
+<dt>$PP(a)</dt>
+<dd>a physical pointer access to pdl <tt>&quot;a&quot;</tt>; mainly for internal use</dd>
+<dt>$TXXX(Alternative,Alternative)</dt>
+<dd>expansion alternatives according to runtime type of operation, where <font SIZE="-1">XXX</font> is some string that is matched by <tt>&quot;/[BSULFD+]/&quot;</tt>.</dd>
+<dt>$PDL(a)</dt>
+<dd>return a pointer to the pdl data structure (pdl *) of piddle <tt>&quot;a&quot;</tt></dd>
+<dt>$ISBAD(a()) (bad)</dt>
+<dd>returns true if the value stored in <tt>&quot;a()&quot;</tt> equals the bad value for this piddle. Requires <tt>&quot;HandleBad&quot;</tt> being set to 1.</dd>
+<dt>$ISGOOD(a()) (bad)</dt>
+<dd>returns true if the value stored in <tt>&quot;a()&quot;</tt> does not equal the bad value for this piddle. Requires <tt>&quot;HandleBad&quot;</tt> being set to 1.</dd>
+<dt>$SETBAD(a()) (bad)</dt>
+<dd>Sets <tt>&quot;a()&quot;</tt> to equal the bad value for this piddle. Requires <tt>&quot;HandleBad&quot;</tt> being set to 1.</dd></dl>
 <h3>functions</h3>
 <dl>
-<dt>&quot;loop(DIMS) %{ &#8230; %}&quot;</p>
-<dd>loop over named dimensions; limits are generated automatically by <font SIZE="-1">PP</font></p>
-<dt>&quot;threadloop %{ &#8230; %}&quot;</p>
-<dd>enclose following code in a thread loop</p>
-<dt>&quot;types(TYPES) %{ &#8230; %}&quot;</p>
-<dd>execute following code if type of operation is any of <tt>&quot;TYPES&quot;</tt></dl>
+<dt>&quot;loop(DIMS) %{ &#8230; %}&quot;</dt>
+<dd>loop over named dimensions; limits are generated automatically by <font SIZE="-1">PP</font></dd>
+<dt>&quot;threadloop %{ &#8230; %}&quot;</dt>
+<dd>enclose following code in a thread loop</dd>
+<dt>&quot;types(TYPES) %{ &#8230; %}&quot;</dt>
+<dd>execute following code if type of operation is any of <tt>&quot;TYPES&quot;</tt></dd></dl>
 <h2>Appendix C: Functions imported by PDL::PP</h2>
 <p>A number of functions are imported when you <tt>&quot;use PDL::PP&quot;</tt>. These include functions that control the generated C or <font SIZE="-1">XS</font> code, functions that control the generated Perl code, and functions that manipulate the packages and symbol tables into which the code is created.</p>
 <h3>Generating C and <font SIZE="-1">XS</font> Code</h3>
 <p><font SIZE="-1">PDL::PP</font>&#8216;s main purpose is to make it easy for you to wrap the threading engine around your own C code, but you can do some other things, too.</p>
 <dl>
-<dt>pp_def</p>
-<dd>Used to wrap the threading engine around your C code. Virtually all of this document discusses the use of pp_def.</p>
-<dt>pp_done</p>
-<dd>Indicates you are done with <font SIZE="-1">PDL::PP</font> and that it should generate its .xs and .pm files based upon the other pp_* functions that you have called. This function takes no arguments.</p>
-<dt>pp_addxs</p>
-<dd>This lets you add <font SIZE="-1">XS</font> code to your .xs file. This is useful if you want to create Perl-accessible functions that invoke C code but cannot or should not invoke the threading engine. <font SIZE="-1">XS</font> is the standard means by which you wrap Perl-accessible C code. You can learn more at perlxs.</p>
-<dt>pp_add_boot</p>
-<dd>This function adds whatever string you pass to the <font SIZE="-1">XS BOOT</font> section. The <font SIZE="-1">BOOT</font> section is C code that gets called by Perl when your module is loaded and is useful for automatic initialization. You can learn more about <font SIZE="-1">XS</font> and the <font SIZE="-1">BOOT</font> section at perlxs.</p>
-<dt>pp_addhdr</p>
-<dd>Adds pure-C code to your <font SIZE="-1">XS</font> file. <font SIZE="-1">XS</font> files are structured such that pure C code must come before <font SIZE="-1">XS</font> specifications. This allows you to specify such C code.</p>
-<dt>pp_boundscheck</p>
-<dd><font SIZE="-1">PDL</font> normally checks the bounds of your accesses before making them. You can turn that on or off at runtime by setting MyPackage::set_boundscheck. This function allows you to remove that runtime flexibility and <code>never</code> do bounds checking. It also returns the current boundschecking status if called without any argumens. </p>
+<dt>pp_def</dt>
+<dd>Used to wrap the threading engine around your C code. Virtually all of this document discusses the use of pp_def.</dd>
+<dt>pp_done</dt>
+<dd>Indicates you are done with <font SIZE="-1">PDL::PP</font> and that it should generate its .xs and .pm files based upon the other pp_* functions that you have called. This function takes no arguments.</dd>
+<dt>pp_addxs</dt>
+<dd>This lets you add <font SIZE="-1">XS</font> code to your .xs file. This is useful if you want to create Perl-accessible functions that invoke C code but cannot or should not invoke the threading engine. <font SIZE="-1">XS</font> is the standard means by which you wrap Perl-accessible C code. You can learn more at perlxs.</dd>
+<dt>pp_add_boot</dt>
+<dd>This function adds whatever string you pass to the <font SIZE="-1">XS BOOT</font> section. The <font SIZE="-1">BOOT</font> section is C code that gets called by Perl when your module is loaded and is useful for automatic initialization. You can learn more about <font SIZE="-1">XS</font> and the <font SIZE="-1">BOOT</font> section at perlxs.</dd>
+<dt>pp_addhdr</dt>
+<dd>Adds pure-C code to your <font SIZE="-1">XS</font> file. <font SIZE="-1">XS</font> files are structured such that pure C code must come before <font SIZE="-1">XS</font> specifications. This allows you to specify such C code.</dd>
+<dt>pp_boundscheck</dt>
+<dd><font SIZE="-1">PDL</font> normally checks the bounds of your accesses before making them. You can turn that on or off at runtime by setting MyPackage::set_boundscheck. This function allows you to remove that runtime flexibility and <code>never</code> do bounds checking. It also returns the current boundschecking status if called without any argumens. </dd>
 <p> <font SIZE="-1">NOTE: I</font> have not found anything about bounds checking in other documentation. That needs to be addressed.</dl>
 <h3>Generating Perl Code</h3>
 <p>Many functions imported when you use <font SIZE="-1">PDL::PP</font> allow you to modify the contents of the generated .pm file. In addition to pp_def and pp_done, the role of these functions is primarily to add code to various parts of your generated .pm file.</p>
 <dl>
-<dt>pp_addpm</p>
-<dd>Adds Perl code to the generated .pm file. <font SIZE="-1">PDL::PP</font> actually keeps track of three different sections of generated code: the Top, the Middle, and the Bottom. You can add Perl code to the Middle section using the one-argument form, where the argument is the Perl code you want to supply. In the two-argument form, the first argument is an anonymous hash with only one key that specifies where to put the second argument, which is the string that you want to add to the .pm file. The hash is one of these three: </p>
+<dt>pp_addpm</dt>
+<dd>Adds Perl code to the generated .pm file. <font SIZE="-1">PDL::PP</font> actually keeps track of three different sections of generated code: the Top, the Middle, and the Bottom. You can add Perl code to the Middle section using the one-argument form, where the argument is the Perl code you want to supply. In the two-argument form, the first argument is an anonymous hash with only one key that specifies where to put the second argument, which is the string that you want to add to the .pm file. The hash is one of these three: </dd>
 <pre> {At =&gt; 'Top'}
  {At =&gt; 'Middle'}
  {At =&gt; 'Bot'}</pre>
 <p>For example: </p>
 <pre> pp_addpm({At =&gt; 'Bot'}, &lt;&lt;POD);
- 
  =head1 Some documentation
- 
  I know I'm typing this in the middle of my file, but it'll go at
  the bottom.
- 
  =cut
- 
  POD</pre>
 <p>Warning: If, in the middle of your .pd file, you put documentation meant for the bottom of your pod, you will thoroughly confuse <font SIZE="-1">CPAN.</font> On the other hand, if in the middle of your .pd fil, you add some Perl code destined for the bottom or top of your .pm file, you only have yourself to confuse. :-)</p>
-<dt>pp_beginwrap</p>
-<dd>Adds BEGIN-block wrapping. Certain declarations can be wrapped in <font SIZE="-1">BEGIN</font> blocks, though the default behavior is to have no such wrapping.</p>
-<dt>pp_addbegin</p>
-<dd>Sets code to be added to the top of your .pm file, even above code that you specify with <tt>&quot;pp_addpm({At =&gt; 'Top'}, ...)&quot;</tt>. Unlike pp_addpm, calling this overwrites whatever was there before. Generally, you probably shouldn&#8217;t use it.</dl>
+<dt>pp_beginwrap</dt>
+<dd>Adds BEGIN-block wrapping. Certain declarations can be wrapped in <font SIZE="-1">BEGIN</font> blocks, though the default behavior is to have no such wrapping.</dd>
+<dt>pp_addbegin</dt>
+<dd>Sets code to be added to the top of your .pm file, even above code that you specify with <tt>&quot;pp_addpm({At =&gt; 'Top'}, ...)&quot;</tt>. Unlike pp_addpm, calling this overwrites whatever was there before. Generally, you probably shouldn&#8217;t use it.</dd></dl>
 <h3>Tracking Line Numbers</h3>
 <p>When you get compile errors, either from your C-like code or your Perl code, it can help to make those errors back to the line numbers in the source file at which the error occurred.</p>
 <dl>
-<dt>pp_line_numbers</p>
-<dd>Takes a line number and a (usually long) string of code. The line number should indicate the line at which the quote begins. This is usually Perl&#8217;s <tt>&quot;__LINE__&quot;</tt> literal, unless you are using heredocs, in which case it is <tt>&quot;__LINE__ + 1&quot;</tt>. The returned string has #line directives interspersed to help the compiler report errors on the proper line.</dl>
+<dt>pp_line_numbers</dt>
+<dd>Takes a line number and a (usually long) string of code. The line number should indicate the line at which the quote begins. This is usually Perl&#8217;s <tt>&quot;__LINE__&quot;</tt> literal, unless you are using heredocs, in which case it is <tt>&quot;__LINE__ + 1&quot;</tt>. The returned string has #line directives interspersed to help the compiler report errors on the proper line.</dd></dl>
 <h3>Modifying the Symbol Table and Export Behavior</h3>
 <p><font SIZE="-1">PDL::PP</font> usually exports all functions generated using pp_def, and usually installs them into the <font SIZE="-1">PDL</font> symbol table. However, you can modify this behavior with these functions.</p>
 <dl>
-<dt>pp_bless</p>
-<dd>Sets the package (symbol table) to which the <font SIZE="-1">XS</font> code is added. The default is <font SIZE="-1">PDL,</font> which is generally what you want. If you use the default blessing and you create a function myfunc, then you can do the following: </p>
+<dt>pp_bless</dt>
+<dd>Sets the package (symbol table) to which the <font SIZE="-1">XS</font> code is added. The default is <font SIZE="-1">PDL,</font> which is generally what you want. If you use the default blessing and you create a function myfunc, then you can do the following: </dd>
 <pre> $piddle-&gt;myfunc(&lt;args&gt;);
  PDL::myfunc($piddle, &lt;args&gt;);</pre>
 <p>On the other hand, if you bless your functions into another package, you cannot invoke them as <font SIZE="-1">PDL</font> methods, and must invoke them as: </p>
 <pre> MyPackage::myfunc($piddle, &lt;args&gt;);</pre>
 <p>Of course, you could always use the PMFunc key to add your function to the <font SIZE="-1">PDL</font> symbol table, but why do that?</p>
-<dt>pp_add_isa</p>
-<dd>Adds to the list of modules from which your <code>module</code> inherits. The default list is </p>
+<dt>pp_add_isa</dt>
+<dd>Adds to the list of modules from which your <code>module</code> inherits. The default list is </dd>
 <pre> qw(PDL::Exporter DynaLoader)</pre>
-<dt>pp_core_importlist</p>
-<dd>At the top of your generated .pm file is a line that looks like this: </p>
+<dt>pp_core_importlist</dt>
+<dd>At the top of your generated .pm file is a line that looks like this: </dd>
 <pre> use PDL::Core;</pre>
 <p>You can modify that by specifying a string to pp_core_importlist. For example, </p>
 <pre> pp_core_importlist('::Blarg');</pre>
@@ -917,12 +913,12 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
 <pre> pp_core_importlist(&quot; ':Internal'&quot;);</pre>
 <p>will lead to the following use statement: </p>
 <pre> use PDL::Core ':Internal';</pre>
-<dt>pp_setversion</p>
-<dd>Sets your module&#8217;s version. The version must be consistent between the .xs and the .pm file, and is used to ensure that your Perl&#8217;s libraries do not suffer from version skew.</p>
-<dt>pp_add_exported</p>
-<dd>Adds to the export list whatever names you give it. Functions created using pp_def are automatically added to the list. This function is useful if you define any Perl functions using pp_addpm or pp_addxs that you want exported as well.</p>
-<dt>pp_export_nothing</p>
-<dd>This resets the list of exported symbols to nothing. This is probably better called <tt>&quot;pp_export_clear&quot;</tt>, since you can add exported symbols after calling <tt>&quot;pp_export_nothing&quot;</tt>. When called just before calling pp_done, this ensures that your module does not export anything, for example, if you only want programmers to use your functions as methods.</dl>
+<dt>pp_setversion</dt>
+<dd>Sets your module&#8217;s version. The version must be consistent between the .xs and the .pm file, and is used to ensure that your Perl&#8217;s libraries do not suffer from version skew.</dd>
+<dt>pp_add_exported</dt>
+<dd>Adds to the export list whatever names you give it. Functions created using pp_def are automatically added to the list. This function is useful if you define any Perl functions using pp_addpm or pp_addxs that you want exported as well.</dd>
+<dt>pp_export_nothing</dt>
+<dd>This resets the list of exported symbols to nothing. This is probably better called <tt>&quot;pp_export_clear&quot;</tt>, since you can add exported symbols after calling <tt>&quot;pp_export_nothing&quot;</tt>. When called just before calling pp_done, this ensures that your module does not export anything, for example, if you only want programmers to use your functions as methods.</dd></dl>
 <h2>See Also</h2>
 <p><i></i><font SIZE="-1"><i>PDL</i></font><i></i> </p>
 <p> For the concepts of threading and slicing check PDL::Indexing. </p>
@@ -938,6 +934,6 @@ description: "PDL::PP – Generate PDL routines from concise descriptions"
 <h2>Pod Errors</h2>
 <p>Hey! <code>The above document had some coding errors, which are explained below:</code></p>
 <dl>
-<dt>Around line 350:</p>
-<dd>Non-ASCII character seen before =encoding in &#8216;XrmpX&#8217;. Assuming <font SIZE="-1">UTF-8</font> </p>
+<dt>Around line 350:</dt>
+<dd>Non-ASCII character seen before =encoding in &#8216;XrmpX&#8217;. Assuming <font SIZE="-1">UTF-8</font> </dd>
 </dl>

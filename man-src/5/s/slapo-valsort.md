@@ -15,8 +15,8 @@ description: "slapo-valsort – Value Sorting overlay to slapd"
 <h2>Configuration</h2>
 <p>These <i>slapd.conf</i> options apply to the Value Sorting overlay. They should appear after the <code>overlay</code> directive.</p>
 <dl>
-<dt>valsort-attr &lt;<i>attribute</i>&gt; &lt;<i>baseDN</i>&gt; (&lt;<i>sort-method</i>&gt; | weighted [&lt;<i>sort-method</i>&gt;])</p>
-<dd>Configure a sorting method for the specified <i>attribute</i> in the subtree rooted at <i>baseDN</i>. The <i>sort-method</i> may be one of <code>alpha-ascend</code>, <code>alpha-descend</code>, <code>numeric-ascend</code>, or <code>numeric-descend</code>. If the special <code>weighted</code> method is specified, a secondary <i>sort-method</i> may also be specified. It is an error to specify an alphanumeric <i>sort-method</i> for an attribute with Integer or NumericString syntax, and it is an error to specify a numeric <i>sort-method</i> for an attribute with a syntax other than Integer or NumericString.</dl>
+<dt>valsort-attr &lt;<i>attribute</i>&gt; &lt;<i>baseDN</i>&gt; (&lt;<i>sort-method</i>&gt; | weighted [&lt;<i>sort-method</i>&gt;])</dt>
+<dd>Configure a sorting method for the specified <i>attribute</i> in the subtree rooted at <i>baseDN</i>. The <i>sort-method</i> may be one of <code>alpha-ascend</code>, <code>alpha-descend</code>, <code>numeric-ascend</code>, or <code>numeric-descend</code>. If the special <code>weighted</code> method is specified, a secondary <i>sort-method</i> may also be specified. It is an error to specify an alphanumeric <i>sort-method</i> for an attribute with Integer or NumericString syntax, and it is an error to specify a numeric <i>sort-method</i> for an attribute with a syntax other than Integer or NumericString.</dd></dl>
 <h2>Examples</h2>
 <pre> database bdb
  suffix dc=example,dc=com
@@ -29,8 +29,8 @@ description: "slapo-valsort – Value Sorting overlay to slapd"
 <pre> ldapsearch -E 1.3.6.1.4.1.4203.666.5.14=::MAMBAf8=</pre>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/openldap/slapd.conf</i></p>
-<dd>default <code>slapd</code> configuration file</dl>
+<dt><i>/etc/openldap/slapd.conf</i></dt>
+<dd>default <code>slapd</code> configuration file</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5), <code><a href="/docs/linux/man/5-slapd-config/">slapd-config</a></code>(5).</p>
 <h2>Acknowledgements</h2>

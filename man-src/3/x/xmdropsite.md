@@ -381,69 +381,69 @@ description: "XmDropSite — The DropSite Registry"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNanimationMask</code></p>
-<dd>Specifies a mask to use with the pixmap specified by <code>XmNanimationPixmap</code> when the animation style is <code>XmDRAG_UNDER_PIXMAP</code>.</p>
-<dt><code>XmNanimationPixmap</code></p>
-<dd>Specifies a pixmap for drag-under animation when the animation style is <code>XmDRAG_UNDER_PIXMAP</code>. The pixmap is drawn with its origin at the upper left corner of the bounding box of the drop site. If the drop site window is larger than the animation pixmap, the portion of the window not covered by the pixmap will be tiled with the window&#8217;s background color.</p>
-<dt><code>XmNanimationPixmapDepth</code></p>
-<dd>Specifies the depth of the pixmap specified by the <code>XmNanimationPixmap</code> resource. When the depth is 1, the colors are taken from the foreground and background of the drop site widget. For any other value, drop site animation occurs only if the <code>XmNanimationPixmapDepth</code> matches the depth of the drop site window. Colors are derived from the current colormap.</p>
-<dt><code>XmNanimationStyle</code></p>
-<dd>Specifies the drag-under animation style used when a drag enters a valid drop site. The possible values are</p>
+<dt><code>XmNanimationMask</code></dt>
+<dd>Specifies a mask to use with the pixmap specified by <code>XmNanimationPixmap</code> when the animation style is <code>XmDRAG_UNDER_PIXMAP</code>.</dd>
+<dt><code>XmNanimationPixmap</code></dt>
+<dd>Specifies a pixmap for drag-under animation when the animation style is <code>XmDRAG_UNDER_PIXMAP</code>. The pixmap is drawn with its origin at the upper left corner of the bounding box of the drop site. If the drop site window is larger than the animation pixmap, the portion of the window not covered by the pixmap will be tiled with the window&#8217;s background color.</dd>
+<dt><code>XmNanimationPixmapDepth</code></dt>
+<dd>Specifies the depth of the pixmap specified by the <code>XmNanimationPixmap</code> resource. When the depth is 1, the colors are taken from the foreground and background of the drop site widget. For any other value, drop site animation occurs only if the <code>XmNanimationPixmapDepth</code> matches the depth of the drop site window. Colors are derived from the current colormap.</dd>
+<dt><code>XmNanimationStyle</code></dt>
+<dd>Specifies the drag-under animation style used when a drag enters a valid drop site. The possible values are</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmDRAG_UNDER_HIGHLIGHT</code></p>
-<dd>The drop site uses highlighting effects.</p>
-<dt><code>XmDRAG_UNDER_SHADOW_OUT</code></p>
-<dd>The drop site uses an outset shadow.</p>
-<dt><code>XmDRAG_UNDER_SHADOW_IN</code></p>
-<dd>The drop site uses an inset shadow.</p>
-<dt><code>XmDRAG_UNDER_PIXMAP</code></p>
-<dd>The drop site uses the pixmap specified by <code>XmNanimationPixmap</code> to indicate that it can receive the drop.</p>
-<dt><code>XmDRAG_UNDER_NONE</code></p>
-<dd>The drop site does not use animation effects. A client using a dynamic protocol, may provide drag-under effects in its <code>XmNdragProc</code> routine.</dl>
+</dd><dl COMPACT>
+<dt><code>XmDRAG_UNDER_HIGHLIGHT</code></dt>
+<dd>The drop site uses highlighting effects.</dd>
+<dt><code>XmDRAG_UNDER_SHADOW_OUT</code></dt>
+<dd>The drop site uses an outset shadow.</dd>
+<dt><code>XmDRAG_UNDER_SHADOW_IN</code></dt>
+<dd>The drop site uses an inset shadow.</dd>
+<dt><code>XmDRAG_UNDER_PIXMAP</code></dt>
+<dd>The drop site uses the pixmap specified by <code>XmNanimationPixmap</code> to indicate that it can receive the drop.</dd>
+<dt><code>XmDRAG_UNDER_NONE</code></dt>
+<dd>The drop site does not use animation effects. A client using a dynamic protocol, may provide drag-under effects in its <code>XmNdragProc</code> routine.</dd></dl>
 </dl>
-<dt><code>XmNdragProc</code></p>
-<dd>Specifies the procedure that is invoked when the drop site receives a crossing, motion, or operation changed message. This procedure is called only when a dynamic protocol is used. The type of structure whose address is passed to this procedure is <code>XmDragProcCallbackStruct</code>. The reason sent to the procedure is one of the following:</p>
+<dt><code>XmNdragProc</code></dt>
+<dd>Specifies the procedure that is invoked when the drop site receives a crossing, motion, or operation changed message. This procedure is called only when a dynamic protocol is used. The type of structure whose address is passed to this procedure is <code>XmDragProcCallbackStruct</code>. The reason sent to the procedure is one of the following:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd><code>XmCR_DROP_SITE_ENTER_MESSAGE</code></p>
-<dt> &bull;</p>
-<dd><code>XmCR_DROP_SITE_LEAVE_MESSAGE</code></p>
-<dt> &bull;</p>
-<dd><code>XmCR_DRAG_MOTION</code></p>
-<dt> &bull;</p>
-<dd><code>XmCR_OPERATION_CHANGED</code></dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd><code>XmCR_DROP_SITE_ENTER_MESSAGE</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmCR_DROP_SITE_LEAVE_MESSAGE</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmCR_DRAG_MOTION</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmCR_OPERATION_CHANGED</code></dd></dl>
 </dl>
-<dd>The drag procedure may change the values of some members of the <code>XmDragProcCallbackStruct</code> passed to it. After the drag procedure returns, the toolkit uses the final values in initializing some members of the callback structure passed to the appropriate callbacks of the initiator (the DragContext&#8217;s <code>XmNdropSiteEnterCallback</code>, <code>XmNdropSiteLeaveCallback</code>, <code>XmNdragMotionCallback</code>, or <code>XmNoperationChangedCallback</code> callbacks).</p>
-<dt><code>XmNdropProc</code></p>
-<dd>Specifies the procedure that is invoked when a drop (excluding a cancel or interrupt action) occurs on a drop site regardless of the status of the drop site. The type of the structure whose address is passed to this procedure is <code>XmDropProcCallbackStruct</code>. The reason sent to the procedure is <code>XmCR_DROP_MESSAGE</code>.</p>
-<dd>The drop procedure may change the values of some members of the <code>XmDropProcCallbackStruct</code> passed to it. After the drop procedure returns, the toolkit uses the final values in initializing some members of the <code>XmDropStartCallbackStruct</code> passed to the initiator&#8217;s drop start callbacks (the DragContext&#8217;s <code>XmNdropStartCallback</code> callbacks).</p>
-<dt><code>XmNdropRectangles</code></p>
-<dd>Specifies a list of rectangles that describe the shape of a drop site. The locations of the rectangles are relative to the origin of the enclosing object. When <code>XmNdropRectangles</code> is NULL, the drop site is assumed to be the sensitive area of the enclosing widget. If <code>XmNdropSiteType</code> is <code>XmDROP_SITE_COMPOSITE</code>, this resource cannot be specified by the application.</p>
-<dd>Retrieving this resource returns allocated memory that needs to be freed with the <code>XtFree</code> function.</p>
-<dt><code>XmNdropSiteActivity</code></p>
-<dd>Indicates whether a drop site is active or inactive. The values are <code>XmDROP_SITE_ACTIVE</code>, <code>XmDROP_SITE_INACTIVE</code>, and <code>XmDROP_SITE_IGNORE</code>. An active drop site can receive a drop, whereas an inactive drop site is dormant. An inactive drop site is treated as if it was not a registered drop site and any drag-under visuals associated with entering or leaving the drop site do not occur. However, it is still used for clipping drag-under effects. A value of <code>XmDROP_SITE_IGNORE</code> indicates that a drop site should be ignored for all purposes.</p>
-<dt><code>XmNdropSiteOperations</code></p>
-<dd>Specifies the set of valid operations associated with a drop site. This resource is a bit mask that is formed by combining one or more of the following values using a bitwise operation such as inclusive OR (|): <code>XmDROP_COPY</code>, <code>XmDROP_LINK</code>, and <code>XmDROP_MOVE</code>. The value <code>XmDROP_NOOP</code> for this resource indicates that no operations are valid.</p>
-<dt><code>XmNdropSiteType</code></p>
-<dd>Specifies the type of the drop site. The possible values are</p>
+<dd>The drag procedure may change the values of some members of the <code>XmDragProcCallbackStruct</code> passed to it. After the drag procedure returns, the toolkit uses the final values in initializing some members of the callback structure passed to the appropriate callbacks of the initiator (the DragContext&#8217;s <code>XmNdropSiteEnterCallback</code>, <code>XmNdropSiteLeaveCallback</code>, <code>XmNdragMotionCallback</code>, or <code>XmNoperationChangedCallback</code> callbacks).</dd>
+<dt><code>XmNdropProc</code></dt>
+<dd>Specifies the procedure that is invoked when a drop (excluding a cancel or interrupt action) occurs on a drop site regardless of the status of the drop site. The type of the structure whose address is passed to this procedure is <code>XmDropProcCallbackStruct</code>. The reason sent to the procedure is <code>XmCR_DROP_MESSAGE</code>.</dd>
+<dd>The drop procedure may change the values of some members of the <code>XmDropProcCallbackStruct</code> passed to it. After the drop procedure returns, the toolkit uses the final values in initializing some members of the <code>XmDropStartCallbackStruct</code> passed to the initiator&#8217;s drop start callbacks (the DragContext&#8217;s <code>XmNdropStartCallback</code> callbacks).</dd>
+<dt><code>XmNdropRectangles</code></dt>
+<dd>Specifies a list of rectangles that describe the shape of a drop site. The locations of the rectangles are relative to the origin of the enclosing object. When <code>XmNdropRectangles</code> is NULL, the drop site is assumed to be the sensitive area of the enclosing widget. If <code>XmNdropSiteType</code> is <code>XmDROP_SITE_COMPOSITE</code>, this resource cannot be specified by the application.</dd>
+<dd>Retrieving this resource returns allocated memory that needs to be freed with the <code>XtFree</code> function.</dd>
+<dt><code>XmNdropSiteActivity</code></dt>
+<dd>Indicates whether a drop site is active or inactive. The values are <code>XmDROP_SITE_ACTIVE</code>, <code>XmDROP_SITE_INACTIVE</code>, and <code>XmDROP_SITE_IGNORE</code>. An active drop site can receive a drop, whereas an inactive drop site is dormant. An inactive drop site is treated as if it was not a registered drop site and any drag-under visuals associated with entering or leaving the drop site do not occur. However, it is still used for clipping drag-under effects. A value of <code>XmDROP_SITE_IGNORE</code> indicates that a drop site should be ignored for all purposes.</dd>
+<dt><code>XmNdropSiteOperations</code></dt>
+<dd>Specifies the set of valid operations associated with a drop site. This resource is a bit mask that is formed by combining one or more of the following values using a bitwise operation such as inclusive OR (|): <code>XmDROP_COPY</code>, <code>XmDROP_LINK</code>, and <code>XmDROP_MOVE</code>. The value <code>XmDROP_NOOP</code> for this resource indicates that no operations are valid.</dd>
+<dt><code>XmNdropSiteType</code></dt>
+<dd>Specifies the type of the drop site. The possible values are</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmDROP_SITE_SIMPLE</code></p>
-<dd>The widget does not have any additional children that are registered as drop sites.</p>
-<dt><code>XmDROP_SITE_COMPOSITE</code></p>
-<dd>The widget will have children that are registered as drop sites.</dl>
+</dd><dl COMPACT>
+<dt><code>XmDROP_SITE_SIMPLE</code></dt>
+<dd>The widget does not have any additional children that are registered as drop sites.</dd>
+<dt><code>XmDROP_SITE_COMPOSITE</code></dt>
+<dd>The widget will have children that are registered as drop sites.</dd></dl>
 </dl>
-<dt><code>XmNimportTargets</code></p>
-<dd>Specifies the list of target atoms that this drop site accepts.</p>
-<dt><code>XmNnumDropRectangles</code></p>
-<dd>Specifies the number of rectangles in the <code>XmNdropRectangles</code> list. If the drop site type is <code>XmDROP_SITE_COMPOSITE</code>, this resource can not be specified by the application.</p>
-<dt><code>XmNnumImportTargets</code></p>
-<dd>Specifies the number of atoms in the target atom list.</dl>
+<dt><code>XmNimportTargets</code></dt>
+<dd>Specifies the list of target atoms that this drop site accepts.</dd>
+<dt><code>XmNnumDropRectangles</code></dt>
+<dd>Specifies the number of rectangles in the <code>XmNdropRectangles</code> list. If the drop site type is <code>XmDROP_SITE_COMPOSITE</code>, this resource can not be specified by the application.</dd>
+<dt><code>XmNnumImportTargets</code></dt>
+<dd>Specifies the number of atoms in the target atom list.</dd></dl>
 <h3>Callback Information</h3>
 <p>A pointer to the following structure is passed to the <code>XmNdragProc</code> routine when the drop site receives crossing, motion, or operation changed messages: </p>
 <pre>typedef struct
@@ -460,33 +460,33 @@ description: "XmDropSite — The DropSite Registry"
  Boolean <i>animate</i>;
 } XmDragProcCallbackStruct, *XmDragProcCallback;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked.</p>
-<dt><i>event</i></p>
-<dd>Points to the <code>XEvent</code> that triggered the callback.</p>
-<dt><code>timeStamp</code></p>
-<dd>Specifies the timestamp of the logical event.</p>
-<dt><i>dragContext</i></p>
-<dd>Specifies the ID of the DragContext widget associated with the transaction.</p>
-<dt><i>x</i></p>
-<dd>Indicates the x-coordinate of the pointer relative to the drop site.</p>
-<dt><i>y</i></p>
-<dd>Indicates the y-coordinate of the pointer relative to the drop site.</p>
-<dt><code>dropSiteStatus</code></p>
-<dd>An IN/OUT member that indicates whether or not a drop site is valid.</p>
-<dd>When <i>reason</i> is <code>XmCR_DROP_SITE_ENTER_MESSAGE</code> or <code>XmCR_OPERATION_CHANGED</code>, or <i>reason</i> is <code>XmCR_DRAG_MOTION</code> or <code>XmCR_DROP_SITE_LEAVE_MESSAGE</code> and the pointer is not in the same drop site as on the previous invocation of the drag procedure, the toolkit initializes <code>dropSiteStatus</code> to <code>XmDROP_SITE_VALID</code> if the DragContext&#8217;s <code>XmNexportTargets</code> and the DropSite&#8217;s <code>XmNimportTargets</code> are compatible and if the initial value of the <i>operation</i> member is not <code>XmDROP_NOOP</code>. Otherwise, the toolkit initializes <code>dropSiteStatus</code> to <code>XmDROP_SITE_INVALID</code>.</p>
-<dd>When the <i>reason</i> is <code>XmCR_DRAG_MOTION</code> or <code>XmCR_DROP_SITE_LEAVE_MESSAGE</code> and the pointer is within the same drop site as on the previous invocation of the drag procedure, the toolkit initializes <code>dropSiteStatus</code> to the value of <code>dropSiteStatus</code> at the time the previous invocation of the drag procedure returns.</p>
-<dd>The drag procedure may change the value of this member. After the drag procedure returns, the toolkit uses the final value in initializing the <code>dropSiteStatus</code> member of the callback struct passed to the appropriate callbacks of the initiator.</p>
-<dt><i>operation</i></p>
-<dd>An IN/OUT member that identifies an operation.</p>
-<dd>The toolkit initializes <i>operation</i> by selecting an operation from the bitwise AND of the initial value of the <i>operations</i> member and the value of the DropSite&#8217;s <code>XmNdropSiteOperations</code> resource. The toolkit searches this set first for <code>XmDROP_MOVE</code>, then for <code>XmDROP_COPY</code>, then for <code>XmDROP_LINK</code>, and initializes <i>operation</i> to the first operation it finds in the set. If the toolkit finds none of these operations in the set, it initializes <i>operation</i> to <code>XmDROP_NOOP</code>.</p>
-<dd>The drag procedure may change the value of this member. After the drag procedure returns, the toolkit uses the final value in initializing the <i>operation</i> member of the callback struct passed to the appropriate callbacks of the initiator.</p>
-<dt><i>operations</i></p>
-<dd>An IN/OUT member that indicates the set of operations supported for the source data.</p>
-<dd>If the user does not select an operation (by pressing a modifier key), the toolkit initializes <i>operations</i> to the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource. If the user does select an operation, the toolkit initializes <i>operations</i> to the bitwise AND of the corresponding operation and the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource. If the resulting set of operations is empty, the toolkit initializes <i>operations</i> to <code>XmDROP_NOOP</code>.</p>
-<dd>The drag procedure may change the value of this member. After the drag procedure returns, the toolkit uses the final value in initializing the <i>operations</i> member of the callback struct passed to the appropriate callbacks of the initiator.</p>
-<dt><i>animate</i></p>
-<dd>An OUT member that indicates whether the toolkit or the receiver client provides drag-under effects for a valid drop site. If <i>animate</i> is set to True, the toolkit provides drop site animation per the <code>XmNanimationStyle</code> resource value; if it is set to False, the receiver generates drag-under animation effects.</dl>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked.</dd>
+<dt><i>event</i></dt>
+<dd>Points to the <code>XEvent</code> that triggered the callback.</dd>
+<dt><code>timeStamp</code></dt>
+<dd>Specifies the timestamp of the logical event.</dd>
+<dt><i>dragContext</i></dt>
+<dd>Specifies the ID of the DragContext widget associated with the transaction.</dd>
+<dt><i>x</i></dt>
+<dd>Indicates the x-coordinate of the pointer relative to the drop site.</dd>
+<dt><i>y</i></dt>
+<dd>Indicates the y-coordinate of the pointer relative to the drop site.</dd>
+<dt><code>dropSiteStatus</code></dt>
+<dd>An IN/OUT member that indicates whether or not a drop site is valid.</dd>
+<dd>When <i>reason</i> is <code>XmCR_DROP_SITE_ENTER_MESSAGE</code> or <code>XmCR_OPERATION_CHANGED</code>, or <i>reason</i> is <code>XmCR_DRAG_MOTION</code> or <code>XmCR_DROP_SITE_LEAVE_MESSAGE</code> and the pointer is not in the same drop site as on the previous invocation of the drag procedure, the toolkit initializes <code>dropSiteStatus</code> to <code>XmDROP_SITE_VALID</code> if the DragContext&#8217;s <code>XmNexportTargets</code> and the DropSite&#8217;s <code>XmNimportTargets</code> are compatible and if the initial value of the <i>operation</i> member is not <code>XmDROP_NOOP</code>. Otherwise, the toolkit initializes <code>dropSiteStatus</code> to <code>XmDROP_SITE_INVALID</code>.</dd>
+<dd>When the <i>reason</i> is <code>XmCR_DRAG_MOTION</code> or <code>XmCR_DROP_SITE_LEAVE_MESSAGE</code> and the pointer is within the same drop site as on the previous invocation of the drag procedure, the toolkit initializes <code>dropSiteStatus</code> to the value of <code>dropSiteStatus</code> at the time the previous invocation of the drag procedure returns.</dd>
+<dd>The drag procedure may change the value of this member. After the drag procedure returns, the toolkit uses the final value in initializing the <code>dropSiteStatus</code> member of the callback struct passed to the appropriate callbacks of the initiator.</dd>
+<dt><i>operation</i></dt>
+<dd>An IN/OUT member that identifies an operation.</dd>
+<dd>The toolkit initializes <i>operation</i> by selecting an operation from the bitwise AND of the initial value of the <i>operations</i> member and the value of the DropSite&#8217;s <code>XmNdropSiteOperations</code> resource. The toolkit searches this set first for <code>XmDROP_MOVE</code>, then for <code>XmDROP_COPY</code>, then for <code>XmDROP_LINK</code>, and initializes <i>operation</i> to the first operation it finds in the set. If the toolkit finds none of these operations in the set, it initializes <i>operation</i> to <code>XmDROP_NOOP</code>.</dd>
+<dd>The drag procedure may change the value of this member. After the drag procedure returns, the toolkit uses the final value in initializing the <i>operation</i> member of the callback struct passed to the appropriate callbacks of the initiator.</dd>
+<dt><i>operations</i></dt>
+<dd>An IN/OUT member that indicates the set of operations supported for the source data.</dd>
+<dd>If the user does not select an operation (by pressing a modifier key), the toolkit initializes <i>operations</i> to the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource. If the user does select an operation, the toolkit initializes <i>operations</i> to the bitwise AND of the corresponding operation and the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource. If the resulting set of operations is empty, the toolkit initializes <i>operations</i> to <code>XmDROP_NOOP</code>.</dd>
+<dd>The drag procedure may change the value of this member. After the drag procedure returns, the toolkit uses the final value in initializing the <i>operations</i> member of the callback struct passed to the appropriate callbacks of the initiator.</dd>
+<dt><i>animate</i></dt>
+<dd>An OUT member that indicates whether the toolkit or the receiver client provides drag-under effects for a valid drop site. If <i>animate</i> is set to True, the toolkit provides drop site animation per the <code>XmNanimationStyle</code> resource value; if it is set to False, the receiver generates drag-under animation effects.</dd></dl>
 <p> A pointer to the following structure is passed to the <code>XmNdropProc</code> routine when the drop site receives a drop message: </p>
 <pre>typedef struct
 {
@@ -502,40 +502,40 @@ description: "XmDropSite — The DropSite Registry"
  unsigned char <i>dropAction</i>;
 } XmDropProcCallbackStruct, *XmDropProcCallback;</pre>
 <dl COMPACT>
-<dt><i>reason</i></p>
-<dd>Indicates why the callback was invoked.</p>
-<dt><i>event</i></p>
-<dd>Specifies the <code>XEvent</code> that triggered the callback.</p>
-<dt><code>timeStamp</code></p>
-<dd>Specifies the timestamp of the logical event.</p>
-<dt><i>dragContext</i></p>
-<dd>Specifies the ID of the DragContext widget associated with the transaction.</p>
-<dt><i>x</i></p>
-<dd>Indicates the x-coordinate of the pointer relative to the drop site.</p>
-<dt><i>y</i></p>
-<dd>Indicates the y-coordinate of the pointer relative to the drop site.</p>
-<dt><code>dropSiteStatus</code></p>
-<dd>An IN/OUT member that indicates whether or not a drop site is valid.</p>
-<dd>The toolkit initializes <code>dropSiteStatus</code> to <code>XmDROP_SITE_VALID</code> if the DragContext&#8217;s <code>XmNexportTargets</code> and the DropSite&#8217;s <code>XmNimportTargets</code> are compatible and if the initial value of the <i>operation</i> member is not <code>XmDROP_NOOP</code>. Otherwise, the toolkit initializes <code>dropSiteStatus</code> to <code>XmDROP_SITE_INVALID</code>.</p>
-<dd>The drop procedure may change the value of this member. After the drop procedure returns, the toolkit uses the final value in initializing the <code>dropSiteStatus</code> member of the <code>XmDropStartCallbackStruct</code> passed to the initiator&#8217;s drop start callbacks (the DragContext&#8217;s <code>XmNdropStartCallback</code> callbacks).</p>
-<dt><i>operation</i></p>
-<dd>An IN/OUT member that identifies an operation.</p>
-<dd>The toolkit initializes <i>operation</i> by selecting an operation from the bitwise AND of the initial value of the <i>operations</i> member and the value of the DropSite&#8217;s <code>XmNdropSiteOperations</code> resource. The toolkit searches this set first for <code>XmDROP_MOVE</code>, then for <code>XmDROP_COPY</code>, then for <code>XmDROP_LINK</code>, and initializes <i>operation</i> to the first operation it finds in the set. If it finds none of these operations in the set, it initializes <i>operation</i> to <code>XmDROP_NOOP</code>.</p>
-<dd>The drop procedure may change the value of this member. After the drop procedure returns, the toolkit uses the final value in initializing the <i>operation</i> member of the <code>XmDropStartCallbackStruct</code> passed to the initiator&#8217;s drop start callbacks (the DragContext&#8217;s <code>XmNdropStartCallback</code> callbacks).</p>
-<dt><i>operations</i></p>
-<dd>An IN/OUT member that indicates the set of operations supported for the source data.</p>
-<dd>If the user does not select an operation (by pressing a modifier key), the toolkit initializes <i>operations</i> to the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource. If the user does select an operation, the toolkit initializes <i>operations</i> to the bitwise AND of the corresponding operation and the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource. If the resulting set of operations is empty, the toolkit initializes <i>operations</i> to <code>XmDROP_NOOP</code>.</p>
-<dd>The drop procedure may change the value of this member. After the drop procedure returns, the toolkit uses the final value in initializing the <i>operations</i> member of the <code>XmDropStartCallbackStruct</code> passed to the initiator&#8217;s drop start callbacks (the DragContext&#8217;s <code>XmNdropStartCallback</code> callbacks).</p>
-<dt><code>dropAction</code></p>
-<dd>An IN/OUT member that identifies the action associated with the drop. The possible values are</p>
+<dt><i>reason</i></dt>
+<dd>Indicates why the callback was invoked.</dd>
+<dt><i>event</i></dt>
+<dd>Specifies the <code>XEvent</code> that triggered the callback.</dd>
+<dt><code>timeStamp</code></dt>
+<dd>Specifies the timestamp of the logical event.</dd>
+<dt><i>dragContext</i></dt>
+<dd>Specifies the ID of the DragContext widget associated with the transaction.</dd>
+<dt><i>x</i></dt>
+<dd>Indicates the x-coordinate of the pointer relative to the drop site.</dd>
+<dt><i>y</i></dt>
+<dd>Indicates the y-coordinate of the pointer relative to the drop site.</dd>
+<dt><code>dropSiteStatus</code></dt>
+<dd>An IN/OUT member that indicates whether or not a drop site is valid.</dd>
+<dd>The toolkit initializes <code>dropSiteStatus</code> to <code>XmDROP_SITE_VALID</code> if the DragContext&#8217;s <code>XmNexportTargets</code> and the DropSite&#8217;s <code>XmNimportTargets</code> are compatible and if the initial value of the <i>operation</i> member is not <code>XmDROP_NOOP</code>. Otherwise, the toolkit initializes <code>dropSiteStatus</code> to <code>XmDROP_SITE_INVALID</code>.</dd>
+<dd>The drop procedure may change the value of this member. After the drop procedure returns, the toolkit uses the final value in initializing the <code>dropSiteStatus</code> member of the <code>XmDropStartCallbackStruct</code> passed to the initiator&#8217;s drop start callbacks (the DragContext&#8217;s <code>XmNdropStartCallback</code> callbacks).</dd>
+<dt><i>operation</i></dt>
+<dd>An IN/OUT member that identifies an operation.</dd>
+<dd>The toolkit initializes <i>operation</i> by selecting an operation from the bitwise AND of the initial value of the <i>operations</i> member and the value of the DropSite&#8217;s <code>XmNdropSiteOperations</code> resource. The toolkit searches this set first for <code>XmDROP_MOVE</code>, then for <code>XmDROP_COPY</code>, then for <code>XmDROP_LINK</code>, and initializes <i>operation</i> to the first operation it finds in the set. If it finds none of these operations in the set, it initializes <i>operation</i> to <code>XmDROP_NOOP</code>.</dd>
+<dd>The drop procedure may change the value of this member. After the drop procedure returns, the toolkit uses the final value in initializing the <i>operation</i> member of the <code>XmDropStartCallbackStruct</code> passed to the initiator&#8217;s drop start callbacks (the DragContext&#8217;s <code>XmNdropStartCallback</code> callbacks).</dd>
+<dt><i>operations</i></dt>
+<dd>An IN/OUT member that indicates the set of operations supported for the source data.</dd>
+<dd>If the user does not select an operation (by pressing a modifier key), the toolkit initializes <i>operations</i> to the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource. If the user does select an operation, the toolkit initializes <i>operations</i> to the bitwise AND of the corresponding operation and the value of the DragContext&#8217;s <code>XmNdragOperations</code> resource. If the resulting set of operations is empty, the toolkit initializes <i>operations</i> to <code>XmDROP_NOOP</code>.</dd>
+<dd>The drop procedure may change the value of this member. After the drop procedure returns, the toolkit uses the final value in initializing the <i>operations</i> member of the <code>XmDropStartCallbackStruct</code> passed to the initiator&#8217;s drop start callbacks (the DragContext&#8217;s <code>XmNdropStartCallback</code> callbacks).</dd>
+<dt><code>dropAction</code></dt>
+<dd>An IN/OUT member that identifies the action associated with the drop. The possible values are</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmDROP</code></p>
-<dd>A drop was attempted. If the drop site is valid, drop transfer handling proceeds.</p>
-<dt><code>XmDROP_HELP</code></p>
-<dd>The user has requested help on the drop site.</dl>
+</dd><dl COMPACT>
+<dt><code>XmDROP</code></dt>
+<dd>A drop was attempted. If the drop site is valid, drop transfer handling proceeds.</dd>
+<dt><code>XmDROP_HELP</code></dt>
+<dd>The user has requested help on the drop site.</dd></dl>
 </dl>
-<dd>The drop procedure may change the value of this member. After the drop procedure returns, the toolkit uses the final value in initializing the <code>dropAction</code> member of the <code>XmDropStartCallbackStruct</code> passed to the initiator&#8217;s drop start callbacks (the DragContext&#8217;s <code>XmNdropStartCallback</code> callbacks).</dl>
+<dd>The drop procedure may change the value of this member. After the drop procedure returns, the toolkit uses the final value in initializing the <code>dropAction</code> member of the <code>XmDropStartCallbackStruct</code> passed to the initiator&#8217;s drop start callbacks (the DragContext&#8217;s <code>XmNdropStartCallback</code> callbacks).</dd></dl>
 <h2>Related Information</h2>
 <p><code><a href="/docs/linux/man/3-xmdragcontext/">XmDragContext</a></code>(3), <code><a href="/docs/linux/man/3-xmdragicon/">XmDragIcon</a></code>(3), <code><a href="/docs/linux/man/3-xmdropsiteconfigurestackingorder/">XmDropSiteConfigureStackingOrder</a></code>(3), <code><a href="/docs/linux/man/3-xmdropsiteendupdate/">XmDropSiteEndUpdate</a></code>(3), <code><a href="/docs/linux/man/3-xmdropsitequerystackingorder/">XmDropSiteQueryStackingOrder</a></code>(3), <code><a href="/docs/linux/man/3-xmdropsiteregister/">XmDropSiteRegister</a></code>(3), <code><a href="/docs/linux/man/3-xmdropsitestartupdate/">XmDropSiteStartUpdate</a></code>(3), <code><a href="/docs/linux/man/3-xmdropsiteupdate/">XmDropSiteUpdate</a></code>(3), <code><a href="/docs/linux/man/3-xmdropsiteunregister/">XmDropSiteUnregister</a></code>(3), <code><a href="/docs/linux/man/3-xmdroptransfer/">XmDropTransfer</a></code>(3), and <code><a href="/docs/linux/man/3-xmtargetsarecompatible/">XmTargetsAreCompatible</a></code>(3).</p>

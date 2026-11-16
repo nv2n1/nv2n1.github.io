@@ -11,103 +11,103 @@ description: "gearmand – Gearmand Documentation, http://gearman.info/"
 <h2>Synopsis</h2>
 <p><code>General options</code></p>
 <dl>
-<dt><code>-b [ &#8211;backlog ] arg (=32)</code></p>
-<dd>Number of backlog connections for listen.</p>
-<dt><code>&#8211;check-args</code></p>
-<dd>Check command line and configuration file argments and then exit.</p>
-<dt><code>-d [ &#8211;daemon ]</code></p>
-<dd>Daemon, detach and run in the background.</p>
-<dt><code>-f [ &#8211;file-descriptors ] arg</code></p>
-<dd>Number of file descriptors to allow for the process (total connections will be slightly less). Default is max allowed for user.</p>
-<dt><code>-h [ &#8211;help ]</code></p>
-<dd>Print this help menu.</p>
-<dt><code>-j [ &#8211;job-retries ] arg (=0)</code></p>
-<dd>Number of attempts to run the job before the job server removes it. This is helpful to ensure a bad job does not crash all available workers. Default is no limit.</p>
-<dt><code>-l [ &#8211;log-file ] arg</code></p>
-<dd>Log file to write errors and information to. Turning this option on also forces the first verbose level to be enabled.</p>
-<dt><code>-L [ &#8211;listen ] arg</code></p>
-<dd>Address the server should listen on. Default is INADDR_ANY.</p>
-<dt><code>-p [ &#8211;port ] arg (=4730)</code></p>
-<dd>Port the server should listen on.</p>
-<dt><code>-P [ &#8211;pid-file ] arg</code></p>
-<dd>File to write process ID out to.</p>
-<dt><code>-r [ &#8211;protocol ] arg</code></p>
-<dd>Load protocol module.</p>
-<dt><code>-R [ &#8211;round-robin ]</code></p>
-<dd>Assign work in round-robin order per worker connection. The default is to assign work in the order of functions added by the worker.</p>
-<dt><code>-q [ &#8211;queue-type ] arg</code></p>
-<dd>Persistent queue type to use.</p>
-<dt><code>-t [ &#8211;threads ] arg (=4)</code></p>
-<dd>Number of I/O threads to use. Default=4.</p>
-<dt><code>-u [ &#8211;user ] arg</code></p>
-<dd>Switch to given user after startup.</p>
-<dt><code>-v [ &#8211;verbose ] arg (=v)</code></p>
-<dd>Increase verbosity level by one.</p>
-<dt><code>-V [ &#8211;version ]</code></p>
-<dd>Display the version of gearmand and exit.</p>
-<dt><code>-w [ &#8211;worker-wakeup ] arg (=0)</code></p>
-<dd>Number of workers to wakeup for each job received. The default is to wakeup all available workers.</p>
-<dt><code>&#8211;keepalive</code></p>
-<dd>Enable keepalive on sockets.</p>
-<dt><code>&#8211;keepalive-idle arg (=-1)</code></p>
-<dd>If keepalive is enabled, set the value for TCP_KEEPIDLE for systems that support it. A value of -1 means that either the system does not support it or an error occurred when trying to retrieve the default value.</p>
-<dt><code>&#8211;keepalive-interval arg (=-1)</code></p>
-<dd>If keepalive is enabled, set the value for TCP_KEEPINTVL for systems that support it. A value of -1 means that either the system does not support it or an error occurred when trying to retrieve the default value.</p>
-<dt><code>&#8211;keepalive-count arg (=-1)</code></p>
-<dd>If keepalive is enabled, set the value for TCP_KEEPCNT for systems that support it. A value of -1 means that either the system does not support it or an error occurred when trying to retrieve the default value. </p>
+<dt><code>-b [ &#8211;backlog ] arg (=32)</code></dt>
+<dd>Number of backlog connections for listen.</dd>
+<dt><code>&#8211;check-args</code></dt>
+<dd>Check command line and configuration file argments and then exit.</dd>
+<dt><code>-d [ &#8211;daemon ]</code></dt>
+<dd>Daemon, detach and run in the background.</dd>
+<dt><code>-f [ &#8211;file-descriptors ] arg</code></dt>
+<dd>Number of file descriptors to allow for the process (total connections will be slightly less). Default is max allowed for user.</dd>
+<dt><code>-h [ &#8211;help ]</code></dt>
+<dd>Print this help menu.</dd>
+<dt><code>-j [ &#8211;job-retries ] arg (=0)</code></dt>
+<dd>Number of attempts to run the job before the job server removes it. This is helpful to ensure a bad job does not crash all available workers. Default is no limit.</dd>
+<dt><code>-l [ &#8211;log-file ] arg</code></dt>
+<dd>Log file to write errors and information to. Turning this option on also forces the first verbose level to be enabled.</dd>
+<dt><code>-L [ &#8211;listen ] arg</code></dt>
+<dd>Address the server should listen on. Default is INADDR_ANY.</dd>
+<dt><code>-p [ &#8211;port ] arg (=4730)</code></dt>
+<dd>Port the server should listen on.</dd>
+<dt><code>-P [ &#8211;pid-file ] arg</code></dt>
+<dd>File to write process ID out to.</dd>
+<dt><code>-r [ &#8211;protocol ] arg</code></dt>
+<dd>Load protocol module.</dd>
+<dt><code>-R [ &#8211;round-robin ]</code></dt>
+<dd>Assign work in round-robin order per worker connection. The default is to assign work in the order of functions added by the worker.</dd>
+<dt><code>-q [ &#8211;queue-type ] arg</code></dt>
+<dd>Persistent queue type to use.</dd>
+<dt><code>-t [ &#8211;threads ] arg (=4)</code></dt>
+<dd>Number of I/O threads to use. Default=4.</dd>
+<dt><code>-u [ &#8211;user ] arg</code></dt>
+<dd>Switch to given user after startup.</dd>
+<dt><code>-v [ &#8211;verbose ] arg (=v)</code></dt>
+<dd>Increase verbosity level by one.</dd>
+<dt><code>-V [ &#8211;version ]</code></dt>
+<dd>Display the version of gearmand and exit.</dd>
+<dt><code>-w [ &#8211;worker-wakeup ] arg (=0)</code></dt>
+<dd>Number of workers to wakeup for each job received. The default is to wakeup all available workers.</dd>
+<dt><code>&#8211;keepalive</code></dt>
+<dd>Enable keepalive on sockets.</dd>
+<dt><code>&#8211;keepalive-idle arg (=-1)</code></dt>
+<dd>If keepalive is enabled, set the value for TCP_KEEPIDLE for systems that support it. A value of -1 means that either the system does not support it or an error occurred when trying to retrieve the default value.</dd>
+<dt><code>&#8211;keepalive-interval arg (=-1)</code></dt>
+<dd>If keepalive is enabled, set the value for TCP_KEEPINTVL for systems that support it. A value of -1 means that either the system does not support it or an error occurred when trying to retrieve the default value.</dd>
+<dt><code>&#8211;keepalive-count arg (=-1)</code></dt>
+<dd>If keepalive is enabled, set the value for TCP_KEEPCNT for systems that support it. A value of -1 means that either the system does not support it or an error occurred when trying to retrieve the default value. </dd>
 <p> <code>HTTP:</code></p>
-<dt><code>&#8211;http-port arg (=8080)</code></p>
-<dd>Port to listen on. </p>
+<dt><code>&#8211;http-port arg (=8080)</code></dt>
+<dd>Port to listen on. </dd>
 <p> <code>sqlite</code></p>
-<dt><code>&#8211;libsqlite3-db arg</code></p>
-<dd>Database file to use.</p>
-<dt><code>&#8211;libsqlite3-table arg (=gearman_queue)</code></p>
-<dd>Table to use. </p>
+<dt><code>&#8211;libsqlite3-db arg</code></dt>
+<dd>Database file to use.</dd>
+<dt><code>&#8211;libsqlite3-table arg (=gearman_queue)</code></dt>
+<dd>Table to use. </dd>
 <p> <code>Memcached(libmemcached)</code></p>
-<dt><code>&#8211;libmemcached-servers arg</code></p>
-<dd>List of Memcached servers to use. </p>
+<dt><code>&#8211;libmemcached-servers arg</code></dt>
+<dd>List of Memcached servers to use. </dd>
 <p> <code>Drizzle/MySQL(libdrizzle)</code></p>
-<dt><code>&#8211;libdrizzle-host arg</code></p>
-<dd>Host of server.</p>
-<dt><code>&#8211;libdrizzle-port arg</code></p>
-<dd>Port of server. (by default Drizzle)</p>
-<dt><code>&#8211;libdrizzle-uds arg</code></p>
-<dd>Unix domain socket for server.</p>
-<dt><code>&#8211;libdrizzle-user arg</code></p>
-<dd>User name for authentication.</p>
-<dt><code>&#8211;libdrizzle-password arg</code></p>
-<dd>Password for authentication.</p>
-<dt><code>&#8211;libdrizzle-db arg</code></p>
-<dd>Schema/Database to use.</p>
-<dt><code>&#8211;libdrizzle-table arg</code></p>
-<dd>Table to use.</p>
-<dt><code>&#8211;libdrizzle-mysql arg</code></p>
-<dd>Use MySQL protocol. </p>
+<dt><code>&#8211;libdrizzle-host arg</code></dt>
+<dd>Host of server.</dd>
+<dt><code>&#8211;libdrizzle-port arg</code></dt>
+<dd>Port of server. (by default Drizzle)</dd>
+<dt><code>&#8211;libdrizzle-uds arg</code></dt>
+<dd>Unix domain socket for server.</dd>
+<dt><code>&#8211;libdrizzle-user arg</code></dt>
+<dd>User name for authentication.</dd>
+<dt><code>&#8211;libdrizzle-password arg</code></dt>
+<dd>Password for authentication.</dd>
+<dt><code>&#8211;libdrizzle-db arg</code></dt>
+<dd>Schema/Database to use.</dd>
+<dt><code>&#8211;libdrizzle-table arg</code></dt>
+<dd>Table to use.</dd>
+<dt><code>&#8211;libdrizzle-mysql arg</code></dt>
+<dd>Use MySQL protocol. </dd>
 <p> <code>Postgres</code></p>
-<dt><code>&#8211;libpq-conninfo arg</code></p>
-<dd>PostgreSQL connection information string.</p>
-<dt><code>&#8211;libpq-table arg (=queue)</code></p>
-<dd>Table to use. </p>
+<dt><code>&#8211;libpq-conninfo arg</code></dt>
+<dd>PostgreSQL connection information string.</dd>
+<dt><code>&#8211;libpq-table arg (=queue)</code></dt>
+<dd>Table to use. </dd>
 <p> <code>tokyocabinet</code></p>
-<dt><code>&#8211;libtokyocabinet-file arg</code></p>
-<dd>File name of the database. [see: man tcadb, tcadbopen() for name guidelines]</p>
-<dt><code>&#8211;libtokyocabinet-optimize</code></p>
-<dd>Optimize database on open. [default=true]</dl>
+<dt><code>&#8211;libtokyocabinet-file arg</code></dt>
+<dd>File name of the database. [see: man tcadb, tcadbopen() for name guidelines]</dd>
+<dt><code>&#8211;libtokyocabinet-optimize</code></dt>
+<dd>Optimize database on open. [default=true]</dd></dl>
 <h2>Description</h2>
 <p>Gearman provides a generic application framework to farm out work to other machines or processes that are better suited to do the work. It allows you to do work in parallel, to load balance processing, and to call functions between languages. It can be used in a variety of applications, from high-availability web sites to the transport of database replication events. In other words, it is the nervous system for how distributed processing communicates. A few strong points about Gearman:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Open Source &#8211; It&#8217;s free! (in both meanings of the word) Gearman has an active open source community that is easy to get involved with if you need help or want to contribute.</p>
-<dt>&bull;</p>
-<dd>Multi-language &#8211; There are interfaces for a number of languages, and this list is growing. You also have the option to write heterogeneous applications with clients submitting work in one language and workers performing that work in another.</p>
-<dt>&bull;</p>
-<dd>Flexible &#8211; You are not tied to any specific design pattern. You can quickly put together distributed applications using any model you choose, one of those options being Map/Reduce.</p>
-<dt>&bull;</p>
-<dd>Fast &#8211; Gearman has a simple protocol and interface with a new optimized server in C to minimize your application overhead.</p>
-<dt>&bull;</p>
-<dd>Embeddable &#8211; Since Gearman is fast and lightweight, it is great for applications of all sizes. It is also easy to introduce into existing applications with minimal overhead.</p>
-<dt>&bull;</p>
-<dd>No single point of failure &#8211; Gearman can not only help scale systems, but can do it in a fault tolerant way.</dl>
+<dt>&bull;</dt>
+<dd>Open Source &#8211; It&#8217;s free! (in both meanings of the word) Gearman has an active open source community that is easy to get involved with if you need help or want to contribute.</dd>
+<dt>&bull;</dt>
+<dd>Multi-language &#8211; There are interfaces for a number of languages, and this list is growing. You also have the option to write heterogeneous applications with clients submitting work in one language and workers performing that work in another.</dd>
+<dt>&bull;</dt>
+<dd>Flexible &#8211; You are not tied to any specific design pattern. You can quickly put together distributed applications using any model you choose, one of those options being Map/Reduce.</dd>
+<dt>&bull;</dt>
+<dd>Fast &#8211; Gearman has a simple protocol and interface with a new optimized server in C to minimize your application overhead.</dd>
+<dt>&bull;</dt>
+<dd>Embeddable &#8211; Since Gearman is fast and lightweight, it is great for applications of all sizes. It is also easy to introduce into existing applications with minimal overhead.</dd>
+<dt>&bull;</dt>
+<dd>No single point of failure &#8211; Gearman can not only help scale systems, but can do it in a fault tolerant way.</dd></dl>
 <h3>Thread Model</h3>
 <p>The -t option to gearmand allows you to specify multiple I/O threads, this is enabled by default. There are currently three types of threads in the job server: </p>
 <p> Listening and management thread &#8211; only one I/O thread &#8211; can have many Processing thread &#8211; only one </p>

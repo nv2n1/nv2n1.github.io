@@ -20,13 +20,13 @@ url: "/docs/linux/man/3-gnutls_ocsp_status_request_enable_client/"
 
 <dl>
 <dt>gnutls_session_t session
-<dd> is a <b>gnutls_session_t</b> structure.
-<dt>gnutls_datum_t * responder_id
-<dd> array with <b>gnutls_datum_t</b> with DER data of responder id
-<dt>size_t responder_id_size
-<dd> number of members in <i>responder_id</i> array
-<dt>gnutls_datum_t * extensions
-<dd> a <b>gnutls_datum_t</b> with DER encoded OCSP extensions</dl>
+</dt><dd> is a <b>gnutls_session_t</b> structure.
+</dd><dt>gnutls_datum_t * responder_id
+</dt><dd> array with <b>gnutls_datum_t</b> with DER data of responder id
+</dd><dt>size_t responder_id_size
+</dt><dd> number of members in <i>responder_id</i> array
+</dd><dt>gnutls_datum_t * extensions
+</dt><dd> a <b>gnutls_datum_t</b> with DER encoded OCSP extensions</dd></dl>
 
 <h2>DESCRIPTION</h2>
 
@@ -55,7 +55,7 @@ url: "/docs/linux/man/3-gnutls_ocsp_status_request_enable_client/"
  The full documentation for <b>gnutls</b> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <b>
 <dl>
 <dt><a rel="nofollow" HREF="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a>
-<dd> </b></dl>
+</dt><dd> </b></dd></dl>
  
 
  

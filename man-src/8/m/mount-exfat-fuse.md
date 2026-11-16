@@ -15,33 +15,33 @@ description: "mount.exfat-fuse – mount an exFAT file system"
 <h2>Command Line Options</h2>
 <p>Command line options available:</p>
 <dl>
-<dt><code>-d</code></p>
-<dd>Enable debug logging and do not detach from shell.</p>
-<dt><code>-n</code></p>
-<dd>Ignored.</p>
-<dt><code>-o</code><i> options</i></p>
-<dd>File system specific options. For more details see <code>FILE SYSTEM OPTIONS</code> section below.</p>
-<dt><code>-V</code></p>
-<dd>Print version and copyright.</p>
-<dt><code>-v</code></p>
-<dd>Ignored. </p>
+<dt><code>-d</code></dt>
+<dd>Enable debug logging and do not detach from shell.</dd>
+<dt><code>-n</code></dt>
+<dd>Ignored.</dd>
+<dt><code>-o</code><i> options</i></dt>
+<dd>File system specific options. For more details see <code>FILE SYSTEM OPTIONS</code> section below.</dd>
+<dt><code>-V</code></dt>
+<dd>Print version and copyright.</dd>
+<dt><code>-v</code></dt>
+<dd>Ignored. </dd>
 </dl>
 <h2>File System Options</h2>
 <dl>
-<dt><code>umask=</code><i>value</i></p>
-<dd>Set the umask (the bitmask of the permissions that are <code>not</code> present, in octal). The default is 0.</p>
-<dt><code>dmask=</code><i>value</i></p>
-<dd>Set the umask for directories only.</p>
-<dt><code>fmask=</code><i>value</i></p>
-<dd>Set the umask for files only.</p>
-<dt><code>uid=</code><i>n</i></p>
-<dd>Set the owner for all files and directories. The default is the owner of the current process.</p>
-<dt><code>gid=</code><i>n</i></p>
-<dd>Set the group for all files and directories. The default is the group of the current process.</p>
-<dt><code>ro</code></p>
-<dd>Mount the file system in read only mode.</p>
-<dt><code>noatime</code></p>
-<dd>Do not update access time when file is read. </p>
+<dt><code>umask=</code><i>value</i></dt>
+<dd>Set the umask (the bitmask of the permissions that are <code>not</code> present, in octal). The default is 0.</dd>
+<dt><code>dmask=</code><i>value</i></dt>
+<dd>Set the umask for directories only.</dd>
+<dt><code>fmask=</code><i>value</i></dt>
+<dd>Set the umask for files only.</dd>
+<dt><code>uid=</code><i>n</i></dt>
+<dd>Set the owner for all files and directories. The default is the owner of the current process.</dd>
+<dt><code>gid=</code><i>n</i></dt>
+<dd>Set the group for all files and directories. The default is the group of the current process.</dd>
+<dt><code>ro</code></dt>
+<dd>Mount the file system in read only mode.</dd>
+<dt><code>noatime</code></dt>
+<dd>Do not update access time when file is read. </dd>
 </dl>
 <h2>Exit Codes</h2>
 <p>Zero is returned on successful mount. Any other code means an error.</p>

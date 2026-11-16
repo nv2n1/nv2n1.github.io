@@ -14,13 +14,13 @@ description: "seq_hlist_start_percpu – start an iteration of a percpu hlist ar
 <p><i>head</i></p>
 <dl>
 <dd>
-<dd>pointer to percpu array of struct hlist_heads</dl>
+</dd><dd>pointer to percpu array of struct hlist_heads</dd></dl>
 <p> <i>cpu</i></p>
 <dl>
-<dd>pointer to cpu &#8220;cursor&#8221;</dl>
+<dd>pointer to cpu &#8220;cursor&#8221;</dd></dl>
 <p> <i>pos</i></p>
 <dl>
-<dd>start position of sequence</dl>
+<dd>start position of sequence</dd></dl>
 <h2>Description</h2>
 <p>Called at seq_file-&gt;op-&gt;<code>start</code>.</p>
 <h2>Copyright</h2>

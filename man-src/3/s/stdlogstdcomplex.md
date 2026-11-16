@@ -11,9 +11,7 @@ std::log(std::complex) - std::log(std::complex)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;complex&gt;
-
     template &lt;class T&gt;
-
     complex&lt;T&gt; log(const complex&lt;T&gt; &amp;z);</code></pre> 
 Computes complex natural (base e) logarithm of a complex value z with a branch cut along the negative real axis. 
 
@@ -54,12 +52,9 @@ LWG_2597 C++98 specification mishandles signed zero imaginary parts erroneous re
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;complex&gt;
 int main()
-
 {
     std::complex&lt;double&gt; z(0, 1); // // r = 1, θ = pi/2
     std::cout &lt;&lt; &quot;2*log&quot; &lt;&lt; z &lt;&lt; &quot; = &quot; &lt;&lt; 2. * std::log(z) &lt;&lt; '\n';

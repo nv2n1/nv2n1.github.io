@@ -16,20 +16,20 @@ description: "btrfsctl – control a btrfs filesystem"
 <p><code>btrfsctl</code> is used to control the filesystem and the files and directories stored. It is the tool to create a new snapshot for the filesystem.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code> <i>file|directory</i></p>
-<dd>Defragment a file or a directory. If the argument is a directory, the entire b-tree under the directory is defragged.</p>
-<dt><code>-s</code> <i>snapshot-name directory</i></p>
-<dd>Creates a new <i>snapshot</i> of the <i>directory</i> specified.</p>
-<dt><code>-S</code> <i>subvolume-name directory</i></p>
-<dd>Creates a new subvolume.</p>
-<dt><code>-r</code> <i>[+|-]size</i></p>
-<dd>Resizes the filesystem with the <i>size</i> specified. If the value is preceded with a signed symbol, the filesystem is resized with respect to the current filesystem size. <i>size</i> can be suffixed by k,m or g to represent kilobytes, megabytes, or gigabytes respectively.</p>
-<dt><code>-A</code> <i>device</i></p>
-<dd>Scans the <i>device</i> for btrfs filesystem.</p>
-<dt><code>-a</code></p>
-<dd>Scans all devices present in the system for btrfs filesystem.</p>
-<dt><code>-c</code></p>
-<dd>Forces a filesystem sync.</dl>
+<dt><code>-d</code> <i>file|directory</i></dt>
+<dd>Defragment a file or a directory. If the argument is a directory, the entire b-tree under the directory is defragged.</dd>
+<dt><code>-s</code> <i>snapshot-name directory</i></dt>
+<dd>Creates a new <i>snapshot</i> of the <i>directory</i> specified.</dd>
+<dt><code>-S</code> <i>subvolume-name directory</i></dt>
+<dd>Creates a new subvolume.</dd>
+<dt><code>-r</code> <i>[+|-]size</i></dt>
+<dd>Resizes the filesystem with the <i>size</i> specified. If the value is preceded with a signed symbol, the filesystem is resized with respect to the current filesystem size. <i>size</i> can be suffixed by k,m or g to represent kilobytes, megabytes, or gigabytes respectively.</dd>
+<dt><code>-A</code> <i>device</i></dt>
+<dd>Scans the <i>device</i> for btrfs filesystem.</dd>
+<dt><code>-a</code></dt>
+<dd>Scans all devices present in the system for btrfs filesystem.</dd>
+<dt><code>-c</code></dt>
+<dd>Forces a filesystem sync.</dd></dl>
 <h2>Availability</h2>
 <p><code>btrfsctl</code> is part of btrfs-progs. Btrfs is currently under heavy development, and not suitable for any uses other than benchmarking and review. Please refer to the btrfs wiki <a rel="nofollow" href="http://btrfs.wiki.kernel.org">http://btrfs.wiki.kernel.org</a> for further details.</p>
 <h2>See Also</h2>

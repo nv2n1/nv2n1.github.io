@@ -19,7 +19,7 @@ description: "dgecon.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DGECON estimates the reciprocal of the condition number of a general
  real matrix A, in either the 1-norm or the infinity-norm, using
@@ -28,11 +28,11 @@ description: "dgecon.f –"
  condition number is computed as
     RCOND = 1 / ( norm(A) * norm(inv(A)) ).
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>NORM</i> </p>
+</dt><dd> <i>NORM</i> </dd>
 <pre>
           NORM is CHARACTER*1
           Specifies whether the 1-norm condition number or the
@@ -86,14 +86,14 @@ description: "dgecon.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 124 of file dgecon.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

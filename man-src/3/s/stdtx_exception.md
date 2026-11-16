@@ -10,9 +10,7 @@ description: "std::tx_exception – std::tx_exception"
 <p>std::tx_exception &#8211; std::tx_exception</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;stdexcept&gt;
-
 template&lt; class T &gt;                              (TM TS)
-
 class tx_exception : public std::runtime_error;</code></pre>
 <p>Defines an exception type that can be used to cancel and roll back an atomic transaction initiated by the keyword atomic_cancel<br />
 If T is not TriviallyCopyable, the program that specializes std::tx_exception&lt;T&gt; is ill-formed. </p>

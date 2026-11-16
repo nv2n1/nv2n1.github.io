@@ -17,36 +17,36 @@ description: "xgamma – Alter a monitor’s gamma correction through the X serv
 <p> If no value for the gamma correction is given via the <i>-gamma</i> or <i>-rgamma</i>/<i>-ggamma</i>/<i>-bgamma</i> options, <code>xgamma</code> prints the current gamma correction of the display.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-display </code><i>display</i></p>
-<dd> This argument allows you to specify the server to connect to; see <i><a href="/docs/linux/man/7-x/">X</a>(7)</i>.</dl>
+<dt><code>-display </code><i>display</i></dt>
+<dd> This argument allows you to specify the server to connect to; see <i><a href="/docs/linux/man/7-x/">X</a>(7)</i>.</dd></dl>
 <dl>
-<dt><code>-screen </code><i>screen</i></p>
-<dd> When multiple displays are configured as a single logical display, this option allows you to select the screen you wish to change.</dl>
+<dt><code>-screen </code><i>screen</i></dt>
+<dd> When multiple displays are configured as a single logical display, this option allows you to select the screen you wish to change.</dd></dl>
 <dl>
-<dt><code>-quiet</code></p>
-<dd> Silence the normal output of <code>xgamma</code></dl>
+<dt><code>-quiet</code></dt>
+<dd> Silence the normal output of <code>xgamma</code></dd></dl>
 <dl>
-<dt><code>-help</code></p>
-<dd> Print out the `Usage:&#8217; command syntax summary.</dl>
+<dt><code>-help</code></dt>
+<dd> Print out the `Usage:&#8217; command syntax summary.</dd></dl>
 <dl>
-<dt><code>-version</code></p>
-<dd> Print out the program version and exit.</dl>
+<dt><code>-version</code></dt>
+<dd> Print out the program version and exit.</dd></dl>
 <dl>
-<dt><code>-gamma f.f</code></p>
-<dd> The gamma correction can either be defined as a single value, or separately for the red, green and blue components. This argument specifies the gamma correction as a single value.</dl>
+<dt><code>-gamma f.f</code></dt>
+<dd> The gamma correction can either be defined as a single value, or separately for the red, green and blue components. This argument specifies the gamma correction as a single value.</dd></dl>
 <dl>
-<dt><code>-rgamma f.f</code></p>
-<dd> This argument specifies the red component of the gamma correction.</dl>
+<dt><code>-rgamma f.f</code></dt>
+<dd> This argument specifies the red component of the gamma correction.</dd></dl>
 <dl>
-<dt><code>-ggamma f.f</code></p>
-<dd> This argument specifies the green component of the gamma correction.</dl>
+<dt><code>-ggamma f.f</code></dt>
+<dd> This argument specifies the green component of the gamma correction.</dd></dl>
 <dl>
-<dt><code>-bgamma f.f</code></p>
-<dd> This argument specifies the blue component of the gamma correction.</dl>
+<dt><code>-bgamma f.f</code></dt>
+<dd> This argument specifies the blue component of the gamma correction.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>DISPLAY</code></p>
-<dd> To get default host and display number.</dl>
+<dt><code>DISPLAY</code></dt>
+<dd> To get default host and display number.</dd></dl>
 <h2>BUGS</h2>
 <p> This client changes the internal values of the gamma correction for the Xserver. Whether or not these values are respected depends on the video drivers. </p>
 <p> The gamma values are passed to the Xserver with 3 decimal places of accuracy.</p>

@@ -18,51 +18,51 @@ description: "oggdec – simple decoder, Ogg Vorbis file to PCM audio file (Wave
 <p> Writing Wave format to stdout is a bad idea. Wave requires a seekable medium for the header to be rewritten after all the data is written out; stdout is not seekable. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-Q, &#8211;quiet</p>
-<dd> Suppresses program output.</p>
-<dt>-h, &#8211;help</p>
-<dd> Print help message.</p>
-<dt>-V, &#8211;version</p>
-<dd> Display version information.</p>
-<dt>-b n, &#8211;bits=n</p>
-<dd> Bits per sample. Valid values are 8 or 16.</p>
-<dt>-e n, &#8211;endianness=n</p>
-<dd> Set endianness for 16-bit output. 0 (default) is little-endian (Intel byte order). 1 is big-endian (sane byte order).</p>
-<dt>-R, &#8211;raw</p>
-<dd> Output in raw format. If not specified, writes Wave file (RIFF headers).</p>
-<dt>-s n, &#8211;sign=n</p>
-<dd> Set signedness for output. 0 for unsigned, 1 (default) for signed.</p>
-<dt>-o filename, &#8211;output=filename</p>
-<dd> Write output to specified filename. This option is only valid if one input [file] is specified, or if raw mode is used. </p>
+<dt>-Q, &#8211;quiet</dt>
+<dd> Suppresses program output.</dd>
+<dt>-h, &#8211;help</dt>
+<dd> Print help message.</dd>
+<dt>-V, &#8211;version</dt>
+<dd> Display version information.</dd>
+<dt>-b n, &#8211;bits=n</dt>
+<dd> Bits per sample. Valid values are 8 or 16.</dd>
+<dt>-e n, &#8211;endianness=n</dt>
+<dd> Set endianness for 16-bit output. 0 (default) is little-endian (Intel byte order). 1 is big-endian (sane byte order).</dd>
+<dt>-R, &#8211;raw</dt>
+<dd> Output in raw format. If not specified, writes Wave file (RIFF headers).</dd>
+<dt>-s n, &#8211;sign=n</dt>
+<dd> Set signedness for output. 0 for unsigned, 1 (default) for signed.</dd>
+<dt>-o filename, &#8211;output=filename</dt>
+<dd> Write output to specified filename. This option is only valid if one input [file] is specified, or if raw mode is used. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> Decode a file <code>enabler.ogg</code> to <code>enabler.wav</code><br />
 &nbsp;<wbr>as little-endian unsigned 16-bit&nbsp;<wbr>(default options):</p>
 <dl>
 <dt>
-<dd> oggdec enabler.ogg</dl>
+</dt><dd> oggdec enabler.ogg</dd></dl>
 <p> Decode a file <code>enabler.ogg</code> to <code>enabler.raw</code> as headerless little-endian unsigned 16-bit:</p>
 <dl>
 <dt>
-<dd> oggdec &#8211;raw=1 enabler.ogg</dl>
+</dt><dd> oggdec &#8211;raw=1 enabler.ogg</dd></dl>
 <p> Decode <code>enabler.ogg</code> to <code>enabler.crazymonkey</code> as unsigned 8-bit:</p>
 <dl>
 <dt>
-<dd> oggdec -b 8 -s 0 -o enabler.crazymonkey enabler.ogg</dl>
+</dt><dd> oggdec -b 8 -s 0 -o enabler.crazymonkey enabler.ogg</dd></dl>
 <p> Decode <code>enabler.ogg</code> to <code>enabler.raw</code> as big-endian signed 16-bit (any of the following):</p>
 <dl>
 <dt>
-<dd> oggdec -R -e 1 -b 16 enabler.ogg</dl>
+</dt><dd> oggdec -R -e 1 -b 16 enabler.ogg</dd></dl>
 <dl>
 <dt>
-<dd> oggdec -R -e 1 -b 16 -o enabler.raw &#8211; &lt; enabler.ogg</dl>
+</dt><dd> oggdec -R -e 1 -b 16 -o enabler.raw &#8211; &lt; enabler.ogg</dd></dl>
 <dl>
 <dt>
-<dd> oggdec -R -e 1 -b 16 &#8211; &lt; enabler.ogg &gt; enabler.raw</dl>
+</dt><dd> oggdec -R -e 1 -b 16 &#8211; &lt; enabler.ogg &gt; enabler.raw</dd></dl>
 <p> Mass decoding (foo.ogg to foo.wav, bar.ogg to bar.wav, quux.ogg to quux.wav, etc.):</p>
 <dl>
 <dt>
-<dd> oggdec *.ogg</dl>
+</dt><dd> oggdec *.ogg</dd></dl>
 <h2>AUTHORS</h2>
 <h3>Program Authors</h3>
 <p> Michael Smith &lt;msmith [at] xiph.org&gt;</p>

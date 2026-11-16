@@ -18,21 +18,21 @@ sprof[option]... shared - object - path[profile - data - path]
 <h2>OPTIONS</h2>
 <p> The following command-line options specify the profile output to be produced:</p>
 <dl>
-<dt><code>-c</code>, <code>&#8211;call-pairs</code></p>
-<dd> Print a list of pairs of call paths for the interfaces exported by the shared object, along with the number of times each path is used.</p>
-<dt><code>-p</code>, <code>&#8211;flat-profile</code></p>
-<dd> Generate a flat profile of all of the functions in the monitored object, with counts and ticks.</p>
-<dt><code>-q</code>, <code>&#8211;graph</code></p>
-<dd> Generate a call graph.</dl>
+<dt><code>-c</code>, <code>&#8211;call-pairs</code></dt>
+<dd> Print a list of pairs of call paths for the interfaces exported by the shared object, along with the number of times each path is used.</dd>
+<dt><code>-p</code>, <code>&#8211;flat-profile</code></dt>
+<dd> Generate a flat profile of all of the functions in the monitored object, with counts and ticks.</dd>
+<dt><code>-q</code>, <code>&#8211;graph</code></dt>
+<dd> Generate a call graph.</dd></dl>
 <p> If none of the above options is specified, then the default behavior is to display a flat profile and a call graph. </p>
 <p> The following additional command-line options are available:</p>
 <dl>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd> Display a summary of command-line options and arguments and exit.</p>
-<dt><code>&#8211;usage</code></p>
-<dd> Display a short usage message and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Display the program version and exit.</dl>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd> Display a summary of command-line options and arguments and exit.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> Display a short usage message and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Display the program version and exit.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> The <code>sprof</code> command is a GNU extension, not present in POSIX.1.</p>
 <h2>EXAMPLES</h2>

@@ -15,79 +15,79 @@ description: "ipmiutil_sensor – show Sensor Data Records"
 <h2>Options</h2>
 <p>Command line options are described below.</p>
 <dl>
-<dt>-a snum</p>
-<dd>ReArms the sensor number for events</p>
-<dt>-b</p>
-<dd>Shows SDRs for Bladed (PICMG or ATCA) systems by traversing the child MCs (same as -e).</p>
-<dt>-c</p>
-<dd>Show sensor list in a simpler/Canonical format without uninterpreted binary values. Only the user-friendly interpreted sensor information is shown. (same as -s).</p>
-<dt>-d &lt;file&gt;</p>
-<dd>Dump the SDRs to a specified binary file. This file can be used with -j to jumpstart getting the sensor readings.</p>
-<dt>-e</p>
-<dd>Show Every SDR in a bladed system by traversing the child MCs (same as -b).</p>
-<dt>-f &lt;file&gt;</p>
-<dd>Restore the SDRs from the specified binary File. This is normally only done with the initial factory provisioning.</p>
-<dt>-g sens_type</p>
-<dd>Shows only those SDRs matching the given sensor type group. The sens_type string can be &quot;fan&quot;, &quot;temp&quot;, &quot;voltage&quot;, or any string or substring matching those in the IPMI 2.0 Table 42-3 for Sensor Types. Multiple types can be listed, separated by a comma (,) but no spaces.</p>
-<dt>-h tval</p>
-<dd>Highest threshold value to set for the specified sensor. This tval can be in decimal, or of the form 0x1a, to match the raw reading value shown by sensor following the &quot; = &quot;. The value passed is set as the non-critical threshold value, with the more critical ones set by the utility as incrementally lower. This simplifies the interface and ensures that the threshold values do not get out of order. This requires specifying the sensor number via -n.</p>
-<dt>-i ID</p>
-<dd>Show or set only the sensor Index corresponding to ID, where ID is the hex ID of the SDR as shown in the sensor output under &quot;_ID_&quot;. The ID argument can be one hex number (e.g. 0x0e or 0e), or a range of hex numbers (e.g. 0e-1a or 1a,2a or 0x0e-0x2a). This is useful to repeatedly view just a few sensor readings for changes, or to set just one sensor quickly without reading all of the SDRs.</p>
-<dt>-j file</p>
-<dd>Jump-start by caching the SDRs from a file. This uses an SDR binary file to read the SDRs, so that only the sensor readings need to be read from the firmware. This avoids getting the SDR reservation and reading each SDR, so it makes getting the sensor readings more efficient. The SDR binary file can be created using the -d option to dump the SDRs to a file, or -j will try to create the file if not there.</p>
-<dt>-k K</p>
-<dd>When looping with -L, wait K seconds between loops. Default is 1 second.</p>
-<dt>-l tval</p>
-<dd>Lowest threshold value to set for the specified sensor. This tval can be in decimal, or of the form 0x1a, to match the raw reading value shown by sensor following the &quot; = &quot;. The value passed is set as the non-critical threshold value, with the more critical ones set by the utility as incrementally higher. This simplifies the interface and ensures that the threshold values do not get out of order. This requires specifying the sensor number via -n.</p>
-<dt>-m 002000s</p>
-<dd>Show SDRs for a specific MC (e.g. bus 00, sa 20, lun 00). This could be used for PICMG or ATCA blade systems. The trailing character, if present, indicates SMI addressing if &#8216;s&#8217;, or IPMB addressing if &#8216;i&#8217; or not present.</p>
-<dt>-n snum</p>
-<dd>Number of the sensor to set. This num can be in decimal, or of the form 0x1a, to match the value shown by sensor following the &quot;snum&quot; tag. This is required if setting hi/lo thresholds via -h/-l.</p>
-<dt>-o</p>
+<dt>-a snum</dt>
+<dd>ReArms the sensor number for events</dd>
+<dt>-b</dt>
+<dd>Shows SDRs for Bladed (PICMG or ATCA) systems by traversing the child MCs (same as -e).</dd>
+<dt>-c</dt>
+<dd>Show sensor list in a simpler/Canonical format without uninterpreted binary values. Only the user-friendly interpreted sensor information is shown. (same as -s).</dd>
+<dt>-d &lt;file&gt;</dt>
+<dd>Dump the SDRs to a specified binary file. This file can be used with -j to jumpstart getting the sensor readings.</dd>
+<dt>-e</dt>
+<dd>Show Every SDR in a bladed system by traversing the child MCs (same as -b).</dd>
+<dt>-f &lt;file&gt;</dt>
+<dd>Restore the SDRs from the specified binary File. This is normally only done with the initial factory provisioning.</dd>
+<dt>-g sens_type</dt>
+<dd>Shows only those SDRs matching the given sensor type group. The sens_type string can be &quot;fan&quot;, &quot;temp&quot;, &quot;voltage&quot;, or any string or substring matching those in the IPMI 2.0 Table 42-3 for Sensor Types. Multiple types can be listed, separated by a comma (,) but no spaces.</dd>
+<dt>-h tval</dt>
+<dd>Highest threshold value to set for the specified sensor. This tval can be in decimal, or of the form 0x1a, to match the raw reading value shown by sensor following the &quot; = &quot;. The value passed is set as the non-critical threshold value, with the more critical ones set by the utility as incrementally lower. This simplifies the interface and ensures that the threshold values do not get out of order. This requires specifying the sensor number via -n.</dd>
+<dt>-i ID</dt>
+<dd>Show or set only the sensor Index corresponding to ID, where ID is the hex ID of the SDR as shown in the sensor output under &quot;_ID_&quot;. The ID argument can be one hex number (e.g. 0x0e or 0e), or a range of hex numbers (e.g. 0e-1a or 1a,2a or 0x0e-0x2a). This is useful to repeatedly view just a few sensor readings for changes, or to set just one sensor quickly without reading all of the SDRs.</dd>
+<dt>-j file</dt>
+<dd>Jump-start by caching the SDRs from a file. This uses an SDR binary file to read the SDRs, so that only the sensor readings need to be read from the firmware. This avoids getting the SDR reservation and reading each SDR, so it makes getting the sensor readings more efficient. The SDR binary file can be created using the -d option to dump the SDRs to a file, or -j will try to create the file if not there.</dd>
+<dt>-k K</dt>
+<dd>When looping with -L, wait K seconds between loops. Default is 1 second.</dd>
+<dt>-l tval</dt>
+<dd>Lowest threshold value to set for the specified sensor. This tval can be in decimal, or of the form 0x1a, to match the raw reading value shown by sensor following the &quot; = &quot;. The value passed is set as the non-critical threshold value, with the more critical ones set by the utility as incrementally higher. This simplifies the interface and ensures that the threshold values do not get out of order. This requires specifying the sensor number via -n.</dd>
+<dt>-m 002000s</dt>
+<dd>Show SDRs for a specific MC (e.g. bus 00, sa 20, lun 00). This could be used for PICMG or ATCA blade systems. The trailing character, if present, indicates SMI addressing if &#8216;s&#8217;, or IPMB addressing if &#8216;i&#8217; or not present.</dd>
+<dt>-n snum</dt>
+<dd>Number of the sensor to set. This num can be in decimal, or of the form 0x1a, to match the value shown by sensor following the &quot;snum&quot; tag. This is required if setting hi/lo thresholds via -h/-l.</dd>
+<dt>-o</dt>
 <dd>Output the memory DIMM information from SMBIOS, including size. Not available if using IPMI LAN via -N. Sample output:<br />
  Memory Device (0,0): DIMM_A1 : size=2048MB<br />
- Memory Device (0,1): DIMM_A2 : not present</p>
-<dt>-p</p>
-<dd>Persist the threshold being set (as specified via -l or -h). This writes a &quot;sensor -i&quot; script line to the file /usr/share/ipmiutil/thresholds.sh, which can then be executed at each reboot by starting the /etc/init.d/ipmi_port service for the desired runlevels. For Windows, the filename is thresholds.cmd.</p>
-<dt>-q</p>
-<dd>Show threshold values in d:d:d format. Thresholds are shown for each sensor in short format with &#8216;:&#8217; delimiters, which is useful as an example for setting thresholds with &#8216;-u&#8217;.</p>
-<dt>-r</p>
-<dd>Show Raw SDR bytes also.</p>
-<dt>-s</p>
-<dd>Show sensor list in a simpler/canonical format without uninterpreted binary values. Only the user-friendly interpreted sensor information is shown. (same as -c).</p>
-<dt>-t</p>
-<dd>Show any Thresholds for each sensor also, in text format.</p>
-<dt>-u</p>
+ Memory Device (0,1): DIMM_A2 : not present</dd>
+<dt>-p</dt>
+<dd>Persist the threshold being set (as specified via -l or -h). This writes a &quot;sensor -i&quot; script line to the file /usr/share/ipmiutil/thresholds.sh, which can then be executed at each reboot by starting the /etc/init.d/ipmi_port service for the desired runlevels. For Windows, the filename is thresholds.cmd.</dd>
+<dt>-q</dt>
+<dd>Show threshold values in d:d:d format. Thresholds are shown for each sensor in short format with &#8216;:&#8217; delimiters, which is useful as an example for setting thresholds with &#8216;-u&#8217;.</dd>
+<dt>-r</dt>
+<dd>Show Raw SDR bytes also.</dd>
+<dt>-s</dt>
+<dd>Show sensor list in a simpler/canonical format without uninterpreted binary values. Only the user-friendly interpreted sensor information is shown. (same as -c).</dd>
+<dt>-t</dt>
+<dd>Show any Thresholds for each sensor also, in text format.</dd>
+<dt>-u</dt>
 <dd>Set unique threshold values. The values are specified in a string of threshold values. It can be in raw hex characters or in float values. All 6 possible thresholds must be specified, but only the ones that are valid for this sensor will be applied. These values are validated for ordering. For example:<br />
 &nbsp;<wbr>&nbsp;<wbr>-u 6:5:4:60:65:69&nbsp;<wbr>(float)&nbsp;<wbr>or<br />
 &nbsp;<wbr>&nbsp;<wbr>-u 0x0605043c4145&nbsp;<wbr>(raw hex)<br />
-&nbsp;<wbr>would mean 0x06=noncrit_lo, 0x05=crit_lo, 0x04=nonrec_lo, 0x3c=noncrit_hi, 0x41=crit_hi, 0x45=nonrec_hi.</p>
-<dt>-v</p>
-<dd>Show Verbose output, including volatile thresholds, SDR thresholds, max/min, hysteresis, and BMC_TAM decoding.</p>
-<dt>-w</p>
-<dd>Wrap the threshold data onto the same line as the sensor. This may be convenient for scripting.</p>
-<dt>-x</p>
-<dd>Causes eXtra debug messages to be displayed.</p>
-<dt>-L n</p>
-<dd>Loop n times every K seconds. Default is one loop and K defaults to 1 second. See option -k to change K seconds if desired. This is useful along with -i or -g to read some sensors as they change. Using -j with this option makes run it quicker.</p>
-<dt>-N nodename</p>
-<dd>Nodename or IP address of the remote target system. If a nodename is specified, IPMI LAN interface is used. Otherwise the local system management interface is used.</p>
-<dt>-P/-R rmt_pswd</p>
-<dd>Remote password for the nodename given. The default is a null password.</p>
-<dt>-U rmt_user</p>
-<dd>Remote username for the nodename given. The default is a null username.</p>
-<dt>-E</p>
-<dd>Use the remote password from Environment variable IPMI_PASSWORD.</p>
-<dt>-F drv_t</p>
-<dd>Force the driver type to one of the followng: imb, va, open, gnu, landesk, lan, lan2, lan2i, kcs, smb. Note that lan2i means lan2 with intelplus. The default is to detect any available driver type and use it.</p>
-<dt>-J</p>
-<dd>Use the specified LanPlus cipher suite (0 thru 17): 0=none/none/none, 1=sha1/none/none, 2=sha1/sha1/none, 3=sha1/sha1/cbc128, 4=sha1/sha1/xrc4_128, 5=sha1/sha1/xrc4_40, 6=md5/none/none, &#8230; 14=md5/md5/xrc4_40. Default is 3.</p>
-<dt>-T</p>
-<dd>Use a specified IPMI LAN Authentication Type: 0=None, 1=MD2, 2=MD5, 4=Straight Password, 5=OEM.</p>
-<dt>-V</p>
-<dd>Use a specified IPMI LAN privilege level. 1=Callback level, 2=User level, 3=Operator level, 4=Administrator level (default), 5=OEM level.</p>
-<dt>-Y</p>
-<dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </p>
+&nbsp;<wbr>would mean 0x06=noncrit_lo, 0x05=crit_lo, 0x04=nonrec_lo, 0x3c=noncrit_hi, 0x41=crit_hi, 0x45=nonrec_hi.</dd>
+<dt>-v</dt>
+<dd>Show Verbose output, including volatile thresholds, SDR thresholds, max/min, hysteresis, and BMC_TAM decoding.</dd>
+<dt>-w</dt>
+<dd>Wrap the threshold data onto the same line as the sensor. This may be convenient for scripting.</dd>
+<dt>-x</dt>
+<dd>Causes eXtra debug messages to be displayed.</dd>
+<dt>-L n</dt>
+<dd>Loop n times every K seconds. Default is one loop and K defaults to 1 second. See option -k to change K seconds if desired. This is useful along with -i or -g to read some sensors as they change. Using -j with this option makes run it quicker.</dd>
+<dt>-N nodename</dt>
+<dd>Nodename or IP address of the remote target system. If a nodename is specified, IPMI LAN interface is used. Otherwise the local system management interface is used.</dd>
+<dt>-P/-R rmt_pswd</dt>
+<dd>Remote password for the nodename given. The default is a null password.</dd>
+<dt>-U rmt_user</dt>
+<dd>Remote username for the nodename given. The default is a null username.</dd>
+<dt>-E</dt>
+<dd>Use the remote password from Environment variable IPMI_PASSWORD.</dd>
+<dt>-F drv_t</dt>
+<dd>Force the driver type to one of the followng: imb, va, open, gnu, landesk, lan, lan2, lan2i, kcs, smb. Note that lan2i means lan2 with intelplus. The default is to detect any available driver type and use it.</dd>
+<dt>-J</dt>
+<dd>Use the specified LanPlus cipher suite (0 thru 17): 0=none/none/none, 1=sha1/none/none, 2=sha1/sha1/none, 3=sha1/sha1/cbc128, 4=sha1/sha1/xrc4_128, 5=sha1/sha1/xrc4_40, 6=md5/none/none, &#8230; 14=md5/md5/xrc4_40. Default is 3.</dd>
+<dt>-T</dt>
+<dd>Use a specified IPMI LAN Authentication Type: 0=None, 1=MD2, 2=MD5, 4=Straight Password, 5=OEM.</dd>
+<dt>-V</dt>
+<dd>Use a specified IPMI LAN privilege level. 1=Callback level, 2=User level, 3=Operator level, 4=Administrator level (default), 5=OEM level.</dd>
+<dt>-Y</dt>
+<dd>Yes, do prompt the user for the IPMI LAN remote password. Alternatives for the password are -E or -P. </dd>
 </dl>
 <h2>Examples</h2>
 <p>ipmiutil sensor sample output is below.<br />

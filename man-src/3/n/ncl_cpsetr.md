@@ -13,9 +13,9 @@ CPSETR - Sets the value of an internal parameter of type REAL or INTEGER.
 
  void c_cpsetr (char *pnam, float rval)
 <h2>Description</h2><dl COMPACT><dt>PNAM
-<dd>(CHARACTER, input) is the name of a parameter to be given a real value. Only the first three characters of PNAM are examined. It is recommended that the rest of the character string be used to improve the readability of the code. For example, instead of 'CIS', use 'CIS - CONTOUR INTERVAL SPECIFIER'.
-<dt>RVAL
-<dd>(REAL, input) is an expression, the value of which is to be given to the parameter specified by PNAM. If the internal parameter is of type REAL, the value given to it is RVAL. If the internal parameter is of type INTEGER, the value given to it is INT(RVAL).</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(CHARACTER, input) is the name of a parameter to be given a real value. Only the first three characters of PNAM are examined. It is recommended that the rest of the character string be used to improve the readability of the code. For example, instead of 'CIS', use 'CIS - CONTOUR INTERVAL SPECIFIER'.
+</dd><dt>RVAL
+</dt><dd>(REAL, input) is an expression, the value of which is to be given to the parameter specified by PNAM. If the internal parameter is of type REAL, the value given to it is RVAL. If the internal parameter is of type INTEGER, the value given to it is INT(RVAL).</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Usage</h2>This routine allows you to set the current value of Conpack parameters. For a complete list of parameters available in this utility, see the conpack_params man page.
 <h2>Examples</h2>Use the ncargex command to see the following relevant examples: caredg, ccpcfx, ccpcica, ccpcir, ccpcis, ccpcit, ccpcll, ccpclu, ccpga, ccphand, ccphcf, ccphl, ccphlt, ccpila, ccpils, ccpilt, ccplbam, ccpline, ccpllc, ccplll, ccpllp, ccpllt, ccpllw, ccpmap, ccpmovi, ccpmpxy, ccpnsd, ccppc1, ccppc2, ccppc3, ccppc4, ccppkcl, ccppole, ccprc, ccpscam, ccpset, ccpsps2, ccpspv, ccpt2d, ccpvp, colcon, cpex01, cpex02, cpex03, cpex04, cpex05, cpex06, cpex07, cpex08, cpex09, cbex01, vvex01, tconpa, fcover, ffex03, ffex05, fsfsgfa.
 <h2>Access</h2>To use CPSETR or c_cpsetr, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.

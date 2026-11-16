@@ -10,7 +10,6 @@ description: "ustrchr – Finds the first occurrence of a character in a string.
 <p>ustrchr &#8211; Finds the first occurrence of a character in a string. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 char *ustrchr(const char *s, int c);</code></pre>
 <h2>Description</h2>
 <p>Finds the first occurrence of the character `c&#8217; in the string `s&#8217;. Example: </p>

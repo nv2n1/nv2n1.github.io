@@ -24,45 +24,45 @@ description: "BeakerLib – logging – phase support, logging functions and met
 rlLog message[logfile][priority][label]
 </code></pre>
 <dl>
-<dt>message</p>
-<dd> Message you want to show (use quotes when invoking).</p>
-<dt>logfile</p>
-<dd> Log file. If not supplied, <font SIZE="-1">OUTPUTFILE</font> is assumed.</p>
-<dt>priority</p>
-<dd> Priority of the log.</p>
-<dt>label</p>
-<dd> Print this text instead of time in log label.</dl>
+<dt>message</dt>
+<dd> Message you want to show (use quotes when invoking).</dd>
+<dt>logfile</dt>
+<dd> Log file. If not supplied, <font SIZE="-1">OUTPUTFILE</font> is assumed.</dd>
+<dt>priority</dt>
+<dd> Priority of the log.</dd>
+<dt>label</dt>
+<dd> Print this text instead of time in log label.</dd></dl>
 <p> <i>rlDie</i> </p>
 <p> Create a time-labelled message in the log, report test result, upload logs, close unfinished phase and terminate the test. </p>
 <pre>
     rlDie message [file...]
 </pre>
 <dl>
-<dt>message</p>
-<dd> Message you want to show (use quotes when invoking) &#8211; this option is mandatory.</p>
-<dt>file</p>
-<dd> Files (logs) you want to upload as well. <tt>&quot;rlBundleLogs&quot;</tt> will be used for it. Files which are not readable will be excluded before calling <tt>&quot;rlBundleLogs&quot;</tt>, so it is safe to call even with possibly not existent logs and it will succeed.</dl>
+<dt>message</dt>
+<dd> Message you want to show (use quotes when invoking) &#8211; this option is mandatory.</dd>
+<dt>file</dt>
+<dd> Files (logs) you want to upload as well. <tt>&quot;rlBundleLogs&quot;</tt> will be used for it. Files which are not readable will be excluded before calling <tt>&quot;rlBundleLogs&quot;</tt>, so it is safe to call even with possibly not existent logs and it will succeed.</dd></dl>
 <p> <i>rlBundleLogs</i> </p>
 <p> Create a tarball of files (e.g. logs) and attach them to the test result. </p>
 <pre>
     rlBundleLogs package file [file...]
 </pre>
 <dl>
-<dt>package</p>
-<dd> Name of the package. Will be used as a part of the tar-ball name.</p>
-<dt>file</p>
-<dd> File(s) to be packed and submitted.</dl>
+<dt>package</dt>
+<dd> Name of the package. Will be used as a part of the tar-ball name.</dd>
+<dt>file</dt>
+<dd> File(s) to be packed and submitted.</dd></dl>
 <p> Returns result of submiting the tarball. </p>
 <p> <i>rlFileSubmit</i> </p>
 <p> Resolves absolute path to the file, replaces / for &#8211; and uploads this renamed file using rhts-submit-log. It also allows you to specify your custom name for the uploaded file. </p>
 <p>rlFileSubmit[-s sep] path_to_file[required_name]</p>
 <dl>
-<dt>-s sep</p>
-<dd> Sets separator (i.e. the replacement of the /) to sep.</p>
-<dt>path_to_file</p>
-<dd> Either absolute or relative path to file. Relative path is converted to absolute.</p>
-<dt>required_name</p>
-<dd> Default behavior renames file to full_path_to_file with / replaced for -, if this does not suit your needs, you can specify the name using this option. </p>
+<dt>-s sep</dt>
+<dd> Sets separator (i.e. the replacement of the /) to sep.</dd>
+<dt>path_to_file</dt>
+<dd> Either absolute or relative path to file. Relative path is converted to absolute.</dd>
+<dt>required_name</dt>
+<dd> Default behavior renames file to full_path_to_file with / replaced for -, if this does not suit your needs, you can specify the name using this option. </dd>
 <p> Examples: </p>
 <p> rlFileSubmit logfile.txt -&gt; logfile.txt cd /etc; rlFileSubmit ./passwd -&gt; etc-passwd rlFileSubmit /etc/passwd -&gt; etc-passwd rlFileSubmit /etc/passwd my-top-secret_file -&gt; my-top-secret-file rlFileSubmit -s &#8216;_&#8217; /etc/passwd -&gt; etc_passwd</dl>
 <h3>Info</h3>
@@ -72,8 +72,8 @@ rlLog message[logfile][priority][label]
     rlShowPackageVersion package [package...]
 </pre>
 <dl>
-<dt>package</p>
-<dd> Name of a package(s) you want to log.</dl>
+<dt>package</dt>
+<dd> Name of a package(s) you want to log.</dd></dl>
 <p> <i>rlGetArch</i> </p>
 <p> This function is deprecated. Use rlGetPrimaryArch or rlGetSecondaryArch instead, or use uname. This function will be only kept for compatibility. </p>
 <p> Return base arch for the current system (good when you need base arch on a multilib system). </p>
@@ -111,22 +111,19 @@ rlLog message[logfile][priority][label]
     rlPhaseStart type [name]
 </pre>
 <dl>
-<dt>type</p>
-<dd> Type of the phase, one of the following:</p>
+<dt>type</dt>
+<dd> Type of the phase, one of the following:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><font SIZE="-1">FAIL</font></p>
-<dd> When assert fails here, phase will report a <font SIZE="-1">FAIL.</font></p>
-<dt><font SIZE="-1">WARN</font></p>
-<dd> When assert fails here, phase will report a <font SIZE="-1">WARN.</font></dl>
+<dt><font SIZE="-1">FAIL</font></dt>
+<dd> When assert fails here, phase will report a <font SIZE="-1">FAIL.</font></dd>
+<dt><font SIZE="-1">WARN</font></dt>
+<dd> When assert fails here, phase will report a <font SIZE="-1">WARN.</font></dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>name</p>
-<dd> Optional name of the phase (if not provided, one will be generated).</dl>
+</dl>
+<dt>name</dt>
+<dd> Optional name of the phase (if not provided, one will be generated).</dd></dl>
 <p> If all asserts included in the phase pass, phase reports <font SIZE="-1">PASS.</font> </p>
 <p> <i>rlPhaseEnd</i> </p>
 <p> End current phase, summarize asserts included and report phase result. </p>
@@ -142,8 +139,8 @@ rlLog message[logfile][priority][label]
 rlPhaseStartSetup[name] rlPhaseStartTest[name] rlPhaseStartCleanup[name]
 </code></pre>
 <dl>
-<dt>name</p>
-<dd> Optional name of the phase. If not specified, default Setup/Test/Cleanup are used.</dl>
+<dt>name</dt>
+<dd> Optional name of the phase. If not specified, default Setup/Test/Cleanup are used.</dd></dl>
 <p> If you do not want these shortcuts, use plain <tt>&quot;rlPhaseStart&quot;</tt> function.</p>
 <h3>Metric</h3>
 <p> <i>rlLogMetricLow</i> </p>
@@ -152,12 +149,12 @@ rlPhaseStartSetup[name] rlPhaseStartTest[name] rlPhaseStartCleanup[name]
     rlLogMetricLow name value [tolerance]
 </pre>
 <dl>
-<dt>name</p>
-<dd> Name of the metric. It has to be unique in a phase.</p>
-<dt>value</p>
-<dd> Value of the metric.</p>
-<dt>tolerance</p>
-<dd> It is used when comparing via rcw. It means how larger can the second value be to not trigger a <font SIZE="-1">FAIL.</font> Default is 0.2</dl>
+<dt>name</dt>
+<dd> Name of the metric. It has to be unique in a phase.</dd>
+<dt>value</dt>
+<dd> Value of the metric.</dd>
+<dt>tolerance</dt>
+<dd> It is used when comparing via rcw. It means how larger can the second value be to not trigger a <font SIZE="-1">FAIL.</font> Default is 0.2</dd></dl>
 <p> When comparing <font SIZE="-1">FIRST, SECOND,</font> then: </p>
 <pre>
     FIRST &gt;= SECOND means PASS
@@ -178,12 +175,12 @@ rlPhaseStartSetup[name] rlPhaseStartTest[name] rlPhaseStartCleanup[name]
     rlLogMetricHigh name value [tolerance]
 </pre>
 <dl>
-<dt>name</p>
-<dd> Name of the metric. It has to be unique in a phase.</p>
-<dt>value</p>
-<dd> Value of the metric.</p>
-<dt>tolerance</p>
-<dd> It is used when comparing via rcw. It means how lower can the second value be to not trigger a <font SIZE="-1">FAIL.</font> Default is 0.2</dl>
+<dt>name</dt>
+<dd> Name of the metric. It has to be unique in a phase.</dd>
+<dt>value</dt>
+<dd> Value of the metric.</dd>
+<dt>tolerance</dt>
+<dd> It is used when comparing via rcw. It means how lower can the second value be to not trigger a <font SIZE="-1">FAIL.</font> Default is 0.2</dd></dl>
 <p> When comparing <font SIZE="-1">FIRST, SECOND,</font> then: </p>
 <pre>
     FIRST &lt;= SECOND means PASS
@@ -192,13 +189,13 @@ rlPhaseStartSetup[name] rlPhaseStartTest[name] rlPhaseStartCleanup[name]
 </pre>
 <h2>AUTHORS</h2>
 <dl>
-<dt>&bull;</p>
-<dd> Petr Muller &lt;pmuller [at] redhat.com&gt;</p>
-<dt>&bull;</p>
-<dd> Jan Hutar &lt;jhutar [at] redhat.com&gt;</p>
-<dt>&bull;</p>
-<dd> Ales Zelinka &lt;azelinka [at] redhat.com&gt;</p>
-<dt>&bull;</p>
-<dd> Petr Splichal &lt;psplicha [at] redhat.com&gt; </p>
+<dt>&bull;</dt>
+<dd> Petr Muller &lt;pmuller [at] redhat.com&gt;</dd>
+<dt>&bull;</dt>
+<dd> Jan Hutar &lt;jhutar [at] redhat.com&gt;</dd>
+<dt>&bull;</dt>
+<dd> Ales Zelinka &lt;azelinka [at] redhat.com&gt;</dd>
+<dt>&bull;</dt>
+<dd> Petr Splichal &lt;psplicha [at] redhat.com&gt; </dd>
 </dl>
 <h2>Index</h2>

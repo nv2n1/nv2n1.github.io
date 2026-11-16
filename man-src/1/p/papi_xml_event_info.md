@@ -38,13 +38,13 @@ url: "/docs/linux/man/1-papi_xml_event_info/"
 
 <dl>
 <dt>&bull;
-<dd> -h print help message
-<dt>&bull;
-<dd> -p print only preset events
-<dt>&bull;
-<dd> -n print only native events
-<dt>&bull;
-<dd> -c COMPONENT print only events from component number COMPONENT event1, event2, ... Print only events that can be created in the same event set with the events event1, event2, etc.</dl>
+</dt><dd> -h print help message
+</dd><dt>&bull;
+</dt><dd> -p print only preset events
+</dd><dt>&bull;
+</dt><dd> -n print only native events
+</dd><dt>&bull;
+</dt><dd> -c COMPONENT print only events from component number COMPONENT event1, event2, ... Print only events that can be created in the same event set with the events event1, event2, etc.</dd></dl>
  
 
 <h2>Bugs</h2>

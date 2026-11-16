@@ -15,11 +15,11 @@ snd_card_add_dev_attr - Append a new sysfs attribute group to card
 <h2>Arguments</h2>
 
 <i>card</i>
-<dl><dd><dd>card instance</dl>
+<dl><dd></dd><dd>card instance</dd></dl>
  
 
  <i>group</i>
-<dl><dd>attribute group to append</dl>
+<dl><dd>attribute group to append</dd></dl>
 
 <h2>Copyright</h2>
 

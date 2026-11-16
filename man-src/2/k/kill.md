@@ -29,12 +29,12 @@ int kill(pid_t pid, int sig);
 <p> On success (at least one signal was sent), zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> An invalid signal was specified.</p>
-<dt><code>EPERM</code></p>
-<dd> The calling process does not have permission to send the signal to any of the target processes.</p>
-<dt><code>ESRCH</code></p>
-<dd> The target process or process group does not exist. Note that an existing process might be a zombie, a process that has terminated execution, but has not yet been <code><a href="/docs/linux/man/2-wait/">wait</a></code>(2)ed for.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> An invalid signal was specified.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The calling process does not have permission to send the signal to any of the target processes.</dd>
+<dt><code>ESRCH</code></dt>
+<dd> The target process or process group does not exist. Note that an existing process might be a zombie, a process that has terminated execution, but has not yet been <code><a href="/docs/linux/man/2-wait/">wait</a></code>(2)ed for.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, SVr4, 4.3BSD.</p>
 <h2>NOTES</h2>

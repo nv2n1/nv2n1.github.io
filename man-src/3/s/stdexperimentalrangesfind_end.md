@@ -10,25 +10,15 @@ description: "std::experimental::ranges::find_end – std::experimental::ranges:
 <p>std::experimental::ranges::find_end &#8211; std::experimental::ranges::find_end</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;experimental/ranges/algorithm&gt;
-
 template&lt; ForwardIterator I1, Sentinel&lt;I1&gt; S1, ForwardIterator I2, Sentinel&lt;I2&gt; S2,
-
 class Proj = ranges::identity,
-
 IndirectRelation&lt;I2, projected&lt;I1, Proj&gt;&gt; Pred = ranges::equal_to&lt;&gt; &gt;               (1) (ranges TS)
-
 I1 find_end(I1 first1, S1 last1, I2 first2, S2 last2,
-
 Pred pred = Pred{}, Proj proj = Proj{});
-
 template&lt; ForwardRange R1, ForwardRange R2, class Proj = ranges::identity,
-
 IndirectRelation&lt;ranges::iterator_t&lt;R2&gt;,
-
 projected&lt;ranges::iterator_t&lt;R1&gt;, Proj&gt;&gt; Pred = ranges::equal_to&lt;&gt; &gt;                (2) (ranges TS)
-
 ranges::safe_iterator_t&lt;R1&gt; find_end(Rng1&amp;&amp; rng1, Rng2&amp;&amp; rng2,
-
 Pred pred = Pred{}, Proj proj = Proj{});</code></pre>
 <p>1) Searches for the last occurrence of the sequence [first2, last2) in the range [first1, last1) (after projection with proj).<br />
 2) Same as <code>(1)</code>, but uses r1 as the first source range and r2 as the second source range, as if using ranges::begin(r1) as first1, ranges::end(r1) as last1, ranges::begin(r2) as first2, and ranges::end(r2) as last2.<br />

@@ -14,7 +14,7 @@ description: "qb-blackbox – Display \"flight data\" from the \"blackbox\"."
 <p><code>qb-blackbox</code> Print out the logs (including debug logs) that were recorded using libqb&#8217;s blackbox.</p>
 <h2>Examples</h2>
 <dl>
-<dt>Get info to help developers diagnose a crash.</p>
+<dt>Get info to help developers diagnose a crash.</dt>
 <dd>$ qb-blackbox /var/lib/corosync/fdata<br />
  Dumping the contents of /var/lib/corosync/fdata<br />
  Mar 23 20:58:57 message_handler_orf_token():3677 install seq 0 aru 0 high seq received 0<br />
@@ -26,7 +26,7 @@ description: "qb-blackbox – Display \"flight data\" from the \"blackbox\"."
  Mar 23 20:58:57 sync_save_transitional():586 ENTERING sync_save_transitional()<br />
  Mar 23 20:58:57 member_object_joined():301 Member joined: r(0) ip(192.168.122.1)<br />
  Mar 23 20:58:57 sync_abort():594 ENTERING sync_abort()
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-qblog-h/">qblog.h</a></code>(3),</p>
 <h2>Author</h2>

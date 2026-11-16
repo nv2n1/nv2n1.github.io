@@ -15,8 +15,8 @@ void bson_value_destroy(bson_value_t *value);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>value</code></p>
-<dd> A <code>bson_value_t</code> \&amp;.</dl>
+<dt><code>value</code></dt>
+<dd> A <code>bson_value_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Releases any resources associated with <code>value</code> \&amp;. </p>
 <h2>COLOPHON</h2>

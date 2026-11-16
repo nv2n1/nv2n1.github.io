@@ -36,22 +36,22 @@ description: "Razor-Agents – Collection of files for checking, reporting, and 
 <h2>Files</h2>
 <p>Besides those listed at the end with their own manpages, Razor Agents also has the following files.</p>
 <dl>
-<dt><code>razorhome/identity</code></p>
-<dd>Usually a symlink to identity file containing user+pass. Used by <i><a href="/docs/linux/man/1-razor-report/">razor-report</a></i>(1) and <i><a href="/docs/linux/man/1-razor-revoke/">razor-revoke</a></i>(1).</p>
-<dt><code>razorhome/razor-agent.log</code></p>
-<dd>Default log file. To change, edit <i><a href="/docs/linux/man/5-razor-agent-conf/">razor-agent.conf</a></i>(5).</p>
-<dt><code>razorhome/servers.*.lst</code></p>
-<dd>Cached list of Razor Servers. If more than one, they are ordered by closest ping time.</p>
-<dt><code>razorhome/server.&lt;name&gt;.lst</code></p>
-<dd>Cached info for &lt;name&gt; server. The <tt>&quot;srl&quot;</tt> key in this file is compared against the server greeting, and if server&#8217;s is greater, new cache info is retrieved from the server.</dl>
+<dt><code>razorhome/identity</code></dt>
+<dd>Usually a symlink to identity file containing user+pass. Used by <i><a href="/docs/linux/man/1-razor-report/">razor-report</a></i>(1) and <i><a href="/docs/linux/man/1-razor-revoke/">razor-revoke</a></i>(1).</dd>
+<dt><code>razorhome/razor-agent.log</code></dt>
+<dd>Default log file. To change, edit <i><a href="/docs/linux/man/5-razor-agent-conf/">razor-agent.conf</a></i>(5).</dd>
+<dt><code>razorhome/servers.*.lst</code></dt>
+<dd>Cached list of Razor Servers. If more than one, they are ordered by closest ping time.</dd>
+<dt><code>razorhome/server.&lt;name&gt;.lst</code></dt>
+<dd>Cached info for &lt;name&gt; server. The <tt>&quot;srl&quot;</tt> key in this file is compared against the server greeting, and if server&#8217;s is greater, new cache info is retrieved from the server.</dd></dl>
 <h2>Examples</h2>
 <dl>
-<dt>razor-check -d -debuglevel=9 mbox</p>
-<dd>Checks spam in mbox. prints numbers for those found to be spam. -d logs to stdout, -debuglevel=9 is verbose logging</p>
-<dt>razor-admin -create -home=/home/chad/.razor -d -s</p>
-<dd>Creates razorhome in /home/chad/.razor, log to stdout, does not connect to server (-s simulate).</p>
-<dt>razor-report spam -debuglevel=0</p>
-<dd>sends spam to server, with no log msgs.</dl>
+<dt>razor-check -d -debuglevel=9 mbox</dt>
+<dd>Checks spam in mbox. prints numbers for those found to be spam. -d logs to stdout, -debuglevel=9 is verbose logging</dd>
+<dt>razor-admin -create -home=/home/chad/.razor -d -s</dt>
+<dd>Creates razorhome in /home/chad/.razor, log to stdout, does not connect to server (-s simulate).</dd>
+<dt>razor-report spam -debuglevel=0</dt>
+<dd>sends spam to server, with no log msgs.</dd></dl>
 <h2>Authors</h2>
 <p>Vipul Ved Prakash, &lt;mail [at] vipul.net&gt; and Chad Norwood &lt;chad [at] samo.org&gt;</p>
 <h2>See Also</h2>

@@ -15,38 +15,38 @@ description: "mtx-interface – ConTeXt Interface Related Goodies"
 <p> <code>ConTeXt Interface Related Goodies</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;interfaces</code></p>
-<dd> generate context mkii interface files</p>
-<dt><code>&#8211;context</code></p>
-<dd> equals &#8211;interfaces &#8211;messages &#8211;languages</p>
-<dt><code>&#8211;scite</code></p>
-<dd> generate scite interface</p>
-<dt><code>&#8211;bbedit</code></p>
-<dd> generate bbedit interface files</p>
-<dt><code>&#8211;jedit</code></p>
-<dd> generate jedit interface files</p>
-<dt><code>&#8211;textpad</code></p>
-<dd> generate textpad interface files</p>
-<dt><code>&#8211;text</code></p>
-<dd> create text files for commands and environments</p>
-<dt><code>&#8211;raw</code></p>
-<dd> report commands to the console</p>
-<dt><code>&#8211;check</code></p>
-<dd> generate check file</p>
-<dt><code>&#8211;meaning</code></p>
-<dd> report the mening of commands</p>
-<dt><code>&#8211;tokens</code></p>
-<dd> show the internal representation of commands</p>
-<dt><code>&#8211;toutf</code></p>
-<dd> replace named characters by utf</p>
-<dt><code>&#8211;preprocess</code></p>
-<dd> preprocess mkvi files to tex files [force,suffix]</p>
-<dt><code>&#8211;suffix</code></p>
-<dd> use given suffix for output files</p>
-<dt><code>&#8211;force</code></p>
-<dd> force action even when in doubt</p>
-<dt><code>&#8211;pattern</code></p>
-<dd> a pattern for meaning lookups</dl>
+<dt><code>&#8211;interfaces</code></dt>
+<dd> generate context mkii interface files</dd>
+<dt><code>&#8211;context</code></dt>
+<dd> equals &#8211;interfaces &#8211;messages &#8211;languages</dd>
+<dt><code>&#8211;scite</code></dt>
+<dd> generate scite interface</dd>
+<dt><code>&#8211;bbedit</code></dt>
+<dd> generate bbedit interface files</dd>
+<dt><code>&#8211;jedit</code></dt>
+<dd> generate jedit interface files</dd>
+<dt><code>&#8211;textpad</code></dt>
+<dd> generate textpad interface files</dd>
+<dt><code>&#8211;text</code></dt>
+<dd> create text files for commands and environments</dd>
+<dt><code>&#8211;raw</code></dt>
+<dd> report commands to the console</dd>
+<dt><code>&#8211;check</code></dt>
+<dd> generate check file</dd>
+<dt><code>&#8211;meaning</code></dt>
+<dd> report the mening of commands</dd>
+<dt><code>&#8211;tokens</code></dt>
+<dd> show the internal representation of commands</dd>
+<dt><code>&#8211;toutf</code></dt>
+<dd> replace named characters by utf</dd>
+<dt><code>&#8211;preprocess</code></dt>
+<dd> preprocess mkvi files to tex files [force,suffix]</dd>
+<dt><code>&#8211;suffix</code></dt>
+<dd> use given suffix for output files</dd>
+<dt><code>&#8211;force</code></dt>
+<dd> force action even when in doubt</dd>
+<dt><code>&#8211;pattern</code></dt>
+<dd> a pattern for meaning lookups</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

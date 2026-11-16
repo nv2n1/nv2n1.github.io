@@ -14,11 +14,11 @@ description: "maple_driver_unregister – unregister a maple driver."
 <p><i>drv</i></p>
 <dl>
 <dd>
-<dd>maple driver to unregister.</dl>
+</dd><dd>maple driver to unregister.</dd></dl>
 <h2>Description</h2>
 <p>Cleans up after <code>maple_driver_register</code>. To be invoked in the exit path of any module drivers.</p>
 <h2>Author</h2>
 <p><code>Paul Mundt</code> &lt;lethal [at] linux-sh.org&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

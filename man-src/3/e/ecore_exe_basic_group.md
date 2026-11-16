@@ -46,60 +46,60 @@ description: "Process Spawning Functions – Functions that deal with spawned pr
  <i>start_bytes</i> limit of bytes at start of output to buffer.<br />
  <i>end_bytes</i> limit of bytes at end of output to buffer.<br />
  <i>start_lines</i> limit of lines at start of output to buffer.<br />
- <i>end_lines</i> limit of lines at end of output to buffer.</dl>
+ <i>end_lines</i> limit of lines at end of output to buffer.</dd></dl>
 <h3>EAPI void ecore_exe_close_stdin (<code>Ecore_Exe</code> * exe)</h3>
 <p>The stdin of the given child process will close when the write buffer is empty. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>exe</i> The child process</dl>
+<dd><i>exe</i> The child process</dd></dl>
 <h3>EAPI char* ecore_exe_cmd_get (<code>Ecore_Exe</code> * exe)</h3>
 <p>Retrieves the command of the given spawned process. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>exe</i> Handle to the given spawned process.</dl>
+<dd><i>exe</i> Handle to the given spawned process.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The command on success. NULL otherwise.</dl>
+<dd>The command on success. NULL otherwise.</dd></dl>
 <h3>EAPI void* ecore_exe_data_get (<code>Ecore_Exe</code> * exe)</h3>
 <p>Retrieves the data attached to the given process handle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>exe</i> The given process handle.</dl>
+<dd><i>exe</i> The given process handle.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The data pointer attached to exe.</dl>
+<dd>The data pointer attached to exe.</dd></dl>
 <h3>EAPI void ecore_exe_event_data_free (<code>Ecore_Exe_Event_Data</code> * e)</h3>
 <p>Frees the given event data. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>e</i> The given event data.</dl>
+<dd><i>e</i> The given event data.</dd></dl>
 <p> References _Ecore_Exe_Event_Data::data, and _Ecore_Exe_Event_Data::lines.</p>
 <h3>EAPI <code>Ecore_Exe_Event_Data</code>* ecore_exe_event_data_get (<code>Ecore_Exe</code> * exe, Ecore_Exe_Flags flags)</h3>
 <p>Gets the auto pipe data for the given process handle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>exe</i> The given process handle.<br />
- <i>flags</i> Is this a ECORE_EXE_PIPE_READ or ECORE_EXE_PIPE_ERROR?</dl>
+ <i>flags</i> Is this a ECORE_EXE_PIPE_READ or ECORE_EXE_PIPE_ERROR?</dd></dl>
 <p> References _Ecore_Exe_Event_Data::data, ECORE_EXE_PIPE_ERROR, ECORE_EXE_PIPE_ERROR_LINE_BUFFERED, ECORE_EXE_PIPE_READ, ECORE_EXE_PIPE_READ_LINE_BUFFERED, _Ecore_Exe_Event_Data::exe, _Ecore_Exe_Event_Data::lines, and _Ecore_Exe_Event_Data::size.</p>
 <h3>EAPI void* ecore_exe_free (<code>Ecore_Exe</code> * exe)</h3>
 <p>Frees the given process handle. </p>
 <p> Note that the process that the handle represents is unaffected by this function. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>exe</i> The given process handle.</dl>
+<dd><i>exe</i> The given process handle.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The data attached to the handle when <code>ecore_exe_run</code> was called.</dl>
+<dd>The data attached to the handle when <code>ecore_exe_run</code> was called.</dd></dl>
 <p> References ecore_main_fd_handler_del(), and ecore_timer_del(). </p>
 <p> Referenced by ecore_exe_pipe_run().</p>
 <h3>EAPI pid_t ecore_exe_pid_get (<code>Ecore_Exe</code> * exe)</h3>
 <p>Retrieves the process ID of the given spawned process. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>exe</i> Handle to the given spawned process.</dl>
+<dd><i>exe</i> Handle to the given spawned process.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The process ID on success. -1 otherwise.</dl>
+<dd>The process ID on success. -1 otherwise.</dd></dl>
 <h3>EAPI <code>Ecore_Exe</code>* ecore_exe_pipe_run (const char * exe_cmd, Ecore_Exe_Flags flags, const void * data)</h3>
 <p>Spawns a child process with its stdin/out available for communication. </p>
 <p> This function forks and runs the given command using /bin/sh. </p>
@@ -109,10 +109,10 @@ description: "Process Spawning Functions – Functions that deal with spawned pr
 <dl COMPACT>
 <dd><i>exe_cmd</i> The command to run with /bin/sh.<br />
  <i>flags</i> The flag parameters for how to deal with inter-process I/O<br />
- <i>data</i> Data to attach to the returned process handle.</dl>
+ <i>data</i> Data to attach to the returned process handle.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A process handle to the spawned process.</dl>
+<dd>A process handle to the spawned process.</dd></dl>
 <p> References ecore_event_add(), ECORE_EXE_EVENT_ADD, ecore_exe_free(), ECORE_EXE_PIPE_AUTO, ECORE_EXE_PIPE_ERROR, ECORE_EXE_PIPE_READ, ECORE_EXE_PIPE_WRITE, ecore_exe_terminate(), ECORE_FD_READ, ECORE_FD_WRITE, ecore_main_fd_handler_active_set(), ecore_main_fd_handler_add(), and _Ecore_Exe_Event_Add::exe. </p>
 <p> Referenced by ecore_exe_run().</p>
 <h3>EAPI <code>Ecore_Exe</code>* ecore_exe_run (const char * exe_cmd, const void * data)</h3>
@@ -121,10 +121,10 @@ description: "Process Spawning Functions – Functions that deal with spawned pr
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>exe_cmd</i> The command to run with /bin/sh.<br />
- <i>data</i> Data to attach to the returned process handle.</dl>
+ <i>data</i> Data to attach to the returned process handle.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A process handle to the spawned process.</dl>
+<dd>A process handle to the spawned process.</dd></dl>
 <p> References ecore_exe_pipe_run().</p>
 <h3>EAPI int ecore_exe_send (<code>Ecore_Exe</code> * exe, void * data, int size)</h3>
 <p>Sends data to the given child process which it recieves on stdin. </p>
@@ -133,25 +133,25 @@ description: "Process Spawning Functions – Functions that deal with spawned pr
 <dl COMPACT>
 <dd><i>exe</i> The child process to send to<br />
  <i>data</i> The data to send<br />
- <i>size</i> The size of the data to send, in bytes</dl>
+ <i>size</i> The size of the data to send, in bytes</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 if successful, 0 on failure.</dl>
+<dd>1 if successful, 0 on failure.</dd></dl>
 <p> References ECORE_FD_WRITE, and ecore_main_fd_handler_active_set().</p>
 <h3>EAPI char* ecore_exe_tag_get (<code>Ecore_Exe</code> * exe)</h3>
 <p>Retrieves the tag attached to the given process handle. </p>
 <p> There is no need to free it as it just returns the internal pointer value. This value is only valid as long as the exe is valid or until the tag is set to something else on this exe. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>exe</i> The given process handle.</dl>
+<dd><i>exe</i> The given process handle.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The string attached to exe.</dl>
+<dd>The string attached to exe.</dd></dl>
 <h3>EAPI void ecore_exe_tag_set (<code>Ecore_Exe</code> * exe, const char * tag)</h3>
 <p>Sets the string tag for the given process handle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>exe</i> The given process handle.<br />
- <i>tag</i> The string tag to set on the process handle.</dl>
+ <i>tag</i> The string tag to set on the process handle.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

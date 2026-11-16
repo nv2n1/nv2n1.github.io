@@ -11,51 +11,35 @@ std::rend,std::crend - std::rend,std::crend
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;iterator&gt;
-
     template &lt;class C&gt;
     (since C++ 14)
-
         auto rend(C &amp;c) -&gt; decltype(c.rend());
 (until C++ 17)
-
     template &lt;class C&gt;
     (since C++ 17)
-
         constexpr auto rend(C &amp;c) -&gt; decltype(c.rend());
-
 template &lt;class C&gt;
 (since C++ 14)
-
     auto rend(const C &amp;c) -&gt; decltype(c.rend());
 (until C++ 17)
-
     template &lt;class C&gt;
     (since C++ 17)
-
         constexpr auto rend(const C &amp;c) -&gt; decltype(c.rend());
 (1)
-
     template &lt;class T, size_t N&gt;
     (since C++ 14)
-
         reverse_iterator&lt;T *&gt; rend(T (&amp;array)[N]);
 (1)(until C++ 17)
-
     template &lt;class T, size_t N&gt;
     (since C++ 17)
-
         constexpr reverse_iterator&lt;T *&gt; rend(T (&amp;array)[N]);
 (2)
-
     template &lt;class C&gt;
     (since C++ 14)
-
         auto crend(const C &amp;c) -&gt; decltype(std::rend(c));
 (3)(until C++ 17)
-
     template &lt;class C&gt;
     (since C++ 17)
-
         constexpr auto crend(const C &amp;c) -&gt; decltype(std::rend(c));</code></pre> 
 Returns an iterator to the reverse-end of the given container c or array array. 
 1) Returns a possibly const-qualified iterator to the reverse-end of the container c. 
@@ -88,14 +72,10 @@ rend(std::initializer_list) specializes std::rend
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;algorithm&gt;
 int main()
-
 {
     int a[] = {4, 6, -3, 9, 10};
     std::cout &lt;&lt; &quot;Array backwards: &quot;;

@@ -21,15 +21,15 @@ url: "/docs/linux/man/3-krb5_ccache_intro/"
 
 <dl>
 <dt>&bull;
-<dd> SCC Store the credential in a database
-<dt>&bull;
-<dd> FILE Store the credential in memory
-<dt>&bull;
-<dd> MEMORY Store the credential in memory
-<dt>&bull;
-<dd> API A credential cache server based solution for Mac OS X
-<dt>&bull;
-<dd> KCM A credential cache server based solution for all platforms</dl>
+</dt><dd> SCC Store the credential in a database
+</dd><dt>&bull;
+</dt><dd> FILE Store the credential in memory
+</dd><dt>&bull;
+</dt><dd> MEMORY Store the credential in memory
+</dd><dt>&bull;
+</dt><dd> API A credential cache server based solution for Mac OS X
+</dd><dt>&bull;
+</dt><dd> KCM A credential cache server based solution for all platforms</dd></dl>
  
 
 <h3>Example</h3>

@@ -20,31 +20,31 @@ description: "smtp – Postfix SMTP+LMTP client"
 <h2>Smtp Destination Syntax</h2>
 <p>SMTP destinations have the following form:</p>
 <dl>
-<dt><i>domainname</i></p>
+<dt><i>domainname</i></dt>
 <dd>
-<dt><i>domainname</i>:<i>port</i></p>
-<dd>Look up the mail exchangers for the specified domain, and connect to the specified port (default: <code>smtp</code>).</p>
-<dt>[<i>hostname</i>]</p>
+</dd><dt><i>domainname</i>:<i>port</i></dt>
+<dd>Look up the mail exchangers for the specified domain, and connect to the specified port (default: <code>smtp</code>).</dd>
+<dt>[<i>hostname</i>]</dt>
 <dd>
-<dt>[<i>hostname</i>]:<i>port</i></p>
-<dd>Look up the address(es) of the specified host, and connect to the specified port (default: <code>smtp</code>).</p>
-<dt>[<i>address</i>]</p>
+</dd><dt>[<i>hostname</i>]:<i>port</i></dt>
+<dd>Look up the address(es) of the specified host, and connect to the specified port (default: <code>smtp</code>).</dd>
+<dt>[<i>address</i>]</dt>
 <dd>
-<dt>[<i>address</i>]:<i>port</i></p>
-<dd>Connect to the host at the specified address, and connect to the specified port (default: <code>smtp</code>). An IPv6 address must be formatted as [<code>ipv6</code>:<i>address</i>].</dl>
+</dd><dt>[<i>address</i>]:<i>port</i></dt>
+<dd>Connect to the host at the specified address, and connect to the specified port (default: <code>smtp</code>). An IPv6 address must be formatted as [<code>ipv6</code>:<i>address</i>].</dd></dl>
 <h2>Lmtp Destination Syntax</h2>
 <p>LMTP destinations have the following form:</p>
 <dl>
-<dt><code>unix</code>:<i>pathname</i></p>
-<dd>Connect to the local UNIX-domain server that is bound to the specified <i>pathname</i>. If the process runs chrooted, an absolute pathname is interpreted relative to the Postfix queue directory.</p>
-<dt><code>inet</code>:<i>hostname</i></p>
+<dt><code>unix</code>:<i>pathname</i></dt>
+<dd>Connect to the local UNIX-domain server that is bound to the specified <i>pathname</i>. If the process runs chrooted, an absolute pathname is interpreted relative to the Postfix queue directory.</dd>
+<dt><code>inet</code>:<i>hostname</i></dt>
 <dd>
-<dt><code>inet:</code><i>hostname</i>:<i>port</i></p>
+</dd><dt><code>inet:</code><i>hostname</i>:<i>port</i></dt>
 <dd>
-<dt><code>inet</code>:[<i>address</i>]</p>
+</dd><dt><code>inet</code>:[<i>address</i>]</dt>
 <dd>
-<dt><code>inet</code>:[<i>address</i>]:<i>port</i></p>
-<dd>Connect to the specified TCP port on the specified local or remote host. If no port is specified, connect to the port defined as <code>lmtp</code> in <code>services</code>(4). If no such service is found, the <code>lmtp_tcp_port</code> configuration parameter (default value of 24) will be used. An IPv6 address must be formatted as [<code>ipv6</code>:<i>address</i>].</dl>
+</dd><dt><code>inet</code>:[<i>address</i>]:<i>port</i></dt>
+<dd>Connect to the specified TCP port on the specified local or remote host. If no port is specified, connect to the port defined as <code>lmtp</code> in <code>services</code>(4). If no such service is found, the <code>lmtp_tcp_port</code> configuration parameter (default value of 24) will be used. An IPv6 address must be formatted as [<code>ipv6</code>:<i>address</i>].</dd></dl>
 <h2>Security</h2>
 <p>The SMTP+LMTP client is moderately security-sensitive. It talks to SMTP or LMTP servers and to DNS servers on the network. The SMTP+LMTP client can be run chrooted at fixed low privilege.</p>
 <h2>Standards</h2>
@@ -78,352 +78,352 @@ RFC 5321 (SMTP protocol)</pre>
 <p> The text below provides only a parameter summary. See <code><a href="/docs/linux/man/5-postconf/">postconf</a></code>(5) for more details including examples.</p>
 <h2>Compatibility Controls</h2>
 <dl>
-<dt><code>ignore_mx_lookup_error (no)</code></p>
-<dd>Ignore DNS MX lookups that produce no response.</p>
-<dt><code>smtp_always_send_ehlo (yes)</code></p>
-<dd>Always send EHLO at the start of an SMTP session.</p>
-<dt><code>smtp_never_send_ehlo (no)</code></p>
-<dd>Never send EHLO at the start of an SMTP session.</p>
-<dt><code>smtp_defer_if_no_mx_address_found (no)</code></p>
-<dd>Defer mail delivery when no MX record resolves to an IP address.</p>
-<dt><code>smtp_line_length_limit (998)</code></p>
-<dd>The maximal length of message header and body lines that Postfix will send via SMTP.</p>
-<dt><code>smtp_pix_workaround_delay_time (10s)</code></p>
-<dd>How long the Postfix SMTP client pauses before sending &quot;.&lt;CR&gt;&lt;LF&gt;&quot; in order to work around the PIX firewall &quot;&lt;CR&gt;&lt;LF&gt;.&lt;CR&gt;&lt;LF&gt;&quot; bug.</p>
-<dt><code>smtp_pix_workaround_threshold_time (500s)</code></p>
-<dd>How long a message must be queued before the Postfix SMTP client turns on the PIX firewall &quot;&lt;CR&gt;&lt;LF&gt;.&lt;CR&gt;&lt;LF&gt;&quot; bug workaround for delivery through firewalls with &quot;smtp fixup&quot; mode turned on.</p>
-<dt><code>smtp_pix_workarounds (disable_esmtp, delay_dotcrlf)</code></p>
-<dd>A list that specifies zero or more workarounds for CISCO PIX firewall bugs.</p>
-<dt><code>smtp_pix_workaround_maps (empty)</code></p>
-<dd>Lookup tables, indexed by the remote SMTP server address, with per-destination workarounds for CISCO PIX firewall bugs.</p>
-<dt><code>smtp_quote_rfc821_envelope (yes)</code></p>
-<dd>Quote addresses in Postfix SMTP client MAIL FROM and RCPT TO commands as required by RFC 5321.</p>
-<dt><code>smtp_reply_filter (empty)</code></p>
-<dd>A mechanism to transform replies from remote SMTP servers one line at a time.</p>
-<dt><code>smtp_skip_5xx_greeting (yes)</code></p>
-<dd>Skip remote SMTP servers that greet with a 5XX status code (go away, do not try again later).</p>
-<dt><code>smtp_skip_quit_response (yes)</code></p>
-<dd>Do not wait for the response to the SMTP QUIT command.</dl>
+<dt><code>ignore_mx_lookup_error (no)</code></dt>
+<dd>Ignore DNS MX lookups that produce no response.</dd>
+<dt><code>smtp_always_send_ehlo (yes)</code></dt>
+<dd>Always send EHLO at the start of an SMTP session.</dd>
+<dt><code>smtp_never_send_ehlo (no)</code></dt>
+<dd>Never send EHLO at the start of an SMTP session.</dd>
+<dt><code>smtp_defer_if_no_mx_address_found (no)</code></dt>
+<dd>Defer mail delivery when no MX record resolves to an IP address.</dd>
+<dt><code>smtp_line_length_limit (998)</code></dt>
+<dd>The maximal length of message header and body lines that Postfix will send via SMTP.</dd>
+<dt><code>smtp_pix_workaround_delay_time (10s)</code></dt>
+<dd>How long the Postfix SMTP client pauses before sending &quot;.&lt;CR&gt;&lt;LF&gt;&quot; in order to work around the PIX firewall &quot;&lt;CR&gt;&lt;LF&gt;.&lt;CR&gt;&lt;LF&gt;&quot; bug.</dd>
+<dt><code>smtp_pix_workaround_threshold_time (500s)</code></dt>
+<dd>How long a message must be queued before the Postfix SMTP client turns on the PIX firewall &quot;&lt;CR&gt;&lt;LF&gt;.&lt;CR&gt;&lt;LF&gt;&quot; bug workaround for delivery through firewalls with &quot;smtp fixup&quot; mode turned on.</dd>
+<dt><code>smtp_pix_workarounds (disable_esmtp, delay_dotcrlf)</code></dt>
+<dd>A list that specifies zero or more workarounds for CISCO PIX firewall bugs.</dd>
+<dt><code>smtp_pix_workaround_maps (empty)</code></dt>
+<dd>Lookup tables, indexed by the remote SMTP server address, with per-destination workarounds for CISCO PIX firewall bugs.</dd>
+<dt><code>smtp_quote_rfc821_envelope (yes)</code></dt>
+<dd>Quote addresses in Postfix SMTP client MAIL FROM and RCPT TO commands as required by RFC 5321.</dd>
+<dt><code>smtp_reply_filter (empty)</code></dt>
+<dd>A mechanism to transform replies from remote SMTP servers one line at a time.</dd>
+<dt><code>smtp_skip_5xx_greeting (yes)</code></dt>
+<dd>Skip remote SMTP servers that greet with a 5XX status code (go away, do not try again later).</dd>
+<dt><code>smtp_skip_quit_response (yes)</code></dt>
+<dd>Do not wait for the response to the SMTP QUIT command.</dd></dl>
 <p> Available in Postfix version 2.0 and earlier:</p>
 <dl>
-<dt><code>smtp_skip_4xx_greeting (yes)</code></p>
-<dd>Skip SMTP servers that greet with a 4XX status code (go away, try again later).</dl>
+<dt><code>smtp_skip_4xx_greeting (yes)</code></dt>
+<dd>Skip SMTP servers that greet with a 4XX status code (go away, try again later).</dd></dl>
 <p> Available in Postfix version 2.2 and later:</p>
 <dl>
-<dt><code>smtp_discard_ehlo_keyword_address_maps (empty)</code></p>
-<dd>Lookup tables, indexed by the remote SMTP server address, with case insensitive lists of EHLO keywords (pipelining, starttls, auth, etc.) that the Postfix SMTP client will ignore in the EHLO response from a remote SMTP server.</p>
-<dt><code>smtp_discard_ehlo_keywords (empty)</code></p>
-<dd>A case insensitive list of EHLO keywords (pipelining, starttls, auth, etc.) that the Postfix SMTP client will ignore in the EHLO response from a remote SMTP server.</p>
-<dt><code>smtp_generic_maps (empty)</code></p>
-<dd>Optional lookup tables that perform address rewriting in the Postfix SMTP client, typically to transform a locally valid address into a globally valid address when sending mail across the Internet.</dl>
+<dt><code>smtp_discard_ehlo_keyword_address_maps (empty)</code></dt>
+<dd>Lookup tables, indexed by the remote SMTP server address, with case insensitive lists of EHLO keywords (pipelining, starttls, auth, etc.) that the Postfix SMTP client will ignore in the EHLO response from a remote SMTP server.</dd>
+<dt><code>smtp_discard_ehlo_keywords (empty)</code></dt>
+<dd>A case insensitive list of EHLO keywords (pipelining, starttls, auth, etc.) that the Postfix SMTP client will ignore in the EHLO response from a remote SMTP server.</dd>
+<dt><code>smtp_generic_maps (empty)</code></dt>
+<dd>Optional lookup tables that perform address rewriting in the Postfix SMTP client, typically to transform a locally valid address into a globally valid address when sending mail across the Internet.</dd></dl>
 <p> Available in Postfix version 2.2.9 and later:</p>
 <dl>
-<dt><code>smtp_cname_overrides_servername (version dependent)</code></p>
-<dd>Allow DNS CNAME records to override the servername that the Postfix SMTP client uses for logging, SASL password lookup, TLS policy decisions, or TLS certificate verification.</dl>
+<dt><code>smtp_cname_overrides_servername (version dependent)</code></dt>
+<dd>Allow DNS CNAME records to override the servername that the Postfix SMTP client uses for logging, SASL password lookup, TLS policy decisions, or TLS certificate verification.</dd></dl>
 <p> Available in Postfix version 2.3 and later:</p>
 <dl>
-<dt><code>lmtp_discard_lhlo_keyword_address_maps (empty)</code></p>
-<dd>Lookup tables, indexed by the remote LMTP server address, with case insensitive lists of LHLO keywords (pipelining, starttls, auth, etc.) that the Postfix LMTP client will ignore in the LHLO response from a remote LMTP server.</p>
-<dt><code>lmtp_discard_lhlo_keywords (empty)</code></p>
-<dd>A case insensitive list of LHLO keywords (pipelining, starttls, auth, etc.) that the Postfix LMTP client will ignore in the LHLO response from a remote LMTP server.</dl>
+<dt><code>lmtp_discard_lhlo_keyword_address_maps (empty)</code></dt>
+<dd>Lookup tables, indexed by the remote LMTP server address, with case insensitive lists of LHLO keywords (pipelining, starttls, auth, etc.) that the Postfix LMTP client will ignore in the LHLO response from a remote LMTP server.</dd>
+<dt><code>lmtp_discard_lhlo_keywords (empty)</code></dt>
+<dd>A case insensitive list of LHLO keywords (pipelining, starttls, auth, etc.) that the Postfix LMTP client will ignore in the LHLO response from a remote LMTP server.</dd></dl>
 <p> Available in Postfix version 2.4.4 and later:</p>
 <dl>
-<dt><code>send_cyrus_sasl_authzid (no)</code></p>
-<dd>When authenticating to a remote SMTP or LMTP server with the default setting &quot;no&quot;, send no SASL authoriZation ID (authzid); send only the SASL authentiCation ID (authcid) plus the authcid&#8217;s password.</dl>
+<dt><code>send_cyrus_sasl_authzid (no)</code></dt>
+<dd>When authenticating to a remote SMTP or LMTP server with the default setting &quot;no&quot;, send no SASL authoriZation ID (authzid); send only the SASL authentiCation ID (authcid) plus the authcid&#8217;s password.</dd></dl>
 <p> Available in Postfix version 2.5 and later:</p>
 <dl>
-<dt><code>smtp_header_checks (empty)</code></p>
-<dd>Restricted <code><a href="/docs/linux/man/5-header_checks/">header_checks</a></code>(5) tables for the Postfix SMTP client.</p>
-<dt><code>smtp_mime_header_checks (empty)</code></p>
-<dd>Restricted <code>mime_header_checks</code>(5) tables for the Postfix SMTP client.</p>
-<dt><code>smtp_nested_header_checks (empty)</code></p>
-<dd>Restricted <code>nested_header_checks</code>(5) tables for the Postfix SMTP client.</p>
-<dt><code>smtp_body_checks (empty)</code></p>
-<dd>Restricted <code><a href="/docs/linux/man/5-body_checks/">body_checks</a></code>(5) tables for the Postfix SMTP client.</dl>
+<dt><code>smtp_header_checks (empty)</code></dt>
+<dd>Restricted <code><a href="/docs/linux/man/5-header_checks/">header_checks</a></code>(5) tables for the Postfix SMTP client.</dd>
+<dt><code>smtp_mime_header_checks (empty)</code></dt>
+<dd>Restricted <code>mime_header_checks</code>(5) tables for the Postfix SMTP client.</dd>
+<dt><code>smtp_nested_header_checks (empty)</code></dt>
+<dd>Restricted <code>nested_header_checks</code>(5) tables for the Postfix SMTP client.</dd>
+<dt><code>smtp_body_checks (empty)</code></dt>
+<dd>Restricted <code><a href="/docs/linux/man/5-body_checks/">body_checks</a></code>(5) tables for the Postfix SMTP client.</dd></dl>
 <p> Available in Postfix version 2.6 and later:</p>
 <dl>
-<dt><code>tcp_windowsize (0)</code></p>
-<dd>An optional workaround for routers that break TCP window scaling.</dl>
+<dt><code>tcp_windowsize (0)</code></dt>
+<dd>An optional workaround for routers that break TCP window scaling.</dd></dl>
 <p> Available in Postfix version 2.8 and later:</p>
 <dl>
-<dt><code>smtp_dns_resolver_options (empty)</code></p>
-<dd>DNS Resolver options for the Postfix SMTP client.</dl>
+<dt><code>smtp_dns_resolver_options (empty)</code></dt>
+<dd>DNS Resolver options for the Postfix SMTP client.</dd></dl>
 <p> Available in Postfix version 2.9 and later:</p>
 <dl>
-<dt><code>smtp_per_record_deadline (no)</code></p>
-<dd>Change the behavior of the smtp_*_timeout time limits, from a time limit per read or write system call, to a time limit to send or receive a complete record (an SMTP command line, SMTP response line, SMTP message content line, or TLS protocol message).</p>
-<dt><code>smtp_send_dummy_mail_auth (no)</code></p>
-<dd>Whether or not to append the &quot;AUTH=&lt;&gt;&quot; option to the MAIL FROM command in SASL-authenticated SMTP sessions.</dl>
+<dt><code>smtp_per_record_deadline (no)</code></dt>
+<dd>Change the behavior of the smtp_*_timeout time limits, from a time limit per read or write system call, to a time limit to send or receive a complete record (an SMTP command line, SMTP response line, SMTP message content line, or TLS protocol message).</dd>
+<dt><code>smtp_send_dummy_mail_auth (no)</code></dt>
+<dd>Whether or not to append the &quot;AUTH=&lt;&gt;&quot; option to the MAIL FROM command in SASL-authenticated SMTP sessions.</dd></dl>
 <h2>Mime Processing Controls</h2>
 <p>Available in Postfix version 2.0 and later:</p>
 <dl>
-<dt><code>disable_mime_output_conversion (no)</code></p>
-<dd>Disable the conversion of 8BITMIME format to 7BIT format.</p>
-<dt><code>mime_boundary_length_limit (2048)</code></p>
-<dd>The maximal length of MIME multipart boundary strings.</p>
-<dt><code>mime_nesting_limit (100)</code></p>
-<dd>The maximal recursion level that the MIME processor will handle.</dl>
+<dt><code>disable_mime_output_conversion (no)</code></dt>
+<dd>Disable the conversion of 8BITMIME format to 7BIT format.</dd>
+<dt><code>mime_boundary_length_limit (2048)</code></dt>
+<dd>The maximal length of MIME multipart boundary strings.</dd>
+<dt><code>mime_nesting_limit (100)</code></dt>
+<dd>The maximal recursion level that the MIME processor will handle.</dd></dl>
 <h2>External Content Inspection Controls</h2>
 <p>Available in Postfix version 2.1 and later:</p>
 <dl>
-<dt><code>smtp_send_xforward_command (no)</code></p>
-<dd>Send the non-standard XFORWARD command when the Postfix SMTP server EHLO response announces XFORWARD support.</dl>
+<dt><code>smtp_send_xforward_command (no)</code></dt>
+<dd>Send the non-standard XFORWARD command when the Postfix SMTP server EHLO response announces XFORWARD support.</dd></dl>
 <h2>Sasl Authentication Controls</h2>
 <dl>
-<dt><code>smtp_sasl_auth_enable (no)</code></p>
-<dd>Enable SASL authentication in the Postfix SMTP client.</p>
-<dt><code>smtp_sasl_password_maps (empty)</code></p>
-<dd>Optional Postfix SMTP client lookup tables with one username:password entry per remote hostname or domain, or sender address when sender-dependent authentication is enabled.</p>
-<dt><code>smtp_sasl_security_options (noplaintext, noanonymous)</code></p>
-<dd>Postfix SMTP client SASL security options; as of Postfix 2.3 the list of available features depends on the SASL client implementation that is selected with <code>smtp_sasl_type</code>.</dl>
+<dt><code>smtp_sasl_auth_enable (no)</code></dt>
+<dd>Enable SASL authentication in the Postfix SMTP client.</dd>
+<dt><code>smtp_sasl_password_maps (empty)</code></dt>
+<dd>Optional Postfix SMTP client lookup tables with one username:password entry per remote hostname or domain, or sender address when sender-dependent authentication is enabled.</dd>
+<dt><code>smtp_sasl_security_options (noplaintext, noanonymous)</code></dt>
+<dd>Postfix SMTP client SASL security options; as of Postfix 2.3 the list of available features depends on the SASL client implementation that is selected with <code>smtp_sasl_type</code>.</dd></dl>
 <p> Available in Postfix version 2.2 and later:</p>
 <dl>
-<dt><code>smtp_sasl_mechanism_filter (empty)</code></p>
-<dd>If non-empty, a Postfix SMTP client filter for the remote SMTP server&#8217;s list of offered SASL mechanisms.</dl>
+<dt><code>smtp_sasl_mechanism_filter (empty)</code></dt>
+<dd>If non-empty, a Postfix SMTP client filter for the remote SMTP server&#8217;s list of offered SASL mechanisms.</dd></dl>
 <p> Available in Postfix version 2.3 and later:</p>
 <dl>
-<dt><code>smtp_sender_dependent_authentication (no)</code></p>
-<dd>Enable sender-dependent authentication in the Postfix SMTP client; this is available only with SASL authentication, and disables SMTP connection caching to ensure that mail from different senders will use the appropriate credentials.</p>
-<dt><code>smtp_sasl_path (empty)</code></p>
-<dd>Implementation-specific information that the Postfix SMTP client passes through to the SASL plug-in implementation that is selected with <code>smtp_sasl_type</code>.</p>
-<dt><code>smtp_sasl_type (cyrus)</code></p>
-<dd>The SASL plug-in type that the Postfix SMTP client should use for authentication.</dl>
+<dt><code>smtp_sender_dependent_authentication (no)</code></dt>
+<dd>Enable sender-dependent authentication in the Postfix SMTP client; this is available only with SASL authentication, and disables SMTP connection caching to ensure that mail from different senders will use the appropriate credentials.</dd>
+<dt><code>smtp_sasl_path (empty)</code></dt>
+<dd>Implementation-specific information that the Postfix SMTP client passes through to the SASL plug-in implementation that is selected with <code>smtp_sasl_type</code>.</dd>
+<dt><code>smtp_sasl_type (cyrus)</code></dt>
+<dd>The SASL plug-in type that the Postfix SMTP client should use for authentication.</dd></dl>
 <p> Available in Postfix version 2.5 and later:</p>
 <dl>
-<dt><code>smtp_sasl_auth_cache_name (empty)</code></p>
-<dd>An optional table to prevent repeated SASL authentication failures with the same remote SMTP server hostname, username and password.</p>
-<dt><code>smtp_sasl_auth_cache_time (90d)</code></p>
-<dd>The maximal age of an smtp_sasl_auth_cache_name entry before it is removed.</p>
-<dt><code>smtp_sasl_auth_soft_bounce (yes)</code></p>
-<dd>When a remote SMTP server rejects a SASL authentication request with a 535 reply code, defer mail delivery instead of returning mail as undeliverable.</dl>
+<dt><code>smtp_sasl_auth_cache_name (empty)</code></dt>
+<dd>An optional table to prevent repeated SASL authentication failures with the same remote SMTP server hostname, username and password.</dd>
+<dt><code>smtp_sasl_auth_cache_time (90d)</code></dt>
+<dd>The maximal age of an smtp_sasl_auth_cache_name entry before it is removed.</dd>
+<dt><code>smtp_sasl_auth_soft_bounce (yes)</code></dt>
+<dd>When a remote SMTP server rejects a SASL authentication request with a 535 reply code, defer mail delivery instead of returning mail as undeliverable.</dd></dl>
 <p> Available in Postfix version 2.9 and later:</p>
 <dl>
-<dt><code>smtp_send_dummy_mail_auth (no)</code></p>
-<dd>Whether or not to append the &quot;AUTH=&lt;&gt;&quot; option to the MAIL FROM command in SASL-authenticated SMTP sessions.</dl>
+<dt><code>smtp_send_dummy_mail_auth (no)</code></dt>
+<dd>Whether or not to append the &quot;AUTH=&lt;&gt;&quot; option to the MAIL FROM command in SASL-authenticated SMTP sessions.</dd></dl>
 <h2>Starttls Support Controls</h2>
 <p>Detailed information about STARTTLS configuration may be found in the TLS_README document.</p>
 <dl>
-<dt><code>smtp_tls_security_level (empty)</code></p>
-<dd>The default SMTP TLS security level for the Postfix SMTP client; when a non-empty value is specified, this overrides the obsolete parameters smtp_use_tls, smtp_enforce_tls, and smtp_tls_enforce_peername.</p>
-<dt><code>smtp_sasl_tls_security_options ($smtp_sasl_security_options)</code></p>
-<dd>The SASL authentication security options that the Postfix SMTP client uses for TLS encrypted SMTP sessions.</p>
-<dt><code>smtp_starttls_timeout (300s)</code></p>
-<dd>Time limit for Postfix SMTP client write and read operations during TLS startup and shutdown handshake procedures.</p>
-<dt><code>smtp_tls_CAfile (empty)</code></p>
-<dd>A file containing CA certificates of root CAs trusted to sign either remote SMTP server certificates or intermediate CA certificates.</p>
-<dt><code>smtp_tls_CApath (empty)</code></p>
-<dd>Directory with PEM format certificate authority certificates that the Postfix SMTP client uses to verify a remote SMTP server certificate.</p>
-<dt><code>smtp_tls_cert_file (empty)</code></p>
-<dd>File with the Postfix SMTP client RSA certificate in PEM format.</p>
-<dt><code>smtp_tls_mandatory_ciphers (medium)</code></p>
-<dd>The minimum TLS cipher grade that the Postfix SMTP client will use with mandatory TLS encryption.</p>
-<dt><code>smtp_tls_exclude_ciphers (empty)</code></p>
-<dd>List of ciphers or cipher types to exclude from the Postfix SMTP client cipher list at all TLS security levels.</p>
-<dt><code>smtp_tls_mandatory_exclude_ciphers (empty)</code></p>
-<dd>Additional list of ciphers or cipher types to exclude from the Postfix SMTP client cipher list at mandatory TLS security levels.</p>
-<dt><code>smtp_tls_dcert_file (empty)</code></p>
-<dd>File with the Postfix SMTP client DSA certificate in PEM format.</p>
-<dt><code>smtp_tls_dkey_file ($smtp_tls_dcert_file)</code></p>
-<dd>File with the Postfix SMTP client DSA private key in PEM format.</p>
-<dt><code>smtp_tls_key_file ($smtp_tls_cert_file)</code></p>
-<dd>File with the Postfix SMTP client RSA private key in PEM format.</p>
-<dt><code>smtp_tls_loglevel (0)</code></p>
-<dd>Enable additional Postfix SMTP client logging of TLS activity.</p>
-<dt><code>smtp_tls_note_starttls_offer (no)</code></p>
-<dd>Log the hostname of a remote SMTP server that offers STARTTLS, when TLS is not already enabled for that server.</p>
-<dt><code>smtp_tls_policy_maps (empty)</code></p>
-<dd>Optional lookup tables with the Postfix SMTP client TLS security policy by next-hop destination; when a non-empty value is specified, this overrides the obsolete smtp_tls_per_site parameter.</p>
-<dt><code>smtp_tls_mandatory_protocols (!SSLv2)</code></p>
-<dd>List of SSL/TLS protocols that the Postfix SMTP client will use with mandatory TLS encryption.</p>
-<dt><code>smtp_tls_scert_verifydepth (9)</code></p>
-<dd>The verification depth for remote SMTP server certificates.</p>
-<dt><code>smtp_tls_secure_cert_match (nexthop, dot-nexthop)</code></p>
-<dd>How the Postfix SMTP client verifies the server certificate peername for the &quot;secure&quot; TLS security level.</p>
-<dt><code>smtp_tls_session_cache_database (empty)</code></p>
-<dd>Name of the file containing the optional Postfix SMTP client TLS session cache.</p>
-<dt><code>smtp_tls_session_cache_timeout (3600s)</code></p>
-<dd>The expiration time of Postfix SMTP client TLS session cache information.</p>
-<dt><code>smtp_tls_verify_cert_match (hostname)</code></p>
-<dd>How the Postfix SMTP client verifies the server certificate peername for the &quot;verify&quot; TLS security level.</p>
-<dt><code>tls_daemon_random_bytes (32)</code></p>
-<dd>The number of pseudo-random bytes that an <code><a href="/docs/linux/man/8-smtp/">smtp</a></code>(8) or <code><a href="/docs/linux/man/8-smtpd/">smtpd</a></code>(8) process requests from the <code><a href="/docs/linux/man/8-tlsmgr/">tlsmgr</a></code>(8) server in order to seed its internal pseudo random number generator (PRNG).</p>
-<dt><code>tls_high_cipherlist (ALL:!EXPORT:!LOW:!MEDIUM:+RC4:@STRENGTH)</code></p>
-<dd>The OpenSSL cipherlist for &quot;HIGH&quot; grade ciphers.</p>
-<dt><code>tls_medium_cipherlist (ALL:!EXPORT:!LOW:+RC4:@STRENGTH)</code></p>
-<dd>The OpenSSL cipherlist for &quot;MEDIUM&quot; or higher grade ciphers.</p>
-<dt><code>tls_low_cipherlist (ALL:!EXPORT:+RC4:@STRENGTH)</code></p>
-<dd>The OpenSSL cipherlist for &quot;LOW&quot; or higher grade ciphers.</p>
-<dt><code>tls_export_cipherlist (ALL:+RC4:@STRENGTH)</code></p>
-<dd>The OpenSSL cipherlist for &quot;EXPORT&quot; or higher grade ciphers.</p>
-<dt><code>tls_null_cipherlist (eNULL:!aNULL)</code></p>
-<dd>The OpenSSL cipherlist for &quot;NULL&quot; grade ciphers that provide authentication without encryption.</dl>
+<dt><code>smtp_tls_security_level (empty)</code></dt>
+<dd>The default SMTP TLS security level for the Postfix SMTP client; when a non-empty value is specified, this overrides the obsolete parameters smtp_use_tls, smtp_enforce_tls, and smtp_tls_enforce_peername.</dd>
+<dt><code>smtp_sasl_tls_security_options ($smtp_sasl_security_options)</code></dt>
+<dd>The SASL authentication security options that the Postfix SMTP client uses for TLS encrypted SMTP sessions.</dd>
+<dt><code>smtp_starttls_timeout (300s)</code></dt>
+<dd>Time limit for Postfix SMTP client write and read operations during TLS startup and shutdown handshake procedures.</dd>
+<dt><code>smtp_tls_CAfile (empty)</code></dt>
+<dd>A file containing CA certificates of root CAs trusted to sign either remote SMTP server certificates or intermediate CA certificates.</dd>
+<dt><code>smtp_tls_CApath (empty)</code></dt>
+<dd>Directory with PEM format certificate authority certificates that the Postfix SMTP client uses to verify a remote SMTP server certificate.</dd>
+<dt><code>smtp_tls_cert_file (empty)</code></dt>
+<dd>File with the Postfix SMTP client RSA certificate in PEM format.</dd>
+<dt><code>smtp_tls_mandatory_ciphers (medium)</code></dt>
+<dd>The minimum TLS cipher grade that the Postfix SMTP client will use with mandatory TLS encryption.</dd>
+<dt><code>smtp_tls_exclude_ciphers (empty)</code></dt>
+<dd>List of ciphers or cipher types to exclude from the Postfix SMTP client cipher list at all TLS security levels.</dd>
+<dt><code>smtp_tls_mandatory_exclude_ciphers (empty)</code></dt>
+<dd>Additional list of ciphers or cipher types to exclude from the Postfix SMTP client cipher list at mandatory TLS security levels.</dd>
+<dt><code>smtp_tls_dcert_file (empty)</code></dt>
+<dd>File with the Postfix SMTP client DSA certificate in PEM format.</dd>
+<dt><code>smtp_tls_dkey_file ($smtp_tls_dcert_file)</code></dt>
+<dd>File with the Postfix SMTP client DSA private key in PEM format.</dd>
+<dt><code>smtp_tls_key_file ($smtp_tls_cert_file)</code></dt>
+<dd>File with the Postfix SMTP client RSA private key in PEM format.</dd>
+<dt><code>smtp_tls_loglevel (0)</code></dt>
+<dd>Enable additional Postfix SMTP client logging of TLS activity.</dd>
+<dt><code>smtp_tls_note_starttls_offer (no)</code></dt>
+<dd>Log the hostname of a remote SMTP server that offers STARTTLS, when TLS is not already enabled for that server.</dd>
+<dt><code>smtp_tls_policy_maps (empty)</code></dt>
+<dd>Optional lookup tables with the Postfix SMTP client TLS security policy by next-hop destination; when a non-empty value is specified, this overrides the obsolete smtp_tls_per_site parameter.</dd>
+<dt><code>smtp_tls_mandatory_protocols (!SSLv2)</code></dt>
+<dd>List of SSL/TLS protocols that the Postfix SMTP client will use with mandatory TLS encryption.</dd>
+<dt><code>smtp_tls_scert_verifydepth (9)</code></dt>
+<dd>The verification depth for remote SMTP server certificates.</dd>
+<dt><code>smtp_tls_secure_cert_match (nexthop, dot-nexthop)</code></dt>
+<dd>How the Postfix SMTP client verifies the server certificate peername for the &quot;secure&quot; TLS security level.</dd>
+<dt><code>smtp_tls_session_cache_database (empty)</code></dt>
+<dd>Name of the file containing the optional Postfix SMTP client TLS session cache.</dd>
+<dt><code>smtp_tls_session_cache_timeout (3600s)</code></dt>
+<dd>The expiration time of Postfix SMTP client TLS session cache information.</dd>
+<dt><code>smtp_tls_verify_cert_match (hostname)</code></dt>
+<dd>How the Postfix SMTP client verifies the server certificate peername for the &quot;verify&quot; TLS security level.</dd>
+<dt><code>tls_daemon_random_bytes (32)</code></dt>
+<dd>The number of pseudo-random bytes that an <code><a href="/docs/linux/man/8-smtp/">smtp</a></code>(8) or <code><a href="/docs/linux/man/8-smtpd/">smtpd</a></code>(8) process requests from the <code><a href="/docs/linux/man/8-tlsmgr/">tlsmgr</a></code>(8) server in order to seed its internal pseudo random number generator (PRNG).</dd>
+<dt><code>tls_high_cipherlist (ALL:!EXPORT:!LOW:!MEDIUM:+RC4:@STRENGTH)</code></dt>
+<dd>The OpenSSL cipherlist for &quot;HIGH&quot; grade ciphers.</dd>
+<dt><code>tls_medium_cipherlist (ALL:!EXPORT:!LOW:+RC4:@STRENGTH)</code></dt>
+<dd>The OpenSSL cipherlist for &quot;MEDIUM&quot; or higher grade ciphers.</dd>
+<dt><code>tls_low_cipherlist (ALL:!EXPORT:+RC4:@STRENGTH)</code></dt>
+<dd>The OpenSSL cipherlist for &quot;LOW&quot; or higher grade ciphers.</dd>
+<dt><code>tls_export_cipherlist (ALL:+RC4:@STRENGTH)</code></dt>
+<dd>The OpenSSL cipherlist for &quot;EXPORT&quot; or higher grade ciphers.</dd>
+<dt><code>tls_null_cipherlist (eNULL:!aNULL)</code></dt>
+<dd>The OpenSSL cipherlist for &quot;NULL&quot; grade ciphers that provide authentication without encryption.</dd></dl>
 <p> Available in Postfix version 2.4 and later:</p>
 <dl>
-<dt><code>smtp_sasl_tls_verified_security_options ($smtp_sasl_tls_security_options)</code></p>
-<dd>The SASL authentication security options that the Postfix SMTP client uses for TLS encrypted SMTP sessions with a verified server certificate.</dl>
+<dt><code>smtp_sasl_tls_verified_security_options ($smtp_sasl_tls_security_options)</code></dt>
+<dd>The SASL authentication security options that the Postfix SMTP client uses for TLS encrypted SMTP sessions with a verified server certificate.</dd></dl>
 <p> Available in Postfix version 2.5 and later:</p>
 <dl>
-<dt><code>smtp_tls_fingerprint_cert_match (empty)</code></p>
-<dd>List of acceptable remote SMTP server certificate fingerprints for the &quot;fingerprint&quot; TLS security level (<code>smtp_tls_security_level</code> = fingerprint).</p>
-<dt><code>smtp_tls_fingerprint_digest (md5)</code></p>
-<dd>The message digest algorithm used to construct remote SMTP server certificate fingerprints.</dl>
+<dt><code>smtp_tls_fingerprint_cert_match (empty)</code></dt>
+<dd>List of acceptable remote SMTP server certificate fingerprints for the &quot;fingerprint&quot; TLS security level (<code>smtp_tls_security_level</code> = fingerprint).</dd>
+<dt><code>smtp_tls_fingerprint_digest (md5)</code></dt>
+<dd>The message digest algorithm used to construct remote SMTP server certificate fingerprints.</dd></dl>
 <p> Available in Postfix version 2.6 and later:</p>
 <dl>
-<dt><code>smtp_tls_protocols (!SSLv2)</code></p>
-<dd>List of TLS protocols that the Postfix SMTP client will exclude or include with opportunistic TLS encryption.</p>
-<dt><code>smtp_tls_ciphers (export)</code></p>
-<dd>The minimum TLS cipher grade that the Postfix SMTP client will use with opportunistic TLS encryption.</p>
-<dt><code>smtp_tls_eccert_file (empty)</code></p>
-<dd>File with the Postfix SMTP client ECDSA certificate in PEM format.</p>
-<dt><code>smtp_tls_eckey_file ($smtp_tls_eccert_file)</code></p>
-<dd>File with the Postfix SMTP client ECDSA private key in PEM format.</dl>
+<dt><code>smtp_tls_protocols (!SSLv2)</code></dt>
+<dd>List of TLS protocols that the Postfix SMTP client will exclude or include with opportunistic TLS encryption.</dd>
+<dt><code>smtp_tls_ciphers (export)</code></dt>
+<dd>The minimum TLS cipher grade that the Postfix SMTP client will use with opportunistic TLS encryption.</dd>
+<dt><code>smtp_tls_eccert_file (empty)</code></dt>
+<dd>File with the Postfix SMTP client ECDSA certificate in PEM format.</dd>
+<dt><code>smtp_tls_eckey_file ($smtp_tls_eccert_file)</code></dt>
+<dd>File with the Postfix SMTP client ECDSA private key in PEM format.</dd></dl>
 <p> Available in Postfix version 2.7 and later:</p>
 <dl>
-<dt><code>smtp_tls_block_early_mail_reply (no)</code></p>
-<dd>Try to detect a mail hijacking attack based on a TLS protocol vulnerability (CVE-2009-3555), where an attacker prepends malicious HELO, MAIL, RCPT, DATA commands to a Postfix SMTP client TLS session.</dl>
+<dt><code>smtp_tls_block_early_mail_reply (no)</code></dt>
+<dd>Try to detect a mail hijacking attack based on a TLS protocol vulnerability (CVE-2009-3555), where an attacker prepends malicious HELO, MAIL, RCPT, DATA commands to a Postfix SMTP client TLS session.</dd></dl>
 <p> Available in Postfix version 2.8 and later:</p>
 <dl>
-<dt><code>tls_disable_workarounds (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>List or bit-mask of OpenSSL bug work-arounds to disable.</dl>
+<dt><code>tls_disable_workarounds (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>List or bit-mask of OpenSSL bug work-arounds to disable.</dd></dl>
 <h2>Obsolete Starttls Controls</h2>
 <p>The following configuration parameters exist for compatibility with Postfix versions before 2.3. Support for these will be removed in a future release.</p>
 <dl>
-<dt><code>smtp_use_tls (no)</code></p>
-<dd>Opportunistic mode: use TLS when a remote SMTP server announces STARTTLS support, otherwise send the mail in the clear.</p>
-<dt><code>smtp_enforce_tls (no)</code></p>
-<dd>Enforcement mode: require that remote SMTP servers use TLS encryption, and never send mail in the clear.</p>
-<dt><code>smtp_tls_enforce_peername (yes)</code></p>
-<dd>With mandatory TLS encryption, require that the remote SMTP server hostname matches the information in the remote SMTP server certificate.</p>
-<dt><code>smtp_tls_per_site (empty)</code></p>
-<dd>Optional lookup tables with the Postfix SMTP client TLS usage policy by next-hop destination and by remote SMTP server hostname.</p>
-<dt><code>smtp_tls_cipherlist (empty)</code></p>
-<dd>Obsolete Postfix &lt; 2.3 control for the Postfix SMTP client TLS cipher list.</dl>
+<dt><code>smtp_use_tls (no)</code></dt>
+<dd>Opportunistic mode: use TLS when a remote SMTP server announces STARTTLS support, otherwise send the mail in the clear.</dd>
+<dt><code>smtp_enforce_tls (no)</code></dt>
+<dd>Enforcement mode: require that remote SMTP servers use TLS encryption, and never send mail in the clear.</dd>
+<dt><code>smtp_tls_enforce_peername (yes)</code></dt>
+<dd>With mandatory TLS encryption, require that the remote SMTP server hostname matches the information in the remote SMTP server certificate.</dd>
+<dt><code>smtp_tls_per_site (empty)</code></dt>
+<dd>Optional lookup tables with the Postfix SMTP client TLS usage policy by next-hop destination and by remote SMTP server hostname.</dd>
+<dt><code>smtp_tls_cipherlist (empty)</code></dt>
+<dd>Obsolete Postfix &lt; 2.3 control for the Postfix SMTP client TLS cipher list.</dd></dl>
 <h2>Resource And Rate Controls</h2>
 <dl>
-<dt><code>smtp_destination_concurrency_limit ($default_destination_concurrency_limit)</code></p>
-<dd>The maximal number of parallel deliveries to the same destination via the smtp message delivery transport.</p>
-<dt><code>smtp_destination_recipient_limit ($default_destination_recipient_limit)</code></p>
-<dd>The maximal number of recipients per message for the smtp message delivery transport.</p>
-<dt><code>smtp_connect_timeout (30s)</code></p>
-<dd>The Postfix SMTP client time limit for completing a TCP connection, or zero (use the operating system built-in time limit).</p>
-<dt><code>smtp_helo_timeout (300s)</code></p>
-<dd>The Postfix SMTP client time limit for sending the HELO or EHLO command, and for receiving the initial remote SMTP server response.</p>
-<dt><code>lmtp_lhlo_timeout (300s)</code></p>
-<dd>The Postfix LMTP client time limit for sending the LHLO command, and for receiving the initial remote LMTP server response.</p>
-<dt><code>smtp_xforward_timeout (300s)</code></p>
-<dd>The Postfix SMTP client time limit for sending the XFORWARD command, and for receiving the remote SMTP server response.</p>
-<dt><code>smtp_mail_timeout (300s)</code></p>
-<dd>The Postfix SMTP client time limit for sending the MAIL FROM command, and for receiving the remote SMTP server response.</p>
-<dt><code>smtp_rcpt_timeout (300s)</code></p>
-<dd>The Postfix SMTP client time limit for sending the SMTP RCPT TO command, and for receiving the remote SMTP server response.</p>
-<dt><code>smtp_data_init_timeout (120s)</code></p>
-<dd>The Postfix SMTP client time limit for sending the SMTP DATA command, and for receiving the remote SMTP server response.</p>
-<dt><code>smtp_data_xfer_timeout (180s)</code></p>
-<dd>The Postfix SMTP client time limit for sending the SMTP message content.</p>
-<dt><code>smtp_data_done_timeout (600s)</code></p>
-<dd>The Postfix SMTP client time limit for sending the SMTP &quot;.&quot;, and for receiving the remote SMTP server response.</p>
-<dt><code>smtp_quit_timeout (300s)</code></p>
-<dd>The Postfix SMTP client time limit for sending the QUIT command, and for receiving the remote SMTP server response.</dl>
+<dt><code>smtp_destination_concurrency_limit ($default_destination_concurrency_limit)</code></dt>
+<dd>The maximal number of parallel deliveries to the same destination via the smtp message delivery transport.</dd>
+<dt><code>smtp_destination_recipient_limit ($default_destination_recipient_limit)</code></dt>
+<dd>The maximal number of recipients per message for the smtp message delivery transport.</dd>
+<dt><code>smtp_connect_timeout (30s)</code></dt>
+<dd>The Postfix SMTP client time limit for completing a TCP connection, or zero (use the operating system built-in time limit).</dd>
+<dt><code>smtp_helo_timeout (300s)</code></dt>
+<dd>The Postfix SMTP client time limit for sending the HELO or EHLO command, and for receiving the initial remote SMTP server response.</dd>
+<dt><code>lmtp_lhlo_timeout (300s)</code></dt>
+<dd>The Postfix LMTP client time limit for sending the LHLO command, and for receiving the initial remote LMTP server response.</dd>
+<dt><code>smtp_xforward_timeout (300s)</code></dt>
+<dd>The Postfix SMTP client time limit for sending the XFORWARD command, and for receiving the remote SMTP server response.</dd>
+<dt><code>smtp_mail_timeout (300s)</code></dt>
+<dd>The Postfix SMTP client time limit for sending the MAIL FROM command, and for receiving the remote SMTP server response.</dd>
+<dt><code>smtp_rcpt_timeout (300s)</code></dt>
+<dd>The Postfix SMTP client time limit for sending the SMTP RCPT TO command, and for receiving the remote SMTP server response.</dd>
+<dt><code>smtp_data_init_timeout (120s)</code></dt>
+<dd>The Postfix SMTP client time limit for sending the SMTP DATA command, and for receiving the remote SMTP server response.</dd>
+<dt><code>smtp_data_xfer_timeout (180s)</code></dt>
+<dd>The Postfix SMTP client time limit for sending the SMTP message content.</dd>
+<dt><code>smtp_data_done_timeout (600s)</code></dt>
+<dd>The Postfix SMTP client time limit for sending the SMTP &quot;.&quot;, and for receiving the remote SMTP server response.</dd>
+<dt><code>smtp_quit_timeout (300s)</code></dt>
+<dd>The Postfix SMTP client time limit for sending the QUIT command, and for receiving the remote SMTP server response.</dd></dl>
 <p> Available in Postfix version 2.1 and later:</p>
 <dl>
-<dt><code>smtp_mx_address_limit (5)</code></p>
-<dd>The maximal number of MX (mail exchanger) IP addresses that can result from Postfix SMTP client mail exchanger lookups, or zero (no limit).</p>
-<dt><code>smtp_mx_session_limit (2)</code></p>
-<dd>The maximal number of SMTP sessions per delivery request before the Postfix SMTP client gives up or delivers to a fall-back relay host, or zero (no limit).</p>
-<dt><code>smtp_rset_timeout (20s)</code></p>
-<dd>The Postfix SMTP client time limit for sending the RSET command, and for receiving the remote SMTP server response.</dl>
+<dt><code>smtp_mx_address_limit (5)</code></dt>
+<dd>The maximal number of MX (mail exchanger) IP addresses that can result from Postfix SMTP client mail exchanger lookups, or zero (no limit).</dd>
+<dt><code>smtp_mx_session_limit (2)</code></dt>
+<dd>The maximal number of SMTP sessions per delivery request before the Postfix SMTP client gives up or delivers to a fall-back relay host, or zero (no limit).</dd>
+<dt><code>smtp_rset_timeout (20s)</code></dt>
+<dd>The Postfix SMTP client time limit for sending the RSET command, and for receiving the remote SMTP server response.</dd></dl>
 <p> Available in Postfix version 2.2 and earlier:</p>
 <dl>
-<dt><code>lmtp_cache_connection (yes)</code></p>
-<dd>Keep Postfix LMTP client connections open for up to $max_idle seconds.</dl>
+<dt><code>lmtp_cache_connection (yes)</code></dt>
+<dd>Keep Postfix LMTP client connections open for up to $max_idle seconds.</dd></dl>
 <p> Available in Postfix version 2.2 and later:</p>
 <dl>
-<dt><code>smtp_connection_cache_destinations (empty)</code></p>
-<dd>Permanently enable SMTP connection caching for the specified destinations.</p>
-<dt><code>smtp_connection_cache_on_demand (yes)</code></p>
-<dd>Temporarily enable SMTP connection caching while a destination has a high volume of mail in the active queue.</p>
-<dt><code>smtp_connection_reuse_time_limit (300s)</code></p>
-<dd>The amount of time during which Postfix will use an SMTP connection repeatedly.</p>
-<dt><code>smtp_connection_cache_time_limit (2s)</code></p>
-<dd>When SMTP connection caching is enabled, the amount of time that an unused SMTP client socket is kept open before it is closed.</dl>
+<dt><code>smtp_connection_cache_destinations (empty)</code></dt>
+<dd>Permanently enable SMTP connection caching for the specified destinations.</dd>
+<dt><code>smtp_connection_cache_on_demand (yes)</code></dt>
+<dd>Temporarily enable SMTP connection caching while a destination has a high volume of mail in the active queue.</dd>
+<dt><code>smtp_connection_reuse_time_limit (300s)</code></dt>
+<dd>The amount of time during which Postfix will use an SMTP connection repeatedly.</dd>
+<dt><code>smtp_connection_cache_time_limit (2s)</code></dt>
+<dd>When SMTP connection caching is enabled, the amount of time that an unused SMTP client socket is kept open before it is closed.</dd></dl>
 <p> Available in Postfix version 2.3 and later:</p>
 <dl>
-<dt><code>connection_cache_protocol_timeout (5s)</code></p>
-<dd>Time limit for connection cache connect, send or receive operations.</dl>
+<dt><code>connection_cache_protocol_timeout (5s)</code></dt>
+<dd>Time limit for connection cache connect, send or receive operations.</dd></dl>
 <p> Available in Postfix version 2.9 and later:</p>
 <dl>
-<dt><code>smtp_per_record_deadline (no)</code></p>
-<dd>Change the behavior of the smtp_*_timeout time limits, from a time limit per read or write system call, to a time limit to send or receive a complete record (an SMTP command line, SMTP response line, SMTP message content line, or TLS protocol message).</dl>
+<dt><code>smtp_per_record_deadline (no)</code></dt>
+<dd>Change the behavior of the smtp_*_timeout time limits, from a time limit per read or write system call, to a time limit to send or receive a complete record (an SMTP command line, SMTP response line, SMTP message content line, or TLS protocol message).</dd></dl>
 <h2>Trouble Shooting Controls</h2>
 <dl>
-<dt><code>debug_peer_level (2)</code></p>
-<dd>The increment in verbose logging level when a remote client or server matches a pattern in the debug_peer_list parameter.</p>
-<dt><code>debug_peer_list (empty)</code></p>
-<dd>Optional list of remote client or server hostname or network address patterns that cause the verbose logging level to increase by the amount specified in $debug_peer_level.</p>
-<dt><code>error_notice_recipient (postmaster)</code></p>
-<dd>The recipient of postmaster notifications about mail delivery problems that are caused by policy, resource, software or protocol errors.</p>
-<dt><code>internal_mail_filter_classes (empty)</code></p>
-<dd>What categories of Postfix-generated mail are subject to before-queue content inspection by non_smtpd_milters, header_checks and body_checks.</p>
-<dt><code>notify_classes (resource, software)</code></p>
-<dd>The list of error classes that are reported to the postmaster.</dl>
+<dt><code>debug_peer_level (2)</code></dt>
+<dd>The increment in verbose logging level when a remote client or server matches a pattern in the debug_peer_list parameter.</dd>
+<dt><code>debug_peer_list (empty)</code></dt>
+<dd>Optional list of remote client or server hostname or network address patterns that cause the verbose logging level to increase by the amount specified in $debug_peer_level.</dd>
+<dt><code>error_notice_recipient (postmaster)</code></dt>
+<dd>The recipient of postmaster notifications about mail delivery problems that are caused by policy, resource, software or protocol errors.</dd>
+<dt><code>internal_mail_filter_classes (empty)</code></dt>
+<dd>What categories of Postfix-generated mail are subject to before-queue content inspection by non_smtpd_milters, header_checks and body_checks.</dd>
+<dt><code>notify_classes (resource, software)</code></dt>
+<dd>The list of error classes that are reported to the postmaster.</dd></dl>
 <h2>Miscellaneous Controls</h2>
 <dl>
-<dt><code>best_mx_transport (empty)</code></p>
-<dd>Where the Postfix SMTP client should deliver mail when it detects a &quot;mail loops back to myself&quot; error condition.</p>
-<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The default location of the Postfix main.cf and master.cf configuration files.</p>
-<dt><code>daemon_timeout (18000s)</code></p>
-<dd>How much time a Postfix daemon process may take to handle a request before it is terminated by a built-in watchdog timer.</p>
-<dt><code>delay_logging_resolution_limit (2)</code></p>
-<dd>The maximal number of digits after the decimal point when logging sub-second delay values.</p>
-<dt><code>disable_dns_lookups (no)</code></p>
-<dd>Disable DNS lookups in the Postfix SMTP and LMTP clients.</p>
-<dt><code>inet_interfaces (all)</code></p>
-<dd>The network interface addresses that this mail system receives mail on.</p>
-<dt><code>inet_protocols (all)</code></p>
-<dd>The Internet protocols Postfix will attempt to use when making or accepting connections.</p>
-<dt><code>ipc_timeout (3600s)</code></p>
-<dd>The time limit for sending or receiving information over an internal communication channel.</p>
-<dt><code>lmtp_assume_final (no)</code></p>
-<dd>When a remote LMTP server announces no DSN support, assume that the server performs final delivery, and send &quot;delivered&quot; delivery status notifications instead of &quot;relayed&quot;.</p>
-<dt><code>lmtp_tcp_port (24)</code></p>
-<dd>The default TCP port that the Postfix LMTP client connects to.</p>
-<dt><code>max_idle (100s)</code></p>
-<dd>The maximum amount of time that an idle Postfix daemon process waits for an incoming connection before terminating voluntarily.</p>
-<dt><code>max_use (100)</code></p>
-<dd>The maximal number of incoming connections that a Postfix daemon process will service before terminating voluntarily.</p>
-<dt><code>process_id (read-only)</code></p>
-<dd>The process ID of a Postfix command or daemon process.</p>
-<dt><code>process_name (read-only)</code></p>
-<dd>The process name of a Postfix command or daemon process.</p>
-<dt><code>proxy_interfaces (empty)</code></p>
-<dd>The network interface addresses that this mail system receives mail on by way of a proxy or network address translation unit.</p>
-<dt><code>smtp_address_preference (any)</code></p>
-<dd>The address type (&quot;ipv6&quot;, &quot;ipv4&quot; or &quot;any&quot;) that the Postfix SMTP client will try first, when a destination has IPv6 and IPv4 addresses with equal MX preference.</p>
-<dt><code>smtp_bind_address (empty)</code></p>
-<dd>An optional numerical network address that the Postfix SMTP client should bind to when making an IPv4 connection.</p>
-<dt><code>smtp_bind_address6 (empty)</code></p>
-<dd>An optional numerical network address that the Postfix SMTP client should bind to when making an IPv6 connection.</p>
-<dt><code>smtp_helo_name ($myhostname)</code></p>
-<dd>The hostname to send in the SMTP EHLO or HELO command.</p>
-<dt><code>lmtp_lhlo_name ($myhostname)</code></p>
-<dd>The hostname to send in the LMTP LHLO command.</p>
-<dt><code>smtp_host_lookup (dns)</code></p>
-<dd>What mechanisms the Postfix SMTP client uses to look up a host&#8217;s IP address.</p>
-<dt><code>smtp_randomize_addresses (yes)</code></p>
-<dd>Randomize the order of equal-preference MX host addresses.</p>
-<dt><code>syslog_facility (mail)</code></p>
-<dd>The syslog facility of Postfix logging.</p>
-<dt><code>syslog_name (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The mail system name that is prepended to the process name in syslog records, so that &quot;smtpd&quot; becomes, for example, &quot;postfix/smtpd&quot;.</dl>
+<dt><code>best_mx_transport (empty)</code></dt>
+<dd>Where the Postfix SMTP client should deliver mail when it detects a &quot;mail loops back to myself&quot; error condition.</dd>
+<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The default location of the Postfix main.cf and master.cf configuration files.</dd>
+<dt><code>daemon_timeout (18000s)</code></dt>
+<dd>How much time a Postfix daemon process may take to handle a request before it is terminated by a built-in watchdog timer.</dd>
+<dt><code>delay_logging_resolution_limit (2)</code></dt>
+<dd>The maximal number of digits after the decimal point when logging sub-second delay values.</dd>
+<dt><code>disable_dns_lookups (no)</code></dt>
+<dd>Disable DNS lookups in the Postfix SMTP and LMTP clients.</dd>
+<dt><code>inet_interfaces (all)</code></dt>
+<dd>The network interface addresses that this mail system receives mail on.</dd>
+<dt><code>inet_protocols (all)</code></dt>
+<dd>The Internet protocols Postfix will attempt to use when making or accepting connections.</dd>
+<dt><code>ipc_timeout (3600s)</code></dt>
+<dd>The time limit for sending or receiving information over an internal communication channel.</dd>
+<dt><code>lmtp_assume_final (no)</code></dt>
+<dd>When a remote LMTP server announces no DSN support, assume that the server performs final delivery, and send &quot;delivered&quot; delivery status notifications instead of &quot;relayed&quot;.</dd>
+<dt><code>lmtp_tcp_port (24)</code></dt>
+<dd>The default TCP port that the Postfix LMTP client connects to.</dd>
+<dt><code>max_idle (100s)</code></dt>
+<dd>The maximum amount of time that an idle Postfix daemon process waits for an incoming connection before terminating voluntarily.</dd>
+<dt><code>max_use (100)</code></dt>
+<dd>The maximal number of incoming connections that a Postfix daemon process will service before terminating voluntarily.</dd>
+<dt><code>process_id (read-only)</code></dt>
+<dd>The process ID of a Postfix command or daemon process.</dd>
+<dt><code>process_name (read-only)</code></dt>
+<dd>The process name of a Postfix command or daemon process.</dd>
+<dt><code>proxy_interfaces (empty)</code></dt>
+<dd>The network interface addresses that this mail system receives mail on by way of a proxy or network address translation unit.</dd>
+<dt><code>smtp_address_preference (any)</code></dt>
+<dd>The address type (&quot;ipv6&quot;, &quot;ipv4&quot; or &quot;any&quot;) that the Postfix SMTP client will try first, when a destination has IPv6 and IPv4 addresses with equal MX preference.</dd>
+<dt><code>smtp_bind_address (empty)</code></dt>
+<dd>An optional numerical network address that the Postfix SMTP client should bind to when making an IPv4 connection.</dd>
+<dt><code>smtp_bind_address6 (empty)</code></dt>
+<dd>An optional numerical network address that the Postfix SMTP client should bind to when making an IPv6 connection.</dd>
+<dt><code>smtp_helo_name ($myhostname)</code></dt>
+<dd>The hostname to send in the SMTP EHLO or HELO command.</dd>
+<dt><code>lmtp_lhlo_name ($myhostname)</code></dt>
+<dd>The hostname to send in the LMTP LHLO command.</dd>
+<dt><code>smtp_host_lookup (dns)</code></dt>
+<dd>What mechanisms the Postfix SMTP client uses to look up a host&#8217;s IP address.</dd>
+<dt><code>smtp_randomize_addresses (yes)</code></dt>
+<dd>Randomize the order of equal-preference MX host addresses.</dd>
+<dt><code>syslog_facility (mail)</code></dt>
+<dd>The syslog facility of Postfix logging.</dd>
+<dt><code>syslog_name (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The mail system name that is prepended to the process name in syslog records, so that &quot;smtpd&quot; becomes, for example, &quot;postfix/smtpd&quot;.</dd></dl>
 <p> Available with Postfix 2.2 and earlier:</p>
 <dl>
-<dt><code>fallback_relay (empty)</code></p>
-<dd>Optional list of relay hosts for SMTP destinations that can&#8217;t be found or that are unreachable.</dl>
+<dt><code>fallback_relay (empty)</code></dt>
+<dd>Optional list of relay hosts for SMTP destinations that can&#8217;t be found or that are unreachable.</dd></dl>
 <p> Available with Postfix 2.3 and later:</p>
 <dl>
-<dt><code>smtp_fallback_relay ($fallback_relay)</code></p>
-<dd>Optional list of relay hosts for SMTP destinations that can&#8217;t be found or that are unreachable.</dl>
+<dt><code>smtp_fallback_relay ($fallback_relay)</code></dt>
+<dd>Optional list of relay hosts for SMTP destinations that can&#8217;t be found or that are unreachable.</dd></dl>
 <h2>See Also</h2>
 <pre><a href="//www.systutorials.com/docs/linux/man/5-generic/">generic</a>(5), output address rewriting
 <a href="//www.systutorials.com/docs/linux/man/5-header_checks/">header_checks</a>(5), message header content inspection

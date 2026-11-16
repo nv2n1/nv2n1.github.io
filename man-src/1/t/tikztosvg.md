@@ -18,8 +18,9 @@ description: "tikztosvg – Render TikZ diagrams to SVG."
 <p> <code>-o, &#8211;output</code>=<i>OUTPUT_PATH</i></p>
 <dl>
 <dt>
-<dd> Write output to file <i>OUTPUT_PATH</i>. If set to <i>&#8211;</i> the output will be written to stdout. Defaults to the base name of the input file suffixed with the <i>.svg</i> extension. The file is resolved relative to the working directory.</dl>
+</dt><dd> Write output to file <i>OUTPUT_PATH</i>. If set to <i>&#8211;</i> the output will be written to stdout. Defaults to the base name of the input file suffixed with the <i>.svg</i> extension. The file is resolved relative to the working directory.</dd></dl>
 <p> <code>-p, &#8211;package</code>=+<i>PACKAGE</i></p>
 <dl>
 <dt>
-<dd> Include <i>
+</dt><dd> Include <i>
+</dd></dl>

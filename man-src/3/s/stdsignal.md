@@ -11,10 +11,8 @@ std::signal - std::signal
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;csignal&gt;
-
     /*signal-handler*/ *signal(int sig, /*signal-handler*/ *handler);
 (1)
-
     extern &quot;C&quot; using /*signal-handler*/
     = void(int);     // exposition-only (2)</code></pre> 
 Sets the handler for signal sig. The signal handler can be set so that default handling will occur, signal is ignored, or a user-defined function is called. 
@@ -100,21 +98,16 @@ Signal handlers are expected to have C_linkage and, in general, only use the fea
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;csignal&gt;
-
 #include &lt;iostream&gt;
 namespace
-
 {
 volatile std::sig_atomic_t gSignalStatus;
-
 }
 void signal_handler(int signal)
-
 {
     gSignalStatus = signal;
 }
 int main()
-
 {
     // Install a signal handler
     std::signal(SIGINT, signal_handler);

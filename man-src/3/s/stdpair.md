@@ -12,7 +12,6 @@ std::pair&lt;T1,T2&gt;::swap - std::pair&lt;T1,T2&gt;::swap
 
 <pre><code>void swap(pair &amp;other) noexcept(/* see below */);
 (since C++ 11)(until C++ 20)
-
     constexpr void swap(pair &amp;other) noexcept(/* see below */);
 (since C++ 20)</code></pre> 
 Swaps first with other.first and second with other.second. 
@@ -42,13 +41,9 @@ std::is_nothrow_swappable_v&lt;second_type&gt;
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;utility&gt;
-
 #include &lt;string&gt;
-
 int main()
-
 {
     std::pair&lt;int, std::string&gt; p1, p2;
     p1 = std::make_pair(10, &quot;test&quot;);

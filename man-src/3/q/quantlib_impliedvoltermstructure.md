@@ -33,9 +33,9 @@ description: "QuantLib::ImpliedVolTermStructure – Implied vol term structure a
 <p> The given date will be the implied reference date. </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>This term structure will remain linked to the original structure, i.e., any changes in the latter will be reflected in this structure as well.</dl>
+<dd>This term structure will remain linked to the original structure, i.e., any changes in the latter will be reflected in this structure as well.</dd></dl>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>It doesn&#8217;t make financial sense to have an asset-dependant implied Vol Term Structure. This class should be used with term structures that are time dependant only.</dl>
+<dd>It doesn&#8217;t make financial sense to have an asset-dependant implied Vol Term Structure. This class should be used with term structures that are time dependant only.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

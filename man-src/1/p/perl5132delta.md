@@ -47,16 +47,16 @@ description: "perl5132delta – what is new for perl v5.13.2"
 <p> (04febe, f06daa) </p>
 <p> <i></i><font SIZE="-1"><i>CPAN</i></font><i>.pm 1.94_57</i></p>
 <dl>
-<dt>&bull;</p>
-<dd> release 1.94_57</p>
-<dt>&bull;</p>
-<dd> bugfix: treat modules correctly that are deprecated in perl 5.12.</p>
-<dt>&bull;</p>
-<dd> bugfix: <font SIZE="-1">RT</font> #57482 and #57788 revealed that configure_requires implicitly assumed build_requires instead of normal requires. (Reported by Andrew Whatson and Father Chrysostomos respectively)</p>
-<dt>&bull;</p>
-<dd> testfix: solaris should run the tests without expect because (some?) solaris have a broken expect</p>
-<dt>&bull;</p>
-<dd> testfix: run tests with cache_metadata off to prevent spill over effects from previous test runs</dl>
+<dt>&bull;</dt>
+<dd> release 1.94_57</dd>
+<dt>&bull;</dt>
+<dd> bugfix: treat modules correctly that are deprecated in perl 5.12.</dd>
+<dt>&bull;</dt>
+<dd> bugfix: <font SIZE="-1">RT</font> #57482 and #57788 revealed that configure_requires implicitly assumed build_requires instead of normal requires. (Reported by Andrew Whatson and Father Chrysostomos respectively)</dd>
+<dt>&bull;</dt>
+<dd> testfix: solaris should run the tests without expect because (some?) solaris have a broken expect</dd>
+<dt>&bull;</dt>
+<dd> testfix: run tests with cache_metadata off to prevent spill over effects from previous test runs</dd></dl>
 <p> (742adb) </p>
 <p> <i>Hash::Util warning fix</i> </p>
 <p> Hash::Util now enables &#8220;no warnings &#8216;uninitialized&#8221;&#8217; to suppress spurious warnings from undefined hash values (<font SIZE="-1">RT</font> #74280). </p>
@@ -102,46 +102,46 @@ description: "perl5132delta – what is new for perl v5.13.2"
 <p> This means the &#8216;incpath&#8217;, &#8216;libpth&#8217;, &#8216;ldflags&#8217;, &#8216;lddlflags&#8217; and &#8216;ldflags_nolargefiles&#8217; values in Config.pm and Config_heavy.pl are now set correctly (23ae7f).</p>
 <h2>Selected Bug Fixes</h2>
 <dl>
-<dt>&bull;</p>
-<dd> Timely cleanup of SVs that are cloned into a new thread but then discovered to be orphaned (i.e. their owners are -not- cloned) (e42956)</p>
-<dt>&bull;</p>
-<dd> Don&#8217;t accidentally clone lexicals in scope within active stack frames in the parent when creating a child thread (<font SIZE="-1">RT</font> #73086) (05d04d).</p>
-<dt>&bull;</p>
-<dd> Avoid loading feature.pm when &#8216;no 5.13.2;&#8217; or similar is encountered (faee19).</p>
-<dt>&bull;</p>
-<dd> Trap invalid use of SvIVX on SVt_REGEXP when assertions are on (e77da3)</p>
-<dt>&bull;</p>
-<dd> Don&#8217;t stamp on <tt>$DB::single</tt>, <tt>$DB::trace</tt> and <tt>$DB::signal</tt> if they already have values when $^P is assigned to (<font SIZE="-1">RT</font> #72422) (4c0f30).</p>
-<dt>&bull;</p>
-<dd> chop now correctly handles perl&#8217;s extended <font SIZE="-1">UTF-8</font> (<font SIZE="-1">RT</font> #73246) (65ab92)</p>
-<dt>&bull;</p>
-<dd> Defer signal handling when shared <font SIZE="-1">SV</font> locks are held to avoid deadlocks (<font SIZE="-1">RT</font> #74868) (65c742).</p>
-<dt>&bull;</p>
-<dd> <i>glob()</i> no longer crashes when <tt>%File::Glob::</tt> is empty and CORE::GLOBAL::glob isn&#8217;t present (4984aa).</p>
-<dt>&bull;</p>
-<dd> perlbug now always permits the sender address to be changed before sending &#8211; if you were having trouble sending bug reports before now, this should fix it, we hope (e6eb90).</p>
-<dt>&bull;</p>
-<dd> Overloading now works properly in conjunction with tied variables. What formerly happened was that most ops checked their arguments for overloading <i>before</i> checking for magic, so for example an overloaded object returned by a tied array access would usually be treated as not overloaded (<font SIZE="-1">RT</font> #57012) (6f1401, ed3b9b, 6a5f8c .. 24328f).</p>
-<dt>&bull;</p>
-<dd> Independently, a bug was fixed that prevented <tt>$tied</tt>-&gt;() from always calling <font SIZE="-1">FETCH</font> correctly (<font SIZE="-1">RT</font> #8438) (7c7501)</dl>
+<dt>&bull;</dt>
+<dd> Timely cleanup of SVs that are cloned into a new thread but then discovered to be orphaned (i.e. their owners are -not- cloned) (e42956)</dd>
+<dt>&bull;</dt>
+<dd> Don&#8217;t accidentally clone lexicals in scope within active stack frames in the parent when creating a child thread (<font SIZE="-1">RT</font> #73086) (05d04d).</dd>
+<dt>&bull;</dt>
+<dd> Avoid loading feature.pm when &#8216;no 5.13.2;&#8217; or similar is encountered (faee19).</dd>
+<dt>&bull;</dt>
+<dd> Trap invalid use of SvIVX on SVt_REGEXP when assertions are on (e77da3)</dd>
+<dt>&bull;</dt>
+<dd> Don&#8217;t stamp on <tt>$DB::single</tt>, <tt>$DB::trace</tt> and <tt>$DB::signal</tt> if they already have values when $^P is assigned to (<font SIZE="-1">RT</font> #72422) (4c0f30).</dd>
+<dt>&bull;</dt>
+<dd> chop now correctly handles perl&#8217;s extended <font SIZE="-1">UTF-8</font> (<font SIZE="-1">RT</font> #73246) (65ab92)</dd>
+<dt>&bull;</dt>
+<dd> Defer signal handling when shared <font SIZE="-1">SV</font> locks are held to avoid deadlocks (<font SIZE="-1">RT</font> #74868) (65c742).</dd>
+<dt>&bull;</dt>
+<dd> <i>glob()</i> no longer crashes when <tt>%File::Glob::</tt> is empty and CORE::GLOBAL::glob isn&#8217;t present (4984aa).</dd>
+<dt>&bull;</dt>
+<dd> perlbug now always permits the sender address to be changed before sending &#8211; if you were having trouble sending bug reports before now, this should fix it, we hope (e6eb90).</dd>
+<dt>&bull;</dt>
+<dd> Overloading now works properly in conjunction with tied variables. What formerly happened was that most ops checked their arguments for overloading <i>before</i> checking for magic, so for example an overloaded object returned by a tied array access would usually be treated as not overloaded (<font SIZE="-1">RT</font> #57012) (6f1401, ed3b9b, 6a5f8c .. 24328f).</dd>
+<dt>&bull;</dt>
+<dd> Independently, a bug was fixed that prevented <tt>$tied</tt>-&gt;() from always calling <font SIZE="-1">FETCH</font> correctly (<font SIZE="-1">RT</font> #8438) (7c7501)</dd></dl>
 <h2>Changed Internals</h2>
 <dl>
-<dt>&bull;</p>
-<dd> The implementation of <i>sv_dup_inc()</i> has changed from a macro to a function.</p>
-<dt>&bull;</p>
-<dd> The <tt>&quot;find_rundefsvoffset&quot;</tt> function has been deprecated. It appeared that its design was insufficient to reliably get the lexical <tt>$_</tt> at run-time. </p>
+<dt>&bull;</dt>
+<dd> The implementation of <i>sv_dup_inc()</i> has changed from a macro to a function.</dd>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;find_rundefsvoffset&quot;</tt> function has been deprecated. It appeared that its design was insufficient to reliably get the lexical <tt>$_</tt> at run-time. </dd>
 <p> Use the new <tt>&quot;find_rundefsv&quot;</tt> function or the <tt>&quot;UNDERBAR&quot;</tt> macro instead. They directly return the right <font SIZE="-1">SV</font> representing <tt>$_</tt>, whether it&#8217;s lexical or dynamic (789bd8 .. 03d5bc).</p>
-<dt>&bull;</p>
-<dd> The following new functions or macros have been added to the public <font SIZE="-1">API:</font> <tt>&quot;SvNV_nomg&quot;</tt>, <tt>&quot;sv_2nv_flags&quot;</tt>, <tt>&quot;find_rundefsv&quot;</tt>.</p>
-<dt>&bull;</p>
-<dd> The <tt>&quot;UNDERBAR&quot;</tt> macro now calls <tt>&quot;find_rundefsv&quot;</tt>. <tt>&quot;dUNDERBAR&quot;</tt> is now a noop but should still be used to ensure past and future compatibility.</p>
-<dt>&bull;</p>
-<dd> The ibcmp_* functions have been renamed and are now called foldEQ, foldEQ_locale and foldEQ_utf8 (e6226b).</dl>
+<dt>&bull;</dt>
+<dd> The following new functions or macros have been added to the public <font SIZE="-1">API:</font> <tt>&quot;SvNV_nomg&quot;</tt>, <tt>&quot;sv_2nv_flags&quot;</tt>, <tt>&quot;find_rundefsv&quot;</tt>.</dd>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;UNDERBAR&quot;</tt> macro now calls <tt>&quot;find_rundefsv&quot;</tt>. <tt>&quot;dUNDERBAR&quot;</tt> is now a noop but should still be used to ensure past and future compatibility.</dd>
+<dt>&bull;</dt>
+<dd> The ibcmp_* functions have been renamed and are now called foldEQ, foldEQ_locale and foldEQ_utf8 (e6226b).</dd></dl>
 <h2>Deprecations</h2>
 <p> The following items are now deprecated.</p>
 <dl>
-<dt>&bull;</p>
-<dd> Omitting a space between a regex pattern or pattern modifiers and the following word is deprecated. For example, <tt>&quot;m/foo/sand $bar&quot;</tt> will still be parsed as <tt>&quot;m/foo/s and $bar&quot;</tt> but will issue a warning.</dl>
+<dt>&bull;</dt>
+<dd> Omitting a space between a regex pattern or pattern modifiers and the following word is deprecated. For example, <tt>&quot;m/foo/sand $bar&quot;</tt> will still be parsed as <tt>&quot;m/foo/s and $bar&quot;</tt> but will issue a warning.</dd></dl>
 <h2>Platform Specific Notes</h2>
 <h3>Recent OpenBSDs now use perl&#8217;s malloc</h3>
 <p> OpenBSD &gt; 3.7 has a new malloc implementation which is mmap based and as such can release memory back to the <font SIZE="-1">OS</font>; however for perl using this malloc causes a substantial slowdown so we now default to using perl&#8217;s malloc instead (<font SIZE="-1">RT</font> #75742) (9b58b5).</p>
@@ -160,25 +160,25 @@ description: "perl5132delta – what is new for perl v5.13.2"
 <p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>
 <h2>Index</h2>
-<dt><a href="#lbAM">Modules and Pragmata</a></p>
+<dt><a href="#lbAM">Modules and Pragmata</a></dt>
 <dd>
-<dt><a href="#lbAO">Changes to Existing Documentation</a></p>
+</dd><dt><a href="#lbAO">Changes to Existing Documentation</a></dt>
 <dd>
-<dt><a href="#lbAV">Performance Enhancements</a></p>
+</dd><dt><a href="#lbAV">Performance Enhancements</a></dt>
 <dd>
-<dt><a href="#lbBA">Installation and Configuration Improvements</a></p>
+</dd><dt><a href="#lbBA">Installation and Configuration Improvements</a></dt>
 <dd>
-<dt><a href="#lbBC">Selected Bug Fixes</a></p>
+</dd><dt><a href="#lbBC">Selected Bug Fixes</a></dt>
 <dd>
-<dt><a href="#lbBD">Changed Internals</a></p>
+</dd><dt><a href="#lbBD">Changed Internals</a></dt>
 <dd>
-<dt><a href="#lbBE">Deprecations</a></p>
+</dd><dt><a href="#lbBE">Deprecations</a></dt>
 <dd>
-<dt><a href="#lbBF">Platform Specific Notes</a></p>
+</dd><dt><a href="#lbBF">Platform Specific Notes</a></dt>
 <dd>
-<dt><a href="#lbBH">Acknowledgements</a></p>
+</dd><dt><a href="#lbBH">Acknowledgements</a></dt>
 <dd>
-<dt><a href="#lbBI">Reporting Bugs</a></p>
+</dd><dt><a href="#lbBI">Reporting Bugs</a></dt>
 <dd>
-<dt><a href="#lbBJ">SEE ALSO</a></p>
-<dd></dl>
+</dd><dt><a href="#lbBJ">SEE ALSO</a></dt>
+<dd></dd></dl>

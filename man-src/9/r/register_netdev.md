@@ -14,7 +14,7 @@ description: "register_netdev – register a network device"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device to register</dl>
+</dd><dd>device to register</dd></dl>
 <h2>Description</h2>
 <p>Take a completed network device structure and add it to the kernel interfaces. A <code>NETDEV_REGISTER</code> message is sent to the netdev notifier chain. 0 is returned on success. A negative errno code is returned on a failure to set up the device, or if the name is a duplicate. </p>
 <p> This is a wrapper around register_netdevice that takes the rtnl semaphore and expands the device name if you passed a format string to alloc_netdev.</p>

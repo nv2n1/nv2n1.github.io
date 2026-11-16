@@ -15,23 +15,21 @@ description: "zipmerge – merge zip archives"
 <p> <code>zipmerge</code> merges the source zip archives <code>source-zip</code> into the target zip archive <code>target-zip.</code> By default, files in the source zip archives overwrite existing files of the same name in the target zip archive. </p>
 <p> Supported options:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-D</code></p>
-<dd> Ignore directory components in file name comparisons.</p>
-<dt><code>-h</code></p>
-<dd> Display a short help message and exit.</p>
-<dt><code>-I</code></p>
-<dd> Ignore case in file name comparisons</p>
-<dt><code>-i</code></p>
-<dd> Ask before overwriting files. See also <code>-s</code>.</p>
-<dt><code>-S</code></p>
-<dd> Do not overwrite files that have the same size and CRC32 in both the source and target archives.</p>
-<dt><code>-s</code></p>
-<dd> When <code>-i</code> is given, do not before overwriting files that have the same size and CRC32.</p>
-<dt><code>-V</code></p>
-<dd> Display version information and exit.</dl>
+<dt><code>-D</code></dt>
+<dd> Ignore directory components in file name comparisons.</dd>
+<dt><code>-h</code></dt>
+<dd> Display a short help message and exit.</dd>
+<dt><code>-I</code></dt>
+<dd> Ignore case in file name comparisons</dd>
+<dt><code>-i</code></dt>
+<dd> Ask before overwriting files. See also <code>-s</code>.</dd>
+<dt><code>-S</code></dt>
+<dd> Do not overwrite files that have the same size and CRC32 in both the source and target archives.</dd>
+<dt><code>-s</code></dt>
+<dd> When <code>-i</code> is given, do not before overwriting files that have the same size and CRC32.</dd>
+<dt><code>-V</code></dt>
+<dd> Display version information and exit.</dd></dl>
 </dl>
 <h2>EXIT STATUS</h2>
 <p> <code>zipmerge</code> exits 0 on success and &gt;1 if an error occurred.</p>

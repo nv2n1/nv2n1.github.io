@@ -13,11 +13,12 @@ description: "PAPIF_set_event_domain –"
 <h2>Detailed Description</h2>
 <p><code>Fortran Prototype:</code></p>
 <dl COMPACT>
-<dd>#include &#8216;fpapi.h&#8217; </p>
+<dd>#include &#8216;fpapi.h&#8217; </dd>
 <p>&nbsp;<wbr><code>PAPIF_set_event_domain(&nbsp;<wbr>C_INT EventSet, C_INT domain, C_INT check&nbsp;<wbr>)</code></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_set_domain</code> </p>
+<dd><code>PAPI_set_domain</code> </dd>
 <p> <code>PAPI_set_opt</code></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>
+</p>

@@ -15,15 +15,15 @@ skb_cow_data - Check that a socket buffer's data buffers are writable
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>The socket buffer to check.</dl>
+<dl><dd></dd><dd>The socket buffer to check.</dd></dl>
  
 
  <i>tailbits</i>
-<dl><dd>Amount of trailing space to be added</dl>
+<dl><dd>Amount of trailing space to be added</dd></dl>
  
 
  <i>trailer</i>
-<dl><dd>Returned pointer to the skb where the <i>tailbits</i> space begins</dl>
+<dl><dd>Returned pointer to the skb where the <i>tailbits</i> space begins</dd></dl>
 
 <h2>Description</h2>
 

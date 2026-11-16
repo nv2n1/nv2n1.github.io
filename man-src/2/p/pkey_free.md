@@ -21,22 +21,22 @@ int pkey_free(int pkey);
 <p> The <code>pkey_alloc</code>() <i>flags</i> is reserved for future use and currently must always be specified as 0. </p>
 <p> The <code>pkey_alloc</code>() <i>access_rights</i> argument may contain zero or more disable operations:</p>
 <dl>
-<dt><code>PKEY_DISABLE_ACCESS</code></p>
-<dd> Disable all data access to memory covered by the returned protection key.</p>
-<dt><code>PKEY_DISABLE_WRITE</code></p>
-<dd> Disable write access to memory covered by the returned protection key.</dl>
+<dt><code>PKEY_DISABLE_ACCESS</code></dt>
+<dd> Disable all data access to memory covered by the returned protection key.</dd>
+<dt><code>PKEY_DISABLE_WRITE</code></dt>
+<dd> Disable write access to memory covered by the returned protection key.</dd></dl>
 <p> <code>pkey_free</code>() frees a protection key and makes it available for later allocations. After a protection key has been freed, it may no longer be used in any protection-key-related operations. </p>
 <p> An application should not call <code>pkey_free</code>() on any protection key which has been assigned to an address range by <code><a href="/docs/linux/man/2-pkey_mprotect/">pkey_mprotect</a></code>(2) and which is still in use. The behavior in this case is undefined and may result in an error.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, <code>pkey_alloc</code>() returns a positive protection key value. On success, <code>pkey_free</code>() returns zero. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> <i>pkey</i>, <i>flags</i>, or <i>access_rights</i> is invalid.</p>
-<dt><code>ENOSPC</code></p>
-<dd> (<code>pkey_alloc</code>()) All protection keys available for the current process have been allocated. The number of keys available is architecture-specific and implementation-specific and may be reduced by kernel-internal use of certain keys. There are currently 15 keys available to user programs on x86.</p>
+<dt><code>EINVAL</code></dt>
+<dd> <i>pkey</i>, <i>flags</i>, or <i>access_rights</i> is invalid.</dd>
+<dt><code>ENOSPC</code></dt>
+<dd> (<code>pkey_alloc</code>()) All protection keys available for the current process have been allocated. The number of keys available is architecture-specific and implementation-specific and may be reduced by kernel-internal use of certain keys. There are currently 15 keys available to user programs on x86.</dd>
 <dt>
-<dd> This error will also be returned if the processor or operating system does not support protection keys. Applications should always be prepared to handle this error, since factors outside of the application&#8217;s control can reduce the number of available pkeys.</dl>
+</dt><dd> This error will also be returned if the processor or operating system does not support protection keys. Applications should always be prepared to handle this error, since factors outside of the application&#8217;s control can reduce the number of available pkeys.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>pkey_alloc</code>() and <code>pkey_free</code>() were added to Linux in kernel 4.9; library support was added in glibc 2.27.</p>
 <h2>CONFORMING TO</h2>

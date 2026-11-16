@@ -21,24 +21,24 @@ description: "ldns_pkt_new, ldns_pkt_free, ldns_pkt_print, ldns_pkt_query_new, l
 <p> ldns_pkt_type ldns_pkt_reply_type(ldns_pkt *p); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_pkt_new</i>()</p>
-<dd>allocates and initializes a ldns_pkt structure. .br Returns pointer to the new packet</dl>
+<dt> <i>ldns_pkt_new</i>()</dt>
+<dd>allocates and initializes a ldns_pkt structure. .br Returns pointer to the new packet</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_free</i>()</p>
-<dd>frees the packet structure and all data that it contains. .br <code>packet</code>: The packet structure to free .br Returns void</dl>
+<dt> <i>ldns_pkt_free</i>()</dt>
+<dd>frees the packet structure and all data that it contains. .br <code>packet</code>: The packet structure to free .br Returns void</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_print</i>()</p>
-<dd>Prints the data in the DNS packet to the given file stream (in presentation format) </p>
+<dt> <i>ldns_pkt_print</i>()</dt>
+<dd>Prints the data in the DNS packet to the given file stream (in presentation format) </dd>
 <p> .br <code>output</code>: the file stream to print to .br <code>pkt</code>: the packet to print .br Returns void</dl>
 <dl>
-<dt> <i>ldns_pkt_query_new</i>()</p>
-<dd>creates a packet with a query in it for the given name, type and class. .br <code>rr_name</code>: the name to query for .br <code>rr_type</code>: the type to query for .br <code>rr_class</code>: the class to query for .br <code>flags</code>: packet flags .br Returns ldns_pkt* a pointer to the new pkt</dl>
+<dt> <i>ldns_pkt_query_new</i>()</dt>
+<dd>creates a packet with a query in it for the given name, type and class. .br <code>rr_name</code>: the name to query for .br <code>rr_type</code>: the type to query for .br <code>rr_class</code>: the class to query for .br <code>flags</code>: packet flags .br Returns ldns_pkt* a pointer to the new pkt</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_query_new_frm_str</i>()</p>
-<dd>creates a query packet for the given name, type, class. .br <code>p</code>: the packet to be returned .br <code>rr_name</code>: the name to query for (as string) .br <code>rr_type</code>: the type to query for .br <code>rr_class</code>: the class to query for .br <code>flags</code>: packet flags .br Returns LDNS_STATUS_OK or a ldns_status mesg with the error</dl>
+<dt> <i>ldns_pkt_query_new_frm_str</i>()</dt>
+<dd>creates a query packet for the given name, type, class. .br <code>p</code>: the packet to be returned .br <code>rr_name</code>: the name to query for (as string) .br <code>rr_type</code>: the type to query for .br <code>rr_class</code>: the class to query for .br <code>flags</code>: packet flags .br Returns LDNS_STATUS_OK or a ldns_status mesg with the error</dd></dl>
 <dl>
-<dt> <i>ldns_pkt_reply_type</i>()</p>
-<dd>looks inside the packet to determine what kind of packet it is, AUTH, NXDOMAIN, REFERRAL, etc. .br <code>p</code>: the packet to examine .br Returns the type of packet</dl>
+<dt> <i>ldns_pkt_reply_type</i>()</dt>
+<dd>looks inside the packet to determine what kind of packet it is, AUTH, NXDOMAIN, REFERRAL, etc. .br <code>p</code>: the packet to examine .br Returns the type of packet</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

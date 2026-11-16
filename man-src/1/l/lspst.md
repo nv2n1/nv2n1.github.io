@@ -11,21 +11,19 @@ description: "lspst – list PST (MS Outlook Personal Folders) file data"
 <p> lspst &#8211; list PST (MS Outlook Personal Folders) file data </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>lspst</code> [<code>-V</code>] [<code>-d&nbsp;<wbr></code><i>debug-file</i>] [<code>-h</code>] pstfile</dl>
+<dt> <code>lspst</code> [<code>-V</code>] [<code>-d&nbsp;<wbr></code><i>debug-file</i>] [<code>-h</code>] pstfile</dt></dl>
 <h2>OPTIONS</h2>
 <p> -V</p>
 <dl>
-<dt>
-<dd>
-<dd>Show program version and exit.</dl>
+<dd>Show program version and exit.</dd></dl>
 <p> -d <i>debug-file</i></p>
 <dl>
 <dt>
-<dd> Specify name of debug log file. The log file is now an ascii file, instead of the binary file used in previous versions.</dl>
+</dt><dd> Specify name of debug log file. The log file is now an ascii file, instead of the binary file used in previous versions.</dd></dl>
 <p> -h</p>
 <dl>
 <dt>
-<dd> Show summary of options and exit.</dl>
+</dt><dd> Show summary of options and exit.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>lspst</code> is a program that can read an Outlook PST (Personal Folders) file and produce a simple listing of the data (contacts, email subjects, etc).</p>
 <h2>AUTHOR</h2>

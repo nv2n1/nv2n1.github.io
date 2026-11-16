@@ -14,7 +14,7 @@ description: "clk_get_parent – get the parent clock source for this clock"
 <p><i>clk</i></p>
 <dl>
 <dd>
-<dd>clock source</dl>
+</dd><dd>clock source</dd></dl>
 <h2>Description</h2>
 <p>Returns struct clk corresponding to parent clock source, or valid <code>IS_ERR</code> condition containing errno.</p>
 <h2>Copyright</h2>

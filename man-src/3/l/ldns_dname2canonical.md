@@ -16,8 +16,8 @@ description: "ldns_dname2canonical"
 <p> void ldns_dname2canonical(const ldns_rdf *rdf); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_dname2canonical</i>()</p>
-<dd>Put a dname into canonical fmt &#8211; ie. lowercase it .br <code>rdf</code>: the dname to lowercase .br Returns void</dl>
+<dt> <i>ldns_dname2canonical</i>()</dt>
+<dd>Put a dname into canonical fmt &#8211; ie. lowercase it .br <code>rdf</code>: the dname to lowercase .br Returns void</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

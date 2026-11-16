@@ -31,29 +31,29 @@ description: "std::locale::id –"
 <p> has_facet tests the locale argument for the presence of the facet type provided as the template parameter. Facets derived from the facet parameter will also return true. </p>
 <p> <code>Template Parameters:</code></p>
 <dl>
-<dd><i>_Facet</i> The facet type to test the presence of.</dl>
+<dd><i>_Facet</i> The facet type to test the presence of.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__loc</i> The locale to test.</dl>
+<dd><i>__loc</i> The locale to test.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>true if __loc contains a facet of type _Facet, else false.</dl>
+<dd>true if __loc contains a facet of type _Facet, else false.</dd></dl>
 <p> Definition at line 104 of file locale_classes.tcc.</p>
 <h3>template&lt;typename _Facet &gt; const _Facet&amp; use_facet (const <code>locale</code> &amp;) [friend]</h3>
 <p>Return a facet. </p>
 <p> use_facet looks for and returns a reference to a facet of type Facet where Facet is the template parameter. If has_facet(locale) is true, there is a suitable facet to return. It throws std::bad_cast if the locale doesn&#8217;t contain a facet of type Facet. </p>
 <p> <code>Template Parameters:</code></p>
 <dl>
-<dd><i>_Facet</i> The facet type to access.</dl>
+<dd><i>_Facet</i> The facet type to access.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>__loc</i> The locale to use.</dl>
+<dd><i>__loc</i> The locale to use.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>Reference to facet of type Facet.</dl>
+<dd>Reference to facet of type Facet.</dd></dl>
 <p> <code>Exceptions:</code></p>
 <dl>
-<dd><i>std::bad_cast</i> if __loc doesn&#8217;t contain a facet of type _Facet.</dl>
+<dd><i>std::bad_cast</i> if __loc doesn&#8217;t contain a facet of type _Facet.</dd></dl>
 <p> Definition at line 132 of file locale_classes.tcc.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for libstdc++ from the source code.</p>

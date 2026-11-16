@@ -14,10 +14,10 @@ description: "xprt_wait_for_buffer_space – wait for transport output buffer to
 <p><i>task</i></p>
 <dl>
 <dd>
-<dd>task to be put to sleep</dl>
+</dd><dd>task to be put to sleep</dd></dl>
 <p> <i>action</i></p>
 <dl>
-<dd>function pointer to be executed after wait</dl>
+<dd>function pointer to be executed after wait</dd></dl>
 <h2>Description</h2>
 <p>Note that we only set the timer for the case of <code>RPC_IS_SOFT</code>, since we don&#8217;t in general want to force a socket disconnection due to an incomplete RPC call transmission.</p>
 <h2>Copyright</h2>

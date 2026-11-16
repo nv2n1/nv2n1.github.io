@@ -16,18 +16,18 @@ description: "pam_console_apply – set or revoke permissions for users at the s
 <p> When initializing its configuration it first parses the <i>/etc/security/console.perms</i> file and then it searches for files ending with the <i>.perms</i> suffix in the <i>/etc/security/console.perms.d</i> directory. These files are parsed in the lexical order in &quot;C&quot; locale. Permission rules are appended to a global list, console and device class definitions override previous definitions of the same class.</p>
 <h2>Arguments</h2>
 <dl>
-<dt>-c</p>
-<dd>Load other console.perms file than the default one.</p>
-<dt>-f</p>
-<dd>Load other fstab file than the default one (<i>/etc/fstab</i>).</p>
-<dt>-r</p>
-<dd>Signals <code>pam_console_apply</code> to reset permissions. The default is to set permissions so that the user listed in <i>/var/run/console.lock</i> has access to the devices, and to reset permissions if no such file exists.</p>
-<dt>-t</p>
-<dd>Use &lt;tty&gt; to match console class in console.perms file. The default is tty0.</p>
-<dt>-s</p>
-<dd>Write error messages to the system log instead of stderr.</p>
-<dt>-d</p>
-<dd>Log/display messages useful for debugging.</dl>
+<dt>-c</dt>
+<dd>Load other console.perms file than the default one.</dd>
+<dt>-f</dt>
+<dd>Load other fstab file than the default one (<i>/etc/fstab</i>).</dd>
+<dt>-r</dt>
+<dd>Signals <code>pam_console_apply</code> to reset permissions. The default is to set permissions so that the user listed in <i>/var/run/console.lock</i> has access to the devices, and to reset permissions if no such file exists.</dd>
+<dt>-t</dt>
+<dd>Use &lt;tty&gt; to match console class in console.perms file. The default is tty0.</dd>
+<dt>-s</dt>
+<dd>Write error messages to the system log instead of stderr.</dd>
+<dt>-d</dt>
+<dd>Log/display messages useful for debugging.</dd></dl>
 <p> The optional &lt;device file&gt; arguments constrain what files should be affected by <code>pam_console_apply</code>. If they aren&#8217;t specified permissions are changed on all files specified in the <i>console.perms</i> file.</p>
 <h2>Files</h2>
 <p><i>/var/run/console.lock</i><br />

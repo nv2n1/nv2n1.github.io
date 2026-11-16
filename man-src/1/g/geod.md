@@ -17,22 +17,22 @@ description: "geod – direct geodesic computations invgeod – inverse geodesic
 <p> <i>Geod</i> (direct) and <i>invgeod</i> (inverse) perform geodesic (&#8220;Great Circle&#8221;) computations for determining latitude, longitude and back azimuth of a terminus point given a initial point latitude, longitude, azimuth and distance (direct) or the forward and back azimuths and distance between an initial and terminus point latitudes and longitudes (inverse). </p>
 <p> The following runline control parameters can appear in any order:</p>
 <dl>
-<dt><code>-I</code></p>
-<dd> Specifies that the inverse geodesic computation is to be performed. May be used with execution of <code>goed</code> as an alternative to <code>invgeod</code> execution.</p>
-<dt><code>-a</code></p>
-<dd> Latitude and longitudes of the initial and terminal points, forward and back azimuths and distance are output.</p>
-<dt><code>-t</code><i>a</i></p>
-<dd> <i>A</i> specifies a character employed as the first character to denote a control line to be passed through without processing.</p>
-<dt><code>-le</code></p>
-<dd> Gives a listing of all the ellipsoids that may be selected with the <code>+ellps=</code> option.</p>
-<dt><code>-lu</code></p>
-<dd> Gives a listing of all the units that may be selected with the <code>+units=</code> option.</p>
-<dt><code>-[f|F]</code><i> format</i></p>
-<dd> <i>Format</i> is a <i>printf</i> format string to control the output form of the geographic coordinate values (<code>f</code>) or distance value (<code>F</code>). The default mode is DMS for geographic coordinates and &quot;%.3f&quot; for distance.</p>
-<dt><code>-[w|W]</code><i>n</i></p>
-<dd> <i>N</i> is the number of significant fractional digits to employ for seconds output (when the option is not specified, <code>-w3</code> is assumed). When <code>-W</code> is employed the fields will be constant width with leading zeroes.</p>
-<dt><code>-p</code></p>
-<dd> This option causes the azimuthal values to be output as unsigned DMS numbers between 0 and 360 degrees. Also note -f.</dl>
+<dt><code>-I</code></dt>
+<dd> Specifies that the inverse geodesic computation is to be performed. May be used with execution of <code>goed</code> as an alternative to <code>invgeod</code> execution.</dd>
+<dt><code>-a</code></dt>
+<dd> Latitude and longitudes of the initial and terminal points, forward and back azimuths and distance are output.</dd>
+<dt><code>-t</code><i>a</i></dt>
+<dd> <i>A</i> specifies a character employed as the first character to denote a control line to be passed through without processing.</dd>
+<dt><code>-le</code></dt>
+<dd> Gives a listing of all the ellipsoids that may be selected with the <code>+ellps=</code> option.</dd>
+<dt><code>-lu</code></dt>
+<dd> Gives a listing of all the units that may be selected with the <code>+units=</code> option.</dd>
+<dt><code>-[f|F]</code><i> format</i></dt>
+<dd> <i>Format</i> is a <i>printf</i> format string to control the output form of the geographic coordinate values (<code>f</code>) or distance value (<code>F</code>). The default mode is DMS for geographic coordinates and &quot;%.3f&quot; for distance.</dd>
+<dt><code>-[w|W]</code><i>n</i></dt>
+<dd> <i>N</i> is the number of significant fractional digits to employ for seconds output (when the option is not specified, <code>-w3</code> is assumed). When <code>-W</code> is employed the fields will be constant width with leading zeroes.</dd>
+<dt><code>-p</code></dt>
+<dd> This option causes the azimuthal values to be output as unsigned DMS numbers between 0 and 360 degrees. Also note -f.</dd></dl>
 <p> The <code>+args</code> run-line arguments are associated with geodetic parameters for specifying the ellipsoidal or sphere to use. See <code>proj</code> documentation for full list of these parameters and controls. The options are processed in left to right order from the run line. Reentry of an option is ignored with the first occurrence assumed to be the desired value. </p>
 <p> One or more <i>files</i> (processed in left to right order) specify the source of data to be transformed. A &#8211; will specify the location of processing standard input. If no files are specified, the input is assumed to be from <i>stdin.</i> </p>
 <p> For direct determinations input data must be in latitude, longitude, azimuth and distance order and output will be latitude, longitude and back azimuth of the terminus point. Latitude, longitude of the initial and terminus point are input for the inverse mode and respective forward and back azimuth from the initial and terminus points are output along with the distance between the points. </p>
@@ -45,28 +45,28 @@ description: "geod – direct geodesic computations invgeod – inverse geodesic
 <p> The following script determines the geodesic azimuths and distance in U.S. stature miles from Boston, MA, to Portland, OR:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 &nbsp;<wbr><tt>geod&nbsp;<wbr>+ellps=clrk66&nbsp;<wbr>&lt;&lt;EOF -I&nbsp;<wbr>+units=us-mi<br />
 &nbsp;<wbr>42d15'N 71d07'W 45d31'N 123d41'W<br />
-&nbsp;<wbr>EOF</tt></dl>
+&nbsp;<wbr>EOF</tt></dd></dl>
 <p> which gives the results:</p>
 <dl>
 <dt>
-<dd>
-&nbsp;<wbr><tt>-66d31'50.141&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>75d39'13.083&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2587.504</dl>
+</dt><dd>
+&nbsp;<wbr><tt>-66d31'50.141&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>75d39'13.083&quot;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>2587.504</dd></dl>
 <p> where the first two values are the azimuth from Boston to Portland, the back azimuth from Portland to Boston followed by the distance. </p>
 <p> An example of forward geodesic use is to use the Boston location and determine Portland's location by azimuth and distance:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 &nbsp;<wbr>geod&nbsp;<wbr>+ellps=clrk66&nbsp;<wbr>&lt;&lt;EOF&nbsp;<wbr>+units=us-mi<br />
 &nbsp;<wbr>42d15'N 71d07'W -66d31'50.141&quot;&nbsp;<wbr>2587.504<br />
-&nbsp;<wbr>EOF</tt></dl>
+&nbsp;<wbr>EOF</tt></dd></dl>
 <p> which gives:</p>
 <dl>
 <dt>
-<dd>
-&nbsp;<wbr><tt>45d31'0.003&quot;N&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>123d40'59.985&quot;W 75d39'13.094&quot;</tt></dl>
+</dt><dd>
+&nbsp;<wbr><tt>45d31'0.003&quot;N&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>123d40'59.985&quot;W 75d39'13.094&quot;</tt></dd></dl>
 <p> Note: lack of precision in the distance value compromises the precision of the Portland location.</p>
 <h2>SEE ALSO</h2>
 <p> Thomas, P.D., 1970, <i>Spheroidal Geodesics, Reference Systems &amp; Local Geometry:</i> U.S. Naval Oceanographic Office, S-138.</p>

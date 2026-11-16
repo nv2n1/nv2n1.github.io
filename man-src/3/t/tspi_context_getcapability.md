@@ -37,12 +37,12 @@ description: "Tspi_Context_GetCapability – provide the capabilites of a TSS Co
 <h2>Return Codes</h2>
 <p><code>Tspi_Context_GetCapability</code> returns TSS_SUCCESS on success, otherwise one of the following values are returned:</p>
 <dl COMPACT>
-<dt><font SIZE="-1">TSS_E_INVALID_HANDLE &#8211; <i>hContext</i> is an invalid handle.</font></p>
+<dt><font SIZE="-1">TSS_E_INVALID_HANDLE &#8211; <i>hContext</i> is an invalid handle.</font></dt>
 <dd>
-<dt><font SIZE="-1">TSS_E_BAD_PARAMETER &#8211; One of the parameters did not match. </font></p>
+</dd><dt><font SIZE="-1">TSS_E_BAD_PARAMETER &#8211; One of the parameters did not match. </font></dt>
 <dd>
-<dt><font SIZE="-1">TSS_E_INTERNAL_ERROR &#8211; An error occurred internal to the TSS.</font></p>
-<dd></dl>
+</dd><dt><font SIZE="-1">TSS_E_INTERNAL_ERROR &#8211; An error occurred internal to the TSS.</font></dt>
+<dd></dd></dl>
 <h2>Conforming To</h2>
 <p><code>Tspi_Context_GetCapability</code> conforms to the Trusted Computing Group Software Specification version 1.1 Golden</p>
 <h2>See Also</h2>

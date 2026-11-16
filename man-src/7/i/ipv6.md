@@ -10,15 +10,9 @@ description: "ipv6 – Linux IPv6 protocol implementation"
 <p>ipv6 &#8211; Linux IPv6 protocol implementation</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sys/socket.h&gt;
-
-
 #include &lt;netinet/in.h&gt;
 tcp6_socket = socket(AF_INET6, SOCK_STREAM, 0);
-
-
 raw6_socket = socket(AF_INET6, SOCK_RAW, protocol);
-
-
 udp6_socket = socket(AF_INET6, SOCK_DGRAM, protocol);</code></pre>
 <h2>Description</h2>
 <p>Linux 2.2 optionally implements the Internet Protocol, version 6. This man page contains a description of the IPv6 basic API as implemented by the Linux kernel and glibc 2.1. The interface is based on the BSD sockets interface; see <code><a href="/docs/linux/man/7-socket/">socket</a></code>(7). The IPv6 API aims to be mostly compatible with the IPv4 API (see <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7)). Only differences are described in this man page. To bind an <code>AF_INET6</code> socket to any process, the local address should be copied from the <i>in6addr_any</i> variable which has <i>in6_addr</i> type. In static initializations, <code>IN6ADDR_ANY_INIT</code> may also be used, which expands to a constant expression. Both of them are in network byte order. The IPv6 loopback address (::1) is available in the global <i>in6addr_loopback</i> variable. For initializations, <code>IN6ADDR_LOOPBACK_INIT</code> should be used. IPv4 connections can be handled with the v6 API by using the v4-mapped-on-v6 address type; thus a program needs to support only this API type to support both protocols. This is handled transparently by the address handling functions in the C library. IPv4 and IPv6 share the local port space. When you get an IPv4 connection or packet to an IPv6 socket, its source address will be mapped to v6 and it will be mapped to v6.</p>
@@ -36,39 +30,39 @@ udp6_socket = socket(AF_INET6, SOCK_DGRAM, protocol);</code></pre>
 <h3>Socket options</h3>
 <p>IPv6 supports some protocol-specific socket options that can be set with <code><a href="/docs/linux/man/2-setsockopt/">setsockopt</a></code>(2) and read with <code><a href="/docs/linux/man/2-getsockopt/">getsockopt</a></code>(2). The socket option level for IPv6 is <code>IPPROTO_IPV6</code>. A boolean integer flag is zero when it is false, otherwise true.</p>
 <dl>
-<dt><code>IPV6_ADDRFORM</code></p>
-<dd>Turn an <code>AF_INET6</code> socket into a socket of a different address family. Only <code>AF_INET</code> is currently supported for that. It is allowed only for IPv6 sockets that are connected and bound to a v4-mapped-on-v6 address. The argument is a pointer to an integer containing <code>AF_INET</code>. This is useful to pass v4-mapped sockets as file descriptors to programs that don&#8217;t know how to deal with the IPv6 API.</p>
-<dt><code>IPV6_ADD_MEMBERSHIP, IPV6_DROP_MEMBERSHIP</code></p>
-<dd>Control membership in multicast groups. Argument is a pointer to a <i>struct ipv6_mreq</i>.</p>
-<dt><code>IPV6_MTU</code></p>
-<dd><code>getsockopt</code>(): Retrieve the current known path MTU of the current socket. Valid only when the socket has been connected. Returns an integer.</p>
-<dd><code>setsockopt</code>(): Set the MTU to be used for the socket. The MTU is limited by the device MTU or the path MTU when path MTU discovery is enabled. Argument is a pointer to integer.</p>
-<dt><code>IPV6_MTU_DISCOVER</code></p>
-<dd>Control path-MTU discovery on the socket. See <code>IP_MTU_DISCOVER</code> in <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7) for details.</p>
-<dt><code>IPV6_MULTICAST_HOPS</code></p>
-<dd>Set the multicast hop limit for the socket. Argument is a pointer to an integer. -1 in the value means use the route default, otherwise it should be between 0 and 255.</p>
-<dt><code>IPV6_MULTICAST_IF</code></p>
-<dd>Set the device for outgoing multicast packets on the socket. This is allowed only for <code>SOCK_DGRAM</code> and <code>SOCK_RAW</code> socket. The argument is a pointer to an interface index (see <code><a href="/docs/linux/man/7-netdevice/">netdevice</a></code>(7)) in an integer.</p>
-<dt><code>IPV6_MULTICAST_LOOP</code></p>
-<dd>Control whether the socket sees multicast packets that it has send itself. Argument is a pointer to boolean.</p>
-<dt><code>IPV6_RECVPKTINFO</code> (since Linux 2.6.14)</p>
-<dd>Set delivery of the <code>IPV6_PKTINFO</code> control message on incoming datagrams. Such control messages contain a <i>struct in6_pktinfo</i>, as per RFC 3542. Allowed only for <code>SOCK_DGRAM</code> or <code>SOCK_RAW</code> sockets. Argument is a pointer to a boolean value in an integer.</p>
-<dd><code>IPV6_RTHDR, IPV6_AUTHHDR, IPV6_DSTOPTS, IPV6_HOPOPTS, IPV6_FLOWINFO, IPV6_HOPLIMIT</code> Set delivery of control messages for incoming datagrams containing extension headers from the received packet. <code>IPV6_RTHDR</code> delivers the routing header, <code>IPV6_AUTHHDR</code> delivers the authentication header, <code>IPV6_DSTOPTS</code> delivers the destination options, <code>IPV6_HOPOPTS</code> delivers the hop options, <code>IPV6_FLOWINFO</code> delivers an integer containing the flow ID, <code>IPV6_HOPLIMIT</code> delivers an integer containing the hop count of the packet. The control messages have the same type as the socket option. All these header options can also be set for outgoing packets by putting the appropriate control message into the control buffer of <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2). Allowed only for <code>SOCK_DGRAM</code> or <code>SOCK_RAW</code> sockets. Argument is a pointer to a boolean value.</p>
-<dt><code>IPV6_RECVERR</code></p>
-<dd>Control receiving of asynchronous error options. See <code>IP_RECVERR</code> in <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7) for details. Argument is a pointer to boolean.</p>
-<dt><code>IPV6_ROUTER_ALERT</code></p>
-<dd>Pass forwarded packets containing a router alert hop-by-hop option to this socket. Allowed only for <code>SOCK_RAW</code> sockets. The tapped packets are not forwarded by the kernel, it is the user&#8217;s responsibility to send them out again. Argument is a pointer to an integer. A positive integer indicates a router alert option value to intercept. Packets carrying a router alert option with a value field containing this integer will be delivered to the socket. A negative integer disables delivery of packets with router alert options to this socket.</p>
-<dt><code>IPV6_UNICAST_HOPS</code></p>
-<dd>Set the unicast hop limit for the socket. Argument is a pointer to an integer. -1 in the value means use the route default, otherwise it should be between 0 and 255.</p>
-<dt><code>IPV6_V6ONLY</code> (since Linux 2.4.21 and 2.6)</p>
-<dd>If this flag is set to true (nonzero), then the socket is restricted to sending and receiving IPv6 packets only. In this case, an IPv4 and an IPv6 application can bind to a single port at the same time.</p>
-<dd>If this flag is set to false (zero), then the socket can be used to send and receive packets to and from an IPv6 address or an IPv4-mapped IPv6 address.</p>
-<dd>The argument is a pointer to a boolean value in an integer.</p>
-<dd>The default value for this flag is defined by the contents of the file <i>/proc/sys/net/ipv6/bindv6only</i>. The default value for that file is 0 (false).</dl>
+<dt><code>IPV6_ADDRFORM</code></dt>
+<dd>Turn an <code>AF_INET6</code> socket into a socket of a different address family. Only <code>AF_INET</code> is currently supported for that. It is allowed only for IPv6 sockets that are connected and bound to a v4-mapped-on-v6 address. The argument is a pointer to an integer containing <code>AF_INET</code>. This is useful to pass v4-mapped sockets as file descriptors to programs that don&#8217;t know how to deal with the IPv6 API.</dd>
+<dt><code>IPV6_ADD_MEMBERSHIP, IPV6_DROP_MEMBERSHIP</code></dt>
+<dd>Control membership in multicast groups. Argument is a pointer to a <i>struct ipv6_mreq</i>.</dd>
+<dt><code>IPV6_MTU</code></dt>
+<dd><code>getsockopt</code>(): Retrieve the current known path MTU of the current socket. Valid only when the socket has been connected. Returns an integer.</dd>
+<dd><code>setsockopt</code>(): Set the MTU to be used for the socket. The MTU is limited by the device MTU or the path MTU when path MTU discovery is enabled. Argument is a pointer to integer.</dd>
+<dt><code>IPV6_MTU_DISCOVER</code></dt>
+<dd>Control path-MTU discovery on the socket. See <code>IP_MTU_DISCOVER</code> in <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7) for details.</dd>
+<dt><code>IPV6_MULTICAST_HOPS</code></dt>
+<dd>Set the multicast hop limit for the socket. Argument is a pointer to an integer. -1 in the value means use the route default, otherwise it should be between 0 and 255.</dd>
+<dt><code>IPV6_MULTICAST_IF</code></dt>
+<dd>Set the device for outgoing multicast packets on the socket. This is allowed only for <code>SOCK_DGRAM</code> and <code>SOCK_RAW</code> socket. The argument is a pointer to an interface index (see <code><a href="/docs/linux/man/7-netdevice/">netdevice</a></code>(7)) in an integer.</dd>
+<dt><code>IPV6_MULTICAST_LOOP</code></dt>
+<dd>Control whether the socket sees multicast packets that it has send itself. Argument is a pointer to boolean.</dd>
+<dt><code>IPV6_RECVPKTINFO</code> (since Linux 2.6.14)</dt>
+<dd>Set delivery of the <code>IPV6_PKTINFO</code> control message on incoming datagrams. Such control messages contain a <i>struct in6_pktinfo</i>, as per RFC 3542. Allowed only for <code>SOCK_DGRAM</code> or <code>SOCK_RAW</code> sockets. Argument is a pointer to a boolean value in an integer.</dd>
+<dd><code>IPV6_RTHDR, IPV6_AUTHHDR, IPV6_DSTOPTS, IPV6_HOPOPTS, IPV6_FLOWINFO, IPV6_HOPLIMIT</code> Set delivery of control messages for incoming datagrams containing extension headers from the received packet. <code>IPV6_RTHDR</code> delivers the routing header, <code>IPV6_AUTHHDR</code> delivers the authentication header, <code>IPV6_DSTOPTS</code> delivers the destination options, <code>IPV6_HOPOPTS</code> delivers the hop options, <code>IPV6_FLOWINFO</code> delivers an integer containing the flow ID, <code>IPV6_HOPLIMIT</code> delivers an integer containing the hop count of the packet. The control messages have the same type as the socket option. All these header options can also be set for outgoing packets by putting the appropriate control message into the control buffer of <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2). Allowed only for <code>SOCK_DGRAM</code> or <code>SOCK_RAW</code> sockets. Argument is a pointer to a boolean value.</dd>
+<dt><code>IPV6_RECVERR</code></dt>
+<dd>Control receiving of asynchronous error options. See <code>IP_RECVERR</code> in <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7) for details. Argument is a pointer to boolean.</dd>
+<dt><code>IPV6_ROUTER_ALERT</code></dt>
+<dd>Pass forwarded packets containing a router alert hop-by-hop option to this socket. Allowed only for <code>SOCK_RAW</code> sockets. The tapped packets are not forwarded by the kernel, it is the user&#8217;s responsibility to send them out again. Argument is a pointer to an integer. A positive integer indicates a router alert option value to intercept. Packets carrying a router alert option with a value field containing this integer will be delivered to the socket. A negative integer disables delivery of packets with router alert options to this socket.</dd>
+<dt><code>IPV6_UNICAST_HOPS</code></dt>
+<dd>Set the unicast hop limit for the socket. Argument is a pointer to an integer. -1 in the value means use the route default, otherwise it should be between 0 and 255.</dd>
+<dt><code>IPV6_V6ONLY</code> (since Linux 2.4.21 and 2.6)</dt>
+<dd>If this flag is set to true (nonzero), then the socket is restricted to sending and receiving IPv6 packets only. In this case, an IPv4 and an IPv6 application can bind to a single port at the same time.</dd>
+<dd>If this flag is set to false (zero), then the socket can be used to send and receive packets to and from an IPv6 address or an IPv4-mapped IPv6 address.</dd>
+<dd>The argument is a pointer to a boolean value in an integer.</dd>
+<dd>The default value for this flag is defined by the contents of the file <i>/proc/sys/net/ipv6/bindv6only</i>. The default value for that file is 0 (false).</dd></dl>
 <h2>Errors</h2>
 <dl>
-<dt><code>ENODEV</code></p>
-<dd>The user tried to <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2) to a link-local IPv6 address, but the <i>sin6_scope_id</i> in the supplied <i>sockaddr_in6</i> structure is not a valid interface index.</dl>
+<dt><code>ENODEV</code></dt>
+<dd>The user tried to <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2) to a link-local IPv6 address, but the <i>sin6_scope_id</i> in the supplied <i>sockaddr_in6</i> structure is not a valid interface index.</dd></dl>
 <h2>Versions</h2>
 <p>Linux 2.4 will break binary compatibility for the <i>sockaddr_in6</i> for 64-bit hosts by changing the alignment of <i>in6_addr</i> and adding an additional <i>sin6_scope_id</i> field. The kernel interfaces stay compatible, but a program including <i>sockaddr_in6</i> or <i>in6_addr</i> into other structures may not be. This is not a problem for 32-bit hosts like i386. </p>
 <p> The <i>sin6_flowinfo</i> field is new in Linux 2.4. It is transparently passed/read by the kernel when the passed address length contains it. Some programs that pass a longer address buffer and then check the outgoing address length may break.</p>

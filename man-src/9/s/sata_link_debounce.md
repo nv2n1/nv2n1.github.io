@@ -14,13 +14,13 @@ description: "sata_link_debounce – debounce SATA phy status"
 <p><i>link</i></p>
 <dl>
 <dd>
-<dd>ATA link to debounce SATA phy status for</dl>
+</dd><dd>ATA link to debounce SATA phy status for</dd></dl>
 <p> <i>params</i></p>
 <dl>
-<dd>timing parameters { interval, duration, timeout } in msec</dl>
+<dd>timing parameters { interval, duration, timeout } in msec</dd></dl>
 <p> <i>deadline</i></p>
 <dl>
-<dd>deadline jiffies for the operation</dl>
+<dd>deadline jiffies for the operation</dd></dl>
 <h2>Description</h2>
 <p>Make sure SStatus of <i>link</i> reaches stable state, determined by holding the same value where DET is not 1 for <i>duration</i> polled every <i>interval</i>, before <i>timeout</i>. Timeout constraints the beginning of the stable state. Because DET gets stuck at 1 on some controllers after hot unplugging, this functions waits until timeout then returns 0 if DET is stable at 1. </p>
 <p> <i>timeout</i> is further limited by <i>deadline</i>. The sooner of the two is used. </p>
@@ -30,5 +30,5 @@ description: "sata_link_debounce – debounce SATA phy status"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -32,9 +32,9 @@ nvme fw - activate&lt;device&gt;[--slot = &lt;slot&gt; | -s&lt;slot&gt;]
 
 <dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
  # echo 1 &gt; /sys/class/misc/nvme0/device/reset
-</pre></dl>
+</pre></dd></dl>
  
 
  If your kernel is not recent enough, you will need to remove and add the device some other way.
@@ -46,20 +46,19 @@ nvme fw - activate&lt;device&gt;[--slot = &lt;slot&gt; | -s&lt;slot&gt;]
  -a &lt;action&gt;, --action=&lt;action&gt;
 <dl>
 <dt>
-<dd> Activate Action: This field specifies the action that is taken on the image downloaded with the Firmware Image Download command or on a previously downloaded and placed image. <table BORDER> <tr VALIGN=top><td> Value </td><td> Definition 
+</dt><dd> Activate Action: This field specifies the action that is taken on the image downloaded with the Firmware Image Download command or on a previously downloaded and placed image. <table BORDER> <tr VALIGN=top><td> Value </td><td> Definition 
 </td></tr> <tr VALIGN=top><td> 0 </td><td> Downloaded image replaces the image indicated by the Firmware Slot field. This image is not activated. 
 </td></tr> <tr VALIGN=top><td> 1 </td><td> Downloaded image replaces the image indicated by the Firmware Slot field. This image is activated at the next reset. 
 </td></tr> <tr VALIGN=top><td> 2 </td><td> The image indicated by the Firmware Slot field is activated at the next reset. 
 </td></tr> <tr VALIGN=top><td> 3 </td><td> Reserved. 
 </td></tr> </table> 
-
-</dl>
+</dd></dl>
  
 
  -s &lt;slot&gt;, --slot=&lt;slot&gt;
 <dl>
 <dt>
-<dd> Firmware Slot: Specifies the firmware slot that shall be used for the Activate Action, if applicable. If the value specified is 0h, then the controller shall choose the firmware slot (slot 1 - 7) to use for the operation.</dl>
+</dt><dd> Firmware Slot: Specifies the firmware slot that shall be used for the Activate Action, if applicable. If the value specified is 0h, then the controller shall choose the firmware slot (slot 1 - 7) to use for the operation.</dd></dl>
 
 <h2>EXAMPLES</h2>
 
@@ -67,13 +66,12 @@ nvme fw - activate&lt;device&gt;[--slot = &lt;slot&gt; | -s&lt;slot&gt;]
 
 <dl>
 <dt>
-<dd> &bull; Activate the last downloaded fw to slot 1. 
-
-<dl>
+</dt><dd> &bull; Activate the last downloaded fw to slot 1. 
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 # nvme fw-activate /dev/nvme0 --slot=1 --action=2
-</pre></dl>
+</pre></dd></dl>
 </dl>
 
 <h2>NVME</h2>

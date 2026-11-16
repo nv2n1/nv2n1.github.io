@@ -13,10 +13,10 @@ description: "pskc_set_id – API function"
 void pskc_set_id(pskc_t *container, const char *id);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_t * container</p>
-<dd>a <code>pskc_t</code> handle, from <code>pskc_init()</code>.</p>
-<dt>const char * id</p>
-<dd>pointer to id string to set.</dl>
+<dt>pskc_t * container</dt>
+<dd>a <code>pskc_t</code> handle, from <code>pskc_init()</code>.</dd>
+<dt>const char * id</dt>
+<dd>pointer to id string to set.</dd></dl>
 <h2>Description</h2>
 <p>Set the PSKC KeyContainer Id attribute. </p>
 <p> The pointer is stored in <i>container</i>, not a copy of the data, so you must not deallocate the data before another call to this function or the last call to any function using <i>container</i>.</p>

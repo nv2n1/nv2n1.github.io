@@ -10,7 +10,7 @@ description: "vfs_netatalk – hide .AppleDouble files from CIFS clients"
 <p>vfs_netatalk &#8211; hide .AppleDouble files from CIFS clients</p>
 <h2>Synopsis</h2>
 <dl>
-<dd>vfs objects = netatalk</dl>
+<dd>vfs objects = netatalk</dd></dl>
 <h2>Description</h2>
 <p>This VFS module is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> The vfs_netatalk VFS module dynamically hides .AppleDouble files, preventing spurious errors on some CIFS clients. .AppleDouble files may be created by historic implementations of AFP (Apple Filing Protocol) on servers. </p>
@@ -21,7 +21,7 @@ description: "vfs_netatalk – hide .AppleDouble files from CIFS clients"
 <dd>
 <pre> <i>[data]</i>
  m[blue]<code>vfs objects = netatalk</code>m[]</pre>
-</dl>
+</dd></dl>
 <h2>Caveats</h2>
 <p>This module is largely historic and unlikely to be of use in modern networks since current Apple systems are able to mount CIFS shares natively.</p>
 <h2>Version</h2>

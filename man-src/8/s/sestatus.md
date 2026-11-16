@@ -22,29 +22,29 @@ description: "sestatus – SELinux status tool"
  Mode from config file: enforcing<br />
  Policy MLS status: enabled<br />
  Policy deny_unknown status: allow<br />
- Max kernel policy version: 26</dl>
+ Max kernel policy version: 26</dd></dl>
 <p> <code>sestatus</code> can also be used to display:</p>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;</p>
-<dd>The security context of files and processes listed in the <i>/etc/sestatus.conf</i> file. The format of this file is described in <code><a href="/docs/linux/man/5-sestatus-conf/">sestatus.conf</a></code>(5).</p>
-<dt>&#8211;</p>
-<dd>The status of booleans.</dl>
+</dd><dl>
+<dt>&#8211;</dt>
+<dd>The security context of files and processes listed in the <i>/etc/sestatus.conf</i> file. The format of this file is described in <code><a href="/docs/linux/man/5-sestatus-conf/">sestatus.conf</a></code>(5).</dd>
+<dt>&#8211;</dt>
+<dd>The status of booleans.</dd></dl>
 </dl>
 <h2>Options</h2>
 <p><code>-v</code></p>
 <dl>
-<dd>Displays the contexts of files and processes listed in the <i>/etc/sestatus.conf</i> file. It also checks whether the file is a symbolic link, if so then the context of the target file is also shown. </p>
+<dd>Displays the contexts of files and processes listed in the <i>/etc/sestatus.conf</i> file. It also checks whether the file is a symbolic link, if so then the context of the target file is also shown. </dd>
 <p> The following contexts will always be displayed:</p>
 <dl>
 <dd>The current process context<br />
  The init process context<br />
- The controlling terminal file context</dl>
+ The controlling terminal file context</dd></dl>
 </dl>
 <p> <code>-b</code></p>
 <dl>
-<dd>Display the current state of booleans.</dl>
+<dd>Display the current state of booleans.</dd></dl>
 <h2>Files</h2>
 <p><i>/etc/sestatus.conf</i></p>
 <h2>Author</h2>

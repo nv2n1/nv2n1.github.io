@@ -41,17 +41,17 @@ url: "/docs/linux/man/1-perl5281delta/"
 
 <dl>
 <dt>&bull;
-<dd> Module::CoreList has been upgraded from version 5.20180622 to 5.20181129_28.</dl>
+</dt><dd> Module::CoreList has been upgraded from version 5.20180622 to 5.20181129_28.</dd></dl>
 
 <h2>Selected Bug Fixes</h2>
 
 <dl>
 <dt>&bull;
-<dd> Perl 5.28 introduced an <tt>&quot;index()&quot;</tt> optimization when comparing to -1 (or indirectly, e.g. &gt;= 0). When this optimization was triggered inside a <tt>&quot;when&quot;</tt> clause it caused a warning (``Argument <tt>%s</tt> isn't numeric in smart match''). This has now been fixed. [perl #133368] &lt;<a rel="nofollow" HREF="https://rt.perl.org/Ticket/Display.html?id=133368">https://rt.perl.org/Ticket/Display.html?id=133368</a>&gt;
-<dt>&bull;
-<dd> Matching of decimal digits in script runs, introduced in Perl 5.28, had a bug that led to <tt>&quot;1\N{THAI DIGIT FIVE}&quot;</tt> matching <tt>&quot;/^(*sr:\d+)$/&quot;</tt> when it should not. This has now been fixed.
-<dt>&bull;
-<dd> The new in-place editing code no longer leaks directory handles. [perl #133314] &lt;<a rel="nofollow" HREF="https://rt.perl.org/Ticket/Display.html?id=133314">https://rt.perl.org/Ticket/Display.html?id=133314</a>&gt;</dl>
+</dt><dd> Perl 5.28 introduced an <tt>&quot;index()&quot;</tt> optimization when comparing to -1 (or indirectly, e.g. &gt;= 0). When this optimization was triggered inside a <tt>&quot;when&quot;</tt> clause it caused a warning (``Argument <tt>%s</tt> isn't numeric in smart match''). This has now been fixed. [perl #133368] &lt;<a rel="nofollow" HREF="https://rt.perl.org/Ticket/Display.html?id=133368">https://rt.perl.org/Ticket/Display.html?id=133368</a>&gt;
+</dd><dt>&bull;
+</dt><dd> Matching of decimal digits in script runs, introduced in Perl 5.28, had a bug that led to <tt>&quot;1\N{THAI DIGIT FIVE}&quot;</tt> matching <tt>&quot;/^(*sr:\d+)$/&quot;</tt> when it should not. This has now been fixed.
+</dd><dt>&bull;
+</dt><dd> The new in-place editing code no longer leaks directory handles. [perl #133314] &lt;<a rel="nofollow" HREF="https://rt.perl.org/Ticket/Display.html?id=133314">https://rt.perl.org/Ticket/Display.html?id=133314</a>&gt;</dd></dl>
 
 <h2>Acknowledgements</h2>
 
@@ -102,18 +102,18 @@ url: "/docs/linux/man/1-perl5281delta/"
 
 
 <dt><a HREF="#lbAG">Incompatible Changes</a>
-<dd>
-<dt><a HREF="#lbAH">Modules and Pragmata</a>
-<dd>
+</dt><dd>
+</dd><dt><a HREF="#lbAH">Modules and Pragmata</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbAJ">Selected Bug Fixes</a>
-<dd>
-<dt><a HREF="#lbAK">Acknowledgements</a>
-<dd>
-<dt><a HREF="#lbAL">Reporting Bugs</a>
-<dd>
-<dt><a HREF="#lbAM">Give Thanks</a>
-<dd>
-<dt><a HREF="#lbAN">SEE ALSO</a>
-<dd></dl>
+</dd><dt><a HREF="#lbAJ">Selected Bug Fixes</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAK">Acknowledgements</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAL">Reporting Bugs</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAM">Give Thanks</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAN">SEE ALSO</a>
+</dt><dd></dd></dl>

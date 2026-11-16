@@ -28,31 +28,31 @@ ib_acme[-A[addr_file]][-O[opt_file]][-D dest_dir][-V]
 
 <dl>
 <dt>-f addr_format
-<dd> Specifies the format of the src_addr and dest_addr parameters. Valid address formats are: 'i' ip address, 'n' host name, 'l' lid, 'g' gid, and 'u' unspecified. If the -f option is omitted, an unspecified address format is assumed. ib_acme will use getaddrinfo or other mechanisms to determine which format the address uses.
-<dt>-s src_addr
-<dd> Specifies the local source address of the path to resolve. The source address can be an IP address, system network name, or LID, as indicated by the addr_format option.
-<dt>-d dest_addr
-<dd> Specifies the destination address of the path to resolve. The destination address can be an IP address, system network name, or LID, as indicated by the addr_format option.
-<dt>-v
-<dd> Indicates that the resolved path information should be verified with the active IB SA. Use of the -v option provides a sanity check that resolved path information is usable given the current cluster configuration.
-<dt>-c
-<dd> Instructs the ACM service to only returned information that currently resides in its local cache.
-<dt>-e [N]
-<dd> Displays one (N = 1, 2, ...) or all endpoints (N = 0 or not present).
-<dt>-P [opt]
-<dd> Queries performance data from the destination service. Valid options are: &quot;col&quot; for outputting combined data in column format, &quot;N&quot; (N = 1, 2, ...) for outputing data for a specific endpoint N, &quot;all&quot; for outputting data for all endpoints, and &quot;s&quot; for outputting data for a specific endpoint with the address given by the -s option.
-<dt>-S svc_addr
-<dd> address of ACM service, default: local service
-<dt>-C repetitions
-<dd> number of repetitions to perform resolution. Used to measure performance of ACM cache lookups. Defaults to 1.
-<dt>-A [addr_file]
-<dd> With this option, the ib_acme utility automatically generates the address configuration file ibacm_addr.cfg. The generated file is constructed using the system host name.
-<dt>-O [opt_file]
-<dd> With this option, the ib_acme utility automatically generates the option configuration file ibacm_opts.cfg. The generated file is currently generated using static information.
-<dt>-D dest_dir
-<dd> Specify the destination directory for the output files.
-<dt>-V
-<dd> Enables verbose output. When combined with -A or -O options, ib_acme will display additional details, such as generated address information saved to the ibacm_addr.cfg file.</dl>
+</dt><dd> Specifies the format of the src_addr and dest_addr parameters. Valid address formats are: 'i' ip address, 'n' host name, 'l' lid, 'g' gid, and 'u' unspecified. If the -f option is omitted, an unspecified address format is assumed. ib_acme will use getaddrinfo or other mechanisms to determine which format the address uses.
+</dd><dt>-s src_addr
+</dt><dd> Specifies the local source address of the path to resolve. The source address can be an IP address, system network name, or LID, as indicated by the addr_format option.
+</dd><dt>-d dest_addr
+</dt><dd> Specifies the destination address of the path to resolve. The destination address can be an IP address, system network name, or LID, as indicated by the addr_format option.
+</dd><dt>-v
+</dt><dd> Indicates that the resolved path information should be verified with the active IB SA. Use of the -v option provides a sanity check that resolved path information is usable given the current cluster configuration.
+</dd><dt>-c
+</dt><dd> Instructs the ACM service to only returned information that currently resides in its local cache.
+</dd><dt>-e [N]
+</dt><dd> Displays one (N = 1, 2, ...) or all endpoints (N = 0 or not present).
+</dd><dt>-P [opt]
+</dt><dd> Queries performance data from the destination service. Valid options are: &quot;col&quot; for outputting combined data in column format, &quot;N&quot; (N = 1, 2, ...) for outputing data for a specific endpoint N, &quot;all&quot; for outputting data for all endpoints, and &quot;s&quot; for outputting data for a specific endpoint with the address given by the -s option.
+</dd><dt>-S svc_addr
+</dt><dd> address of ACM service, default: local service
+</dd><dt>-C repetitions
+</dt><dd> number of repetitions to perform resolution. Used to measure performance of ACM cache lookups. Defaults to 1.
+</dd><dt>-A [addr_file]
+</dt><dd> With this option, the ib_acme utility automatically generates the address configuration file ibacm_addr.cfg. The generated file is constructed using the system host name.
+</dd><dt>-O [opt_file]
+</dt><dd> With this option, the ib_acme utility automatically generates the option configuration file ibacm_opts.cfg. The generated file is currently generated using static information.
+</dd><dt>-D dest_dir
+</dt><dd> Specify the destination directory for the output files.
+</dd><dt>-V
+</dt><dd> Enables verbose output. When combined with -A or -O options, ib_acme will display additional details, such as generated address information saved to the ibacm_addr.cfg file.</dd></dl>
 
 <h2>NOTES</h2>
 

@@ -15,30 +15,30 @@ description: "fapg – Fast Audio Playlist Generator"
 <p> <code>fapg</code> is a tool to generate list of audio files (Wav, MP2, MP3, Ogg, etc) in various formats (M3U, PLS, XSPF, HTML, RSS, etc). It is very useful if you have a large amount of audio files and you want to quickly and frequently build a playlist. It is coded in C to be as fast as possible, and does not use any specific audio library (like ID3Lib). This allow you to deploy it faster and easier, and to have better performances since the less informations are loaded. On the other hand, this tool is not (yet) compatible with all the known formats. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-b|&#8211;backslash</p>
-<dd> Replace the &#8216;/&#8217; with &#8221; in Unix path.</p>
-<dt>-d|&#8211;debug</p>
-<dd> Display useful messages if the program fails ;)</p>
-<dt>-f|&#8211;format=m3u|pls|xspf|html|rss|pla|txx</p>
-<dd> Choose which format of playlist you want to generate (default is m3u).</p>
-<dt>-g|&#8211;genre=#:#:&#8230;</p>
-<dd> Choose which genres (numerical values only) will be included in the generated playlist (default is all).</p>
-<dt>-n|&#8211;nohardlink</p>
-<dd> Avoid to parse twice the files because of hardlinks.</p>
-<dt>-o|&#8211;output=/path/to/file.m3u</p>
-<dd> Choose the name of the playlist file to generate (default behavior is to display on standard output).</p>
-<dt>-p|&#8211;prefix=/the/prefix</p>
-<dd> Replace the Unix path with another string (useful to give a Samba path for example).</p>
-<dt>-r|&#8211;recursive</p>
-<dd> Recursively read the subdirectories.</p>
-<dt>-w|&#8211;windows</p>
-<dd> Replace all Unix characters with Windows characters.</p>
-<dt>-x|&#8211;exclude=#:#:&#8230;</p>
-<dd> Choose which genres (numerical values only) will be excluded in the generated playlist (default is none).</p>
-<dt>-c|&#8211;command=&lt;intern|&#8230;&gt;</p>
-<dd> External binary or script that produces additional fields for RSS feeds (slow).</p>
-<dt>-s|&#8211;stdin</p>
-<dd> Read filenames and/or directories from standard input instead of command line. </p>
+<dt>-b|&#8211;backslash</dt>
+<dd> Replace the &#8216;/&#8217; with &#8221; in Unix path.</dd>
+<dt>-d|&#8211;debug</dt>
+<dd> Display useful messages if the program fails ;)</dd>
+<dt>-f|&#8211;format=m3u|pls|xspf|html|rss|pla|txx</dt>
+<dd> Choose which format of playlist you want to generate (default is m3u).</dd>
+<dt>-g|&#8211;genre=#:#:&#8230;</dt>
+<dd> Choose which genres (numerical values only) will be included in the generated playlist (default is all).</dd>
+<dt>-n|&#8211;nohardlink</dt>
+<dd> Avoid to parse twice the files because of hardlinks.</dd>
+<dt>-o|&#8211;output=/path/to/file.m3u</dt>
+<dd> Choose the name of the playlist file to generate (default behavior is to display on standard output).</dd>
+<dt>-p|&#8211;prefix=/the/prefix</dt>
+<dd> Replace the Unix path with another string (useful to give a Samba path for example).</dd>
+<dt>-r|&#8211;recursive</dt>
+<dd> Recursively read the subdirectories.</dd>
+<dt>-w|&#8211;windows</dt>
+<dd> Replace all Unix characters with Windows characters.</dd>
+<dt>-x|&#8211;exclude=#:#:&#8230;</dt>
+<dd> Choose which genres (numerical values only) will be excluded in the generated playlist (default is none).</dd>
+<dt>-c|&#8211;command=&lt;intern|&#8230;&gt;</dt>
+<dd> External binary or script that produces additional fields for RSS feeds (slow).</dd>
+<dt>-s|&#8211;stdin</dt>
+<dd> Read filenames and/or directories from standard input instead of command line. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> Generate a PLS playlist for an album: <code>fapg &#8211;format=pls &#8211;output=~/path/to/album/list.pls ~/path/to/album</code><br />

@@ -14,13 +14,13 @@ description: "snd_soc_jack_report – Report the current status for a jack"
 <p><i>jack</i></p>
 <dl>
 <dd>
-<dd>the jack</dl>
+</dd><dd>the jack</dd></dl>
 <p> <i>status</i></p>
 <dl>
-<dd>a bitmask of enum snd_jack_type values that are currently detected.</dl>
+<dd>a bitmask of enum snd_jack_type values that are currently detected.</dd></dl>
 <p> <i>mask</i></p>
 <dl>
-<dd>a bitmask of enum snd_jack_type values that being reported.</dl>
+<dd>a bitmask of enum snd_jack_type values that being reported.</dd></dl>
 <h2>Description</h2>
 <p>If configured using <code>snd_soc_jack_add_pins</code> then the associated DAPM pins will be enabled or disabled as appropriate and DAPM synchronised.</p>
 <h2>Note</h2>

@@ -10,18 +10,18 @@ description: "XcmsSetWhitePoint, XcmsSetWhiteAdjustProc – modifying CCC attrib
 <p>XcmsSetWhitePoint, XcmsSetWhiteAdjustProc &#8211; modifying CCC attributes </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>Status XcmsSetWhitePoint(XcmsCCC <i>ccc</i>, XcmsColor *<i>color</i>);</p>
-<dd>XcmsWhiteAdjustProc XcmsSetWhiteAdjustProc(XcmsCCC <i>ccc</i>, XcmsWhiteAdjustProc <i>white_adjust_proc</i>, XPointer <i>client_data</i>);</dl>
+<dd>Status XcmsSetWhitePoint(XcmsCCC <i>ccc</i>, XcmsColor *<i>color</i>);</dd>
+<dd>XcmsWhiteAdjustProc XcmsSetWhiteAdjustProc(XcmsCCC <i>ccc</i>, XcmsWhiteAdjustProc <i>white_adjust_proc</i>, XPointer <i>client_data</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>ccc</i></p>
-<dd>Specifies the CCC.</p>
-<dt><i>client_data</i></p>
-<dd>Specifies client data for the white point adjustment procedure or NULL.</p>
-<dt><i>color</i></p>
-<dd>Specifies the new Client White Point.</p>
-<dt><i>white_adjust_proc</i></p>
-<dd>Specifies the white point adjustment procedure.</dl>
+<dt><i>ccc</i></dt>
+<dd>Specifies the CCC.</dd>
+<dt><i>client_data</i></dt>
+<dd>Specifies client data for the white point adjustment procedure or NULL.</dd>
+<dt><i>color</i></dt>
+<dd>Specifies the new Client White Point.</dd>
+<dt><i>white_adjust_proc</i></dt>
+<dd>Specifies the white point adjustment procedure.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XcmsSetWhitePoint</code> function changes the Client White Point in the specified CCC. Note that the pixel member is ignored and that the color specification is left unchanged upon return. The format for the new white point must be <code>XcmsCIEXYZFormat</code>, <code>XcmsCIEuvYFormat</code>, <code>XcmsCIExyYFormat</code>, or <code>XcmsUndefinedFormat</code>. If the color argument is NULL, this function sets the format component of the Client White Point specification to <code>XcmsUndefinedFormat</code>, indicating that the Client White Point is assumed to be the same as the Screen White Point. </p>
 <p> This function returns nonzero status if the format for the new white point is valid; otherwise, it returns zero. </p>

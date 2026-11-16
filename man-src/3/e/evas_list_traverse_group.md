@@ -22,10 +22,10 @@ description: "Linked List Traverse Functions – Functions that you can use to t
 <p>Get the last list node in the list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The list to get the last list node from</dl>
+<dd><i>list</i> The list to get the last list node from</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The last list node in the list list</dl>
+<dd>The last list node in the list list</dd></dl>
 <p> This function will return the last list node in the list (or NULL if the list is empty). </p>
 <p> NB: This is a order-1 operation (it takes the same short time regardless of the length of the list). </p>
 <p> Example: </p>
@@ -43,10 +43,10 @@ description: "Linked List Traverse Functions – Functions that you can use to t
 <p>Get the next list node after the specified list node. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The list node to get the next list node from</dl>
+<dd><i>list</i> The list node to get the next list node from</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The next list node, or NULL if no next list node exists</dl>
+<dd>The next list node, or NULL if no next list node exists</dd></dl>
 <p> This function returns the next list node after the current one. It is equivalent to list-&gt;next. </p>
 <p> Example: </p>
 <pre> extern Evas_List *list;
@@ -63,10 +63,10 @@ description: "Linked List Traverse Functions – Functions that you can use to t
 <p>Get the previous list node before the specified list node. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>list</i> The list node to get the previous list node from</dl>
+<dd><i>list</i> The list node to get the previous list node from</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The previous list node, or NULL if no previous list node exists</dl>
+<dd>The previous list node, or NULL if no previous list node exists</dd></dl>
 <p> This function returns the previous list node before the current one. It is equivalent to list-&gt;prev. </p>
 <p> Example: </p>
 <pre> extern Evas_List *list;

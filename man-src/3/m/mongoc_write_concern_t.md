@@ -14,20 +14,20 @@ description: "mongoc_write_concern_t – Write Concern abstraction"
 <p> See <code>Write Concern</code> on the MongoDB website for more information. </p>
 <h2>Write Concern Levels</h2>
 <dl COMPACT>
-<dt><code>MONGOC_WRITE_CONCERN_W_DEFAULT (1)</code></p>
-<dd>By default, writes block awaiting acknowledgment from MongoDB. Acknowledged write concern allows clients to catch network, duplicate key, and other errors.</dl>
+<dt><code>MONGOC_WRITE_CONCERN_W_DEFAULT (1)</code></dt>
+<dd>By default, writes block awaiting acknowledgment from MongoDB. Acknowledged write concern allows clients to catch network, duplicate key, and other errors.</dd></dl>
 <dl COMPACT>
-<dt><code>MONGOC_WRITE_CONCERN_W_UNACKNOWLEDGED (0)</code></p>
-<dd>With this write concern, MongoDB does not acknowledge the receipt of write operation. Unacknowledged is similar to errors ignored; however, mongoc attempts to receive and handle network errors when possible.</dl>
+<dt><code>MONGOC_WRITE_CONCERN_W_UNACKNOWLEDGED (0)</code></dt>
+<dd>With this write concern, MongoDB does not acknowledge the receipt of write operation. Unacknowledged is similar to errors ignored; however, mongoc attempts to receive and handle network errors when possible.</dd></dl>
 <dl COMPACT>
-<dt><code>MONGOC_WRITE_CONCERN_W_MAJORITY (majority)</code></p>
-<dd>Block until a write has been propagated to a majority of the nodes in the replica set.</dl>
+<dt><code>MONGOC_WRITE_CONCERN_W_MAJORITY (majority)</code></dt>
+<dd>Block until a write has been propagated to a majority of the nodes in the replica set.</dd></dl>
 <dl COMPACT>
-<dt><code>n</code></p>
-<dd>Block until a write has been propagated to at least <code>n</code> nodes in the replica set.</dl>
+<dt><code>n</code></dt>
+<dd>Block until a write has been propagated to at least <code>n</code> nodes in the replica set.</dd></dl>
 <dl COMPACT>
-<dt><code>journal</code></p>
-<dd>Block until the node receiving the write has committed the journal.</dl>
+<dt><code>journal</code></dt>
+<dd>Block until the node receiving the write has committed the journal.</dd></dl>
 <h2>Deprecation</h2>
 <p>The write concern <code>MONGOC_WRITE_CONCERN_W_ERRORS_IGNORED</code> (value -1) is a deprecated synonym for <code>MONGOC_WRITE_CONCERN_W_UNACKNOWLEDGED</code> (value 0), and will be removed in the next major release. </p>
 <h2>Colophon</h2>

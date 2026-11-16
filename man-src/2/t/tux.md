@@ -152,76 +152,76 @@ typedef struct user_req_s {<br />
     uint8_t new_date[DATE_LEN];<br />
 } user_req_t;</p>
 <dl>
-<dt>version_major</p>
-<dd> Always set to TUX_MAJOR_VERSION, used to flag binary incompatibility.</p>
-<dt>version_minor</p>
-<dd> Always set to TUX_MINOR_VERSION, used to flag binary incompatibility.</p>
-<dt>version_patch</p>
-<dd> Always set to TUX_PATCHLEVEL_VERSION, used to flag binary incompatibility.</p>
-<dt>http_version</p>
-<dd> One of <code>HTTP_1_0</code> or <code>HTTP_1_1</code></p>
-<dt>http_method</p>
-<dd> One of <code>METHOD_NONE</code>, <code>METHOD_GET</code>, <code>METHOD_HEAD</code>, <code>METHOD_POST</code>, or <code>METHOD_PUT</code></p>
-<dt>sock</p>
-<dd> Socket file descriptor; writing to this will send data to the connected client associated with this request. Do not read from this socket file descriptor; you could potentially confuse the HTTP engine.</p>
-<dt>event</p>
-<dd> Private, per-request state for use in tux modules. The system will preserve this value as long as a request is active.</p>
-<dt>thread_nr</p>
-<dd> Thread index; see discussion of <i>TUX_ACTION_STARTTHREAD</i>.</p>
-<dt>id</p>
-<dd> A tux-daemon-internal value that is used to multiplex requests to the correct modules.</p>
-<dt>priv</p>
-<dd> Works just like <i>event</i>, except that it is a pointer to private data instead of an integer.</p>
-<dt>http_status</p>
-<dd> Set the error status as an integer for error reporting. The status is good by default, so it should not be modified except to report errors.</p>
-<dt>bytes_sent</p>
-<dd> When you write to sock, you must set bytes_sent to the total number of bytes sent since the last tux() operation on this <i>req</i>, or the log entry&#8217;s bytes sent counter will be incorrect. (This may change or disappear in future versions of tux.)</p>
-<dt>object_addr</p>
-<dd> Set to an address for a buffer of at least <i>req-&gt;objectlen</i> size into which to read an object from the URL cache with the TUX_ACTION_READ_OBJECT <i>action</i>. TUX_ACTION_READ_OBJECT must not be called unless <i>req-&gt;objectlen</i> &gt;= 0, and TUX implicitly relies on <i>req-&gt;object_addr</i> being at least <i>req-&gt;objectlen</i> in size.</p>
-<dt>module_index</p>
-<dd> Used by the tux(8) daemon to determine which loadable module to associate with a <i>req</i>.</p>
-<dt>modulename</p>
-<dd> The name of the module as set by TUX_ACTION_REGISTER_MODULE; private data to the tux daemon.</p>
-<dt>client_host</p>
-<dd> The IP address of the host to which sock is connected.</p>
-<dt>objectlen</p>
-<dd> The size of a file that satisfies the current request and which is currently living in the URL cache. This is set if a request returns after TUX_ACTION_GET_OBJECT. A module should make sure that the buffer at <i>req-&gt;object_addr</i> is at least <i>req-&gt;objectlen</i> in size before calling TUX_ACTION_READ_OBJECT.</p>
-<dt>query</p>
-<dd> The full query string sent from the client.</p>
-<dt>objectname</p>
-<dd> Specifies the name of a URL to get with the TUX_ACTION_GET_OBJECT <i>action</i>. If the URL is not immediately available (that is, is not in the URL cache), the request is queued and the tux subsystem may go on to other ready requests while waiting.</p>
-<dt>cookies_len</p>
-<dd> If cookies are in the request header, <i>cookies_len</i> contains the length of the <i>cookies</i> string</p>
-<dt>cookies</p>
-<dd> If cookies are in the request header, <i>cookies</i> is the string in which the cookies are passed to the module.</p>
-<dt>content_type</p>
-<dd> The Content-Type header value for the request</p>
-<dt>user_agent</p>
-<dd> The User-Agent header value for the request</p>
-<dt>accept</p>
-<dd> The Accept header value for the request</p>
-<dt>accept_charset</p>
-<dd> The Accept-Charset header value for the request</p>
-<dt>accept_encoding</p>
-<dd> The Accept-Encoding header value for the request</p>
-<dt>accept_language</p>
-<dd> The Accept-Language header value for the request</p>
-<dt>cache_control</p>
-<dd> The Cache-Control header value for the request</p>
-<dt>if_modified_since</p>
-<dd> The If-Modified-Since header value for the request</p>
-<dt>negotiate</p>
-<dd> The Negotiate header value for the request</p>
-<dt>pragma</p>
-<dd> The Pragma header value for the request</p>
-<dt>referer</p>
-<dd> The Referer header value for the request</p>
-<dt>post_data</p>
-<dd> For POST requests, the incoming data is placed in post_data.</p>
-<dt>new_date</p>
-<dd> Returns the current date/time</p>
-<dt>keep_alive</p>
-<dd> The KeepAlive header value for the request </p>
+<dt>version_major</dt>
+<dd> Always set to TUX_MAJOR_VERSION, used to flag binary incompatibility.</dd>
+<dt>version_minor</dt>
+<dd> Always set to TUX_MINOR_VERSION, used to flag binary incompatibility.</dd>
+<dt>version_patch</dt>
+<dd> Always set to TUX_PATCHLEVEL_VERSION, used to flag binary incompatibility.</dd>
+<dt>http_version</dt>
+<dd> One of <code>HTTP_1_0</code> or <code>HTTP_1_1</code></dd>
+<dt>http_method</dt>
+<dd> One of <code>METHOD_NONE</code>, <code>METHOD_GET</code>, <code>METHOD_HEAD</code>, <code>METHOD_POST</code>, or <code>METHOD_PUT</code></dd>
+<dt>sock</dt>
+<dd> Socket file descriptor; writing to this will send data to the connected client associated with this request. Do not read from this socket file descriptor; you could potentially confuse the HTTP engine.</dd>
+<dt>event</dt>
+<dd> Private, per-request state for use in tux modules. The system will preserve this value as long as a request is active.</dd>
+<dt>thread_nr</dt>
+<dd> Thread index; see discussion of <i>TUX_ACTION_STARTTHREAD</i>.</dd>
+<dt>id</dt>
+<dd> A tux-daemon-internal value that is used to multiplex requests to the correct modules.</dd>
+<dt>priv</dt>
+<dd> Works just like <i>event</i>, except that it is a pointer to private data instead of an integer.</dd>
+<dt>http_status</dt>
+<dd> Set the error status as an integer for error reporting. The status is good by default, so it should not be modified except to report errors.</dd>
+<dt>bytes_sent</dt>
+<dd> When you write to sock, you must set bytes_sent to the total number of bytes sent since the last tux() operation on this <i>req</i>, or the log entry&#8217;s bytes sent counter will be incorrect. (This may change or disappear in future versions of tux.)</dd>
+<dt>object_addr</dt>
+<dd> Set to an address for a buffer of at least <i>req-&gt;objectlen</i> size into which to read an object from the URL cache with the TUX_ACTION_READ_OBJECT <i>action</i>. TUX_ACTION_READ_OBJECT must not be called unless <i>req-&gt;objectlen</i> &gt;= 0, and TUX implicitly relies on <i>req-&gt;object_addr</i> being at least <i>req-&gt;objectlen</i> in size.</dd>
+<dt>module_index</dt>
+<dd> Used by the tux(8) daemon to determine which loadable module to associate with a <i>req</i>.</dd>
+<dt>modulename</dt>
+<dd> The name of the module as set by TUX_ACTION_REGISTER_MODULE; private data to the tux daemon.</dd>
+<dt>client_host</dt>
+<dd> The IP address of the host to which sock is connected.</dd>
+<dt>objectlen</dt>
+<dd> The size of a file that satisfies the current request and which is currently living in the URL cache. This is set if a request returns after TUX_ACTION_GET_OBJECT. A module should make sure that the buffer at <i>req-&gt;object_addr</i> is at least <i>req-&gt;objectlen</i> in size before calling TUX_ACTION_READ_OBJECT.</dd>
+<dt>query</dt>
+<dd> The full query string sent from the client.</dd>
+<dt>objectname</dt>
+<dd> Specifies the name of a URL to get with the TUX_ACTION_GET_OBJECT <i>action</i>. If the URL is not immediately available (that is, is not in the URL cache), the request is queued and the tux subsystem may go on to other ready requests while waiting.</dd>
+<dt>cookies_len</dt>
+<dd> If cookies are in the request header, <i>cookies_len</i> contains the length of the <i>cookies</i> string</dd>
+<dt>cookies</dt>
+<dd> If cookies are in the request header, <i>cookies</i> is the string in which the cookies are passed to the module.</dd>
+<dt>content_type</dt>
+<dd> The Content-Type header value for the request</dd>
+<dt>user_agent</dt>
+<dd> The User-Agent header value for the request</dd>
+<dt>accept</dt>
+<dd> The Accept header value for the request</dd>
+<dt>accept_charset</dt>
+<dd> The Accept-Charset header value for the request</dd>
+<dt>accept_encoding</dt>
+<dd> The Accept-Encoding header value for the request</dd>
+<dt>accept_language</dt>
+<dd> The Accept-Language header value for the request</dd>
+<dt>cache_control</dt>
+<dd> The Cache-Control header value for the request</dd>
+<dt>if_modified_since</dt>
+<dd> The If-Modified-Since header value for the request</dd>
+<dt>negotiate</dt>
+<dd> The Negotiate header value for the request</dd>
+<dt>pragma</dt>
+<dd> The Pragma header value for the request</dd>
+<dt>referer</dt>
+<dd> The Referer header value for the request</dd>
+<dt>post_data</dt>
+<dd> For POST requests, the incoming data is placed in post_data.</dd>
+<dt>new_date</dt>
+<dd> Returns the current date/time</dd>
+<dt>keep_alive</dt>
+<dd> The KeepAlive header value for the request </dd>
 </dl>
 <h2>RETURN VALUE</h2>
 <p> <code>tux()</code> returns the following values: </p>

@@ -23,21 +23,10 @@ description: "sc::SumMolecularEnergy –"
  <i>Set and retrieve the coordinate values. </i></p>
 <h3>Protected Member Functions</h3>
 <pre><code>void compute ()
-
-
 Recompute at least the results that have compute true and are not already computed.
-
-
-
 Protected Attributes
 int n_
-
-
-
 Ref&lt; MolecularEnergy &gt; * mole_
-
-
-
 double * coef_</code></pre>
 <h2>Member Function Documentation</h2>
 <h3>void sc::SumMolecularEnergy::compute () [protected, virtual]</h3>

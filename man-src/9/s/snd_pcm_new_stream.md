@@ -14,13 +14,13 @@ description: "snd_pcm_new_stream – create a new PCM stream"
 <p><i>pcm</i></p>
 <dl>
 <dd>
-<dd>the pcm instance</dl>
+</dd><dd>the pcm instance</dd></dl>
 <p> <i>stream</i></p>
 <dl>
-<dd>the stream direction, SNDRV_PCM_STREAM_XXX</dl>
+<dd>the stream direction, SNDRV_PCM_STREAM_XXX</dd></dl>
 <p> <i>substream_count</i></p>
 <dl>
-<dd>the number of substreams</dl>
+<dd>the number of substreams</dd></dl>
 <h2>Description</h2>
 <p>Creates a new stream for the pcm. The corresponding stream on the pcm must have been empty before calling this, i.e. zero must be given to the argument of <code>snd_pcm_new</code>.</p>
 <h2>Return</h2>

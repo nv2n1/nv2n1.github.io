@@ -19,35 +19,35 @@ description: "QuantLib::Ukraine – Ukrainian calendars."
 <p>Ukrainian calendars. </p>
 <p> Holidays for the Ukrainian stock exchange (data from &lt;<a rel="nofollow" href="http://www.ukrse.kiev.ua/eng/">http://www.ukrse.kiev.ua/eng/</a>&gt;): </p>
 <dl COMPACT>
-<dt>*</p>
-<dd>Saturdays</p>
-<dt>*</p>
-<dd>Sundays</p>
-<dt>*</p>
-<dd>New Year&#8217;s Day, January 1st</p>
-<dt>*</p>
-<dd>Orthodox Christmas, January 7th</p>
-<dt>*</p>
-<dd>International Women&#8217;s Day, March 8th</p>
-<dt>*</p>
-<dd>Easter Monday</p>
-<dt>*</p>
-<dd>Holy Trinity Day, 50 days after Easter</p>
-<dt>*</p>
-<dd>International Workers&#8217; Solidarity Days, May 1st and 2nd</p>
-<dt>*</p>
-<dd>Victory Day, May 9th</p>
-<dt>*</p>
-<dd>Constitution Day, June 28th</p>
-<dt>*</p>
-<dd>Independence Day, August 24th</dl>
+<dt>*</dt>
+<dd>Saturdays</dd>
+<dt>*</dt>
+<dd>Sundays</dd>
+<dt>*</dt>
+<dd>New Year&#8217;s Day, January 1st</dd>
+<dt>*</dt>
+<dd>Orthodox Christmas, January 7th</dd>
+<dt>*</dt>
+<dd>International Women&#8217;s Day, March 8th</dd>
+<dt>*</dt>
+<dd>Easter Monday</dd>
+<dt>*</dt>
+<dd>Holy Trinity Day, 50 days after Easter</dd>
+<dt>*</dt>
+<dd>International Workers&#8217; Solidarity Days, May 1st and 2nd</dd>
+<dt>*</dt>
+<dd>Victory Day, May 9th</dd>
+<dt>*</dt>
+<dd>Constitution Day, June 28th</dd>
+<dt>*</dt>
+<dd>Independence Day, August 24th</dd></dl>
 <p> Holidays falling on a Saturday or Sunday are moved to the following Monday.</p>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>Market</code></h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>USE </i></p>
-<dd>Ukrainian stock exchange. </p>
+<dt><i>USE </i></dt>
+<dd>Ukrainian stock exchange. </dd>
 </dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

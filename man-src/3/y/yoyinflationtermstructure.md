@@ -10,32 +10,14 @@ description: "QuantLib::YoYInflationIndex – Base class for year-on-year inflat
 <p>QuantLib::YoYInflationIndex &#8211; Base class for year-on-year inflation indices. </p>
 <h2>Synopsis</h2>
 <pre><code>YoYInflationIndex (const std::string &amp;familyName, const Region &amp;region, bool revised, bool interpolated, bool ratio, Frequency frequency, const Period &amp;availabilityLag, const Currency &amp;currency, const Handle&lt; YoYInflationTermStructure &gt; &amp;ts=Handle&lt; YoYInflationTermStructure &gt;())
-
-
-
 Rate fixing (const Date &amp;fixingDate, bool forecastTodaysFixing=false) const
-
-
-
 bool ratio () const
-
-
-
 Handle&lt; YoYInflationTermStructure &gt; yoyInflationTermStructure () const</code></pre>
 <p> Inherits <code>QuantLib::InflationIndex</code>. Inherited by <code>YYEUHICP</code>, <code>YYEUHICPr</code>, <code>YYUKRPI</code>, and <code>YYUKRPIr</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>YoYInflationIndex (const std::string &amp;familyName, const Region &amp;region, bool revised, bool interpolated, bool ratio, Frequency frequency, const Period &amp;availabilityLag, const Currency &amp;currency, const Handle&lt; YoYInflationTermStructure &gt; &amp;ts=Handle&lt; YoYInflationTermStructure &gt;())
-
-
-
 Rate fixing (const Date &amp;fixingDate, bool forecastTodaysFixing=false) const
-
-
-
 bool ratio () const
-
-
-
 Handle&lt; YoYInflationTermStructure &gt; yoyInflationTermStructure () const</code></pre>
 <h2>Detailed Description</h2>
 <p>Base class for year-on-year inflation indices. </p>

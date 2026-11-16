@@ -11,10 +11,10 @@ description: "nfprofile – netflow profiler"
 <p> nfprofile &#8211; netflow profiler</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>nfprofile [options] </code></dl>
+<dt> <code>nfprofile [options] </code></dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>nfprofile</code></p>
-<dd>is the netflow profiler program for NfSen. It reads the netflow data from the files stored by nfcapd and creates the corresponding output files for every channel required. This program is run only by NfSen. </p>
+<dd>is the netflow profiler program for NfSen. It reads the netflow data from the files stored by nfcapd and creates the corresponding output files for every channel required. This program is run only by NfSen. </dd>
 <h2>OPTIONS</h2>
 <h2>RETURN VALUE</h2>
 <h2>NOTES</h2>

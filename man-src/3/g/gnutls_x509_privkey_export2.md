@@ -14,12 +14,12 @@ description: "gnutls_x509_privkey_export2 – API function"
 <p> <code>int gnutls_x509_privkey_export2(gnutls_x509_privkey_t </code><i>key</i><code>, gnutls_x509_crt_fmt_t </code><i>format</i><code>, gnutls_datum_t * </code><i>out</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_privkey_t key</p>
-<dd> Holds the key</p>
-<dt>gnutls_x509_crt_fmt_t format</p>
-<dd> the format of output params. One of PEM or DER.</p>
-<dt>gnutls_datum_t * out</p>
-<dd> will contain a private key PEM or DER encoded</dl>
+<dt>gnutls_x509_privkey_t key</dt>
+<dd> Holds the key</dd>
+<dt>gnutls_x509_crt_fmt_t format</dt>
+<dd> the format of output params. One of PEM or DER.</dd>
+<dt>gnutls_datum_t * out</dt>
+<dd> will contain a private key PEM or DER encoded</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will export the private key to a PKCS1 structure for RSA keys, or an integer sequence for DSA keys. The DSA keys are in the same format with the parameters used by openssl. </p>
 <p> The output buffer is allocated using <code>gnutls_malloc()</code>. </p>
@@ -36,6 +36,6 @@ description: "gnutls_x509_privkey_export2 – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

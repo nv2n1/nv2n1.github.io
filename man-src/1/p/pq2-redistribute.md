@@ -17,18 +17,18 @@ description: "pq2-redistribute – Execute the file movements as determined by p
 <p> More details about the input file can be found in the man page <i><a href="/docs/linux/man/1-pq2-ana-dist/">pq2-ana-dist</a></i>(1).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display help information.</p>
-<dt><code>&#8211;dryrun</code></p>
-<dd> Only show the action that should be done (don&#8217;t execute them).</p>
-<dt><code>-b</code> &lt;<i>backend</i>&gt;</p>
-<dd> Tag identifying the backend to be used. Currently only &#8216;xrd&#8217; (for XROOTD) is supported.</p>
-<dt><code>-f</code> &lt;<i>filemv</i>&gt;</p>
-<dd> File with the file movement directives produced by pq2-ana-dist .</p>
-<dt><code>-r</code> &lt;<i>redirurl</i>&gt;, <code>&#8211;redir</code>=&lt;<i>redirurl</i>&gt;</p>
-<dd> URL of the redirector from where the files should be copied and deleted.</p>
-<dt><code>-t</code> &lt;<i>dir</i>&gt;, <code>&#8211;tmpdir</code>=&lt;<i>dir</i>&gt;</p>
-<dd> Directory for temporary files; default is /tmp/&lt;username&gt;. Thsi is used to store temporary copies of the files during transfers.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display help information.</dd>
+<dt><code>&#8211;dryrun</code></dt>
+<dd> Only show the action that should be done (don&#8217;t execute them).</dd>
+<dt><code>-b</code> &lt;<i>backend</i>&gt;</dt>
+<dd> Tag identifying the backend to be used. Currently only &#8216;xrd&#8217; (for XROOTD) is supported.</dd>
+<dt><code>-f</code> &lt;<i>filemv</i>&gt;</dt>
+<dd> File with the file movement directives produced by pq2-ana-dist .</dd>
+<dt><code>-r</code> &lt;<i>redirurl</i>&gt;, <code>&#8211;redir</code>=&lt;<i>redirurl</i>&gt;</dt>
+<dd> URL of the redirector from where the files should be copied and deleted.</dd>
+<dt><code>-t</code> &lt;<i>dir</i>&gt;, <code>&#8211;tmpdir</code>=&lt;<i>dir</i>&gt;</dt>
+<dd> Directory for temporary files; default is /tmp/&lt;username&gt;. Thsi is used to store temporary copies of the files during transfers.</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> See <i>setup-pq2</i>(1).</p>
 <h2>SEE ALSO</h2>

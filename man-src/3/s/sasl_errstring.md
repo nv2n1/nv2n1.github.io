@@ -10,7 +10,6 @@ description: "sasl_errstring – Translate a SASL return code to a human-readabl
 <p>sasl_errstring &#8211; Translate a SASL return code to a human-readable form </p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
 const char *sasl_errstring(int saslerr,
                            const char *langlist,
                            const char **outlang);</code></pre>

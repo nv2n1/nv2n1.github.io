@@ -17,14 +17,14 @@ description: "gethostip — convert an IP address into various formats"
 <h2>OPTIONS</h2>
 <p> A summary of options is included below.</p>
 <dl>
-<dt><code>-d</code></p>
-<dd> Output the IP address in decimal format.</p>
-<dt><code>-x</code></p>
-<dd> Output the IP address in hexadecimal format.</p>
-<dt><code>-n</code></p>
-<dd> Output the host&#8217;s canonical name.</p>
-<dt><code>-f</code></p>
-<dd> Full output. Outputs the IP address in all supported formats. Same as <code>-xdn</code>. </p>
+<dt><code>-d</code></dt>
+<dd> Output the IP address in decimal format.</dd>
+<dt><code>-x</code></dt>
+<dd> Output the IP address in hexadecimal format.</dd>
+<dt><code>-n</code></dt>
+<dd> Output the host&#8217;s canonical name.</dd>
+<dt><code>-f</code></dt>
+<dd> Full output. Outputs the IP address in all supported formats. Same as <code>-xdn</code>. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-syslinux/">syslinux</a></code>(1) </p>

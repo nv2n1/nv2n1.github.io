@@ -24,23 +24,23 @@ int isunordered(x, y);
 <p> All functions described here:</p>
 <dl>
 <dt>
-<dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+</dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The normal relational operations (like <code>&lt;</code>, &quot;less than&quot;) fail if one of the operands is NaN. This will cause an exception. To avoid this, C99 defines the macros listed below. </p>
 <p> These macros are guaranteed to evaluate their arguments only once. The arguments must be of real floating-point type (note: do not pass integer values as arguments to these macros, since the arguments will <i>not</i> be promoted to real-floating types).</p>
 <dl>
-<dt><code>isgreater</code>()</p>
-<dd> determines <i>(x)&nbsp;&gt;&nbsp;(y)</i> without an exception if <i>x</i> or <i>y</i> is NaN.</p>
-<dt><code>isgreaterequal</code>()</p>
-<dd> determines <i>(x)&nbsp;&gt;=&nbsp;(y)</i> without an exception if <i>x</i> or <i>y</i> is NaN.</p>
-<dt><code>isless</code>()</p>
-<dd> determines <i>(x)&nbsp;&lt;&nbsp;(y)</i> without an exception if <i>x</i> or <i>y</i> is NaN.</p>
-<dt><code>islessequal</code>()</p>
-<dd> determines <i>(x)&nbsp;&lt;=&nbsp;(y)</i> without an exception if <i>x</i> or <i>y</i> is NaN.</p>
-<dt><code>islessgreater</code>()</p>
-<dd> determines <i>(x)&nbsp;&lt; (y) || (x) &gt;&nbsp;(y)</i> without an exception if <i>x</i> or <i>y</i> is NaN. This macro is not equivalent to <i>x&nbsp;!=&nbsp;y</i> because that expression is true if <i>x</i> or <i>y</i> is NaN.</p>
-<dt><code>isunordered</code>()</p>
-<dd> determines whether its arguments are unordered, that is, whether at least one of the arguments is a NaN.</dl>
+<dt><code>isgreater</code>()</dt>
+<dd> determines <i>(x)&nbsp;&gt;&nbsp;(y)</i> without an exception if <i>x</i> or <i>y</i> is NaN.</dd>
+<dt><code>isgreaterequal</code>()</dt>
+<dd> determines <i>(x)&nbsp;&gt;=&nbsp;(y)</i> without an exception if <i>x</i> or <i>y</i> is NaN.</dd>
+<dt><code>isless</code>()</dt>
+<dd> determines <i>(x)&nbsp;&lt;&nbsp;(y)</i> without an exception if <i>x</i> or <i>y</i> is NaN.</dd>
+<dt><code>islessequal</code>()</dt>
+<dd> determines <i>(x)&nbsp;&lt;=&nbsp;(y)</i> without an exception if <i>x</i> or <i>y</i> is NaN.</dd>
+<dt><code>islessgreater</code>()</dt>
+<dd> determines <i>(x)&nbsp;&lt; (y) || (x) &gt;&nbsp;(y)</i> without an exception if <i>x</i> or <i>y</i> is NaN. This macro is not equivalent to <i>x&nbsp;!=&nbsp;y</i> because that expression is true if <i>x</i> or <i>y</i> is NaN.</dd>
+<dt><code>isunordered</code>()</dt>
+<dd> determines whether its arguments are unordered, that is, whether at least one of the arguments is a NaN.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> The macros other than <code>isunordered</code>() return the result of the relational comparison; these macros return 0 if either argument is a NaN. </p>
 <p> <code>isunordered</code>() returns 1 if <i>x</i> or <i>y</i> is NaN and 0 otherwise.</p>

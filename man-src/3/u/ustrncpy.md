@@ -10,7 +10,6 @@ description: "ustrncpy – Copies a string into another one, specifying size. Al
 <p>ustrncpy &#8211; Copies a string into another one, specifying size. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 char *ustrncpy(char *dest, const char *src, int n);</code></pre>
 <h2>Description</h2>
 <p>This function is like ustrcpy() except that no more than `n&#8217; characters from `src&#8217; are copied into `dest&#8217;. If `src&#8217; is shorter than `n&#8217; characters, null characters are appended to `dest&#8217; as padding until `n&#8217; characters have been written. </p>

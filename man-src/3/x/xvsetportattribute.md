@@ -14,14 +14,14 @@ description: "XvSetPortAttribute – sets an attribute of a video port"
 <code> Atom </code><i>attribute</i><code>, int </code><i>value</i><code>);</code></pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>dpy</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>port</i></p>
-<dd>Specifies the port for which the attribute is to be used.</p>
-<dt><i>attribute</i></p>
-<dd>Identifies the port attribute to be set by this request. Can be one of the table entries under the column &quot;String,&quot; below.</p>
-<dt><i>value</i></p>
-<dd>Identifies the value to which <i>attribute</i> is to be set. Can be one of the table entries under the column &quot;Type,&quot; below.</dl>
+<dt><i>dpy</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>port</i></dt>
+<dd>Specifies the port for which the attribute is to be used.</dd>
+<dt><i>attribute</i></dt>
+<dd>Identifies the port attribute to be set by this request. Can be one of the table entries under the column &quot;String,&quot; below.</dd>
+<dt><i>value</i></dt>
+<dd>Identifies the value to which <i>attribute</i> is to be set. Can be one of the table entries under the column &quot;Type,&quot; below.</dd></dl>
 <h2>Description</h2>
 <p><code><a href="/docs/linux/man/3-xvsetportattribute/">XvSetPortAttribute</a></code>(3)<br />
 &nbsp;<wbr>permits a client to set the port attribute to specified values. This request supports the following values: </p>
@@ -78,19 +78,19 @@ description: "XvSetPortAttribute – sets an attribute of a video port"
 <p> When an <code><a href="/docs/linux/man/3-xvsetportattribute/">XvSetPortAttribute</a></code>(3) request is processed, a <code><a href="/docs/linux/man/3-xvportnotify/">XvPortNotify</a></code>(3) event is generated for all clients that have requested notification of port changes using <code><a href="/docs/linux/man/3-xvselectportnotify/">XvSelectPortNotify</a></code>(3).</p>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>[Success]</p>
-<dd>Returned if <code><a href="/docs/linux/man/3-xvsetportattribute/">XvSetPortAttribute</a></code>(3) completed successfully.</p>
-<dt>[XvBadExtension]</p>
-<dd>Returned if the Xv extension is unavailable.</p>
-<dt>[XvBadAlloc]</p>
-<dd>Returned if <code><a href="/docs/linux/man/3-xvselectvideonotify/">XvSelectVideoNotify</a></code>(3) failed to allocate memory to process the request.</dl>
+<dt>[Success]</dt>
+<dd>Returned if <code><a href="/docs/linux/man/3-xvsetportattribute/">XvSetPortAttribute</a></code>(3) completed successfully.</dd>
+<dt>[XvBadExtension]</dt>
+<dd>Returned if the Xv extension is unavailable.</dd>
+<dt>[XvBadAlloc]</dt>
+<dd>Returned if <code><a href="/docs/linux/man/3-xvselectvideonotify/">XvSelectVideoNotify</a></code>(3) failed to allocate memory to process the request.</dd></dl>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt>[XvBadPort]</p>
-<dd>Generated if the requested port does not exist.</p>
-<dt>[XvBadEncoding]</p>
-<dd>Generated if an encoding is specified that does not exist.</p>
-<dt>[BadMatch]</p>
-<dd>Generated if the requested attribute atom does not specify an attribute supported by the adaptor.</dl>
+<dt>[XvBadPort]</dt>
+<dd>Generated if the requested port does not exist.</dd>
+<dt>[XvBadEncoding]</dt>
+<dd>Generated if an encoding is specified that does not exist.</dd>
+<dt>[BadMatch]</dt>
+<dd>Generated if the requested attribute atom does not specify an attribute supported by the adaptor.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-xvgetportattribute/">XvGetPortAttribute</a></code>(3), <code><a href="/docs/linux/man/3-xvqueryportattributes/">XvQueryPortAttributes</a></code>(3), <code><a href="/docs/linux/man/3-xvselectportnotify/">XvSelectPortNotify</a></code>(3), <code><a href="/docs/linux/man/3-xvportnotify/">XvPortNotify</a></code>(3)</p>

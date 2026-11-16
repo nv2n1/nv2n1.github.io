@@ -14,7 +14,7 @@ description: "snd_pcm_lib_free_vmalloc_buffer – free vmalloc buffer"
 <p><i>substream</i></p>
 <dl>
 <dd>
-<dd>the substream with a buffer allocated by <code>snd_pcm_lib_alloc_vmalloc_buffer</code></dl>
+</dd><dd>the substream with a buffer allocated by <code>snd_pcm_lib_alloc_vmalloc_buffer</code></dd></dl>
 <h2>Return</h2>
 <p>Zero if successful, or a negative error code on failure.</p>
 <h2>Copyright</h2>

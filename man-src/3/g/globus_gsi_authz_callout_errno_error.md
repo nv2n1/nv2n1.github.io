@@ -28,30 +28,30 @@ description: "GSI Authorization Callout Error API –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>__RESULT</i> A globus_result_t value pointing to a causal error. This will be modified by this macro to point to the new error object.<br />
- <i>__ERRNO</i> The errno value of this new error object.</dl>
+ <i>__ERRNO</i> The errno value of this new error object.</dd></dl>
 <h3>#define GLOBUS_GSI_AUTHZ_CALLOUT_ERROR(__RESULT, __TYPE, __ERRSTR)</h3>
 <p>Create an authorization callout error object. Update the __RESULT parameter to contain a new globus_result_t value pointing to an authorization error of type __TYPE with the detail string __ERRSTR. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>__RESULT</i> A globus_result_t value pointing to a causal error. This will be modified by this macro to point to the new error object.<br />
  <i>__TYPE</i> The authorization error value from the globus_gsi_authz_callout_error_t enumeration.<br />
- <i>__ERRSTR</i> A parenthesized printf string containing the description of the error</dl>
+ <i>__ERRSTR</i> A parenthesized printf string containing the description of the error</dd></dl>
 <h2>Enumeration Type Documentation</h2>
 <h3>enum <code>globus_gsi_authz_callout_error_t</code></h3>
 <p>Error codes. Error code types used by the GSI Authorization Callout API </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>GLOBUS_GSI_AUTHZ_CALLOUT_AUTHZ_CALLOUT_ERROR </i></p>
-<dd>Authz callout error</p>
-<dt><i>GLOBUS_GSI_AUTHZ_CALLOUT_AUTHZ_DENIED_BY_CALLOUT </i></p>
-<dd>Authorization denied by callout</p>
-<dt><i>GLOBUS_GSI_AUTHZ_CALLOUT_CONFIGURATION_ERROR </i></p>
-<dd>Configuration Error</p>
-<dt><i>GLOBUS_GSI_AUTHZ_CALLOUT_SYSTEM_ERROR </i></p>
-<dd>System Error</p>
-<dt><i>GLOBUS_GSI_AUTHZ_CALLOUT_CREDENTIAL_ERROR </i></p>
-<dd>Credentials Error</p>
-<dt><i>GLOBUS_GSI_AUTHZ_CALLOUT_BAD_ARGUMENT_ERROR </i></p>
-<dd>A invalid parameter was detected</dl>
+<dt><i>GLOBUS_GSI_AUTHZ_CALLOUT_AUTHZ_CALLOUT_ERROR </i></dt>
+<dd>Authz callout error</dd>
+<dt><i>GLOBUS_GSI_AUTHZ_CALLOUT_AUTHZ_DENIED_BY_CALLOUT </i></dt>
+<dd>Authorization denied by callout</dd>
+<dt><i>GLOBUS_GSI_AUTHZ_CALLOUT_CONFIGURATION_ERROR </i></dt>
+<dd>Configuration Error</dd>
+<dt><i>GLOBUS_GSI_AUTHZ_CALLOUT_SYSTEM_ERROR </i></dt>
+<dd>System Error</dd>
+<dt><i>GLOBUS_GSI_AUTHZ_CALLOUT_CREDENTIAL_ERROR </i></dt>
+<dd>Credentials Error</dd>
+<dt><i>GLOBUS_GSI_AUTHZ_CALLOUT_BAD_ARGUMENT_ERROR </i></dt>
+<dd>A invalid parameter was detected</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for globus_authz_callout_error from the source code.</p>

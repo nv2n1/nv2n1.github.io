@@ -12,27 +12,18 @@ std::experimental::any_cast - std::experimental::any_cast
 
 <pre><code>template &lt;class ValueType&gt;
 (1)(library fundamentals TS)
-
     ValueType any_cast(const any &amp;operand);
-
 template &lt;class ValueType&gt;
 (2)(library fundamentals TS)
-
     ValueType any_cast(any &amp;operand);
-
 template &lt;class ValueType&gt;
 (3)(library fundamentals TS)
-
     ValueType any_cast(any &amp;&amp;operand);
-
 template &lt;class ValueType&gt;
 (4)(library fundamentals TS)
-
     const ValueType *any_cast(const any *operand) noexcept;
-
 template &lt;class ValueType&gt;
 (5)(library fundamentals TS)
-
     ValueType *any_cast(any *operand) noexcept;</code></pre> 
 Performs type-safe access to the contained object. 
 For (1-3), the program is ill-formed if ValueType is not a reference and std::is_copy_constructible&lt;ValueType&gt;::value is false. 

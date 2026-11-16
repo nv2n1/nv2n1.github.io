@@ -14,35 +14,35 @@ description: "ftpshut – shut down all proftpd servers at a given time"
 <p>The <code>ftpshut</code> command provides an automated shutdown procedure that a superuser can use to automagically disconnect current proftpd connections, and deny new connections. The command creates a control file as <code>/etc/shutmsg</code> to inform proftpd processes about an impending shutdown.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>time</code></p>
-<dd>The time at which the ftp servers will be brought down. It may be the word `now&#8217;, indicating an immediate shutdown, or a future time in one of two formats: <i>+number </i> or <i>HHMM. </i> The first form brings the servers down in <i>number</i> minutes, while the second form indicates an exact time of day, using a 24-hour clock format.</p>
-<dt><code>-R</code></p>
-<dd>Instructs ftpshut to <i>remove</i> the /etc/shutmsg file, restoring proftpd to its normal service. If this option is used, this will be the only operation performed by <i>ftpshut</i></p>
-<dt><code>-l min</code></p>
-<dd>Specifies the number of minutes before shutdown that new ftp access will be disabled. If the -l option is not specified, a default of 10 minutes (or immediately, if less than 10 minutes remains until shutdown) is used.</p>
-<dt><code>-d min</code></p>
-<dd>Specifies the number of minutes before shutdown that existing ftp connections will be disconnected. If the -d option is not specified, a default of 5 minutes (or immediately, if less than 5 minutes remains until shutdown) is used.</p>
-<dt><code>warning-message</code></p>
-<dd>Optionally provide a message which will be sent to new connections (if denied) and existing connections (when disconnected). The message can contain the following magic cookies, which will be replaced as follows before being sent to new or existing connections:</p>
+<dt><code>time</code></dt>
+<dd>The time at which the ftp servers will be brought down. It may be the word `now&#8217;, indicating an immediate shutdown, or a future time in one of two formats: <i>+number </i> or <i>HHMM. </i> The first form brings the servers down in <i>number</i> minutes, while the second form indicates an exact time of day, using a 24-hour clock format.</dd>
+<dt><code>-R</code></dt>
+<dd>Instructs ftpshut to <i>remove</i> the /etc/shutmsg file, restoring proftpd to its normal service. If this option is used, this will be the only operation performed by <i>ftpshut</i></dd>
+<dt><code>-l min</code></dt>
+<dd>Specifies the number of minutes before shutdown that new ftp access will be disabled. If the -l option is not specified, a default of 10 minutes (or immediately, if less than 10 minutes remains until shutdown) is used.</dd>
+<dt><code>-d min</code></dt>
+<dd>Specifies the number of minutes before shutdown that existing ftp connections will be disconnected. If the -d option is not specified, a default of 5 minutes (or immediately, if less than 5 minutes remains until shutdown) is used.</dd>
+<dt><code>warning-message</code></dt>
+<dd>Optionally provide a message which will be sent to new connections (if denied) and existing connections (when disconnected). The message can contain the following magic cookies, which will be replaced as follows before being sent to new or existing connections:</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>%s</code></p>
-<dd>time proftpd is being shut down</p>
-<dt><code>%r</code></p>
-<dd>time new connections will be denied</p>
-<dt><code>%d</code></p>
-<dd>time current connections will be dropped</p>
-<dt><code>%C</code></p>
-<dd>current working directory (where applicable)</p>
-<dt><code>%L</code></p>
-<dd>local host name (or virtualhost name)</p>
-<dt><code>%R</code></p>
-<dd>remote host name</p>
-<dt><code>%T</code></p>
-<dd>local time (format Thu Nov 15 17:12:42 1990)</p>
-<dt><code>%U</code></p>
-<dd>username given at login time</dl>
+</dd><dl>
+<dt><code>%s</code></dt>
+<dd>time proftpd is being shut down</dd>
+<dt><code>%r</code></dt>
+<dd>time new connections will be denied</dd>
+<dt><code>%d</code></dt>
+<dd>time current connections will be dropped</dd>
+<dt><code>%C</code></dt>
+<dd>current working directory (where applicable)</dd>
+<dt><code>%L</code></dt>
+<dd>local host name (or virtualhost name)</dd>
+<dt><code>%R</code></dt>
+<dd>remote host name</dd>
+<dt><code>%T</code></dt>
+<dd>local time (format Thu Nov 15 17:12:42 1990)</dd>
+<dt><code>%U</code></dt>
+<dd>username given at login time</dd></dl>
 </dl>
 </dl>
 <h2>Caveats</h2>

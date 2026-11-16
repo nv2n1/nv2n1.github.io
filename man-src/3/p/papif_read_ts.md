@@ -13,10 +13,10 @@ description: "PAPIF_read_ts –"
 <h2>Detailed Description</h2>
 <p><code>Fortran Interface:</code></p>
 <dl COMPACT>
-<dd>#include &#8216;fpapi.h&#8217; </p>
+<dd>#include &#8216;fpapi.h&#8217; </dd>
 <p>&nbsp;<wbr><code>PAPIF_read_ts</code>(C_INT EventSet, C_LONG_LONG(*)&nbsp;<wbr>values, C_LONG_LONG(*)&nbsp;<wbr>cycles, C_INT check)</dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_read_ts</code></dl>
+<dd><code>PAPI_read_ts</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

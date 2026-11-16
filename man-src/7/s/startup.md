@@ -21,6 +21,6 @@ description: "startup – event signalling system startup"
 <dl>
 <dd>
 <pre>start on startup</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-runlevel/">runlevel</a></code>(7) <code><a href="/docs/linux/man/7-session-end/">session-end</a></code>(7) <code><a href="/docs/linux/man/5-init/">init</a></code>(5) <code><a href="/docs/linux/man/8-init/">init</a></code>(8) </p>

@@ -33,7 +33,7 @@ character.</pre>
 <p>&nbsp;<wbr> </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The actual number of segments (limited by maxSegments).</dl>
+<dd>The actual number of segments (limited by maxSegments).</dd></dl>
 <h3>template&lt;typename T &gt; static unsigned int log4cpp::StringUtil::split (T &amp;output, const std::string &amp;s, chardelimiter, unsigned intmaxSegments = INT_MAX) [inline], [static]</h3>
 <p>splits a string into string segments based on the given delimiter and assigns the segments through an output_iterator. </p>
 <p> <code>Parameters:</code></p>
@@ -41,10 +41,10 @@ character.</pre>
 <dd><i>output</i> The output_iterator through which to assign the string segments. Typically this will be a back_insertion_iterator.<br />
  <i>s</i> The string to split into segments.<br />
  <i>delimiter</i> The delimiter character<br />
- <i>maxSegments</i> The maximum number of segments.</dl>
+ <i>maxSegments</i> The maximum number of segments.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The actual number of segments (limited by maxSegments).</dl>
+<dd>The actual number of segments (limited by maxSegments).</dd></dl>
 <h3>std::string log4cpp::StringUtil::trim (const std::string &amp;s) [static]</h3>
 <p>Returns a string identical to the given string but without leading or trailing HTABs or spaces.</p>
 <h3>std::string log4cpp::StringUtil::vform (const char *format, va_listargs) [static]</h3>
@@ -52,6 +52,6 @@ character.</pre>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>format</i> the format specifier.<br />
- <i>args</i> the va_list of arguments.</dl>
+ <i>args</i> the va_list of arguments.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for log4cpp from the source code.</p>

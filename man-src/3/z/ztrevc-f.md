@@ -22,25 +22,21 @@ description: "ztrevc.f –"
  a complex upper triangular matrix T.
  Matrices of this type are produced by the Schur factorization of
  a complex general matrix: A = Q*T*Q**H, as computed by ZHSEQR.
- 
  The right eigenvector x and the left eigenvector y of T corresponding
  to an eigenvalue w are defined by:
- 
  T*x = w*x, (y**H)*T = w*(y**H)
- 
  where y**H denotes the conjugate transpose of the vector y.
  The eigenvalues are not input to this routine, but are read directly
  from the diagonal of T.
- 
  This routine returns the matrices X and/or Y of right and left
  eigenvectors of T, or the products Q*X and/or Q*Y, where Q is an
  input matrix. If Q is the unitary factor that reduces a matrix A to
  Schur form T, then Q*X and Q*Y are the matrices of right and left
  eigenvectors of A.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>SIDE</i> </p>
+<dd><i>SIDE</i> </dd>
 <pre> SIDE is CHARACTER*1
  = 'R': compute right eigenvectors only;
  = 'L': compute left eigenvectors only;
@@ -124,13 +120,13 @@ description: "ztrevc.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -140,7 +136,8 @@ description: "ztrevc.f –"
  Each eigenvector is normalized so that the element of largest
  magnitude has magnitude 1; here the magnitude of a complex number
  (x,y) is taken to be |x| + |y|.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 218 of file ztrevc.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

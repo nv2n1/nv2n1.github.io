@@ -17,11 +17,9 @@ description: "al_findnext – Finds the next file in a search started by al_find
 <pre><code>
 if (al_findfirst("*.pcx", &amp;info, 0) != 0)
     return;
-
 do {
     /* Do something useful here with info.name. */
 } while (al_findnext(&amp;info) == 0);
-
 al_findclose(&amp;info);
 </code></pre>
 <h2>RETURN VALUE</h2>

@@ -36,34 +36,34 @@ description: "Smokeping::probes::DNS – Name Service Probe for SmokePing"
 <h2>Variables</h2>
 <p>Supported probe-specific variables:</p>
 <dl COMPACT>
-<dt>binary</p>
-<dd>The location of your dig binary. </p>
+<dt>binary</dt>
+<dd>The location of your dig binary. </dd>
 <p> Example value: /usr/bin/dig </p>
 <p> This setting is mandatory.</p>
-<dt>forks</p>
-<dd>Run this many concurrent processes at maximum </p>
+<dt>forks</dt>
+<dd>Run this many concurrent processes at maximum </dd>
 <p> Example value: 5 </p>
 <p> Default value: 5</p>
-<dt>offset</p>
-<dd>If you run many probes concurrently you may want to prevent them from hitting your network all at the same time. Using the probe-specific offset parameter you can change the point in time when each probe will be run. Offset is specified in % of total interval, or alternatively as &#8216;random&#8217;, and the offset from the &#8216;General&#8217; section is used if nothing is specified here. Note that this does <font SIZE="-1">NOT</font> influence the rrds itself, it is just a matter of when data acqusition is initiated. (This variable is only applicable if the variable &#8216;concurrentprobes&#8217; is set in the &#8216;General&#8217; section.) </p>
+<dt>offset</dt>
+<dd>If you run many probes concurrently you may want to prevent them from hitting your network all at the same time. Using the probe-specific offset parameter you can change the point in time when each probe will be run. Offset is specified in % of total interval, or alternatively as &#8216;random&#8217;, and the offset from the &#8216;General&#8217; section is used if nothing is specified here. Note that this does <font SIZE="-1">NOT</font> influence the rrds itself, it is just a matter of when data acqusition is initiated. (This variable is only applicable if the variable &#8216;concurrentprobes&#8217; is set in the &#8216;General&#8217; section.) </dd>
 <p> Example value: 50%</p>
-<dt>step</p>
-<dd>Duration of the base interval that this probe should use, if different from the one specified in the &#8216;Database&#8217; section. Note that the step in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change the step parameter afterwards, you&#8217;ll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. (This variable is only applicable if the variable &#8216;concurrentprobes&#8217; is set in the &#8216;General&#8217; section.) </p>
+<dt>step</dt>
+<dd>Duration of the base interval that this probe should use, if different from the one specified in the &#8216;Database&#8217; section. Note that the step in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change the step parameter afterwards, you&#8217;ll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. (This variable is only applicable if the variable &#8216;concurrentprobes&#8217; is set in the &#8216;General&#8217; section.) </dd>
 <p> Example value: 300</p>
-<dt>timeout</p>
-<dd>How long a single &#8216;ping&#8217; takes at maximum </p>
+<dt>timeout</dt>
+<dd>How long a single &#8216;ping&#8217; takes at maximum </dd>
 <p> Example value: 15 </p>
 <p> Default value: 5</dl>
 <p> Supported target-specific variables:</p>
 <dl COMPACT>
-<dt>lookup</p>
-<dd>Name of the host to look up in the dns. </p>
+<dt>lookup</dt>
+<dd>Name of the host to look up in the dns. </dd>
 <p> Example value: <a rel="nofollow" href="http://www.example.org">www.example.org</a></p>
-<dt>pings</p>
-<dd>How many pings should be sent to each target, if different from the global value specified in the Database section. Note that the number of pings in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change this parameter afterwards, you&#8217;ll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. </p>
+<dt>pings</dt>
+<dd>How many pings should be sent to each target, if different from the global value specified in the Database section. Note that the number of pings in the <font SIZE="-1">RRD</font> files is fixed when they are originally generated, and if you change this parameter afterwards, you&#8217;ll have to delete the old <font SIZE="-1">RRD</font> files or somehow convert them. </dd>
 <p> Example value: 5</p>
-<dt>server</p>
-<dd>Name of the dns server to use. </p>
+<dt>server</dt>
+<dd>Name of the dns server to use. </dd>
 <p> Example value: ns1.someisp.net</dl>
 <h2>Authors</h2>
 <pre> Igor Petrovski &lt;pigor [at] myrealbox.com&gt;,
@@ -71,3 +71,4 @@ description: "Smokeping::probes::DNS – Name Service Probe for SmokePing"
  Andre Stolze &lt;stolze [at] uni-muenster.de&gt;,
  Niko Tyni &lt;ntyni [at] iki.fi&gt;,
  Chris Poetzel&lt;cpoetzel [at] anl.gov&gt;</pre>
+</p>

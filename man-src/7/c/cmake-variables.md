@@ -12,12 +12,12 @@ description: "cmake-variables – CMake Variables Reference"
 <p> For general information on variables, see the Variables section in the cmake-language manual. </p>
 <p> <code>NOTE:</code> CMake reserves identifiers that:</p>
 <dl>
-<dt>&bull;</p>
-<dd>begin with <code>CMAKE_</code> (upper-, lower-, or mixed-case), or</p>
-<dt>&bull;</p>
-<dd>begin with <code>_CMAKE_</code> (upper-, lower-, or mixed-case), or</p>
-<dt>&bull;</p>
-<dd>begin with <code>_</code> followed by the name of any <code>CMake Command</code>.</dl>
+<dt>&bull;</dt>
+<dd>begin with <code>CMAKE_</code> (upper-, lower-, or mixed-case), or</dd>
+<dt>&bull;</dt>
+<dd>begin with <code>_CMAKE_</code> (upper-, lower-, or mixed-case), or</dd>
+<dt>&bull;</dt>
+<dd>begin with <code>_</code> followed by the name of any <code>CMake Command</code>.</dd></dl>
 <h2>Variables That Provide Information</h2>
 <h3>Cmake_Ar</h3>
 <p>Name of archiving tool for static libraries. </p>
@@ -142,24 +142,24 @@ endfunction()</pre>
 <p>Enables tracing output for target properties. </p>
 <p> This variable can be populated with a list of properties to generate debug output for when evaluating target properties. Currently it can only be used when evaluating:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>AUTOUIC_OPTIONS</code></p>
-<dt>&bull;</p>
-<dd><code>COMPILE_DEFINITIONS</code></p>
-<dt>&bull;</p>
-<dd><code>COMPILE_FEATURES</code></p>
-<dt>&bull;</p>
-<dd><code>COMPILE_OPTIONS</code></p>
-<dt>&bull;</p>
-<dd><code>INCLUDE_DIRECTORIES</code></p>
-<dt>&bull;</p>
-<dd><code>LINK_DIRECTORIES</code></p>
-<dt>&bull;</p>
-<dd><code>LINK_OPTIONS</code></p>
-<dt>&bull;</p>
-<dd><code>POSITION_INDEPENDENT_CODE</code></p>
-<dt>&bull;</p>
-<dd><code>SOURCES</code> </p>
+<dt>&bull;</dt>
+<dd><code>AUTOUIC_OPTIONS</code></dd>
+<dt>&bull;</dt>
+<dd><code>COMPILE_DEFINITIONS</code></dd>
+<dt>&bull;</dt>
+<dd><code>COMPILE_FEATURES</code></dd>
+<dt>&bull;</dt>
+<dd><code>COMPILE_OPTIONS</code></dd>
+<dt>&bull;</dt>
+<dd><code>INCLUDE_DIRECTORIES</code></dd>
+<dt>&bull;</dt>
+<dd><code>LINK_DIRECTORIES</code></dd>
+<dt>&bull;</dt>
+<dd><code>LINK_OPTIONS</code></dd>
+<dt>&bull;</dt>
+<dd><code>POSITION_INDEPENDENT_CODE</code></dd>
+<dt>&bull;</dt>
+<dd><code>SOURCES</code> </dd>
 <p> target properties and any other property listed in <code>COMPATIBLE_INTERFACE_STRING</code> and other <code>COMPATIBLE_INTERFACE_</code> properties. It outputs an origin for each entry in the target property. Default is unset.</dl>
 <h3>Cmake_Directory_Labels</h3>
 <p>New in version 3.10. </p>
@@ -200,16 +200,16 @@ endfunction()</pre>
 <p>New in version 3.17. </p>
 <p> Print extra find call information for the following commands to standard error:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>find_program()</code></p>
-<dt>&bull;</p>
-<dd><code>find_library()</code></p>
-<dt>&bull;</p>
-<dd><code>find_file()</code></p>
-<dt>&bull;</p>
-<dd><code>find_path()</code></p>
-<dt>&bull;</p>
-<dd><code>find_package()</code> </p>
+<dt>&bull;</dt>
+<dd><code>find_program()</code></dd>
+<dt>&bull;</dt>
+<dd><code>find_library()</code></dd>
+<dt>&bull;</dt>
+<dd><code>find_file()</code></dd>
+<dt>&bull;</dt>
+<dd><code>find_path()</code></dd>
+<dt>&bull;</dt>
+<dd><code>find_package()</code> </dd>
 <p> Output is designed for human consumption and not for parsing. Enabling this variable is equivalent to using <code>cmake</code> <code>&#8211;debug-find</code> with the added ability to enable debugging for a subset of find calls. </p>
 <pre>set(CMAKE_FIND_DEBUG_MODE TRUE)
 find_program(...)
@@ -222,28 +222,28 @@ set(CMAKE_FIND_DEBUG_MODE FALSE)</pre>
 <p>New in version 3.7. </p>
 <p> The sorting direction used by <code>CMAKE_FIND_PACKAGE_SORT_ORDER</code>. It can assume one of the following values:</p>
 <dl>
-<dt><code>DEC</code></p>
-<dd>Default. Ordering is done in descending mode. The highest folder found will be tested first.</p>
-<dt><code>ASC</code></p>
-<dd>Ordering is done in ascending mode. The lowest folder found will be tested first. </p>
+<dt><code>DEC</code></dt>
+<dd>Default. Ordering is done in descending mode. The highest folder found will be tested first.</dd>
+<dt><code>ASC</code></dt>
+<dd>Ordering is done in ascending mode. The lowest folder found will be tested first. </dd>
 <p> If <code>CMAKE_FIND_PACKAGE_SORT_ORDER</code> is not set or is set to <code>NONE</code> this variable has no effect.</dl>
 <h3>Cmake_Find_Package_Sort_Order</h3>
 <p>New in version 3.7. </p>
 <p> The default order for sorting packages found using <code>find_package()</code>. It can assume one of the following values:</p>
 <dl>
-<dt><code>NONE</code></p>
-<dd>Default. No attempt is done to sort packages. The first valid package found will be selected.</p>
-<dt><code>NAME</code></p>
-<dd>Sort packages lexicographically before selecting one.</p>
-<dt><code>NATURAL</code></p>
-<dd>Sort packages using natural order (see <code><a href="/docs/linux/man/3-strverscmp/">strverscmp</a>(3)</code> manual), i.e. such that contiguous digits are compared as whole numbers. </p>
+<dt><code>NONE</code></dt>
+<dd>Default. No attempt is done to sort packages. The first valid package found will be selected.</dd>
+<dt><code>NAME</code></dt>
+<dd>Sort packages lexicographically before selecting one.</dd>
+<dt><code>NATURAL</code></dt>
+<dd>Sort packages using natural order (see <code><a href="/docs/linux/man/3-strverscmp/">strverscmp</a>(3)</code> manual), i.e. such that contiguous digits are compared as whole numbers. </dd>
 <p> Natural sorting can be employed to return the highest version when multiple versions of the same library are found by <code>find_package()</code>. For example suppose that the following libraries have been found:</p>
-<dt>&bull;</p>
-<dd>libX-1.1.0</p>
-<dt>&bull;</p>
-<dd>libX-1.2.9</p>
-<dt>&bull;</p>
-<dd>libX-1.2.10 </p>
+<dt>&bull;</dt>
+<dd>libX-1.1.0</dd>
+<dt>&bull;</dt>
+<dd>libX-1.2.9</dd>
+<dt>&bull;</dt>
+<dd>libX-1.2.10 </dd>
 <p> By setting <code>NATURAL</code> order we can select the one with the highest version number <code>libX-1.2.10</code>. </p>
 <pre>set(CMAKE_FIND_PACKAGE_SORT_ORDER NATURAL)
 find_package(libX CONFIG)</pre>
@@ -259,8 +259,8 @@ find_package(libX CONFIG)</pre>
 <p> The value of this variable should never be modified by project code. A toolchain file specified by the <code>CMAKE_TOOLCHAIN_FILE</code> variable may initialize <code>CMAKE_GENERATOR_INSTANCE</code> as a cache entry. Once a given build tree has been initialized with a particular value for this variable, changing the value has undefined behavior. </p>
 <p> Instance specification is supported only on specific generators:</p>
 <dl>
-<dt>&bull;</p>
-<dd>For the <code>Visual Studio 15 2017</code> generator (and above) this specifies the absolute path to the VS installation directory of the selected VS instance. </p>
+<dt>&bull;</dt>
+<dd>For the <code>Visual Studio 15 2017</code> generator (and above) this specifies the absolute path to the VS installation directory of the selected VS instance. </dd>
 <p> See native build system documentation for allowed instance values.</dl>
 <h3>Cmake_Generator_Platform</h3>
 <p>New in version 3.1. </p>
@@ -269,10 +269,10 @@ find_package(libX CONFIG)</pre>
 <p> The value of this variable should never be modified by project code. A toolchain file specified by the <code>CMAKE_TOOLCHAIN_FILE</code> variable may initialize <code>CMAKE_GENERATOR_PLATFORM</code>. Once a given build tree has been initialized with a particular value for this variable, changing the value has undefined behavior. </p>
 <p> Platform specification is supported only on specific generators:</p>
 <dl>
-<dt>&bull;</p>
-<dd>For Visual Studio Generators with VS 2005 and above this specifies the target architecture.</p>
-<dt>&bull;</p>
-<dd>For <code>Green Hills MULTI</code> this specifies the target architecture. </p>
+<dt>&bull;</dt>
+<dd>For Visual Studio Generators with VS 2005 and above this specifies the target architecture.</dd>
+<dt>&bull;</dt>
+<dd>For <code>Green Hills MULTI</code> this specifies the target architecture. </dd>
 <p> See native build system documentation for allowed platform names.</dl>
 <h3>Visual Studio Platform Selection</h3>
 <p>On Visual Studio Generators the selected platform name is provided in the <code>CMAKE_VS_PLATFORM_NAME</code> variable.</p>
@@ -282,38 +282,38 @@ find_package(libX CONFIG)</pre>
 <p> The value of this variable should never be modified by project code. A toolchain file specified by the <code>CMAKE_TOOLCHAIN_FILE</code> variable may initialize <code>CMAKE_GENERATOR_TOOLSET</code>. Once a given build tree has been initialized with a particular value for this variable, changing the value has undefined behavior. </p>
 <p> Toolset specification is supported only on specific generators:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Visual Studio Generators for VS 2010 and above</p>
-<dt>&bull;</p>
-<dd>The <code>Xcode</code> generator for Xcode 3.0 and above</p>
-<dt>&bull;</p>
-<dd>The <code>Green Hills MULTI</code> generator </p>
+<dt>&bull;</dt>
+<dd>Visual Studio Generators for VS 2010 and above</dd>
+<dt>&bull;</dt>
+<dd>The <code>Xcode</code> generator for Xcode 3.0 and above</dd>
+<dt>&bull;</dt>
+<dd>The <code>Green Hills MULTI</code> generator </dd>
 <p> See native build system documentation for allowed toolset names.</dl>
 <h3>Visual Studio Toolset Selection</h3>
 <p>The Visual Studio Generators support toolset specification using one of these forms:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>toolset</code></p>
-<dt>&bull;</p>
-<dd><code>toolset[,key=value]*</code></p>
-<dt>&bull;</p>
-<dd><code>key=value[,key=value]*</code> </p>
+<dt>&bull;</dt>
+<dd><code>toolset</code></dd>
+<dt>&bull;</dt>
+<dd><code>toolset[,key=value]*</code></dd>
+<dt>&bull;</dt>
+<dd><code>key=value[,key=value]*</code> </dd>
 <p> The <code>toolset</code> specifies the toolset name. The selected toolset name is provided in the <code>CMAKE_VS_PLATFORM_TOOLSET</code> variable. </p>
 <p> The <code>key=value</code> pairs form a comma-separated list of options to specify generator-specific details of the toolset selection. Supported pairs are:</p>
-<dt><code>cuda=&lt;version&gt;|&lt;path&gt;</code></p>
-<dd>Specify the CUDA toolkit version to use or the path to a standalone CUDA toolkit directory. Supported by VS 2010 and above. The version can only be used with the CUDA toolkit VS integration globally installed. See the <code>CMAKE_VS_PLATFORM_TOOLSET_CUDA</code> and <code>CMAKE_VS_PLATFORM_TOOLSET_CUDA_CUSTOM_DIR</code> variables.</p>
-<dt><code>host=&lt;arch&gt;</code></p>
-<dd>Specify the host tools architecture as <code>x64</code> or <code>x86</code>. Supported by VS 2013 and above. See the <code>CMAKE_VS_PLATFORM_TOOLSET_HOST_ARCHITECTURE</code> variable.</p>
-<dt><code>version=&lt;version&gt;</code></p>
-<dd>Specify the toolset version to use. Supported by VS 2017 and above with the specified toolset installed. See the <code>CMAKE_VS_PLATFORM_TOOLSET_VERSION</code> variable.</p>
-<dt><code>VCTargetsPath=&lt;path&gt;</code></p>
-<dd>Specify an alternative <code>VCTargetsPath</code> value for Visual Studio project files. This allows use of VS platform extension configuration files (<code>.props</code> and <code>.targets</code>) that are not installed with VS.</dl>
+<dt><code>cuda=&lt;version&gt;|&lt;path&gt;</code></dt>
+<dd>Specify the CUDA toolkit version to use or the path to a standalone CUDA toolkit directory. Supported by VS 2010 and above. The version can only be used with the CUDA toolkit VS integration globally installed. See the <code>CMAKE_VS_PLATFORM_TOOLSET_CUDA</code> and <code>CMAKE_VS_PLATFORM_TOOLSET_CUDA_CUSTOM_DIR</code> variables.</dd>
+<dt><code>host=&lt;arch&gt;</code></dt>
+<dd>Specify the host tools architecture as <code>x64</code> or <code>x86</code>. Supported by VS 2013 and above. See the <code>CMAKE_VS_PLATFORM_TOOLSET_HOST_ARCHITECTURE</code> variable.</dd>
+<dt><code>version=&lt;version&gt;</code></dt>
+<dd>Specify the toolset version to use. Supported by VS 2017 and above with the specified toolset installed. See the <code>CMAKE_VS_PLATFORM_TOOLSET_VERSION</code> variable.</dd>
+<dt><code>VCTargetsPath=&lt;path&gt;</code></dt>
+<dd>Specify an alternative <code>VCTargetsPath</code> value for Visual Studio project files. This allows use of VS platform extension configuration files (<code>.props</code> and <code>.targets</code>) that are not installed with VS.</dd></dl>
 <h3>Visual Studio Toolset Customization</h3>
 <p><code>These are unstable interfaces with no compatibility guarantees</code> because they hook into undocumented internal CMake implementation details. Institutions may use these to internally maintain support for non-public Visual Studio platforms and toolsets, but must accept responsibility to make updates as changes are made to CMake. </p>
 <p> Additional <code>key=value</code> pairs are available:</p>
 <dl>
-<dt><code>customFlagTableDir=&lt;path&gt;</code></p>
-<dd>New in version 3.21. </p>
+<dt><code>customFlagTableDir=&lt;path&gt;</code></dt>
+<dd>New in version 3.21. </dd>
 <p> Specify the absolute path to a directory from which to load custom flag tables stored as JSON documents with file names of the form <code>&lt;platform&gt;_&lt;toolset&gt;_&lt;tool&gt;.json</code> or <code>&lt;platform&gt;_&lt;tool&gt;.json</code>, where <code>&lt;platform&gt;</code> is the <code>CMAKE_VS_PLATFORM_NAME</code>, <code>&lt;toolset&gt;</code> is the <code>CMAKE_VS_PLATFORM_TOOLSET</code>, and <code>&lt;tool&gt;</code> is the tool for which the flag table is meant. <code>This naming pattern is an internal CMake implementation detail.</code> The <code>&lt;tool&gt;</code> names are undocumented. The format of the <code>.json</code> flag table files is undocumented.</dl>
 <h3>Cmake_Import_Library_Prefix</h3>
 <p>The prefix for import libraries that you link to. </p>
@@ -371,22 +371,22 @@ find_package(libX CONFIG)</pre>
 <p>Tool that can launch the native build system. The value may be the full path to an executable or just the tool name if it is expected to be in the <code>PATH</code>. </p>
 <p> The tool selected depends on the <code>CMAKE_GENERATOR</code> used to configure the project:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The Makefile Generators set this to <code>make</code>, <code>gmake</code>, or a generator-specific tool (e.g. <code>nmake</code> for <code>NMake Makefiles</code>). </p>
+<dt>&bull;</dt>
+<dd>The Makefile Generators set this to <code>make</code>, <code>gmake</code>, or a generator-specific tool (e.g. <code>nmake</code> for <code>NMake Makefiles</code>). </dd>
 <p> These generators store <code>CMAKE_MAKE_PROGRAM</code> in the CMake cache so that it may be edited by the user.</p>
-<dt>&bull;</p>
-<dd>The <code>Ninja</code> generator sets this to <code>ninja</code>. </p>
+<dt>&bull;</dt>
+<dd>The <code>Ninja</code> generator sets this to <code>ninja</code>. </dd>
 <p> This generator stores <code>CMAKE_MAKE_PROGRAM</code> in the CMake cache so that it may be edited by the user.</p>
-<dt>&bull;</p>
-<dd>The <code>Xcode</code> generator sets this to <code>xcodebuild</code>. </p>
+<dt>&bull;</dt>
+<dd>The <code>Xcode</code> generator sets this to <code>xcodebuild</code>. </dd>
 <p> This generator prefers to lookup the build tool at build time rather than to store <code>CMAKE_MAKE_PROGRAM</code> in the CMake cache ahead of time. This is because <code>xcodebuild</code> is easy to find. </p>
 <p> For compatibility with versions of CMake prior to 3.2, if a user or project explicitly adds <code>CMAKE_MAKE_PROGRAM</code> to the CMake cache then CMake will use the specified value.</p>
-<dt>&bull;</p>
-<dd>The Visual Studio Generators set this to the full path to <code>MSBuild.exe</code> (VS &gt;= 10), <code>devenv.com</code> (VS 7,8,9), or <code>VCExpress.exe</code> (VS Express 8,9). (See also variables <code>CMAKE_VS_MSBUILD_COMMAND</code> and <code>CMAKE_VS_DEVENV_COMMAND</code>. </p>
+<dt>&bull;</dt>
+<dd>The Visual Studio Generators set this to the full path to <code>MSBuild.exe</code> (VS &gt;= 10), <code>devenv.com</code> (VS 7,8,9), or <code>VCExpress.exe</code> (VS Express 8,9). (See also variables <code>CMAKE_VS_MSBUILD_COMMAND</code> and <code>CMAKE_VS_DEVENV_COMMAND</code>. </dd>
 <p> These generators prefer to lookup the build tool at build time rather than to store <code>CMAKE_MAKE_PROGRAM</code> in the CMake cache ahead of time. This is because the tools are version-specific and can be located using the Windows Registry. It is also necessary because the proper build tool may depend on the project content (e.g. the Intel Fortran plugin to VS 10 and 11 requires <code>devenv.com</code> to build its <code>.vfproj</code> project files even though <code>MSBuild.exe</code> is normally preferred to support the <code>CMAKE_GENERATOR_TOOLSET</code>). </p>
 <p> For compatibility with versions of CMake prior to 3.0, if a user or project explicitly adds <code>CMAKE_MAKE_PROGRAM</code> to the CMake cache then CMake will use the specified value if possible.</p>
-<dt>&bull;</p>
-<dd>The <code>Green Hills MULTI</code> generator sets this to the full path to <code>gbuild.exe(Windows)</code> or <code>gbuild(Linux)</code> based upon the toolset being used. </p>
+<dt>&bull;</dt>
+<dd>The <code>Green Hills MULTI</code> generator sets this to the full path to <code>gbuild.exe(Windows)</code> or <code>gbuild(Linux)</code> based upon the toolset being used. </dd>
 <p> Once the generator has initialized a particular value for this variable, changing the value has undefined behavior. </p>
 <p> The <code>CMAKE_MAKE_PROGRAM</code> variable is set for use by project code. The value is also used by the <code><a href="/docs/linux/man/1-cmake/">cmake</a>(1)</code> <code>&#8211;build</code> and <code><a href="/docs/linux/man/1-ctest/">ctest</a>(1)</code> <code>&#8211;build-and-test</code> tools to launch the native build process.</dl>
 <h3>Cmake_Match_Count</h3>
@@ -569,14 +569,14 @@ message(&quot;CMAKE_PROJECT_VERSION = ${CMAKE_PROJECT_VERSION}&quot;)</pre>
 <p>where the <code>&lt;date&gt;</code> component is of format <code>CCYYMMDD</code> and <code>&lt;id&gt;</code> may contain arbitrary text. This represents development as of a particular date following the <code>&lt;major&gt;.&lt;minor&gt;</code> feature release. </p>
 <p> Individual component values are also available in variables:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>CMAKE_MAJOR_VERSION</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_MINOR_VERSION</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_PATCH_VERSION</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_TWEAK_VERSION</code> </p>
+<dt>&bull;</dt>
+<dd><code>CMAKE_MAJOR_VERSION</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_MINOR_VERSION</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_PATCH_VERSION</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_TWEAK_VERSION</code> </dd>
 <p> Use the <code>if()</code> command <code>VERSION_LESS</code>, <code>VERSION_GREATER</code>, <code>VERSION_EQUAL</code>, <code>VERSION_LESS_EQUAL</code>, or <code>VERSION_GREATER_EQUAL</code> operators to compare version string values against <code>CMAKE_VERSION</code> using a component-wise test. Version component values may be 10 or larger so do not attempt to compare version strings as floating-point numbers. </p>
 <p> <code>NOTE:</code> CMake versions 2.8.2 through 2.8.12 used three components for the feature level. Release versions represented the bug-fix level in a fourth component, i.e. <code>&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;[.&lt;tweak&gt;][-rc&lt;n&gt;]</code>. Development versions represented the development date in the fourth component, i.e. <code>&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;.&lt;date&gt;[-&lt;id&gt;]</code>. </p>
 <p> CMake versions prior to 2.8.2 used three components for the feature level and had no bug-fix component. Release versions used an even-valued second component, i.e. <code>&lt;major&gt;.&lt;even-minor&gt;.&lt;patch&gt;[-rc&lt;n&gt;]</code>. Development versions used an odd-valued second component with the development date as the third component, i.e. <code>&lt;major&gt;.&lt;odd-minor&gt;.&lt;date&gt;</code>. </p>
@@ -609,3 +609,5 @@ message(&quot;CMAKE_PROJECT_VERSION = ${CMAKE_PROJECT_VERSION}&quot;)</pre>
 <p>New in version 3.9. </p>
 <p> NVIDIA CUDA Toolkit version whose Visual Studio toolset to use. </p>
 <p> The Visual Studio Generators for VS 2010 and above support using a CUDA toolset provided by a CUDA Toolkit. The toolset version number may be specified by a field in <code>CMAKE_GENERATOR_TOOLSET</code> of the form <code>cuda=8.0</code>. Or it is automatically detected if a path to a standalone CUDA directory is specified in the form <code>cuda=C:\path	o
+</p></p>
+</code>

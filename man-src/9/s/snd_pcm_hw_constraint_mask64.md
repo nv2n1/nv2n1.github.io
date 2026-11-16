@@ -15,15 +15,15 @@ snd_pcm_hw_constraint_mask64 - apply the given bitmap mask constraint
 <h2>Arguments</h2>
 
 <i>runtime</i>
-<dl><dd><dd>PCM runtime instance</dl>
+<dl><dd></dd><dd>PCM runtime instance</dd></dl>
  
 
  <i>var</i>
-<dl><dd>hw_params variable to apply the mask</dl>
+<dl><dd>hw_params variable to apply the mask</dd></dl>
  
 
  <i>mask</i>
-<dl><dd>the 64bit bitmap mask</dl>
+<dl><dd>the 64bit bitmap mask</dd></dl>
 
 <h2>Description</h2>
 

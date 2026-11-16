@@ -37,12 +37,12 @@ struct passwd *fgetpwent(FILE *stream);
 <p> The <code>fgetpwent</code>() function returns a pointer to a <i>passwd</i> structure, or NULL if there are no more entries or an error occurs. In the event of an error, <i>errno</i> is set to indicate the cause.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient memory to allocate <i>passwd</i> structure.</dl>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient memory to allocate <i>passwd</i> structure.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/passwd</i></p>
-<dd> password database file</dl>
+<dt><i>/etc/passwd</i></dt>
+<dd> password database file</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

@@ -19,10 +19,10 @@ RESET ALL</pre>
 <p> The transactional behavior of <code>RESET</code> is the same as <code>SET</code>: its effects will be undone by transaction rollback.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>configuration_parameter</i></p>
-<dd>Name of a settable run-time parameter. Available parameters are documented in in the documentation and on the SET [<code><a href="/docs/linux/man/7-set/">set</a></code>(7)] reference page.</p>
-<dt><code>ALL</code></p>
-<dd>Resets all settable run-time parameters to default values.</dl>
+<dt><i>configuration_parameter</i></dt>
+<dd>Name of a settable run-time parameter. Available parameters are documented in in the documentation and on the SET [<code><a href="/docs/linux/man/7-set/">set</a></code>(7)] reference page.</dd>
+<dt><code>ALL</code></dt>
+<dd>Resets all settable run-time parameters to default values.</dd></dl>
 <h2>Examples</h2>
 <p>Set the timezone configuration variable to its default value: </p>
 <pre>RESET timezone;</pre>

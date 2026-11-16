@@ -36,127 +36,127 @@ description: "sx, sb, sz – XMODEM, YMODEM, ZMODEM file send"
 <p> If <code>sz</code> is invoked with stdout and stderr to different datasets, Verbose is set to 2, causing frame by frame progress reports to stderr. This may be disabled with the <code>q</code> option. </p>
 <p> The meanings of the available options are: </p>
 <dl>
-<dt><code>-+, &#8211;append</code></p>
-<dd> Instruct the receiver to append transmitted data to an existing file (ZMODEM only).</p>
-<dt><code>-2, &#8211;twostop</code></p>
-<dd> use two stop bits (if possible). Do not use this unless you know what you are doing.</p>
-<dt><code>-8, &#8211;try-8k</code></p>
-<dd> Try to go up to 8KB blocksize. This is incompatible with standard zmodem, but a common extension in the bbs world. (ZMODEM only).</p>
-<dt><code>&#8211;start-8k</code></p>
-<dd> Start with 8KB blocksize. Like &#8211;try-8k.</p>
-<dt><code>-a, &#8211;ascii</code></p>
-<dd> Convert NL characters in the transmitted file to CR/LF. This is done by the sender for XMODEM and YMODEM, by the receiver for ZMODEM.</p>
-<dt><code>-b, &#8211;binary</code></p>
-<dd> (ZMODEM) Binary override: transfer file without any translation.</p>
-<dt><code>-B NUMBER, &#8211;bufsize NUMBER</code></p>
-<dd> Use a readbuffer of <code>NUMBER</code> bytes. Default is 16384, which should be enough for most situations. If you have a slow machine or a bad disk interface or suffer from other hardware problems you might want to increase the buffersize. <code>-1</code> or <code>auto</code> use a buffer large enough to buffer the whole file. Be careful with this option &#8211; things normally get worse, not better, if the machine starts to swap. </p>
+<dt><code>-+, &#8211;append</code></dt>
+<dd> Instruct the receiver to append transmitted data to an existing file (ZMODEM only).</dd>
+<dt><code>-2, &#8211;twostop</code></dt>
+<dd> use two stop bits (if possible). Do not use this unless you know what you are doing.</dd>
+<dt><code>-8, &#8211;try-8k</code></dt>
+<dd> Try to go up to 8KB blocksize. This is incompatible with standard zmodem, but a common extension in the bbs world. (ZMODEM only).</dd>
+<dt><code>&#8211;start-8k</code></dt>
+<dd> Start with 8KB blocksize. Like &#8211;try-8k.</dd>
+<dt><code>-a, &#8211;ascii</code></dt>
+<dd> Convert NL characters in the transmitted file to CR/LF. This is done by the sender for XMODEM and YMODEM, by the receiver for ZMODEM.</dd>
+<dt><code>-b, &#8211;binary</code></dt>
+<dd> (ZMODEM) Binary override: transfer file without any translation.</dd>
+<dt><code>-B NUMBER, &#8211;bufsize NUMBER</code></dt>
+<dd> Use a readbuffer of <code>NUMBER</code> bytes. Default is 16384, which should be enough for most situations. If you have a slow machine or a bad disk interface or suffer from other hardware problems you might want to increase the buffersize. <code>-1</code> or <code>auto</code> use a buffer large enough to buffer the whole file. Be careful with this option &#8211; things normally get worse, not better, if the machine starts to swap. </dd>
 <p> Using this option turns of memory mapping of the input file. This increases memory and CPU usage.</p>
-<dt><code>-c COMMAND, &#8211;command COMMAND</code></p>
-<dd> Send COMMAND to the receiver for execution, return with COMMAND&#8217;s exit status.</p>
-<dt><code>-C N, &#8211;command-tries N</code></p>
-<dd> Retry to send command N times (default: 11).</p>
-<dt><code>-d, &#8211;dot-to-slash</code></p>
-<dd> Change all instances of &quot;.&quot; to &quot;/&quot; in the transmitted pathname. Thus, C.omenB0000 (which is unacceptable to MSDOS or CP/M) is transmitted as C/omenB0000. If the resultant filename has more than 8 characters in the stem, a &quot;.&quot; is inserted to allow a total of eleven. </p>
+<dt><code>-c COMMAND, &#8211;command COMMAND</code></dt>
+<dd> Send COMMAND to the receiver for execution, return with COMMAND&#8217;s exit status.</dd>
+<dt><code>-C N, &#8211;command-tries N</code></dt>
+<dd> Retry to send command N times (default: 11).</dd>
+<dt><code>-d, &#8211;dot-to-slash</code></dt>
+<dd> Change all instances of &quot;.&quot; to &quot;/&quot; in the transmitted pathname. Thus, C.omenB0000 (which is unacceptable to MSDOS or CP/M) is transmitted as C/omenB0000. If the resultant filename has more than 8 characters in the stem, a &quot;.&quot; is inserted to allow a total of eleven. </dd>
 <p> This option enables the <code>&#8211;full-path</code> option.</p>
-<dt><code>&#8211;delay-startup N</code></p>
-<dd> Wait <code>N</code> seconds before doing anything.</p>
-<dt><code>-e, &#8211;escape</code></p>
-<dd> Escape all control characters; normally XON, XOFF, DLE, CR-@-CR, and Ctrl-X are escaped.</p>
+<dt><code>&#8211;delay-startup N</code></dt>
+<dd> Wait <code>N</code> seconds before doing anything.</dd>
+<dt><code>-e, &#8211;escape</code></dt>
+<dd> Escape all control characters; normally XON, XOFF, DLE, CR-@-CR, and Ctrl-X are escaped.</dd>
 <dt>
-<dd> Force the sender to rename the new file if a file with the same name already exists.</p>
-<dt><code>-f, &#8211;full-path</code></p>
-<dd> Send Full pathname. Normally directory prefixes are stripped from the transmitted filename. </p>
+</dt><dd> Force the sender to rename the new file if a file with the same name already exists.</dd>
+<dt><code>-f, &#8211;full-path</code></dt>
+<dd> Send Full pathname. Normally directory prefixes are stripped from the transmitted filename. </dd>
 <p> This is also turned on with to <code>&#8211;dot-to-slash</code> option.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> give help.</p>
-<dt><code>-i COMMAND, &#8211;immediate-command COMMAND</code></p>
-<dd> Send COMMAND to the receiver for execution, return immediately upon the receiving program&#8217;s successful reception of the command.</p>
-<dt><code>-k, &#8211;1k</code></p>
-<dd> (XMODEM/YMODEM) Send files using 1024 byte blocks rather than the default 128 byte blocks. 1024 byte packets speed file transfers at high bit rates. (ZMODEM streams the data for the best possible throughput.)</p>
-<dt><code>-L N, &#8211;packetlen N</code></p>
-<dd> Use ZMODEM sub-packets of length N. A larger N (32 &lt;= N &lt;= 1024) gives slightly higher throughput, a smaller N speeds error recovery. The default is 128 below 300 baud, 256 above 300 baud, or 1024 above 2400 baud.</p>
-<dt><code>-m N, &#8211;min-bps N</code></p>
-<dd> Stop transmission if BPS-Rate (Bytes Per Second) falls below N for a certain time (see &#8211;min-bps-time option).</p>
-<dt><code>-M N, &#8211;min-bps-time</code></p>
-<dd> Used together with &#8211;min-bps. Default is 120 (seconds).</p>
-<dt><code>-l N, &#8211;framelen N</code></p>
-<dd> Wait for the receiver to acknowledge correct data every <code>N</code> (32 &lt;= N &lt;= 1024) characters. This may be used to avoid network overrun when XOFF flow control is lacking.</p>
-<dt><code>-n, &#8211;newer</code></p>
-<dd> (ZMODEM) Send each file if destination file does not exist. Overwrite destination file if source file is newer than the destination file.</p>
-<dt><code>-N, &#8211;newer-or-longer</code></p>
-<dd> (ZMODEM) Send each file if destination file does not exist. Overwrite destination file if source file is newer or longer than the destination file.</p>
-<dt><code>-o, &#8211;16-bit-crc</code></p>
-<dd> (ZMODEM) Disable automatic selection of 32 bit CRC.</p>
-<dt><code>-O, &#8211;disable-timeouts</code></p>
-<dd> Disable read timeout handling. This makes lsz hang if the other side doesn&#8217;t send anything, but increases performance (not much) and decreases system load (reduces number of system calls by about 50 percent). </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> give help.</dd>
+<dt><code>-i COMMAND, &#8211;immediate-command COMMAND</code></dt>
+<dd> Send COMMAND to the receiver for execution, return immediately upon the receiving program&#8217;s successful reception of the command.</dd>
+<dt><code>-k, &#8211;1k</code></dt>
+<dd> (XMODEM/YMODEM) Send files using 1024 byte blocks rather than the default 128 byte blocks. 1024 byte packets speed file transfers at high bit rates. (ZMODEM streams the data for the best possible throughput.)</dd>
+<dt><code>-L N, &#8211;packetlen N</code></dt>
+<dd> Use ZMODEM sub-packets of length N. A larger N (32 &lt;= N &lt;= 1024) gives slightly higher throughput, a smaller N speeds error recovery. The default is 128 below 300 baud, 256 above 300 baud, or 1024 above 2400 baud.</dd>
+<dt><code>-m N, &#8211;min-bps N</code></dt>
+<dd> Stop transmission if BPS-Rate (Bytes Per Second) falls below N for a certain time (see &#8211;min-bps-time option).</dd>
+<dt><code>-M N, &#8211;min-bps-time</code></dt>
+<dd> Used together with &#8211;min-bps. Default is 120 (seconds).</dd>
+<dt><code>-l N, &#8211;framelen N</code></dt>
+<dd> Wait for the receiver to acknowledge correct data every <code>N</code> (32 &lt;= N &lt;= 1024) characters. This may be used to avoid network overrun when XOFF flow control is lacking.</dd>
+<dt><code>-n, &#8211;newer</code></dt>
+<dd> (ZMODEM) Send each file if destination file does not exist. Overwrite destination file if source file is newer than the destination file.</dd>
+<dt><code>-N, &#8211;newer-or-longer</code></dt>
+<dd> (ZMODEM) Send each file if destination file does not exist. Overwrite destination file if source file is newer or longer than the destination file.</dd>
+<dt><code>-o, &#8211;16-bit-crc</code></dt>
+<dd> (ZMODEM) Disable automatic selection of 32 bit CRC.</dd>
+<dt><code>-O, &#8211;disable-timeouts</code></dt>
+<dd> Disable read timeout handling. This makes lsz hang if the other side doesn&#8217;t send anything, but increases performance (not much) and decreases system load (reduces number of system calls by about 50 percent). </dd>
 <p> Use this option with care.</p>
-<dt><code>-p, &#8211;protect</code></p>
-<dd> (ZMODEM) Protect existing destination files by skipping transfer if the destination file exists.</p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd> Quiet suppresses verbosity.</p>
-<dt><code>-R, &#8211;restricted</code></p>
-<dd> Restricted mode: restricts pathnames to the current directory and PUBDIR (usually /usr/spool/uucppublic) and/or subdirectories thereof.</p>
-<dt><code>-r, &#8211;resume</code></p>
-<dd> (ZMODEM) Resume interrupted file transfer. If the source file is longer than the destination file, the transfer commences at the offset in the source file that equals the length of the destination file.</p>
-<dt><code>-s HH:MM, &#8211;stop-at HH:MM</code></p>
-<dd> Stop transmission at <code>HH </code> hours, <code>MM</code> minutes. Another variant, using <code>+N </code> instead of <code>HH:MM,</code> stops transmission in <code>N</code> seconds.</p>
-<dt><code>-S, &#8211;timesync</code></p>
-<dd> enable timesync protocol support. See timesync.doc for further information. </p>
+<dt><code>-p, &#8211;protect</code></dt>
+<dd> (ZMODEM) Protect existing destination files by skipping transfer if the destination file exists.</dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> Quiet suppresses verbosity.</dd>
+<dt><code>-R, &#8211;restricted</code></dt>
+<dd> Restricted mode: restricts pathnames to the current directory and PUBDIR (usually /usr/spool/uucppublic) and/or subdirectories thereof.</dd>
+<dt><code>-r, &#8211;resume</code></dt>
+<dd> (ZMODEM) Resume interrupted file transfer. If the source file is longer than the destination file, the transfer commences at the offset in the source file that equals the length of the destination file.</dd>
+<dt><code>-s HH:MM, &#8211;stop-at HH:MM</code></dt>
+<dd> Stop transmission at <code>HH </code> hours, <code>MM</code> minutes. Another variant, using <code>+N </code> instead of <code>HH:MM,</code> stops transmission in <code>N</code> seconds.</dd>
+<dt><code>-S, &#8211;timesync</code></dt>
+<dd> enable timesync protocol support. See timesync.doc for further information. </dd>
 <p> This option is incompatible with standard zmodem. Use it with care.</p>
-<dt><code>&#8211;syslog[=off]</code></p>
-<dd> turn syslogging on or off. the default is set at configure time. This option is ignored if no syslog support is compiled in.</p>
-<dt><code>-t TIM, &#8211;timeout TIM</code></p>
-<dd> Change timeout to <i>TIM</i> tenths of seconds.</p>
-<dt><code>-T, &#8211;turbo</code></p>
-<dd> Do not escape certain characters (^P, ^P|0x80, telenet escape sequence [CR + @]). This improves performance by about 1 percent and shouldn&#8217;t hurt in the normal case (but be careful &#8211; ^P might be useful if connected through a terminal server).</p>
-<dt><code>&#8211;tcp</code></p>
-<dd> Try to initiate a TCP/IP connection. lsz will ask the receiving zmodem to open a TCP/IP connection. All handshaking (which address / port to use) will be done by the zmodem programs. </p>
+<dt><code>&#8211;syslog[=off]</code></dt>
+<dd> turn syslogging on or off. the default is set at configure time. This option is ignored if no syslog support is compiled in.</dd>
+<dt><code>-t TIM, &#8211;timeout TIM</code></dt>
+<dd> Change timeout to <i>TIM</i> tenths of seconds.</dd>
+<dt><code>-T, &#8211;turbo</code></dt>
+<dd> Do not escape certain characters (^P, ^P|0x80, telenet escape sequence [CR + @]). This improves performance by about 1 percent and shouldn&#8217;t hurt in the normal case (but be careful &#8211; ^P might be useful if connected through a terminal server).</dd>
+<dt><code>&#8211;tcp</code></dt>
+<dd> Try to initiate a TCP/IP connection. lsz will ask the receiving zmodem to open a TCP/IP connection. All handshaking (which address / port to use) will be done by the zmodem programs. </dd>
 <p> You will normally not want to use this option as lrzsz is the only zmodem which understands what to do (private extension). You might want to use this option if the two programs are connected (stdin/out) over a slow or bad (not 8bit clean) network connection. </p>
 <p> Use of this option imposes a security risk, somebody else could connect to the port in between. See <code>SECURITY</code> for details.</p>
-<dt><code>&#8211;tcp-client ADDRESS:PORT</code></p>
-<dd> Act as a tcp/ip client: Connect to the given port. </p>
+<dt><code>&#8211;tcp-client ADDRESS:PORT</code></dt>
+<dd> Act as a tcp/ip client: Connect to the given port. </dd>
 <p> See <code>&#8211;tcp-server</code> for more information. </p>
-<dt><code>&#8211;tcp-server</code></p>
-<dd> Act as a server: Open a socket, print out what to do, wait for connection. </p>
+<dt><code>&#8211;tcp-server</code></dt>
+<dd> Act as a server: Open a socket, print out what to do, wait for connection. </dd>
 <p> You will normally not want to use this option as lrzsz is the only zmodem which understands what to do (private extension). You might want to use this if you have to use zmodem (for which reason whatever), and cannot use the <code>&#8211;tcp</code> option of <i>lsz</i> (perhaps because your telnet doesn&#8217;t allow to spawn a local program with stdin/stdout connected to the remote side). </p>
 <p> If you use this option you have to start <i>lsz</i> with the <code>&#8211;tcp-client ADDRESS:PORT</code> option. <i>lrz will print the address and port on startup.</i> </p>
 <p> Use of this option imposes a security risk, somebody else could connect to the port in between. See <code>SECURITY</code> for details. </p>
-<dt><code>-u</code></p>
-<dd> Unlink the file after successful transmission.</p>
-<dt><code>-U, &#8211;unrestrict</code></p>
-<dd> Turn off restricted mode (this is not possible if running under a restricted shell).</p>
-<dt><code>-w N, &#8211;windowsize N</code></p>
-<dd> Limit the transmit window size to N bytes (ZMODEM).</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Verbose output to stderr. More v&#8217;s generate more output.</p>
-<dt><code>-X, &#8211;xmodem</code></p>
-<dd> use XMODEM protocol.</p>
-<dt><code>-y, &#8211;overwrite</code></p>
-<dd> Instruct a ZMODEM receiving program to overwrite any existing file with the same name.</p>
-<dt><code>-Y, &#8211;overwrite-or-skip</code></p>
-<dd> Instruct a ZMODEM receiving program to overwrite any existing file with the same name, and to skip any source files that do have a file with the same pathname on the destination system.</p>
-<dt><code>&#8211;ymodem</code></p>
-<dd> use ZMODEM protocol.</p>
-<dt><code>-Z, &#8211;zmodem</code></p>
-<dd> use ZMODEM protocol.</dl>
+<dt><code>-u</code></dt>
+<dd> Unlink the file after successful transmission.</dd>
+<dt><code>-U, &#8211;unrestrict</code></dt>
+<dd> Turn off restricted mode (this is not possible if running under a restricted shell).</dd>
+<dt><code>-w N, &#8211;windowsize N</code></dt>
+<dd> Limit the transmit window size to N bytes (ZMODEM).</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Verbose output to stderr. More v&#8217;s generate more output.</dd>
+<dt><code>-X, &#8211;xmodem</code></dt>
+<dd> use XMODEM protocol.</dd>
+<dt><code>-y, &#8211;overwrite</code></dt>
+<dd> Instruct a ZMODEM receiving program to overwrite any existing file with the same name.</dd>
+<dt><code>-Y, &#8211;overwrite-or-skip</code></dt>
+<dd> Instruct a ZMODEM receiving program to overwrite any existing file with the same name, and to skip any source files that do have a file with the same pathname on the destination system.</dd>
+<dt><code>&#8211;ymodem</code></dt>
+<dd> use ZMODEM protocol.</dd>
+<dt><code>-Z, &#8211;zmodem</code></dt>
+<dd> use ZMODEM protocol.</dd></dl>
 <h2>SECURITY</h2>
 <p> Restricted mode restricts pathnames to the current directory and PUBDIR (usually /var/spool/uucppublic) and/or subdirectories thereof, and disables remote command execution. </p>
 <p> Restricted mode is entered if the <code>R</code> option is given or if lsz detects that it runs under a restricted shell or if the environment variable ZMODEM_RESTRICTED is found. </p>
 <p> Restricted mode can be turned of with the <code>U</code> option if not running under a restricted shell. </p>
 <dl>
-<dt>Use of the</p>
-<dd> <code>&#8211;tcp-client</code> or <code>&#8211;tcp-server</code> options imposes a security risk, as somebody else could connect to the port before you do it, and grab your data. If there&#8217;s strong demand for a more secure mode i might introduce some sort of password challenge. </p>
+<dt>Use of the</dt>
+<dd> <code>&#8211;tcp-client</code> or <code>&#8211;tcp-server</code> options imposes a security risk, as somebody else could connect to the port before you do it, and grab your data. If there&#8217;s strong demand for a more secure mode i might introduce some sort of password challenge. </dd>
 </dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>ZNULLS</code></p>
-<dd> may be used to specify the number of nulls to send before a ZDATA frame.</p>
-<dt><code>SHELL</code></p>
-<dd> lsz recognizes a restricted shell if this variable includes <i>rsh</i> or <i>rksh</i></p>
-<dt><code>ZMODEM_RESTRICTED</code></p>
-<dd> lrz enters restricted mode if the variable is set.</p>
-<dt><code>TMPDIR</code></p>
-<dd> If this environment variable is set its content is used as the directory to place in the answer file to a <code>timesync </code> request. <code>TMP</code> Used instead of TMPDIR if TMPDIR is not set. If neither TMPDIR nor TMP is set /tmp will be used.</dl>
+<dt><code>ZNULLS</code></dt>
+<dd> may be used to specify the number of nulls to send before a ZDATA frame.</dd>
+<dt><code>SHELL</code></dt>
+<dd> lsz recognizes a restricted shell if this variable includes <i>rsh</i> or <i>rksh</i></dd>
+<dt><code>ZMODEM_RESTRICTED</code></dt>
+<dd> lrz enters restricted mode if the variable is set.</dd>
+<dt><code>TMPDIR</code></dt>
+<dd> If this environment variable is set its content is used as the directory to place in the answer file to a <code>timesync </code> request. <code>TMP</code> Used instead of TMPDIR if TMPDIR is not set. If neither TMPDIR nor TMP is set /tmp will be used.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> <code>ZMODEM File Transfer</code> (Unix to DSZ/ZCOMM/Professional-YAM)<br />
  <code>% sz -a *.c</code><br />

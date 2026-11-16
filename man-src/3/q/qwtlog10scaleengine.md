@@ -25,7 +25,7 @@ description: "QwtLog10ScaleEngine – A scale engine for logarithmic (base 10) s
 <p>re n is a natural number including zero.</p>
 <p> <code>Warning:</code></p>
 <dl COMPACT>
-<dd>the step size as well as the margins are measured in *decades*.</dl>
+<dd>the step size as well as the margins are measured in *decades*.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void QwtLog10ScaleEngine::autoScale (int maxNumSteps, double &amp; x1, double &amp; x2, double &amp; stepSize) const [virtual]</h3>
 <p>Align and divide an interval </p>
@@ -34,10 +34,10 @@ description: "QwtLog10ScaleEngine – A scale engine for logarithmic (base 10) s
 <dd><i>maxNumSteps</i> Max. number of steps<br />
  <i>x1</i> First limit of the interval (In/Out)<br />
  <i>x2</i> Second limit of the interval (In/Out)<br />
- <i>stepSize</i> Step size (Out)</dl>
+ <i>stepSize</i> Step size (Out)</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>QwtScaleEngine::setAttribute()</code></dl>
+<dd><code>QwtScaleEngine::setAttribute()</code></dd></dl>
 <p> Implements <code>QwtScaleEngine</code>.</p>
 <h3><code>QwtScaleDiv</code> QwtLog10ScaleEngine::divideScale (double x1, double x2, int maxMajSteps, int maxMinSteps, double stepSize = 0.0) const [virtual]</h3>
 <p>Calculate a scale division. </p>
@@ -47,10 +47,10 @@ description: "QwtLog10ScaleEngine – A scale engine for logarithmic (base 10) s
  <i>x2</i> Second interval limit<br />
  <i>maxMajSteps</i> Maximum for the number of major steps<br />
  <i>maxMinSteps</i> Maximum number of minor steps<br />
- <i>stepSize</i> Step size. If stepSize == 0, the scaleEngine calculates one.</dl>
+ <i>stepSize</i> Step size. If stepSize == 0, the scaleEngine calculates one.</dd></dl>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd>QwtScaleEngine::stepSize(), QwtLog10ScaleEngine::subDivide()</dl>
+<dd>QwtScaleEngine::stepSize(), QwtLog10ScaleEngine::subDivide()</dd></dl>
 <p> Implements <code>QwtScaleEngine</code>.</p>
 <h3><code>QwtDoubleInterval</code> QwtLog10ScaleEngine::log10 (const <code>QwtDoubleInterval</code> &amp; interval) const [protected]</h3>
 <p>Return the interval [log10(interval.minValue(), log10(interval.maxValue]</p>

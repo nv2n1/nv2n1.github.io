@@ -12,94 +12,34 @@ description: "sc::R12IntsAcc_Node0File –"
 <p> Inherits <code>sc::R12IntsAcc</code>.</p>
 <h3>Classes</h3>
 <pre><code>struct PairBlkInfo
-
-
-
 Public Member Functions
 R12IntsAcc_Node0File (Ref&lt; MemoryGrp &gt; &amp;mem, const char *filename, int num_te_types, int ni, int nj, int nx, int ny)
-
-
-
 R12IntsAcc_Node0File (StateIn &amp;)
-
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 void store_memorygrp (Ref&lt; MemoryGrp &gt; &amp;mem, int ni, const size_t blksize=0)
-
-
 Stores all pair block of integrals held in mem.
-
-
 void store_pair_block (int i, int j, double *ints)
-
-
 Stores an ij pair block of integrals to the file.
-
-
 void commit ()
-
-
 Commit the content of the accumulator for reading - deactivate the associated MemoryGrp and activate the accumulator.
-
-
 void activate ()
-
-
 Call when ready to start reading content.
-
-
 void deactivate ()
-
-
 Done reading content - activate the associated MemoryGrp This is a collective operation.
-
-
 double * retrieve_pair_block (int i, int j, tbint_type oper_type)
-
-
 Retrieves an ij pair block of integrals from the file.
-
-
 void release_pair_block (int i, int j, tbint_type oper_type)
-
-
 Releases an ij pair block of integrals.
-
-
 bool is_local (int i, int j) const
-
-
 Is this block stored locally?
-
-
 bool is_avail (int i, int j) const
-
-
 In this implementation blocks are available only on node 0.
-
-
 bool has_access (int proc) const
-
-
 Does this task have access to all the integrals?
-
-
 bool can_restart () const
-
-
 Can restart Node0File-based accumulator.
-
-
 int ij_index (int i, int j) const
-
-
-
 int ij_proc (int i, int j) const</code></pre>
 <h2>Member Function Documentation</h2>
 <h3>void sc::R12IntsAcc_Node0File::commit () [virtual]</h3>

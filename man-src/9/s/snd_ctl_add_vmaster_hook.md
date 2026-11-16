@@ -15,15 +15,15 @@ snd_ctl_add_vmaster_hook - Add a hook to a vmaster control
 <h2>Arguments</h2>
 
 <i>kcontrol</i>
-<dl><dd><dd>vmaster kctl element</dl>
+<dl><dd></dd><dd>vmaster kctl element</dd></dl>
  
 
  <i>hook</i>
-<dl><dd>the hook function</dl>
+<dl><dd>the hook function</dd></dl>
  
 
  <i>private_data</i>
-<dl><dd>the private_data pointer to be saved</dl>
+<dl><dd>the private_data pointer to be saved</dd></dl>
 
 <h2>Description</h2>
 

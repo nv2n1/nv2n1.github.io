@@ -28,18 +28,18 @@ int ioctl(int fd, VFAT_IOCTL_READDIR_SHORT,
 <p> The <i>fd</i> argument contains a file descriptor for a file or directory. It is sufficient to create the file descriptor by calling <code><a href="/docs/linux/man/2-open/">open</a></code>(2) with the <code>O_RDONLY</code> flag. </p>
 <p> The <i>attr</i> argument contains a pointer to a bit mask. The bits of the bit mask are:</p>
 <dl>
-<dt><code>ATTR_RO</code></p>
-<dd> This bit specifies that the file or directory is read-only.</p>
-<dt><code>ATTR_HIDDEN</code></p>
-<dd> This bit specifies that the file or directory is hidden.</p>
-<dt><code>ATTR_SYS</code></p>
-<dd> This bit specifies that the file is a system file.</p>
-<dt><code>ATTR_VOLUME</code></p>
-<dd> This bit specifies that the file is a volume label. This attribute is read-only.</p>
-<dt><code>ATTR_DIR</code></p>
-<dd> This bit specifies that this is a directory. This attribute is read-only.</p>
-<dt><code>ATTR_ARCH</code></p>
-<dd> This bit indicates that this file or directory should be archived. It is set when a file is created or modified. It is reset by an archiving system.</dl>
+<dt><code>ATTR_RO</code></dt>
+<dd> This bit specifies that the file or directory is read-only.</dd>
+<dt><code>ATTR_HIDDEN</code></dt>
+<dd> This bit specifies that the file or directory is hidden.</dd>
+<dt><code>ATTR_SYS</code></dt>
+<dd> This bit specifies that the file is a system file.</dd>
+<dt><code>ATTR_VOLUME</code></dt>
+<dd> This bit specifies that the file is a volume label. This attribute is read-only.</dd>
+<dt><code>ATTR_DIR</code></dt>
+<dd> This bit specifies that this is a directory. This attribute is read-only.</dd>
+<dt><code>ATTR_ARCH</code></dt>
+<dd> This bit indicates that this file or directory should be archived. It is set when a file is created or modified. It is reset by an archiving system.</dd></dl>
 <p> The zero value <code>ATTR_NONE</code> can be used to indicate that no attribute bit is set.</p>
 <h3>Reading the volume ID</h3>
 <p> FAT filesystems are identified by a volume ID. The volume ID can be read with <code>FAT_IOCTL_GET_VOLUME_ID</code>. </p>
@@ -65,12 +65,12 @@ int ioctl(int fd, VFAT_IOCTL_READDIR_SHORT,
 <p> For <code>VFAT_IOCTL_READDIR_BOTH</code> and <code>VFAT_IOCTL_READDIR_SHORT</code> a return value of 1 signals that a new directory entry has been read and a return value of 0 signals that the end of the directory has been reached.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>ENOENT</code></p>
-<dd> This error is returned by <code>VFAT_IOCTL_READDIR_BOTH</code> and <code>VFAT_IOCTL_READDIR_SHORT</code> if the file descriptor <i>fd</i> refers to a removed, but still open directory.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> This error is returned by <code>VFAT_IOCTL_READDIR_BOTH</code> and <code>VFAT_IOCTL_READDIR_SHORT</code> if the file descriptor <i>fd</i> does not refer to a directory.</p>
-<dt><code>ENOTTY</code></p>
-<dd> The file descriptor <i>fd</i> does not refer to an object in a FAT filesystem.</dl>
+<dt><code>ENOENT</code></dt>
+<dd> This error is returned by <code>VFAT_IOCTL_READDIR_BOTH</code> and <code>VFAT_IOCTL_READDIR_SHORT</code> if the file descriptor <i>fd</i> refers to a removed, but still open directory.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> This error is returned by <code>VFAT_IOCTL_READDIR_BOTH</code> and <code>VFAT_IOCTL_READDIR_SHORT</code> if the file descriptor <i>fd</i> does not refer to a directory.</dd>
+<dt><code>ENOTTY</code></dt>
+<dd> The file descriptor <i>fd</i> does not refer to an object in a FAT filesystem.</dd></dl>
 <p> For further error values, see <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2).</p>
 <h2>VERSIONS</h2>
 <p> <code>VFAT_IOCTL_READDIR_BOTH</code> and <code>VFAT_IOCTL_READDIR_SHORT</code> first appeared in Linux 2.0. </p>

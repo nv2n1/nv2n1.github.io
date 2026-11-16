@@ -96,14 +96,14 @@ description: "oddjob_selinux – Security Enhanced Linux Policy for the oddjob p
 <p> <code>oddjob_exec_t</code> </p>
 <p> &#8211; Set files with the oddjob_exec_t type, if you want to transition an executable to the oddjob_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/oddjobd, /usr/bin/oddjob_request </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/oddjobd, /usr/bin/oddjob_request </dd>
 </dl>
 <p> <code>oddjob_mkhomedir_exec_t</code> </p>
 <p> &#8211; Set files with the oddjob_mkhomedir_exec_t type, if you want to transition an executable to the oddjob_mkhomedir_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/oddjob/mkhomedir, /usr/sbin/mkhomedir_helper, /usr/libexec/oddjob/mkhomedir </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/oddjob/mkhomedir, /usr/sbin/mkhomedir_helper, /usr/libexec/oddjob/mkhomedir </dd>
 </dl>
 <p> <code>oddjob_unit_file_t</code> </p>
 <p> &#8211; Set files with the oddjob_unit_file_t type, if you want to treat the files as oddjob unit content. </p>

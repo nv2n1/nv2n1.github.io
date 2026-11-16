@@ -26,7 +26,6 @@ struct al_ffblk {
 <p> There is some other stuff in the structure as well, but it is there for internal use only. Example: </p>
 <pre><code>
 struct al_ffblk info;
-
 if (al_findfirst("*.pcx", &amp;info, FA_ALL) != 0) {
     /* Tell user there are no PCX files. */
     return;

@@ -25,36 +25,31 @@ CALL PWRITY (X,Y,IDPC,NCHAR,JSIZE,JOR,JCTR)
 <h2>Description</h2>
 
 <dl><dt>X
-<dd>(an input parameter of type REAL) defining the X world coordinate of the text string to be drawn using polylines.
-<dt>Y
-<dd>(an input parameter of type REAL) defining the Y world coordinate of the text string to be drawn using polylines.
-<dt>IDPC
-<dd>(an input string of type CHARACTER) which are the characters to be drawn.
-<dt>NCHAR
-<dd>(an input parameter of type INTEGER) giving the number of characters in the IDPC string.
-<dt>JSIZE
-<dd>(an input parameter of type INTEGER) giving the width of the characters to be drawn. 
-
+</dt><dd>(an input parameter of type REAL) defining the X world coordinate of the text string to be drawn using polylines.
+</dd><dt>Y
+</dt><dd>(an input parameter of type REAL) defining the Y world coordinate of the text string to be drawn using polylines.
+</dd><dt>IDPC
+</dt><dd>(an input string of type CHARACTER) which are the characters to be drawn.
+</dd><dt>NCHAR
+</dt><dd>(an input parameter of type INTEGER) giving the number of characters in the IDPC string.
+</dd><dt>JSIZE
+</dt><dd>(an input parameter of type INTEGER) giving the width of the characters to be drawn. 
  0 - 8./1023. NDCs 
  1 - 12./1023. NDCs 
  2 - 16./1023. NDCs 
  3 - 24./1023. NDCs 
-
  If greater than 3: 
-
  FLOAT(JSIZE)/1023. NDCs 
-
  One can relate these sizes to a viewport in normalized device coordinates (each axis runs 0. to 1.) by dividing by 1023. That is a character of width .05 would take up 5% of the possible picture width meaning that less than 20 characters could fit on a line. 
-
  Note that there is an important difference in how text sizes are handled in GKS versus PWRITY. In GKS, text size is given in terms of character heights. In PWRITY, text size (JSIZE) is given in character width.
-<dt>JOR
-<dd>(an input parameter of type INTEGER) giving the orientation at which the IDPC string is to be drawn. JOR is measured counter-clockwise from the positive X axis.
-<dt>JCTR
-<dd>(an input parameter of type INTEGER) giving the centering option for the IDPC character string. <pre> 0, (X,Y) is the center of the entire IDPC string.
+</dd><dt>JOR
+</dt><dd>(an input parameter of type INTEGER) giving the orientation at which the IDPC string is to be drawn. JOR is measured counter-clockwise from the positive X axis.
+</dd><dt>JCTR
+</dt><dd>(an input parameter of type INTEGER) giving the centering option for the IDPC character string. <pre> 0, (X,Y) is the center of the entire IDPC string.
  -1, (X,Y) is the center of the left edge of the
  first character.
  1 (X,Y) is the center of the right edge of the
- last character.</pre></dl>
+ last character.</pre></dd></dl>
 
 <h2>Access</h2>
 

@@ -15,15 +15,15 @@ posix_lock_file - Apply a POSIX-style lock to a file
 <h2>Arguments</h2>
 
 <i>filp</i>
-<dl><dd><dd>The file to apply the lock to</dl>
+<dl><dd></dd><dd>The file to apply the lock to</dd></dl>
  
 
  <i>fl</i>
-<dl><dd>The lock to be applied</dl>
+<dl><dd>The lock to be applied</dd></dl>
  
 
  <i>conflock</i>
-<dl><dd>Place to return a copy of the conflicting lock, if found.</dl>
+<dl><dd>Place to return a copy of the conflicting lock, if found.</dd></dl>
 
 <h2>Description</h2>
 

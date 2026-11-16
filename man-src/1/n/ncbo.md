@@ -19,50 +19,50 @@ description: "ncbo – netCDF Binary Operator"
 <p> Say files <code>85_0112.nc</code> and <code>86_0112.nc</code> each contain 12 months of data. Compute the change in the monthly averages from 1985 to 1986:</p>
 <dl>
 <dt>
-<dd> ncbo 86_0112.nc 85_0112.nc 86m85_0112.nc</dl>
+</dt><dd> ncbo 86_0112.nc 85_0112.nc 86m85_0112.nc</dd></dl>
 <p> The following examples demonstrate the broadcasting feature of <code>ncbo</code>. Say we wish to compute the monthly anomalies of <code>T</code> from the yearly average of <code>T</code> for the year 1985. First we create the 1985 average from the monthly data, which is stored with the record dimension <code>time</code>.</p>
 <dl>
 <dt>
-<dd> ncra 85_0112.nc 85.nc<br />
- ncwa -O -a time 85.nc 85.nc</dl>
+</dt><dd> ncra 85_0112.nc 85.nc<br />
+ ncwa -O -a time 85.nc 85.nc</dd></dl>
 <p> The second command, <code>ncwa</code>, gets rid of the <code>time</code> dimension of size 1 that <code>ncra</code> left in <code>85.nc</code>. Now none of the variables in <code>85.nc</code> has a <code>time</code> dimension. A quicker way to accomplish this is to use <code>ncwa</code> from the beginning:</p>
 <dl>
 <dt>
-<dd> ncwa -a time 85_0112.nc 85.nc</dl>
+</dt><dd> ncwa -a time 85_0112.nc 85.nc</dd></dl>
 <p> We are now ready to use <code>ncbo</code> to compute the anomalies for 1985:</p>
 <dl>
 <dt>
-<dd> ncbo -v T 85_0112.nc 85.nc t_anm_85_0112.nc</dl>
+</dt><dd> ncbo -v T 85_0112.nc 85.nc t_anm_85_0112.nc</dd></dl>
 <p> Each of the 12 records in <code>t_anm_85_0112.nc</code> now contains the monthly deviation of <code>T</code> from the annual mean of <code>T</code> for each gridpoint. </p>
 <p> Say we wish to compute the monthly gridpoint anomalies from the zonal annual mean. A <i>zonal mean</i> is a quantity that has been averaged over the longitudinal (or <i>x</i>) direction. First we use <code>ncwa</code> to average over longitudinal direction <code>lon</code>, creating <code>xavg_85.nc</code>, the zonal mean of <code>85.nc</code>. Then we use <code>ncbo</code> to subtract the zonal annual means from the monthly gridpoint data:</p>
 <dl>
 <dt>
-<dd> ncwa -a lon 85.nc xavg_85.nc<br />
- ncbo 85_0112.nc xavg_85.nc tx_anm_85_0112.nc</dl>
+</dt><dd> ncwa -a lon 85.nc xavg_85.nc<br />
+ ncbo 85_0112.nc xavg_85.nc tx_anm_85_0112.nc</dd></dl>
 <p> Assuming <code>85_0112.nc</code> has dimensions <code>time</code> and <code>lon</code>, this example only works if <code>xavg_85.nc</code> has no <code>time</code> or <code>lon</code> dimension. </p>
 <p> As a final example, say we have five years of monthly data (i.e., 60 months) stored in <code>8501_8912.nc</code> and we wish to create a file which contains the twelve month seasonal cycle of the average monthly anomaly from the five-year mean of this data. The following method is just one permutation of many which will accomplish the same result. First use <code>ncwa</code> to create the file containing the five-year mean:</p>
 <dl>
 <dt>
-<dd> ncwa -a time 8501_8912.nc 8589.nc</dl>
+</dt><dd> ncwa -a time 8501_8912.nc 8589.nc</dd></dl>
 <p> Next use <code>ncbo</code> to create a file containing the difference of each month&#8217;s data from the five-year mean:</p>
 <dl>
 <dt>
-<dd> ncbo 8501_8912.nc 8589.nc t_anm_8501_8912.nc</dl>
+</dt><dd> ncbo 8501_8912.nc 8589.nc t_anm_8501_8912.nc</dd></dl>
 <p> Now use <code>ncks</code> to group the five January anomalies together in one file, and use <code>ncra</code> to create the average anomaly for all five Januarys. These commands are embedded in a shell loop so they are repeated for all twelve months:</p>
 <dl>
 <dt>
-<dd> foreach idx (01 02 03 04 05 06 07 08 09 10 11 12)<br />
+</dt><dd> foreach idx (01 02 03 04 05 06 07 08 09 10 11 12)<br />
  ncks -F -d time,,,12 t_anm_8501_8912.nc foo.<br />
  ncra foo. t_anm_8589_.nc<br />
- end</dl>
+ end</dd></dl>
 <p> Note that <code>ncra</code> understands the <code>stride</code> argument so the two commands inside the loop may be combined into the single command</p>
 <dl>
 <dt>
-<dd> ncra -F -d time,,,12 t_anm_8501_8912.nc foo.</dl>
+</dt><dd> ncra -F -d time,,,12 t_anm_8501_8912.nc foo.</dd></dl>
 <p> Finally, use <code>ncrcat</code> to concatenate the 12 average monthly anomaly files into one twelve-record file which contains the entire seasonal cycle of the monthly anomalies:</p>
 <dl>
 <dt>
-<dd> ncrcat t_anm_8589_??.nc t_anm_8589_0112.nc</dl>
+</dt><dd> ncrcat t_anm_8589_??.nc t_anm_8589_0112.nc</dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>NCO</code> manual pages written by Charlie Zender and originally formatted by Brian Mays. </p>
 <h2>REPORTING BUGS</h2>
@@ -75,7 +75,7 @@ description: "ncbo – netCDF Binary Operator"
 <p> If the <code>info</code> and <code>NCO</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info nco</code></dl>
+</dt><dd> <code>info nco</code></dd></dl>
 <p> should give you access to the complete manual, except for the TeX-intensive portions. </p>
 <h2>HOMEPAGE</h2>
 <p> The <code>NCO</code> homepage at &lt;<a rel="nofollow" href="http://nco.sf.net">http://nco.sf.net</a>&gt; contains more information. </p>

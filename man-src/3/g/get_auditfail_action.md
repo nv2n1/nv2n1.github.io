@@ -13,7 +13,7 @@ description: "get_auditfail_action – Get failure_action tunable value"
 <p> #include &lt;libaudit.h&gt; </p>
 <dl>
 <dt>
-<dd>int&nbsp;<wbr><code>get_auditfail_action</code>&nbsp;<wbr>(int *<i>failmode</i>); </p>
+</dt><dd>int&nbsp;<wbr><code>get_auditfail_action</code>&nbsp;<wbr>(int *<i>failmode</i>); </dd>
 </dl>
 <h2>DESCRIPTION</h2>
 <p> This function gets the failure_action tunable value stored in <code>/etc/libaudit.conf</code>. <code>get_auditfail_action</code> should be called after an <code>audit_open</code> call returns an error to see what action the admin prefers. </p>

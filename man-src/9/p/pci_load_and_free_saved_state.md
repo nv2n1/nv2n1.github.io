@@ -14,8 +14,8 @@ description: "pci_load_and_free_saved_state – Reload the save state pointed to
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>PCI device that we&#8217;re dealing with</dl>
+</dd><dd>PCI device that we&#8217;re dealing with</dd></dl>
 <p> <i>state</i></p>
 <dl>
-<dd>Pointer to saved state returned from <code>pci_store_saved_state</code></dl>
+<dd>Pointer to saved state returned from <code>pci_store_saved_state</code></dd></dl>
 <h2>Copyright</h2>

@@ -10,12 +10,12 @@ description: "XkbSAGroup – Returns the group_XXX field of act converted to a s
 <p>XkbSAGroup &#8211; Returns the group_XXX field of act converted to a signed int </p>
 <h2>Synopsis</h2>
 <dl COMPACT>
-<dt> <code>int XkbSAGroup</code> <code>(XkbAction </code><i>act</i><code>);</code></dl>
+<dt> <code>int XkbSAGroup</code> <code>(XkbAction </code><i>act</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; act</i></p>
+<dt><i>&#8211; act</i></dt>
 <dd>
-<dd>action from which to extract group</dl>
+</dd><dd>action from which to extract group</dd></dl>
 <h2>Description</h2>
 <p><i>XkbSAGroup </i> returns the <i>group_XXX </i> field of <i>act </i> converted to a signed int.</p>
 <h2>Structure</h2>

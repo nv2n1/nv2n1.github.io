@@ -19,28 +19,28 @@ description: "getdns_dict, getdns_dict_create, getdns_dict_create_with_extended_
  <code>getdns_dict_create_with_extended_memory_functions</code></p>
 <dl>
 <dt>
-<dd> (void *userarg,<br />
+</dt><dd> (void *userarg,<br />
  void *(*malloc)(void *userarg, size_t sz),<br />
  void *(*realloc)(void *userarg, void *buf, size_t sz),<br />
- void (*free)(void *userarg, void *buf)</dl>
+ void (*free)(void *userarg, void *buf)</dd></dl>
 <p> getdns_dict *<br />
  <code>getdns_dict_create_with_memory_functions</code></p>
 <dl>
 <dt>
-<dd> (void *(*malloc)(size_t sz),<br />
+</dt><dd> (void *(*malloc)(size_t sz),<br />
  void *(*realloc)(void *buf, size_t sz),<br />
- void (*free)(void *buf)</dl>
+ void (*free)(void *buf)</dd></dl>
 <p> void<br />
  <code>getdns_dict_destroy</code> (getdns_dict *this_dict) </p>
 <h2>DESCRIPTION</h2>
 <p> The getdns_dict type is used to manage name/value pairs in which the names are strings and the data types of the values are heterogeneous and include</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
  getdns_bindata<br />
  getdns_dict<br />
  getdns_list<br />
- uint32_t</dl>
+ uint32_t</dd></dl>
 <p> The destroy function performs a &quot;deep&quot; destroy, freeing storage for all of the members of the dictionary before destroying the dictionary. There are a number of helper functions that provide access to the dictionary object, see their respective man pages. </p>
 <p> <i>userarg</i> pass this argument to the user specified memory management functions for operations on lists created using extended memory functions </p>
 <p> <i>this_dict</i> the dictionary to destroy </p>

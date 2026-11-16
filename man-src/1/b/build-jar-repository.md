@@ -18,11 +18,11 @@ description: "build-jar-repository – create a symbolic link to a JAR"
 <p> <code>-c, &#8211;copy</code></p>
 <dl>
 <dt>
-<dd> Copy files.</dl>
+</dt><dd> Copy files.</dd></dl>
 <p> <code>-h, &#8211;hard</code></p>
 <dl>
 <dt>
-<dd> Create hard links.</dl>
+</dt><dd> Create hard links.</dd></dl>
 <p> <code>-p, &#8211;preserve-naming</code> Try to preserve the names of the original JAR files (in case of a nested hit the slashes in the path will still be replaced by underscores). Using this option makes any future automated repository rebuild impossible, and implies -c unless specified otherwise. </p>
 <p> <code>-s, &#8211;soft, &#8211;symbolic</code> Create symbolic links (default). </p>
 <p> <code>&#8211;help</code> Display help text</p>

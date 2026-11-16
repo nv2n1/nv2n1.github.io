@@ -10,9 +10,7 @@ description: "std::log10(std::complex) – std::log10(std::complex)"
 <p>std::log10(std::complex) &#8211; std::log10(std::complex)</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;complex&gt;
-
     template &lt;class T&gt;
-
     complex&lt;T&gt; log10(const complex&lt;T&gt; &amp;z);</code></pre>
 <p>Computes complex common (base 10) logarithm of a complex value z with a branch cut along the negative real axis.<br />
 The behavior of this function is equivalent to std::log(z)/std::log(T<code>(10)</code>). </p>
@@ -23,12 +21,9 @@ The behavior of this function is equivalent to std::log(z)/std::log(T<code>(10)<
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;complex&gt;
 int main()
-
 {
     std::complex&lt;double&gt; z(0, 1); // // r = 0, θ = pi/2
     std::cout &lt;&lt; &quot;2*log10&quot; &lt;&lt; z &lt;&lt; &quot; = &quot; &lt;&lt; 2. * std::log10(z) &lt;&lt; '

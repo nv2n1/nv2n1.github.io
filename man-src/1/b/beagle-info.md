@@ -17,27 +17,27 @@ description: "beagle-info"
 <h3>Information about the currently running Beagle daemon.</h3>
 <p> Beagle daemon should be running for these options. <code>beagle-info</code> takes the following options:</p>
 <dl>
-<dt><code>&#8211;daemon-version</code></p>
-<dd> Print the version of the running daemon.</p>
-<dt><code>&#8211;status</code></p>
-<dd> Display status of the running daemon.</p>
-<dt><code>&#8211;index-info</code></p>
-<dd> Display statistics of the Beagle indexes.</p>
-<dt><code>&#8211;is-indexing</code></p>
-<dd> Display whether the indexer is currently active.</p>
-<dt><code>&#8211;all-info</code></p>
-<dd> Display all of the above information.</dl>
+<dt><code>&#8211;daemon-version</code></dt>
+<dd> Print the version of the running daemon.</dd>
+<dt><code>&#8211;status</code></dt>
+<dd> Display status of the running daemon.</dd>
+<dt><code>&#8211;index-info</code></dt>
+<dd> Display statistics of the Beagle indexes.</dd>
+<dt><code>&#8211;is-indexing</code></dt>
+<dd> Display whether the indexer is currently active.</dd>
+<dt><code>&#8211;all-info</code></dt>
+<dd> Display all of the above information.</dd></dl>
 <h3>Other information</h3>
 <p> Beagle daemon need not be running for these options.</p>
 <dl>
-<dt><code>&#8211;list-backends</code></p>
-<dd> List the currently available backends.</p>
-<dt><code>&#8211;list-filters</code></p>
-<dd> List the currently available filters.</p>
-<dt><code>&#8211;list-static-indexes</code></p>
-<dd> List the available static indexes.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print a summary of command-line options.</dl>
+<dt><code>&#8211;list-backends</code></dt>
+<dd> List the currently available backends.</dd>
+<dt><code>&#8211;list-filters</code></dt>
+<dd> List the currently available filters.</dd>
+<dt><code>&#8211;list-static-indexes</code></dt>
+<dd> List the available static indexes.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print a summary of command-line options.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Novell, Inc.</p>
 <h2>REPORTING BUGS</h2>

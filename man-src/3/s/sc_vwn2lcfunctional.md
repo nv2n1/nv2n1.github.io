@@ -11,7 +11,6 @@ description: "sc::VWN2LCFunctional –"
 <p> The <code>VWN2LCFunctional</code> computes energies and densities using the VWN2 local correlation term (from Vosko, Wilk, and Nusair).</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;functional.h&gt;</code></pre>
 <p> Inherits <code>sc::VWNLCFunctional</code>.</p>
 <h3>Public Member Functions</h3>

@@ -15,8 +15,8 @@ description: "XmGetXmScreen — A Screen function that returns the XmScreen obje
 <h2>Description</h2>
 <p><code>XmGetXmScreen</code> returns the <code>XmScreen</code> object ID associated with a screen. The application can access and manipulate Screen resources with <code>XtGetValues</code> and <code>XtSetValues</code>.</p>
 <dl COMPACT>
-<dt><i>screen</i></p>
-<dd>Specifies the screen for which the <code>XmScreen</code> ID is to be returned</dl>
+<dt><i>screen</i></dt>
+<dd>Specifies the screen for which the <code>XmScreen</code> ID is to be returned</dd></dl>
 <p> For a complete definition of Screen and its associated resources, see <code><a href="/docs/linux/man/3-xmscreen/">XmScreen</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns the <code>XmScreen</code> object ID.</p>

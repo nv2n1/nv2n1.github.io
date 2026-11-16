@@ -16,19 +16,19 @@ description: "telegram-desktop – official telegram messaging application"
 <h2>OPTIONS</h2>
 <p> The program understands various parameters, some of them are described in the present document.</p>
 <dl>
-<dt><code>-startintray</code></p>
-<dd> Do not show the main window, just start in the system tray. Useful for automatic launching.</p>
-<dt><code>-many</code></p>
-<dd> Allow multiple instances of the client at the same time.</p>
-<dt><code>-debug</code></p>
-<dd> Run in debug mode immediately. See logs in <code>~/.local/share/TelegramDesktop/DebugLogs</code>.</p>
-<dt><i>URI</i></p>
-<dd> Specify Telegram URI. It is used for automatically opening chats by <code>t.me</code> site. </p>
+<dt><code>-startintray</code></dt>
+<dd> Do not show the main window, just start in the system tray. Useful for automatic launching.</dd>
+<dt><code>-many</code></dt>
+<dd> Allow multiple instances of the client at the same time.</dd>
+<dt><code>-debug</code></dt>
+<dd> Run in debug mode immediately. See logs in <code>~/.local/share/TelegramDesktop/DebugLogs</code>.</dd>
+<dt><i>URI</i></dt>
+<dd> Specify Telegram URI. It is used for automatically opening chats by <code>t.me</code> site. </dd>
 </dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>HOME</code></p>
-<dd> User home directory where it stores downloaded files and configuration. </p>
+<dt><code>HOME</code></dt>
+<dd> User home directory where it stores downloaded files and configuration. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> Wiki on GitHub </p>

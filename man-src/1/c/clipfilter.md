@@ -17,7 +17,6 @@ url: "/docs/linux/man/1-clipfilter/"
     # (copy some stuff)
     $ clipfilter -html
     # (paste, with html entities substituted in)
-    
     # or URI-escaping:
     $ clipfilter -uri
     # or pipe through an arbitrary program, like `tac`, the backwards cat:

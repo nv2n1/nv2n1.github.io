@@ -15,18 +15,18 @@ description: "mtx-plain – Plain TeX Runner"
 <p> <code>Plain TeX Runner</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;make</code></p>
-<dd> create format file</p>
-<dt><code>&#8211;fonts</code></p>
-<dd> create plain font database</p>
-<dt><code>&#8211;run</code></p>
-<dd> process file</p>
-<dt><code>&#8211;format=string</code></p>
-<dd> format name (default: luatex-plain)</p>
-<dt><code>&#8211;engine=string</code></p>
-<dd> engine to use (default: luatex)</p>
-<dt><code>&#8211;jit</code></p>
-<dd> use luajittex</dl>
+<dt><code>&#8211;make</code></dt>
+<dd> create format file</dd>
+<dt><code>&#8211;fonts</code></dt>
+<dd> create plain font database</dd>
+<dt><code>&#8211;run</code></dt>
+<dd> process file</dd>
+<dt><code>&#8211;format=string</code></dt>
+<dd> format name (default: luatex-plain)</dd>
+<dt><code>&#8211;engine=string</code></dt>
+<dd> engine to use (default: luatex)</dd>
+<dt><code>&#8211;jit</code></dt>
+<dd> use luajittex</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

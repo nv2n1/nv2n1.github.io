@@ -10,14 +10,12 @@ description: "sasl_verifyfile_t – The SASL file verification"
 <p>sasl_verifyfile_t &#8211; The SASL file verification </p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sasl/sasl.h&gt;
-
 typedef enum {
     SASL_VRFY_PLUGIN, /* a DLL/shared library plugin */
     SASL_VRFY_CONF,   /* a configuration file */
     SASL_VRFY_PASSWD, /* a password storage file */
     SASL_VRFY_OTHER   /* some other file type */
 } sasl_verify_type_t
-
     int
     sasl_verifyfile_t(void *context,
                       const char *file,

@@ -82,13 +82,12 @@ else
 
 <dl>
 <dt>&bull;
-<dd> &lt;<a rel="nofollow" HREF="http://perlmonks.org/?node_id=216602">http://perlmonks.org/?node_id=216602</a>&gt; - the original <font SIZE="-1">PM</font> post
-<dt>&bull;
-<dd> &lt;<a rel="nofollow" HREF="http://perlmonks.org/?node_id=238031">http://perlmonks.org/?node_id=238031</a>&gt; - Damian Conway's Perl 6 version
-<dt>&bull;
-<dd> &lt;<a rel="nofollow" HREF="http://juerd.nl/site.plp/perlcheat">http://juerd.nl/site.plp/perlcheat</a>&gt; - home of the Perl Cheat Sheet 
-
-</dl>
+</dt><dd> &lt;<a rel="nofollow" HREF="http://perlmonks.org/?node_id=216602">http://perlmonks.org/?node_id=216602</a>&gt; - the original <font SIZE="-1">PM</font> post
+</dd><dt>&bull;
+</dt><dd> &lt;<a rel="nofollow" HREF="http://perlmonks.org/?node_id=238031">http://perlmonks.org/?node_id=238031</a>&gt; - Damian Conway's Perl 6 version
+</dd><dt>&bull;
+</dt><dd> &lt;<a rel="nofollow" HREF="http://juerd.nl/site.plp/perlcheat">http://juerd.nl/site.plp/perlcheat</a>&gt; - home of the Perl Cheat Sheet 
+</dd></dl>
 
 <h2>Index</h2>
 

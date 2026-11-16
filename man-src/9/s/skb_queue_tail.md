@@ -15,11 +15,11 @@ skb_queue_tail - queue a buffer at the list tail
 <h2>Arguments</h2>
 
 <i>list</i>
-<dl><dd><dd>list to use</dl>
+<dl><dd></dd><dd>list to use</dd></dl>
  
 
  <i>newsk</i>
-<dl><dd>buffer to queue</dl>
+<dl><dd>buffer to queue</dd></dl>
 
 <h2>Description</h2>
 

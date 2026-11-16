@@ -17,7 +17,7 @@ description: "index.sense, sense.idx – WordNet’s sense index"
 <p>The sense index file lists all of the senses in the WordNet database with each line representing one sense. The file is in alphabetical order, fields are separated by one space, and each line is terminated with a newline character. </p>
 <p> Each line is of the form: </p>
 <dl>
-<dd><i>sense_key~~synset_offset~~sense_number~~tag_cnt</i></dl>
+<dd><i>sense_key~~synset_offset~~sense_number~~tag_cnt</i></dd></dl>
 <p> <i>sense_key</i> is an encoding of the word sense. Programs can construct a sense key in this format and use it as a binary search key into the sense index file. The format of a <i>sense_key</i> is described below. </p>
 <p> <i>synset_offset</i> is the byte offset that the synset containing the sense is found at in the database &quot;data&quot; file corresponding to the part of speech encoded in the <i>sense_key</i>. <i>synset_offset</i> is an 8 digit, zero-filled decimal integer, and can be used with <code><a href="/docs/linux/man/3-fseek/">fseek</a></code>(3) to read a synset from the data file. When passed to the WordNet library function <code>read_synset()</code> along with the syntactic category, a data structure containing the parsed synset is returned. </p>
 <p> <i>sense_number</i> is a decimal integer indicating the sense number of the word, within the part of speech encoded in <i>sense_key</i>, in the WordNet database. See <code><a href="/docs/linux/man/5-wndb/">wndb</a></code>(5) for information about how sense numbers are assigned. </p>
@@ -25,10 +25,10 @@ description: "index.sense, sense.idx – WordNet’s sense index"
 <h3>Sense Key Encoding</h3>
 <p>A <i>sense_key</i> is represented as: </p>
 <dl>
-<dd><i>lemma</i><code>%</code><i>lex_sense</i></dl>
+<dd><i>lemma</i><code>%</code><i>lex_sense</i></dd></dl>
 <p> where <i>lex_sense</i> is encoded as: </p>
 <dl>
-<dd><i>ss_type</i><code>:</code><i>lex_filenum</i><code>:</code><i>lex_id</i><code>:</code><i>head_word</i><code>:</code><i>head_id</i></dl>
+<dd><i>ss_type</i><code>:</code><i>lex_filenum</i><code>:</code><i>lex_id</i><code>:</code><i>head_word</i><code>:</code><i>head_id</i></dd></dl>
 <p> <i>lemma</i> is the ASCII text of the word or collocation as found in the WordNet database index file corresponding to <i>pos</i>. <i>lemma</i> is in lower case, and collocations are formed by joining individual words with an underscore (<code>_</code>) character. </p>
 <p> <i>ss_type</i> is a one digit decimal integer representing the synset type for the sense. See <font SIZE="-1"><code>&quot;Synset Type&quot;</code></font> below for a listing of the numbers corresponding to each synset type. </p>
 <p> <i>lex_filenum</i> is a two digit decimal integer representing the name of the lexicographer file containing the synset for the sense. See <code><a href="/docs/linux/man/5-lexnames/">lexnames</a></code>(5) for the list of lexicographer file names and their corresponding numbers. </p>
@@ -44,22 +44,22 @@ description: "index.sense, sense.idx – WordNet’s sense index"
 <code>3</code> ADJECTIVE
 <code>4</code> ADVERB
 <code>5</code> ADJECTIVE SATELLITE</pre>
-</dl>
+</dd></dl>
 <h2>Notes</h2>
 <p>For non-satellite senses the <i>head_word</i> and <i>head_id</i> fields have no values, however the field separator character (<code>:</code>) is present.</p>
 <h2>Environment Variables (Unix)</h2>
 <dl>
-<dt><code>WNHOME</code></p>
-<dd>Base directory for WordNet. Default is <code>/usr/local/WordNet-3.0</code>.</p>
-<dt><code>WNSEARCHDIR</code></p>
-<dd>Directory in which the WordNet database has been installed. Default is <code>WNHOME/dict</code>.</dl>
+<dt><code>WNHOME</code></dt>
+<dd>Base directory for WordNet. Default is <code>/usr/local/WordNet-3.0</code>.</dd>
+<dt><code>WNSEARCHDIR</code></dt>
+<dd>Directory in which the WordNet database has been installed. Default is <code>WNHOME/dict</code>.</dd></dl>
 <h2>Registry (Windows)</h2>
 <dl>
-<dt><code>HKEY_LOCAL_MACHINE\SOFTWARE\WordNet\3.0\WNHome</code></p>
-<dd>Base directory for WordNet. Default is <code>C:\Program~Files\WordNet\3.0</code>.</dl>
+<dt><code>HKEY_LOCAL_MACHINE\SOFTWARE\WordNet\3.0\WNHome</code></dt>
+<dd>Base directory for WordNet. Default is <code>C:\Program~Files\WordNet\3.0</code>.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>index.sense</code></p>
-<dd>sense index</dl>
+<dt><code>index.sense</code></dt>
+<dd>sense index</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-binsrch/">binsrch</a></code>(3), <code><a href="/docs/linux/man/3-wnsearch/">wnsearch</a></code>(3), <code><a href="/docs/linux/man/5-lexnames/">lexnames</a></code>(5), <code><a href="/docs/linux/man/5-wnintro/">wnintro</a></code>(5), <code>sensemap</code>(5), <code><a href="/docs/linux/man/5-wndb/">wndb</a></code>(5), <code><a href="/docs/linux/man/5-wninput/">wninput</a></code>(5). </p>

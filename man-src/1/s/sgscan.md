@@ -15,28 +15,28 @@ description: "sgscan – scan an file or mailbox for viruses/spams"
 <p> This command is a part of sagator. It can be used to scan files or mailboxes for viruses/spams. It also can be used to clean mailboxes (if some viruses passes through sagator).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&#8211;help</p>
-<dd> Display a short help text.</p>
-<dt>&#8211;config filename</p>
-<dd> Load &quot;filename&quot; as alternate config. This filename must be without &quot;.py&quot; extension.</p>
-<dt>&#8211;debug level</p>
-<dd> Set debug level to &quot;level&quot;. You can specifi level from 0 to 9.</p>
-<dt>&#8211;clean</p>
-<dd> Clean all known viruses from mailboxes.</p>
-<dt>&#8211;quiet</p>
-<dd> Quiet output. If an infection/spam will be found, only increment an counter and do not display anything.</p>
-<dt>&#8211;verbose</p>
-<dd> Verbose output. Also clean emails are shown. Virus name &quot;CLEAN&quot; will be shown.</p>
-<dt>&#8211;progress</p>
-<dd> Show progress indicator. Shows total number of emails in mailbox, email counter, infection/spam count and estimation time.</p>
-<dt>&#8211;av-only</p>
-<dd> Use only antivirus scanners and do not use antispam scanners.</dl>
+<dt>&#8211;help</dt>
+<dd> Display a short help text.</dd>
+<dt>&#8211;config filename</dt>
+<dd> Load &quot;filename&quot; as alternate config. This filename must be without &quot;.py&quot; extension.</dd>
+<dt>&#8211;debug level</dt>
+<dd> Set debug level to &quot;level&quot;. You can specifi level from 0 to 9.</dd>
+<dt>&#8211;clean</dt>
+<dd> Clean all known viruses from mailboxes.</dd>
+<dt>&#8211;quiet</dt>
+<dd> Quiet output. If an infection/spam will be found, only increment an counter and do not display anything.</dd>
+<dt>&#8211;verbose</dt>
+<dd> Verbose output. Also clean emails are shown. Virus name &quot;CLEAN&quot; will be shown.</dd>
+<dt>&#8211;progress</dt>
+<dd> Show progress indicator. Shows total number of emails in mailbox, email counter, infection/spam count and estimation time.</dd>
+<dt>&#8211;av-only</dt>
+<dd> Use only antivirus scanners and do not use antispam scanners.</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>Scan all mailboxes for viruses.</p>
-<dd> <code>sgscan</code> &#8211;av-only /var/mail/*</p>
-<dt>Scan and clean all mailboxes:</p>
-<dd> <code>sgscan</code> &#8211;clean /var/mail/*</dl>
+<dt>Scan all mailboxes for viruses.</dt>
+<dd> <code>sgscan</code> &#8211;av-only /var/mail/*</dd>
+<dt>Scan and clean all mailboxes:</dt>
+<dd> <code>sgscan</code> &#8211;clean /var/mail/*</dd></dl>
 <h2>AUTHOR</h2>
 <p> Jan ONDREJ (SAL) &lt;ondrejj (at) salstar.sk&gt;</p>
 <h2>SEE ALSO</h2>

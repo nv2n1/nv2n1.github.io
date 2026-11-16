@@ -50,14 +50,14 @@ description: "Atlas::Objects::Operation::ActionData – This is base operator fo
 <p>Get the reference object that contains the default values for attributes of instances of the same class as this object. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a pointer to the default object.</dl>
+<dd>a pointer to the default object.</dd></dl>
 <p> Reimplemented from <code>Atlas::Objects::Operation::RootOperationData</code>. </p>
 <p> Reimplemented in <code>Atlas::Objects::Operation::CreateData</code>, <code>Atlas::Objects::Operation::CombineData</code>, <code>Atlas::Objects::Operation::DivideData</code>, <code>Atlas::Objects::Operation::CommunicateData</code>, <code>Atlas::Objects::Operation::TalkData</code>, <code>Atlas::Objects::Operation::DeleteData</code>, <code>Atlas::Objects::Operation::SetData</code>, <code>Atlas::Objects::Operation::AffectData</code>, <code>Atlas::Objects::Operation::MoveData</code>, <code>Atlas::Objects::Operation::WieldData</code>, <code>Atlas::Objects::Operation::GetData</code>, <code>Atlas::Objects::Operation::PerceiveData</code>, <code>Atlas::Objects::Operation::LookData</code>, <code>Atlas::Objects::Operation::ListenData</code>, <code>Atlas::Objects::Operation::SniffData</code>, <code>Atlas::Objects::Operation::TouchData</code>, <code>Atlas::Objects::Operation::LoginData</code>, <code>Atlas::Objects::Operation::LogoutData</code>, <code>Atlas::Objects::Operation::ImaginaryData</code>, and <code>Atlas::Objects::Operation::UseData</code>.</p>
 <h3>static <code>ActionData</code>* Atlas::Objects::Operation::ActionData::getDefaultObjectInstance () [static]</h3>
 <p>Get the reference object that contains the default values for attributes of instances of this class. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a pointer to the default object.</dl>
+<dd>a pointer to the default object.</dd></dl>
 <p> Reimplemented from <code>Atlas::Objects::Operation::RootOperationData</code>. </p>
 <p> Reimplemented in <code>Atlas::Objects::Operation::CreateData</code>, <code>Atlas::Objects::Operation::CombineData</code>, <code>Atlas::Objects::Operation::DivideData</code>, <code>Atlas::Objects::Operation::CommunicateData</code>, <code>Atlas::Objects::Operation::TalkData</code>, <code>Atlas::Objects::Operation::DeleteData</code>, <code>Atlas::Objects::Operation::SetData</code>, <code>Atlas::Objects::Operation::AffectData</code>, <code>Atlas::Objects::Operation::MoveData</code>, <code>Atlas::Objects::Operation::WieldData</code>, <code>Atlas::Objects::Operation::GetData</code>, <code>Atlas::Objects::Operation::PerceiveData</code>, <code>Atlas::Objects::Operation::LookData</code>, <code>Atlas::Objects::Operation::ListenData</code>, <code>Atlas::Objects::Operation::SniffData</code>, <code>Atlas::Objects::Operation::TouchData</code>, <code>Atlas::Objects::Operation::LoginData</code>, <code>Atlas::Objects::Operation::LogoutData</code>, <code>Atlas::Objects::Operation::ImaginaryData</code>, and <code>Atlas::Objects::Operation::UseData</code>. </p>
 <h2>Author</h2>

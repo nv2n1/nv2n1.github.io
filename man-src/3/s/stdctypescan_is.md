@@ -12,7 +12,6 @@ description: "std::ctype<char>::scan_is – std::ctype<char>::scan_is"
 <p>Defined in header &lt;locale&gt;<br />
 const char* scan_is (mask m, const char* beg, const char* end) const; <code>(1)</code> </p>
 <pre><code>Locates the first character in the character array [beg, end) that satisfies the classification mask m, that is, the first character c such that table()[(unsigned char) c] &amp; m would return true.
-
 If (unsigned char)c &gt;= std::ctype&lt;char&gt;::table_size, then an implementation-defined value is substituted instead of table()[(unsigned char)c], possibly different for different values of c.
 </code></pre>
 <h2>Parameters</h2>
@@ -26,12 +25,9 @@ end &#8211; one past the end pointer for the array of characters to search</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;locale&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
 int main()
-
 {
     std::locale loc(&quot;&quot;);
     auto &amp;f = std::use_facet&lt;std::ctype&lt;char&gt;&gt;(loc);

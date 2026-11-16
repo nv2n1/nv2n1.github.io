@@ -11,14 +11,14 @@ description: "XkbSetPtrActionY – Sets the high_YYY and low_YYY fields of act f
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>void XkbSetPtrActionY</code> <code>(XkbPtrAction </code><i>act</i><code>,</code> <code>int </code><i>y</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; act</i></p>
+<dt><i>&#8211; act</i></dt>
 <dd>
-<dd>action in which to set Y</p>
-<dt><i>&#8211; y</i></p>
-<dd>new value to set</dl>
+</dd><dd>action in which to set Y</dd>
+<dt><i>&#8211; y</i></dt>
+<dd>new value to set</dd></dl>
 <h2>Description</h2>
 <p>Actions associated with the XkbPtrAction structure move the pointer when keys are pressed and released. </p>
 <p> If the MouseKeys control is not enabled, KeyPress and KeyRelease events are treated as though the action is XkbSA_NoAction. </p>

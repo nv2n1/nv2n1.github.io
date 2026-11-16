@@ -11,9 +11,7 @@ std::use_facet - std::use_facet
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;locale&gt;
-
     template &lt;class Facet&gt;
-
     const Facet &amp;use_facet(const std::locale &amp;loc);</code></pre> 
 Obtains a reference to a facet implemented by loc. 
 
@@ -33,10 +31,8 @@ std::bad_cast if std::has_facet&lt;Facet&gt;(loc) == false.
 
 Display the 3-letter currency name used by the user's preferred locale 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;locale&gt;
 int main()
-
 {
     std::locale loc = std::locale(&quot;&quot;); // user's preferred locale
     std::cout &lt;&lt; &quot;Your currency string is &quot;

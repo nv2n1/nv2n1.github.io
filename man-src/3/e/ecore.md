@@ -237,49 +237,49 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <h3>enum <code>_Ecore_Exe_Flags</code></h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>ECORE_EXE_PIPE_READ </i></p>
-<dd>Exe Pipe Read mask.</p>
-<dt><i>ECORE_EXE_PIPE_WRITE </i></p>
-<dd>Exe Pipe Write mask.</p>
-<dt><i>ECORE_EXE_PIPE_ERROR </i></p>
-<dd>Exe Pipe error mask.</p>
-<dt><i>ECORE_EXE_PIPE_READ_LINE_BUFFERED </i></p>
-<dd>Reads are buffered until a newline and delivered 1 event per line.</p>
-<dt><i>ECORE_EXE_PIPE_ERROR_LINE_BUFFERED </i></p>
-<dd>Errors are buffered until a newline and delivered 1 event per line.</p>
-<dt><i>ECORE_EXE_PIPE_AUTO </i></p>
-<dd>stdout and stderr are buffered automatically</p>
-<dt><i>ECORE_EXE_RESPAWN </i></p>
-<dd>FIXME: Exe is restarted if it dies.</p>
-<dt><i>ECORE_EXE_USE_SH </i></p>
-<dd>Use /bin/sh to run the command.</dl>
+<dt><i>ECORE_EXE_PIPE_READ </i></dt>
+<dd>Exe Pipe Read mask.</dd>
+<dt><i>ECORE_EXE_PIPE_WRITE </i></dt>
+<dd>Exe Pipe Write mask.</dd>
+<dt><i>ECORE_EXE_PIPE_ERROR </i></dt>
+<dd>Exe Pipe error mask.</dd>
+<dt><i>ECORE_EXE_PIPE_READ_LINE_BUFFERED </i></dt>
+<dd>Reads are buffered until a newline and delivered 1 event per line.</dd>
+<dt><i>ECORE_EXE_PIPE_ERROR_LINE_BUFFERED </i></dt>
+<dd>Errors are buffered until a newline and delivered 1 event per line.</dd>
+<dt><i>ECORE_EXE_PIPE_AUTO </i></dt>
+<dd>stdout and stderr are buffered automatically</dd>
+<dt><i>ECORE_EXE_RESPAWN </i></dt>
+<dd>FIXME: Exe is restarted if it dies.</dd>
+<dt><i>ECORE_EXE_USE_SH </i></dt>
+<dd>Use /bin/sh to run the command.</dd></dl>
 <dl COMPACT>
-<dt><i>ECORE_EXE_NOT_LEADER </i></p>
-<dd>Do not use setsid() to have the executed process be its own session leader.</dl>
+<dt><i>ECORE_EXE_NOT_LEADER </i></dt>
+<dd>Do not use setsid() to have the executed process be its own session leader.</dd></dl>
 <h3>enum <code>_Ecore_Fd_Handler_Flags</code></h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>ECORE_FD_READ </i></p>
-<dd>Fd Read mask.</p>
-<dt><i>ECORE_FD_WRITE </i></p>
-<dd>Fd Write mask.</p>
-<dt><i>ECORE_FD_ERROR </i></p>
-<dd>Fd Error mask.</dl>
+<dt><i>ECORE_FD_READ </i></dt>
+<dd>Fd Read mask.</dd>
+<dt><i>ECORE_FD_WRITE </i></dt>
+<dd>Fd Write mask.</dd>
+<dt><i>ECORE_FD_ERROR </i></dt>
+<dd>Fd Error mask.</dd></dl>
 <h3>enum <code>_Ecore_Poller_Type</code></h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>ECORE_POLLER_CORE </i></p>
-<dd>The core poller interval.</dl>
+<dt><i>ECORE_POLLER_CORE </i></dt>
+<dd>The core poller interval.</dd></dl>
 <h2>Function Documentation</h2>
 <h3>EAPI <code>Ecore_Animator</code>* ecore_animator_add (int(*)(void *data) func, const void * data)</h3>
 <p>Add a animator to tick off at every animaton tick during main loop execution. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>func</i> The function to call when it ticks off<br />
- <i>data</i> The data to pass to the function</dl>
+ <i>data</i> The data to pass to the function</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A handle to the new animator</dl>
+<dd>A handle to the new animator</dd></dl>
 <p> This function adds a animator and returns its handle on success and NULL on failure. The function func will be called every N seconds where N is the frametime interval set by <code>ecore_animator_frametime_set()</code>. The function will be passed the data pointer as its parameter. </p>
 <p> When the animator func is called, it must return a value of either 1 or 0. If it returns 1 (or ECORE_CALLBACK_RENEW), it will be called again at the next tick, or if it returns 0 (or ECORE_CALLBACK_CANCEL) it will be deleted automatically making any references/handles for it invalid. </p>
 <p> References ecore_animator_add(), and ecore_timer_add(). </p>
@@ -288,10 +288,10 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <p>Delete the specified animator from the animator list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>animator</i> The animator to delete</dl>
+<dd><i>animator</i> The animator to delete</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The data pointer set for the animator</dl>
+<dd>The data pointer set for the animator</dd></dl>
 <p> Delete the specified aqnimator from the set of animators that are executed during main loop execution. This function returns the data parameter that was being passed to the callback on success, or NULL on failure. After this call returns the specified animator object animator is invalid and should not be used again. It will not get called again after deletion. </p>
 <p> References ecore_animator_del(). </p>
 <p> Referenced by ecore_animator_del().</p>
@@ -299,7 +299,7 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <p>Get the animator call interval in seconds. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The time in second in between animator ticks.</dl>
+<dd>The time in second in between animator ticks.</dd></dl>
 <p> this function retrieves the time inbetween animator ticks, in seconds. </p>
 <p> References ecore_animator_frametime_get(). </p>
 <p> Referenced by ecore_animator_frametime_get().</p>
@@ -307,7 +307,7 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <p>Set the animator call interval in seconds. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>frametime</i> The time in seconds in between animator ticks.</dl>
+<dd><i>frametime</i> The time in seconds in between animator ticks.</dd></dl>
 <p> This function sets the time interval (in seconds) inbetween animator ticks. </p>
 <p> References ecore_animator_frametime_set(), ecore_timer_add(), and ecore_timer_del(). </p>
 <p> Referenced by ecore_animator_frametime_set().</p>
@@ -316,7 +316,7 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>argc</i> A pointer to the return value to hold argc<br />
- <i>argv</i> A pointer to the return value to hold argv</dl>
+ <i>argv</i> A pointer to the return value to hold argv</dd></dl>
 <p> When called, this funciton returns the arguments for the program stored by <code>ecore_app_args_set()</code>. The integer pointed to by argc will be filled, if the pointer is not NULL, and the string array pointer argv will be filled also if the pointer is not NULL. The values they are filled with will be the same set by <code>ecore_app_args_set()</code>. </p>
 <p> References ecore_app_args_get(). </p>
 <p> Referenced by ecore_app_args_get(), ecore_config_args_parse(), and ecore_x_window_defaults_set().</p>
@@ -325,7 +325,7 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>argc</i> The same as passed as argc to the programs main() function<br />
- <i>argv</i> The same as passed as argv to the programs main() function</dl>
+ <i>argv</i> The same as passed as argv to the programs main() function</dd></dl>
 <p> A call to this function will store the programs command-line arguments for later use by <code>ecore_app_restart()</code> or <code>ecore_app_args_get()</code>. </p>
 <p> References ecore_app_args_set(). </p>
 <p> Referenced by ecore_app_args_set().</p>
@@ -341,10 +341,10 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <dd><i>type</i> The event type to add to the end of the event queue<br />
  <i>ev</i> The private data structure for this event type<br />
  <i>func_free</i> The function to be called to free this private structure<br />
- <i>data</i> The data pointer to be passed to the free function</dl>
+ <i>data</i> The data pointer to be passed to the free function</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A Handle for that event</dl>
+<dd>A Handle for that event</dd></dl>
 <p> On success this function returns a handle to an event on the event queue, or NULL if it fails. If it succeeds, an event of type type will be added to the queue for processing by event handlers added by <code>ecore_event_handler_add()</code>. The ev parameter will be a pointer to the event private data that is specific to that event type. When the event is no longer needed, func_free will be called and passed the private structure pointer for cleaning up. If func_free is NULL, free() will be called with the private structure pointer. func_free is passed data as its data parameter. </p>
 <p> References ecore_event_add(). </p>
 <p> Referenced by ecore_con_server_connect(), ecore_event_add(), ecore_exe_pipe_run(), ecore_imf_context_commit_event_add(), ecore_imf_context_delete_surrounding_event_add(), ecore_imf_context_preedit_changed_event_add(), ecore_imf_context_preedit_end_event_add(), ecore_imf_context_preedit_start_event_add(), and ecore_job_add().</p>
@@ -352,7 +352,7 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <p>Return the current event type pointer handled. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The current event pointer being handled if inside a handler callback</dl>
+<dd>The current event pointer being handled if inside a handler callback</dd></dl>
 <p> If the program is currently inside an Ecore event handler callback this will return the pointer of the current event being processed. If Ecore is not inside an event handler, NULL will be returned. </p>
 <p> This is useful when certain Ecore modules such as Ecore_Evas &#8216;swallow&#8217; events and not all the original information is passed on. In special cases this extra information may be useful or needed and using this call can let the program access the event data if the type of the event is handled by the program. </p>
 <p> References ecore_event_current_event_get(). </p>
@@ -361,7 +361,7 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <p>Return the current event type being handled. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The current event type being handled if inside a handler callback</dl>
+<dd>The current event type being handled if inside a handler callback</dd></dl>
 <p> If the program is currently inside an Ecore event handler callback this will return the type of the current event being processed. If Ecore is not inside an event handler, ECORE_EVENT_NONE is returned. </p>
 <p> This is useful when certain Ecore modules such as Ecore_Evas &#8216;swallow&#8217; events and not all the original information is passed on. In special cases this extra information may be useful or needed and using this call can let the program know if the event type being handled is one it wants to get more information about. </p>
 <p> References ecore_event_current_type_get(). </p>
@@ -370,10 +370,10 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <p>Delete an event from the queue. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> The event handle to delete</dl>
+<dd><i>event</i> The event handle to delete</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The data pointer originally set for the event free function</dl>
+<dd>The data pointer originally set for the event free function</dd></dl>
 <p> This deletes the event event from the event queue, and returns the data parameer originally set when adding it with <code>ecore_event_add()</code>. This does not immediately call the free function, and it may be called later on cleanup, and so if the free function depends on the data pointer to work, you should defer cleaning of this till the free function is called later. </p>
 <p> References ecore_event_del(). </p>
 <p> Referenced by ecore_event_del(), and ecore_job_del().</p>
@@ -384,10 +384,10 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <dd><i>func_start</i> Function to call just before filtering and return data<br />
  <i>func_filter</i> Function to call on each event<br />
  <i>func_end</i> Function to call after the queu has been filtered<br />
- <i>data</i> Data to pass to the filter functions</dl>
+ <i>data</i> Data to pass to the filter functions</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A filter handle</dl>
+<dd>A filter handle</dd></dl>
 <p> This adds a filter to call callbacks to loop through the event queue and filter events out of the queue. On failure NULL is returned. On success a Filter handle is returned. Filters are called on the queue just before Event handler processing to try and remove redundant events. Just as processing starts func_start is called and passed the data pointer. This function returns a pointer that is used as loop_data that is now passed to func_filter as loop_data. func_filter is also passed data and the event type and private event structure. If this callback returns 0, the event is removed from the queue. If it returns 1, the event is kept. When processing is finished func_end is called and is passed the loop_data and data pointer to clean up. </p>
 <p> References ecore_event_filter_add(). </p>
 <p> Referenced by ecore_event_filter_add(), and ecore_x_init().</p>
@@ -395,10 +395,10 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <p>Delete an event filter. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>ef</i> The event filter handle</dl>
+<dd><i>ef</i> The event filter handle</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The data set for the filter</dl>
+<dd>The data set for the filter</dd></dl>
 <p> Delete a filter that has been added by its ef handle. On success this will return the data pointer set when this filter was added. On failure NULL is returned. </p>
 <p> References ecore_event_filter_del(). </p>
 <p> Referenced by ecore_event_filter_del().</p>
@@ -408,10 +408,10 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <dl COMPACT>
 <dd><i>type</i> The type of the event this handler will get called for<br />
  <i>func</i> The function to call when the event is found in the queue<br />
- <i>data</i> A data pointer to pass to the called function func</dl>
+ <i>data</i> A data pointer to pass to the called function func</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A new Event handler, or NULL on failure</dl>
+<dd>A new Event handler, or NULL on failure</dd></dl>
 <p> Add an event handler to the list of handlers. This will, on success, return a handle to the event handler object that was created, that can be used later to remove the handler using <code>ecore_event_handler_del()</code>. The type parameter is the iteger of the event type that will trigger this callback to be called. The callback func is called when this event is processed and will be passed the event type, a pointer to the private event structure that is specific to that event type, and a data pointer that is provided in this call as the data parameter. </p>
 <p> When the callback func is called, it must return 1 or 0. If it returns 1 (or ECORE_CALLBACK_RENEW), It will keep being called as per normal, for each handler set up for that event type. If it returns 0 (or ECORE_CALLBACK_CANCEL), it will cease processing handlers for that particular event, so all handler set to handle that event type that have not already been called, will not be. </p>
 <p> References ecore_event_handler_add(). </p>
@@ -420,10 +420,10 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <p>Delete an event handler. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event_handler</i> Event handler handle to delete</dl>
+<dd><i>event_handler</i> Event handler handle to delete</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Data passed to handler</dl>
+<dd>Data passed to handler</dd></dl>
 <p> Delete a specified event handler from the handler list. On success this will delete the event handler and return the pointer passed as data when the handler was added by <code>ecore_event_handler_add()</code>. On failure NULL will be returned. Once a handler is deleted it will no longer be called. </p>
 <p> References ecore_event_handler_del(). </p>
 <p> Referenced by ecore_event_handler_del(), and ecore_ipc_shutdown().</p>
@@ -431,7 +431,7 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <p>Allocate a new event type id sensibly and return the new id. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A new event type id.</dl>
+<dd>A new event type id.</dd></dl>
 <p> This function allocates a new event type id and returns it. Once an event type has been allocated it can never be de-allocated during the life of the program. There is no guarantee of the contents of this event ID, or how it is calculated, except that the ID will be unique to the current instance of the process. </p>
 <p> References ecore_event_type_new(). </p>
 <p> Referenced by ecore_con_init(), ecore_con_url_init(), ecore_event_type_new(), ecore_fb_init(), ecore_imf_init(), ecore_ipc_init(), and ecore_x_init().</p>
@@ -439,7 +439,7 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <p>Set up connections, signal handlers, sockets etc. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>1 or greater on success, 0 otherwise</dl>
+<dd>1 or greater on success, 0 otherwise</dd></dl>
 <p> This function sets up all singal handlers and the basic event loop. If it succeeds, 1 will be returned, otherwise 0 will be returned. </p>
 <pre> #include &lt;<a href="file:/usr/include/Ecore.h">Ecore.h</a>&gt;
  int main(int argc, char **argv)
@@ -460,10 +460,10 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <dd><i>type</i> The ticker type to attach the poller to<br />
  <i>interval</i> The poll interval<br />
  <i>func</i> The given function. If func returns 1, the poller is rescheduled for the next tick interval.<br />
- <i>data</i> Data to pass to func when it is called.</dl>
+ <i>data</i> Data to pass to func when it is called.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A poller object on success. NULL on failure.</dl>
+<dd>A poller object on success. NULL on failure.</dd></dl>
 <p> This function adds a poller callback that is to be called regularly along with all other poller callbacks so the pollers are synchronized with all other pollers running off the same poller type and at the same tick interval. This should be used for polling things when polling is desired or required, and you do not have specific requirements on the exact times to poll and want to avoid extra process wakeups for polling. This will save power as the CPU has more of a chance to go into a low power state the longer it is asleep for, so this should be used if you are at all power conscious. </p>
 <p> The type parameter defines the poller tick type (there is a virtual clock ticking all the time &#8211; though ecore avoids making it tick when there will not be any work to do at that tick point). There is only one ticker at the moment &#8211; that is ECORE_POLLER_CORE. This is here for future expansion if multiple clocks with different frequencies are really required. The default time between ticks for the ECORE_POLLER_CORE ticker is 0.125 seconds. </p>
 <p> The interval is the number of ticker ticks that will pass by in between invocations of the func callback. This must be between 1 and 32768 inclusive, and must be a power of 2 (i.e. 1, 2, 4, 8, 16, &#8230; 16384, 32768). If it is 1, then the function will be called every tick. if it is 2, then it will be called every 2nd tick, if it is 8, then every 8th tick etc. Exactly which tick is undefined, as only the interval between calls can be defined. Ecore will endeavour to keep pollers synchronised and to call as many in 1 wakeup event as possible. </p>
@@ -475,10 +475,10 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <p>Delete the specified poller from the timer list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>poller</i> The poller to delete.</dl>
+<dd><i>poller</i> The poller to delete.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The data pointer set for the timer when <code>ecore_poller_add</code> was called. NULL is returned if the function is unsuccessful.</dl>
+<dd>The data pointer set for the timer when <code>ecore_poller_add</code> was called. NULL is returned if the function is unsuccessful.</dd></dl>
 <p> Note: poller must be a valid handle. If the poller function has already returned 0, the handle is no longer valid (and does not need to be delete). </p>
 <p> References ecore_poller_del(). </p>
 <p> Referenced by ecore_poller_del().</p>
@@ -486,10 +486,10 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <p>Gets the time between ticks (in seconds) for the fiven ticker clock. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>type</i> The ticker type to query</dl>
+<dd><i>type</i> The ticker type to query</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The time in seconds between ticks of the ticker clock</dl>
+<dd>The time in seconds between ticks of the ticker clock</dd></dl>
 <p> This will get the time between ticks of the specifider ticker clock. </p>
 <p> References ecore_poller_poll_interval_get(). </p>
 <p> Referenced by ecore_poller_poll_interval_get().</p>
@@ -498,7 +498,7 @@ description: "Ecore.h – The file that provides the program utility, main loop 
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>type</i> The ticker type to adjust<br />
- <i>poll_time</i> The time (in seconds) between ticks of the clock</dl>
+ <i>poll_time</i> The time (in seconds) between ticks of the clock</dd></dl>
 <p> This will adjust the time between ticks of the given ticker type defined by type to the time period defined by poll_time. </p>
 <p> References ecore_poller_poll_interval_set(). </p>
 <p> Referenced by ecore_poller_poll_interval_set().</p>

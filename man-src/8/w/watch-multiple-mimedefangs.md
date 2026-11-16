@@ -15,36 +15,36 @@ description: "watch-multiple-mimdefangs.tcl – Keep an eye on a cluster of MIME
 <h2>Prerequisites</h2>
 <p>To use <code>watch-multiple-mimdefangs.tcl</code> to monitor a cluster of machines, you need the following prerequisites: </p>
 <dl>
-<dt><code>o</code></p>
-<dd>A UNIX-like machine with Tcl/Tk 8.4, the X window system and an SSH client. You also need &quot;xterm&quot; to use some of the features. </p>
-<dt><code>o</code></p>
-<dd>The ability to SSH <i>as root</i> to all of the machines you want to monitor. Ideally, you should be using the SSH agent so that you can SSH to the monitored machines as root without being prompted for a password or pass phrase. </p>
-<dt><code>o</code></p>
-<dd>The program <code>md-mx-ctrl</code> on root&#8217;s path on all the machines you want to monitor. </p>
+<dt><code>o</code></dt>
+<dd>A UNIX-like machine with Tcl/Tk 8.4, the X window system and an SSH client. You also need &quot;xterm&quot; to use some of the features. </dd>
+<dt><code>o</code></dt>
+<dd>The ability to SSH <i>as root</i> to all of the machines you want to monitor. Ideally, you should be using the SSH agent so that you can SSH to the monitored machines as root without being prompted for a password or pass phrase. </dd>
+<dt><code>o</code></dt>
+<dd>The program <code>md-mx-ctrl</code> on root&#8217;s path on all the machines you want to monitor. </dd>
 </dl>
 <h2>Display</h2>
 <p>For each machine specified on the command line, <code>watch-multiple-mimdefangs.tcl</code> creates a chart with five columns. The columns are: </p>
 <dl>
-<dt><code>o</code></p>
-<dd>A button with the name of the machine. Clicking the button pops up a menu that lets you take various actions, as described later. If all slaves on the machine are busy, the button turns yellow. </p>
-<dt><code>o</code></p>
-<dd>A label showing the number of busy slaves in the form &quot;busy/total&quot;, where total is the total number of slaves. </p>
-<dt><code>o</code></p>
-<dd>A label showing the average number of messages per second over the last 10 seconds. </p>
-<dt><code>o</code></p>
-<dd>A label showing the average number of milliseconds per scan over the last 10 seconds. </p>
-<dt><code>o</code></p>
-<dd>A chart that graphs the average number of busy slaves, the average number of messages per second and the average scan time in milliseconds, all averaged over the last 10 seconds. </p>
+<dt><code>o</code></dt>
+<dd>A button with the name of the machine. Clicking the button pops up a menu that lets you take various actions, as described later. If all slaves on the machine are busy, the button turns yellow. </dd>
+<dt><code>o</code></dt>
+<dd>A label showing the number of busy slaves in the form &quot;busy/total&quot;, where total is the total number of slaves. </dd>
+<dt><code>o</code></dt>
+<dd>A label showing the average number of messages per second over the last 10 seconds. </dd>
+<dt><code>o</code></dt>
+<dd>A label showing the average number of milliseconds per scan over the last 10 seconds. </dd>
+<dt><code>o</code></dt>
+<dd>A chart that graphs the average number of busy slaves, the average number of messages per second and the average scan time in milliseconds, all averaged over the last 10 seconds. </dd>
 </dl>
 <h2>Machine Menu</h2>
 <p>If you click on a machine name, a menu with three options pops up: </p>
 <dl>
-<dt><code>SSH</code></p>
-<dd>Open an xterm session and ssh as root to the machine. </p>
-<dt><code>Busy Slaves</code></p>
-<dd>Monitor the busy slaves on the machine. If you click on the process-ID of a slave, an xterm will open up and the command &quot;strace -s 100 -t -p <i>pid</i>&quot; will be executed on the remote machine. This is Linux-specific, but you can edit <code>watch-multiple-mimdefangs.tcl</code> to replace the command with your particular system&#8217;s command for tracing system calls. </p>
-<dt><code>Delete</code></p>
-<dd>Remove the machine from the list of machines being monitored. </p>
+<dt><code>SSH</code></dt>
+<dd>Open an xterm session and ssh as root to the machine. </dd>
+<dt><code>Busy Slaves</code></dt>
+<dd>Monitor the busy slaves on the machine. If you click on the process-ID of a slave, an xterm will open up and the command &quot;strace -s 100 -t -p <i>pid</i>&quot; will be executed on the remote machine. This is Linux-specific, but you can edit <code>watch-multiple-mimdefangs.tcl</code> to replace the command with your particular system&#8217;s command for tracing system calls. </dd>
+<dt><code>Delete</code></dt>
+<dd>Remove the machine from the list of machines being monitored. </dd>
 </dl>
 <h2>Adding A Machine</h2>
 <p>If you need to add a machine to the display, simply type the name of the machine in the &quot;Add Machine:&quot; box and press Enter.</p>

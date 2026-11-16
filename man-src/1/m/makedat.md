@@ -11,9 +11,9 @@ description: "makedat – create GDBM/DB files for maildrop"
 <p> makedat &#8211; create GDBM/DB files for maildrop </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>makedat</code> {-src=<i>textfile</i>} {-tmp=<i>tmpfile</i>} {-file=<i>gdbmfile</i>} [-cidr]</dl>
+<dt> <code>makedat</code> {-src=<i>textfile</i>} {-tmp=<i>tmpfile</i>} {-file=<i>gdbmfile</i>} [-cidr]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>The gdbm family of functions in <code>maildrop</code> provides access to GDBM/DB databases &#8211; simple database files. The gdbm family of functions provide a way of quickly storing and looking up key/data pairs. </p>
+<dd>The gdbm family of functions in <code>maildrop</code> provides access to GDBM/DB databases &#8211; simple database files. The gdbm family of functions provide a way of quickly storing and looking up key/data pairs. </dd>
 <p> You can use any program to create GDBM/DB database files. <code>makedat</code> is a quick utility to create GDBM or DB files from plain text files. </p>
 <p> The system administrator selects whether <code>maildrop</code> uses GDBM or DB database files and whether <code>makedat</code> creates GDBM or DB database files as well. </p>
 <p> The <code>makedat</code> command may not be available to you. GDBM/DB support in <code>maildrop</code> is optional, and the system administrator may choose not to install GDBM/DB support and the <code>makedat</code> command. </p>
@@ -21,13 +21,13 @@ description: "makedat – create GDBM/DB files for maildrop"
 <p> The <i>textfile</i> argument to <code>makedat</code> is a plain text file containing key/value pairs. Each line in the text file contains a key value, followed by a tab and a data value. The data value may be omitted, which defaults to &quot;1&quot;. For example, the following three lines: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 example.com
 domain.com&lt;tab&gt;ok
 foo.domain.com&lt;tab&gt;bad
 </pre>
-</dl>
+</dd></dl>
 <p> Three key/value pairs are created: example.com, value &quot;1&quot;; domain.com, value &quot;ok&quot;, and &quot;foo.domain.com&quot;, value &quot;bad&quot;. </p>
 <p> Empty lines in <i>textfile</i>, and lines starting with the # character, are ignored. </p>
 <p> <i>textfile</i> can be &quot;-&quot;, in which case standard input is used. </p>
@@ -40,11 +40,11 @@ foo.domain.com&lt;tab&gt;bad
 <h2>EXAMPLE</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 makedat blacklist /etc/mail/blacklist.tmp /etc/mail/blacklist.dat
 </pre>
-</dl>
+</dd></dl>
 <p> Takes blacklist, and creates /etc/mail/blacklist.dat, using /etc/mail/blacklist.tmp as a temporary file.</p>
 <h2>SEE ALSO</h2>
 <p> m[blue]<code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)m[]<font SIZE="-2">[1]</font>, m[blue]<code>maildropgdbm</code>(5)m[]<font SIZE="-2">[2]</font>.</p>
@@ -52,18 +52,18 @@ makedat blacklist /etc/mail/blacklist.tmp /etc/mail/blacklist.dat
 <p> <code>Sam Varshavchik</code></p>
 <dl>
 <dt>
-<dd> Author</dl>
+</dt><dd> Author</dd></dl>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> <code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)</p>
+<dt> 1.</dt>
+<dd> <code><a href="/docs/linux/man/1-maildrop/">maildrop</a></code>(1)</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.courier-mta.org/maildrop/maildrop.html">http://www.courier-mta.org/maildrop/maildrop.html</a></dl>
-<dt> 2.</p>
-<dd> <code>maildropgdbm</code>(5)</p>
+</dt><dd> <a rel="nofollow" href="http://www.courier-mta.org/maildrop/maildrop.html">http://www.courier-mta.org/maildrop/maildrop.html</a></dd></dl>
+<dt> 2.</dt>
+<dd> <code>maildropgdbm</code>(5)</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.courier-mta.org/maildrop/maildropgdbm.html">http://www.courier-mta.org/maildrop/maildropgdbm.html</a></dl>
+</dt><dd> <a rel="nofollow" href="http://www.courier-mta.org/maildrop/maildropgdbm.html">http://www.courier-mta.org/maildrop/maildropgdbm.html</a></dd></dl>
 </dl>
 <h2>Index</h2>

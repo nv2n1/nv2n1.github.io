@@ -10,8 +10,6 @@ description: "tcgetsid – get session ID"
 <p>tcgetsid &#8211; get session ID</p>
 <h2>Synopsis</h2>
 <pre><code>#define _XOPEN_SOURCE 500        /* See feature_test_macros(7) */
-
-
 #include &lt;termios.h&gt;</code></pre>
 <p> <code>pid_t tcgetsid(int </code><i>fd</i><code>);</code></p>
 <h2>Description</h2>
@@ -20,10 +18,10 @@ description: "tcgetsid – get session ID"
 <p>When <i>fd</i> refers to the controlling terminal of our session, the function <code>tcgetsid</code>() will return the session ID of this session. Otherwise, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd><i>fd</i> is not a valid file descriptor.</p>
-<dt><code>ENOTTY</code></p>
-<dd>The calling process does not have a controlling terminal, or it has one but it is not described by <i>fd</i>.</dl>
+<dt><code>EBADF</code></dt>
+<dd><i>fd</i> is not a valid file descriptor.</dd>
+<dt><code>ENOTTY</code></dt>
+<dd>The calling process does not have a controlling terminal, or it has one but it is not described by <i>fd</i>.</dd></dl>
 <h2>Versions</h2>
 <p><code>tcgetsid</code>() is provided in glibc since version 2.1.</p>
 <h2>Attributes</h2>

@@ -14,17 +14,17 @@ description: "nand_do_read_ops – [INTERN] Read data with ECC"
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>from</i></p>
 <dl>
-<dd>offset to read from</dl>
+<dd>offset to read from</dd></dl>
 <p> <i>ops</i></p>
 <dl>
-<dd>oob ops structure</dl>
+<dd>oob ops structure</dd></dl>
 <h2>Description</h2>
 <p>Internal function. Called with chip held.</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -13,12 +13,12 @@ description: "oath_hex2bin – API function"
 int oath_hex2bin(const char *hexstr, char *binstr, size_t *binlen);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>const char * hexstr</p>
-<dd>input string with hex data</p>
-<dt>char * binstr</p>
-<dd>output string that holds binary data, or NULL</p>
-<dt>size_t * binlen</p>
-<dd>output variable holding needed length of <i>binstr</i></dl>
+<dt>const char * hexstr</dt>
+<dd>input string with hex data</dd>
+<dt>char * binstr</dt>
+<dd>output string that holds binary data, or NULL</dd>
+<dt>size_t * binlen</dt>
+<dd>output variable holding needed length of <i>binstr</i></dd></dl>
 <h2>Description</h2>
 <p>Convert string with hex data to binary data. </p>
 <p> Non-hexadecimal data are not ignored but instead will lead to an <code>OATH_INVALID_HEX</code> error. </p>

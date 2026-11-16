@@ -14,17 +14,15 @@ description: "Dislocate – disconnect and reconnect processes"
 <h2>INTRODUCTION</h2>
 <p> <code>Dislocate</code> allows processes to be disconnected and reconnected to the terminal. Possible uses:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> You can disconnect a process from a terminal at work and reconnect from home, to continue working.</p>
-<dt>&bull;</p>
-<dd> After having your line be dropped due to noise, you can get back to your process without having to restart it from scratch.</p>
-<dt>&bull;</p>
-<dd> If you have a problem that you would like to show someone, you can set up the scenario at your own terminal, disconnect, walk down the hall, and reconnect on another terminal.</p>
-<dt>&bull;</p>
-<dd> If you are in the middle of a great game (or whatever) that does not allow you to save, and someone else kicks you off the terminal, you can disconnect, and reconnect later.</dl>
+<dt>&bull;</dt>
+<dd> You can disconnect a process from a terminal at work and reconnect from home, to continue working.</dd>
+<dt>&bull;</dt>
+<dd> After having your line be dropped due to noise, you can get back to your process without having to restart it from scratch.</dd>
+<dt>&bull;</dt>
+<dd> If you have a problem that you would like to show someone, you can set up the scenario at your own terminal, disconnect, walk down the hall, and reconnect on another terminal.</dd>
+<dt>&bull;</dt>
+<dd> If you are in the middle of a great game (or whatever) that does not allow you to save, and someone else kicks you off the terminal, you can disconnect, and reconnect later.</dd></dl>
 </dl>
 <h2>USAGE</h2>
 <p> When run with no arguments, <code>Dislocate</code> tells you about your disconnected processes and lets you reconnect to one. Otherwise, <code>Dislocate</code> runs the named program along with any arguments. </p>

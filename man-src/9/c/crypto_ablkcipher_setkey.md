@@ -14,13 +14,13 @@ description: "crypto_ablkcipher_setkey – set key for cipher"
 <p><i>tfm</i></p>
 <dl>
 <dd>
-<dd>cipher handle</dl>
+</dd><dd>cipher handle</dd></dl>
 <p> <i>key</i></p>
 <dl>
-<dd>buffer holding the key</dl>
+<dd>buffer holding the key</dd></dl>
 <p> <i>keylen</i></p>
 <dl>
-<dd>length of the key in bytes</dl>
+<dd>length of the key in bytes</dd></dl>
 <h2>Description</h2>
 <p>The caller provided key is set for the ablkcipher referenced by the cipher handle. </p>
 <p> Note, the key length determines the cipher type. Many block ciphers implement different cipher modes depending on the key size, such as AES-128 vs AES-192 vs. AES-256. When providing a 16 byte key for an AES cipher handle, AES-128 is performed.</p>
@@ -29,8 +29,8 @@ description: "crypto_ablkcipher_setkey – set key for cipher"
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

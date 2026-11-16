@@ -13,20 +13,20 @@ description: "oath_hotp_validate_callback – API function"
 int oath_hotp_validate_callback(const char *secret, size_t secret_length, uint64_t start_moving_factor, size_t window, unsigned digits, oath_validate_strcmp_function strcmp_otp, void *strcmp_handle);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>const char * secret</p>
-<dd>the shared secret string</p>
-<dt>size_t secret_length</p>
-<dd>length of <i>secret</i></p>
-<dt>uint64_t start_moving_factor</p>
-<dd>start counter in OTP stream</p>
-<dt>size_t window</p>
-<dd>how many OTPs after start counter to test</p>
-<dt>unsigned digits</p>
-<dd>number of requested digits in the OTP</p>
-<dt>oath_validate_strcmp_function strcmp_otp</p>
-<dd>function pointer to a strcmp-like function.</p>
-<dt>void * strcmp_handle</p>
-<dd>caller handle to be passed on to <i>strcmp_otp</i>.</dl>
+<dt>const char * secret</dt>
+<dd>the shared secret string</dd>
+<dt>size_t secret_length</dt>
+<dd>length of <i>secret</i></dd>
+<dt>uint64_t start_moving_factor</dt>
+<dd>start counter in OTP stream</dd>
+<dt>size_t window</dt>
+<dd>how many OTPs after start counter to test</dd>
+<dt>unsigned digits</dt>
+<dd>number of requested digits in the OTP</dd>
+<dt>oath_validate_strcmp_function strcmp_otp</dt>
+<dd>function pointer to a strcmp-like function.</dd>
+<dt>void * strcmp_handle</dt>
+<dd>caller handle to be passed on to <i>strcmp_otp</i>.</dd></dl>
 <h2>Description</h2>
 <p>Validate an OTP according to OATH HOTP algorithm per RFC 4226. Validation is implemented by generating a number of potential OTPs and performing a call to the <i>strcmp_otp</i> function, to compare the potential OTP against the given <i>otp</i>. It has the following prototype: </p>
 <pre><code>int (*oath_validate_strcmp_function)(void *handle, const char *test_otp);</code></pre>

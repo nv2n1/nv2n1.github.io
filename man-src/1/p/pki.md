@@ -16,42 +16,42 @@ description: "pki – Command-Line Interface for accessing Certificate System se
 &nbsp;<wbr>&nbsp;<wbr></p>
 <h2>CLI OPTIONS</h2>
 <dl>
-<dt><code>-c &lt;client security database password&gt;</code></p>
-<dd> Specifies the client security database password (mutually exclusive to the &#8216;-C&#8217; option).</p>
-<dt><code>-C &lt;client-side password file&gt;</code></p>
-<dd> Specifies the file which contains the client security database password (mutually exclusive to the &#8216;-c&#8217; option).</p>
-<dt><code>-d &lt;client security database location&gt;</code></p>
-<dd> Specifies the client security database location (default: <i>~/.dogtag/nssdb</i>).</p>
-<dt><code>-h &lt;hostname&gt;</code></p>
-<dd> Specifies the hostname (default: hostname of the local machine).</p>
-<dt><code>&#8211;help</code></p>
-<dd> Prints additional help information.</p>
-<dt><code>&#8211;ignore-cert-status &lt;list&gt;</code></p>
-<dd> Comma-separated list of ignored certificate validity statuses.</p>
-<dt><code>&#8211;message-format &lt;format&gt;</code></p>
-<dd> Message format: xml (default), json.</p>
-<dt><code>-n &lt;client certificate nickname&gt;</code></p>
-<dd> Specifies the nickname for client certificate authentication (mutually exclusive to the &#8216;-u&#8217; option). This authentication requires a security database password.</p>
-<dt><code>&#8211;output &lt;folder&gt;</code></p>
-<dd> Folder to store HTTP messages.</p>
-<dt><code>-P &lt;protocol&gt;</code></p>
-<dd> Specifies the protocol (default: http).</p>
-<dt><code>-p &lt;port&gt;</code></p>
-<dd> Specifies the port (default: 8080).</p>
-<dt><code>&#8211;reject-cert-status &lt;list&gt;</code></p>
-<dd> Comma-separated list of rejected certificate validity statuses. PKI subsystem type &#8211; [CA, KRA, OCSP, TKS, or TPS] (non-case-sensitive).</p>
-<dt><code>-U &lt;URI&gt;</code></p>
-<dd> Specifies the server URI.</p>
-<dt><code>-u &lt;username&gt;</code></p>
-<dd> Specifies the username for basic authentication (mutually exclusive to the &#8216;-n&#8217; option). This authentication requires a user password.</p>
-<dt><code>-v</code></p>
-<dd> Displays verbose information.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Displays CLI version information.</p>
-<dt><code>-w &lt;password&gt;</code></p>
-<dd> Specifies the user password (mutually exclusive to the &#8216;-W&#8217; option).</p>
-<dt><code>-W &lt;client-side password file&gt;</code></p>
-<dd> Specifies the file which contains the user password (mutually exclusive to the &#8216;-w&#8217; option). </p>
+<dt><code>-c &lt;client security database password&gt;</code></dt>
+<dd> Specifies the client security database password (mutually exclusive to the &#8216;-C&#8217; option).</dd>
+<dt><code>-C &lt;client-side password file&gt;</code></dt>
+<dd> Specifies the file which contains the client security database password (mutually exclusive to the &#8216;-c&#8217; option).</dd>
+<dt><code>-d &lt;client security database location&gt;</code></dt>
+<dd> Specifies the client security database location (default: <i>~/.dogtag/nssdb</i>).</dd>
+<dt><code>-h &lt;hostname&gt;</code></dt>
+<dd> Specifies the hostname (default: hostname of the local machine).</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Prints additional help information.</dd>
+<dt><code>&#8211;ignore-cert-status &lt;list&gt;</code></dt>
+<dd> Comma-separated list of ignored certificate validity statuses.</dd>
+<dt><code>&#8211;message-format &lt;format&gt;</code></dt>
+<dd> Message format: xml (default), json.</dd>
+<dt><code>-n &lt;client certificate nickname&gt;</code></dt>
+<dd> Specifies the nickname for client certificate authentication (mutually exclusive to the &#8216;-u&#8217; option). This authentication requires a security database password.</dd>
+<dt><code>&#8211;output &lt;folder&gt;</code></dt>
+<dd> Folder to store HTTP messages.</dd>
+<dt><code>-P &lt;protocol&gt;</code></dt>
+<dd> Specifies the protocol (default: http).</dd>
+<dt><code>-p &lt;port&gt;</code></dt>
+<dd> Specifies the port (default: 8080).</dd>
+<dt><code>&#8211;reject-cert-status &lt;list&gt;</code></dt>
+<dd> Comma-separated list of rejected certificate validity statuses. PKI subsystem type &#8211; [CA, KRA, OCSP, TKS, or TPS] (non-case-sensitive).</dd>
+<dt><code>-U &lt;URI&gt;</code></dt>
+<dd> Specifies the server URI.</dd>
+<dt><code>-u &lt;username&gt;</code></dt>
+<dd> Specifies the username for basic authentication (mutually exclusive to the &#8216;-n&#8217; option). This authentication requires a user password.</dd>
+<dt><code>-v</code></dt>
+<dd> Displays verbose information.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Displays CLI version information.</dd>
+<dt><code>-w &lt;password&gt;</code></dt>
+<dd> Specifies the user password (mutually exclusive to the &#8216;-W&#8217; option).</dd>
+<dt><code>-W &lt;client-side password file&gt;</code></dt>
+<dd> Specifies the file which contains the user password (mutually exclusive to the &#8216;-w&#8217; option). </dd>
 </dl>
 <h2>OPERATIONS</h2>
 <p> To view available commands and options, simply type <code>pki</code>. Some commands have sub-commands. To view the sub-commands, type <code>pki &lt;command&gt;</code>. To view each command&#8217;s usage, type <code> pki &lt;command&gt; &#8211;help</code>. </p>
@@ -105,7 +105,7 @@ description: "pki – Command-Line Interface for accessing Certificate System se
 <p> <code>Caveats:</code></p>
 <dl>
 <dt>
-<dd> &bull; Since client-side password files are allowed to use the &#8216;token=password&#8217; format, the first &#8216;=&#8217; character can only be used as a delimiter (i. e. &#8211; it cannot be used as a valid character within the &#8216;token&#8217; name) as escaping the &#8216;=&#8217; character within a token is not supported. </p>
+</dt><dd> &bull; Since client-side password files are allowed to use the &#8216;token=password&#8217; format, the first &#8216;=&#8217; character can only be used as a delimiter (i. e. &#8211; it cannot be used as a valid character within the &#8216;token&#8217; name) as escaping the &#8216;=&#8217; character within a token is not supported. </dd>
 <p> &bull; When specifying a password which contains an &#8216;=&#8217; character, always specify an initial &#8216;=&#8217; prior to specifying the actual password (mandatory when no token has been specified) as escaping the &#8216;=&#8217; character within a password is not supported. </p>
 <p> &bull; Tokens do not support leading or trailing whitespace since these characters are stripped prior to their use; however, all whitespace inside tokens will be preserved. </p>
 <p> &bull; Passwords preserve all leading, trailing, and internal whitespace since passwords are not trimmed prior to their use. </p>
@@ -147,43 +147,43 @@ where:&nbsp;<wbr>&nbsp;<wbr>token=&quot;internal&quot;&nbsp;<wbr>(default), pass
 <p> <code><a href="/docs/linux/man/1-pki-cert/">pki-cert</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Certificate management commands</dl>
+</dt><dd> Certificate management commands</dd></dl>
 <p> <code><a href="/docs/linux/man/1-pki-client/">pki-client</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Client security database management commands</dl>
+</dt><dd> Client security database management commands</dd></dl>
 <p> <code><a href="/docs/linux/man/1-pki-group/">pki-group</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Group management commands</dl>
+</dt><dd> Group management commands</dd></dl>
 <p> <code><a href="/docs/linux/man/1-pki-group-member/">pki-group-member</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Group member management commands</dl>
+</dt><dd> Group member management commands</dd></dl>
 <p> <code><a href="/docs/linux/man/1-pki-key/">pki-key</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Key management commands</dl>
+</dt><dd> Key management commands</dd></dl>
 <p> <code><a href="/docs/linux/man/1-pki-securitydomain/">pki-securitydomain</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Security domain management commands</dl>
+</dt><dd> Security domain management commands</dd></dl>
 <p> <code><a href="/docs/linux/man/1-pki-user/">pki-user</a></code>(1)</p>
 <dl>
 <dt>
-<dd> User management commands</dl>
+</dt><dd> User management commands</dd></dl>
 <p> <code><a href="/docs/linux/man/1-pki-user-cert/">pki-user-cert</a></code>(1)</p>
 <dl>
 <dt>
-<dd> User certificate management commands</dl>
+</dt><dd> User certificate management commands</dd></dl>
 <p> <code><a href="/docs/linux/man/1-pki-user-membership/">pki-user-membership</a></code>(1)</p>
 <dl>
 <dt>
-<dd> User membership management commands</dl>
+</dt><dd> User membership management commands</dd></dl>
 <p> <code><a href="/docs/linux/man/1-pki-ca-profile/">pki-ca-profile</a></code>(1)</p>
 <dl>
 <dt>
-<dd> Profile management commands</dl>
+</dt><dd> Profile management commands</dd></dl>
 <h2>AUTHORS</h2>
 <p> Ade Lee &lt;alee [at] redhat.com&gt;, Endi Dewata &lt;edewata [at] redhat.com&gt;, and Matthew Harmsen &lt;mharmsen [at] redhat.com&gt;. </p>
 <h2>COPYRIGHT</h2>

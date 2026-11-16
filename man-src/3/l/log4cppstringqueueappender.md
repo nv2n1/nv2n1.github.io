@@ -39,7 +39,7 @@ description: "log4cpp::StringQueueAppender –"
 <p> Its primary use is in test cases, but it may be useful elsewhere as well. </p>
 <p> <code>Since:</code></p>
 <dl COMPACT>
-<dd>0.2.4</dl>
+<dd>0.2.4</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>log4cpp::StringQueueAppender::StringQueueAppender (const std::string &amp;name)</h3>
 <h3>log4cpp::StringQueueAppender::~StringQueueAppender () [virtual]</h3>
@@ -48,7 +48,7 @@ description: "log4cpp::StringQueueAppender –"
 <p>Appends the <code>LoggingEvent</code> to the queue. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> the <code>LoggingEvent</code> to layout and append to the queue.</dl>
+<dd><i>event</i> the <code>LoggingEvent</code> to layout and append to the queue.</dd></dl>
 <p> Implements <code>log4cpp::AppenderSkeleton</code>.</p>
 <h3>void log4cpp::StringQueueAppender::close () [virtual]</h3>
 <p>Release any resources allocated within the appender such as file handles, network connections, etc. </p>
@@ -57,27 +57,27 @@ description: "log4cpp::StringQueueAppender –"
 <p>Return the queue to which the Appends adds messages. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the message queue</dl>
+<dd>the message queue</dd></dl>
 <h3>const std::queue&lt; std::string &gt; &amp; log4cpp::StringQueueAppender::getQueue () const [virtual]</h3>
 <p>Return the queue to which the Appends adds messages. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the message queue</dl>
+<dd>the message queue</dd></dl>
 <h3>std::string log4cpp::StringQueueAppender::popMessage () [virtual]</h3>
 <p>Pop the oldest log message from the front of the queue. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the oldest log message</dl>
+<dd>the oldest log message</dd></dl>
 <h3>size_t log4cpp::StringQueueAppender::queueSize () const [virtual]</h3>
 <p>Return the current size of the message queue. Shorthand for <code>getQueue()</code>.size(). </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>the queue size</dl>
+<dd>the queue size</dd></dl>
 <h3>bool log4cpp::StringQueueAppender::reopen () [virtual]</h3>
 <p>Reopens the output destination of this <code>Appender</code>, e.g. the logfile or TCP socket. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>false if an error occured during reopening, true otherwise.</dl>
+<dd>false if an error occured during reopening, true otherwise.</dd></dl>
 <p> Reimplemented from <code>log4cpp::AppenderSkeleton</code>.</p>
 <h2>Member Data Documentation</h2>
 <h3>std::queue&lt;std::string&gt; log4cpp::StringQueueAppender::_queue [protected]</h3>

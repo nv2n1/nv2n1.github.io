@@ -87,5 +87,5 @@ MLX5DV_FLOW_ACTION_FLAGS_ESP_AES_GCM_TX_IV_IS_ESN = 1 &lt;&lt; 4, /* Flow action
 <p><code><a href="/docs/linux/man/7-mlx5dv/">mlx5dv</a></code>(7), <code>ibv_query_device</code>(3)</p>
 <h2>Authors</h2>
 <dl COMPACT>
-<dt>Leon Romanovsky &lt;leonro [at] mellanox.com&gt;</p>
-<dd></dl>
+<dt>Leon Romanovsky &lt;leonro [at] mellanox.com&gt;</dt>
+<dd></dd></dl>

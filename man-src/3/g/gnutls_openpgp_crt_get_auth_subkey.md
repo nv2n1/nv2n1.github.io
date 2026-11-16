@@ -14,12 +14,12 @@ description: "gnutls_openpgp_crt_get_auth_subkey – API function"
 <p> <code>int gnutls_openpgp_crt_get_auth_subkey(gnutls_openpgp_crt_t </code><i>crt</i><code>, gnutls_openpgp_keyid_t </code><i>keyid</i><code>, unsigned int </code><i>flag</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_openpgp_crt_t crt</p>
-<dd> the structure that contains the OpenPGP public key.</p>
-<dt>gnutls_openpgp_keyid_t keyid</p>
-<dd> the struct to save the keyid.</p>
-<dt>unsigned int flag</p>
-<dd> Non-zero indicates that a valid subkey is always returned.</dl>
+<dt>gnutls_openpgp_crt_t crt</dt>
+<dd> the structure that contains the OpenPGP public key.</dd>
+<dt>gnutls_openpgp_keyid_t keyid</dt>
+<dd> the struct to save the keyid.</dd>
+<dt>unsigned int flag</dt>
+<dd> Non-zero indicates that a valid subkey is always returned.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Returns the 64-bit keyID of the first valid OpenPGP subkey marked for authentication. If flag is non-zero and no authentication subkey exists, then a valid subkey will be returned even if it is not marked for authentication.</p>
 <h2>RETURNS</h2>
@@ -33,6 +33,6 @@ description: "gnutls_openpgp_crt_get_auth_subkey – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

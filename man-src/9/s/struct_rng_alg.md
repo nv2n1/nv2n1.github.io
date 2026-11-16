@@ -19,24 +19,24 @@ description: "struct_rng_alg – random number generator definition"
 <h2>Members</h2>
 <p>generate</p>
 <dl>
-<dd>The function defined by this variable obtains a random number. The random number generator transform must generate the random number out of the context provided with this call, plus any additional data if provided to the call.</dl>
+<dd>The function defined by this variable obtains a random number. The random number generator transform must generate the random number out of the context provided with this call, plus any additional data if provided to the call.</dd></dl>
 <p> seed</p>
 <dl>
-<dd>Seed or reseed the random number generator. With the invocation of this function call, the random number generator shall become ready for generation. If the random number generator requires a seed for setting up a new state, the seed must be provided by the consumer while invoking this function. The required size of the seed is defined with <i>seedsize</i> .</dl>
+<dd>Seed or reseed the random number generator. With the invocation of this function call, the random number generator shall become ready for generation. If the random number generator requires a seed for setting up a new state, the seed must be provided by the consumer while invoking this function. The required size of the seed is defined with <i>seedsize</i> .</dd></dl>
 <p> set_ent</p>
 <dl>
-<dd>Set entropy that would otherwise be obtained from entropy source. Internal use only.</dl>
+<dd>Set entropy that would otherwise be obtained from entropy source. Internal use only.</dd></dl>
 <p> seedsize</p>
 <dl>
-<dd>The seed size required for a random number generator initialization defined with this variable. Some random number generators does not require a seed as the seeding is implemented internally without the need of support by the consumer. In this case, the seed size is set to zero.</dl>
+<dd>The seed size required for a random number generator initialization defined with this variable. Some random number generators does not require a seed as the seeding is implemented internally without the need of support by the consumer. In this case, the seed size is set to zero.</dd></dl>
 <p> base</p>
 <dl>
-<dd>Common crypto API algorithm data structure.</dl>
+<dd>Common crypto API algorithm data structure.</dd></dl>
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

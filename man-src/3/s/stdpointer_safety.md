@@ -11,15 +11,10 @@ std::pointer_safety - std::pointer_safety
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;memory&gt;
-
 enum class pointer_safety {
-
     relaxed,
-
     preferred,                   (since C++11)
-
     strict
-
 };</code></pre> 
 The scoped enumeration type pointer_safety lists the pointer safety modes supported by C++ 
 Enumeration constants 

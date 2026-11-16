@@ -27,46 +27,46 @@ description: "dhcpd – Dynamic Host Configuration Protocol Server"
 <p>The names of the network interfaces on which dhcpd should listen for broadcasts may be specified on the command line. This should be done on systems where dhcpd is unable to identify non-broadcast interfaces, but should not be required on other systems. If no interface names are specified on the command line dhcpd will identify all network interfaces which are up, eliminating non-broadcast interfaces if possible, and listen for DHCP broadcasts on each interface.</p>
 <h2>Command Line Options</h2>
 <dl>
-<dt><code>-4</code></p>
-<dd>Run as a DHCP server. This is the default and cannot be combined with <code>-6</code>.</p>
-<dt><code>-6</code></p>
-<dd>Run as a DHCPv6 server. This cannot be combined with <code>-4</code>.</p>
-<dt><code>-p</code><i>&nbsp;<wbr>port</i></p>
-<dd>The udp port number on which <code>dhcpd</code> should listen. If unspecified <code>dhcpd</code> uses the default port of 67. This is mostly useful for debugging purposes.</p>
-<dt><code>-s</code><i>&nbsp;<wbr>address</i></p>
-<dd>Specify an address or host name to which <code>dhcpd</code> should send replies rather than the broadcast address (255.255.255.255). This option is only supported in IPv4.</p>
-<dt><code>-f</code></p>
-<dd>Force <code>dhcpd</code> to run as a foreground process instead of as a daemon in the background. This is useful when running <code>dhcpd </code> under a debugger, or when running it out of inittab on System V systems.</p>
-<dt><code>-d</code></p>
-<dd>Send log messages to the standard error descriptor. This can be useful for debugging, and also at sites where a complete log of all dhcp activity must be kept but syslogd is not reliable or otherwise cannot be used. Normally, <code>dhcpd</code> will log all output using the <code><a href="/docs/linux/man/3-syslog/">syslog</a>(3)</code> function with the log facility set to LOG_DAEMON. Note that <code>-d</code> implies <code>-f</code> (the daemon will not fork itself into the background).</p>
-<dt><code>-q</code></p>
-<dd>Be quiet at startup. This suppresses the printing of the entire copyright message during startup. This might be desirable when starting <code>dhcpd</code> from a system startup script (e.g., /etc/rc).</p>
-<dt><code>-t</code></p>
-<dd>Test the configuration file. The server tests the configuration file for correct syntax, but will not attempt to perform any network operations. This can be used to test a new configuration file automatically before installing it.</p>
-<dt><code>-T</code></p>
-<dd>Test the lease file. The server tests the lease file for correct syntax, but will not attempt to perform any network operations. This can be used to test a new leaes file automatically before installing it.</p>
-<dt><code>-tf</code><i>&nbsp;<wbr>tracefile</i></p>
-<dd>Specify a file into which the entire startup state of the server and all the transactions it processes are logged. This can be useful in submitting bug reports &#8211; if you are getting a core dump every so often, you can start the server with the <code>-tf</code> option and then, when the server dumps core, the trace file will contain all the transactions that led up to it dumping core, so that the problem can be easily debugged with <code>-play</code>.</p>
-<dt><code>-play</code><i>&nbsp;<wbr>playfile</i></p>
-<dd>Specify a file from which the entire startup state of the server and all the transactions it processed are read. The <code>-play</code> option must be specified with an alternate lease file, using the <code>-lf</code> switch, so that the DHCP server doesn&#8217;t wipe out your existing lease file with its test data. The DHCP server will refuse to operate in playback mode unless you specify an alternate lease file.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Print version number and exit.</p>
-<dt><code>-user</code><i>&nbsp;<wbr>user</i></p>
-<dd>Setuid to user after completing privileged operations, such as creating sockets that listen on privileged ports.</p>
-<dt><code>-group</code><i>&nbsp;<wbr>group</i></p>
-<dd>Setgid to group after completing privileged operations, such as creating sockets that listen on privileged ports.</p>
-<dt><code>-chroot</code><i>&nbsp;<wbr>dir</i></p>
-<dd>Chroot to directory after processing the command line arguments, but before reading the configuration file.</dl>
+<dt><code>-4</code></dt>
+<dd>Run as a DHCP server. This is the default and cannot be combined with <code>-6</code>.</dd>
+<dt><code>-6</code></dt>
+<dd>Run as a DHCPv6 server. This cannot be combined with <code>-4</code>.</dd>
+<dt><code>-p</code><i>&nbsp;<wbr>port</i></dt>
+<dd>The udp port number on which <code>dhcpd</code> should listen. If unspecified <code>dhcpd</code> uses the default port of 67. This is mostly useful for debugging purposes.</dd>
+<dt><code>-s</code><i>&nbsp;<wbr>address</i></dt>
+<dd>Specify an address or host name to which <code>dhcpd</code> should send replies rather than the broadcast address (255.255.255.255). This option is only supported in IPv4.</dd>
+<dt><code>-f</code></dt>
+<dd>Force <code>dhcpd</code> to run as a foreground process instead of as a daemon in the background. This is useful when running <code>dhcpd </code> under a debugger, or when running it out of inittab on System V systems.</dd>
+<dt><code>-d</code></dt>
+<dd>Send log messages to the standard error descriptor. This can be useful for debugging, and also at sites where a complete log of all dhcp activity must be kept but syslogd is not reliable or otherwise cannot be used. Normally, <code>dhcpd</code> will log all output using the <code><a href="/docs/linux/man/3-syslog/">syslog</a>(3)</code> function with the log facility set to LOG_DAEMON. Note that <code>-d</code> implies <code>-f</code> (the daemon will not fork itself into the background).</dd>
+<dt><code>-q</code></dt>
+<dd>Be quiet at startup. This suppresses the printing of the entire copyright message during startup. This might be desirable when starting <code>dhcpd</code> from a system startup script (e.g., /etc/rc).</dd>
+<dt><code>-t</code></dt>
+<dd>Test the configuration file. The server tests the configuration file for correct syntax, but will not attempt to perform any network operations. This can be used to test a new configuration file automatically before installing it.</dd>
+<dt><code>-T</code></dt>
+<dd>Test the lease file. The server tests the lease file for correct syntax, but will not attempt to perform any network operations. This can be used to test a new leaes file automatically before installing it.</dd>
+<dt><code>-tf</code><i>&nbsp;<wbr>tracefile</i></dt>
+<dd>Specify a file into which the entire startup state of the server and all the transactions it processes are logged. This can be useful in submitting bug reports &#8211; if you are getting a core dump every so often, you can start the server with the <code>-tf</code> option and then, when the server dumps core, the trace file will contain all the transactions that led up to it dumping core, so that the problem can be easily debugged with <code>-play</code>.</dd>
+<dt><code>-play</code><i>&nbsp;<wbr>playfile</i></dt>
+<dd>Specify a file from which the entire startup state of the server and all the transactions it processed are read. The <code>-play</code> option must be specified with an alternate lease file, using the <code>-lf</code> switch, so that the DHCP server doesn&#8217;t wipe out your existing lease file with its test data. The DHCP server will refuse to operate in playback mode unless you specify an alternate lease file.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Print version number and exit.</dd>
+<dt><code>-user</code><i>&nbsp;<wbr>user</i></dt>
+<dd>Setuid to user after completing privileged operations, such as creating sockets that listen on privileged ports.</dd>
+<dt><code>-group</code><i>&nbsp;<wbr>group</i></dt>
+<dd>Setgid to group after completing privileged operations, such as creating sockets that listen on privileged ports.</dd>
+<dt><code>-chroot</code><i>&nbsp;<wbr>dir</i></dt>
+<dd>Chroot to directory after processing the command line arguments, but before reading the configuration file.</dd></dl>
 <p> <i>Modifying default file locations:</i> The following options can be used to modify the locations <code>dhcpd</code> uses for it&#8217;s files. Because of the importance of using the same lease database at all times when running dhcpd in production, these options should be used <code>only</code> for testing lease files or database files in a non-production environment.</p>
 <dl>
-<dt><code>-cf</code><i>&nbsp;<wbr>config-file</i></p>
-<dd>Path to alternate configuration file.</p>
-<dt><code>-lf</code><i>&nbsp;<wbr>lease-file</i></p>
-<dd>Path to alternate lease file.</p>
-<dt><code>-pf</code><i>&nbsp;<wbr>pid-file</i></p>
-<dd>Path to alternate pid file.</p>
-<dt><code>&#8211;no-pid</code></p>
-<dd>Option to disable writing pid files. By default the program will write a pid file. If the program is invoked with this option it will not check for an existing server process.</dl>
+<dt><code>-cf</code><i>&nbsp;<wbr>config-file</i></dt>
+<dd>Path to alternate configuration file.</dd>
+<dt><code>-lf</code><i>&nbsp;<wbr>lease-file</i></dt>
+<dd>Path to alternate lease file.</dd>
+<dt><code>-pf</code><i>&nbsp;<wbr>pid-file</i></dt>
+<dd>Path to alternate pid file.</dd>
+<dt><code>&#8211;no-pid</code></dt>
+<dd>Option to disable writing pid files. By default the program will write a pid file. If the program is invoked with this option it will not check for an existing server process.</dd></dl>
 <h2>Configuration</h2>
 <p>The syntax of the <a href="/docs/linux/man/5-dhcpd-conf/">dhcpd.conf</a>(5) file is discussed separately. This section should be used as an overview of the configuration process, and the <a href="/docs/linux/man/5-dhcpd-conf/">dhcpd.conf</a>(5) documentation should be consulted for detailed reference information.</p>
 <h2>Subnets</h2>
@@ -138,86 +138,86 @@ description: "dhcpd – Dynamic Host Configuration Protocol Server"
 7 = backup
 8 = reserved
 9 = bootp</pre>
-</dl>
+</dd></dl>
 <p> <code>ip-address </code><i>data</i> lookup, examine</p>
 <dl>
-<dd>The IP address of the lease.</dl>
+<dd>The IP address of the lease.</dd></dl>
 <p> <code>dhcp-client-identifier </code><i>data</i> lookup, examine, update</p>
 <dl>
-<dd>The client identifier that the client used when it acquired the lease. Not all clients send client identifiers, so this may be empty.</dl>
+<dd>The client identifier that the client used when it acquired the lease. Not all clients send client identifiers, so this may be empty.</dd></dl>
 <p> <code>client-hostname </code><i>data</i> examine, update</p>
 <dl>
-<dd>The value the client sent in the host-name option.</dl>
+<dd>The value the client sent in the host-name option.</dd></dl>
 <p> <code>host </code><i>handle</i> examine</p>
 <dl>
-<dd>the host declaration associated with this lease, if any.</dl>
+<dd>the host declaration associated with this lease, if any.</dd></dl>
 <p> <code>subnet </code><i>handle</i> examine</p>
 <dl>
-<dd>the subnet object associated with this lease (the subnet object is not currently supported).</dl>
+<dd>the subnet object associated with this lease (the subnet object is not currently supported).</dd></dl>
 <p> <code>pool </code><i>handle</i> examine</p>
 <dl>
-<dd>the pool object associated with this lease (the pool object is not currently supported).</dl>
+<dd>the pool object associated with this lease (the pool object is not currently supported).</dd></dl>
 <p> <code>billing-class </code><i>handle</i> examine</p>
 <dl>
-<dd>the handle to the class to which this lease is currently billed, if any (the class object is not currently supported).</dl>
+<dd>the handle to the class to which this lease is currently billed, if any (the class object is not currently supported).</dd></dl>
 <p> <code>hardware-address </code><i>data</i> examine, update</p>
 <dl>
-<dd>the hardware address (chaddr) field sent by the client when it acquired its lease.</dl>
+<dd>the hardware address (chaddr) field sent by the client when it acquired its lease.</dd></dl>
 <p> <code>hardware-type </code><i>integer</i> examine, update</p>
 <dl>
-<dd>the type of the network interface that the client reported when it acquired its lease.</dl>
+<dd>the type of the network interface that the client reported when it acquired its lease.</dd></dl>
 <p> <code>ends </code><i>time</i> examine</p>
 <dl>
-<dd>the time when the lease&#8217;s current state ends, as understood by the client.</dl>
+<dd>the time when the lease&#8217;s current state ends, as understood by the client.</dd></dl>
 <p> <code>tstp </code><i>time</i> examine</p>
 <dl>
-<dd>the time when the lease&#8217;s current state ends, as understood by the server.</dl>
+<dd>the time when the lease&#8217;s current state ends, as understood by the server.</dd></dl>
 <p> <code>tsfp </code><i>time</i> examine</p>
 <dl>
-<dd>the adjusted time when the lease&#8217;s current state ends, as understood by the failover peer (if there is no failover peer, this value is undefined). Generally this value is only adjusted for expired, released, or reset leases while the server is operating in partner-down state, and otherwise is simply the value supplied by the peer.</dl>
+<dd>the adjusted time when the lease&#8217;s current state ends, as understood by the failover peer (if there is no failover peer, this value is undefined). Generally this value is only adjusted for expired, released, or reset leases while the server is operating in partner-down state, and otherwise is simply the value supplied by the peer.</dd></dl>
 <p> <code>atsfp </code><i>time</i> examine</p>
 <dl>
-<dd>the actual tsfp value sent from the peer. This value is forgotten when a lease binding state change is made, to facilitate retransmission logic.</dl>
+<dd>the actual tsfp value sent from the peer. This value is forgotten when a lease binding state change is made, to facilitate retransmission logic.</dd></dl>
 <p> <code>cltt </code><i>time</i> examine</p>
 <dl>
-<dd>The time of the last transaction with the client on this lease.</dl>
+<dd>The time of the last transaction with the client on this lease.</dd></dl>
 <h2>The Host Object</h2>
 <p>Hosts can be created, destroyed, looked up, examined and modified. If a host declaration is created or deleted using OMAPI, that information will be recorded in the dhcpd.leases file. It is permissible to delete host declarations that are declared in the dhcpd.conf file. </p>
 <p> Hosts have the following attributes: </p>
 <p> <code>name </code><i>data</i> lookup, examine, modify</p>
 <dl>
-<dd>the name of the host declaration. This name must be unique among all host declarations.</dl>
+<dd>the name of the host declaration. This name must be unique among all host declarations.</dd></dl>
 <p> <code>group </code><i>handle</i> examine, modify</p>
 <dl>
-<dd>the named group associated with the host declaration, if there is one.</dl>
+<dd>the named group associated with the host declaration, if there is one.</dd></dl>
 <p> <code>hardware-address </code><i>data</i> lookup, examine, modify</p>
 <dl>
-<dd>the link-layer address that will be used to match the client, if any. Only valid if hardware-type is also present.</dl>
+<dd>the link-layer address that will be used to match the client, if any. Only valid if hardware-type is also present.</dd></dl>
 <p> <code>hardware-type </code><i>integer</i> lookup, examine, modify</p>
 <dl>
-<dd>the type of the network interface that will be used to match the client, if any. Only valid if hardware-address is also present.</dl>
+<dd>the type of the network interface that will be used to match the client, if any. Only valid if hardware-address is also present.</dd></dl>
 <p> <code>dhcp-client-identifier </code><i>data</i> lookup, examine, modify</p>
 <dl>
-<dd>the dhcp-client-identifier option that will be used to match the client, if any.</dl>
+<dd>the dhcp-client-identifier option that will be used to match the client, if any.</dd></dl>
 <p> <code>ip-address </code><i>data</i> examine, modify</p>
 <dl>
-<dd>a fixed IP address which is reserved for a DHCP client that matches this host declaration. The IP address will only be assigned to the client if it is valid for the network segment to which the client is connected.</dl>
+<dd>a fixed IP address which is reserved for a DHCP client that matches this host declaration. The IP address will only be assigned to the client if it is valid for the network segment to which the client is connected.</dd></dl>
 <p> <code>statements </code><i>data</i> modify</p>
 <dl>
-<dd>a list of statements in the format of the dhcpd.conf file that will be executed whenever a message from the client is being processed.</dl>
+<dd>a list of statements in the format of the dhcpd.conf file that will be executed whenever a message from the client is being processed.</dd></dl>
 <p> <code>known </code><i>integer</i> examine, modify</p>
 <dl>
-<dd>if nonzero, indicates that a client matching this host declaration will be treated as <i>known</i> in pool permit lists. If zero, the client will not be treated as known.</dl>
+<dd>if nonzero, indicates that a client matching this host declaration will be treated as <i>known</i> in pool permit lists. If zero, the client will not be treated as known.</dd></dl>
 <h2>The Group Object</h2>
 <p>Named groups can be created, destroyed, looked up, examined and modified. If a group declaration is created or deleted using OMAPI, that information will be recorded in the dhcpd.leases file. It is permissible to delete group declarations that are declared in the dhcpd.conf file. </p>
 <p> Named groups currently can only be associated with hosts &#8211; this allows one set of statements to be efficiently attached to more than one host declaration. </p>
 <p> Groups have the following attributes: </p>
 <p> <code>name </code><i>data</i></p>
 <dl>
-<dd>the name of the group. All groups that are created using OMAPI must have names, and the names must be unique among all groups.</dl>
+<dd>the name of the group. All groups that are created using OMAPI must have names, and the names must be unique among all groups.</dd></dl>
 <p> <code>statements </code><i>data</i></p>
 <dl>
-<dd>a list of statements in the format of the dhcpd.conf file that will be executed whenever a message from a client whose host declaration references this group is processed.</dl>
+<dd>a list of statements in the format of the dhcpd.conf file that will be executed whenever a message from a client whose host declaration references this group is processed.</dd></dl>
 <h2>The Control Object</h2>
 <p>The control object allows you to shut the server down. If the server is doing failover with another peer, it will make a clean transition into the shutdown state and notify its peer, so that the peer can go into partner down, and then record the &quot;recover&quot; state in the lease file so that when the server is restarted, it will automatically resynchronize with its peer. </p>
 <p> On shutdown the server will also attempt to cleanly shut down all OMAPI connections. If these connections do not go down cleanly after five seconds, they are shut down preemptively. It can take as much as 25 seconds from the beginning of the shutdown process to the time that the server actually exits. </p>
@@ -226,34 +226,34 @@ description: "dhcpd – Dynamic Host Configuration Protocol Server"
 <p>The failover-state object is the object that tracks the state of the failover protocol as it is being managed for a given failover peer. The failover object has the following attributes (please see <code>dhcpd.conf (5)</code> for explanations about what these attributes mean): </p>
 <p> <code>name </code><i>data</i> examine</p>
 <dl>
-<dd>Indicates the name of the failover peer relationship, as described in the server&#8217;s <code>dhcpd.conf</code> file.</dl>
+<dd>Indicates the name of the failover peer relationship, as described in the server&#8217;s <code>dhcpd.conf</code> file.</dd></dl>
 <p> <code>partner-address </code><i>data</i> examine</p>
 <dl>
-<dd>Indicates the failover partner&#8217;s IP address.</dl>
+<dd>Indicates the failover partner&#8217;s IP address.</dd></dl>
 <p> <code>local-address </code><i>data</i> examine</p>
 <dl>
-<dd>Indicates the IP address that is being used by the DHCP server for this failover pair.</dl>
+<dd>Indicates the IP address that is being used by the DHCP server for this failover pair.</dd></dl>
 <p> <code>partner-port </code><i>data</i> examine</p>
 <dl>
-<dd>Indicates the TCP port on which the failover partner is listening for failover protocol connections.</dl>
+<dd>Indicates the TCP port on which the failover partner is listening for failover protocol connections.</dd></dl>
 <p> <code>local-port </code><i>data</i> examine</p>
 <dl>
-<dd>Indicates the TCP port on which the DHCP server is listening for failover protocol connections for this failover pair.</dl>
+<dd>Indicates the TCP port on which the DHCP server is listening for failover protocol connections for this failover pair.</dd></dl>
 <p> <code>max-outstanding-updates </code><i>integer</i> examine</p>
 <dl>
-<dd>Indicates the number of updates that can be outstanding and unacknowledged at any given time, in this failover relationship.</dl>
+<dd>Indicates the number of updates that can be outstanding and unacknowledged at any given time, in this failover relationship.</dd></dl>
 <p> <code>mclt </code><i>integer</i> examine</p>
 <dl>
-<dd>Indicates the maximum client lead time in this failover relationship.</dl>
+<dd>Indicates the maximum client lead time in this failover relationship.</dd></dl>
 <p> <code>load-balance-max-secs </code><i>integer</i> examine</p>
 <dl>
-<dd>Indicates the maximum value for the secs field in a client request before load balancing is bypassed.</dl>
+<dd>Indicates the maximum value for the secs field in a client request before load balancing is bypassed.</dd></dl>
 <p> <code>load-balance-hba </code><i>data</i> examine</p>
 <dl>
-<dd>Indicates the load balancing hash bucket array for this failover relationship.</dl>
+<dd>Indicates the load balancing hash bucket array for this failover relationship.</dd></dl>
 <p> <code>local-state </code><i>integer</i> examine, modify</p>
 <dl>
-<dd>Indicates the present state of the DHCP server in this failover relationship. Possible values for state are:</dl>
+<dd>Indicates the present state of the DHCP server in this failover relationship. Possible values for state are:</dd></dl>
 <dl>
 <dd>
 <pre>1 - startup
@@ -268,38 +268,38 @@ description: "dhcpd – Dynamic Host Configuration Protocol Server"
 10 - resolution interrupted
 11 - conflict done
 254 - recover wait</pre>
-</dl>
+</dd></dl>
 <dl>
-<dd>(Note that some of the above values have changed since DHCP 3.0.x.)</dl>
+<dd>(Note that some of the above values have changed since DHCP 3.0.x.)</dd></dl>
 <dl>
-<dd>In general it is not a good idea to make changes to this state. However, in the case that the failover partner is known to be down, it can be useful to set the DHCP server&#8217;s failover state to partner down. At this point the DHCP server will take over service of the failover partner&#8217;s leases as soon as possible, and will give out normal leases, not leases that are restricted by MCLT. If you do put the DHCP server into the partner-down when the other DHCP server is not in the partner-down state, but is not reachable, IP address assignment conflicts are possible, even likely. Once a server has been put into partner-down mode, its failover partner must not be brought back online until communication is possible between the two servers.</dl>
+<dd>In general it is not a good idea to make changes to this state. However, in the case that the failover partner is known to be down, it can be useful to set the DHCP server&#8217;s failover state to partner down. At this point the DHCP server will take over service of the failover partner&#8217;s leases as soon as possible, and will give out normal leases, not leases that are restricted by MCLT. If you do put the DHCP server into the partner-down when the other DHCP server is not in the partner-down state, but is not reachable, IP address assignment conflicts are possible, even likely. Once a server has been put into partner-down mode, its failover partner must not be brought back online until communication is possible between the two servers.</dd></dl>
 <p> <code>partner-state </code><i>integer</i> examine</p>
 <dl>
-<dd>Indicates the present state of the failover partner.</dl>
+<dd>Indicates the present state of the failover partner.</dd></dl>
 <p> <code>local-stos </code><i>integer</i> examine</p>
 <dl>
-<dd>Indicates the time at which the DHCP server entered its present state in this failover relationship.</dl>
+<dd>Indicates the time at which the DHCP server entered its present state in this failover relationship.</dd></dl>
 <p> <code>partner-stos </code><i>integer</i> examine</p>
 <dl>
-<dd>Indicates the time at which the failover partner entered its present state.</dl>
+<dd>Indicates the time at which the failover partner entered its present state.</dd></dl>
 <p> <code>hierarchy </code><i>integer</i> examine</p>
 <dl>
-<dd>Indicates whether the DHCP server is primary (0) or secondary (1) in this failover relationship.</dl>
+<dd>Indicates whether the DHCP server is primary (0) or secondary (1) in this failover relationship.</dd></dl>
 <p> <code>last-packet-sent </code><i>integer</i> examine</p>
 <dl>
-<dd>Indicates the time at which the most recent failover packet was sent by this DHCP server to its failover partner.</dl>
+<dd>Indicates the time at which the most recent failover packet was sent by this DHCP server to its failover partner.</dd></dl>
 <p> <code>last-timestamp-received </code><i>integer</i> examine</p>
 <dl>
-<dd>Indicates the timestamp that was on the failover message most recently received from the failover partner.</dl>
+<dd>Indicates the timestamp that was on the failover message most recently received from the failover partner.</dd></dl>
 <p> <code>skew </code><i>integer</i> examine</p>
 <dl>
-<dd>Indicates the skew between the failover partner&#8217;s clock and this DHCP server&#8217;s clock</dl>
+<dd>Indicates the skew between the failover partner&#8217;s clock and this DHCP server&#8217;s clock</dd></dl>
 <p> <code>max-response-delay </code><i>integer</i> examine</p>
 <dl>
-<dd>Indicates the time in seconds after which, if no message is received from the failover partner, the partner is assumed to be out of communication.</dl>
+<dd>Indicates the time in seconds after which, if no message is received from the failover partner, the partner is assumed to be out of communication.</dd></dl>
 <p> <code>cur-unacked-updates </code><i>integer</i> examine</p>
 <dl>
-<dd>Indicates the number of update messages that have been received from the failover partner but not yet processed.</dl>
+<dd>Indicates the number of update messages that have been received from the failover partner but not yet processed.</dd></dl>
 <h2>Files</h2>
 <p><code>/etc/dhcp/dhcpd.conf, /var/lib/dhcpd/dhcpd.leases, /var/run/dhcpd.pid,</code> <code>/var/lib/dhcpd/dhcpd.leases~.</code></p>
 <h2>See Also</h2>

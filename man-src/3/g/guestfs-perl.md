@@ -12,7 +12,6 @@ description: "guestfs-perl – How to use libguestfs from Perl"
 <h2>SYNOPSIS</h2>
 <pre><code>
 use Sys::Guestfs;
-
 my $g = Sys::Guestfs-&gt;new ();
 $g-&gt;add_drive_opts('guest.img', format = &gt; 'raw');
 $g-&gt;launch();
@@ -80,41 +79,31 @@ $g-&gt;close();</p>
 <h2>EXAMPLE 2: INSPECT A VIRTUAL MACHINE DISK IMAGE</h2>
 <pre><code>
 #!/ usr / bin / env perl
-
 #Example showing how to inspect a virtual machine disk.
-
 use strict;
 use warnings;
 use Sys::Guestfs;
-
 if (@ARGV &lt; 1) {
     die "usage: inspect_vm disk.img"
 }
-
 my $disk = $ARGV[0];
-
 my $g = new Sys::Guestfs();
-
 #Attach the disk image read - only to libguestfs.
 #You could also add an optional format = &gt;... argument here.This is
 #advisable since automatic format detection is insecure.
 $g-&gt;add_drive_opts($disk, readonly = &gt; 1);
-
 #Run the libguestfs back - end.
 $g-&gt;launch();
-
 #Ask libguestfs to inspect for operating systems.
 my @roots = $g-&gt;inspect_os();
 if (@roots == 0) {
     die "inspect_vm: no operating systems found";
 }
-
  for
      my $root(@roots)
      {
          printf "Root device: %s
 ", $root;
-
 #Print basic information about the operating system.
          printf "  Product name: %s
 ", $g-&gt;inspect_get_product_name($root);
@@ -126,7 +115,6 @@ if (@roots == 0) {
 ", $g-&gt;inspect_get_type($root);
          printf "  Distro:       %s
 ", $g-&gt;inspect_get_distro($root);
-
 #Mount up the disks, like guestfish - i.
 #
 #Sort keys by length, shortest first, so that we end up
@@ -142,7 +130,6 @@ if (@roots == 0) {
 "
              }
          }
-
 #If / etc / issue.net file exists, print up to 3 lines.
      my $filename = "/etc/issue.net";
      if ($g-&gt;is_file($filename)) {
@@ -152,7 +139,6 @@ if (@roots == 0) {
          print "$_
 " foreach @lines;
      }
-
 #Unmount everything.
      $g-&gt;umount_all()
      }
@@ -170,27 +156,27 @@ if (@roots == 0) {
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> When reporting a bug, please supply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The version of libguestfs.</p>
-<dt>&bull;</p>
-<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</p>
-<dt>&bull;</p>
-<dd> Describe the bug accurately and give a way to reproduce it.</p>
-<dt>&bull;</p>
-<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
 <h2>Index</h2>
-<dt><a href="#lbAF">EXAMPLE 1: CREATE A DISK IMAGE</a></p>
+<dt><a href="#lbAF">EXAMPLE 1: CREATE A DISK IMAGE</a></dt>
 <dd>
-<dt><a href="#lbAG">EXAMPLE 2: INSPECT A VIRTUAL MACHINE DISK IMAGE</a></p>
+</dd><dt><a href="#lbAG">EXAMPLE 2: INSPECT A VIRTUAL MACHINE DISK IMAGE</a></dt>
 <dd>
-<dt><a href="#lbAH">SEE ALSO</a></p>
+</dd><dt><a href="#lbAH">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAI">AUTHORS</a></p>
+</dd><dt><a href="#lbAI">AUTHORS</a></dt>
 <dd>
-<dt><a href="#lbAJ">COPYRIGHT</a></p>
+</dd><dt><a href="#lbAJ">COPYRIGHT</a></dt>
 <dd>
-<dt><a href="#lbAK">LICENSE</a></p>
+</dd><dt><a href="#lbAK">LICENSE</a></dt>
 <dd>
-<dt><a href="#lbAL">BUGS</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAL">BUGS</a></dt>
+<dd></dd></dl>

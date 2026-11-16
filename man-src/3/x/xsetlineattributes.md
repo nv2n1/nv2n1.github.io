@@ -10,28 +10,28 @@ description: "XSetLineAttributes, XSetDashes – GC convenience routines"
 <p>XSetLineAttributes, XSetDashes &#8211; GC convenience routines </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>int XSetLineAttributes(Display *<i>display</i>, GC <i>gc</i>, unsigned int <i>line_width</i>, int <i>line_style</i>, int <i>cap_style</i>, int <i>join_style</i>);</p>
-<dd>int XSetDashes(Display *<i>display</i>, GC <i>gc</i>, int <i>dash_offset</i>, char <i>dash_list</i>[], int <i>n</i>);</dl>
+<dd>int XSetLineAttributes(Display *<i>display</i>, GC <i>gc</i>, unsigned int <i>line_width</i>, int <i>line_style</i>, int <i>cap_style</i>, int <i>join_style</i>);</dd>
+<dd>int XSetDashes(Display *<i>display</i>, GC <i>gc</i>, int <i>dash_offset</i>, char <i>dash_list</i>[], int <i>n</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>cap_style</i></p>
-<dd>Specifies the line-style and cap-style you want to set for the specified GC. You can pass <code>CapNotLast</code>, <code>CapButt</code>, <code>CapRound</code>, or <code>CapProjecting</code>.</p>
-<dt><i>dash_list</i></p>
-<dd>Specifies the dash-list for the dashed line-style you want to set for the specified GC.</p>
-<dt><i>dash_offset</i></p>
-<dd>Specifies the phase of the pattern for the dashed line-style you want to set for the specified GC.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>gc</i></p>
-<dd>Specifies the GC.</p>
-<dt><i>join_style</i></p>
-<dd>Specifies the line join-style you want to set for the specified GC. You can pass <code>JoinMiter</code>, <code>JoinRound</code>, or <code>JoinBevel</code>.</p>
-<dt><i>line_style</i></p>
-<dd>Specifies the line-style you want to set for the specified GC. You can pass <code>LineSolid</code>, <code>LineOnOffDash</code>, or <code>LineDoubleDash</code>.</p>
-<dt><i>line_width</i></p>
-<dd>Specifies the line-width you want to set for the specified GC.</p>
-<dt><i>n</i></p>
-<dd>Specifies the number of elements in dash_list.</dl>
+<dt><i>cap_style</i></dt>
+<dd>Specifies the line-style and cap-style you want to set for the specified GC. You can pass <code>CapNotLast</code>, <code>CapButt</code>, <code>CapRound</code>, or <code>CapProjecting</code>.</dd>
+<dt><i>dash_list</i></dt>
+<dd>Specifies the dash-list for the dashed line-style you want to set for the specified GC.</dd>
+<dt><i>dash_offset</i></dt>
+<dd>Specifies the phase of the pattern for the dashed line-style you want to set for the specified GC.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>gc</i></dt>
+<dd>Specifies the GC.</dd>
+<dt><i>join_style</i></dt>
+<dd>Specifies the line join-style you want to set for the specified GC. You can pass <code>JoinMiter</code>, <code>JoinRound</code>, or <code>JoinBevel</code>.</dd>
+<dt><i>line_style</i></dt>
+<dd>Specifies the line-style you want to set for the specified GC. You can pass <code>LineSolid</code>, <code>LineOnOffDash</code>, or <code>LineDoubleDash</code>.</dd>
+<dt><i>line_width</i></dt>
+<dd>Specifies the line-width you want to set for the specified GC.</dd>
+<dt><i>n</i></dt>
+<dd>Specifies the number of elements in dash_list.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XSetLineAttributes</code> function sets the line drawing components in the specified GC. </p>
 <p> <code>XSetLineAttributes</code> can generate <code>BadAlloc</code>, <code>BadGC</code>, and <code>BadValue</code> errors. </p>
@@ -41,12 +41,12 @@ description: "XSetLineAttributes, XSetDashes – GC convenience routines"
 <p> <code>XSetDashes</code> can generate <code>BadAlloc</code>, <code>BadGC</code>, and <code>BadValue</code> errors.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>The server failed to allocate the requested resource or server memory.</p>
-<dt><code>BadGC</code></p>
-<dd>A value for a GContext argument does not name a defined GContext.</p>
-<dt><code>BadValue</code></p>
-<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>The server failed to allocate the requested resource or server memory.</dd>
+<dt><code>BadGC</code></dt>
+<dd>A value for a GContext argument does not name a defined GContext.</dd>
+<dt><code>BadValue</code></dt>
+<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xcreategc/">XCreateGC</a>(3), <a href="/docs/linux/man/3-xquerybestsize/">XQueryBestSize</a>(3), <a href="/docs/linux/man/3-xsetarcmode/">XSetArcMode</a>(3), <a href="/docs/linux/man/3-xsetcliporigin/">XSetClipOrigin</a>(3), <a href="/docs/linux/man/3-xsetfillstyle/">XSetFillStyle</a>(3), <a href="/docs/linux/man/3-xsetfont/">XSetFont</a>(3), <a href="/docs/linux/man/3-xsetstate/">XSetState</a>(3), <a href="/docs/linux/man/3-xsettile/">XSetTile</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

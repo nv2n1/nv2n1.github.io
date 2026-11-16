@@ -10,7 +10,6 @@ description: "sinh, sinhf, sinhl – hyperbolic sine function"
 <p>sinh, sinhf, sinhl &#8211; hyperbolic sine function</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;math.h&gt;
-
 double sinh(double x);
 float sinhf(float x);
 long double sinhl(long double x);</code></pre>
@@ -18,7 +17,7 @@ long double sinhl(long double x);</code></pre>
 <dl>
 <dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>These functions return the hyperbolic sine of <i>x</i>, which is defined mathematically as: </p>
 <pre> sinh(x) = (exp(x) - exp(-x)) / 2</pre>
@@ -32,8 +31,8 @@ long double sinhl(long double x);</code></pre>
 <p>See <code><a href="/docs/linux/man/7-math_error/">math_error</a></code>(7) for information on how to determine whether an error has occurred when calling these functions. </p>
 <p> The following errors can occur:</p>
 <dl>
-<dt>Range error: result overflow</p>
-<dd><i>errno</i> is set to <code>ERANGE</code>. An overflow floating-point exception (<code>FE_OVERFLOW</code>) is raised.</dl>
+<dt>Range error: result overflow</dt>
+<dd><i>errno</i> is set to <code>ERANGE</code>. An overflow floating-point exception (<code>FE_OVERFLOW</code>) is raised.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

@@ -15,11 +15,11 @@ snd_pcm_notify - Add/remove the notify list
 <h2>Arguments</h2>
 
 <i>notify</i>
-<dl><dd><dd>PCM notify list</dl>
+<dl><dd></dd><dd>PCM notify list</dd></dl>
  
 
  <i>nfree</i>
-<dl><dd>0 = register, 1 = unregister</dl>
+<dl><dd>0 = register, 1 = unregister</dd></dl>
 
 <h2>Description</h2>
 

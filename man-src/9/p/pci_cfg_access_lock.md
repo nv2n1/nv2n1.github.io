@@ -15,7 +15,7 @@ pci_cfg_access_lock - Lock PCI config reads/writes
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>pci device struct</dl>
+<dl><dd></dd><dd>pci device struct</dd></dl>
 
 <h2>Description</h2>
 

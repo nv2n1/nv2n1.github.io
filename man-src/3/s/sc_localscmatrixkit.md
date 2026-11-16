@@ -11,7 +11,6 @@ description: "sc::LocalSCMatrixKit –"
 <p> The <code>LocalSCMatrixKit</code> produces matrices that work in a single processor environment.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;local.h&gt;</code></pre>
 <p> Inherits <code>sc::SCMatrixKit</code>.</p>
 <h3>Public Member Functions</h3>

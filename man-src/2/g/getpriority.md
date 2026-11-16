@@ -26,16 +26,16 @@ description: "getpriority, setpriority – get/set program scheduling priority"
 <p> <code>setpriority</code>() returns 0 on success. On error, it returns -1 and sets <i>errno</i> to indicate the cause of the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> <i>which</i> was not one of <code>PRIO_PROCESS</code>, <code>PRIO_PGRP</code>, or <code>PRIO_USER</code>.</p>
-<dt><code>ESRCH</code></p>
-<dd> No process was located using the <i>which</i> and <i>who</i> values specified.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> <i>which</i> was not one of <code>PRIO_PROCESS</code>, <code>PRIO_PGRP</code>, or <code>PRIO_USER</code>.</dd>
+<dt><code>ESRCH</code></dt>
+<dd> No process was located using the <i>which</i> and <i>who</i> values specified.</dd></dl>
 <p> In addition to the errors indicated above, <code>setpriority</code>() may fail if:</p>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> The caller attempted to set a lower nice value (i.e., a higher process priority), but did not have the required privilege (on Linux: did not have the <code>CAP_SYS_NICE</code> capability).</p>
-<dt><code>EPERM</code></p>
-<dd> A process was located, but its effective user ID did not match either the effective or the real user ID of the caller, and was not privileged (on Linux: did not have the <code>CAP_SYS_NICE</code> capability). But see NOTES below.</dl>
+<dt><code>EACCES</code></dt>
+<dd> The caller attempted to set a lower nice value (i.e., a higher process priority), but did not have the required privilege (on Linux: did not have the <code>CAP_SYS_NICE</code> capability).</dd>
+<dt><code>EPERM</code></dt>
+<dd> A process was located, but its effective user ID did not match either the effective or the real user ID of the caller, and was not privileged (on Linux: did not have the <code>CAP_SYS_NICE</code> capability). But see NOTES below.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, SVr4, 4.4BSD (these interfaces first appeared in 4.2BSD).</p>
 <h2>NOTES</h2>

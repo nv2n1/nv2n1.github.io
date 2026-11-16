@@ -15,19 +15,19 @@ snd_device_new - create an ALSA device component
 <h2>Arguments</h2>
 
 <i>card</i>
-<dl><dd><dd>the card instance</dl>
+<dl><dd></dd><dd>the card instance</dd></dl>
  
 
  <i>type</i>
-<dl><dd>the device type, SNDRV_DEV_XXX</dl>
+<dl><dd>the device type, SNDRV_DEV_XXX</dd></dl>
  
 
  <i>device_data</i>
-<dl><dd>the data pointer of this device</dl>
+<dl><dd>the data pointer of this device</dd></dl>
  
 
  <i>ops</i>
-<dl><dd>the operator table</dl>
+<dl><dd>the operator table</dd></dl>
 
 <h2>Description</h2>
 

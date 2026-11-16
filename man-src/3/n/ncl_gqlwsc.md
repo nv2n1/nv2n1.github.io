@@ -12,9 +12,9 @@ GQLWSC (Inquire linewidth scale factor) - retrieves the current setting of the l
 
  void ginq_linewidth(Gint *err_ind, Gdouble *linewidth);
 <h2>Description</h2><dl COMPACT><dt>ERRIND
-<dd>(Integer, Output) - If the inquired value cannot be returned correctly, a non-zero error indicator is returned in ERRIND, otherwise a zero is returned. Consult &quot;User's Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.
-<dt>LWIDTH
-<dd>(Real, Output) - Returns the current value of the linewidth scale factor as set by default or by a call to GSLWSC.</dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
+</dt><dd>(Integer, Output) - If the inquired value cannot be returned correctly, a non-zero error indicator is returned in ERRIND, otherwise a zero is returned. Consult &quot;User's Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.
+</dd><dt>LWIDTH
+</dt><dd>(Real, Output) - Returns the current value of the linewidth scale factor as set by default or by a call to GSLWSC.</dd></dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
 <h2>See Also</h2>Online: gpl, gsln, gslwsc, gscr, gsplci, gqln, gqplci, dashline, ginq_linewidth 
 
  Hardcopy: User's Guide for NCAR GKS-0A Graphics; NCAR Graphics Fundamentals, UNIX Version

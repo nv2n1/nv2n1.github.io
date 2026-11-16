@@ -40,38 +40,38 @@ description: "git-changelog – Generate a changelog report"
 <p> Show a help message with basic usage information.</p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>Updating existing file or creating a new <i>History.md</i> file with pretty formatted output:</p>
+<dt>Updating existing file or creating a new <i>History.md</i> file with pretty formatted output:</dt>
 <dd>
-<dt>
-<dd> $ git changelog</p>
-<dt>Listing commits from the current version:</p>
+</dd><dt>
+</dt><dd> $ git changelog</dd>
+<dt>Listing commits from the current version:</dt>
 <dd>
-<dt>
-<dd> $ git changelog &#8211;list</p>
-<dt>Listing a range of commits from 2.1.0 to now:</p>
+</dd><dt>
+</dt><dd> $ git changelog &#8211;list</dd>
+<dt>Listing a range of commits from 2.1.0 to now:</dt>
 <dd>
-<dt>
-<dd> $ git changelog &#8211;list &#8211;start-tag 2.1.0</p>
-<dt>Listing a pretty formatted version of the same:</p>
+</dd><dt>
+</dt><dd> $ git changelog &#8211;list &#8211;start-tag 2.1.0</dd>
+<dt>Listing a pretty formatted version of the same:</dt>
 <dd>
-<dt>
-<dd> $ git changelog &#8211;start-tag 2.1.0</p>
-<dt>Listing a range of commits from initial commit to 2.1.0:</p>
+</dd><dt>
+</dt><dd> $ git changelog &#8211;start-tag 2.1.0</dd>
+<dt>Listing a range of commits from initial commit to 2.1.0:</dt>
 <dd>
-<dt>
-<dd> $ git changelog &#8211;list &#8211;final-tag 2.1.0</p>
-<dt>Listing a pretty formatted range of commits between 0.5.0 and 1.0.0:</p>
+</dd><dt>
+</dt><dd> $ git changelog &#8211;list &#8211;final-tag 2.1.0</dd>
+<dt>Listing a pretty formatted range of commits between 0.5.0 and 1.0.0:</dt>
 <dd>
-<dt>
-<dd> $ git changelog &#8211;start-tag 0.5.0 &#8211;final-tag 1.0.0</p>
-<dt>Specifying a file for output:</p>
+</dd><dt>
+</dt><dd> $ git changelog &#8211;start-tag 0.5.0 &#8211;final-tag 1.0.0</dd>
+<dt>Specifying a file for output:</dt>
 <dd>
-<dt>
-<dd> $ git changelog ChangeLog.md</p>
-<dt>And if an existing Changelog exists, replace its contents entirely:</p>
+</dd><dt>
+</dt><dd> $ git changelog ChangeLog.md</dd>
+<dt>And if an existing Changelog exists, replace its contents entirely:</dt>
 <dd>
-<dt>
-<dd> $ git changelog &#8211;prune-old</dl>
+</dd><dt>
+</dt><dd> $ git changelog &#8211;prune-old</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Mark Eissler &lt;<i>mark [at] mixtur.com</i>&gt;</p>
 <h2>REPORTING BUGS</h2>

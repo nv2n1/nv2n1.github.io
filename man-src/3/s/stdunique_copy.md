@@ -11,41 +11,23 @@ std::unique_copy - std::unique_copy
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;algorithm&gt;
-
 template&lt; class InputIt, class OutputIt &gt;
-
 OutputIt unique_copy( InputIt first, InputIt last,                                                   (until C++20)
-
 OutputIt d_first );
-
 template&lt; class InputIt, class OutputIt &gt;
-
 constexpr OutputIt unique_copy( InputIt first, InputIt last,                                         (since C++20)
-
 OutputIt d_first );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2 &gt;
-
 ForwardIt2 unique_copy( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first, ForwardIt1 last,             (2) (since C++17)
-
 ForwardIt2 d_first );                                                                        (1)
-
 template&lt; class InputIt, class OutputIt, class BinaryPredicate &gt;
-
 OutputIt unique_copy( InputIt first, InputIt last,                                                                 (until C++20)
-
 OutputIt d_first, BinaryPredicate p );
-
 template&lt; class InputIt, class OutputIt, class BinaryPredicate &gt;
-
 constexpr OutputIt unique_copy( InputIt first, InputIt last,                                     (3)               (since C++20)
-
 OutputIt d_first, BinaryPredicate p );
-
 template&lt; class ExecutionPolicy, class ForwardIt1, class ForwardIt2, class BinaryPredicate &gt;
-
 ForwardIt2 unique_copy( ExecutionPolicy&amp;&amp; policy, ForwardIt1 first, ForwardIt1 last,                 (4)           (since C++17)
-
 ForwardIt2 d_first, BinaryPredicate p );</code></pre> 
 Copies the elements from the range [first, last), to another range beginning at d_first in such a way that there are no consecutive equal elements. Only the first element of each group of equal elements is copied. 
 1) Elements are compared using operator==. The behavior is undefined if it is not an equivalence_relation. 
@@ -104,14 +86,10 @@ For the overloads with an ExecutionPolicy, there may be a performance cost if th
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;string&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;iterator&gt;
 int main()
-
 {
     std::string s1 = &quot;The      string    with many       spaces!&quot;;
     std::cout &lt;&lt; &quot;before: &quot; &lt;&lt; s1 &lt;&lt; '\n';

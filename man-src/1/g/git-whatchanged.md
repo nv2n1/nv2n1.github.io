@@ -21,11 +21,11 @@ description: "git-whatchanged – Show logs with difference each commit introduc
 <p> <code>git whatchanged -p v2.6.12.. include/scsi drivers/scsi</code></p>
 <dl>
 <dt>
-<dd> Show as patches the commits since version <i>v2.6.12</i> that changed any file in the include/scsi or drivers/scsi subdirectories</dl>
+</dt><dd> Show as patches the commits since version <i>v2.6.12</i> that changed any file in the include/scsi or drivers/scsi subdirectories</dd></dl>
 <p> <code>git whatchanged &#8211;since=&quot;2 weeks ago&quot; &#8212; gitk</code></p>
 <dl>
 <dt>
-<dd> Show the changes during the last two weeks to the file <i>gitk</i>. The &quot;&#8211;&quot; is necessary to avoid confusion with the <code>branch</code> named <i>gitk</i></dl>
+</dt><dd> Show the changes during the last two weeks to the file <i>gitk</i>. The &quot;&#8211;&quot; is necessary to avoid confusion with the <code>branch</code> named <i>gitk</i></dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
 <h2>Index</h2>

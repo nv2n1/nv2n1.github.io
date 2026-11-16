@@ -17,11 +17,11 @@ bson_as_json(const bson_t *bson,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>bson</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>bson</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>length</code></p>
-<dd> An optional location for the length of the resulting string.</dl>
+<dt><code>length</code></dt>
+<dd> An optional location for the length of the resulting string.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_as_json/">bson_as_json</a>(3)</code> function shall encode <code>bson</code> as a JSON encoded UTF-8 string. </p>
 <p> The caller is responsible for freeing the resulting UTF-8 encoded string by calling <code><a href="/docs/linux/man/3-bson_free/">bson_free</a>(3)</code> with the result. </p>

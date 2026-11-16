@@ -12,7 +12,6 @@ std::numeric_limits&lt;T&gt;::round_style - std::numeric_limits&lt;T&gt;::round_
 
 <pre><code>static const std::float_round_style round_style;
 (until C++ 11)
-
     static constexpr std::float_round_style round_style;
 (since C++ 11)</code></pre> 
 The value of std::numeric_limits&lt;T&gt;::round_style identifies the rounding style used by the floating-point type T whenever a value that is not one of the exactly repesentable values of T is stored in an object of that type. 
@@ -56,11 +55,8 @@ and 0x1.3333333333334*2-2
 is rounded to nearest and is stored as 0x1.3333333333333*2-2 
 . 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;limits&gt;
-
 int main()
-
 {
     std::cout &lt;&lt; std::hexfloat &lt;&lt; &quot;The decimal 0.1 is stored in a double as &quot;
               &lt;&lt; 0.1 &lt;&lt; '\n'

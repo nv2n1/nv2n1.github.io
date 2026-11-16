@@ -19,7 +19,7 @@ description: "cungbr.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 CUNGBR generates one of the complex unitary matrices Q or P **H
                                                               determined by CGEBRD when reducing a complex matrix A to bidiagonal
@@ -32,11 +32,11 @@ if m
 if k
 &gt;= n, P **H = G(n - 1)...G(2) G(1) and CUNGBR returns P * *H as an N - by - N matrix.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>VECT</i> </p>
+</dt><dd> <i>VECT</i> </dd>
 <pre>
           VECT is CHARACTER*1
           Specifies whether the matrix Q or the matrix P**H is
@@ -115,14 +115,14 @@ if VECT
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> April 2012</dl>
+</dt><dd> April 2012</dd></dl>
 <p> Definition at line 158 of file cungbr.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

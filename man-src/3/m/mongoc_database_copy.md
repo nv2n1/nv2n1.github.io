@@ -13,8 +13,8 @@ description: "mongoc_database_copy() – Performs a deep copy of the database st
 mongoc_database_copy (mongoc_database_t *database);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>database</code></p>
-<dd>A <code>mongoc_database_t</code> \&amp;.</dl>
+<dt><code>database</code></dt>
+<dd>A <code>mongoc_database_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Performs a deep copy of the <code>database</code> struct and its configuration. Useful if you intend to call <code>mongoc_database_set_write_concern</code> , <code>mongoc_database_set_read_prefs</code> , or <code>mongoc_database_set_read_concern</code> , and want to preserve an unaltered copy of the struct. </p>
 <p> This function does <code>not</code> copy the contents of the database on the MongoDB server; use the for that purpose. </p>

@@ -23,19 +23,19 @@ url: "/docs/linux/man/1-luafindfont/"
 
 <dl>
 <dt>-h,--help
-<dd> obvious ... :-)
-<dt>-o,--otfinfo
-<dd> Use the program otfinfo for the font with the given number. The number can be followed by an optional argument for otfinfo, e.g. -o 2f, list all features for font no 2. Without an additional character, otfinfo is called with -i
-<dt>-i,--info
-<dd> List the given fontstyles (regular, bold, italic, bolditalic) for the font with the given number
-<dt>-v,--verbose
-<dd> Give more informations, by now only -v works
-<dt>-m,--max_string
-<dd> The maximum of the stringlength of the full path of fonts
-<dt>-n,--nosymbolicnames
-<dd> The fontlist contains only fontfile and fontpath
-<dt>&lt;fontname&gt;
-<dd> Can be a substring, e.g. times, or a combination of two substrings which act like a boolean and, e.g. &quot;times &amp; bold&quot; (must be in quotes). All strings are not case sensitive. Upper and lowercase can be mixed.</dl>
+</dt><dd> obvious ... :-)
+</dd><dt>-o,--otfinfo
+</dt><dd> Use the program otfinfo for the font with the given number. The number can be followed by an optional argument for otfinfo, e.g. -o 2f, list all features for font no 2. Without an additional character, otfinfo is called with -i
+</dd><dt>-i,--info
+</dt><dd> List the given fontstyles (regular, bold, italic, bolditalic) for the font with the given number
+</dd><dt>-v,--verbose
+</dt><dd> Give more informations, by now only -v works
+</dd><dt>-m,--max_string
+</dt><dd> The maximum of the stringlength of the full path of fonts
+</dd><dt>-n,--nosymbolicnames
+</dt><dd> The fontlist contains only fontfile and fontpath
+</dd><dt>&lt;fontname&gt;
+</dt><dd> Can be a substring, e.g. times, or a combination of two substrings which act like a boolean and, e.g. &quot;times &amp; bold&quot; (must be in quotes). All strings are not case sensitive. Upper and lowercase can be mixed.</dd></dl>
 
 <h2>EXAMPLES</h2>
 

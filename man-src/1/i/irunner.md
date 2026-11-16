@@ -18,14 +18,14 @@ description: "irunner – interactive runner interface"
 <p> The already implemented runners are listed below; adding one for a new program is a trivial task, see the source for examples.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> show this help message and exit</p>
-<dt><code>&#8211;ipython</code></p>
-<dd> IPython interactive runner (default).</p>
-<dt><code>&#8211;python</code></p>
-<dd> Python interactive runner.</p>
-<dt><code>&#8211;sage</code></p>
-<dd> SAGE interactive runner.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> show this help message and exit</dd>
+<dt><code>&#8211;ipython</code></dt>
+<dd> IPython interactive runner (default).</dd>
+<dt><code>&#8211;python</code></dt>
+<dd> Python interactive runner.</dd>
+<dt><code>&#8211;sage</code></dt>
+<dd> SAGE interactive runner.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> irunner.py &#8211;python &#8212; &#8211;help will pass &#8211;help to the python runner. Similarly, irunner.py &#8211;ipython &#8212; &#8211;interact script.ipy</p>
 <h2>SEE ALSO</h2>

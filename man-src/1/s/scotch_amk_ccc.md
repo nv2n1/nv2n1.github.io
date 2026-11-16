@@ -22,21 +22,19 @@ amk_ccc[options] dim[tfile] amk_fft2[options] dim[tfile] amk_hy[options] dim[tfi
 <p> <code>amk_p2</code> creates a weighted path graph topology comprising only two vertices of weights <i>wght0</i> and <i>wght1</i>. This is just a helper program, which builds a &#8216;wcmplt&#8217; algorithmically-defined complete graph with two vertices. It may be used to compute weighted bisections of a graph.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-m</code><i>meth</i></p>
-<dd> For <code>amk_m2</code> only. Perform either recursive dissection or one-way dissection, according to the given method flag:</p>
+<dt><code>-m</code><i>meth</i></dt>
+<dd> For <code>amk_m2</code> only. Perform either recursive dissection or one-way dissection, according to the given method flag:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>n</code></p>
-<dd> perform nested dissection (default).</p>
-<dt><code>o</code></p>
-<dd> perform one-way dissection (cut across Y, then X).</dl>
+<dt><code>n</code></dt>
+<dd> perform nested dissection (default).</dd>
+<dt><code>o</code></dt>
+<dd> perform one-way dissection (cut across Y, then X).</dd></dl>
 </dl>
-<dt><code>-h</code></p>
-<dd> Display some help.</p>
-<dt><code>-V</code></p>
-<dd> Display program version and copyright.</dl>
+<dt><code>-h</code></dt>
+<dd> Display some help.</dd>
+<dt><code>-V</code></dt>
+<dd> Display program version and copyright.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> Create a cube-connected-cycle target architecture of dimension 4, and save it to file &#8216;ccc4.tgt&#8217;. </p>
 <pre>

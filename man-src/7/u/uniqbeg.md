@@ -16,7 +16,7 @@ description: "uniqbeg – unique beginners for noun hierarchies"
 <p>The lexicographer files are not included in the WordNet database package.</p>
 <h2>Files</h2>
 <dl>
-<dt><code>noun.Tops</code></p>
-<dd>unique beginners for nouns</dl>
+<dt><code>noun.Tops</code></dt>
+<dd>unique beginners for nouns</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-wndb/">wndb</a></code>(5), <code><a href="/docs/linux/man/5-wninput/">wninput</a></code>(5), <code><a href="/docs/linux/man/7-wnintro/">wnintro</a></code>(7), <code><a href="/docs/linux/man/7-wngloss/">wngloss</a></code>(7). </p>

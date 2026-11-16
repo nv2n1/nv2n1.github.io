@@ -10,29 +10,17 @@ description: "std::experimental::ranges::search – std::experimental::ranges::s
 <p>std::experimental::ranges::search &#8211; std::experimental::ranges::search</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;experimental/ranges/algorithm&gt;
-
 template&lt; ForwardIterator I1, Sentinel&lt;I1&gt; S1,
-
 ForwardIterator I2, Sentinel&lt;I2&gt; S2, class Pred = ranges::equal_to&lt;&gt;,
-
 class Proj1 = ranges::identity, class Proj2 = ranges::identity &gt;              (1) (ranges TS)
-
 requires IndirectlyComparable&lt;I1, I2, Pred, Proj1, Proj2&gt;
-
 I1 search(I1 first1, S1 last1, I2 first2, S2 last2,
-
 Pred pred = Pred{}, Proj1 proj1 = Proj1{}, Proj2 proj2 = Proj2{});
-
 template&lt; ForwardRange R1, ForwardRange R2, class Pred = ranges::equal_to&lt;&gt;,
-
 class Proj1 = ranges::identity, class Proj2 = ranges::identity &gt;
-
 requires IndirectlyComparable&lt;ranges::iterator_t&lt;R1&gt;, ranges::iterator_t&lt;R2&gt;, (2) (ranges TS)
-
 Pred, Proj1, Proj2&gt;
-
 ranges::safe_iterator_t&lt;R1&gt; search(R1&amp;&amp; r1, R2&amp;&amp; r2, Pred pred = Pred{},
-
 Proj1 proj1 = Proj1{}, Proj2 proj2 = Proj2{});</code></pre>
 <p>1) Searches for the first occurrence of the sequence of elements [first2, last2) in the range [first1, last1). Elements are compared using pred after being projected with proj2 and proj1, respectively.<br />
 2) Same as <code>(1)</code>, but uses r1 as the first source range and r2 as the second source range, as if using ranges::begin(r1) as first1, ranges::end(r1) as last1, ranges::begin(r2) as first2, and ranges::end(r2) as last2.<br />

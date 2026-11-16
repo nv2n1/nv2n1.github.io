@@ -11,7 +11,6 @@ description: "ql/cashflows/conundrumpricer.hpp – CMS-coupon pricer."
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/cashflows/couponpricer.hpp&gt;
-
 #include &lt;ql/instruments/payoffs.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>HaganPricer</code><br />

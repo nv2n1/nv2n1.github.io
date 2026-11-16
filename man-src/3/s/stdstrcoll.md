@@ -10,7 +10,6 @@ description: "std::strcoll – std::strcoll"
 <p>std::strcoll &#8211; std::strcoll</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;cstring&gt;
-
     int strcoll(const char *lhs, const char *rhs);</code></pre>
 <p>Compares two null-terminated byte strings according to the current locale as defined by the LC_COLLATE category. </p>
 <h2>Parameters</h2>
@@ -24,12 +23,9 @@ Positive value if lhs is greater than (follows) rhs. </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstring&gt;
-
 #include &lt;clocale&gt;
 int main()
-
 {
     std::setlocale(LC_COLLATE, &quot;cs_CZ.iso88592&quot;);
     const char *s1 = &quot;hrnec&quot;;

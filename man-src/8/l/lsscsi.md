@@ -18,48 +18,48 @@ description: "lsscsi – list SCSI devices (or hosts) and their attributes"
 <h2>Options</h2>
 <p>Arguments to long options are mandatory for short options as well. The options are arranged in alphabetical order based on the long option name.</p>
 <dl>
-<dt><code>-c</code>, <code>&#8211;classic</code></p>
-<dd>The output is similar to that obtained from &#8216;cat /proc/scsi/scsi&#8217;</p>
-<dt><code>-d</code>, <code>&#8211;device</code></p>
-<dd>After outputting the (probable) SCSI device name the device node major and minor numbers are shown in brackets (e.g. &quot;/dev/sda[8:0]&quot;).</p>
-<dt><code>-g</code>, <code>&#8211;generic</code></p>
-<dd>Output the SCSI generic device file name. Note that if the sg driver is a module it may need to be loaded otherwise &#8216;-&#8216; may appear.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Output the usage message and exit.</p>
-<dt><code>-H</code>, <code>&#8211;hosts</code></p>
-<dd>List the SCSI hosts currently attached to the system. If this option is not given then SCSI devices are listed.</p>
-<dt><code>-k</code>, <code>&#8211;kname</code></p>
-<dd>Use Linux default algorithm for naming devices (e.g. block major 8, minor 0 is &quot;/dev/sda&quot;) rather than the &quot;match by major and minor&quot; in the &quot;/dev&quot; directory as discussed above.</p>
-<dt><code>-L</code>, <code>&#8211;list</code></p>
-<dd>Output additional information in &lt;attribute_name&gt;=&lt;value&gt; pairs, one pair per line preceded by two spaces. This option has the same effect as &#8216;-lll&#8217;.</p>
-<dt><code>-l</code>, <code>&#8211;long</code></p>
-<dd>Output additional information for each SCSI device (host). Can be used multiple times for more output in which case the shorter option form is more convenient (e.g. &#8216;-lll&#8217;). When used three times (i.e. &#8216;-lll&#8217;) outputs SCSI device (host) attributes one per line; preceded by two spaces; in the form &quot;&lt;attribute_name&gt;=&lt;value&gt;&quot;.</p>
-<dt><code>-x</code>, <code>&#8211;lunhex</code></p>
-<dd>when this option is used once the LUN in the tuple (at the start of each device line) is shown in &quot;T10&quot; format which is up to 16 hexadecimal digits. It is prefixed by &quot;0x&quot; to distinguish the LUN from the decimal value shown in the absence of this option. Also hierarchal LUNs are shown with a &quot;_&quot; character separating the levels. For example the two level LUN: 0x0355006600000000 will appear as 0x0355_0066. If this option is given twice (e.g. using the short form: &#8216;-xx&#8217;) then the full 16 hexadecimal digits are shown for each LUN, prefixed by &quot;0x&quot;.</p>
-<dt><code>-p</code>, <code>&#8211;protection</code></p>
-<dd>Output target (DIF) and initiator (DIX) protection types.</p>
-<dt><code>-P</code>, <code>&#8211;protmode</code></p>
-<dd>Output effective protection information mode for each disk device.</p>
-<dt><code>-i</code>, <code>&#8211;scsi_id</code></p>
-<dd>outputs the udev derived matching id found in /dev/disk/by-id/scsi* . This is only for disk (and disk like) devices. If no match is found then &quot;dm-uuid-mpath*&quot; and &quot;usb*&quot; are searched in the same directory. If there is still no match then the /sys/class/block/&lt;disk&gt;/holders directory is searched. The matching id is printed following the device name (e.g. /dev/sdc) and if there is no match &quot;-&quot; is output.</p>
-<dt><code>-s</code>, <code>&#8211;size</code></p>
-<dd>Print disk capacity in human readable form.</p>
-<dt><code>-t</code>, <code>&#8211;transport</code></p>
-<dd>Output transport information. This will be a target related information or, if <i>&#8211;hosts</i> is given, initiator related information. When used without <i>&#8211;list</i>, a name or identifier (or both) are output on a single line, usually prefixed by the type of transport. For devices this information replaces the normal vendor, product and revision strings. When the <i>&#8211;list</i> option is also given then additionally multiple lines of attribute_name=value pairs are output, each indented by two spaces. See the section on transports below.</p>
-<dt><code>-u</code>, <code>&#8211;unit</code></p>
+<dt><code>-c</code>, <code>&#8211;classic</code></dt>
+<dd>The output is similar to that obtained from &#8216;cat /proc/scsi/scsi&#8217;</dd>
+<dt><code>-d</code>, <code>&#8211;device</code></dt>
+<dd>After outputting the (probable) SCSI device name the device node major and minor numbers are shown in brackets (e.g. &quot;/dev/sda[8:0]&quot;).</dd>
+<dt><code>-g</code>, <code>&#8211;generic</code></dt>
+<dd>Output the SCSI generic device file name. Note that if the sg driver is a module it may need to be loaded otherwise &#8216;-&#8216; may appear.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Output the usage message and exit.</dd>
+<dt><code>-H</code>, <code>&#8211;hosts</code></dt>
+<dd>List the SCSI hosts currently attached to the system. If this option is not given then SCSI devices are listed.</dd>
+<dt><code>-k</code>, <code>&#8211;kname</code></dt>
+<dd>Use Linux default algorithm for naming devices (e.g. block major 8, minor 0 is &quot;/dev/sda&quot;) rather than the &quot;match by major and minor&quot; in the &quot;/dev&quot; directory as discussed above.</dd>
+<dt><code>-L</code>, <code>&#8211;list</code></dt>
+<dd>Output additional information in &lt;attribute_name&gt;=&lt;value&gt; pairs, one pair per line preceded by two spaces. This option has the same effect as &#8216;-lll&#8217;.</dd>
+<dt><code>-l</code>, <code>&#8211;long</code></dt>
+<dd>Output additional information for each SCSI device (host). Can be used multiple times for more output in which case the shorter option form is more convenient (e.g. &#8216;-lll&#8217;). When used three times (i.e. &#8216;-lll&#8217;) outputs SCSI device (host) attributes one per line; preceded by two spaces; in the form &quot;&lt;attribute_name&gt;=&lt;value&gt;&quot;.</dd>
+<dt><code>-x</code>, <code>&#8211;lunhex</code></dt>
+<dd>when this option is used once the LUN in the tuple (at the start of each device line) is shown in &quot;T10&quot; format which is up to 16 hexadecimal digits. It is prefixed by &quot;0x&quot; to distinguish the LUN from the decimal value shown in the absence of this option. Also hierarchal LUNs are shown with a &quot;_&quot; character separating the levels. For example the two level LUN: 0x0355006600000000 will appear as 0x0355_0066. If this option is given twice (e.g. using the short form: &#8216;-xx&#8217;) then the full 16 hexadecimal digits are shown for each LUN, prefixed by &quot;0x&quot;.</dd>
+<dt><code>-p</code>, <code>&#8211;protection</code></dt>
+<dd>Output target (DIF) and initiator (DIX) protection types.</dd>
+<dt><code>-P</code>, <code>&#8211;protmode</code></dt>
+<dd>Output effective protection information mode for each disk device.</dd>
+<dt><code>-i</code>, <code>&#8211;scsi_id</code></dt>
+<dd>outputs the udev derived matching id found in /dev/disk/by-id/scsi* . This is only for disk (and disk like) devices. If no match is found then &quot;dm-uuid-mpath*&quot; and &quot;usb*&quot; are searched in the same directory. If there is still no match then the /sys/class/block/&lt;disk&gt;/holders directory is searched. The matching id is printed following the device name (e.g. /dev/sdc) and if there is no match &quot;-&quot; is output.</dd>
+<dt><code>-s</code>, <code>&#8211;size</code></dt>
+<dd>Print disk capacity in human readable form.</dd>
+<dt><code>-t</code>, <code>&#8211;transport</code></dt>
+<dd>Output transport information. This will be a target related information or, if <i>&#8211;hosts</i> is given, initiator related information. When used without <i>&#8211;list</i>, a name or identifier (or both) are output on a single line, usually prefixed by the type of transport. For devices this information replaces the normal vendor, product and revision strings. When the <i>&#8211;list</i> option is also given then additionally multiple lines of attribute_name=value pairs are output, each indented by two spaces. See the section on transports below.</dd>
+<dt><code>-u</code>, <code>&#8211;unit</code></dt>
 <dd>Output logical unit name, if available. If this option is given once or twice, then the 30 character field where the vendor, product and revision strings are usually placed is expanded to 32 characters and replaced by the logical unit name. The first found of the NAA, EUI-64 or SCSI name string is output unless a SCSI name string is found and the associated target port indicates the iSCSI protocol, in which case the SCSI name string is preferred.<br />
  If the name cannot fit in the 32 character field then it is truncated to the right and a trailing &#8216;_&#8217; character is used to alert the reader to the truncation. The 32 character width is chosen since that is large enough to hold 16 byte NAA or EUI-64 identifiers. However SCSI name strings as used by iSCSI can be larger than that.<br />
  If this option is used twice then this field is also 32 character wide. If the logical unit name cannot fit then it will be truncated to the left and a leading &#8216;_&#8217; character is used to alert the reader to the truncation.<br />
  If this option is used three times the whole logical unit name is output, and any remaining output on that line is skipped.<br />
- In order for this option to work, it needs a Linux kernel from and including 3.15 . It accesses the sysfs vpd_pg83 file for the device in question. Old SCSI and ATA (SATA) equipment may not provide this information. If it is provided by ATA (SATA) then it will be the WWN.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>outputs directory names where information is found. Use multiple times for more output.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>outputs version information then exits.</p>
-<dt><code>-w</code>, <code>&#8211;wwn</code></p>
-<dd>outputs the WWN for disks instead of manufacturer, model and revision (or instead of transport information). The World Wide Name (WWN) is typically 64 bits long (16 hex digits) but could be up to 128 bits long. To indicate the WWN is hexadecimal, it is prefixed by &quot;0x&quot;.</p>
-<dt><code>-y</code>, <code>&#8211;sysfsroot</code>=<i>PATH</i></p>
-<dd>assumes sysfs is mounted at PATH instead of the default &#8216;/sys&#8217; . If this option is given PATH should be an absolute path (i.e. start with &#8216;/&#8217;).</dl>
+ In order for this option to work, it needs a Linux kernel from and including 3.15 . It accesses the sysfs vpd_pg83 file for the device in question. Old SCSI and ATA (SATA) equipment may not provide this information. If it is provided by ATA (SATA) then it will be the WWN.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>outputs directory names where information is found. Use multiple times for more output.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>outputs version information then exits.</dd>
+<dt><code>-w</code>, <code>&#8211;wwn</code></dt>
+<dd>outputs the WWN for disks instead of manufacturer, model and revision (or instead of transport information). The World Wide Name (WWN) is typically 64 bits long (16 hex digits) but could be up to 128 bits long. To indicate the WWN is hexadecimal, it is prefixed by &quot;0x&quot;.</dd>
+<dt><code>-y</code>, <code>&#8211;sysfsroot</code>=<i>PATH</i></dt>
+<dd>assumes sysfs is mounted at PATH instead of the default &#8216;/sys&#8217; . If this option is given PATH should be an absolute path (i.e. start with &#8216;/&#8217;).</dd></dl>
 <h2>Transports</h2>
 <p>This utility lists SCSI devices which are known as logical units (LU) in the SCSI Architecture Model (ref: SAM-4 at <a rel="nofollow" href="http://www.t10.org)">http://www.t10.org)</a> or hosts when the <i>&#8211;hosts</i> option is given. A host is called an initiator in SAM-4. A SCSI command travels out via an initiator, across some transport to a target and then onwards to a logical unit. A target device may contain several logical units. A target device has one or more ports that can be viewed as transport end points. Each FC and SAS disk is a single target that has two ports and contains one logical unit. If both target ports on a FC or SAS disk are connected and visible to a machine, then lsscsi will show two entries. Initiators (i.e. hosts) also have one or more ports and some HBAs in Linux have a host entry per initiator port while others have a host entry per initiator device. </p>
 <p> When the <i>&#8211;transport</i> option is given for devices (i.e. <i>&#8211;hosts</i> not given) then most of the information produced by lsscsi is associated with the target, or more precisely: the target port, through which SCSI commands pass that access a logical unit. </p>

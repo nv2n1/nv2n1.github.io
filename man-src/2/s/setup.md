@@ -19,8 +19,8 @@ description: "setup – setup devices and filesystems, mount root filesystem"
 <p> <code>setup</code>() always returns -1 for a user process.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EPERM</code></p>
-<dd> Always, for a user process.</dl>
+<dt><code>EPERM</code></dt>
+<dd> Always, for a user process.</dd></dl>
 <h2>VERSIONS</h2>
 <p> Since Linux 2.1.121, no such function exists anymore.</p>
 <h2>CONFORMING TO</h2>

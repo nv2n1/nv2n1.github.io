@@ -22,46 +22,46 @@ description: "lvmraid — LVM RAID"
 <p>Also called striping, raid0 spreads LV data across multiple devices in units of stripe size. This is used to increase performance. LV data will be lost if any of the devices fail. </p>
 <p> <code>lvcreate &#8211;type raid0</code> [<code>&#8211;stripes</code> <i>Number</i> <code>&#8211;stripesize</code> <i>Size</i>] <i>VG</i> [<i>PVs</i>] </p>
 <dl>
-<dt> <code>&#8211;stripes</code></p>
-<dd>specifies the number of devices to spread the LV across. </p>
-<dt> <code>&#8211;stripesize</code></p>
-<dd>specifies the size of each stripe in kilobytes. This is the amount of data that is written to one device before moving to the next.</dl>
+<dt> <code>&#8211;stripes</code></dt>
+<dd>specifies the number of devices to spread the LV across. </dd>
+<dt> <code>&#8211;stripesize</code></dt>
+<dd>specifies the size of each stripe in kilobytes. This is the amount of data that is written to one device before moving to the next.</dd></dl>
 <p> <i>PVs</i> specifies the devices to use. If not specified, lvm will choose <i>Number</i> devices, one for each stripe based on the number of PVs available or supplied.</p>
 <h3>raid1</h3>
 <p>Also called mirroring, raid1 uses multiple devices to duplicate LV data. The LV data remains available if all but one of the devices fail. The minimum number of devices (i.e. sub LV pairs) required is 2. </p>
 <p> <code>lvcreate &#8211;type raid1</code> [<code>&#8211;mirrors</code> <i>Number</i>] <i>VG</i> [<i>PVs</i>] </p>
 <dl>
-<dt> <code>&#8211;mirrors</code></p>
-<dd>specifies the number of mirror images in addition to the original LV image, e.g. &#8211;mirrors 1 means there are two images of the data, the original and one mirror image.</dl>
+<dt> <code>&#8211;mirrors</code></dt>
+<dd>specifies the number of mirror images in addition to the original LV image, e.g. &#8211;mirrors 1 means there are two images of the data, the original and one mirror image.</dd></dl>
 <p> <i>PVs</i> specifies the devices to use. If not specified, lvm will choose <i>Number</i> devices, one for each image.</p>
 <h3>raid4</h3>
 <p>raid4 is a form of striping that uses an extra, first device dedicated to storing parity blocks. The LV data remains available if one device fails. The parity is used to recalculate data that is lost from a single device. The minimum number of devices required is 3. </p>
 <p> <code>lvcreate &#8211;type raid4</code> [<code>&#8211;stripes</code> <i>Number</i> <code>&#8211;stripesize</code> <i>Size</i>] <i>VG</i> [<i>PVs</i>] </p>
 <dl>
-<dt> <code>&#8211;stripes</code></p>
-<dd>specifies the number of devices to use for LV data. This does not include the extra device lvm adds for storing parity blocks. A raid4 LV with <i>Number</i> stripes requires <i>Number</i>+1 devices. <i>Number</i> must be 2 or more. </p>
-<dt> <code>&#8211;stripesize</code></p>
-<dd>specifies the size of each stripe in kilobytes. This is the amount of data that is written to one device before moving to the next.</dl>
+<dt> <code>&#8211;stripes</code></dt>
+<dd>specifies the number of devices to use for LV data. This does not include the extra device lvm adds for storing parity blocks. A raid4 LV with <i>Number</i> stripes requires <i>Number</i>+1 devices. <i>Number</i> must be 2 or more. </dd>
+<dt> <code>&#8211;stripesize</code></dt>
+<dd>specifies the size of each stripe in kilobytes. This is the amount of data that is written to one device before moving to the next.</dd></dl>
 <p> <i>PVs</i> specifies the devices to use. If not specified, lvm will choose <i>Number</i>+1 separate devices. </p>
 <p> raid4 is called non-rotating parity because the parity blocks are always stored on the same device.</p>
 <h3>raid5</h3>
 <p>raid5 is a form of striping that uses an extra device for storing parity blocks. LV data and parity blocks are stored on each device, typically in a rotating pattern for performance reasons. The LV data remains available if one device fails. The parity is used to recalculate data that is lost from a single device. The minimum number of devices required is 3 (unless converting from 2 legged raid1 to reshape to more stripes; see reshaping). </p>
 <p> <code>lvcreate &#8211;type raid5</code> [<code>&#8211;stripes</code> <i>Number</i> <code>&#8211;stripesize</code> <i>Size</i>] <i>VG</i> [<i>PVs</i>] </p>
 <dl>
-<dt> <code>&#8211;stripes</code></p>
-<dd>specifies the number of devices to use for LV data. This does not include the extra device lvm adds for storing parity blocks. A raid5 LV with <i>Number</i> stripes requires <i>Number</i>+1 devices. <i>Number</i> must be 2 or more. </p>
-<dt> <code>&#8211;stripesize</code></p>
-<dd>specifies the size of each stripe in kilobytes. This is the amount of data that is written to one device before moving to the next.</dl>
+<dt> <code>&#8211;stripes</code></dt>
+<dd>specifies the number of devices to use for LV data. This does not include the extra device lvm adds for storing parity blocks. A raid5 LV with <i>Number</i> stripes requires <i>Number</i>+1 devices. <i>Number</i> must be 2 or more. </dd>
+<dt> <code>&#8211;stripesize</code></dt>
+<dd>specifies the size of each stripe in kilobytes. This is the amount of data that is written to one device before moving to the next.</dd></dl>
 <p> <i>PVs</i> specifies the devices to use. If not specified, lvm will choose <i>Number</i>+1 separate devices. </p>
 <p> raid5 is called rotating parity because the parity blocks are placed on different devices in a round-robin sequence. There are variations of raid5 with different algorithms for placing the parity blocks. The default variant is raid5_ls (raid5 left symmetric, which is a rotating parity 0 with data restart.) See <code>RAID5 variants</code> below.</p>
 <h3>raid6</h3>
 <p>raid6 is a form of striping like raid5, but uses two extra devices for parity blocks. LV data and parity blocks are stored on each device, typically in a rotating pattern for perfomramce reasons. The LV data remains available if up to two devices fail. The parity is used to recalculate data that is lost from one or two devices. The minimum number of devices required is 5. </p>
 <p> <code>lvcreate &#8211;type raid6</code> [<code>&#8211;stripes</code> <i>Number</i> <code>&#8211;stripesize</code> <i>Size</i>] <i>VG</i> [<i>PVs</i>] </p>
 <dl>
-<dt> <code>&#8211;stripes</code></p>
-<dd>specifies the number of devices to use for LV data. This does not include the extra two devices lvm adds for storing parity blocks. A raid6 LV with <i>Number</i> stripes requires <i>Number</i>+2 devices. <i>Number</i> must be 3 or more. </p>
-<dt> <code>&#8211;stripesize</code></p>
-<dd>specifies the size of each stripe in kilobytes. This is the amount of data that is written to one device before moving to the next.</dl>
+<dt> <code>&#8211;stripes</code></dt>
+<dd>specifies the number of devices to use for LV data. This does not include the extra two devices lvm adds for storing parity blocks. A raid6 LV with <i>Number</i> stripes requires <i>Number</i>+2 devices. <i>Number</i> must be 3 or more. </dd>
+<dt> <code>&#8211;stripesize</code></dt>
+<dd>specifies the size of each stripe in kilobytes. This is the amount of data that is written to one device before moving to the next.</dd></dl>
 <p> <i>PVs</i> specifies the devices to use. If not specified, lvm will choose <i>Number</i>+2 separate devices. </p>
 <p> Like raid5, there are variations of raid6 with different algorithms for placing the parity blocks. The default variant is raid6_zr (raid6 zero restart, aka left symmetric, which is a rotating parity 0 with data restart.) See <code>RAID6 variants</code> below.</p>
 <h3>raid10</h3>
@@ -70,14 +70,14 @@ description: "lvmraid — LVM RAID"
 <dl>
 <dd>[<code>&#8211;mirrors</code> <i>NumberMirrors</i>]<br />
  [<code>&#8211;stripes</code> <i>NumberStripes</i> <code>&#8211;stripesize</code> <i>Size</i>]<br />
- <i>VG</i> [<i>PVs</i>]</dl>
+ <i>VG</i> [<i>PVs</i>]</dd></dl>
 <dl>
-<dt> <code>&#8211;mirrors</code></p>
-<dd>specifies the number of mirror images within each stripe. e.g. &#8211;mirrors 1 means there are two images of the data, the original and one mirror image. </p>
-<dt> <code>&#8211;stripes</code></p>
-<dd>specifies the total number of devices to use in all raid1 images (not the number of raid1 devices to spread the LV across, even though that is the effective result). The number of devices in each raid1 mirror will be NumberStripes/(NumberMirrors+1), e.g. mirrors 1 and stripes 4 will stripe data across two raid1 mirrors, where each mirror is devices. </p>
-<dt> <code>&#8211;stripesize</code></p>
-<dd>specifies the size of each stripe in kilobytes. This is the amount of data that is written to one device before moving to the next.</dl>
+<dt> <code>&#8211;mirrors</code></dt>
+<dd>specifies the number of mirror images within each stripe. e.g. &#8211;mirrors 1 means there are two images of the data, the original and one mirror image. </dd>
+<dt> <code>&#8211;stripes</code></dt>
+<dd>specifies the total number of devices to use in all raid1 images (not the number of raid1 devices to spread the LV across, even though that is the effective result). The number of devices in each raid1 mirror will be NumberStripes/(NumberMirrors+1), e.g. mirrors 1 and stripes 4 will stripe data across two raid1 mirrors, where each mirror is devices. </dd>
+<dt> <code>&#8211;stripesize</code></dt>
+<dd>specifies the size of each stripe in kilobytes. This is the amount of data that is written to one device before moving to the next.</dd></dl>
 <p> <i>PVs</i> specifies the devices to use. If not specified, lvm will choose the necessary devices. Devices are used to create mirrors in the order listed, e.g. for mirrors 1, stripes 2, listing PV1 PV2 PV3 PV4 results in mirrors PV1/PV2 and PV3/PV4. </p>
 <p> RAID10 is not mirroring on top of stripes, which would be RAID01, which is less tolerant of device failures.</p>
 <h2>Synchronization</h2>
@@ -94,19 +94,19 @@ description: "lvmraid — LVM RAID"
 <p> The command to scrub a RAID LV can operate in two different modes: </p>
 <p> <code>lvchange &#8211;syncaction</code> <code>check</code>|<code>repair</code> <i>LV</i> </p>
 <dl>
-<dt> <code>check</code></p>
-<dd>Check mode is read-only and only detects inconsistent areas in the RAID LV, it does not correct them. </p>
-<dt> <code>repair</code></p>
-<dd>Repair mode checks and writes corrected blocks to synchronize any inconsistent areas. </p>
+<dt> <code>check</code></dt>
+<dd>Check mode is read-only and only detects inconsistent areas in the RAID LV, it does not correct them. </dd>
+<dt> <code>repair</code></dt>
+<dd>Repair mode checks and writes corrected blocks to synchronize any inconsistent areas. </dd>
 </dl>
 <p> Scrubbing can consume a lot of bandwidth and slow down application I/O on the RAID LV. To control the I/O rate used for scrubbing, use: </p>
 <dl>
-<dt> <code>&#8211;maxrecoveryrate</code> <i>Size</i>[k|UNIT]</p>
+<dt> <code>&#8211;maxrecoveryrate</code> <i>Size</i>[k|UNIT]</dt>
 <dd>
-<dd>Sets the maximum recovery rate for a RAID LV. <i>Size</i> is specified as an amount per second for each device in the array. If no suffix is given, then KiB/sec/device is used. Setting the recovery rate to <code>0</code> means it will be unbounded. </p>
-<dt> <code>&#8211;minrecoveryrate</code> <i>Size</i>[k|UNIT]</p>
+</dd><dd>Sets the maximum recovery rate for a RAID LV. <i>Size</i> is specified as an amount per second for each device in the array. If no suffix is given, then KiB/sec/device is used. Setting the recovery rate to <code>0</code> means it will be unbounded. </dd>
+<dt> <code>&#8211;minrecoveryrate</code> <i>Size</i>[k|UNIT]</dt>
 <dd>
-<dd>Sets the minimum recovery rate for a RAID LV. <i>Size</i> is specified as an amount per second for each device in the array. If no suffix is given, then KiB/sec/device is used. Setting the recovery rate to <code>0</code> means it will be unbounded. </p>
+</dd><dd>Sets the minimum recovery rate for a RAID LV. <i>Size</i> is specified as an amount per second for each device in the array. If no suffix is given, then KiB/sec/device is used. Setting the recovery rate to <code>0</code> means it will be unbounded. </dd>
 </dl>
 <p> To display the current scrubbing in progress on an LV, including the syncaction mode and percent complete, run: </p>
 <p> <code>lvs -a -o name,raid_sync_action,sync_percent</code> </p>
@@ -128,10 +128,10 @@ description: "lvmraid — LVM RAID"
 <p> <code>lvs -a -o name,segtype,devices</code> </p>
 <p> SubLV names begin with the visible LV name, and have an automatic suffix indicating its role: </p>
 <dl>
-<dt>&bull;</p>
-<dd>SubLVs holding LV data or parity blocks have the suffix _rimage_#. These SubLVs are sometimes referred to as DataLVs. </p>
-<dt>&bull;</p>
-<dd>SubLVs holding RAID metadata have the suffix _rmeta_#. RAID metadata includes superblock information, RAID type, bitmap, and device health information. These SubLVs are sometimes referred to as MetaLVs. </p>
+<dt>&bull;</dt>
+<dd>SubLVs holding LV data or parity blocks have the suffix _rimage_#. These SubLVs are sometimes referred to as DataLVs. </dd>
+<dt>&bull;</dt>
+<dd>SubLVs holding RAID metadata have the suffix _rmeta_#. RAID metadata includes superblock information, RAID type, bitmap, and device health information. These SubLVs are sometimes referred to as MetaLVs. </dd>
 </dl>
 <p> SubLVs are an internal implementation detail of LVM. The way they are used, constructed and named may change. </p>
 <p> The following examples show the SubLV arrangement for each of the basic RAID LV types, using the fewest number of devices allowed for each.</p>
@@ -219,16 +219,16 @@ description: "lvmraid — LVM RAID"
 <h2>Device Failure</h2>
 <p>Physical devices in a RAID LV can fail or be lost for multiple reasons. A device could be disconnected, permanently failed, or temporarily disconnected. The purpose of RAID LVs (levels 1 and higher) is to continue operating in a degraded mode, without losing LV data, even after a device fails. The number of devices that can fail without the loss of LV data depends on the RAID level: </p>
 <dl>
-<dt>&bull;</p>
-<dd>RAID0 (striped) LVs cannot tolerate losing any devices. LV data will be lost if any devices fail. </p>
-<dt>&bull;</p>
-<dd>RAID1 LVs can tolerate losing all but one device without LV data loss. </p>
-<dt>&bull;</p>
-<dd>RAID4 and RAID5 LVs can tolerate losing one device without LV data loss. </p>
-<dt>&bull;</p>
-<dd>RAID6 LVs can tolerate losing two devices without LV data loss. </p>
-<dt>&bull;</p>
-<dd>RAID10 is variable, and depends on which devices are lost. It stripes across multiple mirror groups with raid1 layout thus it can tolerate losing all but one device in each of these groups without LV data loss. </p>
+<dt>&bull;</dt>
+<dd>RAID0 (striped) LVs cannot tolerate losing any devices. LV data will be lost if any devices fail. </dd>
+<dt>&bull;</dt>
+<dd>RAID1 LVs can tolerate losing all but one device without LV data loss. </dd>
+<dt>&bull;</dt>
+<dd>RAID4 and RAID5 LVs can tolerate losing one device without LV data loss. </dd>
+<dt>&bull;</dt>
+<dd>RAID6 LVs can tolerate losing two devices without LV data loss. </dd>
+<dt>&bull;</dt>
+<dd>RAID10 is variable, and depends on which devices are lost. It stripes across multiple mirror groups with raid1 layout thus it can tolerate losing all but one device in each of these groups without LV data loss. </dd>
 </dl>
 <p> If a RAID LV is missing devices, or has other device-related problems, lvs reports this in the health_status (and attr) fields: </p>
 <p> <code>lvs -o name,lv_health_status</code> </p>
@@ -314,12 +314,12 @@ description: "lvmraid — LVM RAID"
 <p> <code>lvconvert &#8211;type</code> <i>RaidLevel</i> <i>LV</i> [<i>PVs</i>] </p>
 <p> The most common and recommended RAID takeover conversions are: </p>
 <dl>
-<dt> <code>linear</code> to <code>raid1</code></p>
+<dt> <code>linear</code> to <code>raid1</code></dt>
 <dd>
-<dd>Linear is a single image of LV data, and converting it to raid1 adds a mirror image which is a direct copy of the original linear image. </p>
-<dt> <code>striped</code>/<code>raid0</code> to <code>raid4/5/6</code></p>
+</dd><dd>Linear is a single image of LV data, and converting it to raid1 adds a mirror image which is a direct copy of the original linear image. </dd>
+<dt> <code>striped</code>/<code>raid0</code> to <code>raid4/5/6</code></dt>
 <dd>
-<dd>Adding parity devices to a striped volume results in raid4/5/6. </p>
+</dd><dd>Adding parity devices to a striped volume results in raid4/5/6. </dd>
 </dl>
 <p> Unnatural conversions that are not recommended include converting between striped and non-striped types. This is because file systems often optimize I/O patterns based on device striping values. If those values change, it can decrease performance. </p>
 <p> Converting to a higher RAID level requires allocating new SubLVs to hold RAID metadata, and new SubLVs to hold parity blocks for LV data. Converting to a lower RAID level removes the SubLVs that are no longer needed. </p>
@@ -327,28 +327,28 @@ description: "lvmraid — LVM RAID"
 <p> Warning: though it is possible to create <code>striped</code> LVs with up to 128 stripes, a maximum of 64 stripes can be converted to <code>raid0</code>, 63 to <code>raid4/5</code> and 62 to <code>raid6</code> because of the added parity SubLVs. A <code>striped</code> LV with a maximum of 32 stripes can be converted to <code>raid10</code>. </p>
 <p> The following takeover conversions are currently possible: </p>
 <dl>
-<dt>&bull;</p>
-<dd>between striped and raid0.</p>
-<dt>&bull;</p>
-<dd>between linear and raid1.</p>
-<dt>&bull;</p>
-<dd>between mirror and raid1.</p>
-<dt>&bull;</p>
-<dd>between raid1 with two images and raid4/5.</p>
-<dt>&bull;</p>
-<dd>between striped/raid0 and raid4.</p>
-<dt>&bull;</p>
-<dd>between striped/raid0 and raid5.</p>
-<dt>&bull;</p>
-<dd>between striped/raid0 and raid6.</p>
-<dt>&bull;</p>
-<dd>between raid4 and raid5.</p>
-<dt>&bull;</p>
-<dd>between raid4/raid5 and raid6.</p>
-<dt>&bull;</p>
-<dd>between striped/raid0 and raid10.</p>
-<dt>&bull;</p>
-<dd>between striped and raid4. </p>
+<dt>&bull;</dt>
+<dd>between striped and raid0.</dd>
+<dt>&bull;</dt>
+<dd>between linear and raid1.</dd>
+<dt>&bull;</dt>
+<dd>between mirror and raid1.</dd>
+<dt>&bull;</dt>
+<dd>between raid1 with two images and raid4/5.</dd>
+<dt>&bull;</dt>
+<dd>between striped/raid0 and raid4.</dd>
+<dt>&bull;</dt>
+<dd>between striped/raid0 and raid5.</dd>
+<dt>&bull;</dt>
+<dd>between striped/raid0 and raid6.</dd>
+<dt>&bull;</dt>
+<dd>between raid4 and raid5.</dd>
+<dt>&bull;</dt>
+<dd>between raid4/raid5 and raid6.</dd>
+<dt>&bull;</dt>
+<dd>between striped/raid0 and raid10.</dd>
+<dt>&bull;</dt>
+<dd>between striped and raid4. </dd>
 </dl>
 <h3>Indirect conversions</h3>
 <p>Converting from one raid level to another may require multiple steps, converting first to intermediate raid levels. </p>
@@ -841,13 +841,13 @@ Are you sure you want to convert raid6_nr LV vg/lv? [y/n]: y
  &bull; RAID6 last parity devices<br />
  &bull; Fixed dedicated last devices (P-Syndrome N-1 and Q-Syndrome N)</p>
 <dl>
-<dd>with striped data used for striped/raid0 conversions</dl>
+<dd>with striped data used for striped/raid0 conversions</dd></dl>
 <p> &bull; Used for RAID Takeover </p>
 <p> raid6_{ls,rs,la,ra}_6<br />
  &bull; RAID6 last parity device<br />
  &bull; Dedicated last parity device used for conversions from/to</p>
 <dl>
-<dd>raid5_{ls,rs,la,ra}</dl>
+<dd>raid5_{ls,rs,la,ra}</dd></dl>
 <p> raid6_ls_6<br />
  &bull; RAID6 N continue<br />
  &bull; Same as raid5_ls for N-1 devices with fixed Q-Syndrome N<br />

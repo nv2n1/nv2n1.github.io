@@ -27,27 +27,27 @@ bmpanel2[-h | --help][--version][--usage][--list][--theme = &lt;theme&gt;]
 
 <dl>
 <dt>
-<dd> 1. Taskbar - A list of tasks (windows) on the current desktop.</dl>
+</dt><dd> 1. Taskbar - A list of tasks (windows) on the current desktop.</dd></dl>
  
 
 <dl>
 <dt>
-<dd> 2. Desktop Switcher - Allows user to choose current desktop.</dl>
+</dt><dd> 2. Desktop Switcher - Allows user to choose current desktop.</dd></dl>
  
 
 <dl>
 <dt>
-<dd> 3. Systray - Also known as notification area.</dl>
+</dt><dd> 3. Systray - Also known as notification area.</dd></dl>
  
 
 <dl>
 <dt>
-<dd> 4. Clock - No comments.</dl>
+</dt><dd> 4. Clock - No comments.</dd></dl>
  
 
 <dl>
 <dt>
-<dd> 5. Launchbar - Allows user to run different programs in one click.</dl>
+</dt><dd> 5. Launchbar - Allows user to run different programs in one click.</dd></dl>
  
 
  The main goal of this project is to create a simple, lightweight, nice looking, but still useful panel, that will be accompanied with another piece of a really good software - the Openbox 3.
@@ -59,31 +59,31 @@ bmpanel2[-h | --help][--version][--usage][--list][--theme = &lt;theme&gt;]
  -h, --help
 <dl>
 <dt>
-<dd> Prints short list with following tiny descriptions of all of the options.</dl>
+</dt><dd> Prints short list with following tiny descriptions of all of the options.</dd></dl>
  
 
  --version
 <dl>
 <dt>
-<dd> Prints currently installed version of the bmpanel2.</dl>
+</dt><dd> Prints currently installed version of the bmpanel2.</dd></dl>
  
 
  --usage
 <dl>
 <dt>
-<dd> Prints the most shortest possible bmpanel2 usage reminder.</dl>
+</dt><dd> Prints the most shortest possible bmpanel2 usage reminder.</dd></dl>
  
 
  --list
 <dl>
 <dt>
-<dd> Lists all themes found on known paths for current user. Additional info such as theme author name will be printed also.</dl>
+</dt><dd> Lists all themes found on known paths for current user. Additional info such as theme author name will be printed also.</dd></dl>
  
 
  --theme=&lt;theme&gt;
 <dl>
 <dt>
-<dd> Override theme parameter in the config file.</dl>
+</dt><dd> Override theme parameter in the config file.</dd></dl>
 
 <h2>AUTHORS</h2>
 
@@ -93,21 +93,21 @@ bmpanel2[-h | --help][--version][--usage][--list][--theme = &lt;theme&gt;]
 
 <dl>
 <dt>
-<dd> * nsf &lt;no.smile.face [at] gmail.com&gt;</dl>
+</dt><dd> * nsf &lt;no.smile.face [at] gmail.com&gt;</dd></dl>
  
 
  Noir theme: 
 
 <dl>
 <dt>
-<dd> * Andrew Nayenko &lt;resver [at] gmail.com&gt;</dl>
+</dt><dd> * Andrew Nayenko &lt;resver [at] gmail.com&gt;</dd></dl>
  
 
  A lot of Creative Commons covered theme ports (alduin, auriel, curvy, flora, striped): 
 
 <dl>
 <dt>
-<dd> * weakhead (<a rel="nofollow" HREF="http://weakhead.deviantart.com)">http://weakhead.deviantart.com)</a></dl>
+</dt><dd> * weakhead (<a rel="nofollow" HREF="http://weakhead.deviantart.com)">http://weakhead.deviantart.com)</a></dd></dl>
  
 
 <h2>Index</h2>

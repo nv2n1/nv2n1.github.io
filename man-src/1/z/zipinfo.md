@@ -16,53 +16,51 @@ description: "zipinfo – list detailed information about a ZIP archive"
 <p> <i>zipinfo</i> lists technical information about files in a ZIP archive, most commonly found on MS-DOS systems. Such information includes file access permissions, encryption status, type of compression, version and operating system or file system of compressing program, and the like. The default behavior (with no options) is to list single-line entries for each file in the archive, with header and trailer lines providing summary information for the entire archive. The format is a cross between Unix &#8220;ls -l&#8221; and &#8220;unzip -v&#8221; output. See <code>DETAILED DESCRIPTION</code> below. Note that <i>zipinfo</i> is the same program as <i>unzip</i> (under Unix, a link to it); on some systems, however, <i>zipinfo</i> support may have been omitted when <i>unzip</i> was compiled.</p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><i>file</i>[<i>.zip</i>]</p>
-<dd> Path of the ZIP archive(s). If the file specification is a wildcard, each matching file is processed in an order determined by the operating system (or file system). Only the filename can be a wildcard; the path itself cannot. Wildcard expressions are similar to Unix <i><a href="/docs/linux/man/1-egrep/">egrep</a></i>(1) (regular) expressions and may contain:</p>
+<dt><i>file</i>[<i>.zip</i>]</dt>
+<dd> Path of the ZIP archive(s). If the file specification is a wildcard, each matching file is processed in an order determined by the operating system (or file system). Only the filename can be a wildcard; the path itself cannot. Wildcard expressions are similar to Unix <i><a href="/docs/linux/man/1-egrep/">egrep</a></i>(1) (regular) expressions and may contain:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> matches a sequence of 0 or more characters</p>
-<dt>?</p>
-<dd> matches exactly 1 character</p>
-<dt>[&#8230;]</p>
-<dd> matches any single character found inside the brackets; ranges are specified by a beginning character, a hyphen, and an ending character. If an exclamation point or a caret (`!&#8217; or `^&#8217;) follows the left bracket, then the range of characters within the brackets is complemented (that is, anything <i>except</i> the characters inside the brackets is considered a match). To specify a verbatim left bracket, the three-character sequence &#8220;[[]&#8221; has to be used.</dl>
+<dt>*</dt>
+<dd> matches a sequence of 0 or more characters</dd>
+<dt>?</dt>
+<dd> matches exactly 1 character</dd>
+<dt>[&#8230;]</dt>
+<dd> matches any single character found inside the brackets; ranges are specified by a beginning character, a hyphen, and an ending character. If an exclamation point or a caret (`!&#8217; or `^&#8217;) follows the left bracket, then the range of characters within the brackets is complemented (that is, anything <i>except</i> the characters inside the brackets is considered a match). To specify a verbatim left bracket, the three-character sequence &#8220;[[]&#8221; has to be used.</dd></dl>
 </dl>
 <dt>
-<dd> (Be sure to quote any character that might otherwise be interpreted or modified by the operating system, particularly under Unix and VMS.) If no matches are found, the specification is assumed to be a literal filename; and if that also fails, the suffix .zip is appended. Note that self-extracting ZIP files are supported, as with any other ZIP archive; just specify the .exe suffix (if any) explicitly.</p>
-<dt>[<i>file(s)</i>]</p>
-<dd> An optional list of archive members to be processed, separated by spaces. (VMS versions compiled with VMSCLI defined must delimit files with commas instead.) Regular expressions (wildcards) may be used to match multiple members; see above. Again, be sure to quote expressions that would otherwise be expanded or modified by the operating system.</p>
-<dt>[<code>-x</code>&nbsp;<i>xfile(s)</i>]</p>
-<dd> An optional list of archive members to be excluded from processing.</dl>
+</dt><dd> (Be sure to quote any character that might otherwise be interpreted or modified by the operating system, particularly under Unix and VMS.) If no matches are found, the specification is assumed to be a literal filename; and if that also fails, the suffix .zip is appended. Note that self-extracting ZIP files are supported, as with any other ZIP archive; just specify the .exe suffix (if any) explicitly.</dd>
+<dt>[<i>file(s)</i>]</dt>
+<dd> An optional list of archive members to be processed, separated by spaces. (VMS versions compiled with VMSCLI defined must delimit files with commas instead.) Regular expressions (wildcards) may be used to match multiple members; see above. Again, be sure to quote expressions that would otherwise be expanded or modified by the operating system.</dd>
+<dt>[<code>-x</code>&nbsp;<i>xfile(s)</i>]</dt>
+<dd> An optional list of archive members to be excluded from processing.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-1</code></p>
-<dd> list filenames only, one per line. This option excludes all others; headers, trailers and zipfile comments are never printed. It is intended for use in Unix shell scripts.</p>
-<dt><code>-2</code></p>
-<dd> list filenames only, one per line, but allow headers (<code>-h</code>), trailers (<code>-t</code>) and zipfile comments (<code>-z</code>), as well. This option may be useful in cases where the stored filenames are particularly long.</p>
-<dt><code>-s</code></p>
-<dd> list zipfile info in short Unix &#8220;ls -l&#8221; format. This is the default behavior; see below.</p>
-<dt><code>-m</code></p>
-<dd> list zipfile info in medium Unix &#8220;ls -l&#8221; format. Identical to the <code>-s</code> output, except that the compression factor, expressed as a percentage, is also listed.</p>
-<dt><code>-l</code></p>
-<dd> list zipfile info in long Unix &#8220;ls -l&#8221; format. As with <code>-m</code> except that the compressed size (in bytes) is printed instead of the compression ratio.</p>
-<dt><code>-v</code></p>
-<dd> list zipfile information in verbose, multi-page format.</p>
-<dt><code>-h</code></p>
-<dd> list header line. The archive name, actual size (in bytes) and total number of files is printed.</p>
-<dt><code>-M</code></p>
-<dd> pipe all output through an internal pager similar to the Unix <i><a href="/docs/linux/man/1-more/">more</a></i>(1) command. At the end of a screenful of output, <i>zipinfo</i> pauses with a &#8220;&#8211;More&#8211;&#8221; prompt; the next screenful may be viewed by pressing the Enter (Return) key or the space bar. <i>zipinfo</i> can be terminated by pressing the &#8220;q&#8221; key and, on some systems, the Enter/Return key. Unlike Unix <i><a href="/docs/linux/man/1-more/">more</a></i>(1), there is no forward-searching or editing capability. Also, <i>zipinfo</i> doesn&#8217;t notice if long lines wrap at the edge of the screen, effectively resulting in the printing of two or more lines and the likelihood that some text will scroll off the top of the screen before being viewed. On some systems the number of available lines on the screen is not detected, in which case <i>zipinfo</i> assumes the height is 24 lines.</p>
-<dt><code>-t</code></p>
-<dd> list totals for files listed or for all files. The number of files listed, their uncompressed and compressed total sizes , and their overall compression factor is printed; or, if only the totals line is being printed, the values for the entire archive are given. The compressed total size does not include the 12 additional header bytes of each encrypted entry. Note that the total compressed (data) size will never match the actual zipfile size, since the latter includes all of the internal zipfile headers in addition to the compressed data.</p>
-<dt><code>-T</code></p>
-<dd> print the file dates and times in a sortable decimal format (yymmdd.hhmmss). The default date format is a more standard, human-readable version with abbreviated month names (see examples below).</p>
-<dt><code>-U</code></p>
-<dd> [UNICODE_SUPPORT only] modify or disable UTF-8 handling. When UNICODE_SUPPORT is available, the option <code>-U</code> forces <i>unzip</i> to escape all non-ASCII characters from UTF-8 coded filenames as &#8220;#Uxxxx&#8221;. This option is mainly provided for debugging purpose when the fairly new UTF-8 support is suspected to mangle up extracted filenames.</p>
+<dt><code>-1</code></dt>
+<dd> list filenames only, one per line. This option excludes all others; headers, trailers and zipfile comments are never printed. It is intended for use in Unix shell scripts.</dd>
+<dt><code>-2</code></dt>
+<dd> list filenames only, one per line, but allow headers (<code>-h</code>), trailers (<code>-t</code>) and zipfile comments (<code>-z</code>), as well. This option may be useful in cases where the stored filenames are particularly long.</dd>
+<dt><code>-s</code></dt>
+<dd> list zipfile info in short Unix &#8220;ls -l&#8221; format. This is the default behavior; see below.</dd>
+<dt><code>-m</code></dt>
+<dd> list zipfile info in medium Unix &#8220;ls -l&#8221; format. Identical to the <code>-s</code> output, except that the compression factor, expressed as a percentage, is also listed.</dd>
+<dt><code>-l</code></dt>
+<dd> list zipfile info in long Unix &#8220;ls -l&#8221; format. As with <code>-m</code> except that the compressed size (in bytes) is printed instead of the compression ratio.</dd>
+<dt><code>-v</code></dt>
+<dd> list zipfile information in verbose, multi-page format.</dd>
+<dt><code>-h</code></dt>
+<dd> list header line. The archive name, actual size (in bytes) and total number of files is printed.</dd>
+<dt><code>-M</code></dt>
+<dd> pipe all output through an internal pager similar to the Unix <i><a href="/docs/linux/man/1-more/">more</a></i>(1) command. At the end of a screenful of output, <i>zipinfo</i> pauses with a &#8220;&#8211;More&#8211;&#8221; prompt; the next screenful may be viewed by pressing the Enter (Return) key or the space bar. <i>zipinfo</i> can be terminated by pressing the &#8220;q&#8221; key and, on some systems, the Enter/Return key. Unlike Unix <i><a href="/docs/linux/man/1-more/">more</a></i>(1), there is no forward-searching or editing capability. Also, <i>zipinfo</i> doesn&#8217;t notice if long lines wrap at the edge of the screen, effectively resulting in the printing of two or more lines and the likelihood that some text will scroll off the top of the screen before being viewed. On some systems the number of available lines on the screen is not detected, in which case <i>zipinfo</i> assumes the height is 24 lines.</dd>
+<dt><code>-t</code></dt>
+<dd> list totals for files listed or for all files. The number of files listed, their uncompressed and compressed total sizes , and their overall compression factor is printed; or, if only the totals line is being printed, the values for the entire archive are given. The compressed total size does not include the 12 additional header bytes of each encrypted entry. Note that the total compressed (data) size will never match the actual zipfile size, since the latter includes all of the internal zipfile headers in addition to the compressed data.</dd>
+<dt><code>-T</code></dt>
+<dd> print the file dates and times in a sortable decimal format (yymmdd.hhmmss). The default date format is a more standard, human-readable version with abbreviated month names (see examples below).</dd>
+<dt><code>-U</code></dt>
+<dd> [UNICODE_SUPPORT only] modify or disable UTF-8 handling. When UNICODE_SUPPORT is available, the option <code>-U</code> forces <i>unzip</i> to escape all non-ASCII characters from UTF-8 coded filenames as &#8220;#Uxxxx&#8221;. This option is mainly provided for debugging purpose when the fairly new UTF-8 support is suspected to mangle up extracted filenames.</dd>
 <dt>
-<dd> The option <code>-UU</code> allows to entirely disable the recognition of UTF-8 encoded filenames. The handling of filename codings within <i>unzip</i> falls back to the behaviour of previous versions.</p>
-<dt><code>-z</code></p>
-<dd> include the archive comment (if any) in the listing.</dl>
+</dt><dd> The option <code>-UU</code> allows to entirely disable the recognition of UTF-8 encoded filenames. The handling of filename codings within <i>unzip</i> falls back to the behaviour of previous versions.</dd>
+<dt><code>-z</code></dt>
+<dd> include the archive comment (if any) in the listing.</dd></dl>
 <h2>DETAILED DESCRIPTION</h2>
 <p> <i>zipinfo</i> has a number of modes, and its behavior can be rather difficult to fathom if one isn&#8217;t familiar with Unix <i><a href="/docs/linux/man/1-ls/">ls</a></i>(1) (or even if one is). The default behavior is to list files in the following format: </p>
 <p> The last three fields are the modification date and time of the file, and its name. The case of the filename is respected; thus files that come from MS-DOS PKZIP are always capitalized. If the file was zipped with a stored directory name, that is also displayed as part of the filename. </p>
@@ -84,14 +82,14 @@ description: "zipinfo – list detailed information about a ZIP archive"
 <p> Modifying <i>zipinfo</i>&#8216;s default behavior via options placed in an environment variable can be a bit complicated to explain, due to <i>zipinfo</i>&#8216;s attempts to handle various defaults in an intuitive, yet Unix-like, manner. (Try not to laugh.) Nevertheless, there is some underlying logic. In brief, there are three &#8220;priority levels&#8221; of options: the default options; environment options, which can override or add to the defaults; and explicit options given by the user, which can override or add to either of the above. </p>
 <p> The default listing format, as noted above, corresponds roughly to the &quot;zipinfo -hst&quot; command (except when individual zipfile members are specified). A user who prefers the long-listing format (<code>-l</code>) can make use of the <i>zipinfo</i>&#8216;s environment variable to change this default:</p>
 <dl>
-<dt>Unix Bourne shell:</p>
-<dd> <tt>ZIPINFO=-l; export ZIPINFO</tt></p>
-<dt>Unix C shell:</p>
-<dd> <tt>setenv ZIPINFO -l</tt></p>
-<dt>OS/2 or MS-DOS:</p>
-<dd> <tt>set ZIPINFO=-l</tt></p>
-<dt>VMS (quotes for <i>lowercase</i>):</p>
-<dd> <tt>define ZIPINFO_OPTS &quot;-l&quot;</tt></dl>
+<dt>Unix Bourne shell:</dt>
+<dd> <tt>ZIPINFO=-l; export ZIPINFO</tt></dd>
+<dt>Unix C shell:</dt>
+<dd> <tt>setenv ZIPINFO -l</tt></dd>
+<dt>OS/2 or MS-DOS:</dt>
+<dd> <tt>set ZIPINFO=-l</tt></dd>
+<dt>VMS (quotes for <i>lowercase</i>):</dt>
+<dd> <tt>define ZIPINFO_OPTS &quot;-l&quot;</tt></dd></dl>
 <p> If, in addition, the user dislikes the trailer line, <i>zipinfo</i>&#8216;s concept of &#8220;negative options&#8221; may be used to override the default inclusion of the line. This is accomplished by preceding the undesired option with one or more minuses: e.g., &#8220;-l-t&#8221; or &#8220;&#8211;tl&#8221;, in this example. The first hyphen is the regular switch character, but the one before the `t&#8217; is a minus sign. The dual use of hyphens may seem a little awkward, but it&#8217;s reasonably intuitive nonetheless: simply ignore the first hyphen and go from there. It is also consistent with the behavior of the Unix command <i><a href="/docs/linux/man/1-nice/">nice</a></i>(1). </p>
 <p> As suggested above, the default variable names are ZIPINFO_OPTS for VMS (where the symbol used to install <i>zipinfo</i> as a foreign command would otherwise be confused with the environment variable), and ZIPINFO for all other operating systems. For compatibility with <i><a href="/docs/linux/man/1-zip/">zip</a></i>(1), ZIPINFOOPT is also accepted (don&#8217;t ask). If both ZIPINFO and ZIPINFOOPT are defined, however, ZIPINFO takes precedence. <i>unzip</i>&#8216;s diagnostic option (<code>-v</code> with no zipfile name) can be used to check the values of all four possible <i>unzip</i> and <i>zipinfo</i> environment variables.</p>
 <h2>EXAMPLES</h2>

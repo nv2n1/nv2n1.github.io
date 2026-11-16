@@ -11,7 +11,6 @@ description: "selinux_restorecon_default_handle – sets default parameters for"
 <p> <a href="/docs/linux/man/3-selinux_restorecon/">selinux_restorecon</a></code>(3)</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;selinux/restorecon.h&gt;
-
 #include &lt;selinux/label.h&gt;
 struct selabel_handle *selinux_restorecon_default_handle(void);</code></pre>
 <h2>Description</h2>

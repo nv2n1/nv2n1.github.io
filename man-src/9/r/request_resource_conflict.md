@@ -15,11 +15,11 @@ request_resource_conflict - request and reserve an I/O or memory resource
 <h2>Arguments</h2>
 
 <i>root</i>
-<dl><dd><dd>root resource descriptor</dl>
+<dl><dd></dd><dd>root resource descriptor</dd></dl>
  
 
  <i>new</i>
-<dl><dd>resource descriptor desired by caller</dl>
+<dl><dd>resource descriptor desired by caller</dd></dl>
 
 <h2>Description</h2>
 

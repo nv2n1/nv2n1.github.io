@@ -14,7 +14,7 @@ description: "d_obtain_alias – find or allocate a DISCONNECTED dentry for a gi
 <p><i>inode</i></p>
 <dl>
 <dd>
-<dd>inode to allocate the dentry for</dl>
+</dd><dd>inode to allocate the dentry for</dd></dl>
 <h2>Description</h2>
 <p>Obtain a dentry for an inode resulting from NFS filehandle conversion or similar open by handle operations. The returned dentry may be anonymous, or may have a full name (if the inode was already in the cache). </p>
 <p> When called on a directory inode, we must ensure that the inode only ever has one dentry. If a dentry is found, that is returned instead of allocating a new one. </p>

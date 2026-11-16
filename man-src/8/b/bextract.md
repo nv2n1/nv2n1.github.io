@@ -15,26 +15,26 @@ description: "bextract – Bacula’s ‘Extract from tape’"
 <h2>Options</h2>
 <p>A summary of options is included below.</p>
 <dl>
-<dt><code>-?</code></p>
-<dd>Show version and usage of program.</p>
-<dt><code>-b&nbsp;<wbr></code><i>bootstrap</i></p>
-<dd>Specify a bootstrap file.</p>
-<dt><code>-c&nbsp;<wbr></code><i>config</i></p>
-<dd>Specify configuration file.</p>
-<dt><code>-d&nbsp;<wbr></code><i>nn</i></p>
-<dd>Set debug level to <i>nn</i>.</p>
-<dt><code>-dt</code></p>
-<dd>Print timestamp in debug output.</p>
-<dt><code>-e&nbsp;<wbr></code><i>file</i></p>
-<dd>Specify exclude list.</p>
-<dt><code>-i&nbsp;<wbr></code><i>file</i></p>
-<dd>Specify include list.</p>
-<dt><code>-p</code></p>
-<dd>Proceed in spite of I/O errors.</p>
-<dt><code>-v</code></p>
-<dd>Set verbose mode.</p>
-<dt><code>-V&nbsp;<wbr></code><i>volume-name</i></p>
-<dd>Specify volume names.</dl>
+<dt><code>-?</code></dt>
+<dd>Show version and usage of program.</dd>
+<dt><code>-b&nbsp;<wbr></code><i>bootstrap</i></dt>
+<dd>Specify a bootstrap file.</dd>
+<dt><code>-c&nbsp;<wbr></code><i>config</i></dt>
+<dd>Specify configuration file.</dd>
+<dt><code>-d&nbsp;<wbr></code><i>nn</i></dt>
+<dd>Set debug level to <i>nn</i>.</dd>
+<dt><code>-dt</code></dt>
+<dd>Print timestamp in debug output.</dd>
+<dt><code>-e&nbsp;<wbr></code><i>file</i></dt>
+<dd>Specify exclude list.</dd>
+<dt><code>-i&nbsp;<wbr></code><i>file</i></dt>
+<dd>Specify include list.</dd>
+<dt><code>-p</code></dt>
+<dd>Proceed in spite of I/O errors.</dd>
+<dt><code>-v</code></dt>
+<dd>Set verbose mode.</dd>
+<dt><code>-V&nbsp;<wbr></code><i>volume-name</i></dt>
+<dd>Specify volume names.</dd></dl>
 <h2>See Also</h2>
 <p><code>bls</code>(1), <code>bextract</code>(1).</p>
 <h2>Author</h2>

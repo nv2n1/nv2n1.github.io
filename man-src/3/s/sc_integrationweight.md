@@ -11,56 +11,23 @@ description: "sc::IntegrationWeight –"
 <p> An abstract base class for computing grid weights.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;integrator.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>. Inherited by <code>sc::BeckeIntegrationWeight</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>IntegrationWeight (const Ref&lt; KeyVal &gt; &amp;)
-
-
-
 IntegrationWeight (StateIn &amp;)
-
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 void test (int icenter, SCVector3 &amp;point)
-
-
-
 void test ()
-
-
-
 virtual void init (const Ref&lt; Molecule &gt; &amp;, double tolerance)
-
-
 Initialize the integration weight object.
-
-
 virtual void done ()
-
-
 Called when finished with the integration weight object.
-
-
 virtual double w (int center, SCVector3 &amp;point, double *grad_w=0)=0
-
-
 Computes the weight for a given center at a given point in space.
-
-
-
 Protected Member Functions
 void fd_w (int icenter, SCVector3 &amp;point, double *fd_grad_w)
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Ref</code>&lt; <code>Molecule</code> &gt; <code>mol_</code> </p>
 <p> double <code>tol_</code></p>

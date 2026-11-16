@@ -13,19 +13,19 @@ description: "gset_text_path (Set text path) – sets the text paths or directio
 <p> void gset_text_path(Gtext_path text_path);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>text_path</p>
-<dd>(Input) Gives the direction in which a character string is to be drawn. Options are:</p>
+<dt>text_path</dt>
+<dd>(Input) Gives the direction in which a character string is to be drawn. Options are:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>GPATH_RIGHT</p>
-<dd>Draw successive characters in the string such that character n+l appears to the right of character n. This is text path &quot;right&quot; and is the default.</p>
-<dt>GPATH_LEFT</p>
-<dd>Draw character n+1 to the left of character n. This is text path &quot;left&quot;.</p>
-<dt>GPATH_UP</p>
-<dd>Draw character n+1 above character n. This is text path &quot;up&quot;.</p>
-<dt>GPATH_DOWN</p>
-<dd>Draw character n+1 below character n. This is text path &quot;down&quot;.</dl>
+</dd><dl COMPACT>
+<dt>GPATH_RIGHT</dt>
+<dd>Draw successive characters in the string such that character n+l appears to the right of character n. This is text path &quot;right&quot; and is the default.</dd>
+<dt>GPATH_LEFT</dt>
+<dd>Draw character n+1 to the left of character n. This is text path &quot;left&quot;.</dd>
+<dt>GPATH_UP</dt>
+<dd>Draw character n+1 above character n. This is text path &quot;up&quot;.</dd>
+<dt>GPATH_DOWN</dt>
+<dd>Draw character n+1 below character n. This is text path &quot;down&quot;.</dd></dl>
 <p> The right, left, up, and down directions are relative to the character up vector. The right text path direction is perpendicular to the up vector direction. Thus, to draw a text string at a 45 degree angle the character up vector would be (-1,1), and the text path would be right .</dl>
 </dl>
 <h2>Access</h2>
@@ -37,3 +37,4 @@ description: "gset_text_path (Set text path) – sets the text paths or directio
 <p>Copyright (C) 1987-2009<br />
  University Corporation for Atmospheric Research<br />
  The use of this Software is governed by a License Agreement.</p>
+</p>

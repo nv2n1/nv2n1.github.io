@@ -11,9 +11,7 @@ std::fputc,std::putc - std::fputc,std::putc
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdio&gt;
-
     int fputc(int ch, std::FILE *stream);
-
 int putc(int ch, std::FILE *stream);</code></pre> 
 Writes a character ch to the given output stream stream. 
 Internally, the character is converted to unsigned char just before being written. 
@@ -33,7 +31,6 @@ On failure, returns EOF and sets the error indicator (see std::ferror()) on stre
 
 // Run this code <pre><code>#include &lt;cstdio&gt;
 int main()
-
 {
     for (char c = 'a'; c != 'z'; c++)
         std::putc(c, stdout);

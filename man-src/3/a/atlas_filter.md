@@ -26,7 +26,8 @@ description: "Atlas::Filter – Atlas stream filter."
 <p> Filters are used by <code>Codec</code> to transform the byte stream before transmission. The transform must be invertible; that is to say, encoding a string and then decoding it must result in the original string. Filters can be used for compression, encryption or performing checksums and other forms of transmission error detection. A compound filter can be created that acts like a single filter, allowing various filters to be chained together in useful ways such as compressing and then encrypting. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>Codec</code> </p>
+<dd><code>Codec</code> </dd>
 <p> <code>Negotiate</code></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Atlas-C++ from the source code.</p>
+</p>

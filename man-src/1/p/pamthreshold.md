@@ -26,19 +26,19 @@ description: "pamthreshold – threshold grayscale image to black and white"
 &nbsp;<wbr><i>Thresholding&nbsp;<wbr>(image processing)</i> to compute the thresholding value. ( this version of the Wikipedia article was current at the time of this writing). It uses this threshold to globally threshold the image. This should work well for most images. The program issues a message telling you what threshold it used. (Netpbm messages go to Standard Error, and you can turn them off with the Netpbm common option <code>-quiet</code>). </p>
 <p> Options <code>-simple</code>, <code>-local</code>, and <code>-dual</code> select other methods. </p>
 <dl>
-<dt><code>-simple</code></p>
-<dd> This selects simple or global thresholding, i.e. <code>pamthreshold</code> compares every pixel to the threshold you specify with <code>-threshold</code>. Those with a brightness greater than or equal to the threshold become white; others become black. This works well for black and white text pages scanned with a flatbed scanner and is faster than the default method that iteratively determines the thresholding value first. </p>
-<dt><code>-local=</code><i>width</i><code>x</code><i>height</i></p>
-<dd> This selects local adaptive thresholding (also known as dynamic thresholding) using the neighborhood which is the square <i>width</i> pixels wide and <i>height</i> pixels high centered on the pixel in question. <code>pamthreshold</code> computes the threshold individually for each pixel of the image. This can accommodate changing lighting conditions in the image. Depending on the size of the neighborhood this can be quite slow. </p>
-<dt><code>-dual=</code><i>width</i><code>x</code><i>height</i></p>
-<dd> This selects a dual thresholding algorithm using a global threshold for low contrast neighborhoods and local thresholding otherwise. This can preserve larger back- respectively foreground areas than local adaptive thresholding. This algorithm was proposed in the paper &quot;An Approach To Licence Plate Recognition&quot; by J.R. Parker and Pavol Federl. </p>
-<dt><code>-threshold=</code><i>threshold</i></p>
-<dd> This sets the thresholding value for simple or local thresholding. The value is a floating point number in the range [0, 1] directly proportional to the Netpbm sample values, where 0 corresponds to black and 1 to the maxval of the image. </p>
+<dt><code>-simple</code></dt>
+<dd> This selects simple or global thresholding, i.e. <code>pamthreshold</code> compares every pixel to the threshold you specify with <code>-threshold</code>. Those with a brightness greater than or equal to the threshold become white; others become black. This works well for black and white text pages scanned with a flatbed scanner and is faster than the default method that iteratively determines the thresholding value first. </dd>
+<dt><code>-local=</code><i>width</i><code>x</code><i>height</i></dt>
+<dd> This selects local adaptive thresholding (also known as dynamic thresholding) using the neighborhood which is the square <i>width</i> pixels wide and <i>height</i> pixels high centered on the pixel in question. <code>pamthreshold</code> computes the threshold individually for each pixel of the image. This can accommodate changing lighting conditions in the image. Depending on the size of the neighborhood this can be quite slow. </dd>
+<dt><code>-dual=</code><i>width</i><code>x</code><i>height</i></dt>
+<dd> This selects a dual thresholding algorithm using a global threshold for low contrast neighborhoods and local thresholding otherwise. This can preserve larger back- respectively foreground areas than local adaptive thresholding. This algorithm was proposed in the paper &quot;An Approach To Licence Plate Recognition&quot; by J.R. Parker and Pavol Federl. </dd>
+<dt><code>-threshold=</code><i>threshold</i></dt>
+<dd> This sets the thresholding value for simple or local thresholding. The value is a floating point number in the range [0, 1] directly proportional to the Netpbm sample values, where 0 corresponds to black and 1 to the maxval of the image. </dd>
 <p> If you don&#8217;t specify this option, <code>pamthreshold</code> uses a threshold of 0.5. </p>
 <p> Without <code>-simple</code>, <code>-local</code>, or <code>-dual</code>, this option is meaningless. </p>
 <p> The meaning of the threshold depends upon the kind of thresholding you do (as determined by other options). Roughly, pixels at least as bright as the threshold become white in the output while others become black. </p>
-<dt><code>-contrast=</code><i>threshold</i></p>
-<dd> This sets the threshold to determine if a neighborhood has low contrast or not for dual thresholding. The value is a floating point number in the range [0, 1]. </p>
+<dt><code>-contrast=</code><i>threshold</i></dt>
+<dd> This sets the threshold to determine if a neighborhood has low contrast or not for dual thresholding. The value is a floating point number in the range [0, 1]. </dd>
 <p> If you don&#8217;t specify this option, <code>pamthreshold</code> uses a contrast threshold of 0.05. Without <code>-dual</code> this option is meaningless. </p>
 </dl>
 <h2>SEE ALSO</h2>

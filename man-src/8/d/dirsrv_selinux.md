@@ -150,22 +150,22 @@ description: "dirsrv_selinux – Security Enhanced Linux Policy for the dirsrv p
 <p> <code>dirsrv_var_run_t</code> </p>
 <p> &#8211; Set files with the dirsrv_var_run_t type, if you want to store the dirsrv files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/slapd.*, /var/run/dirsrv(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/run/slapd.*, /var/run/dirsrv(/.*)? </dd>
 </dl>
 <p> <code>dirsrvadmin_config_t</code> </p>
 <p> &#8211; Set files with the dirsrvadmin_config_t type, if you want to treat the files as dirsrvadmin configuration data, usually stored under the /etc directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/dirsrv/dsgw(/.*)?, /etc/dirsrv/admin-serv(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/dirsrv/dsgw(/.*)?, /etc/dirsrv/admin-serv(/.*)? </dd>
 </dl>
 <p> <code>dirsrvadmin_content_t</code> </p>
 <p> &#8211; Set files with the dirsrvadmin_content_t type, if you want to treat the files as dirsrvadmin content. </p>
 <p> <code>dirsrvadmin_exec_t</code> </p>
 <p> &#8211; Set files with the dirsrvadmin_exec_t type, if you want to transition an executable to the dirsrvadmin_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/stop-ds-admin, /usr/sbin/start-ds-admin, /usr/sbin/restart-ds-admin </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/stop-ds-admin, /usr/sbin/start-ds-admin, /usr/sbin/restart-ds-admin </dd>
 </dl>
 <p> <code>dirsrvadmin_htaccess_t</code> </p>
 <p> &#8211; Set files with the dirsrvadmin_htaccess_t type, if you want to treat the file as a dirsrvadmin access file. </p>
@@ -178,16 +178,16 @@ description: "dirsrv_selinux – Security Enhanced Linux Policy for the dirsrv p
 <p> <code>dirsrvadmin_script_exec_t</code> </p>
 <p> &#8211; Set files with the dirsrvadmin_script_exec_t type, if you want to transition an executable to the dirsrvadmin_script_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/dirsrv/cgi-bin(/.*)?, /usr/lib/dirsrv/dsgw-cgi-bin(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/dirsrv/cgi-bin(/.*)?, /usr/lib/dirsrv/dsgw-cgi-bin(/.*)? </dd>
 </dl>
 <p> <code>dirsrvadmin_tmp_t</code> </p>
 <p> &#8211; Set files with the dirsrvadmin_tmp_t type, if you want to store dirsrvadmin temporary files in the /tmp directories. </p>
 <p> <code>dirsrvadmin_unconfined_script_exec_t</code> </p>
 <p> &#8211; Set files with the dirsrvadmin_unconfined_script_exec_t type, if you want to transition an executable to the dirsrvadmin_unconfined_script_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/dirsrv/cgi-bin/ds_create, /usr/lib/dirsrv/cgi-bin/ds_remove </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/dirsrv/cgi-bin/ds_create, /usr/lib/dirsrv/cgi-bin/ds_remove </dd>
 </dl>
 <p> <code>dirsrvadmin_unit_file_t</code> </p>
 <p> &#8211; Set files with the dirsrvadmin_unit_file_t type, if you want to treat the files as dirsrvadmin unit content. </p>

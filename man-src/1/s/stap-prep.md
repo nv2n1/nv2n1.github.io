@@ -17,12 +17,12 @@ description: "stap-prep – prepare system for systemtap use"
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ stap-prep
 Please install linux-image-3.2.0-2-amd64-dbg
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <pre>
 <i><a href="//www.systutorials.com/docs/linux/man/1-stap/">stap</a></i>(1)

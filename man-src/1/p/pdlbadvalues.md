@@ -19,10 +19,10 @@ description: "PDL::BadValues – Discussion of bad value support in PDL"
 <p>The following comparison is out of date! </p>
 <p> On an i386 machine running Linux and Perl 5.005_03, I measured the following sizes (the Slatec code was compiled in, but none of the other options: e.g., <font SIZE="-1">FFTW, GSL,</font> and TriD were):</p>
 <dl>
-<dt><font SIZE="-1">WITH_BADVAL</font> = 0</p>
-<dd>Size of blib directory after a successful make = <code>4963 kb</code>: blib/arch = 2485 kb and blib/lib = 1587 kb.</p>
-<dt><font SIZE="-1">WITH_BADVAL</font> = 1</p>
-<dd>Size of blib directory after a successful make = <code>5723 kb</code>: blib/arch = 3178 kb and blib/lib = 1613 kb.</dl>
+<dt><font SIZE="-1">WITH_BADVAL</font> = 0</dt>
+<dd>Size of blib directory after a successful make = <code>4963 kb</code>: blib/arch = 2485 kb and blib/lib = 1587 kb.</dd>
+<dt><font SIZE="-1">WITH_BADVAL</font> = 1</dt>
+<dd>Size of blib directory after a successful make = <code>5723 kb</code>: blib/arch = 3178 kb and blib/lib = 1613 kb.</dd></dl>
 <p> So, the overall increase is <i>only</i> 15% &#8211; not much to pay for all the wonders that bad values provides ;) </p>
 <p> The source code used for this test had the vast majority of the core routines (eg those in Basic/) converted to use bad values, whilst very few of the &#8216;external&#8217; routines (i.e. everything else in the <font SIZE="-1">PDL</font> distribution) had been changed.</p>
 <h3>A quick overview</h3>
@@ -54,20 +54,20 @@ description: "PDL::BadValues – Discussion of bad value support in PDL"
 <p><tt>&quot;demo bad&quot;</tt> and <tt>&quot;demo bad2&quot;</tt> within perldl or pdl2 gives a demonstration of some of the things possible with bad values. These are also available on <font SIZE="-1">PDL</font>&#8216;s web-site, at <i><a rel="nofollow" href="http://pdl.perl.org/demos/">http://pdl.perl.org/demos/</a></i>. See PDL::Bad for useful routines for working with bad values and <i>t/bad.t</i> to see them in action. </p>
 <p> The intention is to:</p>
 <dl>
-<dt>&bull;</p>
-<dd>not significantly affect <font SIZE="-1">PDL</font> for users who don&#8217;t need bad value support</p>
-<dt>&bull;</p>
-<dd>be as fast as possible when bad value support is installed</dl>
+<dt>&bull;</dt>
+<dd>not significantly affect <font SIZE="-1">PDL</font> for users who don&#8217;t need bad value support</dd>
+<dt>&bull;</dt>
+<dd>be as fast as possible when bad value support is installed</dd></dl>
 <p> If you never want bad value support, then you set <tt>&quot;WITH_BADVAL&quot;</tt> to 0 in <i>perldl.conf</i>; <font SIZE="-1">PDL</font> then has no bad value support compiled in, so will be as fast as it used to be. </p>
 <p> However, in most cases, the bad value support has a negligible affect on speed, so you should set <tt>&quot;WITH_CONFIG&quot;</tt> to 1! One exception is if you are low on memory, since the amount of code produced is larger (but only by about 15% &#8211; see &#8220;Code increase due to bad values&#8221;). </p>
 <p> To find out if <font SIZE="-1">PDL</font> has been compiled with bad value support, look at the values of either <tt>$PDL::Config{WITH_BADVAL}</tt> or <tt>$PDL::Bad::Status</tt> &#8211; if true then it has been. </p>
 <p> To find out if a routine supports bad values, use the <tt>&quot;badinfo&quot;</tt> command in perldl or pdl2 or the <tt>&quot;-b&quot;</tt> option to pdldoc. This facility is currently a &#8216;proof of concept&#8217; (or, more realistically, a quick hack) so expect it to be rough around the edges. </p>
 <p> Each piddle contains a flag &#8211; accessible via <tt>&quot;$pdl-&gt;badflag&quot;</tt> &#8211; to say whether there&#8217;s any bad data present:</p>
 <dl>
-<dt>&bull;</p>
-<dd>If <code>false/0</code>, which means there&#8217;s no bad data here, the code supplied by the <tt>&quot;Code&quot;</tt> option to <tt>&quot;pp_def()&quot;</tt> is executed. This means that the speed should be very close to that obtained with <tt>&quot;WITH_BADVAL=0&quot;</tt>, since the only overhead is several accesses to a bit in the piddles state variable.</p>
-<dt>&bull;</p>
-<dd>If <code>true/1</code>, then this says there <i></i><font SIZE="-1"><i>MAY</i></font><i></i> be bad data in the piddle, so use the code in the <tt>&quot;BadCode&quot;</tt> option (assuming that the <tt>&quot;pp_def()&quot;</tt> for this routine has been updated to have a BadCode key). You get all the advantages of threading, as with the <tt>&quot;Code&quot;</tt> option, but it will run slower since you are going to have to handle the presence of bad values.</dl>
+<dt>&bull;</dt>
+<dd>If <code>false/0</code>, which means there&#8217;s no bad data here, the code supplied by the <tt>&quot;Code&quot;</tt> option to <tt>&quot;pp_def()&quot;</tt> is executed. This means that the speed should be very close to that obtained with <tt>&quot;WITH_BADVAL=0&quot;</tt>, since the only overhead is several accesses to a bit in the piddles state variable.</dd>
+<dt>&bull;</dt>
+<dd>If <code>true/1</code>, then this says there <i></i><font SIZE="-1"><i>MAY</i></font><i></i> be bad data in the piddle, so use the code in the <tt>&quot;BadCode&quot;</tt> option (assuming that the <tt>&quot;pp_def()&quot;</tt> for this routine has been updated to have a BadCode key). You get all the advantages of threading, as with the <tt>&quot;Code&quot;</tt> option, but it will run slower since you are going to have to handle the presence of bad values.</dd></dl>
 <p> If you create a piddle, it will have its bad-value flag set to 0. To change this, use <tt>&quot;$pdl-&gt;badflag($new_bad_status)&quot;</tt>, where <tt>$new_bad_status</tt> can be 0 or 1. When a routine creates a piddle, its bad-value flag will depend on the input piddles: unless over-ridden (see the <tt>&quot;CopyBadStatusCode&quot;</tt> option to <tt>&quot;pp_def&quot;</tt>), the bad-value flag will be set true if any of the input piddles contain bad values. To check that a piddle really contains bad data, use the <tt>&quot;check_badflag&quot;</tt> method. </p>
 <p> <i></i><font SIZE="-1"><i>NOTE</i></font><i></i>: propogation of the badflag </p>
 <p> If you change the badflag of a piddle, this change is propagated to all the <i>children</i> of a piddle, so </p>
@@ -91,10 +91,10 @@ description: "PDL::BadValues – Discussion of bad value support in PDL"
  &gt;&gt;a: 1</pre>
 <p>Thoughts:</p>
 <dl>
-<dt>&bull;</p>
-<dd>the badflag can <font SIZE="-1">ONLY</font> be cleared <font SIZE="-1">IF</font> a piddle has <font SIZE="-1">NO</font> parents, and that this change will propagate to all the children of that piddle. I am not so keen on this anymore (too awkward to code, for one).</p>
-<dt>&bull;</p>
-<dd><tt>&quot;$a-&gt;badflag(1)&quot;</tt> should propagate the badflag to <font SIZE="-1">BOTH</font> parents and children.</dl>
+<dt>&bull;</dt>
+<dd>the badflag can <font SIZE="-1">ONLY</font> be cleared <font SIZE="-1">IF</font> a piddle has <font SIZE="-1">NO</font> parents, and that this change will propagate to all the children of that piddle. I am not so keen on this anymore (too awkward to code, for one).</dd>
+<dt>&bull;</dt>
+<dd><tt>&quot;$a-&gt;badflag(1)&quot;</tt> should propagate the badflag to <font SIZE="-1">BOTH</font> parents and children.</dd></dl>
 <p> This shouldn&#8217;t be hard to implement (although an initial attempt failed!). Does it make sense though? There&#8217;s also the issue of what happens if you change the badvalue of a piddle &#8211; should these propagate to children/parents (yes) or whether you should only be able to change the badvalue at the &#8216;top&#8217; level &#8211; i.e. those piddles which do not have parents. </p>
 <p> The <tt>&quot;orig_badvalue()&quot;</tt> method returns the compile-time value for a given datatype. It works on piddles, PDL::Type objects, and numbers &#8211; eg </p>
 <pre> $pdl-&gt;orig_badvalue(), byte-&gt;orig_badvalue(), and orig_badvalue(4).</pre>
@@ -156,10 +156,10 @@ description: "PDL::BadValues – Discussion of bad value support in PDL"
 <p>This <i>should</i> cause the routine to print a warning if it&#8217;s sent any piddles with the bad flag set. Primitive&#8217;s <tt>&quot;intover&quot;</tt> has had this set &#8211; since it would be awkward to convert &#8211; but I&#8217;ve not tried it out to see if it works. </p>
 <p> If you want to handle bad values but not set the state of all the output piddles, or if it&#8217;s only one input piddle that&#8217;s important, then look at the <font SIZE="-1">PP</font> rules <tt>&quot;NewXSFindBadStatus&quot;</tt> and <tt>&quot;NewXSCopyBadStatus&quot;</tt> and the corresponding <tt>&quot;pp_def&quot;</tt> options:</p>
 <dl>
-<dt>FindBadStatusCode</p>
-<dd>By default, <tt>&quot;FindBadStatusCode&quot;</tt> creates code which sets <tt>&quot;$PRIV(bvalflag)&quot;</tt> depending on the state of the bad flag of the input piddles: see <tt>&quot;findbadstatus&quot;</tt> in <i>Basic/Gen/PP.pm</i>. User-defined code should also store the value of <tt>&quot;bvalflag&quot;</tt> in the <tt>&quot;$BADFLAGCACHE()&quot;</tt> variable.</p>
-<dt>CopyBadStatusCode</p>
-<dd>The default code here is a bit simpler than for <tt>&quot;FindBadStatusCode&quot;</tt>: the bad flag of the output piddles are set if <tt>&quot;$BADFLAGCACHE()&quot;</tt> is true after the code has been evaluated. Sometimes <tt>&quot;CopyBadStatusCode&quot;</tt> is set to an empty string, with the responsibility of setting the badflag of the output piddle left to the <tt>&quot;BadCode&quot;</tt> section (e.g. the <tt>&quot;xxxover&quot;</tt> routines in <i>Basic/Primitive/primitive.pd</i>). </p>
+<dt>FindBadStatusCode</dt>
+<dd>By default, <tt>&quot;FindBadStatusCode&quot;</tt> creates code which sets <tt>&quot;$PRIV(bvalflag)&quot;</tt> depending on the state of the bad flag of the input piddles: see <tt>&quot;findbadstatus&quot;</tt> in <i>Basic/Gen/PP.pm</i>. User-defined code should also store the value of <tt>&quot;bvalflag&quot;</tt> in the <tt>&quot;$BADFLAGCACHE()&quot;</tt> variable.</dd>
+<dt>CopyBadStatusCode</dt>
+<dd>The default code here is a bit simpler than for <tt>&quot;FindBadStatusCode&quot;</tt>: the bad flag of the output piddles are set if <tt>&quot;$BADFLAGCACHE()&quot;</tt> is true after the code has been evaluated. Sometimes <tt>&quot;CopyBadStatusCode&quot;</tt> is set to an empty string, with the responsibility of setting the badflag of the output piddle left to the <tt>&quot;BadCode&quot;</tt> section (e.g. the <tt>&quot;xxxover&quot;</tt> routines in <i>Basic/Primitive/primitive.pd</i>). </dd>
 <p> Prior to <font SIZE="-1">PDL 2.4.3</font> we used <tt>&quot;$PRIV(bvalflag)&quot;</tt> instead of <tt>&quot;$BADFLAGCACHE()&quot;</tt>. This is dangerous since the <tt>&quot;$PRIV()&quot;</tt> structure is not guaranteed to be valid at this point in the code.</dl>
 <p> If you have a routine that you want to be able to use as in-place, look at the routines in <i>bad.pd</i> (or <i>ops.pd</i>) which use the <tt>&quot;in-place&quot;</tt> option to see how the bad flag is propagated to children using the <tt>&quot;xxxBadStatusCode&quot;</tt> options. I decided not to automate this as rules would be a little complex, since not every in-place op will need to propagate the badflag (eg unary functions). </p>
 <p> If the option </p>
@@ -215,10 +215,10 @@ description: "PDL::BadValues – Discussion of bad value support in PDL"
 <h3>Handling NaN values</h3>
 <p>There are two issues:</p>
 <dl>
-<dt>NaN as the bad value</p>
-<dd>which is done. To select, set <tt>&quot;BADVAL_USENAN&quot;</tt> to 1 in perldl.conf; a value of 0 falls back to treating the floating-point types the same as the integers. I need to do some benchmarks to see which is faster, and whether it&#8217;s dependent on machines (Linux seems to slow down much more than my Sparc machine in some very simple tests I did).</p>
-<dt>Ignoring BadCode sections</p>
-<dd>which is <i>not</i>.</dl>
+<dt>NaN as the bad value</dt>
+<dd>which is done. To select, set <tt>&quot;BADVAL_USENAN&quot;</tt> to 1 in perldl.conf; a value of 0 falls back to treating the floating-point types the same as the integers. I need to do some benchmarks to see which is faster, and whether it&#8217;s dependent on machines (Linux seems to slow down much more than my Sparc machine in some very simple tests I did).</dd>
+<dt>Ignoring BadCode sections</dt>
+<dd>which is <i>not</i>.</dd></dl>
 <p> For <i>simple</i> routines processing floating-point numbers, we should let the computer process the bad values (i.e. <tt>&quot;NaN&quot;</tt> and <tt>&quot;Inf&quot;</tt> values) instead of using the code in the <tt>&quot;BadCode&quot;</tt> section. Many such routines have been labeled using <tt>&quot;NoBadifNaN =&gt; 1&quot;</tt>; however this is currently <i>ignored</i> by <font SIZE="-1">PDL::PP.</font> </p>
 <p> For these routines, we want to use the <tt>&quot;Code&quot;</tt> section if </p>
 <pre> the piddle does not have its bad flag set
@@ -267,15 +267,15 @@ description: "PDL::BadValues – Discussion of bad value support in PDL"
 <p>etc</p>
 <h2>Todo/Suggestions</h2>
 <dl>
-<dt>&bull;</p>
-<dd>Look at using per-piddle bad values. Would mean a change to the pdl structure (i.e. binary incompatibility) and the routines in <tt>&quot;Basic/Core/pdlconv.c.PL&quot;</tt> would need changing to handle this. Most other routines <i>should not</i> need to be changed &#8230; </p>
+<dt>&bull;</dt>
+<dd>Look at using per-piddle bad values. Would mean a change to the pdl structure (i.e. binary incompatibility) and the routines in <tt>&quot;Basic/Core/pdlconv.c.PL&quot;</tt> would need changing to handle this. Most other routines <i>should not</i> need to be changed &#8230; </dd>
 <p> See the <code>experimental</code> <tt>&quot;BADVAL_PER_PDL&quot;</tt> option.</p>
-<dt>&bull;</p>
-<dd>what to do about <tt>&quot;$b = pdl(-2); $a = log10($b)&quot;</tt> &#8211; <tt>$a</tt> should be set bad, but it currently isn&#8217;t.</p>
-<dt>&bull;</p>
-<dd>Allow the operations in PDL::Ops to skip the check for bad values when using NaN as a bad value and processing a floating-point piddle. Needs a fair bit of work to PDL::PP::PDLCode.</p>
-<dt>&bull;</p>
-<dd><tt>&quot;$pdl-&gt;baddata()&quot;</tt> now updates all the children of this piddle as well. However, not sure what to do with parents, since: </p>
+<dt>&bull;</dt>
+<dd>what to do about <tt>&quot;$b = pdl(-2); $a = log10($b)&quot;</tt> &#8211; <tt>$a</tt> should be set bad, but it currently isn&#8217;t.</dd>
+<dt>&bull;</dt>
+<dd>Allow the operations in PDL::Ops to skip the check for bad values when using NaN as a bad value and processing a floating-point piddle. Needs a fair bit of work to PDL::PP::PDLCode.</dd>
+<dt>&bull;</dt>
+<dd><tt>&quot;$pdl-&gt;baddata()&quot;</tt> now updates all the children of this piddle as well. However, not sure what to do with parents, since: </dd>
 <pre> $b = $a-&gt;slice(); 
  $b-&gt;baddata(0)</pre>
 <p>doesn&#8217;t mean that <tt>$a</tt> shouldn&#8217;t have its badvalue cleared. however, after </p>
@@ -283,10 +283,10 @@ description: "PDL::BadValues – Discussion of bad value support in PDL"
 <p>it&#8217;s sensible to assume that the parents now get flagged as containing bad values. </p>
 <p> <font SIZE="-1">PERHAPS</font> you can only clear the bad value flag if you are <font SIZE="-1">NOT</font> a child of another piddle, whereas if you set the flag then all children <font SIZE="-1">AND</font> parents should be set as well? </p>
 <p> Similarly, if you change the bad value in a piddle, should this be propagated to parent &amp; children? Or should you only be able to do this on the &#8216;top-level&#8217; piddle? Nasty&#8230;</p>
-<dt>&bull;</p>
-<dd>get some code set up to do benchmarks to see how much things are slowed down (and to check that I haven&#8217;t messed things up if <tt>&quot;WITH_BADVAL&quot;</tt> is 0/undef).</p>
-<dt>&bull;</p>
-<dd>some of the names aren&#8217;t appealing &#8211; I&#8217;m thinking of <tt>&quot;orig_badvalue()&quot;</tt> in <i>Basic/Bad/bad.pd</i> in particular. Any suggestions appreciated.</dl>
+<dt>&bull;</dt>
+<dd>get some code set up to do benchmarks to see how much things are slowed down (and to check that I haven&#8217;t messed things up if <tt>&quot;WITH_BADVAL&quot;</tt> is 0/undef).</dd>
+<dt>&bull;</dt>
+<dd>some of the names aren&#8217;t appealing &#8211; I&#8217;m thinking of <tt>&quot;orig_badvalue()&quot;</tt> in <i>Basic/Bad/bad.pd</i> in particular. Any suggestions appreciated.</dd></dl>
 <h2>Author</h2>
 <p>Copyright (C) Doug Burke (djburke [at] cpan.org), 2000, 2006. </p>
 <p> The per-piddle bad value support is by Heiko Klein (2006). </p>

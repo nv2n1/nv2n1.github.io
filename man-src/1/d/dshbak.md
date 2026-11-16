@@ -15,14 +15,14 @@ description: "dshbak – format output from pdsh command"
 <p> The <code>dshbak</code> program formats <code>pdsh</code> pdsh output for humans. Output from each node is consolidated, the leading &quot;<i>node:</i>&quot; is stripped, and a header block with the node name is added. If the <i>-c</i> option is specified, nodes with identical output are not displayed twice; instead, the header will contain a list of nodes. The list of nodes is further compressed into node ranges if the node names have a numeric suffix. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Display a summary of command line options.</p>
-<dt><code>-c</code></p>
-<dd> Do not display identical output from nodes twice. Instead, print the list of nodes with matching output in the header block.</p>
-<dt><code>-d </code><i>DIR</i></p>
-<dd> Write consolidated node output to separate files in output directory <i>DIR</i>. Any existing files will be overwritten.</p>
-<dt><code>-f</code></p>
-<dd> With <i>-d</i>, force creation of specified <i>DIR</i>. </p>
+<dt><code>-h</code></dt>
+<dd> Display a summary of command line options.</dd>
+<dt><code>-c</code></dt>
+<dd> Do not display identical output from nodes twice. Instead, print the list of nodes with matching output in the header block.</dd>
+<dt><code>-d </code><i>DIR</i></dt>
+<dd> Write consolidated node output to separate files in output directory <i>DIR</i>. Any existing files will be overwritten.</dd>
+<dt><code>-f</code></dt>
+<dd> With <i>-d</i>, force creation of specified <i>DIR</i>. </dd>
 </dl>
 <h2>ORIGIN</h2>
 <p> A rewrite of IBM <a href="/docs/linux/man/1-dshbak/">dshbak</a>(1) by Jim Garlick<br />

@@ -23,10 +23,10 @@ description: "cgemm.f –"
  op( X ) = X or op( X ) = X**T or op( X ) = X**H,
  alpha and beta are scalars, and A, B and C are matrices, with op( A )
  an m by k matrix, op( B ) a k by n matrix and C an m by n matrix.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>TRANSA</i> </p>
+<dd><i>TRANSA</i> </dd>
 <pre> TRANSA is CHARACTER*1
  On entry, TRANSA specifies the form of op( A ) to be used in
  the matrix multiplication as follows:
@@ -102,13 +102,13 @@ description: "cgemm.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
@@ -118,7 +118,8 @@ description: "cgemm.f –"
  Iain Duff, AERE Harwell.
  Jeremy Du Croz, Numerical Algorithms Group Ltd.
  Sven Hammarling, Numerical Algorithms Group Ltd.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 188 of file cgemm.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

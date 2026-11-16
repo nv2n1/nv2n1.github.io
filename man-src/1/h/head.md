@@ -16,20 +16,20 @@ description: "head – output the first part of files"
 <p> With no FILE, or when FILE is -, read standard input. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt><code>-c</code>, <code>&#8211;bytes</code>=<i>,[-]NUM/</i></p>
-<dd> print the first NUM bytes of each file; with the leading &#8216;-&#8216;, print all but the last NUM bytes of each file</p>
-<dt><code>-n</code>, <code>&#8211;lines</code>=<i>,[-]NUM/</i></p>
-<dd> print the first NUM lines instead of the first 10; with the leading &#8216;-&#8216;, print all but the last NUM lines of each file</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code>, <code>&#8211;silent</code></p>
-<dd> never print headers giving file names</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> always print headers giving file names</p>
-<dt><code>-z</code>, <code>&#8211;zero-terminated</code></p>
-<dd> line delimiter is NUL, not newline</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-c</code>, <code>&#8211;bytes</code>=<i>,[-]NUM/</i></dt>
+<dd> print the first NUM bytes of each file; with the leading &#8216;-&#8216;, print all but the last NUM bytes of each file</dd>
+<dt><code>-n</code>, <code>&#8211;lines</code>=<i>,[-]NUM/</i></dt>
+<dd> print the first NUM lines instead of the first 10; with the leading &#8216;-&#8216;, print all but the last NUM lines of each file</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code>, <code>&#8211;silent</code></dt>
+<dd> never print headers giving file names</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> always print headers giving file names</dd>
+<dt><code>-z</code>, <code>&#8211;zero-terminated</code></dt>
+<dd> line delimiter is NUL, not newline</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> NUM may have a multiplier suffix: b 512, kB 1000, K 1024, MB 1000*1000, M 1024*1024, GB 1000*1000*1000, G 1024*1024*1024, and so on for T, P, E, Z, Y. Binary prefixes can be used, too: KiB=K, MiB=M, and so on.</p>
 <h2>AUTHOR</h2>
 <p> Written by David MacKenzie and Jim Meyering.</p>

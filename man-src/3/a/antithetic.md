@@ -30,7 +30,7 @@ RSG
 <p> <code>Tests</code></p>
 <dl>
 <dt>
-<dd> the generated paths are checked against cached results</dl>
+</dt><dd> the generated paths are checked against cached results</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>

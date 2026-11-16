@@ -15,24 +15,24 @@ description: "pptpctrl – PPTP control connection manager"
 <h2>Options</h2>
 <p><code>pptpctrl </code> options are unconventional, as they are designed for use by <code><a href="/docs/linux/man/8-pptpd/">pptpd</a></code>(8) rather than users. The option order is critical. Flag options consist of a 0 or 1, and must be present. Value options consist of a 0, or a 1 followed by the value. Either the 0 or both the 1 and the value must be present. The remaining options are optional, but must be present in the defined order. The options are as follows:</p>
 <dl>
-<dt>pptp-debug-flag</p>
-<dd>if set (1), enables debug messages to syslog from pptpctrl. This has no effect on the setting of the PPP debug option.</p>
-<dt>no-ipparam-flag</p>
-<dd>if set, <code>pptpctrl </code> will not pass the client&#8217;s IP address to <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8) using the <i>ipparam</i> option. See the <i>noipparam</i> option in <code><a href="/docs/linux/man/5-pptpd-conf/">pptpd.conf</a></code>(5).</p>
-<dt>ppp-options-value</p>
-<dd>file to use for PPP options. See the <i>file</i> option in <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8).</p>
-<dt>ppp-speed-value</p>
-<dd>value for the <i>speed</i> option given to <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8). Note that on Linux, this parameter is ineffective.</p>
-<dt>ppp-local-ip-value</p>
-<dd>if set, specifies the IP address that <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8) is to use for the network interface on the server. If not set, <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8) will determine it based on options; usually it will be the ethernet address of the server.</p>
-<dt>ppp-remote-ip-value</p>
-<dd>if set, specifies the IP address that <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8) is to use for the network interface on the client. If not set, <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8) will determine it based on options; usually it will be the ethernet address of the client, or an address given in <i>chap-secrets.</i> Must be set if <i>ppp-local-ip-value</i> is set.</p>
-<dt>pptp-call-id</p>
-<dd>if present, specifies the call identification for the PPTP session. If omitted, the call identification is zero. Normally the ID is allocated by <code><a href="/docs/linux/man/8-pptpd/">pptpd</a></code>(8) and passed to pptpctrl.</p>
-<dt>ppp-binary</p>
-<dd>if present, path to the PPP binary to use. If omitted, the default value is used.</p>
-<dt>pptp-logwtmp</p>
-<dd>if present, specifies whether <code><a href="/docs/linux/man/5-wtmp/">wtmp</a></code>(5) should be updated as users connect and disconnect.</dl>
+<dt>pptp-debug-flag</dt>
+<dd>if set (1), enables debug messages to syslog from pptpctrl. This has no effect on the setting of the PPP debug option.</dd>
+<dt>no-ipparam-flag</dt>
+<dd>if set, <code>pptpctrl </code> will not pass the client&#8217;s IP address to <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8) using the <i>ipparam</i> option. See the <i>noipparam</i> option in <code><a href="/docs/linux/man/5-pptpd-conf/">pptpd.conf</a></code>(5).</dd>
+<dt>ppp-options-value</dt>
+<dd>file to use for PPP options. See the <i>file</i> option in <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8).</dd>
+<dt>ppp-speed-value</dt>
+<dd>value for the <i>speed</i> option given to <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8). Note that on Linux, this parameter is ineffective.</dd>
+<dt>ppp-local-ip-value</dt>
+<dd>if set, specifies the IP address that <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8) is to use for the network interface on the server. If not set, <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8) will determine it based on options; usually it will be the ethernet address of the server.</dd>
+<dt>ppp-remote-ip-value</dt>
+<dd>if set, specifies the IP address that <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8) is to use for the network interface on the client. If not set, <code><a href="/docs/linux/man/8-pppd/">pppd</a></code>(8) will determine it based on options; usually it will be the ethernet address of the client, or an address given in <i>chap-secrets.</i> Must be set if <i>ppp-local-ip-value</i> is set.</dd>
+<dt>pptp-call-id</dt>
+<dd>if present, specifies the call identification for the PPTP session. If omitted, the call identification is zero. Normally the ID is allocated by <code><a href="/docs/linux/man/8-pptpd/">pptpd</a></code>(8) and passed to pptpctrl.</dd>
+<dt>ppp-binary</dt>
+<dd>if present, path to the PPP binary to use. If omitted, the default value is used.</dd>
+<dt>pptp-logwtmp</dt>
+<dd>if present, specifies whether <code><a href="/docs/linux/man/5-wtmp/">wtmp</a></code>(5) should be updated as users connect and disconnect.</dd></dl>
 <h2>Files</h2>
 <p>none.</p>
 <h2>Authors</h2>

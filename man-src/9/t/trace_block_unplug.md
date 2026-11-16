@@ -14,20 +14,20 @@ description: "trace_block_unplug – release of operations requests in request q
 <p><i>q</i></p>
 <dl>
 <dd>
-<dd>request queue to unplug</dl>
+</dd><dd>request queue to unplug</dd></dl>
 <p> <i>depth</i></p>
 <dl>
-<dd>number of requests just added to the queue</dl>
+<dd>number of requests just added to the queue</dd></dl>
 <p> <i>explicit</i></p>
 <dl>
-<dd>whether this was an explicit unplug, or one from <code>schedule</code></dl>
+<dd>whether this was an explicit unplug, or one from <code>schedule</code></dd></dl>
 <h2>Description</h2>
 <p>Unplug request queue <i>q</i> because device driver is scheduled to work on elements in the request queue.</p>
 <h2>Authors</h2>
 <p><code>Jason Baron</code> &lt;jbaron [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>William Cohen</code> &lt;wcohen [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

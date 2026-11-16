@@ -27,36 +27,36 @@ description: "apgbfm – APG Bloom filter management program"
 <p> In simple words, <code>apgbfm</code> generates <i>n</i> hash values for every word and sets corresponding bits in filter file to 1. To check the word <code>apgbfm</code> generates the same hash functions for that word and if all <i>n</i> corresponding bits in filter file are set to 1 then it suppose that word exists in dicionary. <code>apgbfm</code> uses <code>SHA-1</code> as a hash function. </p>
 <p> <code>apgbfm</code> can be used as standalone utility, not only with <code>apg</code>, or <code>apgd</code>. </p>
 <dl>
-<dt><code>WARNING !!!</code></p>
-<dd> Filter file format can be changed in the future. I&#8217;ll try to make file formats compatible but i can not guaranty this.</p>
-<dt><code>WARNING !!!</code></p>
-<dd> <code>apgbfm</code> may slow down your computer during filter creation.</dl>
+<dt><code>WARNING !!!</code></dt>
+<dd> Filter file format can be changed in the future. I&#8217;ll try to make file formats compatible but i can not guaranty this.</dd>
+<dt><code>WARNING !!!</code></dt>
+<dd> <code>apgbfm</code> may slow down your computer during filter creation.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f </code><i>filter</i></p>
-<dd> use <i>filter</i> as the name for Bloom filter filename.</p>
-<dt><code>-i </code><i>filter</i></p>
-<dd> print information about <i>filter</i>.</p>
-<dt><code>-n numofwords</code></p>
-<dd> create new empty filter for <code>numofwords</code> number of words. Useful when you want to fill filter dynamicaly.</p>
-<dt><code>-d </code><i>dictfile</i></p>
-<dd> create new filter from <i>dictfile</i>. It may take a lot of time to generate filter from a big dictionary. In that dictionary you may place words (one per line) that should not appear as generated passwords. For example: user names common words, etc. You even can use one of the dictionaries that come with <i>dictionary password crackers</i>. This check is case sensitive. For example, if you want to reject word &#8216;root&#8217;, you should insert in <i>dictfile</i> words: root, Root, RoOt, &#8230; , ROOT. To indicate that program is working <code>apgbfm</code> prints dot for every 100 words added in dictionary.</p>
-<dt><code>-a word</code></p>
-<dd> add <code>word</code> to the filter.</p>
-<dt><code>-A </code><i>dictfile</i></p>
-<dd> add all words from <i>dictfile</i> to the filter. To indicate that program is working <code>apgbfm</code> prints dot for every 100 words added in dictionary.</p>
-<dt><code>-c word</code></p>
-<dd> check <code>word</code> for appearance in the filter.</p>
-<dt><code>-C </code><i>dictfile</i></p>
-<dd> check every word from <i>dictfile</i> for appearance in the filter.</p>
-<dt><code>-q</code></p>
-<dd> quiet mode.</p>
-<dt><code>-s</code></p>
-<dd> create new filter in case-insensitive mode.</p>
-<dt><code>-v</code></p>
-<dd> print version information.</p>
-<dt><code>-h</code></p>
-<dd> print help information.</dl>
+<dt><code>-f </code><i>filter</i></dt>
+<dd> use <i>filter</i> as the name for Bloom filter filename.</dd>
+<dt><code>-i </code><i>filter</i></dt>
+<dd> print information about <i>filter</i>.</dd>
+<dt><code>-n numofwords</code></dt>
+<dd> create new empty filter for <code>numofwords</code> number of words. Useful when you want to fill filter dynamicaly.</dd>
+<dt><code>-d </code><i>dictfile</i></dt>
+<dd> create new filter from <i>dictfile</i>. It may take a lot of time to generate filter from a big dictionary. In that dictionary you may place words (one per line) that should not appear as generated passwords. For example: user names common words, etc. You even can use one of the dictionaries that come with <i>dictionary password crackers</i>. This check is case sensitive. For example, if you want to reject word &#8216;root&#8217;, you should insert in <i>dictfile</i> words: root, Root, RoOt, &#8230; , ROOT. To indicate that program is working <code>apgbfm</code> prints dot for every 100 words added in dictionary.</dd>
+<dt><code>-a word</code></dt>
+<dd> add <code>word</code> to the filter.</dd>
+<dt><code>-A </code><i>dictfile</i></dt>
+<dd> add all words from <i>dictfile</i> to the filter. To indicate that program is working <code>apgbfm</code> prints dot for every 100 words added in dictionary.</dd>
+<dt><code>-c word</code></dt>
+<dd> check <code>word</code> for appearance in the filter.</dd>
+<dt><code>-C </code><i>dictfile</i></dt>
+<dd> check every word from <i>dictfile</i> for appearance in the filter.</dd>
+<dt><code>-q</code></dt>
+<dd> quiet mode.</dd>
+<dt><code>-s</code></dt>
+<dd> create new filter in case-insensitive mode.</dd>
+<dt><code>-v</code></dt>
+<dd> print version information.</dd>
+<dt><code>-h</code></dt>
+<dd> print help information.</dd></dl>
 <h2>EXIT CODE</h2>
 <p> On successful completion of its task, <code>apgbfm</code> will complete with exit code 0. An exit code of -1 indicates an error occurred. Textual errors are written to the standard error stream.</p>
 <h2>FILES</h2>

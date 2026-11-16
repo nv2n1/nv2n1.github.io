@@ -73,7 +73,7 @@ emergency.service | | |
  v \|/
 <i>emergency.target</i> v
  <i>graphical.target</i></pre>
-</dl>
+</dd></dl>
 <p> Target units that are commonly used as boot targets are <i>emphasized</i>. These units are good choices as goal targets, for example by passing them to the <i>systemd.unit=</i> kernel command line option (see <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1)) or by symlinking default.target to them. </p>
 <p> timers.target is pulled-in by basic.target asynchronously. This allows timers units to depend on services which become only available later in boot.</p>
 <h2>User Manager Startup</h2>
@@ -102,7 +102,7 @@ emergency.service | | |
  | | printer.target
  v v
  <i>default.target</i> graphical-session.target</pre>
-</dl>
+</dd></dl>
 <h2>Bootup In The Initial Ram Disk (Initrd)</h2>
 <p>The initial RAM disk implementation (initrd) can be set up using systemd as well. In this case, boot up inside the initrd follows the following structure. </p>
 <p> systemd detects that it is run within an initrd by checking for the file /etc/initrd-release. The default target in the initrd is initrd.target. The bootup process begins identical to the system manager bootup (see above) until it reaches basic.target. From there, systemd approaches the special target initrd.target. Before any file systems are mounted, it must be determined whether the system will resume from hibernation or proceed with normal boot. This is accomplished by systemd-hibernate-resume [at] .service which must be finished before local-fs-pre.target, so no filesystems can be mounted before the check is complete. When the root device becomes available, initrd-root-device.target is reached. If the root device can be mounted at /sysroot, the sysroot.mount unit becomes active and initrd-root-fs.target is reached. The service initrd-parse-etc.service scans /sysroot/etc/fstab for a possible /usr/ mount point and additional entries marked with the <i>x-initrd.mount</i> option. All entries found are mounted below /sysroot, and initrd-fs.target is reached. The service initrd-cleanup.service isolates to the initrd-switch-root.target, where cleanup services can run. As the very last step, the initrd-switch-root.service is activated, which will cause the system to switch its root to /sysroot. </p>
@@ -161,7 +161,7 @@ emergency.service | | |
  |
  v
  Transition to Host OS</pre>
-</dl>
+</dd></dl>
 <h2>System Manager Shutdown</h2>
 <p>System shutdown with systemd also consists of various target units with some minimal ordering structure applied: </p>
 <dl>
@@ -193,14 +193,15 @@ systemd-reboot.service systemd-poweroff.service systemd-halt.service systemd-kex
  | | | |
  v v v v
  <i>reboot.target</i> <i>poweroff.target</i> <i>halt.target</i> <i>kexec.target</i></pre>
-</dl>
+</dd></dl>
 <p> Commonly used system shutdown targets are <i>emphasized</i>. </p>
 <p> Note that <code><a href="/docs/linux/man/8-systemd-halt-service/">systemd-halt.service</a></code>(8), systemd-reboot.service, systemd-poweroff.service and systemd-kexec.service will transition the system and server manager (PID 1) into the second phase of system shutdown (implemented in the systemd-shutdown binary), which will unmount any remaining file systems, kill any remaining processes and release any other remaining resources, in a simple and robust fashion, without taking any service or unit concept into account anymore. At that point, regular applications and resources are generally terminated and released already, the second phase hence operates only as safety net for everything that couldn&#8217;t be stopped or released for some reason during the primary, unit-based shutdown phase described above.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/7-boot/">boot</a></code>(7), <code><a href="/docs/linux/man/7-systemd-special/">systemd.special</a></code>(7), <code><a href="/docs/linux/man/5-systemd-target/">systemd.target</a></code>(5), <code><a href="/docs/linux/man/8-systemd-halt-service/">systemd-halt.service</a></code>(8), <code><a href="/docs/linux/man/8-dracut/">dracut</a></code>(8)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>GRUB</p>
+<dt> 1.</dt>
+<dd>GRUB</dd>
 <dl>
-<dd><a rel="nofollow" href="https://www.gnu.org/software/grub/">https://www.gnu.org/software/grub/</a></dl>
+<dd><a rel="nofollow" href="https://www.gnu.org/software/grub/">https://www.gnu.org/software/grub/</a></dd></dl>
+</dl>

@@ -22,25 +22,25 @@ description: "pnmstitch – stitch together two panoramic (side-by-side) photogr
 <p> <i>output_filespec</i> is the specification (name) of the output PNM file. The <code>-output</code> option also specifies the output file. You cannot specify both the argument and the option. If you specify neither, the output goes to Standard Output. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-width=</code><i>width</i></p>
+<dt><code>-width=</code><i>width</i></dt>
 <dd>
-<dt><code>-height=</code><i>height</i></p>
+</dd><dt><code>-height=</code><i>height</i></dt>
 <dd>
-<dt><code>-xrightpos=</code><i>column</i></p>
+</dd><dt><code>-xrightpos=</code><i>column</i></dt>
 <dd>
-<dt><code>-yrightpos=</code><i>row</i></p>
+</dd><dt><code>-yrightpos=</code><i>row</i></dt>
 <dd> These are constraints on where <code>pnmstitch</code> stitches the images together. For the <code>LinearSliver</code> method, <i>column</i> and <i>row</i> tell what location in the right hand image matches up to the top right corner of the left hand image.<br />
-&nbsp;<wbr>&nbsp;<wbr></p>
-<dt><code>-stitcher=</code>{<code>RotateSliver</code>,<code>BiLinearSliver</code>,</p>
-<dd> <code>LinearSliver</code>} The default is <code>RotateSliver</code>. </p>
-<dt><code>-filter=</code>{<code>LineAtATime</code>,<code>HorizontalCrop</code>}</p>
+&nbsp;<wbr>&nbsp;<wbr></dd>
+<dt><code>-stitcher=</code>{<code>RotateSliver</code>,<code>BiLinearSliver</code>,</dt>
+<dd> <code>LinearSliver</code>} The default is <code>RotateSliver</code>. </dd>
+<dt><code>-filter=</code>{<code>LineAtATime</code>,<code>HorizontalCrop</code>}</dt>
 <dd> No details available.<br />
-&nbsp;<wbr>&nbsp;<wbr></p>
-<dt><code>-output=</code><i>output_filespec</i></p>
-<dd> Name of output file. If you don&#8217;t specify this option, the output image goes to Standard Output. </p>
-<dt><code>-verbose</code></p>
+&nbsp;<wbr>&nbsp;<wbr></dd>
+<dt><code>-output=</code><i>output_filespec</i></dt>
+<dd> Name of output file. If you don&#8217;t specify this option, the output image goes to Standard Output. </dd>
+<dt><code>-verbose</code></dt>
 <dd> This option causes <code>pnmstitch</code> to issue messages to Standard Error about the stitching process.<br />
-&nbsp;<wbr>&nbsp;<wbr> </p>
+&nbsp;<wbr>&nbsp;<wbr> </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pamcut/">pamcut</a></code>(1) , <code><a href="/docs/linux/man/1-pnmcat/">pnmcat</a></code>(1) , <code><a href="/docs/linux/man/1-pamflip/">pamflip</a></code>(1) , <code>pnm</code>(1) , </p>

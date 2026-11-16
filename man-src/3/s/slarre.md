@@ -19,7 +19,7 @@ description: "slarre.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  To find the desired eigenvalues of a given real symmetric
  tridiagonal matrix T, SLARRE sets any &quot;small&quot; off-diagonal
@@ -35,11 +35,11 @@ description: "slarre.f –"
  As an added benefit, SLARRE also outputs the n
  Gerschgorin intervals for the matrices L_i D_i L_i^T.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>RANGE</i> </p>
+</dt><dd> <i>RANGE</i> </dd>
 <pre>
           RANGE is CHARACTER*1
           = 'A': (&quot;All&quot;)   all eigenvalues will be found.
@@ -220,28 +220,28 @@ INDEXW is INTEGER array, dimension(N)
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   The base representations are required to suffer very little
   element growth and consequently define all their eigenvalues to
   high relative accuracy.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Beresford Parlett, University of California, Berkeley, USA </p>
+</dt><dd> Beresford Parlett, University of California, Berkeley, USA </dd>
 <p>&nbsp;<wbr>Jim Demmel, University of California, Berkeley, USA&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>Inderjit Dhillon, University of Texas, Austin, USA&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>Osni Marques, LBNL/NERSC, USA&nbsp;<wbr> </p>
@@ -251,3 +251,4 @@ INDEXW is INTEGER array, dimension(N)
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

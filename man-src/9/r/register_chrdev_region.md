@@ -15,15 +15,15 @@ register_chrdev_region - register a range of device numbers
 <h2>Arguments</h2>
 
 <i>from</i>
-<dl><dd><dd>the first in the desired range of device numbers; must include the major number.</dl>
+<dl><dd></dd><dd>the first in the desired range of device numbers; must include the major number.</dd></dl>
  
 
  <i>count</i>
-<dl><dd>the number of consecutive device numbers required</dl>
+<dl><dd>the number of consecutive device numbers required</dd></dl>
  
 
  <i>name</i>
-<dl><dd>the name of the device or driver.</dl>
+<dl><dd>the name of the device or driver.</dd></dl>
 
 <h2>Description</h2>
 

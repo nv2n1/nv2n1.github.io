@@ -11,7 +11,6 @@ description: "sc::ShellPairCints –"
 <p> <code>ShellPairCints</code> provides all primitive pair data for a given shell pair.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;shellpairs.h&gt;</code></pre>
 <p> Inherits <code>sc::SavableState</code>.</p>
 <h3>Public Member Functions</h3>

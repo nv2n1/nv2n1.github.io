@@ -16,10 +16,10 @@ description: "ldns-zcat – reunite (z)split up a zone files"
 <p> The resulted zone file is printed to standard output. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-o ORIGIN</code></p>
-<dd> use ORIGIN when reading in the zone </p>
-<dt><code>-v</code></p>
-<dd> show the version number and exit </p>
+<dt><code>-o ORIGIN</code></dt>
+<dd> use ORIGIN when reading in the zone </dd>
+<dt><code>-v</code></dt>
+<dd> show the version number and exit </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Written by the ldns team as an example for ldns usage. </p>

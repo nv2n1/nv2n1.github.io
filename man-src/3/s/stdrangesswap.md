@@ -11,31 +11,23 @@ std::ranges::swap - std::ranges::swap
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;concepts&gt;
-
     inline namespace /* unspecified */
 {
     (since C++ 20)
-
         inline constexpr /* unspecified */ swap = /* unspecified */;
     (customization point object)
 }
-
 Call signature
-
     template &lt;class T, class U&gt;
-
 requires /* see below */
-
     constexpr void
     swap(T &amp;&amp;t, U &amp;&amp;u) noexcept(/* see below */);</code></pre> 
 Exchanges the values referenced by t and u. 
 A call to ranges::swap is equivalent to: 
 1) (void)swap(std::forward&lt;T&gt;(t), std::forward&lt;U&gt;(u)), if that expression is valid, where the overload_resolution is performed with the following candidates: <pre><code>*template &lt;class T&gt;
 void swap(T &amp;, T &amp;) = delete;
-
 *template &lt;class T, std::size_t N&gt;
 void swap(T (&amp;)[N], T (&amp;)[N]) = delete;
-
 *any declarations of swap found by argument - dependent_lookup.</code></pre> 
 If the function selected by overload resolution does not exchange the values referenced by t and u, the program is ill-formed; no diagnostic required. 
 2) Otherwise, (void)ranges::swap_ranges(t, u), if T and U are lvalue references to array types of equal extent (but possibly different element types) and ranges::swap(*t, *u) is a valid expression; 

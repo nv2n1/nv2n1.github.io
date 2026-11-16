@@ -15,7 +15,7 @@ description: "bcfg2-repo-validate – Check Bcfg2 repository data against data s
 <h2>Options</h2>
 <p><code>-C </code></p>
 <dl>
-<dd>Specify path to bcfg2.conf (default /etc/bcfg2.conf)</dl>
+<dd>Specify path to bcfg2.conf (default /etc/bcfg2.conf)</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-bcfg2/">bcfg2</a>(1),</code> <code><a href="/docs/linux/man/8-bcfg2-server/">bcfg2-server</a>(8)</code></p>
 <h2>Bugs</h2>

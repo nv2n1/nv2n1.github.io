@@ -11,10 +11,10 @@ description: "lvmcache — LVM caching"
 <h2>Description</h2>
 <p><code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) includes two kinds of caching that can be used to improve the performance of a Logical Volume (LV). Typically, a smaller, faster device is used to improve i/o performance of a larger, slower LV. To do this, a separate LV is created from the faster device, and then the original LV is converted to start using the fast LV. The two kinds of caching are:</p>
 <dl>
-<dt>&bull;</p>
-<dd>A read and write hot-spot cache, using the dm-cache kernel module. This cache is slow moving, and adjusts the cache content over time so that the most used parts of the LV are kept on the faster device. Both reads and writes use the cache. LVM refers to this using the LV type <code>cache</code>.</p>
-<dt>&bull;</p>
-<dd>A streaming write cache, using the dm-writecache kernel module. This cache is intended to be used with SSD or PMEM devices to speed up all writes to an LV. Reads do not use this cache. LVM refers to this using the LV type <code>writecache</code>. </p>
+<dt>&bull;</dt>
+<dd>A read and write hot-spot cache, using the dm-cache kernel module. This cache is slow moving, and adjusts the cache content over time so that the most used parts of the LV are kept on the faster device. Both reads and writes use the cache. LVM refers to this using the LV type <code>cache</code>.</dd>
+<dt>&bull;</dt>
+<dd>A streaming write cache, using the dm-writecache kernel module. This cache is intended to be used with SSD or PMEM devices to speed up all writes to an LV. Reads do not use this cache. LVM refers to this using the LV type <code>writecache</code>. </dd>
 <h2>Usage</h2>
 <p>Both kinds of caching use similar lvm commands: </p>
 <p> <code>1. Identify main LV that needs caching</code> </p>
@@ -90,26 +90,26 @@ Look for sectsz=512 or sectsz=4096</pre>
  --cachesettings 'high_watermark=N writeback_jobs=N' vg/main</pre>
 <p>Tunable options are: </p>
 <dl>
-<dt>&bull;</p>
-<dd>high_watermark = &lt;count&gt; </p>
+<dt>&bull;</dt>
+<dd>high_watermark = &lt;count&gt; </dd>
 <p> Start writeback when the number of used blocks reach this watermark </p>
-<dt>&bull;</p>
-<dd>low_watermark = &lt;count&gt; </p>
+<dt>&bull;</dt>
+<dd>low_watermark = &lt;count&gt; </dd>
 <p> Stop writeback when the number of used blocks drops below this watermark </p>
-<dt>&bull;</p>
-<dd>writeback_jobs = &lt;count&gt; </p>
+<dt>&bull;</dt>
+<dd>writeback_jobs = &lt;count&gt; </dd>
 <p> Limit the number of blocks that are in flight during writeback. Setting this value reduces writeback throughput, but it may improve latency of read requests. </p>
-<dt>&bull;</p>
-<dd>autocommit_blocks = &lt;count&gt; </p>
+<dt>&bull;</dt>
+<dd>autocommit_blocks = &lt;count&gt; </dd>
 <p> When the application writes this amount of blocks without issuing the FLUSH request, the blocks are automatically commited. </p>
-<dt>&bull;</p>
-<dd>autocommit_time = &lt;milliseconds&gt; </p>
+<dt>&bull;</dt>
+<dd>autocommit_time = &lt;milliseconds&gt; </dd>
 <p> The data is automatically commited if this time passes and no FLUSH request is received. </p>
-<dt>&bull;</p>
-<dd>fua = 0|1 </p>
+<dt>&bull;</dt>
+<dd>fua = 0|1 </dd>
 <p> Use the FUA flag when writing data from persistent memory back to the underlying device. Applicable only to persistent memory. </p>
-<dt>&bull;</p>
-<dd>nofua = 0|1 </p>
+<dt>&bull;</dt>
+<dd>nofua = 0|1 </dd>
 <p> Don&#8217;t use the FUA flag when writing back data and send the FLUSH request afterwards. Some underlying devices perform better with fua, some with nofua. Testing is necessary to determine which. Applicable only to persistent memory. </p>
 </dl>
 <h3>dm-cache with separate data and metadata LVs</h3>
@@ -171,3 +171,4 @@ $ lvconvert --type cache --cachevol fast vg/main</pre>
 <p> (Note: the type option is interpreted differently by this command than by normal lvcreate commands in which &#8211;type specifies the type of the newly created LV. In this case, an LV with type cache-pool is being created, and the existing main LV is being converted to type cache.)</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5), <code><a href="/docs/linux/man/8-lvchange/">lvchange</a></code>(8), <code><a href="/docs/linux/man/8-lvcreate/">lvcreate</a></code>(8), <code><a href="/docs/linux/man/8-lvdisplay/">lvdisplay</a></code>(8), <code><a href="/docs/linux/man/8-lvextend/">lvextend</a></code>(8), <code><a href="/docs/linux/man/8-lvremove/">lvremove</a></code>(8), <code><a href="/docs/linux/man/8-lvrename/">lvrename</a></code>(8), <code><a href="/docs/linux/man/8-lvresize/">lvresize</a></code>(8), <code><a href="/docs/linux/man/8-lvs/">lvs</a></code>(8), <code><a href="/docs/linux/man/8-vgchange/">vgchange</a></code>(8), <code><a href="/docs/linux/man/8-vgmerge/">vgmerge</a></code>(8), <code><a href="/docs/linux/man/8-vgreduce/">vgreduce</a></code>(8), <code><a href="/docs/linux/man/8-vgsplit/">vgsplit</a></code>(8) </p>
+</dl>

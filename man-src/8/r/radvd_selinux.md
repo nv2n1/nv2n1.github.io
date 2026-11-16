@@ -101,8 +101,8 @@ description: "radvd_selinux – Security Enhanced Linux Policy for the radvd pro
 <p> <code>radvd_var_run_t</code> </p>
 <p> &#8211; Set files with the radvd_var_run_t type, if you want to store the radvd files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/radvd(/.*)?, /var/run/radvd.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/radvd(/.*)?, /var/run/radvd.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

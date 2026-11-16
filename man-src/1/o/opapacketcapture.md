@@ -16,26 +16,26 @@ description: "opapacketcapture"
 <p> opapacketcapture [-o <i>outfile</i>] [-d <i>devfile</i>] [-f <i>filterfile</i>] [-t <i>triggerfile</i>] [-l <i>triggerlag</i>][-a <i>alarm</i>] [-p <i>packets</i>] [-s <i>maxblocks</i>] [-v] [-h]</p>
 <h2>Options</h2>
 <dl>
-<dt>-h/&#8211;help</p>
-<dd> Produces full help text. </p>
-<dt>-o <i>outfile</i></p>
-<dd> Output file for captured packets. Default = packetDump.pcap </p>
-<dt>-d <i>devfile</i></p>
-<dd> Device file for capturing packets. Default = /dev/hfi1_diagpkt0 </p>
-<dt>-f <i>filterfile</i></p>
-<dd> File used for filtering. If absent, no filtering is done. </p>
-<dt>-t <i>triggerfile</i></p>
-<dd> File used for triggering a stop capture. If absent, normal triggering is performed. </p>
-<dt>-l <i>triggerlag</i></p>
-<dd> Number of packets to collect after trigger condition is met, before dumping data and exiting. Default = 10. </p>
-<dt>-a <i>alarm</i></p>
-<dd> Number of seconds for alarm trigger to dump capture and exit. </p>
-<dt>-p <i>packets</i></p>
-<dd> Number of packets for alarm trigger to dump capture and exit. </p>
-<dt>-s <i>maxblocks</i></p>
-<dd> Number of blocks to allocate for ring buffer. Value is in Millions. Default = 2 which corresponds to 128 MiB because 1 block = 64 Bytes. </p>
-<dt>-v</p>
-<dd> Produces verbose output. </p>
+<dt>-h/&#8211;help</dt>
+<dd> Produces full help text. </dd>
+<dt>-o <i>outfile</i></dt>
+<dd> Output file for captured packets. Default = packetDump.pcap </dd>
+<dt>-d <i>devfile</i></dt>
+<dd> Device file for capturing packets. Default = /dev/hfi1_diagpkt0 </dd>
+<dt>-f <i>filterfile</i></dt>
+<dd> File used for filtering. If absent, no filtering is done. </dd>
+<dt>-t <i>triggerfile</i></dt>
+<dd> File used for triggering a stop capture. If absent, normal triggering is performed. </dd>
+<dt>-l <i>triggerlag</i></dt>
+<dd> Number of packets to collect after trigger condition is met, before dumping data and exiting. Default = 10. </dd>
+<dt>-a <i>alarm</i></dt>
+<dd> Number of seconds for alarm trigger to dump capture and exit. </dd>
+<dt>-p <i>packets</i></dt>
+<dd> Number of packets for alarm trigger to dump capture and exit. </dd>
+<dt>-s <i>maxblocks</i></dt>
+<dd> Number of blocks to allocate for ring buffer. Value is in Millions. Default = 2 which corresponds to 128 MiB because 1 block = 64 Bytes. </dd>
+<dt>-v</dt>
+<dd> Produces verbose output. </dd>
 </dl>
 <h2>Example</h2>
 <p> # opapacketcapture<br />

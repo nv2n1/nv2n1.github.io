@@ -16,10 +16,10 @@ description: "XmMultiListUnselectItem — An MultiList function that deselects t
 <h2>Description</h2>
 <p><code>XmMultiListUnselectItem</code> unselects the row designated by row_info of the passed MultiList widget.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ID of the MultiList from whose list an item is unselected.</p>
-<dt><i>row_info</i></p>
-<dd>Specified the pointer to the row which is to be unselected.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the MultiList from whose list an item is unselected.</dd>
+<dt><i>row_info</i></dt>
+<dd>Specified the pointer to the row which is to be unselected.</dd></dl>
 <p> For a complete definition of MultiList and its associated resources, see <code><a href="/docs/linux/man/3-xmmultilist/">XmMultiList</a></code>(3).</p>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmmultilist/">XmMultiList</a></code>(3).</p>

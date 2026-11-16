@@ -14,16 +14,16 @@ description: "gnutls_pubkey_import_openpgp_raw – API function"
 <p> <code>int gnutls_pubkey_import_openpgp_raw(gnutls_pubkey_t </code><i>pkey</i><code>, const gnutls_datum_t * </code><i>data</i><code>, gnutls_openpgp_crt_fmt_t </code><i>format</i><code>, const gnutls_openpgp_keyid_t </code><i>keyid</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_pubkey_t pkey</p>
-<dd> The public key</p>
-<dt>const gnutls_datum_t * data</p>
-<dd> The public key data to be imported</p>
-<dt>gnutls_openpgp_crt_fmt_t format</p>
-<dd> The format of the public key</p>
-<dt>const gnutls_openpgp_keyid_t keyid</p>
-<dd> The key id to use (optional)</p>
-<dt>unsigned int flags</p>
-<dd> Should be zero</dl>
+<dt>gnutls_pubkey_t pkey</dt>
+<dd> The public key</dd>
+<dt>const gnutls_datum_t * data</dt>
+<dd> The public key data to be imported</dd>
+<dt>gnutls_openpgp_crt_fmt_t format</dt>
+<dd> The format of the public key</dd>
+<dt>const gnutls_openpgp_keyid_t keyid</dt>
+<dd> The key id to use (optional)</dd>
+<dt>unsigned int flags</dt>
+<dd> Should be zero</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will import the given public key to the abstract <code>gnutls_pubkey_t</code> structure.</p>
 <h2>RETURNS</h2>
@@ -39,6 +39,6 @@ description: "gnutls_pubkey_import_openpgp_raw – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

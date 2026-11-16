@@ -11,27 +11,17 @@ std::experimental::ranges::Writable - std::experimental::ranges::Writable
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / ranges / iterator&gt;
-
     template &lt;class Out, class T&gt;
-
     concept bool Writable =
-
         requires(Out &amp;&amp; o, T &amp;&amp;t)
 {
-
     *o = std::forward&lt;T&gt;(t);
-
     *std::forward&lt;Out&gt;(o) = std::forward&lt;T&gt;(t);
-
     const_cast&lt;const ranges::reference_t&lt;Out&gt; &amp;&amp;&gt;(*o) = (ranges TS)
-
         std::forward&lt;T&gt;(t);
-
     const_cast&lt;const ranges::reference_t&lt;Out&gt; &amp;&amp;&gt;(*std::forward&lt;Out&gt;(o)) =
-
         std::forward&lt;T&gt;(t);
 };
-
 /* none of the four expressions above are required to be equality-preserving */</code></pre> 
 The concept Writable&lt;Out, T&gt; specifies the requirements for writing a value whose type and value category are encoded by T into an iterator Out's referenced object. 
 Let E be an expression such that decltype((E)) is T, and o be a dereferenceable object of type Out, then Writable&lt;Out, T&gt; is satisfied only if: 

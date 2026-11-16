@@ -17,175 +17,175 @@ description: "synctex – Synchronize TeXnology help file"
 <h2>Structure</h2>
 <p>The element structure of a synctex file is a list of text line records as follows. `*&#8217; `+&#8217; and `?&#8217; have their usual EBNF meanings: `*&#8217; means zero or more, `+&#8217; means one or more, and `?&#8217; means zero or one (i.e., optional) </p>
 <dl>
-<dt><code>&lt;SyncTeX&gt; ::=</code></p>
-<dd>(The whole contents in 4 sections)</p>
+<dt><code>&lt;SyncTeX&gt; ::=</code></dt>
+<dd>(The whole contents in 4 sections)</dd>
 <dl>
-<dt><code>&lt;Preamble&gt;</code></p>
+<dt><code>&lt;Preamble&gt;</code></dt>
 <dd>
-<dt><code>&lt;Content&gt;</code></p>
+</dd><dt><code>&lt;Content&gt;</code></dt>
 <dd>
-<dt><code>&lt;Postamble&gt;</code></p>
+</dd><dt><code>&lt;Postamble&gt;</code></dt>
 <dd>
-<dt><code>&lt;Post Scriptum&gt;</code></p>
-<dd></dl>
+</dd><dt><code>&lt;Post Scriptum&gt;</code></dt>
+<dd></dd></dl>
 </dl>
 <p> Each section starts with the first occurrence of a sectioning line, and ends with the next section, if any. In the following definitions, we do not mention the section ending condition.</p>
 <h2>The preamble</h2>
 <dl>
-<dt><code>&lt;Preamble&gt; ::=</code></p>
+<dt><code>&lt;Preamble&gt; ::=</code></dt>
 <dd>
-<dl>
-<dt><code>Qq </code>SyncTeX Version:</p>
-<dd>&lt;Version Number&gt; &lt;EOL&gt;</p>
-<dt><code>&lt;Input Line&gt;*</code></p>
+</dd><dl>
+<dt><code>Qq </code>SyncTeX Version:</dt>
+<dd>&lt;Version Number&gt; &lt;EOL&gt;</dd>
+<dt><code>&lt;Input Line&gt;*</code></dt>
 <dd>
-<dt><code>Qq </code>Magnification:</p>
-<dd>&lt;TeX magnification&gt; &lt;EOL&gt;</p>
-<dt><code>Qq </code>Unit:</p>
-<dd>&lt;unit in scaled point&gt; &lt;EOL&gt;</p>
-<dt><code>Qq </code>X Offset:</p>
-<dd>&lt;horizontal offset in scaled point&gt; &lt;EOL&gt;</p>
-<dt><code>Qq </code>Y Offset:</p>
-<dd>&lt;vertical offset in scaled point&gt; &lt;EOL&gt;</dl>
-<dt><code>&lt;Input Line&gt; ::= </code></p>
-<dd>Qq Input: &lt;tag&gt; Qq : &lt;File Name&gt; &lt;EOL&gt;</dl>
+</dd><dt><code>Qq </code>Magnification:</dt>
+<dd>&lt;TeX magnification&gt; &lt;EOL&gt;</dd>
+<dt><code>Qq </code>Unit:</dt>
+<dd>&lt;unit in scaled point&gt; &lt;EOL&gt;</dd>
+<dt><code>Qq </code>X Offset:</dt>
+<dd>&lt;horizontal offset in scaled point&gt; &lt;EOL&gt;</dd>
+<dt><code>Qq </code>Y Offset:</dt>
+<dd>&lt;vertical offset in scaled point&gt; &lt;EOL&gt;</dd></dl>
+<dt><code>&lt;Input Line&gt; ::= </code></dt>
+<dd>Qq Input: &lt;tag&gt; Qq : &lt;File Name&gt; &lt;EOL&gt;</dd></dl>
 <h2>The content</h2>
 <dl>
-<dt><code>&lt;Content&gt; ::=</code></p>
+<dt><code>&lt;Content&gt; ::=</code></dt>
 <dd>
-<dl>
-<dt><code>&lt;byte offset record&gt;</code></p>
+</dd><dl>
+<dt><code>&lt;byte offset record&gt;</code></dt>
 <dd>
-<dt><code>Qq </code>Content:</p>
-<dd>&lt;EOL&gt;</p>
-<dt><code>(&lt;Form(k)&gt;|&lt;Input Line&gt;)*</code></p>
+</dd><dt><code>Qq </code>Content:</dt>
+<dd>&lt;EOL&gt;</dd>
+<dt><code>(&lt;Form(k)&gt;|&lt;Input Line&gt;)*</code></dt>
 <dd>
-<dt><code>&lt;sheet(1)&gt;</code></p>
+</dd><dt><code>&lt;sheet(1)&gt;</code></dt>
 <dd>
-<dt><code>(&lt;Form(k)&gt;|&lt;Input Line&gt;)*</code></p>
+</dd><dt><code>(&lt;Form(k)&gt;|&lt;Input Line&gt;)*</code></dt>
 <dd>
-<dt><code>&lt;sheet(2)&gt;</code></p>
+</dd><dt><code>&lt;sheet(2)&gt;</code></dt>
 <dd>
-<dt><code>(&lt;Form(k)&gt;|&lt;Input Line&gt;)*</code></p>
+</dd><dt><code>(&lt;Form(k)&gt;|&lt;Input Line&gt;)*</code></dt>
 <dd>
-<dt><code>&#8230;</code></p>
+</dd><dt><code>&#8230;</code></dt>
 <dd>
-<dt><code>&lt;sheet(N)&gt;</code></p>
+</dd><dt><code>&lt;sheet(N)&gt;</code></dt>
 <dd>
-<dt><code>(&lt;Form(k)&gt;|&lt;Input Line&gt;)*</code></p>
-<dd></dl>
-<dt><code>&lt;byte offset record&gt; ::=</code></p>
-<dd>Qq ! &lt;byte offset&gt; &lt;end of record&gt; </p>
+</dd><dt><code>(&lt;Form(k)&gt;|&lt;Input Line&gt;)*</code></dt>
+<dd></dd></dl>
+<dt><code>&lt;byte offset record&gt; ::=</code></dt>
+<dd>Qq ! &lt;byte offset&gt; &lt;end of record&gt; </dd>
 </dl>
 <dl>
-<dt><code>&lt;sheet(n)&gt; ::=</code></p>
+<dt><code>&lt;sheet(n)&gt; ::=</code></dt>
 <dd>
-<dl>
-<dt><code>&lt;byte offset record&gt;</code></p>
+</dd><dl>
+<dt><code>&lt;byte offset record&gt;</code></dt>
 <dd>
-<dt><code>Qq </code>{</p>
-<dd>&lt;the integer n&gt; &lt;end of record&gt;</p>
-<dt><code>&lt;vbox section&gt;|&lt;hbox section&gt;</code></p>
+</dd><dt><code>Qq </code>{</dt>
+<dd>&lt;the integer n&gt; &lt;end of record&gt;</dd>
+<dt><code>&lt;vbox section&gt;|&lt;hbox section&gt;</code></dt>
 <dd>
-<dt><code>&lt;byte offset record&gt;</code></p>
+</dd><dt><code>&lt;byte offset record&gt;</code></dt>
 <dd>
-<dt><code>Qq </code>}</p>
-<dd>&lt;the integer n&gt; &lt;end of record&gt;</dl>
-<dt><code>&lt;Form&gt; ::=</code></p>
+</dd><dt><code>Qq </code>}</dt>
+<dd>&lt;the integer n&gt; &lt;end of record&gt;</dd></dl>
+<dt><code>&lt;Form&gt; ::=</code></dt>
 <dd>
-<dl>
-<dt><code>&lt;byte offset record&gt;</code></p>
+</dd><dl>
+<dt><code>&lt;byte offset record&gt;</code></dt>
 <dd>
-<dt><code>Qq </code>&lt;</p>
-<dd>&lt;form tag&gt; &lt;end of record&gt;</p>
-<dt><code>&lt;vbox section&gt;|&lt;hbox section&gt;</code></p>
+</dd><dt><code>Qq </code>&lt;</dt>
+<dd>&lt;form tag&gt; &lt;end of record&gt;</dd>
+<dt><code>&lt;vbox section&gt;|&lt;hbox section&gt;</code></dt>
 <dd>
-<dt><code>&lt;byte offset record&gt;</code></p>
+</dd><dt><code>&lt;byte offset record&gt;</code></dt>
 <dd>
-<dt><code>Qq </code>&gt;</p>
-<dd>&lt;end of record&gt;</dl>
-<dt><code>&lt;form tag&gt; ::= &lt;integer&gt;</code></p>
-<dd></dl>
+</dd><dt><code>Qq </code>&gt;</dt>
+<dd>&lt;end of record&gt;</dd></dl>
+<dt><code>&lt;form tag&gt; ::= &lt;integer&gt;</code></dt>
+<dd></dd></dl>
 <p> Forms are available with pdfTeX. All the numbers are integers encoded using the decimal representation with &quot;C&quot; locale. The &lt;box content&gt; describes what is inside a box. It is either a vertical or horizontal box, with some records related to glue, kern or math nodes.</p>
 <dl>
-<dt><code>&lt;box content&gt; ::=</code></p>
+<dt><code>&lt;box content&gt; ::=</code></dt>
 <dd>
-<dl>
-<dt><code>&lt;vbox section&gt;|&lt;hbox section&gt;</code></p>
+</dd><dl>
+<dt><code>&lt;vbox section&gt;|&lt;hbox section&gt;</code></dt>
 <dd>
-<dt><code>|&lt;void vbox record&gt;|&lt;void hbox record&gt;</code></p>
+</dd><dt><code>|&lt;void vbox record&gt;|&lt;void hbox record&gt;</code></dt>
 <dd>
-<dt><code>|&lt;current record&gt;|&lt;glue record&gt;|&lt;kern record&gt;</code></p>
+</dd><dt><code>|&lt;current record&gt;|&lt;glue record&gt;|&lt;kern record&gt;</code></dt>
 <dd>
-<dt><code>|&lt;math record&gt;|&lt;form ref record&gt;|&lt;Form&gt;</code></p>
-<dd></dl>
-<dt><code>&lt;vbox section&gt; ::=</code></p>
+</dd><dt><code>|&lt;math record&gt;|&lt;form ref record&gt;|&lt;Form&gt;</code></dt>
+<dd></dd></dl>
+<dt><code>&lt;vbox section&gt; ::=</code></dt>
 <dd>
-<dl>
-<dt><code>Qq </code>[</p>
-<dd>&lt;link&gt; Qq : &lt;point&gt; Qq : &lt;size&gt; &lt;end of record&gt;</p>
-<dt><code>&lt;box content&gt;*</code></p>
+</dd><dl>
+<dt><code>Qq </code>[</dt>
+<dd>&lt;link&gt; Qq : &lt;point&gt; Qq : &lt;size&gt; &lt;end of record&gt;</dd>
+<dt><code>&lt;box content&gt;*</code></dt>
 <dd>
-<dt><code>Qq </code>]</p>
-<dd>&lt;end of record&gt;</dl>
-<dt><code>&lt;hbox section&gt; ::=</code></p>
+</dd><dt><code>Qq </code>]</dt>
+<dd>&lt;end of record&gt;</dd></dl>
+<dt><code>&lt;hbox section&gt; ::=</code></dt>
 <dd>
-<dl>
-<dt><code>(</code></p>
-<dd>&lt;link&gt; Qq : &lt;point&gt; Qq : &lt;size&gt; &lt;end of record&gt;</p>
-<dt><code>&lt;box content&gt;*</code></p>
+</dd><dl>
+<dt><code>(</code></dt>
+<dd>&lt;link&gt; Qq : &lt;point&gt; Qq : &lt;size&gt; &lt;end of record&gt;</dd>
+<dt><code>&lt;box content&gt;*</code></dt>
 <dd>
-<dt><code>Qq </code>)</p>
-<dd>&lt;end of record&gt;</dl>
+</dd><dt><code>Qq </code>)</dt>
+<dd>&lt;end of record&gt;</dd></dl>
 </dl>
 <p> Void boxes:</p>
 <dl>
-<dt><code>&lt;void vbox record&gt; ::=</code></p>
-<dd>Qq v &lt;link&gt; Qq : &lt;point&gt; Qq : &lt;size&gt; &lt;end of record&gt;</p>
-<dt><code>&lt;void hbox record&gt; ::=</code></p>
-<dd>Qq h &lt;link&gt; Qq : &lt;point&gt; Qq : &lt;size&gt; &lt;end of record&gt;</p>
-<dt><code>&lt;link&gt; ::= &lt;tag&gt;</code></p>
-<dd>Qq , &lt;line&gt;( Qq , &lt;column&gt;)?</p>
-<dt><code>&lt;point&gt; ::= &lt;full point&gt;|&lt;compressed point&gt;</code></p>
+<dt><code>&lt;void vbox record&gt; ::=</code></dt>
+<dd>Qq v &lt;link&gt; Qq : &lt;point&gt; Qq : &lt;size&gt; &lt;end of record&gt;</dd>
+<dt><code>&lt;void hbox record&gt; ::=</code></dt>
+<dd>Qq h &lt;link&gt; Qq : &lt;point&gt; Qq : &lt;size&gt; &lt;end of record&gt;</dd>
+<dt><code>&lt;link&gt; ::= &lt;tag&gt;</code></dt>
+<dd>Qq , &lt;line&gt;( Qq , &lt;column&gt;)?</dd>
+<dt><code>&lt;point&gt; ::= &lt;full point&gt;|&lt;compressed point&gt;</code></dt>
 <dd>
-<dt><code>&lt;full point&gt; ::=</code></p>
-<dd>&lt;integer&gt; Qq , &lt;integer&gt;</p>
-<dt><code>&lt;compressed point&gt; ::=</code></p>
-<dd>&lt;integer&gt; Qq ,=</p>
-<dt><code>&lt;line&gt; ::= &lt;integer&gt;</code></p>
+</dd><dt><code>&lt;full point&gt; ::=</code></dt>
+<dd>&lt;integer&gt; Qq , &lt;integer&gt;</dd>
+<dt><code>&lt;compressed point&gt; ::=</code></dt>
+<dd>&lt;integer&gt; Qq ,=</dd>
+<dt><code>&lt;line&gt; ::= &lt;integer&gt;</code></dt>
 <dd>
-<dt><code>&lt;column&gt; ::= &lt;integer&gt;</code></p>
+</dd><dt><code>&lt;column&gt; ::= &lt;integer&gt;</code></dt>
 <dd>
-<dt><code>&lt;size&gt; ::= &lt;Width&gt;</code></p>
-<dd>Qq , &lt;Height&gt; Qq , &lt;Depth&gt;</p>
-<dt><code>&lt;Width&gt; ::= &lt;integer&gt;</code></p>
+</dd><dt><code>&lt;size&gt; ::= &lt;Width&gt;</code></dt>
+<dd>Qq , &lt;Height&gt; Qq , &lt;Depth&gt;</dd>
+<dt><code>&lt;Width&gt; ::= &lt;integer&gt;</code></dt>
 <dd>
-<dt><code>&lt;Height&gt; ::= &lt;integer&gt;</code></p>
+</dd><dt><code>&lt;Height&gt; ::= &lt;integer&gt;</code></dt>
 <dd>
-<dt><code>&lt;Depth&gt; ::= &lt;integer&gt;</code></p>
-<dd></dl>
+</dd><dt><code>&lt;Depth&gt; ::= &lt;integer&gt;</code></dt>
+<dd></dd></dl>
 <p> The forthcoming records are basic one liners.</p>
 <dl>
-<dt><code>&lt;current record&gt; ::=</code></p>
-<dd>Qq x &lt;link&gt; Qq : &lt;point&gt; &lt;end of record&gt;</p>
-<dt><code>&lt;kern record&gt; ::=</code></p>
-<dd>Qq k &lt;link&gt; Qq : &lt;point&gt; Qq : &lt;Width&gt; &lt;end of record&gt;</p>
-<dt><code>&lt;glue record&gt; ::=</code></p>
-<dd>Qq g &lt;link&gt; Qq : &lt;point&gt; &lt;end of record&gt;</p>
-<dt><code>&lt;math record&gt; ::=</code></p>
-<dd>Qq $ &lt;link&gt; Qq : &lt;point&gt; &lt;end of record&gt;</p>
-<dt><code>&lt;form ref record&gt; ::=</code></p>
-<dd>Qq f &lt;form tag&gt; Qq : &lt;point&gt; &lt;end of record&gt;</dl>
+<dt><code>&lt;current record&gt; ::=</code></dt>
+<dd>Qq x &lt;link&gt; Qq : &lt;point&gt; &lt;end of record&gt;</dd>
+<dt><code>&lt;kern record&gt; ::=</code></dt>
+<dd>Qq k &lt;link&gt; Qq : &lt;point&gt; Qq : &lt;Width&gt; &lt;end of record&gt;</dd>
+<dt><code>&lt;glue record&gt; ::=</code></dt>
+<dd>Qq g &lt;link&gt; Qq : &lt;point&gt; &lt;end of record&gt;</dd>
+<dt><code>&lt;math record&gt; ::=</code></dt>
+<dd>Qq $ &lt;link&gt; Qq : &lt;point&gt; &lt;end of record&gt;</dd>
+<dt><code>&lt;form ref record&gt; ::=</code></dt>
+<dd>Qq f &lt;form tag&gt; Qq : &lt;point&gt; &lt;end of record&gt;</dd></dl>
 <h2>The postamble</h2>
 <p>The postamble closes the file If there is no postamble, it means that the typesetting process did not end correctly.</p>
 <dl>
-<dt><code>&lt;Postamble&gt;::=</code></p>
+<dt><code>&lt;Postamble&gt;::=</code></dt>
 <dd>
-<dl>
-<dt><code>&lt;byte offset record&gt;</code></p>
+</dd><dl>
+<dt><code>&lt;byte offset record&gt;</code></dt>
 <dd>
-<dt><code>Qq </code>Count:</p>
-<dd>&lt;Number of records&gt; &lt;EOL&gt;</dl>
+</dd><dt><code>Qq </code>Count:</dt>
+<dd>&lt;Number of records&gt; &lt;EOL&gt;</dd></dl>
 </dl>
 <h2>The post scriptum</h2>
 <p>The post scriptum contains material possibly added by 3rd parties. It allows to append some transformation (shift and magnify). Typically, one applies a dvi to pdf filter with offset options and magnification, then he appends the same options to the synctex file, for example </p>
@@ -193,19 +193,19 @@ description: "synctex – Synchronize TeXnology help file"
 <pre>synctex update -o foo.pdf -m 0.486 -x 9472573sp -y 13.3dd source.dvi</pre>
 </blockquote>
 <dl>
-<dt><code>&lt;Post Scriptum&gt;::=</code></p>
+<dt><code>&lt;Post Scriptum&gt;::=</code></dt>
 <dd>
-<dl>
-<dt><code>&lt;byte offset record&gt;</code></p>
+</dd><dl>
+<dt><code>&lt;byte offset record&gt;</code></dt>
 <dd>
-<dt><code>Qq </code>Post Scriptum:</p>
-<dd>&lt;EOL&gt;</p>
-<dt><code>Qq </code>Magnification:</p>
-<dd>&lt;number&gt; &lt;EOL&gt; (Set additional magnification)</p>
-<dt><code>Qq </code>X Offset:</p>
-<dd>&lt;dimension&gt; &lt;EOL&gt; (Set horizontal offset)</p>
-<dt><code>Qq </code>Y Offset:</p>
-<dd>&lt;dimension&gt; &lt;EOL&gt; (Set vertical offset)</dl>
+</dd><dt><code>Qq </code>Post Scriptum:</dt>
+<dd>&lt;EOL&gt;</dd>
+<dt><code>Qq </code>Magnification:</dt>
+<dd>&lt;number&gt; &lt;EOL&gt; (Set additional magnification)</dd>
+<dt><code>Qq </code>X Offset:</dt>
+<dd>&lt;dimension&gt; &lt;EOL&gt; (Set horizontal offset)</dd>
+<dt><code>Qq </code>Y Offset:</dt>
+<dd>&lt;dimension&gt; &lt;EOL&gt; (Set vertical offset)</dd></dl>
 </dl>
 <p> This second information will override the offset and magnification previously available in the preamble section. All the numbers are encoded using the decimal representation with &quot;C&quot; locale.</p>
 <h2>Usage</h2>

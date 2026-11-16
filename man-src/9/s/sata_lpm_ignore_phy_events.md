@@ -10,12 +10,12 @@ description: "sata_lpm_ignore_phy_events – test if PHY event should be ignored
 <p>sata_lpm_ignore_phy_events &#8211; test if PHY event should be ignored</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>bool sata_lpm_ignore_phy_events(struct ata_link&nbsp;<wbr>*&nbsp;<wbr></code><i>link</i><code>);</code></dl>
+<dt> <code>bool sata_lpm_ignore_phy_events(struct ata_link&nbsp;<wbr>*&nbsp;<wbr></code><i>link</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>link</i></p>
 <dl>
 <dd>
-<dd>Link receiving the event</dl>
+</dd><dd>Link receiving the event</dd></dl>
 <h2>Description</h2>
 <p>Test whether the received PHY event has to be ignored or not. </p>
 <p> LOCKING: None:</p>
@@ -24,5 +24,5 @@ description: "sata_lpm_ignore_phy_events – test if PHY event should be ignored
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

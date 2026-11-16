@@ -35,134 +35,134 @@ description: "globusrun – Execute and manage jobs via GRAM"
 <p> <code>-help</code></p>
 <dl>
 <dt>
-<dd> Display a help message to standard error and exit.</dl>
+</dt><dd> Display a help message to standard error and exit.</dd></dl>
 <p> <code>-usage</code></p>
 <dl>
 <dt>
-<dd> Display a one-line usage summary to standard error and exit.</dl>
+</dt><dd> Display a one-line usage summary to standard error and exit.</dd></dl>
 <p> <code>-version</code></p>
 <dl>
 <dt>
-<dd> Display the software version of <code>globusrun</code> to standard error and exit.</dl>
+</dt><dd> Display the software version of <code>globusrun</code> to standard error and exit.</dd></dl>
 <p> <code>-versions</code></p>
 <dl>
 <dt>
-<dd> Display the software version of all modules used by <code>globusrun</code> (including DiRT information) to standard error and then exit.</dl>
+</dt><dd> Display the software version of all modules used by <code>globusrun</code> (including DiRT information) to standard error and then exit.</dd></dl>
 <p> <code>-p, -parse</code></p>
 <dl>
 <dt>
-<dd> Do a parse check on the job specification and print diagnostics. If a parse error occurs, <code>globusrun</code> exits with a non-zero exit code.</dl>
+</dt><dd> Do a parse check on the job specification and print diagnostics. If a parse error occurs, <code>globusrun</code> exits with a non-zero exit code.</dd></dl>
 <p> <code>-f FILENAME, -file FILENAME</code></p>
 <dl>
 <dt>
-<dd> Read job specification from the file named by <i>FILENAME</i></dl>
+</dt><dd> Read job specification from the file named by <i>FILENAME</i></dd></dl>
 <p> <code>-n, -no-interrupt</code></p>
 <dl>
 <dt>
-<dd> Disable handling of the SIGINT signal, so that the interrupt character (typically Control-C causes <code>globusrun</code> to terminate without canceling the job.</dl>
+</dt><dd> Disable handling of the SIGINT signal, so that the interrupt character (typically Control-C causes <code>globusrun</code> to terminate without canceling the job.</dd></dl>
 <p> <code>-r RESOURCE</code></p>
 <dl>
 <dt>
-<dd> Submit the request to the resource specified by <i>RESOURCE</i>. A resource may be specified in the following ways: </p>
+</dt><dd> Submit the request to the resource specified by <i>RESOURCE</i>. A resource may be specified in the following ways: </dd>
 <dl>
 <dt>
-<dd> &bull; <i>HOST</i></dl>
+</dt><dd> &bull; <i>HOST</i></dd></dl>
 <dl>
 <dt>
-<dd> &bull; <i>HOST</i>:<i>PORT</i></dl>
+</dt><dd> &bull; <i>HOST</i>:<i>PORT</i></dd></dl>
 <dl>
 <dt>
-<dd> &bull; <i>HOST</i>:<i>PORT</i>/<i>SERVICE</i></dl>
+</dt><dd> &bull; <i>HOST</i>:<i>PORT</i>/<i>SERVICE</i></dd></dl>
 <dl>
 <dt>
-<dd> &bull; <i>HOST</i>/<i>SERVICE</i></dl>
+</dt><dd> &bull; <i>HOST</i>/<i>SERVICE</i></dd></dl>
 <dl>
 <dt>
-<dd> &bull; <i>HOST</i>:/<i>SERVICE</i></dl>
+</dt><dd> &bull; <i>HOST</i>:/<i>SERVICE</i></dd></dl>
 <dl>
 <dt>
-<dd> &bull; <i>HOST</i>::<i>SUBJECT</i></dl>
+</dt><dd> &bull; <i>HOST</i>::<i>SUBJECT</i></dd></dl>
 <dl>
 <dt>
-<dd> &bull; <i>HOST</i>:<i>PORT</i>:<i>SUBJECT</i></dl>
+</dt><dd> &bull; <i>HOST</i>:<i>PORT</i>:<i>SUBJECT</i></dd></dl>
 <dl>
 <dt>
-<dd> &bull; <i>HOST</i>/<i>SERVICE</i>:<i>SUBJECT</i></dl>
+</dt><dd> &bull; <i>HOST</i>/<i>SERVICE</i>:<i>SUBJECT</i></dd></dl>
 <dl>
 <dt>
-<dd> &bull; <i>HOST</i>:/<i>SERVICE</i>:<i>SUBJECT</i></dl>
+</dt><dd> &bull; <i>HOST</i>:/<i>SERVICE</i>:<i>SUBJECT</i></dd></dl>
 <dl>
 <dt>
-<dd> &bull; <i>HOST</i>:<i>PORT</i>/<i>SERVICE</i>:<i>SUBJECT</i> If any of <i>PORT</i>, <i>SERVICE</i>, or <i>SUBJECT</i> is omitted, the defaults of 2811, jobmanager, and host@<i>HOST</i> are used respectively.</dl>
+</dt><dd> &bull; <i>HOST</i>:<i>PORT</i>/<i>SERVICE</i>:<i>SUBJECT</i> If any of <i>PORT</i>, <i>SERVICE</i>, or <i>SUBJECT</i> is omitted, the defaults of 2811, jobmanager, and host@<i>HOST</i> are used respectively.</dd></dl>
 </dl>
 <p> <code>-j, -jobmanager-version</code></p>
 <dl>
 <dt>
-<dd> Print the software version being run by the service running at <i>RESOURCE</i>.</dl>
+</dt><dd> Print the software version being run by the service running at <i>RESOURCE</i>.</dd></dl>
 <p> <code>-k </code><i>JOBID</i><code>, -kill </code><i>JOBID</i></p>
 <dl>
 <dt>
-<dd> Kill the job named by <i>JOBID</i>.</dl>
+</dt><dd> Kill the job named by <i>JOBID</i>.</dd></dl>
 <p> <code>-D, -full-proxy</code></p>
 <dl>
 <dt>
-<dd> Delegate a full impersonation proxy to the service. By default, a limited proxy is delegated when needed.</dl>
+</dt><dd> Delegate a full impersonation proxy to the service. By default, a limited proxy is delegated when needed.</dd></dl>
 <p> <code>-y, -refresh-proxy</code>: Delegate a new proxy to the service processing JOBID. </p>
 <p> <code>-status</code></p>
 <dl>
 <dt>
-<dd> Display the current status of the job named by JOBID.</dl>
+</dt><dd> Display the current status of the job named by JOBID.</dd></dl>
 <p> <code>-q, -quiet</code></p>
 <dl>
 <dt>
-<dd> Do not display job state change or exit code information.</dl>
+</dt><dd> Do not display job state change or exit code information.</dd></dl>
 <p> <code>-o, -output-enable</code></p>
 <dl>
 <dt>
-<dd> Start a GASS server within the <code>globusrun</code> application that allows access to its standard output and standard error streams only. Also, augment the <i>RSL</i> with a definition of the GLOBUSRUN_GASS_URL RSL substitution and add stdout and stderr clauses which redirect the output and error streams of the job to the output and error streams of the interactive <code>globusrun</code> command. If this is specified, then <code>globusrun</code> acts as though the <i>-q</i> were also specified.</dl>
+</dt><dd> Start a GASS server within the <code>globusrun</code> application that allows access to its standard output and standard error streams only. Also, augment the <i>RSL</i> with a definition of the GLOBUSRUN_GASS_URL RSL substitution and add stdout and stderr clauses which redirect the output and error streams of the job to the output and error streams of the interactive <code>globusrun</code> command. If this is specified, then <code>globusrun</code> acts as though the <i>-q</i> were also specified.</dd></dl>
 <p> <code>-s, -server</code></p>
 <dl>
 <dt>
-<dd> Start a GASS server within the <code>globusrun</code> application that allows access to its standard output and standard error streams for writing and any file local the the <code>globusrun</code> invocation for reading. Also, augment the <i>RSL</i> with a definition of the GLOBUSRUN_GASS_URL RSL substitution and add stdout and stderr clauses which redirect the output and error streams of the job to the output and error streams of the interactive <code>globusrun</code> command. If this is specified, then <code>globusrun</code> acts as though the <i>-q</i> were also specified.</dl>
+</dt><dd> Start a GASS server within the <code>globusrun</code> application that allows access to its standard output and standard error streams for writing and any file local the the <code>globusrun</code> invocation for reading. Also, augment the <i>RSL</i> with a definition of the GLOBUSRUN_GASS_URL RSL substitution and add stdout and stderr clauses which redirect the output and error streams of the job to the output and error streams of the interactive <code>globusrun</code> command. If this is specified, then <code>globusrun</code> acts as though the <i>-q</i> were also specified.</dd></dl>
 <p> <code>-w, -write-allow</code></p>
 <dl>
 <dt>
-<dd> Start a GASS server within the <code>globusrun</code> application that allows access to its standard output and standard error streams for writing and any file local the the <code>globusrun</code> invocation for reading or writing. Also, augment the <i>RSL</i> with a definition of the GLOBUSRUN_GASS_URL RSL substitution and add stdout and stderr clauses which redirect the output and error streams of the job to the output and error streams of the interactive <code>globusrun</code> command. If this is specified, then <code>globusrun</code> acts as though the <i>-q</i> were also specified.</dl>
+</dt><dd> Start a GASS server within the <code>globusrun</code> application that allows access to its standard output and standard error streams for writing and any file local the the <code>globusrun</code> invocation for reading or writing. Also, augment the <i>RSL</i> with a definition of the GLOBUSRUN_GASS_URL RSL substitution and add stdout and stderr clauses which redirect the output and error streams of the job to the output and error streams of the interactive <code>globusrun</code> command. If this is specified, then <code>globusrun</code> acts as though the <i>-q</i> were also specified.</dd></dl>
 <p> <code>-b, -batch</code></p>
 <dl>
 <dt>
-<dd> Terminate after submitting the job to the GRAM service. The GASS-related options can be used to stage input files, but standard output, standard error, and file staging after the job completes will not be processed. The <code>globusrun</code> program will exit after the job hits any of the following states: </p>
+</dt><dd> Terminate after submitting the job to the GRAM service. The GASS-related options can be used to stage input files, but standard output, standard error, and file staging after the job completes will not be processed. The <code>globusrun</code> program will exit after the job hits any of the following states: </dd>
 <dl>
 <dt>
-<dd> &bull; PENDING</dl>
+</dt><dd> &bull; PENDING</dd></dl>
 <dl>
 <dt>
-<dd> &bull; ACTIVE</dl>
+</dt><dd> &bull; ACTIVE</dd></dl>
 <dl>
 <dt>
-<dd> &bull; FAILED</dl>
+</dt><dd> &bull; FAILED</dd></dl>
 <dl>
 <dt>
-<dd> &bull; DONE</dl>
+</dt><dd> &bull; DONE</dd></dl>
 </dl>
 <p> <code>-F, -fast-batch</code></p>
 <dl>
 <dt>
-<dd> Terminate after submitting the job to the GRAM service. The <code>globusrun</code> program will exit after it receives a reply from the service. The <i>JOBID</i> will be displayed to standard output before terminating so that the job can be checked with the <i>-status</i> command-line option or modified by the <i>-refresh-proxy</i> or <i>-kill</i> command-line options.</dl>
+</dt><dd> Terminate after submitting the job to the GRAM service. The <code>globusrun</code> program will exit after it receives a reply from the service. The <i>JOBID</i> will be displayed to standard output before terminating so that the job can be checked with the <i>-status</i> command-line option or modified by the <i>-refresh-proxy</i> or <i>-kill</i> command-line options.</dd></dl>
 <p> <code>-d, -dryrun</code></p>
 <dl>
 <dt>
-<dd> Submit the job with the dryrun attribute set to true. When this is done, the job manager will prepare to start the job but start short of submitting it to the service. This can be used to detect problems with the <i>RSL</i>.</dl>
+</dt><dd> Submit the job with the dryrun attribute set to true. When this is done, the job manager will prepare to start the job but start short of submitting it to the service. This can be used to detect problems with the <i>RSL</i>.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> The following variables affect the execution of <code>globusrun</code> </p>
 <p> <code>X509_USER_PROXY</code></p>
 <dl>
 <dt>
-<dd> Path to proxy credential.</dl>
+</dt><dd> Path to proxy credential.</dd></dl>
 <p> <code>X509_CERT_DIR</code></p>
 <dl>
 <dt>
-<dd> Path to trusted certificate directory.</dl>
+</dt><dd> Path to trusted certificate directory.</dd></dl>
 <h2>BUGS</h2>
 <p> The <code>globusrun</code> program assumes any failure to contact the job means the job has terminated. In fact, this may be due to the <code>globus-job-manager</code> program exiting after all jobs it is managing have reached the DONE or FAILED states. In order to reliably detect job termination, the two_phase RSL attribute should be used.</p>
 <h2>SEE ALSO</h2>

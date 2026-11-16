@@ -18,25 +18,23 @@ description: "ppufiles – The FPC Pascal unit object file lister."
 <h2>Options</h2>
 <p> <code>ppufiles</code> has several options, which are case insensitive: </p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>-a</code></p>
-<dd> This option tells <code>ppufiles</code> to list all files.</p>
-<dt><code>-h </code></p>
-<dd> Help screen.</p>
-<dt><code>-l</code></p>
-<dd> This option tells <code>ppufiles</code> to list only shared libraries.</p>
-<dt><code>-o </code></p>
-<dd> This option tells <code>ppufiles</code> to list only object files.</p>
-<dt><code>-s </code></p>
-<dd> This option tells <code>ppufiles</code> to list only static libraries.</dl>
+<dt><code>-a</code></dt>
+<dd> This option tells <code>ppufiles</code> to list all files.</dd>
+<dt><code>-h </code></dt>
+<dd> Help screen.</dd>
+<dt><code>-l</code></dt>
+<dd> This option tells <code>ppufiles</code> to list only shared libraries.</dd>
+<dt><code>-o </code></dt>
+<dd> This option tells <code>ppufiles</code> to list only object files.</dd>
+<dt><code>-s </code></dt>
+<dd> This option tells <code>ppufiles</code> to list only static libraries.</dd></dl>
 </dl>
 <h2>ERRORS</h2>
 <p> In case the unit is in an older or unrecognised format, ppufiles will complain about that.</p>
 <h2>SEE ALSO</h2>
 <dl>
 <dt>
-<dd> <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code><a href="/docs/linux/man/1-ppumove/">ppumove</a></code>(1) <code><a href="/docs/linux/man/1-make/">make</a></code>(1) </p>
+</dt><dd> <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code><a href="/docs/linux/man/1-ppumove/">ppumove</a></code>(1) <code><a href="/docs/linux/man/1-make/">make</a></code>(1) </dd>
 </dl>
 <h2>Index</h2>

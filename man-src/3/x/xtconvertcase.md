@@ -11,34 +11,34 @@ description: "XtSetKeyTranslator, XtTranslateKeycode, XtRegisterCaseConverter, X
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>void XtSetKeyTranslator(Display *<i>display</i>, XtKeyProc <i>proc</i>);</p>
-<dd>void XtTranslateKeycode(Display *<i>display</i>, KeyCode <i>keycode</i>, Modifiers <i>modifiers</i>, Modifiers *<i>modifiers_return</i>, KeySym *<i>keysym_return</i>);</p>
-<dd>void XtRegisterCaseConverter(Display *<i>display</i>, XtCaseProc <i>proc</i>, KeySym <i>start</i>, KeySym <i>stop</i>);</p>
-<dd>void XtConvertCase(Display *<i>display</i>, KeySym <i>keysym</i>, KeySym *<i>lower_return</i>, KeySym *<i>upper_return</i>);</dl>
+<dd>void XtSetKeyTranslator(Display *<i>display</i>, XtKeyProc <i>proc</i>);</dd>
+<dd>void XtTranslateKeycode(Display *<i>display</i>, KeyCode <i>keycode</i>, Modifiers <i>modifiers</i>, Modifiers *<i>modifiers_return</i>, KeySym *<i>keysym_return</i>);</dd>
+<dd>void XtRegisterCaseConverter(Display *<i>display</i>, XtCaseProc <i>proc</i>, KeySym <i>start</i>, KeySym <i>stop</i>);</dd>
+<dd>void XtConvertCase(Display *<i>display</i>, KeySym <i>keysym</i>, KeySym *<i>lower_return</i>, KeySym *<i>upper_return</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the display.</p>
-<dt><i>keycode</i></p>
-<dd>Specifies the KeyCode to translate.</p>
-<dt><i>keysym</i></p>
-<dd>Specifies the KeySym to convert.</p>
-<dt><i>keysym_return</i></p>
-<dd>Returns the resulting KeySym.</p>
-<dt><i>lower_return</i></p>
-<dd>Returns the lowercase equivalent of the KeySym.</p>
-<dt><i>upper_return</i></p>
-<dd>Returns the uppercase equivalent of the KeySym.</p>
-<dt><i>modifiers</i></p>
-<dd>Specifies the modifiers to the KeyCode.</p>
-<dt><i>modifiers_return</i></p>
-<dd>Returns a mask that indicates the modifiers actually used to generate the KeySym.</p>
-<dt><i>proc</i></p>
-<dd>Specifies the procedure that is to perform key translations or conversions.</p>
-<dt><i>start</i></p>
-<dd>Specifies the first KeySym for which this converter is valid.</p>
-<dt><i>stop</i></p>
-<dd>Specifies the last KeySym for which this converter is valid.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the display.</dd>
+<dt><i>keycode</i></dt>
+<dd>Specifies the KeyCode to translate.</dd>
+<dt><i>keysym</i></dt>
+<dd>Specifies the KeySym to convert.</dd>
+<dt><i>keysym_return</i></dt>
+<dd>Returns the resulting KeySym.</dd>
+<dt><i>lower_return</i></dt>
+<dd>Returns the lowercase equivalent of the KeySym.</dd>
+<dt><i>upper_return</i></dt>
+<dd>Returns the uppercase equivalent of the KeySym.</dd>
+<dt><i>modifiers</i></dt>
+<dd>Specifies the modifiers to the KeyCode.</dd>
+<dt><i>modifiers_return</i></dt>
+<dd>Returns a mask that indicates the modifiers actually used to generate the KeySym.</dd>
+<dt><i>proc</i></dt>
+<dd>Specifies the procedure that is to perform key translations or conversions.</dd>
+<dt><i>start</i></dt>
+<dd>Specifies the first KeySym for which this converter is valid.</dd>
+<dt><i>stop</i></dt>
+<dd>Specifies the last KeySym for which this converter is valid.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XtSetKeyTranslator</code> function sets the specified procedure as the current key translator. The default translator is <code>XtTranslateKey</code>, an <code>XtKeyProc</code> that uses Shift and Lock modifiers with the interpretations defined by the core protocol. It is provided so that new translators can call it to get default KeyCode-to-KeySym translations and so that the default translator can be reinstalled. </p>
 <p> The <code>XtTranslateKeycode</code> function passes the specified arguments directly to the currently registered KeyCode to KeySym translator. </p>

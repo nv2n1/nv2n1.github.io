@@ -10,28 +10,24 @@ description: "waffle_native, waffle_native_display, waffle_native_config, waffle
 <p>waffle_native, waffle_native_display, waffle_native_config, waffle_native_context, waffle_native_window &#8211; Containers for underlying native objects</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;waffle.h&gt;
-
 union waffle_native_display {
     struct waffle_gbm_display *gbm;
     struct waffle_glx_display *glx;
     struct waffle_wayland_display *wayland;
     struct waffle_x11_egl_display *x11_egl;
 };
-
 union waffle_native_config {
     struct waffle_gbm_config *gbm;
     struct waffle_glx_config *glx;
     struct waffle_wayland_config *wayland;
     struct waffle_x11_egl_config *x11_egl;
 };
-
 union waffle_native_context {
     struct waffle_gbm_context *gbm;
     struct waffle_glx_context *glx;
     struct waffle_wayland_context *wayland;
     struct waffle_x11_egl_context *x11_egl;
 };
-
 union waffle_native_window {
     struct waffle_gbm_window *gbm;
     struct waffle_glx_window *glx;
@@ -49,7 +45,7 @@ union waffle_native_window {
 <h2>Author</h2>
 <p><code>Chad Versace</code> &lt;chad.versace [at] linux.intel.com&gt;</p>
 <dl>
-<dd>Maintainer</dl>
+<dd>Maintainer</dd></dl>
 <h2>Copyright</h2>
 <p>Copyright &#169; 2013 Intel </p>
 <p> This manual page is licensed under the Creative Commons Attribution-ShareAlike 3.0 United States License (CC BY-SA 3.0). To view a copy of this license, visit m[blue]<code><a rel="nofollow" href="http://creativecommons.org.license/by-sa/3.0/us">http://creativecommons.org.license/by-sa/3.0/us</a></code>m[].</p>

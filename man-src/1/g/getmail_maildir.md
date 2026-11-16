@@ -15,8 +15,8 @@ description: "getmail_maildir – read a message from stdin and deliver to a nam
 <p> Deliver a mail message from standard input, to the maildir named PATH. PATH must start with a dot or a slash and end with a slash. </p>
 <p> <code>getmail_maildir</code> uses the SENDER environment variable to construct a <code>Return-Path:</code> header field and the contents of the RECIPIENT environment variable to construct a <code>Delivered-To:</code> header field at the top of the message.</p>
 <dl>
-<dt><code>&#8211;verbose, -v</code></p>
-<dd> print a status message on success</dl>
+<dt><code>&#8211;verbose, -v</code></dt>
+<dd> print a status message on success</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Charles Cazabon.</p>
 <h2>REPORTING BUGS</h2>

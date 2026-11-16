@@ -16,44 +16,44 @@ description: "munge – MUNGE credential encoder"
 <p> By default, payload input is read from stdin and the credential is written to stdout. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display a summary of the command-line options.</p>
-<dt><code>-L, &#8211;license</code></p>
-<dd> Display license information.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Display version information.</p>
-<dt><code>-n, &#8211;no-input</code></p>
-<dd> Discard all input for the payload.</p>
-<dt><code>-s, &#8211;string </code><i>string</i></p>
-<dd> Input payload from the specified string.</p>
-<dt><code>-i, &#8211;input </code><i>file</i></p>
-<dd> Input payload from the specified file.</p>
-<dt><code>-o, &#8211;output </code><i>file</i></p>
-<dd> Output the credential to the specified file.</p>
-<dt><code>-c, &#8211;cipher </code><i>string</i></p>
-<dd> Specify the cipher type, either by name or number.</p>
-<dt><code>-C, &#8211;list-ciphers</code></p>
-<dd> Display a list of supported cipher types.</p>
-<dt><code>-m, &#8211;mac </code><i>string</i></p>
-<dd> Specify the MAC type, either by name or number.</p>
-<dt><code>-M, &#8211;list-macs</code></p>
-<dd> Display a list of supported MAC types.</p>
-<dt><code>-z, &#8211;zip </code><i>string</i></p>
-<dd> Specify the compression type, either by name or number.</p>
-<dt><code>-Z, &#8211;list-zips</code></p>
-<dd> Display a list of supported compression types.</p>
-<dt><code>-u, &#8211;restrict-uid </code><i>uid</i></p>
-<dd> Specify the user name or UID allowed to decode the credential. This will be matched against the effective user ID of the process requesting the credential decode.</p>
-<dt><code>-U, &#8211;uid </code><i>uid</i></p>
-<dd> Specify the user name or UID under which to request the credential. This requires root privileges or the CAP_SETUID capability.</p>
-<dt><code>-g, &#8211;restrict-gid </code><i>gid</i></p>
-<dd> Specify the group name or GID allowed to decode the credential. This will be matched against the effective group ID of the process requesting the credential decode, as well as each supplementary group of which the effective user ID of that process is a member.</p>
-<dt><code>-G, &#8211;gid </code><i>gid</i></p>
-<dd> Specify the group name or GID under which to request the credential. This requires root privileges or the CAP_SETGID capability.</p>
-<dt><code>-t, &#8211;ttl </code><i>integer</i></p>
-<dd> Specify the time-to-live (in seconds). This controls how long the credential is valid once it has been encoded. A value of 0 selects the default TTL. A value of -1 selects the maximum allowed TTL.</p>
-<dt><code>-S, &#8211;socket </code><i>path</i></p>
-<dd> Specify the local domain socket for connecting with <code>munged</code>. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display a summary of the command-line options.</dd>
+<dt><code>-L, &#8211;license</code></dt>
+<dd> Display license information.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Display version information.</dd>
+<dt><code>-n, &#8211;no-input</code></dt>
+<dd> Discard all input for the payload.</dd>
+<dt><code>-s, &#8211;string </code><i>string</i></dt>
+<dd> Input payload from the specified string.</dd>
+<dt><code>-i, &#8211;input </code><i>file</i></dt>
+<dd> Input payload from the specified file.</dd>
+<dt><code>-o, &#8211;output </code><i>file</i></dt>
+<dd> Output the credential to the specified file.</dd>
+<dt><code>-c, &#8211;cipher </code><i>string</i></dt>
+<dd> Specify the cipher type, either by name or number.</dd>
+<dt><code>-C, &#8211;list-ciphers</code></dt>
+<dd> Display a list of supported cipher types.</dd>
+<dt><code>-m, &#8211;mac </code><i>string</i></dt>
+<dd> Specify the MAC type, either by name or number.</dd>
+<dt><code>-M, &#8211;list-macs</code></dt>
+<dd> Display a list of supported MAC types.</dd>
+<dt><code>-z, &#8211;zip </code><i>string</i></dt>
+<dd> Specify the compression type, either by name or number.</dd>
+<dt><code>-Z, &#8211;list-zips</code></dt>
+<dd> Display a list of supported compression types.</dd>
+<dt><code>-u, &#8211;restrict-uid </code><i>uid</i></dt>
+<dd> Specify the user name or UID allowed to decode the credential. This will be matched against the effective user ID of the process requesting the credential decode.</dd>
+<dt><code>-U, &#8211;uid </code><i>uid</i></dt>
+<dd> Specify the user name or UID under which to request the credential. This requires root privileges or the CAP_SETUID capability.</dd>
+<dt><code>-g, &#8211;restrict-gid </code><i>gid</i></dt>
+<dd> Specify the group name or GID allowed to decode the credential. This will be matched against the effective group ID of the process requesting the credential decode, as well as each supplementary group of which the effective user ID of that process is a member.</dd>
+<dt><code>-G, &#8211;gid </code><i>gid</i></dt>
+<dd> Specify the group name or GID under which to request the credential. This requires root privileges or the CAP_SETGID capability.</dd>
+<dt><code>-t, &#8211;ttl </code><i>integer</i></dt>
+<dd> Specify the time-to-live (in seconds). This controls how long the credential is valid once it has been encoded. A value of 0 selects the default TTL. A value of -1 selects the maximum allowed TTL.</dd>
+<dt><code>-S, &#8211;socket </code><i>path</i></dt>
+<dd> Specify the local domain socket for connecting with <code>munged</code>. </dd>
 </dl>
 <h2>EXIT STATUS</h2>
 <p> The <code>munge</code> program returns a zero exit code when the credential is successfully created and returned. On error, it prints an error message to stderr and returns a non-zero exit code. </p>

@@ -14,13 +14,13 @@ description: "invalidate_mapping_pages – Invalidate all the unlocked pages of 
 <p><i>mapping</i></p>
 <dl>
 <dd>
-<dd>the address_space which holds the pages to invalidate</dl>
+</dd><dd>the address_space which holds the pages to invalidate</dd></dl>
 <p> <i>start</i></p>
 <dl>
-<dd>the offset &#8216;from&#8217; which to invalidate</dl>
+<dd>the offset &#8216;from&#8217; which to invalidate</dd></dl>
 <p> <i>end</i></p>
 <dl>
-<dd>the offset &#8216;to&#8217; which to invalidate (inclusive)</dl>
+<dd>the offset &#8216;to&#8217; which to invalidate (inclusive)</dd></dl>
 <h2>Description</h2>
 <p>This function only removes the unlocked pages, if you want to remove all the pages of one inode, you must call truncate_inode_pages. </p>
 <p> <code>invalidate_mapping_pages</code> will not block on IO activity. It will not invalidate pages which are dirty, locked, under writeback or mapped into pagetables.</p>

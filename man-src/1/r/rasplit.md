@@ -21,46 +21,38 @@ description: "rasplit – split argus(8) data."
 <h2>RASPLIT SPECIFIC OPTIONS</h2>
 <p> Rasplit, like all ra based clients, supports a number of <code>ra options</code> including remote data access, reading from multiple files and filtering of input argus records through a terminating filter expression. <code><a href="/docs/linux/man/1-rasplit/">rasplit</a>(1)</code> specific options are:</p>
 <dl>
-<dt><code>-a</code><i> suffix length</i></p>
-<dd> default is 2 characters.</p>
-<dt><code>-d</code></p>
-<dd> Toggle running as a deamon.</p>
-<dt><code>-M</code><i> splitmode</i></p>
-<dd> Supported spliting modes are: </p>
+<dt><code>-a</code><i> suffix length</i></dt>
+<dd> default is 2 characters.</dd>
+<dt><code>-d</code></dt>
+<dd> Toggle running as a deamon.</dd>
+<dt><code>-M</code><i> splitmode</i></dt>
+<dd> Supported spliting modes are: </dd>
 <pre>
 <code>    count &lt;num&gt;</code>
 <code>     size &lt;size&gt;</code>
 <code>     time &lt;period&gt;</code>
 <code>     flow &quot;filter-expression&quot;</code>
 </pre>
-<dt><code>-w</code><i> filename</i></p>
-<dd> <code>Rasplit</code> supports an extended <i>-w</i> option that allows for output record contents to be inserted into the output filename. Specified using &#8216;$&#8217; (dollar) notation, any printable field can be used. Care should be taken to honor any shell escape requirements when specifying on the command line. See <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code> for the list of printable fields. </p>
+<dt><code>-w</code><i> filename</i></dt>
+<dd> <code>Rasplit</code> supports an extended <i>-w</i> option that allows for output record contents to be inserted into the output filename. Specified using &#8216;$&#8217; (dollar) notation, any printable field can be used. Care should be taken to honor any shell escape requirements when specifying on the command line. See <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code> for the list of printable fields. </dd>
 <p> Another extended feature, when using <code>time</code> mode, <code>rasplit</code> will process the supplied filename using <code><a href="/docs/linux/man/3-strftime/">strftime</a>(3)</code>, so that time fields can be inserted into the resulting output filename. </p>
 </dl>
 <h2>INVOCATION</h2>
 <p> This invocation reads <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from <code>inputfile</code> and splits the <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data stream based on output file size of no greater than 1 Megabyte. The resulting output files have a prefix of <i>argus.</i> and suffix that starts with &#8216;aa&#8217;. The single trailing &#8216;.&#8217; is significant. </p>
 <pre>
- 
    <code>rasplit</code> -r inputfile -M size 1m -w argus.
- 
 </pre>
 <p> This invocation splits <code>inputfile</code> based on hard 10 minute time boundaries. The resulting output files are created with a prefix of <i>/archive/%Y/%m/%d/argus.</i> and the suffix is <i>%H.%M.%S</i>. The values will be supplied based on the time in the record being written out. </p>
 <pre>
-  
    <code>rasplit</code> -r * -M time 10m -w &quot;/archive/%Y/%m/%d/argus.%H.%M.%S&quot;
- 
 </pre>
 <p> This invocation splits <code>inputfile</code> based on the argus source identifier. The resulting output files are created with a prefix of <i>/archive/Source Identifier/argus.</i> and the default suffix starting with &quot;aa&quot;. The source identifier will be supplied based on the contents of the record being exported. </p>
 <pre>
-  
    <code>rasplit</code> -r * -M time 10m -w &quot;/archive/$srcid/argus.&quot;
- 
 </pre>
 <p> This invocation splits <code>inputfile</code> based on a flow event marker. The resulting output files are created with a prefix of &#8216;outfile.&#8217; and the default suffix starting with &quot;aa&quot;. Whenever a ping to a specific host is seen in the stream, a new output file is generated. </p>
 <pre>
-  
    <code>rasplit</code> -r * -M flow &quot;echo and host 1.2.3.4&quot; -w outfile.
- 
 </pre>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2000-2016 QoSient. All rights reserved. </p>

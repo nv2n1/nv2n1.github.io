@@ -14,16 +14,16 @@ description: "pagecache_get_page – find and get a page reference"
 <p><i>mapping</i></p>
 <dl>
 <dd>
-<dd>the address_space to search</dl>
+</dd><dd>the address_space to search</dd></dl>
 <p> <i>offset</i></p>
 <dl>
-<dd>the page index</dl>
+<dd>the page index</dd></dl>
 <p> <i>fgp_flags</i></p>
 <dl>
-<dd>PCG flags</dl>
+<dd>PCG flags</dd></dl>
 <p> <i>gfp_mask</i></p>
 <dl>
-<dd>gfp mask to use for the page cache data page allocation</dl>
+<dd>gfp mask to use for the page cache data page allocation</dd></dl>
 <h2>Description</h2>
 <p>Looks up the page cache slot at <i>mapping</i> &amp; <i>offset</i>. </p>
 <p> PCG flags modify how the page is returned. </p>

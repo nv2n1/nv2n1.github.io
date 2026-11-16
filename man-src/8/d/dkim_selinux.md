@@ -24,8 +24,8 @@ description: "dkim_selinux – Security Enhanced Linux Policy for the dkim proce
 <p> dkim_milter_data_t </code> </p>
 <p> &#8211; Set files with the dkim_milter_data_t type, if you want to treat the files as dkim milter content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/dkim-milter(/.*)?, /var/run/dkim-milter(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/dkim-milter(/.*)?, /var/run/dkim-milter(/.*)? </dd>
 </dl>
 <p> <code>dkim_milter_exec_t </code> </p>
 <p> &#8211; Set files with the dkim_milter_exec_t type, if you want to transition an executable to the dkim_milter_t domain. </p>

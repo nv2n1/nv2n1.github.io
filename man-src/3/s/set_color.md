@@ -10,7 +10,6 @@ description: "set_color – Sets the specified palette entry to the specified RG
 <p>set_color &#8211; Sets the specified palette entry to the specified RGB triplet. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void set_color(int index, const RGB *p);</code></pre>
 <h2>Description</h2>
 <p>Sets the specified palette entry to the specified RGB triplet. Unlike the other palette functions this doesn&#8217;t do any retrace synchronisation, so you should call vsync() before it to prevent snow problems. Example: </p>

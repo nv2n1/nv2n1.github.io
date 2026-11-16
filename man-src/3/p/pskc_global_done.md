@@ -13,8 +13,8 @@ description: "pskc_global_done – API function"
 void pskc_global_done(void);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt> void</p>
-<dd></dl>
+<dt> void</dt>
+<dd></dd></dl>
 <h2>Description</h2>
 <p>This function deinitializes the PSKC library, which were initialized using <code>pskc_global_init()</code>. After calling this function, no other PSKC library function may be called except for to re-initialize the library using <code>pskc_global_init()</code>.</p>
 <h2>Reporting Bugs</h2>

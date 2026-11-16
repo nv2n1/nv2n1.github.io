@@ -35,7 +35,6 @@ struct Foo {
 };</code></pre>
 <p>&nbsp;<wbr>&nbsp;Foo f; // static object </p>
 <pre><code>int main()
-
 {
     std::clog &lt;&lt; &quot;main function
 &quot;;

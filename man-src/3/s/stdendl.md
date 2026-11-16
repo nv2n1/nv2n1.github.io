@@ -11,9 +11,7 @@ std::endl - std::endl
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;ostream&gt;
-
 template&lt; class CharT, class Traits &gt;
-
 std::basic_ostream&lt;CharT, Traits&gt;&amp; endl( std::basic_ostream&lt;CharT, Traits&gt;&amp; os );</code></pre> 
 Inserts a newline character into the output sequence os and flushes it as if by calling os.put(os.widen('\n')) followed by os.flush(). 
 This is an output-only I/O manipulator, it may be called with an expression such as out &lt;&lt; std::endl for any out of type std::basic_ostream. 
@@ -38,18 +36,14 @@ os (reference to the stream after manipulation)
 
 With \n instead of endl, the output would be the same, but may not appear in real time. 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;chrono&gt;
 template &lt;typename Diff&gt;
-
 void log_progress(Diff d)
-
 {
     std::cout &lt;&lt; std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(d).count()
               &lt;&lt; &quot; ms passed&quot; &lt;&lt; std::endl;
 }
 int main()
-
 {
     std::cout.sync_with_stdio(false); // on some platforms, stdout flushes on \n
     volatile int sink = 0;

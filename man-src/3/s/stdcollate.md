@@ -10,9 +10,7 @@ description: "std::collate – std::collate"
 <p>std::collate &#8211; std::collate</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header &lt;locale&gt;
-
 template&lt; class CharT &gt;
-
 class collate;</code></pre>
 <p>Class std::collate encapsulates locale-specific collation (comparison) and hashing of strings. This facet is used by std::basic_regex and can be applied, by means of std::locale::operator(), directly to all standard algorithms that expect a string comparison predicate.<br />
 &nbsp;std-collate-inheritance.svg<br />
@@ -53,16 +51,11 @@ static std::locale::id id <i>(public member object)</i></p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;locale&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;algorithm&gt;
 int main()
-
 {
     std::wcout.imbue(std::locale(&quot;&quot;));
     std::vector&lt;std::wstring&gt; v = {L&quot;ar&quot;, L&quot;zebra&quot;, L&quot;ögrupp&quot;, L&quot;Zebra&quot;, L&quot;ängel&quot;,

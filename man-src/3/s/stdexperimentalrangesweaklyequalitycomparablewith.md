@@ -11,29 +11,21 @@ std::experimental::ranges::WeaklyEqualityComparableWith - std::experimental::ran
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / ranges / concepts&gt;
-
     template &lt;class T, class U&gt;
-
     concept bool WeaklyEqualityComparableWith =
-
         requires(const std::remove_reference_t&lt;T&gt; &amp;t,
-
                  const std::remove_reference_t&lt;U&gt; &amp;u)
 {
-
     {
         t == u
         } -&gt; Boolean &amp;&amp;;
     (ranges TS)
-
     {
         t != u
         } -&gt; Boolean &amp;&amp;;
-
     {
         u == t
         } -&gt; Boolean &amp;&amp;;
-
     {
         u != t
         } -&gt; Boolean &amp;&amp;;

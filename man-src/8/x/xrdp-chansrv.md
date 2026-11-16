@@ -14,26 +14,27 @@ description: "xrdp-chansrv – xrdp channel server"
 <p><code>xrdp-chansrv</code> is the <code><a href="/docs/linux/man/8-xrdp/">xrdp</a></code>(8) channel server, which manages the Remote Desktop Protocol (RDP) sub-channels. This program is only forked internally by <code><a href="/docs/linux/man/8-xrdp-sesman/">xrdp-sesman</a></code>(8).<br />
  Currently <code>xrdp-chansrv</code> knows about the following channels:</p>
 <dl>
-<dt><code>cliprdr</code></p>
-<dd>Clipboard Redirection</p>
-<dt><code>rdpsnd</code></p>
-<dd>Remote Desktop Protocol Sound</p>
-<dt><code>rdpdr</code></p>
-<dd>Remote Desktop Protocol Device Redirection</p>
-<dt><code>rail</code></p>
-<dd>Remote Applications Integrated Locally</p>
-<dt><code>drdynvc</code></p>
-<dd>Dynamic Virtual Channel</p>
+<dt><code>cliprdr</code></dt>
+<dd>Clipboard Redirection</dd>
+<dt><code>rdpsnd</code></dt>
+<dd>Remote Desktop Protocol Sound</dd>
+<dt><code>rdpdr</code></dt>
+<dd>Remote Desktop Protocol Device Redirection</dd>
+<dt><code>rail</code></dt>
+<dd>Remote Applications Integrated Locally</dd>
+<dt><code>drdynvc</code></dt>
+<dd>Dynamic Virtual Channel</dd>
 <dl>
 <dd>
 <h2>Files</h2>
-<dl>
-<dt><i>/tmp/.xrdp/xrdp_chansrv_socket_*</i></p>
-<dd>UNIX socket used by external programs to implement channels.</p>
-<dt><i>/tmp/.xrdp/xrdp_api_*</i></p>
-<dd>UNIX socket used by <code>xrdp-chansrv</code> to communicate with <code>xrdp-sesman</code>.</p>
-<dt><i>$XDG_DATA_HOME/xrdp/xrdp-chansrv.log</i></p>
-<dd>Log file used by <code><a href="/docs/linux/man/8-xrdp-chansrv/">xrdp-chansrv</a></code>(8). </p>
+</dd><dl>
+<dt><i>/tmp/.xrdp/xrdp_chansrv_socket_*</i></dt>
+<dd>UNIX socket used by external programs to implement channels.</dd>
+<dt><i>/tmp/.xrdp/xrdp_api_*</i></dt>
+<dd>UNIX socket used by <code>xrdp-chansrv</code> to communicate with <code>xrdp-sesman</code>.</dd>
+<dt><i>$XDG_DATA_HOME/xrdp/xrdp-chansrv.log</i></dt>
+<dd>Log file used by <code><a href="/docs/linux/man/8-xrdp-chansrv/">xrdp-chansrv</a></code>(8). </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-xrdp-sesman/">xrdp-sesman</a></code>(8), <code><a href="/docs/linux/man/5-sesman-ini/">sesman.ini</a></code>(5). for more info on <code>xrdp</code> see <a rel="nofollow" href="http://www.xrdp.org/">http://www.xrdp.org/</a> </p>
+</dl></dl>

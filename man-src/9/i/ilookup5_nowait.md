@@ -14,16 +14,16 @@ description: "ilookup5_nowait – search for an inode in the inode cache"
 <p><i>sb</i></p>
 <dl>
 <dd>
-<dd>super block of file system to search</dl>
+</dd><dd>super block of file system to search</dd></dl>
 <p> <i>hashval</i></p>
 <dl>
-<dd>hash value (usually inode number) to search for</dl>
+<dd>hash value (usually inode number) to search for</dd></dl>
 <p> <i>test</i></p>
 <dl>
-<dd>callback used for comparisons between inodes</dl>
+<dd>callback used for comparisons between inodes</dd></dl>
 <p> <i>data</i></p>
 <dl>
-<dd>opaque data pointer to pass to <i>test</i></dl>
+<dd>opaque data pointer to pass to <i>test</i></dd></dl>
 <h2>Description</h2>
 <p>Search for the inode specified by <i>hashval</i> and <i>data</i> in the inode cache. If the inode is in the cache, the inode is returned with an incremented reference count.</p>
 <h2>Note</h2>

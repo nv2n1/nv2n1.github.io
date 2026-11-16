@@ -19,7 +19,8 @@ description: "Atlas::Codec – Atlas stream codec."
 <p> This class presents an interface for sending and receiving <code>Atlas</code> messages. Each outgoing message is converted to a byte stream and piped through an optional chain of filters for compression or other transformations, then passed to a socket for transmission. Incoming messages are read from the socket, piped through the filters in the opposite direction and passed to a user specified <code>Bridge</code> callback class. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>Bridge</code> </p>
+<dd><code>Bridge</code> </dd>
 <p> <code>Negotiate</code></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Atlas-C++ from the source code.</p>
+</p>

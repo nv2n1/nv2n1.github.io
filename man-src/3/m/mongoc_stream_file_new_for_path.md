@@ -15,14 +15,14 @@ mongoc_stream_file_new_for_path (const char *path,
  int mode);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>path</code></p>
-<dd>The path of the target file.</dl>
+<dt><code>path</code></dt>
+<dd>The path of the target file.</dd></dl>
 <dl COMPACT>
-<dt><code>flags</code></p>
-<dd>Flags to be passed to <code>open(3)</code> \&amp;.</dl>
+<dt><code>flags</code></dt>
+<dd>Flags to be passed to <code>open(3)</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>mode</code></p>
-<dd>An optional mode to be passed to <code>open(3)</code> when creating a file.</dl>
+<dt><code>mode</code></dt>
+<dd>An optional mode to be passed to <code>open(3)</code> when creating a file.</dd></dl>
 <p> This function shall create a new <code>mongoc_stream_file_t</code> after opening the underlying file with <code>open(3)</code> or the platform equivalent. </p>
 <h2>Returns</h2>
 <p><code>NULL</code> on failure, otherwise a newly allocated <code>mongoc_stream_file_t</code> that should be freed with <code><a href="/docs/linux/man/3-mongoc_stream_destroy/">mongoc_stream_destroy</a>(3)</code> when no longer in use. </p>

@@ -15,16 +15,16 @@ description: "alsamixer – soundcard mixer for ALSA soundcard driver, with ncur
 <p> <code>alsamixer</code> is an ncurses mixer program for use with the ALSA soundcard drivers. It supports multiple soundcards with multiple devices. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-h, &#8211;help</i></p>
-<dd> Help: show available flags. </p>
-<dt><i>-c, &#8211;card</i> &lt;card number or identification&gt;</p>
-<dd> Select the soundcard to use, if you have more than one. Cards are numbered from 0 (the default). </p>
-<dt><i>-D, &#8211;device</i> &lt;device identification&gt;</p>
-<dd> Select the mixer device to control. </p>
-<dt><i>-V, &#8211;view</i> &lt;mode&gt;</p>
-<dd> Select the starting view mode, either <i>playback</i>, <i>capture</i> or <i>all</i>. </p>
-<dt><i>-g, &#8211;no-color</i></p>
-<dd> Toggle the using of colors. </p>
+<dt><i>-h, &#8211;help</i></dt>
+<dd> Help: show available flags. </dd>
+<dt><i>-c, &#8211;card</i> &lt;card number or identification&gt;</dt>
+<dd> Select the soundcard to use, if you have more than one. Cards are numbered from 0 (the default). </dd>
+<dt><i>-D, &#8211;device</i> &lt;device identification&gt;</dt>
+<dd> Select the mixer device to control. </dd>
+<dt><i>-V, &#8211;view</i> &lt;mode&gt;</dt>
+<dd> Select the starting view mode, either <i>playback</i>, <i>capture</i> or <i>all</i>. </dd>
+<dt><i>-g, &#8211;no-color</i></dt>
+<dd> Toggle the using of colors. </dd>
 </dl>
 <h2>MIXER VIEWS</h2>
 <p> The top-left corner of <code>alsamixer</code> shows some basic information: the card name, the mixer chip name, the current view mode and the currently selected mixer item. When the mixer item is switched off, <i>[Off]</i> is displayed in its name. </p>
@@ -72,12 +72,12 @@ description: "alsamixer – soundcard mixer for ALSA soundcard driver, with ncur
 <h2>CONFIGURATION</h2>
 <p> Comments start with &#8216;#&#8217;. </p>
 <dl>
-<dt><code>color</code> <i>element</i> <i>foreground</i> <i>background</i> [<i>attribute&#8230;</i>]</p>
+<dt><code>color</code> <i>element</i> <i>foreground</i> <i>background</i> [<i>attribute&#8230;</i>]</dt>
 <dd>
 <p> Valid values for <i>foreground</i> and <i>background</i> are: red, green, yellow, blue, magenta, cyan, white, black, none / default. </p>
 <p> Valid values for <i>attribute</i> are: bold, normal, reverse, underline, dim, italic, blink. </p>
 <p> See section <code>THEME ELEMENTS</code> for a list of <i>elements</i>. </p>
-<dt><code>set</code> <i>option</i> <i>value</i></p>
+</dd><dt><code>set</code> <i>option</i> <i>value</i></dt>
 <dd>
 <p> <code>mouse_wheel_step</code> <i>&lt;N&gt;</i> </p>
 <p> Set the mouse wheel step to <i>&lt;N&gt;</i> </p>
@@ -85,7 +85,7 @@ description: "alsamixer – soundcard mixer for ALSA soundcard driver, with ncur
 <p> If enabled (<i>1</i>), mixer controls can be changed by hovering over them and scrolling the mouse wheel. </p>
 <p> <code>background</code> <i>color</i> </p>
 <p> Set the default background color </p>
-<dt><code>bind</code> <i>key_definition</i> <i>command</i></p>
+</dd><dt><code>bind</code> <i>key_definition</i> <i>command</i></dt>
 <dd>
 <p> A <i>key_definition</i> may be:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; a single character<br />
@@ -93,103 +93,103 @@ description: "alsamixer – soundcard mixer for ALSA soundcard driver, with ncur
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; a combination with alt: M-a<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8211; a special keyname: Enter, Escape, PageUp, PageDown, Left, Down, Right, Up, Home, End, Backspace, F1 .. F12 </p>
 <p> See section <code>COMMANDS</code> for a list of <i>commands</i>. </p>
-</dl>
+</dd></dl>
 <h3>COMMANDS</h3>
 <dl>
-<dt><i>textbox_close</i></p>
-<dd> Close textbox </p>
-<dt><i>textbox_up</i> / <i>textbox_down</i></p>
-<dd> Scroll text up/down by one line </p>
-<dt><i>textbox_left</i> / <i>textbox_right</i></p>
-<dd> Scroll text left/right by one column </p>
-<dt><i>textbox_page_up</i> / <i>textbox_page_down</i></p>
-<dd> Scroll text up/down one page </p>
-<dt><i>textbox_page_left</i> / <i>textbox_page_right</i></p>
-<dd> Scroll text left/right one page </p>
-<dt><i>textbox_top</i> / <i>textbox_bottom</i></p>
-<dd> Go to top/bottom position of text </p>
-<dt><i>mixer_balance_volumes</i></p>
-<dd> Balance both channels </p>
-<dt><i>mixer_close</i></p>
-<dd> Close alsamixer application </p>
-<dt><i>mixer_help</i></p>
-<dd> Show help </p>
-<dt><i>mixer_mode_playback</i></p>
-<dd> Show playback controls </p>
-<dt><i>mixer_mode_capture</i></p>
-<dd> Show capture controls </p>
-<dt><i>mixer_mode_all</i></p>
-<dd> Show playback and capture controls </p>
-<dt><i>mixer_mode_toggle</i></p>
-<dd> Toggle between playback/capture/all controls </p>
-<dt><i>mixer_refresh</i></p>
-<dd> Refresh screen </p>
-<dt><i>mixer_previous</i> / <i>mixer_next</i></p>
-<dd> Select previous/next mixer control </p>
-<dt><i>mixer_control_focus_&lt;N&gt;</i></p>
-<dd> Focus control number <i>&lt;N&gt;</i>. </p>
-<dt><i>mixer_control_set_&lt;N&gt;</i>[<i>_left</i>|<i>_right</i>]</p>
-<dd> Change volume of current control to <i>&lt;N&gt;</i> percent. </p>
-<dt><i>mixer_control_up_&lt;N&gt;</i>[<i>_left</i>|<i>_right</i>]</p>
-<dd> Increase volume of current control by <i>&lt;N&gt;</i> percent. </p>
-<dt><i>mixer_control_down_&lt;N&gt;</i>[<i>_left</i>|<i>_right</i>]</p>
-<dd> Decrease volume of current control by <i>&lt;N&gt;</i> percent. </p>
-<dt><i>mixer_toggle_mute</i>[<i>_left</i>|<i>_right</i>]</p>
-<dd> Toggle mute state of both/left/right channels </p>
-<dt><i>mixer_toggle_capture</i>[<i>_left</i>|<i>_right</i>]</p>
-<dd> Toggle capture state of both/left/right channels </p>
-<dt><i>mixer_select_card</i></p>
-<dd> Show window for selecting sound card </p>
-<dt><i>mixer_system_information</i></p>
-<dd> Show system information </p>
+<dt><i>textbox_close</i></dt>
+<dd> Close textbox </dd>
+<dt><i>textbox_up</i> / <i>textbox_down</i></dt>
+<dd> Scroll text up/down by one line </dd>
+<dt><i>textbox_left</i> / <i>textbox_right</i></dt>
+<dd> Scroll text left/right by one column </dd>
+<dt><i>textbox_page_up</i> / <i>textbox_page_down</i></dt>
+<dd> Scroll text up/down one page </dd>
+<dt><i>textbox_page_left</i> / <i>textbox_page_right</i></dt>
+<dd> Scroll text left/right one page </dd>
+<dt><i>textbox_top</i> / <i>textbox_bottom</i></dt>
+<dd> Go to top/bottom position of text </dd>
+<dt><i>mixer_balance_volumes</i></dt>
+<dd> Balance both channels </dd>
+<dt><i>mixer_close</i></dt>
+<dd> Close alsamixer application </dd>
+<dt><i>mixer_help</i></dt>
+<dd> Show help </dd>
+<dt><i>mixer_mode_playback</i></dt>
+<dd> Show playback controls </dd>
+<dt><i>mixer_mode_capture</i></dt>
+<dd> Show capture controls </dd>
+<dt><i>mixer_mode_all</i></dt>
+<dd> Show playback and capture controls </dd>
+<dt><i>mixer_mode_toggle</i></dt>
+<dd> Toggle between playback/capture/all controls </dd>
+<dt><i>mixer_refresh</i></dt>
+<dd> Refresh screen </dd>
+<dt><i>mixer_previous</i> / <i>mixer_next</i></dt>
+<dd> Select previous/next mixer control </dd>
+<dt><i>mixer_control_focus_&lt;N&gt;</i></dt>
+<dd> Focus control number <i>&lt;N&gt;</i>. </dd>
+<dt><i>mixer_control_set_&lt;N&gt;</i>[<i>_left</i>|<i>_right</i>]</dt>
+<dd> Change volume of current control to <i>&lt;N&gt;</i> percent. </dd>
+<dt><i>mixer_control_up_&lt;N&gt;</i>[<i>_left</i>|<i>_right</i>]</dt>
+<dd> Increase volume of current control by <i>&lt;N&gt;</i> percent. </dd>
+<dt><i>mixer_control_down_&lt;N&gt;</i>[<i>_left</i>|<i>_right</i>]</dt>
+<dd> Decrease volume of current control by <i>&lt;N&gt;</i> percent. </dd>
+<dt><i>mixer_toggle_mute</i>[<i>_left</i>|<i>_right</i>]</dt>
+<dd> Toggle mute state of both/left/right channels </dd>
+<dt><i>mixer_toggle_capture</i>[<i>_left</i>|<i>_right</i>]</dt>
+<dd> Toggle capture state of both/left/right channels </dd>
+<dt><i>mixer_select_card</i></dt>
+<dd> Show window for selecting sound card </dd>
+<dt><i>mixer_system_information</i></dt>
+<dd> Show system information </dd>
 </dl>
 <h3>THEME ELEMENTS</h3>
 <dl>
-<dt><i>mixer_frame</i> Color of the box around the mixer</p>
+<dt><i>mixer_frame</i> Color of the box around the mixer</dt>
 <dd>
-<dt><i>mixer_text</i> Color of text at the top of the mixer</p>
+</dd><dt><i>mixer_text</i> Color of text at the top of the mixer</dt>
 <dd>
-<dt><i>mixer_active</i> Color of <i>AlsaMixer</i> heading</p>
+</dd><dt><i>mixer_active</i> Color of <i>AlsaMixer</i> heading</dt>
 <dd>
-<dt><i>ctl_frame</i> Color of the frame around the mixer controls</p>
+</dd><dt><i>ctl_frame</i> Color of the frame around the mixer controls</dt>
 <dd>
-<dt><i>ctl_mute</i> Color indicating the mute state (<i>MM</i>)</p>
+</dd><dt><i>ctl_mute</i> Color indicating the mute state (<i>MM</i>)</dt>
 <dd>
-<dt><i>ctl_nomute</i> Color indicating the unmute state (<i>00</i>)</p>
+</dd><dt><i>ctl_nomute</i> Color indicating the unmute state (<i>00</i>)</dt>
 <dd>
-<dt><i>ctl_capture</i> Color of <i>CAPTURE</i> text</p>
+</dd><dt><i>ctl_capture</i> Color of <i>CAPTURE</i> text</dt>
 <dd>
-<dt><i>ctl_nocapture</i> Colof of disabled capture label</p>
+</dd><dt><i>ctl_nocapture</i> Colof of disabled capture label</dt>
 <dd>
-<dt><i>ctl_label</i> Color of label underneath mixer controls</p>
+</dd><dt><i>ctl_label</i> Color of label underneath mixer controls</dt>
 <dd>
-<dt><i>ctl_label_focus</i> Color of label underneath focused mixer control</p>
+</dd><dt><i>ctl_label_focus</i> Color of label underneath focused mixer control</dt>
 <dd>
-<dt><i>ctl_mark_focus</i> Color of <i>&lt;&gt;</i> marks beside focused mixer label</p>
+</dd><dt><i>ctl_mark_focus</i> Color of <i>&lt;&gt;</i> marks beside focused mixer label</dt>
 <dd>
-<dt><i>ctl_bar_lo</i> Color of lower volume bar</p>
+</dd><dt><i>ctl_bar_lo</i> Color of lower volume bar</dt>
 <dd>
-<dt><i>ctl_bar_mi</i> Color of middle volume bar</p>
+</dd><dt><i>ctl_bar_mi</i> Color of middle volume bar</dt>
 <dd>
-<dt><i>ctl_bar_hi</i> Color of top volume bar</p>
+</dd><dt><i>ctl_bar_hi</i> Color of top volume bar</dt>
 <dd>
-<dt><i>ctl_inactive</i> Color for inactive control</p>
+</dd><dt><i>ctl_inactive</i> Color for inactive control</dt>
 <dd>
-<dt><i>ctl_label_inactive</i> Color for inactive label</p>
+</dd><dt><i>ctl_label_inactive</i> Color for inactive label</dt>
 <dd>
-<dt><i>errormsg</i> Color used for error message</p>
+</dd><dt><i>errormsg</i> Color used for error message</dt>
 <dd>
-<dt><i>infomsg</i> Color used for information message</p>
+</dd><dt><i>infomsg</i> Color used for information message</dt>
 <dd>
-<dt><i>textbox</i> Color used for textbox (user input)</p>
+</dd><dt><i>textbox</i> Color used for textbox (user input)</dt>
 <dd>
-<dt><i>textfield</i> Color used for textbox</p>
+</dd><dt><i>textfield</i> Color used for textbox</dt>
 <dd>
-<dt><i>menu</i> Color used for menu</p>
+</dd><dt><i>menu</i> Color used for menu</dt>
 <dd>
-<dt><i>menu_selected</i> Color used for selected entry in menu</p>
+</dd><dt><i>menu_selected</i> Color used for selected entry in menu</dt>
 <dd>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code> <a href="/docs/linux/man/1-amixer/">amixer</a>(1), <a href="/docs/linux/man/1-aplay/">aplay</a>(1), <a href="/docs/linux/man/1-arecord/">arecord</a>(1) </code> </p>
 <h2>AUTHOR</h2>

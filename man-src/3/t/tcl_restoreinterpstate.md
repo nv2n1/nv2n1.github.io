@@ -20,10 +20,10 @@ int
 <code>Tcl_DiscardResult</code>(<i>savedPtr</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_Interp <i>*interp</i> (in) Interpreter for which state should be saved.</p>
-<dd>int <i>status</i> (in) Return code value to save as part of interpreter state.</p>
-<dd>Tcl_InterpState <i>state</i> (in) Saved state token to be restored or discarded.</p>
-<dd>Tcl_SavedResult <i>*savedPtr</i> (in) Pointer to location where interpreter result should be saved or restored. </p>
+<dd>Tcl_Interp <i>*interp</i> (in) Interpreter for which state should be saved.</dd>
+<dd>int <i>status</i> (in) Return code value to save as part of interpreter state.</dd>
+<dd>Tcl_InterpState <i>state</i> (in) Saved state token to be restored or discarded.</dd>
+<dd>Tcl_SavedResult <i>*savedPtr</i> (in) Pointer to location where interpreter result should be saved or restored. </dd>
 </dl>
 <h2>Description</h2>
 <p>These routines allows a C procedure to take a snapshot of the current state of an interpreter so that it can be restored after a call to <code>Tcl_Eval</code> or some other routine that modifies the interpreter state. There are two triplets of routines meant to work together. </p>

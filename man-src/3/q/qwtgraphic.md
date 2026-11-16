@@ -73,26 +73,26 @@ description: "QwtGraphic –"
 <p> <code>QwtGraphic</code> is the representation of a graphic that is tailored for scalability. Like QPicture it will be initialized by QPainter operations and can be replayed later to any target paint device. </p>
 <p> While the usual image representations QImage and QPixmap are not scalable Qt offers two paint devices, that might be candidates for representing a vector graphic: </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>QPicture </p>
+<dt>&bull;</dt>
+<dd>QPicture </dd>
 <p>&nbsp;<wbr>Unfortunately QPicture had been forgotten, when Qt4 introduced floating point based render engines. Its API is still on integers, what make it unusable for proper scaling.</p>
-<dt>&bull;</p>
-<dd>QSvgRenderer/QSvgGenerator </p>
+<dt>&bull;</dt>
+<dd>QSvgRenderer/QSvgGenerator </dd>
 <p>&nbsp;<wbr>Unfortunately QSvgRenderer hides to much information about its nodes in internal APIs, that are necessary for proper layout calculations. Also it is derived from QObject and can&#8217;t be copied like QImage/QPixmap.</dl>
 <p> <code>QwtGraphic</code> maps all scalable drawing primitives to a QPainterPath and stores them together with the painter state changes ( pen, brush, transformation &#8230; ) in a list of QwtPaintCommands. For being a complete QPaintDevice it also stores pixmaps or images, what is somehow against the idea of the class, because these objects can&#8217;t be scaled without a loss in quality. </p>
 <p> The main issue about scaling a <code>QwtGraphic</code> object are the pens used for drawing the outlines of the painter paths. While non cosmetic pens ( QPen::isCosmetic() ) are scaled with the same ratio as the path, cosmetic pens have a fixed width. A graphic might have paths with different pens &#8211; cosmetic and non-cosmetic. </p>
 <p> <code>QwtGraphic</code> caches 2 different rectangles: </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>control point rectangle </p>
+<dt>&bull;</dt>
+<dd>control point rectangle </dd>
 <p>&nbsp;<wbr>The control point rectangle is the bounding rectangle of all control point rectangles of the painter paths, or the target rectangle of the pixmaps/images.</p>
-<dt>&bull;</p>
-<dd>bounding rectangle </p>
+<dt>&bull;</dt>
+<dd>bounding rectangle </dd>
 <p>&nbsp;<wbr>The bounding rectangle extends the control point rectangle by what is needed for rendering the outline with an unscaled pen.</dl>
 <p> Because the offset for drawing the outline depends on the shape of the painter path ( the peak of a triangle is different than the flat side ) scaling with a fixed aspect ratio always needs to be calculated from the control point rectangle. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>QwtPainterCommand</code></dl>
+<dd><code>QwtPainterCommand</code></dd></dl>
 <h2>Member Typedef Documentation</h2>
 <h3>typedef QFlags&lt;<code>RenderHint</code>&gt; <code>QwtGraphic::RenderHints</code></h3>
 <p>Render hints. The default setting is to disable all hints</p>
@@ -101,62 +101,62 @@ description: "QwtGraphic –"
 <p>Hint how to render a graphic </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setRenderHint()</code>, <code>testRenderHint()</code></dl>
+<dd><code>setRenderHint()</code>, <code>testRenderHint()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>RenderPensUnscaled </i></p>
-<dd>When rendering a <code>QwtGraphic</code> a specific scaling between the <code>controlPointRect()</code> and the coordinates of the target rectangle is set up internally in <code>render()</code>.</dl>
+<dt><i>RenderPensUnscaled </i></dt>
+<dd>When rendering a <code>QwtGraphic</code> a specific scaling between the <code>controlPointRect()</code> and the coordinates of the target rectangle is set up internally in <code>render()</code>.</dd></dl>
 <p> When RenderPensUnscaled is set this specific scaling is applied for the control points only, but not for the pens. All other painter transformations ( set up by application code ) are supposed to work like usual. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>render()</code>;</dl>
+<dd><code>render()</code>;</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtGraphic::QwtGraphic ()</h3>
 <p>Constructor. Initializes a null graphic </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>isNull()</code></dl>
+<dd><code>isNull()</code></dd></dl>
 <h3>QwtGraphic::QwtGraphic (const <code>QwtGraphic</code> &amp;other)</h3>
 <p>Copy constructor. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>other</i> Source</dl>
+<dd><i>other</i> Source</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>operator=()</code></dl>
+<dd><code>operator=()</code></dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>QRectF QwtGraphic::boundingRect () const</h3>
 <p>The bounding rectangle is the <code>controlPointRect()</code> extended by the areas needed for rendering the outlines with unscaled pens. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Bounding rectangle of the graphic</dl>
+<dd>Bounding rectangle of the graphic</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>controlPointRect()</code>, <code>scaledBoundingRect()</code></dl>
+<dd><code>controlPointRect()</code>, <code>scaledBoundingRect()</code></dd></dl>
 <h3>const QVector&lt; <code>QwtPainterCommand</code> &gt; &amp; QwtGraphic::commands () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>List of recorded paint commands</dl>
+<dd>List of recorded paint commands</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setCommands()</code></dl>
+<dd><code>setCommands()</code></dd></dl>
 <h3>QRectF QwtGraphic::controlPointRect () const</h3>
 <p>The control point rectangle is the bounding rectangle of all control points of the paths and the target rectangles of the images/pixmaps. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Control point rectangle</dl>
+<dd>Control point rectangle</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>boundingRect()</code>, <code>scaledBoundingRect()</code></dl>
+<dd><code>boundingRect()</code>, <code>scaledBoundingRect()</code></dd></dl>
 <h3>QSizeF QwtGraphic::defaultSize () const</h3>
 <p>Default size. When a non empty size has been assigned by <code>setDefaultSize()</code> this size will be returned. Otherwise the default size is the size of the bounding rectangle. </p>
 <p> The default size is used in all methods rendering the graphic, where no size is explicitly specified. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Default size</dl>
+<dd>Default size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setDefaultSize()</code>, <code>boundingRect()</code></dl>
+<dd><code>setDefaultSize()</code>, <code>boundingRect()</code></dd></dl>
 <h3>void QwtGraphic::drawImage (const QRectF &amp;rect, const QImage &amp;image, const QRectF &amp;subRect, Qt::ImageConversionFlagsflags) [protected], [virtual]</h3>
 <p>Store a image command in the command list. </p>
 <p> <code>Parameters:</code></p>
@@ -164,19 +164,19 @@ description: "QwtGraphic –"
 <dd><i>rect</i> traget rectangle<br />
  <i>image</i> Image to be painted<br />
  <i>subRect</i> Reactangle of the pixmap to be painted<br />
- <i>flags</i> Image conversion flags</dl>
+ <i>flags</i> Image conversion flags</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>QPaintEngine::drawImage()</dl>
+<dd>QPaintEngine::drawImage()</dd></dl>
 <p> Reimplemented from <code>QwtNullPaintDevice</code>.</p>
 <h3>void QwtGraphic::drawPath (const QPainterPath &amp;path) [protected], [virtual]</h3>
 <p>Store a path command in the command list </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>path</i> Painter path</dl>
+<dd><i>path</i> Painter path</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>QPaintEngine::drawPath()</dl>
+<dd>QPaintEngine::drawPath()</dd></dl>
 <p> Reimplemented from <code>QwtNullPaintDevice</code>.</p>
 <h3>void QwtGraphic::drawPixmap (const QRectF &amp;rect, const QPixmap &amp;pixmap, const QRectF &amp;subRect) [protected], [virtual]</h3>
 <p>Store a pixmap command in the command list. </p>
@@ -184,173 +184,173 @@ description: "QwtGraphic –"
 <dl COMPACT>
 <dd><i>rect</i> target rectangle<br />
  <i>pixmap</i> Pixmap to be painted<br />
- <i>subRect</i> Reactangle of the pixmap to be painted</dl>
+ <i>subRect</i> Reactangle of the pixmap to be painted</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>QPaintEngine::drawPixmap()</dl>
+<dd>QPaintEngine::drawPixmap()</dd></dl>
 <p> Reimplemented from <code>QwtNullPaintDevice</code>.</p>
 <h3>bool QwtGraphic::isEmpty () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, when the bounding rectangle is empty</dl>
+<dd>True, when the bounding rectangle is empty</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>boundingRect()</code>, <code>isNull()</code></dl>
+<dd><code>boundingRect()</code>, <code>isNull()</code></dd></dl>
 <h3>bool QwtGraphic::isNull () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, when no painter commands have been stored</dl>
+<dd>True, when no painter commands have been stored</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>isEmpty()</code>, <code>commands()</code></dl>
+<dd><code>isEmpty()</code>, <code>commands()</code></dd></dl>
 <h3><code>QwtGraphic</code> &amp; QwtGraphic::operator= (const <code>QwtGraphic</code> &amp;other)</h3>
 <p>Assignment operator. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>other</i> Source</dl>
+<dd><i>other</i> Source</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>A reference of this object</dl>
+<dd>A reference of this object</dd></dl>
 <h3>void QwtGraphic::render (QPainter *painter) const</h3>
 <p>Replay all recorded painter commands. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Qt painter</dl>
+<dd><i>painter</i> Qt painter</dd></dl>
 <h3>void QwtGraphic::render (QPainter *painter, const QSizeF &amp;size, Qt::AspectRatioModeaspectRatioMode = Qt::IgnoreAspectRatio) const</h3>
 <p>Replay all recorded painter commands. The graphic is scaled to fit into the rectangle of the given size starting at ( 0, 0 ). </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>painter</i> Qt painter<br />
  <i>size</i> Size for the scaled graphic<br />
- <i>aspectRatioMode</i> Mode how to scale &#8211; See Qt::AspectRatioMode</dl>
+ <i>aspectRatioMode</i> Mode how to scale &#8211; See Qt::AspectRatioMode</dd></dl>
 <h3>void QwtGraphic::render (QPainter *painter, const QRectF &amp;rect, Qt::AspectRatioModeaspectRatioMode = Qt::IgnoreAspectRatio) const</h3>
 <p>Replay all recorded painter commands. The graphic is scaled to fit into the given rectangle </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>painter</i> Qt painter<br />
  <i>rect</i> Rectangle for the scaled graphic<br />
- <i>aspectRatioMode</i> Mode how to scale &#8211; See Qt::AspectRatioMode</dl>
+ <i>aspectRatioMode</i> Mode how to scale &#8211; See Qt::AspectRatioMode</dd></dl>
 <h3>void QwtGraphic::render (QPainter *painter, const QPointF &amp;pos, Qt::Alignmentalignment = Qt::AlignTop | Qt::AlignLeft) const</h3>
 <p>Replay all recorded painter commands. The graphic is scaled to the <code>defaultSize()</code> and aligned to a position. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>painter</i> Qt painter<br />
  <i>pos</i> Reference point, where to render<br />
- <i>alignment</i> Flags how to align the target rectangle to pos.</dl>
+ <i>alignment</i> Flags how to align the target rectangle to pos.</dd></dl>
 <h3>void QwtGraphic::reset ()</h3>
 <p>Clear all stored commands. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>isNull()</code></dl>
+<dd><code>isNull()</code></dd></dl>
 <h3>QRectF QwtGraphic::scaledBoundingRect (doublesx, doublesy) const</h3>
 <p>Calculate the target rectangle for scaling the graphic. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>sx</i> Horizontal scaling factor<br />
- <i>sy</i> Vertical scaling factor</dl>
+ <i>sy</i> Vertical scaling factor</dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>In case of paths that are painted with a cosmetic pen ( see QPen::isCosmetic() ) the target rectangle is different to multiplying the bounding rectangle.</dl>
+<dd>In case of paths that are painted with a cosmetic pen ( see QPen::isCosmetic() ) the target rectangle is different to multiplying the bounding rectangle.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Scaled bounding rectangle</dl>
+<dd>Scaled bounding rectangle</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>boundingRect()</code>, <code>controlPointRect()</code></dl>
+<dd><code>boundingRect()</code>, <code>controlPointRect()</code></dd></dl>
 <h3>void QwtGraphic::setCommands (QVector&lt; <code>QwtPainterCommand</code> &gt; &amp;commands)</h3>
 <p>Append paint commands. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>commands</i> Paint commands</dl>
+<dd><i>commands</i> Paint commands</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>commands()</code></dl>
+<dd><code>commands()</code></dd></dl>
 <h3>void QwtGraphic::setDefaultSize (const QSizeF &amp;size)</h3>
 <p>Set a default size. The default size is used in all methods rendering the graphic, where no size is explicitly specified. Assigning an empty size means, that the default size will be calculated from the bounding rectangle. </p>
 <p> The default setting is an empty size. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>size</i> Default size</dl>
+<dd><i>size</i> Default size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>defaultSize()</code>, <code>boundingRect()</code></dl>
+<dd><code>defaultSize()</code>, <code>boundingRect()</code></dd></dl>
 <h3>void QwtGraphic::setRenderHint (<code>RenderHint</code>hint, boolon = true)</h3>
 <p>Toggle an render hint </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>hint</i> Render hint<br />
- <i>on</i> true/false</dl>
+ <i>on</i> true/false</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>testRenderHint()</code>, <code>RenderHint</code></dl>
+<dd><code>testRenderHint()</code>, <code>RenderHint</code></dd></dl>
 <h3>QSize QwtGraphic::sizeMetrics () const [protected], [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Ceiled <code>defaultSize()</code></dl>
+<dd>Ceiled <code>defaultSize()</code></dd></dl>
 <p> Implements <code>QwtNullPaintDevice</code>.</p>
 <h3>bool QwtGraphic::testRenderHint (<code>RenderHint</code>hint) const</h3>
 <p>Test a render hint </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>hint</i> Render hint</dl>
+<dd><i>hint</i> Render hint</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>true/false</dl>
+<dd>true/false</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setRenderHint()</code>, <code>RenderHint</code></dl>
+<dd><code>setRenderHint()</code>, <code>RenderHint</code></dd></dl>
 <h3>QImage QwtGraphic::toImage () const</h3>
 <p>Convert the graphic to a QImage. All pixels of the image get initialized by 0 ( transparent ) before the graphic is scaled and rendered on it. </p>
 <p> The format of the image is QImage::Format_ARGB32_Premultiplied. </p>
 <p> The size of the image is the default size ( ceiled to integers ) of the graphic. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The graphic as image in default size</dl>
+<dd>The graphic as image in default size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>defaultSize()</code>, <code>toPixmap()</code>, <code>render()</code></dl>
+<dd><code>defaultSize()</code>, <code>toPixmap()</code>, <code>render()</code></dd></dl>
 <h3>QImage QwtGraphic::toImage (const QSize &amp;size, Qt::AspectRatioModeaspectRatioMode = Qt::IgnoreAspectRatio) const</h3>
 <p>Convert the graphic to a QImage. All pixels of the image get initialized by 0 ( transparent ) before the graphic is scaled and rendered on it. </p>
 <p> The format of the image is QImage::Format_ARGB32_Premultiplied. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>size</i> Size of the image<br />
- <i>aspectRatioMode</i> Aspect ratio how to scale the graphic</dl>
+ <i>aspectRatioMode</i> Aspect ratio how to scale the graphic</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The graphic as image</dl>
+<dd>The graphic as image</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>toPixmap()</code>, <code>render()</code></dl>
+<dd><code>toPixmap()</code>, <code>render()</code></dd></dl>
 <h3>QPixmap QwtGraphic::toPixmap () const</h3>
 <p>Convert the graphic to a QPixmap. All pixels of the pixmap get initialized by Qt::transparent before the graphic is scaled and rendered on it. </p>
 <p> The size of the pixmap is the default size ( ceiled to integers ) of the graphic. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The graphic as pixmap in default size</dl>
+<dd>The graphic as pixmap in default size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>defaultSize()</code>, <code>toImage()</code>, <code>render()</code></dl>
+<dd><code>defaultSize()</code>, <code>toImage()</code>, <code>render()</code></dd></dl>
 <h3>QPixmap QwtGraphic::toPixmap (const QSize &amp;size, Qt::AspectRatioModeaspectRatioMode = Qt::IgnoreAspectRatio) const</h3>
 <p>Convert the graphic to a QPixmap. All pixels of the pixmap get initialized by Qt::transparent before the graphic is scaled and rendered on it. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>size</i> Size of the image<br />
- <i>aspectRatioMode</i> Aspect ratio how to scale the graphic</dl>
+ <i>aspectRatioMode</i> Aspect ratio how to scale the graphic</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The graphic as pixmap</dl>
+<dd>The graphic as pixmap</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>toImage()</code>, <code>render()</code></dl>
+<dd><code>toImage()</code>, <code>render()</code></dd></dl>
 <h3>void QwtGraphic::updateState (const QPaintEngineState &amp;state) [protected], [virtual]</h3>
 <p>Store a state command in the command list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>state</i> State to be stored</dl>
+<dd><i>state</i> State to be stored</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>QPaintEngine::updateState()</dl>
+<dd>QPaintEngine::updateState()</dd></dl>
 <p> Reimplemented from <code>QwtNullPaintDevice</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

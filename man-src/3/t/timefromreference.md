@@ -10,23 +10,11 @@ description: "QuantLib::TermStructure – Basic term-structure functionality."
 <p>QuantLib::TermStructure &#8211; Basic term-structure functionality. </p>
 <h2>Synopsis</h2>
 <pre><code>void update ()
-
-
-
 Protected Member Functions
 void checkRange (const Date &amp;d, bool extrapolate) const
-
-
 date-range check
-
-
 void checkRange (Time t, bool extrapolate) const
-
-
 time-range check
-
-
-
 Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::Observer</code>, <code>QuantLib::Observable</code>, and <code>QuantLib::Extrapolator</code>. Inherited by <code>CallableBondVolatilityStructure</code>, <code>CommodityCurve</code>, <code>DefaultProbabilityTermStructure</code>, <code>InflationTermStructure</code>, <code>VolatilityTermStructure</code>, and <code>YieldTermStructure</code>.</p>
 <h3>Public Member Functions</h3>
@@ -46,23 +34,11 @@ void checkRange (const Date &amp;d, bool extrapolate) const</p>
 <p>time-range check</p>
 <p>Protected Attributes <code>Observer interface</code> </p>
 <pre><code>void update ()
-
-
-
 Protected Member Functions
 void checkRange (const Date &amp;d, bool extrapolate) const
-
-
 date-range check
-
-
 void checkRange (Time t, bool extrapolate) const
-
-
 time-range check
-
-
-
 Protected Attributes</code></pre>
 <p> bool <code>moving_</code> </p>
 <p> <code>Calendar</code> <code>calendar_</code></p>
@@ -73,7 +49,7 @@ Protected Attributes</code></pre>
 <p>default constructor </p>
 <p> <code>Warning</code></p>
 <dl>
-<dd>term structures initialized by means of this constructor must manage their own reference date by overriding the <code>referenceDate()</code> method.</dl>
+<dd>term structures initialized by means of this constructor must manage their own reference date by overriding the <code>referenceDate()</code> method.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void update () [virtual]</h3>
 <p>This method must be implemented in derived classes. An instance of Observer does not call this method directly: instead, it will be called by the observables the instance registered with when they need to notify any changes. </p>

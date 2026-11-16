@@ -21,27 +21,23 @@ description: "condor_update_machine_ad update a machine ClassAd"
 <p> <code>-help</code></p>
 <dl>
 <dt>
-<dd> Display usage information and exit</p>
-<dt>
-<dd></dl>
+</dt><dd> Display usage information and exit</dd>
+</dl>
 <p> <code>-version</code></p>
 <dl>
 <dt>
-<dd> Display the HTCondor version and exit</p>
-<dt>
-<dd></dl>
+</dt><dd> Display the HTCondor version and exit</dd>
+</dl>
 <p> <code>-pool </code> <i>centralmanagerhostname[:portnumber]</i></p>
 <dl>
 <dt>
-<dd> Specify a pool by giving the central manager&#8217;s host name and an optional port number</p>
-<dt>
-<dd></dl>
+</dt><dd> Specify a pool by giving the central manager&#8217;s host name and an optional port number</dd>
+</dl>
 <p> <code>-name </code> <i>startdname</i></p>
 <dl>
 <dt>
-<dd> Send the command to a machine identified by <i>startdname</i></p>
-<dt>
-<dd></dl>
+</dt><dd> Send the command to a machine identified by <i>startdname</i></dd>
+</dl>
 <h2>General Remarks</h2>
 <p> This tool is intended for the use of system administrators when dealing with offline universes. </p>
 <h2>Examples</h2>

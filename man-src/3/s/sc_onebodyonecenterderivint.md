@@ -11,69 +11,28 @@ description: "sc::OneBodyOneCenterDerivInt –"
 <p> <code>OneBodyOneCenterDerivInt</code> is an abstract base class for objects that compute one body derivative integrals on a single center.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;obint.h&gt;</code></pre>
 <p> Inherits <code>sc::RefCount</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>OneBodyOneCenterDerivInt (Integral *, const Ref&lt; GaussianBasisSet &gt; &amp;b)
-
-
-
 int nbasis () const
-
-
 Return the number of basis functions on center one.
-
-
 int nbasis1 () const
-
-
 Return the number of basis functions on center one.
-
-
 int nshell () const
-
-
 Return the number of shells on center one.
-
-
 int nshell1 () const
-
-
 Return the number of shells on center one.
-
-
 Ref&lt; GaussianBasisSet &gt; basis ()
-
-
 Return the basis set on center one.
-
-
 Ref&lt; GaussianBasisSet &gt; basis1 ()
-
-
 Return the basis set on center one.
-
-
 const double * buffer () const
-
-
 The computed shell integrals will be put in the buffer returned by this member.
-
-
 virtual void compute_shell (int ish, DerivCenters &amp;)=0
-
-
 Compute the derivative integrals and place the result in the buffer returned by buffer().
-
-
 virtual void compute_shell (int ish, int center)=0
-
-
 Compute the derivative integrals with respect to the given center and place the result in the buffer returned by buffer().
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Integral</code> * <code>integral_</code> </p>
 <p> <code>Ref</code>&lt; <code>GaussianBasisSet</code> &gt; <code>bs1</code> </p>

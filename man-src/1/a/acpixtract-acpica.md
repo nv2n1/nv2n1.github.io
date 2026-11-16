@@ -17,12 +17,12 @@ description: "acpixtract – ACPICA source code conversion utility"
 <p> Much more detailed documentation may be found at <a rel="nofollow" href="http://www.acpica.org/documentation/.">http://www.acpica.org/documentation/.</a> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd> Extract all tables, not just DSDT/SSDT</p>
-<dt><code>-l</code></p>
-<dd> List table summaries, do not extract</p>
-<dt><code>-s &lt;signature&gt;</code></p>
-<dd> Extract all tables with &lt;signature&gt; </p>
+<dt><code>-a</code></dt>
+<dd> Extract all tables, not just DSDT/SSDT</dd>
+<dt><code>-l</code></dt>
+<dd> List table summaries, do not extract</dd>
+<dt><code>-s &lt;signature&gt;</code></dt>
+<dd> Extract all tables with &lt;signature&gt; </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> acpixtract was written by Robert Moore &lt;robert.moore [at] intel.com&gt;. </p>

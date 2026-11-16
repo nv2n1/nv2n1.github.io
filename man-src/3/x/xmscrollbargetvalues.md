@@ -21,16 +21,16 @@ increment_return, page_increment_return</i>)
 <h2>Description</h2>
 <p><code>XmScrollBarGetValues</code> returns the the ScrollBar&#8217;s increment values. The scroll region is overlaid with a slider bar that is adjusted in size and position using the main ScrollBar or set slider function attributes.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ScrollBar widget ID.</p>
-<dt><i>value_return</i></p>
-<dd>Returns the ScrollBar&#8217;s slider position between the <code>XmNminimum</code> and <code>XmNmaximum</code> resources. Specify NULL to prevent the return of a particular value.</p>
-<dt><i>slider_size_return</i></p>
-<dd>Returns the size of the slider as a value between 0 (zero) and the absolute value of <code>XmNmaximum</code> minus <code>XmNminimum</code>. The size of the slider varies, depending on how much of the slider scroll area it represents.</p>
-<dt><i>increment_return</i></p>
-<dd>Returns the amount of increment and decrement.</p>
-<dt><i>page_increment_return</i></p>
-<dd>Returns the amount of page increment and decrement.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ScrollBar widget ID.</dd>
+<dt><i>value_return</i></dt>
+<dd>Returns the ScrollBar&#8217;s slider position between the <code>XmNminimum</code> and <code>XmNmaximum</code> resources. Specify NULL to prevent the return of a particular value.</dd>
+<dt><i>slider_size_return</i></dt>
+<dd>Returns the size of the slider as a value between 0 (zero) and the absolute value of <code>XmNmaximum</code> minus <code>XmNminimum</code>. The size of the slider varies, depending on how much of the slider scroll area it represents.</dd>
+<dt><i>increment_return</i></dt>
+<dd>Returns the amount of increment and decrement.</dd>
+<dt><i>page_increment_return</i></dt>
+<dd>Returns the amount of page increment and decrement.</dd></dl>
 <p> For a complete definition of ScrollBar and its associated resources, see <code><a href="/docs/linux/man/3-xmscrollbar/">XmScrollBar</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns the ScrollBar&#8217;s increment values.</p>

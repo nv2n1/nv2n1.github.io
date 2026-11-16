@@ -15,37 +15,37 @@ description: "krazy2xml – KDE source code checking for the English Breakfast N
 <p> krazy2xml is a big wrapper around <i>krazy</i>(1) for no obvious use other than generating Code Checking Quality reports on the English Breakfast Network.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Print help message and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print version information and exit.</p>
-<dt><code>&#8211;dry-run</code></p>
-<dd> With this option the checker programs aren&#8217;t run; instead, the command line for each check that would be run is printed.</p>
-<dt><code>&#8211;nodb</code></p>
-<dd> Set this option to turn-off all database operations.</p>
-<dt><code>&#8211;dbgen</code>=[id]</p>
-<dd> Use the specified value for the database generationId. </p>
+<dt><code>&#8211;help</code></dt>
+<dd> Print help message and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print version information and exit.</dd>
+<dt><code>&#8211;dry-run</code></dt>
+<dd> With this option the checker programs aren&#8217;t run; instead, the command line for each check that would be run is printed.</dd>
+<dt><code>&#8211;nodb</code></dt>
+<dd> Set this option to turn-off all database operations.</dd>
+<dt><code>&#8211;dbgen</code>=[id]</dt>
+<dd> Use the specified value for the database generationId. </dd>
 <p> The value is intended to be computed by the database being used and then passed into this program, rather than this program computing the value itself. </p>
 <p> Do <font SIZE="-1"><code>NOT</code></font> use this option unless you know what you&#8217;re doing.</p>
-<dt><code>&#8211;component</code>=[comp]</p>
-<dd> Only run for the specified <font SIZE="-1">KDE</font> component. By default, the kde-4.x component is assumed.</p>
-<dt><code>&#8211;module</code>=[mod1,&lt;mod2&gt;,&#8230;&lt;modN&gt;]</p>
-<dd> Only run for the specified <font SIZE="-1">KDE</font> module within the component. By default all modules within the component are processed.</p>
-<dt><code>&#8211;title</code>=title</p>
-<dd> A title string to print onto each report page. If this option is not provided, a title for each page is generated that contains the source component, module and subdir.</dl>
+<dt><code>&#8211;component</code>=[comp]</dt>
+<dd> Only run for the specified <font SIZE="-1">KDE</font> component. By default, the kde-4.x component is assumed.</dd>
+<dt><code>&#8211;module</code>=[mod1,&lt;mod2&gt;,&#8230;&lt;modN&gt;]</dt>
+<dd> Only run for the specified <font SIZE="-1">KDE</font> module within the component. By default all modules within the component are processed.</dd>
+<dt><code>&#8211;title</code>=title</dt>
+<dd> A title string to print onto each report page. If this option is not provided, a title for each page is generated that contains the source component, module and subdir.</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>Process all modules within component extragear</p>
+<dt>Process all modules within component extragear</dt>
 <dd>
 <pre>
  % krazy2xml --component=extragear
 </pre>
-<dt>Process module kdelibs within component kde-4.0</p>
+</dd><dt>Process module kdelibs within component kde-4.0</dt>
 <dd>
 <pre>
  % krazy2xml --component=kde-4.0 --module=kdelibs
 </pre>
-</dl>
+</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> <font SIZE="-1">KRAZY_PLUGIN_PATH</font> &#8211; this is a colon-separated list of paths which is searched when locating plugins. By default, plugins are searched for in the path <i></i>$TOP<i>/lib/krazy2/krazy-plugins:krazy-plugins</i>. </p>
 <p> <font SIZE="-1">KRAZY_EXTRA_PATH</font> &#8211; this is a colon-separated list of paths which is searched when locating &#8220;extra&#8221; plugins. By default, the &#8220;extras&#8221; are searched for in the path <i></i>$TOP<i>/lib/krazy2/krazy-extras:krazy-extras</i>. </p>

@@ -14,9 +14,9 @@ description: "PAPIF_accum –"
 <p><code>Fortran Interface:</code></p>
 <dl COMPACT>
 <dd>#include &#8216;fpapi.h&#8217;<br />
- <code>PAPIF_accum</code>( C_INT EventSet, C_LONG_LONG(*) values, C_INT check )</dl>
+ <code>PAPIF_accum</code>( C_INT EventSet, C_LONG_LONG(*) values, C_INT check )</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_accum</code></dl>
+<dd><code>PAPI_accum</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

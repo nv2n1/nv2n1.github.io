@@ -15,11 +15,11 @@ description: "write – send a message to another user"
 <p> When you run the <code>write</code> command, the user you are writing to gets a message of the form: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 Message from yourname [at] yourhost on yourtty at hh:mm ...
 </pre>
-</dl>
+</dd></dl>
 <p> Any further lines you enter will be copied to the specified user&#8217;s terminal. If the other user wants to reply, they must run <code>write</code> as well. </p>
 <p> When you are done, type an end-of-file or interrupt character. The other user will see the message <code>EOF</code> indicating that the conversation is over. </p>
 <p> You can prevent people (other than the superuser) from writing to you with the <code><a href="/docs/linux/man/1-mesg/">mesg</a></code>(1) command. Some commands, for example <code><a href="/docs/linux/man/1-nroff/">nroff</a></code>(1) and <code><a href="/docs/linux/man/1-pr/">pr</a></code>(1), may automatically disallow writing, so that the output they produce isn&#8217;t overwritten. </p>
@@ -29,11 +29,11 @@ Message from yourname [at] yourhost on yourtty at hh:mm ...
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit.</dl>
+</dt><dd> Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit.</dl>
+</dt><dd> Display help text and exit.</dd></dl>
 <h2>HISTORY</h2>
 <p> A <code>write</code> command appeared in Version 6 AT&amp;T UNIX.</p>
 <h2>SEE ALSO</h2>

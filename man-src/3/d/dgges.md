@@ -19,7 +19,7 @@ description: "dgges.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  DGGES computes for a pair of N-by-N real nonsymmetric matrices (A,B),
  the generalized eigenvalues, the generalized real Schur form (S,T),
@@ -46,11 +46,11 @@ description: "dgges.f –"
      2 - by - 2 blocks.1 - by - 1 blocks correspond to real generalized eigenvalues,
      while 2 - by - 2 blocks of S will be "standardized" by making the corresponding elements of T have the form : [a 0][0 b] and the pair of corresponding 2 - by - 2 blocks in S and T will have a complex conjugate pair of generalized eigenvalues.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>JOBVSL</i> </p>
+</dt><dd> <i>JOBVSL</i> </dd>
 <pre>
           JOBVSL is CHARACTER*1
           = 'N':  do not compute the left Schur vectors;
@@ -196,14 +196,14 @@ the routine
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> Definition at line 283 of file dgges.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

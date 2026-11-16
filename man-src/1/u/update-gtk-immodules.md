@@ -11,10 +11,10 @@ description: "update-gtk-immodules – Update GTK+ immodule cache"
 <p> update-gtk-immodules &#8211; Update GTK+ immodule cache </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>update-gtk-immodules</code> [HOST_TRIPLET]</dl>
+<dt> <code>update-gtk-immodules</code> [HOST_TRIPLET]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>update-gtk-immodules</code></p>
-<dd>is a wrapper around gtk-query-immodules-2.0 that tries to help with multilib installations. It is meant to be used in %post scripts of rpm packages that install input method modules for GTK+ 2.x. </p>
+<dd>is a wrapper around gtk-query-immodules-2.0 that tries to help with multilib installations. It is meant to be used in %post scripts of rpm packages that install input method modules for GTK+ 2.x. </dd>
 <p> It needs to be given a GNU-style host triplet as argument, such as &quot;x86_64-redhat-linux-gnu&quot;. This argument determines where the tool saves the gtk.immodules file that it creates. It must be the same as the host triplet that GTK+ was configured with. </p>
 <h2>FILES</h2>
 <p> $libdir/gtk-2.0/2.10.0/immodules.cache &#8211; the file created by update-gtk-immodules. </p>

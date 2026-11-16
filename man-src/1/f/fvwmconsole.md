@@ -19,58 +19,58 @@ description: "FvwmConsole – an fvwm command input interface"
 <h2>Configuration Options</h2>
 <p>FvwmConsole uses <i><a href="/docs/linux/man/1-xterm/">xterm</a></i>(1). All resources set for xterm are inherited unless overridden by command line options. </p>
 <dl>
-<dd>Module FvwmConsole -g 40&#215;10 -fg black -bg green3</dl>
+<dd>Module FvwmConsole -g 40&#215;10 -fg black -bg green3</dd></dl>
 <p> A different terminal emulator can be specified with the -terminal option. However, only terminal programs that understand the options -name, -title and -e can be used. </p>
 <dl>
-<dd>Module FvwmConsole -terminal rxvt</dl>
+<dd>Module FvwmConsole -terminal rxvt</dd></dl>
 <p> Previous versions of FvwmConsole supported a -e option to choose a different front-end. Although this option is still provided for backwards compatibility its use is discouraged unless you know exactly what you are doing. </p>
 <dl>
-<dd>Module FvwmConsole -e FvwmConsoleC.pl</dl>
+<dd>Module FvwmConsole -e FvwmConsoleC.pl</dd></dl>
 <p> (see <i><a href="/docs/linux/man/1-fvwmconsolec-pl/">FvwmConsoleC.pl</a></i>(1)). </p>
 <p> Also X resources can be set in your ~/.Xdefaults file: </p>
 <dl>
 <dd>FvwmConsole*VT100*geometry: 40&#215;4<br />
- FvwmConsole*font: 7&#215;14</dl>
+ FvwmConsole*font: 7&#215;14</dd></dl>
 <h2>Command Editing</h2>
 <p>There are a few options. If the GNU readline library is available, it can be used. </p>
 <p> If Perl5 is installed, FvwmConsoleC.pl can be used as a command editor. This can be accomplished by either copying FvwmConsoleC.pl to fvwmlib directory as FvwmConsoleC or invoking FvwmConsole with -e option. For example: </p>
 <dl>
-<dd>Module FvwmConsole -e FvwmConsoleC.pl</dl>
+<dd>Module FvwmConsole -e FvwmConsoleC.pl</dd></dl>
 <p> If neither one is installed, a simple input reading function which doesn&#8217;t have editing capabilities is used. </p>
 <p> GNU readline and FvwmConsoleC.pl have some frequent used commands in common as default. These commands are similar to emacs. For more details, refer GNU readline man and info pages, and FvwmConsoleC.pl man page. </p>
 <dl>
 <dd>
-<dl>
-<dt>Ctrl-A</p>
-<dd>&#8211; beginning of line</p>
-<dt>Ctrl-B</p>
-<dd>&#8211; previous char</p>
-<dt>Ctrl-D</p>
-<dd>&#8211; delete char</p>
-<dt>Ctrl-E</p>
-<dd>&#8211; end of line</p>
-<dt>Ctrl-F</p>
-<dd>&#8211; next char</p>
-<dt>Ctrl-H</p>
-<dd>&#8211; backspace</p>
-<dt>Ctrl-K</p>
-<dd>&#8211; erase to the end of line</p>
-<dt>Ctrl-N</p>
-<dd>&#8211; next line</p>
-<dt>Ctrl-P</p>
-<dd>&#8211; previous line</p>
-<dt>Ctrl-R</p>
-<dd>&#8211; search reverse</p>
-<dt>Ctrl-U</p>
-<dd>&#8211; delete line</p>
-<dt>Meta-B</p>
-<dd>&#8211; previous word</p>
-<dt>Meta-F</p>
-<dd>&#8211; next word</p>
-<dt>Esc &lt;</p>
-<dd>&#8211; beginning of history</p>
-<dt>Esc &gt;</p>
-<dd>&#8211; end of history</dl>
+</dd><dl>
+<dt>Ctrl-A</dt>
+<dd>&#8211; beginning of line</dd>
+<dt>Ctrl-B</dt>
+<dd>&#8211; previous char</dd>
+<dt>Ctrl-D</dt>
+<dd>&#8211; delete char</dd>
+<dt>Ctrl-E</dt>
+<dd>&#8211; end of line</dd>
+<dt>Ctrl-F</dt>
+<dd>&#8211; next char</dd>
+<dt>Ctrl-H</dt>
+<dd>&#8211; backspace</dd>
+<dt>Ctrl-K</dt>
+<dd>&#8211; erase to the end of line</dd>
+<dt>Ctrl-N</dt>
+<dd>&#8211; next line</dd>
+<dt>Ctrl-P</dt>
+<dd>&#8211; previous line</dd>
+<dt>Ctrl-R</dt>
+<dd>&#8211; search reverse</dd>
+<dt>Ctrl-U</dt>
+<dd>&#8211; delete line</dd>
+<dt>Meta-B</dt>
+<dd>&#8211; previous word</dd>
+<dt>Meta-F</dt>
+<dd>&#8211; next word</dd>
+<dt>Esc &lt;</dt>
+<dd>&#8211; beginning of history</dd>
+<dt>Esc &gt;</dt>
+<dd>&#8211; end of history</dd></dl>
 </dl>
 <h2>Exiting</h2>
 <p>FvwmConsole can be stopped by entering the EOF character (usually CTRL-D). </p>

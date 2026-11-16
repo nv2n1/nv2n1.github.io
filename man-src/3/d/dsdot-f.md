@@ -23,10 +23,10 @@ description: "dsdot.f –"
  DSDOT = sum for I = 0 to N-1 of SX(LX+I*INCX) * SY(LY+I*INCY),
  where LX = 1 if INCX .GE. 0, else LX = 1+(1-N)*INCX, and LY is
  defined in a similar way using INCY.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>N</i> </p>
+<dd><i>N</i> </dd>
 <pre> N is INTEGER
  number of elements in input vector(s)</pre>
 <p><i>SX</i> </p>
@@ -44,22 +44,22 @@ description: "dsdot.f –"
 </dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>DSDOT </p>
+<dd>DSDOT </dd>
 <pre> DSDOT is DOUBLE PRECISION
  DSDOT double precision dot product (zero if N.LE.0)</pre>
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
-<dd>&nbsp;<wbr></dl>
+<dd>&nbsp;<wbr></dd></dl>
 <p> <code>References: </code></p>
 <dl COMPACT>
 <dd>
@@ -75,7 +75,8 @@ description: "dsdot.f –"
  920310 Corrected definition of LX in DESCRIPTION. (WRB)
  920501 Reformatted the REFERENCES section. (WRB)
  070118 Reformat to LAPACK style (JL)</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 120 of file dsdot.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

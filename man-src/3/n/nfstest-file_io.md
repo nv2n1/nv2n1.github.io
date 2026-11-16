@@ -45,88 +45,88 @@ Destructor
 <code>__init__(self, **kwargs)</code>
 Constructor
 Initialize object's private data
-<dl><dt><dd><dl><dt><code>datadir:</code>
-<dd>Top level directory where files will be created,
+<dl><dl><dt><code>datadir:</code>
+</dt><dd>Top level directory where files will be created,
 it will be created if it does not exist
-<dt><code>seed:</code>
-<dd>Seed to initialized the random number generator
+</dd><dt><code>seed:</code>
+</dt><dd>Seed to initialized the random number generator
 [default: automatically generated]
-<dt><code>nprocs:</code>
-<dd>Number of processes to use [default: 1]
-<dt><code>runtime:</code>
-<dd>Run time [default: 0 (indefinitely)]
-<dt><code>verbose:</code>
-<dd>Verbose level: none|info|debug|dbg1-7|all [default: 'none']
-<dt><code>exiterr:</code>
-<dd>Exit on first error [default: False]
-<dt><code>read:</code>
-<dd>Read file percentage [default: 40]
-<dt><code>write:</code>
-<dd>Write file percentage [default: 40]
-<dt><code>rdwr:</code>
-<dd>Read/write file percentage [default: 20]
-<dt><code>randio:</code>
-<dd>Random file access percentage [default: 50]
-<dt><code>iodelay:</code>
-<dd>Seconds to delay I/O operations [default: 0.0]
-<dt><code>direct:</code>
-<dd>Use direct I/O [default: False]
-<dt><code>rdwronly:</code>
-<dd>Use read and write only, no rename, remove, etc. [default: False]
-<dt><code>create:</code>
-<dd>Create file percentage [default: 5]
-<dt><code>odgrade:</code>
-<dd>Open downgrade percentage [default: 10]
-<dt><code>osync:</code>
-<dd>Open file with O_SYNC [default: 20]
-<dt><code>fsync:</code>
-<dd>Percentage of fsync after write [default: 5]
-<dt><code>rename:</code>
-<dd>Rename file percentage [default: 5]
-<dt><code>remove:</code>
-<dd>Remove file percentage [default: 5]
-<dt><code>trunc:</code>
-<dd>Truncate file percentage [default: 5]
-<dt><code>ftrunc:</code>
-<dd>Truncate opened file percentage [default: 5]
-<dt><code>link:</code>
-<dd>Create hard link percentage [default: 2]
-<dt><code>slink:</code>
-<dd>Create symbolic link percentage [default: 1]
-<dt><code>readdir:</code>
-<dd>List contents of directory percentage [default: 1]
-<dt><code>lock:</code>
-<dd>Lock file percentage [default: 20]
-<dt><code>unlock:</code>
-<dd>Unlock file percentage [default: 80]
-<dt><code>tlock:</code>
-<dd>Lock test percentage [default: 50]
-<dt><code>lockfull:</code>
-<dd>Lock full file percentage [default: 50]
-<dt><code>minfiles:</code>
-<dd>Mininum number of files to create before any file operation
+</dd><dt><code>nprocs:</code>
+</dt><dd>Number of processes to use [default: 1]
+</dd><dt><code>runtime:</code>
+</dt><dd>Run time [default: 0 (indefinitely)]
+</dd><dt><code>verbose:</code>
+</dt><dd>Verbose level: none|info|debug|dbg1-7|all [default: 'none']
+</dd><dt><code>exiterr:</code>
+</dt><dd>Exit on first error [default: False]
+</dd><dt><code>read:</code>
+</dt><dd>Read file percentage [default: 40]
+</dd><dt><code>write:</code>
+</dt><dd>Write file percentage [default: 40]
+</dd><dt><code>rdwr:</code>
+</dt><dd>Read/write file percentage [default: 20]
+</dd><dt><code>randio:</code>
+</dt><dd>Random file access percentage [default: 50]
+</dd><dt><code>iodelay:</code>
+</dt><dd>Seconds to delay I/O operations [default: 0.0]
+</dd><dt><code>direct:</code>
+</dt><dd>Use direct I/O [default: False]
+</dd><dt><code>rdwronly:</code>
+</dt><dd>Use read and write only, no rename, remove, etc. [default: False]
+</dd><dt><code>create:</code>
+</dt><dd>Create file percentage [default: 5]
+</dd><dt><code>odgrade:</code>
+</dt><dd>Open downgrade percentage [default: 10]
+</dd><dt><code>osync:</code>
+</dt><dd>Open file with O_SYNC [default: 20]
+</dd><dt><code>fsync:</code>
+</dt><dd>Percentage of fsync after write [default: 5]
+</dd><dt><code>rename:</code>
+</dt><dd>Rename file percentage [default: 5]
+</dd><dt><code>remove:</code>
+</dt><dd>Remove file percentage [default: 5]
+</dd><dt><code>trunc:</code>
+</dt><dd>Truncate file percentage [default: 5]
+</dd><dt><code>ftrunc:</code>
+</dt><dd>Truncate opened file percentage [default: 5]
+</dd><dt><code>link:</code>
+</dt><dd>Create hard link percentage [default: 2]
+</dd><dt><code>slink:</code>
+</dt><dd>Create symbolic link percentage [default: 1]
+</dd><dt><code>readdir:</code>
+</dt><dd>List contents of directory percentage [default: 1]
+</dd><dt><code>lock:</code>
+</dt><dd>Lock file percentage [default: 20]
+</dd><dt><code>unlock:</code>
+</dt><dd>Unlock file percentage [default: 80]
+</dd><dt><code>tlock:</code>
+</dt><dd>Lock test percentage [default: 50]
+</dd><dt><code>lockfull:</code>
+</dt><dd>Lock full file percentage [default: 50]
+</dd><dt><code>minfiles:</code>
+</dt><dd>Mininum number of files to create before any file operation
 is executed [default: 10]
-<dt><code>fsizeavg:</code>
-<dd>File size average [default: 1m]
-<dt><code>fsizedev:</code>
-<dd>File size standard deviation [default: 256k]
-<dt><code>rsize:</code>
-<dd>Read block size [default: 64k]
-<dt><code>rsizedev:</code>
-<dd>Read block size standard deviation [default: 8k]
-<dt><code>wsize:</code>
-<dd>Write block size [default: 64k]
-<dt><code>wsizedev:</code>
-<dd>Write block size standard deviation [default: 8k]
-<dt><code>sizemult:</code>
-<dd>Size multiplier [default: 1]
-<dt><code>createlog:</code>
-<dd>Create log file [default: False]
-<dt><code>createlogs:</code>
-<dd>Create a log file for each process [default: False]
-<dt><code>logdir:</code>
-<dd>Log directory [default: '/tmp']
-</dl></dl>
+</dd><dt><code>fsizeavg:</code>
+</dt><dd>File size average [default: 1m]
+</dd><dt><code>fsizedev:</code>
+</dt><dd>File size standard deviation [default: 256k]
+</dd><dt><code>rsize:</code>
+</dt><dd>Read block size [default: 64k]
+</dd><dt><code>rsizedev:</code>
+</dt><dd>Read block size standard deviation [default: 8k]
+</dd><dt><code>wsize:</code>
+</dt><dd>Write block size [default: 64k]
+</dd><dt><code>wsizedev:</code>
+</dt><dd>Write block size standard deviation [default: 8k]
+</dd><dt><code>sizemult:</code>
+</dt><dd>Size multiplier [default: 1]
+</dd><dt><code>createlog:</code>
+</dt><dd>Create log file [default: False]
+</dd><dt><code>createlogs:</code>
+</dt><dd>Create a log file for each process [default: False]
+</dd><dt><code>logdir:</code>
+</dt><dd>Log directory [default: '/tmp']
+</dd></dl></dl>
 <code>run(self)</code>
 Main function where all processes are started
 <code>run_process(self, tid=0)</code>

@@ -10,7 +10,6 @@ description: "sleep – sleep for a specified number of seconds"
 <p>sleep &#8211; sleep for a specified number of seconds</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;unistd.h&gt;
-
 unsigned int sleep(unsigned int seconds);</code></pre>
 <h2>Description</h2>
 <p><code>sleep</code>() causes the calling thread to sleep either until the number of real-time seconds specified in <i>seconds</i> have elapsed or until a signal arrives which is not ignored.</p>

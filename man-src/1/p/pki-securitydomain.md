@@ -20,11 +20,11 @@ pki[CLI options] securitydomain
 <p> <code>pki</code> [CLI options] <code>securitydomain</code></p>
 <dl>
 <dt>
-<dd> This command is to list available security domain commands.</dl>
+</dt><dd> This command is to list available security domain commands.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>securitydomain-show</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to show the contents of the security domain.</dl>
+</dt><dd> This command is to show the contents of the security domain.</dd></dl>
 <h2>OPTIONS</h2>
 <p> The CLI options are described in <code><a href="/docs/linux/man/1-pki/">pki</a></code>(1). </p>
 <h2>OPERATIONS</h2>

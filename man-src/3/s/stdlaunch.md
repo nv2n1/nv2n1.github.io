@@ -11,15 +11,10 @@ std::launch - std::launch
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;future&gt;
-
 enum class launch : /* unspecified */ {
-
     async = /* unspecified */,
-
     deferred = /* unspecified */,            (since C++11)
-
     /* implementation-defined */
-
 };</code></pre> 
 Specifies the launch policy for a task executed by the std::async function. std::launch is an enumeration used as BitmaskType. 
 The following constants denoting individual bits are defined by the standard library: 

@@ -20,7 +20,8 @@ description: "systemd-machined.service, systemd-machined – Virtual machine and
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-machinectl/">machinectl</a></code>(1), <code><a href="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></code>(1), <code><a href="/docs/linux/man/8-nss-mymachines/">nss-mymachines</a></code>(8), <code><a href="/docs/linux/man/7-systemd-special/">systemd.special</a></code>(7)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>machined D-Bus API Documentation</p>
+<dt> 1.</dt>
+<dd>machined D-Bus API Documentation</dd>
 <dl>
-<dd><a rel="nofollow" href="http://www.freedesktop.org/wiki/Software/systemd/machined">http://www.freedesktop.org/wiki/Software/systemd/machined</a></dl>
+<dd><a rel="nofollow" href="http://www.freedesktop.org/wiki/Software/systemd/machined">http://www.freedesktop.org/wiki/Software/systemd/machined</a></dd></dl>
+</dl>

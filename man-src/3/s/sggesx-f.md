@@ -46,10 +46,10 @@ description: "sggesx.f –"
  [ 0 b ]
  and the pair of corresponding 2-by-2 blocks in S and T will have a
  complex conjugate pair of generalized eigenvalues.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>JOBVSL</i> </p>
+<dd><i>JOBVSL</i> </dd>
 <pre> JOBVSL is CHARACTER*1
  = 'N': do not compute the left Schur vectors;
  = 'V': compute the left Schur vectors.</pre>
@@ -214,13 +214,13 @@ description: "sggesx.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -231,7 +231,8 @@ description: "sggesx.f –"
  the computed deflating subspaces is
  EPS * norm((A, B)) / RCONDV( 2 ).
  See LAPACK User's Guide, section 4.11 for more information.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 363 of file sggesx.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

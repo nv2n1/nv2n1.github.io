@@ -19,7 +19,7 @@ description: "slaqtr.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  SLAQTR solves the real quasi-triangular system
               op(T)*p = scale*c,               if LREAL = .TRUE.
@@ -40,11 +40,11 @@ description: "slaqtr.f –"
  This subroutine is designed for the condition number estimation
  in routine STRSNA.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>LTRAN</i> </p>
+</dt><dd> <i>LTRAN</i> </dd>
 <pre>
           LTRAN is LOGICAL
           On entry, LTRAN specifies the option of conjugate transpose:
@@ -119,14 +119,14 @@ description: "slaqtr.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 165 of file slaqtr.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

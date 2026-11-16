@@ -14,13 +14,13 @@ description: "jbd2_journal_try_to_free_buffers – try to free page buffers."
 <p><i>journal</i></p>
 <dl>
 <dd>
-<dd>journal for operation</dl>
+</dd><dd>journal for operation</dd></dl>
 <p> <i>page</i></p>
 <dl>
-<dd>to try and free</dl>
+<dd>to try and free</dd></dl>
 <p> <i>gfp_mask</i></p>
 <dl>
-<dd>we use the mask to detect how hard should we try to release buffers. If __GFP_DIRECT_RECLAIM and __GFP_FS is set, we wait for commit code to release the buffers.</dl>
+<dd>we use the mask to detect how hard should we try to release buffers. If __GFP_DIRECT_RECLAIM and __GFP_FS is set, we wait for commit code to release the buffers.</dd></dl>
 <h2>Description</h2>
 <p>For all the buffers on this page, if they are fully written out ordered data, move them onto BUF_CLEAN so <code>try_to_free_buffers</code> can reap them. </p>
 <p> This function returns non-zero if we wish <code>try_to_free_buffers</code> to be called. We do this if the page is releasable by <code>try_to_free_buffers</code>. We also do it if the page has locked or dirty buffers and the caller wants us to perform sync or async writeout. </p>
@@ -32,8 +32,8 @@ description: "jbd2_journal_try_to_free_buffers – try to free page buffers."
 <h2>Authors</h2>
 <p><code>Roger Gammans</code> &lt;rgammans [at] computer-surgery.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Stephen Tweedie</code> &lt;sct [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

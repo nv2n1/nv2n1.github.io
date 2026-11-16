@@ -12,24 +12,24 @@ description: "policytool – PolicyTool Administration GUI Utility"
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>&nbsp;<wbr></p>
+</dd><dl COMPACT>
+<dt>&nbsp;<wbr></dt>
 <dd>
-<dt>Run the policytool Administrator&#8217;s utility</p>
-<dd><tt>policytool</tt></p>
-<dt>Run policytool and load the specified policy file</p>
-<dd><tt>policytool</tt><i>[-file&nbsp;<wbr></i><i>filename</i><i>]</i></p>
-<dt>&nbsp;<wbr></p>
+</dd><dt>Run the policytool Administrator&#8217;s utility</dt>
+<dd><tt>policytool</tt></dd>
+<dt>Run policytool and load the specified policy file</dt>
+<dd><tt>policytool</tt><i>[-file&nbsp;<wbr></i><i>filename</i><i>]</i></dd>
+<dt>&nbsp;<wbr></dt>
 <dd>
-<dt>where:</p>
+</dd><dt>where:</dt>
 <dd>
-<dl COMPACT>
+</dd><dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>file</p>
-<dd>directs <i>policytool</i> to load a local policy file</p>
-<dt>filename</p>
-<dd>The file name</dl>
+</dd><dl COMPACT>
+<dt>file</dt>
+<dd>directs <i>policytool</i> to load a local policy file</dd>
+<dt>filename</dt>
+<dd>The file name</dd></dl>
 </dl>
 </dl>
 </dl>
@@ -38,9 +38,9 @@ description: "policytool – PolicyTool Administration GUI Utility"
 <h2>Options</h2>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>file</p>
-<dd>Loads <i>filename</i>.</dl>
+</dd><dl COMPACT>
+<dt>file</dt>
+<dd>Loads <i>filename</i>.</dd></dl>
 </dl>
 <h2>See Also</h2>
 <p><i>Default Policy Implementation and Syntax</i> @ <a rel="nofollow" href="http://java.sun.com/javase/6/docs/technotes/guides/security/PolicyFiles.html">http://java.sun.com/javase/6/docs/technotes/guides/security/PolicyFiles.html</a><br />

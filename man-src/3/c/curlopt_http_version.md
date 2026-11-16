@@ -14,14 +14,14 @@ description: "CURLOPT_HTTP_VERSION – specify HTTP protocol version to use"
 <h2>Description</h2>
 <p>Pass <i>version</i> a long, set to one of the values described below. They force libcurl to use the specific HTTP versions. This is not sensible to do unless you have a good reason. You have to set this option if you want to use libcurl&#8217;s HTTP/2 support. </p>
 <dl COMPACT>
-<dt>CURL_HTTP_VERSION_NONE</p>
-<dd>We don&#8217;t care about what version the library uses. libcurl will use whatever it thinks fit.</p>
-<dt>CURL_HTTP_VERSION_1_0</p>
-<dd>Enforce HTTP 1.0 requests.</p>
-<dt>CURL_HTTP_VERSION_1_1</p>
-<dd>Enforce HTTP 1.1 requests.</p>
-<dt>CURL_HTTP_VERSION_2_0</p>
-<dd>Attempt HTTP 2.0 requests. libcurl will fall back to HTTP 1.x if HTTP 2.0 can&#8217;t be negotiated with the server.</dl>
+<dt>CURL_HTTP_VERSION_NONE</dt>
+<dd>We don&#8217;t care about what version the library uses. libcurl will use whatever it thinks fit.</dd>
+<dt>CURL_HTTP_VERSION_1_0</dt>
+<dd>Enforce HTTP 1.0 requests.</dd>
+<dt>CURL_HTTP_VERSION_1_1</dt>
+<dd>Enforce HTTP 1.1 requests.</dd>
+<dt>CURL_HTTP_VERSION_2_0</dt>
+<dd>Attempt HTTP 2.0 requests. libcurl will fall back to HTTP 1.x if HTTP 2.0 can&#8217;t be negotiated with the server.</dd></dl>
 <h2>Default</h2>
 <p>CURL_HTTP_VERSION_NONE</p>
 <h2>Protocols</h2>

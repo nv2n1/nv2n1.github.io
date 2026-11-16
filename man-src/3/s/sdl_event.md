@@ -27,72 +27,72 @@ description: "SDL_Event – General event structure"
 } SDL_Event;</tt></pre>
 <h2>Structure Data</h2>
 <dl COMPACT>
-<dt><code>type</code></p>
-<dd>The type of event</p>
-<dt><code>active</code></p>
-<dd><i>Activation event</i></p>
-<dt><code>key</code></p>
-<dd><i>Keyboard event</i></p>
-<dt><code>motion</code></p>
-<dd><i>Mouse motion event</i></p>
-<dt><code>button</code></p>
-<dd><i>Mouse button event</i></p>
-<dt><code>jaxis</code></p>
-<dd><i>Joystick axis motion event</i></p>
-<dt><code>jball</code></p>
-<dd><i>Joystick trackball motion event</i></p>
-<dt><code>jhat</code></p>
-<dd><i>Joystick hat motion event</i></p>
-<dt><code>jbutton</code></p>
-<dd><i>Joystick button event</i></p>
-<dt><code>resize</code></p>
-<dd><i>Application window resize event</i></p>
-<dt><code>expose</code></p>
-<dd><i>Application window expose event</i></p>
-<dt><code>quit</code></p>
-<dd><i>Application quit request event</i></p>
-<dt><code>user</code></p>
-<dd><i>User defined event</i></p>
-<dt><code>syswm</code></p>
-<dd><i>Undefined window manager event</i></dl>
+<dt><code>type</code></dt>
+<dd>The type of event</dd>
+<dt><code>active</code></dt>
+<dd><i>Activation event</i></dd>
+<dt><code>key</code></dt>
+<dd><i>Keyboard event</i></dd>
+<dt><code>motion</code></dt>
+<dd><i>Mouse motion event</i></dd>
+<dt><code>button</code></dt>
+<dd><i>Mouse button event</i></dd>
+<dt><code>jaxis</code></dt>
+<dd><i>Joystick axis motion event</i></dd>
+<dt><code>jball</code></dt>
+<dd><i>Joystick trackball motion event</i></dd>
+<dt><code>jhat</code></dt>
+<dd><i>Joystick hat motion event</i></dd>
+<dt><code>jbutton</code></dt>
+<dd><i>Joystick button event</i></dd>
+<dt><code>resize</code></dt>
+<dd><i>Application window resize event</i></dd>
+<dt><code>expose</code></dt>
+<dd><i>Application window expose event</i></dd>
+<dt><code>quit</code></dt>
+<dd><i>Application quit request event</i></dd>
+<dt><code>user</code></dt>
+<dd><i>User defined event</i></dd>
+<dt><code>syswm</code></dt>
+<dd><i>Undefined window manager event</i></dd></dl>
 <h2>Description</h2>
 <p>The <code>SDL_Event</code> union is the core to all event handling is SDL, its probably the most important structure after <code>SDL_Surface</code>. <code>SDL_Event</code> is a union of all event structures used in SDL, using it is a simple matter of knowing which union member relates to which event <code>type</code>. </p>
 <dl COMPACT>
-<dt><code>Event type</code></p>
-<dd><code>Event Structure</code></p>
-<dt><code>SDL_ACTIVEEVENT</code></p>
-<dd><i></i><code>SDL_ActiveEvent</code></p>
-<dt><code>SDL_KEYDOWN/UP</code></p>
-<dd><i></i><code>SDL_KeyboardEvent</code></p>
-<dt><code>SDL_MOUSEMOTION</code></p>
-<dd><i></i><code>SDL_MouseMotionEvent</code></p>
-<dt><code>SDL_MOUSEBUTTONDOWN/UP</code></p>
-<dd><i></i><code>SDL_MouseButtonEvent</code></p>
-<dt><code>SDL_JOYAXISMOTION</code></p>
-<dd><i></i><code>SDL_JoyAxisEvent</code></p>
-<dt><code>SDL_JOYBALLMOTION</code></p>
-<dd><i></i><code>SDL_JoyBallEvent</code></p>
-<dt><code>SDL_JOYHATMOTION</code></p>
-<dd><i></i><code>SDL_JoyHatEvent</code></p>
-<dt><code>SDL_JOYBUTTONDOWN/UP</code></p>
-<dd><i></i><code>SDL_JoyButtonEvent</code></p>
-<dt><code>SDL_QUIT</code></p>
-<dd><i></i><code>SDL_QuitEvent</code></p>
-<dt><code>SDL_SYSWMEVENT</code></p>
-<dd><i></i><code>SDL_SysWMEvent</code></p>
-<dt><code>SDL_VIDEORESIZE</code></p>
-<dd><i></i><code>SDL_ResizeEvent</code></p>
-<dt><code>SDL_VIDEOEXPOSE</code></p>
-<dd><i></i><code>SDL_ExposeEvent</code></p>
-<dt><code>SDL_USEREVENT</code></p>
-<dd><i></i><code>SDL_UserEvent</code></dl>
+<dt><code>Event type</code></dt>
+<dd><code>Event Structure</code></dd>
+<dt><code>SDL_ACTIVEEVENT</code></dt>
+<dd><i></i><code>SDL_ActiveEvent</code></dd>
+<dt><code>SDL_KEYDOWN/UP</code></dt>
+<dd><i></i><code>SDL_KeyboardEvent</code></dd>
+<dt><code>SDL_MOUSEMOTION</code></dt>
+<dd><i></i><code>SDL_MouseMotionEvent</code></dd>
+<dt><code>SDL_MOUSEBUTTONDOWN/UP</code></dt>
+<dd><i></i><code>SDL_MouseButtonEvent</code></dd>
+<dt><code>SDL_JOYAXISMOTION</code></dt>
+<dd><i></i><code>SDL_JoyAxisEvent</code></dd>
+<dt><code>SDL_JOYBALLMOTION</code></dt>
+<dd><i></i><code>SDL_JoyBallEvent</code></dd>
+<dt><code>SDL_JOYHATMOTION</code></dt>
+<dd><i></i><code>SDL_JoyHatEvent</code></dd>
+<dt><code>SDL_JOYBUTTONDOWN/UP</code></dt>
+<dd><i></i><code>SDL_JoyButtonEvent</code></dd>
+<dt><code>SDL_QUIT</code></dt>
+<dd><i></i><code>SDL_QuitEvent</code></dd>
+<dt><code>SDL_SYSWMEVENT</code></dt>
+<dd><i></i><code>SDL_SysWMEvent</code></dd>
+<dt><code>SDL_VIDEORESIZE</code></dt>
+<dd><i></i><code>SDL_ResizeEvent</code></dd>
+<dt><code>SDL_VIDEOEXPOSE</code></dt>
+<dd><i></i><code>SDL_ExposeEvent</code></dd>
+<dt><code>SDL_USEREVENT</code></dt>
+<dd><i></i><code>SDL_UserEvent</code></dd></dl>
 <h2>Use</h2>
 <p>The <code>SDL_Event</code> structure has two uses</p>
 <dl COMPACT>
-<dt> &bull;</p>
-<dd>Reading events on the event queue</p>
-<dt> &bull;</p>
-<dd>Placing events on the event queue</dl>
+<dt> &bull;</dt>
+<dd>Reading events on the event queue</dd>
+<dt> &bull;</dt>
+<dd>Placing events on the event queue</dd></dl>
 <p> Reading events from the event queue is done with either <i></i><code>SDL_PollEvent</code> or <i></i><code>SDL_PeepEvents</code>. We&#8217;ll use <code>SDL_PollEvent</code> and step through an example. </p>
 <p> First off, we create an empty <code>SDL_Event</code> structure. </p>
 <pre><tt>SDL_Event test_event;</tt></pre>

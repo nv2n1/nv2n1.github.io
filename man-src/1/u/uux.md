@@ -29,35 +29,35 @@ uux 'sys1!diff sys2!~user1/foo sys3!~user2/foo &gt;!foo.diff'
 <h2>OPTIONS</h2>
 <p> The following options may be given to <i>uux.</i></p>
 <dl>
-<dt><code>-, -p, &#8211;stdin</code></p>
-<dd> Read standard input and use it as the standard input for the command to be executed.</p>
-<dt><code>-c, &#8211;nocopy</code></p>
-<dd> Do not copy local files to the spool directory. This is the default. If they are removed before being processed by the <i>uucico</i> (8) daemon, the copy will fail. The files must be readable by the <i>uucico</i> (8) daemon, as well as the by the invoker of <i>uux.</i></p>
-<dt><code>-C, &#8211;copy</code></p>
-<dd> Copy local files to the spool directory.</p>
-<dt><code>-l, &#8211;link</code></p>
-<dd> Link local files into the spool directory. If a file can not be linked because it is on a different device, it will be copied unless one of the <code>-c</code> or <code>&#8211;nocopy</code> options also appears (in other words, use of <code>&#8211;link</code> switches the default from <code>&#8211;nocopy</code> to <code>&#8211;copy).</code> If the files are changed before being processed by the <i>uucico</i> (8) daemon, the changed versions will be used. The files must be readable by the <i>uucico</i> (8) daemon, as well as by the invoker of <i>uux.</i></p>
-<dt><code>-g grade, &#8211;grade grade</code></p>
-<dd> Set the grade of the file transfer command. Jobs of a higher grade are executed first. Grades run 0 &#8230; 9 A &#8230; Z a &#8230; z from high to low.</p>
-<dt><code>-n, &#8211;notification=no</code></p>
-<dd> Do not send mail about the status of the job, even if it fails.</p>
-<dt><code>-z, &#8211;notification=error</code></p>
-<dd> Send mail about the status of the job if an error occurs. For many <i>uuxqt</i> daemons, including the Taylor UUCP <i>uuxqt,</i> this is the default action; for those, <code>&#8211;notification=error</code> will have no effect. However, some <i>uuxqt</i> daemons will send mail if the job succeeds unless the <code>&#8211;notification=error</code> option is used, and some other <i>uuxqt</i> daemons will not send mail if the job fails unless the <code>&#8211;notification=error</code> option is used.</p>
-<dt><code>-r, &#8211;nouucico</code></p>
-<dd> Do not start the <i>uucico</i> (8) daemon immediately; merely queue up the execution request for later processing.</p>
-<dt><code>-j, &#8211;jobid</code></p>
-<dd> Print jobids on standard output. A jobid will be generated for each file copy operation required to perform the operation. These file copies may be cancelled by passing the jobid to the <code>&#8211;kill</code> switch of <i>uustat</i> (1), which will make the execution impossible to complete.</p>
-<dt><code>-a address, &#8211;requestor address</code></p>
-<dd> Report job status to the specified e-mail address.</p>
-<dt><code>-x type, &#8211;debug type</code></p>
-<dd> Turn on particular debugging types. The following types are recognized: abnormal, chat, handshake, uucp-proto, proto, port, config, spooldir, execute, incoming, outgoing. Only abnormal, config, spooldir and execute are meaningful for <i>uux.</i> </p>
+<dt><code>-, -p, &#8211;stdin</code></dt>
+<dd> Read standard input and use it as the standard input for the command to be executed.</dd>
+<dt><code>-c, &#8211;nocopy</code></dt>
+<dd> Do not copy local files to the spool directory. This is the default. If they are removed before being processed by the <i>uucico</i> (8) daemon, the copy will fail. The files must be readable by the <i>uucico</i> (8) daemon, as well as the by the invoker of <i>uux.</i></dd>
+<dt><code>-C, &#8211;copy</code></dt>
+<dd> Copy local files to the spool directory.</dd>
+<dt><code>-l, &#8211;link</code></dt>
+<dd> Link local files into the spool directory. If a file can not be linked because it is on a different device, it will be copied unless one of the <code>-c</code> or <code>&#8211;nocopy</code> options also appears (in other words, use of <code>&#8211;link</code> switches the default from <code>&#8211;nocopy</code> to <code>&#8211;copy).</code> If the files are changed before being processed by the <i>uucico</i> (8) daemon, the changed versions will be used. The files must be readable by the <i>uucico</i> (8) daemon, as well as by the invoker of <i>uux.</i></dd>
+<dt><code>-g grade, &#8211;grade grade</code></dt>
+<dd> Set the grade of the file transfer command. Jobs of a higher grade are executed first. Grades run 0 &#8230; 9 A &#8230; Z a &#8230; z from high to low.</dd>
+<dt><code>-n, &#8211;notification=no</code></dt>
+<dd> Do not send mail about the status of the job, even if it fails.</dd>
+<dt><code>-z, &#8211;notification=error</code></dt>
+<dd> Send mail about the status of the job if an error occurs. For many <i>uuxqt</i> daemons, including the Taylor UUCP <i>uuxqt,</i> this is the default action; for those, <code>&#8211;notification=error</code> will have no effect. However, some <i>uuxqt</i> daemons will send mail if the job succeeds unless the <code>&#8211;notification=error</code> option is used, and some other <i>uuxqt</i> daemons will not send mail if the job fails unless the <code>&#8211;notification=error</code> option is used.</dd>
+<dt><code>-r, &#8211;nouucico</code></dt>
+<dd> Do not start the <i>uucico</i> (8) daemon immediately; merely queue up the execution request for later processing.</dd>
+<dt><code>-j, &#8211;jobid</code></dt>
+<dd> Print jobids on standard output. A jobid will be generated for each file copy operation required to perform the operation. These file copies may be cancelled by passing the jobid to the <code>&#8211;kill</code> switch of <i>uustat</i> (1), which will make the execution impossible to complete.</dd>
+<dt><code>-a address, &#8211;requestor address</code></dt>
+<dd> Report job status to the specified e-mail address.</dd>
+<dt><code>-x type, &#8211;debug type</code></dt>
+<dd> Turn on particular debugging types. The following types are recognized: abnormal, chat, handshake, uucp-proto, proto, port, config, spooldir, execute, incoming, outgoing. Only abnormal, config, spooldir and execute are meaningful for <i>uux.</i> </dd>
 <p> Multiple types may be given, separated by commas, and the <code>&#8211;debug</code> option may appear multiple times. A number may also be given, which will turn on that many types from the foregoing list; for example, <code>&#8211;debug 2</code> is equivalent to <code>&#8211;debug abnormal,chat.</code></p>
-<dt><code>-I file, &#8211;config file</code></p>
-<dd> Set configuration file to use. This option may not be available, depending upon how <i>uux</i> was compiled.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Report version information and exit.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print a help message and exit.</dl>
+<dt><code>-I file, &#8211;config file</code></dt>
+<dd> Set configuration file to use. This option may not be available, depending upon how <i>uux</i> was compiled.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Report version information and exit.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print a help message and exit.</dd></dl>
 <h2>EXAMPLES</h2>
 <pre>
 uux -z - sys1!rmail user1

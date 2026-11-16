@@ -83,26 +83,21 @@ LWG_3001 C++17 element_type was not updated for array support updated
 
 Demonstrates how lock is used to ensure validity of the pointer. 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;memory&gt;
 std::weak_ptr&lt;int&gt; gw;
 void observe()
-
 {
     std::cout &lt;&lt; &quot;use_count == &quot; &lt;&lt; gw.use_count() &lt;&lt; &quot;: &quot;;
     if (auto spt = gw.lock()) { // Has to be copied into a shared_ptr before usage
-
         std::cout &lt;&lt; *spt &lt;&lt; &quot;\n&quot;;
     } else {
         std::cout &lt;&lt; &quot;gw is expired\n&quot;;
     }
 }
 int main()
-
 {
     {
         auto sp = std::make_shared&lt;int&gt;(42);
-
         gw = sp;
         observe();
     }

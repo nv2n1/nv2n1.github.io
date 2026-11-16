@@ -15,12 +15,12 @@ description: "llvm-profdata – Profile data tool"
 <p> The <code>llvm-profdata</code> tool is a small utility for working with profile data files.</p>
 <h2>COMMANDS</h2>
 <dl>
-<dt>&bull;</p>
-<dd> <i>merge</i></p>
-<dt>&bull;</p>
-<dd> <i>show</i></p>
-<dt>&bull;</p>
-<dd> <i>overlap</i></dl>
+<dt>&bull;</dt>
+<dd> <i>merge</i></dd>
+<dt>&bull;</dt>
+<dd> <i>show</i></dd>
+<dt>&bull;</dt>
+<dd> <i>overlap</i></dd></dl>
 <h2>MERGE</h2>
 <h3>SYNOPSIS</h3>
 <p> <code>llvm-profdata merge</code> [<i>options</i>] [<i>filename…</i>]</p>
@@ -30,58 +30,58 @@ description: "llvm-profdata – Profile data tool"
 <p> Profiles passed in via <code>-weighted-input</code>, <code>-input-files</code>, or via positional arguments are processed once for each time they are seen.</p>
 <h3>OPTIONS</h3>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Print a summary of command line options.</p>
-<dt><code>&#8211;output=&lt;output&gt;, -o</code></p>
-<dd> Specify the output file name. <i>Output</i> cannot be <code>&#8211;</code> as the resulting indexed profile data can’t be written to standard output.</p>
-<dt><code>&#8211;weighted-input=&lt;weight,filename&gt;</code></p>
-<dd> Specify an input file name along with a weight. The profile counts of the supplied <code>filename</code> will be scaled (multiplied) by the supplied <code>weight</code>, where <code>weight</code> is a decimal integer &gt;= 1. Input files specified without using this option are assigned a default weight of 1. Examples are shown below.</p>
-<dt><code>&#8211;input-files=&lt;path&gt;, -f</code></p>
-<dd> Specify a file which contains a list of files to merge. The entries in this file are newline-separated. Lines starting with ‘#’ are skipped. Entries may be of the form &lt;filename&gt; or &lt;weight&gt;,&lt;filename&gt;.</p>
-<dt><code>&#8211;remapping-file=&lt;path&gt;, -r</code></p>
-<dd> Specify a file which contains a remapping from symbol names in the input profile to the symbol names that should be used in the output profile. The file should consist of lines of the form <code>&lt;input-symbol&gt; &lt;output-symbol&gt;</code>. Blank lines and lines starting with <code>#</code> are skipped. </p>
+<dt><code>&#8211;help</code></dt>
+<dd> Print a summary of command line options.</dd>
+<dt><code>&#8211;output=&lt;output&gt;, -o</code></dt>
+<dd> Specify the output file name. <i>Output</i> cannot be <code>&#8211;</code> as the resulting indexed profile data can’t be written to standard output.</dd>
+<dt><code>&#8211;weighted-input=&lt;weight,filename&gt;</code></dt>
+<dd> Specify an input file name along with a weight. The profile counts of the supplied <code>filename</code> will be scaled (multiplied) by the supplied <code>weight</code>, where <code>weight</code> is a decimal integer &gt;= 1. Input files specified without using this option are assigned a default weight of 1. Examples are shown below.</dd>
+<dt><code>&#8211;input-files=&lt;path&gt;, -f</code></dt>
+<dd> Specify a file which contains a list of files to merge. The entries in this file are newline-separated. Lines starting with ‘#’ are skipped. Entries may be of the form &lt;filename&gt; or &lt;weight&gt;,&lt;filename&gt;.</dd>
+<dt><code>&#8211;remapping-file=&lt;path&gt;, -r</code></dt>
+<dd> Specify a file which contains a remapping from symbol names in the input profile to the symbol names that should be used in the output profile. The file should consist of lines of the form <code>&lt;input-symbol&gt; &lt;output-symbol&gt;</code>. Blank lines and lines starting with <code>#</code> are skipped. </dd>
 <p> The llvm-cxxmap tool can be used to generate the symbol remapping file.</p>
-<dt><code>&#8211;instr (default)</code></p>
-<dd> Specify that the input profile is an instrumentation-based profile.</p>
-<dt><code>&#8211;sample</code></p>
-<dd> Specify that the input profile is a sample-based profile. </p>
+<dt><code>&#8211;instr (default)</code></dt>
+<dd> Specify that the input profile is an instrumentation-based profile.</dd>
+<dt><code>&#8211;sample</code></dt>
+<dd> Specify that the input profile is a sample-based profile. </dd>
 <p> The format of the generated file can be generated in one of three ways:</p>
-<dt><code>&#8211;binary (default)</code></p>
+<dt><code>&#8211;binary (default)</code></dt>
 <dd>
 <p> Emit the profile using a binary encoding. For instrumentation-based profile the output format is the indexed binary format.</p>
-<dt><code>&#8211;extbinary</code></p>
+</dd><dt><code>&#8211;extbinary</code></dt>
 <dd>
 <p> Emit the profile using an extensible binary encoding. This option can only be used with sample-based profile. The extensible binary encoding can be more compact with compression enabled and can be loaded faster than the default binary encoding.</p>
-<dt><code>&#8211;text</code></p>
+</dd><dt><code>&#8211;text</code></dt>
 <dd>
 <p> Emit the profile in text mode. This option can also be used with both sample-based and instrumentation-based profile. When this option is used the profile will be dumped in the text format that is parsable by the profile reader.</p>
-<dt><code>&#8211;gcc</code></p>
+</dd><dt><code>&#8211;gcc</code></dt>
 <dd>
 <p> Emit the profile using GCC’s gcov format (Not yet supported).</p>
-<dt><code>&#8211;sparse[=true|false]</code></p>
-<dd> Do not emit function records with 0 execution count. Can only be used in conjunction with -instr. Defaults to false, since it can inhibit compiler optimization during PGO.</p>
-<dt><code>&#8211;num-threads=&lt;N&gt;, -j</code></p>
-<dd> Use N threads to perform profile merging. When N=0, llvm-profdata auto-detects an appropriate number of threads to use. This is the default.</p>
-<dt><code>&#8211;failure-mode=[any|all]</code></p>
-<dd> Set the failure mode. There are two options: ‘any’ causes the merge command to fail if any profiles are invalid, and ‘all’ causes the merge command to fail only if all profiles are invalid. If ‘all’ is set, information from any invalid profiles is excluded from the final merged product. The default failure mode is ‘any’.</p>
-<dt><code>&#8211;prof-sym-list=&lt;path&gt;</code></p>
-<dd> Specify a file which contains a list of symbols to generate profile symbol list in the profile. This option can only be used with sample-based profile in extbinary format. The entries in this file are newline-separated.</p>
-<dt><code>&#8211;compress-all-sections=[true|false]</code></p>
-<dd> Compress all sections when writing the profile. This option can only be used with sample-based profile in extbinary format.</p>
-<dt><code>&#8211;use-md5=[true|false]</code></p>
-<dd> Use MD5 to represent string in name table when writing the profile. This option can only be used with sample-based profile in extbinary format.</p>
-<dt><code>&#8211;gen-partial-profile=[true|false]</code></p>
-<dd> Mark the profile to be a partial profile which only provides partial profile coverage for the optimized target. This option can only be used with sample-based profile in extbinary format.</p>
-<dt><code>&#8211;supplement-instr-with-sample=&lt;file&gt;</code></p>
-<dd> Supplement an instrumentation profile with sample profile. The sample profile is the input of the flag. Output will be in instrumentation format (only works with -instr).</p>
-<dt><code>&#8211;zero-counter-threshold=&lt;float&gt;</code></p>
-<dd> For the function which is cold in instr profile but hot in sample profile, if the ratio of the number of zero counters divided by the the total number of counters is above the threshold, the profile of the function will be regarded as being harmful for performance and will be dropped.</p>
-<dt><code>&#8211;instr-prof-cold-threshold=&lt;int&gt;</code></p>
-<dd> User specified cold threshold for instr profile which will override the cold threshold got from profile summary.</p>
-<dt><code>&#8211;suppl-min-size-threshold=&lt;int&gt;</code></p>
-<dd> If the size of a function is smaller than the threshold, assume it can be inlined by PGO early inliner and it will not be adjusted based on sample profile.</p>
-<dt><code>&#8211;debug-info=&lt;path&gt;</code></p>
-<dd> Specify the executable or <code>.dSYM</code> that contains debug info for the raw profile. When <code>-debug-info-correlate</code> was used for instrumentation, use this option to correlate the raw profile.</dl>
+</dd><dt><code>&#8211;sparse[=true|false]</code></dt>
+<dd> Do not emit function records with 0 execution count. Can only be used in conjunction with -instr. Defaults to false, since it can inhibit compiler optimization during PGO.</dd>
+<dt><code>&#8211;num-threads=&lt;N&gt;, -j</code></dt>
+<dd> Use N threads to perform profile merging. When N=0, llvm-profdata auto-detects an appropriate number of threads to use. This is the default.</dd>
+<dt><code>&#8211;failure-mode=[any|all]</code></dt>
+<dd> Set the failure mode. There are two options: ‘any’ causes the merge command to fail if any profiles are invalid, and ‘all’ causes the merge command to fail only if all profiles are invalid. If ‘all’ is set, information from any invalid profiles is excluded from the final merged product. The default failure mode is ‘any’.</dd>
+<dt><code>&#8211;prof-sym-list=&lt;path&gt;</code></dt>
+<dd> Specify a file which contains a list of symbols to generate profile symbol list in the profile. This option can only be used with sample-based profile in extbinary format. The entries in this file are newline-separated.</dd>
+<dt><code>&#8211;compress-all-sections=[true|false]</code></dt>
+<dd> Compress all sections when writing the profile. This option can only be used with sample-based profile in extbinary format.</dd>
+<dt><code>&#8211;use-md5=[true|false]</code></dt>
+<dd> Use MD5 to represent string in name table when writing the profile. This option can only be used with sample-based profile in extbinary format.</dd>
+<dt><code>&#8211;gen-partial-profile=[true|false]</code></dt>
+<dd> Mark the profile to be a partial profile which only provides partial profile coverage for the optimized target. This option can only be used with sample-based profile in extbinary format.</dd>
+<dt><code>&#8211;supplement-instr-with-sample=&lt;file&gt;</code></dt>
+<dd> Supplement an instrumentation profile with sample profile. The sample profile is the input of the flag. Output will be in instrumentation format (only works with -instr).</dd>
+<dt><code>&#8211;zero-counter-threshold=&lt;float&gt;</code></dt>
+<dd> For the function which is cold in instr profile but hot in sample profile, if the ratio of the number of zero counters divided by the the total number of counters is above the threshold, the profile of the function will be regarded as being harmful for performance and will be dropped.</dd>
+<dt><code>&#8211;instr-prof-cold-threshold=&lt;int&gt;</code></dt>
+<dd> User specified cold threshold for instr profile which will override the cold threshold got from profile summary.</dd>
+<dt><code>&#8211;suppl-min-size-threshold=&lt;int&gt;</code></dt>
+<dd> If the size of a function is smaller than the threshold, assume it can be inlined by PGO early inliner and it will not be adjusted based on sample profile.</dd>
+<dt><code>&#8211;debug-info=&lt;path&gt;</code></dt>
+<dd> Specify the executable or <code>.dSYM</code> that contains debug info for the raw profile. When <code>-debug-info-correlate</code> was used for instrumentation, use this option to correlate the raw profile.</dd></dl>
 <h3>EXAMPLES</h3>
 <h3>Basic Usage</h3>
 <p> Merge three profiles: </p>
@@ -105,36 +105,36 @@ llvm - profdata merge-- weighted - input = 10, foo.profdata-- weighted - input =
 <p> If <i>filename</i> is omitted or is <code>&#8211;</code>, then <code>llvm-profdata show</code> reads its input from standard input.</p>
 <h3>OPTIONS</h3>
 <dl>
-<dt><code>&#8211;all-functions</code></p>
-<dd> Print details for every function.</p>
-<dt><code>&#8211;counts</code></p>
-<dd> Print the counter values for the displayed functions.</p>
-<dt><code>&#8211;function=&lt;string&gt;</code></p>
-<dd> Print details for a function if the function’s name contains the given string.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print a summary of command line options.</p>
-<dt><code>&#8211;output=&lt;output&gt;, -o</code></p>
-<dd> Specify the output file name. If <i>output</i> is <code>&#8211;</code> or it isn’t specified, then the output is sent to standard output.</p>
-<dt><code>&#8211;instr (default)</code></p>
-<dd> Specify that the input profile is an instrumentation-based profile.</p>
-<dt><code>&#8211;text</code></p>
-<dd> Instruct the profile dumper to show profile counts in the text format of the instrumentation-based profile data representation. By default, the profile information is dumped in a more human readable form (also in text) with annotations.</p>
-<dt><code>&#8211;topn=&lt;n&gt;</code></p>
-<dd> Instruct the profile dumper to show the top <code>n</code> functions with the hottest basic blocks in the summary section. By default, the topn functions are not dumped.</p>
-<dt><code>&#8211;sample</code></p>
-<dd> Specify that the input profile is a sample-based profile.</p>
-<dt><code>&#8211;memop-sizes</code></p>
-<dd> Show the profiled sizes of the memory intrinsic calls for shown functions.</p>
-<dt><code>&#8211;value-cutoff=&lt;n&gt;</code></p>
-<dd> Show only those functions whose max count values are greater or equal to <code>n</code>. By default, the value-cutoff is set to 0.</p>
-<dt><code>&#8211;list-below-cutoff</code></p>
-<dd> Only output names of functions whose max count value are below the cutoff value.</p>
-<dt><code>&#8211;showcs</code></p>
-<dd> Only show context sensitive profile counts. The default is to filter all context sensitive profile counts.</p>
-<dt><code>&#8211;show-prof-sym-list=[true|false]</code></p>
-<dd> Show profile symbol list if it exists in the profile. This option is only meaningful for sample-based profile in extbinary format.</p>
-<dt><code>&#8211;show-sec-info-only=[true|false]</code></p>
-<dd> Show basic information about each section in the profile. This option is only meaningful for sample-based profile in extbinary format.</dl>
+<dt><code>&#8211;all-functions</code></dt>
+<dd> Print details for every function.</dd>
+<dt><code>&#8211;counts</code></dt>
+<dd> Print the counter values for the displayed functions.</dd>
+<dt><code>&#8211;function=&lt;string&gt;</code></dt>
+<dd> Print details for a function if the function’s name contains the given string.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print a summary of command line options.</dd>
+<dt><code>&#8211;output=&lt;output&gt;, -o</code></dt>
+<dd> Specify the output file name. If <i>output</i> is <code>&#8211;</code> or it isn’t specified, then the output is sent to standard output.</dd>
+<dt><code>&#8211;instr (default)</code></dt>
+<dd> Specify that the input profile is an instrumentation-based profile.</dd>
+<dt><code>&#8211;text</code></dt>
+<dd> Instruct the profile dumper to show profile counts in the text format of the instrumentation-based profile data representation. By default, the profile information is dumped in a more human readable form (also in text) with annotations.</dd>
+<dt><code>&#8211;topn=&lt;n&gt;</code></dt>
+<dd> Instruct the profile dumper to show the top <code>n</code> functions with the hottest basic blocks in the summary section. By default, the topn functions are not dumped.</dd>
+<dt><code>&#8211;sample</code></dt>
+<dd> Specify that the input profile is a sample-based profile.</dd>
+<dt><code>&#8211;memop-sizes</code></dt>
+<dd> Show the profiled sizes of the memory intrinsic calls for shown functions.</dd>
+<dt><code>&#8211;value-cutoff=&lt;n&gt;</code></dt>
+<dd> Show only those functions whose max count values are greater or equal to <code>n</code>. By default, the value-cutoff is set to 0.</dd>
+<dt><code>&#8211;list-below-cutoff</code></dt>
+<dd> Only output names of functions whose max count value are below the cutoff value.</dd>
+<dt><code>&#8211;showcs</code></dt>
+<dd> Only show context sensitive profile counts. The default is to filter all context sensitive profile counts.</dd>
+<dt><code>&#8211;show-prof-sym-list=[true|false]</code></dt>
+<dd> Show profile symbol list if it exists in the profile. This option is only meaningful for sample-based profile in extbinary format.</dd>
+<dt><code>&#8211;show-sec-info-only=[true|false]</code></dt>
+<dd> Show basic information about each section in the profile. This option is only meaningful for sample-based profile in extbinary format.</dd></dl>
 <h2>OVERLAP</h2>
 <h3>SYNOPSIS</h3>
 <p> <code>llvm-profdata overlap</code> [<i>options</i>] [<i>base profile file</i>] [<i>test profile file</i>]</p>
@@ -145,16 +145,16 @@ llvm - profdata merge-- weighted - input = 10, foo.profdata-- weighted - input =
 <p> Here is an example, if <i>base profile file</i> has counts of {400, 600}, and <i>test profile file</i> has matched counts of {60000, 40000}. The <i>overlap</i> is 80%.</p>
 <h3>OPTIONS</h3>
 <dl>
-<dt><code>&#8211;function=&lt;string&gt;</code></p>
-<dd> Print details for a function if the function’s name contains the given string.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print a summary of command line options.</p>
-<dt><code>&#8211;output=&lt;output&gt;, -o</code></p>
-<dd> Specify the output file name. If <i>output</i> is <code>&#8211;</code> or it isn’t specified, then the output is sent to standard output.</p>
-<dt><code>&#8211;value-cutoff=&lt;n&gt;</code></p>
-<dd> Show only those functions whose max count values are greater or equal to <code>n</code>. By default, the value-cutoff is set to max of unsigned long long.</p>
-<dt><code>&#8211;cs</code></p>
-<dd> Only show overlap for the context sensitive profile counts. The default is to show non-context sensitive profile counts.</dl>
+<dt><code>&#8211;function=&lt;string&gt;</code></dt>
+<dd> Print details for a function if the function’s name contains the given string.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print a summary of command line options.</dd>
+<dt><code>&#8211;output=&lt;output&gt;, -o</code></dt>
+<dd> Specify the output file name. If <i>output</i> is <code>&#8211;</code> or it isn’t specified, then the output is sent to standard output.</dd>
+<dt><code>&#8211;value-cutoff=&lt;n&gt;</code></dt>
+<dd> Show only those functions whose max count values are greater or equal to <code>n</code>. By default, the value-cutoff is set to max of unsigned long long.</dd>
+<dt><code>&#8211;cs</code></dt>
+<dd> Only show overlap for the context sensitive profile counts. The default is to show non-context sensitive profile counts.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> <code>llvm-profdata</code> returns 1 if the command is omitted or is invalid, if it cannot read input files, or if there is a mismatch between their data.</p>
 <h2>AUTHOR</h2>

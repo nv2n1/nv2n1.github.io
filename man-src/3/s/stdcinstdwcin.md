@@ -21,7 +21,6 @@ Once std::cin is constructed, std::cin.tie() returns &amp;std::cout, and likewis
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 struct Foo {
     int n;
     Foo()
@@ -30,11 +29,8 @@ struct Foo {
         std::cin &gt;&gt; n;
     }
 };
-
 Foo f; // static object
-
 int main()
-
 {
     std::cout &lt;&lt; &quot;f.n is &quot; &lt;&lt; f.n &lt;&lt; '
 ';

@@ -15,11 +15,11 @@ register_blkdev - register a new block device
 <h2>Arguments</h2>
 
 <i>major</i>
-<dl><dd><dd>the requested major device number [1..255]. If <i>major</i>=0, try to allocate any unused major number.</dl>
+<dl><dd></dd><dd>the requested major device number [1..255]. If <i>major</i>=0, try to allocate any unused major number.</dd></dl>
  
 
  <i>name</i>
-<dl><dd>the name of the new block device as a zero terminated string</dl>
+<dl><dd>the name of the new block device as a zero terminated string</dd></dl>
 
 <h2>Description</h2>
 

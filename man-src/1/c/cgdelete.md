@@ -14,22 +14,22 @@ description: "cgdelete – remove control group(s)"
 <h2>DESCRIPTION</h2>
 <p> The <code>cgdelete</code> program removes all specified control groups. </p>
 <dl>
-<dt><code>[-g] &lt;controllers&gt;:&lt;path&gt;</code></p>
-<dd> Defines the control group to delete. Multiple control groups may be specified. <code>-g</code> is optional. </p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Display this help and exit. </p>
-<dt><code>-r, &#8211;recursive</code></p>
-<dd> Recursively remove all subgroups. </p>
+<dt><code>[-g] &lt;controllers&gt;:&lt;path&gt;</code></dt>
+<dd> Defines the control group to delete. Multiple control groups may be specified. <code>-g</code> is optional. </dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Display this help and exit. </dd>
+<dt><code>-r, &#8211;recursive</code></dt>
+<dd> Recursively remove all subgroups. </dd>
 </dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>CGROUP_LOGLEVEL</code></p>
-<dd> controls verbosity of the tool. Allowed values are <code>DEBUG</code>, <code>INFO</code>, <code>WARNING</code> or <code>ERROR</code>. </p>
+<dt><code>CGROUP_LOGLEVEL</code></dt>
+<dd> controls verbosity of the tool. Allowed values are <code>DEBUG</code>, <code>INFO</code>, <code>WARNING</code> or <code>ERROR</code>. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt><code>cgdelete -g cpu,devices:/test</code></p>
-<dd> remove control group test from hierarchies containing cpu and device controllers </p>
+<dt><code>cgdelete -g cpu,devices:/test</code></dt>
+<dd> remove control group test from hierarchies containing cpu and device controllers </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> cgcreate (1), lscgroup (1), cgclear (1) </p>

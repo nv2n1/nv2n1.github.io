@@ -23,10 +23,10 @@ void afInitAESChannelData(AFfilesetup setup, int track);</pre>
 <p>afInitAESChannelDataTo and afInitAESChannelData can produce the following errors: </p>
 <p> AF_BAD_FILESETUP</p>
 <dl COMPACT>
-<dd>setup represents an invalid file setup.</dl>
+<dd>setup represents an invalid file setup.</dd></dl>
 <p> AF_BAD_TRACKID</p>
 <dl COMPACT>
-<dd>track represents an invalid track identifier.</dl>
+<dd>track represents an invalid track identifier.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-afnewfilesetup/">afNewFileSetup</a></code>(3)</p>
 <h2>Author</h2>

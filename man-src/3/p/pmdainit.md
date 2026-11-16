@@ -24,16 +24,13 @@ description: "pmdaInit, pmdaRehash, pmdaSetFlags – initialize a PMDA"
 <p>For example, a PMDA has three metrics: A, B and C, and two instance domains X and Y, with two instances in each instance domain. The instance domain and metrics description tables could be defined as: </p>
 <pre><code>static pmdaInstid _X[] = {
     {0, &quot;X1&quot;}, {1, &quot;X2&quot;}};
-
 static pmdaInstid _Y[] = {
     {0, &quot;Y1&quot;}, {1, &quot;Y2&quot;}};
-
 static pmdaIndom indomtab[] = {
 #define X_INDOM 0
     {X_INDOM, 2, _X},
 #define Y_INDOM 3
     {Y_INDOM, 2, _Y}};
-
 static pmdaMetric metrictab[] = {
     /* A */
     {
@@ -61,18 +58,18 @@ static pmdaMetric metrictab[] = {
 <p><code>pmdaInit</code> will set <i>dispatch-&gt;status</i> to a value less than zero if there is an error that would prevent the <code><a href="/docs/linux/man/3-pmda/">PMDA</a></code>(3) from successfully running. <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) will terminate the connection to the <code><a href="/docs/linux/man/3-pmda/">PMDA</a></code>(3) if this occurs. </p>
 <p> <code>pmdaInit</code> may issue any of these messages:</p>
 <dl>
-<dt><code>PMDA interface version </code><i>interface</i><code> not supported</code></p>
-<dd>The <i>interface</i> version is not supported by <code>pmdaInit</code>.</p>
-<dt><code>Using pmdaFetch() but fetch call back not set</code></p>
-<dd>The fetch callback, <code><a href="/docs/linux/man/3-pmdafetch/">pmdaFetch</a></code>(3), requires an additional callback to be provided using <code>pmdaSetFetchCallBack</code>(3).</p>
-<dt><code>Illegal instance domain </code><i>inst</i><code> for metric </code><i>pmid</i></p>
-<dd>The instance domain <i>inst</i> that was specified for metric <i>pmid</i> is not within the range of the instance domain table.</p>
-<dt><code>No help text path specified</code></p>
-<dd>The help text callback, <code><a href="/docs/linux/man/3-pmdatext/">pmdaText</a></code>(3), requires a help text file for the metrics to have been opened, however no path to the help text was specified as a command line option, or as an argument to <code><a href="/docs/linux/man/3-pmdadso/">pmdaDSO</a></code>(3) or <code><a href="/docs/linux/man/3-pmdadaemon/">pmdaDaemon</a></code>(3). This message is only a warning.</p>
-<dt><code>Direct mapping for metrics disabled @ </code><i>num</i></p>
-<dd>The unit numbers of the metrics did not correspond to the index in the metric description table. The direct mapping failed for metric number <i>num</i> in the <i>metrics</i> table. This is less efficient but is not fatal and the message is only a warning.</p>
-<dt><code>Hashed mapping for metrics disabled @ </code><i>num</i></p>
-<dd>A memory allocation failure occurred while building the hash table to index the metric description table. This is a non-fatal warning message &#8211; a fallback to linear searching will be automatically performed should this situation arise.</dl>
+<dt><code>PMDA interface version </code><i>interface</i><code> not supported</code></dt>
+<dd>The <i>interface</i> version is not supported by <code>pmdaInit</code>.</dd>
+<dt><code>Using pmdaFetch() but fetch call back not set</code></dt>
+<dd>The fetch callback, <code><a href="/docs/linux/man/3-pmdafetch/">pmdaFetch</a></code>(3), requires an additional callback to be provided using <code>pmdaSetFetchCallBack</code>(3).</dd>
+<dt><code>Illegal instance domain </code><i>inst</i><code> for metric </code><i>pmid</i></dt>
+<dd>The instance domain <i>inst</i> that was specified for metric <i>pmid</i> is not within the range of the instance domain table.</dd>
+<dt><code>No help text path specified</code></dt>
+<dd>The help text callback, <code><a href="/docs/linux/man/3-pmdatext/">pmdaText</a></code>(3), requires a help text file for the metrics to have been opened, however no path to the help text was specified as a command line option, or as an argument to <code><a href="/docs/linux/man/3-pmdadso/">pmdaDSO</a></code>(3) or <code><a href="/docs/linux/man/3-pmdadaemon/">pmdaDaemon</a></code>(3). This message is only a warning.</dd>
+<dt><code>Direct mapping for metrics disabled @ </code><i>num</i></dt>
+<dd>The unit numbers of the metrics did not correspond to the index in the metric description table. The direct mapping failed for metric number <i>num</i> in the <i>metrics</i> table. This is less efficient but is not fatal and the message is only a warning.</dd>
+<dt><code>Hashed mapping for metrics disabled @ </code><i>num</i></dt>
+<dd>A memory allocation failure occurred while building the hash table to index the metric description table. This is a non-fatal warning message &#8211; a fallback to linear searching will be automatically performed should this situation arise.</dd></dl>
 <h2>Caveat</h2>
 <p>The PMDA must be using <code>PMDA_INTERFACE_2 </code> or later, as specified in the call to <code><a href="/docs/linux/man/3-pmdadso/">pmdaDSO</a></code>(3) or <code><a href="/docs/linux/man/3-pmdadaemon/">pmdaDaemon</a></code>(3).</p>
 <h2>See Also</h2>

@@ -19,28 +19,28 @@ description: "fsck.gfs2 – Offline GFS and GFS2 file system checker"
 <p> fsck.gfs2 will log to the system log on start and exit to aid debugging and administration.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd>Same as the -p (preen) option.</p>
-<dt><code>-f</code></p>
-<dd>Force checking even if the file system seems clean.</p>
-<dt><code>-h</code></p>
-<dd>Help. </p>
+<dt><code>-a</code></dt>
+<dd>Same as the -p (preen) option.</dd>
+<dt><code>-f</code></dt>
+<dd>Force checking even if the file system seems clean.</dd>
+<dt><code>-h</code></dt>
+<dd>Help. </dd>
 <p> This prints out the proper command line usage syntax.</p>
-<dt><code>-q</code></p>
-<dd>Quiet.</p>
-<dt><code>-n</code></p>
-<dd>No to all questions. </p>
+<dt><code>-q</code></dt>
+<dd>Quiet.</dd>
+<dt><code>-n</code></dt>
+<dd>No to all questions. </dd>
 <p> By specifying this option, fsck.gfs2 will only show the changes that would be made, but not make any changes to the filesystem.</p>
-<dt><code>-p</code></p>
-<dd>Preen (same as -a: automatically repair the file system if it is dirty, and safe to do so, otherwise exit.) </p>
+<dt><code>-p</code></dt>
+<dd>Preen (same as -a: automatically repair the file system if it is dirty, and safe to do so, otherwise exit.) </dd>
 <p> Note: If the file system has locking protocol lock_nolock, the file system is considered a non-shared storage device and the fsck is deemed safe. However, fsck.gfs2 does not know whether it was called automatically from the init process, due to options in the /etc/fstab file. Therefore, if the locking protocol is lock_dlm and -a or -p was specified, fsck.gfs2 cannot determine whether the disk is mounted by other nodes in the cluster. Therefore, the fsck is deemed to be unsafe and a warning is given if any damage or dirty journals are found. In that case, the file system should be unmounted from all nodes in the cluster and fsck.gfs2 should be run manually without the -a or -p options.</p>
-<dt><code>-V</code></p>
-<dd>Version. </p>
+<dt><code>-V</code></dt>
+<dd>Version. </dd>
 <p> Print out the program version information.</p>
-<dt><code>-v</code></p>
-<dd>Verbose operation. </p>
+<dt><code>-v</code></dt>
+<dd>Verbose operation. </dd>
 <p> Print more information while running.</p>
-<dt><code>-y</code></p>
-<dd>Yes to all questions. </p>
+<dt><code>-y</code></dt>
+<dd>Yes to all questions. </dd>
 <p> By specifying this option, fsck.gfs2 will not prompt before making changes. </p>
 </dl>

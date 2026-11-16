@@ -18,69 +18,58 @@ description: "condor_suspend suspend jobs from the HTCondor queue"
 <p> <code>-help</code></p>
 <dl>
 <dt>
-<dd> Display usage information</p>
-<dt>
-<dd></dl>
+</dt><dd> Display usage information</dd>
+</dl>
 <p> <code>-version</code></p>
 <dl>
 <dt>
-<dd> Display version information</p>
-<dt>
-<dd></dl>
+</dt><dd> Display version information</dd>
+</dl>
 <p> <code>-pool </code> <i>centralmanagerhostname[:portnumber]</i></p>
 <dl>
 <dt>
-<dd> Specify a pool by giving the central manager&#8217;s host name and an optional port number</p>
-<dt>
-<dd></dl>
+</dt><dd> Specify a pool by giving the central manager&#8217;s host name and an optional port number</dd>
+</dl>
 <p> <code>-name </code> <i>scheddname</i></p>
 <dl>
 <dt>
-<dd> Send the command to a machine identified by <i>scheddname</i></p>
-<dt>
-<dd></dl>
+</dt><dd> Send the command to a machine identified by <i>scheddname</i></dd>
+</dl>
 <p> <code>-addr </code> <i>&lt;a.b.c.d:port&gt;</i></p>
 <dl>
 <dt>
-<dd> Send the command to a machine located at <i>&lt;a.b.c.d:port&gt;</i></p>
-<dt>
-<dd></dl>
+</dt><dd> Send the command to a machine located at <i>&lt;a.b.c.d:port&gt;</i></dd>
+</dl>
 <p> <code>-debug</code></p>
 <dl>
 <dt>
-<dd> Causes debugging information to be sent to stderr , based on the value of the configuration variable TOOL_DEBUG</p>
-<dt>
-<dd></dl>
+</dt><dd> Causes debugging information to be sent to stderr , based on the value of the configuration variable TOOL_DEBUG</dd>
+</dl>
 <p> <i>cluster</i></p>
 <dl>
 <dt>
-<dd> Suspend all jobs in the specified cluster</p>
-<dt>
-<dd></dl>
+</dt><dd> Suspend all jobs in the specified cluster</dd>
+</dl>
 <p> <i>cluster.process</i></p>
 <dl>
 <dt>
-<dd> Suspend the specific job in the cluster</p>
-<dt>
-<dd></dl>
+</dt><dd> Suspend the specific job in the cluster</dd>
+</dl>
 <p> <i>user</i></p>
 <dl>
 <dt>
-<dd> Suspend jobs belonging to specified user</p>
-<dt>
-<dd></dl>
+</dt><dd> Suspend jobs belonging to specified user</dd>
+</dl>
 <p> <code>-constraint </code> <i>expression</i></p>
 <dl>
 <dt>
-<dd> Suspend all jobs which match the job ClassAd expression constraint</p>
-<dt>
-<dd></dl>
+</dt><dd> Suspend all jobs which match the job ClassAd expression constraint</dd>
+</dl>
 <p> <i>-all</i></p>
 <dl>
 <dt>
-<dd> Suspend all the jobs in the queue</p>
-<dt>
-<dd></dl>
+</dt><dd> Suspend all the jobs in the queue</dd>
+</dl>
 <h2>Exit Status</h2>
 <p> <i>condor_suspend</i> will exit with a status value of 0 (zero) upon success, and it will exit with the value 1 (one) upon failure. </p>
 <h2>Examples</h2>

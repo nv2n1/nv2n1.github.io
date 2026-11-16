@@ -44,50 +44,50 @@ description: "gpt-bundle – Creates binary or source bundles from an installati
 <p> The list of packages that can be entered from the command line are of the form <i></i><font SIZE="-1"><i>NAME-FLAVOR-PACKAGE_TYPE</i></font><i></i>. The wildcard character &#8216;*&#8217; can also be used.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-srcdir=PATH</code></p>
-<dd>Specifies where the directory containing your source packages is. If this is used, a source bundle will be created. Note that this flag is required to create source bundles.</p>
-<dt><code>-installdir=PATH</code></p>
-<dd>Specifies where the installation used for creating binary bundles is. <tt>$GLOBUS_LOCATION</tt> is the default.</p>
-<dt><code>-xml=FILE</code></p>
-<dd>Specifies the input bundle description file. A new file will be generated using the contents of this file and included in the bundle.</p>
-<dt><code>-bundlename=NAME</code></p>
-<dd>The name of the bundle. This name is stored in the bundle description file and used as part of the bundle filename if <code>-output</code> is not specified.</p>
-<dt><code>-bundleversion=MAJOR.MINOR</code></p>
-<dd>This is the bundle version number. It is stored in the bundle description file and used for bundle updates. It is also used for the bundle filename if <code>-bundlelabel</code> is not specified.</p>
-<dt><code>-bundlelabel=VERSION</code></p>
-<dd>This is the bundle version label. It is stored in the bundle description file as a string and so can accomodate any versioning scheme. The label is used in user queries, and as part of the bundle filename.</p>
-<dt><code>-bundlestability=STABILITY</code></p>
-<dd>This is the bundle version stability. It is a field that is used to indicate the stability of this version of the bundle. The field can have values of <code>experimental</code>, <code>alpha</code>, <code>beta</code>, or <code>production</code>. The default vaule is experimental. The field is stored in the bundle description file and used for user queries.</p>
-<dt><code>-tmpdir=PATH</code></p>
-<dd>Specifies the where the directory is that <code>gpt-bundle</code> should use to store generated binary packages.</p>
-<dt><code>-all</code></p>
-<dd>Tells <code>gpt-bundle</code> to bundle all of the packages in the source package directory or installation.</p>
-<dt><code>-native</code></p>
-<dd>Tells <code>gpt-bundle</code> to also bundle packages that are in the native format of the operating system. Presently this only works for <font SIZE="-1">RPMS</font> on linux. <code>gpt-bundle</code> will output two bundle giving the native bundle a platform specific extension such as -rpm.</p>
-<dt><code>-nodeps</code></p>
-<dd>Tells <code>gpt-bundle</code> to only include the packages specified&#8212;do not check for or include dependencies.</p>
-<dt><code>-nosetups</code></p>
-<dd>Tells <code>gpt-bundle</code> to exclude any packages that are pulled in by a setup dependencies. Note that setup packages that are listed on the command line will still be added to the bundle..</p>
-<dt><code>-exclude=package1,package2,&#8230;</code></p>
-<dd>This option excludes the listed packages from the created bundle. It can be specified multiple times with the final listing used being an aggregate of all the listed packages. This option can be abbreviated as &#8216;-exclude=package1,package2,&#8230;&#8217;.</p>
-<dt><code>-output=FILE</code></p>
-<dd>This is an alternative way to specify the bundle name. The output file is put in the directory from which <code>gpt-bundle</code> was invoked if no path was given, in a directory relative it if a relative path was given, or in the absolute location, if given.</p>
-<dt><code>-template</code></p>
-<dd>Creates an empty Bundle <font SIZE="-1">XML</font> that can be modified and used to create a new bundle.</p>
-<dt><code>-bundledef=FILE</code></p>
-<dd>Creates an <font SIZE="-1">XML</font> file with name equal to <font SIZE="-1"><code>FILE</code></font>.gpt-bundle.xml. This file will contain a <font SIZE="-1">GPT</font> Bundle definition with values set to those passed in on the command line.</p>
-<dt><code>-rpmprefix=&lt;path_to_installation</code>&gt;</p>
-<dd>This should be set to the path to your <font SIZE="-1">GLOBUS_LOCATION</font>. <font SIZE="-1">GPT</font> will use a value of &#8220;/usr/grid&#8221; if this option is not specified.</p>
-<dt><code>-rpmlicense=&lt;label</code>&gt;</p>
-<dd>Provides an alternate copyright label for the rpms. The default is whatever <font SIZE="-1">GPT</font> was configured with.</p>
-<dt><code>-help</code></p>
-<dd>Print a brief help message and exits.</p>
-<dt><code>-buildnumber=&lt;number</code>&gt;</p>
-<dd>Build number used to version static packages.</p>
-<dt><code>-man</code></p>
-<dd>Prints the manual page and exits.</p>
-<dt><code>-version</code></p>
-<dd>Prints the version of <font SIZE="-1">GPT</font> and exits.</dl>
+<dt><code>-srcdir=PATH</code></dt>
+<dd>Specifies where the directory containing your source packages is. If this is used, a source bundle will be created. Note that this flag is required to create source bundles.</dd>
+<dt><code>-installdir=PATH</code></dt>
+<dd>Specifies where the installation used for creating binary bundles is. <tt>$GLOBUS_LOCATION</tt> is the default.</dd>
+<dt><code>-xml=FILE</code></dt>
+<dd>Specifies the input bundle description file. A new file will be generated using the contents of this file and included in the bundle.</dd>
+<dt><code>-bundlename=NAME</code></dt>
+<dd>The name of the bundle. This name is stored in the bundle description file and used as part of the bundle filename if <code>-output</code> is not specified.</dd>
+<dt><code>-bundleversion=MAJOR.MINOR</code></dt>
+<dd>This is the bundle version number. It is stored in the bundle description file and used for bundle updates. It is also used for the bundle filename if <code>-bundlelabel</code> is not specified.</dd>
+<dt><code>-bundlelabel=VERSION</code></dt>
+<dd>This is the bundle version label. It is stored in the bundle description file as a string and so can accomodate any versioning scheme. The label is used in user queries, and as part of the bundle filename.</dd>
+<dt><code>-bundlestability=STABILITY</code></dt>
+<dd>This is the bundle version stability. It is a field that is used to indicate the stability of this version of the bundle. The field can have values of <code>experimental</code>, <code>alpha</code>, <code>beta</code>, or <code>production</code>. The default vaule is experimental. The field is stored in the bundle description file and used for user queries.</dd>
+<dt><code>-tmpdir=PATH</code></dt>
+<dd>Specifies the where the directory is that <code>gpt-bundle</code> should use to store generated binary packages.</dd>
+<dt><code>-all</code></dt>
+<dd>Tells <code>gpt-bundle</code> to bundle all of the packages in the source package directory or installation.</dd>
+<dt><code>-native</code></dt>
+<dd>Tells <code>gpt-bundle</code> to also bundle packages that are in the native format of the operating system. Presently this only works for <font SIZE="-1">RPMS</font> on linux. <code>gpt-bundle</code> will output two bundle giving the native bundle a platform specific extension such as -rpm.</dd>
+<dt><code>-nodeps</code></dt>
+<dd>Tells <code>gpt-bundle</code> to only include the packages specified&#8212;do not check for or include dependencies.</dd>
+<dt><code>-nosetups</code></dt>
+<dd>Tells <code>gpt-bundle</code> to exclude any packages that are pulled in by a setup dependencies. Note that setup packages that are listed on the command line will still be added to the bundle..</dd>
+<dt><code>-exclude=package1,package2,&#8230;</code></dt>
+<dd>This option excludes the listed packages from the created bundle. It can be specified multiple times with the final listing used being an aggregate of all the listed packages. This option can be abbreviated as &#8216;-exclude=package1,package2,&#8230;&#8217;.</dd>
+<dt><code>-output=FILE</code></dt>
+<dd>This is an alternative way to specify the bundle name. The output file is put in the directory from which <code>gpt-bundle</code> was invoked if no path was given, in a directory relative it if a relative path was given, or in the absolute location, if given.</dd>
+<dt><code>-template</code></dt>
+<dd>Creates an empty Bundle <font SIZE="-1">XML</font> that can be modified and used to create a new bundle.</dd>
+<dt><code>-bundledef=FILE</code></dt>
+<dd>Creates an <font SIZE="-1">XML</font> file with name equal to <font SIZE="-1"><code>FILE</code></font>.gpt-bundle.xml. This file will contain a <font SIZE="-1">GPT</font> Bundle definition with values set to those passed in on the command line.</dd>
+<dt><code>-rpmprefix=&lt;path_to_installation</code>&gt;</dt>
+<dd>This should be set to the path to your <font SIZE="-1">GLOBUS_LOCATION</font>. <font SIZE="-1">GPT</font> will use a value of &#8220;/usr/grid&#8221; if this option is not specified.</dd>
+<dt><code>-rpmlicense=&lt;label</code>&gt;</dt>
+<dd>Provides an alternate copyright label for the rpms. The default is whatever <font SIZE="-1">GPT</font> was configured with.</dd>
+<dt><code>-help</code></dt>
+<dd>Print a brief help message and exits.</dd>
+<dt><code>-buildnumber=&lt;number</code>&gt;</dt>
+<dd>Build number used to version static packages.</dd>
+<dt><code>-man</code></dt>
+<dd>Prints the manual page and exits.</dd>
+<dt><code>-version</code></dt>
+<dd>Prints the version of <font SIZE="-1">GPT</font> and exits.</dd></dl>
 <h2>Bundle Definition File Overrides</h2>
 <p>The <i>-bundle*</i> switches can be used to override content in the bundle definition file inputted by the <i>-xml</i> switch. The relationship between the switches and the bundle definition file contents is shown in the following table: </p>
 <pre> I&lt;Switch&gt; I&lt;Element&gt; I&lt;Attribute&gt;

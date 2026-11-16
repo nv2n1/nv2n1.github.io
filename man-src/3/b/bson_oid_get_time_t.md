@@ -16,8 +16,8 @@ bson_oid_get_time_t(const bson_oid_t *oid);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>oid</code></p>
-<dd> A <code>bson_oid_t</code> \&amp;.</dl>
+<dt><code>oid</code></dt>
+<dd> A <code>bson_oid_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Fetches the generation time in seconds since the UNIX Epoch of <code>oid</code> \&amp;. </p>
 <h2>RETURNS</h2>

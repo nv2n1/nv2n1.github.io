@@ -18,34 +18,34 @@ description: "KGB_protocol – specification of the client-server communication 
 <h3>commit_v4 <i>arguments</i></h3>
 <p>This method takes information about a single commit and relays it to <font SIZE="-1">IRC. </font><i>arguments</i> is a map with the members described below. Any additional members are ignored.</p>
 <dl>
-<dt><code>commit_id</code> <i>string</i></p>
-<dd>A string identifying the commit in the version control system. Git (short) hash, Subversion revision number, this kind of thing.</p>
-<dt><code>rev_prefix</code> <i>string</i></p>
-<dd>A string to prepend to the commit <font SIZE="-1">ID</font> when displaying on <font SIZE="-1">IRC. </font><tt>&quot;r&quot;</tt> is particularly useful for Subversion repositories.</p>
-<dt><code>author</code> <i>string</i></p>
-<dd>A string representing the commit author.</p>
-<dt><code>branch</code> <i>string</i></p>
-<dd>A string representing the commit branch.</p>
-<dt><code>module</code> <i>string</i></p>
-<dd>A string representing the commit module or sub-project.</p>
-<dt><code>commit_log</code> <i>string</i></p>
-<dd>The commit message.</p>
-<dt><code>changes</code> <i>list of strings</i></p>
-<dd>List of changes files/directories in the commit. Each string is a path, optionaly prepended with <tt>&quot;(A)&quot;</tt> for added paths, <tt>&quot;(M)&quot;</tt> for modified paths and <tt>&quot;(D)&quot;</tt> for deleted paths. If no prefix is given modification is assumed. An additional plus sign flags property changes (Specific to Subversion term), e.g. <tt>&quot;(M+)&quot;</tt>.</p>
-<dt><code>extra</code> <i>map</i></p>
-<dd>A map with additional parameters. Currently supported members are:</p>
+<dt><code>commit_id</code> <i>string</i></dt>
+<dd>A string identifying the commit in the version control system. Git (short) hash, Subversion revision number, this kind of thing.</dd>
+<dt><code>rev_prefix</code> <i>string</i></dt>
+<dd>A string to prepend to the commit <font SIZE="-1">ID</font> when displaying on <font SIZE="-1">IRC. </font><tt>&quot;r&quot;</tt> is particularly useful for Subversion repositories.</dd>
+<dt><code>author</code> <i>string</i></dt>
+<dd>A string representing the commit author.</dd>
+<dt><code>branch</code> <i>string</i></dt>
+<dd>A string representing the commit branch.</dd>
+<dt><code>module</code> <i>string</i></dt>
+<dd>A string representing the commit module or sub-project.</dd>
+<dt><code>commit_log</code> <i>string</i></dt>
+<dd>The commit message.</dd>
+<dt><code>changes</code> <i>list of strings</i></dt>
+<dd>List of changes files/directories in the commit. Each string is a path, optionaly prepended with <tt>&quot;(A)&quot;</tt> for added paths, <tt>&quot;(M)&quot;</tt> for modified paths and <tt>&quot;(D)&quot;</tt> for deleted paths. If no prefix is given modification is assumed. An additional plus sign flags property changes (Specific to Subversion term), e.g. <tt>&quot;(M+)&quot;</tt>.</dd>
+<dt><code>extra</code> <i>map</i></dt>
+<dd>A map with additional parameters. Currently supported members are:</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>web_link</code></p>
-<dd>A <font SIZE="-1">URL</font> with commit details (e.g. gitweb or viewvc).</p>
-<dt><code>use_irc_notices</code></p>
-<dd>A flag whether to use <font SIZE="-1">IRC</font> notices instead of regular messages.</p>
-<dt><code>use_color</code></p>
-<dd>A flag whether to use colors when sending commit notifications. Defaults to 1.</dl>
+</dd><dl>
+<dt><code>web_link</code></dt>
+<dd>A <font SIZE="-1">URL</font> with commit details (e.g. gitweb or viewvc).</dd>
+<dt><code>use_irc_notices</code></dt>
+<dd>A flag whether to use <font SIZE="-1">IRC</font> notices instead of regular messages.</dd>
+<dt><code>use_color</code></dt>
+<dd>A flag whether to use colors when sending commit notifications. Defaults to 1.</dd></dl>
 </dl>
 <dl>
-<dd></dl>
+<dd></dd></dl>
 </dl>
 <h3>relay_message <i>message</i></h3>
 <p>This method takes only one string argument which is the message to relay to <font SIZE="-1">IRC.</font> There are no restrictions or requirements to the message content, which is relayed verbatim to project&#8217;s <font SIZE="-1">IRC</font> channels.</p>
@@ -57,8 +57,8 @@ description: "KGB_protocol – specification of the client-server communication 
 <p> After successful authentication and decoding of the <font SIZE="-1">JSON</font> request, all the errors are reported as mandated by the JSON-RPC specification.</p>
 <h2>Author</h2>
 <dl>
-<dt>Damyan Ivanov dmn [at] debian.org</p>
-<dd></dl>
+<dt>Damyan Ivanov dmn [at] debian.org</dt>
+<dd></dd></dl>
 <h2>COPYRIGHT &amp; LICENSE</h2>
 <p>Copyright (C) 2012 Damyan Ivanov </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>

@@ -17,20 +17,20 @@ description: "lc – Mono License Compiler"
 <h2>RUNTIME OPTIONS</h2>
 <p> The following options are available:</p>
 <dl>
-<dt><code>&#8211;complist=filename</code>, <code>-c filename</code></p>
-<dd> This option is used to specify the input file, the licenses.licx file to create a license reesource for. This option is required. The license compiler will read each line in this file and try to load the types specified on that line.</p>
-<dt><code>&#8211;target=assemblyname</code>, <code>-t targetassembly</code></p>
-<dd> full assembly name with file extension for the target assembly. The license compiler uses this as a key when compiling the licenses. It has to match the assembly the resource will be embedded in. This option is required.</p>
-<dt><code>&#8211;load=reference</code>, <code>-i reference</code></p>
-<dd> Assembly reference to load before trying to compile a license. This option is needed for assemblies where the references are not in the gac. Compilers should pass all references to the license compiler.</p>
-<dt><code>&#8211;verbose,</code>, <code>-v</code></p>
-<dd> Gives more verbose output about the license compiling process.</p>
-<dt><code>&#8211;help</code>, <code>-h</code></p>
-<dd> Displays usage instructions.</p>
-<dt><code>&#8211;outdir=path</code>, <code>-o path</code></p>
-<dd> Target path file the licenses resource. By default the license compiler emits the resource in the current directory. The filename will always match the target assembly passed to &#8211;target with .licenses added.</p>
-<dt><code>&#8211;nologo</code></p>
-<dd> Do not emit the &quot;Mono License Compiler&quot; logo on stdout while compilng. </p>
+<dt><code>&#8211;complist=filename</code>, <code>-c filename</code></dt>
+<dd> This option is used to specify the input file, the licenses.licx file to create a license reesource for. This option is required. The license compiler will read each line in this file and try to load the types specified on that line.</dd>
+<dt><code>&#8211;target=assemblyname</code>, <code>-t targetassembly</code></dt>
+<dd> full assembly name with file extension for the target assembly. The license compiler uses this as a key when compiling the licenses. It has to match the assembly the resource will be embedded in. This option is required.</dd>
+<dt><code>&#8211;load=reference</code>, <code>-i reference</code></dt>
+<dd> Assembly reference to load before trying to compile a license. This option is needed for assemblies where the references are not in the gac. Compilers should pass all references to the license compiler.</dd>
+<dt><code>&#8211;verbose,</code>, <code>-v</code></dt>
+<dd> Gives more verbose output about the license compiling process.</dd>
+<dt><code>&#8211;help</code>, <code>-h</code></dt>
+<dd> Displays usage instructions.</dd>
+<dt><code>&#8211;outdir=path</code>, <code>-o path</code></dt>
+<dd> Target path file the licenses resource. By default the license compiler emits the resource in the current directory. The filename will always match the target assembly passed to &#8211;target with .licenses added.</dd>
+<dt><code>&#8211;nologo</code></dt>
+<dd> Do not emit the &quot;Mono License Compiler&quot; logo on stdout while compilng. </dd>
 </dl>
 <h2>LICENSE FILES</h2>
 <p> The format for the license files (licenses.licx) is the following: </p>

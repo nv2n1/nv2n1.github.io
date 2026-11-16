@@ -14,11 +14,11 @@ description: "superhyway_register_driver – Register a new SuperHyway driver"
 <p><i>drv</i></p>
 <dl>
 <dd>
-<dd>SuperHyway driver to register.</dl>
+</dd><dd>SuperHyway driver to register.</dd></dl>
 <h2>Description</h2>
 <p>This registers the passed in <i>drv</i>. Any devices matching the id table will automatically be populated and handed off to the driver&#8217;s specified probe routine.</p>
 <h2>Author</h2>
 <p><code>Paul Mundt</code> &lt;lethal [at] linux-sh.org&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

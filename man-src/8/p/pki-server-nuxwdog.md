@@ -15,13 +15,13 @@ description: "pki-server-nuxwdog – Command-Line Interface for enabling CS inst
 <h2>Description</h2>
 <p>When a Certificate System (CS) instance starts, it reads a plain text configuration file (<code> /etc/pki/&lt;instance_name&gt;/password.conf</code>) to obtain passwords needed to initialize the server. This could include passwords needed to access server keys in hardware or software cryptographic modules, or passwords to establish database connections. While this file is protected by file and SELinux permissions, it is even more secure to remove this file entirely, and have the server prompt for these passwords on startup. This means of course that it will not be possible to start the CS instance unattended, including on server reboots. <code>nuxwdog</code> is a daemon that will launch the CS instance and prompt the administrator for the relevant passwords. These passwords will be cached securely in the kernel keyring. If the CS instance crashes unexpectedly, <code>nuxwdog</code> will attempt to restart the instance using the cached passwords. CS instances need to be reconfigured to use <code>nuxwdog</code> to start. Not only are changes required in instance configuration files, but instances need to use a different systemd unit file to start. See details in the <code>Operations</code> section. <code>pki-server nuxwdog</code> commands provide a mechanism to reconfigure instances to either start or not start with <code>nuxwdog</code>. <code>pki-server [CLI options] nuxwdog</code></p>
 <dl>
-<dd>This command is to list available <code>nuxwdog</code> commands.</dl>
+<dd>This command is to list available <code>nuxwdog</code> commands.</dd></dl>
 <p> <code>pki-server [CLI options] nuxwdog-enable</code></p>
 <dl>
-<dd>This command is to reconfigure ALL local CS instances to start using <code>nuxwdog</code>. To reconfigure a particular CS instance only, use <code>pki-server instance-nuxwdog-enable</code>.</dl>
+<dd>This command is to reconfigure ALL local CS instances to start using <code>nuxwdog</code>. To reconfigure a particular CS instance only, use <code>pki-server instance-nuxwdog-enable</code>.</dd></dl>
 <p> <code>pki-server [CLI options] nuxwdog-disable</code></p>
 <dl>
-<dd>This command is to reconfigure ALL local CS instances to start without using <code>nuxwdog</code>. To reconfigure a particular CS instance only, use <code>pki-server instance-nuxwdog-disable</code>. Once this operation is complete, instances will need to read a <code>password.conf</code> file in order to start up.</dl>
+<dd>This command is to reconfigure ALL local CS instances to start without using <code>nuxwdog</code>. To reconfigure a particular CS instance only, use <code>pki-server instance-nuxwdog-disable</code>. Once this operation is complete, instances will need to read a <code>password.conf</code> file in order to start up.</dd></dl>
 <h2>Options</h2>
 <p>The CLI options are described in <code><a href="/docs/linux/man/8-pki-server/">pki-server</a></code>(8).</p>
 <h2>Operations</h2>

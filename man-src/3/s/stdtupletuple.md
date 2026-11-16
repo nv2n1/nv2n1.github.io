@@ -10,115 +10,75 @@ description: "std::tuple<Types…>::tuple – std::tuple<Types…>::tuple"
 <p>std::tuple&lt;Types&#8230;&gt;::tuple &#8211; std::tuple&lt;Types&#8230;&gt;::tuple</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;tuple&gt;
-
     constexpr tuple();
 (1)(since C++ 11)(conditionally explicit)(since C++ 11)
-
     tuple(const Types &amp;...args);
 (2)(constexpr since C++ 14)(conditionally explicit)
-
     template &lt;class... UTypes&gt;
     (since C++ 11)
-
         tuple(UTypes &amp;&amp;...args);
 (3)(constexpr since C++ 14)(conditionally explicit)
-
     template &lt;class... UTypes&gt;
     (since C++ 11)
-
         tuple(const tuple&lt;UTypes...&gt; &amp;other);
 (4)(constexpr since C++ 14)(conditionally explicit)
-
     template &lt;class... UTypes&gt;
     (since C++ 11)
-
         tuple(tuple&lt;UTypes...&gt; &amp;&amp;other);
 (5)(constexpr since C++ 14)(conditionally explicit)
-
     template &lt;class U1, class U2&gt;
     (since C++ 11)
-
         tuple(const pair&lt;U1, U2&gt; &amp;p);
 (6)(constexpr since C++ 14)(conditionally explicit)
-
     template &lt;class U1, class U2&gt;
     (since C++ 11)
-
         tuple(pair&lt;U1, U2&gt; &amp;&amp;p);
 (7)(constexpr since C++ 14)(conditionally explicit)
-
     tuple(const tuple &amp;other) = default;
 (8)(since C++ 11)
-
     tuple(tuple &amp;&amp;other) = default;
 (9)(since C++ 11)
-
     template &lt;class Alloc&gt;
     (10)(since C++ 11)
-
         tuple(std::allocator_arg_t, const Alloc &amp;a);
 (constexpr since C++ 20)
-
     template &lt;class Alloc&gt;
     (since C++ 11)
-
         tuple(std::allocator_arg_t, const Alloc &amp;a, (11)(constexpr since C++ 20)
-
                                                         const Types &amp;...args);
 (conditionally explicit)
-
     template &lt;class Alloc, class... UTypes&gt;
     (since C++ 11)
-
         tuple(std::allocator_arg_t, const Alloc &amp;a, (12)(constexpr since C++ 20)
-
                                                         UTypes &amp;&amp;...args);
 (conditionally explicit)
-
     template &lt;class Alloc, class... UTypes&gt;
     (since C++ 11)
-
         tuple(std::allocator_arg_t, const Alloc &amp;a, (13)(constexpr since C++ 20)
-
                                                         const tuple&lt;UTypes...&gt; &amp;other);
 (conditionally explicit)
-
     template &lt;class Alloc, class... UTypes&gt;
     (since C++ 11)
-
         tuple(std::allocator_arg_t, const Alloc &amp;a, (14)(constexpr since C++ 20)
-
                                                         tuple&lt;UTypes...&gt; &amp;&amp;other);
 (conditionally explicit)
-
     template &lt;class Alloc, class U1, class U2&gt;
     (since C++ 11)
-
         tuple(std::allocator_arg_t, const Alloc &amp;a, (15)(constexpr since C++ 20)
-
                                                         const pair&lt;U1, U2&gt; &amp;p);
 (conditionally explicit)
-
     template &lt;class Alloc, class U1, class U2&gt;
     (since C++ 11)
-
         tuple(std::allocator_arg_t, const Alloc &amp;a, (16)(constexpr since C++ 20)
-
                                                         pair&lt;U1, U2&gt; &amp;&amp;p);
 (conditionally explicit)
-
     template &lt;class Alloc&gt;
     (since C++ 11)
-
         tuple(std::allocator_arg_t, const Alloc &amp;a, (17)(constexpr since C++ 20)
-
                                                         const tuple &amp;other);
-
 template &lt;class Alloc&gt;
 (since C++ 11)
-
     tuple(std::allocator_arg_t, const Alloc &amp;a, (18)(constexpr since C++ 20)
-
                                                     tuple &amp;&amp;other);</code></pre>
 <p>Constructs a new tuple.<br />
 1) Default constructor. Value-initializes all elements.<br />
@@ -206,7 +166,6 @@ template &lt;class Tuple&gt;</p>
 &nbsp;<wbr>&nbsp;}<br />
 &nbsp;<wbr>&nbsp;// end helper function </p>
 <pre><code>int main()
-
 {
     std::tuple&lt;int, std::string, double&gt; t1;
     std::cout &lt;&lt; &quot;Value-initialized: &quot;;

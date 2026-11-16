@@ -20,14 +20,14 @@ int setitimer(int which, const struct itimerval *new_value,
 <p> These system calls provide access to interval timers, that is, timers that initially expire at some point in the future, and (optionally) at regular intervals after that. When a timer expires, a signal is generated for the calling process, and the timer is reset to the specified interval (if the interval is nonzero). </p>
 <p> Three types of timers&#8212;specified via the <i>which</i> argument&#8212;are provided, each of which counts against a different clock and generates a different signal on timer expiration:</p>
 <dl>
-<dt><code>ITIMER_REAL</code></p>
-<dd> This timer counts down in real (i.e., wall clock) time. At each expiration, a <code>SIGALRM</code> signal is generated.</p>
-<dt><code>ITIMER_VIRTUAL</code></p>
-<dd> This timer counts down against the user-mode CPU time consumed by the process. (The measurement includes CPU time consumed by all threads in the process.) At each expiration, a <code>SIGVTALRM</code> signal is generated.</p>
-<dt><code>ITIMER_PROF</code></p>
-<dd> This timer counts down against the total (i.e., both user and system) CPU time consumed by the process. (The measurement includes CPU time consumed by all threads in the process.) At each expiration, a <code>SIGPROF</code> signal is generated.</p>
+<dt><code>ITIMER_REAL</code></dt>
+<dd> This timer counts down in real (i.e., wall clock) time. At each expiration, a <code>SIGALRM</code> signal is generated.</dd>
+<dt><code>ITIMER_VIRTUAL</code></dt>
+<dd> This timer counts down against the user-mode CPU time consumed by the process. (The measurement includes CPU time consumed by all threads in the process.) At each expiration, a <code>SIGVTALRM</code> signal is generated.</dd>
+<dt><code>ITIMER_PROF</code></dt>
+<dd> This timer counts down against the total (i.e., both user and system) CPU time consumed by the process. (The measurement includes CPU time consumed by all threads in the process.) At each expiration, a <code>SIGPROF</code> signal is generated.</dd>
 <dt>
-<dd> In conjunction with <code>ITIMER_VIRTUAL</code>, this timer can be used to profile user and system CPU time consumed by the process.</dl>
+</dt><dd> In conjunction with <code>ITIMER_VIRTUAL</code>, this timer can be used to profile user and system CPU time consumed by the process.</dd></dl>
 <p> A process has only one of each of the three types of timers. </p>
 <p> Timer values are defined by the following structures: </p>
 <p> struct itimerval {<br />
@@ -48,10 +48,10 @@ int setitimer(int which, const struct itimerval *new_value,
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> <i>new_value</i>, <i>old_value</i>, or <i>curr_value</i> is not valid a pointer.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>which</i> is not one of <code>ITIMER_REAL</code>, <code>ITIMER_VIRTUAL</code>, or <code>ITIMER_PROF</code>; or (since Linux 2.6.22) one of the <i>tv_usec</i> fields in the structure pointed to by <i>new_value</i> contains a value outside the range 0 to 999999.</dl>
+<dt><code>EFAULT</code></dt>
+<dd> <i>new_value</i>, <i>old_value</i>, or <i>curr_value</i> is not valid a pointer.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>which</i> is not one of <code>ITIMER_REAL</code>, <code>ITIMER_VIRTUAL</code>, or <code>ITIMER_PROF</code>; or (since Linux 2.6.22) one of the <i>tv_usec</i> fields in the structure pointed to by <i>new_value</i> contains a value outside the range 0 to 999999.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, SVr4, 4.4BSD (this call first appeared in 4.2BSD). POSIX.1-2008 marks <code>getitimer</code>() and <code>setitimer</code>() obsolete, recommending the use of the POSIX timers API (<code><a href="/docs/linux/man/2-timer_gettime/">timer_gettime</a></code>(2), <code><a href="/docs/linux/man/2-timer_settime/">timer_settime</a></code>(2), etc.) instead.</p>
 <h2>NOTES</h2>

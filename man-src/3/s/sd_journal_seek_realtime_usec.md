@@ -13,14 +13,14 @@ description: "sd_journal_seek_head, sd_journal_seek_tail, sd_journal_seek_monoto
 #include &lt;systemd/sd-journal.h&gt;
 </pre>
 <dl COMPACT>
-<dt> <code>int sd_journal_seek_head(sd_journal&nbsp;<wbr>*</code><i>j</i><code>);</code></p>
-<dt> <code>int sd_journal_seek_tail(sd_journal&nbsp;<wbr>*</code><i>j</i><code>);</code></p>
-<dt> <code>int sd_journal_seek_monotonic_usec(sd_journal&nbsp;<wbr>*</code><i>j</i><code>, sd_id128_t&nbsp;<wbr></code><i>boot_id</i><code>, uint64_t&nbsp;<wbr></code><i>usec</i><code>);</code></p>
-<dt> <code>int sd_journal_seek_realtime_usec(sd_journal&nbsp;<wbr>*</code><i>j</i><code>, uint64_t&nbsp;<wbr></code><i>usec</i><code>);</code></p>
-<dt> <code>int sd_journal_seek_cursor(sd_journal&nbsp;<wbr>*</code><i>j</i><code>, const char&nbsp;<wbr>*</code><i>cursor</i><code>);</code></dl>
+<dt> <code>int sd_journal_seek_head(sd_journal&nbsp;<wbr>*</code><i>j</i><code>);</code></dt>
+<dt> <code>int sd_journal_seek_tail(sd_journal&nbsp;<wbr>*</code><i>j</i><code>);</code></dt>
+<dt> <code>int sd_journal_seek_monotonic_usec(sd_journal&nbsp;<wbr>*</code><i>j</i><code>, sd_id128_t&nbsp;<wbr></code><i>boot_id</i><code>, uint64_t&nbsp;<wbr></code><i>usec</i><code>);</code></dt>
+<dt> <code>int sd_journal_seek_realtime_usec(sd_journal&nbsp;<wbr>*</code><i>j</i><code>, uint64_t&nbsp;<wbr></code><i>usec</i><code>);</code></dt>
+<dt> <code>int sd_journal_seek_cursor(sd_journal&nbsp;<wbr>*</code><i>j</i><code>, const char&nbsp;<wbr>*</code><i>cursor</i><code>);</code></dt></dl>
 <h2>Description</h2>
 <p> <code>sd_journal_seek_head()</code></p>
-<dd>seeks to the beginning of the journal, i.e. the oldest available entry. </p>
+<dd>seeks to the beginning of the journal, i.e. the oldest available entry. </dd>
 <p> Similarly, <code>sd_journal_seek_tail()</code> may be used to seek to the end of the journal, i.e. the most recent available entry. </p>
 <p> <code>sd_journal_seek_monotonic_usec()</code> seeks to the entry with the specified monotonic timestamp, i.e. <code>CLOCK_MONOTONIC</code>. Since monotonic time restarts on every reboot a boot ID needs to be specified as well. </p>
 <p> <code>sd_journal_seek_realtime_usec()</code> seeks to the entry with the specified realtime (wallclock) timestamp, i.e. <code>CLOCK_REALTIME</code>. Note that the realtime clock is not necessarily monotonic. If a realtime timestamp is ambiguous, it is not defined which position is sought to. </p>

@@ -31,12 +31,12 @@ Record(
 <code>__init__(self, pktt, data)</code>
 Constructor
 Initialize object's private data.
-<dl><dt><dd><dl><dt><code>pktt:</code>
-<dd>Packet trace object (packet.pktt.Pktt) so this layer has
+<dl><dl><dt><code>pktt:</code>
+</dt><dd>Packet trace object (packet.pktt.Pktt) so this layer has
 access to the parent layers.
-<dt><code>data:</code>
-<dd>Raw packet data for this layer.
-</dl></dl>
+</dd><dt><code>data:</code>
+</dt><dd>Raw packet data for this layer.
+</dd></dl></dl>
 <code>__str__(self)</code>
 String representation of object
 The representation depends on the verbose level set by debug_repr().
@@ -46,8 +46,8 @@ the frame number and the timestamp:
  '57 2014-03-16 13:42:56.530957 '
 If set to 2 the representation of the object also includes the number
 of bytes on the wire, number of bytes captured and a little bit more
-<dl><dt><dd><dl><dt><code>verbose:</code>
-<dd></dl></dl></pre>
+<dl><dl><dt><code>verbose:</code>
+</dt><dd></dd></dl></dl></pre>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-baseobj/">baseobj</a>(3)</code> </p>
 <h2>Bugs</h2>

@@ -19,23 +19,23 @@ description: "optiups – Driver for Opti-UPS (Viewsonic) UPS and Zinto D (ONLIN
 <pre>UPS 6 -&gt; PC 3
 UPS 9 -&gt; PC 2
 UPS 4 -&gt; PC 5</pre>
-</dl>
+</dd></dl>
 <p> The cable for Online-USV uses pin UPS 7 (not UPS 4) → PC 5.</p>
 <h2>Extra Arguments</h2>
 <p>This driver supports the following optional settings in the <code><a href="/docs/linux/man/5-ups-conf/">ups.conf</a></code>(5) file: </p>
 <p> <code>status_only</code></p>
 <dl>
-<dd>Only poll for critical status information. Without this, <code>optiups</code> (and all NUT drivers) poll all sorts of information from the UPS fairly often. It is probably not often enough to hurt anything, so this option probably is not very useful, unless you have a flaky serial connection or a highly loaded machine.</dl>
+<dd>Only poll for critical status information. Without this, <code>optiups</code> (and all NUT drivers) poll all sorts of information from the UPS fairly often. It is probably not often enough to hurt anything, so this option probably is not very useful, unless you have a flaky serial connection or a highly loaded machine.</dd></dl>
 <p> <code>nowarn_noimp</code></p>
 <dl>
-<dd>Does not print warnings when the UPS reports that a variable is not implemented or not pollable. Without the option you will get a message sent to your system logs each time NUT polls the UPS. If you specify <code>nowarn_noimp</code>, this message will only be logged once.</dl>
+<dd>Does not print warnings when the UPS reports that a variable is not implemented or not pollable. Without the option you will get a message sent to your system logs each time NUT polls the UPS. If you specify <code>nowarn_noimp</code>, this message will only be logged once.</dd></dl>
 <p> <code>fake_lowbatt</code></p>
 <dl>
-<dd>This forces the low battery flag true. Without it, if you want to test your UPS, you will have to unplug it and wait until the battery drops to a low/critical voltage level before NUT will respond and power down your system. With the flag, NUT should power down the system soon after you pull the plug. When you are done testing, you should remove this flag. </p>
+<dd>This forces the low battery flag true. Without it, if you want to test your UPS, you will have to unplug it and wait until the battery drops to a low/critical voltage level before NUT will respond and power down your system. With the flag, NUT should power down the system soon after you pull the plug. When you are done testing, you should remove this flag. </dd>
 <p> For basic shutdown configuration testing, the command <i>upsmon -c fsd</i> is preferred.</dl>
 <p> <code>powerup</code></p>
 <dl>
-<dd>Zinto D from ONLINE-USV cannot be identified when switched to standby. Set this flag to allow the driver to power-up your Zinto UPS. This will also power-up your equipment connected to the UPS!</dl>
+<dd>Zinto D from ONLINE-USV cannot be identified when switched to standby. Set this flag to allow the driver to power-up your Zinto UPS. This will also power-up your equipment connected to the UPS!</dd></dl>
 <h2>Bugs</h2>
 <p>On the 420E, ups.serial and ups.temperature are unsupported features. This is not a bug in NUT or the NUT driver, just the way things are with this UPS.</p>
 <h2>Author</h2>

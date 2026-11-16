@@ -13,10 +13,10 @@ description: "gopen_gks (Open GKS) – opens the GKS package"
 <p> void gopen_gks(const char *err_file, size_t mem_unit);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>err_file</p>
-<dd>(Input) &#8211; The place to which error messages are to be written. Typically this should be &quot;stdout&quot;.</p>
-<dt>mem_unit</p>
-<dd>(Input) &#8211; The dimension of an internal buffer. Currently in NCAR GKS-0A, mem_unit is ignored.</dl>
+<dt>err_file</dt>
+<dd>(Input) &#8211; The place to which error messages are to be written. Typically this should be &quot;stdout&quot;.</dd>
+<dt>mem_unit</dt>
+<dd>(Input) &#8211; The dimension of an internal buffer. Currently in NCAR GKS-0A, mem_unit is ignored.</dd></dl>
 <h2>Usage</h2>
 <p>To get output to any workstation, gopen_gks, gopen_ws and gactivate_ws must be called in that order. For jobs producing only CGM output, the three calls to gopen_gks, gopen_ws, and gactivate_ws can be replaced with a call to the SPPS function c_opngks().</p>
 <h2>Access</h2>

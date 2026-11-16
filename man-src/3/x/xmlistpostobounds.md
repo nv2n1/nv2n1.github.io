@@ -20,18 +20,18 @@ description: "XmListPosToBounds — A List function that returns the bounding bo
 <h2>Description</h2>
 <p><code>XmListPosToBounds</code> returns the coordinates of an item within a list and the dimensions of its bounding box. The function returns the associated x and y-coordinates of the upper left corner of the bounding box relative to the upper left corner of the List widget, as well as the width and the height of the box. The caller can pass a NULL value for the <i>x</i>, <i>y</i>, <i>width</i>, or <i>height</i> parameters to indicate that the return value for that parameter is not requested.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ID of the List widget.</p>
-<dt><i>position</i></p>
-<dd>Specifies the position of the specified item. A value of 1 indicates the first item in the list; a value of 2 indicates the second item; and so on. A value of 0 (zero) specifies the last item in the list.</p>
-<dt><i>x</i></p>
-<dd>Specifies a pointer to the returned x-coordinate of the item.</p>
-<dt><i>y</i></p>
-<dd>Specifies the pointer to the returned y-coordinate of the item.</p>
-<dt><i>width</i></p>
-<dd>Specifies the pointer to the returned width of the item.</p>
-<dt><i>height</i></p>
-<dd>Specifies the pointer to the returned height of the item.</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the List widget.</dd>
+<dt><i>position</i></dt>
+<dd>Specifies the position of the specified item. A value of 1 indicates the first item in the list; a value of 2 indicates the second item; and so on. A value of 0 (zero) specifies the last item in the list.</dd>
+<dt><i>x</i></dt>
+<dd>Specifies a pointer to the returned x-coordinate of the item.</dd>
+<dt><i>y</i></dt>
+<dd>Specifies the pointer to the returned y-coordinate of the item.</dd>
+<dt><i>width</i></dt>
+<dd>Specifies the pointer to the returned width of the item.</dd>
+<dt><i>height</i></dt>
+<dd>Specifies the pointer to the returned height of the item.</dd></dl>
 <p> For a complete definition of List and its associated resources, see <code><a href="/docs/linux/man/3-xmlist/">XmList</a></code>(3).</p>
 <h2>Return</h2>
 <p>If the item at the specified position is not visible, returns False, and the returned values (if any) are undefined. Otherwise, this function returns True.</p>

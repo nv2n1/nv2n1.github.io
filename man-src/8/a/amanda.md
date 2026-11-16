@@ -13,118 +13,118 @@ description: "amanda – The Open Source Backup Platform"
 <h3>Commands</h3>
 <p>Here are all the Amanda commands. Each one has its own manual page. See them for all the gory details. </p>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amaddclient/">amaddclient</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amaddclient/">amaddclient</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amadmin/">amadmin</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amadmin/">amadmin</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amaespipe/">amaespipe</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amaespipe/">amaespipe</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amarchiver/">amarchiver</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amarchiver/">amarchiver</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amcheck/">amcheck</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amcheck/">amcheck</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amcheckdb/">amcheckdb</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amcheckdb/">amcheckdb</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amcheckdump/">amcheckdump</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amcheckdump/">amcheckdump</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amcleanup/">amcleanup</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amcleanup/">amcleanup</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amcrypt-ossl-asym/">amcrypt-ossl-asym</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amcrypt-ossl-asym/">amcrypt-ossl-asym</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amcrypt-ossl/">amcrypt-ossl</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amcrypt-ossl/">amcrypt-ossl</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amcrypt/">amcrypt</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amcrypt/">amcrypt</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amcryptsimple/">amcryptsimple</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amcryptsimple/">amcryptsimple</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amdevcheck/">amdevcheck</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amdevcheck/">amdevcheck</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amdump/">amdump</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amdump/">amdump</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amfetchdump/">amfetchdump</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amfetchdump/">amfetchdump</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amflush/">amflush</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amflush/">amflush</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amgetconf/">amgetconf</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amgetconf/">amgetconf</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amgpgcrypt/">amgpgcrypt</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amgpgcrypt/">amgpgcrypt</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amgtar/">amgtar</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amgtar/">amgtar</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amlabel/">amlabel</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amlabel/">amlabel</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amoverview/">amoverview</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amoverview/">amoverview</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-ampgsql/">ampgsql</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-ampgsql/">ampgsql</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amplot/">amplot</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amplot/">amplot</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amraw/">amraw</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amraw/">amraw</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amrecover/">amrecover</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amrecover/">amrecover</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amreport/">amreport</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amreport/">amreport</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amrestore/">amrestore</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amrestore/">amrestore</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amrmtape/">amrmtape</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amrmtape/">amrmtape</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amsamba/">amsamba</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amsamba/">amsamba</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amserverconfig/">amserverconfig</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amserverconfig/">amserverconfig</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amservice/">amservice</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amservice/">amservice</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amstar/">amstar</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amstar/">amstar</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amstatus/">amstatus</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amstatus/">amstatus</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amsuntar/">amsuntar</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amsuntar/">amsuntar</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amtape/">amtape</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amtape/">amtape</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amtapetype/">amtapetype</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amtapetype/">amtapetype</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amtoc/">amtoc</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amtoc/">amtoc</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amvault/">amvault</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amvault/">amvault</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amzfs-sendrecv/">amzfs-sendrecv</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amzfs-sendrecv/">amzfs-sendrecv</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-amzfs-snapshot/">amzfs-snapshot</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-amzfs-snapshot/">amzfs-snapshot</a></code>(8),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/8-script-email/">script-email</a></code>(8),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/8-script-email/">script-email</a></code>(8),</dd></dl>
 <h3>Configuration Files</h3>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/5-amanda-conf/">amanda.conf</a></code>(5),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/5-amanda-conf/">amanda.conf</a></code>(5),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/5-amanda-client-conf/">amanda-client.conf</a></code>(5),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/5-amanda-client-conf/">amanda-client.conf</a></code>(5),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/5-disklist/">disklist</a></code>(5),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/5-disklist/">disklist</a></code>(5),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/5-tapelist/">tapelist</a></code>(5),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/5-tapelist/">tapelist</a></code>(5),</dd></dl>
 <h3>Data Formats</h3>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/5-amanda-archive-format/">amanda-archive-format</a></code>(5),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/5-amanda-archive-format/">amanda-archive-format</a></code>(5),</dd></dl>
 <h3>Concepts</h3>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/7-amanda-applications/">amanda-applications</a></code>(7),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/7-amanda-applications/">amanda-applications</a></code>(7),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/7-amanda-auth/">amanda-auth</a></code>(7),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/7-amanda-auth/">amanda-auth</a></code>(7),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/7-amanda-changers/">amanda-changers</a></code>(7),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/7-amanda-changers/">amanda-changers</a></code>(7),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/7-amanda-compatibility/">amanda-compatibility</a></code>(7),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/7-amanda-compatibility/">amanda-compatibility</a></code>(7),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/7-amanda-devices/">amanda-devices</a></code>(7),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/7-amanda-devices/">amanda-devices</a></code>(7),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/7-amanda-interactivity/">amanda-interactivity</a></code>(7),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/7-amanda-interactivity/">amanda-interactivity</a></code>(7),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/7-amanda-match/">amanda-match</a></code>(7),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/7-amanda-match/">amanda-match</a></code>(7),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/7-amanda-scripts/">amanda-scripts</a></code>(7),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/7-amanda-scripts/">amanda-scripts</a></code>(7),</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/7-amanda-taperscan/">amanda-taperscan</a></code>(7),</dl>
+<dd>&bull; <code><a href="/docs/linux/man/7-amanda-taperscan/">amanda-taperscan</a></code>(7),</dd></dl>
 <h2>Configuration Files</h2>
 <p>There are four user-editable files that control the behavior of Amanda. </p>
 <p> The first two are <code><a href="/docs/linux/man/5-amanda-conf/">amanda.conf</a></code>(5) and <code><a href="/docs/linux/man/5-amanda-client-conf/">amanda-client.conf</a></code>(5), the main configuration files for the server and client, respectively. They contain parameters to customize Amanda for the site. </p>

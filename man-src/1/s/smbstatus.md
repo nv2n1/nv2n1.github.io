@@ -12,7 +12,7 @@ description: "smbstatus – report on current Samba connections"
 <h2>SYNOPSIS</h2>
 <dl>
 <dt>
-<dd>smbstatus [-P] [-b] [-d&nbsp;<wbr>&lt;debug level&gt;] [-v] [-L] [-B] [-p] [-S] [-N] [-f] [-s&nbsp;<wbr>&lt;configuration file&gt;] [-u&nbsp;<wbr>&lt;username&gt;] [-n|&#8211;numeric] [-R|&#8211;profile-rates]</dl>
+</dt><dd>smbstatus [-P] [-b] [-d&nbsp;<wbr>&lt;debug level&gt;] [-v] [-L] [-B] [-p] [-S] [-N] [-f] [-s&nbsp;<wbr>&lt;configuration file&gt;] [-u&nbsp;<wbr>&lt;username&gt;] [-n|&#8211;numeric] [-R|&#8211;profile-rates]</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This tool is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> smbstatus is a very simple program to list the current Samba connections.</p>
@@ -20,78 +20,78 @@ description: "smbstatus – report on current Samba connections"
 <p> -P|&#8211;profile</p>
 <dl>
 <dt>
-<dd> If samba has been compiled with the profiling option, print only the contents of the profiling shared memory area.</dl>
+</dt><dd> If samba has been compiled with the profiling option, print only the contents of the profiling shared memory area.</dd></dl>
 <p> -R|&#8211;profile-rates</p>
 <dl>
 <dt>
-<dd> If samba has been compiled with the profiling option, print the contents of the profiling shared memory area and the call rates.</dl>
+</dt><dd> If samba has been compiled with the profiling option, print the contents of the profiling shared memory area and the call rates.</dd></dl>
 <p> -b|&#8211;brief</p>
 <dl>
 <dt>
-<dd> gives brief output.</dl>
+</dt><dd> gives brief output.</dd></dl>
 <p> -d|&#8211;debuglevel=level</p>
 <dl>
 <dt>
-<dd> <i>level</i> is an integer from 0 to 10. The default value if this parameter is not specified is 0. </p>
+</dt><dd> <i>level</i> is an integer from 0 to 10. The default value if this parameter is not specified is 0. </dd>
 <p> The higher this value, the more detail will be logged to the log files about the activities of the server. At level 0, only critical errors and serious warnings will be logged. Level 1 is a reasonable level for day-to-day running &#8211; it generates a small amount of information about operations carried out. </p>
 <p> Levels above 1 will generate considerable amounts of log data, and should only be used when investigating a problem. Levels above 3 are designed for use only by developers and generate HUGE amounts of log data, most of which is extremely cryptic. </p>
 <p> Note that specifying this parameter here will override the m[blue]<code>log level</code>m[] parameter in the smb.conf file.</dl>
 <p> -V|&#8211;version</p>
 <dl>
 <dt>
-<dd> Prints the program version number.</dl>
+</dt><dd> Prints the program version number.</dd></dl>
 <p> -s|&#8211;configfile=&lt;configuration file&gt;</p>
 <dl>
 <dt>
-<dd> The file specified contains the configuration details required by the server. The information in this file includes server-specific information such as what printcap file to use, as well as descriptions of all the services that the server is to provide. See smb.conf for more information. The default configuration file name is determined at compile time.</dl>
+</dt><dd> The file specified contains the configuration details required by the server. The information in this file includes server-specific information such as what printcap file to use, as well as descriptions of all the services that the server is to provide. See smb.conf for more information. The default configuration file name is determined at compile time.</dd></dl>
 <p> -l|&#8211;log-basename=logdirectory</p>
 <dl>
 <dt>
-<dd> Base directory name for log/debug files. The extension <code>&quot;.progname&quot;</code> will be appended (e.g. log.smbclient, log.smbd, etc&#8230;). The log file is never removed by the client.</dl>
+</dt><dd> Base directory name for log/debug files. The extension <code>&quot;.progname&quot;</code> will be appended (e.g. log.smbclient, log.smbd, etc&#8230;). The log file is never removed by the client.</dd></dl>
 <p> &#8211;option=&lt;name&gt;=&lt;value&gt;</p>
 <dl>
 <dt>
-<dd> Set the <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) option &quot;&lt;name&gt;&quot; to value &quot;&lt;value&gt;&quot; from the command line. This overrides compiled-in defaults and options read from the configuration file.</dl>
+</dt><dd> Set the <code><a href="/docs/linux/man/5-smb-conf/">smb.conf</a></code>(5) option &quot;&lt;name&gt;&quot; to value &quot;&lt;value&gt;&quot; from the command line. This overrides compiled-in defaults and options read from the configuration file.</dd></dl>
 <p> -v|&#8211;verbose</p>
 <dl>
 <dt>
-<dd> gives verbose output.</dl>
+</dt><dd> gives verbose output.</dd></dl>
 <p> -L|&#8211;locks</p>
 <dl>
 <dt>
-<dd> causes smbstatus to only list locks.</dl>
+</dt><dd> causes smbstatus to only list locks.</dd></dl>
 <p> -B|&#8211;byterange</p>
 <dl>
 <dt>
-<dd> causes smbstatus to include byte range locks.</dl>
+</dt><dd> causes smbstatus to include byte range locks.</dd></dl>
 <p> -p|&#8211;processes</p>
 <dl>
 <dt>
-<dd> print a list of <code><a href="/docs/linux/man/8-smbd/">smbd</a></code>(8) processes and exit. Useful for scripting.</dl>
+</dt><dd> print a list of <code><a href="/docs/linux/man/8-smbd/">smbd</a></code>(8) processes and exit. Useful for scripting.</dd></dl>
 <p> -S|&#8211;shares</p>
 <dl>
 <dt>
-<dd> causes smbstatus to only list shares.</dl>
+</dt><dd> causes smbstatus to only list shares.</dd></dl>
 <p> -N|&#8211;notify</p>
 <dl>
 <dt>
-<dd> causes smbstatus to display registered file notifications</dl>
+</dt><dd> causes smbstatus to display registered file notifications</dd></dl>
 <p> -f|&#8211;fast</p>
 <dl>
 <dt>
-<dd> causes smbstatus to not check if the status data is valid by checking if the processes that the status data refer to all still exist. This speeds up execution on busy systems and clusters but might display stale data of processes that died without cleaning up properly.</dl>
+</dt><dd> causes smbstatus to not check if the status data is valid by checking if the processes that the status data refer to all still exist. This speeds up execution on busy systems and clusters but might display stale data of processes that died without cleaning up properly.</dd></dl>
 <p> -?|&#8211;help</p>
 <dl>
 <dt>
-<dd> Print a summary of command line options.</dl>
+</dt><dd> Print a summary of command line options.</dd></dl>
 <p> -u|&#8211;user=&lt;username&gt;</p>
 <dl>
 <dt>
-<dd> selects information relevant to <i>username</i> only.</dl>
+</dt><dd> selects information relevant to <i>username</i> only.</dd></dl>
 <p> -n|&#8211;numeric</p>
 <dl>
 <dt>
-<dd> causes smbstatus to display numeric UIDs and GIDs instead of resolving them to names.</dl>
+</dt><dd> causes smbstatus to display numeric UIDs and GIDs instead of resolving them to names.</dd></dl>
 <h2>VERSION</h2>
 <p> This man page is correct for version 3 of the Samba suite.</p>
 <h2>SEE ALSO</h2>

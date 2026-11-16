@@ -15,7 +15,7 @@ snd_pcm_mmap_data_close - decrease the mmap counter
 <h2>Arguments</h2>
 
 <i>area</i>
-<dl><dd><dd>VMA</dl>
+<dl><dd></dd><dd>VMA</dd></dl>
 
 <h2>Description</h2>
 

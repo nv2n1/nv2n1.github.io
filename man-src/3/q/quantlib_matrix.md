@@ -107,7 +107,7 @@ description: "QuantLib::Matrix – Matrix used in linear algebra."
 <h3>const <code>Matrix</code> &amp; operator+= (const <code>Matrix</code> &amp; m)</h3>
 <p><code>Precondition:</code></p>
 <dl COMPACT>
-<dd>all matrices involved in an algebraic expression must have the same size.</dl>
+<dd>all matrices involved in an algebraic expression must have the same size.</dd></dl>
 <h2>Friends And Related Function Documentation</h2>
 <h3>const <code>Disposable</code>&lt; <code>Matrix</code> &gt; operator+ (const <code>Matrix</code> &amp;, const <code>Matrix</code> &amp;) [related]</h3>
 <h3>const <code>Disposable</code>&lt; <code>Matrix</code> &gt; operator- (const <code>Matrix</code> &amp;, const <code>Matrix</code> &amp;) [related]</h3>
@@ -132,18 +132,18 @@ description: "QuantLib::Matrix – Matrix used in linear algebra."
 <p> Revised and extended in &#8216;Monte Carlo Methods in Finance&#8217;, by Peter J�ckel, Chapter 6. </p>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>the given matrix must be symmetric.</dl>
+<dd>the given matrix must be symmetric.</dd></dl>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>Higham algorithm only works for correlation matrices.</dl>
+<dd>Higham algorithm only works for correlation matrices.</dd></dl>
 <p> <code>Tests</code></p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>*</p>
-<dd>the correctness of the results is tested by reproducing known good data.</p>
-<dt>*</p>
-<dd>the correctness of the results is tested by checking returned values against numerical calculations.</dl>
+</dd><dl COMPACT>
+<dt>*</dt>
+<dd>the correctness of the results is tested by reproducing known good data.</dd>
+<dt>*</dt>
+<dd>the correctness of the results is tested by checking returned values against numerical calculations.</dd></dl>
 </dl>
 <h3>const <code>Disposable</code>&lt; <code>Matrix</code> &gt; rankReducedSqrt (const <code>Matrix</code> &amp;, Size maxRank, Real componentRetainedPercentage, SalvagingAlgorithm::Type) [related]</h3>
 <p>Returns the rank-reduced pseudo square root of a real symmetric matrix. </p>
@@ -151,6 +151,6 @@ description: "QuantLib::Matrix – Matrix used in linear algebra."
 <p> If the input matrix is not positive semi definite, it can return an approximation of the pseudo square root using a (user selected) salvaging algorithm. </p>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>the given matrix must be symmetric.</dl>
+<dd>the given matrix must be symmetric.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

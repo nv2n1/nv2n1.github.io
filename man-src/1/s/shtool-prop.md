@@ -16,8 +16,8 @@ description: "shtool prop – GNU shtool propeller processing indication"
 <h2>OPTIONS</h2>
 <p> The following command line options are available.</p>
 <dl>
-<dt><code>-p</code>, <code>&#8211;prefix</code> <i>str</i></p>
-<dd> Set a particular prefix <i>str</i> which is displayed in front of the propeller. The default is no prefix string.</dl>
+<dt><code>-p</code>, <code>&#8211;prefix</code> <i>str</i></dt>
+<dd> Set a particular prefix <i>str</i> which is displayed in front of the propeller. The default is no prefix string.</dd></dl>
 <h2>EXAMPLE</h2>
 <pre>
  #   shell script

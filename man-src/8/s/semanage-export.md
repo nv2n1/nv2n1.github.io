@@ -14,12 +14,12 @@ description: "semanage-export – SELinux Policy Management import tool"
 <p>semanage is used to configure certain elements of SELinux policy without requiring modification to or recompilation from policy sources. semanage import and export can be used to extract the SELinux modifications from one machine and apply them to another. You can put a whole group of semanage commands within a file and apply them to a machine in a single transaction. </p>
 <h2>Options</h2>
 <dl>
-<dt><i>-h, &#8211;help</i></p>
-<dd>show this help message and exit</p>
-<dt><i>-S STORE, &#8211;store STORE</i></p>
-<dd>Select an alternate SELinux Policy Store to manage</p>
-<dt><i>-f OUTPUT_FILE, &#8211;output_file OUTPUT_FILE</i></p>
-<dd>Output file </p>
+<dt><i>-h, &#8211;help</i></dt>
+<dd>show this help message and exit</dd>
+<dt><i>-S STORE, &#8211;store STORE</i></dt>
+<dd>Select an alternate SELinux Policy Store to manage</dd>
+<dt><i>-f OUTPUT_FILE, &#8211;output_file OUTPUT_FILE</i></dt>
+<dd>Output file </dd>
 </dl>
 <h2>Example</h2>
 <pre>Import semanage modifications from another machine

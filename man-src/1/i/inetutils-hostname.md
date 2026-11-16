@@ -16,24 +16,24 @@ description: "hostname – show or set the system host name"
 <p> Show the system&#8217;s host name, or set it if <i>name</i> is specified.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a , -aliases</code></p>
-<dd> Also show aliases for the host name.</p>
-<dt><code>-d , -domain</code></p>
-<dd> Show the DNS domain name.</p>
-<dt><code>-f , -fqdn , -long</code></p>
-<dd> Show the DNS host name or FQDN.</p>
-<dt><code>-F , -file </code><i>file</i></p>
-<dd> Set the host name or NIS domain name from <i>file</i></p>
-<dt><code>-i , -ip-addresses</code></p>
-<dd> Show the addresses for the host name.</p>
-<dt><code>-s , -short</code></p>
-<dd> Show the short host name.</p>
-<dt><code>-y , -yp , -nis</code></p>
-<dd> Show the NIS/YP domain name.</p>
-<dt><code>-? , -help</code></p>
-<dd> Give this help list.</p>
-<dt><code>&#8211;usage</code></p>
-<dd> Give a short usage message.</p>
-<dt><code>-V , -version</code></p>
-<dd> Print program version.</dl>
+<dt><code>-a , -aliases</code></dt>
+<dd> Also show aliases for the host name.</dd>
+<dt><code>-d , -domain</code></dt>
+<dd> Show the DNS domain name.</dd>
+<dt><code>-f , -fqdn , -long</code></dt>
+<dd> Show the DNS host name or FQDN.</dd>
+<dt><code>-F , -file </code><i>file</i></dt>
+<dd> Set the host name or NIS domain name from <i>file</i></dd>
+<dt><code>-i , -ip-addresses</code></dt>
+<dd> Show the addresses for the host name.</dd>
+<dt><code>-s , -short</code></dt>
+<dd> Show the short host name.</dd>
+<dt><code>-y , -yp , -nis</code></dt>
+<dd> Show the NIS/YP domain name.</dd>
+<dt><code>-? , -help</code></dt>
+<dd> Give this help list.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd> Give a short usage message.</dd>
+<dt><code>-V , -version</code></dt>
+<dd> Print program version.</dd></dl>
 <h2>Index</h2>

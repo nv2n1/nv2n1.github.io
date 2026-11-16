@@ -16,24 +16,24 @@ description: "blaze-remove – remove a post/page from the BlazeBlogger reposito
 <p> <code>blaze-remove</code> deletes the blog posts or pages with given <i>id</i>s from the BlazeBlogger repository.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code>, <code>&#8211;blogdir</code> <i>directory</i></p>
-<dd> Specify the <i>directory</i> where the BlazeBlogger repository is placed. The default option is the current working directory.</p>
-<dt><code>-p</code>, <code>&#8211;page</code>, <code>&#8211;pages</code></p>
-<dd> Remove pages instead of blog posts.</p>
-<dt><code>-P</code>, <code>&#8211;post</code>, <code>&#8211;posts</code></p>
-<dd> Remove blog posts; this is the default option.</p>
-<dt><code>-i</code>, <code>&#8211;interactive</code></p>
-<dd> Prompt before post/page removal.</p>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd> Do not prompt before post/page removal; this is the default option.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Avoid displaying messages that are not necessary.</p>
-<dt><code>-V</code>, <code>&#8211;verbose</code></p>
-<dd> Display all messages. This is the default option.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display usage information and exit.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Display version information and exit.</dl>
+<dt><code>-b</code>, <code>&#8211;blogdir</code> <i>directory</i></dt>
+<dd> Specify the <i>directory</i> where the BlazeBlogger repository is placed. The default option is the current working directory.</dd>
+<dt><code>-p</code>, <code>&#8211;page</code>, <code>&#8211;pages</code></dt>
+<dd> Remove pages instead of blog posts.</dd>
+<dt><code>-P</code>, <code>&#8211;post</code>, <code>&#8211;posts</code></dt>
+<dd> Remove blog posts; this is the default option.</dd>
+<dt><code>-i</code>, <code>&#8211;interactive</code></dt>
+<dd> Prompt before post/page removal.</dd>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd> Do not prompt before post/page removal; this is the default option.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Avoid displaying messages that are not necessary.</dd>
+<dt><code>-V</code>, <code>&#8211;verbose</code></dt>
+<dd> Display all messages. This is the default option.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display usage information and exit.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Display version information and exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1).</p>
 <h2>BUGS</h2>

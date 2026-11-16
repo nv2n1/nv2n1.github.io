@@ -10,48 +10,48 @@ description: "ocf_heartbeat_AoEtarget – Manages ATA-over-Ethernet (AoE) target
 <p>ocf_heartbeat_AoEtarget &#8211; Manages ATA-over-Ethernet (AoE) target exports</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>AoEtarget</code> [start | stop | monitor | meta-data | validate-all]</dl>
+<dt> <code>AoEtarget</code> [start | stop | monitor | meta-data | validate-all]</dt></dl>
 <h2>Description</h2>
-<dd>This resource agent manages an ATA-over-Ethernet (AoE) target using vblade. It exports any block device, or file, as an AoE target using the specified Ethernet device, shelf, and slot number.</p>
+<dd>This resource agent manages an ATA-over-Ethernet (AoE) target using vblade. It exports any block device, or file, as an AoE target using the specified Ethernet device, shelf, and slot number.</dd>
 <h2>Supported Parameters</h2>
 <p><code>device</code></p>
 <dl>
-<dd>The local block device (or file) to export as an AoE target. (required, string, no default)</dl>
+<dd>The local block device (or file) to export as an AoE target. (required, string, no default)</dd></dl>
 <p> <code>nic</code></p>
 <dl>
-<dd>The local Ethernet interface to use for exporting this AoE target. (required, string, default eth0)</dl>
+<dd>The local Ethernet interface to use for exporting this AoE target. (required, string, default eth0)</dd></dl>
 <p> <code>shelf</code></p>
 <dl>
-<dd>The AoE shelf number to use when exporting this target. (optional, integer, no default)</dl>
+<dd>The AoE shelf number to use when exporting this target. (optional, integer, no default)</dd></dl>
 <p> <code>slot</code></p>
 <dl>
-<dd>The AoE slot number to use when exporting this target. (required, integer, no default)</dl>
+<dd>The AoE slot number to use when exporting this target. (required, integer, no default)</dd></dl>
 <p> <code>pid</code></p>
 <dl>
-<dd>The file to record the daemon pid to. (optional, string, default /var/run/heartbeat/rsctmp/AoEtarget-default.pid)</dl>
+<dd>The file to record the daemon pid to. (optional, string, default /var/run/heartbeat/rsctmp/AoEtarget-default.pid)</dd></dl>
 <p> <code>binary</code></p>
 <dl>
-<dd>Location of the vblade binary. (optional, string, default /usr/sbin/vblade)</dl>
+<dd>Location of the vblade binary. (optional, string, default /usr/sbin/vblade)</dd></dl>
 <h2>Supported Actions</h2>
 <p>This resource agent supports the following actions (operations): </p>
 <p> <code>start</code></p>
 <dl>
-<dd>Starts the resource. Suggested minimum timeout: 15.</dl>
+<dd>Starts the resource. Suggested minimum timeout: 15.</dd></dl>
 <p> <code>stop</code></p>
 <dl>
-<dd>Stops the resource. Suggested minimum timeout: 15.</dl>
+<dd>Stops the resource. Suggested minimum timeout: 15.</dd></dl>
 <p> <code>monitor</code></p>
 <dl>
-<dd>Performs a detailed status check. Suggested minimum timeout: 15. Suggested interval: 10.</dl>
+<dd>Performs a detailed status check. Suggested minimum timeout: 15. Suggested interval: 10.</dd></dl>
 <p> <code>reload</code></p>
 <dl>
-<dd>Suggested minimum timeout: 15.</dl>
+<dd>Suggested minimum timeout: 15.</dd></dl>
 <p> <code>meta-data</code></p>
 <dl>
-<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dl>
+<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dd></dl>
 <p> <code>validate-all</code></p>
 <dl>
-<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 15.</dl>
+<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 15.</dd></dl>
 <h2>Example</h2>
 <p>The following is an example configuration for a AoEtarget resource using the <code>crm</code>(8) shell: </p>
 <pre><code>primitive example_AoEtarget ocf:heartbeat:AoEtarget \

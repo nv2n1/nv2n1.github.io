@@ -15,7 +15,7 @@ clk_unprepare - undo preparation of a clock source
 <h2>Arguments</h2>
 
 <i>clk</i>
-<dl><dd><dd>clock source</dl>
+<dl><dd></dd><dd>clock source</dd></dl>
 
 <h2>Description</h2>
 

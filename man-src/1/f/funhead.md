@@ -76,10 +76,10 @@ description: "funhead – display a header in a Funtools file"
 <p> The funhead program also can edit (i.e. add, delete, or modify) or display individual headers parameters. Edit mode is signalled by the presence of two additional command-line arguments: output file and edit command file, in that order. Edit mode acts as a filter: the output file will contain the entire input <font SIZE="-1">FITS</font> file, including other extensions. The edit command file can be &#8220;stdin&#8221;, in which case edit command are read from the standard input. </p>
 <p> The edit command file contains parameter comments (having &#8216;#&#8217; in the first column) and delete and assignment(modify or add) operations. A delete operation is specified by preceding the parameter name with a minus sign &#8220;-&#8221;. A display operation (very useful in interactive sessions, i.e., where the edit commands are taken from stdin) is specified by preceding the parameter name with a question mark &#8220;?&#8221;. In either case, a parameter value need not be specified. An assignment operation is specified in the same two ways that a parameter is specified in a text header (but without the comment character that precedes header params), i.e.:</p>
 <dl>
-<dt>*</p>
-<dd> FITS-style comments have an equal sign &#8220;=&#8221; between the keyword and value and an optional slash &#8220;/&#8221; to signify a comment. The strict <font SIZE="-1">FITS</font> rules on column positions are not enforced.</p>
-<dt>*</p>
-<dd> Free-form comments can have an optional colon separator between the keyword and value. In the absence of quote, all tokens after the keyword are part of the value, i.e. no comment is allowed.</dl>
+<dt>*</dt>
+<dd> FITS-style comments have an equal sign &#8220;=&#8221; between the keyword and value and an optional slash &#8220;/&#8221; to signify a comment. The strict <font SIZE="-1">FITS</font> rules on column positions are not enforced.</dd>
+<dt>*</dt>
+<dd> Free-form comments can have an optional colon separator between the keyword and value. In the absence of quote, all tokens after the keyword are part of the value, i.e. no comment is allowed.</dd></dl>
 <p> For example, the following interactive session checks for the existence of parameters, adds new parameters, modifies them, and modifies and deletes existing parameters: </p>
 <pre>
   sh$ ./funhead snr.ev foo.fits -

@@ -19,28 +19,28 @@ xrdgsiproxy[-h][mode][-debug][-f[-out] file]
 <p> <i>mode</i></p>
 <dl>
 <dt>
-<dd> <code>init</code> create proxy certificate and related proxy file<br />
+</dt><dd> <code>init</code> create proxy certificate and related proxy file<br />
  <code>info</code> display content of existing proxy file<br />
- <code>destroy</code> delete existing proxy file</dl>
+ <code>destroy</code> delete existing proxy file</dd></dl>
 <h2>OPTIONS</h2>
 <p> <code>-h</code> display help</p>
 <dl>
-<dt><code>-f</code> [<code>-out</code>] <i>file</i></p>
-<dd> Non-standard location of proxy file</p>
-<dt><code>init</code><i>&nbsp;<wbr></i><code>mode</code><i>&nbsp;<wbr></i><code>only:</code></p>
+<dt><code>-f</code> [<code>-out</code>] <i>file</i></dt>
+<dd> Non-standard location of proxy file</dd>
+<dt><code>init</code><i>&nbsp;<wbr></i><code>mode</code><i>&nbsp;<wbr></i><code>only:</code></dt>
 <dd>
-<dt><code>-certdir</code> <i>dir</i></p>
-<dd> Non-standard location of directory with information about known CAs</p>
-<dt><code>-cert</code> <i>file</i></p>
-<dd> Non-standard location of certificate for which proxies are wanted</p>
-<dt><code>-key</code> <i>file</i></p>
-<dd> Non-standard location of private key to be used to sign the proxy</p>
-<dt><code>-bits</code> <i>n</i></p>
-<dd> Strength in bits of the key [default 512]</p>
-<dt><code>-valid</code> <i>hh:mm</i></p>
-<dd> Time validity of the proxy certificate [default 12:00]</p>
-<dt><code>-path-length</code> <i>len</i></p>
-<dd> Max number of descendent levels below this proxy [default 0]</dl>
+</dd><dt><code>-certdir</code> <i>dir</i></dt>
+<dd> Non-standard location of directory with information about known CAs</dd>
+<dt><code>-cert</code> <i>file</i></dt>
+<dd> Non-standard location of certificate for which proxies are wanted</dd>
+<dt><code>-key</code> <i>file</i></dt>
+<dd> Non-standard location of private key to be used to sign the proxy</dd>
+<dt><code>-bits</code> <i>n</i></dt>
+<dd> Strength in bits of the key [default 512]</dd>
+<dt><code>-valid</code> <i>hh:mm</i></dt>
+<dd> Time validity of the proxy certificate [default 12:00]</dd>
+<dt><code>-path-length</code> <i>len</i></dt>
+<dd> Max number of descendent levels below this proxy [default 0]</dd></dl>
 <h2>NOTES</h2>
 <p> Complete HTML documentation can be found at <center> <a rel="nofollow" href="http://xrootd.org/doc/prod/sec_config.htm">http://xrootd.org/doc/prod/sec_config.htm</a><br />
  </center><br />

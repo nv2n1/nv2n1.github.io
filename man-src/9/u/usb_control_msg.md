@@ -14,31 +14,31 @@ description: "usb_control_msg – Builds a control urb, sends it off and waits f
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>pointer to the usb device to send the message to</dl>
+</dd><dd>pointer to the usb device to send the message to</dd></dl>
 <p> <i>pipe</i></p>
 <dl>
-<dd>endpoint &#8220;pipe&#8221; to send the message to</dl>
+<dd>endpoint &#8220;pipe&#8221; to send the message to</dd></dl>
 <p> <i>request</i></p>
 <dl>
-<dd>USB message request value</dl>
+<dd>USB message request value</dd></dl>
 <p> <i>requesttype</i></p>
 <dl>
-<dd>USB message request type value</dl>
+<dd>USB message request type value</dd></dl>
 <p> <i>value</i></p>
 <dl>
-<dd>USB message value</dl>
+<dd>USB message value</dd></dl>
 <p> <i>index</i></p>
 <dl>
-<dd>USB message index value</dl>
+<dd>USB message index value</dd></dl>
 <p> <i>data</i></p>
 <dl>
-<dd>pointer to the data to send</dl>
+<dd>pointer to the data to send</dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>length in bytes of the data to send</dl>
+<dd>length in bytes of the data to send</dd></dl>
 <p> <i>timeout</i></p>
 <dl>
-<dd>time in msecs to wait for the message to complete before timing out (if 0 the wait is forever)</dl>
+<dd>time in msecs to wait for the message to complete before timing out (if 0 the wait is forever)</dd></dl>
 <h2>Context</h2>
 <p>!in_interrupt ()</p>
 <h2>Description</h2>

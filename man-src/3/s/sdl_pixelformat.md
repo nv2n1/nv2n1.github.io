@@ -21,22 +21,22 @@ description: "SDL_PixelFormat – Stores surface format information"
 } SDL_PixelFormat;</tt></pre>
 <h2>Structure Data</h2>
 <dl COMPACT>
-<dt><code>palette</code></p>
-<dd>Pointer to the <i>palette</i>, or <code>NULL</code> if the <code>BitsPerPixel</code>&gt;8</p>
-<dt><code>BitsPerPixel</code></p>
-<dd>The number of bits used to represent each pixel in a surface. Usually 8, 16, 24 or 32.</p>
-<dt><code>BytesPerPixel</code></p>
-<dd>The number of bytes used to represent each pixel in a surface. Usually one to four.</p>
-<dt><code>[RGBA]mask</code></p>
-<dd>Binary mask used to retrieve individual color values</p>
-<dt><code>[RGBA]loss</code></p>
-<dd>Precision loss of each color component (2^[RGBA]loss)</p>
-<dt><code>[RGBA]shift</code></p>
-<dd>Binary left shift of each color component in the pixel value</p>
-<dt><code>colorkey</code></p>
-<dd>Pixel value of transparent pixels</p>
-<dt><code>alpha</code></p>
-<dd>Overall surface alpha value</dl>
+<dt><code>palette</code></dt>
+<dd>Pointer to the <i>palette</i>, or <code>NULL</code> if the <code>BitsPerPixel</code>&gt;8</dd>
+<dt><code>BitsPerPixel</code></dt>
+<dd>The number of bits used to represent each pixel in a surface. Usually 8, 16, 24 or 32.</dd>
+<dt><code>BytesPerPixel</code></dt>
+<dd>The number of bytes used to represent each pixel in a surface. Usually one to four.</dd>
+<dt><code>[RGBA]mask</code></dt>
+<dd>Binary mask used to retrieve individual color values</dd>
+<dt><code>[RGBA]loss</code></dt>
+<dd>Precision loss of each color component (2^[RGBA]loss)</dd>
+<dt><code>[RGBA]shift</code></dt>
+<dd>Binary left shift of each color component in the pixel value</dd>
+<dt><code>colorkey</code></dt>
+<dd>Pixel value of transparent pixels</dd>
+<dt><code>alpha</code></dt>
+<dd>Overall surface alpha value</dd></dl>
 <h2>Description</h2>
 <p>A <code>SDL_PixelFormat</code> describes the format of the pixel data stored at the <code>pixels</code> field of a <i></i><code>SDL_Surface</code>. Every surface stores a <code>SDL_PixelFormat</code> in the <code>format</code> field. </p>
 <p> If you wish to do pixel level modifications on a surface, then understanding how SDL stores its color information is essential. </p>

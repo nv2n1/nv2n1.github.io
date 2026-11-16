@@ -22,9 +22,9 @@ ENAM = PCPNWI (PNAM,IPAI)</pre>
 <h2>Description</h2>
 
 <dl><dt>PNAM
-<dd>(an input constant or variable of type CHARACTER) is a character string, the first two characters of which are the name of an internal parameter array of Plotchar (currently, 'BC' or 'CC').
-<dt>IPAI
-<dd>(an input expression of type INTEGER) is an integer expression specifying the index of that element of the internal parameter array of which one wants the name.</dl>
+</dt><dd>(an input constant or variable of type CHARACTER) is a character string, the first two characters of which are the name of an internal parameter array of Plotchar (currently, 'BC' or 'CC').
+</dd><dt>IPAI
+</dt><dd>(an input expression of type INTEGER) is an integer expression specifying the index of that element of the internal parameter array of which one wants the name.</dd></dl>
  
 
  Given the above two arguments, the value of PCPNWI(PNAM,IPAI) is that character string which serves as the name of element IPAI of the internal parameter array identified by PNAM. 

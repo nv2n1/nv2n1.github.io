@@ -16,10 +16,10 @@ description: "check-module – program to check gnulib modules."
 <p> <code>check-module</code> reads a module description file and derives the set of files included directly by any .c or .h file listed in the `Files:&#8217; section. First, it takes the union of all such sets for any dependent modules. Then, it compares that set with the set derived from the names listed in the various Files: sections. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of options.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Show version of program. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Show version of program. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> Report bugs to &lt;bug-gnulib [at] gnu.org&gt;. </p>

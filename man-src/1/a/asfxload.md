@@ -20,52 +20,52 @@ description: "sfxload, asfxload – load a SoundFont file on the Emux WaveTable"
 <p> The sound files are searched through the path list. The path list is defined as built-in. If the environment variable <code>SFBANKDIR</code> or the command line option <code>-P</code> is given, it replaces the default search list. The file extension <i>.sf2</i>, and <i>.sbk</i> can be abbreviated. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-F, &#8211;device=</code><i>file</i>(sfxload only)</p>
-<dd> Specify the device file to be used. Default value is <i>/dev/sequencer</i>.</p>
-<dt><code>-D, &#8211;index=</code><i>number</i>(sfxload only)</p>
-<dd> Specify the device index of AWE driver. Negative number (e.g. -1) means to probe the first AWE device automatically. For selecting the other AWE cards, a positive index number must be given here. Default value is <code>-1</code>.</p>
-<dt><code>-D, &#8211;hwdep=</code><i>name</i>(asfxload only)</p>
-<dd> Specify the hwdep name to be used. As default, asfxload seeks until any Emux compatible hwdep device is found.</p>
-<dt><code>-i, &#8211;clear</code><i></i>[=bool]</p>
-<dd> Remove all samples before loading the fonts. This is an explicit directive (see -b option). If this option is specified alone without soundfont file arguments, sfxload does onlay remove samples. Either of <code>on</code>, <code>off</code>, <code>yes</code>, <code>no</code>, <code>true</code>, or <code>false</code> can be specified as an optional argument.</p>
-<dt><code>-x, &#8211;remove</code><i></i>[=bool]</p>
-<dd> Remove the optional samples previouly loaded via <code>-b</code> option. Otherwise, all new samples are simply appended.</p>
-<dt><code>-N, &#8211;increment</code><i></i>[=bool]</p>
-<dd> Do not clear samples even with the absence of <code>-b</code> option. However, this option is not exclusive with <code>-x</code> option. If both options are specified, and the memory full error is encountered during loading fonts, <code>sfxload</code> will try to remove samples and load the fonts again.</p>
-<dt><code>-b, &#8211;bank=</code><i>number</i></p>
+<dt><code>-F, &#8211;device=</code><i>file</i>(sfxload only)</dt>
+<dd> Specify the device file to be used. Default value is <i>/dev/sequencer</i>.</dd>
+<dt><code>-D, &#8211;index=</code><i>number</i>(sfxload only)</dt>
+<dd> Specify the device index of AWE driver. Negative number (e.g. -1) means to probe the first AWE device automatically. For selecting the other AWE cards, a positive index number must be given here. Default value is <code>-1</code>.</dd>
+<dt><code>-D, &#8211;hwdep=</code><i>name</i>(asfxload only)</dt>
+<dd> Specify the hwdep name to be used. As default, asfxload seeks until any Emux compatible hwdep device is found.</dd>
+<dt><code>-i, &#8211;clear</code><i></i>[=bool]</dt>
+<dd> Remove all samples before loading the fonts. This is an explicit directive (see -b option). If this option is specified alone without soundfont file arguments, sfxload does onlay remove samples. Either of <code>on</code>, <code>off</code>, <code>yes</code>, <code>no</code>, <code>true</code>, or <code>false</code> can be specified as an optional argument.</dd>
+<dt><code>-x, &#8211;remove</code><i></i>[=bool]</dt>
+<dd> Remove the optional samples previouly loaded via <code>-b</code> option. Otherwise, all new samples are simply appended.</dd>
+<dt><code>-N, &#8211;increment</code><i></i>[=bool]</dt>
+<dd> Do not clear samples even with the absence of <code>-b</code> option. However, this option is not exclusive with <code>-x</code> option. If both options are specified, and the memory full error is encountered during loading fonts, <code>sfxload</code> will try to remove samples and load the fonts again.</dd>
+<dt><code>-b, &#8211;bank=</code><i>number</i></dt>
 <dd> Append the sound samples on the specified bank. Without this option, all present samples in the driver are removed before loading the new fonts unless <code>-N</code> option is specified. Usually, this option is necessary to load user bank, typically in bank one. For example, % sfxload synthgm.sbk<br />
- % sfxload -b1 surprise.sf2 </p>
-<dt><code>-l, &#8211;lock</code><i></i>[=bool]</p>
-<dd> Lock the font. The locked font is no longer removed via remove option (<code>-x</code>) even if it&#8217;s loaded together with <code>-b</code> option.</p>
-<dt><code>-C, &#8211;compat</code><i></i>[=bool]</p>
-<dd> Use the old (v0.4.2) parameter calculations.</p>
-<dt><code>-A, &#8211;sense=</code><i>sensitivity</i></p>
+ % sfxload -b1 surprise.sf2 </dd>
+<dt><code>-l, &#8211;lock</code><i></i>[=bool]</dt>
+<dd> Lock the font. The locked font is no longer removed via remove option (<code>-x</code>) even if it&#8217;s loaded together with <code>-b</code> option.</dd>
+<dt><code>-C, &#8211;compat</code><i></i>[=bool]</dt>
+<dd> Use the old (v0.4.2) parameter calculations.</dd>
+<dt><code>-A, &#8211;sense=</code><i>sensitivity</i></dt>
 <dd> (Only valid on compatible mode)<br />
- Set sample attenuation sensitivity. This option controls the sensitivity of initial attenuation parameter of each instrument defined in SoundFont file. In the program, each parameter is calculated from the value divided by this number for the original value. The number <i>1.0</i> means that the original initial attenuation parameters would be used. Generally, smaller number makes drum sounds louder. (I think <code>&quot;-A 2&quot;</code> would be similar to Windows sounds.) The default value is <i>10</i>. Note that this option changes also the default attenuation automatically (see below).</p>
-<dt><code>-a, &#8211;atten=</code><i>attenuation</i></p>
+ Set sample attenuation sensitivity. This option controls the sensitivity of initial attenuation parameter of each instrument defined in SoundFont file. In the program, each parameter is calculated from the value divided by this number for the original value. The number <i>1.0</i> means that the original initial attenuation parameters would be used. Generally, smaller number makes drum sounds louder. (I think <code>&quot;-A 2&quot;</code> would be similar to Windows sounds.) The default value is <i>10</i>. Note that this option changes also the default attenuation automatically (see below).</dd>
+<dt><code>-a, &#8211;atten=</code><i>attenuation</i></dt>
 <dd> (Only valid on compatible mode)<br />
- Set the default attenuation level. This option controls the minimum attenuation of the sample. The parameter is given in raw digit number for AWE driver, that is, in 8/3 dB unit. Since <code>&#8211;sense</code> option changes the default attenuation automatically, specify this option later from <code>&#8211;sense</code> option. The default value is <i>32</i>.</p>
-<dt><code>-d, &#8211;decay=</code><i>scale</i></p>
+ Set the default attenuation level. This option controls the minimum attenuation of the sample. The parameter is given in raw digit number for AWE driver, that is, in 8/3 dB unit. Since <code>&#8211;sense</code> option changes the default attenuation automatically, specify this option later from <code>&#8211;sense</code> option. The default value is <i>32</i>.</dd>
+<dt><code>-d, &#8211;decay=</code><i>scale</i></dt>
 <dd> (Only valid on compatible mode)<br />
- Set the scale of envelope decay time. Default value is <i>50.0</i>. Sounds decay fast when larger number is set. The ver.0.3 sfxload uses <i>54.8</i>. If you want to keep the same sound, use this number instead.</p>
-<dt><code>-M, &#8211;memory</code><i></i>[=bool]</p>
-<dd> Display the left memory size in DRAM on the AWE32 card.</p>
-<dt><code>-c, &#8211;chorus=</code><i>percent</i></p>
-<dd> Specify the effects of chorus. The value is in percent, from 0 to 100. The default is unspecified. This value may be overwritten by MIDI control messages.</p>
-<dt><code>-r, &#8211;reverb=</code><i>percent</i></p>
-<dd> Specify the effects of reverb. The value is in percent, from 0 to 100. The default is unspecified. This value may be overwritten by MIDI control messages.</p>
-<dt><code>-B, &#8211;addblank</code><i></i>[=bool]</p>
-<dd> Add 48 size of blank loop on each sample data. Usually, this option is not necessary. Most of soundfont files are designed well for enough blank loops for each sample.</p>
-<dt><code>-L, &#8211;extract=</code><i>source</i>[:<i>map</i>]</p>
-<dd> Extract and load only the specified preset(s). This option is usually employed by drvmidi. The preset is given as same as in virtual bank file.</p>
-<dt><code>-v, &#8211;verbose</code><i></i>[=level]</p>
-<dd> Increase or set the verbosity level.</p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd> Don&#8217;t show error messages, equivalen with &#8211;verbose=0.</p>
-<dt><code>-V, &#8211;volume=</code><i>percent</i></p>
-<dd> Specify the total volume of sounds, provided in percent. The default volume is <i>70%</i>.</p>
-<dt><code>-P, &#8211;path=</code><i>path1</i><code>:</code><i>path2</i><code>:</code><i>pathN</i></p>
-<dd> Specify the search path list. The sound files are searched from <i>path1</i>, <i>path2</i>, and so on. This overrides both the system path and environment variable <code>SFBANKDIR</code>. </p>
+ Set the scale of envelope decay time. Default value is <i>50.0</i>. Sounds decay fast when larger number is set. The ver.0.3 sfxload uses <i>54.8</i>. If you want to keep the same sound, use this number instead.</dd>
+<dt><code>-M, &#8211;memory</code><i></i>[=bool]</dt>
+<dd> Display the left memory size in DRAM on the AWE32 card.</dd>
+<dt><code>-c, &#8211;chorus=</code><i>percent</i></dt>
+<dd> Specify the effects of chorus. The value is in percent, from 0 to 100. The default is unspecified. This value may be overwritten by MIDI control messages.</dd>
+<dt><code>-r, &#8211;reverb=</code><i>percent</i></dt>
+<dd> Specify the effects of reverb. The value is in percent, from 0 to 100. The default is unspecified. This value may be overwritten by MIDI control messages.</dd>
+<dt><code>-B, &#8211;addblank</code><i></i>[=bool]</dt>
+<dd> Add 48 size of blank loop on each sample data. Usually, this option is not necessary. Most of soundfont files are designed well for enough blank loops for each sample.</dd>
+<dt><code>-L, &#8211;extract=</code><i>source</i>[:<i>map</i>]</dt>
+<dd> Extract and load only the specified preset(s). This option is usually employed by drvmidi. The preset is given as same as in virtual bank file.</dd>
+<dt><code>-v, &#8211;verbose</code><i></i>[=level]</dt>
+<dd> Increase or set the verbosity level.</dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> Don&#8217;t show error messages, equivalen with &#8211;verbose=0.</dd>
+<dt><code>-V, &#8211;volume=</code><i>percent</i></dt>
+<dd> Specify the total volume of sounds, provided in percent. The default volume is <i>70%</i>.</dd>
+<dt><code>-P, &#8211;path=</code><i>path1</i><code>:</code><i>path2</i><code>:</code><i>pathN</i></dt>
+<dd> Specify the search path list. The sound files are searched from <i>path1</i>, <i>path2</i>, and so on. This overrides both the system path and environment variable <code>SFBANKDIR</code>. </dd>
 </dl>
 <h2>VIRTUAL BANK FILE</h2>
 <p> The virtual bank file is a list of presets treated as one soundfont file. The syntax of virtual bank is as follows: <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt># comments</p>
@@ -89,8 +89,8 @@ description: "sfxload, asfxload – load a SoundFont file on the Emux WaveTable"
 <p> synthgm &#8211;chorus=0 </p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>SFBANKDIR</code></p>
-<dd> Search path for sound files. The current directory is always searched at first. </p>
+<dt><code>SFBANKDIR</code></dt>
+<dd> Search path for sound files. The current directory is always searched at first. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code>drvmidi</code>(1) </p>

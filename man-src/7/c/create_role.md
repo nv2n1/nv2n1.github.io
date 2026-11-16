@@ -11,7 +11,6 @@ description: "CREATE ROLE – define a new database role"
 <h2>Synopsis</h2>
 <pre>CREATE ROLE <i>name</i> [ [ WITH ] <i>option</i> [ ... ] ]
 where <i>option</i> can be:
- 
  SUPERUSER | NOSUPERUSER
  | CREATEDB | NOCREATEDB
  | CREATEROLE | NOCREATEROLE
@@ -32,55 +31,55 @@ where <i>option</i> can be:
 <p> Note that roles are defined at the database cluster level, and so are valid in all databases in the cluster.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name of the new role.</p>
-<dt><code>SUPERUSER</code></p>
+<dt><i>name</i></dt>
+<dd>The name of the new role.</dd>
+<dt><code>SUPERUSER</code></dt>
 <dd>
-<dt><code>NOSUPERUSER</code></p>
-<dd>These clauses determine whether the new role is a &#8220;superuser&#8221;, who can override all access restrictions within the database. Superuser status is dangerous and should be used only when really needed. You must yourself be a superuser to create a new superuser. If not specified, NOSUPERUSER is the default.</p>
-<dt><code>CREATEDB</code></p>
+</dd><dt><code>NOSUPERUSER</code></dt>
+<dd>These clauses determine whether the new role is a &#8220;superuser&#8221;, who can override all access restrictions within the database. Superuser status is dangerous and should be used only when really needed. You must yourself be a superuser to create a new superuser. If not specified, NOSUPERUSER is the default.</dd>
+<dt><code>CREATEDB</code></dt>
 <dd>
-<dt><code>NOCREATEDB</code></p>
-<dd>These clauses define a role&#8217;s ability to create databases. If CREATEDB is specified, the role being defined will be allowed to create new databases. Specifying NOCREATEDB will deny a role the ability to create databases. If not specified, NOCREATEDB is the default.</p>
-<dt><code>CREATEROLE</code></p>
+</dd><dt><code>NOCREATEDB</code></dt>
+<dd>These clauses define a role&#8217;s ability to create databases. If CREATEDB is specified, the role being defined will be allowed to create new databases. Specifying NOCREATEDB will deny a role the ability to create databases. If not specified, NOCREATEDB is the default.</dd>
+<dt><code>CREATEROLE</code></dt>
 <dd>
-<dt><code>NOCREATEROLE</code></p>
-<dd>These clauses determine whether a role will be permitted to create new roles (that is, execute <code>CREATE ROLE</code>). A role with CREATEROLE privilege can also alter and drop other roles. If not specified, NOCREATEROLE is the default.</p>
-<dt><code>CREATEUSER</code></p>
+</dd><dt><code>NOCREATEROLE</code></dt>
+<dd>These clauses determine whether a role will be permitted to create new roles (that is, execute <code>CREATE ROLE</code>). A role with CREATEROLE privilege can also alter and drop other roles. If not specified, NOCREATEROLE is the default.</dd>
+<dt><code>CREATEUSER</code></dt>
 <dd>
-<dt><code>NOCREATEUSER</code></p>
-<dd>These clauses are an obsolete, but still accepted, spelling of SUPERUSER and NOSUPERUSER. Note that they are <code>not</code> equivalent to CREATEROLE as one might naively expect!</p>
-<dt><code>INHERIT</code></p>
+</dd><dt><code>NOCREATEUSER</code></dt>
+<dd>These clauses are an obsolete, but still accepted, spelling of SUPERUSER and NOSUPERUSER. Note that they are <code>not</code> equivalent to CREATEROLE as one might naively expect!</dd>
+<dt><code>INHERIT</code></dt>
 <dd>
-<dt><code>NOINHERIT</code></p>
-<dd>These clauses determine whether a role &#8220;inherits&#8221; the privileges of roles it is a member of. A role with the INHERIT attribute can automatically use whatever database privileges have been granted to all roles it is directly or indirectly a member of. Without INHERIT, membership in another role only grants the ability to <code>SET ROLE</code> to that other role; the privileges of the other role are only available after having done so. If not specified, INHERIT is the default.</p>
-<dt><code>LOGIN</code></p>
+</dd><dt><code>NOINHERIT</code></dt>
+<dd>These clauses determine whether a role &#8220;inherits&#8221; the privileges of roles it is a member of. A role with the INHERIT attribute can automatically use whatever database privileges have been granted to all roles it is directly or indirectly a member of. Without INHERIT, membership in another role only grants the ability to <code>SET ROLE</code> to that other role; the privileges of the other role are only available after having done so. If not specified, INHERIT is the default.</dd>
+<dt><code>LOGIN</code></dt>
 <dd>
-<dt><code>NOLOGIN</code></p>
-<dd>These clauses determine whether a role is allowed to log in; that is, whether the role can be given as the initial session authorization name during client connection. A role having the LOGIN attribute can be thought of as a user. Roles without this attribute are useful for managing database privileges, but are not users in the usual sense of the word. If not specified, NOLOGIN is the default, except when <code>CREATE ROLE</code> is invoked through its alternative spelling <code>CREATE USER</code>.</p>
-<dt><code>CONNECTION LIMIT </code><i>connlimit</i></p>
-<dd>If role can log in, this specifies how many concurrent connections the role can make. -1 (the default) means no limit.</p>
-<dt><code>PASSWORD </code><i>password</i></p>
-<dd>Sets the role&#8217;s password. (A password is only of use for roles having the LOGIN attribute, but you can nonetheless define one for roles without it.) If you do not plan to use password authentication you can omit this option. If no password is specified, the password will be set to null and password authentication will always fail for that user. A null password can optionally be written explicitly as PASSWORD NULL.</p>
-<dt><code>ENCRYPTED</code></p>
+</dd><dt><code>NOLOGIN</code></dt>
+<dd>These clauses determine whether a role is allowed to log in; that is, whether the role can be given as the initial session authorization name during client connection. A role having the LOGIN attribute can be thought of as a user. Roles without this attribute are useful for managing database privileges, but are not users in the usual sense of the word. If not specified, NOLOGIN is the default, except when <code>CREATE ROLE</code> is invoked through its alternative spelling <code>CREATE USER</code>.</dd>
+<dt><code>CONNECTION LIMIT </code><i>connlimit</i></dt>
+<dd>If role can log in, this specifies how many concurrent connections the role can make. -1 (the default) means no limit.</dd>
+<dt><code>PASSWORD </code><i>password</i></dt>
+<dd>Sets the role&#8217;s password. (A password is only of use for roles having the LOGIN attribute, but you can nonetheless define one for roles without it.) If you do not plan to use password authentication you can omit this option. If no password is specified, the password will be set to null and password authentication will always fail for that user. A null password can optionally be written explicitly as PASSWORD NULL.</dd>
+<dt><code>ENCRYPTED</code></dt>
 <dd>
-<dt><code>UNENCRYPTED</code></p>
-<dd>These key words control whether the password is stored encrypted in the system catalogs. (If neither is specified, the default behavior is determined by the configuration parameter password_encryption.) If the presented password string is already in MD5-encrypted format, then it is stored encrypted as-is, regardless of whether ENCRYPTED or UNENCRYPTED is specified (since the system cannot decrypt the specified encrypted password string). This allows reloading of encrypted passwords during dump/restore. </p>
+</dd><dt><code>UNENCRYPTED</code></dt>
+<dd>These key words control whether the password is stored encrypted in the system catalogs. (If neither is specified, the default behavior is determined by the configuration parameter password_encryption.) If the presented password string is already in MD5-encrypted format, then it is stored encrypted as-is, regardless of whether ENCRYPTED or UNENCRYPTED is specified (since the system cannot decrypt the specified encrypted password string). This allows reloading of encrypted passwords during dump/restore. </dd>
 <p> Note that older clients might lack support for the MD5 authentication mechanism that is needed to work with passwords that are stored encrypted.</p>
-<dt><code>VALID UNTIL &#8216;</code><i>timestamp</i><code>&#8216;</code></p>
-<dd>The VALID UNTIL clause sets a date and time after which the role&#8217;s password is no longer valid. If this clause is omitted the password will be valid for all time.</p>
-<dt><code>IN ROLE </code><i>rolename</i></p>
-<dd>The IN ROLE clause lists one or more existing roles to which the new role will be immediately added as a new member. (Note that there is no option to add the new role as an administrator; use a separate <code>GRANT</code> command to do that.)</p>
-<dt><code>IN GROUP </code><i>rolename</i></p>
-<dd>IN GROUP is an obsolete spelling of IN ROLE.</p>
-<dt><code>ROLE </code><i>rolename</i></p>
-<dd>The ROLE clause lists one or more existing roles which are automatically added as members of the new role. (This in effect makes the new role a &#8220;group&#8221;.)</p>
-<dt><code>ADMIN </code><i>rolename</i></p>
-<dd>The ADMIN clause is like ROLE, but the named roles are added to the new role WITH ADMIN OPTION, giving them the right to grant membership in this role to others.</p>
-<dt><code>USER </code><i>rolename</i></p>
-<dd>The USER clause is an obsolete spelling of the ROLE clause.</p>
-<dt><code>SYSID </code><i>uid</i></p>
-<dd>The SYSID clause is ignored, but is accepted for backwards compatibility.</dl>
+<dt><code>VALID UNTIL &#8216;</code><i>timestamp</i><code>&#8216;</code></dt>
+<dd>The VALID UNTIL clause sets a date and time after which the role&#8217;s password is no longer valid. If this clause is omitted the password will be valid for all time.</dd>
+<dt><code>IN ROLE </code><i>rolename</i></dt>
+<dd>The IN ROLE clause lists one or more existing roles to which the new role will be immediately added as a new member. (Note that there is no option to add the new role as an administrator; use a separate <code>GRANT</code> command to do that.)</dd>
+<dt><code>IN GROUP </code><i>rolename</i></dt>
+<dd>IN GROUP is an obsolete spelling of IN ROLE.</dd>
+<dt><code>ROLE </code><i>rolename</i></dt>
+<dd>The ROLE clause lists one or more existing roles which are automatically added as members of the new role. (This in effect makes the new role a &#8220;group&#8221;.)</dd>
+<dt><code>ADMIN </code><i>rolename</i></dt>
+<dd>The ADMIN clause is like ROLE, but the named roles are added to the new role WITH ADMIN OPTION, giving them the right to grant membership in this role to others.</dd>
+<dt><code>USER </code><i>rolename</i></dt>
+<dd>The USER clause is an obsolete spelling of the ROLE clause.</dd>
+<dt><code>SYSID </code><i>uid</i></dt>
+<dd>The SYSID clause is ignored, but is accepted for backwards compatibility.</dd></dl>
 <h2>Notes</h2>
 <p>Use ALTER ROLE [<code><a href="/docs/linux/man/7-alter_role/">alter_role</a></code>(7)] to change the attributes of a role, and DROP ROLE [<code><a href="/docs/linux/man/7-drop_role/">drop_role</a></code>(7)] to remove a role. All the attributes specified by <code>CREATE ROLE</code> can be modified by later <code>ALTER ROLE</code> commands. </p>
 <p> The preferred way to add and remove members of roles that are being used as groups is to use GRANT [<code><a href="/docs/linux/man/7-grant/">grant</a></code>(7)] and REVOKE [<code><a href="/docs/linux/man/7-revoke/">revoke</a></code>(7)]. </p>

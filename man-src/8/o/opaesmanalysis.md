@@ -15,29 +15,29 @@ description: "opaesmanalysis"
 <p>opaesmanalysis [-b|-e] [-s] [-d <i>dir</i>] [-G <i>esmchassisfile</i>] [-E#8217#160;&#8217;<i>esmchassis</i>&#8216;]</p>
 <h2>Options</h2>
 <dl>
-<dt>&#8211;help</p>
-<dd>Produces full help text.</p>
-<dt>-b</p>
-<dd>Baseline mode. Default is the compare/check mode.</p>
-<dt>-e</p>
-<dd>Evaluates health only. Default is the compare/check mode.</p>
-<dt>-s</p>
-<dd>Saves history of failures (errors/differences).</p>
-<dt>-d <i>dir</i></p>
-<dd>Top-level directory for saving baseline and history of failed checks. Default = /var/lib/opa-ff/analysis</p>
-<dt>-G <i>esmchassisfile</i></p>
-<dd>File with SM chassis in the cluster. Default = /etc/sysconfig/opa/esm_chassis</p>
-<dt>-E &#8216;<i>esmchassis</i>&#8216;</p>
-<dd>List of SM chassis on which to execute the command.</dl>
+<dt>&#8211;help</dt>
+<dd>Produces full help text.</dd>
+<dt>-b</dt>
+<dd>Baseline mode. Default is the compare/check mode.</dd>
+<dt>-e</dt>
+<dd>Evaluates health only. Default is the compare/check mode.</dd>
+<dt>-s</dt>
+<dd>Saves history of failures (errors/differences).</dd>
+<dt>-d <i>dir</i></dt>
+<dd>Top-level directory for saving baseline and history of failed checks. Default = /var/lib/opa-ff/analysis</dd>
+<dt>-G <i>esmchassisfile</i></dt>
+<dd>File with SM chassis in the cluster. Default = /etc/sysconfig/opa/esm_chassis</dd>
+<dt>-E &#8216;<i>esmchassis</i>&#8216;</dt>
+<dd>List of SM chassis on which to execute the command.</dd></dl>
 <h2>Example</h2>
 <p>opaesmanalysis</p>
 <h2>Environment Variables</h2>
 <p>The following environment variables are also used by this command:</p>
 <dl>
-<dt><code>ESM_CHASSIS</code></p>
-<dd>List of SM chassis, used if -G and -E options are not supplied. </p>
-<dt><code>ESM_CHASSIS_FILE</code></p>
-<dd>File containing list of SM chassis, used if -G and -E options are not supplied. </p>
-<dt><code>FF_ANALYSIS_DIR</code></p>
-<dd>Top-level directory for baselines and failed health checks. </p>
+<dt><code>ESM_CHASSIS</code></dt>
+<dd>List of SM chassis, used if -G and -E options are not supplied. </dd>
+<dt><code>ESM_CHASSIS_FILE</code></dt>
+<dd>File containing list of SM chassis, used if -G and -E options are not supplied. </dd>
+<dt><code>FF_ANALYSIS_DIR</code></dt>
+<dd>Top-level directory for baselines and failed health checks. </dd>
 </dl>

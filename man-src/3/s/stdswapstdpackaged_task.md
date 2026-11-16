@@ -11,9 +11,7 @@ std::swap(std::packaged_task) - std::swap(std::packaged_task)
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class Function, class... Args&gt;
-
 void swap(packaged_task&lt;Function(Args...)&gt; &amp;lhs, (since C++ 11)
-
                                                      packaged_task&lt;Function(Args...)&gt; &amp;rhs) noexcept;</code></pre> 
 Specializes the std::swap algorithm for std::packaged_task. Exchanges the state of lhs with that of rhs. Effectively calls lhs.swap(rhs). 
 

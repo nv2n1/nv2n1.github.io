@@ -16,30 +16,30 @@ description: "shred – overwrite a file to hide its contents, and optionally de
 <p> If FILE is -, shred standard output. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd> change permissions to allow writing if necessary</p>
-<dt><code>-n</code>, <code>&#8211;iterations</code>=<i>,N/</i></p>
-<dd> overwrite N times instead of the default (3)</p>
-<dt><code>&#8211;random-source</code>=<i>,FILE/</i></p>
-<dd> get random bytes from FILE</p>
-<dt><code>-s</code>, <code>&#8211;size</code>=<i>,N/</i></p>
-<dd> shred this many bytes (suffixes like K, M, G accepted)</p>
-<dt><code>-u</code></p>
-<dd> deallocate and remove file after overwriting</p>
-<dt><code>&#8211;remove</code>[=<i>,HOW/</i>]</p>
-<dd> like <code>-u</code> but give control on HOW to delete; See below</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> show progress</p>
-<dt><code>-x</code>, <code>&#8211;exact</code></p>
-<dd> do not round file sizes up to the next full block;</p>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd> change permissions to allow writing if necessary</dd>
+<dt><code>-n</code>, <code>&#8211;iterations</code>=<i>,N/</i></dt>
+<dd> overwrite N times instead of the default (3)</dd>
+<dt><code>&#8211;random-source</code>=<i>,FILE/</i></dt>
+<dd> get random bytes from FILE</dd>
+<dt><code>-s</code>, <code>&#8211;size</code>=<i>,N/</i></dt>
+<dd> shred this many bytes (suffixes like K, M, G accepted)</dd>
+<dt><code>-u</code></dt>
+<dd> deallocate and remove file after overwriting</dd>
+<dt><code>&#8211;remove</code>[=<i>,HOW/</i>]</dt>
+<dd> like <code>-u</code> but give control on HOW to delete; See below</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> show progress</dd>
+<dt><code>-x</code>, <code>&#8211;exact</code></dt>
+<dd> do not round file sizes up to the next full block;</dd>
 <dt>
-<dd> this is the default for non-regular files</p>
-<dt><code>-z</code>, <code>&#8211;zero</code></p>
-<dd> add a final overwrite with zeros to hide shredding</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+</dt><dd> this is the default for non-regular files</dd>
+<dt><code>-z</code>, <code>&#8211;zero</code></dt>
+<dd> add a final overwrite with zeros to hide shredding</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <p> Delete FILE(s) if <code>&#8211;remove</code> (<code>-u</code>) is specified. The default is not to remove the files because it is common to operate on device files like <i>,/dev/hda/</i>, and those files usually should not be removed. The optional HOW parameter indicates how to remove a directory entry: &#8216;unlink&#8217; =&gt; use a standard unlink call. &#8216;wipe&#8217; =&gt; also first obfuscate bytes in the name. &#8216;wipesync&#8217; =&gt; also sync each obfuscated byte to disk. The default mode is &#8216;wipesync&#8217;, but note it can be expensive. </p>
 <p> CAUTION: shred assumes the file system and hardware overwrite data in place. Although this is common, many platforms operate otherwise. Also, backups and mirrors may contain unremovable copies that will let a shredded file be recovered later. See the GNU coreutils manual for details.</p>
 <h2>AUTHOR</h2>

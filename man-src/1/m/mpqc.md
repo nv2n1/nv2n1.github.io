@@ -11,22 +11,22 @@ description: "mpqc – The Massively Parallel Quantum Chemistry program (MPQC) c
 <p> mpqc &#8211; The Massively Parallel Quantum Chemistry program (MPQC) computes the properties of molecules from first principles. </p>
 <p> This documentation is divided into the following chapters: </p>
 <dl>
-<dt>o</p>
-<dd> <code>MPQC Overview</code></p>
-<dt>o</p>
-<dd> <code>Running MPQC</code></p>
-<dt>o</p>
-<dd> <code>MPQC Input</code></p>
-<dt>o</p>
-<dd> <code>Validating MPQC</code></p>
-<dt>o</p>
-<dd> <code>Running Psi 3 from MPQC</code></p>
-<dt>o</p>
-<dd> <code>CCA Components</code></p>
-<dt>o</p>
-<dd> <code>MPQC License</code></p>
-<dt>o</p>
-<dd> <code>MPQC Warranty</code></dl>
+<dt>o</dt>
+<dd> <code>MPQC Overview</code></dd>
+<dt>o</dt>
+<dd> <code>Running MPQC</code></dd>
+<dt>o</dt>
+<dd> <code>MPQC Input</code></dd>
+<dt>o</dt>
+<dd> <code>Validating MPQC</code></dd>
+<dt>o</dt>
+<dd> <code>Running Psi 3 from MPQC</code></dd>
+<dt>o</dt>
+<dd> <code>CCA Components</code></dd>
+<dt>o</dt>
+<dd> <code>MPQC License</code></dd>
+<dt>o</dt>
+<dd> <code>MPQC Warranty</code></dd></dl>
 <h2>MPQC Overview</h2>
 <p> The Massively Parallel Quantum Chemistry program (MPQC) computes the properties of molecules, <i>ab initio</i>, on a wide variety of computer architectures. </p>
 <p> MPQC can compute closed shell and general restricted open-shell Hartree-Fock energies and gradients, second order open-shell perturbation theory (OPT2[2]) and Z-averaged perturbation theory (ZAPT2) energies, and second order closed shell Moeller-Plesset perturbation theory energies and gradients. It also includes methods for optimizing molecules in either Cartesian or internal coordinates. </p>
@@ -35,92 +35,92 @@ description: "mpqc – The Massively Parallel Quantum Chemistry program (MPQC) c
 <p> This chapter explains how to run MPQC in a variety of environments. </p>
 <p> The first two sections give general information on running MPQC: </p>
 <dl>
-<dt>o</p>
-<dd> <code>Command Line Options</code></p>
-<dt>o</p>
-<dd> <code>Environmental Variables</code></dl>
+<dt>o</dt>
+<dd> <code>Command Line Options</code></dd>
+<dt>o</dt>
+<dd> <code>Environmental Variables</code></dd></dl>
 <p> The final sections given specific information on running MPQC in different environments: </p>
 <dl>
-<dt>o</p>
-<dd> <code>Shared Memory Multiprocessor with SysV IPC</code></p>
-<dt>o</p>
-<dd> <code>Shared Memory Multiprocessor with POSIX Threads</code></p>
-<dt>o</p>
-<dd> <code>Shared or Distributed Memory Multiprocessor with MPI</code></p>
-<dt>o</p>
-<dd> <code>Special Notes for MP2 Gradients</code></p>
-<dt>o</p>
-<dd> <code>Special Notes for MP2-R12 energies</code></p>
-<dt>o</p>
-<dd> <code>Special Notes for CCA Components</code></dl>
+<dt>o</dt>
+<dd> <code>Shared Memory Multiprocessor with SysV IPC</code></dd>
+<dt>o</dt>
+<dd> <code>Shared Memory Multiprocessor with POSIX Threads</code></dd>
+<dt>o</dt>
+<dd> <code>Shared or Distributed Memory Multiprocessor with MPI</code></dd>
+<dt>o</dt>
+<dd> <code>Special Notes for MP2 Gradients</code></dd>
+<dt>o</dt>
+<dd> <code>Special Notes for MP2-R12 energies</code></dd>
+<dt>o</dt>
+<dd> <code>Special Notes for CCA Components</code></dd></dl>
 <h3>Command Line Options</h3>
 <p> MPQC can be given options followed by an optional input file name. If the input file name is not given, it will default to &#8216;mpqc.in&#8217;. The following command line options are recognized: </p>
 <dl>
-<dt>-o</p>
-<dd> Gives the name of the output file. The default is the console.</dl>
+<dt>-o</dt>
+<dd> Gives the name of the output file. The default is the console.</dd></dl>
 <dl>
-<dt>-i</p>
-<dd> Convert a simple input file to an object oriented input file and write the result to the ouput. No calculations are done.</dl>
+<dt>-i</dt>
+<dd> Convert a simple input file to an object oriented input file and write the result to the ouput. No calculations are done.</dd></dl>
 <dl>
-<dt>-messagegrp</p>
-<dd> A ParsedKeyVal specification of a MessageGrp object. The default depends on how MPQC was compiled.</dl>
+<dt>-messagegrp</dt>
+<dd> A ParsedKeyVal specification of a MessageGrp object. The default depends on how MPQC was compiled.</dd></dl>
 <dl>
-<dt>-memorygrp</p>
-<dd> A ParsedKeyVal specification of a MemoryGrp object. The default depends on how MPQC was compiled.</dl>
+<dt>-memorygrp</dt>
+<dd> A ParsedKeyVal specification of a MemoryGrp object. The default depends on how MPQC was compiled.</dd></dl>
 <dl>
-<dt>-threadgrp</p>
-<dd> A ParsedKeyVal specification of a ThreadGrp object. The default depends on how MPQC was compiled.</dl>
+<dt>-threadgrp</dt>
+<dd> A ParsedKeyVal specification of a ThreadGrp object. The default depends on how MPQC was compiled.</dd></dl>
 <dl>
-<dt>-integral</p>
-<dd> A ParsedKeyVal specification of an Integral object. The default is IntegralV3. Note that some MolecularEnergy specializations require specific choices of Integral specializations and may not work with IntegralV3.</dl>
+<dt>-integral</dt>
+<dd> A ParsedKeyVal specification of an Integral object. The default is IntegralV3. Note that some MolecularEnergy specializations require specific choices of Integral specializations and may not work with IntegralV3.</dd></dl>
 <dl>
-<dt>-l</p>
-<dd> Sets a limit on the number of basis functions. The default is zero, which means an unlimited number of basis functions.</dl>
+<dt>-l</dt>
+<dd> Sets a limit on the number of basis functions. The default is zero, which means an unlimited number of basis functions.</dd></dl>
 <dl>
-<dt>-W</p>
-<dd> Sets the working directory. The default is the current directory.</dl>
+<dt>-W</dt>
+<dd> Sets the working directory. The default is the current directory.</dd></dl>
 <dl>
-<dt>-c</p>
-<dd> Check the input and exit.</dl>
+<dt>-c</dt>
+<dd> Check the input and exit.</dd></dl>
 <dl>
-<dt>-v</p>
-<dd> Print the version number.</dl>
+<dt>-v</dt>
+<dd> Print the version number.</dd></dl>
 <dl>
-<dt>-w</p>
-<dd> Print the warranty information (there is no warranty).</dl>
+<dt>-w</dt>
+<dd> Print the warranty information (there is no warranty).</dd></dl>
 <dl>
-<dt>-d</p>
-<dd> If a debugger object was given in the input, start the debugger running as soon as MPQC is started.</dl>
+<dt>-d</dt>
+<dd> If a debugger object was given in the input, start the debugger running as soon as MPQC is started.</dd></dl>
 <dl>
-<dt>-h</p>
-<dd> Print a list of options.</dl>
+<dt>-h</dt>
+<dd> Print a list of options.</dd></dl>
 <dl>
-<dt>-f</p>
-<dd> The name of an object-oriented input file. The default is mpqc.in. This cannot be used if another input file is specified. This option is deprecated, as both input file formats can be read by given the input file name on the command line without any option flags.</dl>
+<dt>-f</dt>
+<dd> The name of an object-oriented input file. The default is mpqc.in. This cannot be used if another input file is specified. This option is deprecated, as both input file formats can be read by given the input file name on the command line without any option flags.</dd></dl>
 <dl>
-<dt>-cca-path</p>
-<dd> A colon-separated list of directories in which CCA component libraries may be found.</dl>
+<dt>-cca-path</dt>
+<dd> A colon-separated list of directories in which CCA component libraries may be found.</dd></dl>
 <dl>
-<dt>-cca-load</p>
-<dd> A colon-separated list of sidl class names for CCA components which will be instantiated from the libraries found in the path given by -cca-path</dl>
+<dt>-cca-load</dt>
+<dd> A colon-separated list of sidl class names for CCA components which will be instantiated from the libraries found in the path given by -cca-path</dd></dl>
 <p> Some MPI environments do not pass the command line to slave programs, but supply it when MPI_Init is called. To make MPQC call MPI_Init with the correct arguments as early as possible use the configure option &#8211;enable-always-use-mpi.</p>
 <h3>Environmental Variables</h3>
 <p> MPQC looks at five environmental variables to set up communication, find library files, and specify the default Integral object. Machine specific libraries and utilities to run programs in parallel might look at other environment variables as well. The five that apply on all platforms are: </p>
 <dl>
-<dt>SCLIBDIR</p>
-<dd> The name of the library directory. See the GaussianBasisSet documentation and look below for more information.</dl>
+<dt>SCLIBDIR</dt>
+<dd> The name of the library directory. See the GaussianBasisSet documentation and look below for more information.</dd></dl>
 <dl>
-<dt>MESSAGEGRP</p>
-<dd> A ParsedKeyVal specification of a MessageGrp object. The default depends on how MPQC was compiled. See the MessageGrp class documentation for more information.</dl>
+<dt>MESSAGEGRP</dt>
+<dd> A ParsedKeyVal specification of a MessageGrp object. The default depends on how MPQC was compiled. See the MessageGrp class documentation for more information.</dd></dl>
 <dl>
-<dt>MEMORYGRP</p>
-<dd> A ParsedKeyVal specification of a MemoryGrp object. The default depends on how MPQC was compiled and the MessageGrp in use.</dl>
+<dt>MEMORYGRP</dt>
+<dd> A ParsedKeyVal specification of a MemoryGrp object. The default depends on how MPQC was compiled and the MessageGrp in use.</dd></dl>
 <dl>
-<dt>THREADGRP</p>
-<dd> A ParsedKeyVal specification of a ThreadGrp object. The default depends on how MPQC was compiled.</dl>
+<dt>THREADGRP</dt>
+<dd> A ParsedKeyVal specification of a ThreadGrp object. The default depends on how MPQC was compiled.</dd></dl>
 <dl>
-<dt>INTEGRAL</p>
-<dd> A ParsedKeyVal specification of an Integral object. The default is IntegralV3. Note that some MolecularEnergy specializations require specific choices of Integral specializations and may not work with IntegralV3.</dl>
+<dt>INTEGRAL</dt>
+<dd> A ParsedKeyVal specification of an Integral object. The default is IntegralV3. Note that some MolecularEnergy specializations require specific choices of Integral specializations and may not work with IntegralV3.</dd></dl>
 <p> By default, MPQC tries to find library files first in the lib subdirectory of the installation directory and then the source code directory. If the library files cannot be found, MPQC must be notified of the new location with the environmental variable SCLIBDIR. </p>
 <p> For example, if you need to run MPQC on a machine that doesn&#8217;t have the source code distribution in the same place as it was located on the machine on which MPQC is compiled you must do something like the following on the machine with the source code: </p>
 <pre>
@@ -219,10 +219,10 @@ mpqc input_file
 <p> MPQC supports two input formats. The primary input is an object oriented format which gives users access to all of MPQC&#8217;s options. The second format allows access to a subset of MPQC&#8217;s capabilities, but is more intuitive and easier to learn. New users are advised to start with the simplified format. MPQC can be used to convert the simplified format to the full object-oriented format with the -i option. </p>
 <p> Each of these input formats is described in the following two chapters: </p>
 <dl>
-<dt>o</p>
-<dd> <code>Simple Input</code></p>
-<dt>o</p>
-<dd> <code>Object-Oriented Input</code></dl>
+<dt>o</dt>
+<dd> <code>Simple Input</code></dd>
+<dt>o</dt>
+<dd> <code>Object-Oriented Input</code></dd></dl>
 <h2>Simple Input</h2>
 <p> The simple input format consists of keywords followed by a &#8216;:&#8217; followed by a value. The keywords are case sensitive. The values might be modified by options found in parenthesis. For example, the following input performs an optimization of water using density functional theory with the B3LYP exchange-correlation functional: </p>
 <pre>
@@ -238,223 +238,223 @@ molecule: (angstrom)
 <p>&nbsp;<wbr> </p>
 <p> Comments begin with a % and continue to the end of the line. Basis set names containing special characters, such as a space or parentheses, must be quoted inside a pair of double quotes. The accepted keywords are: </p>
 <dl>
-<dt>molecule</p>
-<dd> Gives the atoms types and coordinates. The following options can be used</dl>
+<dt>molecule</dt>
+<dd> Gives the atoms types and coordinates. The following options can be used</dd></dl>
 <dl>
-<dt>bohr</p>
-<dd> The coordinates are given in Bohr.</p>
-<dt>angstrom</p>
-<dd> The coordinates are given in Angstroms (the default).</p>
-<dt>charge</p>
-<dd> This option can be given after an &#8216;element x y z&#8217; quadruple. This will override the charge on the atom. For example, (charge = 0) can be given for the ghost atoms in a counterpoise correction calculation.</dl>
+<dt>bohr</dt>
+<dd> The coordinates are given in Bohr.</dd>
+<dt>angstrom</dt>
+<dd> The coordinates are given in Angstroms (the default).</dd>
+<dt>charge</dt>
+<dd> This option can be given after an &#8216;element x y z&#8217; quadruple. This will override the charge on the atom. For example, (charge = 0) can be given for the ghost atoms in a counterpoise correction calculation.</dd></dl>
 <dl>
-<dt>multiplicity</p>
-<dd> Gives the multiplicity of the molecule. The default is 1.</dl>
+<dt>multiplicity</dt>
+<dd> Gives the multiplicity of the molecule. The default is 1.</dd></dl>
 <dl>
-<dt>optimize</p>
-<dd> If yes, then an optimization will be performed. The default is no. The following options can be given.</dl>
+<dt>optimize</dt>
+<dd> If yes, then an optimization will be performed. The default is no. The following options can be given.</dd></dl>
 <dl>
-<dt>cartesian</p>
-<dd> Use Cartesian coordinates.</p>
-<dt>internal</p>
-<dd> Use internal coordinates.</p>
-<dt>redundant</p>
-<dd> Use redundant internal coordinates.</dl>
+<dt>cartesian</dt>
+<dd> Use Cartesian coordinates.</dd>
+<dt>internal</dt>
+<dd> Use internal coordinates.</dd>
+<dt>redundant</dt>
+<dd> Use redundant internal coordinates.</dd></dl>
 <dl>
-<dt>gradient</p>
-<dd> If yes, then a gradient calculation will be performed. The default is no.</dl>
+<dt>gradient</dt>
+<dd> If yes, then a gradient calculation will be performed. The default is no.</dd></dl>
 <dl>
-<dt>frequencies</p>
-<dd> If yes, then the frequencies will be obtained. The default is no.</dl>
+<dt>frequencies</dt>
+<dd> If yes, then the frequencies will be obtained. The default is no.</dd></dl>
 <dl>
-<dt>charge</p>
-<dd> Specificies the charge on the molecule. The default is 0.</dl>
+<dt>charge</dt>
+<dd> Specificies the charge on the molecule. The default is 0.</dd></dl>
 <dl>
-<dt>method</p>
-<dd> Specifices the method. There is no default and the possible values are:</dl>
+<dt>method</dt>
+<dd> Specifices the method. There is no default and the possible values are:</dd></dl>
 <dl>
-<dt>HF</p>
-<dd> Hartree-Fock. Unrestricted HF is used if multiplicity &gt; 1</p>
-<dt>RHF</p>
-<dd> Restricted Hartree-Fock.</p>
-<dt>UHF</p>
-<dd> Unrestricted Hartree-Fock.</p>
-<dt>KS</p>
-<dd> Kohn-Sham. Unrestricted KS is used if multiplicity &gt; 1</p>
-<dt>RKS</p>
-<dd> Restricted Kohn-Sham.</p>
-<dt>UKS</p>
-<dd> Unrestricted Kohn-Sham.</p>
-<dt>MP2</p>
-<dd> Second order Moeller-Plesset perturbation theory. Only available for multiplicity = 1.</p>
-<dt>MP2-R12/A</p>
-<dd> The A version of MP2-R12. Only available for multiplicity = 1. An auxiliary basis may be specified. No gradient, optimization, or frequencies are possible.</p>
-<dt>MP2-R12/A&#8217;</p>
-<dd> The A&#8217; version of MP2-R12. Only available for multiplicity = 1. An auxiliary basis may be specified. No gradient, optimization, or frequencies are possible.</p>
-<dt>ZAPT2</p>
-<dd> Z-averaged perturbation theory. Only available for multiplicity &gt; 1. No gradient, optimization, or frequencies are possible.</dl>
+<dt>HF</dt>
+<dd> Hartree-Fock. Unrestricted HF is used if multiplicity &gt; 1</dd>
+<dt>RHF</dt>
+<dd> Restricted Hartree-Fock.</dd>
+<dt>UHF</dt>
+<dd> Unrestricted Hartree-Fock.</dd>
+<dt>KS</dt>
+<dd> Kohn-Sham. Unrestricted KS is used if multiplicity &gt; 1</dd>
+<dt>RKS</dt>
+<dd> Restricted Kohn-Sham.</dd>
+<dt>UKS</dt>
+<dd> Unrestricted Kohn-Sham.</dd>
+<dt>MP2</dt>
+<dd> Second order Moeller-Plesset perturbation theory. Only available for multiplicity = 1.</dd>
+<dt>MP2-R12/A</dt>
+<dd> The A version of MP2-R12. Only available for multiplicity = 1. An auxiliary basis may be specified. No gradient, optimization, or frequencies are possible.</dd>
+<dt>MP2-R12/A&#8217;</dt>
+<dd> The A&#8217; version of MP2-R12. Only available for multiplicity = 1. An auxiliary basis may be specified. No gradient, optimization, or frequencies are possible.</dd>
+<dt>ZAPT2</dt>
+<dd> Z-averaged perturbation theory. Only available for multiplicity &gt; 1. No gradient, optimization, or frequencies are possible.</dd></dl>
 <p> The following options are valid with the KS, RKS, and UKS methods: </p>
 <dl>
-<dt>grid</p>
-<dd> Specifies the grid to be used for numerical integrations. The following values can be given:</p>
-<dt>xcoarse</p>
+<dt>grid</dt>
+<dd> Specifies the grid to be used for numerical integrations. The following values can be given:</dd>
+<dt>xcoarse</dt>
 <dd>
-<dt>coarse</p>
+</dd><dt>coarse</dt>
 <dd>
-<dt>medium</p>
+</dd><dt>medium</dt>
 <dd>
-<dt>fine</p>
+</dd><dt>fine</dt>
 <dd>
-<dt>xfine</p>
+</dd><dt>xfine</dt>
 <dd>
-<dt>ultrafine</p>
-<dd></dl>
+</dd><dt>ultrafine</dt>
+<dd></dd></dl>
 <dl>
-<dt>xc</p>
-<dd> Specifies the exchange-correlation functional. There is no default. See the table in the StdDenFunctional class documentation for the possible values.</dl>
+<dt>xc</dt>
+<dd> Specifies the exchange-correlation functional. There is no default. See the table in the StdDenFunctional class documentation for the possible values.</dd></dl>
 <p> The following options are valid with the MP2-R12/A and MP2-R12/A&#8217; methods. These options are mutually exclusive: </p>
 <dl>
-<dt>abs</p>
-<dd> Use the standard Auxiliary Basis Set method.</p>
-<dt>abs+</p>
-<dd> Use the standard Auxiliary Basis Set method, but use the union of the orbital and the given auxiliary basis as the actual auxiliary basis set used.</p>
-<dt>cabs</p>
-<dd> Use the Complementary Auxiliary Basis Set method.</p>
-<dt>cabs+</p>
-<dd> Use the Complementary Auxiliary Basis Set method, but use the union of the orbital and the given auxiliary basis as the actual auxiliary basis set used.</dl>
+<dt>abs</dt>
+<dd> Use the standard Auxiliary Basis Set method.</dd>
+<dt>abs+</dt>
+<dd> Use the standard Auxiliary Basis Set method, but use the union of the orbital and the given auxiliary basis as the actual auxiliary basis set used.</dd>
+<dt>cabs</dt>
+<dd> Use the Complementary Auxiliary Basis Set method.</dd>
+<dt>cabs+</dt>
+<dd> Use the Complementary Auxiliary Basis Set method, but use the union of the orbital and the given auxiliary basis as the actual auxiliary basis set used.</dd></dl>
 <p> The following options are valid with the MP2-R12/A&#8217; method: </p>
 <dl>
-<dt>ebc</p>
-<dd> Assume the Extended Brillion Condition to hold. This is the default.</p>
-<dt>gbc</p>
-<dd> Assume the Generalized Brillion Condition to hold. This is the default.</p>
-<dt>!ebc</p>
-<dd> Do not assume the Extended Brillion Condition to hold.</p>
-<dt>!gbc</p>
-<dd> Do not assume the Generalized Brillion Condition to hold.</dl>
+<dt>ebc</dt>
+<dd> Assume the Extended Brillion Condition to hold. This is the default.</dd>
+<dt>gbc</dt>
+<dd> Assume the Generalized Brillion Condition to hold. This is the default.</dd>
+<dt>!ebc</dt>
+<dd> Do not assume the Extended Brillion Condition to hold.</dd>
+<dt>!gbc</dt>
+<dd> Do not assume the Generalized Brillion Condition to hold.</dd></dl>
 <dl>
-<dt>basis</p>
-<dd> Specifies the basis set. There is no default. See the table in the GaussianBasisSet class documentation for the available basis sets.</dl>
+<dt>basis</dt>
+<dd> Specifies the basis set. There is no default. See the table in the GaussianBasisSet class documentation for the available basis sets.</dd></dl>
 <dl>
-<dt>auxbasis</p>
-<dd> Specifies the auxiliary basis set for MP2-R12 methods. There is no default. See the table in the GaussianBasisSet class documentation for the available basis sets.</dl>
+<dt>auxbasis</dt>
+<dd> Specifies the auxiliary basis set for MP2-R12 methods. There is no default. See the table in the GaussianBasisSet class documentation for the available basis sets.</dd></dl>
 <dl>
-<dt>restart</p>
-<dd> Set to yes to restart an optimization. The default is no.</dl>
+<dt>restart</dt>
+<dd> Set to yes to restart an optimization. The default is no.</dd></dl>
 <dl>
-<dt>checkpoint</p>
-<dd> Set to no to not save checkpoint files during an optimization. The default is yes.</dl>
+<dt>checkpoint</dt>
+<dd> Set to no to not save checkpoint files during an optimization. The default is yes.</dd></dl>
 <dl>
-<dt>symmetry</p>
-<dd> Specifices the Schoenflies symbol of the point group of the molecule. The default is auto, which will cause to program to find the highest order Abelian subgroup of the molecule.</dl>
+<dt>symmetry</dt>
+<dd> Specifices the Schoenflies symbol of the point group of the molecule. The default is auto, which will cause to program to find the highest order Abelian subgroup of the molecule.</dd></dl>
 <dl>
-<dt>docc</p>
-<dd> Gives the number of doubly occupied orbitals in each each irreducible representation in a parenthesized list. The symmetry must be specified and not be auto. The method must be restricted.</dl>
+<dt>docc</dt>
+<dd> Gives the number of doubly occupied orbitals in each each irreducible representation in a parenthesized list. The symmetry must be specified and not be auto. The method must be restricted.</dd></dl>
 <dl>
-<dt>socc</p>
-<dd> Gives the number of single occupied orbitals in each each irreducible representation in a parenthesized list. The symmetry must be specified and not be auto. The method must be restricted.</dl>
+<dt>socc</dt>
+<dd> Gives the number of single occupied orbitals in each each irreducible representation in a parenthesized list. The symmetry must be specified and not be auto. The method must be restricted.</dd></dl>
 <dl>
-<dt>alpha</p>
-<dd> Gives the number of alpha occupied orbitals in each each irreducible representation in a parenthesized list. The symmetry must be specified and not be auto. The method must be unrestricted.</dl>
+<dt>alpha</dt>
+<dd> Gives the number of alpha occupied orbitals in each each irreducible representation in a parenthesized list. The symmetry must be specified and not be auto. The method must be unrestricted.</dd></dl>
 <dl>
-<dt>beta</p>
-<dd> Gives the number of beta occupied orbitals in each each irreducible representation in a parenthesized list. The symmetry must be specified and not be auto. The method must be unrestricted.</dl>
+<dt>beta</dt>
+<dd> Gives the number of beta occupied orbitals in each each irreducible representation in a parenthesized list. The symmetry must be specified and not be auto. The method must be unrestricted.</dd></dl>
 <dl>
-<dt>frozen_docc</p>
-<dd> Gives the number of frozen core orbitals. Can be either a single integer or a parenthesized list giving the frozen core orbitals in each irreducible representation. In the latter case the symmetry must be given and not be auto.</dl>
+<dt>frozen_docc</dt>
+<dd> Gives the number of frozen core orbitals. Can be either a single integer or a parenthesized list giving the frozen core orbitals in each irreducible representation. In the latter case the symmetry must be given and not be auto.</dd></dl>
 <dl>
-<dt>frozen_uocc</p>
-<dd> Gives the number of frozen virtual orbitals. Can be either a single integer or a parenthesized list giving the frozen virtual orbitals in each irreducible representation. In the latter case the symmetry must be given and not be auto.</dl>
+<dt>frozen_uocc</dt>
+<dd> Gives the number of frozen virtual orbitals. Can be either a single integer or a parenthesized list giving the frozen virtual orbitals in each irreducible representation. In the latter case the symmetry must be given and not be auto.</dd></dl>
 <dl>
-<dt>memory</p>
-<dd> Gives a hint for the amount of memory in bytes that can be used. This is typically a lower bound, more memory will be used in practice and the exact amount cannot be precisely controlled. The format is a fixed or floating point number optionally followed (without spaces) by one of the following suffixes: KB, MB, GB, KIB, MIB, or GIB.</dl>
+<dt>memory</dt>
+<dd> Gives a hint for the amount of memory in bytes that can be used. This is typically a lower bound, more memory will be used in practice and the exact amount cannot be precisely controlled. The format is a fixed or floating point number optionally followed (without spaces) by one of the following suffixes: KB, MB, GB, KIB, MIB, or GIB.</dd></dl>
 <h2>Object-Oriented Input</h2>
 <p> MPQC is an object-oriented program that directly allows the user to specify objects that MPQC then manipulates to obtain energies, properties, etc. This makes the input very flexible, but very complex. However, most calculations should be quite similar to the one of the examples given later in this chapter. The best way to get started is to use one of the example input files and modify it to meet your needs. </p>
 <p> The object-oriented input format is described in the following sections: </p>
 <dl>
-<dt>o</p>
-<dd> <code>Overview of the Object-Oriented Input</code></p>
-<dt>o</p>
-<dd> <code>A Walk-Through of an Object-Oriented Input File</code></p>
-<dt>o</p>
-<dd> <code>Sample Object-Oriented Input Files</code></dl>
+<dt>o</dt>
+<dd> <code>Overview of the Object-Oriented Input</code></dd>
+<dt>o</dt>
+<dd> <code>A Walk-Through of an Object-Oriented Input File</code></dd>
+<dt>o</dt>
+<dd> <code>Sample Object-Oriented Input Files</code></dd></dl>
 <h3>Overview of the Object-Oriented Input</h3>
 <p> MPQC starts off by creating a ParsedKeyVal object that parses the input file specified on the command line. The format of the input file is documented in the KeyVal documentation. It is basically a free format input that associates keywords and logical groupings of keywords with values. The values can be scalars, arrays, or objects. </p>
 <p> The keywords recognized by MPQC begin with the mpqc prefix. That is, they must be nested between an mpqc:( and a ). Alternately, each keyword can be individually prefixed by mpqc:. The primary keywords are given below. Some of the keywords specify objects, in which case the object will require more ParsedKeyVal input. These objects are created from the input by using their ParsedKeyVal constructors. These constructors are documented with the source code documentation for the class. </p>
 <dl>
-<dt>mole</p>
-<dd> This is the most important keyword for MPQC. It specifies the MolecularEnergy object. This is an object that knows how to compute the energy of a molecule. The specializations of MolecularEnergy that are most commonly used are CLKS, HSOSKS, UKS, CLHF, HSOSHF, UHF, and MBPT2.</dl>
+<dt>mole</dt>
+<dd> This is the most important keyword for MPQC. It specifies the MolecularEnergy object. This is an object that knows how to compute the energy of a molecule. The specializations of MolecularEnergy that are most commonly used are CLKS, HSOSKS, UKS, CLHF, HSOSHF, UHF, and MBPT2.</dd></dl>
 <dl>
-<dt>opt</p>
-<dd> This keyword must be specified for optimizations. It specifies an Optimize object. Usually, QNewtonOpt is best for finding minima and EFCOpt is best for transition states.</dl>
+<dt>opt</dt>
+<dd> This keyword must be specified for optimizations. It specifies an Optimize object. Usually, QNewtonOpt is best for finding minima and EFCOpt is best for transition states.</dd></dl>
 <dl>
-<dt>freq</p>
-<dd> This keyword must be specified to compute frequencies. It specifies a MolecularFrequencies object.</dl>
+<dt>freq</dt>
+<dd> This keyword must be specified to compute frequencies. It specifies a MolecularFrequencies object.</dd></dl>
 <dl>
-<dt>thread</p>
-<dd> This specifies an object of type ThreadGrp that can be used to advantage on shared-memory multiprocessor machines for certain types of calculations. This keyword can be overridden by giving the ThreadGrp in the environment or command line. See the section on running MPQC for more information.</dl>
+<dt>thread</dt>
+<dd> This specifies an object of type ThreadGrp that can be used to advantage on shared-memory multiprocessor machines for certain types of calculations. This keyword can be overridden by giving the ThreadGrp in the environment or command line. See the section on running MPQC for more information.</dd></dl>
 <dl>
-<dt>integrals</p>
-<dd> This specifies an object of type Integral that will be used as the default integral evaluator. If MP2-R12 is used, then this should be set to use IntegralCints with a line like integrals&lt;IntegralCints&gt;: ().</dl>
+<dt>integrals</dt>
+<dd> This specifies an object of type Integral that will be used as the default integral evaluator. If MP2-R12 is used, then this should be set to use IntegralCints with a line like integrals&lt;IntegralCints&gt;: ().</dd></dl>
 <dl>
-<dt>checkpoint</p>
-<dd> The value of this keyword is boolean.</dl>
+<dt>checkpoint</dt>
+<dd> The value of this keyword is boolean.</dd></dl>
 <dl>
-<dt>o</p>
+<dt>o</dt>
 <dd> true and optimization is to be performed
-</dl>
+</dd></dl>
 <p> opt object will be checkpointed after each iteration. The checkpoint file suffix is &#8216;.ckpt&#8217;. </p>
 <dl>
-<dt>o</p>
+<dt>o</dt>
 <dd> true and optimization is not performed
-</dl>
+</dd></dl>
 <p> mole object will be checkpointed at intermediate points. The manner in which mole will be checkpointed depends on its particular type. The checkpoint file suffix is usually &#8216;.wfn&#8217;, however in general it will depend on the particular specialization of MolecularEnergy. </p>
 <p> The default is to not checkpoint. </p>
 <dl>
-<dt>checkpoint_freq</p>
-<dd> This specifies how often to checkpoint certain MolecularEnergy specializations which compute iteratively. Currently, mole objects of SCF type can use this keyword. The default is 1, which means to checkpoint after every iteration.</dl>
+<dt>checkpoint_freq</dt>
+<dd> This specifies how often to checkpoint certain MolecularEnergy specializations which compute iteratively. Currently, mole objects of SCF type can use this keyword. The default is 1, which means to checkpoint after every iteration.</dd></dl>
 <dl>
-<dt>savestate</p>
-<dd> The value of this keyword is boolean. If true, then the states of the Optimize and MolecularEnergy objects will be saved after the calculation completes. The output file suffixes are &#8216;.ckpt&#8217; and &#8216;.wfn&#8217;, respectively. The default is to save state.</dl>
+<dt>savestate</dt>
+<dd> The value of this keyword is boolean. If true, then the states of the Optimize and MolecularEnergy objects will be saved after the calculation completes. The output file suffixes are &#8216;.ckpt&#8217; and &#8216;.wfn&#8217;, respectively. The default is to save state.</dd></dl>
 <dl>
-<dt>restart</p>
-<dd> The value of this keyword is boolean. If true, mpqc will attempt to restart the calculation. If the checkpoint file is not found, the calculation will continue as if the value were false. The default is true.</dl>
+<dt>restart</dt>
+<dd> The value of this keyword is boolean. If true, mpqc will attempt to restart the calculation. If the checkpoint file is not found, the calculation will continue as if the value were false. The default is true.</dd></dl>
 <dl>
-<dt>restart_file</p>
-<dd> This gives the name of a file from which restart information is read. If the file name ends with &#8216;.wfn&#8217; then MPQC will try to restore a MolecularEnergy object from it and query for the opt object in the input file. If the file name ends with &#8216;.ckpt&#8217; MPQC will try to restore an Optimize object from this file. The default file name is formed by appending &#8216;.ckpt&#8217; to the input file name with the extension removed.</dl>
+<dt>restart_file</dt>
+<dd> This gives the name of a file from which restart information is read. If the file name ends with &#8216;.wfn&#8217; then MPQC will try to restore a MolecularEnergy object from it and query for the opt object in the input file. If the file name ends with &#8216;.ckpt&#8217; MPQC will try to restore an Optimize object from this file. The default file name is formed by appending &#8216;.ckpt&#8217; to the input file name with the extension removed.</dd></dl>
 <dl>
-<dt>do_energy</p>
-<dd> The value of this keyword is boolean. If true a single point energy calculation will be done for the MolecularEnergy object given with the mole keyword. The default is true.</dl>
+<dt>do_energy</dt>
+<dd> The value of this keyword is boolean. If true a single point energy calculation will be done for the MolecularEnergy object given with the mole keyword. The default is true.</dd></dl>
 <dl>
-<dt>do_gradient</p>
-<dd> The value of this keyword is boolean. If true a single point gradient calculation will be done for the MolecularEnergy object given with the mole keyword. The default is false.</dl>
+<dt>do_gradient</dt>
+<dd> The value of this keyword is boolean. If true a single point gradient calculation will be done for the MolecularEnergy object given with the mole keyword. The default is false.</dd></dl>
 <dl>
-<dt>do_cca</p>
-<dd> The value of this keywork is boolean. If true the cca embedded framework will be initialized. The default is false.</dl>
+<dt>do_cca</dt>
+<dd> The value of this keywork is boolean. If true the cca embedded framework will be initialized. The default is false.</dd></dl>
 <dl>
-<dt>cca_path</p>
-<dd> The value of this keyword is a string that provides a colon-separated list of directories in which CCA component libraries may be found.</dl>
+<dt>cca_path</dt>
+<dd> The value of this keyword is a string that provides a colon-separated list of directories in which CCA component libraries may be found.</dd></dl>
 <dl>
-<dt>cca_load</p>
-<dd> The value of this keyword is a string that provides a colon-separated list of sidl class names for CCA components which will be instantiated from the libraries found in the path given by cca_path.</dl>
+<dt>cca_load</dt>
+<dd> The value of this keyword is a string that provides a colon-separated list of sidl class names for CCA components which will be instantiated from the libraries found in the path given by cca_path.</dd></dl>
 <dl>
-<dt>optimize</p>
-<dd> The value of this keyword is boolean. If true and the opt keyword was set to a valid value, then an optimization will be performed. The default is true.</dl>
+<dt>optimize</dt>
+<dd> The value of this keyword is boolean. If true and the opt keyword was set to a valid value, then an optimization will be performed. The default is true.</dd></dl>
 <dl>
-<dt>write_pdb</p>
-<dd> The value of this keyword is boolean. If true a PDB file with the molecular coordinates will be written.</dl>
+<dt>write_pdb</dt>
+<dd> The value of this keyword is boolean. If true a PDB file with the molecular coordinates will be written.</dd></dl>
 <dl>
-<dt>filename</p>
-<dd> The value of this keyword is a string that gives a name from which checkpoint and other filenames are constructed. The default is the basename of the input file.</dl>
+<dt>filename</dt>
+<dd> The value of this keyword is a string that gives a name from which checkpoint and other filenames are constructed. The default is the basename of the input file.</dd></dl>
 <dl>
-<dt>print_timings</p>
-<dd> If this is true, timing information is printed at the end of the run. The default is true.</dl>
+<dt>print_timings</dt>
+<dd> If this is true, timing information is printed at the end of the run. The default is true.</dd></dl>
 <p> There are also some utility keywords that tell mpqc some technical details about how to do the calculation:</p>
 <dl>
-<dt>debug</p>
-<dd> This optional keyword gives a Debugger object which can be used to help find the problem if MPQC encounters a catastrophic error.</p>
-<dt>matrixkit</p>
-<dd> This optional keyword gives a SCMatrixKit specialization which is used to produce matrices of the desired type. The default is a ReplSCMatrixKit which replicates matrices on all of the nodes. Other choices are not thoroughly tested.</dl>
+<dt>debug</dt>
+<dd> This optional keyword gives a Debugger object which can be used to help find the problem if MPQC encounters a catastrophic error.</dd>
+<dt>matrixkit</dt>
+<dd> This optional keyword gives a SCMatrixKit specialization which is used to produce matrices of the desired type. The default is a ReplSCMatrixKit which replicates matrices on all of the nodes. Other choices are not thoroughly tested.</dd></dl>
 <h3>A Walk-Through of an Object-Oriented Input File</h3>
 <p> This example input does a Hartree-Fock calculation on water. Following is the entire input, followed by a breakdown with descriptions. </p>
 <p>% This input does a Hartree &#8211; Fock calculation on water.molecule&lt;Molecule&gt; : (<br />
@@ -532,40 +532,40 @@ mpqc: (
 <h3>Sample Object-Oriented Input Files</h3>
 <p> The easiest way to get started with mpqc is to start with one of sample inputs that most nearly matches your problem. The src/bin/mpqc/samples contains all of the sample inputs below: </p>
 <dl>
-<dt>o</p>
-<dd> <code>Hartree-Fock Energy</code></p>
-<dt>o</p>
-<dd> <code>MP2 Energy</code></p>
-<dt>o</p>
-<dd> <code>MP2-R12 energy</code></p>
-<dt>o</p>
-<dd> <code>Hartree-Fock Optimization</code></p>
-<dt>o</p>
-<dd> <code>Optimization with a Computed Guess Hessian</code></p>
-<dt>o</p>
-<dd> <code>Optimization Using Newton&#8217;s Method</code></p>
-<dt>o</p>
-<dd> <code>Hartree-Fock Frequencies</code></p>
-<dt>o</p>
-<dd> <code>Giving Coordinates and a Guess Hessian</code></p>
-<dt>o</p>
-<dd> <code>Optimization with a Hydrogen Bond</code></p>
-<dt>o</p>
-<dd> <code>Fixed Coordinate Optimization</code></p>
-<dt>o</p>
-<dd> <code>Transition State Optimization</code></p>
-<dt>o</p>
-<dd> <code>Transition State Optimization with a Computed Guess Hessian</code></p>
-<dt>o</p>
-<dd> <code>Hartree-Fock energy with intermediate checkpointing</code></p>
-<dt>o</p>
-<dd> <code>MP2-R12 energy with intermediate checkpointing</code></p>
-<dt>o</p>
-<dd> <code>HF gradient computed from a previously computed HF wave funtion</code></p>
-<dt>o</p>
-<dd> <code>MP2 Energy computed using precomputed Hartree-Fock wave function</code></p>
-<dt>o</p>
-<dd> <code>CLHF energy using a CCA integrals component</code></dl>
+<dt>o</dt>
+<dd> <code>Hartree-Fock Energy</code></dd>
+<dt>o</dt>
+<dd> <code>MP2 Energy</code></dd>
+<dt>o</dt>
+<dd> <code>MP2-R12 energy</code></dd>
+<dt>o</dt>
+<dd> <code>Hartree-Fock Optimization</code></dd>
+<dt>o</dt>
+<dd> <code>Optimization with a Computed Guess Hessian</code></dd>
+<dt>o</dt>
+<dd> <code>Optimization Using Newton&#8217;s Method</code></dd>
+<dt>o</dt>
+<dd> <code>Hartree-Fock Frequencies</code></dd>
+<dt>o</dt>
+<dd> <code>Giving Coordinates and a Guess Hessian</code></dd>
+<dt>o</dt>
+<dd> <code>Optimization with a Hydrogen Bond</code></dd>
+<dt>o</dt>
+<dd> <code>Fixed Coordinate Optimization</code></dd>
+<dt>o</dt>
+<dd> <code>Transition State Optimization</code></dd>
+<dt>o</dt>
+<dd> <code>Transition State Optimization with a Computed Guess Hessian</code></dd>
+<dt>o</dt>
+<dd> <code>Hartree-Fock energy with intermediate checkpointing</code></dd>
+<dt>o</dt>
+<dd> <code>MP2-R12 energy with intermediate checkpointing</code></dd>
+<dt>o</dt>
+<dd> <code>HF gradient computed from a previously computed HF wave funtion</code></dd>
+<dt>o</dt>
+<dd> <code>MP2 Energy computed using precomputed Hartree-Fock wave function</code></dd>
+<dt>o</dt>
+<dd> <code>CLHF energy using a CCA integrals component</code></dd></dl>
 <h3>Hartree-Fock Energy</h3>
 <p> The following input will compute the Hartree-Fock energy of water. </p>
 <p>% emacs should use -*- KeyVal -*- mode<br />
@@ -1414,125 +1414,125 @@ mpqc: (<br />
 <p> After you compile MPQC, you should run the validation suite. You should also run the validation suite if you upgrade your operating system software, since this could change shared libraries that are linking with MPQC and could affect the results. Note that the reference validation suite has not been verified relative to an independent code, except for a few spot checks. If you find that MPQC doesn&#8217;t produce the same answer as another quantum chemistry program that you trust, then please promptly notify us and send all the details. </p>
 <p> The top-level Makefile has several targets that can be used to check an MPQC build. MPQC must be built before one of these targets is used:</p>
 <dl>
-<dt>check</p>
-<dd> The same as check0 below. This is only available from the top-level directory and src/bin/mpqc/validate.</p>
-<dt>check0</p>
-<dd> Run the smallest MPQC verification suite. It tests basic functionality. This is only available from the top-level directory and src/bin/mpqc/validate.</p>
-<dt>check1</p>
-<dd> Run the intermediate MPQC verification suite. It runs most of the tests, only leaving out very expensive runs. This is only available from the top-level directory and src/bin/mpqc/validate.</p>
-<dt>check2</p>
-<dd> Run the complete MPQC verification suite. Depending on the compilation and runtime environment, tests that are not expected to work will be omitted. This is only available from the top-level directory and src/bin/mpqc/validate.</p>
-<dt>check_clean</p>
-<dd> Remove MPQC verification suite output files. This is only available from the top-level directory and src/bin/mpqc/validate.</p>
-<dt>testbuild</p>
-<dd> Verify that a variety of small test programs compile. If static libraries are used, this will require a substantial amount of disk space.</p>
-<dt>testrun</p>
-<dd> Run a variety of small test programs. This will build them if necessary.</dl>
+<dt>check</dt>
+<dd> The same as check0 below. This is only available from the top-level directory and src/bin/mpqc/validate.</dd>
+<dt>check0</dt>
+<dd> Run the smallest MPQC verification suite. It tests basic functionality. This is only available from the top-level directory and src/bin/mpqc/validate.</dd>
+<dt>check1</dt>
+<dd> Run the intermediate MPQC verification suite. It runs most of the tests, only leaving out very expensive runs. This is only available from the top-level directory and src/bin/mpqc/validate.</dd>
+<dt>check2</dt>
+<dd> Run the complete MPQC verification suite. Depending on the compilation and runtime environment, tests that are not expected to work will be omitted. This is only available from the top-level directory and src/bin/mpqc/validate.</dd>
+<dt>check_clean</dt>
+<dd> Remove MPQC verification suite output files. This is only available from the top-level directory and src/bin/mpqc/validate.</dd>
+<dt>testbuild</dt>
+<dd> Verify that a variety of small test programs compile. If static libraries are used, this will require a substantial amount of disk space.</dd>
+<dt>testrun</dt>
+<dd> Run a variety of small test programs. This will build them if necessary.</dd></dl>
 <p> The check targets will run mpqc with the mpqcrun (see <code>mpqcrun</code>) command. You can give arguments to mpqcrun by setting the MPQCRUN_ARGS variable on the make command line. </p>
 <p> The verification suite is in src/bin/mpqc/validate. After running it, the output files can be found in src/bin/mpqc/validate/run. The check targets will compare outputs that your build produced to the reference files in src/bin/mpqc/validate/ref. The input files can be found with the reference files. For each comparison, first the status (ok, missing, or failed) for each file is printed. If both statuses are ok then an E: is printed followed by the number of digits to which the energies agree. If they agree to all digits 99 is printed. If a gradient was computed, then Grad: is printed followed by the number of digits to which the gradients in least agreement agree. Other properties checked in this way include frequencies, diagnostics, and populations. </p>
 <p> If two numbers do not agree to the expected accuracy, then an asterisk, *, is printed after the number of digits in agreement. </p>
 <p> Finally, you can do a detailed comparison of the contents of the ref and run subdirectories by typing make diff. </p>
 <p> The input files in the verification suite are divided into several categories:</p>
 <dl>
-<dt>h2o</p>
-<dd> These are simple tests that exercise many of MPQC&#8217;s features.</dl>
+<dt>h2o</dt>
+<dd> These are simple tests that exercise many of MPQC&#8217;s features.</dd></dl>
 <dl>
-<dt>h2omp2</p>
-<dd> Tests that further exercise MP2.</dl>
+<dt>h2omp2</dt>
+<dd> Tests that further exercise MP2.</dd></dl>
 <dl>
-<dt>h2ofrq</p>
-<dd> Tests of H2 O frequencies with a variety of methods.</dl>
+<dt>h2ofrq</dt>
+<dd> Tests of H2 O frequencies with a variety of methods.</dd></dl>
 <dl>
-<dt>mbpt</p>
-<dd> These tests exercise MP2 as well as the open-shell perturbation theory methods. The various available algorithms are tested as well.</dl>
+<dt>mbpt</dt>
+<dd> These tests exercise MP2 as well as the open-shell perturbation theory methods. The various available algorithms are tested as well.</dd></dl>
 <dl>
-<dt>ckpt</p>
-<dd> Tests the checkpoint and restart capabilities.</dl>
+<dt>ckpt</dt>
+<dd> Tests the checkpoint and restart capabilities.</dd></dl>
 <dl>
-<dt>symm1</p>
-<dd> Tests of point group symmetry.</dl>
+<dt>symm1</dt>
+<dd> Tests of point group symmetry.</dd></dl>
 <dl>
-<dt>symm2</p>
-<dd> More point group symmetry tests. These use basis sets with higher angular momentum than symm1#.</dl>
+<dt>symm2</dt>
+<dd> More point group symmetry tests. These use basis sets with higher angular momentum than symm1#.</dd></dl>
 <dl>
-<dt>symm3</p>
-<dd> Tests automatic point group determination.</dl>
+<dt>symm3</dt>
+<dd> Tests automatic point group determination.</dd></dl>
 <dl>
-<dt>basis1</p>
-<dd> A variety of basis sets are tested for first row atoms along with hydrogen and helium.</dl>
+<dt>basis1</dt>
+<dd> A variety of basis sets are tested for first row atoms along with hydrogen and helium.</dd></dl>
 <dl>
-<dt>basis2</p>
-<dd> Basis sets test for second row atoms.</dl>
+<dt>basis2</dt>
+<dd> Basis sets test for second row atoms.</dd></dl>
 <dl>
-<dt>methods</p>
-<dd> Basic tests of several of MPQC&#8217;s methods.</dl>
+<dt>methods</dt>
+<dd> Basic tests of several of MPQC&#8217;s methods.</dd></dl>
 <dl>
-<dt>clscf</p>
-<dd> More tests of methods based on CLSCF.</dl>
+<dt>clscf</dt>
+<dd> More tests of methods based on CLSCF.</dd></dl>
 <dl>
-<dt>hsosscf</p>
-<dd> More tests of methods based on HSOSSCF.</dl>
+<dt>hsosscf</dt>
+<dd> More tests of methods based on HSOSSCF.</dd></dl>
 <dl>
-<dt>uscf</p>
-<dd> More tests of methods based on UnrestrictedSCF.</dl>
+<dt>uscf</dt>
+<dd> More tests of methods based on UnrestrictedSCF.</dd></dl>
 <dl>
-<dt>dft</p>
-<dd> More tests of the CLKS method.</dl>
+<dt>dft</dt>
+<dd> More tests of the CLKS method.</dd></dl>
 <dl>
-<dt>mp2r12</p>
-<dd> More tests of MP2-R12.</dl>
+<dt>mp2r12</dt>
+<dd> More tests of MP2-R12.</dd></dl>
 <dl>
-<dt>ccaintv3</p>
-<dd> Tests of embedded CCA integrals components using intv3.</dl>
+<dt>ccaintv3</dt>
+<dd> Tests of embedded CCA integrals components using intv3.</dd></dl>
 <dl>
-<dt>ccacints</p>
-<dd> Tests of embedded CCA integrals components using cints.</dl>
+<dt>ccacints</dt>
+<dd> Tests of embedded CCA integrals components using cints.</dd></dl>
 <h2>Running Psi 3 from MPQC</h2>
 <p> Psi 3 is a suite of <i>ab initio</i> codes related to the original Psi package started in Prof. Fritz Schaefer&#8217;s group at UC Berkeley. Current version of MPQC works with stable versions of Psi 3 starting with 3.2.0. From now on we will refer to Psi 3 as simply Psi. Psi is written primarily in C and executes in serial mode only. The interface between Psi and MPQC is intended mainly for Psi users who wish to exploit MPQC&#8217;s geometry optimization and frequency analyses capabilities with Psi energies and gradients. </p>
 <p> The following sections explain how to use Psi from MPQC: </p>
 <dl>
-<dt>o</p>
-<dd> <code>How the MPQC-Psi interface works</code></p>
-<dt>o</p>
-<dd> <code>Environmental Variables</code></p>
-<dt>o</p>
-<dd> <code>Preparing an input file</code></p>
-<dt>o</p>
-<dd> <code>Psi Execution Environment</code></p>
-<dt>o</p>
-<dd> <code>PsiWavefunction specializations</code></p>
-<dt>o</p>
-<dd> <code>More examples</code></dl>
+<dt>o</dt>
+<dd> <code>How the MPQC-Psi interface works</code></dd>
+<dt>o</dt>
+<dd> <code>Environmental Variables</code></dd>
+<dt>o</dt>
+<dd> <code>Preparing an input file</code></dd>
+<dt>o</dt>
+<dd> <code>Psi Execution Environment</code></dd>
+<dt>o</dt>
+<dd> <code>PsiWavefunction specializations</code></dd>
+<dt>o</dt>
+<dd> <code>More examples</code></dd></dl>
 <h3>How the MPQC-Psi interface works</h3>
 <p> The current version of the interface is rather slim. It is only possible to import energies and gradients computed with Psi into MPQC, i.e. wave functions cannot be imported. All MPQC-Psi interaction happens via text files and system calls. MPQC generates input file for Psi, calls appropriate Psi modules, and then parses the output files for energies and gradients.</p>
 <h3>Environmental Variables</h3>
 <p> Several environmental variables are used to control MPQC-Psi interaction:</p>
 <dl>
-<dt>PSIBIN</p>
-<dd> By default, MPQC will try to find Psi binaries under /usr/local/psi/bin. Use PSIBIN environmental variable to point to the right location.</dl>
+<dt>PSIBIN</dt>
+<dd> By default, MPQC will try to find Psi binaries under /usr/local/psi/bin. Use PSIBIN environmental variable to point to the right location.</dd></dl>
 <p> The rest of the Psi environment is job specific and specified in the input file.</p>
 <h3>Preparing an input file</h3>
 <p> As noted above, MPQC parses the input file, and as such the input file has to be in the MPQC OO input format. All features of usual MPQC input files are there (mpqc section, mole MolecularEnergy object, etc.). In addition the following rules apply: </p>
 <dl>
-<dt>o</p>
-<dd> instead of using MPQC Wavefunction objects (CLHF, MBPT2, etc.), the Psi specific Wavefunction types (i.e. specializations of PsiWavefunction) have to be used. Presently the following specializations are supported: PsiCLHF, PsiHSOSHF, PsiUHF, PsiCCSD, PsiCCSD_T . The first three are directly analogous to MPQC Wavefunction types CLHF, HSOSHF, and UHF. The latter two do not have MPQC analogs yet. See appropriate class documentation on how to specify them properly.</p>
-<dt>o</p>
-<dd> each Psi-specific Wavefunction object has to have a member object psienv of type PsiExEnv. PsiExEnv contains job specific information, such as the directory in which Psi input, output, and checkpoint files will be kept, filename prefix, scratch directories, etc. It makes sense to define one such object and simply refer to it from all PsiWavefunction objects. See PsiExEnv class documentation for more info.</dl>
+<dt>o</dt>
+<dd> instead of using MPQC Wavefunction objects (CLHF, MBPT2, etc.), the Psi specific Wavefunction types (i.e. specializations of PsiWavefunction) have to be used. Presently the following specializations are supported: PsiCLHF, PsiHSOSHF, PsiUHF, PsiCCSD, PsiCCSD_T . The first three are directly analogous to MPQC Wavefunction types CLHF, HSOSHF, and UHF. The latter two do not have MPQC analogs yet. See appropriate class documentation on how to specify them properly.</dd>
+<dt>o</dt>
+<dd> each Psi-specific Wavefunction object has to have a member object psienv of type PsiExEnv. PsiExEnv contains job specific information, such as the directory in which Psi input, output, and checkpoint files will be kept, filename prefix, scratch directories, etc. It makes sense to define one such object and simply refer to it from all PsiWavefunction objects. See PsiExEnv class documentation for more info.</dd></dl>
 <h3>Psi Execution Environment</h3>
 <p> Each PsiWavefunction-derived class has to have a member object called psienv of type PsiExEnv. The following keywords are used by its KeyVal constructor:</p>
 <dl>
-<dt>cwd</p>
-<dd> The directory where to keep Psi input, checkpoint, stdout, stderr, and other files. Default is /tmp.</p>
-<dt>fileprefix</p>
-<dd> The file prefix to use for Psi checkpoint, scratch, and some ASCII files. Equivalent to keyword name in Psi psi:files:default section. Defaults to psi.</p>
-<dt>stdout</p>
-<dd> The file into which to redirect standard output of Psi modules. Defaults to psi.stdout.</p>
-<dt>stderr</p>
-<dd> The file into which to redirect standard error of Psi modules. Defaults to psi.stderr.</p>
-<dt>nscratch</p>
-<dd> The number of locations over which to stripe Psi binary files. Equivalent to keyword nvolume in Psi psi:files:default section. Default is 1.</p>
-<dt>scratch</p>
-<dd> The locations over which to stripe Psi binary files. Equivalent to keyword volume<i>x</i> in Psi psi:files:default section. There&#8217;s no default.</dl>
+<dt>cwd</dt>
+<dd> The directory where to keep Psi input, checkpoint, stdout, stderr, and other files. Default is /tmp.</dd>
+<dt>fileprefix</dt>
+<dd> The file prefix to use for Psi checkpoint, scratch, and some ASCII files. Equivalent to keyword name in Psi psi:files:default section. Defaults to psi.</dd>
+<dt>stdout</dt>
+<dd> The file into which to redirect standard output of Psi modules. Defaults to psi.stdout.</dd>
+<dt>stderr</dt>
+<dd> The file into which to redirect standard error of Psi modules. Defaults to psi.stderr.</dd>
+<dt>nscratch</dt>
+<dd> The number of locations over which to stripe Psi binary files. Equivalent to keyword nvolume in Psi psi:files:default section. Default is 1.</dd>
+<dt>scratch</dt>
+<dd> The locations over which to stripe Psi binary files. Equivalent to keyword volume<i>x</i> in Psi psi:files:default section. There&#8217;s no default.</dd></dl>
 <p> Here&#8217;s an example: </p>
 <pre>
   psienv&lt;PsiExEnv&gt;: (
@@ -1546,22 +1546,22 @@ mpqc: (<br />
 <h3>PsiWavefunction specializations</h3>
 <p> Class PsiWavefunction is derived from class Wavefunction, hence its KeyVal constructor uses all keywords that Wavefunction&#8217;s KeyVal constructor uses (basis, molecule, etc.). In addition, PsiWavefunction&#8217;s KeyVal constructor looks for the following keywords in the input file:</p>
 <dl>
-<dt>psienv</p>
-<dd> The PsiExEnv object that provides job specific Psi environment. There&#8217;s no default.</p>
-<dt>docc</p>
-<dd> An optional array of integers that specifies the number of doubly-occupied orbitals in each irrep.</p>
-<dt>socc</p>
-<dd> An optional array of integers that specifies the number of singly-occupied orbitals in each irrep.</p>
-<dt>frozen_docc</p>
-<dd> An optional array of integers that specifies the number of doubly-occupied orbitals in each irrep frozen in correlated computations.</p>
-<dt>frozen_uocc</p>
-<dd> An optional array of integers that specifies the number of unoccupied orbitals in each irrep frozen in correlated computations.</p>
-<dt>total_charge</p>
-<dd> The total charge of the system. This keyword is queried only if neither docc nor socc are given.</p>
-<dt>multiplicity</p>
-<dd> The spin multiplicity of the system (2*M_S+1). This keyword is queried only if neither docc nor socc are given.</p>
-<dt>memory</p>
-<dd> The number of bytes of memory Psi modules associated with this PsiWavefunction are allowed to use. Default is 2000000 (2 million bytes, approximately 2 MB).</dl>
+<dt>psienv</dt>
+<dd> The PsiExEnv object that provides job specific Psi environment. There&#8217;s no default.</dd>
+<dt>docc</dt>
+<dd> An optional array of integers that specifies the number of doubly-occupied orbitals in each irrep.</dd>
+<dt>socc</dt>
+<dd> An optional array of integers that specifies the number of singly-occupied orbitals in each irrep.</dd>
+<dt>frozen_docc</dt>
+<dd> An optional array of integers that specifies the number of doubly-occupied orbitals in each irrep frozen in correlated computations.</dd>
+<dt>frozen_uocc</dt>
+<dd> An optional array of integers that specifies the number of unoccupied orbitals in each irrep frozen in correlated computations.</dd>
+<dt>total_charge</dt>
+<dd> The total charge of the system. This keyword is queried only if neither docc nor socc are given.</dd>
+<dt>multiplicity</dt>
+<dd> The spin multiplicity of the system (2*M_S+1). This keyword is queried only if neither docc nor socc are given.</dd>
+<dt>memory</dt>
+<dd> The number of bytes of memory Psi modules associated with this PsiWavefunction are allowed to use. Default is 2000000 (2 million bytes, approximately 2 MB).</dd></dl>
 <p> Note that keywords docc, socc, frozen_docc, frozen_uocc, total_charge, and multiplicity are used by appropriate specializations of PsiWavefunctions, i.e. PsiCLHF only checks for docc, etc. </p>
 <p> PsiWavefunction specializations PsiCCSD and PsiCCSD_T also look for keyword reference which specifies the reference wave function (an object of type PsiSCF). All classes for correlated Psi wave functions will require such an object. </p>
 <p> Here are a few examples of PsiWavefunctions: </p>
@@ -1700,44 +1700,44 @@ mpqc: (
 <h2>CCA Components</h2>
 <p> Common Component Architecture (CCA) component wrappers, conforming to interfaces developed for the CCA Chemistry Component Toolkit, have been created to encapsulate some MPQC functionality. The following components are provided by MPQC: </p>
 <dl>
-<dt>o</p>
-<dd> <code>MPQC.Chemistry_QC_ModelFactory</code></p>
-<dt>o</p>
-<dd> <code>MPQC.ChemistryOpt_CoordinateModel</code></p>
-<dt>o</p>
-<dd> <code>MPQC.IntegralEvaluatorFactory</code></dl>
+<dt>o</dt>
+<dd> <code>MPQC.Chemistry_QC_ModelFactory</code></dd>
+<dt>o</dt>
+<dd> <code>MPQC.ChemistryOpt_CoordinateModel</code></dd>
+<dt>o</dt>
+<dd> <code>MPQC.IntegralEvaluatorFactory</code></dd></dl>
 <h3>MPQC.Chemistry_QC_ModelFactory</h3>
 <p> This is an implementation of the Chemistry.QC.ModelFactory interface. This factory produces model objects (implementing the Chemistry.QC.Model interface) based on the MPQC package. The MPQC model allows calculation of molecular energies and energy derivatives using a variety of methods.</p>
 <h3>Provides Ports</h3>
 <dl>
-<dt>o</p>
-<dd> Chemistry.QC.ModelFactory <i>ModelFactory</i></dl>
+<dt>o</dt>
+<dd> Chemistry.QC.ModelFactory <i>ModelFactory</i></dd></dl>
 <h3>Uses Ports</h3>
 <dl>
-<dt>o</p>
-<dd> Chemistry.QC.MoleculeFactory <i>MoleculeFactory</i> (required)</dl>
+<dt>o</dt>
+<dd> Chemistry.QC.MoleculeFactory <i>MoleculeFactory</i> (required)</dd></dl>
 <h3>Parameters</h3>
 <dl>
-<dt>o</p>
-<dd> <code>theory</code> The method for determining the electronic structure. Defaults to HF. </p>
-<dt> o</p>
-<dd> <i>HF</i> Hartree-Fock method.</p>
-<dt> o</p>
-<dd> <i>B3LYP</i> Density Functional Theory (DFT) with B3LYP functional.</p>
-<dt> o</p>
-<dd> Use keyval input for other options.</dl>
+<dt>o</dt>
+<dd> <code>theory</code> The method for determining the electronic structure. Defaults to HF. </dd>
+<dt> o</dt>
+<dd> <i>HF</i> Hartree-Fock method.</dd>
+<dt> o</dt>
+<dd> <i>B3LYP</i> Density Functional Theory (DFT) with B3LYP functional.</dd>
+<dt> o</dt>
+<dd> Use keyval input for other options.</dd></dl>
 <dl>
-<dt>o</p>
-<dd> <code>basis</code> The atomic orbital basis set. Defaults to <i>STO-3G</i>. </p>
-<dt> o</p>
-<dd> Any basis set defined in the MPQC package.</p>
-<dt> o</p>
-<dd> Use keyval input for mixed basis sets.</dl>
+<dt>o</dt>
+<dd> <code>basis</code> The atomic orbital basis set. Defaults to <i>STO-3G</i>. </dd>
+<dt> o</dt>
+<dd> Any basis set defined in the MPQC package.</dd>
+<dt> o</dt>
+<dd> Use keyval input for mixed basis sets.</dd></dl>
 <dl>
-<dt>o</p>
-<dd> <code>molecule_filename</code> Path to the molecule file (see cca-chem-generic documentation for format). No default &#8212; required.</p>
-<dt>o</p>
-<dd> <code>keyval_filename</code> Path to the keyval input file (see below). No default &#8212; optional.</dl>
+<dt>o</dt>
+<dd> <code>molecule_filename</code> Path to the molecule file (see cca-chem-generic documentation for format). No default &#8212; required.</dd>
+<dt>o</dt>
+<dd> <code>keyval_filename</code> Path to the keyval input file (see below). No default &#8212; optional.</dd></dl>
 <h3>Keyval Input</h3>
 <p> The <code>theory</code> and <code>basis</code> parameters allow very basic calculations to be performed. More complex calculations will require the use of a keyval input file. The keyval file format is the same as that used to run MPQC stand-alone, and any valid MPQC options may be used. The molecular energy object must be named model. The user-supplied keyval cannot contain a molecule section; the molecule section will be automatically inserted by the ModelFactory using the required <code>molecule_filename</code>. This molecule section should be referred to as $:molecule. </p>
 <p> Example keyval input: </p>
@@ -1754,52 +1754,52 @@ mpqc: (
 <p> This is an implementation of the ChemistryOpt.CoordinateModel interface based on the MPQC package. It supports molecular structure optimization in cartesian, symmetrized internal, and redundant internal coordinates. Hessian approximation is supported.</p>
 <h3>Provides Ports</h3>
 <dl>
-<dt>o</p>
-<dd> ChemistryOpt.CoordinateModel <i>CoordinateModel</i></dl>
+<dt>o</dt>
+<dd> ChemistryOpt.CoordinateModel <i>CoordinateModel</i></dd></dl>
 <h3>Uses Ports</h3>
 <dl>
-<dt>o</p>
-<dd> Chemistry.QC.ModelFactory <i>ModelFactory</i> (required)</p>
-<dt>o</p>
-<dd> Chemistry.QC.ModelFactory <i>BackupModelFactory</i> (optional)</p>
-<dt>o</p>
-<dd> Chemistry.MoleculeViewer <i>MoleculeViewer</i> (optional)</dl>
+<dt>o</dt>
+<dd> Chemistry.QC.ModelFactory <i>ModelFactory</i> (required)</dd>
+<dt>o</dt>
+<dd> Chemistry.QC.ModelFactory <i>BackupModelFactory</i> (optional)</dd>
+<dt>o</dt>
+<dd> Chemistry.MoleculeViewer <i>MoleculeViewer</i> (optional)</dd></dl>
 <p> A backup model factory may be supplied. If an error is detected in the primary model, then a model obtained from the backup factory will be used. The molecule viewer is currently only used to communicate with the python viewer, in which case component instantiation and connection is handled automatically.</p>
 <h3>Parameters</h3>
 <dl>
-<dt>o</p>
-<dd> <code>grad_rms</code> RMS gradient convergence criteria. Defaults to 0.00030.</p>
-<dt>o</p>
-<dd> <code>grad_max</code> Max gradient convergence criteria. Defaults to 0.00045.</p>
-<dt>o</p>
-<dd> <code>disp_rms</code> RMS displacement convergence criteria. Defaults to 0.00120.</p>
-<dt>o</p>
-<dd> <code>disp_max</code> Max displacement convergence criteria. Defaults to 0.00180.</p>
-<dt>o</p>
-<dd> <code>coordinate_type</code> Optimization coordinate type. Defaults to <i>symmetrized</i>. </p>
-<dt> o</p>
-<dd> <i>cartesian</i> Cartesian coordinates.</p>
-<dt> o</p>
-<dd> <i>symmetrized</i> Symmetrized internal coordinates.</p>
-<dt> o</p>
-<dd> <i>redundant</i> Redundant internal coordinates.</dl>
+<dt>o</dt>
+<dd> <code>grad_rms</code> RMS gradient convergence criteria. Defaults to 0.00030.</dd>
+<dt>o</dt>
+<dd> <code>grad_max</code> Max gradient convergence criteria. Defaults to 0.00045.</dd>
+<dt>o</dt>
+<dd> <code>disp_rms</code> RMS displacement convergence criteria. Defaults to 0.00120.</dd>
+<dt>o</dt>
+<dd> <code>disp_max</code> Max displacement convergence criteria. Defaults to 0.00180.</dd>
+<dt>o</dt>
+<dd> <code>coordinate_type</code> Optimization coordinate type. Defaults to <i>symmetrized</i>. </dd>
+<dt> o</dt>
+<dd> <i>cartesian</i> Cartesian coordinates.</dd>
+<dt> o</dt>
+<dd> <i>symmetrized</i> Symmetrized internal coordinates.</dd>
+<dt> o</dt>
+<dd> <i>redundant</i> Redundant internal coordinates.</dd></dl>
 <dl>
-<dt>o</p>
-<dd> <code>multiple_guess_h</code> Compute new guess Hessian at each call to guess_hessian_solve() (<i>true</i>) or use guess from first iteration only (<i>false</i>). Only meaningful in conjunction with solvers supporting use of dense guess Hessians with limited-memory methods. Defaults to <i>true</i>.</p>
-<dt>o</p>
-<dd> <code>use_current_geom</code> If <code>multiple_guess_h</code> is <i>true</i>, either use the current geometry (<i>true</i>) or the geometry at which the earliest correction pair used by the solver was determined (<i>false</i>) when computing the guess Hessian. Defaults to <i>false</i>.</dl>
+<dt>o</dt>
+<dd> <code>multiple_guess_h</code> Compute new guess Hessian at each call to guess_hessian_solve() (<i>true</i>) or use guess from first iteration only (<i>false</i>). Only meaningful in conjunction with solvers supporting use of dense guess Hessians with limited-memory methods. Defaults to <i>true</i>.</dd>
+<dt>o</dt>
+<dd> <code>use_current_geom</code> If <code>multiple_guess_h</code> is <i>true</i>, either use the current geometry (<i>true</i>) or the geometry at which the earliest correction pair used by the solver was determined (<i>false</i>) when computing the guess Hessian. Defaults to <i>false</i>.</dd></dl>
 <h3>MPQC.IntegralEvaluatorFactory</h3>
 <p> This is an implementation of the Chemistry.QC.GaussianBasis.IntegralEvaluatorFactory interface. This factory produces molecular integral evaluator objects based on the MPQC package. This code is experimental and does not currently support derivative integrals.</p>
 <h3>Provides Ports</h3>
 <dl>
-<dt>o</p>
-<dd> Chemistry.QC.GaussianBasis.IntegralEvaluatorFactory <i>IntegralEvaluatorFactory</i></dl>
+<dt>o</dt>
+<dd> Chemistry.QC.GaussianBasis.IntegralEvaluatorFactory <i>IntegralEvaluatorFactory</i></dd></dl>
 <h3>Parameters</h3>
 <dl>
-<dt>o</p>
-<dd> <code>package</code> Integral package, either intv3 or cints. Defaults to intv3.</p>
-<dt>o</p>
-<dd> <code>integral_buffer</code> Integral buffer type, either opaque or array. The opaque option uses pointers and is therefore higher performance. The array option may be used by components implemented in languages which are not pointer-aware.</dl>
+<dt>o</dt>
+<dd> <code>package</code> Integral package, either intv3 or cints. Defaults to intv3.</dd>
+<dt>o</dt>
+<dd> <code>integral_buffer</code> Integral buffer type, either opaque or array. The opaque option uses pointers and is therefore higher performance. The array option may be used by components implemented in languages which are not pointer-aware.</dd></dl>
 <p>&nbsp;<wbr></p>
 <h2>MPQC License</h2>
 <p> MPQC is open-source software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>

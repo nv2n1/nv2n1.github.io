@@ -14,10 +14,10 @@ description: "gnutls_ia_verify_endphase – API function"
 <p> <code>int gnutls_ia_verify_endphase(gnutls_session_t </code><i>session</i><code>, const char * </code><i>checksum</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>const char * checksum</p>
-<dd> 12-byte checksum data, received from <code>gnutls_ia_recv()</code>.</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>const char * checksum</dt>
+<dd> 12-byte checksum data, received from <code>gnutls_ia_recv()</code>.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Verify TLS/IA end phase checksum data. If verification fails, the <code>GNUTLS_A_INNER_APPLICATION_VERIFICATION</code> alert is sent to the other sie. </p>
 <p> This function is called when <code>gnutls_ia_recv()</code> return <code>GNUTLS_E_WARNING_IA_IPHF_RECEIVED</code> or <code>GNUTLS_E_WARNING_IA_FPHF_RECEIVED</code>.</p>
@@ -32,6 +32,6 @@ description: "gnutls_ia_verify_endphase – API function"
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gnutls</code></dl>
+</dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

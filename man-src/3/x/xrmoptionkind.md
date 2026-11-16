@@ -10,23 +10,23 @@ description: "XrmInitialize, XrmParseCommand, XrmValue, XrmOptionKind, XrmOption
 <p>XrmInitialize, XrmParseCommand, XrmValue, XrmOptionKind, XrmOptionDescRec &#8211; initialize the Resource Manager, Resource Manager structures, and parse the command line </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dt> #include &lt;X11/Xresource.h&gt;</p>
-<dd>void XrmInitialize(void);</p>
-<dd>void XrmParseCommand(XrmDatabase *<i>database</i>, XrmOptionDescList <i>table</i>, int <i>table_count</i>, char *<i>name</i>, int *<i>argc_in_out</i>, char **<i>argv_in_out</i>);</dl>
+<dt> #include &lt;X11/Xresource.h&gt;</dt>
+<dd>void XrmInitialize(void);</dd>
+<dd>void XrmParseCommand(XrmDatabase *<i>database</i>, XrmOptionDescList <i>table</i>, int <i>table_count</i>, char *<i>name</i>, int *<i>argc_in_out</i>, char **<i>argv_in_out</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>argc_in_out</i></p>
-<dd>Specifies the number of arguments and returns the number of remaining arguments.</p>
-<dt><i>argv_in_out</i></p>
-<dd>Specifies the command line arguments and returns the remaining arguments.</p>
-<dt><i>database</i></p>
-<dd>Specifies the resource database.</p>
-<dt><i>name</i></p>
-<dd>Specifies the application name.</p>
-<dt><i>table</i></p>
-<dd>Specifies the table of command line arguments to be parsed.</p>
-<dt><i>table_count</i></p>
-<dd>Specifies the number of entries in the table.</dl>
+<dt><i>argc_in_out</i></dt>
+<dd>Specifies the number of arguments and returns the number of remaining arguments.</dd>
+<dt><i>argv_in_out</i></dt>
+<dd>Specifies the command line arguments and returns the remaining arguments.</dd>
+<dt><i>database</i></dt>
+<dd>Specifies the resource database.</dd>
+<dt><i>name</i></dt>
+<dd>Specifies the application name.</dd>
+<dt><i>table</i></dt>
+<dd>Specifies the table of command line arguments to be parsed.</dd>
+<dt><i>table_count</i></dt>
+<dd>Specifies the number of entries in the table.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XrmInitialize</code> function initialize the resource manager. It must be called before any other Xrm functions are used. </p>
 <p> The <code>XrmParseCommand</code> function parses an (argc, argv) pair according to the specified option table, loads recognized options into the specified database with type &#8220;String,&#8221; and modifies the (argc, argv) pair to remove all recognized options. If database contains NULL, <code>XrmParseCommand</code> creates a new database and returns a pointer to it. Otherwise, entries are added to the database specified. If a database is created, it is created in the current locale. </p>

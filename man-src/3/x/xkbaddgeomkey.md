@@ -11,12 +11,12 @@ description: "XkbAddGeomKey – Add one key at the end of an existing row of key
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>XkbKeyPtr XkbAddGeomKey</code> <code>(XkbRowPtr </code><i>row</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; row</i></p>
+<dt><i>&#8211; row</i></dt>
 <dd>
-<dd>row to be updated</dl>
+</dd><dd>row to be updated</dd></dl>
 <h2>Description</h2>
 <p>Xkb provides functions to add a single new element to the top-level keyboard geometry. In each case the <i>num_ * </i> fields of the corresponding structure is incremented by 1. These functions do not change <i>sz_* </i> unless there is no more room in the array. Some of these functions fill in the values of the element&#8217;s structure from the arguments. For other functions, you must explicitly write code to fill the structure&#8217;s elements. </p>
 <p> The top-level geometry description includes a list of <i>geometry properties. </i> A geometry property associates an arbitrary string with an equally arbitrary name. Programs that display images of keyboards can use geometry properties as hints, but they are not interpreted by Xkb. No other geometry structures refer to geometry properties. </p>

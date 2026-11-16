@@ -29,10 +29,5 @@ Assigns new content to the directory entry object. Sets the path to p.
 <h2>See also</h2>
 
 <pre><code>assigns contents
-
 operator= (public member function)
-
-
-
-
 </code></pre>

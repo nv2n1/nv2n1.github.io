@@ -16,11 +16,11 @@ mongoc_bulk_operation_set_bypass_document_validation (mongoc_bulk_operation_t   
 </pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>bulk</code></p>
-<dd> A <code>mongoc_bulk_operation_t</code> \&amp;.</dl>
+<dt><code>bulk</code></dt>
+<dd> A <code>mongoc_bulk_operation_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>bypass</code></p>
-<dd> A boolean.</dl>
+<dt><code>bypass</code></dt>
+<dd> A boolean.</dd></dl>
 <h2>Description</h2>
 <p> Will bypass document validation for all operations part of this <code>bulk</code> \&amp;. </p>
 <h2>Colophon</h2>

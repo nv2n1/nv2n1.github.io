@@ -26,12 +26,10 @@ Non-zero value if the character is a blank character, zero otherwise.
 <h2>Notes</h2>
 
 Like all other functions from &lt;cctype&gt;, the behavior of std::isblank is undefined if the argument's value is neither representable as unsigned char nor equal to EOF. To use these functions safely with plain chars (or signed chars), the argument should first be converted to unsigned char: <pre><code>bool my_isblank(char ch)
-
 {
     return std::isblank(static_cast&lt;unsigned char&gt;(ch));
 }</code></pre> 
 Similarly, they should not be directly used with standard algorithms when the iterator's value type is char or signed char. Instead, convert the value to unsigned char first: <pre><code>int count_blanks(const std::string &amp;s)
-
 {
     return std::count_if(s.begin(), s.end(),
                          // static_cast&lt;int(*)(int)&gt;(std::isblank)         // wrong

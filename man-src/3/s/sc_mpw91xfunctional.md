@@ -11,7 +11,6 @@ description: "sc::mPW91XFunctional –"
 <p> Implements a modified 1991 Perdew-Wang exchange functional.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;functional.h&gt;</code></pre>
 <p> Inherits <code>sc::DenFunctional</code>.</p>
 <h3>Public Types</h3>
@@ -31,30 +30,12 @@ description: "sc::mPW91XFunctional –"
 <p> void <code>init_constants</code> (Func)</p>
 <h3>Protected Member Functions</h3>
 <pre><code>void spin_contrib (const PointInputData::SpinData &amp;, double &amp;mpw, double &amp;dmpw_dr, double &amp;dmpw_dg)
-
-
-
 Protected Attributes
 double b
-
-
-
 double beta
-
-
-
 double c
-
-
-
 double d
-
-
-
 double a_x
-
-
-
 double x_d_coef</code></pre>
 <h2>Detailed Description</h2>
 <p>Implements a modified 1991 Perdew-Wang exchange functional. </p>
@@ -65,19 +46,19 @@ double x_d_coef</code></pre>
 <h3>sc::mPW91XFunctional::mPW91XFunctional (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)</h3>
 <p>Construct an mPW form exchange functional. The following keywords are recognized:</p>
 <dl>
-<dt>constants</p>
-<dd>This can be B88 to give the Becke88 exchange functional; PW91, to give results similar to the PW91 exchange functional; or mPW91, to give the new functional developed by Adamo and Barone.</dl>
+<dt>constants</dt>
+<dd>This can be B88 to give the Becke88 exchange functional; PW91, to give results similar to the PW91 exchange functional; or mPW91, to give the new functional developed by Adamo and Barone.</dd></dl>
 <dl>
-<dt>b</p>
+<dt>b</dt>
 <dd>
-<dt>beta</p>
+</dd><dt>beta</dt>
 <dd>
-<dt>c</p>
+</dd><dt>c</dt>
 <dd>
-<dt>d</p>
+</dd><dt>d</dt>
 <dd>
-<dt>x_d_coef</p>
-<dd>The coefficient of $x^d$, where $x$ is the reduced gradient.</dl>
+</dd><dt>x_d_coef</dt>
+<dd>The coefficient of $x^d$, where $x$ is the reduced gradient.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void sc::mPW91XFunctional::save_data_state (<code>StateOut</code> &amp;) [virtual]</h3>
 <p>Save the base classes (with save_data_state) and the members in the same order that the <code>StateIn</code> CTOR initializes them. This must be implemented by the derived class if the class has data. </p>

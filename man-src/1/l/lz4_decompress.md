@@ -11,26 +11,26 @@ description: "lz4_decompress – decompress mysqlpump LZ4-compressed output"
 <p> lz4_decompress &#8211; decompress mysqlpump LZ4-compressed output </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>lz4_decompress </code><i>input_file</i><i>output_file</i></dl>
+<dt> <code>lz4_decompress </code><i>input_file</i><i>output_file</i></dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>The <code>lz4_decompress</code> utility decompresses <code>mysqlpump</code> output that was created using LZ4 compression. <code>lz4_decompress</code> was added in MySQL 5.7.10. </p>
+<dd>The <code>lz4_decompress</code> utility decompresses <code>mysqlpump</code> output that was created using LZ4 compression. <code>lz4_decompress</code> was added in MySQL 5.7.10. </dd>
 <p> Invoke <code>lz4_decompress</code> like this: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 shell&gt; <code>lz4_decompress </code><i>input_file</i><i>output_file</i>
 </pre>
-</dl>
+</dd></dl>
 <p> Example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 shell&gt; <code>mysqlpump --compress-output=LZ4 &gt; dump.lz4</code>
 shell&gt; <code>lz4_decompress dump.lz4 dump.txt</code>
 </pre>
-</dl>
+</dd></dl>
 <p> To see a help message, invoke <code>lz4_decompress</code> with no arguments. </p>
 <p> To decompress <code>mysqlpump</code> ZLIB-compressed output, use <code>zlib_decompress</code>. See <code><a href="/docs/linux/man/1-zlib_decompress/">zlib_decompress</a></code>(1).</p>
 <h2>COPYRIGHT</h2>

@@ -38,12 +38,9 @@ function_name <i>(public member function)</i></p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string_view&gt;
-
 #include &lt;experimental/source_location&gt;
 void log(const std::string_view &amp;message, const std::experimental::source_location &amp;location = std::experimental::source_location::current())
-
 {
     std::cout &lt;&lt; &quot;info:&quot;
               &lt;&lt; location.file_name() &lt;&lt; &quot;:&quot;
@@ -52,7 +49,6 @@ void log(const std::string_view &amp;message, const std::experimental::source_lo
 ';
 }
 int main()
-
 {
     log(&quot;Hello world!&quot;);
 }

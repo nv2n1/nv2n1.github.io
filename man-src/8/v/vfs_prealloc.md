@@ -10,7 +10,7 @@ description: "vfs_prealloc – preallocate matching files to a predetermined siz
 <p>vfs_prealloc &#8211; preallocate matching files to a predetermined size</p>
 <h2>Synopsis</h2>
 <dl>
-<dd>vfs objects = prealloc</dl>
+<dd>vfs objects = prealloc</dd></dl>
 <h2>Description</h2>
 <p>This VFS module is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> The vfs_prealloc VFS module preallocates files to a specified size each time a new file is created. This is useful in environments where files are of a predetermined size will be written to a disk subsystem where extending file allocations is expensive. </p>
@@ -18,14 +18,14 @@ description: "vfs_prealloc – preallocate matching files to a predetermined siz
 <h2>Options</h2>
 <p>prealloc:EXT = BYTES</p>
 <dl>
-<dd>Preallocate all files with the extension EXT to the size specified by BYTES. </p>
+<dd>Preallocate all files with the extension EXT to the size specified by BYTES. </dd>
 <p> The following suffixes may be applied to BYTES: </p>
 <dl>
-<dd>&bull; K &#8211; BYTES is a number of kilobytes</dl>
+<dd>&bull; K &#8211; BYTES is a number of kilobytes</dd></dl>
 <dl>
-<dd>&bull; M &#8211; BYTES is a number of megabytes</dl>
+<dd>&bull; M &#8211; BYTES is a number of megabytes</dd></dl>
 <dl>
-<dd>&bull; G &#8211; BYTES is a number of gigabytes</dl>
+<dd>&bull; G &#8211; BYTES is a number of gigabytes</dd></dl>
 </dl>
 <h2>Examples</h2>
 <p>A process writes TIFF files to a Samba share, and the is known these files will almost always be around 4 megabytes (4194304 bytes): </p>
@@ -35,7 +35,7 @@ description: "vfs_prealloc – preallocate matching files to a predetermined siz
  m[blue]<code>path = /data/frames</code>m[]
  m[blue]<code>vfs objects = prealloc</code>m[]
  m[blue]<code>prealloc:tiff = 4M</code>m[]</pre>
-</dl>
+</dd></dl>
 <h2>Caveats</h2>
 <p>vfs_prealloc is not supported on all platforms and filesystems. Currently only XFS filesystems on Linux and IRIX are supported.</p>
 <h2>Version</h2>

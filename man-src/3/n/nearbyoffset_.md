@@ -10,41 +10,14 @@ description: "QuantLib::CommodityIndex – base class for commodity indexes"
 <p>QuantLib::CommodityIndex &#8211; base class for commodity indexes </p>
 <h2>Synopsis</h2>
 <pre><code>const CommodityType &amp; commodityType () const
-
-
-
 const Currency &amp; currency () const
-
-
-
 const UnitOfMeasure &amp; unitOfMeasure () const
-
-
-
 const Calendar &amp; calendar () const
-
-
-
 const boost::shared_ptr&lt; CommodityCurve &gt; &amp; forwardCurve () const
-
-
-
 Real lotQuantity () const
-
-
-
 Real price (const Date &amp;date)
-
-
-
 Real forwardPrice (const Date &amp;date) const
-
-
-
 Date lastQuoteDate () const
-
-
-
 Protected Attributes</code></pre>
 <p> Inherits <code>QuantLib::Observable</code>, and <code>QuantLib::Observer</code>.</p>
 <h3>Public Member Functions</h3>
@@ -71,41 +44,14 @@ Protected Attributes</code></pre>
 <p>Date lastQuoteDate () const</p>
 <p>Protected Attributes <code>Inspectors</code> </p>
 <pre><code>const CommodityType &amp; commodityType () const
-
-
-
 const Currency &amp; currency () const
-
-
-
 const UnitOfMeasure &amp; unitOfMeasure () const
-
-
-
 const Calendar &amp; calendar () const
-
-
-
 const boost::shared_ptr&lt; CommodityCurve &gt; &amp; forwardCurve () const
-
-
-
 Real lotQuantity () const
-
-
-
 Real price (const Date &amp;date)
-
-
-
 Real forwardPrice (const Date &amp;date) const
-
-
-
 Date lastQuoteDate () const
-
-
-
 Protected Attributes</code></pre>
 <p> std::string <code>name_</code> </p>
 <p> <code>CommodityType</code> <code>commodityType_</code> </p>

@@ -20,21 +20,21 @@ int XmClipboardInquireLength (<i>display, window, format_name, length</i>)
 <p><code>XmClipboardInquireLength</code> returns the length of the data stored under a specified format name for the clipboard data item. If no data is found for the specified format, or if there is no item on the clipboard, this function returns a value of 0 (zero) in the <i>length</i> argument. </p>
 <p> Any format passed by name is assumed to have <i>length</i> passed in a call to <code>XmClipboardCopy</code>, even though the data has not yet been transferred to the clipboard in that format.</p>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies a pointer to the <code>Display</code> structure that was returned in a previous call to <code>XOpenDisplay</code> or <code>XtDisplay</code>.</p>
-<dt><i>window</i></p>
-<dd>Specifies the window ID of a widget that relates the application window to the clipboard. The widget&#8217;s window ID can be obtained through <code>XtWindow</code>. The same application instance should pass the same window ID to each of the clipboard functions that it calls.</p>
-<dt><i>format_name</i></p>
-<dd>Specifies the name of the format for the data item.</p>
-<dt><i>length</i></p>
-<dd>Specifies the length of the next data item in the specified format. This argument equals 0 (zero) if no data is found for the specified format, or if there is no item on the clipboard.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies a pointer to the <code>Display</code> structure that was returned in a previous call to <code>XOpenDisplay</code> or <code>XtDisplay</code>.</dd>
+<dt><i>window</i></dt>
+<dd>Specifies the window ID of a widget that relates the application window to the clipboard. The widget&#8217;s window ID can be obtained through <code>XtWindow</code>. The same application instance should pass the same window ID to each of the clipboard functions that it calls.</dd>
+<dt><i>format_name</i></dt>
+<dd>Specifies the name of the format for the data item.</dd>
+<dt><i>length</i></dt>
+<dd>Specifies the length of the next data item in the specified format. This argument equals 0 (zero) if no data is found for the specified format, or if there is no item on the clipboard.</dd></dl>
 <h2>Return</h2>
 <dl COMPACT>
-<dt><code>XmClipboardSuccess</code></p>
-<dd>The function was successful.</p>
-<dt><code>XmClipboardLocked</code></p>
-<dd>The function failed because the clipboard was locked by another application. The application can continue to call the function again with the same parameters until the lock goes away. This gives the application the opportunity to ask if the user wants to keep trying or to give up on the operation.</p>
-<dt><code>XmClipboardNoData</code></p>
-<dd>The function could not find data on the clipboard corresponding to the format requested. This could occur because the clipboard is empty; there is data on the clipboard, but not in the requested format; or the data in the requested format was passed by name and is no longer available.</dl>
+<dt><code>XmClipboardSuccess</code></dt>
+<dd>The function was successful.</dd>
+<dt><code>XmClipboardLocked</code></dt>
+<dd>The function failed because the clipboard was locked by another application. The application can continue to call the function again with the same parameters until the lock goes away. This gives the application the opportunity to ask if the user wants to keep trying or to give up on the operation.</dd>
+<dt><code>XmClipboardNoData</code></dt>
+<dd>The function could not find data on the clipboard corresponding to the format requested. This could occur because the clipboard is empty; there is data on the clipboard, but not in the requested format; or the data in the requested format was passed by name and is no longer available.</dd></dl>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmclipboardcopy/">XmClipboardCopy</a></code>(3) and <code><a href="/docs/linux/man/3-xmclipboardstartcopy/">XmClipboardStartCopy</a></code>(3).</p>

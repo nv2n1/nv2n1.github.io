@@ -14,20 +14,20 @@ description: "sh64_setup_tlb_slot – Load up a translation in a wired slot."
 <p><i>config_addr</i></p>
 <dl>
 <dd>
-<dd>Address of TLB slot.</dl>
+</dd><dd>Address of TLB slot.</dd></dl>
 <p> <i>eaddr</i></p>
 <dl>
-<dd>Virtual address.</dl>
+<dd>Virtual address.</dd></dl>
 <p> <i>asid</i></p>
 <dl>
-<dd>Address Space Identifier.</dl>
+<dd>Address Space Identifier.</dd></dl>
 <p> <i>paddr</i></p>
 <dl>
-<dd>Physical address.</dl>
+<dd>Physical address.</dd></dl>
 <h2>Description</h2>
 <p>Load up a virtual&lt;-&gt;physical translation for <i>eaddr</i>&lt;-&gt;<i>paddr</i> in the pre-allocated TLB slot <i>config_addr</i> (see sh64_get_wired_dtlb_entry).</p>
 <h2>Author</h2>
 <p><code>Paul Mundt</code> &lt;lethal [at] linux-sh.org&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

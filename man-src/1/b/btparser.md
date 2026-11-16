@@ -17,37 +17,37 @@ description: "btparser – a backtrace analyzer"
 <h2>OPTIONS</h2>
 <p> <code>Basic startup options</code></p>
 <dl>
-<dt>-V, &#8211;version</p>
-<dd> Displays version of btparser.</p>
-<dt>-?, &#8211;help</p>
-<dd> Print a help message describing all of btparser’s command-line options. </p>
+<dt>-V, &#8211;version</dt>
+<dd> Displays version of btparser.</dd>
+<dt>-?, &#8211;help</dt>
+<dd> Print a help message describing all of btparser’s command-line options. </dd>
 </dl>
 <p> <code>Actions</code></p>
 <dl>
-<dt>-r, &#8211;rate</p>
-<dd> Print a float number between 0 and 1, representing the quality of the backtrace.</p>
-<dt>-c, &#8211;crash-function</p>
-<dd> Print the name of the function where the program crashed, if it&#8217;s successfully detected.</p>
-<dt>-h, &#8211;duplicate-hash</p>
-<dd> Print a short, textual representation of the backtrace, useful for detecting the backtrace duplicates.</p>
-<dt>-s, &#8211;distances</p>
-<dd> Print Damerau–Levenshtein distances between the backtraces specified on the command line.</p>
-<dt>-g, &#8211;dendrogram</p>
-<dd> Cluster backtraces by their distance and print an ASCII representation of the dendrogram.</p>
-<dt>-l, &#8211;clusters=LEVEL</p>
-<dd> Print clusters cut from the dendrogram at the specified level. </p>
+<dt>-r, &#8211;rate</dt>
+<dd> Print a float number between 0 and 1, representing the quality of the backtrace.</dd>
+<dt>-c, &#8211;crash-function</dt>
+<dd> Print the name of the function where the program crashed, if it&#8217;s successfully detected.</dd>
+<dt>-h, &#8211;duplicate-hash</dt>
+<dd> Print a short, textual representation of the backtrace, useful for detecting the backtrace duplicates.</dd>
+<dt>-s, &#8211;distances</dt>
+<dd> Print Damerau–Levenshtein distances between the backtraces specified on the command line.</dd>
+<dt>-g, &#8211;dendrogram</dt>
+<dd> Cluster backtraces by their distance and print an ASCII representation of the dendrogram.</dd>
+<dt>-l, &#8211;clusters=LEVEL</dt>
+<dd> Print clusters cut from the dendrogram at the specified level. </dd>
 </dl>
 <p> <code>Additional options</code></p>
 <dl>
-<dt>-i, &#8211;stdin</p>
-<dd> Read input from the standard input rather than file.</p>
-<dt>-m, &#8211;max-frames=FRAMES</p>
-<dd> When creating optimized backtrace or preparing backtrace for comparison, limit the number of frames to FRAMES. (default 8)</p>
-<dt>-z, &#8211;min-cluster-size=SIZE</p>
-<dd> When printing clusters, ignore clusters that contain fewer than SIZE objects. (default 2)</p>
-<dt>-d, &#8211;debug</p>
-<dd> Prints debug information when scanning/parsing the backtrace.</p>
-<dt>-v, &#8211;verbose</p>
-<dd> Print more output than usual. </p>
+<dt>-i, &#8211;stdin</dt>
+<dd> Read input from the standard input rather than file.</dd>
+<dt>-m, &#8211;max-frames=FRAMES</dt>
+<dd> When creating optimized backtrace or preparing backtrace for comparison, limit the number of frames to FRAMES. (default 8)</dd>
+<dt>-z, &#8211;min-cluster-size=SIZE</dt>
+<dd> When printing clusters, ignore clusters that contain fewer than SIZE objects. (default 2)</dd>
+<dt>-d, &#8211;debug</dt>
+<dd> Prints debug information when scanning/parsing the backtrace.</dd>
+<dt>-v, &#8211;verbose</dt>
+<dd> Print more output than usual. </dd>
 </dl>
 <h2>Index</h2>

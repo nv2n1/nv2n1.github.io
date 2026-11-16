@@ -14,8 +14,8 @@ description: "gmtpath – Get full pathname for gmt files"
 <h2>DESCRIPTION</h2>
 <p> <code>gmtpath</code> returns the full pathname to one or more gmt-files. The pathname returned for a given cruise may change with time due to reshuffling of disks/subdirectories.</p>
 <dl>
-<dt><i>leg-ids</i></p>
-<dd> Can be one or more gmtleg-names, like c2610. Use `cat list_of_legs` to pass all the legnames in the file list_of_legs.</dl>
+<dt><i>leg-ids</i></dt>
+<dd> Can be one or more gmtleg-names, like c2610. Use `cat list_of_legs` to pass all the legnames in the file list_of_legs.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To obtain pathnames for cruises c2603 and v2819, run </p>
 <p> <code>gmtpath</code> c2603 v2819</p>

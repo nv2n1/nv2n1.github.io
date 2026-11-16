@@ -10,3 +10,5 @@ description: "mlocate.db – a mlocate database"
 <p>mlocate.db &#8211; a mlocate database</p>
 <h2>Description</h2>
 <p>A mlocate database starts with a file header: 8 bytes for a magic number (<code>&quot;
+</p>
+</code>

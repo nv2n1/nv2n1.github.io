@@ -24,36 +24,36 @@ description: "FvwmIconBox – the fvwm icon box module"
 <h2>Configuration Options</h2>
 <p>FvwmIconBox shows icons only if NoIcon is applied. Note that the NoIcon attribute should be set after the Icon attribute specification. Otherwise the icon-box module might become nothing but an empty-box module. The module reads the same .fvwm2rc file as fvwm reads when it starts up, and looks for lines as listed below: </p>
 <dl>
-<dt>*FvwmIconBox: Fore <i>color</i></p>
-<dd>Tells the module to use <i>color</i> instead of white for the window foreground. This option affects only the foreground color of background_bitmap specified in *FvwmIconBox: Pixmap option described below. </p>
-<dt>*FvwmIconBox: Colorset <i>colorset</i></p>
-<dd>Tells the module to use colorset (See FvwmTheme) in place of Fore and Back. </p>
-<dt>*FvwmIconBox: IconColorset <i>colorset</i></p>
-<dd>Tells the module to use colorset (See FvwmTheme) in place of IconFore and IconBack. </p>
-<dt>*FvwmIconBox: IconHiColorset <i>colorset</i></p>
-<dd>Tells the module to use colorset (See FvwmTheme) in place of IconHiFore and IconHiBack. </p>
-<dt>*FvwmIconBox: Back <i>color</i></p>
-<dd>Tells the module to use <i>color</i> instead of black for the window background. </p>
-<dt>*FvwmIconBox: IconFore <i>color</i></p>
-<dd>Tells the module to use <i>color</i> instead of black for non-selected icon text. </p>
-<dt>*FvwmIconBox: IconBack <i>color</i></p>
-<dd>Tells the module to use <i>color</i> instead of white for the non-selected icon background. </p>
-<dt>*FvwmIconBox: IconHiFore <i>color</i></p>
-<dd>Tells the module to use <i>color</i> instead of black for selected icon text. </p>
-<dt>*FvwmIconBox: IconHiBack <i>color</i></p>
-<dd>Tells the module to use <i>color</i> instead of white for the selected icon background. </p>
-<dt>*FvwmIconBox: Pixmap <i>pixmap</i></p>
-<dd>Tells the module to use <i>pixmap</i> for the window background_pixmap. </p>
-<dt>*FvwmIconBox: Font <i>fontname</i></p>
-<dd>Tells the module to use <i>fontname</i> instead of fixed for text. </p>
-<dt>*FvwmIconBox: SortIcons <i>option</i></p>
-<dd>Tells the module to sort all icons in the icon box in alphabetical order. <i>option</i> can be <i>WindowName</i>, <i>IconName</i>, <i>ResClass</i>, and <i>ResName</i>. For example, specifying <i>ResClass</i> means that icons are sorted by using their resource-class strings. If <i>option</i> is <i>ResClass</i> or <i>ResName</i>, an icon having no XA_WM_CLASS property is considered to be the &quot;smallest&quot; element. </p>
-<dt>*FvwmIconBox: Padding <i>number</i></p>
-<dd>Specifies the number of pixels between icons. The default value is 5. </p>
-<dt>*FvwmIconBox: SBWidth <i>number</i></p>
-<dd>Specifies the width of horizontal and vertical scrollbars. The default value is 9. </p>
-<dt>*FvwmIconBox: Placement <i>primary</i> <i>secondary</i></p>
-<dd>Specifies icon placement policy. <i>primary</i> and <i>secondary</i> can be <i>Top</i>, <i>Bottom</i>, <i>Left</i> and <i>Right</i>. The following eight combinations are available: </p>
+<dt>*FvwmIconBox: Fore <i>color</i></dt>
+<dd>Tells the module to use <i>color</i> instead of white for the window foreground. This option affects only the foreground color of background_bitmap specified in *FvwmIconBox: Pixmap option described below. </dd>
+<dt>*FvwmIconBox: Colorset <i>colorset</i></dt>
+<dd>Tells the module to use colorset (See FvwmTheme) in place of Fore and Back. </dd>
+<dt>*FvwmIconBox: IconColorset <i>colorset</i></dt>
+<dd>Tells the module to use colorset (See FvwmTheme) in place of IconFore and IconBack. </dd>
+<dt>*FvwmIconBox: IconHiColorset <i>colorset</i></dt>
+<dd>Tells the module to use colorset (See FvwmTheme) in place of IconHiFore and IconHiBack. </dd>
+<dt>*FvwmIconBox: Back <i>color</i></dt>
+<dd>Tells the module to use <i>color</i> instead of black for the window background. </dd>
+<dt>*FvwmIconBox: IconFore <i>color</i></dt>
+<dd>Tells the module to use <i>color</i> instead of black for non-selected icon text. </dd>
+<dt>*FvwmIconBox: IconBack <i>color</i></dt>
+<dd>Tells the module to use <i>color</i> instead of white for the non-selected icon background. </dd>
+<dt>*FvwmIconBox: IconHiFore <i>color</i></dt>
+<dd>Tells the module to use <i>color</i> instead of black for selected icon text. </dd>
+<dt>*FvwmIconBox: IconHiBack <i>color</i></dt>
+<dd>Tells the module to use <i>color</i> instead of white for the selected icon background. </dd>
+<dt>*FvwmIconBox: Pixmap <i>pixmap</i></dt>
+<dd>Tells the module to use <i>pixmap</i> for the window background_pixmap. </dd>
+<dt>*FvwmIconBox: Font <i>fontname</i></dt>
+<dd>Tells the module to use <i>fontname</i> instead of fixed for text. </dd>
+<dt>*FvwmIconBox: SortIcons <i>option</i></dt>
+<dd>Tells the module to sort all icons in the icon box in alphabetical order. <i>option</i> can be <i>WindowName</i>, <i>IconName</i>, <i>ResClass</i>, and <i>ResName</i>. For example, specifying <i>ResClass</i> means that icons are sorted by using their resource-class strings. If <i>option</i> is <i>ResClass</i> or <i>ResName</i>, an icon having no XA_WM_CLASS property is considered to be the &quot;smallest&quot; element. </dd>
+<dt>*FvwmIconBox: Padding <i>number</i></dt>
+<dd>Specifies the number of pixels between icons. The default value is 5. </dd>
+<dt>*FvwmIconBox: SBWidth <i>number</i></dt>
+<dd>Specifies the width of horizontal and vertical scrollbars. The default value is 9. </dd>
+<dt>*FvwmIconBox: Placement <i>primary</i> <i>secondary</i></dt>
+<dd>Specifies icon placement policy. <i>primary</i> and <i>secondary</i> can be <i>Top</i>, <i>Bottom</i>, <i>Left</i> and <i>Right</i>. The following eight combinations are available: </dd>
 <pre><i>primary</i> <i>secondary</i>
  Left Top
  Left Bottom
@@ -68,48 +68,48 @@ description: "FvwmIconBox – the fvwm icon box module"
 <p> <i>Left</i>: Icons are placed from left to right. </p>
 <p> <i>Right</i>: Icons are placed from right to left. </p>
 <p> For example, when the placement is &quot;Left Top&quot;, icons are placed from left to right, and new rows are added from top to bottom. The default vale is &quot;Left Bottom&quot;. </p>
-<dt>*FvwmIconBox: UseSkipList</p>
-<dd>Tells FvwmIconBox to not show the windows that are listed on a WindowListSkip line in the configuration file. </p>
-<dt>*FvwmIconBox: Lines</p>
-<dd>Specifies the number of icons placed in a line. If <i>primary</i> is Left or Right, this value specifies the number of columns. If <i>primary</i> is Top or Bottom, this value specifies the number of rows. For example, seven icons are placed in a row if *FvwmIconBox: Lines is 7 and *FvwmIconBox: Placement is &quot;Left Top&quot;. The default value is 6. </p>
-<dt>*FvwmIconBox: HideSC <i>direction</i></p>
-<dd>Specifies the un-displayed scroll bar . <i>Direction</i> can be either <i>Horizontal</i> or <i>Vertical</i>. </p>
-<dt>*FvwmIconBox: Geometry <i>&lt;width&gt;x&lt;height&gt;{+-}&lt;X&gt;{+-}&lt;Y&gt;</i></p>
-<dd>Specifies the location and/or size of FvwmIconBox. <i>width</i> and <i>height</i> are measured in icons, not pixels. The default value is 6&#215;1+0+0. </p>
-<dt>*FvwmIconBox: MaxIconSize <i>&lt;width&gt;x&lt;height&gt;</i></p>
-<dd>Specifies the maximum size of icon bitmap. A bitmap larger than this size is clipped to this size. The default value is 48&#215;48. In particular, if the height is 0, then icon bitmaps are not displayed and only icon labels are drawn. </p>
-<dt>*FvwmIconBox: Mouse <i>Button</i> <i>Action</i> <i>Response[, Response]</i></p>
-<dd>Tells the module to do <i>Response</i> when <i>Action</i> is done on button <i>Button</i>. Available <i>Response</i>s are built-in commands in Fvwm (e.g. Iconify, Delete, Focus) and available <i>Action</i>s are Click and DoubleClick. </p>
-<dt>*FvwmIconBox: Key <i>Key</i> <i>Response[, Response]</i></p>
-<dd>Tells the module to do <i>Response</i> when <i>Key</i> is pressed. Available <i>Response</i>s are, besides Fvwm built-in commands, the following six FvwmIconBox built-in commands: <i>Next</i>, <i>Prev</i>, <i>Left</i>, <i>Right</i>, <i>Up</i>, and <i>Down</i>. </p>
+<dt>*FvwmIconBox: UseSkipList</dt>
+<dd>Tells FvwmIconBox to not show the windows that are listed on a WindowListSkip line in the configuration file. </dd>
+<dt>*FvwmIconBox: Lines</dt>
+<dd>Specifies the number of icons placed in a line. If <i>primary</i> is Left or Right, this value specifies the number of columns. If <i>primary</i> is Top or Bottom, this value specifies the number of rows. For example, seven icons are placed in a row if *FvwmIconBox: Lines is 7 and *FvwmIconBox: Placement is &quot;Left Top&quot;. The default value is 6. </dd>
+<dt>*FvwmIconBox: HideSC <i>direction</i></dt>
+<dd>Specifies the un-displayed scroll bar . <i>Direction</i> can be either <i>Horizontal</i> or <i>Vertical</i>. </dd>
+<dt>*FvwmIconBox: Geometry <i>&lt;width&gt;x&lt;height&gt;{+-}&lt;X&gt;{+-}&lt;Y&gt;</i></dt>
+<dd>Specifies the location and/or size of FvwmIconBox. <i>width</i> and <i>height</i> are measured in icons, not pixels. The default value is 6&#215;1+0+0. </dd>
+<dt>*FvwmIconBox: MaxIconSize <i>&lt;width&gt;x&lt;height&gt;</i></dt>
+<dd>Specifies the maximum size of icon bitmap. A bitmap larger than this size is clipped to this size. The default value is 48&#215;48. In particular, if the height is 0, then icon bitmaps are not displayed and only icon labels are drawn. </dd>
+<dt>*FvwmIconBox: Mouse <i>Button</i> <i>Action</i> <i>Response[, Response]</i></dt>
+<dd>Tells the module to do <i>Response</i> when <i>Action</i> is done on button <i>Button</i>. Available <i>Response</i>s are built-in commands in Fvwm (e.g. Iconify, Delete, Focus) and available <i>Action</i>s are Click and DoubleClick. </dd>
+<dt>*FvwmIconBox: Key <i>Key</i> <i>Response[, Response]</i></dt>
+<dd>Tells the module to do <i>Response</i> when <i>Key</i> is pressed. Available <i>Response</i>s are, besides Fvwm built-in commands, the following six FvwmIconBox built-in commands: <i>Next</i>, <i>Prev</i>, <i>Left</i>, <i>Right</i>, <i>Up</i>, and <i>Down</i>. </dd>
 <p> <i>Next</i>: Change the hilighted icon to the next. </p>
 <p> <i>Prev</i>: Change the hilighted icon to the previous. </p>
 <p> <i>Left</i>: Move the slider of the horizontal scrollbar to left. Icons move to right accordingly. </p>
 <p> <i>Right</i>: Move the slider of the horizontal scrollbar to right. Icons move to left accordingly. </p>
 <p> <i>Up</i>: Move the slider of the vertical scrollbar to up. Icons move to down accordingly. </p>
 <p> <i>Down</i>: Move the slider of the vertical scrollbar to down. Icons move to up accordingly. </p>
-<dt>*FvwmIconBox: <i>windowname</i> <i>bitmap-file</i></p>
-<dd>Specifies the bitmap to be displayed in the icon box for <i>windowname</i>. This option &quot;overrides&quot; bitmap files specified in Style command. <i>Windowname</i> can be window name, class name, or resource name. <i>Windowname</i> can contain &quot;*&quot; and &quot;?&quot; like Fvwm configuration file. The <i>bitmap-file</i> is either the full path name to a bitmap file, or a file in the ImagePath. If <i>bitmap-file</i> is specified to be &quot;-&quot;, the icon for a window corresponding to <i>windowname</i> is not shown in the icon box. </p>
-<dt>*FvwmIconBox: SetWMIconSize</p>
-<dd>Tells the module to set XA_WM_ICON_SIZE property of the root window at the size which the module want icon windows to have. If you show icon windows on not the root window but the module, it would be better to specify this option. </p>
-<dt>*FvwmIconBox: HilightFocusWin</p>
-<dd>Tells the module to hilight the icon of the window which has the keyboard focus. The fore/back colors of the hilighted icon are those specified in the *FvwmIconBox: IconHiFore and *FvwmIconBox: IconHiBack commands, respectively. </p>
-<dt>*FvwmIconBox: Resolution <i>resolution</i></p>
-<dd>If <i>resolution</i> is Desk, then the module shows only the icons on the current desk. Currently, Desk is the only value <i>resolution</i> can take :) </p>
-<dt>*FvwmIconBox: FrameWidth <i>width1</i> <i>width2</i></p>
-<dd>Specifies the frame-width of the module. <i>Width1</i> corresponds to the width from the outer-border to the scroll-bar, and, <i>width2</i> corresponds to the width from the scroll-bar to the internal-window displaying icons. The default values are 8 and 6, respectively. </p>
-<dt>*FvwmIconBox: NoIconAction <i>action</i></p>
-<dd>Tells FvwmIconBox to do <i>action</i> is when a NoIcon style window is iconified or de-iconified. Relevant coordinates are appended to <i>action</i> so that the icon can be traced to an FvwmIconBox button. An example action is &quot;*FvwmIconBox: NoIconAction SendToModule FvwmAnimate animate&quot;. A blank or null action turns this feature off. </p>
-<dt>*FvwmIconBox: NoIconifiedParentheses</p>
-<dd>Tells FvwmIconBox to not enclose the title of an iconified window within parantheses. </p>
-<dt>*FvwmIconBox: NormalTitleRelief <i>num</i></p>
-<dd>Sets the width in pixels of the relief that is put around icon titles for windows that are not iconified. The default if this option is not specified is 2 pixels. </p>
-<dt>*FvwmIconBox: IconifiedTitleRelief <i>num</i></p>
-<dd>Sets the width in pixels of the relief that is put around icon titles for windows that are iconified. The default if this option is not specified is 2 pixels. </p>
-<dt>*FvwmIconBox: NormalTitleInvertedRelief</p>
-<dd>This option makes the relief around titles of uniconified windows to appear pressed in. The default is a relief that makes the label look raised from the background (unless a relief width of 0 pixels is specified, see above). </p>
-<dt>*FvwmIconBox: IconifiedTitleInvertedRelief</p>
-<dd>This option makes the relief around titles of iconified windows to appear pressed in. </p>
+<dt>*FvwmIconBox: <i>windowname</i> <i>bitmap-file</i></dt>
+<dd>Specifies the bitmap to be displayed in the icon box for <i>windowname</i>. This option &quot;overrides&quot; bitmap files specified in Style command. <i>Windowname</i> can be window name, class name, or resource name. <i>Windowname</i> can contain &quot;*&quot; and &quot;?&quot; like Fvwm configuration file. The <i>bitmap-file</i> is either the full path name to a bitmap file, or a file in the ImagePath. If <i>bitmap-file</i> is specified to be &quot;-&quot;, the icon for a window corresponding to <i>windowname</i> is not shown in the icon box. </dd>
+<dt>*FvwmIconBox: SetWMIconSize</dt>
+<dd>Tells the module to set XA_WM_ICON_SIZE property of the root window at the size which the module want icon windows to have. If you show icon windows on not the root window but the module, it would be better to specify this option. </dd>
+<dt>*FvwmIconBox: HilightFocusWin</dt>
+<dd>Tells the module to hilight the icon of the window which has the keyboard focus. The fore/back colors of the hilighted icon are those specified in the *FvwmIconBox: IconHiFore and *FvwmIconBox: IconHiBack commands, respectively. </dd>
+<dt>*FvwmIconBox: Resolution <i>resolution</i></dt>
+<dd>If <i>resolution</i> is Desk, then the module shows only the icons on the current desk. Currently, Desk is the only value <i>resolution</i> can take :) </dd>
+<dt>*FvwmIconBox: FrameWidth <i>width1</i> <i>width2</i></dt>
+<dd>Specifies the frame-width of the module. <i>Width1</i> corresponds to the width from the outer-border to the scroll-bar, and, <i>width2</i> corresponds to the width from the scroll-bar to the internal-window displaying icons. The default values are 8 and 6, respectively. </dd>
+<dt>*FvwmIconBox: NoIconAction <i>action</i></dt>
+<dd>Tells FvwmIconBox to do <i>action</i> is when a NoIcon style window is iconified or de-iconified. Relevant coordinates are appended to <i>action</i> so that the icon can be traced to an FvwmIconBox button. An example action is &quot;*FvwmIconBox: NoIconAction SendToModule FvwmAnimate animate&quot;. A blank or null action turns this feature off. </dd>
+<dt>*FvwmIconBox: NoIconifiedParentheses</dt>
+<dd>Tells FvwmIconBox to not enclose the title of an iconified window within parantheses. </dd>
+<dt>*FvwmIconBox: NormalTitleRelief <i>num</i></dt>
+<dd>Sets the width in pixels of the relief that is put around icon titles for windows that are not iconified. The default if this option is not specified is 2 pixels. </dd>
+<dt>*FvwmIconBox: IconifiedTitleRelief <i>num</i></dt>
+<dd>Sets the width in pixels of the relief that is put around icon titles for windows that are iconified. The default if this option is not specified is 2 pixels. </dd>
+<dt>*FvwmIconBox: NormalTitleInvertedRelief</dt>
+<dd>This option makes the relief around titles of uniconified windows to appear pressed in. The default is a relief that makes the label look raised from the background (unless a relief width of 0 pixels is specified, see above). </dd>
+<dt>*FvwmIconBox: IconifiedTitleInvertedRelief</dt>
+<dd>This option makes the relief around titles of iconified windows to appear pressed in. </dd>
 </dl>
 <h2>Sample Configuration</h2>
 <p>The following are excepts from a .fvwm2rc file which describe FvwmIconBox initialization commands: </p>

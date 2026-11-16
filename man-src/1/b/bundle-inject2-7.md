@@ -18,5 +18,5 @@ description: "bundle-inject – Add named gem(s) with version requirements to Ge
 <dd>
 <pre>bundle install
 bundle inject 'rack' '&gt; 0'</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> This will inject the &#8216;rack&#8217; gem with a version greater than 0 in your [<code>Gemfile(5)</code>][Gemfile(5)] and Gemfile.lock</p>

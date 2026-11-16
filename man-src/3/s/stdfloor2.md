@@ -11,9 +11,7 @@ std::floor2 - std::floor2
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;bit&gt;
-
 template&lt; class T &gt;                (since C++20)
-
 constexpr T floor2(T x) noexcept;</code></pre> 
 If x is not zero, calculates the largest integral power of two that is not greater than x. If x is zero, returns zero. 
 This overload only participates in overload resolution if T is an unsigned integer type (that is, unsigned char, unsigned short, unsigned int, unsigned long, unsigned long long, or an extended unsigned integer type). 

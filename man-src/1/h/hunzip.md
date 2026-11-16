@@ -15,8 +15,8 @@ description: "hunzip – decompress and decrypt hzip files to the standard outpu
 <p> <i>Hunzip</i> is the decompression and decryption program of hzip format.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Display short help description.</dl>
+<dt><code>-h</code></dt>
+<dd> Display short help description.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> <code>hunzip file.hz &gt;file</code></p>
 <h2>NOTES</h2>

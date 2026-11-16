@@ -15,23 +15,23 @@ description: "xrdp-sesadmin – console XRDP sessions administration tool"
 <h2>Options</h2>
 <p>A summary of options is included below.</p>
 <dl>
-<dt><code>-u=</code><i>username</i></p>
-<dd><i>Username</i> for authentication on the server. Defaults to <code>root</code>. </p>
-<dt><code>-p=</code><i>password</i></p>
-<dd>The <i>password</i> to authenticate with. The default is to ask for the password interactively. </p>
-<dt><code>-s=</code><i>server</i></p>
-<dd>The host address of the <i>server</i> to connect to. Defaults to <code>localhost</code>. </p>
-<dt><code>-i=</code><i>port</i></p>
-<dd>The TCP <i>port</i> number to connect to. Defaults to <code>3350</code>. </p>
-<dt><code>-c=</code><i>command</i></p>
-<dd>Specifies the <i>command</i> to execute on the server. Valid commands are:</p>
+<dt><code>-u=</code><i>username</i></dt>
+<dd><i>Username</i> for authentication on the server. Defaults to <code>root</code>. </dd>
+<dt><code>-p=</code><i>password</i></dt>
+<dd>The <i>password</i> to authenticate with. The default is to ask for the password interactively. </dd>
+<dt><code>-s=</code><i>server</i></dt>
+<dd>The host address of the <i>server</i> to connect to. Defaults to <code>localhost</code>. </dd>
+<dt><code>-i=</code><i>port</i></dt>
+<dd>The TCP <i>port</i> number to connect to. Defaults to <code>3350</code>. </dd>
+<dt><code>-c=</code><i>command</i></dt>
+<dd>Specifies the <i>command</i> to execute on the server. Valid commands are:</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>list</code></p>
-<dd>List currently active sessions.</p>
-<dt><code>kill:</code><i>sid</i></p>
-<dd>Kills the session specified the given <i>session id</i>. (not yet implemented).</dl>
+</dd><dl>
+<dt><code>list</code></dt>
+<dd>List currently active sessions.</dd>
+<dt><code>kill:</code><i>sid</i></dt>
+<dd>Kills the session specified the given <i>session id</i>. (not yet implemented).</dd></dl>
 </dl>
 </dl>
 <h2>Files</h2>

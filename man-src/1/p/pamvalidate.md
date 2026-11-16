@@ -17,10 +17,10 @@ description: "pamvalidate – validate Netpbm image format"
 <p> This is most useful in a pipeline, before a stage you don&#8217;t want to start working on Netpbm input until it knows it can get all the way through it. For example, assume you are converting PPM images to PNG and you don&#8217;t want to produce a partial PNG file under any circumstance. If you just use <code>pnmtopng</code>, and the PPM input is truncated halfway through the raster, <code>pnmtopng</code> fails, but also produces about half of a PNG file. To prevent that, pass your PPM input through <code>pamvalidate</code> on its way to <code>pnmtopng</code>. Then, <code>pamvalidate</code> will fail, and consequently the pipeline will fail, before <code>pnmtopng</code> has seen any input and therefore before <code>pnmtopng</code> has produced any output. </p>
 <p> These are the kinds of format violations <code>pamvalidate</code> detects: </p>
 <dl>
-<dt>&bull;</p>
-<dd> A purported sample value exceeds the declared maxval.</p>
-<dt>&bull;</p>
-<dd> The stream ends prematurely. </p>
+<dt>&bull;</dt>
+<dd> A purported sample value exceeds the declared maxval.</dd>
+<dt>&bull;</dt>
+<dd> The stream ends prematurely. </dd>
 </dl>
 <p> This program works on multi-image streams, producing a corresponding output stream. </p>
 <p> See <code>pamfix</code> for a way to salvage an invalid Netpbm image stream. </p>

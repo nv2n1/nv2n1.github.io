@@ -10,41 +10,41 @@ description: "sss_seed – seed the SSSD cache with a user"
 <p>sss_seed &#8211; seed the SSSD cache with a user</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>sss_seed</code> [<i>options</i>] -D&nbsp;<wbr><i>DOMAIN</i> -n&nbsp;<wbr><i>USER</i></dl>
+<dt> <code>sss_seed</code> [<i>options</i>] -D&nbsp;<wbr><i>DOMAIN</i> -n&nbsp;<wbr><i>USER</i></dt></dl>
 <h2>Description</h2>
 <p><code>sss_seed</code></p>
-<dd>seeds the SSSD cache with a user entry and temporary password. If a user entry is already present in the SSSD cache then the entry is updated with the temporary password. </p>
+<dd>seeds the SSSD cache with a user entry and temporary password. If a user entry is already present in the SSSD cache then the entry is updated with the temporary password. </dd>
 <h2>Options</h2>
 <p><code>-D</code>,<code>&#8211;domain</code> <i>DOMAIN</i></p>
 <dl>
-<dd>Provide the name of the domain in which the user is a member of. The domain is also used to retrieve user information. The domain must be configured in sssd.conf. The <i>DOMAIN</i> option must be provided. Information retrieved from the domain overrides what is provided in the options.</dl>
+<dd>Provide the name of the domain in which the user is a member of. The domain is also used to retrieve user information. The domain must be configured in sssd.conf. The <i>DOMAIN</i> option must be provided. Information retrieved from the domain overrides what is provided in the options.</dd></dl>
 <p> <code>-n</code>,<code>&#8211;username</code> <i>USER</i></p>
 <dl>
-<dd>The username of the entry to be created or modified in the cache. The <i>USER</i> option must be provided.</dl>
+<dd>The username of the entry to be created or modified in the cache. The <i>USER</i> option must be provided.</dd></dl>
 <p> <code>-u</code>,<code>&#8211;uid</code> <i>UID</i></p>
 <dl>
-<dd>Set the UID of the user to <i>UID</i>.</dl>
+<dd>Set the UID of the user to <i>UID</i>.</dd></dl>
 <p> <code>-g</code>,<code>&#8211;gid</code> <i>GID</i></p>
 <dl>
-<dd>Set the GID of the user to <i>GID</i>.</dl>
+<dd>Set the GID of the user to <i>GID</i>.</dd></dl>
 <p> <code>-c</code>,<code>&#8211;gecos</code> <i>COMMENT</i></p>
 <dl>
-<dd>Any text string describing the user. Often used as the field for the user&#8217;s full name.</dl>
+<dd>Any text string describing the user. Often used as the field for the user&#8217;s full name.</dd></dl>
 <p> <code>-h</code>,<code>&#8211;home</code> <i>HOME_DIR</i></p>
 <dl>
-<dd>Set the home directory of the user to <i>HOME_DIR</i>.</dl>
+<dd>Set the home directory of the user to <i>HOME_DIR</i>.</dd></dl>
 <p> <code>-s</code>,<code>&#8211;shell</code> <i>SHELL</i></p>
 <dl>
-<dd>Set the login shell of the user to <i>SHELL</i>.</dl>
+<dd>Set the login shell of the user to <i>SHELL</i>.</dd></dl>
 <p> <code>-i</code>,<code>&#8211;interactive</code></p>
 <dl>
-<dd>Interactive mode for entering user information. This option will only prompt for information not provided in the options or retrieved from the domain.</dl>
+<dd>Interactive mode for entering user information. This option will only prompt for information not provided in the options or retrieved from the domain.</dd></dl>
 <p> <code>-p</code>,<code>&#8211;password-file</code> <i>PASS_FILE</i></p>
 <dl>
-<dd>Specify file to read user&#8217;s password from. (if not specified password is prompted for)</dl>
+<dd>Specify file to read user&#8217;s password from. (if not specified password is prompted for)</dd></dl>
 <p> <code>-?</code>,<code>&#8211;help</code></p>
 <dl>
-<dd>Display help message and exit.</dl>
+<dd>Display help message and exit.</dd></dl>
 <h2>Notes</h2>
 <p>The length of the password (or the size of file specified with -p or &#8211;password-file option) must be less than or equal to PASS_MAX bytes (64 bytes on systems with no globally-defined PASS_MAX value). </p>
 <h2>See Also</h2>

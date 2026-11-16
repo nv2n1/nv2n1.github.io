@@ -46,14 +46,14 @@ description: "backtrace, backtrace_symbols, backtrace_symbols_fd – support for
 <h2>NOTES</h2>
 <p> These functions make some assumptions about how a function&#8217;s return address is stored on the stack. Note the following:</p>
 <dl>
-<dt>*</p>
-<dd> Omission of the frame pointers (as implied by any of <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1)&#8217;s nonzero optimization levels) may cause these assumptions to be violated.</p>
-<dt>*</p>
-<dd> Inlined functions do not have stack frames.</p>
-<dt>*</p>
-<dd> Tail-call optimization causes one stack frame to replace another.</p>
-<dt>*</p>
-<dd> <code>backtrace</code>() and <code>backtrace_symbols_fd</code>() don&#8217;t call <code>malloc</code>() explicitly, but they are part of <i>libgcc</i>, which gets loaded dynamically when first used. Dynamic loading usually triggers a call to <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3). If you need certain calls to these two functions to not allocate memory (in signal handlers, for example), you need to make sure <i>libgcc</i> is loaded beforehand.</dl>
+<dt>*</dt>
+<dd> Omission of the frame pointers (as implied by any of <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1)&#8217;s nonzero optimization levels) may cause these assumptions to be violated.</dd>
+<dt>*</dt>
+<dd> Inlined functions do not have stack frames.</dd>
+<dt>*</dt>
+<dd> Tail-call optimization causes one stack frame to replace another.</dd>
+<dt>*</dt>
+<dd> <code>backtrace</code>() and <code>backtrace_symbols_fd</code>() don&#8217;t call <code>malloc</code>() explicitly, but they are part of <i>libgcc</i>, which gets loaded dynamically when first used. Dynamic loading usually triggers a call to <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3). If you need certain calls to these two functions to not allocate memory (in signal handlers, for example), you need to make sure <i>libgcc</i> is loaded beforehand.</dd></dl>
 <p> The symbol names may be unavailable without the use of special linker options. For systems using the GNU linker, it is necessary to use the <i>-rdynamic</i> linker option. Note that names of &quot;static&quot; functions are not exposed, and won&#8217;t be available in the backtrace.</p>
 <h2>EXAMPLES</h2>
 <p> The program below demonstrates the use of <code>backtrace</code>() and <code>backtrace_symbols</code>(). The following shell session shows what we might see when running the program: </p>

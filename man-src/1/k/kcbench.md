@@ -17,8 +17,8 @@ description: "kcbench – Kernel compile benchmark"
 <p> Compiles a Linux kernel to benchmark a system or test its stability</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code>, <code>&#8211;compiledir</code> &lt;path&gt;</p>
-<dd></dl>
+<dt><code>-d</code>, <code>&#8211;compiledir</code> &lt;path&gt;</dt>
+<dd></dd></dl>
 <pre>
    Use the subdirectory kcbench in &lt;path&gt;/ when compiling results -- passes
    'O=&lt;path&gt; /kcbench/' to make when calling it to compile a kernel; use a
@@ -104,12 +104,12 @@ description: "kcbench – Kernel compile benchmark"
 </pre>
 <h2>HINTS</h2>
 <dl>
-<dt>*</p>
-<dd> sometimes using exactly as much jobs as processors in the system results in a result that&#8217;s a bit faster than the default (two times the number of processors)</p>
-<dt>*</p>
-<dd> the compiler has a huge impact on the results; if you compare results from different machines make sure they use a similar one. The running kernel and its settings also have a impact on the results. Thus it&#8217;s the best not to compare different distributions/different patch levels.</p>
-<dt>*</p>
-<dd> the kernel that is being compiled of course has a huge impact as well; compare only results where you compiled the same kernel version</dl>
+<dt>*</dt>
+<dd> sometimes using exactly as much jobs as processors in the system results in a result that&#8217;s a bit faster than the default (two times the number of processors)</dd>
+<dt>*</dt>
+<dd> the compiler has a huge impact on the results; if you compare results from different machines make sure they use a similar one. The running kernel and its settings also have a impact on the results. Thus it&#8217;s the best not to compare different distributions/different patch levels.</dd>
+<dt>*</dt>
+<dd> the kernel that is being compiled of course has a huge impact as well; compare only results where you compiled the same kernel version</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-time/">time</a></code>(1).</p>
 <h2>BUGS</h2>

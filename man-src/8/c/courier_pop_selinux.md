@@ -79,8 +79,8 @@ description: "courier_pop_selinux – Security Enhanced Linux Policy for the cou
 <p> <code>courier_pop_exec_t</code> </p>
 <p> &#8211; Set files with the courier_pop_exec_t type, if you want to transition an executable to the courier_pop_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/courier/courier/courierpop.*, /usr/bin/imapd, /usr/sbin/imaplogin, /usr/lib/courier/imapd, /usr/lib/courier/pop3d, /usr/sbin/courier-imapd, /usr/lib/courier/courier/imaplogin </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/courier/courier/courierpop.*, /usr/bin/imapd, /usr/sbin/imaplogin, /usr/lib/courier/imapd, /usr/lib/courier/pop3d, /usr/sbin/courier-imapd, /usr/lib/courier/courier/imaplogin </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

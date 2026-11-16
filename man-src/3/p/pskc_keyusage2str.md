@@ -13,8 +13,8 @@ description: "pskc_keyusage2str – API function"
 const char *pskc_keyusage2str(pskc_keyusage keyusage);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_keyusage keyusage</p>
-<dd>an <code>pskc_keyusage</code> enumeration type</dl>
+<dt>pskc_keyusage keyusage</dt>
+<dd>an <code>pskc_keyusage</code> enumeration type</dd></dl>
 <h2>Description</h2>
 <p>Convert <code>pskc_keyusage</code> to a string. For example, pskc_keyusage2str(<code>PSKC_KEYUSAGE_OTP</code>) will return &quot;OTP&quot;. The returned string must not be deallocated.</p>
 <h2>Returns</h2>

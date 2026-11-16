@@ -13,36 +13,31 @@ ARSCAM - Scans an area map from left to right, extracting the definitions of all
 
  void c_arscam (int *map, float *xcs, float *ycs, int mcs, int *iai, int *iag, int mai, int (*apr)(float *xcs, float *ycs, int *ncs, int *iai, int *iag, int *nai))
 <h2>Description</h2><dl COMPACT><dt>MAP
-<dd>(an input/output array of type INTEGER) - An array containing an area map that has been initialized by a call to ARINAM and to which edges have been added by calls to AREDAM. If you did not preprocess the area map by calling ARPRAM, ARSCAM calls it before doing anything else. 
-
+</dt><dd>(an input/output array of type INTEGER) - An array containing an area map that has been initialized by a call to ARINAM and to which edges have been added by calls to AREDAM. If you did not preprocess the area map by calling ARPRAM, ARSCAM calls it before doing anything else. 
  Note: As part of initializing the area map, ARINAM stores the dimension of MAP in <a HREF="/docs/linux/man/1-map/">MAP</a>(1); therefore, the dimension does not have to be given as an argument in calls to ARSCAM.)
-<dt>XCS,YCS
-<dd>(workspace arrays, dimensioned MCS, of type REAL) - Hold the X and Y coordinates defining the edge of a given area, for use by ARSCAM in calls to the area-processing routine APR.
-<dt>MCS
-<dd>(an input expression of type INTEGER) - Dimension of each of the arrays XCS and YCS.
-<dt>IAI,IAG
-<dd>(workspace arrays, dimensioned MAI, of type INTEGER) - Hold MAI pairs of area identifiers and group identifiers, respectively. Used by ARSCAM in calls to the area-processing routine APR.
-<dt>MAI
-<dd>(an input expression of type INTEGER) - Dimension of each of the arrays IAI and IAG. MAI must be greater than or equal to n, where n is the number of groups in the area map.
-<dt>APR
-<dd>(a subroutine) - An area-processing routine that is called by ARSCAM, and must be declared EXTERNAL in the routine that calls ARSCAM. You must supply the routine APR, and it must have the following form: 
-
+</dd><dt>XCS,YCS
+</dt><dd>(workspace arrays, dimensioned MCS, of type REAL) - Hold the X and Y coordinates defining the edge of a given area, for use by ARSCAM in calls to the area-processing routine APR.
+</dd><dt>MCS
+</dt><dd>(an input expression of type INTEGER) - Dimension of each of the arrays XCS and YCS.
+</dd><dt>IAI,IAG
+</dt><dd>(workspace arrays, dimensioned MAI, of type INTEGER) - Hold MAI pairs of area identifiers and group identifiers, respectively. Used by ARSCAM in calls to the area-processing routine APR.
+</dd><dt>MAI
+</dt><dd>(an input expression of type INTEGER) - Dimension of each of the arrays IAI and IAG. MAI must be greater than or equal to n, where n is the number of groups in the area map.
+</dd><dt>APR
+</dt><dd>(a subroutine) - An area-processing routine that is called by ARSCAM, and must be declared EXTERNAL in the routine that calls ARSCAM. You must supply the routine APR, and it must have the following form: 
  SUBROUTINE APR (XCS,YCS,NCS,IAI,IAG,NAI) 
  DIMENSION XCS(*),YCS(*),IAI(*),IAG(*) 
-
  (code to process the area defined by XCS, YCS, IAI, and IAG) 
-
  RETURN 
  END 
-
-<dl COMPACT><dd><dl COMPACT><dt>XCS,YCS
-<dd>(input arrays, dimensioned NCS, of type REAL) - The X and Y coordinates, in NDCs, of NCS points defining a polygonal area. The last of these points is a duplicate of the first. Holes in an area are traced in a way that maximizes the probability of hardware fill working properly.
-<dt>NCS
-<dd>(an input expression of type INTEGER) - Number of X and Y coordinates in the arrays XCS and YCS.
-<dt>IAI,IAG
-<dd>(input arrays, dimensioned NAI, of type INTEGER) - Hold NAI pairs of identifiers for the area defined by XCS and YCS. For each value of I from 1 to NAI, IAI(I) is the area identifier for the area with respect to the group of edges specified by the group identifier IAG(I).
-<dt>NAI
-<dd>(an input expression of type INTEGER) - Number of values returned in IAI and IAG. NAI equals the number of groups of edges that you put in the area map.</dl></dl>
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>XCS,YCS
+</dt><dd>(input arrays, dimensioned NCS, of type REAL) - The X and Y coordinates, in NDCs, of NCS points defining a polygonal area. The last of these points is a duplicate of the first. Holes in an area are traced in a way that maximizes the probability of hardware fill working properly.
+</dd><dt>NCS
+</dt><dd>(an input expression of type INTEGER) - Number of X and Y coordinates in the arrays XCS and YCS.
+</dd><dt>IAI,IAG
+</dt><dd>(input arrays, dimensioned NAI, of type INTEGER) - Hold NAI pairs of identifiers for the area defined by XCS and YCS. For each value of I from 1 to NAI, IAI(I) is the area identifier for the area with respect to the group of edges specified by the group identifier IAG(I).
+</dd><dt>NAI
+</dt><dd>(an input expression of type INTEGER) - Number of values returned in IAI and IAG. NAI equals the number of groups of edges that you put in the area map.</dd></dl></dl>
  
 
  Before executing the first call to APR, ARSCAM calls GETSET to retrieve the current user coordinates and then executes the statement: 

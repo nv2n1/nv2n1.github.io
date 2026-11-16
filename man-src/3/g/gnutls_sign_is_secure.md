@@ -14,8 +14,8 @@ description: "gnutls_sign_is_secure – API function"
 <p> <code>int gnutls_sign_is_secure(gnutls_sign_algorithm_t </code><i>algorithm</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_sign_algorithm_t algorithm</p>
-<dd> is a sign algorithm</dl>
+<dt>gnutls_sign_algorithm_t algorithm</dt>
+<dd> is a sign algorithm</dd></dl>
 <h2>RETURNS</h2>
 <p> Non-zero if the provided signature algorithm is considered to be secure.</p>
 <h2>REPORTING BUGS</h2>
@@ -27,6 +27,6 @@ description: "gnutls_sign_is_secure – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

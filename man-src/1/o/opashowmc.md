@@ -14,51 +14,43 @@ description: "opashowmc"
 <p> opashowmc [-v] [-t <i>portsfile</i>] [-p <i>ports</i>]</p>
 <h2>Options</h2>
 <dl>
-<dt>&#8211;help</p>
-<dd> Produces full help text. </p>
-<dt>-v</p>
-<dd> Returns verbose output and shows name of each member. </p>
-<dt>-t <i>portsfile</i></p>
-<dd> File with list of local HFI ports used to access fabric(s) for analysis. Default is /etc/sysconfig/opa/ports file. </p>
-<dt>-p <i>ports</i></p>
-<dd> List of local HFI ports used to access fabric(s) for analysis. Default is first active port. The first HFI in the system is 1. The first port on an HFI is 1. </p>
+<dt>&#8211;help</dt>
+<dd> Produces full help text. </dd>
+<dt>-v</dt>
+<dd> Returns verbose output and shows name of each member. </dd>
+<dt>-t <i>portsfile</i></dt>
+<dd> File with list of local HFI ports used to access fabric(s) for analysis. Default is /etc/sysconfig/opa/ports file. </dd>
+<dt>-p <i>ports</i></dt>
+<dd> List of local HFI ports used to access fabric(s) for analysis. Default is first active port. The first HFI in the system is 1. The first port on an HFI is 1. </dd>
 <dt>
-<dd> Uses the format hfi:port, for example:</p>
+</dt><dd> Uses the format hfi:port, for example:</dd>
+<dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd>
+</dt><dd>
 <p> 0:0 First active port in system. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> 0:y Port <i>y</i> within system. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> x:0 First active port on HFI <i>x</i>. </p>
-</dl>
+</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> x:y HFI <i>x</i>, port <i>y</i>. </p>
-</dl>
+</dd></dl>
 </dl>
 </dl>
 <h2>Examples</h2>
@@ -67,9 +59,9 @@ description: "opashowmc"
 <h2>Environment Variables</h2>
 <p> The following environment variables are also used by this command:</p>
 <dl>
-<dt><code>PORTS</code></p>
-<dd> List of ports, used in absence of -t and -p. </p>
-<dt><code>PORTS_FILE</code></p>
-<dd> File containing list of ports, used in absence of -t and -p. </p>
+<dt><code>PORTS</code></dt>
+<dd> List of ports, used in absence of -t and -p. </dd>
+<dt><code>PORTS_FILE</code></dt>
+<dd> File containing list of ports, used in absence of -t and -p. </dd>
 </dl>
 <h2>Index</h2>

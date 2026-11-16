@@ -33,29 +33,29 @@ hivexsh[-options][hivefile]
 <p> Navigate through the hive&#8217;s keys using the <tt>&quot;cd&quot;</tt> command, as if it contained a filesystem, and use <tt>&quot;ls&quot;</tt> to list the subkeys of the current key. Other commands are listed below.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code></p>
-<dd> Enable lots of debug messages. If you find a Registry file that this program cannot parse, please enable this option and post the complete output <i>and</i> the Registry hive file in your bug report.</p>
-<dt><code>-f</code> filename</p>
-<dd> Read commands from <tt>&quot;filename&quot;</tt> instead of stdin. To write a hivexsh script, use: </p>
+<dt><code>-d</code></dt>
+<dd> Enable lots of debug messages. If you find a Registry file that this program cannot parse, please enable this option and post the complete output <i>and</i> the Registry hive file in your bug report.</dd>
+<dt><code>-f</code> filename</dt>
+<dd> Read commands from <tt>&quot;filename&quot;</tt> instead of stdin. To write a hivexsh script, use: </dd>
 <pre>
  #!/usr/bin/hivexsh -f
 </pre>
-<dt><code>-w</code></p>
-<dd> If this option is given, then writes are allowed to the hive (see &#8220;commit&#8221; command below, and the discussion of modifying hives in &#8220;<font SIZE="-1">WRITING TO HIVE FILES&#8221;</font> in <i><a href="/docs/linux/man/3-hivex/">hivex</a></i>(3)). </p>
+<dt><code>-w</code></dt>
+<dd> If this option is given, then writes are allowed to the hive (see &#8220;commit&#8221; command below, and the discussion of modifying hives in &#8220;<font SIZE="-1">WRITING TO HIVE FILES&#8221;</font> in <i><a href="/docs/linux/man/3-hivex/">hivex</a></i>(3)). </dd>
 <p> <code>Important Note:</code> Even if you specify this option, nothing is written to a hive unless you call the &#8220;commit&#8221; command. If you exit the shell without committing, all changes will be discarded. </p>
 <p> If this option is not given, then write commands are disabled.</dl>
 <h2>COMMANDS</h2>
 <dl>
-<dt><code>add</code> name</p>
-<dd> Add a subkey named <tt>&quot;name&quot;</tt> below the current node. The name may contain spaces and punctuation characters, and does not need to be quoted. </p>
+<dt><code>add</code> name</dt>
+<dd> Add a subkey named <tt>&quot;name&quot;</tt> below the current node. The name may contain spaces and punctuation characters, and does not need to be quoted. </dd>
 <p> The new key will have no subkeys and no values (see <tt>&quot;setval&quot;</tt>). </p>
 <p> There must be no existing subkey called <tt>&quot;name&quot;</tt>, or this command will fail. To replace an existing subkey, delete it first like this: </p>
 <pre>
  cd name
  del
 </pre>
-<dt><code>cd</code> path</p>
-<dd> Change to the subkey <tt>&quot;path&quot;</tt>. Use Windows-style backslashes to separate path elements, and start with a backslash in order to start from the root of the hive. For example: </p>
+<dt><code>cd</code> path</dt>
+<dd> Change to the subkey <tt>&quot;path&quot;</tt>. Use Windows-style backslashes to separate path elements, and start with a backslash in order to start from the root of the hive. For example: </dd>
 <pre>
  cd \Classes\*
 </pre>
@@ -72,25 +72,25 @@ hivexsh[-options][hivefile]
 <p> <tt>&quot;cd ..&quot;</tt> may be used to go to the parent directory. </p>
 <p> <tt>&quot;cd&quot;</tt> without any arguments prints the current path. </p>
 <p> Be careful with <tt>&quot;cd \&quot;</tt> since the readline library has an undocumented behaviour where it will think the final backslash is a continuation (it reads the next line of input and appends it). Put a single space after the backslash.</p>
-<dt><code>close</code> | <code>unload</code></p>
-<dd> Close the currently loaded hive. </p>
+<dt><code>close</code> | <code>unload</code></dt>
+<dd> Close the currently loaded hive. </dd>
 <p> If you modified the hive, all uncommitted writes are lost when you call this command (or if the shell exits). You have to call <tt>&quot;commit&quot;</tt> to write changes.</p>
-<dt><code>commit</code> [newfile]</p>
-<dd> Commit changes to the hive. If the optional <tt>&quot;newfile&quot;</tt> parameter is supplied, then the hive is written to that file, else the original file is overwritten. </p>
+<dt><code>commit</code> [newfile]</dt>
+<dd> Commit changes to the hive. If the optional <tt>&quot;newfile&quot;</tt> parameter is supplied, then the hive is written to that file, else the original file is overwritten. </dd>
 <p> Note that you have to specify the <tt>&quot;-w&quot;</tt> flag, otherwise no writes are allowed.</p>
-<dt><code>del</code></p>
-<dd> Delete the current node and everything beneath it. The current directory is moved up one level (as if you did <tt>&quot;cd ..&quot;</tt>) after this command. </p>
+<dt><code>del</code></dt>
+<dd> Delete the current node and everything beneath it. The current directory is moved up one level (as if you did <tt>&quot;cd ..&quot;</tt>) after this command. </dd>
 <p> You cannot delete the root node.</p>
-<dt><code>exit</code> | <code>quit</code></p>
-<dd> Exit the shell.</p>
-<dt><code>load</code> hivefile</p>
-<dd> Load the binary hive named <tt>&quot;hivefile&quot;</tt>. The currently loaded hive, if any, is closed. The current directory is changed back to the root node.</p>
-<dt><code>ls</code></p>
-<dd> List the subkeys of the current hive Registry key. Note this command does not take any arguments.</p>
-<dt><code>lsval</code> [key]</p>
-<dd> List the (key, value) pairs of the current hive Registry key. If no argument is given then all pairs are displayed. If <tt>&quot;key&quot;</tt> is given, then the value of the named key is displayed. If <tt>&quot;@&quot;</tt> is given, then the value of the default key is displayed.</p>
-<dt><code>setval</code> nrvals</p>
-<dd> This command replaces all (key, value) pairs at the current node with the values in subsequent input. <tt>&quot;nrvals&quot;</tt> is the number of values (ie. (key, value) pairs), and any existing values at this node are deleted. So <tt>&quot;setval 0&quot;</tt> just deletes any values at the current node. </p>
+<dt><code>exit</code> | <code>quit</code></dt>
+<dd> Exit the shell.</dd>
+<dt><code>load</code> hivefile</dt>
+<dd> Load the binary hive named <tt>&quot;hivefile&quot;</tt>. The currently loaded hive, if any, is closed. The current directory is changed back to the root node.</dd>
+<dt><code>ls</code></dt>
+<dd> List the subkeys of the current hive Registry key. Note this command does not take any arguments.</dd>
+<dt><code>lsval</code> [key]</dt>
+<dd> List the (key, value) pairs of the current hive Registry key. If no argument is given then all pairs are displayed. If <tt>&quot;key&quot;</tt> is given, then the value of the named key is displayed. If <tt>&quot;@&quot;</tt> is given, then the value of the default key is displayed.</dd>
+<dt><code>setval</code> nrvals</dt>
+<dd> This command replaces all (key, value) pairs at the current node with the values in subsequent input. <tt>&quot;nrvals&quot;</tt> is the number of values (ie. (key, value) pairs), and any existing values at this node are deleted. So <tt>&quot;setval 0&quot;</tt> just deletes any values at the current node. </dd>
 <p> The command reads 2 * nrvals lines of input, with each pair of lines of input corresponding to a key and a value to add. </p>
 <p> For example, the following setval command replaces whatever is at the current node with two (key, value) pairs. The default key is set to the UTF16-LE-encoded string &#8220;abcd&#8221;. The other value is named &#8220;ANumber&#8221; and is a little-endian <font SIZE="-1">DWORD</font> 0x12345678. </p>
 <pre>
@@ -130,3 +130,4 @@ hivexsh[-options][hivefile]
 <pre>
  $ guestfish --ro -i Windows7
  &gt;&lt;fs&gt; download win:c:\windows\system32
+</pre>

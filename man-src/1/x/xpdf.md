@@ -16,148 +16,148 @@ description: "xpdf – Portable Document Format (PDF) file viewer for X (version
 <p> To run xpdf, simply type: </p>
 <dl>
 <dt>
-<dd> xpdf file.pdf</dl>
+</dt><dd> xpdf file.pdf</dd></dl>
 <p> where <i>file.pdf</i> is your PDF file. The file name can be followed by a number specifying the page which should be displayed first, e.g.: </p>
 <dl>
 <dt>
-<dd> xpdf file.pdf 18</dl>
+</dt><dd> xpdf file.pdf 18</dd></dl>
 <p> You can also give a named destination, prefixed with &#8216;+&#8217; in place of the page number. (This is only useful with PDF files that provide named destination targets.) </p>
 <p> You can also start xpdf without opening any files: </p>
 <dl>
 <dt>
-<dd> xpdf</dl>
+</dt><dd> xpdf</dd></dl>
 <h2>CONFIGURATION FILE</h2>
 <p> Xpdf reads a configuration file at startup. It first tries to find the user&#8217;s private config file, ~/.xpdfrc. If that doesn&#8217;t exist, it looks for a system-wide config file, typically /usr/local/etc/xpdfrc (but this location can be changed when xpdf is built). See the <code><a href="/docs/linux/man/5-xpdfrc/">xpdfrc</a></code>(5) man page for details.</p>
 <h2>OPTIONS</h2>
 <p> Many of the following options can be set with configuration file commands or X resources. These are listed in square brackets with the description of the corresponding command line option.</p>
 <dl>
-<dt><code>-g</code><i> geometry</i></p>
-<dd> Set the initial window geometry. (<code>-geometry</code> is equivalent.) [X resource: <code>xpdf.geometry</code>]</p>
-<dt><code>-title</code><i> title</i></p>
-<dd> Set the window title. By default, the title will be &quot;xpdf: foo.pdf&quot;. [X resource: <code>xpdf.title</code>]</p>
-<dt><code>-cmap</code></p>
-<dd> Install a private colormap. This is ignored on TrueColor visuals. [X resource: <code>xpdf.installCmap</code>]</p>
-<dt><code>-rgb</code><i> number</i></p>
-<dd> Set the size of largest RGB cube xpdf will try to allocate. The default is 5 (for a 5x5x5 cube); set to a smaller number to conserve color table entries. This is ignored with private colormaps and on TrueColor visuals. [X resource: <code>xpdf.rgbCubeSize</code>]</p>
-<dt><code>-rv</code></p>
-<dd> Set reverse video mode. This reverses the colors of everything except images. It may not always produce great results for PDF files which do weird things with color. This also causes the paper color to default to black. [X resource: <code>xpdf.reverseVideo</code>]</p>
-<dt><code>-papercolor</code><i> color</i></p>
-<dd> Set the &quot;paper color&quot;, i.e., the background of the page display. This will not work too well with PDF files that do things like filling in white behind the text. [X resource: <code>xpdf.paperColor</code>]</p>
-<dt><code>-mattecolor</code><i> color</i></p>
-<dd> Set the matte color, i.e., the color used for background outside the actual page area. (There is a separate setting, xpdf.fullScreenMatteColor, for full-screen mode.) [X resource: <code>xpdf.matteColor</code>]</p>
-<dt><code>-z</code><i> zoom</i></p>
-<dd> Set the initial zoom factor. A number specifies a zoom percentage, where 100 means 72 dpi. You may also specify &#8216;page&#8217;, to fit the page to the window size, or &#8216;width&#8217;, to fit the page width to the window width. [config file: <code>initialZoom</code>; or X resource: <code>xpdf.initialZoom</code>]</p>
-<dt><code>-cont</code></p>
-<dd> Start in continuous view mode, i.e., with one vertical scroll bar for the whole document. [config file: <code>continuousView</code>]</p>
-<dt><code>-freetype</code><i> yes | no</i></p>
-<dd> Enable or disable FreeType (a TrueType / Type 1 font rasterizer). This defaults to &quot;yes&quot;. [config file: <code>enableFreeType</code>]</p>
-<dt><code>-aa</code><i> yes | no</i></p>
-<dd> Enable or disable font anti-aliasing. This defaults to &quot;yes&quot;. [config file: <code>antialias</code>]</p>
-<dt><code>-aaVector</code><i> yes | no</i></p>
-<dd> Enable or disable vector anti-aliasing. This defaults to &quot;yes&quot;. [config file: <code>vectorAntialias</code>]</p>
-<dt><code>-ps</code><i> PS-file</i></p>
-<dd> Set the default file name for PostScript output (i.e., the name which will appear in the print dialog). This can also be of the form &#8216;|command&#8217; to pipe the PostScript through a command. [config file: <code>psFile</code>]</p>
-<dt><code>-paper</code><i> size</i></p>
-<dd> Set the paper size to one of &quot;letter&quot;, &quot;legal&quot;, &quot;A4&quot;, or &quot;A3&quot;. This can also be set to &quot;match&quot;, which will set the paper size to match the size specified in the PDF file. [config file: <code>psPaperSize</code>]</p>
-<dt><code>-paperw</code><i> size</i></p>
-<dd> Set the paper width, in points. [config file: <code>psPaperSize</code>]</p>
-<dt><code>-paperh</code><i> size</i></p>
-<dd> Set the paper height, in points. [config file: <code>psPaperSize</code>]</p>
-<dt><code>-level1</code></p>
-<dd> Generate Level 1 PostScript. The resulting PostScript files will be significantly larger (if they contain images), but will print on Level 1 printers. This also converts all images to black and white. [config file: <code>psLevel</code>]</p>
-<dt><code>-enc</code><i> encoding-name</i></p>
-<dd> Sets the encoding to use for text output. The <i>encoding-name</i> must be defined with the unicodeMap command (see <code><a href="/docs/linux/man/5-xpdfrc/">xpdfrc</a></code>(5)). This defaults to &quot;Latin1&quot; (which is a built-in encoding). [config file: <code>textEncoding</code>]</p>
-<dt><code>-eol</code><i> unix | dos | mac</i></p>
-<dd> Sets the end-of-line convention to use for text output. [config file: <code>textEOL</code>]</p>
-<dt><code>-opw</code><i> password</i></p>
-<dd> Specify the owner password for the PDF file. Providing this will bypass all security restrictions.</p>
-<dt><code>-upw</code><i> password</i></p>
-<dd> Specify the user password for the PDF file.</p>
-<dt><code>-fullscreen</code></p>
-<dd> Open xpdf in full-screen mode, useful for presentations.</p>
-<dt><code>-remote</code><i> name</i></p>
-<dd> Start/contact xpdf remote server with specified name (see the <code>REMOTE SERVER MODE</code> section below).</p>
-<dt><code>-exec</code><i> command</i></p>
-<dd> Execute a command (see the <code>COMMANDS</code> section below) in an xpdf remote server window (with -remote only).</p>
-<dt><code>-reload</code></p>
-<dd> Reload xpdf remote server window (with -remote only).</p>
-<dt><code>-raise</code></p>
-<dd> Raise xpdf remote server window (with -remote only).</p>
-<dt><code>-quit</code></p>
-<dd> Kill xpdf remote server (with -remote only).</p>
-<dt><code>-cmd</code></p>
-<dd> Print commands as they&#8217;re executed (useful for debugging). [config file: <code>printCommands</code>]</p>
-<dt><code>-q</code></p>
-<dd> Don&#8217;t print any messages or errors. [config file: <code>errQuiet</code>]</p>
-<dt><code>-cfg</code><i> config-file</i></p>
-<dd> Read <i>config-file</i> in place of ~/.xpdfrc or the system-wide config file.</p>
-<dt><code>-v</code></p>
-<dd> Print copyright and version information.</p>
-<dt><code>-h</code></p>
-<dd> Print usage information. (<code>-help</code> and <code>&#8211;help</code> are equivalent.)</dl>
+<dt><code>-g</code><i> geometry</i></dt>
+<dd> Set the initial window geometry. (<code>-geometry</code> is equivalent.) [X resource: <code>xpdf.geometry</code>]</dd>
+<dt><code>-title</code><i> title</i></dt>
+<dd> Set the window title. By default, the title will be &quot;xpdf: foo.pdf&quot;. [X resource: <code>xpdf.title</code>]</dd>
+<dt><code>-cmap</code></dt>
+<dd> Install a private colormap. This is ignored on TrueColor visuals. [X resource: <code>xpdf.installCmap</code>]</dd>
+<dt><code>-rgb</code><i> number</i></dt>
+<dd> Set the size of largest RGB cube xpdf will try to allocate. The default is 5 (for a 5x5x5 cube); set to a smaller number to conserve color table entries. This is ignored with private colormaps and on TrueColor visuals. [X resource: <code>xpdf.rgbCubeSize</code>]</dd>
+<dt><code>-rv</code></dt>
+<dd> Set reverse video mode. This reverses the colors of everything except images. It may not always produce great results for PDF files which do weird things with color. This also causes the paper color to default to black. [X resource: <code>xpdf.reverseVideo</code>]</dd>
+<dt><code>-papercolor</code><i> color</i></dt>
+<dd> Set the &quot;paper color&quot;, i.e., the background of the page display. This will not work too well with PDF files that do things like filling in white behind the text. [X resource: <code>xpdf.paperColor</code>]</dd>
+<dt><code>-mattecolor</code><i> color</i></dt>
+<dd> Set the matte color, i.e., the color used for background outside the actual page area. (There is a separate setting, xpdf.fullScreenMatteColor, for full-screen mode.) [X resource: <code>xpdf.matteColor</code>]</dd>
+<dt><code>-z</code><i> zoom</i></dt>
+<dd> Set the initial zoom factor. A number specifies a zoom percentage, where 100 means 72 dpi. You may also specify &#8216;page&#8217;, to fit the page to the window size, or &#8216;width&#8217;, to fit the page width to the window width. [config file: <code>initialZoom</code>; or X resource: <code>xpdf.initialZoom</code>]</dd>
+<dt><code>-cont</code></dt>
+<dd> Start in continuous view mode, i.e., with one vertical scroll bar for the whole document. [config file: <code>continuousView</code>]</dd>
+<dt><code>-freetype</code><i> yes | no</i></dt>
+<dd> Enable or disable FreeType (a TrueType / Type 1 font rasterizer). This defaults to &quot;yes&quot;. [config file: <code>enableFreeType</code>]</dd>
+<dt><code>-aa</code><i> yes | no</i></dt>
+<dd> Enable or disable font anti-aliasing. This defaults to &quot;yes&quot;. [config file: <code>antialias</code>]</dd>
+<dt><code>-aaVector</code><i> yes | no</i></dt>
+<dd> Enable or disable vector anti-aliasing. This defaults to &quot;yes&quot;. [config file: <code>vectorAntialias</code>]</dd>
+<dt><code>-ps</code><i> PS-file</i></dt>
+<dd> Set the default file name for PostScript output (i.e., the name which will appear in the print dialog). This can also be of the form &#8216;|command&#8217; to pipe the PostScript through a command. [config file: <code>psFile</code>]</dd>
+<dt><code>-paper</code><i> size</i></dt>
+<dd> Set the paper size to one of &quot;letter&quot;, &quot;legal&quot;, &quot;A4&quot;, or &quot;A3&quot;. This can also be set to &quot;match&quot;, which will set the paper size to match the size specified in the PDF file. [config file: <code>psPaperSize</code>]</dd>
+<dt><code>-paperw</code><i> size</i></dt>
+<dd> Set the paper width, in points. [config file: <code>psPaperSize</code>]</dd>
+<dt><code>-paperh</code><i> size</i></dt>
+<dd> Set the paper height, in points. [config file: <code>psPaperSize</code>]</dd>
+<dt><code>-level1</code></dt>
+<dd> Generate Level 1 PostScript. The resulting PostScript files will be significantly larger (if they contain images), but will print on Level 1 printers. This also converts all images to black and white. [config file: <code>psLevel</code>]</dd>
+<dt><code>-enc</code><i> encoding-name</i></dt>
+<dd> Sets the encoding to use for text output. The <i>encoding-name</i> must be defined with the unicodeMap command (see <code><a href="/docs/linux/man/5-xpdfrc/">xpdfrc</a></code>(5)). This defaults to &quot;Latin1&quot; (which is a built-in encoding). [config file: <code>textEncoding</code>]</dd>
+<dt><code>-eol</code><i> unix | dos | mac</i></dt>
+<dd> Sets the end-of-line convention to use for text output. [config file: <code>textEOL</code>]</dd>
+<dt><code>-opw</code><i> password</i></dt>
+<dd> Specify the owner password for the PDF file. Providing this will bypass all security restrictions.</dd>
+<dt><code>-upw</code><i> password</i></dt>
+<dd> Specify the user password for the PDF file.</dd>
+<dt><code>-fullscreen</code></dt>
+<dd> Open xpdf in full-screen mode, useful for presentations.</dd>
+<dt><code>-remote</code><i> name</i></dt>
+<dd> Start/contact xpdf remote server with specified name (see the <code>REMOTE SERVER MODE</code> section below).</dd>
+<dt><code>-exec</code><i> command</i></dt>
+<dd> Execute a command (see the <code>COMMANDS</code> section below) in an xpdf remote server window (with -remote only).</dd>
+<dt><code>-reload</code></dt>
+<dd> Reload xpdf remote server window (with -remote only).</dd>
+<dt><code>-raise</code></dt>
+<dd> Raise xpdf remote server window (with -remote only).</dd>
+<dt><code>-quit</code></dt>
+<dd> Kill xpdf remote server (with -remote only).</dd>
+<dt><code>-cmd</code></dt>
+<dd> Print commands as they&#8217;re executed (useful for debugging). [config file: <code>printCommands</code>]</dd>
+<dt><code>-q</code></dt>
+<dd> Don&#8217;t print any messages or errors. [config file: <code>errQuiet</code>]</dd>
+<dt><code>-cfg</code><i> config-file</i></dt>
+<dd> Read <i>config-file</i> in place of ~/.xpdfrc or the system-wide config file.</dd>
+<dt><code>-v</code></dt>
+<dd> Print copyright and version information.</dd>
+<dt><code>-h</code></dt>
+<dd> Print usage information. (<code>-help</code> and <code>&#8211;help</code> are equivalent.)</dd></dl>
 <p> Several other standard X options and resources will work as expected:</p>
 <dl>
-<dt><code>-display</code><i> display</i></p>
-<dd> [X resource: <code>xpdf.display</code>]</p>
-<dt><code>-fg</code><i> color</i></p>
-<dd> (<code>-foreground</code> is equivalent.) [X resource: <code>xpdf*Foreground</code>]</p>
-<dt><code>-bg</code><i> color</i></p>
-<dd> (<code>-background</code> is equivalent.) [X resource: <code>xpdf*Background</code>]</p>
-<dt><code>-font</code><i> font</i></p>
-<dd> (<code>-fn</code> is equivalent.) [X resource: <code>xpdf*fontList</code>]</dl>
+<dt><code>-display</code><i> display</i></dt>
+<dd> [X resource: <code>xpdf.display</code>]</dd>
+<dt><code>-fg</code><i> color</i></dt>
+<dd> (<code>-foreground</code> is equivalent.) [X resource: <code>xpdf*Foreground</code>]</dd>
+<dt><code>-bg</code><i> color</i></dt>
+<dd> (<code>-background</code> is equivalent.) [X resource: <code>xpdf*Background</code>]</dd>
+<dt><code>-font</code><i> font</i></dt>
+<dd> (<code>-fn</code> is equivalent.) [X resource: <code>xpdf*fontList</code>]</dd></dl>
 <p> The color and font options only affect the user interface elements, not the PDF display (the &#8216;paper&#8217;). </p>
 <p> The following X resources do not have command line option equivalents:</p>
 <dl>
-<dt><code>xpdf.toolTipEnable</code></p>
-<dd> Enables (if set to true) or disables (if set to false) the tool-tips on the toolbar buttons.</p>
-<dt><code>xpdf.fullScreenMatteColor</code></p>
-<dd> Sets the matte color to be used in full-screen mode. The default setting is &quot;black&quot;.</dl>
+<dt><code>xpdf.toolTipEnable</code></dt>
+<dd> Enables (if set to true) or disables (if set to false) the tool-tips on the toolbar buttons.</dd>
+<dt><code>xpdf.fullScreenMatteColor</code></dt>
+<dd> Sets the matte color to be used in full-screen mode. The default setting is &quot;black&quot;.</dd></dl>
 <h2>CONTROLS</h2>
 <h3>On-screen controls, at the bottom of the xpdf window</h3>
 <dl>
-<dt><code>left/right arrow buttons</code></p>
-<dd> Move to the previous/next page.</p>
-<dt><code>double left/right arrow buttons</code></p>
-<dd> Move backward or forward by ten pages.</p>
-<dt><code>dashed left/right arrow buttons</code></p>
-<dd> Move backward or forward along the history path.</p>
-<dt><code>&#8216;Page&#8217; entry box</code></p>
-<dd> Move to a specific page number. Click in the box to activate it, type the page number, then hit return.</p>
-<dt><code>zoom popup menu</code></p>
-<dd> Change the zoom factor (see the description of the -z option above).</p>
-<dt><code>binoculars button</code></p>
-<dd> Find a text string.</p>
-<dt><code>print button</code></p>
-<dd> Bring up a dialog for generating a PostScript file. The dialog has options to set the pages to be printed and the PostScript file name. The file name can be &#8216;-&#8216; for stdout or &#8216;|command&#8217; to pipe the PostScript through a command, e.g., &#8216;|lpr&#8217;.</p>
-<dt><code>&#8216;?&#8217; button</code></p>
-<dd> Bring up the &#8216;about xpdf&#8217; window.</p>
-<dt><code>link info</code></p>
-<dd> The space between the &#8216;?&#8217; and &#8216;Quit&#8217; buttons is used to show the URL or external file name when the mouse is over a link.</p>
-<dt><code>&#8216;Quit&#8217; button</code></p>
-<dd> Quit xpdf.</dl>
+<dt><code>left/right arrow buttons</code></dt>
+<dd> Move to the previous/next page.</dd>
+<dt><code>double left/right arrow buttons</code></dt>
+<dd> Move backward or forward by ten pages.</dd>
+<dt><code>dashed left/right arrow buttons</code></dt>
+<dd> Move backward or forward along the history path.</dd>
+<dt><code>&#8216;Page&#8217; entry box</code></dt>
+<dd> Move to a specific page number. Click in the box to activate it, type the page number, then hit return.</dd>
+<dt><code>zoom popup menu</code></dt>
+<dd> Change the zoom factor (see the description of the -z option above).</dd>
+<dt><code>binoculars button</code></dt>
+<dd> Find a text string.</dd>
+<dt><code>print button</code></dt>
+<dd> Bring up a dialog for generating a PostScript file. The dialog has options to set the pages to be printed and the PostScript file name. The file name can be &#8216;-&#8216; for stdout or &#8216;|command&#8217; to pipe the PostScript through a command, e.g., &#8216;|lpr&#8217;.</dd>
+<dt><code>&#8216;?&#8217; button</code></dt>
+<dd> Bring up the &#8216;about xpdf&#8217; window.</dd>
+<dt><code>link info</code></dt>
+<dd> The space between the &#8216;?&#8217; and &#8216;Quit&#8217; buttons is used to show the URL or external file name when the mouse is over a link.</dd>
+<dt><code>&#8216;Quit&#8217; button</code></dt>
+<dd> Quit xpdf.</dd></dl>
 <h3>Menu</h3>
 <p> Pressing the right mouse button will post a popup menu with the following commands:</p>
 <dl>
-<dt><code>Open&#8230;</code></p>
-<dd> Open a new PDF file via a file requester.</p>
-<dt><code>Open in new window&#8230;</code></p>
-<dd> Create a new window and open a new PDF file via a file requester.</p>
-<dt><code>Reload</code></p>
-<dd> Reload the current PDF file. Note that Xpdf will reload the file automatically (on a page change or redraw) if it has changed since it was last loaded.</p>
-<dt><code>Save as&#8230;</code></p>
-<dd> Save the current file via a file requester.</p>
-<dt><code>Continuous view</code></p>
-<dd> Toggles between single page and continuous view modes.</p>
-<dt><code>Rotate counterclockwise</code></p>
-<dd> Rotate the page 90 degrees counterclockwise.</p>
-<dt><code>Rotate clockwise</code></p>
-<dd> Rotate the page 90 degrees clockwise. The two rotate commands are intended primarily for PDF files where the rotation isn&#8217;t correctly specified in the file.</p>
-<dt><code>Zoom to selection</code></p>
-<dd> Zoom in to the currently selected rectangle.</p>
-<dt><code>Close</code></p>
-<dd> Close the current window. If this is the only open window, the document is closed, but the window is left open (i.e., this menu command won&#8217;t quit xpdf).</p>
-<dt><code>Quit</code></p>
-<dd> Quit xpdf.</dl>
+<dt><code>Open&#8230;</code></dt>
+<dd> Open a new PDF file via a file requester.</dd>
+<dt><code>Open in new window&#8230;</code></dt>
+<dd> Create a new window and open a new PDF file via a file requester.</dd>
+<dt><code>Reload</code></dt>
+<dd> Reload the current PDF file. Note that Xpdf will reload the file automatically (on a page change or redraw) if it has changed since it was last loaded.</dd>
+<dt><code>Save as&#8230;</code></dt>
+<dd> Save the current file via a file requester.</dd>
+<dt><code>Continuous view</code></dt>
+<dd> Toggles between single page and continuous view modes.</dd>
+<dt><code>Rotate counterclockwise</code></dt>
+<dd> Rotate the page 90 degrees counterclockwise.</dd>
+<dt><code>Rotate clockwise</code></dt>
+<dd> Rotate the page 90 degrees clockwise. The two rotate commands are intended primarily for PDF files where the rotation isn&#8217;t correctly specified in the file.</dd>
+<dt><code>Zoom to selection</code></dt>
+<dd> Zoom in to the currently selected rectangle.</dd>
+<dt><code>Close</code></dt>
+<dd> Close the current window. If this is the only open window, the document is closed, but the window is left open (i.e., this menu command won&#8217;t quit xpdf).</dd>
+<dt><code>Quit</code></dt>
+<dd> Quit xpdf.</dd></dl>
 <h3>Outline</h3>
 <p> If the PDF contains an outline (a.k.a., bookmarks), there will be an outline pane on the left side of the window. The width of the outline pane is adjustable with a vertical split bar via the knob near its bottom end. </p>
 <h3>Text selection</h3>
@@ -168,182 +168,182 @@ description: "xpdf – Portable Document Format (PDF) file viewer for X (version
 <p> Dragging the mouse with the middle button held down pans the window. </p>
 <h3>Key bindings</h3>
 <dl>
-<dt><code>o</code></p>
-<dd> Open a new PDF file via a file requester.</p>
-<dt><code>r</code></p>
-<dd> Reload the current PDF file. Note that Xpdf will reload the file automatically (on a page change or redraw) if it has changed since it was last loaded.</p>
-<dt><code>control-L</code></p>
-<dd> Redraw the current page.</p>
-<dt><code>control-W</code></p>
-<dd> Close the current window.</p>
-<dt><code>f or control-F</code></p>
-<dd> Find a text string.</p>
-<dt><code>control-G</code></p>
-<dd> Find next occurrence.</p>
-<dt><code>control-P</code></p>
-<dd> Print.</p>
-<dt><code>n</code></p>
-<dd> Move to the next page. Scrolls to the top of the page, unless scroll lock is turned on.</p>
-<dt><code>p</code></p>
-<dd> Move to the previous page. Scrolls to the top of the page, unless scroll lock is turned on.</p>
-<dt><code>&lt;Space&gt;</code> or <code>&lt;PageDown&gt;</code> or <code>&lt;Next&gt;</code></p>
-<dd> Scroll down on the current page; if already at bottom, move to next page.</p>
-<dt><code>&lt;Backspace&gt;</code> or <code>&lt;Delete&gt;</code> or <code>&lt;PageUp&gt;</code> or <code>&lt;Previous&gt;</code></p>
-<dd> Scroll up on the current page; if already at top, move to previous page.</p>
-<dt><code>v</code></p>
-<dd> Move forward along the history path.</p>
-<dt><code>b</code></p>
-<dd> Move backward along the history path.</p>
-<dt><code>&lt;Home&gt;</code></p>
-<dd> Scroll to top of current page.</p>
-<dt><code>&lt;End&gt;</code></p>
-<dd> Scroll to bottom of current page.</p>
-<dt><code>control-&lt;Home&gt;</code></p>
-<dd> Scroll to first page of document.</p>
-<dt><code>control-&lt;End&gt;</code></p>
-<dd> Scroll to last page of document.</p>
-<dt><code>arrows</code></p>
-<dd> Scroll the current page.</p>
-<dt><code>g</code></p>
-<dd> Activate the page number text field (&quot;goto page&quot;).</p>
-<dt><code>0</code></p>
-<dd> Set the zoom factor to 125%.</p>
-<dt><code>+</code></p>
-<dd> Zoom in (increment the zoom factor by 1).</p>
-<dt><code>&#8211;</code></p>
-<dd> Zoom out (decrement the zoom factor by 1).</p>
-<dt><code>z</code></p>
-<dd> Set the zoom factor to &#8216;page&#8217; (fit page to window).</p>
-<dt><code>w</code></p>
-<dd> Set the zoom factor to &#8216;width&#8217; (fit page width to window).</p>
-<dt><code>alt-F</code></p>
-<dd> Toggle full-screen mode.</p>
-<dt><code>q</code></p>
-<dd> Quit xpdf.</dl>
+<dt><code>o</code></dt>
+<dd> Open a new PDF file via a file requester.</dd>
+<dt><code>r</code></dt>
+<dd> Reload the current PDF file. Note that Xpdf will reload the file automatically (on a page change or redraw) if it has changed since it was last loaded.</dd>
+<dt><code>control-L</code></dt>
+<dd> Redraw the current page.</dd>
+<dt><code>control-W</code></dt>
+<dd> Close the current window.</dd>
+<dt><code>f or control-F</code></dt>
+<dd> Find a text string.</dd>
+<dt><code>control-G</code></dt>
+<dd> Find next occurrence.</dd>
+<dt><code>control-P</code></dt>
+<dd> Print.</dd>
+<dt><code>n</code></dt>
+<dd> Move to the next page. Scrolls to the top of the page, unless scroll lock is turned on.</dd>
+<dt><code>p</code></dt>
+<dd> Move to the previous page. Scrolls to the top of the page, unless scroll lock is turned on.</dd>
+<dt><code>&lt;Space&gt;</code> or <code>&lt;PageDown&gt;</code> or <code>&lt;Next&gt;</code></dt>
+<dd> Scroll down on the current page; if already at bottom, move to next page.</dd>
+<dt><code>&lt;Backspace&gt;</code> or <code>&lt;Delete&gt;</code> or <code>&lt;PageUp&gt;</code> or <code>&lt;Previous&gt;</code></dt>
+<dd> Scroll up on the current page; if already at top, move to previous page.</dd>
+<dt><code>v</code></dt>
+<dd> Move forward along the history path.</dd>
+<dt><code>b</code></dt>
+<dd> Move backward along the history path.</dd>
+<dt><code>&lt;Home&gt;</code></dt>
+<dd> Scroll to top of current page.</dd>
+<dt><code>&lt;End&gt;</code></dt>
+<dd> Scroll to bottom of current page.</dd>
+<dt><code>control-&lt;Home&gt;</code></dt>
+<dd> Scroll to first page of document.</dd>
+<dt><code>control-&lt;End&gt;</code></dt>
+<dd> Scroll to last page of document.</dd>
+<dt><code>arrows</code></dt>
+<dd> Scroll the current page.</dd>
+<dt><code>g</code></dt>
+<dd> Activate the page number text field (&quot;goto page&quot;).</dd>
+<dt><code>0</code></dt>
+<dd> Set the zoom factor to 125%.</dd>
+<dt><code>+</code></dt>
+<dd> Zoom in (increment the zoom factor by 1).</dd>
+<dt><code>&#8211;</code></dt>
+<dd> Zoom out (decrement the zoom factor by 1).</dd>
+<dt><code>z</code></dt>
+<dd> Set the zoom factor to &#8216;page&#8217; (fit page to window).</dd>
+<dt><code>w</code></dt>
+<dd> Set the zoom factor to &#8216;width&#8217; (fit page width to window).</dd>
+<dt><code>alt-F</code></dt>
+<dd> Toggle full-screen mode.</dd>
+<dt><code>q</code></dt>
+<dd> Quit xpdf.</dd></dl>
 <h2>WEB BROWSERS</h2>
 <p> If you want to run xpdf automatically from netscape or mosaic (and probably other browsers) when you click on a link to a PDF file, you need to edit (or create) the files <i>.mime.types</i> and <i>.mailcap</i> in your home directory. In <i>.mime.types</i> add the line: </p>
 <dl>
 <dt>
-<dd> application/pdf pdf</dl>
+</dt><dd> application/pdf pdf</dd></dl>
 <p> In <i>.mailcap</i> add the lines: </p>
 <dl>
 <dt>
-<dd> # Use xpdf to view PDF files.</dl>
+</dt><dd> # Use xpdf to view PDF files.</dd></dl>
 <dl>
 <dt>
-<dd> application/pdf; xpdf -q %s</dl>
+</dt><dd> application/pdf; xpdf -q %s</dd></dl>
 <p> Make sure that xpdf is on your executable search path. </p>
 <p> When you click on a URL link in a PDF file, xpdf will execute the command specified by the urlCommand config file option, replacing an occurrence of &#8216;%s&#8217; with the URL. For example, to call netscape with the URL, add this line to your config file: </p>
 <dl>
 <dt>
-<dd> urlCommand &quot;netscape -remote &#8216;openURL(%s)&#8217;&quot;</dl>
+</dt><dd> urlCommand &quot;netscape -remote &#8216;openURL(%s)&#8217;&quot;</dd></dl>
 <h2>COMMANDS</h2>
 <p> Xpdf&#8217;s key and mouse bindings are user-configurable, using the bind and unbind options in the config file (see <code><a href="/docs/linux/man/5-xpdfrc/">xpdfrc</a></code>(5)). The bind command allows you to bind a key or mouse button to a sequence of one or more commands.</p>
 <h3>Available Commands</h3>
 <p> The following commands are supported:</p>
 <dl>
-<dt><code>gotoPage(</code><i>page</i><code>)</code></p>
-<dd> Go to the specified page.</p>
-<dt><code>gotoPageNoScroll(</code><i>page</i><code>)</code></p>
-<dd> Go to the specified page, with the current relative scroll position.</p>
-<dt><code>gotoDest(</code><i>dest</i><code>)</code></p>
-<dd> Go to a named destination.</p>
-<dt><code>gotoLastPage</code></p>
-<dd> Go to the last page in the PDF file.</p>
-<dt><code>gotoLastPageNoScroll</code></p>
-<dd> Go to the last page in the PDF file, with the current relative scroll position.</p>
-<dt><code>nextPage</code></p>
-<dd> Go to the next page.</p>
-<dt><code>nextPageNoScroll</code></p>
-<dd> Go to the next page, with the current relative scroll position.</p>
-<dt><code>prevPage</code></p>
-<dd> Go to the previous page.</p>
-<dt><code>prevPageNoScroll</code></p>
-<dd> Go to the previous page, with the current relative scroll position.</p>
-<dt><code>pageUp</code></p>
-<dd> Scroll up by one screenful.</p>
-<dt><code>pageDown</code></p>
-<dd> Scroll down by one screenful.</p>
-<dt><code>scrollLeft(</code><i>n</i><code>)</code></p>
-<dd> Scroll left by <i>n</i> pixels.</p>
-<dt><code>scrollRight(</code><i>n</i><code>)</code></p>
-<dd> Scroll right by <i>n</i> pixels.</p>
-<dt><code>scrollUp(</code><i>n</i><code>)</code></p>
-<dd> Scroll up by <i>n</i> pixels.</p>
-<dt><code>scrollDown(</code><i>n</i><code>)</code></p>
-<dd> Scroll down by <i>n</i> pixels.</p>
-<dt><code>scrollUpPrevPage(</code><i>n</i><code>)</code></p>
-<dd> Scroll up by <i>n</i> pixels, moving to the previous page if appropriate.</p>
-<dt><code>scrollDownPrevPage(</code><i>n</i><code>)</code></p>
-<dd> Scroll down by <i>n</i> pixels, moving to the next page if appropriate.</p>
-<dt><code>scrollToTopEdge</code></p>
-<dd> Scroll to the top edge of the current page, with no horizontal movement.</p>
-<dt><code>scrollToBottomEdge</code></p>
-<dd> Scroll to the bottom edge of the current page, with no horizontal movement.</p>
-<dt><code>scrollToLeftEdge</code></p>
-<dd> Scroll to the left edge of the current page, with no vertical movement.</p>
-<dt><code>scrollToRightEdge</code></p>
-<dd> Scroll to the right edge of the current page, with no vertical movement.</p>
-<dt><code>scrollToTopLeft</code></p>
-<dd> Scroll to the top-left corner of the current page.</p>
-<dt><code>scrollToBottomRight</code></p>
-<dd> Scroll to the bottom-right corner of the current page.</p>
-<dt><code>goForward</code></p>
-<dd> Move forward along the history path.</p>
-<dt><code>goBackward</code></p>
-<dd> Move backward along the history path.</p>
-<dt><code>zoomPercent(</code><i>z</i><code>)</code></p>
-<dd> Set the zoom factor to <i>z</i>%.</p>
-<dt><code>zoomFitPage</code></p>
-<dd> Set the zoom factor to fit-page.</p>
-<dt><code>zoomFitWidth</code></p>
-<dd> Set the zoom factor to fit-width.</p>
-<dt><code>zoomIn</code></p>
-<dd> Zoom in &#8211; go to the next higher zoom factor.</p>
-<dt><code>zoomOut</code></p>
-<dd> Zoom out &#8211; go the next lower zoom factor.</p>
-<dt><code>rotateCW</code></p>
-<dd> Rotate the page 90 degrees clockwise.</p>
-<dt><code>rotateCCW</code></p>
-<dd> Rotate the page 90 degrees counterclockwise.</p>
-<dt><code>setSelection(</code><i>pg</i><code>,</code><i>ulx</i><code>,</code><i>uly</i><code>,</code><i>lrx</i><code>,</code><i>lry</i><code>)</code></p>
-<dd> Set the selection to the specified coordinates on the specified page.</p>
-<dt><code>continuousMode</code></p>
-<dd> Go to continuous view mode.</p>
-<dt><code>singlePageMode</code></p>
-<dd> Go to single-page view mode.</p>
-<dt><code>toggleContinuousMode</code></p>
-<dd> Toggle between continuous and single page view modes.</p>
-<dt><code>fullScreenMode</code></p>
-<dd> Go to full-screen mode.</p>
-<dt><code>windowMode</code></p>
-<dd> Go to window (non-full-screen) mode.</p>
-<dt><code>toggleFullScreenMode</code></p>
-<dd> Toggle between full-screen and window modes.</p>
-<dt><code>open</code></p>
-<dd> Open a PDF file in this window, using the open dialog.</p>
-<dt><code>openInNewWin</code></p>
-<dd> Open a PDF file in a new window, using the open dialog.</p>
-<dt><code>openFile(</code><i>file</i><code>)</code></p>
-<dd> Open a specified PDF file in this window.</p>
-<dt><code>openFileInNewWin(</code><i>file</i><code>)</code></p>
-<dd> Open a specified PDF file in a new window.</p>
-<dt><code>openFileAtDest(</code><i>file</i><code>,</code><i>dest</i><code>)</code></p>
-<dd> Open a specified PDF file in this window and go to a named destination.</p>
-<dt><code>openFileAtDestInNewWin(</code><i>file</i><code>,</code><i>dest</i><code>)</code></p>
-<dd> Open a specified PDF file in a new window and go to a named destination.</p>
-<dt><code>reload</code></p>
-<dd> Reload the current PDF file.</p>
-<dt><code>redraw</code></p>
-<dd> Redraw the window.</p>
-<dt><code>raise</code></p>
-<dd> Raise the window to the front.</p>
-<dt><code>closeWindow</code></p>
-<dd> Close the window. If this was the last open window, clear the window, but don&#8217;t quit from Xpdf.</p>
-<dt><code>closeWindowOrQuit</code></p>
-<dd> Close the window. If this was the last open window, quit from Xpdf.</p>
-<dt><code>run(</code><i>external-command-string</i><code>)</code></p>
-<dd> Run an external command. The following escapes are allowed in the command string: </p>
+<dt><code>gotoPage(</code><i>page</i><code>)</code></dt>
+<dd> Go to the specified page.</dd>
+<dt><code>gotoPageNoScroll(</code><i>page</i><code>)</code></dt>
+<dd> Go to the specified page, with the current relative scroll position.</dd>
+<dt><code>gotoDest(</code><i>dest</i><code>)</code></dt>
+<dd> Go to a named destination.</dd>
+<dt><code>gotoLastPage</code></dt>
+<dd> Go to the last page in the PDF file.</dd>
+<dt><code>gotoLastPageNoScroll</code></dt>
+<dd> Go to the last page in the PDF file, with the current relative scroll position.</dd>
+<dt><code>nextPage</code></dt>
+<dd> Go to the next page.</dd>
+<dt><code>nextPageNoScroll</code></dt>
+<dd> Go to the next page, with the current relative scroll position.</dd>
+<dt><code>prevPage</code></dt>
+<dd> Go to the previous page.</dd>
+<dt><code>prevPageNoScroll</code></dt>
+<dd> Go to the previous page, with the current relative scroll position.</dd>
+<dt><code>pageUp</code></dt>
+<dd> Scroll up by one screenful.</dd>
+<dt><code>pageDown</code></dt>
+<dd> Scroll down by one screenful.</dd>
+<dt><code>scrollLeft(</code><i>n</i><code>)</code></dt>
+<dd> Scroll left by <i>n</i> pixels.</dd>
+<dt><code>scrollRight(</code><i>n</i><code>)</code></dt>
+<dd> Scroll right by <i>n</i> pixels.</dd>
+<dt><code>scrollUp(</code><i>n</i><code>)</code></dt>
+<dd> Scroll up by <i>n</i> pixels.</dd>
+<dt><code>scrollDown(</code><i>n</i><code>)</code></dt>
+<dd> Scroll down by <i>n</i> pixels.</dd>
+<dt><code>scrollUpPrevPage(</code><i>n</i><code>)</code></dt>
+<dd> Scroll up by <i>n</i> pixels, moving to the previous page if appropriate.</dd>
+<dt><code>scrollDownPrevPage(</code><i>n</i><code>)</code></dt>
+<dd> Scroll down by <i>n</i> pixels, moving to the next page if appropriate.</dd>
+<dt><code>scrollToTopEdge</code></dt>
+<dd> Scroll to the top edge of the current page, with no horizontal movement.</dd>
+<dt><code>scrollToBottomEdge</code></dt>
+<dd> Scroll to the bottom edge of the current page, with no horizontal movement.</dd>
+<dt><code>scrollToLeftEdge</code></dt>
+<dd> Scroll to the left edge of the current page, with no vertical movement.</dd>
+<dt><code>scrollToRightEdge</code></dt>
+<dd> Scroll to the right edge of the current page, with no vertical movement.</dd>
+<dt><code>scrollToTopLeft</code></dt>
+<dd> Scroll to the top-left corner of the current page.</dd>
+<dt><code>scrollToBottomRight</code></dt>
+<dd> Scroll to the bottom-right corner of the current page.</dd>
+<dt><code>goForward</code></dt>
+<dd> Move forward along the history path.</dd>
+<dt><code>goBackward</code></dt>
+<dd> Move backward along the history path.</dd>
+<dt><code>zoomPercent(</code><i>z</i><code>)</code></dt>
+<dd> Set the zoom factor to <i>z</i>%.</dd>
+<dt><code>zoomFitPage</code></dt>
+<dd> Set the zoom factor to fit-page.</dd>
+<dt><code>zoomFitWidth</code></dt>
+<dd> Set the zoom factor to fit-width.</dd>
+<dt><code>zoomIn</code></dt>
+<dd> Zoom in &#8211; go to the next higher zoom factor.</dd>
+<dt><code>zoomOut</code></dt>
+<dd> Zoom out &#8211; go the next lower zoom factor.</dd>
+<dt><code>rotateCW</code></dt>
+<dd> Rotate the page 90 degrees clockwise.</dd>
+<dt><code>rotateCCW</code></dt>
+<dd> Rotate the page 90 degrees counterclockwise.</dd>
+<dt><code>setSelection(</code><i>pg</i><code>,</code><i>ulx</i><code>,</code><i>uly</i><code>,</code><i>lrx</i><code>,</code><i>lry</i><code>)</code></dt>
+<dd> Set the selection to the specified coordinates on the specified page.</dd>
+<dt><code>continuousMode</code></dt>
+<dd> Go to continuous view mode.</dd>
+<dt><code>singlePageMode</code></dt>
+<dd> Go to single-page view mode.</dd>
+<dt><code>toggleContinuousMode</code></dt>
+<dd> Toggle between continuous and single page view modes.</dd>
+<dt><code>fullScreenMode</code></dt>
+<dd> Go to full-screen mode.</dd>
+<dt><code>windowMode</code></dt>
+<dd> Go to window (non-full-screen) mode.</dd>
+<dt><code>toggleFullScreenMode</code></dt>
+<dd> Toggle between full-screen and window modes.</dd>
+<dt><code>open</code></dt>
+<dd> Open a PDF file in this window, using the open dialog.</dd>
+<dt><code>openInNewWin</code></dt>
+<dd> Open a PDF file in a new window, using the open dialog.</dd>
+<dt><code>openFile(</code><i>file</i><code>)</code></dt>
+<dd> Open a specified PDF file in this window.</dd>
+<dt><code>openFileInNewWin(</code><i>file</i><code>)</code></dt>
+<dd> Open a specified PDF file in a new window.</dd>
+<dt><code>openFileAtDest(</code><i>file</i><code>,</code><i>dest</i><code>)</code></dt>
+<dd> Open a specified PDF file in this window and go to a named destination.</dd>
+<dt><code>openFileAtDestInNewWin(</code><i>file</i><code>,</code><i>dest</i><code>)</code></dt>
+<dd> Open a specified PDF file in a new window and go to a named destination.</dd>
+<dt><code>reload</code></dt>
+<dd> Reload the current PDF file.</dd>
+<dt><code>redraw</code></dt>
+<dd> Redraw the window.</dd>
+<dt><code>raise</code></dt>
+<dd> Raise the window to the front.</dd>
+<dt><code>closeWindow</code></dt>
+<dd> Close the window. If this was the last open window, clear the window, but don&#8217;t quit from Xpdf.</dd>
+<dt><code>closeWindowOrQuit</code></dt>
+<dd> Close the window. If this was the last open window, quit from Xpdf.</dd>
+<dt><code>run(</code><i>external-command-string</i><code>)</code></dt>
+<dd> Run an external command. The following escapes are allowed in the command string: </dd>
 <pre><code>
 % f = &gt; PDF file name(or an empty string if no
                              file is open) %
@@ -354,50 +354,50 @@ description: "xpdf – Portable Document Format (PDF) file viewer for X (version
 <pre>
     bind x &quot;run(ls -l)&quot;
 </pre>
-<dt><code>openOutline</code></p>
-<dd> Open the outline pane.</p>
-<dt><code>closeOutline</code></p>
-<dd> Close the outline pane.</p>
-<dt><code>toggleOutline</code></p>
-<dd> Toggle the outline pane between open and closed.</p>
-<dt><code>scrollOutlineDown(</code><i>n</i><code>)</code></p>
-<dd> Scroll the outline down by <i>n</i> increments.</p>
-<dt><code>scrollOutlineUp(</code><i>n</i><code>)</code></p>
-<dd> Scroll the outline up by <i>n</i> increments.</p>
-<dt><code>focusToDocWin</code></p>
-<dd> Set the keyboard focus to the main document window.</p>
-<dt><code>focusToPageNum</code></p>
-<dd> Set the keyboard focus to the page number text box.</p>
-<dt><code>find</code></p>
-<dd> Open the &#8216;find&#8217; dialog.</p>
-<dt><code>findNext</code></p>
-<dd> Finds the next occurrence of the search string (no dialog).</p>
-<dt><code>print</code></p>
-<dd> Open the &#8216;print&#8217; dialog.</p>
-<dt><code>about</code></p>
-<dd> Open the &#8216;about&#8217; dialog.</p>
-<dt><code>quit</code></p>
-<dd> Quit from xpdf.</dl>
+<dt><code>openOutline</code></dt>
+<dd> Open the outline pane.</dd>
+<dt><code>closeOutline</code></dt>
+<dd> Close the outline pane.</dd>
+<dt><code>toggleOutline</code></dt>
+<dd> Toggle the outline pane between open and closed.</dd>
+<dt><code>scrollOutlineDown(</code><i>n</i><code>)</code></dt>
+<dd> Scroll the outline down by <i>n</i> increments.</dd>
+<dt><code>scrollOutlineUp(</code><i>n</i><code>)</code></dt>
+<dd> Scroll the outline up by <i>n</i> increments.</dd>
+<dt><code>focusToDocWin</code></dt>
+<dd> Set the keyboard focus to the main document window.</dd>
+<dt><code>focusToPageNum</code></dt>
+<dd> Set the keyboard focus to the page number text box.</dd>
+<dt><code>find</code></dt>
+<dd> Open the &#8216;find&#8217; dialog.</dd>
+<dt><code>findNext</code></dt>
+<dd> Finds the next occurrence of the search string (no dialog).</dd>
+<dt><code>print</code></dt>
+<dd> Open the &#8216;print&#8217; dialog.</dd>
+<dt><code>about</code></dt>
+<dd> Open the &#8216;about&#8217; dialog.</dd>
+<dt><code>quit</code></dt>
+<dd> Quit from xpdf.</dd></dl>
 <p> The following commands depend on the current mouse position:</p>
 <dl>
-<dt><code>startSelection</code></p>
-<dd> Start a selection, which will be extended as the mouse moves.</p>
-<dt><code>endSelection</code></p>
-<dd> End a selection.</p>
-<dt><code>startPan</code></p>
-<dd> Start a pan, which will scroll the document as the mouse moves</p>
-<dt><code>endPan</code></p>
-<dd> End a pan.</p>
-<dt><code>postPopupMenu</code></p>
-<dd> Display the popup menu.</p>
-<dt><code>followLink</code></p>
-<dd> Follow a hyperlink (does nothing if the mouse is not over a link).</p>
-<dt><code>followLinkInNewWin</code></p>
-<dd> Follow a hyperlink, opening PDF files in a new window (does nothing if the mouse is not over a link). For links to non-PDF files, this command is identical to followLink.</p>
-<dt><code>followLinkNoSel</code></p>
-<dd> Same as followLink, but does nothing if there is a non-empty selection. (This is useful as a mouse button binding.)</p>
-<dt><code>followLinkInNewWinNoSel</code></p>
-<dd> Same as followLinkInNewWin, but does nothing if there is a non-empty selection. (This is useful as a mouse button binding.)</dl>
+<dt><code>startSelection</code></dt>
+<dd> Start a selection, which will be extended as the mouse moves.</dd>
+<dt><code>endSelection</code></dt>
+<dd> End a selection.</dd>
+<dt><code>startPan</code></dt>
+<dd> Start a pan, which will scroll the document as the mouse moves</dd>
+<dt><code>endPan</code></dt>
+<dd> End a pan.</dd>
+<dt><code>postPopupMenu</code></dt>
+<dd> Display the popup menu.</dd>
+<dt><code>followLink</code></dt>
+<dd> Follow a hyperlink (does nothing if the mouse is not over a link).</dd>
+<dt><code>followLinkInNewWin</code></dt>
+<dd> Follow a hyperlink, opening PDF files in a new window (does nothing if the mouse is not over a link). For links to non-PDF files, this command is identical to followLink.</dd>
+<dt><code>followLinkNoSel</code></dt>
+<dd> Same as followLink, but does nothing if there is a non-empty selection. (This is useful as a mouse button binding.)</dd>
+<dt><code>followLinkInNewWinNoSel</code></dt>
+<dd> Same as followLinkInNewWin, but does nothing if there is a non-empty selection. (This is useful as a mouse button binding.)</dd></dl>
 <h3>Default Bindings</h3>
 <p> The default mouse bindings are as follows: </p>
 <pre>
@@ -469,31 +469,31 @@ description: "xpdf – Portable Document Format (PDF) file viewer for X (version
 <p> Xpdf can be started in remote server mode by specifying a server name (in addition to the file name and page number). For example: </p>
 <dl>
 <dt>
-<dd> xpdf -remote myServer file.pdf</dl>
+</dt><dd> xpdf -remote myServer file.pdf</dd></dl>
 <p> If there is currently no xpdf running in server mode with the name &#8216;myServer&#8217;, a new xpdf window will be opened. If another command: </p>
 <dl>
 <dt>
-<dd> xpdf -remote myServer another.pdf 9</dl>
+</dt><dd> xpdf -remote myServer another.pdf 9</dd></dl>
 <p> is issued, a new copy of xpdf will not be started. Instead, the first xpdf (the server) will load <i>another.pdf</i> and display page nine. If the file name is the same: </p>
 <dl>
 <dt>
-<dd> xpdf -remote myServer another.pdf 4</dl>
+</dt><dd> xpdf -remote myServer another.pdf 4</dd></dl>
 <p> the xpdf server will simply display the specified page. </p>
 <p> The -raise option tells the server to raise its window; it can be specified with or without a file name and page number. </p>
 <p> The -quit option tells the server to close its window and exit.</p>
 <h2>EXIT CODES</h2>
 <p> The Xpdf tools use the following exit codes:</p>
 <dl>
-<dt>0</p>
-<dd> No error.</p>
-<dt>1</p>
-<dd> Error opening a PDF file.</p>
-<dt>2</p>
-<dd> Error opening an output file.</p>
-<dt>3</p>
-<dd> Error related to PDF permissions.</p>
-<dt>99</p>
-<dd> Other error.</dl>
+<dt>0</dt>
+<dd> No error.</dd>
+<dt>1</dt>
+<dd> Error opening a PDF file.</dd>
+<dt>2</dt>
+<dd> Error opening an output file.</dd>
+<dt>3</dt>
+<dd> Error related to PDF permissions.</dd>
+<dt>99</dt>
+<dd> Other error.</dd></dl>
 <h2>AUTHOR</h2>
 <p> The xpdf software and documentation are copyright 1996-2014 Glyph &amp; Cog, LLC.</p>
 <h2>SEE ALSO</h2>

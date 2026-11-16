@@ -14,14 +14,14 @@ description: "perl5260delta – what is new for perl v5.26.0"
 <h2>Notice</h2>
 <p> This release includes three updates with widespread effects:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;.&quot;</tt> no longer in <tt>@INC</tt> </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;.&quot;</tt> no longer in <tt>@INC</tt> </dd>
 <p> For security reasons, the current directory (<tt>&quot;.&quot;</tt>) is no longer included by default at the end of the module search path (<tt>@INC</tt>). This may have widespread implications for the building, testing and installing of modules, and for the execution of scripts. See the section &quot;Removal of the current directory (<tt>&quot;.&quot;</tt>) from <tt>@INC</tt>&quot; for the full details.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;do&quot;</tt> may now warn </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;do&quot;</tt> may now warn </dd>
 <p> <tt>&quot;do&quot;</tt> now gives a deprecation warning when it fails to load a file which it would have loaded had <tt>&quot;.&quot;</tt> been in <tt>@INC</tt>.</p>
-<dt>&bull;</p>
-<dd> In regular expression patterns, a literal left brace <tt>&quot;{&quot;</tt> should be escaped </p>
+<dt>&bull;</dt>
+<dd> In regular expression patterns, a literal left brace <tt>&quot;{&quot;</tt> should be escaped </dd>
 <p> See &quot;Unescaped literal <tt>&quot;{&quot;</tt> characters in regular expression patterns are no longer permissible&quot;.</dl>
 <h2>Core Enhancements</h2>
 <h3>Lexical subroutines are no longer experimental</h3>
@@ -82,20 +82,20 @@ description: "perl5260delta – what is new for perl v5.26.0"
 <p> Starting with v5.26, <tt>&quot;.&quot;</tt> is always removed by default, not just under tainting. This has major implications for installing modules and executing scripts. </p>
 <p> The following new features have been added to help ameliorate these issues.</p>
 <dl>
-<dt>&bull;</p>
-<dd> <i>Configure -Udefault_inc_excludes_dot</i> </p>
+<dt>&bull;</dt>
+<dd> <i>Configure -Udefault_inc_excludes_dot</i> </dd>
 <p> There is a new <i>Configure</i> option, <tt>&quot;default_inc_excludes_dot&quot;</tt> (enabled by default) which builds a perl executable without <tt>&quot;.&quot;</tt>; unsetting this option using <tt>&quot;-U&quot;</tt> reverts perl to the old behaviour. This may fix your path issues but will reintroduce all the security concerns, so don&#8217;t build a perl executable like this unless you&#8217;re <i>really</i> confident that such issues are not a concern in your environment.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;PERL_USE_UNSAFE_INC&quot;</tt> </p>
+<dt>&bull;</dt>
+<dd> <tt>&quot;PERL_USE_UNSAFE_INC&quot;</tt> </dd>
 <p> There is a new environment variable recognised by the perl interpreter. If this variable has the value 1 when the perl interpreter starts up, then <tt>&quot;.&quot;</tt> will be automatically appended to <tt>@INC</tt> (except under tainting). </p>
 <p> This allows you restore the old perl interpreter behaviour on a case-by-case basis. But note that this is intended to be a temporary crutch, and this feature will likely be removed in some future perl version. It is currently set by the <tt>&quot;cpan&quot;</tt> utility and <tt>&quot;Test::Harness&quot;</tt> to ease installation of <font SIZE="-1">CPAN</font> modules which have not been updated to handle the lack of dot. Once again, don&#8217;t use this unless you are sure that this will not reintroduce any security concerns.</p>
-<dt>&bull;</p>
-<dd> A new deprecation warning issued by <tt>&quot;do&quot;</tt>. </p>
+<dt>&bull;</dt>
+<dd> A new deprecation warning issued by <tt>&quot;do&quot;</tt>. </dd>
 <p> While it is well-known that <tt>&quot;use&quot;</tt> and <tt>&quot;require&quot;</tt> use <tt>@INC</tt> to search for the file to load, many people don&#8217;t realise that <tt>&quot;do &quot;file&quot;&quot;</tt> also searches <tt>@INC</tt> if the file is a relative path. With the removal of <tt>&quot;.&quot;</tt>, a simple <tt>&quot;do &quot;file.pl&quot;&quot;</tt> will fail to read in and execute <tt>&quot;file.pl&quot;</tt> from the current directory. Since this is commonly expected behaviour, a new deprecation warning is now issued whenever <tt>&quot;do&quot;</tt> fails to load a file which it otherwise would have found if a dot had been in <tt>@INC</tt>.</dl>
 <p> Here are some things script and module authors may need to do to make their software work in the new regime.</p>
 <dl>
-<dt>&bull;</p>
-<dd> Script authors </p>
+<dt>&bull;</dt>
+<dd> Script authors </dd>
 <p> If the issue is within your own code (rather than within included modules), then you have two main options. Firstly, if you are confident that your script will only be run within a trusted directory (under which you expect to find trusted files and modules), then add <tt>&quot;.&quot;</tt> back into the path; <i>e.g.</i>: </p>
 <p>BEGIN<br />
 {<br />
@@ -120,8 +120,8 @@ use &#8220;Foo::Bar&#8221;;<br />
 <pre>
     do &quot;./foo_config.pl&quot;
 </pre>
-<dt>&bull;</p>
-<dd> Installing and using <font SIZE="-1">CPAN</font> modules </p>
+<dt>&bull;</dt>
+<dd> Installing and using <font SIZE="-1">CPAN</font> modules </dd>
 <p> If you install a <font SIZE="-1">CPAN</font> module using an automatic tool like <tt>&quot;cpan&quot;</tt>, then this tool will itself set the <tt>&quot;PERL_USE_UNSAFE_INC&quot;</tt> environment variable while building and testing the module, which may be sufficient to install a distribution which hasn&#8217;t been updated to be dot-aware. If you want to install such a module manually, then you&#8217;ll need to replace the traditional invocation: </p>
 <pre>
     perl Makefile.PL &amp;&amp; make &amp;&amp; make test &amp;&amp; make install
@@ -137,8 +137,8 @@ use &#8220;Foo::Bar&#8221;;<br />
     $config = Foo::Bar-&gt;read_config();<br />
 }</p>
 <p> This is only rarely expected to be necessary. Again, if doing this, assess the resultant risks first.</p>
-<dt>&bull;</p>
-<dd> Module Authors </p>
+<dt>&bull;</dt>
+<dd> Module Authors </dd>
 <p> If you maintain a <font SIZE="-1">CPAN</font> distribution, it may need updating to run in a dotless environment. Although <tt>&quot;cpan&quot;</tt> and other such tools will currently set the <tt>&quot;PERL_USE_UNSAFE_INC&quot;</tt> during module build, this is a temporary workaround for the set of modules which rely on <tt>&quot;.&quot;</tt> being in <tt>@INC</tt> for installation and testing, and this may mask deeper issues. It could result in a module which passes tests and installs, but which fails at run time. </p>
 <p> During build, test, and install, it will normally be the case that any perl processes will be executing directly within the root directory of the untarred distribution, or a known subdirectory of that, such as <i>t/</i>. It may well be that <i>Makefile.PL</i> or <i>t/foo.t</i> will attempt to include local modules and configuration files using their direct relative filenames, which will now fail. </p>
 <p> However, as described above, automatic tools like <i>cpan</i> will (for now) set the <tt>&quot;PERL_USE_UNSAFE_INC&quot;</tt> environment variable, which introduces dot during a build. </p>
@@ -187,3 +187,4 @@ use &#8220;Foo::Bar&#8221;;<br />
 <p> Formerly, <tt>&quot;require ::Foo::Bar&quot;</tt> would try to read <i>/Foo/Bar.pm</i>. Now any bareword require which starts with a double colon dies instead.</p>
 <h3>Literal control character variable names are no longer permissible</h3>
 <p> A variable name may no longer contain a literal control character under any circumstances. These previously were allowed in single-character names on <font SIZE="-1">ASCII</font> platforms, but have been deprecated there since Perl 5.20. This affects things like <tt>&quot;$</tt>
+</p></p>

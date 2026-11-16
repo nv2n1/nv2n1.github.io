@@ -14,26 +14,26 @@ description: "rc.news – Start or stop INN daemons"
 <p><code>rc.news</code> can be used to start or stop <code>innd</code> and supporting programs. It checks to make sure <font SIZE="-1">INN</font> is not already running, handles cases of unclean shutdown, finishes up tasks which might have been interrupted by the preceding shutdown, e-mails certain boot-time warnings to <i>newsmaster</i> (as set in <i>inn.conf</i>), and is generally safer and easier than starting and stopping everything directly. It needs to be run as the news user so that files in <i>pathrun</i> are created with the right ownership (though this is less important for <tt>&quot;rc.news stop&quot;</tt>). </p>
 <p> Programs run and stopped by this script include:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Always: <code>innd</code> is started or stopped.</p>
-<dt>&bull;</p>
-<dd>If <i>doinnwatch</i> is true in <i>inn.conf</i>: <code>innwatch</code> is started and stopped.</p>
-<dt>&bull;</p>
-<dd>If <i>docnfsstat</i> is true in <i>inn.conf</i>: <code>cnfsstat</code> is started and stopped.</p>
-<dt>&bull;</p>
-<dd>If <i>ovmethod</i> is set to <tt>&quot;ovdb&quot;</tt> in <i>inn.conf</i>: <code>ovdb_init</code> is run; <code>ovdb_server</code> and <code>ovdb_monitor</code> are stopped.</p>
-<dt>&bull;</p>
-<dd>If <i>rc.news.local</i> exists in <i>pathbin</i>: <code>rc.news.local</code> is run with argument <tt>&quot;start&quot;</tt> or <tt>&quot;stop&quot;</tt> (to perform site-specific startup or shutdown tasks).</p>
-<dt>&bull;</p>
-<dd>When started, if <font SIZE="-1">INN</font> appears to have previously been shut down during its expiry process, run <code>expirerm</code> if there are articles to unlink.</p>
-<dt>&bull;</p>
-<dd>When started, if overview data appears to have just been rebuilt and <i>active</i> needs to be renumbered, then actually renumber it.</dl>
+<dt>&bull;</dt>
+<dd>Always: <code>innd</code> is started or stopped.</dd>
+<dt>&bull;</dt>
+<dd>If <i>doinnwatch</i> is true in <i>inn.conf</i>: <code>innwatch</code> is started and stopped.</dd>
+<dt>&bull;</dt>
+<dd>If <i>docnfsstat</i> is true in <i>inn.conf</i>: <code>cnfsstat</code> is started and stopped.</dd>
+<dt>&bull;</dt>
+<dd>If <i>ovmethod</i> is set to <tt>&quot;ovdb&quot;</tt> in <i>inn.conf</i>: <code>ovdb_init</code> is run; <code>ovdb_server</code> and <code>ovdb_monitor</code> are stopped.</dd>
+<dt>&bull;</dt>
+<dd>If <i>rc.news.local</i> exists in <i>pathbin</i>: <code>rc.news.local</code> is run with argument <tt>&quot;start&quot;</tt> or <tt>&quot;stop&quot;</tt> (to perform site-specific startup or shutdown tasks).</dd>
+<dt>&bull;</dt>
+<dd>When started, if <font SIZE="-1">INN</font> appears to have previously been shut down during its expiry process, run <code>expirerm</code> if there are articles to unlink.</dd>
+<dt>&bull;</dt>
+<dd>When started, if overview data appears to have just been rebuilt and <i>active</i> needs to be renumbered, then actually renumber it.</dd></dl>
 <h2>Options</h2>
 <dl>
-<dt>&quot;start&quot;</p>
-<dd>If the first argument is <tt>&quot;start&quot;</tt>, or no first argument is given, <code>rc.news</code> initiates <font SIZE="-1">INN</font> startup.</p>
-<dt>&quot;stop&quot;</p>
-<dd>If the first argument is <tt>&quot;stop&quot;</tt>, <code>rc.news</code> initiates <font SIZE="-1">INN</font> shutdown.</dl>
+<dt>&quot;start&quot;</dt>
+<dd>If the first argument is <tt>&quot;start&quot;</tt>, or no first argument is given, <code>rc.news</code> initiates <font SIZE="-1">INN</font> startup.</dd>
+<dt>&quot;stop&quot;</dt>
+<dd>If the first argument is <tt>&quot;stop&quot;</tt>, <code>rc.news</code> initiates <font SIZE="-1">INN</font> shutdown.</dd></dl>
 <h2>Examples</h2>
 <p>To start <font SIZE="-1">INN</font> and leave certain error messages going to the terminal: </p>
 <pre> su news -s /bin/sh -c /etc/rc.news</pre>

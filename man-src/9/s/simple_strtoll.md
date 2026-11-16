@@ -15,15 +15,15 @@ simple_strtoll - convert a string to a signed long long
 <h2>Arguments</h2>
 
 <i>cp</i>
-<dl><dd><dd>The start of the string</dl>
+<dl><dd></dd><dd>The start of the string</dd></dl>
  
 
  <i>endp</i>
-<dl><dd>A pointer to the end of the parsed string will be placed here</dl>
+<dl><dd>A pointer to the end of the parsed string will be placed here</dd></dl>
  
 
  <i>base</i>
-<dl><dd>The number base to use</dl>
+<dl><dd>The number base to use</dd></dl>
 
 <h2>Description</h2>
 

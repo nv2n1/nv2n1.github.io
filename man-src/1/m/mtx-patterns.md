@@ -15,22 +15,22 @@ description: "mtx-patterns – ConTeXt Pattern File Management"
 <p> <code>ConTeXt Pattern File Management</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;convert</code></p>
-<dd> generate context language files (mnemonic driven, if not given then all)</p>
-<dt><code>&#8211;check</code></p>
-<dd> check pattern file (or those used by context when no file given)</p>
-<dt><code>&#8211;path</code></p>
-<dd> source path where hyph-foo.tex files are stored</p>
-<dt><code>&#8211;destination</code></p>
-<dd> destination path</p>
-<dt><code>&#8211;specification</code></p>
-<dd> additional patterns: e.g.: =cy,hyph-cy,welsh</p>
-<dt><code>&#8211;compress</code></p>
-<dd> compress data</p>
-<dt><code>&#8211;words</code></p>
-<dd> update words in given file</p>
-<dt><code>&#8211;hyphenate</code></p>
-<dd> show hypephenated words</dl>
+<dt><code>&#8211;convert</code></dt>
+<dd> generate context language files (mnemonic driven, if not given then all)</dd>
+<dt><code>&#8211;check</code></dt>
+<dd> check pattern file (or those used by context when no file given)</dd>
+<dt><code>&#8211;path</code></dt>
+<dd> source path where hyph-foo.tex files are stored</dd>
+<dt><code>&#8211;destination</code></dt>
+<dd> destination path</dd>
+<dt><code>&#8211;specification</code></dt>
+<dd> additional patterns: e.g.: =cy,hyph-cy,welsh</dd>
+<dt><code>&#8211;compress</code></dt>
+<dd> compress data</dd>
+<dt><code>&#8211;words</code></dt>
+<dd> update words in given file</dd>
+<dt><code>&#8211;hyphenate</code></dt>
+<dd> show hypephenated words</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

@@ -19,39 +19,39 @@ description: "pmempool-check – Check and repair Persistent Memory Pool"
 <p> <code>-r, &#8211;repair</code></p>
 <dl>
 <dt>
-<dd> Try to repair a pool file if possible.</dl>
+</dt><dd> Try to repair a pool file if possible.</dd></dl>
 <p> <code>-y, &#8211;yes</code></p>
 <dl>
 <dt>
-<dd> Answer yes on all questions.</dl>
+</dt><dd> Answer yes on all questions.</dd></dl>
 <p> <code>-N, &#8211;no-exec</code></p>
 <dl>
 <dt>
-<dd> Don&#8217;t execute, just show what would be done.</dl>
+</dt><dd> Don&#8217;t execute, just show what would be done.</dd></dl>
 <p> <code>-b, &#8211;backup &lt;file&gt;</code></p>
 <dl>
 <dt>
-<dd> Create backup of a pool file before executing. Terminate if it is <i>not</i> possible to create a backup file. This option requires <code>-r</code> option.</dl>
+</dt><dd> Create backup of a pool file before executing. Terminate if it is <i>not</i> possible to create a backup file. This option requires <code>-r</code> option.</dd></dl>
 <p> <code>-q, &#8211;quiet</code></p>
 <dl>
 <dt>
-<dd> Be quiet and don&#8217;t print any messages.</dl>
+</dt><dd> Be quiet and don&#8217;t print any messages.</dd></dl>
 <p> <code>-v, &#8211;verbose</code></p>
 <dl>
 <dt>
-<dd> Be more verbose.</dl>
+</dt><dd> Be more verbose.</dd></dl>
 <p> <code>-h, &#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help message and exit.</dl>
+</dt><dd> Display help message and exit.</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>pmempool check pool.bin</p>
-<dd> # Check consistency of pool.bin pool file</p>
-<dt>pmempool check &#8211;repair &#8211;backup pool.bin.backup pool.bin</p>
-<dd> # Check consistency of pool.bin pool file, create backup and repair if necessary.</p>
-<dt>pmempool check -rvN pool.bin</p>
-<dd> # Check consistency of pool.bin pool file, print what would be repaired with increased verbosity level.</dl>
+<dt>pmempool check pool.bin</dt>
+<dd> # Check consistency of pool.bin pool file</dd>
+<dt>pmempool check &#8211;repair &#8211;backup pool.bin.backup pool.bin</dt>
+<dd> # Check consistency of pool.bin pool file, create backup and repair if necessary.</dd>
+<dt>pmempool check -rvN pool.bin</dt>
+<dd> # Check consistency of pool.bin pool file, print what would be repaired with increased verbosity level.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>libpmemblk(3) libpmemlog(3) <a href="/docs/linux/man/1-pmempool/">pmempool</a>(1)</code></p>
 <h2>PMEMPOOL</h2>

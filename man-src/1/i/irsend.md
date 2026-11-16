@@ -22,33 +22,33 @@ SEND_ONCE - send CODE[CODE...] once SEND_START - start repeating CODE SEND_STOP 
 <p> <i>NUM</i> is the transmitter number of the hardware device. </p>
 <p> For the <code>LIST</code> <i>DIRECTIVE</i>, <i>REMOTE</i> and/or <i>CODE</i> can be empty: </p>
 <pre>
-<dl><dt><dd><code>LIST</code>   &quot;&quot;    &quot;&quot;   - list all configured remote names
+<dl><dt></dt><dd><code>LIST</code>   &quot;&quot;    &quot;&quot;   - list all configured remote names
 <code>LIST</code> <i>REMOTE</i>  &quot;&quot;   - list all codes of <i>REMOTE</i>
 <code>LIST</code> <i>REMOTE</i> <i>CODE</i>  - list only <i>CODE</i> of <i>REMOTE</i>
-</dl>
+</dd></dl>
 </pre>
 <p> The <code>SIMULATE</code> command only works if it has been explicitly enabled in lircd.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code> <code>&#8211;help</code></p>
-<dd> display usage summary</p>
-<dt><code>-v</code> <code>&#8211;version</code></p>
-<dd> display version</p>
-<dt><code>-d</code> <code>&#8211;device</code></p>
-<dd> use given lircd socket [/var/run/lirc/lircd]</p>
-<dt><code>-a</code> <code>&#8211;address</code>=<i>host[</i>:port]</p>
-<dd> connect to lircd at this address</p>
-<dt>-# <code>&#8211;count</code>=<i>n</i></p>
-<dd> send command n times </p>
+<dt><code>-h</code> <code>&#8211;help</code></dt>
+<dd> display usage summary</dd>
+<dt><code>-v</code> <code>&#8211;version</code></dt>
+<dd> display version</dd>
+<dt><code>-d</code> <code>&#8211;device</code></dt>
+<dd> use given lircd socket [/var/run/lirc/lircd]</dd>
+<dt><code>-a</code> <code>&#8211;address</code>=<i>host[</i>:port]</dt>
+<dd> connect to lircd at this address</dd>
+<dt>-# <code>&#8211;count</code>=<i>n</i></dt>
+<dd> send command n times </dd>
 </dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt>LIRC_SOCKET_PATH</p>
-<dd> The lircd socket to connect to, defaults to a hardcoded default value usually /var/run/lirc/lircd</dl>
+<dt>LIRC_SOCKET_PATH</dt>
+<dd> The lircd socket to connect to, defaults to a hardcoded default value usually /var/run/lirc/lircd</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/lirc/lircd.conf</i></p>
-<dd> Default <code>lircd</code> configuration file. It should contain all the remotes, their infra-red codes and the corresponding timing and waveform details. </p>
+<dt><i>/etc/lirc/lircd.conf</i></dt>
+<dd> Default <code>lircd</code> configuration file. It should contain all the remotes, their infra-red codes and the corresponding timing and waveform details. </dd>
 </dl>
 <h2>DIAGNOSTICS</h2>
 <p> If <code>lircd</code> is not running (or /var/run/lirc/lircd lacks write permissions) <code>irsend</code> aborts with the following diagnostics: </p>
@@ -58,7 +58,7 @@ SEND_ONCE - send CODE[CODE...] once SEND_START - start repeating CODE SEND_STOP 
 </pre>
 <h2>EXAMPLES</h2>
 <pre>
-<dl><dt><dd>irsend LIST DenonTuner &quot;&quot;
+<dl><dt></dt><dd>irsend LIST DenonTuner &quot;&quot;
 irsend SEND_ONCE  DenonTuner PROG-SCAN
 irsend SEND_ONCE  OnkyoAmpli VOL-UP VOL-UP VOL-UP VOL-UP
 irsend SEND_START OnkyoAmpli VOL-DOWN ; sleep 3
@@ -66,17 +66,17 @@ irsend SEND_STOP  OnkyoAmpli VOL-DOWN
 irsend SET_TRANSMITTERS 1
 irsend SET_TRANSMITTERS 1 3 4
 irsend SIMULATE &quot;0000000000000476 00 OK TECHNISAT_ST3004S&quot;
-</dl>
+</dd></dl>
 </pre>
 <h2>DRIVER LOADING</h2>
 <p> Drivers are loaded dynamically. The directory used for this is determined by (falling priority):</p>
 <dl>
-<dt>&#8211;</p>
-<dd> The &#8216;plugindir&#8217; entry in the [lircd] section of the lirc_options.conf file.</p>
-<dt>&#8211;</p>
-<dd> The environment variable LIRC_PLUGINDIR.</p>
-<dt>&#8211;</p>
-<dd> A hardcoded default (usually /usr/lib[64]/lirc/plugins).</dl>
+<dt>&#8211;</dt>
+<dd> The &#8216;plugindir&#8217; entry in the [lircd] section of the lirc_options.conf file.</dd>
+<dt>&#8211;</dt>
+<dd> The environment variable LIRC_PLUGINDIR.</dd>
+<dt>&#8211;</dt>
+<dd> A hardcoded default (usually /usr/lib[64]/lirc/plugins).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-lircd/">lircd</a>(8), <a href="/docs/linux/man/1-mode2/">mode2</a>(1), <a href="/docs/linux/man/1-xmode2/">xmode2</a>(1), <a href="/docs/linux/man/1-irrecord/">irrecord</a>(1), irw(1)</code> </p>
 <h2>Index</h2>

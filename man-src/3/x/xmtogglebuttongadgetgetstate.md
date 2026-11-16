@@ -15,8 +15,8 @@ description: "XmToggleButtonGadgetGetState — A ToggleButtonGadget function tha
 <h2>Description</h2>
 <p><code>XmToggleButtonGadgetGetState</code> obtains the state of a ToggleButtonGadget.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ToggleButtonGadget ID</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ToggleButtonGadget ID</dd></dl>
 <p> For a complete definition of ToggleButtonGadget and its associated resources, see <code><a href="/docs/linux/man/3-xmtogglebuttongadget/">XmToggleButtonGadget</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns True if the button is selected and False if the button is unselected.</p>

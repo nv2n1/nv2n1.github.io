@@ -14,62 +14,62 @@ description: "fprobe-ulog – a NetFlow probe"
 <p><code>fprobe-ulog</code> &#8211; libipulog-based tool that collect network traffic data and emit it as NetFlow flows towards the specified collector. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd>Display short help</p>
-<dt><code>-U </code><i>&lt;mask&gt;</i></p>
-<dd>ULOG group bitwise mask. [default=1]</p>
-<dt><code>-s </code><i>&lt;seconds&gt;</i></p>
-<dd>How often scan for expired flows. [default=5]</p>
-<dt><code>-g </code><i>&lt;seconds&gt;</i></p>
-<dd>Fragmented flow lifetime. [default=30]</p>
-<dt><code>-d </code><i>&lt;seconds&gt;</i></p>
-<dd>Idle flow lifetime (inactive timer). [default=60]</p>
-<dt><code>-e </code><i>&lt;seconds&gt;</i></p>
-<dd>Active flow lifetime (active timer). [default=300]</p>
-<dt><code>-n </code><i>&lt;version&gt;</i></p>
-<dd>NetFlow version for use (1, 5, 7). [default=5]</p>
-<dt><code>-a </code><i>&lt;address&gt;</i></p>
-<dd>Use <i>address</i> as source for NetFlow flow.</p>
-<dt><code>-X </code><i>&lt;rule[,&#8230;]&gt;</i></p>
+<dt><code>-h</code></dt>
+<dd>Display short help</dd>
+<dt><code>-U </code><i>&lt;mask&gt;</i></dt>
+<dd>ULOG group bitwise mask. [default=1]</dd>
+<dt><code>-s </code><i>&lt;seconds&gt;</i></dt>
+<dd>How often scan for expired flows. [default=5]</dd>
+<dt><code>-g </code><i>&lt;seconds&gt;</i></dt>
+<dd>Fragmented flow lifetime. [default=30]</dd>
+<dt><code>-d </code><i>&lt;seconds&gt;</i></dt>
+<dd>Idle flow lifetime (inactive timer). [default=60]</dd>
+<dt><code>-e </code><i>&lt;seconds&gt;</i></dt>
+<dd>Active flow lifetime (active timer). [default=300]</dd>
+<dt><code>-n </code><i>&lt;version&gt;</i></dt>
+<dd>NetFlow version for use (1, 5, 7). [default=5]</dd>
+<dt><code>-a </code><i>&lt;address&gt;</i></dt>
+<dd>Use <i>address</i> as source for NetFlow flow.</dd>
+<dt><code>-X </code><i>&lt;rule[,&#8230;]&gt;</i></dt>
 <dd>Comma separated list of interface name to SNMP-index conversion rules. Each <i>rule</i> consists of <i>interface base name</i> and <i>SNMP-index base</i> separated by colon (e.g. ppp:200). Final SNMP-index is sum of corresponding <i>SNMP-index base</i> and <i>interface number</i>.<br />
- In the above example SNMP-index of interface ppp11 is 211. </p>
+ In the above example SNMP-index of interface ppp11 is 211. </dd>
 <p> If interface name did not fit to any of conversion rules then SNMP-index will be taken from kernel.</p>
-<dt><code>-M</code></p>
-<dd>Use the netfilter mark as Type Of Service value.</p>
-<dt><code>-b </code><i>&lt;flows&gt;</i></p>
+<dt><code>-M</code></dt>
+<dd>Use the netfilter mark as Type Of Service value.</dd>
+<dt><code>-b </code><i>&lt;flows&gt;</i></dt>
 <dd>Memory bulk size. [default=200 or 10000]<br />
- Note that maximum and default values depends on compiling options (<i>&#8211;with-membulk</i> parameter).</p>
-<dt><code>-m </code><i>&lt;kilobytes&gt;</i></p>
-<dd>Memory limit for flows cache (0=no limit). [default=0]</p>
-<dt><code>-q </code><i>&lt;flows&gt;</i></p>
+ Note that maximum and default values depends on compiling options (<i>&#8211;with-membulk</i> parameter).</dd>
+<dt><code>-m </code><i>&lt;kilobytes&gt;</i></dt>
+<dd>Memory limit for flows cache (0=no limit). [default=0]</dd>
+<dt><code>-q </code><i>&lt;flows&gt;</i></dt>
 <dd>Pending queue length. [default=100]<br />
- Each captured packet at first puts into special buffer called `pending queue&#8217;. Purpose of this buffer is to separate most time-critical packet capture thread from other.</p>
-<dt><code>-B </code><i>&lt;kilobytes&gt;</i></p>
+ Each captured packet at first puts into special buffer called `pending queue&#8217;. Purpose of this buffer is to separate most time-critical packet capture thread from other.</dd>
+<dt><code>-B </code><i>&lt;kilobytes&gt;</i></dt>
 <dd>Kernel capture buffer size (0=don&#8217;t change). [default=0]<br />
  Increase kernel capture buffer size is most adequate way to prevent packets loss.<br />
- Note that maximum allowed size of the buffer in Linux limited and generally relatively small, so it should need to change the maximum: sysctl -w net/core/rmem_max=4194304</p>
-<dt><code>-r </code><i>&lt;priority&gt;</i></p>
+ Note that maximum allowed size of the buffer in Linux limited and generally relatively small, so it should need to change the maximum: sysctl -w net/core/rmem_max=4194304</dd>
+<dt><code>-r </code><i>&lt;priority&gt;</i></dt>
 <dd>Real-time priority (0=disabled). [default=0]<br />
- If parameter greater then zero <code>fprobe-ulog</code> will use real-time scheduling policy to prevent packets loss. Note that possible values for this option depends on operating system.</p>
-<dt><code>-t </code><i>&lt;B:N&gt;</i></p>
+ If parameter greater then zero <code>fprobe-ulog</code> will use real-time scheduling policy to prevent packets loss. Note that possible values for this option depends on operating system.</dd>
+<dt><code>-t </code><i>&lt;B:N&gt;</i></dt>
 <dd>Emitting rate limit (0:0=no limit). [default=0:0]<br />
  Produce <i>N</i> nanosecond delay after each <i>B</i> bytes sent. This option may be useful with slow interfaces and slow collectors. Note that the suspension time may be longer than requested because the argument value is rounded up to an integer multiple of the sleep resolution (it depends on operating system and hardware) or because of the scheduling of other activity by the system.<br />
- See BUGS section.</p>
-<dt><code>-c </code><i>&lt;directory&gt;</i></p>
-<dd>Directory to chroot to.</p>
-<dt><code>-u </code><i>&lt;user&gt;</i></p>
-<dd>User to run as.</p>
-<dt><code>-v </code><i>&lt;level&gt;</i></p>
-<dd>Maximum displayed log level. (0=EMERG, 1=ALERT, 2=CRIT, 3=ERR, 4=WARNING, 5=NOTICE, 6=INFO, 7=DEBUG) [default=6]</p>
-<dt><code>-l </code><i>&lt;[dst][:id]&gt;</i></p>
+ See BUGS section.</dd>
+<dt><code>-c </code><i>&lt;directory&gt;</i></dt>
+<dd>Directory to chroot to.</dd>
+<dt><code>-u </code><i>&lt;user&gt;</i></dt>
+<dd>User to run as.</dd>
+<dt><code>-v </code><i>&lt;level&gt;</i></dt>
+<dd>Maximum displayed log level. (0=EMERG, 1=ALERT, 2=CRIT, 3=ERR, 4=WARNING, 5=NOTICE, 6=INFO, 7=DEBUG) [default=6]</dd>
+<dt><code>-l </code><i>&lt;[dst][:id]&gt;</i></dt>
 <dd>Log destination (0=none, 1=syslog, 2=stdout, 3=both) and log/pidfile identifier. [default=1]<br />
  This option allows to select opportune log destination and process identifier. The identifier helps to distinguish pidfile and logs of one <code>fprobe-ulog</code> process from other.<br />
- Note that if log destination contains `<i>stdout</i>&#8216; (equal 2 or 3) <code>fprobe-ulog</code> will run in foreground.</p>
-<dt><code>remote:port/local/type</code></p>
+ Note that if log destination contains `<i>stdout</i>&#8216; (equal 2 or 3) <code>fprobe-ulog</code> will run in foreground.</dd>
+<dt><code>remote:port/local/type</code></dt>
 <dd>Parameters <i>remote</i> and <i>port</i> are respectively define address and port of the NetFlow collector.<br />
  The <i>local</i> parameter allows binding certain local IP address with specified collector. If the parameter is omitted the value (if any) of <i>-a</i> option will be used.<br />
  The <i>type</i> parameter determines emitting behavior. It may be `m&#8217; for mirroring (by default) and `r&#8217; for collectors round-robin rotating.<br />
- You may specify multiple collectors. </p>
+ You may specify multiple collectors. </dd>
 </dl>
 <h2>Examples</h2>
 <p><code>fprobe-ulog -Xeth:100,ppp:200 localhost:2055</code> Reasonable configuration to run under heavy load:<br />

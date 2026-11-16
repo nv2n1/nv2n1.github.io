@@ -11,22 +11,22 @@ description: "mysqldumpslow – Summarize slow query log files"
 <p> mysqldumpslow &#8211; Summarize slow query log files </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>mysqldumpslow [</code><code>options</code><code>] [</code><i>log_file</i><code> &#8230;]</code></dl>
+<dt> <code>mysqldumpslow [</code><code>options</code><code>] [</code><i>log_file</i><code> &#8230;]</code></dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>The MySQL slow query log contains information about queries that take a long time to execute (see Section 5.4.5, &#8220;The Slow Query Log&#8221;). <code>mysqldumpslow</code> parses MySQL slow query log files and summarizes their contents. </p>
+<dd>The MySQL slow query log contains information about queries that take a long time to execute (see Section 5.4.5, &#8220;The Slow Query Log&#8221;). <code>mysqldumpslow</code> parses MySQL slow query log files and summarizes their contents. </dd>
 <p> Normally, <code>mysqldumpslow</code> groups queries that are similar except for the particular values of number and string data values. It &#8220;abstracts&#8221; these values to N and &#8216;S&#8217; when displaying summary output. To modify value abstracting behavior, use the <code>-a</code> and <code>-n</code> options. </p>
 <p> Invoke <code>mysqldumpslow</code> like this: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 shell &gt; mysqldumpslow[options][log_file...]
 </code></pre>
-</dl>
+</dd></dl>
 <p> Example of usage: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 shell &gt; mysqldumpslow
                     Reading mysql slow query log from /
@@ -42,69 +42,69 @@ shell &gt; mysqldumpslow
                           root[root] @localhost
                               insert into t1 select *from t1
 </code></pre>
-</dl>
+</dd></dl>
 <p> <code>mysqldumpslow</code> supports the following options. </p>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;help</code> </p>
+</dt><dd> &bull; <code>&#8211;help</code> </dd>
 <p> Display a help message and exit.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>-a</code> </p>
+</dt><dd> &bull; <code>-a</code> </dd>
 <p> Do not abstract all numbers to N and strings to &#8216;S&#8217;.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;debug</code>, <code>-d</code> </p>
+</dt><dd> &bull; <code>&#8211;debug</code>, <code>-d</code> </dd>
 <p> Run in debug mode. </p>
 <p> This option is available only if MySQL was built using <code>WITH_DEBUG</code>. MySQL release binaries provided by Oracle are <i>not</i> built using this option.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>-g </code><i>pattern</i> </p>
+</dt><dd> &bull; <code>-g </code><i>pattern</i> </dd>
 <p> Consider only queries that match the (<code>grep</code>-style) pattern.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>-h </code><i>host_name</i> </p>
+</dt><dd> &bull; <code>-h </code><i>host_name</i> </dd>
 <p> Host name of MySQL server for *-slow.log file name. The value can contain a wildcard. The default is * (match all).</dl>
 <dl>
 <dt>
-<dd> &bull; <code>-i </code><i>name</i> </p>
+</dt><dd> &bull; <code>-i </code><i>name</i> </dd>
 <p> Name of server instance (if using <code>mysql.server</code> startup script).</dl>
 <dl>
 <dt>
-<dd> &bull; <code>-l</code> </p>
+</dt><dd> &bull; <code>-l</code> </dd>
 <p> Do not subtract lock time from total time.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>-n </code><i>N</i> </p>
+</dt><dd> &bull; <code>-n </code><i>N</i> </dd>
 <p> Abstract numbers with at least <i>N</i> digits within names.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>-r</code> </p>
+</dt><dd> &bull; <code>-r</code> </dd>
 <p> Reverse the sort order.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>-s </code><i>sort_type</i> </p>
+</dt><dd> &bull; <code>-s </code><i>sort_type</i> </dd>
 <p> How to sort the output. The value of <i>sort_type</i> should be chosen from the following list: </p>
 <dl>
 <dt>
-<dd> &bull; t, at: Sort by query time or average query time</dl>
+</dt><dd> &bull; t, at: Sort by query time or average query time</dd></dl>
 <dl>
 <dt>
-<dd> &bull; l, al: Sort by lock time or average lock time</dl>
+</dt><dd> &bull; l, al: Sort by lock time or average lock time</dd></dl>
 <dl>
 <dt>
-<dd> &bull; r, ar: Sort by rows sent or average rows sent</dl>
+</dt><dd> &bull; r, ar: Sort by rows sent or average rows sent</dd></dl>
 <dl>
 <dt>
-<dd> &bull; c: Sort by count</dl>
+</dt><dd> &bull; c: Sort by count</dd></dl>
 <p> By default, <code>mysqldumpslow</code> sorts by average query time (equivalent to <code>-s at</code>).</dl>
 <dl>
 <dt>
-<dd> &bull; <code>-t </code><i>N</i> </p>
+</dt><dd> &bull; <code>-t </code><i>N</i> </dd>
 <p> Display only the first <i>N</i> queries in the output.</dl>
 <dl>
 <dt>
-<dd> &bull; <code>&#8211;verbose</code>, <code>-v</code> </p>
+</dt><dd> &bull; <code>&#8211;verbose</code>, <code>-v</code> </dd>
 <p> Verbose mode. Print more information about what the program does.</dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 1997, 2020, Oracle and/or its affiliates. All rights reserved. </p>
@@ -116,3 +116,4 @@ shell &gt; mysqldumpslow
 <h2>AUTHOR</h2>
 <p> Oracle Corporation (<a rel="nofollow" href="http://dev.mysql.com/">http://dev.mysql.com/</a>). </p>
 <h2>Index</h2>
+</p>

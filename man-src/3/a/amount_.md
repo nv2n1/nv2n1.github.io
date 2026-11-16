@@ -31,7 +31,7 @@ description: "QuantLib::FixedDividend – Predetermined cash flow."
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> The amount is not discounted, i.e., it is the actual amount paid at the cash flow date.</dl>
+</dt><dd> The amount is not discounted, i.e., it is the actual amount paid at the cash flow date.</dd></dl>
 <p> Implements <code>Dividend</code>. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>

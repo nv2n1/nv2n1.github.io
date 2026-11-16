@@ -22,66 +22,66 @@ git fsck[--tags][--root][--unreachable][--cache][--no - reflogs]
 <p> &lt;object&gt;</p>
 <dl>
 <dt>
-<dd> An object to treat as the head of an unreachability trace. </p>
+</dt><dd> An object to treat as the head of an unreachability trace. </dd>
 <p> If no objects are given, <i>git fsck</i> defaults to using the index file, all SHA-1 references in <code>refs</code> namespace, and all reflogs (unless &#8211;no-reflogs is given) as heads.</dl>
 <p> &#8211;unreachable</p>
 <dl>
 <dt>
-<dd> Print out objects that exist but that aren&#8217;t reachable from any of the reference nodes.</dl>
+</dt><dd> Print out objects that exist but that aren&#8217;t reachable from any of the reference nodes.</dd></dl>
 <p> &#8211;[no-]dangling</p>
 <dl>
 <dt>
-<dd> Print objects that exist but that are never <i>directly</i> used (default). <code>&#8211;no-dangling</code> can be used to omit this information from the output.</dl>
+</dt><dd> Print objects that exist but that are never <i>directly</i> used (default). <code>&#8211;no-dangling</code> can be used to omit this information from the output.</dd></dl>
 <p> &#8211;root</p>
 <dl>
 <dt>
-<dd> Report root nodes.</dl>
+</dt><dd> Report root nodes.</dd></dl>
 <p> &#8211;tags</p>
 <dl>
 <dt>
-<dd> Report tags.</dl>
+</dt><dd> Report tags.</dd></dl>
 <p> &#8211;cache</p>
 <dl>
 <dt>
-<dd> Consider any object recorded in the index also as a head node for an unreachability trace.</dl>
+</dt><dd> Consider any object recorded in the index also as a head node for an unreachability trace.</dd></dl>
 <p> &#8211;no-reflogs</p>
 <dl>
 <dt>
-<dd> Do not consider commits that are referenced only by an entry in a reflog to be reachable. This option is meant only to search for commits that used to be in a ref, but now aren&#8217;t, but are still in that corresponding reflog.</dl>
+</dt><dd> Do not consider commits that are referenced only by an entry in a reflog to be reachable. This option is meant only to search for commits that used to be in a ref, but now aren&#8217;t, but are still in that corresponding reflog.</dd></dl>
 <p> &#8211;full</p>
 <dl>
 <dt>
-<dd> Check not just objects in GIT_OBJECT_DIRECTORY ($GIT_DIR/objects), but also the ones found in alternate object pools listed in GIT_ALTERNATE_OBJECT_DIRECTORIES or $GIT_DIR/objects/info/alternates, and in packed Git archives found in $GIT_DIR/objects/pack and corresponding pack subdirectories in alternate object pools. This is now default; you can turn it off with &#8211;no-full.</dl>
+</dt><dd> Check not just objects in GIT_OBJECT_DIRECTORY ($GIT_DIR/objects), but also the ones found in alternate object pools listed in GIT_ALTERNATE_OBJECT_DIRECTORIES or $GIT_DIR/objects/info/alternates, and in packed Git archives found in $GIT_DIR/objects/pack and corresponding pack subdirectories in alternate object pools. This is now default; you can turn it off with &#8211;no-full.</dd></dl>
 <p> &#8211;connectivity-only</p>
 <dl>
 <dt>
-<dd> Check only the connectivity of reachable objects, making sure that any objects referenced by a reachable tag, commit, or tree is present. This speeds up the operation by avoiding reading blobs entirely (though it does still check that referenced blobs exist). This will detect corruption in commits and trees, but not do any semantic checks (e.g., for format errors). Corruption in blob objects will not be detected at all. </p>
+</dt><dd> Check only the connectivity of reachable objects, making sure that any objects referenced by a reachable tag, commit, or tree is present. This speeds up the operation by avoiding reading blobs entirely (though it does still check that referenced blobs exist). This will detect corruption in commits and trees, but not do any semantic checks (e.g., for format errors). Corruption in blob objects will not be detected at all. </dd>
 <p> Unreachable tags, commits, and trees will also be accessed to find the tips of dangling segments of history. Use <code>&#8211;no-dangling</code> if you don&#8217;t care about this output and want to speed it up further.</dl>
 <p> &#8211;strict</p>
 <dl>
 <dt>
-<dd> Enable more strict checking, namely to catch a file mode recorded with g+w bit set, which was created by older versions of Git. Existing repositories, including the Linux kernel, Git itself, and sparse repository have old objects that triggers this check, but it is recommended to check new projects with this flag.</dl>
+</dt><dd> Enable more strict checking, namely to catch a file mode recorded with g+w bit set, which was created by older versions of Git. Existing repositories, including the Linux kernel, Git itself, and sparse repository have old objects that triggers this check, but it is recommended to check new projects with this flag.</dd></dl>
 <p> &#8211;verbose</p>
 <dl>
 <dt>
-<dd> Be chatty.</dl>
+</dt><dd> Be chatty.</dd></dl>
 <p> &#8211;lost-found</p>
 <dl>
 <dt>
-<dd> Write dangling objects into .git/lost-found/commit/ or .git/lost-found/other/, depending on type. If the object is a blob, the contents are written into the file, rather than its object name.</dl>
+</dt><dd> Write dangling objects into .git/lost-found/commit/ or .git/lost-found/other/, depending on type. If the object is a blob, the contents are written into the file, rather than its object name.</dd></dl>
 <p> &#8211;name-objects</p>
 <dl>
 <dt>
-<dd> When displaying names of reachable objects, in addition to the SHA-1 also display a name that describes <code>how</code> they are reachable, compatible with <code><a href="/docs/linux/man/1-git-rev-parse/">git-rev-parse</a></code>(1), e.g. <code>HEAD@{1234567890}~25^2:src/</code>.</dl>
+</dt><dd> When displaying names of reachable objects, in addition to the SHA-1 also display a name that describes <code>how</code> they are reachable, compatible with <code><a href="/docs/linux/man/1-git-rev-parse/">git-rev-parse</a></code>(1), e.g. <code>HEAD@{1234567890}~25^2:src/</code>.</dd></dl>
 <p> &#8211;[no-]progress</p>
 <dl>
 <dt>
-<dd> Progress status is reported on the standard error stream by default when it is attached to a terminal, unless &#8211;no-progress or &#8211;verbose is specified. &#8211;progress forces progress status even if the standard error stream is not directed to a terminal.</dl>
+</dt><dd> Progress status is reported on the standard error stream by default when it is attached to a terminal, unless &#8211;no-progress or &#8211;verbose is specified. &#8211;progress forces progress status even if the standard error stream is not directed to a terminal.</dd></dl>
 <h2>CONFIGURATION</h2>
 <p> fsck.&lt;msg-id&gt;</p>
 <dl>
 <dt>
-<dd> During fsck git may find issues with legacy data which wouldn&#8217;t be generated by current versions of git, and which wouldn&#8217;t be sent over the wire if <code>transfer.fsckObjects</code> was set. This feature is intended to support working with legacy repositories containing such data. </p>
+</dt><dd> During fsck git may find issues with legacy data which wouldn&#8217;t be generated by current versions of git, and which wouldn&#8217;t be sent over the wire if <code>transfer.fsckObjects</code> was set. This feature is intended to support working with legacy repositories containing such data. </dd>
 <p> Setting <code>fsck.&lt;msg-id&gt;</code> will be picked up by <code><a href="/docs/linux/man/1-git-fsck/">git-fsck</a></code>(1), but to accept pushes of such data set <code>receive.fsck.&lt;msg-id&gt;</code> instead, or to clone or fetch it set <code>fetch.fsck.&lt;msg-id&gt;</code>. </p>
 <p> The rest of the documentation discusses <code>fsck.*</code> for brevity, but the same applies for the corresponding <code>receive.fsck.*</code> and <code>fetch.&lt;msg-id&gt;.*</code>. variables. </p>
 <p> Unlike variables like <code>color.ui</code> and <code>core.editor</code> the <code>receive.fsck.&lt;msg-id&gt;</code> and <code>fetch.fsck.&lt;msg-id&gt;</code> variables will not fall back on the <code>fsck.&lt;msg-id&gt;</code> configuration if they aren&#8217;t set. To uniformly configure the same fsck settings in different circumstances all three of them they must all set to the same values. </p>
@@ -91,7 +91,7 @@ git fsck[--tags][--root][--unreachable][--cache][--no - reflogs]
 <p> fsck.skipList</p>
 <dl>
 <dt>
-<dd> The path to a list of object names (i.e. one unabbreviated SHA-1 per line) that are known to be broken in a non-fatal way and should be ignored. On versions of Git 2.20 and later comments (<i>#</i>), empty lines, and any leading and trailing whitespace is ignored. Everything but a SHA-1 per line will error out on older versions. </p>
+</dt><dd> The path to a list of object names (i.e. one unabbreviated SHA-1 per line) that are known to be broken in a non-fatal way and should be ignored. On versions of Git 2.20 and later comments (<i>#</i>), empty lines, and any leading and trailing whitespace is ignored. Everything but a SHA-1 per line will error out on older versions. </dd>
 <p> This feature is useful when an established project should be accepted despite early commits containing errors that can be safely ignored such as invalid committer email addresses. Note: corrupt objects cannot be skipped with this setting. </p>
 <p> Like <code>fsck.&lt;msg-id&gt;</code> this variable has corresponding <code>receive.fsck.skipList</code> and <code>fetch.fsck.skipList</code> variants. </p>
 <p> Unlike variables like <code>color.ui</code> and <code>core.editor</code> the <code>receive.fsck.skipList</code> and <code>fetch.fsck.skipList</code> variables will not fall back on the <code>fsck.skipList</code> configuration if they aren&#8217;t set. To uniformly configure the same fsck settings in different circumstances all three of them they must all set to the same values. </p>
@@ -104,32 +104,32 @@ git fsck[--tags][--root][--unreachable][--cache][--no - reflogs]
 <p> unreachable &lt;type&gt; &lt;object&gt;</p>
 <dl>
 <dt>
-<dd> The &lt;type&gt; object &lt;object&gt;, isn&#8217;t actually referred to directly or indirectly in any of the trees or commits seen. This can mean that there&#8217;s another root node that you&#8217;re not specifying or that the tree is corrupt. If you haven&#8217;t missed a root node then you might as well delete unreachable nodes since they can&#8217;t be used.</dl>
+</dt><dd> The &lt;type&gt; object &lt;object&gt;, isn&#8217;t actually referred to directly or indirectly in any of the trees or commits seen. This can mean that there&#8217;s another root node that you&#8217;re not specifying or that the tree is corrupt. If you haven&#8217;t missed a root node then you might as well delete unreachable nodes since they can&#8217;t be used.</dd></dl>
 <p> missing &lt;type&gt; &lt;object&gt;</p>
 <dl>
 <dt>
-<dd> The &lt;type&gt; object &lt;object&gt;, is referred to but isn&#8217;t present in the database.</dl>
+</dt><dd> The &lt;type&gt; object &lt;object&gt;, is referred to but isn&#8217;t present in the database.</dd></dl>
 <p> dangling &lt;type&gt; &lt;object&gt;</p>
 <dl>
 <dt>
-<dd> The &lt;type&gt; object &lt;object&gt;, is present in the database but never <i>directly</i> used. A dangling commit could be a root node.</dl>
+</dt><dd> The &lt;type&gt; object &lt;object&gt;, is present in the database but never <i>directly</i> used. A dangling commit could be a root node.</dd></dl>
 <p> hash mismatch &lt;object&gt;</p>
 <dl>
 <dt>
-<dd> The database has an object whose hash doesn&#8217;t match the object database value. This indicates a serious data integrity problem.</dl>
+</dt><dd> The database has an object whose hash doesn&#8217;t match the object database value. This indicates a serious data integrity problem.</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> GIT_OBJECT_DIRECTORY</p>
 <dl>
 <dt>
-<dd> used to specify the object database root (usually $GIT_DIR/objects)</dl>
+</dt><dd> used to specify the object database root (usually $GIT_DIR/objects)</dd></dl>
 <p> GIT_INDEX_FILE</p>
 <dl>
 <dt>
-<dd> used to specify the index file of the index</dl>
+</dt><dd> used to specify the index file of the index</dd></dl>
 <p> GIT_ALTERNATE_OBJECT_DIRECTORIES</p>
 <dl>
 <dt>
-<dd> used to specify additional object database roots (usually unset)</dl>
+</dt><dd> used to specify additional object database roots (usually unset)</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
 <h2>Index</h2>

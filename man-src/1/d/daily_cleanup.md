@@ -16,8 +16,8 @@ description: "daily_cleanup.py – Database clean-up for the Django Web framewor
 <p> The script can be run manually or can be scheduled to run at regular intervals as a <code>cron</code> job. </p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><i>DJANGO_SETTINGS_MODULE</i></p>
-<dd> This environment variable defines the settings module to be read. It should be in Python-import form, e.g. &quot;myproject.settings&quot;. </p>
+<dt><i>DJANGO_SETTINGS_MODULE</i></dt>
+<dd> This environment variable defines the settings module to be read. It should be in Python-import form, e.g. &quot;myproject.settings&quot;. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> The sessions documentation: </p>

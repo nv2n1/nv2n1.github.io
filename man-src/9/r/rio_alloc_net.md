@@ -14,11 +14,11 @@ description: "rio_alloc_net – Allocate and initialize a new RIO network data s
 <p><i>mport</i></p>
 <dl>
 <dd>
-<dd>Master port associated with the RIO network</dl>
+</dd><dd>Master port associated with the RIO network</dd></dl>
 <h2>Description</h2>
 <p>Allocates a RIO network structure, initializes per-network list heads, and adds the associated master port to the network list of associated master ports. Returns a RIO network pointer on success or <code>NULL</code> on failure.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

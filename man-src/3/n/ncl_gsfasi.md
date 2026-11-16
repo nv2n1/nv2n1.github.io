@@ -12,20 +12,20 @@ GSFASI (Set fill are style index) - sets the fill area style index.
 
  void gset_fill_style_ind(Gint fill_style_ind);
 <h2>Description</h2><dl COMPACT><dt>STYLI
-<dd>(Integer, Input) - Specifies workstation-dependent options for hatch or pattern fills. Pattern fill options are not supported in NCAR Graphics. Hatch fill options are:
-<dl COMPACT><dd><dl COMPACT><dt>1
-<dd>Horizontal lines (default)
-<dt>2
-<dd>Vertical lines
-<dt>3
-<dd>Lines of positive slope
-<dt>4
-<dd>Lines of negative slope
-<dt>5
-<dd>Horizontal and vertical lines
-<dt>6
-<dd>Lines of positive and negative slope
-<dl COMPACT><dd></dl></dl>
+</dt><dd>(Integer, Input) - Specifies workstation-dependent options for hatch or pattern fills. Pattern fill options are not supported in NCAR Graphics. Hatch fill options are:
+</dd><dl COMPACT><dd></dd><dl COMPACT><dt>1
+</dt><dd>Horizontal lines (default)
+</dd><dt>2
+</dt><dd>Vertical lines
+</dd><dt>3
+</dt><dd>Lines of positive slope
+</dd><dt>4
+</dt><dd>Lines of negative slope
+</dd><dt>5
+</dt><dd>Horizontal and vertical lines
+</dd><dt>6
+</dt><dd>Lines of positive and negative slope
+</dd><dl COMPACT><dd></dd></dl></dl>
 </dl></dl><h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
 <h2>See Also</h2>Online: gfa, gsfais, gscr, gsfaci, gqfais, gqfasi, areas, gset_fill_style_ind 
 

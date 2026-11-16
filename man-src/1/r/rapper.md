@@ -24,44 +24,44 @@ description: "rapper – Raptor RDF parsing and serializing utility"
 <h2>OPTIONS</h2>
 <p> rapper uses the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;) if supported by the getopt_long function. Otherwise the short options are only available.</p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show a summary of the options.</p>
-<dt><code>-i, &#8211;input FORMAT</code></p>
-<dd> Set the input <i>FORMAT</i> to one of &#8216;rdfxml&#8217; (RDF/XML, default), &#8216;ntriples&#8217; (N-Triples, see below), &#8216;turtle&#8217; (Turtle, see below) or &#8216;rss-tag-soup&#8217; (RSS Tag Soup). The RSS Tag Soup parser can turn the many XML RSS formats and Atom 0.3 into RDF triples.</p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show a summary of the options.</dd>
+<dt><code>-i, &#8211;input FORMAT</code></dt>
+<dd> Set the input <i>FORMAT</i> to one of &#8216;rdfxml&#8217; (RDF/XML, default), &#8216;ntriples&#8217; (N-Triples, see below), &#8216;turtle&#8217; (Turtle, see below) or &#8216;rss-tag-soup&#8217; (RSS Tag Soup). The RSS Tag Soup parser can turn the many XML RSS formats and Atom 0.3 into RDF triples.</dd>
 <dt>
-<dd> The list of parsers depends on how <a href="/docs/linux/man/3-libraptor/">libraptor</a>(3) was built. The list of supported parsers is given in the help summary given by -h.</p>
-<dt><code>-I, &#8211;input-uri URI</code></p>
-<dd> Set the input/parser base <i>URI</i> or use value &#8216;-&#8216; for no base. The default is the INPUT-URI argument value.</p>
-<dt><code>-o, &#8211;output FORMAT</code></p>
-<dd> Set the output <i>FORMAT</i> to &#8216;ntriples&#8217; (N-Triples, default), &#8216;rdfxml&#8217; (RDF/XML), &#8216;rdfxml-abbrev&#8217; (RDF/XML with abbreviations) or &#8216;rss-1.0&#8217; (RSS 1.0, also an RDF/XML syntax).</p>
+</dt><dd> The list of parsers depends on how <a href="/docs/linux/man/3-libraptor/">libraptor</a>(3) was built. The list of supported parsers is given in the help summary given by -h.</dd>
+<dt><code>-I, &#8211;input-uri URI</code></dt>
+<dd> Set the input/parser base <i>URI</i> or use value &#8216;-&#8216; for no base. The default is the INPUT-URI argument value.</dd>
+<dt><code>-o, &#8211;output FORMAT</code></dt>
+<dd> Set the output <i>FORMAT</i> to &#8216;ntriples&#8217; (N-Triples, default), &#8216;rdfxml&#8217; (RDF/XML), &#8216;rdfxml-abbrev&#8217; (RDF/XML with abbreviations) or &#8216;rss-1.0&#8217; (RSS 1.0, also an RDF/XML syntax).</dd>
 <dt>
-<dd> The list of serializers depends on how <a href="/docs/linux/man/3-libraptor/">libraptor</a>(3) was built. The list of supported serializers is given in the help summary given by -h.</p>
-<dt><code>-O, &#8211;output-uri URI</code></p>
-<dd> Set the output/serializer base <i>URI</i> or use value &#8216;-&#8216; for no base. The default is the input base uri, either set by the argument INPUT-BASE-URI or via options <code>-I, &#8211;input-uri URI</code></p>
-<dt><code>-c, &#8211;count</code></p>
-<dd> Only count the triples and produce no other output.</p>
-<dt><code>-e, &#8211;ignore-errors</code></p>
-<dd> Ignore errors, do not emit the messages and try to continue parsing.</p>
-<dt><code>-f, &#8211;feature FEATURE[=VALUE]</code></p>
-<dd> Set a parser or serializer feature <i>FEATURE</i> to a value, or to 1 if <i>VALUE</i> is omitted, Use -f help to get lists of valid parser and serializer features.</p>
+</dt><dd> The list of serializers depends on how <a href="/docs/linux/man/3-libraptor/">libraptor</a>(3) was built. The list of supported serializers is given in the help summary given by -h.</dd>
+<dt><code>-O, &#8211;output-uri URI</code></dt>
+<dd> Set the output/serializer base <i>URI</i> or use value &#8216;-&#8216; for no base. The default is the input base uri, either set by the argument INPUT-BASE-URI or via options <code>-I, &#8211;input-uri URI</code></dd>
+<dt><code>-c, &#8211;count</code></dt>
+<dd> Only count the triples and produce no other output.</dd>
+<dt><code>-e, &#8211;ignore-errors</code></dt>
+<dd> Ignore errors, do not emit the messages and try to continue parsing.</dd>
+<dt><code>-f, &#8211;feature FEATURE[=VALUE]</code></dt>
+<dd> Set a parser or serializer feature <i>FEATURE</i> to a value, or to 1 if <i>VALUE</i> is omitted, Use -f help to get lists of valid parser and serializer features.</dd>
 <dt>
-<dd> If the form -f &#8216;xmlns:<i>prefix</i>=&quot;<i>uri</i>&quot;&#8217; is used, the prefix and namespace uri given will be set for serializing. The syntax matches XML in that either or both of <i>prefix</i> or <i>uri</i> can be omitted.</p>
-<dt><code>-g, &#8211;guess</code></p>
-<dd> Guess the parser to use from the source-URI rather than use the -i FORMAT.</p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd> No extra information messages.</p>
-<dt><code>-r, &#8211;replace-newlines</code></p>
-<dd> Replace newlines in multi-line literals with spaces.</p>
-<dt><code>&#8211;show-graphs</code></p>
-<dd> Print graph names (URIs) as they are seen in the input. This only has a meaning for parsers that support graph names such as the TRiG parser.</p>
-<dt><code>&#8211;show-namespaces</code></p>
-<dd> Print namespaces as they are seen in the input.</p>
-<dt><code>-t, &#8211;trace</code></p>
-<dd> Print URIs retrieved during parsing. Especially useful for monitoring what the guess and GRDDL parsers are doing.</p>
-<dt><code>-w, &#8211;ignore-warnings</code></p>
-<dd> Ignore warnings, do not emit the messages.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> Print the raptor version and exit.</dl>
+</dt><dd> If the form -f &#8216;xmlns:<i>prefix</i>=&quot;<i>uri</i>&quot;&#8217; is used, the prefix and namespace uri given will be set for serializing. The syntax matches XML in that either or both of <i>prefix</i> or <i>uri</i> can be omitted.</dd>
+<dt><code>-g, &#8211;guess</code></dt>
+<dd> Guess the parser to use from the source-URI rather than use the -i FORMAT.</dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> No extra information messages.</dd>
+<dt><code>-r, &#8211;replace-newlines</code></dt>
+<dd> Replace newlines in multi-line literals with spaces.</dd>
+<dt><code>&#8211;show-graphs</code></dt>
+<dd> Print graph names (URIs) as they are seen in the input. This only has a meaning for parsers that support graph names such as the TRiG parser.</dd>
+<dt><code>&#8211;show-namespaces</code></dt>
+<dd> Print namespaces as they are seen in the input.</dd>
+<dt><code>-t, &#8211;trace</code></dt>
+<dd> Print URIs retrieved during parsing. Especially useful for monitoring what the guess and GRDDL parsers are doing.</dd>
+<dt><code>-w, &#8211;ignore-warnings</code></dt>
+<dd> Ignore warnings, do not emit the messages.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> Print the raptor version and exit.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> <code>rapper -q -i ntriples -o rdfxml -f &#8216;xmlns:rss=<a rel="nofollow" href="http://purl.org/rss/1.0/'">http://purl.org/rss/1.0/&#8217;</a> -f &#8216;xmlns:ex=<a href="http://example.org/'">http://example.org/&#8217;</a> tests/test.nt</code><br />
  <code>rapper -q -o rdfxml -f &#8216;xmlns:rdfs=<a rel="nofollow" href="http://www.w3.org/2000/01/rdf-schema#'">http://www.w3.org/2000/01/rdf-schema#&#8217;</a> tests/rdf-schema.rdf &#8216;<a href="http://www.w3.org/2000/01/rdf-schema#'">http://www.w3.org/2000/01/rdf-schema#&#8217;</a></code></p>

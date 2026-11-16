@@ -13,17 +13,17 @@ description: "npm-folders – Folder Structures Used by npm"
 <p> This document will tell you what it puts where.</p>
 <h3>tl;dr</h3>
 <dl>
-<dt>&bull;</p>
-<dd>Local install (default): puts stuff in <code>./node_modules</code> of the current package root.</p>
-<dt>&bull;</p>
-<dd>Global install (with <code>-g</code>): puts stuff in /usr/local or wherever node is installed.</p>
-<dt>&bull;</p>
-<dd>Install it <code>locally</code> if you&#8217;re going to <code>require()</code> it.</p>
-<dt>&bull;</p>
-<dd>Install it <code>globally</code> if you&#8217;re going to run it on the command line.</p>
-<dt>&bull;</p>
-<dd>If you need both, then install it in both places, or use <code>npm link</code>.</p>
-<dd></dl>
+<dt>&bull;</dt>
+<dd>Local install (default): puts stuff in <code>./node_modules</code> of the current package root.</dd>
+<dt>&bull;</dt>
+<dd>Global install (with <code>-g</code>): puts stuff in /usr/local or wherever node is installed.</dd>
+<dt>&bull;</dt>
+<dd>Install it <code>locally</code> if you&#8217;re going to <code>require()</code> it.</dd>
+<dt>&bull;</dt>
+<dd>Install it <code>globally</code> if you&#8217;re going to run it on the command line.</dd>
+<dt>&bull;</dt>
+<dd>If you need both, then install it in both places, or use <code>npm link</code>.</dd>
+<dd></dd></dl>
 <h3>prefix Configuration</h3>
 <p>The <code>prefix</code> config defaults to the location where node is installed. On most systems, this is <code>/usr/local</code>, and most of the time is the same as node&#8217;s <code>process.installPrefix</code>. </p>
 <p> On windows, this is the exact location of the node.exe binary. On Unix systems, it&#8217;s one level up, since node is typically installed at <code>{prefix}/bin/node</code> rather than <code>{prefix}/node.exe</code>. </p>
@@ -75,7 +75,7 @@ description: "npm-folders – Folder Structures Used by npm"
 `-- baz [at] 1.2.3
  `-- quux@3.x
  `-- bar</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> In this case, we might expect a folder structure like this:</p>
 <dl>
 <dd>
@@ -91,7 +91,7 @@ description: "npm-folders – Folder Structures Used by npm"
  `-- baz (1.2.3) &lt;---[D]
  `-- node_modules
  `-- quux (3.2.0) &lt;---[E]</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> Since foo depends directly on <code>bar [at] 1.2.3</code> and <code>baz [at] 1.2.3</code>, those are installed in foo&#8217;s <code>node_modules</code> folder. </p>
 <p> Even though the latest copy of blerg is 1.3.7, foo has a specific dependency on version 1.2.5. So, that gets installed at [A]. Since the parent installation of blerg satisfies bar&#8217;s dependency on <code>blerg@1.x</code>, it does not install another copy under [B]. </p>
 <p> Bar [B] also has dependencies on baz and asdf, so those are installed in bar&#8217;s <code>node_modules</code> folder. Because it depends on <code>baz@2.x</code>, it cannot re-use the <code>baz [at] 1.2.3</code> installed in the parent <code>node_modules</code> folder [D], and must install its own copy [C]. </p>
@@ -103,22 +103,23 @@ description: "npm-folders – Folder Structures Used by npm"
 <p> This allows a package maintainer to install all of their dependencies (and dev dependencies) locally, but only re-publish those items that cannot be found elsewhere. See npm help 5 <code>package.json</code> for more information.</p>
 <h2>See Also</h2>
 <dl>
-<dt>&bull;</p>
-<dd>npm help 7 faq</p>
-<dt>&bull;</p>
-<dd>npm help 5 package.json</p>
-<dt>&bull;</p>
-<dd>npm help install</p>
-<dt>&bull;</p>
-<dd>npm help pack</p>
-<dt>&bull;</p>
-<dd>npm help cache</p>
-<dt>&bull;</p>
-<dd>npm help config</p>
-<dt>&bull;</p>
-<dd>npm help 5 npmrc</p>
-<dt>&bull;</p>
-<dd>npm help 7 config</p>
-<dt>&bull;</p>
-<dd>npm help publish</p>
+<dt>&bull;</dt>
+<dd>npm help 7 faq</dd>
+<dt>&bull;</dt>
+<dd>npm help 5 package.json</dd>
+<dt>&bull;</dt>
+<dd>npm help install</dd>
+<dt>&bull;</dt>
+<dd>npm help pack</dd>
+<dt>&bull;</dt>
+<dd>npm help cache</dd>
+<dt>&bull;</dt>
+<dd>npm help config</dd>
+<dt>&bull;</dt>
+<dd>npm help 5 npmrc</dd>
+<dt>&bull;</dt>
+<dd>npm help 7 config</dd>
+<dt>&bull;</dt>
+<dd>npm help publish</dd>
 <dd>
+</dd></dl>

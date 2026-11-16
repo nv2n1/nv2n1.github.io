@@ -18,23 +18,23 @@ description: "tor-resolve – resolve a hostname to an IP address via tor"
 <p> <code>-v</code></p>
 <dl>
 <dt>
-<dd> Display verbose output.</dl>
+</dt><dd> Display verbose output.</dd></dl>
 <p> <code>-x</code></p>
 <dl>
 <dt>
-<dd> Perform a reverse lookup: get the PTR record for an IPv4 address.</dl>
+</dt><dd> Perform a reverse lookup: get the PTR record for an IPv4 address.</dd></dl>
 <p> <code>-5</code></p>
 <dl>
 <dt>
-<dd> Use the SOCKS5 protocol. (Default)</dl>
+</dt><dd> Use the SOCKS5 protocol. (Default)</dd></dl>
 <p> <code>-4</code></p>
 <dl>
 <dt>
-<dd> Use the SOCKS4a protocol rather than the default SOCKS5 protocol. Doesn&#8217;t support reverse DNS.</dl>
+</dt><dd> Use the SOCKS4a protocol rather than the default SOCKS5 protocol. Doesn&#8217;t support reverse DNS.</dd></dl>
 <p> <code>-p</code> <i>socksport</i></p>
 <dl>
 <dt>
-<dd> Override the default SOCKS port without setting the hostname.</dl>
+</dt><dd> Override the default SOCKS port without setting the hostname.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tor/">tor</a></code>(1), <code><a href="/docs/linux/man/1-torify/">torify</a></code>(1). </p>
 <p> See doc/socks-extensions.txt in the Tor package for protocol details.</p>
@@ -44,5 +44,5 @@ description: "tor-resolve – resolve a hostname to an IP address via tor"
 <p> <code>Peter Palfrader</code></p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>Index</h2>

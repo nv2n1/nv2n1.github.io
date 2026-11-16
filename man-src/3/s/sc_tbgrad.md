@@ -12,13 +12,7 @@ description: "sc::TBGrad –"
 <p> Inherits <code>sc::Thread</code>. Inherited by <code>sc::LocalTBGrad&lt; T &gt;</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>TBGrad (T &amp;t, double ex=1.0)
-
-
-
 void set_scale (double &amp;coulombscale, double &amp;exchangescale, int i, int j, int k, int l) const
-
-
-
 Protected Attributes</code></pre>
 <p> T &amp; <code>contribution</code> </p>
 <p> double <code>exchange_fraction</code></p>

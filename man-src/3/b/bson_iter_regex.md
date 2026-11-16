@@ -17,11 +17,11 @@ bson_iter_regex(const bson_iter_t *iter,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>options</code></p>
-<dd> A (null).</dl>
+<dt><code>options</code></dt>
+<dd> A (null).</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_regex/">bson_iter_regex</a>(3)</code> function shall retrieve the contents of a BSON_TYPE_REGEX element currently observed by <code>iter</code> \&amp;. </p>
 <p> It is invalid to call this function when not observing an element of type BSON_TYPE_REGEX. </p>

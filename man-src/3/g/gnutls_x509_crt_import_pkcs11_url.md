@@ -14,12 +14,12 @@ description: "gnutls_x509_crt_import_pkcs11_url – API function"
 <p> <code>int gnutls_x509_crt_import_pkcs11_url(gnutls_x509_crt_t </code><i>crt</i><code>, const char * </code><i>url</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t crt</p>
-<dd> A certificate of type <code>gnutls_x509_crt_t</code></p>
-<dt>const char * url</p>
-<dd> A PKCS 11 url</p>
-<dt>unsigned int flags</p>
-<dd> One of GNUTLS_PKCS11_OBJ_* flags</dl>
+<dt>gnutls_x509_crt_t crt</dt>
+<dd> A certificate of type <code>gnutls_x509_crt_t</code></dd>
+<dt>const char * url</dt>
+<dd> A PKCS 11 url</dd>
+<dt>unsigned int flags</dt>
+<dd> One of GNUTLS_PKCS11_OBJ_* flags</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will import a PKCS 11 certificate directly from a token without involving the <code>gnutls_pkcs11_obj_t</code> structure. This function will fail if the certificate stored is not of X.509 type.</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_x509_crt_import_pkcs11_url – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

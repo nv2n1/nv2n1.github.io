@@ -10,7 +10,6 @@ description: "poll_mouse – Polls the mouse. Allegro game programming library."
 <p>poll_mouse &#8211; Polls the mouse. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int poll_mouse();</code></pre>
 <h2>Description</h2>
 <p>Wherever possible, Allegro will read the mouse input asynchronously (ie. from inside an interrupt handler), but on some platforms that may not be possible, in which case you must call this routine at regular intervals to update the mouse state variables. To help you test your mouse polling code even if you are programming on a platform that doesn&#8217;t require it, after the first time that you call this function Allegro will switch into polling mode, so from that point onwards you will have to call this routine in order to get any mouse input at all, regardless of whether the current driver actually needs to be polled or not.</p>

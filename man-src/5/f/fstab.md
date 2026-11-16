@@ -17,7 +17,7 @@ description: "fstab – static information about the filesystems"
 <dl>
 <dd>
 <pre>LABEL=t-home2 /home ext4 defaults,auto_da_alloc 0 2</pre>
-</dl>
+</dd></dl>
 <h3>The first field (<i>fs_spec</i>).</h3>
 <p>This field describes the block special device, remote filesystem or filesystem image for loop device to be mounted or swap file or swap partition to be enabled. </p>
 <p> For ordinary mounts, it will hold (a link to) a block special device node (as created by <code><a href="/docs/linux/man/2-mknod/">mknod</a></code>(2)) for the device to be mounted, like <i>/dev/cdrom</i> or <i>/dev/sdb7</i>. For NFS mounts, this field is <i>&lt;host&gt;:&lt;dir&gt;</i>, e.g., <i>knuth.aeb.nl:/</i>. For filesystems with no storage, any string can be used, and will show up in <code><a href="/docs/linux/man/1-df/">df</a></code>(1) output, for example. Typical usage is <i>proc</i> for <code>procfs</code>; <i>mem</i>, <i>none</i>, or <i>tmpfs</i> for <code>tmpfs</code>. Other special filesystems, like <code>udev</code> and <code>sysfs</code>, are typically not listed in <code>fstab</code>. </p>
@@ -38,22 +38,22 @@ description: "fstab – static information about the filesystems"
 <p> Basic filesystem-independent options are: </p>
 <p> <code>defaults</code></p>
 <dl>
-<dd>use default options: rw, suid, dev, exec, auto, nouser, and async.</dl>
+<dd>use default options: rw, suid, dev, exec, auto, nouser, and async.</dd></dl>
 <p> <code>noauto</code></p>
 <dl>
-<dd>do not mount when <code>mount -a</code> is given (e.g., at boot time)</dl>
+<dd>do not mount when <code>mount -a</code> is given (e.g., at boot time)</dd></dl>
 <p> <code>user</code></p>
 <dl>
-<dd>allow a user to mount</dl>
+<dd>allow a user to mount</dd></dl>
 <p> <code>owner</code></p>
 <dl>
-<dd>allow device owner to mount</dl>
+<dd>allow device owner to mount</dd></dl>
 <p> <code>comment</code></p>
 <dl>
-<dd>or <code>x-&lt;name&gt;</code> for use by fstab-maintaining programs</dl>
+<dd>or <code>x-&lt;name&gt;</code> for use by fstab-maintaining programs</dd></dl>
 <p> <code>nofail</code></p>
 <dl>
-<dd>do not report errors for this device if it does not exist.</dl>
+<dd>do not report errors for this device if it does not exist.</dd></dl>
 <h3>The fifth field (<i>fs_freq</i>).</h3>
 <p>This field is used by <code><a href="/docs/linux/man/8-dump/">dump</a></code>(8) to determine which filesystems need to be dumped. Defaults to zero (don&#8217;t dump) if not present.</p>
 <h3>The sixth field (<i>fs_passno</i>).</h3>

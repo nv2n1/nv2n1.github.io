@@ -16,33 +16,33 @@ description: "catman – create or update the pre-formatted manual pages"
 <p> <code>catman</code> makes use of the <code>index</code> database cache associated with each hierarchy to determine which files need to be formatted.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd>Print debugging information.</p>
-<dt><code>-M&nbsp;</code><i>path</i>,&nbsp;<code>&#8211;manpath=</code><i>path</i></p>
-<dd>Specify an alternate colon-delimited manual page hierarchy search path. By default, this is all paths indicated as system hierarchies in the man-db configuration file.</p>
-<dt><code>-C&nbsp;</code><i>file</i>,&nbsp;<code>&#8211;config-file=</code><i>file</i></p>
-<dd>Use this user configuration file rather than the default of <i>~/.manpath</i>.</p>
-<dt><code>-?</code>, <code>&#8211;help</code></p>
-<dd>Print a help message and exit.</p>
-<dt><code>&#8211;usage</code></p>
-<dd>Print a short usage message and exit.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Display version information.</dl>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd>Print debugging information.</dd>
+<dt><code>-M&nbsp;</code><i>path</i>,&nbsp;<code>&#8211;manpath=</code><i>path</i></dt>
+<dd>Specify an alternate colon-delimited manual page hierarchy search path. By default, this is all paths indicated as system hierarchies in the man-db configuration file.</dd>
+<dt><code>-C&nbsp;</code><i>file</i>,&nbsp;<code>&#8211;config-file=</code><i>file</i></dt>
+<dd>Use this user configuration file rather than the default of <i>~/.manpath</i>.</dd>
+<dt><code>-?</code>, <code>&#8211;help</code></dt>
+<dd>Print a help message and exit.</dd>
+<dt><code>&#8211;usage</code></dt>
+<dd>Print a short usage message and exit.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Display version information.</dd></dl>
 <h2>Environment</h2>
 <dl>
-<dt><code>MANSECT</code></p>
-<dd>If $<code>MANSECT</code> is set, its value is a colon-delimited list of sections and it is used to determine which manual sections to search and in what order. The default is &quot;1 n l 8 3 0 2 3posix 3pm 3perl 3am 5 4 9 6 7&quot;, unless overridden by the <code>SECTION</code> directive in <i>/etc/manpath.config</i>.</p>
-<dt><code>MANPATH</code></p>
-<dd>If $<code>MANPATH</code> is set, its value is interpreted as the colon-delimited manual page hierarchy search path to use. </p>
+<dt><code>MANSECT</code></dt>
+<dd>If $<code>MANSECT</code> is set, its value is a colon-delimited list of sections and it is used to determine which manual sections to search and in what order. The default is &quot;1 n l 8 3 0 2 3posix 3pm 3perl 3am 5 4 9 6 7&quot;, unless overridden by the <code>SECTION</code> directive in <i>/etc/manpath.config</i>.</dd>
+<dt><code>MANPATH</code></dt>
+<dd>If $<code>MANPATH</code> is set, its value is interpreted as the colon-delimited manual page hierarchy search path to use. </dd>
 <p> See the <code>SEARCH PATH</code> section of <code><a href="/docs/linux/man/5-manpath/">manpath</a></code>(5) for the default behaviour and details of how this environment variable is handled.</dl>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/manpath.config</i></p>
-<dd>man-db configuration file.</p>
-<dt><i>/usr/man/index.(bt|db|dir|pag)</i></p>
-<dd>A traditional global <i>index</i> database cache.</p>
-<dt><i>/var/catman/index.(bt|db|dir|pag)</i></p>
-<dd>An alternate or FSSTND compliant global <i>index</i> database cache.</dl>
+<dt><i>/etc/manpath.config</i></dt>
+<dd>man-db configuration file.</dd>
+<dt><i>/usr/man/index.(bt|db|dir|pag)</i></dt>
+<dd>A traditional global <i>index</i> database cache.</dd>
+<dt><i>/var/catman/index.(bt|db|dir|pag)</i></dt>
+<dd>An alternate or FSSTND compliant global <i>index</i> database cache.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-man/">man</a></code>(1), <code><a href="/docs/linux/man/5-manpath/">manpath</a></code>(5), <code><a href="/docs/linux/man/8-mandb/">mandb</a></code>(8)</p>
 <h2>Author</h2>

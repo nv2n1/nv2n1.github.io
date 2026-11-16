@@ -13,19 +13,19 @@ description: "sensors-detect – detect hardware monitoring chips"
 <h2>Description</h2>
 <p>sensors-detect is an interactive program that will walk you through the process of scanning your system for various hardware monitoring chips, or sensors, supported by <a href="/docs/linux/man/3-libsensors/">libsensors</a>(3), or more generally by the lm_sensors tool suite. sensors-detect will look for the following devices, in order:</p>
 <dl>
-<dt>&bull;</p>
-<dd>Sensors embedded in CPUs, south bridges and memory controllers.</p>
-<dt>&bull;</p>
-<dd>Sensors embedded in Super I/O chips.</p>
-<dt>&bull;</p>
-<dd>Hardware monitoring chips accessed through ISA I/O ports.</p>
-<dt>&bull;</p>
-<dd>Hardware monitoring chips reachable over the SMBus or more generally any I2C bus on your system.</dl>
+<dt>&bull;</dt>
+<dd>Sensors embedded in CPUs, south bridges and memory controllers.</dd>
+<dt>&bull;</dt>
+<dd>Sensors embedded in Super I/O chips.</dd>
+<dt>&bull;</dt>
+<dd>Hardware monitoring chips accessed through ISA I/O ports.</dd>
+<dt>&bull;</dt>
+<dd>Hardware monitoring chips reachable over the SMBus or more generally any I2C bus on your system.</dd></dl>
 <p> As the last two detection steps can cause trouble on some systems, they are normally not attempted if the second detection step led to the discovery of a Super I/O chip with complete hardware monitoring features. However, the user is always free to ask for all detection steps if so is his/her wish. This can be useful if a given system has more than one hardware monitoring chip. Some vendors are known to do this, most notably Asus and Tyan. </p>
 <h2>Options</h2>
 <dl>
-<dt>&#8211;auto</p>
-<dd>Run in automatic, non-interactive mode. Assume default answers to all questions. Note that this isn&#8217;t necessarily safe as the internal logic may lead to potentially dangerous probes being attempted. See the WARNING section below. </p>
+<dt>&#8211;auto</dt>
+<dd>Run in automatic, non-interactive mode. Assume default answers to all questions. Note that this isn&#8217;t necessarily safe as the internal logic may lead to potentially dangerous probes being attempted. See the WARNING section below. </dd>
 </dl>
 <h2>Warning</h2>
 <p>sensors-detect needs to access the hardware for most of the chip detections. By definition, it doesn&#8217;t know which chips are there before it manages to identify them. This means that it can access chips in a way these chips do not like, causing problems ranging from SMBus lockup to permanent hardware damage (a rare case, thankfully.) </p>

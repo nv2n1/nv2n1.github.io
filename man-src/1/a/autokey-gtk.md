@@ -19,12 +19,12 @@ description: "autokey-gtk – keyboard automation utility for GNOME and GTK"
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Show summary of options.</p>
-<dt><code>-l, &#8211;verbose</code></p>
-<dd> Enable verbose (debug) logging.</p>
-<dt><code>-c, &#8211;configure</code></p>
-<dd> Show the configuration window on startup, even if this is not the first run.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Show summary of options.</dd>
+<dt><code>-l, &#8211;verbose</code></dt>
+<dd> Enable verbose (debug) logging.</dd>
+<dt><code>-c, &#8211;configure</code></dt>
+<dd> Show the configuration window on startup, even if this is not the first run.</dd></dl>
 <h2>AUTHOR</h2>
 <p> AutoKey was written by Chris Dekter, loosely based on a script by Sam Peterson. </p>
 <p> This manual page was written by Chris Dekter &lt;cdekter [at] gmail.com&gt;. </p>

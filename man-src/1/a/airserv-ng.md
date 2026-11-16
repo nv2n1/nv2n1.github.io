@@ -15,16 +15,16 @@ description: "airserv-ng – a wireless card server"
 <p> <code>airserv-ng</code> is a wireless card server which allows multiple wireless application programs to independently use a wireless card via a client-server TCP network connection. All operating system and wireless card driver specific code is incorporated into the server. This eliminates the need for each wireless application to contain the complex wireless card and driver logic. It is also supports multiple operating systems.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-h</i></p>
-<dd> Shows the help screen.</p>
-<dt><i>-p &lt;port&gt;</i></p>
-<dd> TCP port to listen on (by default: 666).</p>
-<dt><i>-d &lt;iface&gt;</i></p>
-<dd> Wifi interface to use.</p>
-<dt><i>-c &lt;chan&gt;</i></p>
-<dd> Lock interface to this channel.</p>
-<dt><i>-v &lt;level&gt;</i></p>
-<dd> Debug level. There are 3 debug levels. Debug level of 1 shows client connection/disconnection (default). Debug level of 2 shows channel change requests and invalid client command requests in addition to the debug level 1 messages. Debug level of 3 displays a message each time a packet (and its length) is sent to the client. It also include messages from level 2 (and 1).</dl>
+<dt><i>-h</i></dt>
+<dd> Shows the help screen.</dd>
+<dt><i>-p &lt;port&gt;</i></dt>
+<dd> TCP port to listen on (by default: 666).</dd>
+<dt><i>-d &lt;iface&gt;</i></dt>
+<dd> Wifi interface to use.</dd>
+<dt><i>-c &lt;chan&gt;</i></dt>
+<dd> Lock interface to this channel.</dd>
+<dt><i>-v &lt;level&gt;</i></dt>
+<dd> Debug level. There are 3 debug levels. Debug level of 1 shows client connection/disconnection (default). Debug level of 2 shows channel change requests and invalid client command requests in addition to the debug level 1 messages. Debug level of 3 displays a message each time a packet (and its length) is sent to the client. It also include messages from level 2 (and 1).</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Thomas d&#8217;Otreppe. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.</p>
 <h2>SEE ALSO</h2>

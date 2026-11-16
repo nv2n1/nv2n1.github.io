@@ -10,7 +10,6 @@ description: "set_alpha_blender – Enables a special alpha-channel blending mod
 <p>set_alpha_blender &#8211; Enables a special alpha-channel blending mode. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void set_alpha_blender();</code></pre>
 <h2>Description</h2>
 <p>Enables the special alpha-channel blending mode, which is used for drawing 32-bit RGBA sprites. After calling this function, you can use draw_trans_sprite() or draw_trans_rle_sprite() to draw a 32-bit source image onto any hicolor or truecolor destination. The alpha values will be taken directly from the source graphic, so you can vary the solidity of each part of the image. You can&#8217;t use any of the normal translucency functions while this mode is active, though, so you should reset to one of the normal blender modes (eg. set_trans_blender()) before drawing anything other than 32-bit RGBA sprites. </p>

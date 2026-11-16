@@ -14,18 +14,18 @@ description: "jbd2_journal_get_write_access – notify intent to modify a buffer
 <p><i>handle</i></p>
 <dl>
 <dd>
-<dd>transaction to add buffer modifications to</dl>
+</dd><dd>transaction to add buffer modifications to</dd></dl>
 <p> <i>bh</i></p>
 <dl>
-<dd>bh to be used for metadata writes</dl>
+<dd>bh to be used for metadata writes</dd></dl>
 <h2>Description</h2>
 <p>Returns an error code or 0 on success. </p>
 <p> In full data journalling mode the buffer may be of type BJ_AsyncData, because we&#8217;re <code>write</code>ing a buffer which is also part of a shared mapping.</p>
 <h2>Authors</h2>
 <p><code>Roger Gammans</code> &lt;rgammans [at] computer-surgery.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Stephen Tweedie</code> &lt;sct [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

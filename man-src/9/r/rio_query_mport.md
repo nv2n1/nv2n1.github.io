@@ -14,14 +14,14 @@ description: "rio_query_mport – Query mport device attributes"
 <p><i>port</i></p>
 <dl>
 <dd>
-<dd>mport device to query</dl>
+</dd><dd>mport device to query</dd></dl>
 <p> <i>mport_attr</i></p>
 <dl>
-<dd>mport attributes data structure</dl>
+<dd>mport attributes data structure</dd></dl>
 <h2>Description</h2>
 <p>Returns attributes of specified mport through the pointer to attributes data structure.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

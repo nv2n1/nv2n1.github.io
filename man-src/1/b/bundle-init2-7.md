@@ -14,8 +14,8 @@ description: "bundle-init – Generates a Gemfile into the current working direc
 <p>Init generates a default [<code>Gemfile(5)</code>][Gemfile(5)] in the current working directory. When adding a [<code>Gemfile(5)</code>][Gemfile(5)] to a gem with a gemspec, the <code>&#8211;gemspec</code> option will automatically add each dependency listed in the gemspec file to the newly created [<code>Gemfile(5)</code>][Gemfile(5)].</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;gemspec</code></p>
-<dd>Use the specified .gemspec to create the [<code>Gemfile(5)</code>][Gemfile(5)]</dl>
+<dt><code>&#8211;gemspec</code></dt>
+<dd>Use the specified .gemspec to create the [<code>Gemfile(5)</code>][Gemfile(5)]</dd></dl>
 <h2>Files</h2>
 <p>Included in the default [<code>Gemfile(5)</code>][Gemfile(5)] generated is the line <code># frozen_string_literal: true</code>. This is a magic comment supported for the first time in Ruby 2.3. The presence of this line results in all string literals in the file being implicitly frozen.</p>
 <h2>See Also</h2>

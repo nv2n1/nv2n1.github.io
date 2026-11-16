@@ -19,25 +19,25 @@ description: "dpkg-scansources – create Sources index files"
 <p> <code>Note:</code> If you want to access the generated Sources file with <code><a href="/docs/linux/man/8-apt/">apt</a></code>(8) you will probably need to compress the file with <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1) (generating a Sources.gz file). <code><a href="/docs/linux/man/8-apt/">apt</a></code>(8) ignores uncompressed Sources files except on local access (i.e. <code>file://</code> sources).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-n</code>, <code>&#8211;no-sort</code></p>
-<dd> Don&#8217;t sort the index records. Normally they are sorted by source package name.</p>
-<dt><code>-e</code>, <code>&#8211;extra-override</code> <i>file</i></p>
-<dd> Scan <i>file</i> to find supplementary overrides (since dpkg 1.15.4; the file can be compressed since dpkg 1.15.5). See <code><a href="/docs/linux/man/5-deb-extra-override/">deb-extra-override</a></code>(5) for more information on its format.</p>
-<dt><code>-s</code>, <code>&#8211;source-override</code> <i>file</i></p>
-<dd> Use <i>file</i> as the source override file (the file can be compressed since dpkg 1.15.5). The default is the name of the override file you specified with <i>.src</i> appended. </p>
+<dt><code>-n</code>, <code>&#8211;no-sort</code></dt>
+<dd> Don&#8217;t sort the index records. Normally they are sorted by source package name.</dd>
+<dt><code>-e</code>, <code>&#8211;extra-override</code> <i>file</i></dt>
+<dd> Scan <i>file</i> to find supplementary overrides (since dpkg 1.15.4; the file can be compressed since dpkg 1.15.5). See <code><a href="/docs/linux/man/5-deb-extra-override/">deb-extra-override</a></code>(5) for more information on its format.</dd>
+<dt><code>-s</code>, <code>&#8211;source-override</code> <i>file</i></dt>
+<dd> Use <i>file</i> as the source override file (the file can be compressed since dpkg 1.15.5). The default is the name of the override file you specified with <i>.src</i> appended. </dd>
 <p> The source override file is in a different format from the binary override file. It contains only two whitespace separated fields, the first is the source package name and the second is the section. Blank lines and comment lines are ignored in the normal manner. If a package appears in both files the source override takes precedence for setting the section.</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Turn debugging on.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show the usage message and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show the version and exit.</dl>
+<dt><code>&#8211;debug</code></dt>
+<dd> Turn debugging on.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show the usage message and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show the version and exit.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>DPKG_COLORS</code></font></p>
-<dd> Sets the color mode (since dpkg 1.18.5). The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</p>
-<dt><font SIZE="-1"><code>DPKG_NLS</code></font></p>
-<dd> If set, it will be used to decide whether to activate Native Language Support, also known as internationalization (or i18n) support (since dpkg 1.19.0). The accepted values are: <code>0</code> and <code>1</code> (default).</dl>
+<dt><font SIZE="-1"><code>DPKG_COLORS</code></font></dt>
+<dd> Sets the color mode (since dpkg 1.18.5). The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</dd>
+<dt><font SIZE="-1"><code>DPKG_NLS</code></font></dt>
+<dd> If set, it will be used to decide whether to activate Native Language Support, also known as internationalization (or i18n) support (since dpkg 1.19.0). The accepted values are: <code>0</code> and <code>1</code> (default).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-deb-override/">deb-override</a></code>(5), <code><a href="/docs/linux/man/5-deb-extra-override/">deb-extra-override</a></code>(5), <code><a href="/docs/linux/man/1-dpkg-scanpackages/">dpkg-scanpackages</a></code>(1). </p>
 <h2>Index</h2>

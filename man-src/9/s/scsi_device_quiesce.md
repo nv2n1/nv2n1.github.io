@@ -14,7 +14,7 @@ description: "scsi_device_quiesce – Block user issued commands."
 <p><i>sdev</i></p>
 <dl>
 <dd>
-<dd>scsi device to quiesce.</dl>
+</dd><dd>scsi device to quiesce.</dd></dl>
 <h2>Description</h2>
 <p>This works by trying to transition to the SDEV_QUIESCE state (which must be a legal transition). When the device is in this state, only special requests will be accepted, all others will be deferred. Since special requests may also be requeued requests, a successful return doesn&#8217;t guarantee the device will be totally quiescent. </p>
 <p> Must be called with user context, may sleep. </p>
@@ -22,8 +22,8 @@ description: "scsi_device_quiesce – Block user issued commands."
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

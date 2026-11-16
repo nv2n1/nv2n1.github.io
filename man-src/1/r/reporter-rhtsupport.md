@@ -26,69 +26,69 @@ description: "reporter-rhtsupport – Reports problem to RHTSupport."
 <p> <i>Login</i></p>
 <dl>
 <dt>
-<dd> Login to RHTSupport account.</dl>
+</dt><dd> Login to RHTSupport account.</dd></dl>
 <p> <i>Password</i></p>
 <dl>
 <dt>
-<dd> Password to RHTSupport account.</dl>
+</dt><dd> Password to RHTSupport account.</dd></dl>
 <p> <i>URL</i></p>
 <dl>
 <dt>
-<dd> HTTP(S) address. (default: m[blue]<code><a rel="nofollow" href="https://api.access.redhat.com/rs">https://api.access.redhat.com/rs</a></code>m[])</dl>
+</dt><dd> HTTP(S) address. (default: m[blue]<code><a rel="nofollow" href="https://api.access.redhat.com/rs">https://api.access.redhat.com/rs</a></code>m[])</dd></dl>
 <p> <i>SSLVerify</i></p>
 <dl>
 <dt>
-<dd> Use yes/true/on/1 to verify server&#8217;s SSL certificate. (default: yes)</dl>
+</dt><dd> Use yes/true/on/1 to verify server&#8217;s SSL certificate. (default: yes)</dd></dl>
 <p> <i>SubmitUReport</i></p>
 <dl>
 <dt>
-<dd> Use yes/true/on/1 to enable submitting uReport together wit creating a new case. (default: no)</dl>
+</dt><dd> Use yes/true/on/1 to enable submitting uReport together wit creating a new case. (default: no)</dd></dl>
 <p> Parameters can be overridden via $RHTSupport_PARAM environment variables.</p>
 <h3>Integration with ABRT events</h3>
 <p> <i>reporter-rhtsupport</i> can be used as an ABRT reporter. Example fragment for /etc/libreport/report_event.conf: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 # Report Python crashes
 EVENT=report_RHTSupport analyzer=Python
       reporter-rhtsupport -d . -c /etc/libreport/plugins/rhtsupport.conf
 </pre>
-</dl>
+</dd></dl>
 <h2>OPTIONS</h2>
 <p> -d DIR</p>
 <dl>
 <dt>
-<dd> Path to problem directory.</dl>
+</dt><dd> Path to problem directory.</dd></dl>
 <p> -c CONFFILE</p>
 <dl>
 <dt>
-<dd> Path to configuration file.</dl>
+</dt><dd> Path to configuration file.</dd></dl>
 <p> -t[ID]</p>
 <dl>
 <dt>
-<dd> Upload FILEs to the already created case on RHTSupport site.</dl>
+</dt><dd> Upload FILEs to the already created case on RHTSupport site.</dd></dl>
 <p> -u</p>
 <dl>
 <dt>
-<dd> Submit uReport together with creating a new case.</dl>
+</dt><dd> Submit uReport together with creating a new case.</dd></dl>
 <p> -C UR_CONFFILE</p>
 <dl>
 <dt>
-<dd> Configuration file for submitting uReports.</dl>
+</dt><dd> Configuration file for submitting uReports.</dd></dl>
 <p> -F CONF_FORMAT_FILE</p>
 <dl>
 <dt>
-<dd> Formatting file for a new case.</dl>
+</dt><dd> Formatting file for a new case.</dd></dl>
 <h2>FILES</h2>
 <p> /usr/share/libreport/conf.d/plugins/rhtsupport.conf</p>
 <dl>
 <dt>
-<dd> Readonly default configuration files.</dl>
+</dt><dd> Readonly default configuration files.</dd></dl>
 <p> /etc/libreport/plugins/rhtsupport.conf</p>
 <dl>
 <dt>
-<dd> Configuration file.</dl>
+</dt><dd> Configuration file.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-abrt_event-conf/">abrt_event.conf</a>(5), <a href="/docs/linux/man/5-rhtsupport-conf/">rhtsupport.conf</a>(5), <a href="/docs/linux/man/5-rhtsupport_event-conf/">rhtsupport_event.conf</a>(5) </p>
 <h2>Index</h2>

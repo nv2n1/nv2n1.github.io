@@ -20,21 +20,21 @@ description: "CREATE RULE – define a new rewrite rule"
 <p> There is a catch if you try to use conditional rules for view updates: there <code>must</code> be an unconditional INSTEAD rule for each action you wish to allow on the view. If the rule is conditional, or is not INSTEAD, then the system will still reject attempts to perform the update action, because it thinks it might end up trying to perform the action on the dummy table of the view in some cases. If you want to handle all the useful cases in conditional rules, add an unconditional DO INSTEAD NOTHING rule to ensure that the system understands it will never be called on to update the dummy table. Then make the conditional rules non-INSTEAD; in the cases where they are applied, they add to the default INSTEAD NOTHING action. (This method does not currently work to support RETURNING queries, however.)</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name of a rule to create. This must be distinct from the name of any other rule for the same table. Multiple rules on the same table and same event type are applied in alphabetical name order.</p>
-<dt><i>event</i></p>
-<dd>The event is one of SELECT, INSERT, UPDATE, or DELETE.</p>
-<dt><i>table</i></p>
-<dd>The name (optionally schema-qualified) of the table or view the rule applies to.</p>
-<dt><i>condition</i></p>
-<dd>Any SQL conditional expression (returning <code>boolean</code>). The condition expression cannot refer to any tables except NEW and OLD, and cannot contain aggregate functions.</p>
-<dt><code>INSTEAD</code></p>
-<dd>INSTEAD indicates that the commands should be executed <code>instead of</code> the original command.</p>
-<dt><code>ALSO</code></p>
-<dd>ALSO indicates that the commands should be executed <code>in addition to</code> the original command. </p>
+<dt><i>name</i></dt>
+<dd>The name of a rule to create. This must be distinct from the name of any other rule for the same table. Multiple rules on the same table and same event type are applied in alphabetical name order.</dd>
+<dt><i>event</i></dt>
+<dd>The event is one of SELECT, INSERT, UPDATE, or DELETE.</dd>
+<dt><i>table</i></dt>
+<dd>The name (optionally schema-qualified) of the table or view the rule applies to.</dd>
+<dt><i>condition</i></dt>
+<dd>Any SQL conditional expression (returning <code>boolean</code>). The condition expression cannot refer to any tables except NEW and OLD, and cannot contain aggregate functions.</dd>
+<dt><code>INSTEAD</code></dt>
+<dd>INSTEAD indicates that the commands should be executed <code>instead of</code> the original command.</dd>
+<dt><code>ALSO</code></dt>
+<dd>ALSO indicates that the commands should be executed <code>in addition to</code> the original command. </dd>
 <p> If neither ALSO nor INSTEAD is specified, ALSO is the default.</p>
-<dt><i>command</i></p>
-<dd>The command or commands that make up the rule action. Valid commands are <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, or <code>NOTIFY</code>.</dl>
+<dt><i>command</i></dt>
+<dd>The command or commands that make up the rule action. Valid commands are <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, or <code>NOTIFY</code>.</dd></dl>
 <p> Within <i>condition</i> and <i>command</i>, the special table names NEW and OLD can be used to refer to values in the referenced table. NEW is valid in ON INSERT and ON UPDATE rules to refer to the new row being inserted or updated. OLD is valid in ON UPDATE and ON DELETE rules to refer to the existing row being updated or deleted.</p>
 <h2>Notes</h2>
 <p>You must be the owner of a table to create or change rules for it. </p>

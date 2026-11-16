@@ -20,18 +20,18 @@ description: "ppmntsc – make a portable pixmap look like taken from an America
 <p> This program handles multi-image PPM input, producing multi-image PPM output. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;pal</code></p>
-<dd> Use the PAL transform instead of the default NTSC.</p>
-<dt><code>&#8211;verbose</code></p>
-<dd> Print a grand total of the number of illegal pixels.</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Produce a humongous listing of illegal colors and their legal counterparts. NOTE: This option may produce a great deal of output.</p>
-<dt><code>&#8211;legalonly</code></p>
-<dd> Output only pixels that are already legal. Output black in place of pixels that are not.</p>
-<dt><code>&#8211;illegalonly</code></p>
-<dd> Output only pixels that are illegal (and output them uncorrected). Output black in place of pixels that are already legal.</p>
-<dt><code>&#8211;correctedonly</code></p>
-<dd> Output only pixels that are corrected versions of illegal pixels. Output black in place of pixels that are already legal. </p>
+<dt><code>&#8211;pal</code></dt>
+<dd> Use the PAL transform instead of the default NTSC.</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Print a grand total of the number of illegal pixels.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Produce a humongous listing of illegal colors and their legal counterparts. NOTE: This option may produce a great deal of output.</dd>
+<dt><code>&#8211;legalonly</code></dt>
+<dd> Output only pixels that are already legal. Output black in place of pixels that are not.</dd>
+<dt><code>&#8211;illegalonly</code></dt>
+<dd> Output only pixels that are illegal (and output them uncorrected). Output black in place of pixels that are already legal.</dd>
+<dt><code>&#8211;correctedonly</code></dt>
+<dd> Output only pixels that are corrected versions of illegal pixels. Output black in place of pixels that are already legal. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5), <code>ppmdepth</code>(1), <code><a href="/docs/linux/man/1-ppmdim/">ppmdim</a></code>(1), <code><a href="/docs/linux/man/1-ppmbrighten/">ppmbrighten</a></code>(1)</p>

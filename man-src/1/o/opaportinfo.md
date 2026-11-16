@@ -14,32 +14,32 @@ description: "opaportinfo"
 <p> opaportinfo [-l <i>lid</i>[-m <i>dest_port</i>]] [-h <i>hfi</i>] [-p <i>port</i>] [-K <i>mkey</i>] [-v]</p>
 <h2>Options</h2>
 <dl>
-<dt>-l <i>lid</i></p>
-<dd> Destination LID. Default is local port. </p>
-<dt>-m <i>dest_port</i></p>
-<dd> Destination port. Default is port with given LID. Useful to access switch ports. </p>
-<dt>-h <i>hfi</i></p>
-<dd> HFI to send through/to. Default is first HFI. </p>
-<dt>-p <i>port</i></p>
-<dd> Port to send through/to. Default is first port. </p>
-<dt>-K <i>mkey</i></p>
-<dd> SM management key to access remote ports. </p>
+<dt>-l <i>lid</i></dt>
+<dd> Destination LID. Default is local port. </dd>
+<dt>-m <i>dest_port</i></dt>
+<dd> Destination port. Default is port with given LID. Useful to access switch ports. </dd>
+<dt>-h <i>hfi</i></dt>
+<dd> HFI to send through/to. Default is first HFI. </dd>
+<dt>-p <i>port</i></dt>
+<dd> Port to send through/to. Default is first port. </dd>
+<dt>-K <i>mkey</i></dt>
+<dd> SM management key to access remote ports. </dd>
 </dl>
 <h2>-h and -p options permit a variety of selections:</h2>
 <dl>
-<dt>-h 0</p>
-<dd> First port in system (default). </p>
-<dt>-h <i>x</i></p>
-<dd> First port on HFI <i>x</i>. </p>
-<dt>-h 0 -p <i>y</i></p>
-<dd> Port <i>y</i> within system. </p>
-<dt>-h <i>x</i>#8217#160;-p <i>y</i></p>
-<dd> HFI <i>x</i>, port <i>y</i>. </p>
+<dt>-h 0</dt>
+<dd> First port in system (default). </dd>
+<dt>-h <i>x</i></dt>
+<dd> First port on HFI <i>x</i>. </dd>
+<dt>-h 0 -p <i>y</i></dt>
+<dd> Port <i>y</i> within system. </dd>
+<dt>-h <i>x</i>#8217#160;-p <i>y</i></dt>
+<dd> HFI <i>x</i>, port <i>y</i>. </dd>
 </dl>
 <h2>Debug Options</h2>
 <dl>
-<dt>-v</p>
-<dd> Verbose output. Additional invocations (#8217#8211;v -v &#8230;) turn on debugging, openib debugging, and libibumad debugging. </p>
+<dt>-v</dt>
+<dd> Verbose output. Additional invocations (#8217#8211;v -v &#8230;) turn on debugging, openib debugging, and libibumad debugging. </dd>
 </dl>
 <h2>Examples</h2>
 <p> opaportinfo -p 1<br />

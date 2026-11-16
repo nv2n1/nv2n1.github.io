@@ -19,11 +19,11 @@ mongoc_client_set_ssl_opts (mongoc_client_t *client,
 <p> It is a programming error to call this function on a client from a <code>mongoc_client_pool_t</code> \&amp;. Instead, call <code>mongoc_client_pool_set_ssl_opts</code> on the pool before popping any clients. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>client</code></p>
-<dd>A <code>mongoc_client_t</code> \&amp;.</dl>
+<dt><code>client</code></dt>
+<dd>A <code>mongoc_client_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>opts</code></p>
-<dd>A <code>mongoc_ssl_opt_t</code> \&amp;. The struct is copied by the client, but the strings it points to are not.</dl>
+<dt><code>opts</code></dt>
+<dd>A <code>mongoc_ssl_opt_t</code> \&amp;. The struct is copied by the client, but the strings it points to are not.</dd></dl>
 <h2>Availability</h2>
 <p>This feature requires that the MongoDB C driver was compiled with <code>&#8211;enable-ssl</code> \&amp;. </p>
 <h2>Colophon</h2>

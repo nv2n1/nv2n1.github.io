@@ -15,7 +15,7 @@ edd_init - creates sysfs tree of EDD data
 <h2>Arguments</h2>
 
 <i>void</i>
-<dl><dd><dd>no arguments</dl>
+<dl><dd></dd><dd>no arguments</dd></dl>
 
 <h2>Copyright</h2>
 

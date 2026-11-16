@@ -14,7 +14,7 @@ description: "snd_soc_kcontrol_codec – Returns the CODEC that registered the c
 <p><i>kcontrol</i></p>
 <dl>
 <dd>
-<dd>The control for which to get the CODEC</dl>
+</dd><dd>The control for which to get the CODEC</dd></dl>
 <h2>Note</h2>
 <p>This function will only work correctly if the control has been registered with <code>snd_soc_add_codec_controls</code> or via table based setup of snd_soc_codec_driver. Otherwise the behavior is undefined.</p>
 <h2>Copyright</h2>

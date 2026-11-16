@@ -24,78 +24,78 @@ description: "pulseaudio – The PulseAudio Sound System"
 <p> PulseAudio is a networked low-latency sound server for Linux, POSIX and Windows systems.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h | &#8211;help</code></p>
-<dd> Show help.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show version information.</p>
-<dt><code>&#8211;dump-conf</code></p>
-<dd> Load the daemon configuration file <i>daemon.conf</i> (see below), parse remaining configuration options on the command line and dump the resulting daemon configuration, in a format that is compatible with <i>daemon.conf</i>.</p>
-<dt><code>&#8211;dump-modules</code></p>
-<dd> List available loadable modules. Combine with <code>-v</code> for a more elaborate listing.</p>
-<dt><code>&#8211;dump-resample-methods</code></p>
-<dd> List available audio resamplers.</p>
-<dt><code>&#8211;cleanup-shm</code></p>
-<dd> Identify stale PulseAudio POSIX shared memory segments in <i>/dev/shm</i> and remove them if possible. This is done implicitly whenever a new daemon starts up or a client tries to connect to a daemon. It should normally not be necessary to issue this command by hand. Only available on systems with POSIX shared memory segments implemented via a virtual file system mounted to <i>/dev/shm</i> (e.g. Linux).</p>
-<dt><code>&#8211;start</code></p>
-<dd> Start PulseAudio if it is not running yet. This is different from starting PulseAudio without <code>&#8211;start</code> which would fail if PA is already running. PulseAudio is guaranteed to be fully initialized when this call returns. Implies <code>&#8211;daemonize</code>.</p>
-<dt><code>-k | &#8211;kill</code></p>
-<dd> Kill an already running PulseAudio daemon of the calling user (Equivalent to sending a SIGTERM).</p>
-<dt><code>&#8211;check</code></p>
-<dd> Return 0 as return code when the PulseAudio daemon is already running for the calling user, or non-zero otherwise. Produces no output on the console except for errors to stderr. </p>
+<dt><code>-h | &#8211;help</code></dt>
+<dd> Show help.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show version information.</dd>
+<dt><code>&#8211;dump-conf</code></dt>
+<dd> Load the daemon configuration file <i>daemon.conf</i> (see below), parse remaining configuration options on the command line and dump the resulting daemon configuration, in a format that is compatible with <i>daemon.conf</i>.</dd>
+<dt><code>&#8211;dump-modules</code></dt>
+<dd> List available loadable modules. Combine with <code>-v</code> for a more elaborate listing.</dd>
+<dt><code>&#8211;dump-resample-methods</code></dt>
+<dd> List available audio resamplers.</dd>
+<dt><code>&#8211;cleanup-shm</code></dt>
+<dd> Identify stale PulseAudio POSIX shared memory segments in <i>/dev/shm</i> and remove them if possible. This is done implicitly whenever a new daemon starts up or a client tries to connect to a daemon. It should normally not be necessary to issue this command by hand. Only available on systems with POSIX shared memory segments implemented via a virtual file system mounted to <i>/dev/shm</i> (e.g. Linux).</dd>
+<dt><code>&#8211;start</code></dt>
+<dd> Start PulseAudio if it is not running yet. This is different from starting PulseAudio without <code>&#8211;start</code> which would fail if PA is already running. PulseAudio is guaranteed to be fully initialized when this call returns. Implies <code>&#8211;daemonize</code>.</dd>
+<dt><code>-k | &#8211;kill</code></dt>
+<dd> Kill an already running PulseAudio daemon of the calling user (Equivalent to sending a SIGTERM).</dd>
+<dt><code>&#8211;check</code></dt>
+<dd> Return 0 as return code when the PulseAudio daemon is already running for the calling user, or non-zero otherwise. Produces no output on the console except for errors to stderr. </dd>
 <p> Note that a non-zero return value doesn&#8217;t necessarily mean that PulseAudio is not usable. Even if the server is not running, it may get automatically started via PulseAudio&#8217;s autospawning mechanism or systemd&#8217;s socket activation, or the environment might be such that checking for processes doesn&#8217;t work (for example, the running server might not show up in a container, even if the server is accessible via a socket). Also disabling PID files with <code>&#8211;use-pid-file=no</code> prevents <code>&#8211;check</code> from detecting running servers. </p>
 <p> A more robust check in most situations would be to try establishing a client connection to the server. Unfortunately there&#8217;s currently no <code>&#8211;check-connection</code> option to replace <code>&#8211;check</code>, but running &quot;pactl info&quot; could be a pretty good substitute.</p>
-<dt><code>&#8211;system</code><i>[=BOOL]</i></p>
-<dd> Run as system-wide instance instead of per-user. Please note that this disables certain features of PulseAudio and is generally not recommended unless the system knows no local users (e.g. is a thin client). This feature needs special configuration and a dedicated UNIX user set up. It is highly recommended to combine this with <code>&#8211;disallow-module-loading</code> (see below).</p>
-<dt><code>-D | &#8211;daemonize</code><i>[=BOOL]</i></p>
-<dd> Daemonize after startup, i.e. detach from the terminal. Note that when running as a systemd service you should use <code>&#8211;daemonize=no</code> for systemd notification to work.</p>
-<dt><code>&#8211;fail</code><i>[=BOOL]</i></p>
-<dd> Fail startup when any of the commands specified in the startup script <i>default.pa</i> (see below) fails.</p>
-<dt><code>&#8211;high-priority</code><i>[=BOOL]</i></p>
-<dd> Try to acquire a high Unix nice level. This will only succeed if the calling user has a non-zero RLIMIT_NICE resource limit set (on systems that support this), or we&#8217;re configured to be run as system daemon (see <i>&#8211;system</i> above). It is recommended to enable this, since it is only a negligible security risk (see below).</p>
-<dt><code>&#8211;realtime</code><i>[=BOOL]</i></p>
-<dd> Try to acquire a real-time scheduling for PulseAudio&#8217;s I/O threads. This will only succeed if the calling user has a non-zero RLIMIT_RTPRIO resource limit set (on systems that support this), or rtkit is available and allows PulseAudio to enable real-time scheduling, or we are configured to be run as system daemon (see <i>&#8211;system</i> above).</p>
-<dt><code>&#8211;disallow-module-loading</code><i>[=BOOL]</i></p>
-<dd> Disallow module loading after startup. This is a security feature since it disallows additional module loading during runtime and on user request. It is highly recommended when <i>&#8211;system</i> is used (see above). Note however, that this breaks certain features like automatic module loading on hot plug.</p>
-<dt><code>&#8211;disallow-exit</code><i>[=BOOL]</i></p>
-<dd> Disallow user requested exit</p>
-<dt><code>&#8211;exit-idle-time</code><i>=SECS</i></p>
-<dd> Terminate the daemon after the last client quit and this time in seconds passed. Use a negative value to disable this feature. Defaults to 20. </p>
+<dt><code>&#8211;system</code><i>[=BOOL]</i></dt>
+<dd> Run as system-wide instance instead of per-user. Please note that this disables certain features of PulseAudio and is generally not recommended unless the system knows no local users (e.g. is a thin client). This feature needs special configuration and a dedicated UNIX user set up. It is highly recommended to combine this with <code>&#8211;disallow-module-loading</code> (see below).</dd>
+<dt><code>-D | &#8211;daemonize</code><i>[=BOOL]</i></dt>
+<dd> Daemonize after startup, i.e. detach from the terminal. Note that when running as a systemd service you should use <code>&#8211;daemonize=no</code> for systemd notification to work.</dd>
+<dt><code>&#8211;fail</code><i>[=BOOL]</i></dt>
+<dd> Fail startup when any of the commands specified in the startup script <i>default.pa</i> (see below) fails.</dd>
+<dt><code>&#8211;high-priority</code><i>[=BOOL]</i></dt>
+<dd> Try to acquire a high Unix nice level. This will only succeed if the calling user has a non-zero RLIMIT_NICE resource limit set (on systems that support this), or we&#8217;re configured to be run as system daemon (see <i>&#8211;system</i> above). It is recommended to enable this, since it is only a negligible security risk (see below).</dd>
+<dt><code>&#8211;realtime</code><i>[=BOOL]</i></dt>
+<dd> Try to acquire a real-time scheduling for PulseAudio&#8217;s I/O threads. This will only succeed if the calling user has a non-zero RLIMIT_RTPRIO resource limit set (on systems that support this), or rtkit is available and allows PulseAudio to enable real-time scheduling, or we are configured to be run as system daemon (see <i>&#8211;system</i> above).</dd>
+<dt><code>&#8211;disallow-module-loading</code><i>[=BOOL]</i></dt>
+<dd> Disallow module loading after startup. This is a security feature since it disallows additional module loading during runtime and on user request. It is highly recommended when <i>&#8211;system</i> is used (see above). Note however, that this breaks certain features like automatic module loading on hot plug.</dd>
+<dt><code>&#8211;disallow-exit</code><i>[=BOOL]</i></dt>
+<dd> Disallow user requested exit</dd>
+<dt><code>&#8211;exit-idle-time</code><i>=SECS</i></dt>
+<dd> Terminate the daemon after the last client quit and this time in seconds passed. Use a negative value to disable this feature. Defaults to 20. </dd>
 <p> When PulseAudio runs in the per-user mode and detects a login session, then any positive value will be reset to 0 so that PulseAudio will terminate immediately on logout. A positive value therefore has effect only in environments where there&#8217;s no support for login session tracking (or if the user is logged in without a session spawned, a.k.a. lingering). A negative value can still be used to disable any automatic exit. </p>
 <p> When PulseAudio runs in the system mode, automatic exit is always disabled, so this option does nothing.</p>
-<dt><code>&#8211;scache-idle-time</code><i>=SECS</i></p>
-<dd> Unload autoloaded samples from the cache when they haven&#8217;t been used for the specified number of seconds.</p>
-<dt><code>&#8211;log-level</code><i>[=LEVEL]</i></p>
-<dd> If an argument is passed, set the log level to the specified value, otherwise increase the configured verbosity level by one. The log levels are numerical from 0 to 4, corresponding to <i>error</i>, <i>warn</i>, <i>notice</i>, <i>info</i>, <i>debug</i>. Default log level is <i>notice</i>, i.e. all log messages with lower log levels are printed: <i>error</i>, <i>warn</i>, <i>notice</i>.</p>
-<dt><code>-v | &#8211;verbose</code></p>
-<dd> Increase the configured verbosity level by one (see <code>&#8211;log-level</code> above). Specify multiple times to increase log level multiple times.</p>
-<dt><code>&#8211;log-target</code><i>={auto,syslog,journal,stderr,file:PATH,newfile:PATH}</i></p>
-<dd> Specify the log target. If set to <i>auto</i> (which is the default), then logging is directed to syslog when <code>&#8211;daemonize</code> is passed, otherwise to STDERR. If set to <i>journal</i> logging is directed to the systemd journal. If set to <i>file:PATH</i>, logging is directed to the file indicated by PATH. <i>newfile:PATH</i> is otherwise the same as file:PATH, but existing files are never overwritten. If the specified file already exists, a suffix is added to the file name to avoid overwriting.</p>
-<dt><code>&#8211;log-meta</code><i>[=BOOL]</i></p>
-<dd> Show source code location in log messages.</p>
-<dt><code>&#8211;log-time</code><i>[=BOOL]</i></p>
-<dd> Show timestamps in log messages.</p>
-<dt><code>&#8211;log-backtrace</code><i>=FRAMES</i></p>
-<dd> When FRAMES is greater than 0, log for each message a stack trace up to the number of specified stack frames.</p>
-<dt><code>-p | &#8211;dl-search-path</code><i>=PATH</i></p>
-<dd> Set the search path for dynamic shared objects (plugins).</p>
-<dt><code>&#8211;resample-method</code><i>=METHOD</i></p>
-<dd> Use the specified resampler by default (See <code>&#8211;dump-resample-methods</code> above for possible values).</p>
-<dt><code>&#8211;use-pid-file</code><i>[=BOOL]</i></p>
-<dd> Create a PID file. If this options is disabled it is possible to run multiple sound servers per user.</p>
-<dt><code>&#8211;no-cpu-limit</code><i>[=BOOL]</i></p>
-<dd> Do not install CPU load limiter on platforms that support it. By default, PulseAudio will terminate itself when it notices that it takes up too much CPU time. This is useful as a protection against system lockups when real-time scheduling is used (see below). Disabling this mechanism is useful when debugging PulseAudio with tools like <code><a href="/docs/linux/man/1-valgrind/">valgrind</a>(1)</code> which slow down execution.</p>
-<dt><code>&#8211;disable-shm</code><i>[=BOOL]</i></p>
-<dd> PulseAudio clients and the server can exchange audio data via POSIX or memfd shared memory segments (on systems that support this). If disabled PulseAudio will communicate exclusively over sockets. Please note that data transfer via shared memory segments is always disabled when PulseAudio is running with <code>&#8211;system</code> enabled (see above).</p>
-<dt><code>&#8211;enable-memfd</code><i>[=BOOL]</i></p>
-<dd> PulseAudio clients and the server can exchange audio data via memfds &#8211; the anonymous Linux Kernel shared memory mechanism (on kernels that support this). If disabled PulseAudio will communicate via POSIX shared memory.</p>
-<dt><code>-L | &#8211;load</code><i>=&quot;MODULE ARGUMENTS&quot;</i></p>
-<dd> Load the specified plugin module with the specified arguments.</p>
-<dt><code>-F | &#8211;file</code><i>=FILENAME</i></p>
-<dd> Run the specified script on startup. May be specified multiple times to specify multiple scripts to be run in order. Combine with <code>-n</code> to disable loading of the default script <i>default.pa</i> (see below).</p>
-<dt><code>-C</code></p>
-<dd> Open a command interpreter on STDIN/STDOUT after startup. This may be used to configure PulseAudio dynamically during runtime. Equivalent to <code>&#8211;load</code><i>=module-cli</i>.</p>
-<dt><code>-n</code></p>
-<dd> Don&#8217;t load default script file <i>default.pa</i> (see below) on startup. Useful in conjunction with <code>-C</code> or <code>&#8211;file</code>.</dl>
+<dt><code>&#8211;scache-idle-time</code><i>=SECS</i></dt>
+<dd> Unload autoloaded samples from the cache when they haven&#8217;t been used for the specified number of seconds.</dd>
+<dt><code>&#8211;log-level</code><i>[=LEVEL]</i></dt>
+<dd> If an argument is passed, set the log level to the specified value, otherwise increase the configured verbosity level by one. The log levels are numerical from 0 to 4, corresponding to <i>error</i>, <i>warn</i>, <i>notice</i>, <i>info</i>, <i>debug</i>. Default log level is <i>notice</i>, i.e. all log messages with lower log levels are printed: <i>error</i>, <i>warn</i>, <i>notice</i>.</dd>
+<dt><code>-v | &#8211;verbose</code></dt>
+<dd> Increase the configured verbosity level by one (see <code>&#8211;log-level</code> above). Specify multiple times to increase log level multiple times.</dd>
+<dt><code>&#8211;log-target</code><i>={auto,syslog,journal,stderr,file:PATH,newfile:PATH}</i></dt>
+<dd> Specify the log target. If set to <i>auto</i> (which is the default), then logging is directed to syslog when <code>&#8211;daemonize</code> is passed, otherwise to STDERR. If set to <i>journal</i> logging is directed to the systemd journal. If set to <i>file:PATH</i>, logging is directed to the file indicated by PATH. <i>newfile:PATH</i> is otherwise the same as file:PATH, but existing files are never overwritten. If the specified file already exists, a suffix is added to the file name to avoid overwriting.</dd>
+<dt><code>&#8211;log-meta</code><i>[=BOOL]</i></dt>
+<dd> Show source code location in log messages.</dd>
+<dt><code>&#8211;log-time</code><i>[=BOOL]</i></dt>
+<dd> Show timestamps in log messages.</dd>
+<dt><code>&#8211;log-backtrace</code><i>=FRAMES</i></dt>
+<dd> When FRAMES is greater than 0, log for each message a stack trace up to the number of specified stack frames.</dd>
+<dt><code>-p | &#8211;dl-search-path</code><i>=PATH</i></dt>
+<dd> Set the search path for dynamic shared objects (plugins).</dd>
+<dt><code>&#8211;resample-method</code><i>=METHOD</i></dt>
+<dd> Use the specified resampler by default (See <code>&#8211;dump-resample-methods</code> above for possible values).</dd>
+<dt><code>&#8211;use-pid-file</code><i>[=BOOL]</i></dt>
+<dd> Create a PID file. If this options is disabled it is possible to run multiple sound servers per user.</dd>
+<dt><code>&#8211;no-cpu-limit</code><i>[=BOOL]</i></dt>
+<dd> Do not install CPU load limiter on platforms that support it. By default, PulseAudio will terminate itself when it notices that it takes up too much CPU time. This is useful as a protection against system lockups when real-time scheduling is used (see below). Disabling this mechanism is useful when debugging PulseAudio with tools like <code><a href="/docs/linux/man/1-valgrind/">valgrind</a>(1)</code> which slow down execution.</dd>
+<dt><code>&#8211;disable-shm</code><i>[=BOOL]</i></dt>
+<dd> PulseAudio clients and the server can exchange audio data via POSIX or memfd shared memory segments (on systems that support this). If disabled PulseAudio will communicate exclusively over sockets. Please note that data transfer via shared memory segments is always disabled when PulseAudio is running with <code>&#8211;system</code> enabled (see above).</dd>
+<dt><code>&#8211;enable-memfd</code><i>[=BOOL]</i></dt>
+<dd> PulseAudio clients and the server can exchange audio data via memfds &#8211; the anonymous Linux Kernel shared memory mechanism (on kernels that support this). If disabled PulseAudio will communicate via POSIX shared memory.</dd>
+<dt><code>-L | &#8211;load</code><i>=&quot;MODULE ARGUMENTS&quot;</i></dt>
+<dd> Load the specified plugin module with the specified arguments.</dd>
+<dt><code>-F | &#8211;file</code><i>=FILENAME</i></dt>
+<dd> Run the specified script on startup. May be specified multiple times to specify multiple scripts to be run in order. Combine with <code>-n</code> to disable loading of the default script <i>default.pa</i> (see below).</dd>
+<dt><code>-C</code></dt>
+<dd> Open a command interpreter on STDIN/STDOUT after startup. This may be used to configure PulseAudio dynamically during runtime. Equivalent to <code>&#8211;load</code><i>=module-cli</i>.</dd>
+<dt><code>-n</code></dt>
+<dd> Don&#8217;t load default script file <i>default.pa</i> (see below) on startup. Useful in conjunction with <code>-C</code> or <code>&#8211;file</code>.</dd></dl>
 <h2>FILES</h2>
 <p> <i>~/.config/pulse/daemon.conf</i>, <i>/etc/pulse/daemon.conf</i>: configuration settings for the PulseAudio daemon. If the version in the user&#8217;s home directory does not exist the global configuration file is loaded. See <code><a href="/docs/linux/man/5-pulse-daemon-conf/">pulse-daemon.conf</a>(5)</code> for more information. </p>
 <p> <i>~/.config/pulse/default.pa</i>, <i>/etc/pulse/default.pa</i>: the default configuration script to execute when the PulseAudio daemon is started. If the version in the user&#8217;s home directory does not exist the global configuration script is loaded. See <code><a href="/docs/linux/man/5-default-pa/">default.pa</a>(5)</code> for more information. </p>

@@ -22,10 +22,10 @@ description: "std::rel_ops –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>__x</i> A thing.<br />
- <i>__y</i> Another thing.</dl>
+ <i>__y</i> Another thing.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>__x != __y</dl>
+<dd>__x != __y</dd></dl>
 <p> This function uses == to determine its result. </p>
 <p> Definition at line 87 of file stl_relops.h.</p>
 <h3>template&lt;class _Tp &gt; bool std::rel_ops::operator&lt;= (const _Tp &amp;__x, const _Tp &amp;__y) [inline]</h3>
@@ -33,10 +33,10 @@ description: "std::rel_ops –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>__x</i> A thing.<br />
- <i>__y</i> Another thing.</dl>
+ <i>__y</i> Another thing.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>__x &lt;= __y</dl>
+<dd>__x &lt;= __y</dd></dl>
 <p> This function uses &lt; to determine its result. </p>
 <p> Definition at line 113 of file stl_relops.h.</p>
 <h3>template&lt;class _Tp &gt; bool std::rel_ops::operator&gt; (const _Tp &amp;__x, const _Tp &amp;__y) [inline]</h3>
@@ -44,10 +44,10 @@ description: "std::rel_ops –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>__x</i> A thing.<br />
- <i>__y</i> Another thing.</dl>
+ <i>__y</i> Another thing.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>__x &gt; __y</dl>
+<dd>__x &gt; __y</dd></dl>
 <p> This function uses &lt; to determine its result. </p>
 <p> Definition at line 100 of file stl_relops.h.</p>
 <h3>template&lt;class _Tp &gt; bool std::rel_ops::operator&gt;= (const _Tp &amp;__x, const _Tp &amp;__y) [inline]</h3>
@@ -55,10 +55,10 @@ description: "std::rel_ops –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>__x</i> A thing.<br />
- <i>__y</i> Another thing.</dl>
+ <i>__y</i> Another thing.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>__x &gt;= __y</dl>
+<dd>__x &gt;= __y</dd></dl>
 <p> This function uses &lt; to determine its result. </p>
 <p> Definition at line 126 of file stl_relops.h.</p>
 <h2>Author</h2>

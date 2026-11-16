@@ -14,10 +14,10 @@ description: "idr_get_next – lookup next object of id to given id."
 <p><i>idp</i></p>
 <dl>
 <dd>
-<dd>idr handle</dl>
+</dd><dd>idr handle</dd></dl>
 <p> <i>nextidp</i></p>
 <dl>
-<dd>pointer to lookup key</dl>
+<dd>pointer to lookup key</dd></dl>
 <h2>Description</h2>
 <p>Returns pointer to registered object with id, which is next number to given id. After being looked up, *<i>nextidp</i> will be updated for the next iteration. </p>
 <p> This function can be called under <code>rcu_read_lock</code>, given that the leaf pointers lifetimes are correctly managed.</p>

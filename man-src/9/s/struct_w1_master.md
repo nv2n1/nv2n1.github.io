@@ -40,84 +40,84 @@ description: "struct_w1_master – one per bus master"
 <h2>Members</h2>
 <p>w1_master_entry</p>
 <dl>
-<dd>master linked list</dl>
+<dd>master linked list</dd></dl>
 <p> owner</p>
 <dl>
-<dd>module owner</dl>
+<dd>module owner</dd></dl>
 <p> name[W1_MAXNAMELEN]</p>
 <dl>
-<dd>dynamically allocate bus name</dl>
+<dd>dynamically allocate bus name</dd></dl>
 <p> list_mutex</p>
 <dl>
-<dd>protect slist and async_list</dl>
+<dd>protect slist and async_list</dd></dl>
 <p> slist</p>
 <dl>
-<dd>linked list of slaves</dl>
+<dd>linked list of slaves</dd></dl>
 <p> async_list</p>
 <dl>
-<dd>linked list of netlink commands to execute</dl>
+<dd>linked list of netlink commands to execute</dd></dl>
 <p> max_slave_count</p>
 <dl>
-<dd>maximum number of slaves to search for at a time</dl>
+<dd>maximum number of slaves to search for at a time</dd></dl>
 <p> slave_count</p>
 <dl>
-<dd>current number of slaves known</dl>
+<dd>current number of slaves known</dd></dl>
 <p> attempts</p>
 <dl>
-<dd>number of searches ran</dl>
+<dd>number of searches ran</dd></dl>
 <p> slave_ttl</p>
 <dl>
-<dd>number of searches before a slave is timed out</dl>
+<dd>number of searches before a slave is timed out</dd></dl>
 <p> initialized</p>
 <dl>
-<dd>prevent init/removal race conditions</dl>
+<dd>prevent init/removal race conditions</dd></dl>
 <p> id</p>
 <dl>
-<dd>w1 bus number</dl>
+<dd>w1 bus number</dd></dl>
 <p> search_count</p>
 <dl>
-<dd>number of automatic searches to run, -1 unlimited</dl>
+<dd>number of automatic searches to run, -1 unlimited</dd></dl>
 <p> search_id</p>
 <dl>
-<dd>allows continuing a search</dl>
+<dd>allows continuing a search</dd></dl>
 <p> refcnt</p>
 <dl>
-<dd>reference count</dl>
+<dd>reference count</dd></dl>
 <p> priv</p>
 <dl>
-<dd>private data storage</dl>
+<dd>private data storage</dd></dl>
 <p> enable_pullup</p>
 <dl>
-<dd>allows a strong pullup</dl>
+<dd>allows a strong pullup</dd></dl>
 <p> pullup_duration</p>
 <dl>
-<dd>time for the next strong pullup</dl>
+<dd>time for the next strong pullup</dd></dl>
 <p> flags</p>
 <dl>
-<dd>one of w1_master_flags</dl>
+<dd>one of w1_master_flags</dd></dl>
 <p> thread</p>
 <dl>
-<dd>thread for bus search and netlink commands</dl>
+<dd>thread for bus search and netlink commands</dd></dl>
 <p> mutex</p>
 <dl>
-<dd>protect most of w1_master</dl>
+<dd>protect most of w1_master</dd></dl>
 <p> bus_mutex</p>
 <dl>
-<dd>pretect concurrent bus access</dl>
+<dd>pretect concurrent bus access</dd></dl>
 <p> driver</p>
 <dl>
-<dd>sysfs driver</dl>
+<dd>sysfs driver</dd></dl>
 <p> dev</p>
 <dl>
-<dd>sysfs device</dl>
+<dd>sysfs device</dd></dl>
 <p> bus_master</p>
 <dl>
-<dd>io operations available</dl>
+<dd>io operations available</dd></dl>
 <p> seq</p>
 <dl>
-<dd>sequence number used for netlink broadcasts</dl>
+<dd>sequence number used for netlink broadcasts</dd></dl>
 <h2>Author</h2>
 <p><code>David Fries</code> &lt;David [at] Fries.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

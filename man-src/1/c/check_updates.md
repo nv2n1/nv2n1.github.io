@@ -59,21 +59,21 @@ check_updates[OPTIONS] - ?, --usage Print usage information - h, --help Print de
  check_updates depends on
 <dl>
 <dt>&bull;
-<dd> Carp
-<dt>&bull;
-<dd> English
-<dt>&bull;
-<dd> Getopt::Long
-<dt>&bull;
-<dd> Monitoring::Plugin
-<dt>&bull;
-<dd> Monitoring::Plugin::Getopt
-<dt>&bull;
-<dd> Monitoring::Plugin::Threshold
-<dt>&bull;
-<dd> <font SIZE="-1">POSIX</font>
-<dt>&bull;
-<dd> Readonly</dl>
+</dt><dd> Carp
+</dd><dt>&bull;
+</dt><dd> English
+</dd><dt>&bull;
+</dt><dd> Getopt::Long
+</dd><dt>&bull;
+</dt><dd> Monitoring::Plugin
+</dd><dt>&bull;
+</dt><dd> Monitoring::Plugin::Getopt
+</dd><dt>&bull;
+</dt><dd> Monitoring::Plugin::Threshold
+</dd><dt>&bull;
+</dt><dd> <font SIZE="-1">POSIX</font>
+</dd><dt>&bull;
+</dt><dd> Readonly</dd></dl>
 
 <h2>INCOMPATIBILITIES</h2>
 
@@ -127,25 +127,24 @@ check_updates[OPTIONS] - ?, --usage Print usage information - h, --help Print de
  Many thanks to:
 <dl>
 <dt>&bull;
-<dd> Peter Bircher &amp; Cristian Tuduce for several bug fixes
-<dt>&bull;
-<dd> Mark Greenheigh for the prompt and precise bug reports
-<dt>&bull;
-<dd> Jose Pedro Oliveria for the build and release fixes
-<dt>&bull;
-<dd> Tomas Edwardsson for a patch fixing the detection of <font SIZE="-1">RH EL 6</font> systems
-<dt>&bull;
-<dd> Cott Lang for the Amazon Linux patch
-<dt>&bull;
-<dd> Joop Boonen for the yum arguments patch
-<dt>&bull;
-<dd> Franky Van Liedekerke for the perfomance data and security plugin patch and for the openvz kernels patch
-<dt>&bull;
-<dd> Andreas Dijkman for the Oracle <font SIZE="-1">UEK</font> patch
-<dt>&bull;
-<dd> PhiBo (<a rel="nofollow" HREF="https://github.com/phibos)">https://github.com/phibos)</a> for the --boot-check-warning patch 
-
-</dl>
+</dt><dd> Peter Bircher &amp; Cristian Tuduce for several bug fixes
+</dd><dt>&bull;
+</dt><dd> Mark Greenheigh for the prompt and precise bug reports
+</dd><dt>&bull;
+</dt><dd> Jose Pedro Oliveria for the build and release fixes
+</dd><dt>&bull;
+</dt><dd> Tomas Edwardsson for a patch fixing the detection of <font SIZE="-1">RH EL 6</font> systems
+</dd><dt>&bull;
+</dt><dd> Cott Lang for the Amazon Linux patch
+</dd><dt>&bull;
+</dt><dd> Joop Boonen for the yum arguments patch
+</dd><dt>&bull;
+</dt><dd> Franky Van Liedekerke for the perfomance data and security plugin patch and for the openvz kernels patch
+</dd><dt>&bull;
+</dt><dd> Andreas Dijkman for the Oracle <font SIZE="-1">UEK</font> patch
+</dd><dt>&bull;
+</dt><dd> PhiBo (<a rel="nofollow" HREF="https://github.com/phibos)">https://github.com/phibos)</a> for the --boot-check-warning patch 
+</dd></dl>
 
 <h2>Index</h2>
 

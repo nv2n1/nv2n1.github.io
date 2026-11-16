@@ -17,20 +17,18 @@ description: "racount – count things from an argus(8) data file/stream."
 <p> Racount, like all ra based clients, supports a number of <code>ra options</code> including filtering of input argus records through a terminating filter expression. See <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code> for a complete description of <code>ra options</code>. </p>
 <p> <code>racount</code> specfic options are: </p>
 <dl>
-<dt><code>-M</code><i> modes</i></p>
-<dd> Supported modes are:</dl>
+<dt><code>-M</code><i> modes</i></dt>
+<dd> Supported modes are:</dd></dl>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt><code>proto</code></p>
-<dd> Print a count breakdown on protocols seen. <code>racount</code> will report on IP protocols, ether protocols, arp, rarp and unknowwn. </p>
-<dt><code>addr</code></p>
+<dt><code>proto</code></dt>
+<dd> Print a count breakdown on protocols seen. <code>racount</code> will report on IP protocols, ether protocols, arp, rarp and unknowwn. </dd>
+<dt><code>addr</code></dt>
 <dd> Print a summary report of the occurence of the various types of network addresses encountered. The current list of IANA standard network address types include:<br />
 &nbsp;<wbr>IPv4 Unicast ThisNet, Reserved, LoopBack, LinkLocal, TestNet and Private<br />
 &nbsp;<wbr>IPv4 Multicast Local, Internet, AdHoc, Reserved, SdpSap, Nasdaq, DisTrans, SrcSpec, Glop, Admin, OrgLocal and SiteLocal<br />
 &nbsp;<wbr>IPv6 Loopback, LinkLocal, SiteLocal, Global, V4Compat, V4Mapped and Unspecified&nbsp;<wbr><br />
-&nbsp;<wbr>IPv6 MulticastNodeLocal, MulticastLinkLocal, MulticastSiteLocal, MulticastOrgLocal and MulticastGlobal </p>
+&nbsp;<wbr>IPv6 MulticastNodeLocal, MulticastLinkLocal, MulticastSiteLocal, MulticastOrgLocal and MulticastGlobal </dd>
 </dl>
 </dl>
 <h2>EXAMPLE INVOCATION</h2>

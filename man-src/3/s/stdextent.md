@@ -10,10 +10,8 @@ description: "std::extent – std::extent"
 <p>std::extent &#8211; std::extent</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T, unsigned N = 0&gt;
     (since C++ 11)
-
         struct extent;</code></pre>
 <p>If T is an array type, provides the member constant value equal to the number of elements along the Nth dimension of the array, if N is in [0, std::rank&lt;T&gt;::value). For any other type, or if T is array of unknown bound along its first dimension and N is 0, value is 0.<br />
 Helper variable template template&lt; class T, unsigned N = 0 &gt;                           (since C++17)</p>
@@ -47,10 +45,8 @@ type std::integral_constant&lt;std::size_t, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 int main()
-
 {
     std::cout &lt;&lt; std::extent&lt;int[3]&gt;::value &lt;&lt; '
 '; //&lt; default dimension is 0

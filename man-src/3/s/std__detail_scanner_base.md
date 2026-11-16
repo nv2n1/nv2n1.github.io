@@ -14,13 +14,7 @@ description: "std::__detail::_Scanner_base –"
 <p>typedef unsigned int <code>_StateT</code></p>
 <h3>Static Public Attributes</h3>
 <pre><code>static constexpr _StateT _S_state_at_start
-
-
-
 static constexpr _StateT _S_state_in_brace
-
-
-
 static constexpr _StateT _S_state_in_bracket</code></pre>
 <h2>Detailed Description</h2>
 <p>Base class for scanner. </p>

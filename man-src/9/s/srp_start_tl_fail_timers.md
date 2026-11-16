@@ -14,14 +14,14 @@ description: "srp_start_tl_fail_timers – start the transport layer failure tim
 <p><i>rport</i></p>
 <dl>
 <dd>
-<dd>SRP target port.</dl>
+</dd><dd>SRP target port.</dd></dl>
 <h2>Description</h2>
 <p>Start the transport layer fast I/O failure and device loss timers. Do not modify a timer that was already started.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

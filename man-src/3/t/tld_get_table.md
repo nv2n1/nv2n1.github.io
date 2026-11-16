@@ -13,10 +13,10 @@ description: "tld_get_table – API function"
 const Tld_table *tld_get_table(const char *tld, const Tld_table **tables);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>const char * tld</p>
-<dd>TLD name (e.g. &quot;com&quot;) as zero terminated ASCII byte string.</p>
-<dt>const Tld_table ** tables</p>
-<dd>Zero terminated array of <code>Tld_table</code> info-structures for TLDs.</dl>
+<dt>const char * tld</dt>
+<dd>TLD name (e.g. &quot;com&quot;) as zero terminated ASCII byte string.</dd>
+<dt>const Tld_table ** tables</dt>
+<dd>Zero terminated array of <code>Tld_table</code> info-structures for TLDs.</dd></dl>
 <h2>Description</h2>
 <p>Get the TLD table for a named TLD by searching through the given TLD table array.</p>
 <h2>Return Value</h2>
@@ -29,5 +29,5 @@ const Tld_table *tld_get_table(const char *tld, const Tld_table **tables);</code
 <h2>See Also</h2>
 <p>The full documentation for <code>libidn</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>libidn</code> programs are properly installed at your site, the command</p>
 <dl>
-<dd><code>info libidn</code></dl>
+<dd><code>info libidn</code></dd></dl>
 <p> should give you access to the complete manual. </p>

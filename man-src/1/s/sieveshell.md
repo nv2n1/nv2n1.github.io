@@ -17,7 +17,7 @@ description: "sieveshell – remotely manipulate sieve scripts"
 <p> The following commands are recognized: </p>
 <dl>
 <dt>
-<dd> <code>list</code> list scripts on server. </p>
+</dt><dd> <code>list</code> list scripts on server. </dd>
 <p> <code>put</code> &lt;filename&gt; upload script to server. </p>
 <p> <code>get</code> &lt;name&gt; [&lt;filename&gt;] get script. if no filename display to stdout </p>
 <p> <code>delete</code> &lt;name&gt; delete script. </p>
@@ -25,14 +25,14 @@ description: "sieveshell – remotely manipulate sieve scripts"
 <p> <code>deactivate</code> deactivate all scripts.</dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-u</code> <i>user</i>, <code>&#8211;user</code>=<i>user</i></p>
-<dd> The authorization name to request; by default, derived from the authentication credentials.</p>
-<dt><code>-a</code> <i>authname</i>, <code>&#8211;authname</code>=<i>authname</i></p>
-<dd> The user to use for authentication (defaults to current user).</p>
-<dt><code>-r</code> <i>realm</i>, <code>&#8211;realm</code>=<i>realm</i></p>
-<dd> The realm to attempt authentication in.</p>
-<dt><code>-e</code> <i>script</i>, <code>&#8211;exec</code>=<i>script</i></p>
-<dd> Instead of working interactively, run commands from <i>script</i>, and exit when done.</dl>
+<dt><code>-u</code> <i>user</i>, <code>&#8211;user</code>=<i>user</i></dt>
+<dd> The authorization name to request; by default, derived from the authentication credentials.</dd>
+<dt><code>-a</code> <i>authname</i>, <code>&#8211;authname</code>=<i>authname</i></dt>
+<dd> The user to use for authentication (defaults to current user).</dd>
+<dt><code>-r</code> <i>realm</i>, <code>&#8211;realm</code>=<i>realm</i></dt>
+<dd> The realm to attempt authentication in.</dd>
+<dt><code>-e</code> <i>script</i>, <code>&#8211;exec</code>=<i>script</i></dt>
+<dd> Instead of working interactively, run commands from <i>script</i>, and exit when done.</dd></dl>
 <h2>REFERENCES</h2>
 <p> [<font SIZE="-1">MANAGESIEVE</font>] Martin, T.; &#8220;A Protocol for Remotely Managing Sieve Scripts&#8221;, draft-ietf-managesieve-03.txt, Mirapoint, Inc.; May 2001, work in progress.</p>
 <h2>AUTHOR</h2>

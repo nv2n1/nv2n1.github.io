@@ -35,7 +35,7 @@ description: "QwtSimpleCompassRose –"
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>numThorns</i> Number of thorns<br />
- <i>numThornLevels</i> Number of thorn levels</dl>
+ <i>numThornLevels</i> Number of thorn levels</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>void QwtSimpleCompassRose::draw (QPainter *painter, const QPointF &amp;center, doubleradius, doublenorth, QPalette::ColorGroupcg = QPalette::Active) const [virtual]</h3>
 <p>Draw the rose </p>
@@ -45,7 +45,7 @@ description: "QwtSimpleCompassRose –"
  <i>center</i> Center point<br />
  <i>radius</i> Radius of the rose<br />
  <i>north</i> Position<br />
- <i>cg</i> Color group</dl>
+ <i>cg</i> Color group</dd></dl>
 <p> Implements <code>QwtCompassRose</code>.</p>
 <h3>void QwtSimpleCompassRose::drawRose (QPainter *painter, const QPalette &amp;palette, const QPointF &amp;center, doubleradius, doublenorth, doublewidth, intnumThorns, intnumThornLevels, doubleshrinkFactor) [static]</h3>
 <p>Draw the rose </p>
@@ -59,63 +59,63 @@ description: "QwtSimpleCompassRose –"
  <i>width</i> Width of the rose<br />
  <i>numThorns</i> Number of thorns<br />
  <i>numThornLevels</i> Number of thorn levels<br />
- <i>shrinkFactor</i> Factor to shrink the thorns with each level</dl>
+ <i>shrinkFactor</i> Factor to shrink the thorns with each level</dd></dl>
 <h3>int QwtSimpleCompassRose::numThornLevels () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of thorn levels</dl>
+<dd>Number of thorn levels</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setNumThorns()</code>, <code>setNumThornLevels()</code></dl>
+<dd><code>setNumThorns()</code>, <code>setNumThornLevels()</code></dd></dl>
 <h3>int QwtSimpleCompassRose::numThorns () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of thorns</dl>
+<dd>Number of thorns</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setNumThorns()</code>, <code>setNumThornLevels()</code></dl>
+<dd><code>setNumThorns()</code>, <code>setNumThornLevels()</code></dd></dl>
 <h3>void QwtSimpleCompassRose::setNumThornLevels (intnumThornLevels)</h3>
 <p>Set the of thorns levels </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>numThornLevels</i> Number of thorns levels</dl>
+<dd><i>numThornLevels</i> Number of thorns levels</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setNumThorns()</code>, <code>numThornLevels()</code></dl>
+<dd><code>setNumThorns()</code>, <code>numThornLevels()</code></dd></dl>
 <h3>void QwtSimpleCompassRose::setNumThorns (intnumThorns)</h3>
 <p>Set the number of thorns on one level The number is aligned to a multiple of 4, with a minimum of 4 </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>numThorns</i> Number of thorns</dl>
+<dd><i>numThorns</i> Number of thorns</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>numThorns()</code>, <code>setNumThornLevels()</code></dl>
+<dd><code>numThorns()</code>, <code>setNumThornLevels()</code></dd></dl>
 <h3>void QwtSimpleCompassRose::setShrinkFactor (doublefactor)</h3>
 <p>Set the Factor how to shrink the thorns with each level The default value is 0.9. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>factor</i> Shrink factor</dl>
+<dd><i>factor</i> Shrink factor</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>shrinkFactor()</code></dl>
+<dd><code>shrinkFactor()</code></dd></dl>
 <h3>void QwtSimpleCompassRose::setWidth (doublewidth)</h3>
 <p>Set the width of the rose heads. Lower value make thinner heads. The range is limited from 0.03 to 0.4. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>width</i> Width</dl>
+<dd><i>width</i> Width</dd></dl>
 <h3>double QwtSimpleCompassRose::shrinkFactor () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Factor how to shrink the thorns with each level</dl>
+<dd>Factor how to shrink the thorns with each level</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setShrinkFactor()</code></dl>
+<dd><code>setShrinkFactor()</code></dd></dl>
 <h3>double QwtSimpleCompassRose::width () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Width of the rose</dl>
+<dd>Width of the rose</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setWidth()</code></dl>
+<dd><code>setWidth()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

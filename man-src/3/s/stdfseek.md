@@ -11,7 +11,6 @@ std::fseek - std::fseek
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdio&gt;
-
     int fseek(std::FILE *stream, long offset, int origin);</code></pre> 
 Sets the file position indicator for the file stream stream. 
 If the stream is open in binary mode, the new position is exactly offset bytes measured from the beginning of the file if origin is SEEK_SET, from the current file position if origin is SEEK_CUR, and from the end of the file if origin is SEEK_END. Binary streams are not required to support SEEK_END, in particular if additional null bytes are output. 
@@ -39,19 +38,13 @@ POSIX also requires that fseek first performs fflush if there are any unwritten 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;cstdio&gt;
-
 #include &lt;cstdint&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;cassert&gt;
 int main()
-
 {
     std::ofstream(&quot;dummy.nfo&quot;) &lt;&lt; &quot;sample data\n&quot;;
-
     std::FILE *fp = std::fopen(&quot;dummy.nfo&quot;, &quot;rb&quot;);
     assert(fp);
     std::fseek(fp, 0, SEEK_END); // seek to end

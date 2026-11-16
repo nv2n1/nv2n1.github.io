@@ -14,7 +14,7 @@ description: "ccw_device_resume – resume channel program execution"
 <p><i>cdev</i></p>
 <dl>
 <dd>
-<dd>target ccw device</dl>
+</dd><dd>target ccw device</dd></dl>
 <h2>Description</h2>
 <p><code>ccw_device_resume</code> calls rsch on <i>cdev</i>&#8216;s subchannel.</p>
 <h2>Return</h2>
@@ -24,5 +24,5 @@ description: "ccw_device_resume – resume channel program execution"
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

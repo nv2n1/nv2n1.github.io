@@ -24,37 +24,37 @@ url: "/docs/linux/man/1-abrt-watch-log/"
  -F STR
 <dl>
 <dt>
-<dd> Don't run PROG if STRs aren't found</dl>
+</dt><dd> Don't run PROG if STRs aren't found</dd></dl>
  
 
  -v, --verbose
 <dl>
 <dt>
-<dd> Be more verbose. Can be given multiple times.</dl>
+</dt><dd> Be more verbose. Can be given multiple times.</dd></dl>
  
 
  -s
 <dl>
 <dt>
-<dd> Log to syslog</dl>
+</dt><dd> Log to syslog</dd></dl>
  
 
  FILE
 <dl>
 <dt>
-<dd> Watched file</dl>
+</dt><dd> Watched file</dd></dl>
  
 
  PROG
 <dl>
 <dt>
-<dd> Path to an executable</dl>
+</dt><dd> Path to an executable</dd></dl>
  
 
  ARGS
 <dl>
 <dt>
-<dd> Arguments for PROG</dl>
+</dt><dd> Arguments for PROG</dd></dl>
 
 <h2>AUTHORS</h2>
 
@@ -62,7 +62,7 @@ url: "/docs/linux/man/1-abrt-watch-log/"
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

@@ -15,11 +15,11 @@ absent_pages_in_range - Return number of page frames in holes within a range
 <h2>Arguments</h2>
 
 <i>start_pfn</i>
-<dl><dd><dd>The start PFN to start searching for holes</dl>
+<dl><dd></dd><dd>The start PFN to start searching for holes</dd></dl>
  
 
  <i>end_pfn</i>
-<dl><dd>The end PFN to stop searching for holes</dl>
+<dl><dd>The end PFN to stop searching for holes</dd></dl>
 
 <h2>Description</h2>
 

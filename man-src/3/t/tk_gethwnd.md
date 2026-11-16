@@ -16,10 +16,10 @@ Window
 <code>Tk_AttachHWND</code>(<i>tkwin, hwnd</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Window <i>window</i> (in) X token for window.</p>
-<dd>Tk_Window <i>tkwin</i> (in) Tk window for window.</p>
+<dd>Window <i>window</i> (in) X token for window.</dd>
+<dd>Tk_Window <i>tkwin</i> (in) Tk window for window.</dd>
 <dd>HWND <i>hwnd</i> (in) Windows HWND for window.
-</dl>
+</dd></dl>
 <h2>Description</h2>
 <p><code>Tk_GetHWND</code> returns the Windows HWND identifier for X Windows window given by <i>window</i>. </p>
 <p> <code>Tk_AttachHWND</code> binds the Windows HWND identifier to the specified Tk_Window given by <i>tkwin</i>. It returns an X Windows window that encapsulates the HWND. </p>

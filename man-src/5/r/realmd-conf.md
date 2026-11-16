@@ -19,18 +19,18 @@ description: "realmd.conf – Tweak behavior of realmd"
 <pre>[users]
 default-home = /home/%U
 default-shell = /bin/bash</pre>
-</dl>
+</dd></dl>
 <h2>Active-Directory</h2>
 <p>These options should go in an <code>[active-directory]</code> section of the /etc/realmd.conf file. Only specify the settings you wish to override. </p>
 <p> <code>default-client</code></p>
 <dl>
-<dd>Specify the <code>default-client</code> setting in order to control which client software is the preferred default for use with Active Directory. </p>
+<dd>Specify the <code>default-client</code> setting in order to control which client software is the preferred default for use with Active Directory. </dd>
 <dl>
 <dd>
 <pre>[active-directory]
 default-client = sssd
 # default-client = winbind</pre>
-</dl>
+</dd></dl>
 <p> The default setting for this is <code>sssd</code> which uses m[blue]<code>SSSD</code>m[]<font SIZE="-2">[1]</font> as the Active Directory client. You can also specify <code>winbind</code> to use m[blue]<code>Samba Winbind</code>m[]<font SIZE="-2">[2]</font>. </p>
 <p> Some callers of <code>realmd</code> such as the <code>realm</code> command line tool allow specifying which client software should be used. Others, such as GNOME Control Center, simplify choose the default. </p>
 <p> You can verify the preferred default client softawre by running the following command. The realm with the preferred client software will be listed first. </p>
@@ -51,14 +51,14 @@ domain.example.com
  type: kerberos
  realm-name: AD.THEWALTER.LAN
  domain-name: ad.thewalter.lan</pre>
-</dl>
+</dd></dl>
 </dl>
 <p> <code>os-name</code></p>
 <dl>
-<dd>(see below)</dl>
+<dd>(see below)</dd></dl>
 <p> <code>os-version</code></p>
 <dl>
-<dd>Specify the <code>os-name</code> and/or <code>os-version</code> settings to control the values that are placed in the computer account <code>operatingSystem</code> and <code>operatingSystemVersion</code> attributes. </p>
+<dd>Specify the <code>os-name</code> and/or <code>os-version</code> settings to control the values that are placed in the computer account <code>operatingSystem</code> and <code>operatingSystemVersion</code> attributes. </dd>
 <p> This is an Active Directory specific option. </p>
 <p> It is also possible to use the <code>&#8211;os-name</code> or <code>&#8211;os-version</code> argument of the <code>realm</code> command to override the default values. </p>
 <dl>
@@ -66,35 +66,37 @@ domain.example.com
 <pre>[active-directory]
 os-name = Gentoo Linux
 os-version = 9.9.9.9.9</pre>
-</dl>
+</dd></dl>
 </dl>
 <h2>Service</h2>
 <p>These options should go in an <code>[service]</code> section of the /etc/realmd.conf file. Only specify the settings you wish to override. </p>
 <p> <code>automatic-install</code></p>
 <dl>
-<dd>Set this to <i>no</i> to disable automatic installation of packages via package-kit. </p>
+<dd>Set this to <i>no</i> to disable automatic installation of packages via package-kit. </dd>
 <dl>
 <dd>
 <pre>[service]
 automatic-install = no
 # automatic-install = yes</pre>
-</dl>
+</dd></dl>
 </dl>
 <h2>Users</h2>
 <p>These options should go in an <code>[users]</code> section of the /etc/realmd.conf file. Only specify the settings you wish to override. </p>
 <p> <code>default-home</code></p>
 <dl>
-<dd>Specify the <code>default-home</code> setting in order to control how to set the home directory for accounts that have no home directory explicitly set. </p>
+<dd>Specify the <code>default-home</code> setting in order to control how to set the home directory for accounts that have no home directory explicitly set. </dd>
 <dl>
 <dd>
 <pre>[users]
 default-home = /home/%U@%D
 # default-home = /nfs/home/%D-%U
 # default-home = /home/%D/%U</pre>
-</dl>
+</dd></dl>
 <p> The default setting for this is <code>/home/%U@%D</code>. The <code>%D</code> format is replaced by the domain name. The <code>%U</code> format is replaced by the user name. </p>
 <p> You can verify the home directory for a user by running the following command. </p>
 <dl>
 <dd>
 <pre>$ <code>getent passwd 'DOMAIN/User'</code>
 DOMAIN
+</dd></dl></dl>
+</pre>

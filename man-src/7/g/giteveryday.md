@@ -13,40 +13,40 @@ description: "giteveryday – A useful minimum set of commands for Everyday Git"
 <h2>Description</h2>
 <p>Git users can broadly be grouped into four categories for the purposes of describing here a small set of useful command for everyday Git. </p>
 <dl>
-<dd>&bull; Individual Developer (Standalone) commands are essential for anybody who makes a commit, even for somebody who works alone.</dl>
+<dd>&bull; Individual Developer (Standalone) commands are essential for anybody who makes a commit, even for somebody who works alone.</dd></dl>
 <dl>
-<dd>&bull; If you work with other people, you will need commands listed in the Individual Developer (Participant) section as well.</dl>
+<dd>&bull; If you work with other people, you will need commands listed in the Individual Developer (Participant) section as well.</dd></dl>
 <dl>
-<dd>&bull; People who play the Integrator role need to learn some more commands in addition to the above.</dl>
+<dd>&bull; People who play the Integrator role need to learn some more commands in addition to the above.</dd></dl>
 <dl>
-<dd>&bull; Repository Administration commands are for system administrators who are responsible for the care and feeding of Git repositories.</dl>
+<dd>&bull; Repository Administration commands are for system administrators who are responsible for the care and feeding of Git repositories.</dd></dl>
 <h2>Individual Developer (Standalone)</h2>
 <p>A standalone individual developer does not exchange patches with other people, and works alone in a single repository, using the following commands. </p>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-init/">git-init</a></code>(1) to create a new repository.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-init/">git-init</a></code>(1) to create a new repository.</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-log/">git-log</a></code>(1) to see what happened.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-log/">git-log</a></code>(1) to see what happened.</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-switch/">git-switch</a></code>(1) and <code><a href="/docs/linux/man/1-git-branch/">git-branch</a></code>(1) to switch branches.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-switch/">git-switch</a></code>(1) and <code><a href="/docs/linux/man/1-git-branch/">git-branch</a></code>(1) to switch branches.</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-add/">git-add</a></code>(1) to manage the index file.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-add/">git-add</a></code>(1) to manage the index file.</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-diff/">git-diff</a></code>(1) and <code><a href="/docs/linux/man/1-git-status/">git-status</a></code>(1) to see what you are in the middle of doing.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-diff/">git-diff</a></code>(1) and <code><a href="/docs/linux/man/1-git-status/">git-status</a></code>(1) to see what you are in the middle of doing.</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-commit/">git-commit</a></code>(1) to advance the current branch.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-commit/">git-commit</a></code>(1) to advance the current branch.</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-restore/">git-restore</a></code>(1) to undo changes.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-restore/">git-restore</a></code>(1) to undo changes.</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-merge/">git-merge</a></code>(1) to merge between local branches.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-merge/">git-merge</a></code>(1) to merge between local branches.</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-rebase/">git-rebase</a></code>(1) to maintain topic branches.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-rebase/">git-rebase</a></code>(1) to maintain topic branches.</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-tag/">git-tag</a></code>(1) to mark a known point.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-tag/">git-tag</a></code>(1) to mark a known point.</dd></dl>
 <h3>Examples</h3>
 <p>Use a tarball as a starting point for a new repository.</p>
 <dl>
 <dd>
-<dl>
+</dd><dl>
 <dd>
 <pre>$ tar zxf frotz.tar.gz
 $ cd frotz
@@ -54,14 +54,14 @@ $ git init
 $ git add . <code>(1)</code>
 $ git commit -m &quot;import of frotz source tree.&quot;
 $ git tag v2.43 <code>(2)</code></pre>
-</dl>
+</dd></dl>
 <p> <code>1. </code>add everything under the current directory.<br />
  <code>2. </code>make a lightweight, unannotated tag.
 </dl>
 <p> Create a topic branch and develop.</p>
 <dl>
 <dd>
-<dl>
+</dd><dl>
 <dd>
 <pre>$ git switch -c alsa-audio <code>(1)</code>
 $ edit/compile/test
@@ -77,7 +77,7 @@ $ git switch master <code>(8)</code>
 $ git merge alsa-audio <code>(9)</code>
 $ git log --since='3 days ago' <code>(10)</code>
 $ git log v2.43.. curses/ <code>(11)</code></pre>
-</dl>
+</dd></dl>
 <p> <code>1. </code>create a new topic branch.<br />
  <code>2. </code>revert your botched changes in <code>curses/ux_audio_oss.c</code>.<br />
  <code>3. </code>you need to tell Git if you added a new file; removal and modification will be caught if you do <code>git commit -a</code> later.<br />
@@ -93,22 +93,22 @@ $ git log v2.43.. curses/ <code>(11)</code></pre>
 <h2>Individual Developer (Participant)</h2>
 <p>A developer working as a participant in a group project needs to learn how to communicate with others, and uses these commands in addition to the ones needed by a standalone developer. </p>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-clone/">git-clone</a></code>(1) from the upstream to prime your local repository.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-clone/">git-clone</a></code>(1) from the upstream to prime your local repository.</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-pull/">git-pull</a></code>(1) and <code><a href="/docs/linux/man/1-git-fetch/">git-fetch</a></code>(1) from &quot;origin&quot; to keep up-to-date with the upstream.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-pull/">git-pull</a></code>(1) and <code><a href="/docs/linux/man/1-git-fetch/">git-fetch</a></code>(1) from &quot;origin&quot; to keep up-to-date with the upstream.</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-push/">git-push</a></code>(1) to shared repository, if you adopt CVS style shared repository workflow.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-push/">git-push</a></code>(1) to shared repository, if you adopt CVS style shared repository workflow.</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-format-patch/">git-format-patch</a></code>(1) to prepare e-mail submission, if you adopt Linux kernel-style public forum workflow.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-format-patch/">git-format-patch</a></code>(1) to prepare e-mail submission, if you adopt Linux kernel-style public forum workflow.</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-send-email/">git-send-email</a></code>(1) to send your e-mail submission without corruption by your MUA.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-send-email/">git-send-email</a></code>(1) to send your e-mail submission without corruption by your MUA.</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-request-pull/">git-request-pull</a></code>(1) to create a summary of changes for your upstream to pull.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-request-pull/">git-request-pull</a></code>(1) to create a summary of changes for your upstream to pull.</dd></dl>
 <h3>Examples</h3>
 <p>Clone the upstream and work on it. Feed changes to upstream.</p>
 <dl>
 <dd>
-<dl>
+</dd><dl>
 <dd>
 <pre>$ git clone <a href="git://git.kernel.org/pub/scm/.../torvalds/linux-2.6">git://git.kernel.org/pub/scm/.../torvalds/linux-2.6</a> my2.6
 $ cd my2.6
@@ -123,7 +123,7 @@ $ git ls-remote --heads <a rel="nofollow" href="http://git.kernel.org/.../jgarzi
 $ git pull <a href="git://git.kernel.org/pub/.../jgarzik/libata-dev.git">git://git.kernel.org/pub/.../jgarzik/libata-dev.git</a> ALL <code>(9)</code>
 $ git reset --hard ORIG_HEAD <code>(10)</code>
 $ git gc <code>(11)</code></pre>
-</dl>
+</dd></dl>
 <p> <code>1. </code>checkout a new branch <code>mine</code> from master.<br />
  <code>2. </code>repeat as needed.<br />
  <code>3. </code>extract patches from your branch, relative to master,<br />
@@ -139,7 +139,7 @@ $ git gc <code>(11)</code></pre>
 <p> Push into another repository.</p>
 <dl>
 <dd>
-<dl>
+</dd><dl>
 <dd>
 <pre>satellite$ git clone mothership:frotz frotz <code>(1)</code>
 satellite$ cd frotz
@@ -155,7 +155,7 @@ satellite$ git push origin <code>(4)</code>
 mothership$ cd frotz
 mothership$ git switch master
 mothership$ git merge satellite/master <code>(5)</code></pre>
-</dl>
+</dd></dl>
 <p> <code>1. </code>mothership machine has a frotz repository under your home directory; clone from it to start a repository on the satellite machine.<br />
  <code>2. </code>clone sets these configuration variables by default. It arranges <code>git pull</code> to fetch and store the branches of mothership machine to local <code>remotes/origin/*</code> remote-tracking branches.<br />
  <code>3. </code>arrange <code>git push</code> to push all local branches to their corresponding branch of the mothership machine.<br />
@@ -165,13 +165,13 @@ mothership$ git merge satellite/master <code>(5)</code></pre>
 <p> Branch off of a specific tag.</p>
 <dl>
 <dd>
-<dl>
+</dd><dl>
 <dd>
 <pre>$ git switch -c private2.6.14 v2.6.14 <code>(1)</code>
 $ edit/compile/test; git commit -a
 $ git checkout master
 $ git cherry-pick v2.6.14..private2.6.14 <code>(2)</code></pre>
-</dl>
+</dd></dl>
 <p> <code>1. </code>create a private branch based on a well known (but somewhat behind) tag.<br />
  <code>2. </code>forward port all changes in <code>private2.6.14</code> branch to <code>master</code> branch without a formal &quot;merging&quot;. Or longhand </p>
 <p> <code>git format-patch -k -m &#8211;stdout v2.6.14..private2.6.14 | git am -3 -k</code>
@@ -181,20 +181,20 @@ $ git cherry-pick v2.6.14..private2.6.14 <code>(2)</code></pre>
 <p>A fairly central person acting as the integrator in a group project receives changes made by others, reviews and integrates them and publishes the result for others to use, using these commands in addition to the ones needed by participants. </p>
 <p> This section can also be used by those who respond to <code>git request-pull</code> or pull-request on GitHub (<a rel="nofollow" href="http://www.github.com">www.github.com</a>) to integrate the work of others into their history. A sub-area lieutenant for a repository will act both as a participant and as an integrator. </p>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-am/">git-am</a></code>(1) to apply patches e-mailed in from your contributors.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-am/">git-am</a></code>(1) to apply patches e-mailed in from your contributors.</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-pull/">git-pull</a></code>(1) to merge from your trusted lieutenants.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-pull/">git-pull</a></code>(1) to merge from your trusted lieutenants.</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-format-patch/">git-format-patch</a></code>(1) to prepare and send suggested alternative to contributors.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-format-patch/">git-format-patch</a></code>(1) to prepare and send suggested alternative to contributors.</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-revert/">git-revert</a></code>(1) to undo botched commits.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-revert/">git-revert</a></code>(1) to undo botched commits.</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-push/">git-push</a></code>(1) to publish the bleeding edge.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-push/">git-push</a></code>(1) to publish the bleeding edge.</dd></dl>
 <h3>Examples</h3>
 <p>A typical integrator&#8217;s Git day.</p>
 <dl>
 <dd>
-<dl>
+</dd><dl>
 <dd>
 <pre>$ git status <code>(1)</code>
 $ git branch --no-merged master <code>(2)</code>
@@ -218,7 +218,7 @@ $ git fetch ko &amp;&amp; for branch in master maint next seen <code>(11)</code>
  git show-branch ko/$branch $branch <code>(12)</code>
  done
 $ git push --follow-tags ko <code>(13)</code></pre>
-</dl>
+</dd></dl>
 <p> <code>1. </code>see what you were in the middle of doing, if anything.<br />
  <code>2. </code>see which branches haven&#8217;t been merged into <code>master</code> yet. Likewise for any other integration branches e.g. <code>maint</code>, <code>next</code> and <code>seen</code>.<br />
  <code>3. </code>read mails, save ones that are applicable, and save others that are not quite ready (other mail readers are available).<br />
@@ -244,45 +244,45 @@ $ git push --follow-tags ko <code>(13)</code></pre>
  push = refs/heads/next
  push = +refs/heads/seen
  push = refs/heads/maint</pre>
-</dl>
+</dd></dl>
 <h2>Repository Administration</h2>
 <p>A repository administrator uses the following tools to set up and maintain access to the repository by developers. </p>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-daemon/">git-daemon</a></code>(1) to allow anonymous download from repository.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-daemon/">git-daemon</a></code>(1) to allow anonymous download from repository.</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-shell/">git-shell</a></code>(1) can be used as a <i>restricted login shell</i> for shared central repository users.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-shell/">git-shell</a></code>(1) can be used as a <i>restricted login shell</i> for shared central repository users.</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-git-http-backend/">git-http-backend</a></code>(1) provides a server side implementation of Git-over-HTTP (&quot;Smart http&quot;) allowing both fetch and push services.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-git-http-backend/">git-http-backend</a></code>(1) provides a server side implementation of Git-over-HTTP (&quot;Smart http&quot;) allowing both fetch and push services.</dd></dl>
 <dl>
-<dd>&bull; <code><a href="/docs/linux/man/1-gitweb/">gitweb</a></code>(1) provides a web front-end to Git repositories, which can be set-up using the <code><a href="/docs/linux/man/1-git-instaweb/">git-instaweb</a></code>(1) script.</dl>
+<dd>&bull; <code><a href="/docs/linux/man/1-gitweb/">gitweb</a></code>(1) provides a web front-end to Git repositories, which can be set-up using the <code><a href="/docs/linux/man/1-git-instaweb/">git-instaweb</a></code>(1) script.</dd></dl>
 <p> m[blue]<code>update hook howto</code>m[]<font SIZE="-2">[1]</font> has a good example of managing a shared central repository. </p>
 <p> In addition there are a number of other widely deployed hosting, browsing and reviewing solutions such as: </p>
 <dl>
-<dd>&bull; gitolite, gerrit code review, cgit and others.</dl>
+<dd>&bull; gitolite, gerrit code review, cgit and others.</dd></dl>
 <h3>Examples</h3>
 <p>We assume the following in /etc/services</p>
 <dl>
 <dd>
-<dl>
+</dd><dl>
 <dd>
 <pre>$ grep 9418 /etc/services
 git 9418/tcp # Git Version Control System</pre>
-</dl>
+</dd></dl>
 </dl>
 <p> Run git-daemon to serve /pub/scm from inetd.</p>
 <dl>
 <dd>
-<dl>
+</dd><dl>
 <dd>
 <pre>$ grep git /etc/inetd.conf
 git stream tcp nowait nobody \
  /usr/bin/git-daemon git-daemon --inetd --export-all /pub/scm</pre>
-</dl>
+</dd></dl>
 <p> The actual configuration line should be on one line.</dl>
 <p> Run git-daemon to serve /pub/scm from xinetd.</p>
 <dl>
 <dd>
-<dl>
+</dd><dl>
 <dd>
 <pre>$ cat /etc/xinetd.d/git-daemon
 # default: off
@@ -299,11 +299,11 @@ service git
  server_args = --inetd --export-all --base-path=/pub/scm
  log_on_failure += USERID
 }</pre>
-</dl>
+</dd></dl>
 <p> Check your <a href="/docs/linux/man/8-xinetd/">xinetd</a>(8) documentation and setup, this is from a Fedora system. Others might be different.</dl>
 <p> Give push/pull only access to developers using git-over-ssh.</p>
 <dl>
-<dd>e.g. those using: <code>$ git push/pull <a href="ssh://host.xz/pub/scm/project">ssh://host.xz/pub/scm/project</a></code> </p>
+<dd>e.g. those using: <code>$ git push/pull <a href="ssh://host.xz/pub/scm/project">ssh://host.xz/pub/scm/project</a></code> </dd>
 <dl>
 <dd>
 <pre>$ grep git /etc/passwd <code>(1)</code>
@@ -313,14 +313,14 @@ cindy:x:1002:1002::/home/cindy:/usr/bin/git-shell
 david:x:1003:1003::/home/david:/usr/bin/git-shell
 $ grep git /etc/shells <code>(2)</code>
 /usr/bin/git-shell</pre>
-</dl>
+</dd></dl>
 <p> <code>1. </code>log-in shell is set to /usr/bin/git-shell, which does not allow anything but <code>git push</code> and <code>git pull</code>. The users require ssh access to the machine.<br />
  <code>2. </code>in many distributions /etc/shells needs to list what is used as the login shell.
 </dl>
 <p> CVS-style shared repository.</p>
 <dl>
 <dd>
-<dl>
+</dd><dl>
 <dd>
 <pre>$ grep git /etc/group <code>(1)</code>
 git:x:9418:alice,bob,cindy,david
@@ -342,7 +342,7 @@ $ cat info/allowed-users <code>(4)</code>
 refs/heads/master alice\|cindy
 refs/heads/doc-update bob
 refs/tags/v[0-9]* david</pre>
-</dl>
+</dd></dl>
 <p> <code>1. </code>place the developers into the same git group.<br />
  <code>2. </code>and make the shared repository writable by the group.<br />
  <code>3. </code>use update-hook example by Carl from Documentation/howto/ for branch policy control.<br />
@@ -352,7 +352,8 @@ refs/tags/v[0-9]* david</pre>
 <p>Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>update hook howto</p>
+<dt> 1.</dt>
+<dd>update hook howto</dd>
 <dl>
-<dd>file:///usr/share/doc/git/html/howto/update-hook-example.html</dl>
+<dd>file:///usr/share/doc/git/html/howto/update-hook-example.html</dd></dl>
+</dl>

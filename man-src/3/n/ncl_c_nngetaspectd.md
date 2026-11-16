@@ -11,13 +11,13 @@ c_nngetaspectd - retrieve a double precision aspect at a specified coordinate.
 <h2>Function Prototype</h2>void c_nngetaspectd(int, int, double *, int *);
 <h2>Synopsis</h2>c_nngetaspectd (row, column, aspect, ier);
 <h2>Description</h2><dl COMPACT><dt>row
-<dd>A subscript indexing the first dimensioned variable in the 2D grid array returned from the most recent call to c_natgridd.
-<dt>column
-<dd>A subscript indexing the second dimensioned variable in the 2D grid array returned from the most recent call to c_natgridd.
-<dt>aspect
-<dd>*aspect is the aspect at the grid point z[i,j], where z is the output grid in the most recent call to c_natgridd.
-<dt>ier
-<dd>An error value. If *ier is 0, then no errors were detected. If *ier is non-zero, then refer to the man page for natgrid_errors for details.</dl><h2>Usage</h2>This routine allows you to retrieve the current value of Natgrid parameters. For a complete list of parameters available in this utility, see the natgrid_params man page.
+</dt><dd>A subscript indexing the first dimensioned variable in the 2D grid array returned from the most recent call to c_natgridd.
+</dd><dt>column
+</dt><dd>A subscript indexing the second dimensioned variable in the 2D grid array returned from the most recent call to c_natgridd.
+</dd><dt>aspect
+</dt><dd>*aspect is the aspect at the grid point z[i,j], where z is the output grid in the most recent call to c_natgridd.
+</dd><dt>ier
+</dt><dd>An error value. If *ier is 0, then no errors were detected. If *ier is non-zero, then refer to the man page for natgrid_errors for details.</dd></dl><h2>Usage</h2>This routine allows you to retrieve the current value of Natgrid parameters. For a complete list of parameters available in this utility, see the natgrid_params man page.
 <h2>Access</h2>To use c_nngetaspectd, load the NCAR Graphics library ngmath.
 <h2>See Also</h2>natgrid, natgrid_params, c_natgridd, c_nngetsloped. 
 

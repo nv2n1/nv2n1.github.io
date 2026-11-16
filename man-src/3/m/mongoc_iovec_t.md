@@ -27,6 +27,6 @@ typedef struct iovec mongoc_iovec_t;
 <p>The <code>mongoc_iovec_t</code> structure is a portability abstraction for consumers of the <code>mongoc_stream_t</code> interfaces. It allows for scatter/gather I/O through the socket subsystem. </p>
 <p> <code>NOTE</code></p>
 <dl COMPACT>
-<dd>When writing portable code, beware of the ordering of <code>iov_len</code> and <code>iov_base</code> as they are different on various platforms. Therefore, you should not use C initializers for initialization.</dl>
+<dd>When writing portable code, beware of the ordering of <code>iov_len</code> and <code>iov_base</code> as they are different on various platforms. Therefore, you should not use C initializers for initialization.</dd></dl>
 <h2>Colophon</h2>
 <p>This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>

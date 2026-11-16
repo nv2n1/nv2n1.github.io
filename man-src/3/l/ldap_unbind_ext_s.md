@@ -16,45 +16,36 @@ description: "ldap_bind, ldap_bind_s, ldap_simple_bind, ldap_simple_bind_s, ldap
 #include &lt;ldap.h&gt;
 int ldap_bind(LDAP *ld, const char *who, const char *cred,
               int method);
-
 int ldap_bind_s(LDAP *ld, const char *who, const char *cred,
                 int method);
-
 int ldap_simple_bind(LDAP *ld, const char *who, const char *passwd);
 int ldap_simple_bind_s(LDAP *ld, const char *who, const char *passwd);
 int ldap_sasl_bind(LDAP *ld, const char *dn, const char *mechanism,
                    struct berval *cred, LDAPControl *sctrls[],
                    LDAPControl *cctrls[], int *msgidp);
-
 int ldap_sasl_bind_s(LDAP *ld, const char *dn, const char *mechanism,
                      struct berval *cred, LDAPControl *sctrls[],
                      LDAPControl *cctrls[], struct berval **servercredp);
-
 int ldap_parse_sasl_bind_result(LDAP *ld, LDAPMessage *res,
                                 struct berval **servercredp, int freeit);
-
 int ldap_sasl_interactive_bind_s(LDAP *ld, const char *dn,
                                  const char *mechs,
                                  LDAPControl *sctrls[], LDAPControl *cctrls[],
                                  unsigned flags, LDAP_SASL_INTERACT_PROC *interact,
                                  void *defaults);
-
 int ldap_sasl_interactive_bind(LDAP *ld, const char *dn,
                                const char *mechs,
                                LDAPControl *sctrls[], LDAPControl *cctrls[],
                                unsigned flags, LDAP_SASL_INTERACT_PROC *interact,
                                void *defaults, LDAPMessage *result,
                                const char **rmechp, int *msgidp);
-
 int(LDAP_SASL_INTERACT_PROC)(LDAP *ld, unsigned flags, void *defaults, void *sasl_interact);
 int ldap_unbind(LDAP *ld);
 int ldap_unbind_s(LDAP *ld);
 int ldap_unbind_ext(LDAP *ld, LDAPControl *sctrls[],
                     LDAPControl *cctrls[]);
-
 int ldap_unbind_ext_s(LDAP *ld, LDAPControl *sctrls[],
                       LDAPControl *cctrls[]);
-
 int ldap_set_rebind_proc(LDAP *ld, LDAP_REBIND_PROC *ldap_proc, void *params);
 int(LDAP_REBIND_PROC)(LDAP *ld, LDAP_CONST char *url, ber_tag_t request, ber_int_t msgid, void *params);
 </code></pre>
@@ -70,28 +61,28 @@ int(LDAP_REBIND_PROC)(LDAP *ld, LDAP_CONST char *url, ber_tag_t request, ber_int
 <p> For SASL binds the server always ignores any provided DN, so the <i>dn</i> parameter should always be NULL. <code>ldap_sasl_bind_s</code>() sends a single SASL bind request with the given SASL <i>mechanism</i> and credentials in the <i>cred</i> parameter. The format of the credentials depends on the particular SASL mechanism in use. For mechanisms that provide mutual authentication the server&#8217;s credentials will be returned in the <i>servercredp</i> parameter. The routine returns an LDAP error indication (see <code><a href="/docs/linux/man/3-ldap_error/">ldap_error</a></code>(3)). The <code>ldap_sasl_bind</code>() call is asynchronous, taking the same parameters but only sending the request and returning the message id of the request it sent. The result of the operation can be obtained by a subsequent call to <code><a href="/docs/linux/man/3-ldap_result/">ldap_result</a></code>(3). The result must be additionally parsed by <code>ldap_parse_sasl_bind_result</code>() to obtain any server credentials sent from the server. </p>
 <p> Many SASL mechanisms require multiple message exchanges to perform a complete authentication. Applications should generally use <code>ldap_sasl_interactive_bind_s</code>() rather than calling the basic <code>ldap_sasl_bind</code>() functions directly. The <i>mechs</i> parameter should contain a space-separated list of candidate mechanisms to use. If this parameter is NULL or empty the library will query the supportedSASLMechanisms attribute from the server&#8217;s rootDSE for the list of SASL mechanisms the server supports. The <i>flags</i> parameter controls the interaction used to retrieve any necessary SASL authentication parameters and should be one of:</p>
 <dl>
-<dt>LDAP_SASL_AUTOMATIC</p>
-<dd> use defaults if available, prompt otherwise</p>
-<dt>LDAP_SASL_INTERACTIVE</p>
-<dd> always prompt</p>
-<dt>LDAP_SASL_QUIET</p>
-<dd> never prompt</dl>
+<dt>LDAP_SASL_AUTOMATIC</dt>
+<dd> use defaults if available, prompt otherwise</dd>
+<dt>LDAP_SASL_INTERACTIVE</dt>
+<dd> always prompt</dd>
+<dt>LDAP_SASL_QUIET</dt>
+<dd> never prompt</dd></dl>
 <p> The <i>interact</i> function uses the provided <i>defaults</i> to handle requests from the SASL library for particular authentication parameters. There is no defined format for the <i>defaults</i> information; it is up to the caller to use whatever format is appropriate for the supplied <i>interact</i> function. The <i>sasl_interact</i> parameter comes from the underlying SASL library. When used with Cyrus SASL this is an array of <code>sasl_interact_t</code> structures. The Cyrus SASL library will prompt for a variety of inputs, including:</p>
 <dl>
-<dt>SASL_CB_GETREALM</p>
-<dd> the realm for the authentication attempt</p>
-<dt>SASL_CB_AUTHNAME</p>
-<dd> the username to authenticate</p>
-<dt>SASL_CB_PASS</p>
-<dd> the password for the provided username</p>
-<dt>SASL_CB_USER</p>
-<dd> the username to use for proxy authorization</p>
-<dt>SASL_CB_NOECHOPROMPT</p>
-<dd> generic prompt for input with input echoing disabled</p>
-<dt>SASL_CB_ECHOPROMPT</p>
-<dd> generic prompt for input with input echoing enabled</p>
-<dt>SASL_CB_LIST_END</p>
-<dd> indicates the end of the array of prompts</dl>
+<dt>SASL_CB_GETREALM</dt>
+<dd> the realm for the authentication attempt</dd>
+<dt>SASL_CB_AUTHNAME</dt>
+<dd> the username to authenticate</dd>
+<dt>SASL_CB_PASS</dt>
+<dd> the password for the provided username</dd>
+<dt>SASL_CB_USER</dt>
+<dd> the username to use for proxy authorization</dd>
+<dt>SASL_CB_NOECHOPROMPT</dt>
+<dd> generic prompt for input with input echoing disabled</dd>
+<dt>SASL_CB_ECHOPROMPT</dt>
+<dd> generic prompt for input with input echoing enabled</dd>
+<dt>SASL_CB_LIST_END</dt>
+<dd> indicates the end of the array of prompts</dd></dl>
 <p> See the Cyrus SASL documentation for more details. </p>
 <p> Applications which need to manage connections asynchronously may use <code>ldap_sasl_interactive_bind</code>() instead of the synchronous version. A valid mechs parameter must be supplied, otherwise the library will be forced to query the server for a list of supported mechanisms, and this query will be performed synchronously. The other parameters are the same as for the synchronous function, with three additional parameters. The actual SASL mechanism that was used, and the message ID for use with <code>ldap_result</code>() will be returned in rmechp and msgidp, respectively. The value in rmechp must not be modified by the caller and must be passed back on each subsequent call. The message obtained from <code>ldap_result</code>() must be passed in the result parameter. This parameter must be NULL when initiating a new Bind. The caller must free the result message after each call using <code>ldap_msgfree</code>(). The <code>ldap_sasl_interactive_bind</code>() function returns an LDAP result code. If the code is LDAP_SASL_BIND_IN_PROGRESS then the Bind is not complete yet, and this function must be called again with the next result from the server.</p>
 <h2>REBINDING</h2>

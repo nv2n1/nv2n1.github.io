@@ -69,7 +69,7 @@ description: "Ecore_Fb.h – Ecore frame buffer system functions."
 <p> FIXME: To be fixed. </p>
 <p> <code>Todo</code></p>
 <dl COMPACT>
-<dd>Documentation: Find out what this does.</dl>
+<dd>Documentation: Find out what this does.</dd></dl>
 <p> References ecore_fb_callback_gain_set(). </p>
 <p> Referenced by ecore_evas_fb_new(), and ecore_fb_callback_gain_set().</p>
 <h3>EAPI void ecore_fb_callback_lose_set (void(*)(void *data) func, void * data)</h3>
@@ -77,7 +77,7 @@ description: "Ecore_Fb.h – Ecore frame buffer system functions."
 <p> FIXME: To be fixed. </p>
 <p> <code>Todo</code></p>
 <dl COMPACT>
-<dd>Documentation: Find out what this does.</dl>
+<dd>Documentation: Find out what this does.</dd></dl>
 <p> References ecore_fb_callback_lose_set(). </p>
 <p> Referenced by ecore_evas_fb_new(), and ecore_fb_callback_lose_set().</p>
 <h3>EAPI void ecore_fb_size_get (int * w, int * h)</h3>
@@ -85,6 +85,6 @@ description: "Ecore_Fb.h – Ecore frame buffer system functions."
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>w</i> Pointer to an integer in which to store the width.<br />
- <i>h</i> Pointer to an interge in which to store the height.</dl>
+ <i>h</i> Pointer to an interge in which to store the height.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

@@ -11,39 +11,22 @@ std::reduce - std::reduce
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;numeric&gt;
-
 template&lt;class InputIt&gt;
-
 typename std::iterator_traits&lt;InputIt&gt;::value_type reduce(                (1) (since C++17)
-
 InputIt first, InputIt last);
-
 template&lt;class ExecutionPolicy, class ForwardIt&gt;
-
 typename std::iterator_traits&lt;ForwardIt&gt;::value_type reduce(              (2) (since C++17)
-
 ExecutionPolicy&amp;&amp; policy,
-
 ForwardIt first, ForwardIt last);
-
 template&lt;class InputIt, class T&gt;                                          (3) (since C++17)
-
 T reduce(InputIt first, InputIt last, T init);
-
 template&lt;class ExecutionPolicy, class ForwardIt, class T&gt;
-
 T reduce(ExecutionPolicy&amp;&amp; policy,                                        (4) (since C++17)
-
 ForwardIt first, ForwardIt last, T init);
-
 template&lt;class InputIt, class T, class BinaryOp&gt;                          (5) (since C++17)
-
 T reduce(InputIt first, InputIt last, T init, BinaryOp binary_op);
-
 template&lt;class ExecutionPolicy, class ForwardIt, class T, class BinaryOp&gt;
-
 T reduce(ExecutionPolicy&amp;&amp; policy,                                        (6) (since C++17)
-
 ForwardIt first, ForwardIt last, T init, BinaryOp binary_op);</code></pre> 
 1) same as reduce(first, last, typename std::iterator_traits&lt;InputIt&gt;::value_type{}) 
 3) same as reduce(first, last, init, std::plus&lt;&gt;()) 
@@ -115,16 +98,11 @@ If the range is empty, init is returned, unmodified
 
 side-by-side comparison between reduce and std::accumulate: 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;chrono&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;numeric&gt;
-
 #include &lt;execution&gt;
 int main()
-
 {
     std::vector&lt;double&gt; v(10'000'007, 0.5);
     {

@@ -21,12 +21,12 @@ Link with - ldl.
 <p> The <code>dlinfo</code>() function obtains information about the dynamically loaded object referred to by <i>handle</i> (typically obtained by an earlier call to <code><a href="/docs/linux/man/3-dlopen/">dlopen</a></code>(3) or <code><a href="/docs/linux/man/3-dlmopen/">dlmopen</a></code>(3)). The <i>request</i> argument specifies which information is to be returned. The <i>info</i> argument is a pointer to a buffer used to store information returned by the call; the type of this argument depends on <i>request</i>. </p>
 <p> The following values are supported for <i>request</i> (with the corresponding type for <i>info</i> shown in parentheses):</p>
 <dl>
-<dt><code>RTLD_DI_LMID</code> (<i>Lmid_t *</i>)</p>
-<dd> Obtain the ID of the link-map list (namespace) in which <i>handle</i> is loaded.</p>
-<dt><code>RTLD_DI_LINKMAP</code> (<i>struct link_map **</i>)</p>
-<dd> Obtain a pointer to the <i>link_map</i> structure corresponding to <i>handle</i>. The <i>info</i> argument points to a pointer to a <i>link_map</i> structure, defined in <i>&lt;link.h&gt;</i> as:</p>
+<dt><code>RTLD_DI_LMID</code> (<i>Lmid_t *</i>)</dt>
+<dd> Obtain the ID of the link-map list (namespace) in which <i>handle</i> is loaded.</dd>
+<dt><code>RTLD_DI_LINKMAP</code> (<i>struct link_map **</i>)</dt>
+<dd> Obtain a pointer to the <i>link_map</i> structure corresponding to <i>handle</i>. The <i>info</i> argument points to a pointer to a <i>link_map</i> structure, defined in <i>&lt;link.h&gt;</i> as:</dd>
 <dt>
-<dd> struct link_map {<br />
+</dt><dd> struct link_map {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ElfW(Addr)&nbsp;l_addr;&nbsp;<wbr>&nbsp;/*&nbsp;Difference between the<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;address in the ELF file and<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;the address in memory&nbsp;*/<br />
@@ -35,52 +35,50 @@ Link with - ldl.
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ElfW(Dyn)&nbsp;*l_ld;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Dynamic section of the<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;shared object&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct link_map&nbsp;*l_next,&nbsp;*l_prev;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Chain of loaded objects&nbsp;*/ </p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Chain of loaded objects&nbsp;*/ </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Plus additional fields private to the<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;implementation&nbsp;*/ };</p>
-<dt><code>RTLD_DI_ORIGIN</code> (<i>char *</i>)</p>
-<dd> Copy the pathname of the origin of the shared object corresponding to <i>handle</i> to the location pointed to by <i>info</i>.</p>
-<dt><code>RTLD_DI_SERINFO</code> (<i>Dl_serinfo *</i>)</p>
-<dd> Obtain the library search paths for the shared object referred to by <i>handle</i>. The <i>info</i> argument is a pointer to a <i>Dl_serinfo</i> that contains the search paths. Because the number of search paths may vary, the size of the structure pointed to by <i>info</i> can vary. The <code>RTLD_DI_SERINFOSIZE</code> request described below allows applications to size the buffer suitably. The caller must perform the following steps:</p>
+<dt><code>RTLD_DI_ORIGIN</code> (<i>char *</i>)</dt>
+<dd> Copy the pathname of the origin of the shared object corresponding to <i>handle</i> to the location pointed to by <i>info</i>.</dd>
+<dt><code>RTLD_DI_SERINFO</code> (<i>Dl_serinfo *</i>)</dt>
+<dd> Obtain the library search paths for the shared object referred to by <i>handle</i>. The <i>info</i> argument is a pointer to a <i>Dl_serinfo</i> that contains the search paths. Because the number of search paths may vary, the size of the structure pointed to by <i>info</i> can vary. The <code>RTLD_DI_SERINFOSIZE</code> request described below allows applications to size the buffer suitably. The caller must perform the following steps:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>1.</p>
-<dd> Use a <code>RTLD_DI_SERINFOSIZE</code> request to populate a <i>Dl_serinfo</i> structure with the size (<i>dls_size</i>) of the structure needed for the subsequent <code>RTLD_DI_SERINFO</code> request.</p>
-<dt>2.</p>
-<dd> Allocate a <i>Dl_serinfo</i> buffer of the correct size (<i>dls_size</i>).</p>
-<dt>3.</p>
-<dd> Use a further <code>RTLD_DI_SERINFOSIZE</code> request to populate the <i>dls_size</i> and <i>dls_cnt</i> fields of the buffer allocated in the previous step.</p>
-<dt>4.</p>
-<dd> Use a <code>RTLD_DI_SERINFO</code> to obtain the library search paths.</dl>
+<dt>1.</dt>
+<dd> Use a <code>RTLD_DI_SERINFOSIZE</code> request to populate a <i>Dl_serinfo</i> structure with the size (<i>dls_size</i>) of the structure needed for the subsequent <code>RTLD_DI_SERINFO</code> request.</dd>
+<dt>2.</dt>
+<dd> Allocate a <i>Dl_serinfo</i> buffer of the correct size (<i>dls_size</i>).</dd>
+<dt>3.</dt>
+<dd> Use a further <code>RTLD_DI_SERINFOSIZE</code> request to populate the <i>dls_size</i> and <i>dls_cnt</i> fields of the buffer allocated in the previous step.</dd>
+<dt>4.</dt>
+<dd> Use a <code>RTLD_DI_SERINFO</code> to obtain the library search paths.</dd></dl>
 </dl>
 <dt>
-<dd> The <i>Dl_serinfo</i> structure is defined as follows:</p>
+</dt><dd> The <i>Dl_serinfo</i> structure is defined as follows:</dd>
 <dt>
-<dd> typedef struct {<br />
+</dt><dd> typedef struct {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;size_t dls_size;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Size in bytes of<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;the whole buffer&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int dls_cnt;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Number of elements<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;in&nbsp;&#8216;dls_serpath&#8217;&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Dl_serpath dls_serpath[1];&nbsp;/*&nbsp;Actually longer,<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8216;dls_cnt&#8217;&nbsp;elements&nbsp;*/ } Dl_serinfo;</p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&#8216;dls_cnt&#8217;&nbsp;elements&nbsp;*/ } Dl_serinfo;</dd>
 <dt>
-<dd> Each of the <i>dls_serpath</i> elements in the above structure is a structure of the following form:</p>
+</dt><dd> Each of the <i>dls_serpath</i> elements in the above structure is a structure of the following form:</dd>
 <dt>
-<dd> typedef struct {<br />
+</dt><dd> typedef struct {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;*dls_name;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Name of library search<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;path directory&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned int dls_flags;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Indicates where this<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;directory came from&nbsp;*/ } Dl_serpath;</p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;directory came from&nbsp;*/ } Dl_serpath;</dd>
 <dt>
-<dd> The <i>dls_flags</i> field is currently unused, and always contains zero.</p>
-<dt><code>RTLD_DI_SERINFOSIZE</code> (<i>Dl_serinfo *</i>)</p>
-<dd> Populate the <i>dls_size</i> and <i>dls_cnt</i> fields of the <i>Dl_serinfo</i> structure pointed to by <i>info</i> with values suitable for allocating a buffer for use in a subsequent <code>RTLD_DI_SERINFO</code> request.</p>
-<dt><code>RTLD_DI_TLS_MODID</code> (<i>size_t *</i>, since glibc 2.4)</p>
-<dd> Obtain the module ID of this shared object&#8217;s TLS (thread-local storage) segment, as used in TLS relocations. If this object does not define a TLS segment, zero is placed in <i>*info</i>.</p>
-<dt><code>RTLD_DI_TLS_DATA</code> (<i>void **</i>, since glibc 2.4)</p>
-<dd> Obtain a pointer to the calling thread&#8217;s TLS block corresponding to this shared object&#8217;s TLS segment. If this object does not define a PT_TLS segment, or if the calling thread has not allocated a block for it, NULL is placed in <i>*info</i>.</dl>
+</dt><dd> The <i>dls_flags</i> field is currently unused, and always contains zero.</dd>
+<dt><code>RTLD_DI_SERINFOSIZE</code> (<i>Dl_serinfo *</i>)</dt>
+<dd> Populate the <i>dls_size</i> and <i>dls_cnt</i> fields of the <i>Dl_serinfo</i> structure pointed to by <i>info</i> with values suitable for allocating a buffer for use in a subsequent <code>RTLD_DI_SERINFO</code> request.</dd>
+<dt><code>RTLD_DI_TLS_MODID</code> (<i>size_t *</i>, since glibc 2.4)</dt>
+<dd> Obtain the module ID of this shared object&#8217;s TLS (thread-local storage) segment, as used in TLS relocations. If this object does not define a TLS segment, zero is placed in <i>*info</i>.</dd>
+<dt><code>RTLD_DI_TLS_DATA</code> (<i>void **</i>, since glibc 2.4)</dt>
+<dd> Obtain a pointer to the calling thread&#8217;s TLS block corresponding to this shared object&#8217;s TLS segment. If this object does not define a PT_TLS segment, or if the calling thread has not allocated a block for it, NULL is placed in <i>*info</i>.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> On success, <code>dlinfo</code>() returns 0. On failure, it returns -1; the cause of the error can be diagnosed using <code><a href="/docs/linux/man/3-dlerror/">dlerror</a></code>(3).</p>
 <h2>VERSIONS</h2>

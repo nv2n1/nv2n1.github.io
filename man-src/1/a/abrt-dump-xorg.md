@@ -30,43 +30,43 @@ url: "/docs/linux/man/1-abrt-dump-xorg/"
  -v, --verbose
 <dl>
 <dt>
-<dd> Be more verbose. Can be given multiple times.</dl>
+</dt><dd> Be more verbose. Can be given multiple times.</dd></dl>
  
 
  -s
 <dl>
 <dt>
-<dd> Log to syslog</dl>
+</dt><dd> Log to syslog</dd></dl>
  
 
  -o
 <dl>
 <dt>
-<dd> Print found crash data on standard output</dl>
+</dt><dd> Print found crash data on standard output</dd></dl>
  
 
  -d DIR
 <dl>
 <dt>
-<dd> Create new problem directory in DIR for every crash found</dl>
+</dt><dd> Create new problem directory in DIR for every crash found</dd></dl>
  
 
  -D
 <dl>
 <dt>
-<dd> Same as -d DumpLocation, DumpLocation is specified in abrt.conf</dl>
+</dt><dd> Same as -d DumpLocation, DumpLocation is specified in abrt.conf</dd></dl>
  
 
  -x
 <dl>
 <dt>
-<dd> Make the problem directory world readable. Usable only with -d/-D</dl>
+</dt><dd> Make the problem directory world readable. Usable only with -d/-D</dd></dl>
  
 
  -m
 <dl>
 <dt>
-<dd> Print search string(s) for <i>abrt-watch-log</i> to stdout and exit</dl>
+</dt><dd> Print search string(s) for <i>abrt-watch-log</i> to stdout and exit</dd></dl>
 
 <h2>SEE ALSO</h2>
 
@@ -80,7 +80,7 @@ url: "/docs/linux/man/1-abrt-dump-xorg/"
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

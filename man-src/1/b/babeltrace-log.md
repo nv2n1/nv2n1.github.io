@@ -17,13 +17,12 @@ babeltrace-log [OPTIONS] OUTPUT
 <p> Convert for a text log (read from standard input) to CTF. </p>
 <p> This program follow the usual GNU command line syntax with long options starting with two dashes. Below is a summary of the available options. </p>
 <dl>
-<dt><code>OUTPUT</code></p>
-<dd> Output trace path</p>
-<dt><code>-t</code></p>
+<dt><code>OUTPUT</code></dt>
+<dd> Output trace path</dd>
+<dt><code>-t</code></dt>
 <dd> With timestamps (format: [sec.usec] string
-)</p>
-<dt>
-<dd></dl>
+)</dd>
+</dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-babeltrace/">babeltrace</a>(1), <a href="/docs/linux/man/1-lttng/">lttng</a>(1), <a href="/docs/linux/man/3-lttng-ust/">lttng-ust</a>(3), <a href="/docs/linux/man/8-lttng-sessiond/">lttng-sessiond</a>(8) </p>
 <h2>BUGS</h2>

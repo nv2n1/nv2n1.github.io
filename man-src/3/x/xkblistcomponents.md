@@ -11,18 +11,18 @@ description: "XkbListComponents – List of components for one or more component
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>XkbComponentListPtr XkbListComponents</code> <code>(Display *</code><i>dpy</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>,</code> <code>XkbComponentNamesPtr </code><i>ptrns</i><code>,</code> <code>int *</code><i>max_inout</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; dpy</i></p>
+<dt><i>&#8211; dpy</i></dt>
 <dd>
-<dd>connection to X server</p>
-<dt><i>&#8211; device_spec</i></p>
-<dd>device ID, or XkbUseCoreKbd</p>
-<dt><i>&#8211; ptrns</i></p>
-<dd>namelist for components of interest</p>
-<dt><i>&#8211; max_inout</i></p>
-<dd>max # returned names, # left over</dl>
+</dd><dd>connection to X server</dd>
+<dt><i>&#8211; device_spec</i></dt>
+<dd>device ID, or XkbUseCoreKbd</dd>
+<dt><i>&#8211; ptrns</i></dt>
+<dd>namelist for components of interest</dd>
+<dt><i>&#8211; max_inout</i></dt>
+<dd>max # returned names, # left over</dd></dl>
 <h2>Description</h2>
 <p>You may ask the server for a list of components for one or more component types. The request takes the form of a set of patterns, one pattern for each of the component types, including a pattern for the complete keyboard description. To obtain this list, use <i>XkbListComponents.</i> </p>
 <p> <i>XkbListComponents </i> queries the server for a list of component names matching the patterns specified in <i>ptrns. </i> It waits for a reply and returns the matching component names in an XkbComponentListRec structure. When you are done using the structure, you should free it using <i>XkbFreeComponentList. device_spec </i> indicates a particular device in which the caller is interested. A server is allowed (but not required) to restrict its reply to portions of the database that are relevant for that particular device. </p>
@@ -57,7 +57,6 @@ description: "XkbListComponents – List of components for one or more component
  XkbComponentNamePtr symbols; /* symbol names */
  XkbComponentNamePtr geometry; /* geometry names */
  } XkbComponentListRec, *XkbComponentListPtr;
- 
  typedef struct _XkbComponentName {
  unsigned short flags; /* hints regarding component name */
  char * name; /* name of component */

@@ -11,10 +11,10 @@ description: "voms-proxy-destroy – destroys a VOMS proxy"
 <p> voms-proxy-destroy &#8211; destroys a VOMS proxy</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>voms-proxy-destroy</code> [options] </p>
+<dt> <code>voms-proxy-destroy</code> [options] </dt>
 </dl>
 <h2>DESCRIPTION</h2>
-<dd>The voms-proxy-destroy is intended to be used after a proxy is no longer useful, to destroy it </p>
+<dd>The voms-proxy-destroy is intended to be used after a proxy is no longer useful, to destroy it </dd>
 <h2>OPTIONS</h2>
 <p> Options may be specified indifferently with either a &quot;-&quot; or &quot;&#8211;&quot; prefix. The options from -help to -out are present for compatibility with grid-proxy-init, and have the exact same meaning. The meaning of the other ones is the following. </p>
 <p> <code>-help</code> Displays usage </p>

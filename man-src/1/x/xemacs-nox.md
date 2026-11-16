@@ -24,111 +24,111 @@ description: "xemacs – Emacs: The Next Generation"
 <p> <font SIZE="-1">XEmacs Options</font> </p>
 <p> XEmacs accepts all standard X Toolkit command line options when run in an X Windows environment. In addition, the following options are accepted (when options imply a sequence of actions to perform, they are performed in the order encountered):</p>
 <dl>
-<dt><code>-t</code><i> file</i></p>
-<dd> Use specified <i>file</i> as the terminal instead of using stdin/stdout. This implies <code>-nw</code>.</p>
-<dt><code>-batch</code></p>
-<dd> Edit in batch mode. The editor will send messages to stdout. You must use the <code>-l</code>, <code>-f</code>, and <code>-eval</code> options to specify files to execute and functions to call.</p>
-<dt><code>-nw</code></p>
-<dd> Inhibit the use of any window-system-specific display code: use the current TTY.</p>
-<dt><code>-debug-init</code></p>
-<dd> Enter the debugger if an error occurs loading the init file.</p>
-<dt><code>-unmapped</code></p>
-<dd> Do not map the initial frame.</p>
-<dt><code>-no-site-file</code></p>
-<dd> Do not load the site-specific init file (site-start.el).</p>
-<dt><code>-q, -no-init-file</code></p>
-<dd> Do not load an init file.</p>
-<dt><code>-no-early-packages</code></p>
-<dd> Do not process the early packages.</p>
-<dt><code>-vanilla</code></p>
-<dd> Load no extra files at startup. Equivalent to the combination of <code>-q</code>, <code>-no-site-file</code>, and <code>-no-early-packages</code>.</p>
-<dt><code>-u</code><i> user, </i><code>-user</code><i> user</i></p>
-<dd> Load <i>user</i>&#8216;s init file.</p>
-<dt><i>file</i></p>
-<dd> Edit <i>file</i>.</p>
-<dt><code>+</code><i>number</i></p>
-<dd> Go to the line specified by <i>number</i> (do not insert a space between the &quot;+&quot; sign and the number).</p>
-<dt><code>-help</code></p>
-<dd> Print a help message and exit.</p>
-<dt><code>-V, -version,</code></p>
-<dd> Print the version number and exit.</p>
-<dt><code>-f</code><i> function, </i><code>-funcall</code><i> function</i></p>
-<dd> Execute the lisp function <i>function</i>.</p>
-<dt><code>-l</code><i> file, </i><code>-load</code><i> file</i></p>
-<dd> Load the Lisp code in the file <i>file</i>.</p>
-<dt><code>-eval</code><i> form</i></p>
-<dd> Evaluate the Lisp form <i>form</i>.</p>
-<dt><code>-i</code><i> file, </i><code>-insert</code><i> file</i></p>
-<dd> Insert <i>file</i> into the current buffer.</p>
-<dt><code>-kill</code></p>
-<dd> Exit <i>XEmacs</i> (useful with <code>-batch</code>).</dl>
+<dt><code>-t</code><i> file</i></dt>
+<dd> Use specified <i>file</i> as the terminal instead of using stdin/stdout. This implies <code>-nw</code>.</dd>
+<dt><code>-batch</code></dt>
+<dd> Edit in batch mode. The editor will send messages to stdout. You must use the <code>-l</code>, <code>-f</code>, and <code>-eval</code> options to specify files to execute and functions to call.</dd>
+<dt><code>-nw</code></dt>
+<dd> Inhibit the use of any window-system-specific display code: use the current TTY.</dd>
+<dt><code>-debug-init</code></dt>
+<dd> Enter the debugger if an error occurs loading the init file.</dd>
+<dt><code>-unmapped</code></dt>
+<dd> Do not map the initial frame.</dd>
+<dt><code>-no-site-file</code></dt>
+<dd> Do not load the site-specific init file (site-start.el).</dd>
+<dt><code>-q, -no-init-file</code></dt>
+<dd> Do not load an init file.</dd>
+<dt><code>-no-early-packages</code></dt>
+<dd> Do not process the early packages.</dd>
+<dt><code>-vanilla</code></dt>
+<dd> Load no extra files at startup. Equivalent to the combination of <code>-q</code>, <code>-no-site-file</code>, and <code>-no-early-packages</code>.</dd>
+<dt><code>-u</code><i> user, </i><code>-user</code><i> user</i></dt>
+<dd> Load <i>user</i>&#8216;s init file.</dd>
+<dt><i>file</i></dt>
+<dd> Edit <i>file</i>.</dd>
+<dt><code>+</code><i>number</i></dt>
+<dd> Go to the line specified by <i>number</i> (do not insert a space between the &quot;+&quot; sign and the number).</dd>
+<dt><code>-help</code></dt>
+<dd> Print a help message and exit.</dd>
+<dt><code>-V, -version,</code></dt>
+<dd> Print the version number and exit.</dd>
+<dt><code>-f</code><i> function, </i><code>-funcall</code><i> function</i></dt>
+<dd> Execute the lisp function <i>function</i>.</dd>
+<dt><code>-l</code><i> file, </i><code>-load</code><i> file</i></dt>
+<dd> Load the Lisp code in the file <i>file</i>.</dd>
+<dt><code>-eval</code><i> form</i></dt>
+<dd> Evaluate the Lisp form <i>form</i>.</dd>
+<dt><code>-i</code><i> file, </i><code>-insert</code><i> file</i></dt>
+<dd> Insert <i>file</i> into the current buffer.</dd>
+<dt><code>-kill</code></dt>
+<dd> Exit <i>XEmacs</i> (useful with <code>-batch</code>).</dd></dl>
 <p> <font SIZE="-1">Using XEmacs with X Windows</font> </p>
 <p> <i>XEmacs</i> has been tailored to work well with the X window system. If you run <i>XEmacs</i> from under X windows, it will create its own X window to display in. </p>
 <p> <i>XEmacs</i> can be started with the following standard X options:</p>
 <dl>
-<dt><code>-visual</code><i> &lt;visualname&gt;&lt;bitdepth&gt;</i></p>
-<dd> Select the visual that XEmacs will attempt to use. <i>&lt;visualname&gt;</i> should be one of the strings &quot;StaticColor&quot;, &quot;TrueColor&quot;, &quot;GrayScale&quot;, &quot;PseudoColor&quot; or &quot;DirectColor&quot;, and <i>&lt;bitdepth&gt;</i> should be the number of bits per pixel (example, &quot;-visual TrueColor24&quot; for a 24bit TrueColor visual) See <i>X</i>(1) for more information.</p>
-<dt><code>-privateColormap</code></p>
-<dd> Require XEmacs to create and use a private colormap for display. This will keep XEmacs from taking colors from the default colormap and keeping them from other clients, at the cost of causing annoying flicker when the focus changes. Use this option only if your X server does not support 24 bit visuals.</p>
-<dt><code>-geometry</code><i> ##x##+##+##</i></p>
-<dd> Specify the geometry of the initial window. The ##&#8217;s represent a number; the four numbers are width (characters), height (characters), X offset (pixels), and Y offset (pixels), respectively. Partial specifications of the form <i>##x##</i> or <i>+##+##</i> are also allowed. (The geometry specification is in the standard X format; see <i>X</i>(1) for more information.)</p>
-<dt><code>-iconic</code></p>
-<dd> Specifies that the initial window should initially appear iconified.</p>
-<dt><code>-name</code><i> name</i></p>
-<dd> Specifies the program name which should be used when looking up defaults in the user&#8217;s X resources.</p>
-<dt><code>-title</code><i> title, </i><code>-T</code><i> title, </i><code>-wn</code><i> title</i></p>
-<dd> Specifies the title which should be assigned to the <i>XEmacs</i> window.</p>
-<dt><code>-d</code><i> displayname, </i><code>-display</code><i> displayname</i></p>
-<dd> Create the <i>XEmacs</i> window on the display specified by <i>displayname</i>. Must be the first option specified in the command line.</p>
-<dt><code>-font</code><i> font, </i><code>-fn</code><i> font</i></p>
-<dd> Set the <i>XEmacs</i> window&#8217;s font to that specified by <i>font</i>. You will find the various <i>X</i> fonts in the <i>/usr/lib/X11/fonts</i> directory. <i>XEmacs</i> works with either fixed- or variable-width fonts, but will probably look better with a fixed-width font.</p>
-<dt><code>-scrollbar-width</code><i> pixels</i></p>
-<dd> Specify the width of the vertical scrollbars.</p>
-<dt><code>-scrollbar-height</code><i> pixels</i></p>
-<dd> Specify the height of the horizontal scrollbars.</p>
-<dt><code>-bw</code><i> pixels, </i><code>-borderwidth</code><i> pixels</i></p>
-<dd> Set the <i>XEmacs</i> window&#8217;s border width to the number of pixels specified by <i>pixels</i>. Defaults to one pixel on each side of the window.</p>
-<dt><code>-ib</code><i> pixels, </i><code>-internal-border-width</code><i> pixels</i></p>
-<dd> Specify the width between a frame&#8217;s border and its text, in pixels. Defaults to one pixel on each side of the window.</p>
-<dt><code>-fg</code><i> color, </i><code>-foreground</code><i> color</i></p>
-<dd> Sets the color of the text. </p>
+<dt><code>-visual</code><i> &lt;visualname&gt;&lt;bitdepth&gt;</i></dt>
+<dd> Select the visual that XEmacs will attempt to use. <i>&lt;visualname&gt;</i> should be one of the strings &quot;StaticColor&quot;, &quot;TrueColor&quot;, &quot;GrayScale&quot;, &quot;PseudoColor&quot; or &quot;DirectColor&quot;, and <i>&lt;bitdepth&gt;</i> should be the number of bits per pixel (example, &quot;-visual TrueColor24&quot; for a 24bit TrueColor visual) See <i>X</i>(1) for more information.</dd>
+<dt><code>-privateColormap</code></dt>
+<dd> Require XEmacs to create and use a private colormap for display. This will keep XEmacs from taking colors from the default colormap and keeping them from other clients, at the cost of causing annoying flicker when the focus changes. Use this option only if your X server does not support 24 bit visuals.</dd>
+<dt><code>-geometry</code><i> ##x##+##+##</i></dt>
+<dd> Specify the geometry of the initial window. The ##&#8217;s represent a number; the four numbers are width (characters), height (characters), X offset (pixels), and Y offset (pixels), respectively. Partial specifications of the form <i>##x##</i> or <i>+##+##</i> are also allowed. (The geometry specification is in the standard X format; see <i>X</i>(1) for more information.)</dd>
+<dt><code>-iconic</code></dt>
+<dd> Specifies that the initial window should initially appear iconified.</dd>
+<dt><code>-name</code><i> name</i></dt>
+<dd> Specifies the program name which should be used when looking up defaults in the user&#8217;s X resources.</dd>
+<dt><code>-title</code><i> title, </i><code>-T</code><i> title, </i><code>-wn</code><i> title</i></dt>
+<dd> Specifies the title which should be assigned to the <i>XEmacs</i> window.</dd>
+<dt><code>-d</code><i> displayname, </i><code>-display</code><i> displayname</i></dt>
+<dd> Create the <i>XEmacs</i> window on the display specified by <i>displayname</i>. Must be the first option specified in the command line.</dd>
+<dt><code>-font</code><i> font, </i><code>-fn</code><i> font</i></dt>
+<dd> Set the <i>XEmacs</i> window&#8217;s font to that specified by <i>font</i>. You will find the various <i>X</i> fonts in the <i>/usr/lib/X11/fonts</i> directory. <i>XEmacs</i> works with either fixed- or variable-width fonts, but will probably look better with a fixed-width font.</dd>
+<dt><code>-scrollbar-width</code><i> pixels</i></dt>
+<dd> Specify the width of the vertical scrollbars.</dd>
+<dt><code>-scrollbar-height</code><i> pixels</i></dt>
+<dd> Specify the height of the horizontal scrollbars.</dd>
+<dt><code>-bw</code><i> pixels, </i><code>-borderwidth</code><i> pixels</i></dt>
+<dd> Set the <i>XEmacs</i> window&#8217;s border width to the number of pixels specified by <i>pixels</i>. Defaults to one pixel on each side of the window.</dd>
+<dt><code>-ib</code><i> pixels, </i><code>-internal-border-width</code><i> pixels</i></dt>
+<dd> Specify the width between a frame&#8217;s border and its text, in pixels. Defaults to one pixel on each side of the window.</dd>
+<dt><code>-fg</code><i> color, </i><code>-foreground</code><i> color</i></dt>
+<dd> Sets the color of the text. </dd>
 <p> See the file <i>/usr/share/X11/rgb.txt</i> for a list of valid color names.</p>
-<dt><code>-bg</code><i> color, </i><code>-background</code><i> color</i></p>
-<dd> Sets the color of the window&#8217;s background.</p>
-<dt><code>-bd</code><i> color, </i><code>-bordercolor</code><i> color</i></p>
-<dd> Sets the color of the window&#8217;s border.</p>
-<dt><code>-mc</code><i> color</i></p>
-<dd> Sets the color of the mouse pointer.</p>
-<dt><code>-cr</code><i> color</i></p>
-<dd> Sets the color of the text cursor.</p>
-<dt><code>-rv, -reverse</code></p>
-<dd> Reverses the foreground and background colors (reverse video). Consider explicitly setting the foreground and background colors instead of using this option.</p>
-<dt><code>-xrm</code><i> argument</i></p>
-<dd> This allows you to set an arbitrary resource on the command line. <i>argument</i> should be a resource specification, as might be found in your <i>.Xresources</i> or <i>.Xdefaults</i> file.</dl>
+<dt><code>-bg</code><i> color, </i><code>-background</code><i> color</i></dt>
+<dd> Sets the color of the window&#8217;s background.</dd>
+<dt><code>-bd</code><i> color, </i><code>-bordercolor</code><i> color</i></dt>
+<dd> Sets the color of the window&#8217;s border.</dd>
+<dt><code>-mc</code><i> color</i></dt>
+<dd> Sets the color of the mouse pointer.</dd>
+<dt><code>-cr</code><i> color</i></dt>
+<dd> Sets the color of the text cursor.</dd>
+<dt><code>-rv, -reverse</code></dt>
+<dd> Reverses the foreground and background colors (reverse video). Consider explicitly setting the foreground and background colors instead of using this option.</dd>
+<dt><code>-xrm</code><i> argument</i></dt>
+<dd> This allows you to set an arbitrary resource on the command line. <i>argument</i> should be a resource specification, as might be found in your <i>.Xresources</i> or <i>.Xdefaults</i> file.</dd></dl>
 <p> You can also set resources, i.e. <i>X</i> default values, for your <i>XEmacs</i> windows in your <i>.Xresources</i> or <i>.Xdefaults</i> file (see <i><a href="/docs/linux/man/1-xrdb/">xrdb</a></i>(1)). Use the following format:</p>
 <dl>
 <dt>
-<dd> Emacs.keyword:value</dl>
+</dt><dd> Emacs.keyword:value</dd></dl>
 <p> or</p>
 <dl>
 <dt>
-<dd> Emacs*EmacsFrame.keyword:value</dl>
+</dt><dd> Emacs*EmacsFrame.keyword:value</dd></dl>
 <p> where <i>value</i> specifies the default value of <i>keyword</i>. (Some resources need the former format; some the latter.) </p>
 <p> You can also set resources for a particular frame by using the format</p>
 <dl>
 <dt>
-<dd> Emacs*framename.keyword:value</dl>
+</dt><dd> Emacs*framename.keyword:value</dd></dl>
 <p> where <i>framename</i> is the resource name assigned to that particular frame. (Certain packages, such as VM, give their frames unique resource names, in this case &quot;VM&quot;.) </p>
 <p> <i>XEmacs</i> lets you set default values for the following keywords:</p>
 <dl>
-<dt><code>default.attributeFont (</code>class<code> Face.AttributeFont)</code></p>
-<dd> Sets the window&#8217;s text font.</p>
-<dt><code>default.attributeForeground (</code>class<code> Face.AttributeForeground)</code></p>
-<dd> Sets the window&#8217;s text color.</p>
-<dt><code>default.attributeBackground (</code>class<code> Face.AttributeBackground)</code></p>
-<dd> Sets the window&#8217;s background color.</p>
-<dt><i>face</i><code>.attributeFont (</code>class<code> Face.AttributeFont)</code></p>
-<dd> Sets the font for <i>face</i>, which should be the name of a face. Common face names are</dl>
+<dt><code>default.attributeFont (</code>class<code> Face.AttributeFont)</code></dt>
+<dd> Sets the window&#8217;s text font.</dd>
+<dt><code>default.attributeForeground (</code>class<code> Face.AttributeForeground)</code></dt>
+<dd> Sets the window&#8217;s text color.</dd>
+<dt><code>default.attributeBackground (</code>class<code> Face.AttributeBackground)</code></dt>
+<dd> Sets the window&#8217;s background color.</dd>
+<dt><i>face</i><code>.attributeFont (</code>class<code> Face.AttributeFont)</code></dt>
+<dd> Sets the font for <i>face</i>, which should be the name of a face. Common face names are</dd></dl>
 <p> FACE<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>PURPOSE</p>
 <p> default<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Normal text.</p>
 <p> bold<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Bold text.</p>
@@ -143,90 +143,90 @@ description: "xemacs – Emacs: The Next Generation"
 <p> info-node<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Text of Info menu items.</p>
 <p> info-xref<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>Text of Info cross references.</p>
 <dl>
-<dt><i>face</i><code>.attributeForeground (</code>class<code> Face.AttributeForeground)</code></p>
-<dd> Sets the foreground color for <i>face</i>.</p>
-<dt><i>face</i><code>.attributeBackground (</code>class<code> Face.AttributeBackground)</code></p>
-<dd> Sets the background color for <i>face</i>.</p>
-<dt><i>face</i><code>.attributeBackgroundPixmap (</code>class<code> Face.AttributeBackgroundPixmap)</code></p>
-<dd> Sets the background pixmap (stipple) for <i>face</i>.</p>
-<dt><i>face</i><code>.attributeUnderline (</code>class<code> Face.AttributeUnderline)</code></p>
-<dd> Whether <i>face</i> should be underlined.</p>
-<dt><code>reverseVideo (</code>class<code> ReverseVideo)</code></p>
-<dd> If set to <i>on</i>, the window will be displayed in reverse video. Consider explicitly setting the foreground and background colors instead of using this resource.</p>
-<dt><code>borderWidth (</code>class<code> BorderWidth)</code></p>
-<dd> Sets the window&#8217;s border width in pixels.</p>
-<dt><code>internalBorderWidth (</code>class<code> InternalBorderWidth)</code></p>
-<dd> Sets the window&#8217;s internal border width in pixels.</p>
-<dt><code>borderColor (</code>class<code> BorderColor)</code></p>
-<dd> Sets the color of the window&#8217;s border.</p>
-<dt><code>cursorColor (</code>class<code> Foreground)</code></p>
-<dd> Sets the color of the window&#8217;s text cursor.</p>
-<dt><code>pointerColor (</code>class<code> Foreground)</code></p>
-<dd> Sets the color of the window&#8217;s mouse cursor.</p>
-<dt><code>emacsVisual (</code>class<code> EmacsVisual)</code></p>
-<dd> Sets the default visual <i>XEmacs</i> will try to use (as described above).</p>
-<dt><code>privateColormap (</code>class<code> PrivateColormap)</code></p>
-<dd> If set, <i>XEmacs</i> will default to using a private colormap.</p>
-<dt><code>geometry (</code>class<code> Geometry)</code></p>
-<dd> Sets the geometry of the <i>XEmacs</i> window (as described above).</p>
-<dt><code>iconic (</code>class<code> Iconic)</code></p>
-<dd> If set to on, the <i>XEmacs</i> window will initially appear as an icon.</p>
-<dt><code>menubar (</code>class<code> Menubar)</code></p>
-<dd> Whether the <i>XEmacs</i> window will have a menubar. Defaults to true.</p>
-<dt><code>initiallyUnmapped (</code>class<code> InitiallyUnmapped)</code></p>
-<dd> Whether <i>XEmacs</i> will leave the initial frame unmapped when it starts up.</p>
-<dt><code>barCursor (</code>class<code> BarCursor)</code></p>
-<dd> Whether the cursor should be a bar instead of the traditional box.</p>
-<dt><code>title (</code>class<code> Title)</code></p>
-<dd> Sets the title of the <i>XEmacs</i> window.</p>
-<dt><code>iconName (</code>class<code> Title)</code></p>
-<dd> Sets the icon name for the <i>XEmacs</i> window icon.</p>
-<dt><code>scrollBarWidth (</code>class<code> ScrollBarWidth)</code></p>
-<dd> Sets the width of the vertical scrollbars, in pixels. A width of 0 means no vertical scrollbars.</p>
-<dt><code>scrollBarHeight (</code>class<code> ScrollBarHeight)</code></p>
-<dd> Sets the height of the horizontal scrollbars, in pixels. A height of 0 means no horizontal scrollbars.</p>
-<dt><code>scrollBarPlacement (</code>class<code> ScrollBarPlacement)</code></p>
-<dd> Sets the position of vertical and horizontal scrollbars. Should be one of the strings &quot;top-left&quot;, &quot;bottom-left&quot;, &quot;top-right&quot;, or &quot;bottom-right&quot;. The default is &quot;bottom-right&quot; for the Motif and Lucid scrollbars and &quot;bottom-left&quot; for the Athena scrollbars.</p>
-<dt><code>topToolBarHeight (</code>class<code> TopToolBarHeight)</code></p>
-<dd> Sets the height of the top toolbar, in pixels. 0 means no top toolbar.</p>
-<dt><code>bottomToolBarHeight (</code>class<code> BottomToolBarHeight)</code></p>
-<dd> Sets the height of the bottom toolbar, in pixels. 0 means no bottom toolbar.</p>
-<dt><code>leftToolBarWidth (</code>class<code> LeftToolBarWidth)</code></p>
-<dd> Sets the width of the left toolbar, in pixels. 0 means no left toolbar.</p>
-<dt><code>rightToolBarWidth (</code>class<code> RightToolBarWidth)</code></p>
-<dd> Sets the width of the right toolbar, in pixels. 0 means no right toolbar.</p>
-<dt><code>topToolBarShadowColor (</code>class<code> TopToolBarShadowColor)</code></p>
-<dd> Sets the color of the top shadows for the toolbars. (For all toolbars, <code>not</code> just the toolbar at the top of the frame.)</p>
-<dt><code>bottomToolBarShadowColor (</code>class<code> BottomToolBarShadowColor)</code></p>
-<dd> Sets the color of the bottom shadows for the toolbars. (For all toolbars, <code>not</code> just the toolbar at the bottom of the frame.)</p>
-<dt><code>topToolBarShadowPixmap (</code>class<code> TopToolBarShadowPixmap)</code></p>
-<dd> Sets the pixmap of the top shadows for the toolbars. (For all toolbars, <code>not</code> just the toolbar at the top of the frame.) If set, this resource overrides the corresponding color resource.</p>
-<dt><code>bottomToolBarShadowPixmap (</code>class<code> BottomToolBarShadowPixmap)</code></p>
-<dd> Sets the pixmap of the bottom shadows for the toolbars. (For all toolbars, <code>not</code> just the toolbar at the bottom of the frame.) If set, this resource overrides the corresponding color resource.</p>
-<dt><code>toolBarShadowThickness (</code>class<code> ToolBarShadowThickness)</code></p>
-<dd> Thickness of the shadows around the toolbars, in pixels.</p>
-<dt><code>visualBell (</code>class<code> VisualBell)</code></p>
-<dd> Whether XEmacs should flash the screen rather than making an audible beep.</p>
-<dt><code>bellVolume (</code>class<code> BellVolume)</code></p>
-<dd> Volume of the audible beep. Range is 0 through 100.</p>
-<dt><code>useBackingStore (</code>class<code> UseBackingStore)</code></p>
-<dd> Whether <i>XEmacs</i> should set the backing-store attribute of the <i>X</i> windows it creates. This increases the memory usage of the <i>X</i> server but decreases the amount of <i>X</i> traffic necessary to update the screen, and is useful when the connection to the <i>X</i> server goes over a low-bandwidth line such as a modem connection.</p>
-<dt><code>textPointer (</code>class<code> Cursor)</code></p>
-<dd> The cursor to use when the mouse is over text.</p>
-<dt><code>selectionPointer (</code>class<code> Cursor)</code></p>
-<dd> The cursor to use when the mouse is over a mouse-highlighted text region.</p>
-<dt><code>spacePointer (</code>class<code> Cursor)</code></p>
-<dd> The cursor to use when the mouse is over a blank space in a buffer (that is, after the end of a line or after the end-of-file).</p>
-<dt><code>modeLinePointer (</code>class<code> Cursor)</code></p>
-<dd> The cursor to use when the mouse is over a mode line.</p>
-<dt><code>gcPointer (</code>class<code> Cursor)</code></p>
-<dd> The cursor to display when a garbage-collection is in progress.</p>
-<dt><code>scrollbarPointer (</code>class<code> Cursor)</code></p>
-<dd> The cursor to use when the mouse is over the scrollbar.</p>
-<dt><code>pointerColor (</code>class<code> Foreground)</code></p>
-<dd> The foreground color of the mouse cursor.</p>
-<dt><code>pointerBackground (</code>class<code> Background)</code></p>
-<dd> The background color of the mouse cursor.</dl>
+<dt><i>face</i><code>.attributeForeground (</code>class<code> Face.AttributeForeground)</code></dt>
+<dd> Sets the foreground color for <i>face</i>.</dd>
+<dt><i>face</i><code>.attributeBackground (</code>class<code> Face.AttributeBackground)</code></dt>
+<dd> Sets the background color for <i>face</i>.</dd>
+<dt><i>face</i><code>.attributeBackgroundPixmap (</code>class<code> Face.AttributeBackgroundPixmap)</code></dt>
+<dd> Sets the background pixmap (stipple) for <i>face</i>.</dd>
+<dt><i>face</i><code>.attributeUnderline (</code>class<code> Face.AttributeUnderline)</code></dt>
+<dd> Whether <i>face</i> should be underlined.</dd>
+<dt><code>reverseVideo (</code>class<code> ReverseVideo)</code></dt>
+<dd> If set to <i>on</i>, the window will be displayed in reverse video. Consider explicitly setting the foreground and background colors instead of using this resource.</dd>
+<dt><code>borderWidth (</code>class<code> BorderWidth)</code></dt>
+<dd> Sets the window&#8217;s border width in pixels.</dd>
+<dt><code>internalBorderWidth (</code>class<code> InternalBorderWidth)</code></dt>
+<dd> Sets the window&#8217;s internal border width in pixels.</dd>
+<dt><code>borderColor (</code>class<code> BorderColor)</code></dt>
+<dd> Sets the color of the window&#8217;s border.</dd>
+<dt><code>cursorColor (</code>class<code> Foreground)</code></dt>
+<dd> Sets the color of the window&#8217;s text cursor.</dd>
+<dt><code>pointerColor (</code>class<code> Foreground)</code></dt>
+<dd> Sets the color of the window&#8217;s mouse cursor.</dd>
+<dt><code>emacsVisual (</code>class<code> EmacsVisual)</code></dt>
+<dd> Sets the default visual <i>XEmacs</i> will try to use (as described above).</dd>
+<dt><code>privateColormap (</code>class<code> PrivateColormap)</code></dt>
+<dd> If set, <i>XEmacs</i> will default to using a private colormap.</dd>
+<dt><code>geometry (</code>class<code> Geometry)</code></dt>
+<dd> Sets the geometry of the <i>XEmacs</i> window (as described above).</dd>
+<dt><code>iconic (</code>class<code> Iconic)</code></dt>
+<dd> If set to on, the <i>XEmacs</i> window will initially appear as an icon.</dd>
+<dt><code>menubar (</code>class<code> Menubar)</code></dt>
+<dd> Whether the <i>XEmacs</i> window will have a menubar. Defaults to true.</dd>
+<dt><code>initiallyUnmapped (</code>class<code> InitiallyUnmapped)</code></dt>
+<dd> Whether <i>XEmacs</i> will leave the initial frame unmapped when it starts up.</dd>
+<dt><code>barCursor (</code>class<code> BarCursor)</code></dt>
+<dd> Whether the cursor should be a bar instead of the traditional box.</dd>
+<dt><code>title (</code>class<code> Title)</code></dt>
+<dd> Sets the title of the <i>XEmacs</i> window.</dd>
+<dt><code>iconName (</code>class<code> Title)</code></dt>
+<dd> Sets the icon name for the <i>XEmacs</i> window icon.</dd>
+<dt><code>scrollBarWidth (</code>class<code> ScrollBarWidth)</code></dt>
+<dd> Sets the width of the vertical scrollbars, in pixels. A width of 0 means no vertical scrollbars.</dd>
+<dt><code>scrollBarHeight (</code>class<code> ScrollBarHeight)</code></dt>
+<dd> Sets the height of the horizontal scrollbars, in pixels. A height of 0 means no horizontal scrollbars.</dd>
+<dt><code>scrollBarPlacement (</code>class<code> ScrollBarPlacement)</code></dt>
+<dd> Sets the position of vertical and horizontal scrollbars. Should be one of the strings &quot;top-left&quot;, &quot;bottom-left&quot;, &quot;top-right&quot;, or &quot;bottom-right&quot;. The default is &quot;bottom-right&quot; for the Motif and Lucid scrollbars and &quot;bottom-left&quot; for the Athena scrollbars.</dd>
+<dt><code>topToolBarHeight (</code>class<code> TopToolBarHeight)</code></dt>
+<dd> Sets the height of the top toolbar, in pixels. 0 means no top toolbar.</dd>
+<dt><code>bottomToolBarHeight (</code>class<code> BottomToolBarHeight)</code></dt>
+<dd> Sets the height of the bottom toolbar, in pixels. 0 means no bottom toolbar.</dd>
+<dt><code>leftToolBarWidth (</code>class<code> LeftToolBarWidth)</code></dt>
+<dd> Sets the width of the left toolbar, in pixels. 0 means no left toolbar.</dd>
+<dt><code>rightToolBarWidth (</code>class<code> RightToolBarWidth)</code></dt>
+<dd> Sets the width of the right toolbar, in pixels. 0 means no right toolbar.</dd>
+<dt><code>topToolBarShadowColor (</code>class<code> TopToolBarShadowColor)</code></dt>
+<dd> Sets the color of the top shadows for the toolbars. (For all toolbars, <code>not</code> just the toolbar at the top of the frame.)</dd>
+<dt><code>bottomToolBarShadowColor (</code>class<code> BottomToolBarShadowColor)</code></dt>
+<dd> Sets the color of the bottom shadows for the toolbars. (For all toolbars, <code>not</code> just the toolbar at the bottom of the frame.)</dd>
+<dt><code>topToolBarShadowPixmap (</code>class<code> TopToolBarShadowPixmap)</code></dt>
+<dd> Sets the pixmap of the top shadows for the toolbars. (For all toolbars, <code>not</code> just the toolbar at the top of the frame.) If set, this resource overrides the corresponding color resource.</dd>
+<dt><code>bottomToolBarShadowPixmap (</code>class<code> BottomToolBarShadowPixmap)</code></dt>
+<dd> Sets the pixmap of the bottom shadows for the toolbars. (For all toolbars, <code>not</code> just the toolbar at the bottom of the frame.) If set, this resource overrides the corresponding color resource.</dd>
+<dt><code>toolBarShadowThickness (</code>class<code> ToolBarShadowThickness)</code></dt>
+<dd> Thickness of the shadows around the toolbars, in pixels.</dd>
+<dt><code>visualBell (</code>class<code> VisualBell)</code></dt>
+<dd> Whether XEmacs should flash the screen rather than making an audible beep.</dd>
+<dt><code>bellVolume (</code>class<code> BellVolume)</code></dt>
+<dd> Volume of the audible beep. Range is 0 through 100.</dd>
+<dt><code>useBackingStore (</code>class<code> UseBackingStore)</code></dt>
+<dd> Whether <i>XEmacs</i> should set the backing-store attribute of the <i>X</i> windows it creates. This increases the memory usage of the <i>X</i> server but decreases the amount of <i>X</i> traffic necessary to update the screen, and is useful when the connection to the <i>X</i> server goes over a low-bandwidth line such as a modem connection.</dd>
+<dt><code>textPointer (</code>class<code> Cursor)</code></dt>
+<dd> The cursor to use when the mouse is over text.</dd>
+<dt><code>selectionPointer (</code>class<code> Cursor)</code></dt>
+<dd> The cursor to use when the mouse is over a mouse-highlighted text region.</dd>
+<dt><code>spacePointer (</code>class<code> Cursor)</code></dt>
+<dd> The cursor to use when the mouse is over a blank space in a buffer (that is, after the end of a line or after the end-of-file).</dd>
+<dt><code>modeLinePointer (</code>class<code> Cursor)</code></dt>
+<dd> The cursor to use when the mouse is over a mode line.</dd>
+<dt><code>gcPointer (</code>class<code> Cursor)</code></dt>
+<dd> The cursor to display when a garbage-collection is in progress.</dd>
+<dt><code>scrollbarPointer (</code>class<code> Cursor)</code></dt>
+<dd> The cursor to use when the mouse is over the scrollbar.</dd>
+<dt><code>pointerColor (</code>class<code> Foreground)</code></dt>
+<dd> The foreground color of the mouse cursor.</dd>
+<dt><code>pointerBackground (</code>class<code> Background)</code></dt>
+<dd> The background color of the mouse cursor.</dd></dl>
 <p> <font SIZE="-1">Using the Mouse</font> </p>
 <p> The following lists the mouse button bindings for the <i>XEmacs</i> window under X11. </p>
 <p> MOUSE BUTTON<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>FUNCTION</p>

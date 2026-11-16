@@ -10,7 +10,6 @@ description: "uisspace – Tells if a character is whitespace. Allegro game prog
 <p>uisspace &#8211; Tells if a character is whitespace. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int uisspace(int c);</code></pre>
 <h2>Description</h2>
 <p>Returns nonzero if `c&#8217; is whitespace, that is, carriage return, newline, form feed, tab, vertical tab, or space. Example: </p>

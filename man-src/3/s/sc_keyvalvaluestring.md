@@ -14,49 +14,16 @@ description: "sc::KeyValValueString –"
 <p>enum <code>Storage</code> { <code>Copy</code>, <code>Steal</code>, <code>Use</code> }</p>
 <h3>Public Member Functions</h3>
 <pre><code>KeyValValueString (const char *, KeyValValueString::Storage s=KeyValValueString::Use)
-
-
-
 KeyValValueString (char *, KeyValValueString::Storage s=KeyValValueString::Use)
-
-
-
 KeyValValueString (const KeyValValueString &amp;)
-
-
-
 KeyValValue::KeyValValueError doublevalue (double &amp;) const
-
-
-
 KeyValValue::KeyValValueError booleanvalue (int &amp;) const
-
-
-
 KeyValValue::KeyValValueError floatvalue (float &amp;) const
-
-
-
 KeyValValue::KeyValValueError charvalue (char &amp;) const
-
-
-
 KeyValValue::KeyValValueError intvalue (int &amp;) const
-
-
-
 KeyValValue::KeyValValueError sizevalue (size_t &amp;) const
-
-
-
 KeyValValue::KeyValValueError pcharvalue (const char *&amp;) const
-
-
-
 KeyValValue::KeyValValueError stringvalue (std::string &amp;) const
-
-
-
 void print (std::ostream &amp;o=ExEnv::out0()) const
 </code></pre>
 <h2>Author</h2>

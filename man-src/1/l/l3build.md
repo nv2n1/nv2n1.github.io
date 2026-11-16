@@ -22,54 +22,54 @@ url: "/docs/linux/man/1-l3build/"
  The most commonly used l3build commands are:
 <dl>
 <dt>check
-<dd> Run all automated tests
-<dt>clean
-<dd> Clean out directory tree
-<dt>doc
-<dd> Typesets all documentation files
-<dt>install
-<dd> Installs files into the local texmf tree
-<dt>save
-<dd> Saves test validation log
-<dt>tag
-<dd> Update release tags in files
-<dt>uninstall
-<dd> Uninstalls files from the local texmf tree
-<dt>unpack
-<dd> Unpacks the source files into the build tree</dl>
+</dt><dd> Run all automated tests
+</dd><dt>clean
+</dt><dd> Clean out directory tree
+</dd><dt>doc
+</dt><dd> Typesets all documentation files
+</dd><dt>install
+</dt><dd> Installs files into the local texmf tree
+</dd><dt>save
+</dt><dd> Saves test validation log
+</dd><dt>tag
+</dt><dd> Update release tags in files
+</dd><dt>uninstall
+</dt><dd> Uninstalls files from the local texmf tree
+</dd><dt>unpack
+</dt><dd> Unpacks the source files into the build tree</dd></dl>
 
 <h2>OPTIONS</h2>
 
  Various options apply
 <dl>
 <dt>--config|-c
-<dd> Sets the config(s) used for running tests
-<dt>--date
-<dd> Sets the date to insert into sources
-<dt>--dry-run
-<dd> Dry run for install
-<dt>--engine|-e
-<dd> Sets the engine(s) to use for running test
-<dt>--epoch
-<dd> Sets the epoch for tests and typesetting
-<dt>--first
-<dd> Name of first test to run
-<dt>--force|-f
-<dd> Force tests to run if engine is not set up
-<dt>--halt-on-error|-H
-<dd> Stops running tests after the first failure
-<dt>--last
-<dd> Name of last test to run
-<dt>--pdf|-p
-<dd> Check/save PDF files
-<dt>--quiet|-q
-<dd> Suppresses TeX output when unpacking
-<dt>--rerun
-<dd> Skip setup: simply rerun tests
-<dt>--shuffle
-<dd> Shuffle order of tests
-<dt>--texmfhome
-<dd> Location of user texmf tree</dl>
+</dt><dd> Sets the config(s) used for running tests
+</dd><dt>--date
+</dt><dd> Sets the date to insert into sources
+</dd><dt>--dry-run
+</dt><dd> Dry run for install
+</dd><dt>--engine|-e
+</dt><dd> Sets the engine(s) to use for running test
+</dd><dt>--epoch
+</dt><dd> Sets the epoch for tests and typesetting
+</dd><dt>--first
+</dt><dd> Name of first test to run
+</dd><dt>--force|-f
+</dt><dd> Force tests to run if engine is not set up
+</dd><dt>--halt-on-error|-H
+</dt><dd> Stops running tests after the first failure
+</dd><dt>--last
+</dt><dd> Name of last test to run
+</dd><dt>--pdf|-p
+</dt><dd> Check/save PDF files
+</dd><dt>--quiet|-q
+</dt><dd> Suppresses TeX output when unpacking
+</dd><dt>--rerun
+</dt><dd> Skip setup: simply rerun tests
+</dd><dt>--shuffle
+</dt><dd> Shuffle order of tests
+</dd><dt>--texmfhome
+</dt><dd> Location of user texmf tree</dd></dl>
 
 <h2>BUGS</h2>
 

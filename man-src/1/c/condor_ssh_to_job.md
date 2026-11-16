@@ -28,63 +28,53 @@ description: "condor_ssh_to_job create an ssh session to a running job"
 <p> <code>-help</code></p>
 <dl>
 <dt>
-<dd> Display brief usage information and exit.</p>
-<dt>
-<dd></dl>
+</dt><dd> Display brief usage information and exit.</dd>
+</dl>
 <p> <code>-debug</code></p>
 <dl>
 <dt>
-<dd> Causes debugging information to be sent to stderr , based on the value of the configuration variable TOOL_DEBUG</p>
-<dt>
-<dd></dl>
+</dt><dd> Causes debugging information to be sent to stderr , based on the value of the configuration variable TOOL_DEBUG</dd>
+</dl>
 <p> <code>-name </code> <i>schedd-name</i></p>
 <dl>
 <dt>
-<dd> Specify an alternate <i>condor_schedd</i> , if the default (local) one is not desired.</p>
-<dt>
-<dd></dl>
+</dt><dd> Specify an alternate <i>condor_schedd</i> , if the default (local) one is not desired.</dd>
+</dl>
 <p> <code>-pool </code> <i>pool-name</i></p>
 <dl>
 <dt>
-<dd> Specify an alternate HTCondor pool, if the default one is not desired. Does not apply to EC2 jobs.</p>
-<dt>
-<dd></dl>
+</dt><dd> Specify an alternate HTCondor pool, if the default one is not desired. Does not apply to EC2 jobs.</dd>
+</dl>
 <p> <code>-ssh </code> <i>ssh-command</i></p>
 <dl>
 <dt>
-<dd> Specify an alternate <i>ssh</i> program to run in place of <i>ssh</i> , for example <i>sftp</i> or <i>scp</i> . Additional arguments are specified as <i>ssh-command</i> . Since the arguments are delimited by spaces, place double quote marks around the whole command, to prevent the shell from splitting it into multiple arguments to <i>condor_ssh_to_job</i> . If any arguments must contain spaces, enclose them within single quotes. Does not apply to EC2 jobs.</p>
-<dt>
-<dd></dl>
+</dt><dd> Specify an alternate <i>ssh</i> program to run in place of <i>ssh</i> , for example <i>sftp</i> or <i>scp</i> . Additional arguments are specified as <i>ssh-command</i> . Since the arguments are delimited by spaces, place double quote marks around the whole command, to prevent the shell from splitting it into multiple arguments to <i>condor_ssh_to_job</i> . If any arguments must contain spaces, enclose them within single quotes. Does not apply to EC2 jobs.</dd>
+</dl>
 <p> <code>-keygen-options </code> <i>ssh-keygen-options</i></p>
 <dl>
 <dt>
-<dd> Specify additional arguments to the <i>ssh_keygen</i> program, for creating the ssh key that is used for the duration of the session. For example, a different number of bits could be used, or a different key type than the default. Does not apply to EC2 jobs.</p>
-<dt>
-<dd></dl>
+</dt><dd> Specify additional arguments to the <i>ssh_keygen</i> program, for creating the ssh key that is used for the duration of the session. For example, a different number of bits could be used, or a different key type than the default. Does not apply to EC2 jobs.</dd>
+</dl>
 <p> <code>-shells </code> <i>shell1,shell2,&#8230;</i></p>
 <dl>
 <dt>
-<dd> Specify a comma-separated list of shells to attempt to launch. If the first shell does not exist on the remote machine, then the following ones in the list will be tried. If none of the specified shells can be found, <i>/bin/sh</i> is used by default. If this option is not specified, it defaults to the environment variable SHELL from within the <i>condor_ssh_to_job</i> environment. Does not apply to EC2 jobs.</p>
-<dt>
-<dd></dl>
+</dt><dd> Specify a comma-separated list of shells to attempt to launch. If the first shell does not exist on the remote machine, then the following ones in the list will be tried. If none of the specified shells can be found, <i>/bin/sh</i> is used by default. If this option is not specified, it defaults to the environment variable SHELL from within the <i>condor_ssh_to_job</i> environment. Does not apply to EC2 jobs.</dd>
+</dl>
 <p> <code>-auto-retry</code></p>
 <dl>
 <dt>
-<dd> Specifies that if the job is not yet running, <i>condor_ssh_to_job</i> should keep trying periodically until it succeeds or encounters some other error.</p>
-<dt>
-<dd></dl>
+</dt><dd> Specifies that if the job is not yet running, <i>condor_ssh_to_job</i> should keep trying periodically until it succeeds or encounters some other error.</dd>
+</dl>
 <p> <code>-remove-on-interrupt</code></p>
 <dl>
 <dt>
-<dd> If specified, attempt to remove the job from the queue if <i>condor_ssh_to_job</i> is interrupted via a CTRL-c or otherwise terminated abnormally.</p>
-<dt>
-<dd></dl>
+</dt><dd> If specified, attempt to remove the job from the queue if <i>condor_ssh_to_job</i> is interrupted via a CTRL-c or otherwise terminated abnormally.</dd>
+</dl>
 <p> <code>-X</code></p>
 <dl>
 <dt>
-<dd> Enable X11 forwarding. Does not apply to EC2 jobs.</p>
-<dt>
-<dd></dl>
+</dt><dd> Enable X11 forwarding. Does not apply to EC2 jobs.</dd>
+</dl>
 <h2>Examples</h2>
 <p> % condor_ssh_to_job 32.0<br />
  Welcome to slot2 [at] tonic.cs.wisc.edu!<br />

@@ -18,7 +18,6 @@ description: "set_cursor_dimensions"
 <p> Say that we have created a nice cursor drawer that for the insert cursor is one pixel wide and as tall as the characters (in other words: a vertical line), but for the overwrite cursor is a BITMAP with the dimensions 8&#215;10. Then the following would do: </p>
 <pre>
    gs.set_cursor_dimensions(1, gbuf::DYNAMIC_CURSOR_SIZE, 8, 10);
-   
 </pre>
 <p> It is important that you remember to call this function when you are using custom cursor drawers &#8211; else the inputter doesn&#8217;t know how much of the background below the cursor to save and recover. </p>
 <p> The default dimensions are the dimensions that are suited for the default cursor. </p>

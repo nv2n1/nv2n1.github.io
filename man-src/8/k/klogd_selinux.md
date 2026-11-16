@@ -83,8 +83,8 @@ description: "klogd_selinux – Security Enhanced Linux Policy for the klogd pro
 <p> <code>klogd_exec_t</code> </p>
 <p> &#8211; Set files with the klogd_exec_t type, if you want to transition an executable to the klogd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/klogd, /sbin/rklogd, /usr/sbin/klogd, /usr/sbin/rklogd </p>
+<dt>Paths:</dt>
+<dd>/sbin/klogd, /sbin/rklogd, /usr/sbin/klogd, /usr/sbin/rklogd </dd>
 </dl>
 <p> <code>klogd_tmp_t</code> </p>
 <p> &#8211; Set files with the klogd_tmp_t type, if you want to store klogd temporary files in the /tmp directories. </p>

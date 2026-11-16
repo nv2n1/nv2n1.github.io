@@ -11,10 +11,8 @@ std::chrono::ceil(std::chrono::time_point) - std::chrono::ceil(std::chrono::time
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;chrono&gt;
-
     template &lt;class ToDuration, class Clock, class Duration&gt;
     (since C++ 17)
-
         constexpr time_point&lt;Clock, ToDuration&gt; ceil(const time_point&lt;Clock, Duration&gt; &amp;tp);</code></pre> 
 Returns the smallest time point t representable in ToDuration that is greater or equal to tp. 
 The function does not participate in the overload resolution unless ToDuration is an instance of std::chrono::duration. 

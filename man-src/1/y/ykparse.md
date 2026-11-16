@@ -17,20 +17,20 @@ description: "ykparse – decrypt and show information inside a YubiKey OTP"
 <p> <code>AESKEY</code></p>
 <dl>
 <dt>
-<dd> The 16-character AES-128 key to use in hex.</dl>
+</dt><dd> The 16-character AES-128 key to use in hex.</dd></dl>
 <p> <code>TOKEN</code></p>
 <dl>
 <dt>
-<dd> The modhex encoded One-Time Password (OTP).</dl>
+</dt><dd> The modhex encoded One-Time Password (OTP).</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Typical usage of the tool is as follows. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 ykparse ecde18dbe76fbd0c33330f1c354871db dteffujedcflcindvdbrblehecuitvjkjevvehjd
 </pre>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> YubiKeys can be obtained from Yubico: <a rel="nofollow" href="http://www.yubico.com/">http://www.yubico.com/</a> </p>
 <h2>Index</h2>

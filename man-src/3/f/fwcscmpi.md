@@ -34,11 +34,11 @@ url: "/docs/linux/man/3-fwcscmpi/"
 
 <dl>
 <dt><a HREF="/docs/linux/man/3-fstrcmp/">fstrcmp</a>(3)
-<dd> fuzzy comparison of two strings
-<dt><a HREF="/docs/linux/man/3-fwcscmp/">fwcscmp</a>(3)
-<dd> fuzzy comparison of two wide-character strings
-<dt><a HREF="/docs/linux/man/3-wcscmp/">wcscmp</a>(3)
-<dd> compare two wide-character strings</dl>
+</dt><dd> fuzzy comparison of two strings
+</dd><dt><a HREF="/docs/linux/man/3-fwcscmp/">fwcscmp</a>(3)
+</dt><dd> fuzzy comparison of two wide-character strings
+</dd><dt><a HREF="/docs/linux/man/3-wcscmp/">wcscmp</a>(3)
+</dt><dd> compare two wide-character strings</dd></dl>
 
 <h2>COPYRIGHT</h2>
 

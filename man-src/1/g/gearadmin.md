@@ -12,26 +12,26 @@ description: "gearadmin – Gearmand Documentation, http://gearman.info/"
 <p> Run Administrative commands against a server.</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Provice help about the program.</p>
-<dt><code>&#8211;create-function</code></p>
-<dd> Create a function from the server.</p>
-<dt><code>-h [ &#8211;host ] arg (=localhost)i</code></p>
-<dd> Connect to the host</p>
-<dt><code>-p [ &#8211;port ] arg (=4730)</code></p>
-<dd> Port number or service to use for connection</p>
-<dt><code>&#8211;drop-function</code></p>
-<dd> Drop a function from the server.</p>
-<dt><code>&#8211;server-version</code></p>
-<dd> Fetch the version number for the server.</p>
-<dt><code>&#8211;server-verbose</code></p>
-<dd> Fetch the verbose setting for the server.</p>
-<dt><code>&#8211;status</code></p>
-<dd> Status for the server.</p>
-<dt><code>&#8211;workers</code></p>
-<dd> Workers for the server.</p>
-<dt><code>&#8211;shutdown</code></p>
-<dd> Shutdown server.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Provice help about the program.</dd>
+<dt><code>&#8211;create-function</code></dt>
+<dd> Create a function from the server.</dd>
+<dt><code>-h [ &#8211;host ] arg (=localhost)i</code></dt>
+<dd> Connect to the host</dd>
+<dt><code>-p [ &#8211;port ] arg (=4730)</code></dt>
+<dd> Port number or service to use for connection</dd>
+<dt><code>&#8211;drop-function</code></dt>
+<dd> Drop a function from the server.</dd>
+<dt><code>&#8211;server-version</code></dt>
+<dd> Fetch the version number for the server.</dd>
+<dt><code>&#8211;server-verbose</code></dt>
+<dd> Fetch the verbose setting for the server.</dd>
+<dt><code>&#8211;status</code></dt>
+<dd> Status for the server.</dd>
+<dt><code>&#8211;workers</code></dt>
+<dd> Workers for the server.</dd>
+<dt><code>&#8211;shutdown</code></dt>
+<dd> Shutdown server.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Command line tool for manipulating gearmand servers.</p>
 <h2>HOME</h2>

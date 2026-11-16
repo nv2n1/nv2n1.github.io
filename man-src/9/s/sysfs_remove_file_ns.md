@@ -15,15 +15,15 @@ sysfs_remove_file_ns - remove an object attribute with a custom ns tag
 <h2>Arguments</h2>
 
 <i>kobj</i>
-<dl><dd><dd>object we're acting for</dl>
+<dl><dd></dd><dd>object we're acting for</dd></dl>
  
 
  <i>attr</i>
-<dl><dd>attribute descriptor</dl>
+<dl><dd>attribute descriptor</dd></dl>
  
 
  <i>ns</i>
-<dl><dd>namespace tag of the file to remove</dl>
+<dl><dd>namespace tag of the file to remove</dd></dl>
 
 <h2>Description</h2>
 

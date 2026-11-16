@@ -13,20 +13,20 @@ description: "milter-regex – sendmail milter plugin for regular expression fil
 <h2>Description</h2>
 <p>The plugin can be used with the milter API of sendmail(8) to filter mails using regular expressions matching SMTP envelope parameters and mail headers and body. The options are as follows:</p>
 <dl>
-<dt><code>-d</code></p>
-<dd>Don&#8217;t detach from controlling terminal and produce verbose debug output on stdout.</p>
-<dt><code>-c </code><i>config</i></p>
-<dd>Use the specified configuration file instead of the default, /etc/mail/milter-regex.conf.</p>
-<dt><code>-j </code><i>dirname</i></p>
-<dd>Change root to the specified directory.</p>
-<dt><code>-l </code><i>loglevel</i></p>
-<dd>Only log messages up to and including the specified level. See <a href="/docs/linux/man/3-syslog/">syslog</a>(3) for the numerical values, e.g. LOG_INFO=6.</p>
-<dt><code>-m </code><i>number</i></p>
-<dd>Ignore mail body after the specified number of lines.</p>
-<dt><code>-p </code><i>pipe</i></p>
-<dd>Use the specified pipe to interface sendmail(8). Default is unix:/var/spool/milter-regex/sock.</p>
-<dt><code>-u </code><i>user</i></p>
-<dd>Run as the specified user instead of the default, mregex. When is started as root, it calls <a href="/docs/linux/man/2-setuid/">setuid</a>(2) to drop privileges. The non-privileged user should have read access to the configuration file and read-write access to the pipe.</dl>
+<dt><code>-d</code></dt>
+<dd>Don&#8217;t detach from controlling terminal and produce verbose debug output on stdout.</dd>
+<dt><code>-c </code><i>config</i></dt>
+<dd>Use the specified configuration file instead of the default, /etc/mail/milter-regex.conf.</dd>
+<dt><code>-j </code><i>dirname</i></dt>
+<dd>Change root to the specified directory.</dd>
+<dt><code>-l </code><i>loglevel</i></dt>
+<dd>Only log messages up to and including the specified level. See <a href="/docs/linux/man/3-syslog/">syslog</a>(3) for the numerical values, e.g. LOG_INFO=6.</dd>
+<dt><code>-m </code><i>number</i></dt>
+<dd>Ignore mail body after the specified number of lines.</dd>
+<dt><code>-p </code><i>pipe</i></dt>
+<dd>Use the specified pipe to interface sendmail(8). Default is unix:/var/spool/milter-regex/sock.</dd>
+<dt><code>-u </code><i>user</i></dt>
+<dd>Run as the specified user instead of the default, mregex. When is started as root, it calls <a href="/docs/linux/man/2-setuid/">setuid</a>(2) to drop privileges. The non-privileged user should have read access to the configuration file and read-write access to the pipe.</dd></dl>
 <h2>Sendmail Configuration</h2>
 <p>The plugin needs to be registered in the sendmail(8) configuration, by adding the following lines to the .mc file </p>
 <blockquote>
@@ -37,32 +37,32 @@ description: "milter-regex – sendmail milter plugin for regular expression fil
 <h2>Plugin Configuration</h2>
 <p>The configuration file consists of rules that, when matched, cause sendmail(8) to reject mails. Emtpy lines and lines starting with # are ignored, as well as leading whitespace (blanks, tabs). Trailing backslashes can be used to wrap long rules into multiple lines. Each rule starts with one of the following commands:</p>
 <dl>
-<dt><code>reject &lt;message&gt;</code></p>
-<dd>Subsequent rules cause the mail to be rejected with a permanent error consisting of the specified text part. The SMTP reply consists of the three-digit code 554 (RFC 2821 &quot;command rejected for policy reasons&quot;), the extended reply code 5.7.1 (RFC 1893 &quot;Permanent Failure&quot;, &quot;Security or Policy Status&quot;, &quot;Delivery not authorized, message refused&quot;) and the text part (which defaults to &quot;Command rejected&quot;, if not specified). This is a permanent failure, which causes the sender to remove the message from its queue without trying to retransmit, commonly generating a bounce message to the sender.</p>
-<dt><code>tempfail &lt;message&gt;</code></p>
-<dd>Subsequent matching rules cause the mail to be rejected with a temporary error consisting of the specified text part. The SMTP reply consists of the three-digit code 451 (RFC 2821 &quot;Requested action aborted: local error in processing&quot;), the extended reply code 4.7.1 (RFC 1893 &quot;Persistent Transient Failure&quot;, &quot;Security or Policy Status&quot;, &quot;Delivery not authorized, message refused&quot;) and the text part (which defaults to &quot;Please try again later&quot;, if not specified). This is a temporary failure, which causes the sender to keep the message in its queue and try to retransmit it, commonly for several days.</p>
-<dt><code>discard</code></p>
-<dd>Subsequent matching rules cause the mail to be accepted but then discarded silently. Note that <i>connect</i> and <i>helo</i> rules should not use <i>discard</i></p>
-<dt><code>quarantine &lt;message&gt;</code></p>
-<dd>Subsequent matching rules cause the mail to be quarantined in sendmail(8).</p>
-<dt><code>accept</code></p>
-<dd>Subsequent matching rules cause the mail to be accepted without further rule evaluation. Can be used for whitelist criteria.</dl>
+<dt><code>reject &lt;message&gt;</code></dt>
+<dd>Subsequent rules cause the mail to be rejected with a permanent error consisting of the specified text part. The SMTP reply consists of the three-digit code 554 (RFC 2821 &quot;command rejected for policy reasons&quot;), the extended reply code 5.7.1 (RFC 1893 &quot;Permanent Failure&quot;, &quot;Security or Policy Status&quot;, &quot;Delivery not authorized, message refused&quot;) and the text part (which defaults to &quot;Command rejected&quot;, if not specified). This is a permanent failure, which causes the sender to remove the message from its queue without trying to retransmit, commonly generating a bounce message to the sender.</dd>
+<dt><code>tempfail &lt;message&gt;</code></dt>
+<dd>Subsequent matching rules cause the mail to be rejected with a temporary error consisting of the specified text part. The SMTP reply consists of the three-digit code 451 (RFC 2821 &quot;Requested action aborted: local error in processing&quot;), the extended reply code 4.7.1 (RFC 1893 &quot;Persistent Transient Failure&quot;, &quot;Security or Policy Status&quot;, &quot;Delivery not authorized, message refused&quot;) and the text part (which defaults to &quot;Please try again later&quot;, if not specified). This is a temporary failure, which causes the sender to keep the message in its queue and try to retransmit it, commonly for several days.</dd>
+<dt><code>discard</code></dt>
+<dd>Subsequent matching rules cause the mail to be accepted but then discarded silently. Note that <i>connect</i> and <i>helo</i> rules should not use <i>discard</i></dd>
+<dt><code>quarantine &lt;message&gt;</code></dt>
+<dd>Subsequent matching rules cause the mail to be quarantined in sendmail(8).</dd>
+<dt><code>accept</code></dt>
+<dd>Subsequent matching rules cause the mail to be accepted without further rule evaluation. Can be used for whitelist criteria.</dd></dl>
 <p> A command is followed by one or more expressions, each causing the previous command to be executed when matched. The following expressions can be used:</p>
 <dl>
-<dt><code>connect &lt;hostname&gt; &lt;address&gt;</code></p>
-<dd>Reject the connection if both the sender&#8217;s hostname and address match the specified regular expressions. The numerical address is either dotted-quad (IPv4) or coloned-hex (IPv6). The hostname is the result of a DNS reverse resolution of the numerical address (which sendmail(8) performs independantly of the milter plugin). When resolution fails, the hostname contains the numerical address in square brackets.</p>
-<dt><code>helo &lt;name&gt;</code></p>
-<dd>Reject the connection if the sender supplied HELO name matches the specified regular expression. Commonly, the sender supplies his fully-qualified hostname as HELO name.</p>
-<dt><code>envfrom &lt;address&gt;</code></p>
-<dd>Reject the mail if the sender supplied envelope MAIL FROM address matches the specified regular expression. Addresses commonly have the form &lt;user [at] host.doma.in&gt;.</p>
-<dt><code>envrcpt &lt;address&gt;</code></p>
-<dd>Reject the mail if the sender supplied envelope RCPT TO address matches the specified regular expression.</p>
-<dt><code>header &lt;name&gt; &lt;value&gt;</code></p>
-<dd>Reject the mail if a header matches the specified name and value. For instance, the header &quot;Subject: Test&quot; matches name Subject and value Test.</p>
-<dt><code>body &lt;line&gt;</code></p>
-<dd>Reject the mail if a body line matches the specified regular expression.</p>
-<dt><code>macro &lt;name&gt; &lt;value&gt;</code></p>
-<dd>Reject the mail if a sendmail macro value matches.</dl>
+<dt><code>connect &lt;hostname&gt; &lt;address&gt;</code></dt>
+<dd>Reject the connection if both the sender&#8217;s hostname and address match the specified regular expressions. The numerical address is either dotted-quad (IPv4) or coloned-hex (IPv6). The hostname is the result of a DNS reverse resolution of the numerical address (which sendmail(8) performs independantly of the milter plugin). When resolution fails, the hostname contains the numerical address in square brackets.</dd>
+<dt><code>helo &lt;name&gt;</code></dt>
+<dd>Reject the connection if the sender supplied HELO name matches the specified regular expression. Commonly, the sender supplies his fully-qualified hostname as HELO name.</dd>
+<dt><code>envfrom &lt;address&gt;</code></dt>
+<dd>Reject the mail if the sender supplied envelope MAIL FROM address matches the specified regular expression. Addresses commonly have the form &lt;user [at] host.doma.in&gt;.</dd>
+<dt><code>envrcpt &lt;address&gt;</code></dt>
+<dd>Reject the mail if the sender supplied envelope RCPT TO address matches the specified regular expression.</dd>
+<dt><code>header &lt;name&gt; &lt;value&gt;</code></dt>
+<dd>Reject the mail if a header matches the specified name and value. For instance, the header &quot;Subject: Test&quot; matches name Subject and value Test.</dd>
+<dt><code>body &lt;line&gt;</code></dt>
+<dd>Reject the mail if a body line matches the specified regular expression.</dd>
+<dt><code>macro &lt;name&gt; &lt;value&gt;</code></dt>
+<dd>Reject the mail if a sendmail macro value matches.</dd></dl>
 <p> The plugin regularly checks the configuration file for modification and reloads it automatically. Signals like SIGHUP will terminate the plugin, according to the milter signal handler. The plugin reacts to any kind of error, like syntax errors in the configuration file, by failing open, accepting all messages. When the plugin is not running, sendmail(8) will accept all messages.</p>
 <h2>Regular Expressions</h2>
 <p>The regular expressions used in the configuration rules are enclosed in arbitrary delimiters, no further escaping is needed. </p>
@@ -71,12 +71,12 @@ description: "milter-regex – sendmail milter plugin for regular expression fil
 <p> See re_format7 for a detailed description of basic and extended regular expressions. </p>
 <p> Optionally, the following flags can be used after the closing delimiter:</p>
 <dl>
-<dt><code>e</code></p>
-<dd>Extended regular expression. This sets REG_EXTENDED for <a href="/docs/linux/man/3-regcomp/">regcomp</a>(3).</p>
-<dt><code>i</code></p>
-<dd>Ignore upper/lower case. This sets REG_ICASE.</p>
-<dt><code>n</code></p>
-<dd>Not matching. Reverses the matching result, i.e. the mail is rejected if the regular expression does not match.</dl>
+<dt><code>e</code></dt>
+<dd>Extended regular expression. This sets REG_EXTENDED for <a href="/docs/linux/man/3-regcomp/">regcomp</a>(3).</dd>
+<dt><code>i</code></dt>
+<dd>Ignore upper/lower case. This sets REG_ICASE.</dd>
+<dt><code>n</code></dt>
+<dd>Not matching. Reverses the matching result, i.e. the mail is rejected if the regular expression does not match.</dd></dl>
 <h2>Boolean Expressions</h2>
 <p>A rule can consist of either a simple term or more complex expressions. A term has the form </p>
 <pre>header /From/ /domain/i</pre>
@@ -148,9 +148,9 @@ macro = name '=' expr</pre>
 <h2>See Also</h2>
 <p>mailstats(1), <a href="/docs/linux/man/3-regex/">regex</a>(3), <a href="/docs/linux/man/3-syslog/">syslog</a>(3), syslog.conf5, re_format7, sendmail(8), syslogd(8)</p>
 <dl>
-<dd><i>Simple Mail Transfer Protocol</i> RFC 2821</dl>
+<dd><i>Simple Mail Transfer Protocol</i> RFC 2821</dd></dl>
 <dl>
-<dd><i>Enhanced Mail System Status Codes</i> RFC 1893</dl>
+<dd><i>Enhanced Mail System Status Codes</i> RFC 1893</dd></dl>
 <h2>History</h2>
 <p>The first version of was written in 2003. Boolean expression evaluation was added in 2004.</p>
 <h2>Authors</h2>

@@ -16,9 +16,9 @@ description: "bglprof – display call graph profile data for Bigloo programs"
 <h2>OPTIONS</h2>
 <dl>
 <dt>
-<dt><code>-v </code></p>
+</dt><dt><code>-v </code></dt>
 <dd>
-<dd> verbose mode. </p>
+</dd><dd> verbose mode. </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> Here is the sequence of commands to get a Bigloo profile: </p>

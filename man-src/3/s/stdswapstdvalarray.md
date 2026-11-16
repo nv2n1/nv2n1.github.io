@@ -11,7 +11,6 @@ std::swap(std::valarray) - std::swap(std::valarray)
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class T&gt;
-
 void swap(valarray&lt;T&gt; &amp;lhs, valarray&lt;T&gt; &amp;rhs);</code></pre> 
 Specializes the std::swap algorithm for std::valarray. Swaps the contents of lhs and rhs. Calls lhs.swap(rhs). 
 

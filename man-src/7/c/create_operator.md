@@ -22,10 +22,10 @@ description: "CREATE OPERATOR – define a new operator"
 <pre>+ - * / &lt; &gt; = ~ ! @ # % ^ &amp; | ` ?</pre>
 <p>There are a few restrictions on your choice of name:</p>
 <dl>
-<dt>*</p>
-<dd>&#8212; and /* cannot appear anywhere in an operator name, since they will be taken as the start of a comment.</p>
-<dt>*</p>
-<dd>A multicharacter operator name cannot end in + or -, unless the name also contains at least one of these characters: </p>
+<dt>*</dt>
+<dd>&#8212; and /* cannot appear anywhere in an operator name, since they will be taken as the start of a comment.</dd>
+<dt>*</dt>
+<dd>A multicharacter operator name cannot end in + or -, unless the name also contains at least one of these characters: </dd>
 <pre>~ ! @ # % ^ &amp; | ` ?</pre>
 <p>For example, @- is an allowed operator name, but *- is not. This restriction allows PostgreSQL to parse SQL-compliant commands without requiring spaces between tokens.</dl>
 <p> The operator != is mapped to &lt;&gt; on input, so these two names are always equivalent. </p>
@@ -34,26 +34,26 @@ description: "CREATE OPERATOR – define a new operator"
 <p> The other clauses specify optional operator optimization clauses. Their meaning is detailed in in the documentation.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name of the operator to be defined. See above for allowable characters. The name can be schema-qualified, for example CREATE OPERATOR myschema.+ (&#8230;). If not, then the operator is created in the current schema. Two operators in the same schema can have the same name if they operate on different data types. This is called <i>overloading</i>.</p>
-<dt><i>funcname</i></p>
-<dd>The function used to implement this operator.</p>
-<dt><i>lefttype</i></p>
-<dd>The data type of the operator&#8217;s left operand, if any. This option would be omitted for a left-unary operator.</p>
-<dt><i>righttype</i></p>
-<dd>The data type of the operator&#8217;s right operand, if any. This option would be omitted for a right-unary operator.</p>
-<dt><i>com_op</i></p>
-<dd>The commutator of this operator.</p>
-<dt><i>neg_op</i></p>
-<dd>The negator of this operator.</p>
-<dt><i>res_proc</i></p>
-<dd>The restriction selectivity estimator function for this operator.</p>
-<dt><i>join_proc</i></p>
-<dd>The join selectivity estimator function for this operator.</p>
-<dt><code>HASHES</code></p>
-<dd>Indicates this operator can support a hash join.</p>
-<dt><code>MERGES</code></p>
-<dd>Indicates this operator can support a merge join.</dl>
+<dt><i>name</i></dt>
+<dd>The name of the operator to be defined. See above for allowable characters. The name can be schema-qualified, for example CREATE OPERATOR myschema.+ (&#8230;). If not, then the operator is created in the current schema. Two operators in the same schema can have the same name if they operate on different data types. This is called <i>overloading</i>.</dd>
+<dt><i>funcname</i></dt>
+<dd>The function used to implement this operator.</dd>
+<dt><i>lefttype</i></dt>
+<dd>The data type of the operator&#8217;s left operand, if any. This option would be omitted for a left-unary operator.</dd>
+<dt><i>righttype</i></dt>
+<dd>The data type of the operator&#8217;s right operand, if any. This option would be omitted for a right-unary operator.</dd>
+<dt><i>com_op</i></dt>
+<dd>The commutator of this operator.</dd>
+<dt><i>neg_op</i></dt>
+<dd>The negator of this operator.</dd>
+<dt><i>res_proc</i></dt>
+<dd>The restriction selectivity estimator function for this operator.</dd>
+<dt><i>join_proc</i></dt>
+<dd>The join selectivity estimator function for this operator.</dd>
+<dt><code>HASHES</code></dt>
+<dd>Indicates this operator can support a hash join.</dd>
+<dt><code>MERGES</code></dt>
+<dd>Indicates this operator can support a merge join.</dd></dl>
 <p> To give a schema-qualified operator name in <i>com_op</i> or the other optional arguments, use the OPERATOR() syntax, for example: </p>
 <pre>COMMUTATOR = OPERATOR(myschema.===) ,</pre>
 <h2>Notes</h2>

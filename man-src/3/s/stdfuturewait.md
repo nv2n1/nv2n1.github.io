@@ -34,12 +34,9 @@ The implementations are encouraged to detect the case when valid == false before
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;future&gt;
-
 #include &lt;thread&gt;
 int fib(int n)
-
 {
     if (n &lt; 3)
         return 1;
@@ -47,7 +44,6 @@ int fib(int n)
         return fib(n - 1) + fib(n - 2);
 }
 int main()
-
 {
     std::future&lt;int&gt; f1 = std::async(std::launch::async, []() {
         return fib(20);

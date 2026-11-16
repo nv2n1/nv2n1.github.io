@@ -21,10 +21,10 @@ description: "ssymv.f –"
  y := alpha*A*x + beta*y,
  where alpha and beta are scalars, x and y are n element vectors and
  A is an n by n symmetric matrix.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>UPLO</i> </p>
+<dd><i>UPLO</i> </dd>
 <pre> UPLO is CHARACTER*1
  On entry, UPLO specifies whether the upper or lower
  triangular part of the array A is to be referenced as
@@ -81,13 +81,13 @@ description: "ssymv.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -98,7 +98,8 @@ description: "ssymv.f –"
  Jeremy Du Croz, Nag Central Office.
  Sven Hammarling, Nag Central Office.
  Richard Hanson, Sandia National Labs.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 153 of file ssymv.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

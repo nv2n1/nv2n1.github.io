@@ -13,8 +13,8 @@ description: "pskc_get_device_expirydate – API function"
 const struct tm *pskc_get_device_expirydate(pskc_key_t *key);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_key_t * key</p>
-<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dl>
+<dt>pskc_key_t * key</dt>
+<dd>a <code>pskc_key_t</code> handle, from <code>pskc_get_keypackage()</code>.</dd></dl>
 <h2>Description</h2>
 <p>Get the PSKC KeyPackage DeviceInfo ExpiryDate. This element denote the end date of a device (such as the one on a payment card, used when issue numbers are not printed on cards).</p>
 <h2>Returns</h2>

@@ -15,13 +15,13 @@ description: "zmq_msg_send – send a message part on a socket"
 <p> The <i>zmq_msg_send()</i> function shall queue the message referenced by the <i>msg</i> argument to be sent to the socket referenced by the <i>socket</i> argument. The <i>flags</i> argument is a combination of the flags defined below: </p>
 <p> <code>ZMQ_DONTWAIT</code></p>
 <dl>
-<dd>For socket types (DEALER, PUSH) that block when there are no available peers (or all peers have full high-water mark), specifies that the operation should be performed in non-blocking mode. If the message cannot be queued on the <i>socket</i>, the <i>zmq_msg_send()</i> function shall fail with <i>errno</i> set to EAGAIN.</dl>
+<dd>For socket types (DEALER, PUSH) that block when there are no available peers (or all peers have full high-water mark), specifies that the operation should be performed in non-blocking mode. If the message cannot be queued on the <i>socket</i>, the <i>zmq_msg_send()</i> function shall fail with <i>errno</i> set to EAGAIN.</dd></dl>
 <p> <code>ZMQ_SNDMORE</code></p>
 <dl>
-<dd>Specifies that the message being sent is a multi-part message, and that further message parts are to follow. Refer to the section regarding multi-part messages below for a detailed description.</dl>
+<dd>Specifies that the message being sent is a multi-part message, and that further message parts are to follow. Refer to the section regarding multi-part messages below for a detailed description.</dd></dl>
 <p> The <i>zmq_msg_t</i> structure passed to <i>zmq_msg_send()</i> is nullified during the call. If you want to send the same message to multiple sockets you have to copy it using (e.g. using <i>zmq_msg_copy()</i>). </p>
 <dl>
-<dd><font SIZE="+1"> <code>Note</code> </font> </p>
+<dd><font SIZE="+1"> <code>Note</code> </font> </dd>
 <p> A successful invocation of <i>zmq_msg_send()</i> does not indicate that the message has been transmitted to the network, only that it has been queued on the <i>socket</i> and 0MQ has assumed responsibility for the message. You do not need to call <i>zmq_msg_close()</i> after a successful <i>zmq_msg_send()</i>. </p>
 </dl>
 <h3>Multi-part messages</h3>
@@ -32,28 +32,28 @@ description: "zmq_msg_send – send a message part on a socket"
 <h2>Errors</h2>
 <p><code>EAGAIN</code></p>
 <dl>
-<dd>Non-blocking mode was requested and the message cannot be sent at the moment.</dl>
+<dd>Non-blocking mode was requested and the message cannot be sent at the moment.</dd></dl>
 <p> <code>ENOTSUP</code></p>
 <dl>
-<dd>The <i>zmq_msg_send()</i> operation is not supported by this socket type.</dl>
+<dd>The <i>zmq_msg_send()</i> operation is not supported by this socket type.</dd></dl>
 <p> <code>EFSM</code></p>
 <dl>
-<dd>The <i>zmq_msg_send()</i> operation cannot be performed on this socket at the moment due to the socket not being in the appropriate state. This error may occur with socket types that switch between several states, such as ZMQ_REP. See the <i>messaging patterns</i> section of <code><a href="/docs/linux/man/3-zmq_socket/">zmq_socket</a></code>(3) for more information.</dl>
+<dd>The <i>zmq_msg_send()</i> operation cannot be performed on this socket at the moment due to the socket not being in the appropriate state. This error may occur with socket types that switch between several states, such as ZMQ_REP. See the <i>messaging patterns</i> section of <code><a href="/docs/linux/man/3-zmq_socket/">zmq_socket</a></code>(3) for more information.</dd></dl>
 <p> <code>ETERM</code></p>
 <dl>
-<dd>The 0MQ <i>context</i> associated with the specified <i>socket</i> was terminated.</dl>
+<dd>The 0MQ <i>context</i> associated with the specified <i>socket</i> was terminated.</dd></dl>
 <p> <code>ENOTSOCK</code></p>
 <dl>
-<dd>The provided <i>socket</i> was invalid.</dl>
+<dd>The provided <i>socket</i> was invalid.</dd></dl>
 <p> <code>EINTR</code></p>
 <dl>
-<dd>The operation was interrupted by delivery of a signal before the message was sent.</dl>
+<dd>The operation was interrupted by delivery of a signal before the message was sent.</dd></dl>
 <p> <code>EFAULT</code></p>
 <dl>
-<dd>Invalid message.</dl>
+<dd>Invalid message.</dd></dl>
 <p> <code>EHOSTUNREACH</code></p>
 <dl>
-<dd>The message cannot be routed.</dl>
+<dd>The message cannot be routed.</dd></dl>
 <h2>Example</h2>
 <p><code>Filling in a message and sending it to a socket</code>. /* Send a multi-part message consisting of three parts to socket */<br />
 rc = zmq_msg_send (&amp;part1, socket, ZMQ_SNDMORE);<br />

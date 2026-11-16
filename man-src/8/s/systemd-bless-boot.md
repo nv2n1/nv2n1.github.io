@@ -18,28 +18,29 @@ description: "systemd-bless-boot.service, systemd-bless-boot – Mark current bo
 <p>The /lib/systemd/system-bless-boot executable may also be invoked from the command line, taking one of the following command arguments: </p>
 <p> <code>status</code></p>
 <dl>
-<dd>The current status of the boot loader entry file or unified kernel image file is shown. This outputs one of &quot;good&quot;, &quot;bad&quot;, &quot;indeterminate&quot;, &quot;clean&quot;, depending on the state and previous invocations of the command. The string &quot;indeterminate&quot; is shown initially after boot, before it has been marked as &quot;good&quot; or &quot;bad&quot;. The string &quot;good&quot; is shown after the boot was marked as &quot;good&quot; with the <code>good</code> command below, and &quot;bad&quot; conversely after the <code>bad</code> command was invoked. The string &quot;clean&quot; is returned when boot counting is currently not in effect. </p>
+<dd>The current status of the boot loader entry file or unified kernel image file is shown. This outputs one of &quot;good&quot;, &quot;bad&quot;, &quot;indeterminate&quot;, &quot;clean&quot;, depending on the state and previous invocations of the command. The string &quot;indeterminate&quot; is shown initially after boot, before it has been marked as &quot;good&quot; or &quot;bad&quot;. The string &quot;good&quot; is shown after the boot was marked as &quot;good&quot; with the <code>good</code> command below, and &quot;bad&quot; conversely after the <code>bad</code> command was invoked. The string &quot;clean&quot; is returned when boot counting is currently not in effect. </dd>
 <p> This command is implied if no command argument is specified.</dl>
 <p> <code>good</code></p>
 <dl>
-<dd>When invoked, the current boot loader entry file or unified kernel image file will be marked as &quot;good&quot;, executing the file rename operation described above. This command is intended to be invoked at the end of a successful boot. The systemd-bless-boot.service unit invokes this command.</dl>
+<dd>When invoked, the current boot loader entry file or unified kernel image file will be marked as &quot;good&quot;, executing the file rename operation described above. This command is intended to be invoked at the end of a successful boot. The systemd-bless-boot.service unit invokes this command.</dd></dl>
 <p> <code>bad</code></p>
 <dl>
-<dd>When called the &#8216;tries left&#8217; counter in the boot loader entry file name or unified kernel image file name is set to zero, marking the boot loader entry or kernel image as &quot;bad&quot;, so that the boot loader won&#8217;t consider it anymore on future boots (at least as long as there are other entries available that are not marked &quot;bad&quot; yet). This command is normally not executed, but can be used to instantly put an end to the boot counting logic if a problem is detected and persistently mark the boot entry as bad.</dl>
+<dd>When called the &#8216;tries left&#8217; counter in the boot loader entry file name or unified kernel image file name is set to zero, marking the boot loader entry or kernel image as &quot;bad&quot;, so that the boot loader won&#8217;t consider it anymore on future boots (at least as long as there are other entries available that are not marked &quot;bad&quot; yet). This command is normally not executed, but can be used to instantly put an end to the boot counting logic if a problem is detected and persistently mark the boot entry as bad.</dd></dl>
 <p> <code>indeterminate</code></p>
 <dl>
-<dd>This command undoes any marking of the current boot loader entry file or unified kernel image file as good or bad. This is implemented by renaming the boot loader entry file or unified kernel image file back to the path encoded in the <i>LoaderBootCountPath</i> EFI variable.</dl>
+<dd>This command undoes any marking of the current boot loader entry file or unified kernel image file as good or bad. This is implemented by renaming the boot loader entry file or unified kernel image file back to the path encoded in the <i>LoaderBootCountPath</i> EFI variable.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Print a short help text and exit.</dl>
+<dd>Print a short help text and exit.</dd></dl>
 <p> <code>&#8211;version</code></p>
 <dl>
-<dd>Print a short version string and exit.</dl>
+<dd>Print a short version string and exit.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/7-systemd-boot/">systemd-boot</a></code>(7), <code><a href="/docs/linux/man/7-systemd-special/">systemd.special</a></code>(7)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>Boot Loader Specification</p>
+<dt> 1.</dt>
+<dd>Boot Loader Specification</dd>
 <dl>
-<dd><a rel="nofollow" href="https://systemd.io/BOOT_LOADER_SPECIFICATION">https://systemd.io/BOOT_LOADER_SPECIFICATION</a></dl>
+<dd><a rel="nofollow" href="https://systemd.io/BOOT_LOADER_SPECIFICATION">https://systemd.io/BOOT_LOADER_SPECIFICATION</a></dd></dl>
+</dl>

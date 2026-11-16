@@ -14,10 +14,10 @@ description: "truncate_inode_pages – truncate *all* the pages from an offset"
 <p><i>mapping</i></p>
 <dl>
 <dd>
-<dd>mapping to truncate</dl>
+</dd><dd>mapping to truncate</dd></dl>
 <p> <i>lstart</i></p>
 <dl>
-<dd>offset from which to truncate</dl>
+<dd>offset from which to truncate</dd></dl>
 <h2>Description</h2>
 <p>Called under (and serialised by) inode-&gt;i_mutex.</p>
 <h2>Note</h2>

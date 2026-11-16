@@ -11,10 +11,10 @@ description: "IBDM Topology File"
 <p> <code>IBDM Topology File</code> </p>
 <p> The topology file describes the IB connectivity and systems included in the network. It serves two purposes:</p>
 <dl>
-<dt>1. Support for arbitrary system names to be later used in every report that IBDM generates.</p>
+<dt>1. Support for arbitrary system names to be later used in every report that IBDM generates.</dt>
 <dd>
-<dt>2. Connectivity verification: The specified network topology is verified against the discovered one. Mismatch errors resulting from missing cables and/or wrong connections are reported by IBADM.</p>
-<dd></dl>
+</dd><dt>2. Connectivity verification: The specified network topology is verified against the discovered one. Mismatch errors resulting from missing cables and/or wrong connections are reported by IBADM.</dt>
+<dd></dd></dl>
 <p> The topology file is composed &quot;system&quot; sections. Each such section describes the connectivity of one system to other systems in the network. The first line of each section is a declaration of the system composed of a system-type, its system-name section, and optional configuration details. The lines to follow until the next empty line describe the connections between this system ports to the other systems. The following is a formal definition of a system section syntax. </p>
 <p> An example is listed afterwards. </p>
 <p> SYSTEM-TYPE SYSTEM-NAME [CFG: &lt;b1&gt;=&lt;modifier&gt;, [&lt;b2&gt;=&lt;modifier&gt;]&#8230;] </p>
@@ -43,16 +43,16 @@ description: "IBDM Topology File"
 <p> . . . </p>
 <p> Where:</p>
 <dl>
-<dt><code>SYSTEM-TYPE</code> and <code>REM-SYS-TYPE</code></p>
-<dd> Any system that has a corresponding IBNL definition. See man <code>ibdm-ibnl-file</code></p>
-<dt><code>SYSTEM-NAME</code></p>
-<dd> The name of the system described in this topology file section.</p>
-<dt><code>LOCAL-PORT-PANEL-NAME</code></p>
-<dd> The name of the local system port. The numbers printed on the front panel are used together with Ln for Leaf no. N or Sn for Spine no. N.</p>
-<dt><code>REM-SYS-NAME</code></p>
-<dd> The name of the system connected to the local port.</p>
-<dt><code>REM-PORT-PANEL-NAME</code></p>
-<dd> A name of the remote system port. We use the numbers as printed on the front panel and Ln for Leaf number N or Sn for Spine number N.</dl>
+<dt><code>SYSTEM-TYPE</code> and <code>REM-SYS-TYPE</code></dt>
+<dd> Any system that has a corresponding IBNL definition. See man <code>ibdm-ibnl-file</code></dd>
+<dt><code>SYSTEM-NAME</code></dt>
+<dd> The name of the system described in this topology file section.</dd>
+<dt><code>LOCAL-PORT-PANEL-NAME</code></dt>
+<dd> The name of the local system port. The numbers printed on the front panel are used together with Ln for Leaf no. N or Sn for Spine no. N.</dd>
+<dt><code>REM-SYS-NAME</code></dt>
+<dd> The name of the system connected to the local port.</dd>
+<dt><code>REM-PORT-PANEL-NAME</code></dt>
+<dd> A name of the remote system port. We use the numbers as printed on the front panel and Ln for Leaf number N or Sn for Spine number N.</dd></dl>
 <h2>EXAMPLE</h2>
 <p> The following is a topology file for a simple cluster with one 24 port switch and two HCAs. The firts <font SIZE="-1">HCA</font> named H-1 and connect to the fabric with its two ports. The second <font SIZE="-1">HCA</font> named H-2. The switch is of type <font SIZE="-1">MTS2400</font> and is named S-1 </p>
 <p> <font SIZE="-1">MTS2400</font> S-1<br />

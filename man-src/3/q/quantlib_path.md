@@ -43,7 +43,7 @@ description: "QuantLib::Path – single-factor random walk"
 <p>single-factor random walk </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>the path includes the initial asset value as its first point.</dl>
+<dd>the path includes the initial asset value as its first point.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>DiscreteHedging.cpp</code>. </p>
 <h2>Author</h2>

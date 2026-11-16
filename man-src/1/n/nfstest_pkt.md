@@ -18,59 +18,59 @@ description: "nfstest_pkt – Packet trace decoder"
 <p> Note: When using the &#8211;call option, a packet call can be displayed out of order if the call is not matched explicitly but its reply is matched so its corresponding call is displayed right before the reply. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&#8211;version</p>
-<dd> show program&#8217;s version number and exit</p>
-<dt>-h, &#8211;help</p>
-<dd> show this help message and exit</p>
-<dt>-v VERBOSE, &#8211;verbose=VERBOSE</p>
-<dd> Verbose level bitmask [default: 1]. bitmap 0x01: one line per packet. bitmap 0x02: one line per layer. bitmap 0x04: real verbose.</p>
-<dt>-l LAYERS, &#8211;layers=LAYERS</p>
-<dd> Layers to display [default: &#8216;nfs,nlm,mount,portmap&#8217;]. Valid layers: ethernet, ip, tcp, udp, rpc, nfs, nlm, mount, portmap</p>
-<dt>-s START, &#8211;start=START</p>
-<dd> Start index [default: 0]</p>
-<dt>-e END, &#8211;end=END</p>
-<dd> End index [default: 0]</p>
-<dt>-m MATCH, &#8211;match=MATCH</p>
-<dd> Match string [default: True]</p>
-<dt>-c, &#8211;call</p>
-<dd> If matching a reply packet, include its coresponding call in the output</p>
-<dt>-r, &#8211;reply</p>
-<dd> If matching a call packet, include its coresponding reply in the output</p>
-<dt>-d DISPLAY, &#8211;display=DISPLAY</p>
-<dd> Print specific packet or part of a packet [default: pkt]</p>
-<dt>-z TZ, &#8211;tz=TZ</p>
-<dd> Time zone to use to display timestamps </p>
+<dt>&#8211;version</dt>
+<dd> show program&#8217;s version number and exit</dd>
+<dt>-h, &#8211;help</dt>
+<dd> show this help message and exit</dd>
+<dt>-v VERBOSE, &#8211;verbose=VERBOSE</dt>
+<dd> Verbose level bitmask [default: 1]. bitmap 0x01: one line per packet. bitmap 0x02: one line per layer. bitmap 0x04: real verbose.</dd>
+<dt>-l LAYERS, &#8211;layers=LAYERS</dt>
+<dd> Layers to display [default: &#8216;nfs,nlm,mount,portmap&#8217;]. Valid layers: ethernet, ip, tcp, udp, rpc, nfs, nlm, mount, portmap</dd>
+<dt>-s START, &#8211;start=START</dt>
+<dd> Start index [default: 0]</dd>
+<dt>-e END, &#8211;end=END</dt>
+<dd> End index [default: 0]</dd>
+<dt>-m MATCH, &#8211;match=MATCH</dt>
+<dd> Match string [default: True]</dd>
+<dt>-c, &#8211;call</dt>
+<dd> If matching a reply packet, include its coresponding call in the output</dd>
+<dt>-r, &#8211;reply</dt>
+<dd> If matching a call packet, include its coresponding reply in the output</dd>
+<dt>-d DISPLAY, &#8211;display=DISPLAY</dt>
+<dd> Print specific packet or part of a packet [default: pkt]</dd>
+<dt>-z TZ, &#8211;tz=TZ</dt>
+<dd> Time zone to use to display timestamps </dd>
 </dl>
 <h3>RPC display:</h3>
 <dl>
-<dt>&#8211;rpc-type=RPC_TYPE</p>
-<dd> Display RPC type [default: True]</p>
-<dt>&#8211;rpc-load=RPC_LOAD</p>
-<dd> Display RPC load type (NFS, NLM, etc.) [default: True]</p>
-<dt>&#8211;rpc-ver=RPC_VER</p>
-<dd> Display RPC load version [default: True]</p>
-<dt>&#8211;rpc-xid=RPC_XID</p>
-<dd> Display RPC xid [default: True] </p>
+<dt>&#8211;rpc-type=RPC_TYPE</dt>
+<dd> Display RPC type [default: True]</dd>
+<dt>&#8211;rpc-load=RPC_LOAD</dt>
+<dd> Display RPC load type (NFS, NLM, etc.) [default: True]</dd>
+<dt>&#8211;rpc-ver=RPC_VER</dt>
+<dd> Display RPC load version [default: True]</dd>
+<dt>&#8211;rpc-xid=RPC_XID</dt>
+<dd> Display RPC xid [default: True] </dd>
 </dl>
 <h3>Packet display:</h3>
 <dl>
-<dt>&#8211;nfs-mainop=NFS_MAINOP</p>
-<dd> Display NFSv4 main operation only [default: False]</p>
-<dt>&#8211;load-body=LOAD_BODY</p>
-<dd> Display RPC payload body [default: True]</p>
-<dt>&#8211;crc16=CRC16</p>
-<dd> Display CRC16 encoded strings [default: True]</p>
-<dt>&#8211;crc32=CRC32</p>
-<dd> Display CRC32 encoded strings [default: True]</p>
-<dt>&#8211;strsize=STRSIZE</p>
-<dd> Truncate all strings to this size [default: 0] </p>
+<dt>&#8211;nfs-mainop=NFS_MAINOP</dt>
+<dd> Display NFSv4 main operation only [default: False]</dd>
+<dt>&#8211;load-body=LOAD_BODY</dt>
+<dd> Display RPC payload body [default: True]</dd>
+<dt>&#8211;crc16=CRC16</dt>
+<dd> Display CRC16 encoded strings [default: True]</dd>
+<dt>&#8211;crc32=CRC32</dt>
+<dd> Display CRC32 encoded strings [default: True]</dd>
+<dt>&#8211;strsize=STRSIZE</dt>
+<dd> Truncate all strings to this size [default: 0] </dd>
 </dl>
 <h3>Debug:</h3>
 <dl>
-<dt>&#8211;enum-check=ENUM_CHECK</p>
-<dd> If set to True, enums are strictly enforced [default: True]</p>
-<dt>&#8211;debug-level=DEBUG_LEVEL</p>
-<dd> Set debug level messages</dl>
+<dt>&#8211;enum-check=ENUM_CHECK</dt>
+<dd> If set to True, enums are strictly enforced [default: True]</dd>
+<dt>&#8211;debug-level=DEBUG_LEVEL</dt>
+<dd> Set debug level messages</dd></dl>
 <h2>EXAMPLES</h2>
 <p> # Display all NFS packets (one line per packet)<br />
  # Display only the NFS packets by default.<br />

@@ -16,16 +16,16 @@ description: "CREATE CONVERSION – define a new encoding conversion"
 <p> To be able to create a conversion, you must have EXECUTE privilege on the function and CREATE privilege on the destination schema.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>DEFAULT</code></p>
-<dd>The DEFAULT clause indicates that this conversion is the default for this particular source to destination encoding. There should be only one default encoding in a schema for the encoding pair.</p>
-<dt><i>name</i></p>
-<dd>The name of the conversion. The conversion name can be schema-qualified. If it is not, the conversion is defined in the current schema. The conversion name must be unique within a schema.</p>
-<dt><i>source_encoding</i></p>
-<dd>The source encoding name.</p>
-<dt><i>dest_encoding</i></p>
-<dd>The destination encoding name.</p>
-<dt><i>funcname</i></p>
-<dd>The function used to perform the conversion. The function name can be schema-qualified. If it is not, the function will be looked up in the path. </p>
+<dt><code>DEFAULT</code></dt>
+<dd>The DEFAULT clause indicates that this conversion is the default for this particular source to destination encoding. There should be only one default encoding in a schema for the encoding pair.</dd>
+<dt><i>name</i></dt>
+<dd>The name of the conversion. The conversion name can be schema-qualified. If it is not, the conversion is defined in the current schema. The conversion name must be unique within a schema.</dd>
+<dt><i>source_encoding</i></dt>
+<dd>The source encoding name.</dd>
+<dt><i>dest_encoding</i></dt>
+<dd>The destination encoding name.</dd>
+<dt><i>funcname</i></dt>
+<dd>The function used to perform the conversion. The function name can be schema-qualified. If it is not, the function will be looked up in the path. </dd>
 <p> The function must have the following signature: </p>
 <pre>conv_proc(
  integer, -- source encoding ID

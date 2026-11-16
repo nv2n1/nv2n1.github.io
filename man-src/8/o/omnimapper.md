@@ -16,12 +16,12 @@ description: "omniMapper – Simple proxy for CORBA naming service from omniORB"
 <h2>Options</h2>
 <p>A summary of options is included below. For a complete description, see the HTML pages included in the omniorb4-doc package.</p>
 <dl>
-<dt><code>-port</code><i>&nbsp;<wbr>port</i></p>
-<dd>This allows you to choose a port other than 2809 to listen on.</p>
-<dt><code>-config</code><i>&nbsp;<wbr>config_file</i></p>
-<dd>This specifies a location for the configuration file. The default name is <i>/etc/omniMapper.cfg</i>.</p>
-<dt><code>-v</code></p>
-<dd><code>omniMapper</code> does not normally print anything; this option makes it verbose so it prints configuration information and a record of the redirections it makes to standard output.</dl>
+<dt><code>-port</code><i>&nbsp;<wbr>port</i></dt>
+<dd>This allows you to choose a port other than 2809 to listen on.</dd>
+<dt><code>-config</code><i>&nbsp;<wbr>config_file</i></dt>
+<dd>This specifies a location for the configuration file. The default name is <i>/etc/omniMapper.cfg</i>.</dd>
+<dt><code>-v</code></dt>
+<dd><code>omniMapper</code> does not normally print anything; this option makes it verbose so it prints configuration information and a record of the redirections it makes to standard output.</dd></dl>
 <h2>Configuration File</h2>
 <p>The configuration file is very simple. Each line contains a string to be used as an object key, some white space and an IOR (or any valid URI) that it will redirect that object key to. Comments should be prefixed with a <i>#</i> character. For example: </p>
 <p>&nbsp;<wbr>#&nbsp;<wbr>Example omniMapper.cfg </p>

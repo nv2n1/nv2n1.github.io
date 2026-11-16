@@ -15,10 +15,10 @@ description: "SDL_Rect – Defines a rectangular area"
 } SDL_Rect;</tt></pre>
 <h2>Structure Data</h2>
 <dl COMPACT>
-<dt><code>x, y</code></p>
-<dd>Position of the upper-left corner of the rectangle</p>
-<dt><code>w, h</code></p>
-<dd>The width and height of the rectangle</dl>
+<dt><code>x, y</code></dt>
+<dd>Position of the upper-left corner of the rectangle</dd>
+<dt><code>w, h</code></dt>
+<dd>The width and height of the rectangle</dd></dl>
 <h2>Description</h2>
 <p>A <code>SDL_Rect</code> defines a rectangular area of pixels. It is used by <i></i><code>SDL_BlitSurface</code> to define blitting regions and by several other video functions.</p>
 <h2>See Also</h2>

@@ -11,10 +11,8 @@ std::remove_reference - std::remove_reference
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct remove_reference;</code></pre> 
 If the type T is a reference type, provides the member typedef type which is the type referred to by T. Otherwise type is T. 
 
@@ -37,10 +35,8 @@ using remove_reference_t = typename remove_reference&lt;T&gt;::type;
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt; // std::cout
-
 #include &lt;type_traits&gt; // std::is_same
 template &lt;class T1, class T2&gt;
-
 void print_is_same()
 {
     std::cout &lt;&lt; std::is_same&lt;T1, T2&gt;() &lt;&lt; '\n';

@@ -11,7 +11,6 @@ std::memcmp - std::memcmp
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstring&gt;
-
     int memcmp(const void *lhs, const void *rhs, std::size_t count);</code></pre> 
 Reinterprets the objects pointed to by lhs and rhs as arrays of unsigned char and compares the first count characters of these arrays. The comparison is done lexicographically. 
 The sign of the result is the sign of the difference between the values of the first pair of bytes (both interpreted as unsigned char) that differ in the objects being compared. 
@@ -34,10 +33,8 @@ This function reads object_representations, not the object values, and is typica
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstring&gt;
 void demo(const char *lhs, const char *rhs, std::size_t sz)
-
 {
     std::cout &lt;&lt; std::string(lhs, sz);
     int rc = std::memcmp(lhs, rhs, sz);
@@ -50,7 +47,6 @@ void demo(const char *lhs, const char *rhs, std::size_t sz)
     std::cout &lt;&lt; std::string(rhs, sz) &lt;&lt; &quot; in lexicographical order\n&quot;;
 }
 int main()
-
 {
     char a1[] = {'a', 'b', 'c'};
     char a2[sizeof a1] = {'a', 'b', 'd'};

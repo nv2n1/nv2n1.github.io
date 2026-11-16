@@ -19,33 +19,33 @@ description: "eggdrop – an IRC bot"
 <p> Eggdrop needs a config file to run. For an example, have a look at <code>eggdrop.conf</code> which is distributed with Eggdrop.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Display a list of command-line options.</p>
-<dt><code>-n</code></p>
-<dd> Don&#8217;t background. Normally, Eggdrop will move itself into the background when you start it up, meaning you&#8217;ll get another shell prompt, and you can do other things while the bot is running. With -n, you won&#8217;t return to the shell prompt until the bot exits (which won&#8217;t normally happen until it&#8217;s killed). By default, -n will send all log entries to the console.</p>
-<dt><code>-nt</code></p>
-<dd> Don&#8217;t background, use terminal. This is just like -n, except that instead of seeing log entries, your console will simulate a DCC chat with the bot.</p>
-<dt><code>-nc</code></p>
-<dd> Don&#8217;t background, show channel info. This is just like -n, except that instead of seeing log entries, every 10 seconds your screen will clear and you will see the current channel status, sort of like &quot;top&quot;.</p>
-<dt><code>-m</code></p>
-<dd> Create userfile. If you don&#8217;t have a userfile, this will make Eggdrop create one and give owner status to the first person that introduces himself or herself to it. You&#8217;ll need to do this when you first set up your bot.</p>
-<dt><code>-v</code></p>
-<dd> Show version info, then quit.</dl>
+<dt><code>-h</code></dt>
+<dd> Display a list of command-line options.</dd>
+<dt><code>-n</code></dt>
+<dd> Don&#8217;t background. Normally, Eggdrop will move itself into the background when you start it up, meaning you&#8217;ll get another shell prompt, and you can do other things while the bot is running. With -n, you won&#8217;t return to the shell prompt until the bot exits (which won&#8217;t normally happen until it&#8217;s killed). By default, -n will send all log entries to the console.</dd>
+<dt><code>-nt</code></dt>
+<dd> Don&#8217;t background, use terminal. This is just like -n, except that instead of seeing log entries, your console will simulate a DCC chat with the bot.</dd>
+<dt><code>-nc</code></dt>
+<dd> Don&#8217;t background, show channel info. This is just like -n, except that instead of seeing log entries, every 10 seconds your screen will clear and you will see the current channel status, sort of like &quot;top&quot;.</dd>
+<dt><code>-m</code></dt>
+<dd> Create userfile. If you don&#8217;t have a userfile, this will make Eggdrop create one and give owner status to the first person that introduces himself or herself to it. You&#8217;ll need to do this when you first set up your bot.</dd>
+<dt><code>-v</code></dt>
+<dd> Show version info, then quit.</dd></dl>
 <h2>SIGNALS</h2>
 <dl>
-<dt><code>SIGCHLD</code></p>
-<dd> This signal is ignored by Eggdrop and can be used to determine whether it&#8217;s running or not.</p>
-<dt><code>SIGTERM</code></p>
-<dd> Depending on die-on-sigterm being set to 0 or 1 in the config file, Eggdrop will save its user and channel file and/or die.</p>
-<dt><code>SIGHUP</code></p>
-<dd> Depending on die-on-sighup being set to 0 or 1 in the config file, Eggdrop will rehash (reload its config file) or die.</dl>
+<dt><code>SIGCHLD</code></dt>
+<dd> This signal is ignored by Eggdrop and can be used to determine whether it&#8217;s running or not.</dd>
+<dt><code>SIGTERM</code></dt>
+<dd> Depending on die-on-sigterm being set to 0 or 1 in the config file, Eggdrop will save its user and channel file and/or die.</dd>
+<dt><code>SIGHUP</code></dt>
+<dd> Depending on die-on-sighup being set to 0 or 1 in the config file, Eggdrop will rehash (reload its config file) or die.</dd></dl>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>EGG_LANG</code></p>
+<dt><code>EGG_LANG</code></dt>
 <dd> This variable can be set to the language in which you want Eggdrop to speak<br />
-&nbsp;<wbr>to you. It defaults to English, but German, French, Finnish, and Danish are supported, too.</p>
-<dt><code>EGG_LANGDIR</code></p>
-<dd> Specifies the directory where all your language files are stored. The default is ./language.</dl>
+&nbsp;<wbr>to you. It defaults to English, but German, French, Finnish, and Danish are supported, too.</dd>
+<dt><code>EGG_LANGDIR</code></dt>
+<dd> Specifies the directory where all your language files are stored. The default is ./language.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-tclsh/">tclsh</a>(1), irc(1), ircII(1), <a href="/docs/linux/man/8-ircd/">ircd</a>(8) </p>
 <p> There is extensive <code>online documentation.</code> Once you get the bot running, open a DCC chat with it, and type: <code>.help</code> </p>

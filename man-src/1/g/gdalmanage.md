@@ -16,28 +16,28 @@ Usage : gdalmanage mode[-r][-u][-f format] datasetname[newdatasetname]
 <h2>DESCRIPTION</h2>
 <p> The gdalmanage program can perform various operations on raster data files, depending on the chosen <i>mode</i>. This includes identifying raster data types and deleting, renaming or copying the files. </p>
 <dl>
-<dt><i>mode</i>:</p>
-<dd> Mode of operation</p>
-<dt><code>identify</code> <i>datasetname</i>:</p>
-<dd> List data format of file.</p>
-<dt><code>copy</code> <i>datasetname newdatasetname</i>:</p>
-<dd> Create a copy of the raster file with a new name.</p>
-<dt><code>rename</code> <i>datasetname newdatasetname</i>:</p>
-<dd> Change the name of the raster file.</p>
-<dt><code>delete</code> <i>datasetname</i>:</p>
-<dd> Delete raster file.</dl>
+<dt><i>mode</i>:</dt>
+<dd> Mode of operation</dd>
+<dt><code>identify</code> <i>datasetname</i>:</dt>
+<dd> List data format of file.</dd>
+<dt><code>copy</code> <i>datasetname newdatasetname</i>:</dt>
+<dd> Create a copy of the raster file with a new name.</dd>
+<dt><code>rename</code> <i>datasetname newdatasetname</i>:</dt>
+<dd> Change the name of the raster file.</dd>
+<dt><code>delete</code> <i>datasetname</i>:</dt>
+<dd> Delete raster file.</dd></dl>
 <dl>
-<dt><code>-r</code>:</p>
-<dd> Recursively scan files/folders for raster files.</p>
-<dt><code>-u</code>:</p>
-<dd> Report failures if file type is unidentified.</p>
-<dt><code>-f</code> <i>format</i>:</p>
-<dd> Specify format of raster file if unknown by the application. Uses short data format name (e.g. <i>GTiff</i>).</dl>
+<dt><code>-r</code>:</dt>
+<dd> Recursively scan files/folders for raster files.</dd>
+<dt><code>-u</code>:</dt>
+<dd> Report failures if file type is unidentified.</dd>
+<dt><code>-f</code> <i>format</i>:</dt>
+<dd> Specify format of raster file if unknown by the application. Uses short data format name (e.g. <i>GTiff</i>).</dd></dl>
 <dl>
-<dt><i>datasetname</i>:</p>
-<dd> Raster file to operate on.</p>
-<dt><i>newdatasetname</i>:</p>
-<dd> For copy and rename modes, you provide a <i>source</i> filename and a <i>target</i> filename, just like copy and move commands in an operating system.</dl>
+<dt><i>datasetname</i>:</dt>
+<dd> Raster file to operate on.</dd>
+<dt><i>newdatasetname</i>:</dt>
+<dd> For copy and rename modes, you provide a <i>source</i> filename and a <i>target</i> filename, just like copy and move commands in an operating system.</dd></dl>
 <h2>EXAMPLES</h2>
 <h3>Using identify mode</h3>
 <p> Report the data format of the raster file by using the <i>identify</i> mode and specifying a data file name: </p>
@@ -57,7 +57,6 @@ NE1_50M_SR_W/NE1_50M_SR_W.aux: HFA
 NE1_50M_SR_W/NE1_50M_SR_W.tif: GTiff
 NE1_50M_SR_W/ne1_50m_sub.tif: GTiff
 NE1_50M_SR_W/ne1_50m_sub2.tif: GTiff.fi
- 
 </pre>
 <h3>Using copy mode</h3>
 <p> Copy the raster data: </p>

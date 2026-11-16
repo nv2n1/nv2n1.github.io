@@ -17,7 +17,7 @@ NERRO - Referenced by a user to obtain the current value of the internal error f
  The argument of NERRO is as follows: 
 
 <dl COMPACT><dt>NERRF
-<dd>(an output variable of type INTEGER) - Receives the same value that is returned as the value of the function itself.</dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
+</dt><dd>(an output variable of type INTEGER) - Receives the same value that is returned as the value of the function itself.</dd></dl><h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Examples</h2>Use the ncargex command to see the following relevant examples: tseter, arex02.
 <h2>Access</h2>To use nerro or c_nerro, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.
 <h2>See Also</h2>Online: entsr, eprin, errof, error_handling, fdum, icfell, icloem, retsr, semess, seter, ncarg_cbind

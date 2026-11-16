@@ -16,15 +16,15 @@ description: "Bgljfile – a Jvm Access File Generator"
 <h2>OPTIONS</h2>
 <dl>
 <dt>
-<dt><code>file</code></p>
+</dt><dt><code>file</code></dt>
 <dd>
-<dd> Is an file implementing a module. <code>Bgljfile</code> reads that file to discover the name of the implemented module. </p>
-<dt><code>-base</code></p>
-<dd> Set the Jvm base package. </p>
-<dt><code>-o &lt;file&gt;</code></p>
-<dd> Print Module Access File into <i>file</i>. The default is to print the list on the standard output device. </p>
-<dt><code>-suffix &lt;suf&gt;</code></p>
-<dd> Adds <i>suf</i> to the <code>bgljfile</code> source file suffixes list. Default suffixes are &quot;scm&quot;, &quot;sch&quot; and &quot;bgl&quot;. </p>
+</dd><dd> Is an file implementing a module. <code>Bgljfile</code> reads that file to discover the name of the implemented module. </dd>
+<dt><code>-base</code></dt>
+<dd> Set the Jvm base package. </dd>
+<dt><code>-o &lt;file&gt;</code></dt>
+<dd> Print Module Access File into <i>file</i>. The default is to print the list on the standard output device. </dd>
+<dt><code>-suffix &lt;suf&gt;</code></dt>
+<dd> Adds <i>suf</i> to the <code>bgljfile</code> source file suffixes list. Default suffixes are &quot;scm&quot;, &quot;sch&quot; and &quot;bgl&quot;. </dd>
 </dl>
 <h2>EXAMPLE</h2>
 <p> If the three files exists and contain legal Bigloo module clause, then: </p>

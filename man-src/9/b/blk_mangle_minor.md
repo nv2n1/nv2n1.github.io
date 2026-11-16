@@ -15,7 +15,7 @@ blk_mangle_minor - scatter minor numbers apart
 <h2>Arguments</h2>
 
 <i>minor</i>
-<dl><dd><dd>minor number to mangle</dl>
+<dl><dd></dd><dd>minor number to mangle</dd></dl>
 
 <h2>Description</h2>
 

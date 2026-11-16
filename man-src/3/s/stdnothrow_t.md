@@ -11,11 +11,9 @@ std::nothrow_t - std::nothrow_t
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;new&gt;
-
     struct nothrow_t {
 };
 (until C++ 17)
-
     struct nothrow_t {
     explicit nothrow_t() = default;
 };

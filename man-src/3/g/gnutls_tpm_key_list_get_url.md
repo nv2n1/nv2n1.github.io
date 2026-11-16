@@ -14,14 +14,14 @@ description: "gnutls_tpm_key_list_get_url – API function"
 <p> <code>int gnutls_tpm_key_list_get_url(gnutls_tpm_key_list_t </code><i>list</i><code>, unsigned int </code><i>idx</i><code>, char ** </code><i>url</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_tpm_key_list_t list</p>
-<dd> a list of the keys</p>
-<dt>unsigned int idx</p>
-<dd> The index of the key (starting from zero)</p>
-<dt>char ** url</p>
-<dd> The URL to be returned</p>
-<dt>unsigned int flags</p>
-<dd> should be zero</dl>
+<dt>gnutls_tpm_key_list_t list</dt>
+<dd> a list of the keys</dd>
+<dt>unsigned int idx</dt>
+<dd> The index of the key (starting from zero)</dd>
+<dt>char ** url</dt>
+<dd> The URL to be returned</dd>
+<dt>unsigned int flags</dt>
+<dd> should be zero</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return for each given index a URL of the corresponding key. If the provided index is out of bounds then <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> is returned.</p>
 <h2>RETURNS</h2>
@@ -37,6 +37,6 @@ description: "gnutls_tpm_key_list_get_url – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

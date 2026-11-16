@@ -24,36 +24,36 @@ description: "struct_erw – extended report word"
 <h2>Members</h2>
 <p>res0</p>
 <dl>
-<dd>reserved</dl>
+<dd>reserved</dd></dl>
 <p> auth</p>
 <dl>
-<dd>authorization check</dl>
+<dd>authorization check</dd></dl>
 <p> pvrf</p>
 <dl>
-<dd>path-verification-required flag</dl>
+<dd>path-verification-required flag</dd></dl>
 <p> cpt</p>
 <dl>
-<dd>channel-path timeout</dl>
+<dd>channel-path timeout</dd></dl>
 <p> fsavf</p>
 <dl>
-<dd>failing storage address validity flag</dl>
+<dd>failing storage address validity flag</dd></dl>
 <p> cons</p>
 <dl>
-<dd>concurrent sense</dl>
+<dd>concurrent sense</dd></dl>
 <p> scavf</p>
 <dl>
-<dd>secondary ccw address validity flag</dl>
+<dd>secondary ccw address validity flag</dd></dl>
 <p> fsaf</p>
 <dl>
-<dd>failing storage address format</dl>
+<dd>failing storage address format</dd></dl>
 <p> scnt</p>
 <dl>
-<dd>sense count, if <i>cons</i> == <code>1</code></dl>
+<dd>sense count, if <i>cons</i> == <code>1</code></dd></dl>
 <p> res16</p>
 <dl>
-<dd>reserved</dl>
+<dd>reserved</dd></dl>
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

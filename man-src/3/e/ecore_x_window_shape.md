@@ -21,13 +21,13 @@ description: "X Window Shape Functions – These functions use the shape extensi
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>win</i> The given window.<br />
- <i>mask</i> A 2-bit depth pixmap that provides the new input shape of the window.</dl>
+ <i>mask</i> A 2-bit depth pixmap that provides the new input shape of the window.</dd></dl>
 <h3>EAPI void ecore_x_window_shape_mask_set (Ecore_X_Window win, Ecore_X_Pixmap mask)</h3>
 <p>Sets the shape of the given window to that given by the pixmap mask. </p>
 <p> Sets the shape of the given window to the given pixmap. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>win</i> The given window.<br />
- <i>mask</i> A 2-bit depth pixmap that provides the new shape of the window.</dl>
+ <i>mask</i> A 2-bit depth pixmap that provides the new shape of the window.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

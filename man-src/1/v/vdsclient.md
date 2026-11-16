@@ -17,19 +17,19 @@ description: "vdsClient – VDSM’s command line interface"
 <p><code>vdsClient</code> is a debug tool, which is capable of harming the operation of a single RHEV node and even a complete RHEV cluster. Its use is not supported or endorsed by Red Hat. </p>
 <h2>Options</h2>
 <dl COMPACT>
-<dt><code>-h</code></p>
-<dd>Display vdsClient&#8217;s help</p>
-<dt><code>-m</code></p>
-<dd>List supported methods and their params (Short help)</p>
-<dt><code>-s</code></p>
-<dd>Connect to server with SSL.</p>
-<dt><code>&#8211;truststore &lt;path&gt;</code></p>
-<dd>Specify the location of VDSM&#8217;s trust store. The default location is /etc/pki/vdsm. </p>
+<dt><code>-h</code></dt>
+<dd>Display vdsClient&#8217;s help</dd>
+<dt><code>-m</code></dt>
+<dd>List supported methods and their params (Short help)</dd>
+<dt><code>-s</code></dt>
+<dd>Connect to server with SSL.</dd>
+<dt><code>&#8211;truststore &lt;path&gt;</code></dt>
+<dd>Specify the location of VDSM&#8217;s trust store. The default location is /etc/pki/vdsm. </dd>
 </dl>
 <h2>Files</h2>
 <dl COMPACT>
-<dt> <i>/etc/pki/vdsm</i></p>
-<dd>VDSM&#8217;s trust store. Used to obtain SSL key for secure communication with VDSM. </p>
+<dt> <i>/etc/pki/vdsm</i></dt>
+<dd>VDSM&#8217;s trust store. Used to obtain SSL key for secure communication with VDSM. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-vdsmd/">vdsmd</a>(8)</code> </p>

@@ -17,26 +17,26 @@ description: "mlprof – display profiling information for a MLton-compiled exec
 <p> With multiple <code>mlmon.out</code> files, <code>mlprof</code> will sum the profiling information. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-call-graph </code><i>file</i></p>
-<dd> Write a call graph containing the table data to a dot file. See the <code>MLton User Guide</code> for details.</p>
-<dt><code>-graph-title </code><i>string</i></p>
-<dd> Set the call-graph title.</p>
-<dt><code>-gray </code><i>{</i><code>false</code>|<code>true</code>}</p>
-<dd> Gray call-graph nodes according to stack %. This only makes sense if the executable was compiled <code>-profile-stack true</code>.</p>
-<dt><code>-keep </code><i>exp</i></p>
-<dd> Only show functions specified by <i>exp</i>. For details on the allowed expressions, see the <code>MLton User Guide</code>. Multiple <code>-keep</code> expressions are not allowed.</p>
-<dt><code>-mlmon </code><i>file</i></p>
-<dd> Process the list of whitespace-separated <code>mlmon.out</code> files found in the specified file.</p>
-<dt><code>-raw </code><i>{</i><code>false</code>|<code>true</code>}</p>
-<dd> Show the raw counts in addition to the percentages.</p>
-<dt><code>-show-line </code><i>{</i><code>false</code>|<code>true</code>}</p>
-<dd> Show the file and line for each function.</p>
-<dt><code>-split </code><i>regexp</i></p>
-<dd> Treat duplicates of functions whose name matches <i>regexp</i> as different functions.</p>
-<dt><code>-thresh </code><i>x</i></p>
-<dd> An abbreviation for <code>-keep &#8216;(thresh x)&#8217;</code>, which only prints information about functions whose percentage is greater than or equal to <code>x</code>, where 0 &lt;= <code>x</code> &lt;= 100.0.</p>
-<dt><code>-tolerant </code><i>{</i><code>false</code>|<code>true</code>}</p>
-<dd> Print a warning about broken <code>mlmon.out</code> files, but do not exit.</dl>
+<dt><code>-call-graph </code><i>file</i></dt>
+<dd> Write a call graph containing the table data to a dot file. See the <code>MLton User Guide</code> for details.</dd>
+<dt><code>-graph-title </code><i>string</i></dt>
+<dd> Set the call-graph title.</dd>
+<dt><code>-gray </code><i>{</i><code>false</code>|<code>true</code>}</dt>
+<dd> Gray call-graph nodes according to stack %. This only makes sense if the executable was compiled <code>-profile-stack true</code>.</dd>
+<dt><code>-keep </code><i>exp</i></dt>
+<dd> Only show functions specified by <i>exp</i>. For details on the allowed expressions, see the <code>MLton User Guide</code>. Multiple <code>-keep</code> expressions are not allowed.</dd>
+<dt><code>-mlmon </code><i>file</i></dt>
+<dd> Process the list of whitespace-separated <code>mlmon.out</code> files found in the specified file.</dd>
+<dt><code>-raw </code><i>{</i><code>false</code>|<code>true</code>}</dt>
+<dd> Show the raw counts in addition to the percentages.</dd>
+<dt><code>-show-line </code><i>{</i><code>false</code>|<code>true</code>}</dt>
+<dd> Show the file and line for each function.</dd>
+<dt><code>-split </code><i>regexp</i></dt>
+<dd> Treat duplicates of functions whose name matches <i>regexp</i> as different functions.</dd>
+<dt><code>-thresh </code><i>x</i></dt>
+<dd> An abbreviation for <code>-keep &#8216;(thresh x)&#8217;</code>, which only prints information about functions whose percentage is greater than or equal to <code>x</code>, where 0 &lt;= <code>x</code> &lt;= 100.0.</dd>
+<dt><code>-tolerant </code><i>{</i><code>false</code>|<code>true</code>}</dt>
+<dd> Print a warning about broken <code>mlmon.out</code> files, but do not exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mlton/">mlton</a></code>(1) and the <code>MLton Guide</code>. </p>
 <h2>Index</h2>

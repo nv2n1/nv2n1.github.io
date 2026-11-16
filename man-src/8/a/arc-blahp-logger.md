@@ -14,20 +14,20 @@ description: "arc-blahp-logger – ARC authplugin to store BLAH accouting logs a
 <p>arc-blahp-logger -I &lt;jobID&gt; -U &lt;user&gt; -P &lt;proxy file&gt; -L &lt;job status file&gt; [-c &lt;ceid prefix&gt;] [-p &lt;log prefix&gt; ] [-d &lt;log level&gt;] </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-I</code> <i>jobID</i></p>
-<dd>A-REX job identifier</p>
-<dt><code>-U</code> <i>user</i></p>
-<dd>local account that own the job files and processes</p>
-<dt><code>-P</code> <i>user proxy</i></p>
-<dd>path to user proxy certificate file to get VOMS membership info</p>
-<dt><code>-L</code> <i>job status file</i></p>
-<dd>A-REX jobstatus .local file containint more info about job (like LRMS id)</p>
-<dt><code>-c</code> <i>ceid prefix</i></p>
-<dd>prefix to generate CE ID in accordance to GLUE1.3 publishing</p>
-<dt><code>-p</code> <i>log prefix</i></p>
-<dd>logs location and filename prefix. Default is <code>/var/log/arc/accounting/blahp.log</code></p>
-<dt><code>-d</code> <i>loglevel</i></p>
-<dd>logging level from 0(ERROR) to 5(DEBUG) </p>
+<dt><code>-I</code> <i>jobID</i></dt>
+<dd>A-REX job identifier</dd>
+<dt><code>-U</code> <i>user</i></dt>
+<dd>local account that own the job files and processes</dd>
+<dt><code>-P</code> <i>user proxy</i></dt>
+<dd>path to user proxy certificate file to get VOMS membership info</dd>
+<dt><code>-L</code> <i>job status file</i></dt>
+<dd>A-REX jobstatus .local file containint more info about job (like LRMS id)</dd>
+<dt><code>-c</code> <i>ceid prefix</i></dt>
+<dd>prefix to generate CE ID in accordance to GLUE1.3 publishing</dd>
+<dt><code>-p</code> <i>log prefix</i></dt>
+<dd>logs location and filename prefix. Default is <code>/var/log/arc/accounting/blahp.log</code></dd>
+<dt><code>-d</code> <i>loglevel</i></dt>
+<dd>logging level from 0(ERROR) to 5(DEBUG) </dd>
 </dl>
 <h2>Enabling Plugin In A-Rex Configuration</h2>
 <p>You need to add BLAH logger plugin as a handler for FINISHED state, e.g.: </p>

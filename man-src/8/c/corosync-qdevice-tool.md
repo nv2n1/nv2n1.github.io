@@ -14,16 +14,16 @@ description: "corosync-qdevice-tool – corosync-qdevice control interface."
 <p><code>corosync-qdevice-tool</code> is a frontend to the internal corosync-qdevice IPC. Its main purpose is to show important information about the current internal state of <code>corosync-qdevice.</code></p>
 <h2>Options</h2>
 <dl>
-<dt><code>-H</code></p>
-<dd>Properly shutdown the <code>corosync-qdevice</code> process</p>
-<dt><code>-h</code></p>
-<dd>Display a short usage text</p>
-<dt><code>-s</code></p>
-<dd>Display the status of the <code>corosync-qdevice</code> process. The output is described in its own section below.</p>
-<dt><code>-v</code></p>
-<dd>Display more verbose output for the <code>-s</code> option.</p>
-<dt><code>-p</code></p>
-<dd>Path to the <code>corosync-qdevice</code> communication socket. </p>
+<dt><code>-H</code></dt>
+<dd>Properly shutdown the <code>corosync-qdevice</code> process</dd>
+<dt><code>-h</code></dt>
+<dd>Display a short usage text</dd>
+<dt><code>-s</code></dt>
+<dd>Display the status of the <code>corosync-qdevice</code> process. The output is described in its own section below.</dd>
+<dt><code>-v</code></dt>
+<dd>Display more verbose output for the <code>-s</code> option.</dd>
+<dt><code>-p</code></dt>
+<dd>Path to the <code>corosync-qdevice</code> communication socket. </dd>
 </dl>
 <h2>Status Command Output</h2>
 <pre>Qdevice information

@@ -15,11 +15,11 @@ skb_reserve - adjust headroom
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>buffer to alter</dl>
+<dl><dd></dd><dd>buffer to alter</dd></dl>
  
 
  <i>len</i>
-<dl><dd>bytes to move</dl>
+<dl><dd>bytes to move</dd></dl>
 
 <h2>Description</h2>
 

@@ -17,10 +17,10 @@ int
 <code>Tcl_GetDoubleFromObj</code>(<i>interp, objPtr, doublePtr</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>double <i>doubleValue</i> (in) A double-precision floating-point value used to initialize or set a Tcl object.</p>
-<dd>Tcl_Obj <i>*objPtr</i> (in/out) For <code>Tcl_SetDoubleObj</code>, this points to the object in which to store a double value. For <code>Tcl_GetDoubleFromObj</code>, this refers to the object from which to retrieve a double value.</p>
-<dd>Tcl_Interp <i>*interp</i> (in/out) When non-NULL, an error message is left here when double value retrieval fails.</p>
-<dd>double <i>*doublePtr</i> (out) Points to place to store the double value obtained from <i>objPtr</i>. </p>
+<dd>double <i>doubleValue</i> (in) A double-precision floating-point value used to initialize or set a Tcl object.</dd>
+<dd>Tcl_Obj <i>*objPtr</i> (in/out) For <code>Tcl_SetDoubleObj</code>, this points to the object in which to store a double value. For <code>Tcl_GetDoubleFromObj</code>, this refers to the object from which to retrieve a double value.</dd>
+<dd>Tcl_Interp <i>*interp</i> (in/out) When non-NULL, an error message is left here when double value retrieval fails.</dd>
+<dd>double <i>*doublePtr</i> (out) Points to place to store the double value obtained from <i>objPtr</i>. </dd>
 </dl>
 <h2>Description</h2>
 <p>These procedures are used to create, modify, and read Tcl objects that hold double-precision floating-point values. </p>

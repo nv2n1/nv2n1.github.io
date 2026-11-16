@@ -10,7 +10,6 @@ description: "uuid_time – extract the time at which the UUID was created"
 <p>uuid_time &#8211; extract the time at which the UUID was created</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;uuid.h&gt;
-
 time_t uuid_time(uuid_t uu, struct timeval *ret_tv)</code></pre>
 <h2>Description</h2>
 <p>The <code>uuid_time</code> function extracts the time at which the supplied time-based UUID <i>uu</i> was created. Note that the UUID creation time is only encoded within certain types of UUIDs. This function can only reasonably expect to extract the creation time for UUIDs created with the <code><a href="/docs/linux/man/3-uuid_generate_time/">uuid_generate_time</a></code>(3) and <code><a href="/docs/linux/man/3-uuid_generate_time_safe/">uuid_generate_time_safe</a></code>(3) functions. It may or may not work with UUIDs created by other mechanisms.</p>

@@ -10,30 +10,30 @@ description: "BlackPixelOfScreen, WhitePixelOfScreen, CellsOfScreen, DefaultColo
 <p>BlackPixelOfScreen, WhitePixelOfScreen, CellsOfScreen, DefaultColormapOfScreen, DefaultDepthOfScreen, DefaultGCOfScreen, DefaultVisualOfScreen, DoesBackingStore, DoesSaveUnders, DisplayOfScreen, XScreenNumberOfScreen, EventMaskOfScreen, HeightOfScreen, HeightMMOfScreen, MaxCmapsOfScreen, MinCmapsOfScreen, PlanesOfScreen, RootWindowOfScreen, WidthOfScreen, WidthMMOfScreen &#8211; screen information functions and macros </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>unsigned long BlackPixelOfScreen(Screen *<i>screen</i>);</p>
-<dd>unsigned long WhitePixelOfScreen(Screen *<i>screen</i>);</p>
-<dd>int CellsOfScreen(Screen *<i>screen</i>);</p>
-<dd>Colormap DefaultColormapOfScreen(Screen *<i>screen</i>);</p>
-<dd>int DefaultDepthOfScreen(Screen *<i>screen</i>);</p>
-<dd>GC DefaultGCOfScreen(Screen *<i>screen</i>);</p>
-<dd>Visual *DefaultVisualOfScreen(Screen *<i>screen</i>);</p>
-<dd>int DoesBackingStore(Screen *<i>screen</i>);</p>
-<dd>Bool DoesSaveUnders(Screen *<i>screen</i>);</p>
-<dd>Display *DisplayOfScreen(Screen *<i>screen</i>);</p>
-<dd>int XScreenNumberOfScreen(Screen *<i>screen</i>);</p>
-<dd>long EventMaskOfScreen(Screen *<i>screen</i>);</p>
-<dd>int HeightOfScreen(Screen *<i>screen</i>);</p>
-<dd>int HeightMMOfScreen(Screen *<i>screen</i>);</p>
-<dd>int MaxCmapsOfScreen(Screen *<i>screen</i>);</p>
-<dd>int MinCmapsOfScreen(Screen *<i>screen</i>);</p>
-<dd>int PlanesOfScreen(Screen *<i>screen</i>);</p>
-<dd>Window RootWindowOfScreen(Screen *<i>screen</i>);</p>
-<dd>int WidthOfScreen(Screen *<i>screen</i>);</p>
-<dd>int WidthMMOfScreen(Screen *<i>screen</i>);</dl>
+<dd>unsigned long BlackPixelOfScreen(Screen *<i>screen</i>);</dd>
+<dd>unsigned long WhitePixelOfScreen(Screen *<i>screen</i>);</dd>
+<dd>int CellsOfScreen(Screen *<i>screen</i>);</dd>
+<dd>Colormap DefaultColormapOfScreen(Screen *<i>screen</i>);</dd>
+<dd>int DefaultDepthOfScreen(Screen *<i>screen</i>);</dd>
+<dd>GC DefaultGCOfScreen(Screen *<i>screen</i>);</dd>
+<dd>Visual *DefaultVisualOfScreen(Screen *<i>screen</i>);</dd>
+<dd>int DoesBackingStore(Screen *<i>screen</i>);</dd>
+<dd>Bool DoesSaveUnders(Screen *<i>screen</i>);</dd>
+<dd>Display *DisplayOfScreen(Screen *<i>screen</i>);</dd>
+<dd>int XScreenNumberOfScreen(Screen *<i>screen</i>);</dd>
+<dd>long EventMaskOfScreen(Screen *<i>screen</i>);</dd>
+<dd>int HeightOfScreen(Screen *<i>screen</i>);</dd>
+<dd>int HeightMMOfScreen(Screen *<i>screen</i>);</dd>
+<dd>int MaxCmapsOfScreen(Screen *<i>screen</i>);</dd>
+<dd>int MinCmapsOfScreen(Screen *<i>screen</i>);</dd>
+<dd>int PlanesOfScreen(Screen *<i>screen</i>);</dd>
+<dd>Window RootWindowOfScreen(Screen *<i>screen</i>);</dd>
+<dd>int WidthOfScreen(Screen *<i>screen</i>);</dd>
+<dd>int WidthMMOfScreen(Screen *<i>screen</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>screen</i></p>
-<dd>Specifies the appropriate <code>Screen</code> structure.</dl>
+<dt><i>screen</i></dt>
+<dd>Specifies the appropriate <code>Screen</code> structure.</dd></dl>
 <h2>Description</h2>
 <p>The <code>BlackPixelOfScreen</code> macro returns the black pixel value of the specified screen. </p>
 <p> The <code>WhitePixelOfScreen</code> macro returns the white pixel value of the specified screen. </p>

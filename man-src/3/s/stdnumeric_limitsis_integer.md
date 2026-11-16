@@ -11,7 +11,6 @@ description: "std::numeric_limits<T>::is_integer – std::numeric_limits<T>::is_
 <h2>Synopsis</h2>
 <pre><code>static const bool is_integer;
 (until C++ 11)
-
     static constexpr bool is_integer;
 (since C++ 11)</code></pre>
 <p>The value of std::numeric_limits&lt;T&gt;::is_integer is true for all integer arithmetic types T and false otherwise. This constant is meaningful for all specializations. </p>

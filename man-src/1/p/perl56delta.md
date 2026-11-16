@@ -38,3 +38,4 @@ description: "perl56delta – what’s new for perl v5.6.0"
 <p> An &#8220;our&#8221; declaration introduces a value that can be best understood as a lexically scoped symbolic alias to a global variable in the package that was current where the variable was declared. This is mostly useful as an alternative to the <tt>&quot;vars&quot;</tt> pragma, but also provides the opportunity to introduce typing and other attributes for such variables. See &#8220;our&#8221; in perlfunc.</p>
 <h3>Support for strings represented as a vector of ordinals</h3>
 <p> Literals of the form <tt>&quot;v1.2.3.4&quot;</tt> are now parsed as a string composed of characters with the specified ordinals. This is an alternative, more readable way to construct (possibly unicode) strings instead of interpolating characters, as in <tt>&quot;
+</p>

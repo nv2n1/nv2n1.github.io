@@ -10,10 +10,8 @@ description: "std::alignment_of – std::alignment_of"
 <p>std::alignment_of &#8211; std::alignment_of</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct alignment_of;</code></pre>
 <p>Provides the member constant value equal to the alignment_requirement of the type T, as if obtained by an alignof expression. If T is an array type, returns the alignment requirements of the element type. If T is a reference type, returns the alignment requirements of the type referred to.<br />
 If alignof(T) is not a valid expression, the behavior is undefined.<br />
@@ -45,13 +43,11 @@ type std::integral_constant&lt;std::size_t, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 class A
 {
 };
 int main()
-
 {
     std::cout &lt;&lt; std::alignment_of&lt;A&gt;::value &lt;&lt; '
 ';

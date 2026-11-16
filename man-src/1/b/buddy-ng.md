@@ -15,10 +15,10 @@ description: "buddy-ng – a tool to work with easside-ng"
 <p> <code>buddy-ng</code> server echoes back the decrypted packets to the system running easside-ng in order to access the wireless network without knowing the WEP key. It is done by having the AP itself decrypt the packets. When ran, it automatically starts and listen to port 6969.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-h</i></p>
-<dd> Shows the help screen.</p>
-<dt><i>-p</i></p>
-<dd> Don&#8217;t drop privileges</dl>
+<dt><i>-h</i></dt>
+<dd> Shows the help screen.</dd>
+<dt><i>-p</i></dt>
+<dd> Don&#8217;t drop privileges</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Thomas d&#8217;Otreppe. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.</p>
 <h2>SEE ALSO</h2>

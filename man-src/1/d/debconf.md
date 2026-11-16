@@ -20,14 +20,14 @@ debconf[options] command[args]
 <p> This command is not the usual way that debconf is used. It&#8217;s more typical for debconf to be used via <code><a href="/docs/linux/man/8-dpkg-preconfigure/">dpkg-preconfigure</a></code>(8) or <code><a href="/docs/linux/man/8-dpkg-reconfigure/">dpkg-reconfigure</a></code>(8).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-o</code><i>package</i>, <code>&#8211;owner=</code><i>package</i></p>
-<dd> Tell debconf what package the command it is running is a part of. This is necessary to get ownership of registered questions right, and to support unregister and purge commands properly.</p>
-<dt><code>-f</code><i>type</i>, <code>&#8211;frontend=</code><i>type</i></p>
-<dd> Select the frontend to use.</p>
-<dt><code>-p</code><i>value</i>, <code>&#8211;priority=</code><i>value</i></p>
-<dd> Specify the minimum priority of question that will be displayed.</p>
-<dt><code>&#8211;terse</code></p>
-<dd> Enables terse output mode. This affects only some frontends.</dl>
+<dt><code>-o</code><i>package</i>, <code>&#8211;owner=</code><i>package</i></dt>
+<dd> Tell debconf what package the command it is running is a part of. This is necessary to get ownership of registered questions right, and to support unregister and purge commands properly.</dd>
+<dt><code>-f</code><i>type</i>, <code>&#8211;frontend=</code><i>type</i></dt>
+<dd> Select the frontend to use.</dd>
+<dt><code>-p</code><i>value</i>, <code>&#8211;priority=</code><i>value</i></dt>
+<dd> Specify the minimum priority of question that will be displayed.</dd>
+<dt><code>&#8211;terse</code></dt>
+<dd> Enables terse output mode. This affects only some frontends.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To debug a shell script that uses debconf, you might use: </p>
 <pre>

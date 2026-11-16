@@ -12,17 +12,15 @@ rdma_listen - Listen for incoming connection requests.
 
 <pre><code>#include &lt;rdma/rdma_cma.h&gt;
 int rdma_listen
-
     (struct rdma_cm_id *id,
-
      int backlog);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>id
-<dd>RDMA identifier.
-<dt>backlog
-<dd>backlog of incoming connection requests.</dl>
+</dt><dd>RDMA identifier.
+</dd><dt>backlog
+</dt><dd>backlog of incoming connection requests.</dd></dl>
 
 <h2>Description</h2>
 

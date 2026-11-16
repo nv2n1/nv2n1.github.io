@@ -16,27 +16,27 @@ description: "mii-diag – Network adapter control and monitoring"
 <p>The <code>mii-diag</code> command supports both single character and long option names. Short options use a single dash (´-´) in front of the option character. For options without parameters, multiple options may be concatenated after a single dash. Long options are prefixed by two dashes (´&#8211;´), and may be abbreviated with a unique prefix. A long option may take a parameter of the form &#8211;arg=param or &#8211;arg param. </p>
 <p> A summary of options is as follows. </p>
 <dl>
-<dt><code>-A, &#8211;advertise &lt;speed|setting&gt;</code></p>
-<dd><code>-F, &#8211;fixed-speed &lt;speed|setting&gt;</code> </p>
+<dt><code>-A, &#8211;advertise &lt;speed|setting&gt;</code></dt>
+<dd><code>-F, &#8211;fixed-speed &lt;speed|setting&gt;</code> </dd>
 <p> Speed is one of: 100baseT4, 100baseTx, 100baseTx-FD, 100baseTx-HD, 10baseT, 10baseT-FD, 10baseT-HD. For more precise control an explicit numeric register setting is also allowed. </p>
-<dt><code>-a, &#8211;all-interfaces</code></p>
-<dd>Show the status of all interfaces. This option is not recommended with any other option, especially ones that change settings. </p>
-<dt><code>-s,&#8211;status</code></p>
-<dd>Return exit status 2 if there is no link beat. </p>
-<dt><code>-D</code></p>
-<dd>Increase the debugging level. This may be used to understand the actions the command is taking. </p>
-<dt><code>-g, &#8211;read-parameters</code></p>
-<dd>Show driver-specific parameters. </p>
-<dt><code>-G, &#8211;set-parameters value[,value&#8230;]</code></p>
-<dd>Set driver-specific parameters. Set a adapter-specific parameters. Parameters are comma separated, with missing elements retaining the existing value. </p>
-<dt><code>-v</code></p>
-<dd>Increase the verbosity level. Additional &quot;-v&quot; options increase the level further. </p>
-<dt><code>-V</code></p>
-<dd>Show the program version information. </p>
-<dt><code>-w, &#8211;watch</code></p>
-<dd>Continuously monitor the transceiver and report changes. </p>
-<dt><code>-?</code></p>
-<dd>Emit usage information. </p>
+<dt><code>-a, &#8211;all-interfaces</code></dt>
+<dd>Show the status of all interfaces. This option is not recommended with any other option, especially ones that change settings. </dd>
+<dt><code>-s,&#8211;status</code></dt>
+<dd>Return exit status 2 if there is no link beat. </dd>
+<dt><code>-D</code></dt>
+<dd>Increase the debugging level. This may be used to understand the actions the command is taking. </dd>
+<dt><code>-g, &#8211;read-parameters</code></dt>
+<dd>Show driver-specific parameters. </dd>
+<dt><code>-G, &#8211;set-parameters value[,value&#8230;]</code></dt>
+<dd>Set driver-specific parameters. Set a adapter-specific parameters. Parameters are comma separated, with missing elements retaining the existing value. </dd>
+<dt><code>-v</code></dt>
+<dd>Increase the verbosity level. Additional &quot;-v&quot; options increase the level further. </dd>
+<dt><code>-V</code></dt>
+<dd>Show the program version information. </dd>
+<dt><code>-w, &#8211;watch</code></dt>
+<dd>Continuously monitor the transceiver and report changes. </dd>
+<dt><code>-?</code></dt>
+<dd>Emit usage information. </dd>
 </dl>
 <h2>Description</h2>
 <p>Calling the command with just the interface name produces extensive output describing the transceiver capabilities, configuration and current status. The &#8216;&#8211;monitor&#8217; option allows scripting link beat changes. This option is similar to &#8211;watch, but with lower overhead and simplified output. It polls the interface only once a second and the output format is a single line per link change with three fixed words<br />

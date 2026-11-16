@@ -11,7 +11,6 @@ std::resetiosflags - std::resetiosflags
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;iomanip&gt;
-
 /*unspecified*/ resetiosflags( std::ios_base::fmtflags mask );</code></pre> 
 When used in an expression out &lt;&lt; resetiosflags(mask) or in &gt;&gt; resetiosflags(mask), clears all format flags of the stream out or in as specified by the mask. 
 
@@ -29,13 +28,9 @@ Returns an object of unspecified type such that if str is the name of a stream o
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;sstream&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 int main()
-
 {
     std::istringstream in(&quot;10 010 10 010 10 010&quot;);
     int n1, n2;

@@ -33,49 +33,49 @@ description: "cpio – format of cpio archive files"
 </blockquote>
 <p> The <i>unsigned short</i> fields here are 16-bit integer values; the <i>unsigned int</i> fields are 32-bit integer values. The fields are as follows</p>
 <dl>
-<dt><i>magic</i></p>
-<dd>The integer value octal 070707. This value can be used to determine whether this archive is written with little-endian or big-endian integers.</p>
-<dt><i>dev , ino</i></p>
-<dd>The device and inode numbers from the disk. These are used by programs that read archives to determine when two entries refer to the same file. Programs that synthesize archives should be careful to set these to distinct values for each entry.</p>
-<dt><i>mode</i></p>
-<dd>The mode specifies both the regular permissions and the file type. It consists of several bit fields as follows:</p>
+<dt><i>magic</i></dt>
+<dd>The integer value octal 070707. This value can be used to determine whether this archive is written with little-endian or big-endian integers.</dd>
+<dt><i>dev , ino</i></dt>
+<dd>The device and inode numbers from the disk. These are used by programs that read archives to determine when two entries refer to the same file. Programs that synthesize archives should be careful to set these to distinct values for each entry.</dd>
+<dt><i>mode</i></dt>
+<dd>The mode specifies both the regular permissions and the file type. It consists of several bit fields as follows:</dd>
 <dl>
-<dt><code>0170000</code></p>
-<dd>This masks the file type bits.</p>
-<dt><code>0140000</code></p>
-<dd>File type value for sockets.</p>
-<dt><code>0120000</code></p>
-<dd>File type value for symbolic links. For symbolic links, the link body is stored as file data.</p>
-<dt><code>0100000</code></p>
-<dd>File type value for regular files.</p>
-<dt><code>0060000</code></p>
-<dd>File type value for block special devices.</p>
-<dt><code>0040000</code></p>
-<dd>File type value for directories.</p>
-<dt><code>0020000</code></p>
-<dd>File type value for character special devices.</p>
-<dt><code>0010000</code></p>
-<dd>File type value for named pipes or FIFOs.</p>
-<dt><code>0004000</code></p>
-<dd>SUID bit.</p>
-<dt><code>0002000</code></p>
-<dd>SGID bit.</p>
-<dt><code>0001000</code></p>
-<dd>Sticky bit. On some systems, this modifies the behavior of executables and/or directories.</p>
-<dt><code>0000777</code></p>
-<dd>The lower 9 bits specify read/write/execute permissions for world, group, and user following standard POSIX conventions.</dl>
-<dt><i>uid , gid</i></p>
-<dd>The numeric user id and group id of the owner.</p>
-<dt><i>nlink</i></p>
-<dd>The number of links to this file. Directories always have a value of at least two here. Note that hardlinked files include file data with every copy in the archive.</p>
-<dt><i>rdev</i></p>
-<dd>For block special and character special entries, this field contains the associated device number. For all other entry types, it should be set to zero by writers and ignored by readers.</p>
-<dt><i>mtime</i></p>
-<dd>Modification time of the file, indicated as the number of seconds since the start of the epoch, 00:00:00 UTC January 1, 1970. The four-byte integer is stored with the most-significant 16 bits first followed by the least-significant 16 bits. Each of the two 16 bit values are stored in machine-native byte order.</p>
-<dt><i>namesize</i></p>
-<dd>The number of bytes in the pathname that follows the header. This count includes the trailing NUL byte.</p>
-<dt><i>filesize</i></p>
-<dd>The size of the file. Note that this archive format is limited to four gigabyte file sizes. See <i>mtime</i> above for a description of the storage of four-byte integers.</dl>
+<dt><code>0170000</code></dt>
+<dd>This masks the file type bits.</dd>
+<dt><code>0140000</code></dt>
+<dd>File type value for sockets.</dd>
+<dt><code>0120000</code></dt>
+<dd>File type value for symbolic links. For symbolic links, the link body is stored as file data.</dd>
+<dt><code>0100000</code></dt>
+<dd>File type value for regular files.</dd>
+<dt><code>0060000</code></dt>
+<dd>File type value for block special devices.</dd>
+<dt><code>0040000</code></dt>
+<dd>File type value for directories.</dd>
+<dt><code>0020000</code></dt>
+<dd>File type value for character special devices.</dd>
+<dt><code>0010000</code></dt>
+<dd>File type value for named pipes or FIFOs.</dd>
+<dt><code>0004000</code></dt>
+<dd>SUID bit.</dd>
+<dt><code>0002000</code></dt>
+<dd>SGID bit.</dd>
+<dt><code>0001000</code></dt>
+<dd>Sticky bit. On some systems, this modifies the behavior of executables and/or directories.</dd>
+<dt><code>0000777</code></dt>
+<dd>The lower 9 bits specify read/write/execute permissions for world, group, and user following standard POSIX conventions.</dd></dl>
+<dt><i>uid , gid</i></dt>
+<dd>The numeric user id and group id of the owner.</dd>
+<dt><i>nlink</i></dt>
+<dd>The number of links to this file. Directories always have a value of at least two here. Note that hardlinked files include file data with every copy in the archive.</dd>
+<dt><i>rdev</i></dt>
+<dd>For block special and character special entries, this field contains the associated device number. For all other entry types, it should be set to zero by writers and ignored by readers.</dd>
+<dt><i>mtime</i></dt>
+<dd>Modification time of the file, indicated as the number of seconds since the start of the epoch, 00:00:00 UTC January 1, 1970. The four-byte integer is stored with the most-significant 16 bits first followed by the least-significant 16 bits. Each of the two 16 bit values are stored in machine-native byte order.</dd>
+<dt><i>namesize</i></dt>
+<dd>The number of bytes in the pathname that follows the header. This count includes the trailing NUL byte.</dd>
+<dt><i>filesize</i></dt>
+<dd>The size of the file. Note that this archive format is limited to four gigabyte file sizes. See <i>mtime</i> above for a description of the storage of four-byte integers.</dd></dl>
 <p> The pathname immediately follows the fixed header. If the <code>namesize</code> is odd, an additional NUL byte is added after the pathname. The file data is then appended, padded with NUL bytes to an even length. </p>
 <p> Hardlinked files are not given special treatment; the full file contents are included with each copy of the file.</p>
 <h3>Portable ASCII Format</h3>
@@ -118,10 +118,10 @@ description: "cpio – format of cpio archive files"
 </blockquote>
 <p> Except as specified below, the fields here match those specified for the old binary format above.</p>
 <dl>
-<dt><i>magic</i></p>
-<dd>The string &#8220;070701&#8221;</p>
-<dt><i>check</i></p>
-<dd>This field is always set to zero by writers and ignored by readers. See the next section for more details.</dl>
+<dt><i>magic</i></dt>
+<dd>The string &#8220;070701&#8221;</dd>
+<dt><i>check</i></dt>
+<dd>This field is always set to zero by writers and ignored by readers. See the next section for more details.</dd></dl>
 <p> The pathname is followed by NUL bytes so that the total size of the fixed header plus pathname is a multiple of four. Likewise, the file data is padded to a multiple of four bytes. Note that this format supports only 4 gigabyte files (unlike the older ASCII format, which supports 8 gigabyte files). </p>
 <p> In this format, hardlinked files are handled by setting the filesize to zero for each entry except the last one that appears in the archive.</p>
 <h3>New CRC Format</h3>

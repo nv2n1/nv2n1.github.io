@@ -11,9 +11,7 @@ description: "pthread_tryjoin_np, pthread_timedjoin_np – try to join with a te
 <h2>Synopsis</h2>
 <pre><code>#define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;pthread.h&gt;
-
 int pthread_tryjoin_np(pthread_t thread, void **retval);
-
 int pthread_timedjoin_np(pthread_t thread, void **retval,
                          const struct timespec *abstime);</code></pre>
 <p> Compile and link with <i>-pthread</i>.</p>
@@ -27,14 +25,14 @@ int pthread_timedjoin_np(pthread_t thread, void **retval,
 <h2>Errors</h2>
 <p>These functions can fail with the same errors as <code><a href="/docs/linux/man/3-pthread_join/">pthread_join</a></code>(3). <code>pthread_tryjoin_np</code>() can in addition fail with the following error:</p>
 <dl>
-<dt><code>EBUSY</code></p>
-<dd><i>thread</i> had not yet terminated at the time of the call.</dl>
+<dt><code>EBUSY</code></dt>
+<dd><i>thread</i> had not yet terminated at the time of the call.</dd></dl>
 <p> <code>pthread_timedjoin_np</code>() can in addition fail with the following errors:</p>
 <dl>
-<dt><code>ETIMEDOUT</code></p>
-<dd>The call timed out before <i>thread</i> terminated.</p>
-<dt><code>EINVAL</code></p>
-<dd><i>abstime</i> value is invalid (<i>tv_sec</i> is less than 0 or <i>tv_nsec</i> is greater than 1e9).</dl>
+<dt><code>ETIMEDOUT</code></dt>
+<dd>The call timed out before <i>thread</i> terminated.</dd>
+<dt><code>EINVAL</code></dt>
+<dd><i>abstime</i> value is invalid (<i>tv_sec</i> is less than 0 or <i>tv_nsec</i> is greater than 1e9).</dd></dl>
 <p> <code>pthread_timedjoin_np</code>() never returns the error <code>EINTR</code>.</p>
 <h2>Versions</h2>
 <p>These functions first appeared in glibc in version 2.3.3.</p>

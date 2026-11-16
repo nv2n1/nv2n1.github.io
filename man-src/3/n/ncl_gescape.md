@@ -13,18 +13,18 @@ description: "gescape (Escape) – provides a standard way of implementing nonst
 <p> void gescape(Gint func_id, const Gescape_in_data *in_data, Gstore *store_data,Gescape_out_data **out_data);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>func_id</p>
-<dd>(Input) &#8211; A function identifier specifying the requested activity. The legal values for func_id are &quot;-1391&quot; for changing a metafile name and &quot;-1396&quot; for effecting a pause in an X window.</p>
-<dt>in_data.escape_r1.size</p>
-<dd>(size_t, Input) &#8211; Size of the input data record array (for input data record, see below).</p>
-<dt>in_data.escape_r1.data</p>
-<dd>(void *, Input) &#8211; Input data record. For calls to gescape with func_id equal to -1391 the input data record should be a character string containing the desired metafile name left justified and blank filled; for calls to gescape with func_id equal to -1396 the input data record should be a character string containing the workstation identifier encoded as a five character number.</p>
-<dt>store_data</p>
-<dd>(void *, Input) &#8211; Storage for output data. Not currently in use for NCAR GKS.</p>
-<dt>out_data.escape_r1.size</p>
-<dd>(size_t, Output) &#8211; Size of the output data record array. Not currently in use for NCAR GKS.</p>
-<dt>out_data.escape_r1.data</p>
-<dd>(void *, Output) &#8211; Output data record. Not currently in use for NCAR GKS.</dl>
+<dt>func_id</dt>
+<dd>(Input) &#8211; A function identifier specifying the requested activity. The legal values for func_id are &quot;-1391&quot; for changing a metafile name and &quot;-1396&quot; for effecting a pause in an X window.</dd>
+<dt>in_data.escape_r1.size</dt>
+<dd>(size_t, Input) &#8211; Size of the input data record array (for input data record, see below).</dd>
+<dt>in_data.escape_r1.data</dt>
+<dd>(void *, Input) &#8211; Input data record. For calls to gescape with func_id equal to -1391 the input data record should be a character string containing the desired metafile name left justified and blank filled; for calls to gescape with func_id equal to -1396 the input data record should be a character string containing the workstation identifier encoded as a five character number.</dd>
+<dt>store_data</dt>
+<dd>(void *, Input) &#8211; Storage for output data. Not currently in use for NCAR GKS.</dd>
+<dt>out_data.escape_r1.size</dt>
+<dd>(size_t, Output) &#8211; Size of the output data record array. Not currently in use for NCAR GKS.</dd>
+<dt>out_data.escape_r1.data</dt>
+<dd>(void *, Output) &#8211; Output data record. Not currently in use for NCAR GKS.</dd></dl>
 <h2>Usage</h2>
 <p>The sizes of the data records must always be at least &quot;1&quot; in value.</p>
 <h2>Examples</h2>

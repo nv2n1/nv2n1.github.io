@@ -24,38 +24,38 @@ description: "struct_platform_nand_ctrl – controller level device structure"
 <h2>Members</h2>
 <p>probe</p>
 <dl>
-<dd>platform specific function to probe/setup hardware</dl>
+<dd>platform specific function to probe/setup hardware</dd></dl>
 <p> remove</p>
 <dl>
-<dd>platform specific function to remove/teardown hardware</dl>
+<dd>platform specific function to remove/teardown hardware</dd></dl>
 <p> hwcontrol</p>
 <dl>
-<dd>platform specific hardware control structure</dl>
+<dd>platform specific hardware control structure</dd></dl>
 <p> dev_ready</p>
 <dl>
-<dd>platform specific function to read ready/busy pin</dl>
+<dd>platform specific function to read ready/busy pin</dd></dl>
 <p> select_chip</p>
 <dl>
-<dd>platform specific chip select function</dl>
+<dd>platform specific chip select function</dd></dl>
 <p> cmd_ctrl</p>
 <dl>
-<dd>platform specific function for controlling ALE/CLE/nCE. Also used to write command and address</dl>
+<dd>platform specific function for controlling ALE/CLE/nCE. Also used to write command and address</dd></dl>
 <p> write_buf</p>
 <dl>
-<dd>platform specific function for write buffer</dl>
+<dd>platform specific function for write buffer</dd></dl>
 <p> read_buf</p>
 <dl>
-<dd>platform specific function for read buffer</dl>
+<dd>platform specific function for read buffer</dd></dl>
 <p> read_byte</p>
 <dl>
-<dd>platform specific function to read one byte from chip</dl>
+<dd>platform specific function to read one byte from chip</dd></dl>
 <p> priv</p>
 <dl>
-<dd>private data to transport driver specific settings</dl>
+<dd>private data to transport driver specific settings</dd></dl>
 <h2>Description</h2>
 <p>All fields are optional and depend on the hardware driver requirements</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

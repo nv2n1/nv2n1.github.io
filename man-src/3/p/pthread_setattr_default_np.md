@@ -11,27 +11,25 @@ description: "pthread_getattr_default_np, pthread_setattr_default_np, – get or
 <h2>Synopsis</h2>
 <pre><code>#define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;pthread.h&gt;
-
 int pthread_getattr_default_np(pthread_attr_t *attr);
 int pthread_setattr_default_np(pthread_attr_t *attr);
-
 Compile and link with - pthread.</code></pre>
 <h2>Description</h2>
 <p>The <code>pthread_setattr_default_np</code>() function sets the default attributes used for creation of a new thread&#8212;that is, the attributes that are used when <code><a href="/docs/linux/man/3-pthread_create/">pthread_create</a></code>(3) is called with a second argument that is NULL. The default attributes are set using the attributes supplied in <i>*attr</i>, a previously initialized thread attributes object. Note the following details about the supplied attributes object:</p>
 <dl>
-<dt>*</p>
-<dd>The attribute settings in the object must be valid.</p>
-<dt>*</p>
-<dd>The <i>stack address</i> attribute must not be set in the object.</p>
-<dt>*</p>
-<dd>Setting the <i>stack size</i> attribute to zero means leave the default stack size unchanged.</dl>
+<dt>*</dt>
+<dd>The attribute settings in the object must be valid.</dd>
+<dt>*</dt>
+<dd>The <i>stack address</i> attribute must not be set in the object.</dd>
+<dt>*</dt>
+<dd>Setting the <i>stack size</i> attribute to zero means leave the default stack size unchanged.</dd></dl>
 <p> The <code>pthread_getattr_default_np</code>() function initializes the thread attributes object referred to by <i>attr</i> so that it contains the default attributes used for thread creation.</p>
 <h2>Errors</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd>(<code>pthread_setattr_default_np</code>()) One of the attribute settings in <i>attr</i> is invalid, or the stack address attribute is set in <i>attr</i>.</p>
-<dt><code>ENOMEM</code></p>
-<dd>(<code>pthread_setattr_default_np</code>()) Insufficient memory.</dl>
+<dt><code>EINVAL</code></dt>
+<dd>(<code>pthread_setattr_default_np</code>()) One of the attribute settings in <i>attr</i> is invalid, or the stack address attribute is set in <i>attr</i>.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd>(<code>pthread_setattr_default_np</code>()) Insufficient memory.</dd></dl>
 <h2>Versions</h2>
 <p>These functions are available in glibc since version 2.18.</p>
 <h2>Attributes</h2>
@@ -61,13 +59,7 @@ Scheduling policy:   SCHED_OTHER
 Scheduling priority: 0
 Detach state:        JOINABLE
 Inherit scheduler:   INHERIT
-
-
-
 Program source
-
-
-
 #define _GNU_SOURCE
 #include &lt;pthread.h&gt;
 #include &lt;stdio.h&gt;

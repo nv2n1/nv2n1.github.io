@@ -35,67 +35,67 @@ print 1 + 2 + 4;
 <h3>Perl Functions by Category</h3>
 <p> Here are Perl&#8217;s functions (including things that look like functions, like some keywords and named operators) arranged by category. Some functions appear in more than one place. Any warnings, including those produced by keywords, are described in perldiag and warnings.</p>
 <dl>
-<dt>Functions for SCALARs or strings</p>
-<dd> <tt>&quot;chomp&quot;</tt>, <tt>&quot;chop&quot;</tt>, <tt>&quot;chr&quot;</tt>, <tt>&quot;crypt&quot;</tt>, <tt>&quot;fc&quot;</tt>, <tt>&quot;hex&quot;</tt>, <tt>&quot;index&quot;</tt>, <tt>&quot;lc&quot;</tt>, <tt>&quot;lcfirst&quot;</tt>, <tt>&quot;length&quot;</tt>, <tt>&quot;oct&quot;</tt>, <tt>&quot;ord&quot;</tt>, <tt>&quot;pack&quot;</tt>, <tt>&quot;q//&quot;</tt>, <tt>&quot;qq//&quot;</tt>, <tt>&quot;reverse&quot;</tt>, <tt>&quot;rindex&quot;</tt>, <tt>&quot;sprintf&quot;</tt>, <tt>&quot;substr&quot;</tt>, <tt>&quot;tr///&quot;</tt>, <tt>&quot;uc&quot;</tt>, <tt>&quot;ucfirst&quot;</tt>, <tt>&quot;y///&quot;</tt> </p>
+<dt>Functions for SCALARs or strings</dt>
+<dd> <tt>&quot;chomp&quot;</tt>, <tt>&quot;chop&quot;</tt>, <tt>&quot;chr&quot;</tt>, <tt>&quot;crypt&quot;</tt>, <tt>&quot;fc&quot;</tt>, <tt>&quot;hex&quot;</tt>, <tt>&quot;index&quot;</tt>, <tt>&quot;lc&quot;</tt>, <tt>&quot;lcfirst&quot;</tt>, <tt>&quot;length&quot;</tt>, <tt>&quot;oct&quot;</tt>, <tt>&quot;ord&quot;</tt>, <tt>&quot;pack&quot;</tt>, <tt>&quot;q//&quot;</tt>, <tt>&quot;qq//&quot;</tt>, <tt>&quot;reverse&quot;</tt>, <tt>&quot;rindex&quot;</tt>, <tt>&quot;sprintf&quot;</tt>, <tt>&quot;substr&quot;</tt>, <tt>&quot;tr///&quot;</tt>, <tt>&quot;uc&quot;</tt>, <tt>&quot;ucfirst&quot;</tt>, <tt>&quot;y///&quot;</tt> </dd>
 <p> <tt>&quot;fc&quot;</tt> is available only if the <tt>&quot;fc&quot;</tt> feature is enabled or if it is prefixed with <tt>&quot;CORE::&quot;</tt>. The <tt>&quot;fc&quot;</tt> feature is enabled automatically with a <tt>&quot;use v5.16&quot;</tt> (or higher) declaration in the current scope.</p>
-<dt>Regular expressions and pattern matching</p>
-<dd> <tt>&quot;m//&quot;</tt>, <tt>&quot;pos&quot;</tt>, <tt>&quot;qr//&quot;</tt>, <tt>&quot;quotemeta&quot;</tt>, <tt>&quot;s///&quot;</tt>, <tt>&quot;split&quot;</tt>, <tt>&quot;study&quot;</tt></p>
-<dt>Numeric functions</p>
-<dd> <tt>&quot;abs&quot;</tt>, <tt>&quot;atan2&quot;</tt>, <tt>&quot;cos&quot;</tt>, <tt>&quot;exp&quot;</tt>, <tt>&quot;hex&quot;</tt>, <tt>&quot;int&quot;</tt>, <tt>&quot;log&quot;</tt>, <tt>&quot;oct&quot;</tt>, <tt>&quot;rand&quot;</tt>, <tt>&quot;sin&quot;</tt>, <tt>&quot;sqrt&quot;</tt>, <tt>&quot;srand&quot;</tt></p>
-<dt>Functions for real @ARRAYs</p>
-<dd> <tt>&quot;each&quot;</tt>, <tt>&quot;keys&quot;</tt>, <tt>&quot;pop&quot;</tt>, <tt>&quot;push&quot;</tt>, <tt>&quot;shift&quot;</tt>, <tt>&quot;splice&quot;</tt>, <tt>&quot;unshift&quot;</tt>, <tt>&quot;values&quot;</tt></p>
-<dt>Functions for list data</p>
-<dd> <tt>&quot;grep&quot;</tt>, <tt>&quot;join&quot;</tt>, <tt>&quot;map&quot;</tt>, <tt>&quot;qw//&quot;</tt>, <tt>&quot;reverse&quot;</tt>, <tt>&quot;sort&quot;</tt>, <tt>&quot;unpack&quot;</tt></p>
-<dt>Functions for real %HASHes</p>
-<dd> <tt>&quot;delete&quot;</tt>, <tt>&quot;each&quot;</tt>, <tt>&quot;exists&quot;</tt>, <tt>&quot;keys&quot;</tt>, <tt>&quot;values&quot;</tt></p>
-<dt>Input and output functions</p>
-<dd> <tt>&quot;binmode&quot;</tt>, <tt>&quot;close&quot;</tt>, <tt>&quot;closedir&quot;</tt>, <tt>&quot;dbmclose&quot;</tt>, <tt>&quot;dbmopen&quot;</tt>, <tt>&quot;die&quot;</tt>, <tt>&quot;eof&quot;</tt>, <tt>&quot;fileno&quot;</tt>, <tt>&quot;flock&quot;</tt>, <tt>&quot;format&quot;</tt>, <tt>&quot;getc&quot;</tt>, <tt>&quot;print&quot;</tt>, <tt>&quot;printf&quot;</tt>, <tt>&quot;read&quot;</tt>, <tt>&quot;readdir&quot;</tt>, <tt>&quot;readline&quot;</tt>, <tt>&quot;rewinddir&quot;</tt>, <tt>&quot;say&quot;</tt>, <tt>&quot;seek&quot;</tt>, <tt>&quot;seekdir&quot;</tt>, <tt>&quot;select&quot;</tt>, <tt>&quot;syscall&quot;</tt>, <tt>&quot;sysread&quot;</tt>, <tt>&quot;sysseek&quot;</tt>, <tt>&quot;syswrite&quot;</tt>, <tt>&quot;tell&quot;</tt>, <tt>&quot;telldir&quot;</tt>, <tt>&quot;truncate&quot;</tt>, <tt>&quot;warn&quot;</tt>, <tt>&quot;write&quot;</tt> </p>
+<dt>Regular expressions and pattern matching</dt>
+<dd> <tt>&quot;m//&quot;</tt>, <tt>&quot;pos&quot;</tt>, <tt>&quot;qr//&quot;</tt>, <tt>&quot;quotemeta&quot;</tt>, <tt>&quot;s///&quot;</tt>, <tt>&quot;split&quot;</tt>, <tt>&quot;study&quot;</tt></dd>
+<dt>Numeric functions</dt>
+<dd> <tt>&quot;abs&quot;</tt>, <tt>&quot;atan2&quot;</tt>, <tt>&quot;cos&quot;</tt>, <tt>&quot;exp&quot;</tt>, <tt>&quot;hex&quot;</tt>, <tt>&quot;int&quot;</tt>, <tt>&quot;log&quot;</tt>, <tt>&quot;oct&quot;</tt>, <tt>&quot;rand&quot;</tt>, <tt>&quot;sin&quot;</tt>, <tt>&quot;sqrt&quot;</tt>, <tt>&quot;srand&quot;</tt></dd>
+<dt>Functions for real @ARRAYs</dt>
+<dd> <tt>&quot;each&quot;</tt>, <tt>&quot;keys&quot;</tt>, <tt>&quot;pop&quot;</tt>, <tt>&quot;push&quot;</tt>, <tt>&quot;shift&quot;</tt>, <tt>&quot;splice&quot;</tt>, <tt>&quot;unshift&quot;</tt>, <tt>&quot;values&quot;</tt></dd>
+<dt>Functions for list data</dt>
+<dd> <tt>&quot;grep&quot;</tt>, <tt>&quot;join&quot;</tt>, <tt>&quot;map&quot;</tt>, <tt>&quot;qw//&quot;</tt>, <tt>&quot;reverse&quot;</tt>, <tt>&quot;sort&quot;</tt>, <tt>&quot;unpack&quot;</tt></dd>
+<dt>Functions for real %HASHes</dt>
+<dd> <tt>&quot;delete&quot;</tt>, <tt>&quot;each&quot;</tt>, <tt>&quot;exists&quot;</tt>, <tt>&quot;keys&quot;</tt>, <tt>&quot;values&quot;</tt></dd>
+<dt>Input and output functions</dt>
+<dd> <tt>&quot;binmode&quot;</tt>, <tt>&quot;close&quot;</tt>, <tt>&quot;closedir&quot;</tt>, <tt>&quot;dbmclose&quot;</tt>, <tt>&quot;dbmopen&quot;</tt>, <tt>&quot;die&quot;</tt>, <tt>&quot;eof&quot;</tt>, <tt>&quot;fileno&quot;</tt>, <tt>&quot;flock&quot;</tt>, <tt>&quot;format&quot;</tt>, <tt>&quot;getc&quot;</tt>, <tt>&quot;print&quot;</tt>, <tt>&quot;printf&quot;</tt>, <tt>&quot;read&quot;</tt>, <tt>&quot;readdir&quot;</tt>, <tt>&quot;readline&quot;</tt>, <tt>&quot;rewinddir&quot;</tt>, <tt>&quot;say&quot;</tt>, <tt>&quot;seek&quot;</tt>, <tt>&quot;seekdir&quot;</tt>, <tt>&quot;select&quot;</tt>, <tt>&quot;syscall&quot;</tt>, <tt>&quot;sysread&quot;</tt>, <tt>&quot;sysseek&quot;</tt>, <tt>&quot;syswrite&quot;</tt>, <tt>&quot;tell&quot;</tt>, <tt>&quot;telldir&quot;</tt>, <tt>&quot;truncate&quot;</tt>, <tt>&quot;warn&quot;</tt>, <tt>&quot;write&quot;</tt> </dd>
 <p> <tt>&quot;say&quot;</tt> is available only if the <tt>&quot;say&quot;</tt> feature is enabled or if it is prefixed with <tt>&quot;CORE::&quot;</tt>. The <tt>&quot;say&quot;</tt> feature is enabled automatically with a <tt>&quot;use v5.10&quot;</tt> (or higher) declaration in the current scope.</p>
-<dt>Functions for fixed-length data or records</p>
-<dd> <tt>&quot;pack&quot;</tt>, <tt>&quot;read&quot;</tt>, <tt>&quot;syscall&quot;</tt>, <tt>&quot;sysread&quot;</tt>, <tt>&quot;sysseek&quot;</tt>, <tt>&quot;syswrite&quot;</tt>, <tt>&quot;unpack&quot;</tt>, <tt>&quot;vec&quot;</tt></p>
-<dt>Functions for filehandles, files, or directories</p>
-<dd> <tt>&quot;-</tt>X<tt>&quot;</tt>, <tt>&quot;chdir&quot;</tt>, <tt>&quot;chmod&quot;</tt>, <tt>&quot;chown&quot;</tt>, <tt>&quot;chroot&quot;</tt>, <tt>&quot;fcntl&quot;</tt>, <tt>&quot;glob&quot;</tt>, <tt>&quot;ioctl&quot;</tt>, <tt>&quot;link&quot;</tt>, <tt>&quot;lstat&quot;</tt>, <tt>&quot;mkdir&quot;</tt>, <tt>&quot;open&quot;</tt>, <tt>&quot;opendir&quot;</tt>, <tt>&quot;readlink&quot;</tt>, <tt>&quot;rename&quot;</tt>, <tt>&quot;rmdir&quot;</tt>, <tt>&quot;select&quot;</tt>, <tt>&quot;stat&quot;</tt>, <tt>&quot;symlink&quot;</tt>, <tt>&quot;sysopen&quot;</tt>, <tt>&quot;umask&quot;</tt>, <tt>&quot;unlink&quot;</tt>, <tt>&quot;utime&quot;</tt></p>
-<dt>Keywords related to the control flow of your Perl program</p>
-<dd> <tt>&quot;break&quot;</tt>, <tt>&quot;caller&quot;</tt>, <tt>&quot;continue&quot;</tt>, <tt>&quot;die&quot;</tt>, <tt>&quot;do&quot;</tt>, <tt>&quot;dump&quot;</tt>, <tt>&quot;eval&quot;</tt>, <tt>&quot;evalbytes&quot;</tt>, <tt>&quot;exit&quot;</tt>, <tt>&quot;__FILE__&quot;</tt>, <tt>&quot;goto&quot;</tt>, <tt>&quot;last&quot;</tt>, <tt>&quot;__LINE__&quot;</tt>, <tt>&quot;next&quot;</tt>, <tt>&quot;__PACKAGE__&quot;</tt>, <tt>&quot;redo&quot;</tt>, <tt>&quot;return&quot;</tt>, <tt>&quot;sub&quot;</tt>, <tt>&quot;__SUB__&quot;</tt>, <tt>&quot;wantarray&quot;</tt> </p>
+<dt>Functions for fixed-length data or records</dt>
+<dd> <tt>&quot;pack&quot;</tt>, <tt>&quot;read&quot;</tt>, <tt>&quot;syscall&quot;</tt>, <tt>&quot;sysread&quot;</tt>, <tt>&quot;sysseek&quot;</tt>, <tt>&quot;syswrite&quot;</tt>, <tt>&quot;unpack&quot;</tt>, <tt>&quot;vec&quot;</tt></dd>
+<dt>Functions for filehandles, files, or directories</dt>
+<dd> <tt>&quot;-</tt>X<tt>&quot;</tt>, <tt>&quot;chdir&quot;</tt>, <tt>&quot;chmod&quot;</tt>, <tt>&quot;chown&quot;</tt>, <tt>&quot;chroot&quot;</tt>, <tt>&quot;fcntl&quot;</tt>, <tt>&quot;glob&quot;</tt>, <tt>&quot;ioctl&quot;</tt>, <tt>&quot;link&quot;</tt>, <tt>&quot;lstat&quot;</tt>, <tt>&quot;mkdir&quot;</tt>, <tt>&quot;open&quot;</tt>, <tt>&quot;opendir&quot;</tt>, <tt>&quot;readlink&quot;</tt>, <tt>&quot;rename&quot;</tt>, <tt>&quot;rmdir&quot;</tt>, <tt>&quot;select&quot;</tt>, <tt>&quot;stat&quot;</tt>, <tt>&quot;symlink&quot;</tt>, <tt>&quot;sysopen&quot;</tt>, <tt>&quot;umask&quot;</tt>, <tt>&quot;unlink&quot;</tt>, <tt>&quot;utime&quot;</tt></dd>
+<dt>Keywords related to the control flow of your Perl program</dt>
+<dd> <tt>&quot;break&quot;</tt>, <tt>&quot;caller&quot;</tt>, <tt>&quot;continue&quot;</tt>, <tt>&quot;die&quot;</tt>, <tt>&quot;do&quot;</tt>, <tt>&quot;dump&quot;</tt>, <tt>&quot;eval&quot;</tt>, <tt>&quot;evalbytes&quot;</tt>, <tt>&quot;exit&quot;</tt>, <tt>&quot;__FILE__&quot;</tt>, <tt>&quot;goto&quot;</tt>, <tt>&quot;last&quot;</tt>, <tt>&quot;__LINE__&quot;</tt>, <tt>&quot;next&quot;</tt>, <tt>&quot;__PACKAGE__&quot;</tt>, <tt>&quot;redo&quot;</tt>, <tt>&quot;return&quot;</tt>, <tt>&quot;sub&quot;</tt>, <tt>&quot;__SUB__&quot;</tt>, <tt>&quot;wantarray&quot;</tt> </dd>
 <p> <tt>&quot;break&quot;</tt> is available only if you enable the experimental <tt>&quot;switch&quot;</tt> feature or use the <tt>&quot;CORE::&quot;</tt> prefix. The <tt>&quot;switch&quot;</tt> feature also enables the <tt>&quot;default&quot;</tt>, <tt>&quot;given&quot;</tt> and <tt>&quot;when&quot;</tt> statements, which are documented in &#8220;Switch Statements&#8221; in perlsyn. The <tt>&quot;switch&quot;</tt> feature is enabled automatically with a <tt>&quot;use v5.10&quot;</tt> (or higher) declaration in the current scope. In Perl v5.14 and earlier, <tt>&quot;continue&quot;</tt> required the <tt>&quot;switch&quot;</tt> feature, like the other keywords. </p>
 <p> <tt>&quot;evalbytes&quot;</tt> is only available with the <tt>&quot;evalbytes&quot;</tt> feature (see feature) or if prefixed with <tt>&quot;CORE::&quot;</tt>. <tt>&quot;__SUB__&quot;</tt> is only available with the <tt>&quot;current_sub&quot;</tt> feature or if prefixed with <tt>&quot;CORE::&quot;</tt>. Both the <tt>&quot;evalbytes&quot;</tt> and <tt>&quot;current_sub&quot;</tt> features are enabled automatically with a <tt>&quot;use v5.16&quot;</tt> (or higher) declaration in the current scope.</p>
-<dt>Keywords related to scoping</p>
-<dd> <tt>&quot;caller&quot;</tt>, <tt>&quot;import&quot;</tt>, <tt>&quot;local&quot;</tt>, <tt>&quot;my&quot;</tt>, <tt>&quot;our&quot;</tt>, <tt>&quot;package&quot;</tt>, <tt>&quot;state&quot;</tt>, <tt>&quot;use&quot;</tt> </p>
+<dt>Keywords related to scoping</dt>
+<dd> <tt>&quot;caller&quot;</tt>, <tt>&quot;import&quot;</tt>, <tt>&quot;local&quot;</tt>, <tt>&quot;my&quot;</tt>, <tt>&quot;our&quot;</tt>, <tt>&quot;package&quot;</tt>, <tt>&quot;state&quot;</tt>, <tt>&quot;use&quot;</tt> </dd>
 <p> <tt>&quot;state&quot;</tt> is available only if the <tt>&quot;state&quot;</tt> feature is enabled or if it is prefixed with <tt>&quot;CORE::&quot;</tt>. The <tt>&quot;state&quot;</tt> feature is enabled automatically with a <tt>&quot;use v5.10&quot;</tt> (or higher) declaration in the current scope.</p>
-<dt>Miscellaneous functions</p>
-<dd> <tt>&quot;defined&quot;</tt>, <tt>&quot;formline&quot;</tt>, <tt>&quot;lock&quot;</tt>, <tt>&quot;prototype&quot;</tt>, <tt>&quot;reset&quot;</tt>, <tt>&quot;scalar&quot;</tt>, <tt>&quot;undef&quot;</tt></p>
-<dt>Functions for processes and process groups</p>
-<dd> <tt>&quot;alarm&quot;</tt>, <tt>&quot;exec&quot;</tt>, <tt>&quot;fork&quot;</tt>, <tt>&quot;getpgrp&quot;</tt>, <tt>&quot;getppid&quot;</tt>, <tt>&quot;getpriority&quot;</tt>, <tt>&quot;kill&quot;</tt>, <tt>&quot;pipe&quot;</tt>, <tt>&quot;qx//&quot;</tt>, <tt>&quot;readpipe&quot;</tt>, <tt>&quot;setpgrp&quot;</tt>, <tt>&quot;setpriority&quot;</tt>, <tt>&quot;sleep&quot;</tt>, <tt>&quot;system&quot;</tt>, <tt>&quot;times&quot;</tt>, <tt>&quot;wait&quot;</tt>, <tt>&quot;waitpid&quot;</tt></p>
-<dt>Keywords related to Perl modules</p>
-<dd> <tt>&quot;do&quot;</tt>, <tt>&quot;import&quot;</tt>, <tt>&quot;no&quot;</tt>, <tt>&quot;package&quot;</tt>, <tt>&quot;require&quot;</tt>, <tt>&quot;use&quot;</tt></p>
-<dt>Keywords related to classes and object-orientation</p>
-<dd> <tt>&quot;bless&quot;</tt>, <tt>&quot;dbmclose&quot;</tt>, <tt>&quot;dbmopen&quot;</tt>, <tt>&quot;package&quot;</tt>, <tt>&quot;ref&quot;</tt>, <tt>&quot;tie&quot;</tt>, <tt>&quot;tied&quot;</tt>, <tt>&quot;untie&quot;</tt>, <tt>&quot;use&quot;</tt></p>
-<dt>Low-level socket functions</p>
-<dd> <tt>&quot;accept&quot;</tt>, <tt>&quot;bind&quot;</tt>, <tt>&quot;connect&quot;</tt>, <tt>&quot;getpeername&quot;</tt>, <tt>&quot;getsockname&quot;</tt>, <tt>&quot;getsockopt&quot;</tt>, <tt>&quot;listen&quot;</tt>, <tt>&quot;recv&quot;</tt>, <tt>&quot;send&quot;</tt>, <tt>&quot;setsockopt&quot;</tt>, <tt>&quot;shutdown&quot;</tt>, <tt>&quot;socket&quot;</tt>, <tt>&quot;socketpair&quot;</tt></p>
-<dt>System V interprocess communication functions</p>
-<dd> <tt>&quot;msgctl&quot;</tt>, <tt>&quot;msgget&quot;</tt>, <tt>&quot;msgrcv&quot;</tt>, <tt>&quot;msgsnd&quot;</tt>, <tt>&quot;semctl&quot;</tt>, <tt>&quot;semget&quot;</tt>, <tt>&quot;semop&quot;</tt>, <tt>&quot;shmctl&quot;</tt>, <tt>&quot;shmget&quot;</tt>, <tt>&quot;shmread&quot;</tt>, <tt>&quot;shmwrite&quot;</tt></p>
-<dt>Fetching user and group info</p>
-<dd> <tt>&quot;endgrent&quot;</tt>, <tt>&quot;endhostent&quot;</tt>, <tt>&quot;endnetent&quot;</tt>, <tt>&quot;endpwent&quot;</tt>, <tt>&quot;getgrent&quot;</tt>, <tt>&quot;getgrgid&quot;</tt>, <tt>&quot;getgrnam&quot;</tt>, <tt>&quot;getlogin&quot;</tt>, <tt>&quot;getpwent&quot;</tt>, <tt>&quot;getpwnam&quot;</tt>, <tt>&quot;getpwuid&quot;</tt>, <tt>&quot;setgrent&quot;</tt>, <tt>&quot;setpwent&quot;</tt></p>
-<dt>Fetching network info</p>
-<dd> <tt>&quot;endprotoent&quot;</tt>, <tt>&quot;endservent&quot;</tt>, <tt>&quot;gethostbyaddr&quot;</tt>, <tt>&quot;gethostbyname&quot;</tt>, <tt>&quot;gethostent&quot;</tt>, <tt>&quot;getnetbyaddr&quot;</tt>, <tt>&quot;getnetbyname&quot;</tt>, <tt>&quot;getnetent&quot;</tt>, <tt>&quot;getprotobyname&quot;</tt>, <tt>&quot;getprotobynumber&quot;</tt>, <tt>&quot;getprotoent&quot;</tt>, <tt>&quot;getservbyname&quot;</tt>, <tt>&quot;getservbyport&quot;</tt>, <tt>&quot;getservent&quot;</tt>, <tt>&quot;sethostent&quot;</tt>, <tt>&quot;setnetent&quot;</tt>, <tt>&quot;setprotoent&quot;</tt>, <tt>&quot;setservent&quot;</tt></p>
-<dt>Time-related functions</p>
-<dd> <tt>&quot;gmtime&quot;</tt>, <tt>&quot;localtime&quot;</tt>, <tt>&quot;time&quot;</tt>, <tt>&quot;times&quot;</tt></p>
-<dt>Non-function keywords</p>
-<dd> <tt>&quot;and&quot;</tt>, <tt>&quot;AUTOLOAD&quot;</tt>, <tt>&quot;BEGIN&quot;</tt>, <tt>&quot;CHECK&quot;</tt>, <tt>&quot;cmp&quot;</tt>, <tt>&quot;CORE&quot;</tt>, <tt>&quot;__DATA__&quot;</tt>, <tt>&quot;default&quot;</tt>, <tt>&quot;DESTROY&quot;</tt>, <tt>&quot;else&quot;</tt>, <tt>&quot;elseif&quot;</tt>, <tt>&quot;elsif&quot;</tt>, <tt>&quot;END&quot;</tt>, <tt>&quot;__END__&quot;</tt>, <tt>&quot;eq&quot;</tt>, <tt>&quot;for&quot;</tt>, <tt>&quot;foreach&quot;</tt>, <tt>&quot;ge&quot;</tt>, <tt>&quot;given&quot;</tt>, <tt>&quot;gt&quot;</tt>, <tt>&quot;if&quot;</tt>, <tt>&quot;INIT&quot;</tt>, <tt>&quot;le&quot;</tt>, <tt>&quot;lt&quot;</tt>, <tt>&quot;ne&quot;</tt>, <tt>&quot;not&quot;</tt>, <tt>&quot;or&quot;</tt>, <tt>&quot;UNITCHECK&quot;</tt>, <tt>&quot;unless&quot;</tt>, <tt>&quot;until&quot;</tt>, <tt>&quot;when&quot;</tt>, <tt>&quot;while&quot;</tt>, <tt>&quot;x&quot;</tt>, <tt>&quot;xor&quot;</tt></dl>
+<dt>Miscellaneous functions</dt>
+<dd> <tt>&quot;defined&quot;</tt>, <tt>&quot;formline&quot;</tt>, <tt>&quot;lock&quot;</tt>, <tt>&quot;prototype&quot;</tt>, <tt>&quot;reset&quot;</tt>, <tt>&quot;scalar&quot;</tt>, <tt>&quot;undef&quot;</tt></dd>
+<dt>Functions for processes and process groups</dt>
+<dd> <tt>&quot;alarm&quot;</tt>, <tt>&quot;exec&quot;</tt>, <tt>&quot;fork&quot;</tt>, <tt>&quot;getpgrp&quot;</tt>, <tt>&quot;getppid&quot;</tt>, <tt>&quot;getpriority&quot;</tt>, <tt>&quot;kill&quot;</tt>, <tt>&quot;pipe&quot;</tt>, <tt>&quot;qx//&quot;</tt>, <tt>&quot;readpipe&quot;</tt>, <tt>&quot;setpgrp&quot;</tt>, <tt>&quot;setpriority&quot;</tt>, <tt>&quot;sleep&quot;</tt>, <tt>&quot;system&quot;</tt>, <tt>&quot;times&quot;</tt>, <tt>&quot;wait&quot;</tt>, <tt>&quot;waitpid&quot;</tt></dd>
+<dt>Keywords related to Perl modules</dt>
+<dd> <tt>&quot;do&quot;</tt>, <tt>&quot;import&quot;</tt>, <tt>&quot;no&quot;</tt>, <tt>&quot;package&quot;</tt>, <tt>&quot;require&quot;</tt>, <tt>&quot;use&quot;</tt></dd>
+<dt>Keywords related to classes and object-orientation</dt>
+<dd> <tt>&quot;bless&quot;</tt>, <tt>&quot;dbmclose&quot;</tt>, <tt>&quot;dbmopen&quot;</tt>, <tt>&quot;package&quot;</tt>, <tt>&quot;ref&quot;</tt>, <tt>&quot;tie&quot;</tt>, <tt>&quot;tied&quot;</tt>, <tt>&quot;untie&quot;</tt>, <tt>&quot;use&quot;</tt></dd>
+<dt>Low-level socket functions</dt>
+<dd> <tt>&quot;accept&quot;</tt>, <tt>&quot;bind&quot;</tt>, <tt>&quot;connect&quot;</tt>, <tt>&quot;getpeername&quot;</tt>, <tt>&quot;getsockname&quot;</tt>, <tt>&quot;getsockopt&quot;</tt>, <tt>&quot;listen&quot;</tt>, <tt>&quot;recv&quot;</tt>, <tt>&quot;send&quot;</tt>, <tt>&quot;setsockopt&quot;</tt>, <tt>&quot;shutdown&quot;</tt>, <tt>&quot;socket&quot;</tt>, <tt>&quot;socketpair&quot;</tt></dd>
+<dt>System V interprocess communication functions</dt>
+<dd> <tt>&quot;msgctl&quot;</tt>, <tt>&quot;msgget&quot;</tt>, <tt>&quot;msgrcv&quot;</tt>, <tt>&quot;msgsnd&quot;</tt>, <tt>&quot;semctl&quot;</tt>, <tt>&quot;semget&quot;</tt>, <tt>&quot;semop&quot;</tt>, <tt>&quot;shmctl&quot;</tt>, <tt>&quot;shmget&quot;</tt>, <tt>&quot;shmread&quot;</tt>, <tt>&quot;shmwrite&quot;</tt></dd>
+<dt>Fetching user and group info</dt>
+<dd> <tt>&quot;endgrent&quot;</tt>, <tt>&quot;endhostent&quot;</tt>, <tt>&quot;endnetent&quot;</tt>, <tt>&quot;endpwent&quot;</tt>, <tt>&quot;getgrent&quot;</tt>, <tt>&quot;getgrgid&quot;</tt>, <tt>&quot;getgrnam&quot;</tt>, <tt>&quot;getlogin&quot;</tt>, <tt>&quot;getpwent&quot;</tt>, <tt>&quot;getpwnam&quot;</tt>, <tt>&quot;getpwuid&quot;</tt>, <tt>&quot;setgrent&quot;</tt>, <tt>&quot;setpwent&quot;</tt></dd>
+<dt>Fetching network info</dt>
+<dd> <tt>&quot;endprotoent&quot;</tt>, <tt>&quot;endservent&quot;</tt>, <tt>&quot;gethostbyaddr&quot;</tt>, <tt>&quot;gethostbyname&quot;</tt>, <tt>&quot;gethostent&quot;</tt>, <tt>&quot;getnetbyaddr&quot;</tt>, <tt>&quot;getnetbyname&quot;</tt>, <tt>&quot;getnetent&quot;</tt>, <tt>&quot;getprotobyname&quot;</tt>, <tt>&quot;getprotobynumber&quot;</tt>, <tt>&quot;getprotoent&quot;</tt>, <tt>&quot;getservbyname&quot;</tt>, <tt>&quot;getservbyport&quot;</tt>, <tt>&quot;getservent&quot;</tt>, <tt>&quot;sethostent&quot;</tt>, <tt>&quot;setnetent&quot;</tt>, <tt>&quot;setprotoent&quot;</tt>, <tt>&quot;setservent&quot;</tt></dd>
+<dt>Time-related functions</dt>
+<dd> <tt>&quot;gmtime&quot;</tt>, <tt>&quot;localtime&quot;</tt>, <tt>&quot;time&quot;</tt>, <tt>&quot;times&quot;</tt></dd>
+<dt>Non-function keywords</dt>
+<dd> <tt>&quot;and&quot;</tt>, <tt>&quot;AUTOLOAD&quot;</tt>, <tt>&quot;BEGIN&quot;</tt>, <tt>&quot;CHECK&quot;</tt>, <tt>&quot;cmp&quot;</tt>, <tt>&quot;CORE&quot;</tt>, <tt>&quot;__DATA__&quot;</tt>, <tt>&quot;default&quot;</tt>, <tt>&quot;DESTROY&quot;</tt>, <tt>&quot;else&quot;</tt>, <tt>&quot;elseif&quot;</tt>, <tt>&quot;elsif&quot;</tt>, <tt>&quot;END&quot;</tt>, <tt>&quot;__END__&quot;</tt>, <tt>&quot;eq&quot;</tt>, <tt>&quot;for&quot;</tt>, <tt>&quot;foreach&quot;</tt>, <tt>&quot;ge&quot;</tt>, <tt>&quot;given&quot;</tt>, <tt>&quot;gt&quot;</tt>, <tt>&quot;if&quot;</tt>, <tt>&quot;INIT&quot;</tt>, <tt>&quot;le&quot;</tt>, <tt>&quot;lt&quot;</tt>, <tt>&quot;ne&quot;</tt>, <tt>&quot;not&quot;</tt>, <tt>&quot;or&quot;</tt>, <tt>&quot;UNITCHECK&quot;</tt>, <tt>&quot;unless&quot;</tt>, <tt>&quot;until&quot;</tt>, <tt>&quot;when&quot;</tt>, <tt>&quot;while&quot;</tt>, <tt>&quot;x&quot;</tt>, <tt>&quot;xor&quot;</tt></dd></dl>
 <h3>Portability</h3>
 <p> Perl was born in Unix and can therefore access all common Unix system calls. In non-Unix environments, the functionality of some Unix system calls may not be available or details of the available functionality may differ slightly. The Perl functions affected by this are: </p>
 <p> <tt>&quot;-</tt>X<tt>&quot;</tt>, <tt>&quot;binmode&quot;</tt>, <tt>&quot;chmod&quot;</tt>, <tt>&quot;chown&quot;</tt>, <tt>&quot;chroot&quot;</tt>, <tt>&quot;crypt&quot;</tt>, <tt>&quot;dbmclose&quot;</tt>, <tt>&quot;dbmopen&quot;</tt>, <tt>&quot;dump&quot;</tt>, <tt>&quot;endgrent&quot;</tt>, <tt>&quot;endhostent&quot;</tt>, <tt>&quot;endnetent&quot;</tt>, <tt>&quot;endprotoent&quot;</tt>, <tt>&quot;endpwent&quot;</tt>, <tt>&quot;endservent&quot;</tt>, <tt>&quot;exec&quot;</tt>, <tt>&quot;fcntl&quot;</tt>, <tt>&quot;flock&quot;</tt>, <tt>&quot;fork&quot;</tt>, <tt>&quot;getgrent&quot;</tt>, <tt>&quot;getgrgid&quot;</tt>, <tt>&quot;gethostbyname&quot;</tt>, <tt>&quot;gethostent&quot;</tt>, <tt>&quot;getlogin&quot;</tt>, <tt>&quot;getnetbyaddr&quot;</tt>, <tt>&quot;getnetbyname&quot;</tt>, <tt>&quot;getnetent&quot;</tt>, <tt>&quot;getppid&quot;</tt>, <tt>&quot;getpgrp&quot;</tt>, <tt>&quot;getpriority&quot;</tt>, <tt>&quot;getprotobynumber&quot;</tt>, <tt>&quot;getprotoent&quot;</tt>, <tt>&quot;getpwent&quot;</tt>, <tt>&quot;getpwnam&quot;</tt>, <tt>&quot;getpwuid&quot;</tt>, <tt>&quot;getservbyport&quot;</tt>, <tt>&quot;getservent&quot;</tt>, <tt>&quot;getsockopt&quot;</tt>, <tt>&quot;glob&quot;</tt>, <tt>&quot;ioctl&quot;</tt>, <tt>&quot;kill&quot;</tt>, <tt>&quot;link&quot;</tt>, <tt>&quot;lstat&quot;</tt>, <tt>&quot;msgctl&quot;</tt>, <tt>&quot;msgget&quot;</tt>, <tt>&quot;msgrcv&quot;</tt>, <tt>&quot;msgsnd&quot;</tt>, <tt>&quot;open&quot;</tt>, <tt>&quot;pipe&quot;</tt>, <tt>&quot;readlink&quot;</tt>, <tt>&quot;rename&quot;</tt>, <tt>&quot;select&quot;</tt>, <tt>&quot;semctl&quot;</tt>, <tt>&quot;semget&quot;</tt>, <tt>&quot;semop&quot;</tt>, <tt>&quot;setgrent&quot;</tt>, <tt>&quot;sethostent&quot;</tt>, <tt>&quot;setnetent&quot;</tt>, <tt>&quot;setpgrp&quot;</tt>, <tt>&quot;setpriority&quot;</tt>, <tt>&quot;setprotoent&quot;</tt>, <tt>&quot;setpwent&quot;</tt>, <tt>&quot;setservent&quot;</tt>, <tt>&quot;setsockopt&quot;</tt>, <tt>&quot;shmctl&quot;</tt>, <tt>&quot;shmget&quot;</tt>, <tt>&quot;shmread&quot;</tt>, <tt>&quot;shmwrite&quot;</tt>, <tt>&quot;socket&quot;</tt>, <tt>&quot;socketpair&quot;</tt>, <tt>&quot;stat&quot;</tt>, <tt>&quot;symlink&quot;</tt>, <tt>&quot;syscall&quot;</tt>, <tt>&quot;sysopen&quot;</tt>, <tt>&quot;system&quot;</tt>, <tt>&quot;times&quot;</tt>, <tt>&quot;truncate&quot;</tt>, <tt>&quot;umask&quot;</tt>, <tt>&quot;unlink&quot;</tt>, <tt>&quot;utime&quot;</tt>, <tt>&quot;wait&quot;</tt>, <tt>&quot;waitpid&quot;</tt> </p>
 <p> For more information about the portability of these functions, see perlport and other available platform-specific documentation.</p>
 <h3>Alphabetical Listing of Perl Functions</h3>
 <dl>
-<dt>-X <font SIZE="-1">FILEHANDLE</font></p>
+<dt>-X <font SIZE="-1">FILEHANDLE</font></dt>
 <dd>
-<dt>-X <font SIZE="-1">EXPR</font></p>
+</dd><dt>-X <font SIZE="-1">EXPR</font></dt>
 <dd>
-<dt>-X <font SIZE="-1">DIRHANDLE</font></p>
+</dd><dt>-X <font SIZE="-1">DIRHANDLE</font></dt>
 <dd>
-<dt>-X</p>
-<dd> A file test, where X is one of the letters listed below. This unary operator takes one argument, either a filename, a filehandle, or a dirhandle, and tests the associated file to see if something is true about it. If the argument is omitted, tests <tt>$_</tt>, except for <tt>&quot;-t&quot;</tt>, which tests <font SIZE="-1">STDIN.</font> Unless otherwise documented, it returns <tt>1</tt> for true and <tt>''</tt> for false. If the file doesn&#8217;t exist or can&#8217;t be examined, it returns <tt>&quot;undef&quot;</tt> and sets <tt>$!</tt> (errno). With the exception of the <tt>&quot;-l&quot;</tt> test they all follow symbolic links because they use <tt>&quot;stat()&quot;</tt> and not <tt>&quot;lstat()&quot;</tt> (so dangling symlinks can&#8217;t be examined and will therefore report failure). </p>
+</dd><dt>-X</dt>
+<dd> A file test, where X is one of the letters listed below. This unary operator takes one argument, either a filename, a filehandle, or a dirhandle, and tests the associated file to see if something is true about it. If the argument is omitted, tests <tt>$_</tt>, except for <tt>&quot;-t&quot;</tt>, which tests <font SIZE="-1">STDIN.</font> Unless otherwise documented, it returns <tt>1</tt> for true and <tt>''</tt> for false. If the file doesn&#8217;t exist or can&#8217;t be examined, it returns <tt>&quot;undef&quot;</tt> and sets <tt>$!</tt> (errno). With the exception of the <tt>&quot;-l&quot;</tt> test they all follow symbolic links because they use <tt>&quot;stat()&quot;</tt> and not <tt>&quot;lstat()&quot;</tt> (so dangling symlinks can&#8217;t be examined and will therefore report failure). </dd>
 <p> Despite the funny names, precedence is the same as any other named unary operator. The operator may be any of: </p>
 <p>    -r  File is readable by effective uid/gid.<br />
     -w  File is writable by effective uid/gid.<br />
@@ -169,17 +169,17 @@ print &#8220;Binary
 <pre>
     use 5.010;  # so filetest ops can stack
 </pre>
-<dt>abs <font SIZE="-1">VALUE</font></p>
+<dt>abs <font SIZE="-1">VALUE</font></dt>
 <dd>
-<dt>abs</p>
-<dd> Returns the absolute value of its argument. If <font SIZE="-1">VALUE</font> is omitted, uses <tt>$_</tt>.</p>
-<dt>accept <font SIZE="-1">NEWSOCKET,GENERICSOCKET</font></p>
-<dd> Accepts an incoming socket connect, just as <code><a href="/docs/linux/man/2-accept/">accept</a></code>(2) does. Returns the packed address if it succeeded, false otherwise. See the example in &#8220;Sockets: Client/Server Communication&#8221; in perlipc. </p>
+</dd><dt>abs</dt>
+<dd> Returns the absolute value of its argument. If <font SIZE="-1">VALUE</font> is omitted, uses <tt>$_</tt>.</dd>
+<dt>accept <font SIZE="-1">NEWSOCKET,GENERICSOCKET</font></dt>
+<dd> Accepts an incoming socket connect, just as <code><a href="/docs/linux/man/2-accept/">accept</a></code>(2) does. Returns the packed address if it succeeded, false otherwise. See the example in &#8220;Sockets: Client/Server Communication&#8221; in perlipc. </dd>
 <p> On systems that support a close-on-exec flag on files, the flag will be set for the newly opened file descriptor, as determined by the value of <tt>$^F</tt>. See &#8220;$^F&#8221; in perlvar.</p>
-<dt>alarm <font SIZE="-1">SECONDS</font></p>
+<dt>alarm <font SIZE="-1">SECONDS</font></dt>
 <dd>
-<dt>alarm</p>
-<dd> Arranges to have a <font SIZE="-1">SIGALRM</font> delivered to this process after the specified number of wallclock seconds has elapsed. If <font SIZE="-1">SECONDS</font> is not specified, the value stored in <tt>$_</tt> is used. (On some machines, unfortunately, the elapsed time may be up to one second less or more than you specified because of how seconds are counted, and process scheduling may delay the delivery of the signal even further.) </p>
+</dd><dt>alarm</dt>
+<dd> Arranges to have a <font SIZE="-1">SIGALRM</font> delivered to this process after the specified number of wallclock seconds has elapsed. If <font SIZE="-1">SECONDS</font> is not specified, the value stored in <tt>$_</tt> is used. (On some machines, unfortunately, the elapsed time may be up to one second less or more than you specified because of how seconds are counted, and process scheduling may delay the delivery of the signal even further.) </dd>
 <p> Only one timer may be counting at once. Each call disables the previous timer, and an argument of <tt>0</tt> may be supplied to cancel the previous timer without starting a new one. The returned value is the amount of time remaining on the previous timer. </p>
 <p> For delays of finer granularity than one second, the Time::HiRes module (from <font SIZE="-1">CPAN,</font> and starting from Perl 5.8 part of the standard distribution) provides <tt>&quot;ualarm&quot;</tt>. You may also use Perl&#8217;s four-argument version of <tt>&quot;select&quot;</tt> leaving the first three arguments undefined, or you might be able to use the <tt>&quot;syscall&quot;</tt> interface to access <code><a href="/docs/linux/man/2-setitimer/">setitimer</a></code>(2) if your system supports it. See perlfaq8 for details. </p>
 <p> It is usually a mistake to intermix <tt>&quot;alarm&quot;</tt> and <tt>&quot;sleep&quot;</tt> calls, because <tt>&quot;sleep&quot;</tt> may be internally implemented on your system with <tt>&quot;alarm&quot;</tt>. </p>
@@ -204,8 +204,8 @@ if ($ @) {<br />
 }</p>
 <p> For more information see perlipc. </p>
 <p> Portability issues: &#8220;alarm&#8221; in perlport.</p>
-<dt>atan2 Y,X</p>
-<dd> Returns the arctangent of Y/X in the range -PI to <font SIZE="-1">PI.</font> </p>
+<dt>atan2 Y,X</dt>
+<dd> Returns the arctangent of Y/X in the range -PI to <font SIZE="-1">PI.</font> </dd>
 <p> For the tangent operation, you may use the <tt>&quot;Math::Trig::tan&quot;</tt> function, or use the familiar relation: </p>
 <p>sub tan<br />
 {<br />
@@ -213,12 +213,12 @@ if ($ @) {<br />
 }</p>
 <p> The return value for <tt>&quot;atan2(0,0)&quot;</tt> is implementation-defined; consult your <code><a href="/docs/linux/man/3-atan2/">atan2</a></code>(3) manpage for more information. </p>
 <p> Portability issues: &#8220;atan2&#8221; in perlport.</p>
-<dt>bind <font SIZE="-1">SOCKET,NAME</font></p>
-<dd> Binds a network address to a socket, just as <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2) does. Returns true if it succeeded, false otherwise. <font SIZE="-1">NAME</font> should be a packed address of the appropriate type for the socket. See the examples in &#8220;Sockets: Client/Server Communication&#8221; in perlipc.</p>
-<dt>binmode <font SIZE="-1">FILEHANDLE, LAYER</font></p>
+<dt>bind <font SIZE="-1">SOCKET,NAME</font></dt>
+<dd> Binds a network address to a socket, just as <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2) does. Returns true if it succeeded, false otherwise. <font SIZE="-1">NAME</font> should be a packed address of the appropriate type for the socket. See the examples in &#8220;Sockets: Client/Server Communication&#8221; in perlipc.</dd>
+<dt>binmode <font SIZE="-1">FILEHANDLE, LAYER</font></dt>
 <dd>
-<dt>binmode <font SIZE="-1">FILEHANDLE</font></p>
-<dd> Arranges for <font SIZE="-1">FILEHANDLE</font> to be read or written in &#8220;binary&#8221; or &#8220;text&#8221; mode on systems where the run-time libraries distinguish between binary and text files. If <font SIZE="-1">FILEHANDLE</font> is an expression, the value is taken as the name of the filehandle. Returns true on success, otherwise it returns <tt>&quot;undef&quot;</tt> and sets <tt>$!</tt> (errno). </p>
+</dd><dt>binmode <font SIZE="-1">FILEHANDLE</font></dt>
+<dd> Arranges for <font SIZE="-1">FILEHANDLE</font> to be read or written in &#8220;binary&#8221; or &#8220;text&#8221; mode on systems where the run-time libraries distinguish between binary and text files. If <font SIZE="-1">FILEHANDLE</font> is an expression, the value is taken as the name of the filehandle. Returns true on success, otherwise it returns <tt>&quot;undef&quot;</tt> and sets <tt>$!</tt> (errno). </dd>
 <p> On some systems (in general, <font SIZE="-1">DOS-</font> and Windows-based systems) <tt>&quot;binmode&quot;</tt> is necessary when you&#8217;re not working with a text file. For the sake of portability it is a good idea always to use it when appropriate, and never to use it when it isn&#8217;t appropriate. Also, people can set their I/O to be by default UTF8-encoded Unicode, not bytes. </p>
 <p> In other words: regardless of platform, use <tt>&quot;binmode&quot;</tt> on binary data, like images, for example. </p>
 <p> If <font SIZE="-1">LAYER</font> is present it is a single string, but may contain multiple directives. The directives alter the behaviour of the filehandle. When <font SIZE="-1">LAYER</font> is present, using binmode on a text file makes sense. </p>
@@ -232,3 +232,4 @@ if ($ @) {<br />
 &quot;</tt> is made up of more than one character. </p>
 <p> All variants of Unix, Mac <font SIZE="-1">OS</font> (old and new), and Stream_LF files on <font SIZE="-1">VMS</font> use a single character to end each line in the external representation of text (even though that single character is <font SIZE="-1">CARRIAGE RETURN</font> on old, pre-Darwin flavors of Mac <font SIZE="-1">OS,</font> and is <font SIZE="-1">LINE FEED</font> on Unix and most <font SIZE="-1">VMS</font> files). In other systems like <font SIZE="-1">OS/2, DOS,</font> and the various flavors of MS-Windows, your program sees a <tt>&quot;
 &quot;</tt> as a simple <tt>&quot;
+</p></dl>

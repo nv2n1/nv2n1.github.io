@@ -14,10 +14,10 @@ description: "runc-events – display container events and statistics."
 <p>The <code>events</code> command displays information about the container. By default, it works continuously, displaying stats every 5 seconds, and container events as they occur. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;interval</code> <i>time</i></p>
-<dd>Set the stats collection interval. Default is <code>5s</code>. </p>
-<dt><code>&#8211;stats</code></p>
-<dd>Show the container&#8217;s stats once then exit. </p>
+<dt><code>&#8211;interval</code> <i>time</i></dt>
+<dd>Set the stats collection interval. Default is <code>5s</code>. </dd>
+<dt><code>&#8211;stats</code></dt>
+<dd>Show the container&#8217;s stats once then exit. </dd>
 </dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-runc/">runc</a></code>(8). </p>

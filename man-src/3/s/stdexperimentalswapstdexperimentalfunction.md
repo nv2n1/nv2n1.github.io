@@ -11,9 +11,7 @@ std::experimental::swap(std::experimental::function) - std::experimental::swap(s
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class R, class... Args&gt;
-
 void swap(std::experimental::function&lt;R(Args...)&gt; &amp;lhs,
-
           std::experimental::function&lt;R(Args...)&gt; &amp;rhs);</code></pre> 
 Overloads the swap algorithm for std::experimental::function. Exchanges the state of lhs with that of rhs. Effectively calls lhs.swap(rhs). 
 

@@ -20,9 +20,9 @@ dblink_get_connections() returns text[]
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 SELECT dblink_get_connections();
 </pre>
-</dl>
+</dd></dl>
 <h2>Index</h2>

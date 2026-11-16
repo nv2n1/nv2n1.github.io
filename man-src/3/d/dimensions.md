@@ -30,21 +30,19 @@ description: "QuantLib::MultiCubicSpline – N-dimensional cubic spline interpol
 <p> <code>Tests</code></p>
 <dl>
 <dt>
-<dd> interpolated values are checked against the original function.</dl>
+</dt><dd> interpolated values are checked against the original function.</dd></dl>
 <p> <code>Possible enhancements</code></p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> allow extrapolation as for the other interpolations</p>
-<dt>*</p>
-<dd> investigate if and how to implement Hyman filters and different boundary conditions</dl>
+<dt>*</dt>
+<dd> allow extrapolation as for the other interpolations</dd>
+<dt>*</dt>
+<dd> investigate if and how to implement Hyman filters and different boundary conditions</dd></dl>
 </dl>
 <p> <code>Bug</code></p>
 <dl>
 <dt>
-<dd> cannot interpolate at the grid points on the boundary surface of the N-dimensional region</dl>
+</dt><dd> cannot interpolate at the grid points on the boundary surface of the N-dimensional region</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>

@@ -15,19 +15,19 @@ description: "zmq_msg_get – get message property"
 <p> The following properties can be retrieved with the <i>zmq_msg_get()</i> function: </p>
 <p> <code>ZMQ_MORE</code></p>
 <dl>
-<dd>Indicates that there are more message frames to follow after the <i>message</i>.</dl>
+<dd>Indicates that there are more message frames to follow after the <i>message</i>.</dd></dl>
 <p> <code>ZMQ_SRCFD</code></p>
 <dl>
-<dd>Returns the file descriptor of the socket the <i>message</i> was read from. This allows application to retrieve the remote endpoint via <i><a href="/docs/linux/man/2-getpeername/">getpeername</a>(2)</i>. Be aware that the respective socket might be closed already, reused even. Currently only implemented for TCP sockets.</dl>
+<dd>Returns the file descriptor of the socket the <i>message</i> was read from. This allows application to retrieve the remote endpoint via <i><a href="/docs/linux/man/2-getpeername/">getpeername</a>(2)</i>. Be aware that the respective socket might be closed already, reused even. Currently only implemented for TCP sockets.</dd></dl>
 <p> <code>ZMQ_SHARED</code></p>
 <dl>
-<dd>Indicates that a message MAY share underlying storage with another copy of this message.</dl>
+<dd>Indicates that a message MAY share underlying storage with another copy of this message.</dd></dl>
 <h2>Return Value</h2>
 <p>The <i>zmq_msg_get()</i> function shall return the value for the property if successful. Otherwise it shall return -1 and set <i>errno</i> to one of the values defined below.</p>
 <h2>Errors</h2>
 <p><code>EINVAL</code></p>
 <dl>
-<dd>The requested <i>property</i> is unknown.</dl>
+<dd>The requested <i>property</i> is unknown.</dd></dl>
 <h2>Example</h2>
 <p><code>Receiving a multi-frame message</code>. </p>
 <pre><code>zmq_msg_t frame;

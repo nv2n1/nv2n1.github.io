@@ -14,16 +14,16 @@ description: "Xft – X FreeType interface library"
 <p><code>#include &lt;X11/Xft/Xft.h&gt;</code></p>
 <h2>Constants</h2>
 <dl COMPACT>
-<dt><code>XFT_MAJOR</code></p>
-<dd>is the major version number of <code>Xft</code>.</p>
-<dt><code>XFT_MINOR</code></p>
-<dd>is the minor version number of <code>Xft</code>.</p>
-<dt><code>XFT_REVISION</code></p>
-<dd>is the revision number of <code>Xft</code>.</p>
-<dt><code>XFT_VERSION</code></p>
-<dd>is <code>XFT_MAJOR</code> times 10000 (ten thousand), plus <code>XFT_MINOR</code> times 100, plus <code>XFT_REVISION</code>.</p>
-<dt><code>XftVersion</code></p>
-<dd>is an alias for <code>XFT_VERSION</code>.</dl>
+<dt><code>XFT_MAJOR</code></dt>
+<dd>is the major version number of <code>Xft</code>.</dd>
+<dt><code>XFT_MINOR</code></dt>
+<dd>is the minor version number of <code>Xft</code>.</dd>
+<dt><code>XFT_REVISION</code></dt>
+<dd>is the revision number of <code>Xft</code>.</dd>
+<dt><code>XFT_VERSION</code></dt>
+<dd>is <code>XFT_MAJOR</code> times 10000 (ten thousand), plus <code>XFT_MINOR</code> times 100, plus <code>XFT_REVISION</code>.</dd>
+<dt><code>XftVersion</code></dt>
+<dd>is an alias for <code>XFT_VERSION</code>.</dd></dl>
 <p> The following example illustrates how <code>Xft</code>&#8216;s version constants might be used: </p>
 <pre> #if (XFT_VERSION &gt;= 20107)
  (void) puts(&quot;Version 2.1.7 or later of the Xft library is in&quot;
@@ -37,7 +37,7 @@ description: "Xft – X FreeType interface library"
  #endif</pre>
 <h2>Data Types</h2>
 <dl COMPACT>
-<dt><code>XftFont</code></p>
+<dt><code>XftFont</code></dt>
 <dd>
 <pre>typedef struct _XftFont {
  int ascent;
@@ -48,36 +48,36 @@ description: "Xft – X FreeType interface library"
  FcPattern *pattern;
 } XftFont;</pre>
 <p>An <code>XftFont</code> is the primary data structure of interest to programmers using <code>Xft</code>; it contains general font metrics and pointers to the Fontconfig character set and pattern associated with the font. The <code>FcCharSet</code> and <code>FcPattern</code> data types are defined by the Fontconfig library.</p>
-<dd><code>XftFont</code>s are populated with any of <code>XftFontOpen</code>(), <code>XftFontOpenName</code>(), <code>XftFontOpenXlfd</code>(), <code>XftFontOpenInfo</code>(), or <code>XftFontOpenPattern</code>(). <code>XftFontCopy</code>() is used to duplicate <code>XftFont</code>s, and <code>XftFontClose</code>() is used to mark an <code>XftFont</code> as unused. <code>XftFont</code>s are internally allocated, reference-counted, and freed by <code>Xft</code>; the programmer does not ordinarily need to allocate or free storage for them.</p>
-<dd><code>XftDrawGlyphs</code>(), the <code>XftDrawString</code>*() family, <code>XftDrawCharSpec</code>(), and <code>XftDrawGlyphSpec</code>() use <code>XftFont</code>s to render text to an <code>XftDraw</code> object, which may correspond to either a core X drawable or an X Rendering Extension drawable.</p>
-<dd><code>XftGlyphExtents</code>() and the <code>XftTextExtents</code>*() family are used to determine the extents (maximum dimensions) of an <code>XftFont</code>.</p>
-<dd>An <code>XftFont</code>&#8216;s glyph or character coverage can be determined with <code>XftFontCheckGlyph</code>() or <code>XftCharExists</code>(). <code>XftCharIndex</code>() returns the <code>XftFont</code>-specific character index corresponding to a given Unicode codepoint.</p>
-<dd><code>XftGlyphRender</code>(), <code>XftGlyphSpecRender</code>(), <code>XftCharSpecRender</code>(), and the <code>XftTextRender</code>*() family use <code>XftFont</code>s to draw into X Rendering Extension <code>Picture</code> structures. <code>Note:</code> <code>XftDrawGlyphs</code>(), the <code>XftDrawString</code>*() family, <code>XftDrawCharSpec</code>(), and <code>XftDrawGlyphSpec</code>() provide a means of rendering fonts that is independent of the availability of the X Rendering Extension on the X server.</p>
-<dt><code>XftFontInfo</code></p>
-<dd>is an opaque object that stores information about a font. <code>XftFontInfo</code> structures are created with <code>XftFontInfoCreate</code>(), freed with <code>XftFontInfoDestroy</code>(), and compared with <code>XftFontInfoEqual</code>(). <code>XftFontInfo</code> objects are internally allocated and freed by <code>Xft</code>; the programmer does not ordinarily need to allocate or free storage for them.</p>
-<dd>Each <code>XftFontInfo</code> structure in use is associated with a unique identifier, which can be retrieved with <code>XftFontInfoHash</code>(). An <code>XftFont</code> can be opened based on <code>XftFontInfo</code> data with <code>XftFontOpenInfo</code>().</p>
-<dt><code>XftColor</code></p>
+</dd><dd><code>XftFont</code>s are populated with any of <code>XftFontOpen</code>(), <code>XftFontOpenName</code>(), <code>XftFontOpenXlfd</code>(), <code>XftFontOpenInfo</code>(), or <code>XftFontOpenPattern</code>(). <code>XftFontCopy</code>() is used to duplicate <code>XftFont</code>s, and <code>XftFontClose</code>() is used to mark an <code>XftFont</code> as unused. <code>XftFont</code>s are internally allocated, reference-counted, and freed by <code>Xft</code>; the programmer does not ordinarily need to allocate or free storage for them.</dd>
+<dd><code>XftDrawGlyphs</code>(), the <code>XftDrawString</code>*() family, <code>XftDrawCharSpec</code>(), and <code>XftDrawGlyphSpec</code>() use <code>XftFont</code>s to render text to an <code>XftDraw</code> object, which may correspond to either a core X drawable or an X Rendering Extension drawable.</dd>
+<dd><code>XftGlyphExtents</code>() and the <code>XftTextExtents</code>*() family are used to determine the extents (maximum dimensions) of an <code>XftFont</code>.</dd>
+<dd>An <code>XftFont</code>&#8216;s glyph or character coverage can be determined with <code>XftFontCheckGlyph</code>() or <code>XftCharExists</code>(). <code>XftCharIndex</code>() returns the <code>XftFont</code>-specific character index corresponding to a given Unicode codepoint.</dd>
+<dd><code>XftGlyphRender</code>(), <code>XftGlyphSpecRender</code>(), <code>XftCharSpecRender</code>(), and the <code>XftTextRender</code>*() family use <code>XftFont</code>s to draw into X Rendering Extension <code>Picture</code> structures. <code>Note:</code> <code>XftDrawGlyphs</code>(), the <code>XftDrawString</code>*() family, <code>XftDrawCharSpec</code>(), and <code>XftDrawGlyphSpec</code>() provide a means of rendering fonts that is independent of the availability of the X Rendering Extension on the X server.</dd>
+<dt><code>XftFontInfo</code></dt>
+<dd>is an opaque object that stores information about a font. <code>XftFontInfo</code> structures are created with <code>XftFontInfoCreate</code>(), freed with <code>XftFontInfoDestroy</code>(), and compared with <code>XftFontInfoEqual</code>(). <code>XftFontInfo</code> objects are internally allocated and freed by <code>Xft</code>; the programmer does not ordinarily need to allocate or free storage for them.</dd>
+<dd>Each <code>XftFontInfo</code> structure in use is associated with a unique identifier, which can be retrieved with <code>XftFontInfoHash</code>(). An <code>XftFont</code> can be opened based on <code>XftFontInfo</code> data with <code>XftFontOpenInfo</code>().</dd>
+<dt><code>XftColor</code></dt>
 <dd>
 <pre>typedef struct _XftColor {
  unsigned long pixel;
  XRenderColor color;
 } XftColor;</pre>
 <p>An <code>XftColor</code> object permits text and other items to be rendered in a particular color (or the closest approximation offered by the X visual in use). The <code>XRenderColor</code> data type is defined by the X Render Extension library.</p>
-<dd><code>XftColorAllocName</code>() and <code>XftColorAllocValue</code>() request a color allocation from the X server (if necessary) and initialize the members of <code>XftColor</code>. <code>XftColorFree</code>() instructs the X server to free the color currently allocated for an <code>XftColor</code>.</p>
-<dd>One an <code>XftColor</code> has been initialized, <code>XftDrawSrcPicture</code>(), <code>XftDrawGlyphs</code>(), the <code>XftDrawString</code>*() family, <code>XftDrawCharSpec</code>(), <code>XftDrawCharFontSpec</code>(), <code>XftDrawGlyphSpec</code>(), <code>XftDrawGlyphFontSpec</code>(), and <code>XftDrawRect</code>() may be used to draw various objects using it.</p>
-<dt><code>XftDraw</code></p>
-<dd>is an opaque object which holds information used to render to an X drawable using either the core protocol or the X Rendering extension.</p>
-<dd><code>XftDraw</code> objects are created with any of <code>XftDrawCreate</code>() (which associates an <code>XftDraw</code> with an existing X drawable), <code>XftDrawCreateBitmap</code>(), or <code>XftDrawCreateAlpha</code>(), and destroyed with <code>XftDrawDestroy</code>(). The X drawable associated with an <code>XftDraw</code> can be changed with <code>XftDrawChange</code>(). <code>XftDraw</code>s are internally allocated and freed by <code>Xft</code>; the programmer does not ordinarily need to allocate or free storage for them.</p>
-<dd>The X <code>Display</code>, <code>Drawable</code>, <code>Colormap</code>, and <code>Visual</code> of an <code>XftDraw</code> can be queried with <code>XftDrawDisplay</code>(), <code>XftDrawDrawable</code>(), <code>XftDrawColormap</code>(), and <code>XftDrawVisual</code>(), respectively. The X Rendering Extension <code>Picture</code> associated with an <code>XftDraw</code> is returned by <code>XftDrawPicture</code>().</p>
-<dt><code>XftCharSpec</code></p>
+</dd><dd><code>XftColorAllocName</code>() and <code>XftColorAllocValue</code>() request a color allocation from the X server (if necessary) and initialize the members of <code>XftColor</code>. <code>XftColorFree</code>() instructs the X server to free the color currently allocated for an <code>XftColor</code>.</dd>
+<dd>One an <code>XftColor</code> has been initialized, <code>XftDrawSrcPicture</code>(), <code>XftDrawGlyphs</code>(), the <code>XftDrawString</code>*() family, <code>XftDrawCharSpec</code>(), <code>XftDrawCharFontSpec</code>(), <code>XftDrawGlyphSpec</code>(), <code>XftDrawGlyphFontSpec</code>(), and <code>XftDrawRect</code>() may be used to draw various objects using it.</dd>
+<dt><code>XftDraw</code></dt>
+<dd>is an opaque object which holds information used to render to an X drawable using either the core protocol or the X Rendering extension.</dd>
+<dd><code>XftDraw</code> objects are created with any of <code>XftDrawCreate</code>() (which associates an <code>XftDraw</code> with an existing X drawable), <code>XftDrawCreateBitmap</code>(), or <code>XftDrawCreateAlpha</code>(), and destroyed with <code>XftDrawDestroy</code>(). The X drawable associated with an <code>XftDraw</code> can be changed with <code>XftDrawChange</code>(). <code>XftDraw</code>s are internally allocated and freed by <code>Xft</code>; the programmer does not ordinarily need to allocate or free storage for them.</dd>
+<dd>The X <code>Display</code>, <code>Drawable</code>, <code>Colormap</code>, and <code>Visual</code> of an <code>XftDraw</code> can be queried with <code>XftDrawDisplay</code>(), <code>XftDrawDrawable</code>(), <code>XftDrawColormap</code>(), and <code>XftDrawVisual</code>(), respectively. The X Rendering Extension <code>Picture</code> associated with an <code>XftDraw</code> is returned by <code>XftDrawPicture</code>().</dd>
+<dt><code>XftCharSpec</code></dt>
 <dd>
 <pre>typedef struct _XftCharSpec {
  FcChar32 ucs4;
  short x;
  short y;
 } XftCharSpec;</pre>
-<dd>The <code>FcChar32</code> data type is defined by the Fontconfig library.</p>
-<dt><code>XftCharFontSpec</code></p>
+</dd><dd>The <code>FcChar32</code> data type is defined by the Fontconfig library.</dd>
+<dt><code>XftCharFontSpec</code></dt>
 <dd>
 <pre>typedef struct _XftCharFontSpec {
  XftFont *font;
@@ -85,16 +85,16 @@ description: "Xft – X FreeType interface library"
  short x;
  short y;
 } XftCharFontSpec;</pre>
-<dd>The <code>FcChar32</code> data type is defined by the Fontconfig library.</p>
-<dt><code>XftGlyphSpec</code></p>
+</dd><dd>The <code>FcChar32</code> data type is defined by the Fontconfig library.</dd>
+<dt><code>XftGlyphSpec</code></dt>
 <dd>
 <pre>typedef struct _XftGlyphSpec {
  FT_UInt glyph;
  short x;
  short y;
 } XftGlyphSpec;</pre>
-<dd>The <code>FT_UInt</code> data type is defined by the FreeType library.</p>
-<dt><code>XftGlyphFontSpec</code></p>
+</dd><dd>The <code>FT_UInt</code> data type is defined by the FreeType library.</dd>
+<dt><code>XftGlyphFontSpec</code></dt>
 <dd>
 <pre>typedef struct _XftGlyphFontSpec {
  XftFont *font;
@@ -102,7 +102,7 @@ description: "Xft – X FreeType interface library"
  short x;
  short y;
 } XftGlyphFontSpec;</pre>
-<dd>The <code>FT_UInt</code> data type is defined by the FreeType library.</dl>
+</dd><dd>The <code>FT_UInt</code> data type is defined by the FreeType library.</dd></dl>
 <h2>Functions</h2>
 <h3>Opening and Matching Fonts</h3>
 <pre><code>XftFont *</code>
@@ -242,12 +242,12 @@ description: "Xft – X FreeType interface library"
 <p><code>#include &lt;X11/Xft/XftCompat.h&gt;</code></p>
 <h3>Xft 1.x Compatibility Data Types</h3>
 <dl COMPACT>
-<dt><code>XftPattern</code></p>
-<dd>holds a set of names with associated value lists; each name refers to a property of a font. <code>XftPattern</code>s are used as inputs to the matching code as well as holding information about specific fonts.</p>
-<dt><code>XftFontSet</code></p>
-<dd>contains a list of <code>XftPattern</code>s. Internally, <code>Xft</code> uses this data structure to hold sets of fonts. Externally, <code>Xft</code> returns the results of listing fonts in this format.</p>
-<dt><code>XftObjectSet</code></p>
-<dd>holds a set of names and is used to specify which fields from fonts are placed in the the list of returned patterns when listing fonts.</dl>
+<dt><code>XftPattern</code></dt>
+<dd>holds a set of names with associated value lists; each name refers to a property of a font. <code>XftPattern</code>s are used as inputs to the matching code as well as holding information about specific fonts.</dd>
+<dt><code>XftFontSet</code></dt>
+<dd>contains a list of <code>XftPattern</code>s. Internally, <code>Xft</code> uses this data structure to hold sets of fonts. Externally, <code>Xft</code> returns the results of listing fonts in this format.</dd>
+<dt><code>XftObjectSet</code></dt>
+<dd>holds a set of names and is used to specify which fields from fonts are placed in the the list of returned patterns when listing fonts.</dd></dl>
 <h2>Author</h2>
 <p>Keith Packard</p>
 <h2>See Also</h2>

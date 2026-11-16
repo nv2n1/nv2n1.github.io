@@ -15,7 +15,7 @@ rq_flush_dcache_pages - Helper function to flush all pages in a request
 <h2>Arguments</h2>
 
 <i>rq</i>
-<dl><dd><dd>the request to be flushed</dl>
+<dl><dd></dd><dd>the request to be flushed</dd></dl>
 
 <h2>Description</h2>
 

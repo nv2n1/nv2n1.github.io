@@ -17,28 +17,28 @@ description: "ico – animate an icosahedron or other polyhedron"
 <p> <i>Ico</i> displays a wire-frame rotating polyhedron, with hidden lines removed, or a solid-fill polyhedron with hidden faces removed. There are a number of different polyhedra available; adding a new polyhedron to the program is quite simple.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-r</code></p>
-<dd> Display on the root window instead of creating a new window.</p>
-<dt><code>-d pattern</code></p>
-<dd> Specify a bit pattern for drawing dashed lines for wire frames.</p>
-<dt><code>-i</code></p>
-<dd> Use inverted colors for wire frames.</p>
-<dt><code>-dbl</code></p>
-<dd> Use double buffering on the display. This works for either wire frame or solid fill drawings. For solid fill drawings, using this switch results in substantially smoother movement. Note that this requires twice as many bit planes as without double buffering. Since some colors are typically allocated by other programs, most eight-bit-plane displays will probably be limited to eight colors when using double buffering.</p>
-<dt><code>-faces</code></p>
-<dd> Draw filled faces instead of wire frames.</p>
-<dt><code>-noedges</code></p>
-<dd> Don&#8217;t draw the wire frames. Typically used only when -faces is used.</p>
-<dt><code>-sleep </code><i>n</i></p>
-<dd> Sleep n seconds between each move of the object.</p>
-<dt><code>-obj </code><i>object</i></p>
-<dd> Specify what object to draw. If no object is specified, an icosahedron is drawn.</p>
-<dt><code>-objhelp</code></p>
-<dd> Print out a list of the available objects, along with information about each object.</p>
-<dt><code>-colors </code><i>color color &#8230;</i></p>
-<dd> Specify what colors should be used to draw the filled faces of the object. If less colors than faces are given, the colors are reused.</p>
-<dt><code>-version</code></p>
-<dd> Print program version information and exit.</dl>
+<dt><code>-r</code></dt>
+<dd> Display on the root window instead of creating a new window.</dd>
+<dt><code>-d pattern</code></dt>
+<dd> Specify a bit pattern for drawing dashed lines for wire frames.</dd>
+<dt><code>-i</code></dt>
+<dd> Use inverted colors for wire frames.</dd>
+<dt><code>-dbl</code></dt>
+<dd> Use double buffering on the display. This works for either wire frame or solid fill drawings. For solid fill drawings, using this switch results in substantially smoother movement. Note that this requires twice as many bit planes as without double buffering. Since some colors are typically allocated by other programs, most eight-bit-plane displays will probably be limited to eight colors when using double buffering.</dd>
+<dt><code>-faces</code></dt>
+<dd> Draw filled faces instead of wire frames.</dd>
+<dt><code>-noedges</code></dt>
+<dd> Don&#8217;t draw the wire frames. Typically used only when -faces is used.</dd>
+<dt><code>-sleep </code><i>n</i></dt>
+<dd> Sleep n seconds between each move of the object.</dd>
+<dt><code>-obj </code><i>object</i></dt>
+<dd> Specify what object to draw. If no object is specified, an icosahedron is drawn.</dd>
+<dt><code>-objhelp</code></dt>
+<dd> Print out a list of the available objects, along with information about each object.</dd>
+<dt><code>-colors </code><i>color color &#8230;</i></dt>
+<dd> Specify what colors should be used to draw the filled faces of the object. If less colors than faces are given, the colors are reused.</dd>
+<dt><code>-version</code></dt>
+<dd> Print program version information and exit.</dd></dl>
 <h2>PROGRAM TERMINATION</h2>
 <p> Pressing &quot;q&quot; will close a window. If compiled with threads support, the program will stop only when all threads terminate. You can also close an animation window using the ICCCM <i>delete</i> message (depending on your window manager, you will have a decoration button or menu to send such message).</p>
 <h2>ADDING POLYHEDRA</h2>

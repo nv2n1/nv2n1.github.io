@@ -14,16 +14,16 @@ description: "bpf_prog_create_from_user – create an unattached filter from use
 <p><i>pfp</i></p>
 <dl>
 <dd>
-<dd>the unattached filter that is created</dl>
+</dd><dd>the unattached filter that is created</dd></dl>
 <p> <i>fprog</i></p>
 <dl>
-<dd>the filter program</dl>
+<dd>the filter program</dd></dl>
 <p> <i>trans</i></p>
 <dl>
-<dd>post-classic verifier transformation handler</dl>
+<dd>post-classic verifier transformation handler</dd></dl>
 <p> <i>save_orig</i></p>
 <dl>
-<dd>save classic BPF program</dl>
+<dd>save classic BPF program</dd></dl>
 <h2>Description</h2>
 <p>This function effectively does the same as <code>bpf_prog_create</code>, only that it builds up its insns buffer from user space provided buffer. It also allows for passing a bpf_aux_classic_check_t handler.</p>
 <h2>Copyright</h2>

@@ -14,28 +14,28 @@ description: "gmond – manual page for Ganglia Monitor Daemon"
 <h2>DESCRIPTION</h2>
 <p> The Ganglia Monitoring Daemon (gmond) listens to the cluster message channel, stores the data in-memory and when requested will output an XML description of the state of the cluster</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print help and exit</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print version and exit</p>
-<dt><code>-c</code>, <code>&#8211;conf</code>=<i>STRING</i></p>
-<dd> Location of gmond configuration file (default= `/etc/ganglia/gmond.conf&#8217;)</p>
-<dt><code>-l</code>, <code>&#8211;location</code>=<i>STRING</i></p>
-<dd> Location of this host in the cluster &#8216;rack,rank,plane&#8217;. (default=`0,0,0&#8242;)</p>
-<dt><code>-d</code>, <code>&#8211;debug</code>=<i>INT</i></p>
-<dd> Debug level. If greater than zero, daemon will stay in foreground. (default=`0&#8242;)</p>
-<dt><code>-f</code>, <code>&#8211;foreground</code></p>
-<dd> Run in foreground (don&#8217;t daemonize) (default=off)</p>
-<dt><code>-t</code>, <code>&#8211;default_config</code></p>
-<dd> Print the default configuration to stdout and exit (default=off)</p>
-<dt><code>-m</code>, <code>&#8211;metrics</code></p>
-<dd> Print the list of metrics this gmond supports (default=off)</p>
-<dt><code>-b</code>, <code>&#8211;bandwidth</code></p>
-<dd> Calculate minimum bandwidth use for configuration (default=off)</p>
-<dt><code>-r</code>, <code>&#8211;convert</code>=<i>STRING</i></p>
-<dd> Convert a 2.5.x configuration file to the new 3.x format</p>
-<dt><code>-p</code>, <code>&#8211;pid-file</code>=<i>STRING</i></p>
-<dd> Write process-id to file</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print help and exit</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print version and exit</dd>
+<dt><code>-c</code>, <code>&#8211;conf</code>=<i>STRING</i></dt>
+<dd> Location of gmond configuration file (default= `/etc/ganglia/gmond.conf&#8217;)</dd>
+<dt><code>-l</code>, <code>&#8211;location</code>=<i>STRING</i></dt>
+<dd> Location of this host in the cluster &#8216;rack,rank,plane&#8217;. (default=`0,0,0&#8242;)</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code>=<i>INT</i></dt>
+<dd> Debug level. If greater than zero, daemon will stay in foreground. (default=`0&#8242;)</dd>
+<dt><code>-f</code>, <code>&#8211;foreground</code></dt>
+<dd> Run in foreground (don&#8217;t daemonize) (default=off)</dd>
+<dt><code>-t</code>, <code>&#8211;default_config</code></dt>
+<dd> Print the default configuration to stdout and exit (default=off)</dd>
+<dt><code>-m</code>, <code>&#8211;metrics</code></dt>
+<dd> Print the list of metrics this gmond supports (default=off)</dd>
+<dt><code>-b</code>, <code>&#8211;bandwidth</code></dt>
+<dd> Calculate minimum bandwidth use for configuration (default=off)</dd>
+<dt><code>-r</code>, <code>&#8211;convert</code>=<i>STRING</i></dt>
+<dd> Convert a 2.5.x configuration file to the new 3.x format</dd>
+<dt><code>-p</code>, <code>&#8211;pid-file</code>=<i>STRING</i></dt>
+<dd> Write process-id to file</dd></dl>
 <h2>AUTHOR</h2>
 <p> Matt Massie &lt;massie [at] cs.berkeley.edu&gt;</p>
 <h2>REPORTING BUGS</h2>

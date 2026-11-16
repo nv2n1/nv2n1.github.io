@@ -11,16 +11,16 @@ description: "XkbGetMap – Allocate an XkbDescRec structure and populate it wit
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>XkbDescPtr XkbGetMap</code> <code>(Display *</code><i>display</i><code>,</code> <code>unsigned int </code><i>which</i><code>,</code> <code>unsigned int </code><i>device_spec</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; display</i></p>
+<dt><i>&#8211; display</i></dt>
 <dd>
-<dd>connection to X server</p>
-<dt><i>&#8211; which</i></p>
-<dd>mask selecting subcomponents to populate</p>
-<dt><i>&#8211; device_spec</i></p>
-<dd>device_id, or XkbUseCoreKbd</dl>
+</dd><dd>connection to X server</dd>
+<dt><i>&#8211; which</i></dt>
+<dd>mask selecting subcomponents to populate</dd>
+<dt><i>&#8211; device_spec</i></dt>
+<dd>device_id, or XkbUseCoreKbd</dd></dl>
 <h2>Description</h2>
 <p>Xkb provides two functions to obtain the keyboard mapping components from the server. The first function, <i>XkbGetMap, </i> allocates an XkbDescRec structure, retrieves mapping components from the server, and stores them in the XkbDescRec structure it just allocated. The second function, <i>XkbGetUpdatedMap, </i> retrieves mapping components from the server and stores them in an XkbDescRec structure that has previously been allocated. </p>
 <p> To allocate an XkbDescRec structure and populate it with the server&#8217;s keyboard client map and server map, use <i>XkbGetMap. XkbGetMap </i> is similar to <i>XkbGetKeyboard,</i> but is used only for obtaining the address of an XkbDescRec structure that is populated with keyboard mapping components. It allows finer control over which substructures of the keyboard mapping components are to be populated. <i>XkbGetKeyboard </i> always returns fully populated components, while <i>XkbGetMap </i> can be instructed to return a partially populated component. </p>
@@ -143,7 +143,6 @@ description: "XkbGetMap – Allocate an XkbDescRec structure and populate it wit
 </tr>
 </table>
 <pre>Xkb defines combinations of these masks for convenience:
- 
  #define XkbResizableInfoMask (XkbKeyTypesMask)
  #define XkbAllClientInfoMask (XkbKeyTypesMask | XkbKeySymsMask |
  XkbModifierMapMask)

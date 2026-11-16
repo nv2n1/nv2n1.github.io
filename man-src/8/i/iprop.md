@@ -23,42 +23,42 @@ description: "iprop ipropd-master ipropd-slave – propagate changes to a Heimda
 <p> There is a keep-alive feature logged in the master&#8217;s slave-stats file (e.g. /var/heimdal/slave-stats ) </p>
 <p> Supported options for <code>ipropd-master</code></p>
 <dl>
-<dt><code>-c </code><i>string , &#8211;</i><code>-config-file= </code><i>string</i></p>
+<dt><code>-c </code><i>string , &#8211;</i><code>-config-file= </code><i>string</i></dt>
 <dd>
-<dt><code>-r </code><i>string , &#8211;</i><code>-realm= </code><i>string</i></p>
+</dd><dt><code>-r </code><i>string , &#8211;</i><code>-realm= </code><i>string</i></dt>
 <dd>
-<dt><code>-k </code><i>kspec , &#8211;</i><code>-keytab= </code><i>kspec</i></p>
-<dd>keytab to get authentication from</p>
-<dt><code>-d </code><i>file , &#8211;</i><code>-database= </code><i>file</i></p>
-<dd>Database (default per KDC)</p>
-<dt><code>&#8211;slave-stats-file= </code><i>file</i></p>
-<dd>file for slave status information</p>
-<dt><code>&#8211;time-missing= </code><i>time</i></p>
-<dd>time before slave is polled for presence (default 2 min)</p>
-<dt><code>&#8211;time-gone= </code><i>time</i></p>
-<dd>time of inactivity after which a slave is considered gone (default 5 min)</p>
-<dt><code>&#8211;detach</code></p>
-<dd>detach from console</p>
-<dt><code>&#8211;version</code></p>
+</dd><dt><code>-k </code><i>kspec , &#8211;</i><code>-keytab= </code><i>kspec</i></dt>
+<dd>keytab to get authentication from</dd>
+<dt><code>-d </code><i>file , &#8211;</i><code>-database= </code><i>file</i></dt>
+<dd>Database (default per KDC)</dd>
+<dt><code>&#8211;slave-stats-file= </code><i>file</i></dt>
+<dd>file for slave status information</dd>
+<dt><code>&#8211;time-missing= </code><i>time</i></dt>
+<dd>time before slave is polled for presence (default 2 min)</dd>
+<dt><code>&#8211;time-gone= </code><i>time</i></dt>
+<dd>time of inactivity after which a slave is considered gone (default 5 min)</dd>
+<dt><code>&#8211;detach</code></dt>
+<dd>detach from console</dd>
+<dt><code>&#8211;version</code></dt>
 <dd>
-<dt><code>&#8211;help</code></p>
-<dd></dl>
+</dd><dt><code>&#8211;help</code></dt>
+<dd></dd></dl>
 <p> Supported options for <code>ipropd-slave</code></p>
 <dl>
-<dt><code>-c </code><i>string , &#8211;</i><code>-config-file= </code><i>string</i></p>
+<dt><code>-c </code><i>string , &#8211;</i><code>-config-file= </code><i>string</i></dt>
 <dd>
-<dt><code>-r </code><i>string , &#8211;</i><code>-realm= </code><i>string</i></p>
+</dd><dt><code>-r </code><i>string , &#8211;</i><code>-realm= </code><i>string</i></dt>
 <dd>
-<dt><code>-k </code><i>kspec , &#8211;</i><code>-keytab= </code><i>kspec</i></p>
-<dd>keytab to get authentication from</p>
-<dt><code>&#8211;time-lost= </code><i>time</i></p>
-<dd>time before server is considered lost (default 5 min)</p>
-<dt><code>&#8211;detach</code></p>
-<dd>detach from console</p>
-<dt><code>&#8211;version</code></p>
+</dd><dt><code>-k </code><i>kspec , &#8211;</i><code>-keytab= </code><i>kspec</i></dt>
+<dd>keytab to get authentication from</dd>
+<dt><code>&#8211;time-lost= </code><i>time</i></dt>
+<dd>time before server is considered lost (default 5 min)</dd>
+<dt><code>&#8211;detach</code></dt>
+<dd>detach from console</dd>
+<dt><code>&#8211;version</code></dt>
 <dd>
-<dt><code>&#8211;help</code></p>
-<dd></dl>
+</dd><dt><code>&#8211;help</code></dt>
+<dd></dd></dl>
 <p> Time arguments for the relevant options above may be specified in forms like 5 min, 300 s, or simply a number of seconds.</p>
 <h2>Files</h2>
 <p>slaves slave-stats in the database directory.</p>

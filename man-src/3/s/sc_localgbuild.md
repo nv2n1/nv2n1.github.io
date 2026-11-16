@@ -12,21 +12,10 @@ description: "sc::LocalGBuild –"
 <p> Inherits <code>sc::GBuild&lt; T &gt;</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>LocalGBuild (T &amp;t, const Ref&lt; TwoBodyInt &gt; &amp;tbi, const Ref&lt; PetiteList &gt; &amp;rpl, const Ref&lt; GaussianBasisSet &gt; &amp;bs, const Ref&lt; MessageGrp &gt; &amp;g, signed char *pm, double acc, int nt=1, int tn=0)
-
-
-
 void run ()
-
-
 This is called with the Thread is run from a ThreadGrp.
-
-
-
 Public Attributes
 double tnint
-
-
-
 Protected Attributes</code></pre>
 <p> <code>MessageGrp</code> * <code>grp_</code> </p>
 <p> <code>TwoBodyInt</code> * <code>tbi_</code> </p>

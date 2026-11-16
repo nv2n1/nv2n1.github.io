@@ -15,24 +15,24 @@ description: "nullmodem – a Utility to loopback Pseudo-Terminals"
 <p> <code>nullmodem</code> creates a virtual network of Pseudo-Terminals. It can be used as an adapter to connect two programs that normally need serial interface cards. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-F, &#8211;foreground</code></p>
-<dd> Unlike normal operation, nullmodem will not detach from the terminal when given this option. Some debugging informations will be visible. </p>
-<dt><code>-q, &#8211;quiet</code></p>
-<dd> Start quietly &#8211; for init scripts. </p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Print debug info. </p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Print the version number and exit. </p>
-<dt><code>-r, &#8211;realtime</code></p>
-<dd> Start with realtime priority (i.e. use the round-robin scheduler). This requires nullmodem to run with root privileges. </p>
-<dt><code>-m, &#8211;memorylock</code></p>
-<dd> Lock the executable of nullmodem to RAM. This keeps nullmodem from being swapped out. </p>
-<dt><code>&#8211;setuid n</code></p>
-<dd> Set the UserID (UID) of the pseudo terminal spacial files to n. </p>
-<dt><code>&#8211;setgid n</code></p>
-<dd> Set the GroupID (GID) of the pseudo terminal spacial files to n. </p>
-<dt><code>&#8211;blocking</code></p>
-<dd> Use blocking IO to handle the interfaces (default: NONBLOCKing). </p>
+<dt><code>-F, &#8211;foreground</code></dt>
+<dd> Unlike normal operation, nullmodem will not detach from the terminal when given this option. Some debugging informations will be visible. </dd>
+<dt><code>-q, &#8211;quiet</code></dt>
+<dd> Start quietly &#8211; for init scripts. </dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Print debug info. </dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Print the version number and exit. </dd>
+<dt><code>-r, &#8211;realtime</code></dt>
+<dd> Start with realtime priority (i.e. use the round-robin scheduler). This requires nullmodem to run with root privileges. </dd>
+<dt><code>-m, &#8211;memorylock</code></dt>
+<dd> Lock the executable of nullmodem to RAM. This keeps nullmodem from being swapped out. </dd>
+<dt><code>&#8211;setuid n</code></dt>
+<dd> Set the UserID (UID) of the pseudo terminal spacial files to n. </dd>
+<dt><code>&#8211;setgid n</code></dt>
+<dd> Set the GroupID (GID) of the pseudo terminal spacial files to n. </dd>
+<dt><code>&#8211;blocking</code></dt>
+<dd> Use blocking IO to handle the interfaces (default: NONBLOCKing). </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> Juergen Rinas &lt;jrinas [at] gmx.de&gt;</p>

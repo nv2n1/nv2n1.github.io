@@ -13,12 +13,12 @@ description: "pdfedit – Editor for PDF files"
 <p> pdfedit [file(s)] [&#8211;help] [&#8211;version] [-d (n)] [-console] [-script (filename)] [-run (filename)] [-eval (code)] [-s (filename)] [&#8211;]</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>&#8211;help</i></p>
-<dd> Print brief help about commandline options to STDOUT and exit</p>
-<dt><i>&#8211;version</i></p>
-<dd> Print version of editor to STDOUT and exit</p>
-<dt><i>-d (n)</i></p>
-<dd> Set verbosity of debugging messages reported by editor. Only messages below or equal level specified in parameter will be shown, default is debugging level 1. Also, any of symbolic constants defined below (case insensitive), or starting part of them may be given instead of corresponding number. </p>
+<dt><i>&#8211;help</i></dt>
+<dd> Print brief help about commandline options to STDOUT and exit</dd>
+<dt><i>&#8211;version</i></dt>
+<dd> Print version of editor to STDOUT and exit</dd>
+<dt><i>-d (n)</i></dt>
+<dd> Set verbosity of debugging messages reported by editor. Only messages below or equal level specified in parameter will be shown, default is debugging level 1. Also, any of symbolic constants defined below (case insensitive), or starting part of them may be given instead of corresponding number. </dd>
 <p> <code>Explanation of debugging levels</code><br />
 &nbsp;<wbr> <code>0</code> <code>PANIC</code> <code>Critical errors</code><br />
 &nbsp;<wbr> <code>1</code> <code>CRITICAL</code> <code>Critical errors, but at least the program can exit somewhat gracefully</code><br />
@@ -27,18 +27,18 @@ description: "pdfedit – Editor for PDF files"
 &nbsp;<wbr> <code>4</code> <code>INFO</code> <code>Information about some internal behavior</code><br />
 &nbsp;<wbr> <code>5</code> <code>DEBUG</code> <code>Debugging messages</code><br />
 &nbsp;<wbr> Setting this to -1 mean no debug messages will be shown at all, not even the most critical ones. Debugging messages are sent to STDERR.</p>
-<dt><i>-console</i></p>
-<dd> Run in commandline mode. No editor windows are opened and commandline init script is executed.</p>
-<dt><i>-script (filename)</i></p>
-<dd> Run script with given filename. Look for the script in script path. If not found, look for the script in current directory.</p>
-<dt><i>-run (filename)</i></p>
-<dd> Run script with given filename, but unlike <code>-script</code> option, script path is not searched.</p>
-<dt><i>-eval (code)</i></p>
-<dd> Evaluate given script code</p>
-<dt><i>-s (filename)</i></p>
-<dd> This is just shortcut for <code>-console -script (filename)</code></p>
-<dt><i>&#8212;</i></p>
-<dd> Stop processing options. Any further parameters after this one are treated as filenames. This can be useful if you want to open file, that have name beginning with a dash.</dl>
+<dt><i>-console</i></dt>
+<dd> Run in commandline mode. No editor windows are opened and commandline init script is executed.</dd>
+<dt><i>-script (filename)</i></dt>
+<dd> Run script with given filename. Look for the script in script path. If not found, look for the script in current directory.</dd>
+<dt><i>-run (filename)</i></dt>
+<dd> Run script with given filename, but unlike <code>-script</code> option, script path is not searched.</dd>
+<dt><i>-eval (code)</i></dt>
+<dd> Evaluate given script code</dd>
+<dt><i>-s (filename)</i></dt>
+<dd> This is just shortcut for <code>-console -script (filename)</code></dd>
+<dt><i>&#8212;</i></dt>
+<dd> Stop processing options. Any further parameters after this one are treated as filenames. This can be useful if you want to open file, that have name beginning with a dash.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p>&nbsp;<wbr>You can specify any number of filenames as parameters on commandline. One window will be opened for each file specified. If no file is specified on commandline, editor will be loaded initially empty.&nbsp;<wbr><br />
 &nbsp;<wbr>Name of files can be mixed with options&nbsp;<wbr>(parameter that begin with a dash). Invalid option on commandline will cause editor to abort with error message. Names of options are case sensitive.&nbsp;<wbr><br />

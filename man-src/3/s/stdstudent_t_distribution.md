@@ -11,9 +11,7 @@ std::student_t_distribution - std::student_t_distribution
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;random&gt;
-
 template&lt; class RealType = double &gt;  (since C++11)
-
 class student_t_distribution;</code></pre> 
 Produces random floating-point values x, distributed according to probability density function: <pre><code>\(p(x|n) = \frac{1}{\sqrt{n\pi} } \cdot \frac{\Gamma(\frac{n+1}{2})}{\Gamma(\frac{n}{2})} \cdot (1+\frac{x^2}{n})^{-\frac{n+1}{2} } \)p(x|n) =</code></pre> 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;1 

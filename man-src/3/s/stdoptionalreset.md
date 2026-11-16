@@ -18,10 +18,5 @@ If *this contains a value, destroy that value as if by value().T::~T(). Otherwis
 <h2>See also</h2>
 
 <pre><code>assigns contents
-
 operator= (public member function)
-
-
-
-
 </code></pre>

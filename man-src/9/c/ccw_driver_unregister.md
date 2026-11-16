@@ -14,11 +14,11 @@ description: "ccw_driver_unregister – deregister a ccw driver"
 <p><i>cdriver</i></p>
 <dl>
 <dd>
-<dd>driver to be deregistered</dl>
+</dd><dd>driver to be deregistered</dd></dl>
 <h2>Description</h2>
 <p>This function is mainly a wrapper around <code>driver_unregister</code>.</p>
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

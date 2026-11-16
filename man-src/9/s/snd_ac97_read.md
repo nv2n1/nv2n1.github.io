@@ -15,11 +15,11 @@ snd_ac97_read - read a value from the given register
 <h2>Arguments</h2>
 
 <i>ac97</i>
-<dl><dd><dd>the ac97 instance</dl>
+<dl><dd></dd><dd>the ac97 instance</dd></dl>
  
 
  <i>reg</i>
-<dl><dd>the register to read</dl>
+<dl><dd>the register to read</dd></dl>
 
 <h2>Description</h2>
 

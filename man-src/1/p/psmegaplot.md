@@ -14,15 +14,15 @@ description: "psmegaplot – To create poster-size PostScript plots from page-si
 <h2>DESCRIPTION</h2>
 <p> <code>psmegaplot</code> reads a <code>GMT</code>-produced <i>PostScript</i> file and &#8216;blows it up&#8217; by an arbitrary scale. The result is several plots that make up the pieces in a jigsaw puzzle. Cut and paste these pieces to make a &#8216;megaplot&#8217;. </p>
 <dl>
-<dt><i>plotfile</i></p>
-<dd> <i>PostScript</i> file as created by the <code>GMT</code> programs.</p>
-<dt><code>-S</code></p>
-<dd> Multiply the x- and y-dimension by <i>scale</i>. <i>scale</i> must be larger than 1.0.</dl>
+<dt><i>plotfile</i></dt>
+<dd> <i>PostScript</i> file as created by the <code>GMT</code> programs.</dd>
+<dt><code>-S</code></dt>
+<dd> Multiply the x- and y-dimension by <i>scale</i>. <i>scale</i> must be larger than 1.0.</dd></dl>
 <h2>OPTIONS</h2>
 <p> No space between the option flag and the associated arguments.</p>
 <dl>
-<dt><code>-C</code></p>
-<dd> Plot crop marks in each corner of every output page. [Default is no marks]</dl>
+<dt><code>-C</code></dt>
+<dd> Plot crop marks in each corner of every output page. [Default is no marks]</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To magnify a contour-map PostScript file 3 times, giving a total of 9 output pages to be pasted together, use </p>
 <p> <code>psmegaplot</code> hawaii_contour.ps <code>-S</code>3 <code>-C</code> &gt; hawaii_contour_megaplot.ps</p>

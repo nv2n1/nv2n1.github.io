@@ -73,10 +73,10 @@ description: "QwtKnob –"
 <p> The value range of a knob might be divided into several turns. </p>
 <p> The layout of the knob depends on the <code>knobWidth()</code>. </p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>width &gt; 0 The diameter of the knob is fixed and the knob is aligned according to the <code>alignment()</code> flags inside of the contentsRect().</p>
-<dt>&bull;</p>
-<dd>width &lt;= 0 The knob is extended to the minimum of width/height of the contentsRect() and aligned in the other direction according to <code>alignment()</code>.</dl>
+<dt>&bull;</dt>
+<dd>width &gt; 0 The diameter of the knob is fixed and the knob is aligned according to the <code>alignment()</code> flags inside of the contentsRect().</dd>
+<dt>&bull;</dt>
+<dd>width &lt;= 0 The knob is extended to the minimum of width/height of the contentsRect() and aligned in the other direction according to <code>alignment()</code>.</dd></dl>
 <p> Setting a fixed <code>knobWidth()</code> is helpful to align several knobs with different scale labels. </p>
 <p>&nbsp;<wbr></p>
 <h2>Member Enumeration Documentation</h2>
@@ -84,243 +84,243 @@ description: "QwtKnob –"
 <p>Style of the knob surface. Depending on the KnobStyle the surface of the knob is filled from the brushes of the widget palette(). </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setKnobStyle()</code>, <code>knobStyle()</code></dl>
+<dd><code>setKnobStyle()</code>, <code>knobStyle()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>Flat </i></p>
-<dd>Fill the knob with a brush from QPalette::Button.</p>
-<dt><i>Raised </i></p>
-<dd>Build a gradient from QPalette::Midlight and QPalette::Button.</p>
-<dt><i>Sunken </i></p>
-<dd>Build a gradient from QPalette::Midlight, QPalette::Button and QPalette::Midlight</p>
-<dt><i>Styled </i></p>
-<dd>Build a radial gradient from QPalette::Button like it is used for QDial in various Qt styles.</dl>
+<dt><i>Flat </i></dt>
+<dd>Fill the knob with a brush from QPalette::Button.</dd>
+<dt><i>Raised </i></dt>
+<dd>Build a gradient from QPalette::Midlight and QPalette::Button.</dd>
+<dt><i>Sunken </i></dt>
+<dd>Build a gradient from QPalette::Midlight, QPalette::Button and QPalette::Midlight</dd>
+<dt><i>Styled </i></dt>
+<dd>Build a radial gradient from QPalette::Button like it is used for QDial in various Qt styles.</dd></dl>
 <h3>enum <code>QwtKnob::MarkerStyle</code></h3>
 <p>Marker type. The marker indicates the current value on the knob The default setting is a Notch marker. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setMarkerStyle()</code>, <code>setMarkerSize()</code></dl>
+<dd><code>setMarkerStyle()</code>, <code>setMarkerSize()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>NoMarker </i></p>
-<dd>Don&#8217;t paint any marker.</p>
-<dt><i>Tick </i></p>
-<dd>Paint a single tick in QPalette::ButtonText color.</p>
-<dt><i>Triangle </i></p>
-<dd>Paint a triangle in QPalette::ButtonText color.</p>
-<dt><i>Dot </i></p>
-<dd>Paint a circle in QPalette::ButtonText color.</p>
-<dt><i>Nub </i></p>
-<dd>Draw a raised ellipse with a gradient build from QPalette::Light and QPalette::Mid</p>
-<dt><i>Notch </i></p>
-<dd>Draw a sunken ellipse with a gradient build from QPalette::Light and QPalette::Mid</dl>
+<dt><i>NoMarker </i></dt>
+<dd>Don&#8217;t paint any marker.</dd>
+<dt><i>Tick </i></dt>
+<dd>Paint a single tick in QPalette::ButtonText color.</dd>
+<dt><i>Triangle </i></dt>
+<dd>Paint a triangle in QPalette::ButtonText color.</dd>
+<dt><i>Dot </i></dt>
+<dd>Paint a circle in QPalette::ButtonText color.</dd>
+<dt><i>Nub </i></dt>
+<dd>Draw a raised ellipse with a gradient build from QPalette::Light and QPalette::Mid</dd>
+<dt><i>Notch </i></dt>
+<dd>Draw a sunken ellipse with a gradient build from QPalette::Light and QPalette::Mid</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtKnob::QwtKnob (QWidget *parent = NULL) [explicit]</h3>
 <p>Constructor. Construct a knob with an angle of 270°. The style is <code>QwtKnob::Raised</code> and the marker style is <code>QwtKnob::Notch</code>. The width of the knob is set to 50 pixels. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>parent</i> Parent widget</dl>
+<dd><i>parent</i> Parent widget</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setTotalAngle()</code></dl>
+<dd><code>setTotalAngle()</code></dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>Qt::Alignment QwtKnob::alignment () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Alignment of the knob inside of contentsRect()</dl>
+<dd>Alignment of the knob inside of contentsRect()</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setAlignment()</code>, <code>knobWidth()</code>, <code>knobRect()</code></dl>
+<dd><code>setAlignment()</code>, <code>knobWidth()</code>, <code>knobRect()</code></dd></dl>
 <h3>void QwtKnob::changeEvent (QEvent *event) [protected], [virtual]</h3>
 <p>Handle QEvent::StyleChange and QEvent::FontChange; </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Change event</dl>
+<dd><i>event</i> Change event</dd></dl>
 <h3>void QwtKnob::drawFocusIndicator (QPainter *painter) const [protected], [virtual]</h3>
 <p>Draw the focus indicator </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>painter</i> Painter</dl>
+<dd><i>painter</i> Painter</dd></dl>
 <h3>void QwtKnob::drawKnob (QPainter *painter, const QRectF &amp;knobRect) const [protected], [virtual]</h3>
 <p>Draw the knob. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>painter</i> painter<br />
- <i>knobRect</i> Bounding rectangle of the knob (without scale)</dl>
+ <i>knobRect</i> Bounding rectangle of the knob (without scale)</dd></dl>
 <h3>void QwtKnob::drawMarker (QPainter *painter, const QRectF &amp;rect, doubleangle) const [protected], [virtual]</h3>
 <p>Draw the marker at the knob&#8217;s front. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>painter</i> Painter<br />
  <i>rect</i> Bounding rectangle of the knob without scale<br />
- <i>angle</i> Angle of the marker in degrees ( clockwise, 0 at the 12 o&#8217;clock position )</dl>
+ <i>angle</i> Angle of the marker in degrees ( clockwise, 0 at the 12 o&#8217;clock position )</dd></dl>
 <h3>bool QwtKnob::isScrollPosition (const QPoint &amp;pos) const [protected], [virtual]</h3>
 <p>Determine what to do when the user presses a mouse button. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pos</i> Mouse position</dl>
+<dd><i>pos</i> Mouse position</dd></dl>
 <p> <code>Return values:</code></p>
 <dl COMPACT>
-<dd><i>True,when</i> pos is inside the circle of the knob.</dl>
+<dd><i>True,when</i> pos is inside the circle of the knob.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>scrolledTo()</code></dl>
+<dd><code>scrolledTo()</code></dd></dl>
 <p> Implements <code>QwtAbstractSlider</code>.</p>
 <h3>QRect QwtKnob::knobRect () const</h3>
 <p>Calculate the bounding rectangle of the knob without the scale </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Bounding rectangle of the knob</dl>
+<dd>Bounding rectangle of the knob</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>knobWidth()</code>, <code>alignment()</code>, QWidget::contentsRect()</dl>
+<dd><code>knobWidth()</code>, <code>alignment()</code>, QWidget::contentsRect()</dd></dl>
 <h3><code>QwtKnob::KnobStyle</code> QwtKnob::knobStyle () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Marker type of the knob</dl>
+<dd>Marker type of the knob</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setKnobStyle()</code>, <code>setBorderWidth()</code></dl>
+<dd><code>setKnobStyle()</code>, <code>setBorderWidth()</code></dd></dl>
 <h3>int QwtKnob::markerSize () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Marker size</dl>
+<dd>Marker size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setMarkerSize()</code></dl>
+<dd><code>setMarkerSize()</code></dd></dl>
 <h3><code>QwtKnob::MarkerStyle</code> QwtKnob::markerStyle () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Marker type of the knob</dl>
+<dd>Marker type of the knob</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setMarkerStyle()</code>, <code>setMarkerSize()</code></dl>
+<dd><code>setMarkerStyle()</code>, <code>setMarkerSize()</code></dd></dl>
 <h3>QSize QwtKnob::minimumSizeHint () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Minimum size hint</dl>
+<dd>Minimum size hint</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>sizeHint()</code></dl>
+<dd><code>sizeHint()</code></dd></dl>
 <h3>int QwtKnob::numTurns () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Number of turns.</dl>
+<dd>Number of turns.</dd></dl>
 <p> When the total angle is below 360° <code>numTurns()</code> is ceiled to 1. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setNumTurns()</code>, <code>setTotalAngle()</code>, <code>totalAngle()</code></dl>
+<dd><code>setNumTurns()</code>, <code>setTotalAngle()</code>, <code>totalAngle()</code></dd></dl>
 <h3>void QwtKnob::paintEvent (QPaintEvent *event) [protected], [virtual]</h3>
 <p>Repaint the knob </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>event</i> Paint event</dl>
+<dd><i>event</i> Paint event</dd></dl>
 <h3>const <code>QwtRoundScaleDraw</code> * QwtKnob::scaleDraw () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the scale draw of the knob</dl>
+<dd>the scale draw of the knob</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setScaleDraw()</code></dl>
+<dd><code>setScaleDraw()</code></dd></dl>
 <h3><code>QwtRoundScaleDraw</code> * QwtKnob::scaleDraw ()</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the scale draw of the knob</dl>
+<dd>the scale draw of the knob</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setScaleDraw()</code></dl>
+<dd><code>setScaleDraw()</code></dd></dl>
 <h3>double QwtKnob::scrolledTo (const QPoint &amp;pos) const [protected], [virtual]</h3>
 <p>Determine the value for a new position of the mouse. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pos</i> Mouse position</dl>
+<dd><i>pos</i> Mouse position</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Value for the mouse position</dl>
+<dd>Value for the mouse position</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>isScrollPosition()</code></dl>
+<dd><code>isScrollPosition()</code></dd></dl>
 <p> Implements <code>QwtAbstractSlider</code>.</p>
 <h3>void QwtKnob::setAlignment (Qt::Alignmentalignment)</h3>
 <p>Set the alignment of the knob. Similar to a QLabel::alignment() the flags decide how to align the knob inside of contentsRect(). </p>
 <p> The default setting is Qt::AlignCenter </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>alignment</i> Or&#8217;d alignment flags</dl>
+<dd><i>alignment</i> Or&#8217;d alignment flags</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>alignment()</code>, <code>setKnobWidth()</code>, <code>knobRect()</code></dl>
+<dd><code>alignment()</code>, <code>setKnobWidth()</code>, <code>knobRect()</code></dd></dl>
 <h3>void QwtKnob::setBorderWidth (intborderWidth)</h3>
 <p>Set the knob&#8217;s border width. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>borderWidth</i> new border width</dl>
+<dd><i>borderWidth</i> new border width</dd></dl>
 <h3>void QwtKnob::setKnobStyle (<code>KnobStyle</code>knobStyle)</h3>
 <p>Set the knob type. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>knobStyle</i> Knob type</dl>
+<dd><i>knobStyle</i> Knob type</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>knobStyle()</code>, <code>setBorderWidth()</code></dl>
+<dd><code>knobStyle()</code>, <code>setBorderWidth()</code></dd></dl>
 <h3>void QwtKnob::setKnobWidth (intwidth)</h3>
 <p>Change the knob&#8217;s width. Setting a fixed value for the diameter of the knob is helpful for aligning several knobs in a row. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>width</i> New width</dl>
+<dd><i>width</i> New width</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>knobWidth()</code>, <code>setAlignment()</code></dl>
+<dd><code>knobWidth()</code>, <code>setAlignment()</code></dd></dl>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>Modifies the sizePolicy()</dl>
+<dd>Modifies the sizePolicy()</dd></dl>
 <h3>void QwtKnob::setMarkerSize (intsize)</h3>
 <p>Set the size of the marker. When setting a size &lt;= 0 the marker will automatically scaled to 40% of the radius of the knob. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>markerSize()</code>, <code>markerStyle()</code></dl>
+<dd><code>markerSize()</code>, <code>markerStyle()</code></dd></dl>
 <h3>void QwtKnob::setMarkerStyle (<code>MarkerStyle</code>markerStyle)</h3>
 <p>Set the marker type of the knob. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>markerStyle</i> Marker type</dl>
+<dd><i>markerStyle</i> Marker type</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>markerStyle()</code>, <code>setMarkerSize()</code></dl>
+<dd><code>markerStyle()</code>, <code>setMarkerSize()</code></dd></dl>
 <h3>void QwtKnob::setNumTurns (intnumTurns)</h3>
 <p>Set the number of turns. When numTurns &gt; 1 the knob can be turned several times around its axis</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd>otherwise the total angle is floored to 360°.</dl>
+<dt>&bull;</dt>
+<dd>otherwise the total angle is floored to 360°.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>numTurns()</code>, <code>totalAngle()</code>, <code>setTotalAngle()</code></dl>
+<dd><code>numTurns()</code>, <code>totalAngle()</code>, <code>setTotalAngle()</code></dd></dl>
 <h3>void QwtKnob::setScaleDraw (<code>QwtRoundScaleDraw</code> *scaleDraw)</h3>
 <p>Change the scale draw of the knob </p>
 <p> For changing the labels of the scales, it is necessary to derive from <code>QwtRoundScaleDraw</code> and overload <code>QwtRoundScaleDraw::label()</code>. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>scaleDraw()</code></dl>
+<dd><code>scaleDraw()</code></dd></dl>
 <h3>void QwtKnob::setTotalAngle (doubleangle)</h3>
 <p>Set the total angle by which the knob can be turned. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>angle</i> Angle in degrees.</dl>
+<dd><i>angle</i> Angle in degrees.</dd></dl>
 <p> The angle has to be between [10, 360] degrees. Angles above 360 ( so that the knob can be turned several times around its axis ) have to be set using <code>setNumTurns()</code>. </p>
 <p> The default angle is 270 degrees. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>totalAngle()</code>, <code>setNumTurns()</code></dl>
+<dd><code>totalAngle()</code>, <code>setNumTurns()</code></dd></dl>
 <h3>QSize QwtKnob::sizeHint () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd><code>sizeHint()</code></dl>
+<dd><code>sizeHint()</code></dd></dl>
 <h3>double QwtKnob::totalAngle () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>the total angle</dl>
+<dd>the total angle</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setTotalAngle()</code>, <code>setNumTurns()</code>, <code>numTurns()</code></dl>
+<dd><code>setTotalAngle()</code>, <code>setNumTurns()</code>, <code>numTurns()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

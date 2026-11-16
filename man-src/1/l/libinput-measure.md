@@ -17,19 +17,19 @@ description: "libinput-measure – measure properties of devices"
 <p> This tool usually needs to be run as root to have access to the /dev/input/eventX nodes.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Print help</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Print help</dd></dl>
 <h2>FEATURES</h2>
 <p> Features that can be measured include</p>
 <dl>
-<dt><code><a href="/docs/linux/man/1-libinput-measure-fuzz/">libinput-measure-fuzz</a>(1)</code></p>
-<dd> Measure touch fuzz to avoid pointer jitter</p>
-<dt><code><a href="/docs/linux/man/1-libinput-measure-touch-size/">libinput-measure-touch-size</a>(1)</code></p>
-<dd> Measure touch size and orientation</p>
-<dt><code><a href="/docs/linux/man/1-libinput-measure-touchpad-tap/">libinput-measure-touchpad-tap</a>(1)</code></p>
-<dd> Measure tap-to-click time</p>
-<dt><code><a href="/docs/linux/man/1-libinput-measure-touchpad-pressure/">libinput-measure-touchpad-pressure</a>(1)</code></p>
-<dd> Measure touch pressure</dl>
+<dt><code><a href="/docs/linux/man/1-libinput-measure-fuzz/">libinput-measure-fuzz</a>(1)</code></dt>
+<dd> Measure touch fuzz to avoid pointer jitter</dd>
+<dt><code><a href="/docs/linux/man/1-libinput-measure-touch-size/">libinput-measure-touch-size</a>(1)</code></dt>
+<dd> Measure touch size and orientation</dd>
+<dt><code><a href="/docs/linux/man/1-libinput-measure-touchpad-tap/">libinput-measure-touchpad-tap</a>(1)</code></dt>
+<dd> Measure tap-to-click time</dd>
+<dt><code><a href="/docs/linux/man/1-libinput-measure-touchpad-pressure/">libinput-measure-touchpad-pressure</a>(1)</code></dt>
+<dd> Measure touch pressure</dd></dl>
 <h2>LIBINPUT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-libinput/">libinput</a>(1)</code> suite </p>
 <h2>Index</h2>

@@ -19,16 +19,16 @@ description: "git-authors – Generate authors report"
 <p> Show authors.</p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>Updating AUTHORS file:</p>
+<dt>Updating AUTHORS file:</dt>
 <dd>
-<dt>
-<dd> $ git authors</p>
-<dt>Listing authors:</p>
+</dd><dt>
+</dt><dd> $ git authors</dd>
+<dt>Listing authors:</dt>
 <dd>
+</dd><dt>
+</dt><dd> $ git authors &#8211;list</dd>
 <dt>
-<dd> $ git authors &#8211;list</p>
-<dt>
-<dd>
+</dt><dd>
 <pre><code>
 TJ Holowaychuk&lt;tj[at] vision - media.ca&gt;
         Tj Holowaychuk&lt;tj[at] vision - media.ca&gt;
@@ -38,9 +38,7 @@ TJ Holowaychuk&lt;tj[at] vision - media.ca&gt;
     &lt;github[at] jigsoft.co.za&gt;
         Leila Muhtasib&lt;muhtasib[at] gmail.com&gt;
 </code></pre>
-<dt>
-<dd>
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Titus Wormer &lt;<i>tituswormer [at] gmail.com</i>&gt;</p>
 <h2>REPORTING BUGS</h2>

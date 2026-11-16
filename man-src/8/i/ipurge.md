@@ -20,29 +20,29 @@ description: "ipurge – delete mail from IMAP mailbox or partition based on age
 <p> <i>Ipurge</i> reads its configuration options out of the <i><a href="/docs/linux/man/5-imapd-conf/">imapd.conf</a></i>(5) file unless specified otherwise by <code>-C</code>.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-f</code></p>
-<dd>Force deletion of mail in <i>all</i> mailboxes.</p>
-<dt><code>-C</code><i> config-file</i></p>
-<dd>Read configuration options from <i>config-file</i>.</p>
-<dt><code>-d</code><i> days</i></p>
-<dd>Age of message in <i>days</i>.</p>
-<dt><code>-b</code><i> bytes</i></p>
-<dd>Size of message in <i>bytes</i>.</p>
-<dt><code>-k</code><i> Kbytes</i></p>
-<dd>Size of message in <i>Kbytes</i> (2^10 bytes).</p>
-<dt><code>-m</code><i> Mbytes</i></p>
-<dd>Size of message in <i>Mbytes</i> (2^20 bytes).</p>
-<dt><code>-x</code></p>
-<dd>Perform an exact match on age or size (instead of older or larger).</p>
-<dt><code>-X</code></p>
-<dd>Use delivery time instead of Date: header for date matches</p>
-<dt><code>-i</code></p>
-<dd>Invert match logic: -x means not equal, date is for newer, size is for smaller</p>
-<dt><code>-s</code></p>
-<dd>Skip over messages that have the \Flagged flag set.</p>
-<dt><code>-o</code></p>
-<dd>Only purge messages that have the \Deleted flag set.</dl>
+<dt><code>-f</code></dt>
+<dd>Force deletion of mail in <i>all</i> mailboxes.</dd>
+<dt><code>-C</code><i> config-file</i></dt>
+<dd>Read configuration options from <i>config-file</i>.</dd>
+<dt><code>-d</code><i> days</i></dt>
+<dd>Age of message in <i>days</i>.</dd>
+<dt><code>-b</code><i> bytes</i></dt>
+<dd>Size of message in <i>bytes</i>.</dd>
+<dt><code>-k</code><i> Kbytes</i></dt>
+<dd>Size of message in <i>Kbytes</i> (2^10 bytes).</dd>
+<dt><code>-m</code><i> Mbytes</i></dt>
+<dd>Size of message in <i>Mbytes</i> (2^20 bytes).</dd>
+<dt><code>-x</code></dt>
+<dd>Perform an exact match on age or size (instead of older or larger).</dd>
+<dt><code>-X</code></dt>
+<dd>Use delivery time instead of Date: header for date matches</dd>
+<dt><code>-i</code></dt>
+<dd>Invert match logic: -x means not equal, date is for newer, size is for smaller</dd>
+<dt><code>-s</code></dt>
+<dd>Skip over messages that have the \Flagged flag set.</dd>
+<dt><code>-o</code></dt>
+<dd>Only purge messages that have the \Deleted flag set.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/imapd.conf</code></p>
-<dd></dl>
+<dt><code>/etc/imapd.conf</code></dt>
+<dd></dd></dl>

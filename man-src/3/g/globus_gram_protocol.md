@@ -23,16 +23,16 @@ description: "GRAM Protocol –"
 <p> GRAM Protocol. </p>
 <p> The Globus GRAM Protocol Library implements the GRAM protocol. It is used by the GRAM Client and GRAM Job Manager. It provides the constants used by in the sending and receiving of GRAM messages. It also provides functions to encode GRAM requests and replies, and to send and receive the GRAM queries. </p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>GRAM Protocol Functions</code></p>
-<dt>&bull;</p>
-<dd> <code>Job States</code></p>
-<dt>&bull;</p>
-<dd> <code>Signals</code></p>
-<dt>&bull;</p>
-<dd> <code>GRAM Errors</code></p>
-<dt>&bull;</p>
-<dd> <code>GRAM Protocol Message Format</code></dl>
+<dt>&bull;</dt>
+<dd> <code>GRAM Protocol Functions</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Job States</code></dd>
+<dt>&bull;</dt>
+<dd> <code>Signals</code></dd>
+<dt>&bull;</dt>
+<dd> <code>GRAM Errors</code></dd>
+<dt>&bull;</dt>
+<dd> <code>GRAM Protocol Message Format</code></dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gram_protocol from the source code. </p>
 <h2>Index</h2>

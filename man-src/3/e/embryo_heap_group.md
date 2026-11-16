@@ -22,16 +22,16 @@ description: "Heap Functions – The heap is an area of memory that can be alloc
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ep</i> The program with the given virtual machine.<br />
- <i>down_to</i> The given size.</dl>
+ <i>down_to</i> The given size.</dd></dl>
 <h3>EAPI Embryo_Cell embryo_data_heap_push (Embryo_Program * ep, int cells)</h3>
 <p>Increases the size of the heap of the given virtual machine by the given number of Embryo_Cells. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>ep</i> The program with the given virtual machine.<br />
- <i>cells</i> The given number of Embryo_Cells.</dl>
+ <i>cells</i> The given number of Embryo_Cells.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>The address of the new memory region on success. EMBRYO_CELL_NONE otherwise.</dl>
+<dd>The address of the new memory region on success. EMBRYO_CELL_NONE otherwise.</dd></dl>
 <p> References EMBRYO_CELL_NONE. </p>
 <p> Referenced by embryo_program_run().</p>
 <h2>Author</h2>

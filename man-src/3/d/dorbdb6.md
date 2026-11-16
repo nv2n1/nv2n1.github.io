@@ -23,7 +23,6 @@ DORBDB6 orthogonalizes the column vector
             Q = [Q1].
                     [Q2] The columns of Q must be orthonormal.If the projection is zero according to Kahan's "twice is enough" criterion,
     then the zero vector is returned..fi
-
             Parameters : M1
                              M1 is INTEGER
                                  The dimension of X1 and the number of rows in Q1.0 &lt;= M1.
@@ -100,14 +99,14 @@ DORBDB6 orthogonalizes the column vector
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> July 2012</dl>
+</dt><dd> July 2012</dd></dl>
 <p> Definition at line 154 of file dorbdb6.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

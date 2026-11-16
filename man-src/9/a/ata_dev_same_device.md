@@ -14,13 +14,13 @@ description: "ata_dev_same_device – Determine whether new ID matches configure
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device to compare against</dl>
+</dd><dd>device to compare against</dd></dl>
 <p> <i>new_class</i></p>
 <dl>
-<dd>class of the new device</dl>
+<dd>class of the new device</dd></dl>
 <p> <i>new_id</i></p>
 <dl>
-<dd>IDENTIFY page of the new device</dl>
+<dd>IDENTIFY page of the new device</dd></dl>
 <h2>Description</h2>
 <p>Compare <i>new_class</i> and <i>new_id</i> against <i>dev</i> and determine whether <i>dev</i> is the device indicated by <i>new_class</i> and <i>new_id</i>. </p>
 <p> LOCKING: None.</p>
@@ -29,5 +29,5 @@ description: "ata_dev_same_device – Determine whether new ID matches configure
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

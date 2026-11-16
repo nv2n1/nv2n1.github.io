@@ -15,19 +15,19 @@ description: "getc_putc – program to test hard drive performance."
 <h2>Options</h2>
 <p>For getc_putc every option is of the form of a hyphen followed by a letter and then the next parameter contains the value.</p>
 <dl>
-<dt><code>-d</code></p>
-<dd>the directory to use for the tests.</p>
-<dt><code>-s</code></p>
-<dd>the size of the file for byte IO performance measured in kilobytes. NB You can specify the size in mega-bytes if you add &#8216;m&#8217; to the end of the number. </p>
+<dt><code>-d</code></dt>
+<dd>the directory to use for the tests.</dd>
+<dt><code>-s</code></dt>
+<dd>the size of the file for byte IO performance measured in kilobytes. NB You can specify the size in mega-bytes if you add &#8216;m&#8217; to the end of the number. </dd>
 <p> The default for this test is to test with a 40MiB file. Of the file only 1/32 of it will be used for write() and read() system calls (anything else takes too long), and only 1/4 of it will be used for locked getc() and putc(). </p>
-<dt><code>-m</code></p>
-<dd>name of the machine &#8211; for display purposes only. </p>
-<dt><code>-u</code></p>
-<dd>user-id to use. When running as root specify the UID to use for the tests. It is not recommended to use root, so if you really want to run as root then use <code>-u root.</code> Also if you want to specify the group to run as then use the <code>user:group</code> format. If you specify a user by name but no group then the primary group of that user will be chosen. If you specify a user by number and no group then the group will be <code>nogroup.</code> </p>
-<dt><code>-g</code></p>
-<dd>group-id to use. Same as using <code>:group</code> for the <code>-u</code> parameter, just a different way to specify it for compatibility with other programs. </p>
-<dt><code>-q</code></p>
-<dd>quiet mode. If specified then some of the extra informational messages will be suppressed. Also the csv data will be the only output on standard out and the plain text data will be on standard error. This means you can run <code>getc_putc -q &gt;&gt; file.csv</code> to record your csv data. </p>
+<dt><code>-m</code></dt>
+<dd>name of the machine &#8211; for display purposes only. </dd>
+<dt><code>-u</code></dt>
+<dd>user-id to use. When running as root specify the UID to use for the tests. It is not recommended to use root, so if you really want to run as root then use <code>-u root.</code> Also if you want to specify the group to run as then use the <code>user:group</code> format. If you specify a user by name but no group then the primary group of that user will be chosen. If you specify a user by number and no group then the group will be <code>nogroup.</code> </dd>
+<dt><code>-g</code></dt>
+<dd>group-id to use. Same as using <code>:group</code> for the <code>-u</code> parameter, just a different way to specify it for compatibility with other programs. </dd>
+<dt><code>-q</code></dt>
+<dd>quiet mode. If specified then some of the extra informational messages will be suppressed. Also the csv data will be the only output on standard out and the plain text data will be on standard error. This means you can run <code>getc_putc -q &gt;&gt; file.csv</code> to record your csv data. </dd>
 </dl>
 <h2>Output</h2>
 <p>The primary output is plain-text in 80 columns which is designed to fit well when pasted into email and which will work well with Braille displays. </p>

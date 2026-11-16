@@ -26,45 +26,45 @@ description: "struct_shash_alg – synchronous message digest definition"
 <h2>Members</h2>
 <p>init</p>
 <dl>
-<dd>see struct ahash_alg</dl>
+<dd>see struct ahash_alg</dd></dl>
 <p> update</p>
 <dl>
-<dd>see struct ahash_alg</dl>
+<dd>see struct ahash_alg</dd></dl>
 <p> final</p>
 <dl>
-<dd>see struct ahash_alg</dl>
+<dd>see struct ahash_alg</dd></dl>
 <p> finup</p>
 <dl>
-<dd>see struct ahash_alg</dl>
+<dd>see struct ahash_alg</dd></dl>
 <p> digest</p>
 <dl>
-<dd>see struct ahash_alg</dl>
+<dd>see struct ahash_alg</dd></dl>
 <p> export</p>
 <dl>
-<dd>see struct ahash_alg</dl>
+<dd>see struct ahash_alg</dd></dl>
 <p> import</p>
 <dl>
-<dd>see struct ahash_alg</dl>
+<dd>see struct ahash_alg</dd></dl>
 <p> setkey</p>
 <dl>
-<dd>see struct ahash_alg</dl>
+<dd>see struct ahash_alg</dd></dl>
 <p> descsize</p>
 <dl>
-<dd>Size of the operational state for the message digest. This state size is the memory size that needs to be allocated for shash_desc.__ctx</dl>
+<dd>Size of the operational state for the message digest. This state size is the memory size that needs to be allocated for shash_desc.__ctx</dd></dl>
 <p> digestsize</p>
 <dl>
-<dd>see struct ahash_alg</dl>
+<dd>see struct ahash_alg</dd></dl>
 <p> statesize</p>
 <dl>
-<dd>see struct ahash_alg</dl>
+<dd>see struct ahash_alg</dd></dl>
 <p> base</p>
 <dl>
-<dd>internally used</dl>
+<dd>internally used</dd></dl>
 <h2>Authors</h2>
 <p><code>Stephan Mueller</code> &lt;smueller [at] chronox.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Marek Vasut</code> &lt;marek [at] denx.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

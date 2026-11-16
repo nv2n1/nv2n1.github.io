@@ -19,16 +19,16 @@ darktable - viewer[-h, --help; --version][--random][--repeat][--core&lt;darktabl
 <h2>OPTIONS</h2>
 <p> All parameters are optional. If started without parameters <code>darktable-viewer</code> uses reasonable defaults.</p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Gives usage information and terminates.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Gives copyright and version information and terminates.</p>
-<dt><code>&#8211;random</code></p>
-<dd> Displays images in random instead of the default sequential order.</p>
-<dt><code>&#8211;repeat</code></p>
-<dd> Continues the slideshow in an endless loop instead of terminating after the last image.</p>
-<dt><code>&#8211;core &lt;darktable options&gt;</code></p>
-<dd> All command line parameters following <code>&#8211;core</code> are passed to the darktable core and handled as standard parameters. See <i><a href="/docs/linux/man/1-darktable/">darktable</a></i>(1) for a detailed description of the options.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Gives usage information and terminates.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Gives copyright and version information and terminates.</dd>
+<dt><code>&#8211;random</code></dt>
+<dd> Displays images in random instead of the default sequential order.</dd>
+<dt><code>&#8211;repeat</code></dt>
+<dd> Continues the slideshow in an endless loop instead of terminating after the last image.</dd>
+<dt><code>&#8211;core &lt;darktable options&gt;</code></dt>
+<dd> All command line parameters following <code>&#8211;core</code> are passed to the darktable core and handled as standard parameters. See <i><a href="/docs/linux/man/1-darktable/">darktable</a></i>(1) for a detailed description of the options.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-darktable/">darktable</a></i>(1)</p>
 <h2>AUTHORS</h2>

@@ -10,29 +10,11 @@ description: "QuantLib::InflationTermStructure – Interface for inflation term 
 <p>QuantLib::InflationTermStructure &#8211; Interface for inflation term structures. </p>
 <h2>Synopsis</h2>
 <pre><code>virtual Period lag () const
-
-
-
 virtual Frequency frequency () const
-
-
-
 virtual Rate baseRate () const
-
-
-
 virtual Handle&lt; YieldTermStructure &gt; nominalTermStructure () const
-
-
-
 virtual Date baseDate () const =0
-
-
 minimum (base) date
-
-
-
-
 Protected Member Functions</code></pre>
 <p> Inherits <code>QuantLib::TermStructure</code>. Inherited by <code>YoYInflationTermStructure</code>, and <code>ZeroInflationTermStructure</code>.</p>
 <h3>Public Member Functions</h3>
@@ -45,29 +27,11 @@ Protected Member Functions</code></pre>
 <p>minimum (base) date</p>
 <p>Protected Member Functions <code>Inflation interface</code> </p>
 <pre><code>virtual Period lag () const
-
-
-
 virtual Frequency frequency () const
-
-
-
 virtual Rate baseRate () const
-
-
-
 virtual Handle&lt; YieldTermStructure &gt; nominalTermStructure () const
-
-
-
 virtual Date baseDate () const =0
-
-
 minimum (base) date
-
-
-
-
 Protected Member Functions</code></pre>
 <p> virtual void <code>setBaseRate</code> (const <code>Rate</code> &amp;r) </p>
 <p> void <code>checkRange</code> (const <code>Date</code> &amp;, bool extrapolate) const<br />

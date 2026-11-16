@@ -11,7 +11,6 @@ description: "sc::IntegralV3 –"
 <p> <code>IntegralV3</code> computes integrals between Gaussian basis functions.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;intv3.h&gt;</code></pre>
 <p> Inherits <code>sc::Integral</code>.</p>
 <h3>Public Member Functions</h3>

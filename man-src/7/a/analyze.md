@@ -15,12 +15,12 @@ description: "ANALYZE – collect statistics about a database"
 <p> With no parameter, <code>ANALYZE</code> examines every table in the current database. With a parameter, <code>ANALYZE</code> examines only that table. It is further possible to give a list of column names, in which case only the statistics for those columns are collected.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><code>VERBOSE</code></p>
-<dd>Enables display of progress messages.</p>
-<dt><i>table</i></p>
-<dd>The name (possibly schema-qualified) of a specific table to analyze. Defaults to all tables in the current database.</p>
-<dt><i>column</i></p>
-<dd>The name of a specific column to analyze. Defaults to all columns.</dl>
+<dt><code>VERBOSE</code></dt>
+<dd>Enables display of progress messages.</dd>
+<dt><i>table</i></dt>
+<dd>The name (possibly schema-qualified) of a specific table to analyze. Defaults to all tables in the current database.</dd>
+<dt><i>column</i></dt>
+<dd>The name of a specific column to analyze. Defaults to all columns.</dd></dl>
 <h2>Outputs</h2>
 <p>When VERBOSE is specified, <code>ANALYZE</code> emits progress messages to indicate which table is currently being processed. Various statistics about the tables are printed as well.</p>
 <h2>Notes</h2>

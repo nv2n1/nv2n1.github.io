@@ -22,10 +22,10 @@ description: "sigsuspend, rt_sigsuspend – wait for a signal"
 <p> <code>sigsuspend</code>() always returns -1, with <i>errno</i> set to indicate the error (normally, <code>EINTR</code>).</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> <i>mask</i> points to memory which is not a valid part of the process address space.</p>
-<dt><code>EINTR</code></p>
-<dd> The call was interrupted by a signal; <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</dl>
+<dt><code>EFAULT</code></dt>
+<dd> <i>mask</i> points to memory which is not a valid part of the process address space.</dd>
+<dt><code>EINTR</code></dt>
+<dd> The call was interrupted by a signal; <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008.</p>
 <h2>NOTES</h2>

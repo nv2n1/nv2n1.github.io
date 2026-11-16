@@ -14,7 +14,7 @@ description: "dev_remove_offload – remove packet offload handler"
 <p><i>po</i></p>
 <dl>
 <dd>
-<dd>packet offload declaration</dl>
+</dd><dd>packet offload declaration</dd></dl>
 <h2>Description</h2>
 <p>Remove a packet offload handler that was previously added to the kernel offload handlers by <code>dev_add_offload</code>. The passed offload_type is removed from the kernel lists and can be freed or reused once this function returns. </p>
 <p> This call sleeps to guarantee that no CPU is looking at the packet type after return.</p>

@@ -22,7 +22,6 @@ create_light_table(&amp;global_trans_table, my_palette,
 ... if (get_color_depth() == 8)
     color_map = &amp;global_light_table;
 else set_trans_blender(40, 40, 255, 255);
-
 /* Lit the cape with a blueish light. */
 draw_lit_sprite(buffer, colored_cape, x, y, 64);
 </code></pre>

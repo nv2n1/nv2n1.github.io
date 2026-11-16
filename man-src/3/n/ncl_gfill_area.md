@@ -13,10 +13,10 @@ description: "gfill_area (Fill area) – output primitive for filling polygonal 
 <p> void gfill_area(const Gpoint_list *point_list);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>point_list.num_points</p>
-<dd>(Gint, Input) &#8211; The number of points in the polygon to be filled. Must be greater than two.</p>
-<dt>point_list.points</p>
-<dd>(Gpoint *, Input) &#8211; The X and Y world coordinates of the polygon.</dl>
+<dt>point_list.num_points</dt>
+<dd>(Gint, Input) &#8211; The number of points in the polygon to be filled. Must be greater than two.</dd>
+<dt>point_list.points</dt>
+<dd>(Gpoint *, Input) &#8211; The X and Y world coordinates of the polygon.</dd></dl>
 <h2>Usage</h2>
 <p>The area to be filled is delimited by the sequence of straight line segments connecting the successive points ((point_list.points[0].x, point_list.points[0].y), &#8230;(point_list.points[point_list.num_points-1].x, point_list.points[point_list.num_points-1].y)) The last point in the polygon is connected to the first point with a straight line segment in the case that it is not the same as the first point. </p>
 <p> Given a polygon whose edges cross each other, it becomes ambiguous as to what constitutes the &quot;inside&quot; of the polygon. The algorithm used in GKS is as follows: for a given point, draw a ray starting at that point and going to infinity in any direction; if the number of intersections between the ray and the polygon is odd, the point is within the polygon, otherwise it is outside. If the straight line passes through a polygon vertex tangentially, the intersection count is not affected. If a point is within the polygon, it is included in the area to be filled. </p>

@@ -15,7 +15,7 @@ eth_random_addr - Generate software assigned random Ethernet address
 <h2>Arguments</h2>
 
 <i>addr</i>
-<dl><dd><dd>Pointer to a six-byte array containing the Ethernet address</dl>
+<dl><dd></dd><dd>Pointer to a six-byte array containing the Ethernet address</dd></dl>
 
 <h2>Description</h2>
 

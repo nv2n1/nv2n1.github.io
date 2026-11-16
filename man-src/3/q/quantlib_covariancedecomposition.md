@@ -21,15 +21,15 @@ description: "QuantLib::CovarianceDecomposition – Covariance decomposition int
 <p> Note that only the lower symmetric part of the covariance matrix is used. </p>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>The covariance matrix must be symmetric.</dl>
+<dd>The covariance matrix must be symmetric.</dd></dl>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>cross checked with getCovariance</dl>
+<dd>cross checked with getCovariance</dd></dl>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3><code>CovarianceDecomposition</code> (const <code>Matrix</code> &amp; covarianceMatrix, <code>Real</code> tolerance = 1.0e-12, SalvagingAlgorithm::Type sa = SalvagingAlgorithm::None)</h3>
 <p><code>Precondition:</code></p>
 <dl COMPACT>
-<dd>covarianceMatrix must be symmetric</dl>
+<dd>covarianceMatrix must be symmetric</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>const <code>Array</code>&amp; variances () const</h3>
 <p>returns the variances <code>Array</code></p>

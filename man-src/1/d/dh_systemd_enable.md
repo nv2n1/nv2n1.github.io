@@ -18,27 +18,27 @@ description: "dh_systemd_enable – enable/disable systemd unit files"
 <p> For only generating blocks for specific service files, you need to pass them as arguments, e.g. <code>dh_systemd_enable quota.service</code> and <code>dh_systemd_enable &#8211;name=quotarpc quotarpc.service</code>.</p>
 <h2>FILES</h2>
 <dl>
-<dt>debian/<i>package</i>.service, debian/<i>package</i>@.service</p>
-<dd> If this exists, it is installed into lib/systemd/system/<i>package</i>.service (or lib/systemd/system/<i>package</i>@.service) in the package build directory.</p>
-<dt>debian/<i>package</i>.tmpfile</p>
-<dd> If this exists, it is installed into usr/lib/tmpfiles.d/<i>package</i>.conf in the package build directory. (The tmpfiles.d mechanism is currently only used by systemd.)</p>
-<dt>debian/<i>package</i>.target, debian/<i>package</i>@.target</p>
-<dd> If this exists, it is installed into lib/systemd/system/<i>package</i>.target (or lib/systemd/system/<i>package</i>@.target) in the package build directory.</p>
-<dt>debian/<i>package</i>.socket, debian/<i>package</i>@.socket</p>
-<dd> If this exists, it is installed into lib/systemd/system/<i>package</i>.socket (or lib/systemd/system/<i>package</i>@.socket) in the package build directory.</p>
-<dt>debian/<i>package</i>.mount</p>
-<dd> If this exists, it is installed into lib/systemd/system/<i>package</i>.mount in the package build directory.</p>
-<dt>debian/<i>package</i>.path, debian/<i>package</i>@.path</p>
-<dd> If this exists, it is installed into lib/systemd/system/<i>package</i>.path (or lib/systemd/system/<i>package</i>@.path) in the package build directory.</p>
-<dt>debian/<i>package</i>.timer, debian/<i>package</i>@.timer</p>
-<dd> If this exists, it is installed into lib/systemd/system/<i>package</i>.timer (or lib/systemd/system/<i>package</i>@.timer) in the package build directory.</dl>
+<dt>debian/<i>package</i>.service, debian/<i>package</i>@.service</dt>
+<dd> If this exists, it is installed into lib/systemd/system/<i>package</i>.service (or lib/systemd/system/<i>package</i>@.service) in the package build directory.</dd>
+<dt>debian/<i>package</i>.tmpfile</dt>
+<dd> If this exists, it is installed into usr/lib/tmpfiles.d/<i>package</i>.conf in the package build directory. (The tmpfiles.d mechanism is currently only used by systemd.)</dd>
+<dt>debian/<i>package</i>.target, debian/<i>package</i>@.target</dt>
+<dd> If this exists, it is installed into lib/systemd/system/<i>package</i>.target (or lib/systemd/system/<i>package</i>@.target) in the package build directory.</dd>
+<dt>debian/<i>package</i>.socket, debian/<i>package</i>@.socket</dt>
+<dd> If this exists, it is installed into lib/systemd/system/<i>package</i>.socket (or lib/systemd/system/<i>package</i>@.socket) in the package build directory.</dd>
+<dt>debian/<i>package</i>.mount</dt>
+<dd> If this exists, it is installed into lib/systemd/system/<i>package</i>.mount in the package build directory.</dd>
+<dt>debian/<i>package</i>.path, debian/<i>package</i>@.path</dt>
+<dd> If this exists, it is installed into lib/systemd/system/<i>package</i>.path (or lib/systemd/system/<i>package</i>@.path) in the package build directory.</dd>
+<dt>debian/<i>package</i>.timer, debian/<i>package</i>@.timer</dt>
+<dd> If this exists, it is installed into lib/systemd/system/<i>package</i>.timer (or lib/systemd/system/<i>package</i>@.timer) in the package build directory.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;no-enable</code></p>
-<dd> Disable the service(s) on purge, but do not enable them on install. </p>
+<dt><code>&#8211;no-enable</code></dt>
+<dd> Disable the service(s) on purge, but do not enable them on install. </dd>
 <p> <code>Note</code> that this option does not affect whether the services are started. That is controlled by <i><a href="/docs/linux/man/1-dh_systemd_start/">dh_systemd_start</a></i>(1) (using e.g. its <code>&#8211;no-start</code> option).</p>
-<dt><code>&#8211;name=</code><i>name</i></p>
-<dd> Install the service file as <i>name.service</i> instead of the default filename, which is the <i>package.service</i>. When this parameter is used, <code>dh_systemd_enable</code> looks for and installs files named <i>debian/package.name.service</i> instead of the usual <i>debian/package.service</i>.</dl>
+<dt><code>&#8211;name=</code><i>name</i></dt>
+<dd> Install the service file as <i>name.service</i> instead of the default filename, which is the <i>package.service</i>. When this parameter is used, <code>dh_systemd_enable</code> looks for and installs files named <i>debian/package.name.service</i> instead of the usual <i>debian/package.service</i>.</dd></dl>
 <h2>NOTES</h2>
 <p> Note that this command is not idempotent. <i><a href="/docs/linux/man/1-dh_prep/">dh_prep</a></i>(1) should be called between invocations of this command (with the same arguments). Otherwise, it may cause multiple instances of the same text to be added to maintainer scripts. </p>
 <p> Note that <code>dh_systemd_enable</code> should be run before <code>dh_installinit</code>. The default sequence in <code>dh</code> does the right thing, this note is only relevant when you are calling <code>dh_systemd_enable</code> manually.</p>

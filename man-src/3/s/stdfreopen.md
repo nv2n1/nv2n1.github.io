@@ -11,7 +11,6 @@ std::freopen - std::freopen
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstdio&gt;
-
     std::FILE *freopen(const char *filename, const char *mode, std::FILE *stream);</code></pre> 
 First, attempts to close the file associated with stream, ignoring any errors. Then, if filename is not null, attempts to open the file specified by filename using mode as if by fopen, and associates that file with the file stream pointed to by stream. If filename is a null pointer, then the function attempts to reopen the file that is already associated with stream (it is implementation defined which mode changes are allowed in this case) 
 
@@ -51,7 +50,6 @@ freopen is the only way to change the narrow/wide orientation of a stream once i
 The following code redirects stdout to a file 
  // Run this code <pre><code>#include &lt;cstdio&gt;
 int main()
-
 {
     std::printf(&quot;stdout is printed to console\n&quot;);
     if (std::freopen(&quot;redir.txt&quot;, &quot;w&quot;, stdout)) {

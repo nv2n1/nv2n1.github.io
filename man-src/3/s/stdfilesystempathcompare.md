@@ -12,12 +12,9 @@ std::filesystem::path::compare - std::filesystem::path::compare
 
 <pre><code>int compare(const path &amp;p) const noexcept;
 (1)(since C++ 17)
-
     int compare(const string_type &amp;str) const;
 (2)(since C++ 17)
-
     int compare(std::basic_string_view&lt;value_type&gt; str) const;
-
 int compare(const value_type *s) const;
 (3)(since C++ 17)</code></pre> 
 Compares the lexical representations of the path and another path. 
@@ -50,11 +47,8 @@ For two-way comparisons, binary_operators may be more suitable.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;filesystem&gt;
-
 namespace fs = std::filesystem;
-
 void demo(int rc, fs::path p1, fs::path p2)
 {
     if (rc &lt; 0)
@@ -64,7 +58,6 @@ void demo(int rc, fs::path p1, fs::path p2)
     else if (rc == 0)
         std::cout &lt;&lt; p1 &lt;&lt; &quot;==&quot; &lt;&lt; p2 &lt;&lt; '\n';
 }
-
 int main()
 {
     fs::path p1 = &quot;/a/b/&quot;; // as if &quot;a/b/.&quot; for lexicographical iteration

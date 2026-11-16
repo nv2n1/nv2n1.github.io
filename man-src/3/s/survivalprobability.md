@@ -10,35 +10,15 @@ description: "QuantLib::DefaultProbabilityTermStructure – default probability 
 <p>QuantLib::DefaultProbabilityTermStructure &#8211; default probability term structure </p>
 <h2>Synopsis</h2>
 <pre><code>Real hazardRate (const Date &amp;, bool extrapolate=false) const
-
-
 hazard rate at a given date
-
-
 Real hazardRate (Time, bool extrapolate=false) const
-
-
 hazard rate at a given time
-
-
-
-
 Protected Member Functions
 virtual Probability survivalProbabilityImpl (Time) const =0
-
-
 probability of survival between today (t = 0) and a given time
-
-
 virtual Real defaultDensityImpl (Time) const =0
-
-
 instantaneous default density at a given time
-
-
 virtual Real hazardRateImpl (Time) const =0
-
-
 instantaneous hazard rate at a given time</code></pre>
 <p> Inherits <code>QuantLib::TermStructure</code>. Inherited by <code>DefaultDensityStructure</code>, and <code>HazardRateStructure</code>.</p>
 <h3>Public Member Functions</h3>
@@ -88,35 +68,15 @@ virtual Probability survivalProbabilityImpl (Time) const =0</p>
 <p>virtual Real hazardRateImpl (Time) const =0</p>
 <p>instantaneous hazard rate at a given time <code>Hazard rate</code> </p>
 <pre><code>Real hazardRate (const Date &amp;, bool extrapolate=false) const
-
-
 hazard rate at a given date
-
-
 Real hazardRate (Time, bool extrapolate=false) const
-
-
 hazard rate at a given time
-
-
-
-
 Protected Member Functions
 virtual Probability survivalProbabilityImpl (Time) const =0
-
-
 probability of survival between today (t = 0) and a given time
-
-
 virtual Real defaultDensityImpl (Time) const =0
-
-
 instantaneous default density at a given time
-
-
 virtual Real hazardRateImpl (Time) const =0
-
-
 instantaneous hazard rate at a given time</code></pre>
 <h2>Detailed Description</h2>
 <p>default probability term structure</p>
@@ -125,6 +85,6 @@ instantaneous hazard rate at a given time</code></pre>
 <p>default constructor </p>
 <p> <code>Warning</code></p>
 <dl>
-<dd>term structures initialized by means of this constructor must manage their own reference date by overriding the <code>referenceDate()</code> method.</dl>
+<dd>term structures initialized by means of this constructor must manage their own reference date by overriding the <code>referenceDate()</code> method.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

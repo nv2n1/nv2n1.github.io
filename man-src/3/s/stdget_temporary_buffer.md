@@ -33,16 +33,11 @@ noexcept
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;memory&gt;
-
 #include &lt;string&gt;
-
 #include &lt;iterator&gt;
 int main()
-
 {
     const std::string s[] = {&quot;string&quot;, &quot;1&quot;, &quot;test&quot;, &quot;...&quot;};
     const auto p = std::get_temporary_buffer&lt;std::string&gt;(4);

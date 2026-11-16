@@ -14,11 +14,11 @@ description: "z8530_status – Handle a PIO status exception"
 <p><i>chan</i></p>
 <dl>
 <dd>
-<dd>Z8530 channel to process</dl>
+</dd><dd>Z8530 channel to process</dd></dl>
 <h2>Description</h2>
 <p>A status event occurred in PIO synchronous mode. There are several reasons the chip will bother us here. A transmit underrun means we failed to feed the chip fast enough and just broke a packet. A DCD change is a line up or down.</p>
 <h2>Author</h2>
 <p><code>Alan Cox</code> &lt;alan [at] lxorguk.ukuu.org.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

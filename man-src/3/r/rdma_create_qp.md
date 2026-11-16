@@ -12,21 +12,18 @@ rdma_create_qp - Allocate a QP.
 
 <pre><code>#include &lt;rdma/rdma_cma.h&gt;
 int rdma_create_qp
-
     (struct rdma_cm_id *id,
-
      struct ibv_pd *pd,
-
      struct ibv_qp_init_attr *qp_init_attr);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>id
-<dd>RDMA identifier.
-<dt>pd
-<dd>Optional protection domain for the QP.
-<dt>qp_init_attr
-<dd>Initial QP attributes.</dl>
+</dt><dd>RDMA identifier.
+</dd><dt>pd
+</dt><dd>Optional protection domain for the QP.
+</dd><dt>qp_init_attr
+</dt><dd>Initial QP attributes.</dd></dl>
 
 <h2>Description</h2>
 

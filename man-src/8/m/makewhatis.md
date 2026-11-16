@@ -16,23 +16,23 @@ description: "makewhatis – Create the whatis database"
 <p> If no <i>manpath</i> argument is given, <i>/usr/man</i> is assumed by default.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-u</code></p>
-<dd>Update database with new pages (file&#8217;s status was last changed 24 hours ago)</p>
-<dt><code>-v</code></p>
-<dd>Verbose output</p>
-<dt><code>-w</code></p>
-<dd>Use manpath obtained from `man &#8211;path`</p>
-<dt><code>-s</code><i> sections</i></p>
-<dd>Looks in the <i>sections</i> of <i>manpath</i> or <i>catpath</i>. If the option is absent, the MANSECT env var will be used. If it too is absent, the MANSECT setting in man.conf will be used.</p>
-<dt><code>-c</code><i> catpath</i></p>
-<dd>The preformatted manual pages located in <i>catpath</i> are scanned. If the argument is not provided, it is assumed to be the first existing directory between <i>/usr/man/preformat</i> and <i>/usr/man</i>.</dl>
+<dt><code>-u</code></dt>
+<dd>Update database with new pages (file&#8217;s status was last changed 24 hours ago)</dd>
+<dt><code>-v</code></dt>
+<dd>Verbose output</dd>
+<dt><code>-w</code></dt>
+<dd>Use manpath obtained from `man &#8211;path`</dd>
+<dt><code>-s</code><i> sections</i></dt>
+<dd>Looks in the <i>sections</i> of <i>manpath</i> or <i>catpath</i>. If the option is absent, the MANSECT env var will be used. If it too is absent, the MANSECT setting in man.conf will be used.</dd>
+<dt><code>-c</code><i> catpath</i></dt>
+<dd>The preformatted manual pages located in <i>catpath</i> are scanned. If the argument is not provided, it is assumed to be the first existing directory between <i>/usr/man/preformat</i> and <i>/usr/man</i>.</dd></dl>
 <h2>Examples</h2>
 <p>To rebuild only <i>/usr/X11R6/man/whatis</i> and <i>/usr/local/man/whatis</i></p>
 <dl>
-<dd>makewhatis /usr/X11R6/man /usr/local/man</dl>
+<dd>makewhatis /usr/X11R6/man /usr/local/man</dd></dl>
 <p> To rebuild all the databases, including those of the Finnish, French and Italian translations</p>
 <dl>
-<dd>LANGUAGE=fi:fr:it makewhatis -w</dl>
+<dd>LANGUAGE=fi:fr:it makewhatis -w</dd></dl>
 <h2>Bugs</h2>
 <p><code>makewhatis</code> may not handle too well manual pages written with non-standard troff macros, such as the Tcl/Tk pages. </p>
 <p> <code>makewhatis</code> does not work on preformatted translations.</p>

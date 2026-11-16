@@ -130,16 +130,16 @@ description: "slapd_selinux – Security Enhanced Linux Policy for the slapd pro
 <p> <code>slapd_db_t</code> </p>
 <p> &#8211; Set files with the slapd_db_t type, if you want to treat the files as slapd database content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/ldap(/.*)?, /etc/openldap/slapd.d(/.*)?, /var/lib/openldap-data(/.*)?, /var/lib/openldap-ldbm(/.*)?, /var/lib/openldap-slurpd(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/ldap(/.*)?, /etc/openldap/slapd.d(/.*)?, /var/lib/openldap-data(/.*)?, /var/lib/openldap-ldbm(/.*)?, /var/lib/openldap-slurpd(/.*)? </dd>
 </dl>
 <p> <code>slapd_etc_t</code> </p>
 <p> &#8211; Set files with the slapd_etc_t type, if you want to store slapd files in the /etc directories. </p>
 <p> <code>slapd_exec_t</code> </p>
 <p> &#8211; Set files with the slapd_exec_t type, if you want to transition an executable to the slapd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/slapd, /usr/sbin/slapd, /usr/lib/openldap/slapd </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/slapd, /usr/sbin/slapd, /usr/lib/openldap/slapd </dd>
 </dl>
 <p> <code>slapd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the slapd_initrc_exec_t type, if you want to transition an executable to the slapd_initrc_t domain. </p>
@@ -148,14 +148,14 @@ description: "slapd_selinux – Security Enhanced Linux Policy for the slapd pro
 <p> <code>slapd_lock_t</code> </p>
 <p> &#8211; Set files with the slapd_lock_t type, if you want to treat the files as slapd lock data, stored under the /var/lock directory </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lock/subsys/ldap, /var/lock/subsys/slapd </p>
+<dt>Paths:</dt>
+<dd>/var/lock/subsys/ldap, /var/lock/subsys/slapd </dd>
 </dl>
 <p> <code>slapd_log_t</code> </p>
 <p> &#8211; Set files with the slapd_log_t type, if you want to treat the data as slapd log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/ldap.*, /var/log/slapd.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/ldap.*, /var/log/slapd.* </dd>
 </dl>
 <p> <code>slapd_replog_t</code> </p>
 <p> &#8211; Set files with the slapd_replog_t type, if you want to treat the files as slapd replog data. </p>
@@ -168,8 +168,8 @@ description: "slapd_selinux – Security Enhanced Linux Policy for the slapd pro
 <p> <code>slapd_var_run_t</code> </p>
 <p> &#8211; Set files with the slapd_var_run_t type, if you want to store the slapd files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/openldap(/.*)?, /var/run/ldapi, /var/run/slapd.pid, /var/run/slapd.args </p>
+<dt>Paths:</dt>
+<dd>/var/run/openldap(/.*)?, /var/run/ldapi, /var/run/slapd.pid, /var/run/slapd.args </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

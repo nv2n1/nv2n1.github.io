@@ -25,15 +25,11 @@ int votequorum_getinfo(votequorum_handle_t *handle, unsigned int nodeid, struct 
     unsigned int qdevice_votes;
     char qdevice_name[VOTEQUORUM_QDEVICE_MAX_NAME_LEN];
 };
-
 The node_state is defined as :
-
 #define VOTEQUORUM_NODESTATE_MEMBER 1
 #define VOTEQUORUM_NODESTATE_DEAD 2
 #define VOTEQUORUM_NODESTATE_LEAVING 3
-
     The flags are defined as:
-
 #define VOTEQUORUM_INFO_TWONODE 1
 #define VOTEQUORUM_INFO_QUORATE 2
 #define VOTEQUORUM_INFO_WAIT_FOR_ALL 4

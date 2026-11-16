@@ -11,38 +11,24 @@ description: "std::experimental::pmr::polymorphic_allocator<T>::construct – st
 <h2>Synopsis</h2>
 <pre><code>template &lt;class U, class... Args&gt;
 (1)(library fundamentals TS)
-
     void construct(U *p, Args &amp;&amp;...args);
-
 template &lt;class T1, class T2, class... Args1, class... Args2&gt;
-
 void construct(std::pair&lt;T1, T2&gt; *p,
-
                std::piecewise_construct_t, (2)(library fundamentals TS)
-
                                                std::tuple&lt;Args1...&gt;
                                                    x,
-
                std::tuple&lt;Args2...&gt; y);
-
 template &lt;class T1, class T2&gt;
 (3)(library fundamentals TS)
-
     void construct(std::pair&lt;T1, T2&gt; *p);
-
 template &lt;class T1, class T2, class U, class V&gt;
 (4)(library fundamentals TS)
-
     void construct(std::pair&lt;T1, T2&gt; *p, U &amp;&amp;x, V &amp;&amp;y);
-
 template &lt;class T1, class T2, class U, class V&gt;
 (5)(library fundamentals TS)
-
     void construct(std::pair&lt;T1, T2&gt; *p, const std::pair&lt;U, V&gt; &amp;xy);
-
 template &lt;class T1, class T2, class U, class V&gt;
 (6)(library fundamentals TS)
-
     void construct(std::pair&lt;T1, T2&gt; *p, std::pair&lt;U, V&gt; &amp;&amp;xy);</code></pre>
 <p>Constructs an object in allocated, but not initialized storage pointed to by p the provided constructor arguments. If the object is of type that itself uses allocators, or if it is std::pair, passes this-&gt;resource() down to the constructed object.<br />
 1) If std::uses_allocator&lt;U, memory_resource*&gt;::value==false (the type U does not use allocators) and std::is_constructible&lt;U, Args&#8230;&gt;::value==true, then constructs the object as if by ::new((void *) p) U(std::forward&lt;Args&gt;(args)&#8230; );.<br />

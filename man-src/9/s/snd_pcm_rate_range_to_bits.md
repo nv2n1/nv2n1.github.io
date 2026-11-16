@@ -15,11 +15,11 @@ snd_pcm_rate_range_to_bits - converts rate range to SNDRV_PCM_RATE_xxx bit
 <h2>Arguments</h2>
 
 <i>rate_min</i>
-<dl><dd><dd>the minimum sample rate</dl>
+<dl><dd></dd><dd>the minimum sample rate</dd></dl>
  
 
  <i>rate_max</i>
-<dl><dd>the maximum sample rate</dl>
+<dl><dd>the maximum sample rate</dd></dl>
 
 <h2>Description</h2>
 

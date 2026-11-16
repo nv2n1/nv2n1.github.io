@@ -73,177 +73,177 @@ description: "struct_nand_chip – NAND Private Flash Chip Data"
 <h2>Members</h2>
 <p>mtd</p>
 <dl>
-<dd>MTD device registered to the MTD framework</dl>
+<dd>MTD device registered to the MTD framework</dd></dl>
 <p> IO_ADDR_R</p>
 <dl>
-<dd>[BOARDSPECIFIC] address to read the 8 I/O lines of the flash device</dl>
+<dd>[BOARDSPECIFIC] address to read the 8 I/O lines of the flash device</dd></dl>
 <p> IO_ADDR_W</p>
 <dl>
-<dd>[BOARDSPECIFIC] address to write the 8 I/O lines of the flash device.</dl>
+<dd>[BOARDSPECIFIC] address to write the 8 I/O lines of the flash device.</dd></dl>
 <p> read_byte</p>
 <dl>
-<dd>[REPLACEABLE] read one byte from the chip</dl>
+<dd>[REPLACEABLE] read one byte from the chip</dd></dl>
 <p> read_word</p>
 <dl>
-<dd>[REPLACEABLE] read one word from the chip</dl>
+<dd>[REPLACEABLE] read one word from the chip</dd></dl>
 <p> write_byte</p>
 <dl>
-<dd>[REPLACEABLE] write a single byte to the chip on the low 8 I/O lines</dl>
+<dd>[REPLACEABLE] write a single byte to the chip on the low 8 I/O lines</dd></dl>
 <p> write_buf</p>
 <dl>
-<dd>[REPLACEABLE] write data from the buffer to the chip</dl>
+<dd>[REPLACEABLE] write data from the buffer to the chip</dd></dl>
 <p> read_buf</p>
 <dl>
-<dd>[REPLACEABLE] read data from the chip into the buffer</dl>
+<dd>[REPLACEABLE] read data from the chip into the buffer</dd></dl>
 <p> select_chip</p>
 <dl>
-<dd>[REPLACEABLE] select chip nr</dl>
+<dd>[REPLACEABLE] select chip nr</dd></dl>
 <p> block_bad</p>
 <dl>
-<dd>[REPLACEABLE] check if a block is bad, using OOB markers</dl>
+<dd>[REPLACEABLE] check if a block is bad, using OOB markers</dd></dl>
 <p> block_markbad</p>
 <dl>
-<dd>[REPLACEABLE] mark a block bad</dl>
+<dd>[REPLACEABLE] mark a block bad</dd></dl>
 <p> cmd_ctrl</p>
 <dl>
-<dd>[BOARDSPECIFIC] hardwarespecific function for controlling ALE/CLE/nCE. Also used to write command and address</dl>
+<dd>[BOARDSPECIFIC] hardwarespecific function for controlling ALE/CLE/nCE. Also used to write command and address</dd></dl>
 <p> dev_ready</p>
 <dl>
-<dd>[BOARDSPECIFIC] hardwarespecific function for accessing device ready/busy line. If set to NULL no access to ready/busy is available and the ready/busy information is read from the chip status register.</dl>
+<dd>[BOARDSPECIFIC] hardwarespecific function for accessing device ready/busy line. If set to NULL no access to ready/busy is available and the ready/busy information is read from the chip status register.</dd></dl>
 <p> cmdfunc</p>
 <dl>
-<dd>[REPLACEABLE] hardwarespecific function for writing commands to the chip.</dl>
+<dd>[REPLACEABLE] hardwarespecific function for writing commands to the chip.</dd></dl>
 <p> waitfunc</p>
 <dl>
-<dd>[REPLACEABLE] hardwarespecific function for wait on ready.</dl>
+<dd>[REPLACEABLE] hardwarespecific function for wait on ready.</dd></dl>
 <p> erase</p>
 <dl>
-<dd>[REPLACEABLE] erase function</dl>
+<dd>[REPLACEABLE] erase function</dd></dl>
 <p> scan_bbt</p>
 <dl>
-<dd>[REPLACEABLE] function to scan bad block table</dl>
+<dd>[REPLACEABLE] function to scan bad block table</dd></dl>
 <p> errstat</p>
 <dl>
-<dd>[OPTIONAL] hardware specific function to perform additional error status checks (determine if errors are correctable).</dl>
+<dd>[OPTIONAL] hardware specific function to perform additional error status checks (determine if errors are correctable).</dd></dl>
 <p> write_page</p>
 <dl>
-<dd>[REPLACEABLE] High-level page write function</dl>
+<dd>[REPLACEABLE] High-level page write function</dd></dl>
 <p> onfi_set_features</p>
 <dl>
-<dd>[REPLACEABLE] set the features for ONFI nand</dl>
+<dd>[REPLACEABLE] set the features for ONFI nand</dd></dl>
 <p> onfi_get_features</p>
 <dl>
-<dd>[REPLACEABLE] get the features for ONFI nand</dl>
+<dd>[REPLACEABLE] get the features for ONFI nand</dd></dl>
 <p> setup_read_retry</p>
 <dl>
-<dd>[FLASHSPECIFIC] flash (vendor) specific function for setting the read-retry mode. Mostly needed for MLC NAND.</dl>
+<dd>[FLASHSPECIFIC] flash (vendor) specific function for setting the read-retry mode. Mostly needed for MLC NAND.</dd></dl>
 <p> setup_data_interface</p>
 <dl>
-<dd>[OPTIONAL] setup the data interface and timing</dl>
+<dd>[OPTIONAL] setup the data interface and timing</dd></dl>
 <p> chip_delay</p>
 <dl>
-<dd>[BOARDSPECIFIC] chip dependent delay for transferring data from array to read regs (tR).</dl>
+<dd>[BOARDSPECIFIC] chip dependent delay for transferring data from array to read regs (tR).</dd></dl>
 <p> options</p>
 <dl>
-<dd>[BOARDSPECIFIC] various chip options. They can partly be set to inform nand_scan about special functionality. See the defines for further explanation.</dl>
+<dd>[BOARDSPECIFIC] various chip options. They can partly be set to inform nand_scan about special functionality. See the defines for further explanation.</dd></dl>
 <p> bbt_options</p>
 <dl>
-<dd>[INTERN] bad block specific options. All options used here must come from bbm.h. By default, these options will be copied to the appropriate nand_bbt_descr&#8217;s.</dl>
+<dd>[INTERN] bad block specific options. All options used here must come from bbm.h. By default, these options will be copied to the appropriate nand_bbt_descr&#8217;s.</dd></dl>
 <p> page_shift</p>
 <dl>
-<dd>[INTERN] number of address bits in a page (column address bits).</dl>
+<dd>[INTERN] number of address bits in a page (column address bits).</dd></dl>
 <p> phys_erase_shift</p>
 <dl>
-<dd>[INTERN] number of address bits in a physical eraseblock</dl>
+<dd>[INTERN] number of address bits in a physical eraseblock</dd></dl>
 <p> bbt_erase_shift</p>
 <dl>
-<dd>[INTERN] number of address bits in a bbt entry</dl>
+<dd>[INTERN] number of address bits in a bbt entry</dd></dl>
 <p> chip_shift</p>
 <dl>
-<dd>[INTERN] number of address bits in one chip</dl>
+<dd>[INTERN] number of address bits in one chip</dd></dl>
 <p> numchips</p>
 <dl>
-<dd>[INTERN] number of physical chips</dl>
+<dd>[INTERN] number of physical chips</dd></dl>
 <p> chipsize</p>
 <dl>
-<dd>[INTERN] the size of one chip for multichip arrays</dl>
+<dd>[INTERN] the size of one chip for multichip arrays</dd></dl>
 <p> pagemask</p>
 <dl>
-<dd>[INTERN] page number mask = number of (pages / chip) &#8211; 1</dl>
+<dd>[INTERN] page number mask = number of (pages / chip) &#8211; 1</dd></dl>
 <p> pagebuf</p>
 <dl>
-<dd>[INTERN] holds the pagenumber which is currently in data_buf.</dl>
+<dd>[INTERN] holds the pagenumber which is currently in data_buf.</dd></dl>
 <p> pagebuf_bitflips</p>
 <dl>
-<dd>[INTERN] holds the bitflip count for the page which is currently in data_buf.</dl>
+<dd>[INTERN] holds the bitflip count for the page which is currently in data_buf.</dd></dl>
 <p> subpagesize</p>
 <dl>
-<dd>[INTERN] holds the subpagesize</dl>
+<dd>[INTERN] holds the subpagesize</dd></dl>
 <p> bits_per_cell</p>
 <dl>
-<dd>[INTERN] number of bits per cell. i.e., 1 means SLC.</dl>
+<dd>[INTERN] number of bits per cell. i.e., 1 means SLC.</dd></dl>
 <p> ecc_strength_ds</p>
 <dl>
-<dd>[INTERN] ECC correctability from the datasheet. Minimum amount of bit errors per <i>ecc_step_ds</i> guaranteed to be correctable. If unknown, set to zero.</dl>
+<dd>[INTERN] ECC correctability from the datasheet. Minimum amount of bit errors per <i>ecc_step_ds</i> guaranteed to be correctable. If unknown, set to zero.</dd></dl>
 <p> ecc_step_ds</p>
 <dl>
-<dd>[INTERN] ECC step required by the <i>ecc_strength_ds</i>, also from the datasheet. It is the recommended ECC step size, if known; if unknown, set to zero.</dl>
+<dd>[INTERN] ECC step required by the <i>ecc_strength_ds</i>, also from the datasheet. It is the recommended ECC step size, if known; if unknown, set to zero.</dd></dl>
 <p> onfi_timing_mode_default</p>
 <dl>
-<dd>[INTERN] default ONFI timing mode. This field is set to the actually used ONFI mode if the chip is ONFI compliant or deduced from the datasheet if the NAND chip is not ONFI compliant.</dl>
+<dd>[INTERN] default ONFI timing mode. This field is set to the actually used ONFI mode if the chip is ONFI compliant or deduced from the datasheet if the NAND chip is not ONFI compliant.</dd></dl>
 <p> badblockpos</p>
 <dl>
-<dd>[INTERN] position of the bad block marker in the oob area.</dl>
+<dd>[INTERN] position of the bad block marker in the oob area.</dd></dl>
 <p> badblockbits</p>
 <dl>
-<dd>[INTERN] minimum number of set bits in a good block&#8217;s bad block marker position; i.e., BBM == 11110111b is not bad when badblockbits == 7</dl>
+<dd>[INTERN] minimum number of set bits in a good block&#8217;s bad block marker position; i.e., BBM == 11110111b is not bad when badblockbits == 7</dd></dl>
 <p> onfi_version</p>
 <dl>
-<dd>[INTERN] holds the chip ONFI version (BCD encoded), non 0 if ONFI supported.</dl>
+<dd>[INTERN] holds the chip ONFI version (BCD encoded), non 0 if ONFI supported.</dd></dl>
 <p> jedec_version</p>
 <dl>
-<dd>[INTERN] holds the chip JEDEC version (BCD encoded), non 0 if JEDEC supported.</dl>
+<dd>[INTERN] holds the chip JEDEC version (BCD encoded), non 0 if JEDEC supported.</dd></dl>
 <p> {unnamed_union}</p>
 <dl>
-<dd>anonymous</dl>
+<dd>anonymous</dd></dl>
 <p> read_retries</p>
 <dl>
-<dd>[INTERN] the number of read retry modes supported</dl>
+<dd>[INTERN] the number of read retry modes supported</dd></dl>
 <p> state</p>
 <dl>
-<dd>[INTERN] the current state of the NAND device</dl>
+<dd>[INTERN] the current state of the NAND device</dd></dl>
 <p> oob_poi</p>
 <dl>
-<dd>&quot;poison value buffer,&quot; used for laying out OOB data before writing</dl>
+<dd>&quot;poison value buffer,&quot; used for laying out OOB data before writing</dd></dl>
 <p> controller</p>
 <dl>
-<dd>[REPLACEABLE] a pointer to a hardware controller structure which is shared among multiple independent devices.</dl>
+<dd>[REPLACEABLE] a pointer to a hardware controller structure which is shared among multiple independent devices.</dd></dl>
 <p> ecc</p>
 <dl>
-<dd>[BOARDSPECIFIC] ECC control structure</dl>
+<dd>[BOARDSPECIFIC] ECC control structure</dd></dl>
 <p> buffers</p>
 <dl>
-<dd>buffer structure for read/write</dl>
+<dd>buffer structure for read/write</dd></dl>
 <p> hwcontrol</p>
 <dl>
-<dd>platform-specific hardware control structure</dl>
+<dd>platform-specific hardware control structure</dd></dl>
 <p> bbt</p>
 <dl>
-<dd>[INTERN] bad block table pointer</dl>
+<dd>[INTERN] bad block table pointer</dd></dl>
 <p> bbt_td</p>
 <dl>
-<dd>[REPLACEABLE] bad block table descriptor for flash lookup.</dl>
+<dd>[REPLACEABLE] bad block table descriptor for flash lookup.</dd></dl>
 <p> bbt_md</p>
 <dl>
-<dd>[REPLACEABLE] bad block table mirror descriptor</dl>
+<dd>[REPLACEABLE] bad block table mirror descriptor</dd></dl>
 <p> badblock_pattern</p>
 <dl>
-<dd>[REPLACEABLE] bad block scan pattern used for initial bad block scan.</dl>
+<dd>[REPLACEABLE] bad block scan pattern used for initial bad block scan.</dd></dl>
 <p> priv</p>
 <dl>
-<dd>[OPTIONAL] pointer to private chip data</dl>
+<dd>[OPTIONAL] pointer to private chip data</dd></dl>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

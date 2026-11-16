@@ -18,6 +18,6 @@ description: "QuantLib::InverseCumulativeStudent – Inverse cumulative Student 
 <p>Inverse cumulative Student t-distribution. </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>Find/implement an efficient algorithm for evaluating the cumulative Student t-distribution, replacing the <code>Newton</code> iteration</dl>
+<dd>Find/implement an efficient algorithm for evaluating the cumulative Student t-distribution, replacing the <code>Newton</code> iteration</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

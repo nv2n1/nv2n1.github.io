@@ -34,18 +34,12 @@ This function and the related types were deprecated in C++11 and removed in C++1
 <p>uses std::mem_fun_ref to bind std::string&#8217;s member function .size()<br />
  // Run this code </p>
 <pre><code>#include &lt;functional&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;string&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::vector&lt;std::string&gt; v = {&quot;once&quot;, &quot;upon&quot;, &quot;a&quot;, &quot;time&quot;};
     std::transform(v.begin(), v.end(),

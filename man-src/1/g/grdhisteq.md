@@ -17,34 +17,34 @@ description: "grdhisteq – Perform histogram equalization for a grid"
 <p> The second common use of <code>grdhisteq</code> is in writing a grid with statistics based on some kind of cumulative distribution function. In this application, the output has relative highs and lows in the same (x,y) locations as the input file, but the values are changed to reflect their place in some cumulative distribution. One example would be to find the lowest 10% of the data: Take a grid, run <code>grdhisteq</code> and make a grid using <i>n_cells</i> = 10, and then contour the result to trace the 1 contour. This will enclose the lowest 10% of the data, regardless of their original values. Another example is in equalizing the output of <code>grdgradient</code>. For shading purposes it is desired that the data have a smooth distribution, such as a Gaussian. If you run <code>grdhisteq</code> on output from <code>grdgradient</code> and make a grid file output with the Gaussian option, you will have a grid whose values are distributed according to a Gaussian distribution with zero mean and unit variance. The locations of these values will correspond to the locations of the input; that is, the most negative output value will be in the (x,y) location of the most negative input value, and so on.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>
-<dt><i>in_grdfile</i></p>
-<dd> 2-D grid file to be equalized. (See GRID FILE FORMATS below).</dl>
+<dt><i>in_grdfile</i></dt>
+<dd> 2-D grid file to be equalized. (See GRID FILE FORMATS below).</dd></dl>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><code>-C</code><i>n_cells</i></p>
-<dd> Sets how many cells (or divisions) of data range to make [16].</p>
-<dt><code>-D</code></p>
-<dd> Dump level information to <i>file</i>, or standard output if no file is provided.</p>
-<dt><code>-G</code><i>out_grdfile</i></p>
-<dd> Name of output 2-D grid file. Used with <code>-N</code> only. (See GRID FILE FORMATS below).</p>
-<dt><code>-N</code>[<i>norm</i>]</p>
-<dd> Gaussian output. Use with <code>-G</code> to make an output grid with standard normal scores. Append <i>norm</i> to force the scores to fall in the &lt;-1,+1&gt; range [Default is standard normal scores].</p>
-<dt><code>-Q</code></p>
-<dd> Use quadratic intensity scaling. [Default is linear].</p>
-<dt><code>-R</code>[<i>unit</i>]<i>xmin</i>/<i>xmax</i>/<i>ymin</i>/<i>ymax</i>[<code>r</code>] <i>(more &#8230;)</i></p>
-<dd> Specify the region of interest. Using the <code>-R</code> option will select a subsection of <i>in_grdfile</i> grid. If this subsection exceeds the boundaries of the grid, only the common region will be extracted.</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c].</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit.</dl>
+<dt><code>-C</code><i>n_cells</i></dt>
+<dd> Sets how many cells (or divisions) of data range to make [16].</dd>
+<dt><code>-D</code></dt>
+<dd> Dump level information to <i>file</i>, or standard output if no file is provided.</dd>
+<dt><code>-G</code><i>out_grdfile</i></dt>
+<dd> Name of output 2-D grid file. Used with <code>-N</code> only. (See GRID FILE FORMATS below).</dd>
+<dt><code>-N</code>[<i>norm</i>]</dt>
+<dd> Gaussian output. Use with <code>-G</code> to make an output grid with standard normal scores. Append <i>norm</i> to force the scores to fall in the &lt;-1,+1&gt; range [Default is standard normal scores].</dd>
+<dt><code>-Q</code></dt>
+<dd> Use quadratic intensity scaling. [Default is linear].</dd>
+<dt><code>-R</code>[<i>unit</i>]<i>xmin</i>/<i>xmax</i>/<i>ymin</i>/<i>ymax</i>[<code>r</code>] <i>(more &#8230;)</i></dt>
+<dd> Specify the region of interest. Using the <code>-R</code> option will select a subsection of <i>in_grdfile</i> grid. If this subsection exceeds the boundaries of the grid, only the common region will be extracted.</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
 <h2>GRID FILE FORMATS</h2>
 <p> By default GMT writes out grid as single precision floats in a COARDS-complaint netCDF file format. However, GMT is able to produce grid files in many other commonly used grid file formats and also facilitates so called &quot;packing&quot; of grids, writing out floating point data as 1- or 2-byte integers. To specify the precision, scale and offset, the user should add the suffix <code>=</code><i>id</i>[<code>/</code><i>scale</i><code>/</code><i>offset</i>[<code>/</code><i>nan</i>]], where <i>id</i> is a two-letter identifier of the grid type and precision, and <i>scale</i> and <i>offset</i> are optional scale factor and offset to be applied to all grid values, and <i>nan</i> is the value used to indicate missing data. In case the two characters <i>id</i> is not provided, as in <code>=/</code><i>scale</i> than a <i>id</i><code>=</code><i>nf</i> is assumed. When reading grids, the format is generally automatically recognized. If not, the same suffix can be added to input grid file names. See <code>grdconvert</code> and Section <i>grid-file-format</i> of the GMT Technical Reference and Cookbook for more information. </p>
 <p> When reading a netCDF file that contains multiple grids, GMT will read, by default, the first 2-dimensional grid that can find in that file. To coax GMT into reading another multi-dimensional variable in the grid file, append <code>?</code><i>varname</i> to the file name, where <i>varname</i> is the name of the variable. Note that you may need to escape the special meaning of <code>?</code> in your shell program by putting a backslash in front of it, or by placing the filename and suffix between quotes or double quotes. The <code>?</code><i>varname</i> suffix can also be used for output grids to specify a variable name different from the default: &quot;z&quot;. See <code>grdconvert</code> and Sections <i>modifiers-for-CF</i> and <i>grid-file-format</i> of the GMT Technical Reference and Cookbook for more information, particularly on how to read splices of 3-, 4-, or 5-dimensional grids.</p>

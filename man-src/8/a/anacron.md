@@ -27,28 +27,28 @@ description: "anacron – runs commands periodically"
 <p> &quot;Active&quot; jobs (i.e. jobs that Anacron already decided to run and now wait for their delay to pass, and jobs that are currently being executed by Anacron), are &quot;locked&quot;, so that other copies of Anacron won&#8217;t run them at the same time.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-f</code></p>
-<dd>Force execution of the jobs, ignoring the timestamps.</p>
-<dt><code>-u</code></p>
-<dd>Only update the timestamps of the jobs, to the current date, but don&#8217;t run anything.</p>
-<dt><code>-s</code></p>
-<dd>Serialize execution of jobs. Anacron will not start a new job before the previous one finished.</p>
-<dt><code>-n</code></p>
-<dd>Run jobs now. Ignore the delay specifications in the <i>/etc/anacrontab</i> file. This options implies <code>-s</code>.</p>
-<dt><code>-d</code></p>
-<dd>Don&#8217;t fork to the background. In this mode, Anacron will output informational messages to standard error, as well as to syslog. The output of jobs is mailed as usual.</p>
-<dt><code>-q</code></p>
-<dd>Suppress messages to standard error. Only applicable with <code>-d</code>.</p>
-<dt><code>-t anacrontab</code></p>
-<dd>Use specified anacrontab, rather than the default</p>
-<dt><code>-T</code></p>
-<dd>Anacrontab testing. The configuration file will be tested for validity. If there is an error in the file, an error will be shown and anacron will return 1. Valid anacrontabs will return 0.</p>
-<dt><code>-S spooldir</code></p>
-<dd>Use the specified spooldir to store timestamps in. This option is required for users who wish to run anacron themselves.</p>
-<dt><code>-V</code></p>
-<dd>Print version information, and exit.</p>
-<dt><code>-h</code></p>
-<dd>Print short usage message, and exit.</dl>
+<dt><code>-f</code></dt>
+<dd>Force execution of the jobs, ignoring the timestamps.</dd>
+<dt><code>-u</code></dt>
+<dd>Only update the timestamps of the jobs, to the current date, but don&#8217;t run anything.</dd>
+<dt><code>-s</code></dt>
+<dd>Serialize execution of jobs. Anacron will not start a new job before the previous one finished.</dd>
+<dt><code>-n</code></dt>
+<dd>Run jobs now. Ignore the delay specifications in the <i>/etc/anacrontab</i> file. This options implies <code>-s</code>.</dd>
+<dt><code>-d</code></dt>
+<dd>Don&#8217;t fork to the background. In this mode, Anacron will output informational messages to standard error, as well as to syslog. The output of jobs is mailed as usual.</dd>
+<dt><code>-q</code></dt>
+<dd>Suppress messages to standard error. Only applicable with <code>-d</code>.</dd>
+<dt><code>-t anacrontab</code></dt>
+<dd>Use specified anacrontab, rather than the default</dd>
+<dt><code>-T</code></dt>
+<dd>Anacrontab testing. The configuration file will be tested for validity. If there is an error in the file, an error will be shown and anacron will return 1. Valid anacrontabs will return 0.</dd>
+<dt><code>-S spooldir</code></dt>
+<dd>Use the specified spooldir to store timestamps in. This option is required for users who wish to run anacron themselves.</dd>
+<dt><code>-V</code></dt>
+<dd>Print version information, and exit.</dd>
+<dt><code>-h</code></dt>
+<dd>Print short usage message, and exit.</dd></dl>
 <h2>Signals</h2>
 <p>After receiving a <code>SIGUSR1</code> signal, Anacron waits for running jobs, if any, to finish and then exits. This can be used to stop Anacron cleanly.</p>
 <h2>Notes</h2>
@@ -59,14 +59,14 @@ description: "anacron – runs commands periodically"
 <p> By default, The hourly activation of anacron will not take place when the system is using battery and no AC power is connected to the computer. It is meant to reduce power usage and extend battery life, but such design might lead to unwanted results. Users may disable this feature and let anacron run regardless of power supply. Please read Debian-specific documentation in <i>/usr/share/doc/anacron/README.Debian</i> file for detailed instruction in now to change such behaviour.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/anacrontab</i></p>
-<dd>Contains specifications of jobs. See <code><a href="/docs/linux/man/5-anacrontab/">anacrontab</a>(5)</code> for a complete description.</p>
-<dt><i>/var/spool/anacron</i></p>
-<dd>This directory is used by Anacron for storing timestamp files.</p>
-<dt><i>/lib/systemd/system/anacron.service</i></p>
-<dd>This file provides systemd service for anacron.</p>
-<dt><i>/lib/systemd/system/anacron.timer</i></p>
-<dd>This file provides systemd timer for anacron. Currently the service is triggered hourly through systemd timer.</dl>
+<dt><i>/etc/anacrontab</i></dt>
+<dd>Contains specifications of jobs. See <code><a href="/docs/linux/man/5-anacrontab/">anacrontab</a>(5)</code> for a complete description.</dd>
+<dt><i>/var/spool/anacron</i></dt>
+<dd>This directory is used by Anacron for storing timestamp files.</dd>
+<dt><i>/lib/systemd/system/anacron.service</i></dt>
+<dd>This file provides systemd service for anacron.</dd>
+<dt><i>/lib/systemd/system/anacron.timer</i></dt>
+<dd>This file provides systemd timer for anacron. Currently the service is triggered hourly through systemd timer.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-anacrontab/">anacrontab</a>(5), <a href="/docs/linux/man/8-cron/">cron</a>(8), <a href="/docs/linux/man/3-tzset/">tzset</a>(3)</code> </p>
 <p> The Anacron <i>README</i> file. </p>

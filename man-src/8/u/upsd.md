@@ -20,30 +20,30 @@ description: "upsd – UPS information server"
 <h2>Options</h2>
 <p><code>-c</code> <i>command</i></p>
 <dl>
-<dd>Send <i>command</i> to the background process as a signal. Valid commands are: </p>
+<dd>Send <i>command</i> to the background process as a signal. Valid commands are: </dd>
 <p> <code>reload</code></p>
 <dl>
-<dd>reread configuration files</dl>
+<dd>reread configuration files</dd></dl>
 <p> <code>stop</code></p>
 <dl>
-<dd>stop process and exit</dl>
+<dd>stop process and exit</dd></dl>
 </dl>
 <p> <code>-D</code></p>
 <dl>
-<dd>Raise the debug level. Use this multiple times for additional details.</dl>
+<dd>Raise the debug level. Use this multiple times for additional details.</dd></dl>
 <p> <code>-h</code></p>
 <dl>
-<dd>Display the help text.</dl>
+<dd>Display the help text.</dd></dl>
 <p> <code>-r</code> <i>directory</i></p>
 <dl>
-<dd>upsd will <code><a href="/docs/linux/man/2-chroot/">chroot</a></code>(2) to <i>directory</i> shortly after startup and before parsing any configuration files with this option set. You can use this to create a &quot;jail&quot; for greater security. </p>
+<dd>upsd will <code><a href="/docs/linux/man/2-chroot/">chroot</a></code>(2) to <i>directory</i> shortly after startup and before parsing any configuration files with this option set. You can use this to create a &quot;jail&quot; for greater security. </dd>
 <p> You must coordinate this with your drivers, as upsd must be able to find the state path within <i>directory</i>. See <code><a href="/docs/linux/man/8-upsdrvctl/">upsdrvctl</a></code>(8) and <code><a href="/docs/linux/man/8-nutupsdrv/">nutupsdrv</a></code>(8).</dl>
 <p> <code>-u</code> <i>user</i></p>
 <dl>
-<dd>Switch to user <i>user</i> after startup if started as root. This overrides whatever you may have compiled in with configure &#8211;with-user.</dl>
+<dd>Switch to user <i>user</i> after startup if started as root. This overrides whatever you may have compiled in with configure &#8211;with-user.</dd></dl>
 <p> <code>-V</code></p>
 <dl>
-<dd>Display the version of the program.</dl>
+<dd>Display the version of the program.</dd></dl>
 <h2>Reloading</h2>
 <p>upsd can reload its configuration files without shutting down the process if you send it a SIGHUP or start it again with -c reload. This only works if the background process is able to read those files. </p>
 <p> If you think that upsd can&#8217;t reload, check your syslogs for error messages. If it&#8217;s complaining about not being able to read the files, then you need to adjust your system to make it possible. Either change the permissions on the files, or run upsd as another user that will be able to read them. </p>

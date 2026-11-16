@@ -15,7 +15,7 @@ params_period_size - Get the period size (in frames) from the hw params
 <h2>Arguments</h2>
 
 <i>p</i>
-<dl><dd><dd>hw params</dl>
+<dl><dd></dd><dd>hw params</dd></dl>
 
 <h2>Copyright</h2>
 

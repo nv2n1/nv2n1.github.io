@@ -23,53 +23,53 @@ description: "pkcs11.conf – Configuration files for PKCS#11 modules"
 managed: true
 setting.2: A long value with text.
 x-custom : text</pre>
-</dl>
+</dd></dl>
 <h2>Module Configuration</h2>
 <p>Each configured PKCS#11 module has its own config file. These files can be placed in various locations. </p>
 <p> The filename of the configuration file may consist of upper and lowercase letters underscore, comma, dash and dots. The first characters needs to be an alphanumeric, the filename should end with a .module extension. </p>
 <p> Most importantly each config file specifies the path of the PKCS#11 module to load. A module config file has the following fields: </p>
 <p> <code>module:</code></p>
 <dl>
-<dd>The filename of the PKCS#11 module to load. This should include an extension like .so </p>
+<dd>The filename of the PKCS#11 module to load. This should include an extension like .so </dd>
 <p> If this value is blank, then the module will be ignored. This can be used in the user configs to override loading of a module specified in the system configuration. </p>
 <p> If this is a relative path, then the module will be loaded from the default module directory.</dl>
 <p> <code>critical:</code></p>
 <dl>
-<dd>Set to yes if the module is critical and required to load. If a critical module fails to load or initialize, then the loading process for all registered modules will abort and return an error code. </p>
+<dd>Set to yes if the module is critical and required to load. If a critical module fails to load or initialize, then the loading process for all registered modules will abort and return an error code. </dd>
 <p> This argument is optional and defaults to no.</dl>
 <p> <code>enable-in:</code></p>
 <dl>
-<dd>A comma and/or space separated list of names of programs that this module should only be loaded in. The module will not be loaded for other programs using p11-kit. The base name of the process executable should be used here, for example seahorse, ssh. </p>
+<dd>A comma and/or space separated list of names of programs that this module should only be loaded in. The module will not be loaded for other programs using p11-kit. The base name of the process executable should be used here, for example seahorse, ssh. </dd>
 <p> This option can also be used to control whether the module will be loaded by the proxy module. To enable loading only from the proxy module, specify p11-kit-proxy as the value. </p>
 <p> This is not a security feature. The argument is optional. If not present, then any process will load the module.</dl>
 <p> <code>disable-in:</code></p>
 <dl>
-<dd>A comma and/or space separated list of names of programs that this module should not be loaded in. The module will be loaded for any other programs using p11-kit. The base name of the process executable should be used here, for example firefox, thunderbird-bin. </p>
+<dd>A comma and/or space separated list of names of programs that this module should not be loaded in. The module will be loaded for any other programs using p11-kit. The base name of the process executable should be used here, for example firefox, thunderbird-bin. </dd>
 <p> This option can also be used to control whether the module will be loaded by the proxy module. To disable loading from the proxy module, specify p11-kit-proxy as the value. </p>
 <p> This is not a security feature. The argument is optional. If not present, then any process will load the module.</dl>
 <p> <code>managed:</code></p>
 <dl>
-<dd>Set to no if the module is not to be managed by p11-kit. Making a module unmanaged is not recommended, and will cause problems if multiple callers in a single process share a PKCS#11 module. </p>
+<dd>Set to no if the module is not to be managed by p11-kit. Making a module unmanaged is not recommended, and will cause problems if multiple callers in a single process share a PKCS#11 module. </dd>
 <p> This argument is optional and defaults to yes.</dl>
 <p> <code>priority:</code></p>
 <dl>
-<dd>The value should be an integer. When lists of modules are returned to a caller of p11-kit, modules with a higher number are sorted first. When applications search modules for certificates, keys and trust policy information, this setting will affect what find first. </p>
+<dd>The value should be an integer. When lists of modules are returned to a caller of p11-kit, modules with a higher number are sorted first. When applications search modules for certificates, keys and trust policy information, this setting will affect what find first. </dd>
 <p> This argument is optional, and defaults to zero. Modules with the same <code>priority</code> option will be sorted alphabetically.</dl>
 <p> <code>remote:</code></p>
 <dl>
-<dd>Instead of loading the PKCS#11 module locally, run the module remotely. </p>
+<dd>Instead of loading the PKCS#11 module locally, run the module remotely. </dd>
 <p> Specify a command to run, prefixed with | a pipe. The command must speak the p11-kit remoting protocol on its standard in and standard out. For example: </p>
 <dl>
 <dd>
 <pre>remote: |ssh user [at] remote p11-kit remote /path/to/module.so</pre>
-</dl>
+</dd></dl>
 <p> Other forms of remoting will appear in later p11-kit releases.</dl>
 <p> <code>trust-policy:</code></p>
 <dl>
-<dd>Set to yes to use use this module as a source of trust policy information such as certificate anchors and black lists.</dl>
+<dd>Set to yes to use use this module as a source of trust policy information such as certificate anchors and black lists.</dd></dl>
 <p> <code>log-calls:</code></p>
 <dl>
-<dd>Set to yes to write a log to stderr of all the calls into the module. This is only supported for managed modules. </p>
+<dd>Set to yes to write a log to stderr of all the calls into the module. This is only supported for managed modules. </dd>
 <p> This argument is optional and defaults to no.</dl>
 <p> Do not specify both enable-in and disable-in for the same module. </p>
 <p> Other fields may be present, but it is recommended that field names that are not specified in this document start with a x- prefix.</p>
@@ -77,14 +77,14 @@ x-custom : text</pre>
 <p>A global configuration may also be present. This file contains settings that are not related to a single PKCS#11 module. The location(s) of the global configuration are described below. The global configuration file can contain the following fields: </p>
 <p> <code>user-config:</code></p>
 <dl>
-<dd>This will be equal to one of the following values: none, merge, only.</dl>
+<dd>This will be equal to one of the following values: none, merge, only.</dd></dl>
 <p> <code>managed:</code></p>
 <dl>
-<dd>Set to yes or no to force all modules to be managed or unmanaged by p11-kit. Setting this setting in a global configuration file will override the managed setting in the individual module configuration files. Making modules unmanaged is not recommended, and will cause problems if multiple callers in a single process share a PKCS#11 module. </p>
+<dd>Set to yes or no to force all modules to be managed or unmanaged by p11-kit. Setting this setting in a global configuration file will override the managed setting in the individual module configuration files. Making modules unmanaged is not recommended, and will cause problems if multiple callers in a single process share a PKCS#11 module. </dd>
 <p> This argument is optional.</dl>
 <p> <code>log-calls:</code></p>
 <dl>
-<dd>Set to yes to write a log to stderr of all the calls into all configured modules. This is only supported for managed modules. </p>
+<dd>Set to yes to write a log to stderr of all the calls into all configured modules. This is only supported for managed modules. </dd>
 <p> This argument is optional.</dl>
 <p> Other fields may be present, but it is recommended that field names that are not specified in this document start with a x- prefix.</p>
 <h2>Configuration Files</h2>
@@ -95,3 +95,4 @@ x-custom : text</pre>
 <p> The default system config file and module directory can be changed when building p11-kit. Always lookup these paths using pkg-config.</p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/8-p11-kit/">p11-kit</a></code>(8) Further details available in the p11-kit online documentation at m[blue]<code><a rel="nofollow" href="https://p11-glue.github.io/p11-glue/p11-kit/manual/">https://p11-glue.github.io/p11-glue/p11-kit/manual/</a></code>m[]. </p>
+</p>

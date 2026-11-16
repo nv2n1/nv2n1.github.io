@@ -17,15 +17,12 @@ XmTree - The Tree widget class
 <h2>User Interaction</h2>Each node in the tree can be in four states: open, closed, always open, and hidden. The state of a node changes how it appears to the user and what actions are available to the user.
 <dl COMPACT><dd>Open<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>This node will have an open folder shown to its left that 
  may be selected by the user to close this node. When a node is open all of its children will be visible to the user. 
-
-<dd>Closed<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>This node will have a closed folder shown to its left that 
+</dd><dd>Closed<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>This node will have a closed folder shown to its left that 
  may be selected by the user to open this node. When a node is closed none of its children will be visible to the user. 
-
-<dd>Always Open<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>This node will have no folder button associated with it. 
+</dd><dd>Always Open<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>This node will have no folder button associated with it. 
  All of its children will be visible to the user. 
-
-<dd>Hidden<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>This node will not be shown to the user and all of its 
- children will appear and act exactly as if they were children of this node's parent. It will appear to the user as if this node does not exist.</dl>
+</dd><dd>Hidden<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>This node will not be shown to the user and all of its 
+ children will appear and act exactly as if they were children of this node's parent. It will appear to the user as if this node does not exist.</dd></dl>
  
 
  To maintain consistency of the user interface we have found that it is bestto use the node state &quot;Always Open&quot; for nodes with no children. This way the user will only see a folder button next to a node that has children to display. A folder button associated with a node that has no children has no defined semantics. 

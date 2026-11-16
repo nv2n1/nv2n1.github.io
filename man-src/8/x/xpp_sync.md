@@ -23,11 +23,11 @@ On a normal operation one Astribank device provides timing for all the other Ast
 <h2>Parameters</h2>
 
 <dl><dt>auto
-<dd>Automatically selects the best Astribank for syncing.
-<dt>dahdi
-<dd>Gets synchronization from the Dahdi sync master.
-<dt>nn
-<dd>Sets <font SIZE="-1">XBUS-</font><i>nn</i> as sync source.</dl>
+</dt><dd>Automatically selects the best Astribank for syncing.
+</dd><dt>dahdi
+</dt><dd>Gets synchronization from the Dahdi sync master.
+</dd><dt>nn
+</dt><dd>Sets <font SIZE="-1">XBUS-</font><i>nn</i> as sync source.</dd></dl>
  
 
  (Parameter name is case-insensitive)
@@ -51,6 +51,5 @@ On a normal operation one Astribank device provides timing for all the other Ast
 <h2>Files</h2>
 
 <dl><dt>/proc/xpp/sync
-<dd>xpp_sync is essentially a nicer interface to /proc/xpp/sync . That file shows the current xpp sync master (and in what format you need to write to it to set the master). 
-
-</dl>
+</dt><dd>xpp_sync is essentially a nicer interface to /proc/xpp/sync . That file shows the current xpp sync master (and in what format you need to write to it to set the master). 
+</dd></dl>

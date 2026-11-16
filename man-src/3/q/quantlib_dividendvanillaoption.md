@@ -27,7 +27,7 @@ description: "QuantLib::DividendVanillaOption – Single-asset vanilla option (n
 <h3><code>Volatility</code> impliedVolatility (<code>Real</code> price, const boost::shared_ptr&lt; <code>GeneralizedBlackScholesProcess</code> &gt; &amp; process, <code>Real</code> accuracy = 1.0e-4, Size maxEvaluations = 100, <code>Volatility</code> minVol = 1.0e-7, <code>Volatility</code> maxVol = 4.0) const</h3>
 <p><code>Warning</code></p>
 <dl COMPACT>
-<dd>see <code>VanillaOption</code> for notes on implied-volatility calculation.</dl>
+<dd>see <code>VanillaOption</code> for notes on implied-volatility calculation.</dd></dl>
 <h3>void setupArguments (PricingEngine::arguments *) const [protected, virtual]</h3>
 <p>When a derived argument structure is defined for an instrument, this method should be overridden to fill it. This is mandatory in case a pricing <code>engine</code> is used. </p>
 <p> Reimplemented from <code>Option</code>. </p>

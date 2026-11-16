@@ -42,20 +42,15 @@ A std::tuple object containing lvalue references.
 <h2>Notes</h2>
 
 std::tie may be used to unpack a std::pair because std::tuple has a converting_assignment from pairs: <pre><code>bool result;
-
 std::tie(std::ignore, result) = set.insert(value);
-
 </code></pre>
 
 <h2>Example</h2>
 
 std::tie can be used to introduce lexicographical comparison to a struct or to unpack a tuple: 
  // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;set&gt;
-
 #include &lt;tuple&gt;
 struct S {
     int n;
@@ -70,7 +65,6 @@ struct S {
     }
 };
 int main()
-
 {
     std::set&lt;S&gt; set_of_s; // S is LessThanComparable
     S value{42, &quot;Test&quot;, 3.14};

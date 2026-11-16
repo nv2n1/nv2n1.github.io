@@ -10,10 +10,8 @@ description: "std::experimental::parallel::is_execution_policy – std::experime
 <p>std::experimental::parallel::is_execution_policy &#8211; std::experimental::parallel::is_execution_policy</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;experimental / execution_policy&gt;
-
     template &lt;class T&gt;
     (parallelism TS)
-
         struct is_execution_policy;</code></pre>
 <p>Checks whether T is a standard or implementation-defined execution policy type.<br />
 Provides the member constant value which is equal to true, if T is execution_policy, sequential_execution_policy, parallel_execution_policy, parallel_vector_execution_policy, or an implementation-defined execution policy type. Otherwise, value is equal to false.<br />

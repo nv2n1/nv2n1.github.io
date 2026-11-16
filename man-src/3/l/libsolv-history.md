@@ -21,12 +21,12 @@ url: "/docs/linux/man/3-libsolv-history/"
 
 <dl>
 <dt>
-<dd> &bull; because of the unification, testing whether two strings are equal is the same as testing the equality of two numbers, thus very fast</dl>
+</dt><dd> &bull; because of the unification, testing whether two strings are equal is the same as testing the equality of two numbers, thus very fast</dd></dl>
  
 
 <dl>
 <dt>
-<dd> &bull; much space is saved, as numbers do not take up as much space as strings the internal memory representation does not take more space on a 64-bit system where a pointer is twice the size of a 32-bit number</dl>
+</dt><dd> &bull; much space is saved, as numbers do not take up as much space as strings the internal memory representation does not take more space on a 64-bit system where a pointer is twice the size of a 32-bit number</dd></dl>
  
 
  Thus, the solv format was created, which stores a repository as a string dictionary, a relation dictionary and then all packages dependencies. Tests showed that reading and merging multiple solv repositories takes just some milliseconds.
@@ -63,17 +63,17 @@ url: "/docs/linux/man/3-libsolv-history/"
 
 <dl>
 <dt>
-<dd> &bull; space efficient storage of attributes</dl>
+</dt><dd> &bull; space efficient storage of attributes</dd></dl>
  
 
 <dl>
 <dt>
-<dd> &bull; paging/on demand loading of data</dl>
+</dt><dd> &bull; paging/on demand loading of data</dd></dl>
  
 
 <dl>
 <dt>
-<dd> &bull; page compression</dl>
+</dt><dd> &bull; page compression</dd></dl>
  
 
  The first version of the attribute store used a different format for storing information, we later merged this format with the solv file format.

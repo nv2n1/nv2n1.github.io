@@ -30,6 +30,6 @@ description: "QuantLib::HestonModel – Heston model for the stochastic volatili
 <p> Heston, Steven L., 1993. A Closed-Form Solution for Options with Stochastic Volatility with Applications to <code>Bond</code> and <code>Currency</code> Options. The review of Financial Studies, Volume 6, Issue 2, 327-343. </p>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>calibration is tested against known good values.</dl>
+<dd>calibration is tested against known good values.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

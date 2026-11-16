@@ -15,7 +15,7 @@ rpcb_getport_async - obtain the port for a given RPC service on a given host
 <h2>Arguments</h2>
 
 <i>task</i>
-<dl><dd><dd>task that is waiting for portmapper request</dl>
+<dl><dd></dd><dd>task that is waiting for portmapper request</dd></dl>
 
 <h2>Description</h2>
 

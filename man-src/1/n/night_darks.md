@@ -14,30 +14,30 @@ description: "night_darks – non-iteractive dark snapshoting with CCD camera"
 <h2>DESCRIPTION</h2>
 <p> The options are as follows:</p>
 <dl>
-<dt><code>-oo</code></p>
-<dd> output filename mask, default: &#8221;</p>
-<dt><code>-o</code></p>
-<dd> output prefix name, default: &#8216;d&#8217;</p>
-<dt><code>-n</code></p>
-<dd> number of exposures, default=0</p>
-<dt><code>-obsname,-observer</code></p>
-<dd> observer&#8217;s name</p>
-<dt><code>-name,-object</code></p>
-<dd> object&#8217;s name, default: -name dark</p>
-<dt><code>-w</code></p>
-<dd> wait for specified num. of seconds, integer, default: 1</p>
-<dt><code>-b</code></p>
-<dd> binning, default=3</p>
-<dt><code>-r</code></p>
-<dd> select region by format: (x1,y1,x2,y2), default: full area</p>
-<dt><code>-c</code></p>
-<dd> select chip, I &#8211; imaging (default), T &#8211; tracking</p>
-<dt><code>-v</code></p>
-<dd> view exposed image with xnightview</p>
-<dt><code>-host</code></p>
-<dd> address:port internet address server, default: local connect</p>
-<dt><code>-h</code></p>
-<dd> print help</dl>
+<dt><code>-oo</code></dt>
+<dd> output filename mask, default: &#8221;</dd>
+<dt><code>-o</code></dt>
+<dd> output prefix name, default: &#8216;d&#8217;</dd>
+<dt><code>-n</code></dt>
+<dd> number of exposures, default=0</dd>
+<dt><code>-obsname,-observer</code></dt>
+<dd> observer&#8217;s name</dd>
+<dt><code>-name,-object</code></dt>
+<dd> object&#8217;s name, default: -name dark</dd>
+<dt><code>-w</code></dt>
+<dd> wait for specified num. of seconds, integer, default: 1</dd>
+<dt><code>-b</code></dt>
+<dd> binning, default=3</dd>
+<dt><code>-r</code></dt>
+<dd> select region by format: (x1,y1,x2,y2), default: full area</dd>
+<dt><code>-c</code></dt>
+<dd> select chip, I &#8211; imaging (default), T &#8211; tracking</dd>
+<dt><code>-v</code></dt>
+<dd> view exposed image with xnightview</dd>
+<dt><code>-host</code></dt>
+<dd> address:port internet address server, default: local connect</dd>
+<dt><code>-h</code></dt>
+<dd> print help</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> Setting of environment variable NIGHTVIEW_HOST is equivalent to -host option.</p>
 <h2>REPORTING BUGS</h2>

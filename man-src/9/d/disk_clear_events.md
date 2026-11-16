@@ -15,11 +15,11 @@ disk_clear_events - synchronously check, clear and return pending events
 <h2>Arguments</h2>
 
 <i>disk</i>
-<dl><dd><dd>disk to fetch and clear events from</dl>
+<dl><dd></dd><dd>disk to fetch and clear events from</dd></dl>
  
 
  <i>mask</i>
-<dl><dd>mask of events to be fetched and cleared</dl>
+<dl><dd>mask of events to be fetched and cleared</dd></dl>
 
 <h2>Description</h2>
 

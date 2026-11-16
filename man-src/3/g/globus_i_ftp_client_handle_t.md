@@ -129,11 +129,11 @@ description: "globus_i_ftp_client_handle_t –"
 <p> <code>See Also:</code></p>
 <dl>
 <dt>
-<dd> <code>globus_ftp_client_handle_set_user_pointer()</code>, globus_ftp_client_handle_get_user_pointer()</dl>
+</dt><dd> <code>globus_ftp_client_handle_set_user_pointer()</code>, globus_ftp_client_handle_get_user_pointer()</dd></dl>
 <h3>struct tm globus_i_ftp_client_handle_t::utime_time</h3>
 <p> modification time for UTIME </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_ftp_client from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbBQ">Author</a></p>
-<dd></dl>
+<dt><a href="#lbBQ">Author</a></dt>
+<dd></dd></dl>

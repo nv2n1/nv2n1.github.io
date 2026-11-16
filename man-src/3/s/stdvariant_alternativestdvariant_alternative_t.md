@@ -11,24 +11,17 @@ std::variant_alternative,std::variant_alternative_t - std::variant_alternative,s
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;variant&gt;
-
     template &lt;std::size_t I, class T&gt;
     (1)(since C++ 17)
-
         struct variant_alternative; /* undefined */
-
 template &lt;size_t I, class... Types&gt;
 (2)(since C++ 17)
-
     struct variant_alternative&lt;I, variant&lt;Types...&gt;&gt;;
-
 template &lt;size_t I, class T&gt;
 class variant_alternative&lt;I, const T&gt;;
-
 template &lt;size_t I, class T&gt;
 class variant_alternative&lt;I, volatile T&gt;;
 (3)(since C++ 17)
-
     template &lt;size_t I, class T&gt;
     class variant_alternative&lt;I, const volatile T&gt;;</code></pre> 
 Provides compile-time indexed access to the types of the alternatives of the possibly cv-qualified variant, combining cv-qualifications of the variant (if any) with the cv-qualifications of the alternative. 

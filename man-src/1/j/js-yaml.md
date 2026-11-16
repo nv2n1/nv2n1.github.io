@@ -13,18 +13,18 @@ description: "js-yaml.js – JavaScript YAML parser and dumper"
 <p> usage: js-yaml [-h] [-v] [-c] [-t] [file]</p>
 <h3>Positional arguments:</h3>
 <dl>
-<dt>file</p>
-<dd> File to read, utf-8 encoded without BOM</dl>
+<dt>file</dt>
+<dd> File to read, utf-8 encoded without BOM</dd></dl>
 <h3>Optional arguments:</h3>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Show this help message and exit.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Show program&#8217;s version number and exit.</p>
-<dt><code>-c</code>, <code>&#8211;compact</code></p>
-<dd> Display errors in compact mode</p>
-<dt><code>-t</code>, <code>&#8211;trace</code></p>
-<dd> Show stack trace on error</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Show this help message and exit.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Show program&#8217;s version number and exit.</dd>
+<dt><code>-c</code>, <code>&#8211;compact</code></dt>
+<dd> Display errors in compact mode</dd>
+<dt><code>-t</code>, <code>&#8211;trace</code></dt>
+<dd> Show stack trace on error</dd></dl>
 <h2>AUTHORS</h2>
 <p> <code>js-yaml</code> was primarily authored by Vladimir Zapparov with contributions from Aleksey V Zapparov, Vitaly Puzrin, and Martin Grenfell. </p>
 <h2>Index</h2>

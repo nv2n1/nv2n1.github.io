@@ -15,12 +15,12 @@ description: "cvt – calculate VESA CVT mode lines"
 <p> <i>Cvt</i> is a utility for calculating VESA Coordinated Video Timing modes. Given the desired horizontal and vertical resolutions, a modeline adhering to the CVT standard is printed. This modeline can be included in Xorg <code><a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5)</code> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>refresh</code></p>
-<dd> Provide a vertical refresh rate in Hz. The CVT standard prefers either 50.0, 60.0, 75.0 or 85.0Hz. The default is 60.0Hz.</p>
-<dt><code>-v</code>|<code>&#8211;verbose</code></p>
-<dd> Warn verbosely when a given mode does not completely correspond with CVT standards.</p>
-<dt><code>-r</code>|<code>&#8211;reduced</code></p>
-<dd> Create a mode with reduced blanking. This allows for higher frequency signals, with a lower or equal dotclock. Not for Cathode Ray Tube based displays though. </p>
+<dt><code>refresh</code></dt>
+<dd> Provide a vertical refresh rate in Hz. The CVT standard prefers either 50.0, 60.0, 75.0 or 85.0Hz. The default is 60.0Hz.</dd>
+<dt><code>-v</code>|<code>&#8211;verbose</code></dt>
+<dd> Warn verbosely when a given mode does not completely correspond with CVT standards.</dd>
+<dt><code>-r</code>|<code>&#8211;reduced</code></dt>
+<dd> Create a mode with reduced blanking. This allows for higher frequency signals, with a lower or equal dotclock. Not for Cathode Ray Tube based displays though. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5), <a href="/docs/linux/man/1-gtf/">gtf</a>(1)</p>

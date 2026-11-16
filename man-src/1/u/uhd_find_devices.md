@@ -16,10 +16,10 @@ description: "uhd_find_devices – USRP Hardware Driver Discovery Utility"
 <p> <code>uhd_find_devices [OPTIONS]</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>Device Address Arguments:</p>
-<dd> &#8211;args <i>arg</i></p>
-<dt>This help information:</p>
-<dd> &#8211;help</dl>
+<dt>Device Address Arguments:</dt>
+<dd> &#8211;args <i>arg</i></dd>
+<dt>This help information:</dt>
+<dd> &#8211;help</dd></dl>
 <h2>IDENTIFYING USRP DEVICES</h2>
 <p> Devices are addressed through key/value string pairs. These string pairs can be used to narrow down the search for a specific device or group of devices. Most UHD utility applications and examples have a &#8211;args parameter that takes a device address, where the device address is expressed as a delimited string. See the documentation in types/device_addr.hpp for reference. </p>
 <p> Every device has several ways of identifying it on the host system.</p>
@@ -46,8 +46,8 @@ description: "uhd_find_devices – USRP Hardware Driver Discovery Utility"
 uhd_find_devices-- args = "type=usrp1" --OR-- uhd_find_devices-- args = "serial=12345678"
 </code></pre>
 <dl>
-<dt>Find all devices available to this system:</p>
-<dd> uhd_find_devices</dl>
+<dt>Find all devices available to this system:</dt>
+<dd> uhd_find_devices</dd></dl>
 <h2>SEE ALSO</h2>
 <p> UHD documentation: <code><a rel="nofollow" href="http://files.ettus.com/uhd_docs/manual/html/index.html">http://files.ettus.com/uhd_docs/manual/html/index.html</a></code> </p>
 <p> GR-UHD documentation: <code><a rel="nofollow" href="http://gnuradio.org/doc/doxygen/page_uhd.html">http://gnuradio.org/doc/doxygen/page_uhd.html</a></code> </p>

@@ -37,6 +37,6 @@ description: "QuantLib::BlackVarianceCurve – Black volatility curve modelled a
 <p> For strike dependence, see <code>BlackVarianceSurface</code>. </p>
 <p> <code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>check time extrapolation</dl>
+<dd>check time extrapolation</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

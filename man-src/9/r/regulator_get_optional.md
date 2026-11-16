@@ -14,10 +14,10 @@ description: "regulator_get_optional – obtain optional access to a regulator."
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device for regulator &#8220;consumer&#8221;</dl>
+</dd><dd>device for regulator &#8220;consumer&#8221;</dd></dl>
 <p> <i>id</i></p>
 <dl>
-<dd>Supply name or regulator ID.</dl>
+<dd>Supply name or regulator ID.</dd></dl>
 <h2>Description</h2>
 <p>Returns a struct regulator corresponding to the regulator producer, or <code>IS_ERR</code> condition containing errno. </p>
 <p> This is intended for use by consumers for devices which can have some supplies unconnected in normal use, such as some MMC devices. It can allow the regulator core to provide stub supplies for other supplies requested using normal <code>regulator_get</code> calls without disrupting the operation of drivers that can handle absent supplies. </p>
@@ -25,10 +25,10 @@ description: "regulator_get_optional – obtain optional access to a regulator."
 <h2>Authors</h2>
 <p><code>Liam Girdwood</code> &lt;lrg [at] slimlogic.co.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Mark Brown</code> &lt;broonie [at] opensource.wolfsonmicro.com&gt;<br />
  Wolfson Microelectronics, </p>
 <p>&nbsp;<wbr>&nbsp;<wbr></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

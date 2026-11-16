@@ -167,22 +167,22 @@ description: "cupsd_selinux – Security Enhanced Linux Policy for the cupsd pro
 <p> <code>cupsd_config_exec_t</code> </p>
 <p> &#8211; Set files with the cupsd_config_exec_t type, if you want to transition an executable to the cupsd_config_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/hal_lpadmin, /usr/libexec/hal_lpadmin, /usr/bin/cups-config-daemon, /usr/sbin/printconf-backend, /usr/lib/udev/udev-configure-printer, /usr/libexec/cups-pk-helper-mechanism </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/hal_lpadmin, /usr/libexec/hal_lpadmin, /usr/bin/cups-config-daemon, /usr/sbin/printconf-backend, /usr/lib/udev/udev-configure-printer, /usr/libexec/cups-pk-helper-mechanism </dd>
 </dl>
 <p> <code>cupsd_config_var_run_t</code> </p>
 <p> &#8211; Set files with the cupsd_config_var_run_t type, if you want to store the cupsd config files under the /run or /var/run directory. </p>
 <p> <code>cupsd_etc_t</code> </p>
 <p> &#8211; Set files with the cupsd_etc_t type, if you want to store cupsd files in the /etc directories. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/hp(/.*)?, /etc/cups(/.*)?, /usr/share/cups(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/etc/hp(/.*)?, /etc/cups(/.*)?, /usr/share/cups(/.*)? </dd>
 </dl>
 <p> <code>cupsd_exec_t</code> </p>
 <p> &#8211; Set files with the cupsd_exec_t type, if you want to transition an executable to the cupsd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/sbin/hp-[^/]+, /usr/share/hplip/.*.py, /usr/lib/cups/backend/hp.*, /usr/bin/hpijs, /usr/sbin/cupsd, /usr/sbin/hpiod, /usr/sbin/cups-browsed </p>
+<dt>Paths:</dt>
+<dd>/usr/sbin/hp-[^/]+, /usr/share/hplip/.*.py, /usr/lib/cups/backend/hp.*, /usr/bin/hpijs, /usr/sbin/cupsd, /usr/sbin/hpiod, /usr/sbin/cups-browsed </dd>
 </dl>
 <p> <code>cupsd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the cupsd_initrc_exec_t type, if you want to transition an executable to the cupsd_initrc_t domain. </p>
@@ -193,8 +193,8 @@ description: "cupsd_selinux – Security Enhanced Linux Policy for the cupsd pro
 <p> <code>cupsd_log_t</code> </p>
 <p> &#8211; Set files with the cupsd_log_t type, if you want to treat the data as cupsd log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/hp(/.*)?, /var/log/cups(/.*)?, /usr/Brother/fax/.*.log.*, /var/log/turboprint.*, /usr/local/Brother/fax/.*.log.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/hp(/.*)?, /var/log/cups(/.*)?, /usr/Brother/fax/.*.log.*, /var/log/turboprint.*, /usr/local/Brother/fax/.*.log.* </dd>
 </dl>
 <p> <code>cupsd_lpd_exec_t</code> </p>
 <p> &#8211; Set files with the cupsd_lpd_exec_t type, if you want to transition an executable to the cupsd_lpd_t domain. </p>
@@ -205,8 +205,8 @@ description: "cupsd_selinux – Security Enhanced Linux Policy for the cupsd pro
 <p> <code>cupsd_rw_etc_t</code> </p>
 <p> &#8211; Set files with the cupsd_rw_etc_t type, if you want to store cupsd rw files in the /etc directories. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/printcap.*, /etc/cups/ppd(/.*)?, /usr/Brother/(.*/)?inf(/.*)?, /usr/Printer/(.*/)?inf(/.*)?, /usr/lib/bjlib(/.*)?, /var/lib/iscan(/.*)?, /var/cache/cups(/.*)?, /etc/cups/certs/.*, /etc/opt/Brother/(.*/)?inf(/.*)?, /etc/cups/lpoptions.*, /var/cache/foomatic(/.*)?, /usr/local/Brother/(.*/)?inf(/.*)?, /usr/local/Printer/(.*/)?inf(/.*)?, /etc/cups/cupsd.conf.*, /var/lib/cups/certs/.*, /opt/gutenprint/ppds(/.*)?, /opt/brother/Printers(.*/)?inf(/.*)?, /etc/cups/classes.conf.*, /etc/cups/printers.conf.*, /etc/cups/subscriptions.*, /etc/opt/brother/Printers/(.*/)?inf(/.*)?, /usr/local/linuxprinter/ppd(/.*)?, /var/cache/alchemist/printconf.*, /etc/alchemist/namespace/printconf(/.*)?, /etc/cups/certs, /etc/cups/ppds.dat, /var/lib/cups/certs, /usr/share/foomatic/db/oldprinterids </p>
+<dt>Paths:</dt>
+<dd>/etc/printcap.*, /etc/cups/ppd(/.*)?, /usr/Brother/(.*/)?inf(/.*)?, /usr/Printer/(.*/)?inf(/.*)?, /usr/lib/bjlib(/.*)?, /var/lib/iscan(/.*)?, /var/cache/cups(/.*)?, /etc/cups/certs/.*, /etc/opt/Brother/(.*/)?inf(/.*)?, /etc/cups/lpoptions.*, /var/cache/foomatic(/.*)?, /usr/local/Brother/(.*/)?inf(/.*)?, /usr/local/Printer/(.*/)?inf(/.*)?, /etc/cups/cupsd.conf.*, /var/lib/cups/certs/.*, /opt/gutenprint/ppds(/.*)?, /opt/brother/Printers(.*/)?inf(/.*)?, /etc/cups/classes.conf.*, /etc/cups/printers.conf.*, /etc/cups/subscriptions.*, /etc/opt/brother/Printers/(.*/)?inf(/.*)?, /usr/local/linuxprinter/ppd(/.*)?, /var/cache/alchemist/printconf.*, /etc/alchemist/namespace/printconf(/.*)?, /etc/cups/certs, /etc/cups/ppds.dat, /var/lib/cups/certs, /usr/share/foomatic/db/oldprinterids </dd>
 </dl>
 <p> <code>cupsd_tmp_t</code> </p>
 <p> &#8211; Set files with the cupsd_tmp_t type, if you want to store cupsd temporary files in the /tmp directories. </p>
@@ -217,8 +217,8 @@ description: "cupsd_selinux – Security Enhanced Linux Policy for the cupsd pro
 <p> <code>cupsd_var_run_t</code> </p>
 <p> &#8211; Set files with the cupsd_var_run_t type, if you want to store the cupsd files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/ccpd(/.*)?, /var/ekpd(/.*)?, /var/run/hp.*.pid, /var/run/hp.*.port, /var/run/cups(/.*)?, /var/run/hplip(/.*), /var/turboprint(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/ccpd(/.*)?, /var/ekpd(/.*)?, /var/run/hp.*.pid, /var/run/hp.*.port, /var/run/cups(/.*)?, /var/run/hplip(/.*), /var/turboprint(/.*)? </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

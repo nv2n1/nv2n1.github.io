@@ -11,16 +11,16 @@ description: "btmgmt: – A command-line interface of BlueZ for management Usage
 <p> btmgmt: &#8211; A command-line interface of BlueZ for management Usage:</p>
 <dl>
 <dt>
-<dd> btmgmt [options]</dl>
+</dt><dd> btmgmt [options]</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;index</code></p>
-<dd> Specify adapter index</p>
-<dt><code>&#8211;timeout</code></p>
-<dd> Timeout in seconds for non-interactive mode</p>
-<dt><code>&#8211;version</code></p>
-<dd> Display version</p>
-<dt><code>&#8211;help</code></p>
-<dd> Display help </p>
+<dt><code>&#8211;index</code></dt>
+<dd> Specify adapter index</dd>
+<dt><code>&#8211;timeout</code></dt>
+<dd> Timeout in seconds for non-interactive mode</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Display version</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display help </dd>
 </dl>
 <h2>Index</h2>

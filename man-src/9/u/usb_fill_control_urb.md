@@ -15,35 +15,35 @@ usb_fill_control_urb - initializes a control urb
 <h2>Arguments</h2>
 
 <i>urb</i>
-<dl><dd><dd>pointer to the urb to initialize.</dl>
+<dl><dd></dd><dd>pointer to the urb to initialize.</dd></dl>
  
 
  <i>dev</i>
-<dl><dd>pointer to the struct usb_device for this urb.</dl>
+<dl><dd>pointer to the struct usb_device for this urb.</dd></dl>
  
 
  <i>pipe</i>
-<dl><dd>the endpoint pipe</dl>
+<dl><dd>the endpoint pipe</dd></dl>
  
 
  <i>setup_packet</i>
-<dl><dd>pointer to the setup_packet buffer</dl>
+<dl><dd>pointer to the setup_packet buffer</dd></dl>
  
 
  <i>transfer_buffer</i>
-<dl><dd>pointer to the transfer buffer</dl>
+<dl><dd>pointer to the transfer buffer</dd></dl>
  
 
  <i>buffer_length</i>
-<dl><dd>length of the transfer buffer</dl>
+<dl><dd>length of the transfer buffer</dd></dl>
  
 
  <i>complete_fn</i>
-<dl><dd>pointer to the usb_complete_t function</dl>
+<dl><dd>pointer to the usb_complete_t function</dd></dl>
  
 
  <i>context</i>
-<dl><dd>what to set the urb context to.</dl>
+<dl><dd>what to set the urb context to.</dd></dl>
 
 <h2>Description</h2>
 

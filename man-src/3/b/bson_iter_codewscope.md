@@ -21,17 +21,17 @@ bson_iter_codewscope(const bson_iter_t *iter,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>length</code></p>
-<dd> An optional location for the length of the resulting UTF-8 encoded string.</dl>
+<dt><code>length</code></dt>
+<dd> An optional location for the length of the resulting UTF-8 encoded string.</dd></dl>
 <dl>
-<dt><code>scope_len</code></p>
-<dd> A optional location for the length of <code>scope</code> \&amp;.</dl>
+<dt><code>scope_len</code></dt>
+<dd> A optional location for the length of <code>scope</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>scope</code></p>
-<dd> An optional location to store the immutable raw scope BSON document.</dl>
+<dt><code>scope</code></dt>
+<dd> An optional location to store the immutable raw scope BSON document.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_codewscope/">bson_iter_codewscope</a>(3)</code> function acts similar to <code><a href="/docs/linux/man/3-bson_iter_code/">bson_iter_code</a>(3)</code> except for BSON_TYPE_CODEWSCOPE elements. It also will provide a pointer to the buffer for scope, which can be loaded into a <code>bson_t</code> using <code><a href="/docs/linux/man/3-bson_init_static/">bson_init_static</a>(3)</code> \&amp;. </p>
 <h2>RETURNS</h2>

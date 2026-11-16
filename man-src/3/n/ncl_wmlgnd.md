@@ -21,20 +21,18 @@ CALL WMLGND (X,Y,NTYPE,IROWS,ICOLS)
 <h2>Description</h2>
 
 <dl><dt>X
-<dd>(Real, Input) - An X coordinate (specified in world coordinates) of a point that specifies a position for the legend to be plotted.
-<dt>Y
-<dd>(Real, Input) - A Y coordinate (specified in world coordinates) of a point that specifies a position for the legend to be plotted.
-<dt>NTYPE
-<dd>(Integer, Input) - A character variable that indicates the desired kind of legend.
-<dl><dd><dl><dt>Legal values for NTYPE are:
-<dd>1 - Plot the legend for the weather types. There are six weather types: showers; T-storms; rain; flurries; snow; ice. The coordinate (X,Y) for this type specifies the lower left corner of the legend. 
-
+</dt><dd>(Real, Input) - An X coordinate (specified in world coordinates) of a point that specifies a position for the legend to be plotted.
+</dd><dt>Y
+</dt><dd>(Real, Input) - A Y coordinate (specified in world coordinates) of a point that specifies a position for the legend to be plotted.
+</dd><dt>NTYPE
+</dt><dd>(Integer, Input) - A character variable that indicates the desired kind of legend.
+</dd><dl><dd></dd><dl><dt>Legal values for NTYPE are:
+</dt><dd>1 - Plot the legend for the weather types. There are six weather types: showers; T-storms; rain; flurries; snow; ice. The coordinate (X,Y) for this type specifies the lower left corner of the legend. 
  2 - Plot the legend for front types. There are three front types labeled: cold; warm; stationary. The (X,Y) coordinate for this legend specifies the lower right corner of the legend. 
-
- 3 - Plot the explanatory legend. The (X,Y) coordinate for this legend specifies the bottom center of the legend.</dl></dl><dt>IROWS
-<dd>(Integer, Input) - An integer variable specifying how many rows there will be in displaying the weather types. IROWS and ICOLS are significant only when NTYPE=1. Choices for IROWS x ICOLS are: 1x6, 2x3, 3x2, and 6x1.
-<dt>ICOLS
-<dd>(Integer, Input) - An integer variable specifying how many columns there will be in displaying the weather types. IROWS and ICOLS are significant only when NTYPE=1. Choices for IROWS x ICOLS are: 1x6, 2x3, 3x2, and 6x1.</dl>
+ 3 - Plot the explanatory legend. The (X,Y) coordinate for this legend specifies the bottom center of the legend.</dd></dl></dl><dt>IROWS
+</dt><dd>(Integer, Input) - An integer variable specifying how many rows there will be in displaying the weather types. IROWS and ICOLS are significant only when NTYPE=1. Choices for IROWS x ICOLS are: 1x6, 2x3, 3x2, and 6x1.
+</dd><dt>ICOLS
+</dt><dd>(Integer, Input) - An integer variable specifying how many columns there will be in displaying the weather types. IROWS and ICOLS are significant only when NTYPE=1. Choices for IROWS x ICOLS are: 1x6, 2x3, 3x2, and 6x1.</dd></dl>
 
 <h2>Usage</h2>
 

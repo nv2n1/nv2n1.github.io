@@ -49,12 +49,12 @@ description: "perl5144delta – what is new for perl v5.14.4"
 <h3>Updated Modules and Pragmata</h3>
 <p> The following modules have just the minor code fixes as listed above in &#8220;Security&#8221; (version numbers have not changed):</p>
 <dl>
-<dt>Socket</p>
+<dt>Socket</dt>
 <dd>
-<dt>SDBM_File</p>
+</dd><dt>SDBM_File</dt>
 <dd>
-<dt>List::Util</p>
-<dd></dl>
+</dd><dt>List::Util</dt>
+<dd></dd></dl>
 <p> Encode has been upgraded from version 2.42_01 to version 2.42_02. </p>
 <p> Module::CoreList has been updated to version 2.49_06 to add data for this release.</p>
 <h3>Removed Modules and Pragmata</h3>
@@ -77,12 +77,12 @@ description: "perl5144delta – what is new for perl v5.14.4"
 <p> None.</p>
 <h3>Platform-Specific Notes</h3>
 <dl>
-<dt><font SIZE="-1">VMS</font></p>
-<dd> 5.14.3 failed to compile on <font SIZE="-1">VMS</font> due to incomplete application of a patch series that allowed <tt>&quot;userelocatableinc&quot;</tt> and <tt>&quot;usesitecustomize&quot;</tt> to be used simultaneously. Other platforms were not affected and the problem has now been corrected.</dl>
+<dt><font SIZE="-1">VMS</font></dt>
+<dd> 5.14.3 failed to compile on <font SIZE="-1">VMS</font> due to incomplete application of a patch series that allowed <tt>&quot;userelocatableinc&quot;</tt> and <tt>&quot;usesitecustomize&quot;</tt> to be used simultaneously. Other platforms were not affected and the problem has now been corrected.</dd></dl>
 <h2>Selected Bug Fixes</h2>
 <dl>
-<dt>&bull;</p>
-<dd> In Perl 5.14.0, <tt>&quot;$tainted ~~ @array&quot;</tt> stopped working properly. Sometimes it would erroneously fail (when <tt>$tainted</tt> contained a string that occurs in the array <i>after</i> the first element) or erroneously succeed (when <tt>&quot;undef&quot;</tt> occurred after the first element) [perl #93590].</dl>
+<dt>&bull;</dt>
+<dd> In Perl 5.14.0, <tt>&quot;$tainted ~~ @array&quot;</tt> stopped working properly. Sometimes it would erroneously fail (when <tt>$tainted</tt> contained a string that occurs in the array <i>after</i> the first element) or erroneously succeed (when <tt>&quot;undef&quot;</tt> occurred after the first element) [perl #93590].</dd></dl>
 <h2>Known Problems</h2>
 <p> None.</p>
 <h2>Acknowledgements</h2>
@@ -101,29 +101,29 @@ description: "perl5144delta – what is new for perl v5.14.4"
 <p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>
 <h2>Index</h2>
-<dt><a href="#lbAN">Incompatible Changes</a></p>
+<dt><a href="#lbAN">Incompatible Changes</a></dt>
 <dd>
-<dt><a href="#lbAO">Deprecations</a></p>
+</dd><dt><a href="#lbAO">Deprecations</a></dt>
 <dd>
-<dt><a href="#lbAP">Modules and Pragmata</a></p>
+</dd><dt><a href="#lbAP">Modules and Pragmata</a></dt>
 <dd>
-<dt><a href="#lbAT">Documentation</a></p>
+</dd><dt><a href="#lbAT">Documentation</a></dt>
 <dd>
-<dt><a href="#lbAW">Diagnostics</a></p>
+</dd><dt><a href="#lbAW">Diagnostics</a></dt>
 <dd>
-<dt><a href="#lbAX">Utility Changes</a></p>
+</dd><dt><a href="#lbAX">Utility Changes</a></dt>
 <dd>
-<dt><a href="#lbAY">Configuration and Compilation</a></p>
+</dd><dt><a href="#lbAY">Configuration and Compilation</a></dt>
 <dd>
-<dt><a href="#lbAZ">Platform Support</a></p>
+</dd><dt><a href="#lbAZ">Platform Support</a></dt>
 <dd>
-<dt><a href="#lbBD">Selected Bug Fixes</a></p>
+</dd><dt><a href="#lbBD">Selected Bug Fixes</a></dt>
 <dd>
-<dt><a href="#lbBE">Known Problems</a></p>
+</dd><dt><a href="#lbBE">Known Problems</a></dt>
 <dd>
-<dt><a href="#lbBF">Acknowledgements</a></p>
+</dd><dt><a href="#lbBF">Acknowledgements</a></dt>
 <dd>
-<dt><a href="#lbBG">Reporting Bugs</a></p>
+</dd><dt><a href="#lbBG">Reporting Bugs</a></dt>
 <dd>
-<dt><a href="#lbBH">SEE ALSO</a></p>
-<dd></dl>
+</dd><dt><a href="#lbBH">SEE ALSO</a></dt>
+<dd></dd></dl>

@@ -11,7 +11,6 @@ PMIx_Finalize - Finalize the PMIx Client
 <h2>Synopsis</h2>
 
 <pre><code>#include &lt;pmix.h&gt;
-
 pmix_status_t PMIx_Finalize(void);</code></pre>
 
 <h2>Arguments</h2>

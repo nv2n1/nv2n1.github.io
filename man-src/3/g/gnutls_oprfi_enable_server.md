@@ -14,12 +14,12 @@ description: "gnutls_oprfi_enable_server – API function"
 <p> <code>void gnutls_oprfi_enable_server(gnutls_session_t </code><i>session</i><code>, gnutls_oprfi_callback_func </code><i>cb</i><code>, void * </code><i>userdata</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>gnutls_oprfi_callback_func cb</p>
-<dd> function pointer to Opaque PRF extension server callback.</p>
-<dt>void * userdata</p>
-<dd> hook passed to callback function for passing application state.</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>gnutls_oprfi_callback_func cb</dt>
+<dd> function pointer to Opaque PRF extension server callback.</dd>
+<dt>void * userdata</dt>
+<dd> hook passed to callback function for passing application state.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Request that the server should attempt to accept the Opaque PRF Input TLS extension. If the client requests the extension, the provided callback <i>cb</i> will be invoked. The callback must have the following prototype: </p>
 <p> int callback (gnutls_session_t session, void *userdata, size_t oprfi_len, const unsigned char *in_oprfi, unsigned char *out_oprfi); </p>
@@ -33,6 +33,6 @@ description: "gnutls_oprfi_enable_server – API function"
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gnutls</code></dl>
+</dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

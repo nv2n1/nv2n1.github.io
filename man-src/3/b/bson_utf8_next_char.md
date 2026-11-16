@@ -16,8 +16,10 @@ bson_utf8_next_char(const char *utf8);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>utf8</code></p>
-<dd> A UTF-8 encoded string.</dl>
+<dt><code>utf8</code></dt>
+<dd> A UTF-8 encoded string.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Advances within <code>utf8</code> to the next UTF-8 character, which may be multiple bytes offset from <code>utf8</code> \&amp;. A pointer to the next character is returned. </p>
 <p> It is invalid to call this function on a string whose current character is <code>
+</p>
+</code>

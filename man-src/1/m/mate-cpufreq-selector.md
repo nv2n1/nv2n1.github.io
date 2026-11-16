@@ -16,23 +16,23 @@ description: "mate-cpufreq-selector – A generic command line tool to change th
 <p> This manual page briefly documents the <code>mate-cpufreq-selector</code> command. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c NUMBER, &#8211;cpu=NUMBER</code></p>
-<dd> Specify the CPU Number to adjust settings for. If no CPU is specified, CPU0 is assumed.</p>
-<dt><code>-g GOVERNOR, &#8211;governor=GOVERNOR</code></p>
-<dd> Specify a valid CPU Governor to use. (ie. conservative, ondemand, performance, powersave)</p>
-<dt><code>-f FREQ, &#8211;frequency=FREQ</code></p>
-<dd> Specify a CPU Frequency to set in KHz.</p>
-<dt><code>-?, -h, &#8211;help</code></p>
-<dd> Print standard command line options.</dl>
+<dt><code>-c NUMBER, &#8211;cpu=NUMBER</code></dt>
+<dd> Specify the CPU Number to adjust settings for. If no CPU is specified, CPU0 is assumed.</dd>
+<dt><code>-g GOVERNOR, &#8211;governor=GOVERNOR</code></dt>
+<dd> Specify a valid CPU Governor to use. (ie. conservative, ondemand, performance, powersave)</dd>
+<dt><code>-f FREQ, &#8211;frequency=FREQ</code></dt>
+<dd> Specify a CPU Frequency to set in KHz.</dd>
+<dt><code>-?, -h, &#8211;help</code></dt>
+<dd> Print standard command line options.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> <code>mate-cpufreq-selector &#8211;cpu=1 -g powersave</code></p>
 <dl>
 <dt>
-<dd> Set scaling Governor &quot;Powersave&quot; on CPU1</dl>
+</dt><dd> Set scaling Governor &quot;Powersave&quot; on CPU1</dd></dl>
 <p> <code>mate-cpufreq-selector -f 1200</code></p>
 <dl>
 <dt>
-<dd> Set max CPU Frequency to 1200KHz (1.2GHz) on CPU0</dl>
+</dt><dd> Set max CPU Frequency to 1200KHz (1.2GHz) on CPU0</dd></dl>
 <h2>BUGS</h2>
 <h3>Should you encounter any bugs, they may be reported at:</h3>
 <p> <a rel="nofollow" href="http://github.com/mate-desktop/mate-applets/issues">http://github.com/mate-desktop/mate-applets/issues</a></p>

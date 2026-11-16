@@ -16,18 +16,18 @@ description: "fd2pascal – Free Pascal forms description to pascal program conv
 <h2>OPTIONS</h2>
 <p> fd2pascal has a small number of options to control its behaviour: </p>
 <dl>
-<dt><code>-altformat</code></p>
-<dd> By default, a record type is emitted for the form definition, with a field for each widget (object) on the form. The alternate form declares a global variable for the form and each widget on the form.</p>
-<dt><code>-compensate</code></p>
-<dd> If this option is given then a call to fl_adjust_form_size is emitted after the form is created.</p>
-<dt><code>-callback</code></p>
-<dd> If this option is given, then a callback procedure is generated for each widget on the form.</p>
-<dt><code>-main</code></p>
-<dd> By default, a unit is created which can be included in the uses clause of a program. If this option is specified, a program file is emitted instead. </p>
+<dt><code>-altformat</code></dt>
+<dd> By default, a record type is emitted for the form definition, with a field for each widget (object) on the form. The alternate form declares a global variable for the form and each widget on the form.</dd>
+<dt><code>-compensate</code></dt>
+<dd> If this option is given then a call to fl_adjust_form_size is emitted after the form is created.</dd>
+<dt><code>-callback</code></dt>
+<dd> If this option is given, then a callback procedure is generated for each widget on the form.</dd>
+<dt><code>-main</code></dt>
+<dd> By default, a unit is created which can be included in the uses clause of a program. If this option is specified, a program file is emitted instead. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <dl>
 <dt>
-<dd> <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) </p>
+</dt><dd> <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) </dd>
 </dl>
 <h2>Index</h2>

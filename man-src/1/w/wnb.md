@@ -18,17 +18,17 @@ description: "wnb – WordNet window-based browser interface"
 <p> <code>wnb()</code> was developed with the philosophy that only those searches and buttons that are applicable at the current time are displayed. As a result, the appearance of the interface changes as it is used. Use the standard windowing system mouse functions to open and close the WordNet Browser Window, move the window, and change its size. </p>
 <p> The WordNet Browser Window contains the following areas, from top to bottom:</p>
 <dl>
-<dt>Menubar</p>
-<dd> A menubar runs along the top of the browser window with pulldown menus and button entitled <code>File</code>, <code>History</code>, <code>Options</code>, and <code>Help</code>.</p>
-<dt>Search Word Entry</p>
-<dd> Below the Menubar is a line for entering the search word. A search word can be a single word, hyphenated string, or a collocation. Case is ignored. Although only uninflected forms of words are usually stored in WordNet, users may search for inflected forms. WordNet&#8217;s morphological processor finds the base form automatically.</p>
-<dt>Search Selection</p>
-<dd> Below the Search Word Entry line is an area for selecting the search type and senses to search. Until a search word is entered this area is blank. After a search word is entered, buttons appear corresponding to each syntactic category (<code>Noun</code>, <code>Verb</code>, <code>Adjective</code>, <code>Adverb</code>) in which the search string is defined in WordNet. </p>
+<dt>Menubar</dt>
+<dd> A menubar runs along the top of the browser window with pulldown menus and button entitled <code>File</code>, <code>History</code>, <code>Options</code>, and <code>Help</code>.</dd>
+<dt>Search Word Entry</dt>
+<dd> Below the Menubar is a line for entering the search word. A search word can be a single word, hyphenated string, or a collocation. Case is ignored. Although only uninflected forms of words are usually stored in WordNet, users may search for inflected forms. WordNet&#8217;s morphological processor finds the base form automatically.</dd>
+<dt>Search Selection</dt>
+<dd> Below the Search Word Entry line is an area for selecting the search type and senses to search. Until a search word is entered this area is blank. After a search word is entered, buttons appear corresponding to each syntactic category (<code>Noun</code>, <code>Verb</code>, <code>Adjective</code>, <code>Adverb</code>) in which the search string is defined in WordNet. </dd>
 <p> At the right edge of the Search Selection line is a box for entering sense numbers. When this box is empty, search results for all senses of the search word that match the search type are displayed. The search may be restricted to one or more specific senses by entering a comma or space separated list of sense numbers in the <code>Senses</code> box. These sense numbers remain in effect until either the user changes or deletes them, or a new search word is entered.</p>
-<dt>Results Window</p>
-<dd> Most of the browser window consists of a large text buffer for displaying the results of WordNet searches. Horizontal and vertical scroll bars are present for scrolling through the output.</p>
-<dt>Status Line</p>
-<dd> A status line is at the bottom of the browser window. When search results are displayed in the Results Window, this status line reflects the type of search selected. When there is no search word entered, your are prompted to <code>&quot;Enter search word and press return.&quot;</code> If the search word entered is not in WordNet, the message <code>&quot;Sorry, no matches found.&quot;</code> is displayed.</dl>
+<dt>Results Window</dt>
+<dd> Most of the browser window consists of a large text buffer for displaying the results of WordNet searches. Horizontal and vertical scroll bars are present for scrolling through the output.</dd>
+<dt>Status Line</dt>
+<dd> A status line is at the bottom of the browser window. When search results are displayed in the Results Window, this status line reflects the type of search selected. When there is no search word entered, your are prompted to <code>&quot;Enter search word and press return.&quot;</code> If the search word entered is not in WordNet, the message <code>&quot;Sorry, no matches found.&quot;</code> is displayed.</dd></dl>
 <h2>SEARCHING THE DATABASE</h2>
 <p> The WordNet browser navigates through WordNet in two steps. First a search word is entered and an overview of all the senses of the word in all syntactic categories is displayed in the Results Window. The senses are grouped by syntactic category, and each synset is annotated as described above with <i>synset_offset</i>, <i>lex_filename</i>, and <i>sense_number</i> as dictated by the advanced search options set. The overview search also indicates how many of the senses in each syntactic category are represented in the tagged texts. This is a way for the user to determine whether a sense&#8217;s sense number is based on semantic tagging data, or was arbitrarily assigned. For each sense that has appeared in such texts, the number of semantic tags to that sense are indicated in parentheses after the sense number. </p>
 <p> Then, within a syntactic category, a specific search is selected. The desired search is performed and the search results are displayed in the Results Window. Additional searches on the same word can be performed, or a new search word can be entered. </p>
@@ -46,41 +46,37 @@ description: "wnb – WordNet window-based browser interface"
 <h2>MENUS</h2>
 <h3>File Menu</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Find keywords by substring</p>
-<dd> Display a popup window for specifying a search of WordNet for words or collocations that contain a specific substring. If a search word is currently entered in the <code>Search Word</code> box, it is used as the substring to search for by default. The Substring Search Window contains a box for entering a substring, a pulldown menu to its right for specifying the part of speech to search, a large area for displaying the search results, and action buttons at the bottom entitled <code>Search</code>, <code>Save</code>, <code>Print</code> <code>Dismiss</code>. </p>
+<dt>Find keywords by substring</dt>
+<dd> Display a popup window for specifying a search of WordNet for words or collocations that contain a specific substring. If a search word is currently entered in the <code>Search Word</code> box, it is used as the substring to search for by default. The Substring Search Window contains a box for entering a substring, a pulldown menu to its right for specifying the part of speech to search, a large area for displaying the search results, and action buttons at the bottom entitled <code>Search</code>, <code>Save</code>, <code>Print</code> <code>Dismiss</code>. </dd>
 <p> Once a substring is entered and a part of speech selected, clicking on the <code>Search</code> button causes a search to be done for all words and collocations in WordNet, in that syntactic category, that contain the substring according to the following criteria: </p>
 <p> 1. The substring can appear at the beginning or end of a word, hyphenated string o collocation. </p>
 <p> 2. The substring can appear in the middle of a hyphenated string or collocation, but only delimited on both sides by spaces or hyphens. </p>
 <p> The search results are displayed in the large buffer. Clicking on an item from the search results list causes <code>wnb()</code> to automatically enter that word in the <code>Search Word</code> box of the WordNet Browser Window and perform the Overview search. </p>
 <p> Clicking the <code>Save</code> button generates a popup dialog for specifying a filename to save the substring search results to. Clicking the <code>Print</code> button generates a popup dialog in which a print command can be specified. </p>
 <p> Selecting <code>Dismiss</code> closes the Substring Search Window.</p>
-<dt>Save current display</p>
-<dd> Display a popup dialog for specifying a filename to save the current Results Window contents to.</p>
-<dt>Print current display</p>
-<dd> Display a popup dialog in which to specify a print command to which the current Results Window contents can be piped. Note &#8211; this option does not exist in the Windows version.</p>
-<dt>Clear current display</p>
-<dd> Clear the <code>Search Word</code> and <code>Senses</code> boxes, and Results Window.</p>
-<dt>Exit</p>
-<dd> Does what you would expect.</dl>
+<dt>Save current display</dt>
+<dd> Display a popup dialog for specifying a filename to save the current Results Window contents to.</dd>
+<dt>Print current display</dt>
+<dd> Display a popup dialog in which to specify a print command to which the current Results Window contents can be piped. Note &#8211; this option does not exist in the Windows version.</dd>
+<dt>Clear current display</dt>
+<dd> Clear the <code>Search Word</code> and <code>Senses</code> boxes, and Results Window.</dd>
+<dt>Exit</dt>
+<dd> Does what you would expect.</dd></dl>
 </dl>
 <h3>History</h3>
 <p> This pulldown menu contains a list of the last searches performed. Selecting an item from this list performs that search again. The maximum number of searches stored in the list can be adjusted from the <code>Options</code> menu. The default is 10.</p>
 <h3>Options</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Show help with each search</p>
-<dd> When this checkbox is selected search results are preceded by some explanatory text about the type of search selected. This is off by default.</p>
-<dt>Show descriptive gloss</p>
-<dd> When this checkbox is selected, synset glosses are displayed in all search results. This is set by default. Note that glosses are always displayed in the Overview.</p>
-<dt>Wrap Lines</p>
-<dd> When this checkbox is selected, lines in the Results Window that are wider than the window are automatically wrapped. This is set by default. If not selected, a horizontal scroll bar is present if any lines are longer than the width of the window.</p>
-<dt>Set advanced search options&#8230;</p>
-<dd> Selecting this item displays a popup window for setting the following search options: <code>Lexical file information; Synset location in database file; Sense number</code>. Choices for each are: </p>
+<dt>Show help with each search</dt>
+<dd> When this checkbox is selected search results are preceded by some explanatory text about the type of search selected. This is off by default.</dd>
+<dt>Show descriptive gloss</dt>
+<dd> When this checkbox is selected, synset glosses are displayed in all search results. This is set by default. Note that glosses are always displayed in the Overview.</dd>
+<dt>Wrap Lines</dt>
+<dd> When this checkbox is selected, lines in the Results Window that are wider than the window are automatically wrapped. This is set by default. If not selected, a horizontal scroll bar is present if any lines are longer than the width of the window.</dd>
+<dt>Set advanced search options&#8230;</dt>
+<dd> Selecting this item displays a popup window for setting the following search options: <code>Lexical file information; Synset location in database file; Sense number</code>. Choices for each are: </dd>
 <pre>
         <code>Don't show</code> (default)
         <code>Show with searches</code>
@@ -89,26 +85,24 @@ description: "wnb – WordNet window-based browser interface"
 <p> When lexical file information is shown, the name of the lexicographer file is printed before each synset, enclosed in angle brackets (<code>&lt;~~</code><i>&#8230;</i><code>~~&gt;</code>). When both lexical file information and synset location information are displayed, the synset location information appears first. If within one lexicographer file more than one sense of a word is entered, an integer <i>lex_id</i> is appended onto all but one of the word&#8217;s instances to uniquely identify it. In each synset, each word having a non-zero <i>lex_id</i> is printed with the <i>lex_id</i> value printed immediately following the word. If both lexicographer information and sense numbers are displayed, <i>lex_id</i>s, if present, precede sense numbers. </p>
 <p> When synset location is shown, the byte offset of the synset in the database &quot;data&quot; file corresponding to the syntactic category of the synset is printed before each synset, enclosed in curly braces (<code>{~~</code><i>&#8230;</i><code>~~}</code>). When both lexical file information and synset location information are displayed, the synset location information appears first. </p>
 <p> When sense numbers are shown, the sense number of each word in each synset is printed immediately after the word, and is preceded by a number sign (<code>#</code>).</p>
-<dt>Set maximum history length&#8230;</p>
-<dd> Display a popup dialog in which the maximum number of previous searches to be kept on the History list can be set.</p>
-<dt>Set font&#8230;~~~~~~~~~~~</p>
-<dd> Display a popup window for setting the font (typeface) and font size to use for the Results Window. Choices for typeface are: <code>Courier</code>, <code>Helvetica</code>, and <code>Times</code> (default). Font size can be <code>small</code>, <code>medium</code> (default), or <code>large</code>.</p>
-<dt>Save current options as default</p>
-<dd> Save the currently set options. Next time the browser is started, these options will be used as the user defaults.</dl>
+<dt>Set maximum history length&#8230;</dt>
+<dd> Display a popup dialog in which the maximum number of previous searches to be kept on the History list can be set.</dd>
+<dt>Set font&#8230;~~~~~~~~~~~</dt>
+<dd> Display a popup window for setting the font (typeface) and font size to use for the Results Window. Choices for typeface are: <code>Courier</code>, <code>Helvetica</code>, and <code>Times</code> (default). Font size can be <code>small</code>, <code>medium</code> (default), or <code>large</code>.</dd>
+<dt>Save current options as default</dt>
+<dd> Save the currently set options. Next time the browser is started, these options will be used as the user defaults.</dd></dl>
 </dl>
 <h3>Help</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Help on using the WordNet browser</p>
-<dd> Display this manual page.</p>
-<dt>Help on WordNet terminology</p>
-<dd> Display the <code><a href="/docs/linux/man/7-wngloss/">wngloss</a></code>(7) manual page.</p>
-<dt>Display the WordNet license</p>
-<dd> Display the WordNet copyright notice and license agreement.</p>
-<dt>About the WordNet browser</p>
-<dd> Information about this application.</dl>
+<dt>Help on using the WordNet browser</dt>
+<dd> Display this manual page.</dd>
+<dt>Help on WordNet terminology</dt>
+<dd> Display the <code><a href="/docs/linux/man/7-wngloss/">wngloss</a></code>(7) manual page.</dd>
+<dt>Display the WordNet license</dt>
+<dd> Display the WordNet copyright notice and license agreement.</dd>
+<dt>About the WordNet browser</dt>
+<dd> Information about this application.</dd></dl>
 </dl>
 <h2>SHORCUTS</h2>
 <p> Clicking on any word in the Results Window while holding down the <font SIZE="-1"><code>SHIFT</code></font> key on the keyboard causes the browser to replace <code>Search Word</code> with the word and display its Overview and available searches. Clicking on any word in the Results Window with the middle mouse button does the same thing. </p>
@@ -123,7 +117,7 @@ description: "wnb – WordNet window-based browser interface"
 </pre>
 <dl>
 <dt>
-<dd> One line listing the number of senses matching the search selected. </p>
+</dt><dd> One line listing the number of senses matching the search selected. </dd>
 <p> Each sense matching the search selected displayed as follows: </p>
 <pre><code>
 Sense n
@@ -144,26 +138,26 @@ Sense n
 <p> If the WordNet database files cannot be opened, error messages are displayed. This is usually corrected by setting the environment variables described below to the proper location of the WordNet database for your installation.</p>
 <h2>ENVIRONMENT VARIABLES (UNIX)</h2>
 <dl>
-<dt><code>WNHOME</code></p>
-<dd> Base directory for WordNet. Default is <code>/usr/local/WordNet-3.0</code>.</p>
-<dt><code>WNSEARCHDIR</code></p>
-<dd> Directory in which the WordNet database has been installed. Default is <code>WNHOME/dict</code>.</dl>
+<dt><code>WNHOME</code></dt>
+<dd> Base directory for WordNet. Default is <code>/usr/local/WordNet-3.0</code>.</dd>
+<dt><code>WNSEARCHDIR</code></dt>
+<dd> Directory in which the WordNet database has been installed. Default is <code>WNHOME/dict</code>.</dd></dl>
 <h2>REGISTRY (WINDOWS)</h2>
 <dl>
-<dt><code>HKEY_LOCAL_MACHINE\SOFTWARE\WordNet\3.0\WNHome</code></p>
-<dd> Base directory for WordNet. Default is <code>C:\Program~Files\WordNet\3.0</code>.</p>
-<dt><code>HKEY_CURRENT_USER\SOFTWARE\WordNet\3.0\wnres</code></p>
-<dd> User&#8217;s default browser options.</dl>
+<dt><code>HKEY_LOCAL_MACHINE\SOFTWARE\WordNet\3.0\WNHome</code></dt>
+<dd> Base directory for WordNet. Default is <code>C:\Program~Files\WordNet\3.0</code>.</dd>
+<dt><code>HKEY_CURRENT_USER\SOFTWARE\WordNet\3.0\wnres</code></dt>
+<dd> User&#8217;s default browser options.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>index.</code><i>pos</i></p>
-<dd> database index files</p>
-<dt><code>data.</code><i>pos</i></p>
-<dd> database data files</p>
-<dt><code>*.vrb</code></p>
-<dd> files of sentences illustrating the use of verbs</p>
-<dt><i>pos</i>.exc</p>
-<dd> morphology exception lists</dl>
+<dt><code>index.</code><i>pos</i></dt>
+<dd> database index files</dd>
+<dt><code>data.</code><i>pos</i></dt>
+<dd> database data files</dd>
+<dt><code>*.vrb</code></dt>
+<dd> files of sentences illustrating the use of verbs</dd>
+<dt><i>pos</i>.exc</dt>
+<dd> morphology exception lists</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wnintro/">wnintro</a></code>(1), <code><a href="/docs/linux/man/1-wn/">wn</a></code>(1), <code><a href="/docs/linux/man/3-wnintro/">wnintro</a></code>(3), <code><a href="/docs/linux/man/5-lexnames/">lexnames</a></code>(5), <code><a href="/docs/linux/man/5-senseidx/">senseidx</a></code>(5), <code><a href="/docs/linux/man/5-wndb/">wndb</a></code>(5), <code><a href="/docs/linux/man/5-wninput/">wninput</a></code>(5), <code><a href="/docs/linux/man/7-morphy/">morphy</a></code>(7), <code><a href="/docs/linux/man/7-wngloss/">wngloss</a></code>(7), <code><a href="/docs/linux/man/7-wngroups/">wngroups</a></code>(7).</p>
 <h2>BUGS</h2>

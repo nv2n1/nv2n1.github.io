@@ -24,8 +24,8 @@ description: "rhev_selinux – Security Enhanced Linux Policy for the rhev proce
 <p> rhev_agentd_exec_t </code> </p>
 <p> &#8211; Set files with the rhev_agentd_exec_t type, if you want to transition an executable to the rhev_agentd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/share/rhev-agent/rhev-agentd.py, /usr/share/ovirt-guest-agent </p>
+<dt>Paths:</dt>
+<dd>/usr/share/rhev-agent/rhev-agentd.py, /usr/share/ovirt-guest-agent </dd>
 </dl>
 <p> <code>rhev_agentd_log_t </code> </p>
 <p> &#8211; Set files with the rhev_agentd_log_t type, if you want to treat the data as rhev agentd log data, usually stored under the /var/log directory. </p>

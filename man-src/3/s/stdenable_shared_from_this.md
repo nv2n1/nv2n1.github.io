@@ -53,10 +53,8 @@ enable_shared_from_this provides the safe alternative to an expression like std:
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;memory&gt;
-
 #include &lt;iostream&gt;
 struct Good : std::enable_shared_from_this&lt;Good&gt; // note: public inheritance
-
 {
     std::shared_ptr&lt;Good&gt; getptr()
     {
@@ -64,7 +62,6 @@ struct Good : std::enable_shared_from_this&lt;Good&gt; // note: public inheritan
     }
 };
 struct Bad
-
 {
     std::shared_ptr&lt;Bad&gt; getptr()
     {
@@ -76,7 +73,6 @@ struct Bad
     }
 };
 int main()
-
 {
     // Good: the two shared_ptr's share the same object
     std::shared_ptr&lt;Good&gt; gp1 = std::make_shared&lt;Good&gt;();
@@ -94,7 +90,6 @@ int main()
     std::shared_ptr&lt;Bad&gt; bp1 = std::make_shared&lt;Bad&gt;();
     std::shared_ptr&lt;Bad&gt; bp2 = bp1-&gt;getptr();
     std::cout &lt;&lt; &quot;bp2.use_count() = &quot; &lt;&lt; bp2.use_count() &lt;&lt; '\n';
-
 } // UB: double-delete of Bad
 </code></pre>
 

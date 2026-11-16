@@ -18,24 +18,24 @@ description: "krb5_auth_con_addflags krb5_auth_con_free krb5_auth_con_genaddrs k
 <p> Fn krb5_auth_con_init allocates and initializes the <code>krb5_auth_context</code> structure. Default values can be changed with Fn krb5_auth_con_setcksumtype and Fn krb5_auth_con_setflags . The <code>auth_context</code> structure must be freed by Fn krb5_auth_con_free . </p>
 <p> Fn krb5_auth_con_getflags , Fn krb5_auth_con_setflags , Fn krb5_auth_con_addflags and Fn krb5_auth_con_removeflags gets and modifies the flags for a <code>krb5_auth_context</code> structure. Possible flags to set are:</p>
 <dl>
-<dt><code>KRB5_AUTH_CONTEXT_DO_SEQUENCE</code></p>
-<dd> Generate and check sequence-number on each packet.</p>
-<dt><code>KRB5_AUTH_CONTEXT_DO_TIME</code></p>
-<dd> Check timestamp on incoming packets.</p>
-<dt><code>KRB5_AUTH_CONTEXT_RET_SEQUENCE , KRB5_AUTH_CONTEXT_RET_TIME</code></p>
-<dd> Return sequence numbers and time stamps in the outdata parameters.</p>
-<dt><code>KRB5_AUTH_CONTEXT_CLEAR_FORWARDED_CRED</code></p>
-<dd> will force Fn krb5_get_forwarded_creds and Fn krb5_fwd_tgt_creds to create unencrypted ) <code>KRB5_ENCTYPE_NULL</code> credentials. This is for use with old MIT server and JAVA based servers as they can&#8217;t handle encrypted <code>KRB-CRED</code> Note that sending such <code>KRB-CRED</code> is clear exposes crypto keys and tickets and is insecure, make sure the packet is encrypted in the protocol. krb5_rd_cred3, krb5_rd_priv3, krb5_rd_safe3, krb5_mk_priv3 and krb5_mk_safe3. Setting this flag requires that parameter to be passed to these functions. </p>
+<dt><code>KRB5_AUTH_CONTEXT_DO_SEQUENCE</code></dt>
+<dd> Generate and check sequence-number on each packet.</dd>
+<dt><code>KRB5_AUTH_CONTEXT_DO_TIME</code></dt>
+<dd> Check timestamp on incoming packets.</dd>
+<dt><code>KRB5_AUTH_CONTEXT_RET_SEQUENCE , KRB5_AUTH_CONTEXT_RET_TIME</code></dt>
+<dd> Return sequence numbers and time stamps in the outdata parameters.</dd>
+<dt><code>KRB5_AUTH_CONTEXT_CLEAR_FORWARDED_CRED</code></dt>
+<dd> will force Fn krb5_get_forwarded_creds and Fn krb5_fwd_tgt_creds to create unencrypted ) <code>KRB5_ENCTYPE_NULL</code> credentials. This is for use with old MIT server and JAVA based servers as they can&#8217;t handle encrypted <code>KRB-CRED</code> Note that sending such <code>KRB-CRED</code> is clear exposes crypto keys and tickets and is insecure, make sure the packet is encrypted in the protocol. krb5_rd_cred3, krb5_rd_priv3, krb5_rd_safe3, krb5_mk_priv3 and krb5_mk_safe3. Setting this flag requires that parameter to be passed to these functions. </dd>
 <p> The flags <code>KRB5_AUTH_CONTEXT_DO_TIME</code> also modifies the behavior the function Fn krb5_get_forwarded_creds by removing the timestamp in the forward credential message, this have backward compatibility problems since not all versions of the heimdal supports timeless credentional messages. Is very useful since it always the sender of the message to cache forward message and thus avoiding a round trip to the KDC for each time a credential is forwarded. The same functionality can be obtained by using address-less tickets.</dl>
 <p> Fn krb5_auth_con_setaddrs , Fn krb5_auth_con_setaddrs_from_fd and Fn krb5_auth_con_getaddrs gets and sets the addresses that are checked when a packet is received. It is mandatory to set an address for the remote host. If the local address is not set, it iss deduced from the underlaying operating system. Fn krb5_auth_con_getaddrs will call Fn krb5_free_address on any address that is passed in Fa local_addr or Fa remote_addr . Fn krb5_auth_con_setaddr allows passing in a <code>NULL</code> pointer as Fa local_addr and Fa remote_addr , in that case it will just not set that address. </p>
 <p> Fn krb5_auth_con_setaddrs_from_fd fetches the addresses from a file descriptor. </p>
 <p> Fn krb5_auth_con_genaddrs fetches the address information from the given file descriptor Fa fd depending on the bitmap argument Fa flags . </p>
 <p> Possible values on Fa flags are:</p>
 <dl>
-<dt><i>KRB5_AUTH_CONTEXT_GENERATE_LOCAL_ADDR</i></p>
-<dd> fetches the local address from Fa fd .</p>
-<dt><i>KRB5_AUTH_CONTEXT_GENERATE_REMOTE_ADDR</i></p>
-<dd> fetches the remote address from Fa fd .</dl>
+<dt><i>KRB5_AUTH_CONTEXT_GENERATE_LOCAL_ADDR</i></dt>
+<dd> fetches the local address from Fa fd .</dd>
+<dt><i>KRB5_AUTH_CONTEXT_GENERATE_REMOTE_ADDR</i></dt>
+<dd> fetches the remote address from Fa fd .</dd></dl>
 <p> Fn krb5_auth_con_setkey , Fn krb5_auth_con_setuserkey and Fn krb5_auth_con_getkey gets and sets the key used for this auth context. The keyblock returned by Fn krb5_auth_con_getkey should be freed with Fn krb5_free_keyblock . The keyblock send into Fn krb5_auth_con_setkey is copied into the <code>krb5_auth_context</code> and thus no special handling is needed. <code>NULL</code> is not a valid keyblock to Fn krb5_auth_con_setkey . </p>
 <p> Fn krb5_auth_con_setuserkey is only useful when doing user to user authentication. Fn krb5_auth_con_setkey is equivalent to Fn krb5_auth_con_setuserkey . </p>
 <p> Fn krb5_auth_con_getlocalsubkey , Fn krb5_auth_con_setlocalsubkey , Fn krb5_auth_con_getremotesubkey and Fn krb5_auth_con_setremotesubkey gets and sets the keyblock for the local and remote subkey. The keyblock returned by Fn krb5_auth_con_getlocalsubkey and Fn krb5_auth_con_getremotesubkey must be freed with Fn krb5_free_keyblock . </p>

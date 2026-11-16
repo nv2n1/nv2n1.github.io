@@ -23,188 +23,188 @@ description: "unison-2.40.102 – a file-synchronization tool for Unix and Windo
 <h2>OPTIONS</h2>
 <p> All Unison options are long, starting with one dash (`-&#8216;) only. A summary of options is included here. For a complete description, see the inbuilt documentation or the manuals in /usr/share/doc/unison/.</p>
 <dl>
-<dt><code>-auto</code></p>
-<dd> automatically accept default (nonconflicting) actions</p>
-<dt><code>-batch</code></p>
-<dd> batch mode: ask no questions at all</p>
-<dt><code>-doc xxx</code></p>
-<dd> show documentation (&#8216;-doc topics&#8217; lists topics)</p>
-<dt><code>-fat</code></p>
-<dd> use appropriate options for FAT filesystems</p>
-<dt><code>-group</code></p>
-<dd> synchronize group attributes</p>
-<dt><code>-ignore xxx</code></p>
-<dd> add a pattern to the ignore list</p>
-<dt><code>-ignorenot xxx</code></p>
-<dd> add a pattern to the ignorenot list</p>
-<dt><code>-nocreation xxx</code></p>
-<dd> prevent file creations on one replica</p>
-<dt><code>-nodeletion xxx</code></p>
-<dd> prevent file deletions on one replica</p>
-<dt><code>-noupdate xxx</code></p>
-<dd> prevent file updates and deletions on one replica</p>
-<dt><code>-owner</code></p>
-<dd> synchronize owner</p>
-<dt><code>-path xxx</code></p>
-<dd> path to synchronize</p>
-<dt><code>-perms n</code></p>
-<dd> part of the permissions which is synchronized</p>
-<dt><code>-root xxx</code></p>
-<dd> root of a replica (should be used exactly twice)</p>
-<dt><code>-silent</code></p>
-<dd> print nothing except error messages</p>
-<dt><code>-terse</code></p>
-<dd> suppress status messages</p>
-<dt><code>-testserver</code></p>
-<dd> exit immediately after the connection to the server</p>
-<dt><code>-times</code></p>
-<dd> synchronize modification times</p>
-<dt><code>-version</code></p>
-<dd> print version and exit</p>
-<dt><code>-addprefsto xxx</code></p>
-<dd> file to add new prefs to</p>
-<dt><code>-addversionno</code></p>
-<dd> add version number to name of unison on server</p>
-<dt><code>-backup xxx</code></p>
-<dd> add a pattern to the backup list</p>
-<dt><code>-backupcurr xxx</code></p>
-<dd> add a pattern to the backupcurr list</p>
-<dt><code>-backupcurrnot xxx</code></p>
-<dd> add a pattern to the backupcurrnot list</p>
-<dt><code>-backupdir xxx</code></p>
-<dd> directory for storing centralized backups</p>
-<dt><code>-backuploc xxx</code></p>
-<dd> where backups are stored (&#8216;local&#8217; or &#8216;central&#8217;)</p>
-<dt><code>-backupnot xxx</code></p>
-<dd> add a pattern to the backupnot list</p>
-<dt><code>-backupprefix xxx</code></p>
-<dd> prefix for the names of backup files</p>
-<dt><code>-backups</code></p>
-<dd> keep backup copies of all files (see also &#8216;backup&#8217;)</p>
-<dt><code>-backupsuffix xxx</code></p>
-<dd> a suffix to be added to names of backup files</p>
-<dt><code>-confirmbigdel</code></p>
-<dd> ask about whole-replica (or path) deletes (default true)</p>
-<dt><code>-confirmmerge</code></p>
-<dd> ask for confirmation before committing results of a merge</p>
-<dt><code>-contactquietly</code></p>
-<dd> suppress the &#8216;contacting server&#8217; message during startup</p>
-<dt><code>-copymax n</code></p>
-<dd> maximum number of simultaneous copyprog transfers</p>
-<dt><code>-copyprog xxx</code></p>
-<dd> external program for copying large files</p>
-<dt><code>-copyprogrest xxx</code></p>
-<dd> variant of copyprog for resuming partial transfers</p>
-<dt><code>-copyquoterem xxx</code></p>
-<dd> add quotes to remote file name for copyprog (true/false/default)</p>
-<dt><code>-copythreshold n</code></p>
-<dd> use copyprog on files bigger than this (if &gt;=0, in Kb)</p>
-<dt><code>-debug xxx</code></p>
-<dd> debug module xxx (&#8216;all&#8217; -&gt; everything, &#8216;verbose&#8217; -&gt; more)</p>
-<dt><code>-diff xxx</code></p>
-<dd> set command for showing differences between files</p>
-<dt><code>-dontchmod</code></p>
-<dd> when set, never use the chmod system call</p>
-<dt><code>-dumbtty</code></p>
-<dd> do not change terminal settings in text UI</p>
-<dt><code>-fastcheck xxx</code></p>
-<dd> do fast update detection (true/false/default)</p>
-<dt><code>-follow xxx</code></p>
-<dd> add a pattern to the follow list</p>
-<dt><code>-force xxx</code></p>
-<dd> force changes from this replica to the other</p>
-<dt><code>-forcepartial xxx</code></p>
-<dd> add a pattern to the forcepartial list</p>
-<dt><code>-halfduplex</code></p>
-<dd> force half-duplex communication with the server</p>
-<dt><code>-height n</code></p>
-<dd> height (in lines) of main window in graphical interface</p>
-<dt><code>-host xxx</code></p>
-<dd> bind the socket to this host name in server socket mode</p>
-<dt><code>-ignorearchives</code></p>
-<dd> ignore existing archive files</p>
-<dt><code>-ignorecase xxx</code></p>
-<dd> identify upper/lowercase filenames (true/false/default)</p>
-<dt><code>-ignoreinodenumbers</code></p>
-<dd> ignore inode number changes when detecting updates</p>
-<dt><code>-ignorelocks</code></p>
-<dd> ignore locks left over from previous run (dangerous!)</p>
-<dt><code>-immutable xxx</code></p>
-<dd> add a pattern to the immutable list</p>
-<dt><code>-immutablenot xxx</code></p>
-<dd> add a pattern to the immutablenot list</p>
-<dt><code>-key xxx</code></p>
-<dd> define a keyboard shortcut for this profile (in some UIs)</p>
-<dt><code>-killserver</code></p>
-<dd> kill server when done (even when using sockets)</p>
-<dt><code>-label xxx</code></p>
-<dd> provide a descriptive string label for this profile</p>
-<dt><code>-links xxx</code></p>
-<dd> allow the synchronization of symbolic links (true/false/default)</p>
-<dt><code>-log</code></p>
-<dd> record actions in logfile (default true)</p>
-<dt><code>-logfile xxx</code></p>
-<dd> logfile name</p>
-<dt><code>-maxbackups n</code></p>
-<dd> number of backed up versions of a file</p>
-<dt><code>-maxerrors n</code></p>
-<dd> maximum number of errors before a directory transfer is aborted</p>
-<dt><code>-maxthreads n</code></p>
-<dd> maximum number of simultaneous file transfers</p>
-<dt><code>-merge xxx</code></p>
-<dd> add a pattern to the merge list</p>
-<dt><code>-mountpoint xxx</code></p>
-<dd> abort if this path does not exist</p>
-<dt><code>-nocreationpartial xxx</code></p>
-<dd> add a pattern to the nocreationpartial list</p>
-<dt><code>-nodeletionpartial xxx</code></p>
-<dd> add a pattern to the nodeletionpartial list</p>
-<dt><code>-noupdatepartial xxx</code></p>
-<dd> add a pattern to the noupdatepartial list</p>
-<dt><code>-numericids</code></p>
-<dd> don&#8217;t map uid/gid values by user/group names</p>
-<dt><code>-prefer xxx</code></p>
-<dd> choose this replica&#8217;s version for conflicting changes</p>
-<dt><code>-preferpartial xxx</code></p>
-<dd> add a pattern to the preferpartial list</p>
-<dt><code>-repeat xxx</code></p>
-<dd> synchronize repeatedly (text interface only)</p>
-<dt><code>-retry n</code></p>
-<dd> re-try failed synchronizations N times (text ui only)</p>
-<dt><code>-rootalias xxx</code></p>
-<dd> register alias for canonical root names</p>
-<dt><code>-rsrc xxx</code></p>
-<dd> synchronize resource forks (true/false/default)</p>
-<dt><code>-rsync</code></p>
-<dd> activate the rsync transfer mode (default true)</p>
-<dt><code>-selftest</code></p>
-<dd> run internal tests and exit</p>
-<dt><code>-servercmd xxx</code></p>
-<dd> name of unison executable on remote server</p>
-<dt><code>-showarchive</code></p>
-<dd> show &#8216;true names&#8217; (for rootalias) of roots and archive</p>
-<dt><code>-socket xxx</code></p>
-<dd> act as a server on a socket</p>
-<dt><code>-sortbysize</code></p>
-<dd> list changed files by size, not name</p>
-<dt><code>-sortfirst xxx</code></p>
-<dd> add a pattern to the sortfirst list</p>
-<dt><code>-sortlast xxx</code></p>
-<dd> add a pattern to the sortlast list</p>
-<dt><code>-sortnewfirst</code></p>
-<dd> list new before changed files</p>
-<dt><code>-sshargs xxx</code></p>
-<dd> other arguments (if any) for remote shell command</p>
-<dt><code>-sshcmd xxx</code></p>
-<dd> path to the ssh executable</p>
-<dt><code>-stream</code></p>
-<dd> use a streaming protocol for transferring file contents (default true)</p>
-<dt><code>-ui xxx</code></p>
-<dd> select UI (&#8216;text&#8217; or &#8216;graphic&#8217;); command-line only</p>
-<dt><code>-unicode xxx</code></p>
-<dd> assume Unicode encoding in case insensitive mode</p>
-<dt><code>-xferbycopying</code></p>
-<dd> optimize transfers using local copies (default true)</dl>
+<dt><code>-auto</code></dt>
+<dd> automatically accept default (nonconflicting) actions</dd>
+<dt><code>-batch</code></dt>
+<dd> batch mode: ask no questions at all</dd>
+<dt><code>-doc xxx</code></dt>
+<dd> show documentation (&#8216;-doc topics&#8217; lists topics)</dd>
+<dt><code>-fat</code></dt>
+<dd> use appropriate options for FAT filesystems</dd>
+<dt><code>-group</code></dt>
+<dd> synchronize group attributes</dd>
+<dt><code>-ignore xxx</code></dt>
+<dd> add a pattern to the ignore list</dd>
+<dt><code>-ignorenot xxx</code></dt>
+<dd> add a pattern to the ignorenot list</dd>
+<dt><code>-nocreation xxx</code></dt>
+<dd> prevent file creations on one replica</dd>
+<dt><code>-nodeletion xxx</code></dt>
+<dd> prevent file deletions on one replica</dd>
+<dt><code>-noupdate xxx</code></dt>
+<dd> prevent file updates and deletions on one replica</dd>
+<dt><code>-owner</code></dt>
+<dd> synchronize owner</dd>
+<dt><code>-path xxx</code></dt>
+<dd> path to synchronize</dd>
+<dt><code>-perms n</code></dt>
+<dd> part of the permissions which is synchronized</dd>
+<dt><code>-root xxx</code></dt>
+<dd> root of a replica (should be used exactly twice)</dd>
+<dt><code>-silent</code></dt>
+<dd> print nothing except error messages</dd>
+<dt><code>-terse</code></dt>
+<dd> suppress status messages</dd>
+<dt><code>-testserver</code></dt>
+<dd> exit immediately after the connection to the server</dd>
+<dt><code>-times</code></dt>
+<dd> synchronize modification times</dd>
+<dt><code>-version</code></dt>
+<dd> print version and exit</dd>
+<dt><code>-addprefsto xxx</code></dt>
+<dd> file to add new prefs to</dd>
+<dt><code>-addversionno</code></dt>
+<dd> add version number to name of unison on server</dd>
+<dt><code>-backup xxx</code></dt>
+<dd> add a pattern to the backup list</dd>
+<dt><code>-backupcurr xxx</code></dt>
+<dd> add a pattern to the backupcurr list</dd>
+<dt><code>-backupcurrnot xxx</code></dt>
+<dd> add a pattern to the backupcurrnot list</dd>
+<dt><code>-backupdir xxx</code></dt>
+<dd> directory for storing centralized backups</dd>
+<dt><code>-backuploc xxx</code></dt>
+<dd> where backups are stored (&#8216;local&#8217; or &#8216;central&#8217;)</dd>
+<dt><code>-backupnot xxx</code></dt>
+<dd> add a pattern to the backupnot list</dd>
+<dt><code>-backupprefix xxx</code></dt>
+<dd> prefix for the names of backup files</dd>
+<dt><code>-backups</code></dt>
+<dd> keep backup copies of all files (see also &#8216;backup&#8217;)</dd>
+<dt><code>-backupsuffix xxx</code></dt>
+<dd> a suffix to be added to names of backup files</dd>
+<dt><code>-confirmbigdel</code></dt>
+<dd> ask about whole-replica (or path) deletes (default true)</dd>
+<dt><code>-confirmmerge</code></dt>
+<dd> ask for confirmation before committing results of a merge</dd>
+<dt><code>-contactquietly</code></dt>
+<dd> suppress the &#8216;contacting server&#8217; message during startup</dd>
+<dt><code>-copymax n</code></dt>
+<dd> maximum number of simultaneous copyprog transfers</dd>
+<dt><code>-copyprog xxx</code></dt>
+<dd> external program for copying large files</dd>
+<dt><code>-copyprogrest xxx</code></dt>
+<dd> variant of copyprog for resuming partial transfers</dd>
+<dt><code>-copyquoterem xxx</code></dt>
+<dd> add quotes to remote file name for copyprog (true/false/default)</dd>
+<dt><code>-copythreshold n</code></dt>
+<dd> use copyprog on files bigger than this (if &gt;=0, in Kb)</dd>
+<dt><code>-debug xxx</code></dt>
+<dd> debug module xxx (&#8216;all&#8217; -&gt; everything, &#8216;verbose&#8217; -&gt; more)</dd>
+<dt><code>-diff xxx</code></dt>
+<dd> set command for showing differences between files</dd>
+<dt><code>-dontchmod</code></dt>
+<dd> when set, never use the chmod system call</dd>
+<dt><code>-dumbtty</code></dt>
+<dd> do not change terminal settings in text UI</dd>
+<dt><code>-fastcheck xxx</code></dt>
+<dd> do fast update detection (true/false/default)</dd>
+<dt><code>-follow xxx</code></dt>
+<dd> add a pattern to the follow list</dd>
+<dt><code>-force xxx</code></dt>
+<dd> force changes from this replica to the other</dd>
+<dt><code>-forcepartial xxx</code></dt>
+<dd> add a pattern to the forcepartial list</dd>
+<dt><code>-halfduplex</code></dt>
+<dd> force half-duplex communication with the server</dd>
+<dt><code>-height n</code></dt>
+<dd> height (in lines) of main window in graphical interface</dd>
+<dt><code>-host xxx</code></dt>
+<dd> bind the socket to this host name in server socket mode</dd>
+<dt><code>-ignorearchives</code></dt>
+<dd> ignore existing archive files</dd>
+<dt><code>-ignorecase xxx</code></dt>
+<dd> identify upper/lowercase filenames (true/false/default)</dd>
+<dt><code>-ignoreinodenumbers</code></dt>
+<dd> ignore inode number changes when detecting updates</dd>
+<dt><code>-ignorelocks</code></dt>
+<dd> ignore locks left over from previous run (dangerous!)</dd>
+<dt><code>-immutable xxx</code></dt>
+<dd> add a pattern to the immutable list</dd>
+<dt><code>-immutablenot xxx</code></dt>
+<dd> add a pattern to the immutablenot list</dd>
+<dt><code>-key xxx</code></dt>
+<dd> define a keyboard shortcut for this profile (in some UIs)</dd>
+<dt><code>-killserver</code></dt>
+<dd> kill server when done (even when using sockets)</dd>
+<dt><code>-label xxx</code></dt>
+<dd> provide a descriptive string label for this profile</dd>
+<dt><code>-links xxx</code></dt>
+<dd> allow the synchronization of symbolic links (true/false/default)</dd>
+<dt><code>-log</code></dt>
+<dd> record actions in logfile (default true)</dd>
+<dt><code>-logfile xxx</code></dt>
+<dd> logfile name</dd>
+<dt><code>-maxbackups n</code></dt>
+<dd> number of backed up versions of a file</dd>
+<dt><code>-maxerrors n</code></dt>
+<dd> maximum number of errors before a directory transfer is aborted</dd>
+<dt><code>-maxthreads n</code></dt>
+<dd> maximum number of simultaneous file transfers</dd>
+<dt><code>-merge xxx</code></dt>
+<dd> add a pattern to the merge list</dd>
+<dt><code>-mountpoint xxx</code></dt>
+<dd> abort if this path does not exist</dd>
+<dt><code>-nocreationpartial xxx</code></dt>
+<dd> add a pattern to the nocreationpartial list</dd>
+<dt><code>-nodeletionpartial xxx</code></dt>
+<dd> add a pattern to the nodeletionpartial list</dd>
+<dt><code>-noupdatepartial xxx</code></dt>
+<dd> add a pattern to the noupdatepartial list</dd>
+<dt><code>-numericids</code></dt>
+<dd> don&#8217;t map uid/gid values by user/group names</dd>
+<dt><code>-prefer xxx</code></dt>
+<dd> choose this replica&#8217;s version for conflicting changes</dd>
+<dt><code>-preferpartial xxx</code></dt>
+<dd> add a pattern to the preferpartial list</dd>
+<dt><code>-repeat xxx</code></dt>
+<dd> synchronize repeatedly (text interface only)</dd>
+<dt><code>-retry n</code></dt>
+<dd> re-try failed synchronizations N times (text ui only)</dd>
+<dt><code>-rootalias xxx</code></dt>
+<dd> register alias for canonical root names</dd>
+<dt><code>-rsrc xxx</code></dt>
+<dd> synchronize resource forks (true/false/default)</dd>
+<dt><code>-rsync</code></dt>
+<dd> activate the rsync transfer mode (default true)</dd>
+<dt><code>-selftest</code></dt>
+<dd> run internal tests and exit</dd>
+<dt><code>-servercmd xxx</code></dt>
+<dd> name of unison executable on remote server</dd>
+<dt><code>-showarchive</code></dt>
+<dd> show &#8216;true names&#8217; (for rootalias) of roots and archive</dd>
+<dt><code>-socket xxx</code></dt>
+<dd> act as a server on a socket</dd>
+<dt><code>-sortbysize</code></dt>
+<dd> list changed files by size, not name</dd>
+<dt><code>-sortfirst xxx</code></dt>
+<dd> add a pattern to the sortfirst list</dd>
+<dt><code>-sortlast xxx</code></dt>
+<dd> add a pattern to the sortlast list</dd>
+<dt><code>-sortnewfirst</code></dt>
+<dd> list new before changed files</dd>
+<dt><code>-sshargs xxx</code></dt>
+<dd> other arguments (if any) for remote shell command</dd>
+<dt><code>-sshcmd xxx</code></dt>
+<dd> path to the ssh executable</dd>
+<dt><code>-stream</code></dt>
+<dd> use a streaming protocol for transferring file contents (default true)</dd>
+<dt><code>-ui xxx</code></dt>
+<dd> select UI (&#8216;text&#8217; or &#8216;graphic&#8217;); command-line only</dd>
+<dt><code>-unicode xxx</code></dt>
+<dd> assume Unicode encoding in case insensitive mode</dd>
+<dt><code>-xferbycopying</code></dt>
+<dd> optimize transfers using local copies (default true)</dd></dl>
 <p> Some preferences are just boolean flags. Others take numeric or string arguments, indicated in the preferences list by n or xxx. Most of the string preferences can be given several times; the arguments are accumulated into a list internally.</p>
 <h2>SEE ALSO</h2>
 <p> The program is documented fully in the in-built documentation and the manual, available as text in /usr/share/doc/unison/.</p>

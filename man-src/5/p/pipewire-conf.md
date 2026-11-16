@@ -28,30 +28,31 @@ description: "pipewire.conf – The PipeWire server configuration file"
 <p> name = [ { k = v1 } { k = v2 } ] # an array of dictionaries </p>
 <p> The configuration files can be expressed in full JSON syntax but for ease of use, a relaxed format may be used where:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>:</code> to delimit keys and values can be substuted by <code>=</code> or a space.</p>
-<dt>&bull;</p>
+<dt>&bull;</dt>
+<dd><code>:</code> to delimit keys and values can be substuted by <code>=</code> or a space.</dd>
+<dt>&bull;</dt>
 <dd>
-<dt> around keys and string can be omited as long as no special characters</p>
-<dd>are used in the strings.</p>
-<dt>&bull;</p>
-<dd><code>,</code> to separate objects can be replaced with a whitespace character.</p>
-<dt>&bull;</p>
-<dd><code>#</code> can be used to start a comment until the line end</dl>
+</dd><dt> around keys and string can be omited as long as no special characters</dt>
+<dd>are used in the strings.</dd>
+<dt>&bull;</dt>
+<dd><code>,</code> to separate objects can be replaced with a whitespace character.</dd>
+<dt>&bull;</dt>
+<dd><code>#</code> can be used to start a comment until the line end</dd></dl>
 <h2>Configuration File Sections</h2>
 <dl>
-<dt><code>context.properties</code></p>
-<dd>Dictionary. These properties configure the PipeWire instance.</p>
-<dt><code>context.spa-libs</code></p>
-<dd>Dictionary. Maps plugin features with globs to a spa library.</p>
-<dt><code>context.modules</code></p>
-<dd>Array of dictionaries. Each entry in the array is a dictionary with the <i>name</i> of the module to load, including optional <i>args</i> and <i>flags</i>. Most modules support being loaded multiple times.</p>
-<dt><code>context.objects</code></p>
-<dd>Array of dictionaries. Each entry in the array is a dictionary containing the <i>factory</i> to create an object from and optional extra arguments specific to that factory.</p>
-<dt><code>context.exec</code></p>
-<dd>Array of dictionaries. Each entry in the array is dictionary containing the <i>path</i> of a program to execute on startup and optional <i>args</i>. </p>
+<dt><code>context.properties</code></dt>
+<dd>Dictionary. These properties configure the PipeWire instance.</dd>
+<dt><code>context.spa-libs</code></dt>
+<dd>Dictionary. Maps plugin features with globs to a spa library.</dd>
+<dt><code>context.modules</code></dt>
+<dd>Array of dictionaries. Each entry in the array is a dictionary with the <i>name</i> of the module to load, including optional <i>args</i> and <i>flags</i>. Most modules support being loaded multiple times.</dd>
+<dt><code>context.objects</code></dt>
+<dd>Array of dictionaries. Each entry in the array is a dictionary containing the <i>factory</i> to create an object from and optional extra arguments specific to that factory.</dd>
+<dt><code>context.exec</code></dt>
+<dd>Array of dictionaries. Each entry in the array is dictionary containing the <i>path</i> of a program to execute on startup and optional <i>args</i>. </dd>
 <p> This array used to contain an entry to start the session manager but this mode of operation has since been demoted to development aid. Avoid starting a session manager in this way in production environment.</dl>
 <h2>Authors</h2>
 <p>The PipeWire Developers &lt;<i><a rel="nofollow" href="https://gitlab.freedesktop.org/pipewire/pipewire/issues">https://gitlab.freedesktop.org/pipewire/pipewire/issues</a></i>&gt;; PipeWire is available from <i><a rel="nofollow" href="https://pipewire.org">https://pipewire.org</a></i></p>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-pipewire/">pipewire</a>(1)</code>, <code><a href="/docs/linux/man/1-pw-mon/">pw-mon</a>(1)</code>, </p>
+</p>

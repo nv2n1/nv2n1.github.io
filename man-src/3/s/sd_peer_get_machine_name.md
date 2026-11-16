@@ -10,33 +10,21 @@ description: "sd_pid_get_session, sd_pid_get_unit, sd_pid_get_user_unit, sd_pid_
 <p>sd_pid_get_session, sd_pid_get_unit, sd_pid_get_user_unit, sd_pid_get_owner_uid, sd_pid_get_machine_name, sd_pid_get_slice, sd_peer_get_session, sd_peer_get_unit, sd_peer_get_user_unit, sd_peer_get_owner_uid, sd_peer_get_machine_name, sd_peer_get_slice &#8211; Determine session, service, owner of a session, container/VM or slice of a specific PID or socket peer</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;systemd/sd-login.h&gt;
-
 int sd_pid_get_session(pid_t pid, char **session);
-
 int sd_pid_get_unit(pid_t pid, char **unit);
-
 int sd_pid_get_user_unit(pid_t pid, char **unit);
-
 int sd_pid_get_owner_uid(pid_t pid, uid_t *uid);
-
 int sd_pid_get_machine_name(pid_t pid, char **name);
-
 int sd_pid_get_slice(pid_t pid, char **slice);
-
 int sd_peer_get_session(int fd, char **session);
-
 int sd_peer_get_unit(int fd, char **unit);
-
 int sd_peer_get_user_unit(int fd, char **unit);
-
 int sd_peer_get_owner_uid(int fd, uid_t *uid);
-
 int sd_peer_get_machine_name(int fd, char **name);
-
 int sd_peer_get_slice(int fd, char **slice);</code></pre>
 <h2>Description</h2>
 <p><code>sd_pid_get_session()</code></p>
-<dd>may be used to determine the login session identifier of a process identified by the specified process identifier. The session identifier is a short string, suitable for usage in file system paths. Note that not all processes are part of a login session (e.g. system service processes, user processes that are shared between multiple sessions of the same user, or kernel threads). For processes not being part of a login session this function will fail. The returned string needs to be freed with the libc <code><a href="/docs/linux/man/3-free/">free</a></code>(3) call after use. </p>
+<dd>may be used to determine the login session identifier of a process identified by the specified process identifier. The session identifier is a short string, suitable for usage in file system paths. Note that not all processes are part of a login session (e.g. system service processes, user processes that are shared between multiple sessions of the same user, or kernel threads). For processes not being part of a login session this function will fail. The returned string needs to be freed with the libc <code><a href="/docs/linux/man/3-free/">free</a></code>(3) call after use. </dd>
 <p> <code>sd_pid_get_unit()</code> may be used to determine the systemd system unit (i.e. system service) identifier of a process identified by the specified PID. The unit name is a short string, suitable for usage in file system paths. Note that not all processes are part of a system unit/service (e.g. user processes, or kernel threads). For processes not being part of a systemd system unit this function will fail. (More specifically: this call will not work for processes that are part of user units, use <code>sd_pid_get_user_unit()</code> for that.) The returned string needs to be freed with the libc <code><a href="/docs/linux/man/3-free/">free</a></code>(3) call after use. </p>
 <p> <code>sd_pid_get_user_unit()</code> may be used to determine the systemd user unit (i.e. user service) identifier of a process identified by the specified PID. This is similar to <code>sd_pid_get_unit()</code> but applies to user units instead of system units. </p>
 <p> <code>sd_pid_get_owner_uid()</code> may be used to determine the Unix user identifier of the owner of the session of a process identified the specified PID. Note that this function will succeed for user processes which are shared between multiple login sessions of the same user, where <code>sd_pid_get_session()</code> will fail. For processes not being part of a login session and not being a shared process of a user this function will fail. </p>

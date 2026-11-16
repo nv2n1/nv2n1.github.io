@@ -27,7 +27,6 @@ int ldap_search_ext(
     struct timeval *timeout,
     int sizelimit,
     int *msgidp);
-
 int ldap_search_ext_s(
     LDAP *ld,
     char *base,

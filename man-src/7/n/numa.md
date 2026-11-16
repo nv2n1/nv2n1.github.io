@@ -20,30 +20,30 @@ description: "numa – overview of Non-Uniform Memory Architecture"
 <p> The second field shows the memory policy currently in effect for the memory range. Note that the effective policy is not necessarily the policy installed by the process for that memory range. Specifically, if the process installed a &quot;default&quot; policy for that range, the effective policy for that range will be the process policy, which may or may not be &quot;default&quot;. </p>
 <p> The rest of the line contains information about the pages allocated in the memory range, as follows:</p>
 <dl>
-<dt><i>N&lt;node&gt;=&lt;nr_pages&gt;</i></p>
-<dd>The number of pages allocated on <i>&lt;node&gt;</i>. <i>&lt;nr_pages&gt;</i> includes only pages currently mapped by the process. Page migration and memory reclaim may have temporarily unmapped pages associated with this memory range. These pages may show up again only after the process has attempted to reference them. If the memory range represents a shared memory area or file mapping, other processes may currently have additional pages mapped in a corresponding memory range.</p>
-<dt><i>file=&lt;filename&gt;</i></p>
-<dd>The file backing the memory range. If the file is mapped as private, write accesses may have generated COW (Copy-On-Write) pages in this memory range. These pages are displayed as anonymous pages.</p>
-<dt><i>heap</i></p>
-<dd>Memory range is used for the heap.</p>
-<dt><i>stack</i></p>
-<dd>Memory range is used for the stack.</p>
-<dt><i>huge</i></p>
-<dd>Huge memory range. The page counts shown are huge pages and not regular sized pages.</p>
-<dt><i>anon=&lt;pages&gt;</i></p>
-<dd>The number of anonymous page in the range.</p>
-<dt><i>dirty=&lt;pages&gt;</i></p>
-<dd>Number of dirty pages.</p>
-<dt><i>mapped=&lt;pages&gt;</i></p>
-<dd>Total number of mapped pages, if different from <i>dirty</i> and <i>anon</i> pages.</p>
-<dt><i>mapmax=&lt;count&gt;</i></p>
-<dd>Maximum mapcount (number of processes mapping a single page) encountered during the scan. This may be used as an indicator of the degree of sharing occurring in a given memory range.</p>
-<dt><i>swapcache=&lt;count&gt;</i></p>
-<dd>Number of pages that have an associated entry on a swap device.</p>
-<dt><i>active=&lt;pages&gt;</i></p>
-<dd>The number of pages on the active list. This field is shown only if different from the number of pages in this range. This means that some inactive pages exist in the memory range that may be removed from memory by the swapper soon.</p>
-<dt><i>writeback=&lt;pages&gt;</i></p>
-<dd>Number of pages that are currently being written out to disk.</dl>
+<dt><i>N&lt;node&gt;=&lt;nr_pages&gt;</i></dt>
+<dd>The number of pages allocated on <i>&lt;node&gt;</i>. <i>&lt;nr_pages&gt;</i> includes only pages currently mapped by the process. Page migration and memory reclaim may have temporarily unmapped pages associated with this memory range. These pages may show up again only after the process has attempted to reference them. If the memory range represents a shared memory area or file mapping, other processes may currently have additional pages mapped in a corresponding memory range.</dd>
+<dt><i>file=&lt;filename&gt;</i></dt>
+<dd>The file backing the memory range. If the file is mapped as private, write accesses may have generated COW (Copy-On-Write) pages in this memory range. These pages are displayed as anonymous pages.</dd>
+<dt><i>heap</i></dt>
+<dd>Memory range is used for the heap.</dd>
+<dt><i>stack</i></dt>
+<dd>Memory range is used for the stack.</dd>
+<dt><i>huge</i></dt>
+<dd>Huge memory range. The page counts shown are huge pages and not regular sized pages.</dd>
+<dt><i>anon=&lt;pages&gt;</i></dt>
+<dd>The number of anonymous page in the range.</dd>
+<dt><i>dirty=&lt;pages&gt;</i></dt>
+<dd>Number of dirty pages.</dd>
+<dt><i>mapped=&lt;pages&gt;</i></dt>
+<dd>Total number of mapped pages, if different from <i>dirty</i> and <i>anon</i> pages.</dd>
+<dt><i>mapmax=&lt;count&gt;</i></dt>
+<dd>Maximum mapcount (number of processes mapping a single page) encountered during the scan. This may be used as an indicator of the degree of sharing occurring in a given memory range.</dd>
+<dt><i>swapcache=&lt;count&gt;</i></dt>
+<dd>Number of pages that have an associated entry on a swap device.</dd>
+<dt><i>active=&lt;pages&gt;</i></dt>
+<dd>The number of pages on the active list. This field is shown only if different from the number of pages in this range. This means that some inactive pages exist in the memory range that may be removed from memory by the swapper soon.</dd>
+<dt><i>writeback=&lt;pages&gt;</i></dt>
+<dd>Number of pages that are currently being written out to disk.</dd></dl>
 <h2>Conforming To</h2>
 <p>No standards govern NUMA interfaces.</p>
 <h2>Notes</h2>

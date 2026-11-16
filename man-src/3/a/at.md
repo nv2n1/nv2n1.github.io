@@ -39,7 +39,7 @@ description: "QuantLib::Array – 1-D array used in linear algebra."
 <p> <code>Precondition:</code></p>
 <dl>
 <dt>
-<dd> all arrays involved in an algebraic expression must have the same size.</dl>
+</dt><dd> all arrays involved in an algebraic expression must have the same size.</dd></dl>
 <p> const <code>Array</code> &amp; <code>operator+=</code> (const <code>Array</code> &amp;) </p>
 <p> const <code>Array</code> &amp; <code>operator+=</code> (Real) </p>
 <p> const <code>Array</code> &amp; <code>operator-=</code> (const <code>Array</code> &amp;) </p>
@@ -104,7 +104,7 @@ description: "QuantLib::Array – 1-D array used in linear algebra."
 <p> <code>Tests</code></p>
 <dl>
 <dt>
-<dd> construction of arrays is checked in a number of cases</dl>
+</dt><dd> construction of arrays is checked in a number of cases</dd></dl>
 <h2>Friends And Related Function Documentation</h2>
 <h3>Real DotProduct (const <code>Array</code> &amp;, const <code>Array</code> &amp;) [related]</h3>
 <h3>const <code>Disposable</code>&lt; <code>Array</code> &gt; operator+ (const <code>Array</code> &amp; v) [related]</h3>
@@ -131,5 +131,5 @@ description: "QuantLib::Array – 1-D array used in linear algebra."
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbBD">Author</a></p>
-<dd></dl>
+<dt><a href="#lbBD">Author</a></dt>
+<dd></dd></dl>

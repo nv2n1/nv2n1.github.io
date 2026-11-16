@@ -31,7 +31,6 @@ description: "cpu_capabilities – Contains the capability flags of the CPU. All
    CPU_ENH3DNOW - AMD Enhanced 3DNow! instruction set is
                   available.
    CPU_CMOV     - Pentium Pro &quot;cmov&quot; instruction is available.
-   
 </pre>
 <p> You can check for multiple features by OR-ing the flags together. For example, to check if the CPU has an FPU and MMX instructions available, you&#8217;d do: </p>
 <pre><code>

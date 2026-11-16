@@ -18,14 +18,14 @@ mongoc_client_get_database (mongoc_client_t *client,
 <p> <code>NOTE</code></p>
 <dl COMPACT>
 <dt>
-<dd> Databases are automatically created on the MongoDB server upon insertion of the first document into a collection. There is no need to create a database manually.</dl>
+</dt><dd> Databases are automatically created on the MongoDB server upon insertion of the first document into a collection. There is no need to create a database manually.</dd></dl>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>client</code></p>
-<dd> A <code>mongoc_client_t</code> \&amp;.</dl>
+<dt><code>client</code></dt>
+<dd> A <code>mongoc_client_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>name</code></p>
-<dd> The name of the database.</dl>
+<dt><code>name</code></dt>
+<dd> The name of the database.</dd></dl>
 <h2>Returns</h2>
 <p> A newly allocated <code>mongoc_database_t</code> that should be freed with <code><a href="/docs/linux/man/3-mongoc_database_destroy/">mongoc_database_destroy</a>(3)</code> when no longer in use. </p>
 <h2>Colophon</h2>

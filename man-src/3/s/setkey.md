@@ -11,17 +11,12 @@ description: "encrypt, setkey, encrypt_r, setkey_r – encrypt 64-bit messages"
 <h2>Synopsis</h2>
 <pre><code>#define _XOPEN_SOURCE /* See feature_test_macros(7) */
 #include &lt;unistd.h&gt;
-
 void encrypt(char block[64], int edflag);
-
 #define _XOPEN_SOURCE /* See feature_test_macros(7) */
 #include &lt;stdlib.h&gt;
-
 void setkey(const char *key);
-
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;crypt.h&gt;
-
 void setkey_r(const char *key, struct crypt_data *data);
 void encrypt_r(char *block, int edflag, struct crypt_data *data);</code></pre>
 <p> Each of these requires linking with <i>-lcrypt</i>.</p>
@@ -43,8 +38,8 @@ void encrypt_r(char *block, int edflag, struct crypt_data *data);</code></pre>
 <h2>Errors</h2>
 <p>Set <i>errno</i> to zero before calling the above functions. On success, it is unchanged.</p>
 <dl>
-<dt><code>ENOSYS</code></p>
-<dd>The function is not provided. (For example because of former USA export restrictions.)</dl>
+<dt><code>ENOSYS</code></dt>
+<dd>The function is not provided. (For example because of former USA export restrictions.)</dd></dl>
 <h2>Versions</h2>
 <p>Because they employ the DES block cipher, which is no longer considered secure, <code>crypt</code>(), <code>crypt_r</code>(), <code>setkey</code>(), and <code>setkey_r</code>() were removed in glibc 2.28. Applications should switch to a modern cryptography library, such as <code>libgcrypt</code>.</p>
 <h2>Attributes</h2>
@@ -103,3 +98,4 @@ int main(void)
     encrypt(buf, 0);
     for (int i = 0; i &lt; 8; i++) {
         for (int j = 0, txt[i] = '
+</code></pre>

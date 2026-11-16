@@ -19,7 +19,7 @@ description: "cpbstf.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CPBSTF computes a split Cholesky factorization of a complex
  Hermitian positive definite band matrix A.
@@ -31,11 +31,11 @@ description: "cpbstf.f –"
  where U is upper triangular of order m = (n+kd)/2, and L is lower
  triangular of order n-m.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>UPLO</i> </p>
+</dt><dd> <i>UPLO</i> </dd>
 <pre>
           UPLO is CHARACTER*1
           = 'U':  Upper triangle of A is stored;
@@ -79,26 +79,27 @@ the<br />
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 The band storage scheme is illustrated by the following example, when N = 7, KD = 2 : S = (s11 s12 s13)(s22 s23 s24)(s33 s34)(s44)(s53 s54 s55)(s64 s65 s66)(s75 s76 s77)If UPLO = 'U', the array AB holds : on entry : on exit : **a13 a24 a35 a46 a57 **s13 s24 s53 **H s64 **H s75 **H *a12 a23 a34 a45 a56 a67 *s12 s23 s34 s54 **H s65 **H s76 **H a11 a22 a33 a44 a55 a66 a77 s11 s22 s33 s44 s55 s66 s77 If UPLO = 'L', the array AB holds : on entry : on exit : a11 a22 a33 a44 a55 a66 a77 s11 s22 s33 s44 s55 s66 s77 a21 a32 a43 a54 a65 a76 *s12 **H s23 **H s34 **H s54 s65 s76 *a31 a42 a53 a64 a64 **s13 **H s24 **H s53 s64 s75 **Array elements marked *are not used by the routine;
 s12 **H denotes
     conjg(s12);
 the diagonal elements of S are real.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 154 of file cpbstf.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

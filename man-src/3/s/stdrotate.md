@@ -10,27 +10,18 @@ description: "std::rotate – std::rotate"
 <p>std::rotate &#8211; std::rotate</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class ForwardIt&gt;
     (until C++ 11)
-
         void rotate(ForwardIt first, ForwardIt n_first, ForwardIt last);
-
 template &lt;class ForwardIt&gt;
 (since C++ 11)
-
     ForwardIt rotate(ForwardIt first, ForwardIt n_first, ForwardIt last);
 (until C++ 20)
-
     template &lt;class ForwardIt&gt;
     (1)(since C++ 20)
-
         constexpr ForwardIt rotate(ForwardIt first, ForwardIt n_first, ForwardIt last);
-
 template &lt;class ExecutionPolicy, class ForwardIt&gt;
-
 ForwardIt rotate(ExecutionPolicy &amp;&amp;policy, (2)(since C++ 17)
-
                                                ForwardIt first,
                  ForwardIt n_first, ForwardIt last);</code></pre>
 <p>1) Performs a left rotation on a range of elements.<br />
@@ -78,12 +69,9 @@ The iterator equal to first + (last &#8211; n_first) <i>(since C++11)</i> </p>
 <p>std::rotate is a common building block in many algorithms. This example demonstrates insertion sort:<br />
  // Run this code </p>
 <pre><code>#include &lt;vector&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;algorithm&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v{2, 4, 2, 0, 5, 10, 7, 3, 7, 1};
     std::cout &lt;&lt; &quot;before sort:      &quot;;

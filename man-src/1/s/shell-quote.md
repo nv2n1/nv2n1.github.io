@@ -15,8 +15,8 @@ description: "shell-quote – quote arguments for safe use, unmodified in a shel
 <p> <code>shell-quote</code> lets you pass arbitrary strings through the shell so that they won&#8217;t be changed by the shell. This lets you process commands or files with embedded white space or shell globbing characters safely. Here are a few examples.</p>
 <h2>EXAMPLES</h2>
 <dl>
-<dt><code>ssh preserving args</code></p>
-<dd> When running a remote command with ssh, ssh doesn&#8217;t preserve the separate arguments it receives. It just joins them with spaces and passes them to <tt>&quot;$SHELL -c&quot;</tt>. This doesn&#8217;t work as intended: </p>
+<dt><code>ssh preserving args</code></dt>
+<dd> When running a remote command with ssh, ssh doesn&#8217;t preserve the separate arguments it receives. It just joins them with spaces and passes them to <tt>&quot;$SHELL -c&quot;</tt>. This doesn&#8217;t work as intended: </dd>
 <pre>
     ssh host touch 'hi there'           # fails
 </pre>
@@ -26,13 +26,13 @@ description: "shell-quote – quote arguments for safe use, unmodified in a shel
     ssh host &quot;$cmd&quot;
 </pre>
 <p> This gives you just 1 file, <i>hi there</i>.</p>
-<dt><code>process find output</code></p>
-<dd> It&#8217;s not ordinarily possible to process an arbitrary list of files output by <code>find</code> with a shell script. Anything you put in <tt>$IFS</tt> to split up the output could legitimately be in a file&#8217;s name. Here&#8217;s how you can do it using <code>shell-quote</code>: </p>
+<dt><code>process find output</code></dt>
+<dd> It&#8217;s not ordinarily possible to process an arbitrary list of files output by <code>find</code> with a shell script. Anything you put in <tt>$IFS</tt> to split up the output could legitimately be in a file&#8217;s name. Here&#8217;s how you can do it using <code>shell-quote</code>: </dd>
 <pre>
     eval set -- `find -type f -print0 | xargs -0 shell-quote --`
 </pre>
-<dt><code>debug shell scripts</code></p>
-<dd> <code>shell-quote</code> is better than <code>echo</code> for debugging shell scripts. </p>
+<dt><code>debug shell scripts</code></dt>
+<dd> <code>shell-quote</code> is better than <code>echo</code> for debugging shell scripts. </dd>
 <pre><code>
 debug()
 {
@@ -41,8 +41,8 @@ debug()
 }
 </code></pre>
 <p> With <code>echo</code> you can&#8217;t tell the difference between <tt>&quot;debug 'foo bar'&quot;</tt> and <tt>&quot;debug foo bar&quot;</tt>, but with <code>shell-quote</code> you can.</p>
-<dt><code>save a command for later</code></p>
-<dd> <code>shell-quote</code> can be used to build up a shell command to run later. Say you want the user to be able to give you switches for a command you&#8217;re going to run. If you don&#8217;t want the switches to be re-evaluated by the shell (which is usually a good idea, else there are things the user can&#8217;t pass through), you can do something like this: </p>
+<dt><code>save a command for later</code></dt>
+<dd> <code>shell-quote</code> can be used to build up a shell command to run later. Say you want the user to be able to give you switches for a command you&#8217;re going to run. If you don&#8217;t want the switches to be re-evaluated by the shell (which is usually a good idea, else there are things the user can&#8217;t pass through), you can do something like this: </dd>
 <pre><code>
     user_switches=
     while [ $# != 0 ]
@@ -63,12 +63,12 @@ debug()
 </dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;debug</code></p>
-<dd> Turn debugging on.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show the usage message and die.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show the version number and exit.</dl>
+<dt><code>&#8211;debug</code></dt>
+<dd> Turn debugging on.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show the usage message and die.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show the version number and exit.</dd></dl>
 <h2>AVAILABILITY</h2>
 <p> The code is licensed under the <font SIZE="-1">GNU GPL. </font> Check <a rel="nofollow" href="http://www.argon.org/~roderick/">http://www.argon.org/~roderick/</a> or <font SIZE="-1">CPAN</font> for updated versions.</p>
 <h2>AUTHOR</h2>

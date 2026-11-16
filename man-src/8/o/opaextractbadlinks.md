@@ -21,19 +21,16 @@ opaextractbadlinks [--help] [opareport <i>options</i>]
 <h2>Options</h2>
 
 <dl><dt>opareport <i>options</i>
-<dd>Options are passed to opareport. See <i>opareport</i> for the full set of options. 
-
-</dl>
+</dt><dd>Options are passed to opareport. See <i>opareport</i> for the full set of options. 
+</dd></dl>
 
 <h2>Examples</h2>
 
 # List all the bad links in the fabric: 
  opaextractbadlinks 
  <pre><code># List all the bad links to a switch named &quot;OmniPth00117501ffffffff&quot;:
-
 opaextractbadlinks -F &quot;node:OmniPth00117501ffffffff&quot;
 # List all the bad links to end-nodes:
-
 opaextractbadlinks -F &quot;nodetype:FI&quot;</code></pre> 
  # List all the bad links on the 2nd HFI's fabric of a multi-plane fabric: 
  opaextractbadlinks -h 2 

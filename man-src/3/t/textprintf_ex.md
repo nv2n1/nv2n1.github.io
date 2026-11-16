@@ -10,9 +10,7 @@ description: "textprintf_ex – Formatted output of a string. Allegro game progr
 <p>textprintf_ex &#8211; Formatted output of a string. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void textprintf_ex(BITMAP *bmp, const FONT *f, int x, int y,
-
                    int color, int bg, const char *fmt, ...);</code></pre>
 <h2>Description</h2>
 <p>Formatted text output, using a printf() style format string. Due to an internal limitation, this function can&#8217;t be used for extremely long texts. If you happen to reach this limit, you can work around it by using uszprintf() and textout_ex(), which don&#8217;t have any. Example: </p>

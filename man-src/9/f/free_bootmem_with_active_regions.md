@@ -14,10 +14,10 @@ description: "free_bootmem_with_active_regions – Call memblock_free_early_nid 
 <p><i>nid</i></p>
 <dl>
 <dd>
-<dd>The node to free memory on. If MAX_NUMNODES, all nodes are freed.</dl>
+</dd><dd>The node to free memory on. If MAX_NUMNODES, all nodes are freed.</dd></dl>
 <p> <i>max_low_pfn</i></p>
 <dl>
-<dd>The highest PFN that will be passed to memblock_free_early_nid</dl>
+<dd>The highest PFN that will be passed to memblock_free_early_nid</dd></dl>
 <h2>Description</h2>
 <p>If an architecture guarantees that all ranges registered contain no holes and may be freed, this this function may be used instead of calling <code>memblock_free_early_nid</code> manually.</p>
 <h2>Copyright</h2>

@@ -120,11 +120,11 @@ description: "Error handling –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>handle</i> is the handle corresponding to the guilty connection;<br />
+</dt><dd> <i>handle</i> is the handle corresponding to the guilty connection;<br />
  <i>error</i> is a BRLAPI_ERROR_ error code;<br />
  <i>type</i> is the type of the guilty packet;<br />
  <i>packet</i> points to the content of the guilty packet (might be a little bit truncated);<br />
- <i>size</i> gives the guilty packet&#8217;s size.</dl>
+ <i>size</i> gives the guilty packet&#8217;s size.</dd></dl>
 <h3>typedef uint32_t <code>brlapi_packetType_t</code></h3>
 <p> Type for packet type. Only unsigned can cross networks, 32bits</p>
 <h2>Function Documentation</h2>
@@ -156,7 +156,7 @@ description: "Error handling –"
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> the size of the text describing the exception, following snprintf()&#8217;s semantics.</dl>
+</dt><dd> the size of the text describing the exception, following snprintf()&#8217;s semantics.</dd></dl>
 <h2>Variable Documentation</h2>
 <h3>const char* brlapi_errfun</h3>
 <p> Shorthand for brlapi_error.errfun</p>
@@ -178,11 +178,11 @@ description: "Error handling –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for BrlAPI from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbBG">Typedef Documentation</a></p>
+<dt><a href="#lbBG">Typedef Documentation</a></dt>
 <dd>
-<dt><a href="#lbBK">Function Documentation</a></p>
+</dd><dt><a href="#lbBK">Function Documentation</a></dt>
 <dd>
-<dt><a href="#lbBV">Variable Documentation</a></p>
+</dd><dt><a href="#lbBV">Variable Documentation</a></dt>
 <dd>
-<dt><a href="#lbCD">Author</a></p>
-<dd></dl>
+</dd><dt><a href="#lbCD">Author</a></dt>
+<dd></dd></dl>

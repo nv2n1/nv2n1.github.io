@@ -17,12 +17,12 @@ description: "XmContainerGetItemChildren — Container widget function to find a
 <h2>Description</h2>
 <p><code>XmContainerGetItemChildren</code> allocates a WidgetList and stores within it the widget IDs of all widgets that have <i>item</i> specified as the value of their <code>XmNentryParent</code> resource. The application programmer is responsible for freeing the allocated WidgetList using XtFree. The number of widget IDs returned in <i>item_children</i> is returned by the function. If no widgets specify <i>item</i> as the value of their <code>XmNentryParent</code> resource, the function returns zero and <i>item_children</i> is left unchanged.</p>
 <dl COMPACT>
-<dt><i>container</i></p>
-<dd>Specifies the Container widget ID.</p>
-<dt><i>item</i></p>
-<dd>Specifies a widgetID within <i>container</i>.</p>
-<dt><i>item_children</i></p>
-<dd>Returned array of Widgets.</dl>
+<dt><i>container</i></dt>
+<dd>Specifies the Container widget ID.</dd>
+<dt><i>item</i></dt>
+<dd>Specifies a widgetID within <i>container</i>.</dd>
+<dt><i>item_children</i></dt>
+<dd>Returned array of Widgets.</dd></dl>
 <p> For a complete definition of Container and its associated resources, see <code><a href="/docs/linux/man/3-xmcontainer/">XmContainer</a></code>(3).</p>
 <h2>Return</h2>
 <p>This function returns a count of all widgets that have <i>item</i> specified as the value of their <code>XmNentryParent</code> resource.</p>

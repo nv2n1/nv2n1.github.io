@@ -20,18 +20,18 @@ description: "faxq – display fax jobs queued by"
 <p> <code>faxq start</code> re-starts a previously stopped fax queue, by removing the &#8220;stop&#8221; file. As for <i>faxq stop</i> this only works if you have write access. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-v</code></p>
-<dd> Tells <i>faxq</i> to print a more verbose report for each job (multiple lines).</p>
-<dt><code>-o</code></p>
-<dd> Show old jobs, already sent but still in the queue directory, too.</p>
-<dt><code>-s</code></p>
-<dd> Show suspended jobs (stopped because of too many fatal errors during sending). You can restart those jobs with <i>faxq -r</i></p>
-<dt><code>-a</code></p>
-<dd> Show all jobs (active, old, suspended).</p>
-<dt><code>-r</code></p>
-<dd> Restart suspended jobs. Every suspended job in the queue (that you have write permissions for) will be requeued. Use <i>faxrm</i> to delete jobs that you do not want to be sent!</p>
-<dt><code>-P &lt;job&gt; &lt;prio&gt;</code></p>
-<dd> Change the priority of fax job &lt;job&gt; to &lt;prio&gt;. Example: &quot;faxq -P F000247 3&quot;. </p>
+<dt><code>-v</code></dt>
+<dd> Tells <i>faxq</i> to print a more verbose report for each job (multiple lines).</dd>
+<dt><code>-o</code></dt>
+<dd> Show old jobs, already sent but still in the queue directory, too.</dd>
+<dt><code>-s</code></dt>
+<dd> Show suspended jobs (stopped because of too many fatal errors during sending). You can restart those jobs with <i>faxq -r</i></dd>
+<dt><code>-a</code></dt>
+<dd> Show all jobs (active, old, suspended).</dd>
+<dt><code>-r</code></dt>
+<dd> Restart suspended jobs. Every suspended job in the queue (that you have write permissions for) will be requeued. Use <i>faxrm</i> to delete jobs that you do not want to be sent!</dd>
+<dt><code>-P &lt;job&gt; &lt;prio&gt;</code></dt>
+<dd> Change the priority of fax job &lt;job&gt; to &lt;prio&gt;. Example: &quot;faxq -P F000247 3&quot;. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> <i>faxq</i> doesn&#8217;t handle time scheduling yet. </p>

@@ -26,16 +26,16 @@ description: "perl5123delta – what is new for perl v5.12.3"
 <p> Lvalue subroutines are again able to return copy-on-write scalars. This had been broken since version 5.10.0.</p>
 <h2>Platform Specific Notes</h2>
 <dl>
-<dt>Solaris</p>
-<dd> A separate DTrace is now build for miniperl, which means that perl can be compiled with -Dusedtrace on Solaris again.</p>
-<dt><font SIZE="-1">VMS</font></p>
-<dd> A number of regressions on <font SIZE="-1">VMS</font> have been fixed. In addition to minor cleanup of questionable expressions in <i>vms.c</i>, file permissions should no longer be garbled by the PerlIO layer, and spurious record boundaries should no longer be introduced by the PerlIO layer during output. </p>
+<dt>Solaris</dt>
+<dd> A separate DTrace is now build for miniperl, which means that perl can be compiled with -Dusedtrace on Solaris again.</dd>
+<dt><font SIZE="-1">VMS</font></dt>
+<dd> A number of regressions on <font SIZE="-1">VMS</font> have been fixed. In addition to minor cleanup of questionable expressions in <i>vms.c</i>, file permissions should no longer be garbled by the PerlIO layer, and spurious record boundaries should no longer be introduced by the PerlIO layer during output. </dd>
 <p> For more details and discussion on the latter, see: </p>
 <pre>
     <a rel="nofollow" href="http://www.nntp.perl.org/group/perl.vmsperl/2010/11/msg15419.html">http://www.nntp.perl.org/group/perl.vmsperl/2010/11/msg15419.html</a>
 </pre>
-<dt><font SIZE="-1">VOS</font></p>
-<dd> A few very small changes were made to the build process on <font SIZE="-1">VOS</font> to better support the platform. Longer-than-32-character filenames are now supported on OpenVOS, and build properly without IPv6 support.</dl>
+<dt><font SIZE="-1">VOS</font></dt>
+<dd> A few very small changes were made to the build process on <font SIZE="-1">VOS</font> to better support the platform. Longer-than-32-character filenames are now supported on OpenVOS, and build properly without IPv6 support.</dd></dl>
 <h2>Acknowledgements</h2>
 <p> Perl 5.12.3 represents approximately four months of development since Perl 5.12.2 and contains approximately 2500 lines of changes across 54 files from 16 authors. </p>
 <p> Perl continues to flourish into its third decade thanks to a vibrant community of users and developers. The following people are known to have contributed the improvements that became Perl 5.12.3: </p>

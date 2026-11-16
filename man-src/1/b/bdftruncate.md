@@ -17,7 +17,7 @@ description: "bdftruncate – generate truncated BDF font from ISO 10646-1-encod
 <p> The command</p>
 <dl>
 <dt>
-<dd> bdftruncate 0x3200 &lt; 6&#215;13.bdf &gt; 6x13t.bdf</dl>
+</dt><dd> bdftruncate 0x3200 &lt; 6&#215;13.bdf &gt; 6x13t.bdf</dd></dl>
 <p> will generate the file 6x13t.bdf in which all glyphs with codes &gt;= 0x3200 will only be stored unencoded (i.e., they are encoded at codepoint -1).</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ucs2any/">ucs2any</a></code>(1)</p>

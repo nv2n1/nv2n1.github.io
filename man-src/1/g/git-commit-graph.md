@@ -19,16 +19,16 @@ git commit - graph verify[--object - dir&lt;dir&gt;][--shallow][--[no - ] progre
 <p> &#8211;object-dir</p>
 <dl>
 <dt>
-<dd> Use given directory for the location of packfiles and commit-graph file. This parameter exists to specify the location of an alternate that only has the objects directory, not a full <code>.git</code> directory. The commit-graph file is expected to be in the <code>&lt;dir&gt;/info</code> directory and the packfiles are expected to be in <code>&lt;dir&gt;/pack</code>. If the directory could not be made into an absolute path, or does not match any known object directory, <code>git commit-graph &#8230;</code> will exit with non-zero status.</dl>
+</dt><dd> Use given directory for the location of packfiles and commit-graph file. This parameter exists to specify the location of an alternate that only has the objects directory, not a full <code>.git</code> directory. The commit-graph file is expected to be in the <code>&lt;dir&gt;/info</code> directory and the packfiles are expected to be in <code>&lt;dir&gt;/pack</code>. If the directory could not be made into an absolute path, or does not match any known object directory, <code>git commit-graph &#8230;</code> will exit with non-zero status.</dd></dl>
 <p> &#8211;[no-]progress</p>
 <dl>
 <dt>
-<dd> Turn progress on/off explicitly. If neither is specified, progress is shown if standard error is connected to a terminal.</dl>
+</dt><dd> Turn progress on/off explicitly. If neither is specified, progress is shown if standard error is connected to a terminal.</dd></dl>
 <h2>COMMANDS</h2>
 <p> <i>write</i></p>
 <dl>
 <dt>
-<dd> Write a commit-graph file based on the commits found in packfiles. If the config option <code>core.commitGraph</code> is disabled, then this command will output a warning, then return success without writing a commit-graph file. </p>
+</dt><dd> Write a commit-graph file based on the commits found in packfiles. If the config option <code>core.commitGraph</code> is disabled, then this command will output a warning, then return success without writing a commit-graph file. </dd>
 <p> With the <code>&#8211;stdin-packs</code> option, generate the new commit graph by walking objects only in the specified pack-indexes. (Cannot be combined with <code>&#8211;stdin-commits</code> or <code>&#8211;reachable</code>.) </p>
 <p> With the <code>&#8211;stdin-commits</code> option, generate the new commit graph by walking commits starting at the commits specified in stdin as a list of OIDs in hex, one OID per line. OIDs that resolve to non-commits (either directly, or by peeling tags) are silently ignored. OIDs that are malformed, or do not exist generate an error. (Cannot be combined with <code>&#8211;stdin-packs</code> or <code>&#8211;reachable</code>.) </p>
 <p> With the <code>&#8211;reachable</code> option, generate the new commit graph by walking commits starting at all refs. (Cannot be combined with <code>&#8211;stdin-commits</code> or <code>&#8211;stdin-packs</code>.) </p>
@@ -38,64 +38,64 @@ git commit - graph verify[--object - dir&lt;dir&gt;][--shallow][--[no - ] progre
 <p> With the <code>&#8211;split[=&lt;strategy&gt;]</code> option, write the commit-graph as a chain of multiple commit-graph files stored in <code>&lt;dir&gt;/info/commit-graphs</code>. Commit-graph layers are merged based on the strategy and other splitting options. The new commits not already in the commit-graph are added in a new &quot;tip&quot; file. This file is merged with the existing file if the following merge conditions are met: </p>
 <dl>
 <dt>
-<dd> &bull; If <code>&#8211;split=no-merge</code> is specified, a merge is never performed, and the remaining options are ignored. <code>&#8211;split=replace</code> overwrites the existing chain with a new one. A bare <code>&#8211;split</code> defers to the remaining options. (Note that merging a chain of commit graphs replaces the existing chain with a length-1 chain where the first and only incremental holds the entire graph).</dl>
+</dt><dd> &bull; If <code>&#8211;split=no-merge</code> is specified, a merge is never performed, and the remaining options are ignored. <code>&#8211;split=replace</code> overwrites the existing chain with a new one. A bare <code>&#8211;split</code> defers to the remaining options. (Note that merging a chain of commit graphs replaces the existing chain with a length-1 chain where the first and only incremental holds the entire graph).</dd></dl>
 <dl>
 <dt>
-<dd> &bull; If <code>&#8211;size-multiple=&lt;X&gt;</code> is not specified, let <code>X</code> equal 2. If the new tip file would have <code>N</code> commits and the previous tip has <code>M</code> commits and <code>X</code> times <code>N</code> is greater than <code>M</code>, instead merge the two files into a single file.</dl>
+</dt><dd> &bull; If <code>&#8211;size-multiple=&lt;X&gt;</code> is not specified, let <code>X</code> equal 2. If the new tip file would have <code>N</code> commits and the previous tip has <code>M</code> commits and <code>X</code> times <code>N</code> is greater than <code>M</code>, instead merge the two files into a single file.</dd></dl>
 <dl>
 <dt>
-<dd> &bull; If <code>&#8211;max-commits=&lt;M&gt;</code> is specified with <code>M</code> a positive integer, and the new tip file would have more than <code>M</code> commits, then instead merge the new tip with the previous tip. </p>
+</dt><dd> &bull; If <code>&#8211;max-commits=&lt;M&gt;</code> is specified with <code>M</code> a positive integer, and the new tip file would have more than <code>M</code> commits, then instead merge the new tip with the previous tip. </dd>
 <p> Finally, if <code>&#8211;expire-time=&lt;datetime&gt;</code> is not specified, let <code>datetime</code> be the current time. After writing the split commit-graph, delete all unused commit-graph whose modified times are older than <code>datetime</code>.</dl>
 </dl>
 <p> <i>verify</i></p>
 <dl>
 <dt>
-<dd> Read the commit-graph file and verify its contents against the object database. Used to check for corrupted data. </p>
+</dt><dd> Read the commit-graph file and verify its contents against the object database. Used to check for corrupted data. </dd>
 <p> With the <code>&#8211;shallow</code> option, only check the tip commit-graph file in a chain of split commit-graphs.</dl>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd> &bull; Write a commit-graph file for the packed commits in your local <code>.git</code> directory. </p>
+</dt><dd> &bull; Write a commit-graph file for the packed commits in your local <code>.git</code> directory. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git commit-graph write
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> &bull; Write a commit-graph file, extending the current commit-graph file using commits in <code>&lt;pack-index&gt;</code>. </p>
+</dt><dd> &bull; Write a commit-graph file, extending the current commit-graph file using commits in <code>&lt;pack-index&gt;</code>. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ echo &lt;pack-index&gt; | git commit-graph write --stdin-packs
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> &bull; Write a commit-graph file containing all reachable commits. </p>
+</dt><dd> &bull; Write a commit-graph file containing all reachable commits. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git show-ref -s | git commit-graph write --stdin-commits
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd> &bull; Write a commit-graph file containing all commits in the current commit-graph file along with those reachable from <code>HEAD</code>. </p>
+</dt><dd> &bull; Write a commit-graph file containing all commits in the current commit-graph file along with those reachable from <code>HEAD</code>. </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git rev-parse HEAD | git commit-graph write --stdin-commits --append
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>

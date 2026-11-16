@@ -56,49 +56,47 @@ hivexregedit-- merge[--prefix prefix][--encoding enc] hivefile[regfile] hivexreg
                                                                                                                                                                               $ hivexregedit&#8211; merge system.hive&#8211; prefix &#8216;HKEY_LOCAL_MACHINE\SYSTEM&#8217; additions.reg</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display help.</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Enable debugging in the hivex library. This is useful for diagnosing bugs and also malformed hive files.</p>
-<dt><code>&#8211;merge</code></p>
+<dt><code>&#8211;help</code></dt>
+<dd> Display help.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Enable debugging in the hivex library. This is useful for diagnosing bugs and also malformed hive files.</dd>
+<dt><code>&#8211;merge</code></dt>
 <dd>
-hivexregedit&#8211; merge[&#8211;prefix prefix][&#8211;encoding enc] hivefile[regfile]</p>
+hivexregedit&#8211; merge[&#8211;prefix prefix][&#8211;encoding enc] hivefile[regfile]</dd>
 <p> Merge <tt>&quot;regfile&quot;</tt> (a regedit-format text file) into the hive <tt>&quot;hivefile&quot;</tt>. If <tt>&quot;regfile&quot;</tt> is omitted, then the program reads from standard input. (Also you can give multiple input files). </p>
 <p> <tt>&quot;--prefix&quot;</tt> specifies the Windows Registry prefix. It is almost always necessary to use this when dealing with real hive files. </p>
 <p> <tt>&quot;--encoding&quot;</tt> specifies the encoding for unmarked strings in the input. It defaults to <tt>&quot;UTF-16LE&quot;</tt> which should work for recent versions of Windows. Another possibility is to use <tt>&quot;ASCII&quot;</tt>.</p>
-<dt><code>&#8211;export</code></p>
+<dt><code>&#8211;export</code></dt>
 <dd>
 <pre><code>
 hivexregedit-- export[--prefix prefix] hivefile key &gt; regfile
 </code></pre>
 <p> <tt>&quot;key&quot;</tt> is a path within the hive <tt>&quot;hivefile&quot;</tt>. (The key should not contain any prefix and should be quoted to defend backslashes from the shell). The key is exported, recursively, to standard output in the textual regedit format. </p>
 <p> <tt>&quot;--prefix&quot;</tt> specifies the Windows Registry prefix. It is almost always necessary to use this when dealing with real hive files.</p>
-<dt><code>&#8211;prefix</code> prefix</p>
-<dd> Hive files and Windows Registry key names are indirectly related. For example, inside the software hive, all keys are stored relative to <tt>&quot;HKEY_LOCAL_MACHINE\SOFTWARE&quot;</tt>. Thus <tt>&quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft&quot;</tt> appears in the hive file as <tt>&quot;\Microsoft&quot;</tt>. </p>
+</dd><dt><code>&#8211;prefix</code> prefix</dt>
+<dd> Hive files and Windows Registry key names are indirectly related. For example, inside the software hive, all keys are stored relative to <tt>&quot;HKEY_LOCAL_MACHINE\SOFTWARE&quot;</tt>. Thus <tt>&quot;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft&quot;</tt> appears in the hive file as <tt>&quot;\Microsoft&quot;</tt>. </dd>
 <p> The hive format itself does not store this prefix, so you have to supply it based on outside knowledge. (<i><a href="/docs/linux/man/1-virt-win-reg/">virt-win-reg</a></i>(1), amongst other things, already knows about this). </p>
 <p> Usually it is sufficient to pass the parameter <tt>&quot;--prefix 'HKEY_LOCAL_MACHINE\SOFTWARE'&quot;</tt> or similar when doing merges and exports.</p>
-<dt><code>&#8211;encoding</code> UTF-16LE|ASCII</p>
-<dd> When merging (only), you may need to specify the encoding for strings to be used in the hive file. This is explained in detail in &#8220;<font SIZE="-1">ENCODING STRINGS&#8221;</font> in <i>Win::Hivex::Regedit</i>(3). </p>
+<dt><code>&#8211;encoding</code> UTF-16LE|ASCII</dt>
+<dd> When merging (only), you may need to specify the encoding for strings to be used in the hive file. This is explained in detail in &#8220;<font SIZE="-1">ENCODING STRINGS&#8221;</font> in <i>Win::Hivex::Regedit</i>(3). </dd>
 <p> The default is to use <font SIZE="-1">UTF-16LE,</font> which should work with recent versions of Windows.</p>
-<dt><code>&#8211;unsafe-printable-strings</code></p>
-<dd> When exporting (only), assume strings are <font SIZE="-1">UTF-16LE</font> and print them as strings instead of hex sequences. Remove the final zero codepoint from strings if present. </p>
+<dt><code>&#8211;unsafe-printable-strings</code></dt>
+<dd> When exporting (only), assume strings are <font SIZE="-1">UTF-16LE</font> and print them as strings instead of hex sequences. Remove the final zero codepoint from strings if present. </dd>
 <p> This is unsafe and does not preserve the fidelity of strings in the original hive for various reasons:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> Assumes the original encoding is <font SIZE="-1">UTF-16LE. ASCII</font> strings and strings in other encodings will be corrupted by this transformation.</p>
-<dt>&bull;</p>
-<dd> Assumes that everything which has type 1 or 2 is really a string and that everything else is not a string, but the type field in real hives is not reliable.</p>
-<dt>&bull;</p>
-<dd> Loses information about whether a zero codepoint followed the string in the hive or not.</dl>
+<dt>&bull;</dt>
+<dd> Assumes the original encoding is <font SIZE="-1">UTF-16LE. ASCII</font> strings and strings in other encodings will be corrupted by this transformation.</dd>
+<dt>&bull;</dt>
+<dd> Assumes that everything which has type 1 or 2 is really a string and that everything else is not a string, but the type field in real hives is not reliable.</dd>
+<dt>&bull;</dt>
+<dd> Loses information about whether a zero codepoint followed the string in the hive or not.</dd></dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> This all happens because the hive itself contains no information about how strings are encoded (see &#8220;<font SIZE="-1">ENCODING STRINGS&#8221;</font> in <i>Win::Hivex::Regedit</i>(3)). </p>
-<p> You should only use this option for quick hacking and debugging of the hive contents, and <i>never</i> use it if the output is going to be passed into another program or stored in another hive.</dl>
+<p> You should only use this option for quick hacking and debugging of the hive contents, and <i>never</i> use it if the output is going to be passed into another program or stored in another hive.</dd></dl>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-virt-win-reg/">virt-win-reg</a></i>(1), <i>Win::Hivex::Regedit</i>(3), <i>Win::Hivex</i>(3), <i><a href="/docs/linux/man/1-hivexsh/">hivexsh</a></i>(1), <i><a href="/docs/linux/man/1-dos2unix/">dos2unix</a></i>(1), <i><a href="/docs/linux/man/1-unix2dos/">unix2dos</a></i>(1), <i><a href="/docs/linux/man/1-iconv/">iconv</a></i>(1), &lt;<a rel="nofollow" href="http://libguestfs.org/">http://libguestfs.org/</a>&gt;.</p>
@@ -110,13 +108,13 @@ hivexregedit-- export[--prefix prefix] hivefile key &gt; regfile
 <p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE. </font> See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
 <p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, <font SIZE="-1">MA 02139, USA.</font> </p>
 <h2>Index</h2>
-<dt><a href="#lbAH">EXAMPLE</a></p>
+<dt><a href="#lbAH">EXAMPLE</a></dt>
 <dd>
-<dt><a href="#lbAI">OPTIONS</a></p>
+</dd><dt><a href="#lbAI">OPTIONS</a></dt>
 <dd>
-<dt><a href="#lbAJ">SEE ALSO</a></p>
+</dd><dt><a href="#lbAJ">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAK">AUTHOR</a></p>
+</dd><dt><a href="#lbAK">AUTHOR</a></dt>
 <dd>
-<dt><a href="#lbAL">COPYRIGHT</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAL">COPYRIGHT</a></dt>
+<dd></dd></dl>

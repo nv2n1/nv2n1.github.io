@@ -14,25 +14,25 @@ description: "npmrc – The npm config files"
 <p>The four relevant files are:</p>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>per-project config file (/path/to/my/project/.npmrc)</p>
-<dt>&bull;</p>
-<dd>per-user config file (~/.npmrc)</p>
-<dt>&bull;</p>
-<dd>global config file ($PREFIX/etc/npmrc)</p>
-<dt>&bull;</p>
-<dd>npm builtin config file (/path/to/npm/npmrc)  All npm config files are an ini-formatted list of <code>key = value</code> parameters. Environment variables can be replaced using <code>${VARIABLE_NAME}</code>. For example:</p>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>per-project config file (/path/to/my/project/.npmrc)</dd>
+<dt>&bull;</dt>
+<dd>per-user config file (~/.npmrc)</dd>
+<dt>&bull;</dt>
+<dd>global config file ($PREFIX/etc/npmrc)</dd>
+<dt>&bull;</dt>
+<dd>npm builtin config file (/path/to/npm/npmrc)  All npm config files are an ini-formatted list of <code>key = value</code> parameters. Environment variables can be replaced using <code>${VARIABLE_NAME}</code>. For example:</dd>
 <dl>
 <dd>
 <pre>prefix = ${HOME}/.npm-packages</pre>
-</dl>
+</dd></dl>
 <p> Each of these files is loaded, and config options are resolved in priority order. For example, a setting in the userconfig file would override the setting in the globalconfig file. Array values are specified by adding &quot;[]&quot; after the key name. For example:</p>
 <dl>
 <dd>
 <pre>key[] = &quot;first value&quot;
 key[] = &quot;second value&quot;</pre>
-</dl>
+</dd></dl>
 <h3>Comments</h3>
 <p>Lines in <code>.npmrc</code> files are interpreted as comments when they begin with a <code>;</code> or <code>#</code> character. <code>.npmrc</code> files are parsed by npm/ini <i><a rel="nofollow" href="https://github.com/npm/ini">https://github.com/npm/ini</a></i>, which specifies this comment syntax. For example:</p>
 <dl>
@@ -40,7 +40,7 @@ key[] = &quot;second value&quot;</pre>
 <pre># last modified: 01 Jan 2016
 ; Set a new registry for a scoped package
 @myscope:registry=<a rel="nofollow" href="https://mycustomregistry.example.org">https://mycustomregistry.example.org</a></pre>
-</dl>
+</dd></dl>
 <h3>Per-project config file</h3>
 <p>When working locally in a project, a <code>.npmrc</code> file in the root of the project (ie, a sibling of <code>node_modules</code> and <code>package.json</code>) will set config values specific to this project. Note that this only applies to the root of the project that you&#8217;re running npm in. It has no effect when your module is published. For example, you can&#8217;t publish a module that forces itself to install globally, or in a different location. Additionally, this file is not read in global mode, such as when running <code>npm install -g</code>.</p>
 <h3>Per-user config file</h3>
@@ -52,14 +52,15 @@ key[] = &quot;second value&quot;</pre>
 <h3>See also</h3>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>npm help folders</p>
-<dt>&bull;</p>
-<dd>npm help config</p>
-<dt>&bull;</p>
-<dd>npm help config</p>
-<dt>&bull;</p>
-<dd>npm help package.json</p>
-<dt>&bull;</p>
-<dd>npm help npm </p>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>npm help folders</dd>
+<dt>&bull;</dt>
+<dd>npm help config</dd>
+<dt>&bull;</dt>
+<dd>npm help config</dd>
+<dt>&bull;</dt>
+<dd>npm help package.json</dd>
+<dt>&bull;</dt>
+<dd>npm help npm </dd>
+</dl></dl></dl></dl>

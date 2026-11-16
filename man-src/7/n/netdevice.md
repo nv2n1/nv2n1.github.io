@@ -10,8 +10,6 @@ description: "netdevice – low-level access to Linux network devices"
 <p>netdevice &#8211; low-level access to Linux network devices</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;sys/ioctl.h&gt;
-
-
 #include &lt;net/if.h&gt;</code></pre>
 <h2>Description</h2>
 <p>This man page describes the sockets interface which is used to configure network devices. Linux supports some standard ioctls to configure network devices. They can be used on any socket&#8217;s file descriptor regardless of the family or type. Most of them pass an <i>ifreq</i> structure: struct ifreq {<br />
@@ -35,12 +33,12 @@ description: "netdevice – low-level access to Linux network devices"
 <h3>Ioctls</h3>
 <p>If an ioctl is marked as privileged, then using it requires an effective user ID of 0 or the <code>CAP_NET_ADMIN</code> capability. If this is not the case, <code>EPERM</code> will be returned.</p>
 <dl>
-<dt><code>SIOCGIFNAME</code></p>
-<dd>Given the <i>ifr_ifindex</i>, return the name of the interface in <i>ifr_name</i>. This is the only ioctl which returns its result in <i>ifr_name</i>.</p>
-<dt><code>SIOCGIFINDEX</code></p>
-<dd>Retrieve the interface index of the interface into <i>ifr_ifindex</i>.</p>
-<dt><code>SIOCGIFFLAGS</code>, <code>SIOCSIFFLAGS</code></p>
-<dd>Get or set the active flag word of the device. <i>ifr_flags</i> contains a bit mask of the following values: </p>
+<dt><code>SIOCGIFNAME</code></dt>
+<dd>Given the <i>ifr_ifindex</i>, return the name of the interface in <i>ifr_name</i>. This is the only ioctl which returns its result in <i>ifr_name</i>.</dd>
+<dt><code>SIOCGIFINDEX</code></dt>
+<dd>Retrieve the interface index of the interface into <i>ifr_ifindex</i>.</dd>
+<dt><code>SIOCGIFFLAGS</code>, <code>SIOCSIFFLAGS</code></dt>
+<dd>Get or set the active flag word of the device. <i>ifr_flags</i> contains a bit mask of the following values: </dd>
 <table>
 <tr VALIGN=top>
 <td ALIGN=center COLSPAN=2>Device flags
@@ -145,8 +143,8 @@ description: "netdevice – low-level access to Linux network devices"
 </dl>
 <p> Setting the active flag word is a privileged operation, but any process may read it.</p>
 <dl>
-<dt><code>SIOCGIFPFLAGS</code>, <code>SIOCSIFPFLAGS</code></p>
-<dd>Get or set extended (private) flags for the device. <i>ifr_flags</i> contains a bit mask of the following values: </p>
+<dt><code>SIOCGIFPFLAGS</code>, <code>SIOCSIFPFLAGS</code></dt>
+<dd>Get or set extended (private) flags for the device. <i>ifr_flags</i> contains a bit mask of the following values: </dd>
 <table>
 <tr VALIGN=top>
 <td ALIGN=center COLSPAN=2>Private flags
@@ -196,49 +194,49 @@ description: "netdevice – low-level access to Linux network devices"
 </dl>
 <p> Setting the extended (private) interface flags is a privileged operation.</p>
 <dl>
-<dt><code>SIOCGIFADDR</code>, <code>SIOCSIFADDR</code></p>
-<dd>Get or set the address of the device using <i>ifr_addr</i>. Setting the interface address is a privileged operation. For compatibility, only <code>AF_INET</code> addresses are accepted or returned.</p>
-<dt><code>SIOCGIFDSTADDR</code>, <code>SIOCSIFDSTADDR</code></p>
-<dd>Get or set the destination address of a point-to-point device using <i>ifr_dstaddr</i>. For compatibility, only <code>AF_INET</code> addresses are accepted or returned. Setting the destination address is a privileged operation.</p>
-<dt><code>SIOCGIFBRDADDR</code>, <code>SIOCSIFBRDADDR</code></p>
-<dd>Get or set the broadcast address for a device using <i>ifr_brdaddr</i>. For compatibility, only <code>AF_INET</code> addresses are accepted or returned. Setting the broadcast address is a privileged operation.</p>
-<dt><code>SIOCGIFNETMASK</code>, <code>SIOCSIFNETMASK</code></p>
-<dd>Get or set the network mask for a device using <i>ifr_netmask</i>. For compatibility, only <code>AF_INET</code> addresses are accepted or returned. Setting the network mask is a privileged operation.</p>
-<dt><code>SIOCGIFMETRIC</code>, <code>SIOCSIFMETRIC</code></p>
-<dd>Get or set the metric of the device using <i>ifr_metric</i>. This is currently not implemented; it sets <i>ifr_metric</i> to 0 if you attempt to read it and returns <code>EOPNOTSUPP</code> if you attempt to set it.</p>
-<dt><code>SIOCGIFMTU</code>, <code>SIOCSIFMTU</code></p>
-<dd>Get or set the MTU (Maximum Transfer Unit) of a device using <i>ifr_mtu</i>. Setting the MTU is a privileged operation. Setting the MTU to too small values may cause kernel crashes.</p>
-<dt><code>SIOCGIFHWADDR</code>, <code>SIOCSIFHWADDR</code></p>
-<dd>Get or set the hardware address of a device using <i>ifr_hwaddr</i>. The hardware address is specified in a struct <i>sockaddr</i>. <i>sa_family</i> contains the ARPHRD_* device type, <i>sa_data</i> the L2 hardware address starting from byte 0. Setting the hardware address is a privileged operation.</p>
-<dt><code>SIOCSIFHWBROADCAST</code></p>
-<dd>Set the hardware broadcast address of a device from <i>ifr_hwaddr</i>. This is a privileged operation.</p>
-<dt><code>SIOCGIFMAP</code>, <code>SIOCSIFMAP</code></p>
-<dd>Get or set the interface&#8217;s hardware parameters using <i>ifr_map</i>. Setting the parameters is a privileged operation.</p>
+<dt><code>SIOCGIFADDR</code>, <code>SIOCSIFADDR</code></dt>
+<dd>Get or set the address of the device using <i>ifr_addr</i>. Setting the interface address is a privileged operation. For compatibility, only <code>AF_INET</code> addresses are accepted or returned.</dd>
+<dt><code>SIOCGIFDSTADDR</code>, <code>SIOCSIFDSTADDR</code></dt>
+<dd>Get or set the destination address of a point-to-point device using <i>ifr_dstaddr</i>. For compatibility, only <code>AF_INET</code> addresses are accepted or returned. Setting the destination address is a privileged operation.</dd>
+<dt><code>SIOCGIFBRDADDR</code>, <code>SIOCSIFBRDADDR</code></dt>
+<dd>Get or set the broadcast address for a device using <i>ifr_brdaddr</i>. For compatibility, only <code>AF_INET</code> addresses are accepted or returned. Setting the broadcast address is a privileged operation.</dd>
+<dt><code>SIOCGIFNETMASK</code>, <code>SIOCSIFNETMASK</code></dt>
+<dd>Get or set the network mask for a device using <i>ifr_netmask</i>. For compatibility, only <code>AF_INET</code> addresses are accepted or returned. Setting the network mask is a privileged operation.</dd>
+<dt><code>SIOCGIFMETRIC</code>, <code>SIOCSIFMETRIC</code></dt>
+<dd>Get or set the metric of the device using <i>ifr_metric</i>. This is currently not implemented; it sets <i>ifr_metric</i> to 0 if you attempt to read it and returns <code>EOPNOTSUPP</code> if you attempt to set it.</dd>
+<dt><code>SIOCGIFMTU</code>, <code>SIOCSIFMTU</code></dt>
+<dd>Get or set the MTU (Maximum Transfer Unit) of a device using <i>ifr_mtu</i>. Setting the MTU is a privileged operation. Setting the MTU to too small values may cause kernel crashes.</dd>
+<dt><code>SIOCGIFHWADDR</code>, <code>SIOCSIFHWADDR</code></dt>
+<dd>Get or set the hardware address of a device using <i>ifr_hwaddr</i>. The hardware address is specified in a struct <i>sockaddr</i>. <i>sa_family</i> contains the ARPHRD_* device type, <i>sa_data</i> the L2 hardware address starting from byte 0. Setting the hardware address is a privileged operation.</dd>
+<dt><code>SIOCSIFHWBROADCAST</code></dt>
+<dd>Set the hardware broadcast address of a device from <i>ifr_hwaddr</i>. This is a privileged operation.</dd>
+<dt><code>SIOCGIFMAP</code>, <code>SIOCSIFMAP</code></dt>
+<dd>Get or set the interface&#8217;s hardware parameters using <i>ifr_map</i>. Setting the parameters is a privileged operation.</dd>
 <dd>struct ifmap {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long&nbsp;<wbr>&nbsp;<wbr>&nbsp;mem_start;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned long&nbsp;<wbr>&nbsp;<wbr>&nbsp;mem_end;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned short&nbsp;<wbr>&nbsp;base_addr;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char&nbsp;<wbr>&nbsp;<wbr>&nbsp;irq;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char&nbsp;<wbr>&nbsp;<wbr>&nbsp;dma;<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char&nbsp;<wbr>&nbsp;<wbr>&nbsp;port; };</p>
-<dd>The interpretation of the ifmap structure depends on the device driver and the architecture.</p>
-<dt><code>SIOCADDMULTI</code>, <code>SIOCDELMULTI</code></p>
-<dd>Add an address to or delete an address from the device&#8217;s link layer multicast filters using <i>ifr_hwaddr</i>. These are privileged operations. See also <code><a href="/docs/linux/man/7-packet/">packet</a></code>(7) for an alternative.</p>
-<dt><code>SIOCGIFTXQLEN</code>, <code>SIOCSIFTXQLEN</code></p>
-<dd>Get or set the transmit queue length of a device using <i>ifr_qlen</i>. Setting the transmit queue length is a privileged operation.</p>
-<dt><code>SIOCSIFNAME</code></p>
-<dd>Changes the name of the interface specified in <i>ifr_name</i> to <i>ifr_newname</i>. This is a privileged operation. It is allowed only when the interface is not up.</p>
-<dt><code>SIOCGIFCONF</code></p>
-<dd>Return a list of interface (network layer) addresses. This currently means only addresses of the <code>AF_INET</code> (IPv4) family for compatibility. Unlike the others, this ioctl passes an <i>ifconf</i> structure:</p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;unsigned char&nbsp;<wbr>&nbsp;<wbr>&nbsp;port; };</dd>
+<dd>The interpretation of the ifmap structure depends on the device driver and the architecture.</dd>
+<dt><code>SIOCADDMULTI</code>, <code>SIOCDELMULTI</code></dt>
+<dd>Add an address to or delete an address from the device&#8217;s link layer multicast filters using <i>ifr_hwaddr</i>. These are privileged operations. See also <code><a href="/docs/linux/man/7-packet/">packet</a></code>(7) for an alternative.</dd>
+<dt><code>SIOCGIFTXQLEN</code>, <code>SIOCSIFTXQLEN</code></dt>
+<dd>Get or set the transmit queue length of a device using <i>ifr_qlen</i>. Setting the transmit queue length is a privileged operation.</dd>
+<dt><code>SIOCSIFNAME</code></dt>
+<dd>Changes the name of the interface specified in <i>ifr_name</i> to <i>ifr_newname</i>. This is a privileged operation. It is allowed only when the interface is not up.</dd>
+<dt><code>SIOCGIFCONF</code></dt>
+<dd>Return a list of interface (network layer) addresses. This currently means only addresses of the <code>AF_INET</code> (IPv4) family for compatibility. Unlike the others, this ioctl passes an <i>ifconf</i> structure:</dd>
 <dd>struct ifconf {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ifc_len;&nbsp;/*&nbsp;size of buffer&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;union&nbsp;{<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*ifc_buf;&nbsp;/*&nbsp;buffer address&nbsp;*/<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct ifreq&nbsp;<wbr>&nbsp;<wbr>&nbsp;*ifc_req;&nbsp;/*&nbsp;array of structures&nbsp;*/<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}; };</p>
-<dd>If <i>ifc_req</i> is NULL, <code>SIOCGIFCONF</code> returns the necessary buffer size in bytes for receiving all available addresses in <i>ifc_len</i>. Otherwise, <i>ifc_req</i> contains a pointer to an array of <i>ifreq</i> structures to be filled with all currently active L3 interface addresses. <i>ifc_len</i> contains the size of the array in bytes. Within each <i>ifreq</i> structure, <i>ifr_name</i> will receive the interface name, and <i>ifr_addr</i> the address. The actual number of bytes transferred is returned in <i>ifc_len</i>.</p>
-<dd>If the size specified by <i>ifc_len</i> is insufficient to store all the addresses, the kernel will skip the exceeding ones and return success. There is no reliable way of detecting this condition once it has occurred. It is therefore recommended to either determine the necessary buffer size beforehand by calling <code>SIOCGIFCONF</code> with <i>ifc_req</i> set to NULL, or to retry the call with a bigger buffer whenever <i>ifc_len</i> upon return differs by less than <i>sizeof(struct ifreq)</i> from its original value.</p>
-<dd>If an error occurs accessing the <i>ifconf</i> or <i>ifreq</i> structures, <code>EFAULT</code> will be returned.</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;}; };</dd>
+<dd>If <i>ifc_req</i> is NULL, <code>SIOCGIFCONF</code> returns the necessary buffer size in bytes for receiving all available addresses in <i>ifc_len</i>. Otherwise, <i>ifc_req</i> contains a pointer to an array of <i>ifreq</i> structures to be filled with all currently active L3 interface addresses. <i>ifc_len</i> contains the size of the array in bytes. Within each <i>ifreq</i> structure, <i>ifr_name</i> will receive the interface name, and <i>ifr_addr</i> the address. The actual number of bytes transferred is returned in <i>ifc_len</i>.</dd>
+<dd>If the size specified by <i>ifc_len</i> is insufficient to store all the addresses, the kernel will skip the exceeding ones and return success. There is no reliable way of detecting this condition once it has occurred. It is therefore recommended to either determine the necessary buffer size beforehand by calling <code>SIOCGIFCONF</code> with <i>ifc_req</i> set to NULL, or to retry the call with a bigger buffer whenever <i>ifc_len</i> upon return differs by less than <i>sizeof(struct ifreq)</i> from its original value.</dd>
+<dd>If an error occurs accessing the <i>ifconf</i> or <i>ifreq</i> structures, <code>EFAULT</code> will be returned.</dd></dl>
 <p> Most protocols support their own ioctls to configure protocol-specific interface options. See the protocol man pages for a description. For configuring IP addresses, see <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7). In addition, some devices support private ioctls. These are not described here.</p>
 <h2>Notes</h2>
 <p><code>SIOCGIFCONF</code> and the other ioctls that accept or return only <code>AF_INET</code> socket addresses are IP-specific and perhaps should rather be documented in <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7). </p>

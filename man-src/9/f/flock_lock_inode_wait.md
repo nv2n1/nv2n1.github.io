@@ -15,11 +15,11 @@ flock_lock_inode_wait - Apply a FLOCK-style lock to a file
 <h2>Arguments</h2>
 
 <i>inode</i>
-<dl><dd><dd>inode of the file to apply to</dl>
+<dl><dd></dd><dd>inode of the file to apply to</dd></dl>
  
 
  <i>fl</i>
-<dl><dd>The lock to be applied</dl>
+<dl><dd>The lock to be applied</dd></dl>
 
 <h2>Description</h2>
 

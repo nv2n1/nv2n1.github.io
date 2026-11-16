@@ -30,19 +30,19 @@ if (errstr)
 </blockquote>
 <p> The above example will guarantee that the value of iterations is between 1 and 64 (inclusive).</p>
 <h2>Errors</h2>
-<dt><code>Bq </code>Er ERANGE</p>
-<dd>The given string was out of range.</p>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd>The given string did not consist solely of digit characters.</p>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd>The supplied Fa minval was larger than Fa maxval .</dl>
+<dt><code>Bq </code>Er ERANGE</dt>
+<dd>The given string was out of range.</dd>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd>The given string did not consist solely of digit characters.</dd>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd>The supplied Fa minval was larger than Fa maxval .</dd></dl>
 <p> If an error occurs, Fa errstr will be set to one of the following strings: </p>
-<dt><code>too large</code></p>
-<dd>The result was larger than the provided maximum value.</p>
-<dt><code>too small</code></p>
-<dd>The result was smaller than the provided minimum value.</p>
-<dt><code>invalid</code></p>
-<dd>The string did not consist solely of digit characters.</dl>
+<dt><code>too large</code></dt>
+<dd>The result was larger than the provided maximum value.</dd>
+<dt><code>too small</code></dt>
+<dd>The result was smaller than the provided minimum value.</dd>
+<dt><code>invalid</code></dt>
+<dd>The string did not consist solely of digit characters.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-atof/">atof</a>(3), <a href="/docs/linux/man/3-atoi/">atoi</a>(3), <a href="/docs/linux/man/3-atol/">atol</a>(3), <a href="/docs/linux/man/3-atoll/">atoll</a>(3), <a href="/docs/linux/man/3-sscanf/">sscanf</a>(3), <a href="/docs/linux/man/3-strtod/">strtod</a>(3), <a href="/docs/linux/man/3-strtol/">strtol</a>(3), <a href="/docs/linux/man/3-strtoul/">strtoul</a>(3)</p>
 <h2>Standards</h2>

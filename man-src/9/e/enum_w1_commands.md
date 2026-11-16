@@ -24,36 +24,36 @@ description: "enum_w1_commands – commands available for master or slave operat
 <h2>Constants</h2>
 <p>W1_CMD_READ</p>
 <dl>
-<dd>read len bytes</dl>
+<dd>read len bytes</dd></dl>
 <p> W1_CMD_WRITE</p>
 <dl>
-<dd>write len bytes</dl>
+<dd>write len bytes</dd></dl>
 <p> W1_CMD_SEARCH</p>
 <dl>
-<dd>initiate a standard search, returns only the slave devices found during that search</dl>
+<dd>initiate a standard search, returns only the slave devices found during that search</dd></dl>
 <p> W1_CMD_ALARM_SEARCH</p>
 <dl>
-<dd>search for devices that are currently alarming</dl>
+<dd>search for devices that are currently alarming</dd></dl>
 <p> W1_CMD_TOUCH</p>
 <dl>
-<dd>Touches a series of bytes.</dl>
+<dd>Touches a series of bytes.</dd></dl>
 <p> W1_CMD_RESET</p>
 <dl>
-<dd>sends a bus reset on the given master</dl>
+<dd>sends a bus reset on the given master</dd></dl>
 <p> W1_CMD_SLAVE_ADD</p>
 <dl>
-<dd>adds a slave to the given master, 8 byte slave id at data[0]</dl>
+<dd>adds a slave to the given master, 8 byte slave id at data[0]</dd></dl>
 <p> W1_CMD_SLAVE_REMOVE</p>
 <dl>
-<dd>removes a slave to the given master, 8 byte slave id at data[0]</dl>
+<dd>removes a slave to the given master, 8 byte slave id at data[0]</dd></dl>
 <p> W1_CMD_LIST_SLAVES</p>
 <dl>
-<dd>list of slaves registered on this master</dl>
+<dd>list of slaves registered on this master</dd></dl>
 <p> W1_CMD_MAX</p>
 <dl>
-<dd>number of available commands</dl>
+<dd>number of available commands</dd></dl>
 <h2>Author</h2>
 <p><code>David Fries</code> &lt;David [at] Fries.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

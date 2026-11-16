@@ -75,7 +75,6 @@ int main(int argc, char **argv)
         metalink_parser_context_delete(context);
         exit(EXIT_FAILURE);
     }
-
     r = metalink_parse_final(context, NULL, 0, &amp;metalink);
     if (r != 0) {
         fprintf(stderr, "ERROR: code=%d
@@ -83,7 +82,6 @@ int main(int argc, char **argv)
         exit(EXIT_FAILURE);
     }
     TEMP_FAILURE_RETRY(close(fd));
-
     file = metalink-&gt;files[0];
     printf("name: %s
 ", file-&gt;name);

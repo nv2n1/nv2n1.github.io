@@ -14,11 +14,11 @@ description: "rio_init_em – Initializes RIO Error Management (for switches)"
 <p><i>rdev</i></p>
 <dl>
 <dd>
-<dd>RIO device</dl>
+</dd><dd>RIO device</dd></dl>
 <h2>Description</h2>
 <p>For each enumerated switch, call device-specific error management initialization routine (if supplied by the switch driver).</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

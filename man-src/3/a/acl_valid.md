@@ -22,8 +22,8 @@ description: "acl_valid – validate an ACL"
 <h2>ERRORS</h2>
 <p> If any of the following conditions occur, the Fn acl_valid function returns <code>-1</code> and sets <i>errno</i> to the corresponding value:</p>
 <dl>
-<dt><code>Bq </code>Er EINVAL</p>
-<dd> The argument <i>acl</i> is not a valid pointer to an ACL. </p>
+<dt><code>Bq </code>Er EINVAL</dt>
+<dd> The argument <i>acl</i> is not a valid pointer to an ACL. </dd>
 <p> The argument <i>acl</i> does not point to a valid ACL. </p>
 <p> One or more of the required ACL entries is not present in <i>acl</i> </p>
 <p> The ACL contains entries that are not unique.</dl>
@@ -34,3 +34,4 @@ description: "acl_valid – validate an ACL"
 <h2>AUTHOR</h2>
 <p> Derived from the FreeBSD manual pages written by An Robert N M Watson Aq rwatson [at] FreeBSD.org , and adapted for Linux by An Andreas Gruenbacher Aq a.gruenbacher [at] bestbits.at . </p>
 <h2>Index</h2>
+</p>

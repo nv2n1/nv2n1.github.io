@@ -24,150 +24,150 @@ int acct(const char *filename);</dl>
 <h3>Feature test macros understood by glibc</h3>
 <p>The paragraphs below explain how feature test macros are handled in Linux glibc 2.<i>x</i>, <i>x</i> &gt; 0. First, though a summary of a few details for the impatient:</p>
 <dl>
-<dt>*</p>
-<dd>The macros that you most likely need to use in modern source code are <code>_POSIX_C_SOURCE</code> (for definitions from various versions of POSIX.1), <code>_XOPEN_SOURCE</code> (for definitions from various versions of SUS), <code>_GNU_SOURCE</code> (for GNU and/or Linux specific stuff), and <code>_DEFAULT_SOURCE</code> (to get definitions that would normally be provided by default).</p>
-<dt>*</p>
-<dd>Certain macros are defined with default values. Thus, although one or more macros may be indicated as being required in the SYNOPSIS of a man page, it may not be necessary to define them explicitly. Full details of the defaults are given later in this man page.</p>
-<dt>*</p>
-<dd>Defining <code>_XOPEN_SOURCE</code> with a value of 600 or greater produces the same effects as defining <code>_POSIX_C_SOURCE</code> with a value of 200112L or greater. Where one sees</p>
-<dd>_POSIX_C_SOURCE &gt;= 200112L</p>
-<dd>in the feature test macro requirements in the SYNOPSIS of a man page, it is implicit that the following has the same effect:</p>
-<dd>_XOPEN_SOURCE &gt;= 600</p>
-<dt>*</p>
-<dd>Defining <code>_XOPEN_SOURCE</code> with a value of 700 or greater produces the same effects as defining <code>_POSIX_C_SOURCE</code> with a value of 200809L or greater. Where one sees</p>
-<dd>_POSIX_C_SOURCE &gt;= 200809L</p>
-<dd>in the feature test macro requirements in the SYNOPSIS of a man page, it is implicit that the following has the same effect:</p>
-<dd>_XOPEN_SOURCE &gt;= 700</dl>
+<dt>*</dt>
+<dd>The macros that you most likely need to use in modern source code are <code>_POSIX_C_SOURCE</code> (for definitions from various versions of POSIX.1), <code>_XOPEN_SOURCE</code> (for definitions from various versions of SUS), <code>_GNU_SOURCE</code> (for GNU and/or Linux specific stuff), and <code>_DEFAULT_SOURCE</code> (to get definitions that would normally be provided by default).</dd>
+<dt>*</dt>
+<dd>Certain macros are defined with default values. Thus, although one or more macros may be indicated as being required in the SYNOPSIS of a man page, it may not be necessary to define them explicitly. Full details of the defaults are given later in this man page.</dd>
+<dt>*</dt>
+<dd>Defining <code>_XOPEN_SOURCE</code> with a value of 600 or greater produces the same effects as defining <code>_POSIX_C_SOURCE</code> with a value of 200112L or greater. Where one sees</dd>
+<dd>_POSIX_C_SOURCE &gt;= 200112L</dd>
+<dd>in the feature test macro requirements in the SYNOPSIS of a man page, it is implicit that the following has the same effect:</dd>
+<dd>_XOPEN_SOURCE &gt;= 600</dd>
+<dt>*</dt>
+<dd>Defining <code>_XOPEN_SOURCE</code> with a value of 700 or greater produces the same effects as defining <code>_POSIX_C_SOURCE</code> with a value of 200809L or greater. Where one sees</dd>
+<dd>_POSIX_C_SOURCE &gt;= 200809L</dd>
+<dd>in the feature test macro requirements in the SYNOPSIS of a man page, it is implicit that the following has the same effect:</dd>
+<dd>_XOPEN_SOURCE &gt;= 700</dd></dl>
 <p> Linux glibc understands the following feature test macros:</p>
 <dl>
-<dt><code>__STRICT_ANSI__</code></p>
-<dd>ISO Standard C. This macro is implicitly defined by <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1) when invoked with, for example, the <i>-std=c99</i> or <i>-ansi</i> flag.</p>
-<dt><code>_POSIX_C_SOURCE</code></p>
-<dd>Defining this macro causes header files to expose definitions as follows:</p>
+<dt><code>__STRICT_ANSI__</code></dt>
+<dd>ISO Standard C. This macro is implicitly defined by <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1) when invoked with, for example, the <i>-std=c99</i> or <i>-ansi</i> flag.</dd>
+<dt><code>_POSIX_C_SOURCE</code></dt>
+<dd>Defining this macro causes header files to expose definitions as follows:</dd>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>The value 1 exposes definitions conforming to POSIX.1-1990 and ISO C (1990).</p>
-<dt>&bull;</p>
-<dd>The value 2 or greater additionally exposes definitions for POSIX.2-1992.</p>
-<dt>&bull;</p>
-<dd>The value 199309L or greater additionally exposes definitions for POSIX.1b (real-time extensions).</p>
-<dt>&bull;</p>
-<dd>The value 199506L or greater additionally exposes definitions for POSIX.1c (threads).</p>
-<dt>&bull;</p>
-<dd>(Since glibc 2.3.3) The value 200112L or greater additionally exposes definitions corresponding to the POSIX.1-2001 base specification (excluding the XSI extension). This value also causes C95 (since glibc 2.12) and C99 (since glibc 2.10) features to be exposed (in other words, the equivalent of defining <code>_ISOC99_SOURCE</code>).</p>
-<dt>&bull;</p>
-<dd>(Since glibc 2.10) The value 200809L or greater additionally exposes definitions corresponding to the POSIX.1-2008 base specification (excluding the XSI extension).</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>The value 1 exposes definitions conforming to POSIX.1-1990 and ISO C (1990).</dd>
+<dt>&bull;</dt>
+<dd>The value 2 or greater additionally exposes definitions for POSIX.2-1992.</dd>
+<dt>&bull;</dt>
+<dd>The value 199309L or greater additionally exposes definitions for POSIX.1b (real-time extensions).</dd>
+<dt>&bull;</dt>
+<dd>The value 199506L or greater additionally exposes definitions for POSIX.1c (threads).</dd>
+<dt>&bull;</dt>
+<dd>(Since glibc 2.3.3) The value 200112L or greater additionally exposes definitions corresponding to the POSIX.1-2001 base specification (excluding the XSI extension). This value also causes C95 (since glibc 2.12) and C99 (since glibc 2.10) features to be exposed (in other words, the equivalent of defining <code>_ISOC99_SOURCE</code>).</dd>
+<dt>&bull;</dt>
+<dd>(Since glibc 2.10) The value 200809L or greater additionally exposes definitions corresponding to the POSIX.1-2008 base specification (excluding the XSI extension).</dd></dl>
 </dl>
-<dt><code>_POSIX_SOURCE</code></p>
-<dd>Defining this obsolete macro with any value is equivalent to defining <code>_POSIX_C_SOURCE</code> with the value 1.</p>
-<dd>Since this macro is obsolete, its usage is generally not documented when discussing feature test macro requirements in the man pages.</p>
-<dt><code>_XOPEN_SOURCE</code></p>
-<dd>Defining this macro causes header files to expose definitions as follows:</p>
+<dt><code>_POSIX_SOURCE</code></dt>
+<dd>Defining this obsolete macro with any value is equivalent to defining <code>_POSIX_C_SOURCE</code> with the value 1.</dd>
+<dd>Since this macro is obsolete, its usage is generally not documented when discussing feature test macro requirements in the man pages.</dd>
+<dt><code>_XOPEN_SOURCE</code></dt>
+<dd>Defining this macro causes header files to expose definitions as follows:</dd>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>Defining with any value exposes definitions conforming to POSIX.1, POSIX.2, and XPG4.</p>
-<dt>&bull;</p>
-<dd>The value 500 or greater additionally exposes definitions for SUSv2 (UNIX 98).</p>
-<dt>&bull;</p>
-<dd>(Since glibc 2.2) The value 600 or greater additionally exposes definitions for SUSv3 (UNIX 03; i.e., the POSIX.1-2001 base specification plus the XSI extension) and C99 definitions.</p>
-<dt>&bull;</p>
-<dd>(Since glibc 2.10) The value 700 or greater additionally exposes definitions for SUSv4 (i.e., the POSIX.1-2008 base specification plus the XSI extension).</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>Defining with any value exposes definitions conforming to POSIX.1, POSIX.2, and XPG4.</dd>
+<dt>&bull;</dt>
+<dd>The value 500 or greater additionally exposes definitions for SUSv2 (UNIX 98).</dd>
+<dt>&bull;</dt>
+<dd>(Since glibc 2.2) The value 600 or greater additionally exposes definitions for SUSv3 (UNIX 03; i.e., the POSIX.1-2001 base specification plus the XSI extension) and C99 definitions.</dd>
+<dt>&bull;</dt>
+<dd>(Since glibc 2.10) The value 700 or greater additionally exposes definitions for SUSv4 (i.e., the POSIX.1-2008 base specification plus the XSI extension).</dd></dl>
 </dl>
-<dd>If <code>__STRICT_ANSI__</code> is not defined, or <code>_XOPEN_SOURCE</code> is defined with a value greater than or equal to 500 <i>and</i> neither <code>_POSIX_SOURCE</code> nor <code>_POSIX_C_SOURCE</code> is explicitly defined, then the following macros are implicitly defined:</p>
+<dd>If <code>__STRICT_ANSI__</code> is not defined, or <code>_XOPEN_SOURCE</code> is defined with a value greater than or equal to 500 <i>and</i> neither <code>_POSIX_SOURCE</code> nor <code>_POSIX_C_SOURCE</code> is explicitly defined, then the following macros are implicitly defined:</dd>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd><code>_POSIX_SOURCE</code> is defined with the value 1.</p>
-<dt>&bull;</p>
-<dd><code>_POSIX_C_SOURCE</code> is defined, according to the value of <code>_XOPEN_SOURCE</code>:</p>
+</dd><dl>
+<dt>&bull;</dt>
+<dd><code>_POSIX_SOURCE</code> is defined with the value 1.</dd>
+<dt>&bull;</dt>
+<dd><code>_POSIX_C_SOURCE</code> is defined, according to the value of <code>_XOPEN_SOURCE</code>:</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>_XOPEN_SOURCE</code> &lt; 500</p>
-<dd><code>_POSIX_C_SOURCE</code> is defined with the value 2.</p>
-<dt>500 &lt;= <code>_XOPEN_SOURCE</code> &lt; 600</p>
-<dd><code>_POSIX_C_SOURCE</code> is defined with the value 199506L.</p>
-<dt>600 &lt;= <code>_XOPEN_SOURCE</code> &lt; 700</p>
-<dd><code>_POSIX_C_SOURCE</code> is defined with the value 200112L.</p>
-<dt>700 &lt;= <code>_XOPEN_SOURCE</code> (since glibc 2.10)</p>
-<dd><code>_POSIX_C_SOURCE</code> is defined with the value 200809L.</dl>
+</dd><dl>
+<dt><code>_XOPEN_SOURCE</code> &lt; 500</dt>
+<dd><code>_POSIX_C_SOURCE</code> is defined with the value 2.</dd>
+<dt>500 &lt;= <code>_XOPEN_SOURCE</code> &lt; 600</dt>
+<dd><code>_POSIX_C_SOURCE</code> is defined with the value 199506L.</dd>
+<dt>600 &lt;= <code>_XOPEN_SOURCE</code> &lt; 700</dt>
+<dd><code>_POSIX_C_SOURCE</code> is defined with the value 200112L.</dd>
+<dt>700 &lt;= <code>_XOPEN_SOURCE</code> (since glibc 2.10)</dt>
+<dd><code>_POSIX_C_SOURCE</code> is defined with the value 200809L.</dd></dl>
 </dl>
 </dl>
 </dl>
-<dd>In addition, defining <code>_XOPEN_SOURCE</code> with a value of 500 or greater produces the same effects as defining <code>_XOPEN_SOURCE_EXTENDED</code>.</p>
-<dt><code>_XOPEN_SOURCE_EXTENDED</code></p>
-<dd>If this macro is defined, <i>and</i> <code>_XOPEN_SOURCE</code> is defined, then expose definitions corresponding to the XPG4v2 (SUSv1) UNIX extensions (UNIX 95). Defining <code>_XOPEN_SOURCE</code> with a value of 500 or more also produces the same effect as defining <code>_XOPEN_SOURCE_EXTENDED</code>. Use of <code>_XOPEN_SOURCE_EXTENDED</code> in new source code should be avoided.</p>
-<dd>Since defining <code>_XOPEN_SOURCE</code> with a value of 500 or more has the same effect as defining <code>_XOPEN_SOURCE_EXTENDED</code>, the latter (obsolete) feature test macro is generally not described in the SYNOPSIS in man pages.</p>
-<dt><code>_ISOC99_SOURCE</code> (since glibc 2.1.3)</p>
-<dd>Exposes declarations consistent with the ISO C99 standard.</p>
-<dd>Earlier glibc 2.1.x versions recognized an equivalent macro named <code>_ISOC9X_SOURCE</code> (because the C99 standard had not then been finalized). Although the use of this macro is obsolete, glibc continues to recognize it for backward compatibility.</p>
-<dd>Defining <code>_ISOC99_SOURCE</code> also exposes ISO C (1990) Amendment 1 (&quot;C95&quot;) definitions. (The primary change in C95 was support for international character sets.)</p>
-<dd>Invoking the C compiler with the option <i>-std=c99</i> produces the same effects as defining this macro.</p>
-<dt><code>_ISOC11_SOURCE</code> (since glibc 2.16)</p>
-<dd>Exposes declarations consistent with the ISO C11 standard. Defining this macro also enables C99 and C95 features (like <code>_ISOC99_SOURCE</code>).</p>
-<dd>Invoking the C compiler with the option <i>-std=c11</i> produces the same effects as defining this macro.</p>
-<dt><code>_LARGEFILE64_SOURCE</code></p>
-<dd>Expose definitions for the alternative API specified by the LFS (Large File Summit) as a &quot;transitional extension&quot; to the Single UNIX Specification. (See The alternative API consists of a set of new objects (i.e., functions and types) whose names are suffixed with &quot;64&quot; (e.g., <i>off64_t</i> versus <i>off_t</i>, <code>lseek64</code>() versus <code>lseek</code>(), etc.). New programs should not employ this macro; instead <i>_FILE_OFFSET_BITS=64</i> should be employed.</p>
-<dt><code>_LARGEFILE_SOURCE</code></p>
-<dd>This macro was historically used to expose certain functions (specifically <code><a href="/docs/linux/man/3-fseeko/">fseeko</a></code>(3) and <code><a href="/docs/linux/man/3-ftello/">ftello</a></code>(3)) that address limitations of earlier APIs (<code><a href="/docs/linux/man/3-fseek/">fseek</a></code>(3) and <code><a href="/docs/linux/man/3-ftell/">ftell</a></code>(3)) that use <i>long</i> for file offsets. This macro is implicitly defined if <code>_XOPEN_SOURCE</code> is defined with a value greater than or equal to 500. New programs should not employ this macro; defining <code>_XOPEN_SOURCE</code> as just described or defining <code>_FILE_OFFSET_BITS</code> with the value 64 is the preferred mechanism to achieve the same result.</p>
-<dt><code>_FILE_OFFSET_BITS</code></p>
-<dd>Defining this macro with the value 64 automatically converts references to 32-bit functions and data types related to file I/O and filesystem operations into references to their 64-bit counterparts. This is useful for performing I/O on large files (&gt; 2 Gigabytes) on 32-bit systems. (Defining this macro permits correctly written programs to use large files with only a recompilation being required.)</p>
-<dd>64-bit systems naturally permit file sizes greater than 2 Gigabytes, and on those systems this macro has no effect.</p>
-<dt><code>_BSD_SOURCE</code> (deprecated since glibc 2.20)</p>
-<dd>Defining this macro with any value causes header files to expose BSD-derived definitions.</p>
-<dd>In glibc versions up to and including 2.18, defining this macro also causes BSD definitions to be preferred in some situations where standards conflict, unless one or more of <code>_SVID_SOURCE</code>, <code>_POSIX_SOURCE</code>, <code>_POSIX_C_SOURCE</code>, <code>_XOPEN_SOURCE</code>, <code>_XOPEN_SOURCE_EXTENDED</code>, or <code>_GNU_SOURCE</code> is defined, in which case BSD definitions are disfavored. Since glibc 2.19, <code>_BSD_SOURCE</code> no longer causes BSD definitions to be preferred in case of conflicts.</p>
-<dd>Since glibc 2.20, this macro is deprecated. It now has the same effect as defining <code>_DEFAULT_SOURCE</code>, but generates a compile-time warning (unless <code>_DEFAULT_SOURCE</code> is also defined). Use <code>_DEFAULT_SOURCE</code> instead. To allow code that requires <code>_BSD_SOURCE</code> in glibc 2.19 and earlier and <code>_DEFAULT_SOURCE</code> in glibc 2.20 and later to compile without warnings, define <i>both</i> <code>_BSD_SOURCE</code> and <code>_DEFAULT_SOURCE</code>.</p>
-<dt><code>_SVID_SOURCE</code> (deprecated since glibc 2.20)</p>
-<dd>Defining this macro with any value causes header files to expose System V-derived definitions. (SVID == System V Interface Definition; see <code><a href="/docs/linux/man/7-standards/">standards</a></code>(7).)</p>
-<dd>Since glibc 2.20, this macro is deprecated in the same fashion as <code>_BSD_SOURCE</code>.</p>
-<dt><code>_DEFAULT_SOURCE</code> (since glibc 2.19)</p>
-<dd>This macro can be defined to ensure that the &quot;default&quot; definitions are provided even when the defaults would otherwise be disabled, as happens when individual macros are explicitly defined, or the compiler is invoked in one of its &quot;standard&quot; modes (e.g., <i>cc -std=c99</i>). Defining <code>_DEFAULT_SOURCE</code> without defining other individual macros or invoking the compiler in one of its &quot;standard&quot; modes has no effect.</p>
-<dd>The &quot;default&quot; definitions comprise those required by POSIX.1-2008 and ISO C99, as well as various definitions originally derived from BSD and System V. On glibc 2.19 and earlier, these defaults were approximately equivalent to explicitly defining the following:</p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cc -D_BSD_SOURCE -D_SVID_SOURCE -D_POSIX_C_SOURCE=200809</p>
-<dt><code>_ATFILE_SOURCE</code> (since glibc 2.4)</p>
-<dd>Defining this macro with any value causes header files to expose declarations of a range of functions with the suffix &quot;at&quot;; see <code><a href="/docs/linux/man/2-openat/">openat</a></code>(2). Since glibc 2.10, this macro is also implicitly defined if <code>_POSIX_C_SOURCE</code> is defined with a value greater than or equal to 200809L.</p>
-<dt><code>_GNU_SOURCE</code></p>
-<dd>Defining this macro (with any value) implicitly defines <code>_ATFILE_SOURCE</code>, <code>_LARGEFILE64_SOURCE</code>, <code>_ISOC99_SOURCE</code>, <code>_XOPEN_SOURCE_EXTENDED</code>, <code>_POSIX_SOURCE</code>, <code>_POSIX_C_SOURCE</code> with the value 200809L (200112L in glibc versions before 2.10; 199506L in glibc versions before 2.5; 199309L in glibc versions before 2.1) and <code>_XOPEN_SOURCE</code> with the value 700 (600 in glibc versions before 2.10; 500 in glibc versions before 2.2). In addition, various GNU-specific extensions are also exposed.</p>
-<dd>Since glibc 2.19, defining <code>_GNU_SOURCE</code> also has the effect of implicitly defining <code>_DEFAULT_SOURCE</code>. In glibc versions before 2.20, defining <code>_GNU_SOURCE</code> also had the effect of implicitly defining <code>_BSD_SOURCE</code> and <code>_SVID_SOURCE</code>.</p>
-<dt><code>_REENTRANT</code></p>
-<dd>Historically, on various C libraries it was necessary to define this macro in all multithreaded code. (Some C libraries may still require this.) In glibc, this macro also exposed definitions of certain reentrant functions.</p>
-<dd>However, glibc has been thread-safe by default for many years; since glibc 2.3, the only effect of defining <code>_REENTRANT</code> has been to enable one or two of the same declarations that are also enabled by defining <code>_POSIX_C_SOURCE</code> with a value of 199606L or greater.</p>
-<dd><code>_REENTRANT</code> is now obsolete. In glibc 2.25 and later, defining <code>_REENTRANT</code> is equivalent to defining <code>_POSIX_C_SOURCE</code> with the value 199606L. If a higher POSIX conformance level is selected by any other means (such as <code>_POSIX_C_SOURCE</code> itself, <code>_XOPEN_SOURCE</code>, <code>_DEFAULT_SOURCE</code>, or <code>_GNU_SOURCE</code>), then defining <code>_REENTRANT</code> has no effect.</p>
-<dd>This macro is automatically defined if one compiles with <i>cc -pthread</i>.</p>
-<dt><code>_THREAD_SAFE</code></p>
-<dd>Synonym for the (deprecated) <code>_REENTRANT</code>, provided for compatibility with some other implementations.</p>
-<dt><code>_FORTIFY_SOURCE</code> (since glibc 2.3.4)</p>
-<dd>Defining this macro causes some lightweight checks to be performed to detect some buffer overflow errors when employing various string and memory manipulation functions (for example, <code><a href="/docs/linux/man/3-memcpy/">memcpy</a></code>(3), <code><a href="/docs/linux/man/3-memset/">memset</a></code>(3), <code><a href="/docs/linux/man/3-stpcpy/">stpcpy</a></code>(3), <code><a href="/docs/linux/man/3-strcpy/">strcpy</a></code>(3), <code><a href="/docs/linux/man/3-strncpy/">strncpy</a></code>(3), <code><a href="/docs/linux/man/3-strcat/">strcat</a></code>(3), <code><a href="/docs/linux/man/3-strncat/">strncat</a></code>(3), <code><a href="/docs/linux/man/3-sprintf/">sprintf</a></code>(3), <code><a href="/docs/linux/man/3-snprintf/">snprintf</a></code>(3), <code><a href="/docs/linux/man/3-vsprintf/">vsprintf</a></code>(3), <code><a href="/docs/linux/man/3-vsnprintf/">vsnprintf</a></code>(3), <code><a href="/docs/linux/man/3-gets/">gets</a></code>(3), and wide character variants thereof). For some functions, argument consistency is checked; for example, a check is made that <code><a href="/docs/linux/man/2-open/">open</a></code>(2) has been supplied with a <i>mode</i> argument when the specified flags include <code>O_CREAT</code>. Not all problems are detected, just some common cases.</p>
-<dd>If <code>_FORTIFY_SOURCE</code> is set to 1, with compiler optimization level 1 (<i>gcc -O1</i>) and above, checks that shouldn&#8217;t change the behavior of conforming programs are performed. With <code>_FORTIFY_SOURCE</code> set to 2, some more checking is added, but some conforming programs might fail.</p>
-<dd>Some of the checks can be performed at compile time (via macros logic implemented in header files), and result in compiler warnings; other checks take place at run time, and result in a run-time error if the check fails.</p>
-<dd>Use of this macro requires compiler support, available with <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1) since version 4.0.</dl>
+<dd>In addition, defining <code>_XOPEN_SOURCE</code> with a value of 500 or greater produces the same effects as defining <code>_XOPEN_SOURCE_EXTENDED</code>.</dd>
+<dt><code>_XOPEN_SOURCE_EXTENDED</code></dt>
+<dd>If this macro is defined, <i>and</i> <code>_XOPEN_SOURCE</code> is defined, then expose definitions corresponding to the XPG4v2 (SUSv1) UNIX extensions (UNIX 95). Defining <code>_XOPEN_SOURCE</code> with a value of 500 or more also produces the same effect as defining <code>_XOPEN_SOURCE_EXTENDED</code>. Use of <code>_XOPEN_SOURCE_EXTENDED</code> in new source code should be avoided.</dd>
+<dd>Since defining <code>_XOPEN_SOURCE</code> with a value of 500 or more has the same effect as defining <code>_XOPEN_SOURCE_EXTENDED</code>, the latter (obsolete) feature test macro is generally not described in the SYNOPSIS in man pages.</dd>
+<dt><code>_ISOC99_SOURCE</code> (since glibc 2.1.3)</dt>
+<dd>Exposes declarations consistent with the ISO C99 standard.</dd>
+<dd>Earlier glibc 2.1.x versions recognized an equivalent macro named <code>_ISOC9X_SOURCE</code> (because the C99 standard had not then been finalized). Although the use of this macro is obsolete, glibc continues to recognize it for backward compatibility.</dd>
+<dd>Defining <code>_ISOC99_SOURCE</code> also exposes ISO C (1990) Amendment 1 (&quot;C95&quot;) definitions. (The primary change in C95 was support for international character sets.)</dd>
+<dd>Invoking the C compiler with the option <i>-std=c99</i> produces the same effects as defining this macro.</dd>
+<dt><code>_ISOC11_SOURCE</code> (since glibc 2.16)</dt>
+<dd>Exposes declarations consistent with the ISO C11 standard. Defining this macro also enables C99 and C95 features (like <code>_ISOC99_SOURCE</code>).</dd>
+<dd>Invoking the C compiler with the option <i>-std=c11</i> produces the same effects as defining this macro.</dd>
+<dt><code>_LARGEFILE64_SOURCE</code></dt>
+<dd>Expose definitions for the alternative API specified by the LFS (Large File Summit) as a &quot;transitional extension&quot; to the Single UNIX Specification. (See The alternative API consists of a set of new objects (i.e., functions and types) whose names are suffixed with &quot;64&quot; (e.g., <i>off64_t</i> versus <i>off_t</i>, <code>lseek64</code>() versus <code>lseek</code>(), etc.). New programs should not employ this macro; instead <i>_FILE_OFFSET_BITS=64</i> should be employed.</dd>
+<dt><code>_LARGEFILE_SOURCE</code></dt>
+<dd>This macro was historically used to expose certain functions (specifically <code><a href="/docs/linux/man/3-fseeko/">fseeko</a></code>(3) and <code><a href="/docs/linux/man/3-ftello/">ftello</a></code>(3)) that address limitations of earlier APIs (<code><a href="/docs/linux/man/3-fseek/">fseek</a></code>(3) and <code><a href="/docs/linux/man/3-ftell/">ftell</a></code>(3)) that use <i>long</i> for file offsets. This macro is implicitly defined if <code>_XOPEN_SOURCE</code> is defined with a value greater than or equal to 500. New programs should not employ this macro; defining <code>_XOPEN_SOURCE</code> as just described or defining <code>_FILE_OFFSET_BITS</code> with the value 64 is the preferred mechanism to achieve the same result.</dd>
+<dt><code>_FILE_OFFSET_BITS</code></dt>
+<dd>Defining this macro with the value 64 automatically converts references to 32-bit functions and data types related to file I/O and filesystem operations into references to their 64-bit counterparts. This is useful for performing I/O on large files (&gt; 2 Gigabytes) on 32-bit systems. (Defining this macro permits correctly written programs to use large files with only a recompilation being required.)</dd>
+<dd>64-bit systems naturally permit file sizes greater than 2 Gigabytes, and on those systems this macro has no effect.</dd>
+<dt><code>_BSD_SOURCE</code> (deprecated since glibc 2.20)</dt>
+<dd>Defining this macro with any value causes header files to expose BSD-derived definitions.</dd>
+<dd>In glibc versions up to and including 2.18, defining this macro also causes BSD definitions to be preferred in some situations where standards conflict, unless one or more of <code>_SVID_SOURCE</code>, <code>_POSIX_SOURCE</code>, <code>_POSIX_C_SOURCE</code>, <code>_XOPEN_SOURCE</code>, <code>_XOPEN_SOURCE_EXTENDED</code>, or <code>_GNU_SOURCE</code> is defined, in which case BSD definitions are disfavored. Since glibc 2.19, <code>_BSD_SOURCE</code> no longer causes BSD definitions to be preferred in case of conflicts.</dd>
+<dd>Since glibc 2.20, this macro is deprecated. It now has the same effect as defining <code>_DEFAULT_SOURCE</code>, but generates a compile-time warning (unless <code>_DEFAULT_SOURCE</code> is also defined). Use <code>_DEFAULT_SOURCE</code> instead. To allow code that requires <code>_BSD_SOURCE</code> in glibc 2.19 and earlier and <code>_DEFAULT_SOURCE</code> in glibc 2.20 and later to compile without warnings, define <i>both</i> <code>_BSD_SOURCE</code> and <code>_DEFAULT_SOURCE</code>.</dd>
+<dt><code>_SVID_SOURCE</code> (deprecated since glibc 2.20)</dt>
+<dd>Defining this macro with any value causes header files to expose System V-derived definitions. (SVID == System V Interface Definition; see <code><a href="/docs/linux/man/7-standards/">standards</a></code>(7).)</dd>
+<dd>Since glibc 2.20, this macro is deprecated in the same fashion as <code>_BSD_SOURCE</code>.</dd>
+<dt><code>_DEFAULT_SOURCE</code> (since glibc 2.19)</dt>
+<dd>This macro can be defined to ensure that the &quot;default&quot; definitions are provided even when the defaults would otherwise be disabled, as happens when individual macros are explicitly defined, or the compiler is invoked in one of its &quot;standard&quot; modes (e.g., <i>cc -std=c99</i>). Defining <code>_DEFAULT_SOURCE</code> without defining other individual macros or invoking the compiler in one of its &quot;standard&quot; modes has no effect.</dd>
+<dd>The &quot;default&quot; definitions comprise those required by POSIX.1-2008 and ISO C99, as well as various definitions originally derived from BSD and System V. On glibc 2.19 and earlier, these defaults were approximately equivalent to explicitly defining the following:</dd>
+<dd>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;cc -D_BSD_SOURCE -D_SVID_SOURCE -D_POSIX_C_SOURCE=200809</dd>
+<dt><code>_ATFILE_SOURCE</code> (since glibc 2.4)</dt>
+<dd>Defining this macro with any value causes header files to expose declarations of a range of functions with the suffix &quot;at&quot;; see <code><a href="/docs/linux/man/2-openat/">openat</a></code>(2). Since glibc 2.10, this macro is also implicitly defined if <code>_POSIX_C_SOURCE</code> is defined with a value greater than or equal to 200809L.</dd>
+<dt><code>_GNU_SOURCE</code></dt>
+<dd>Defining this macro (with any value) implicitly defines <code>_ATFILE_SOURCE</code>, <code>_LARGEFILE64_SOURCE</code>, <code>_ISOC99_SOURCE</code>, <code>_XOPEN_SOURCE_EXTENDED</code>, <code>_POSIX_SOURCE</code>, <code>_POSIX_C_SOURCE</code> with the value 200809L (200112L in glibc versions before 2.10; 199506L in glibc versions before 2.5; 199309L in glibc versions before 2.1) and <code>_XOPEN_SOURCE</code> with the value 700 (600 in glibc versions before 2.10; 500 in glibc versions before 2.2). In addition, various GNU-specific extensions are also exposed.</dd>
+<dd>Since glibc 2.19, defining <code>_GNU_SOURCE</code> also has the effect of implicitly defining <code>_DEFAULT_SOURCE</code>. In glibc versions before 2.20, defining <code>_GNU_SOURCE</code> also had the effect of implicitly defining <code>_BSD_SOURCE</code> and <code>_SVID_SOURCE</code>.</dd>
+<dt><code>_REENTRANT</code></dt>
+<dd>Historically, on various C libraries it was necessary to define this macro in all multithreaded code. (Some C libraries may still require this.) In glibc, this macro also exposed definitions of certain reentrant functions.</dd>
+<dd>However, glibc has been thread-safe by default for many years; since glibc 2.3, the only effect of defining <code>_REENTRANT</code> has been to enable one or two of the same declarations that are also enabled by defining <code>_POSIX_C_SOURCE</code> with a value of 199606L or greater.</dd>
+<dd><code>_REENTRANT</code> is now obsolete. In glibc 2.25 and later, defining <code>_REENTRANT</code> is equivalent to defining <code>_POSIX_C_SOURCE</code> with the value 199606L. If a higher POSIX conformance level is selected by any other means (such as <code>_POSIX_C_SOURCE</code> itself, <code>_XOPEN_SOURCE</code>, <code>_DEFAULT_SOURCE</code>, or <code>_GNU_SOURCE</code>), then defining <code>_REENTRANT</code> has no effect.</dd>
+<dd>This macro is automatically defined if one compiles with <i>cc -pthread</i>.</dd>
+<dt><code>_THREAD_SAFE</code></dt>
+<dd>Synonym for the (deprecated) <code>_REENTRANT</code>, provided for compatibility with some other implementations.</dd>
+<dt><code>_FORTIFY_SOURCE</code> (since glibc 2.3.4)</dt>
+<dd>Defining this macro causes some lightweight checks to be performed to detect some buffer overflow errors when employing various string and memory manipulation functions (for example, <code><a href="/docs/linux/man/3-memcpy/">memcpy</a></code>(3), <code><a href="/docs/linux/man/3-memset/">memset</a></code>(3), <code><a href="/docs/linux/man/3-stpcpy/">stpcpy</a></code>(3), <code><a href="/docs/linux/man/3-strcpy/">strcpy</a></code>(3), <code><a href="/docs/linux/man/3-strncpy/">strncpy</a></code>(3), <code><a href="/docs/linux/man/3-strcat/">strcat</a></code>(3), <code><a href="/docs/linux/man/3-strncat/">strncat</a></code>(3), <code><a href="/docs/linux/man/3-sprintf/">sprintf</a></code>(3), <code><a href="/docs/linux/man/3-snprintf/">snprintf</a></code>(3), <code><a href="/docs/linux/man/3-vsprintf/">vsprintf</a></code>(3), <code><a href="/docs/linux/man/3-vsnprintf/">vsnprintf</a></code>(3), <code><a href="/docs/linux/man/3-gets/">gets</a></code>(3), and wide character variants thereof). For some functions, argument consistency is checked; for example, a check is made that <code><a href="/docs/linux/man/2-open/">open</a></code>(2) has been supplied with a <i>mode</i> argument when the specified flags include <code>O_CREAT</code>. Not all problems are detected, just some common cases.</dd>
+<dd>If <code>_FORTIFY_SOURCE</code> is set to 1, with compiler optimization level 1 (<i>gcc -O1</i>) and above, checks that shouldn&#8217;t change the behavior of conforming programs are performed. With <code>_FORTIFY_SOURCE</code> set to 2, some more checking is added, but some conforming programs might fail.</dd>
+<dd>Some of the checks can be performed at compile time (via macros logic implemented in header files), and result in compiler warnings; other checks take place at run time, and result in a run-time error if the check fails.</dd>
+<dd>Use of this macro requires compiler support, available with <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1) since version 4.0.</dd></dl>
 <h3>Default definitions, implicit definitions, and combining definitions</h3>
 <p>If no feature test macros are explicitly defined, then the following feature test macros are defined by default: <code>_BSD_SOURCE</code> (in glibc 2.19 and earlier), <code>_SVID_SOURCE</code> (in glibc 2.19 and earlier), <code>_DEFAULT_SOURCE</code> (since glibc 2.19), <code>_POSIX_SOURCE</code>, and <code>_POSIX_C_SOURCE</code>=200809L (200112L in glibc versions before 2.10; 199506L in glibc versions before 2.4; 199309L in glibc versions before 2.1). If any of <code>__STRICT_ANSI__</code>, <code>_ISOC99_SOURCE</code>, <code>_ISOC11_SOURCE</code> (since glibc 2.18), <code>_POSIX_SOURCE</code>, <code>_POSIX_C_SOURCE</code>, <code>_XOPEN_SOURCE</code>, <code>_XOPEN_SOURCE_EXTENDED</code> (in glibc 2.11 and earlier), <code>_BSD_SOURCE</code> (in glibc 2.19 and earlier), or <code>_SVID_SOURCE</code> (in glibc 2.19 and earlier) is explicitly defined, then <code>_BSD_SOURCE</code>, <code>_SVID_SOURCE</code>, and <code>_DEFAULT_SOURCE</code> are not defined by default. If <code>_POSIX_SOURCE</code> and <code>_POSIX_C_SOURCE</code> are not explicitly defined, and either <code>__STRICT_ANSI__</code> is not defined or <code>_XOPEN_SOURCE</code> is defined with a value of 500 or more, then</p>
 <dl>
-<dt>*</p>
-<dd><code>_POSIX_SOURCE</code> is defined with the value 1; and</p>
-<dt>*</p>
-<dd><code>_POSIX_C_SOURCE</code> is defined with one of the following values:</p>
+<dt>*</dt>
+<dd><code>_POSIX_SOURCE</code> is defined with the value 1; and</dd>
+<dt>*</dt>
+<dd><code>_POSIX_C_SOURCE</code> is defined with one of the following values:</dd>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>2, if <code>_XOPEN_SOURCE</code> is defined with a value less than 500;</p>
-<dt>&bull;</p>
-<dd>199506L, if <code>_XOPEN_SOURCE</code> is defined with a value greater than or equal to 500 and less than 600; or</p>
-<dt>&bull;</p>
-<dd>(since glibc 2.4) 200112L, if <code>_XOPEN_SOURCE</code> is defined with a value greater than or equal to 600 and less than 700.</p>
-<dt>&bull;</p>
-<dd>(Since glibc 2.10) 200809L, if <code>_XOPEN_SOURCE</code> is defined with a value greater than or equal to 700.</p>
-<dt>&bull;</p>
-<dd>Older versions of glibc do not know about the values 200112L and 200809L for <code>_POSIX_C_SOURCE</code>, and the setting of this macro will depend on the glibc version.</p>
-<dt>&bull;</p>
-<dd>If <code>_XOPEN_SOURCE</code> is undefined, then the setting of <code>_POSIX_C_SOURCE</code> depends on the glibc version: 199506L, in glibc versions before 2.4; 200112L, in glibc 2.4 to 2.9; and 200809L, since glibc 2.10.</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>2, if <code>_XOPEN_SOURCE</code> is defined with a value less than 500;</dd>
+<dt>&bull;</dt>
+<dd>199506L, if <code>_XOPEN_SOURCE</code> is defined with a value greater than or equal to 500 and less than 600; or</dd>
+<dt>&bull;</dt>
+<dd>(since glibc 2.4) 200112L, if <code>_XOPEN_SOURCE</code> is defined with a value greater than or equal to 600 and less than 700.</dd>
+<dt>&bull;</dt>
+<dd>(Since glibc 2.10) 200809L, if <code>_XOPEN_SOURCE</code> is defined with a value greater than or equal to 700.</dd>
+<dt>&bull;</dt>
+<dd>Older versions of glibc do not know about the values 200112L and 200809L for <code>_POSIX_C_SOURCE</code>, and the setting of this macro will depend on the glibc version.</dd>
+<dt>&bull;</dt>
+<dd>If <code>_XOPEN_SOURCE</code> is undefined, then the setting of <code>_POSIX_C_SOURCE</code> depends on the glibc version: 199506L, in glibc versions before 2.4; 200112L, in glibc 2.4 to 2.9; and 200809L, since glibc 2.10.</dd></dl>
 </dl>
 </dl>
 <p> Multiple macros can be defined; the results are additive.</p>

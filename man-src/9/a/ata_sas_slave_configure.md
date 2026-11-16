@@ -14,14 +14,14 @@ description: "ata_sas_slave_configure – Default slave_config routine for libat
 <p><i>sdev</i></p>
 <dl>
 <dd>
-<dd>SCSI device to configure</dl>
+</dd><dd>SCSI device to configure</dd></dl>
 <p> <i>ap</i></p>
 <dl>
-<dd>ATA port to which SCSI device is attached</dl>
+<dd>ATA port to which SCSI device is attached</dd></dl>
 <h2>Return</h2>
 <p>Zero.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -18,9 +18,9 @@ FX - Given the X and Y coordinates of a point in the grid coordinate system, the
 <h2>Synopsis</h2>USERX = FX (X,Y) 
  USERY = FY (X,Y)
 <h2>Description</h2><dl COMPACT><dt>X
-<dd>(REAL, input): The X coordinate of a vector location in the grid coordinate system.
-<dt>Y
-<dd>(REAL, input) The Y coordinate of a vector location in the grid coordinate system.</dl><h2>Usage</h2>The user does not invoke the functions, FX and FY, directly. Instead the functions are invoked internally by an NCAR Graphics utility in order to convert a position in the grid coordinate system into user coordinates. By default, calls to any of the primary entry points for Vectors and Streamlines utilities that predate Version 3.2 (that is, EZVEC, VELVEC, VELVCT, EZSTRM or STRMLN) use FX and FY to map from grid to user coordinates. However, by appropriately setting the compatibility mode parameter, CPM, the user can choose whether the FX and FY functions or the new mapping routines are invoked when using any of the primary entry points, current or obsolete, supported by Vectors and Streamlines. 
+</dt><dd>(REAL, input): The X coordinate of a vector location in the grid coordinate system.
+</dd><dt>Y
+</dt><dd>(REAL, input) The Y coordinate of a vector location in the grid coordinate system.</dd></dl><h2>Usage</h2>The user does not invoke the functions, FX and FY, directly. Instead the functions are invoked internally by an NCAR Graphics utility in order to convert a position in the grid coordinate system into user coordinates. By default, calls to any of the primary entry points for Vectors and Streamlines utilities that predate Version 3.2 (that is, EZVEC, VELVEC, VELVCT, EZSTRM or STRMLN) use FX and FY to map from grid to user coordinates. However, by appropriately setting the compatibility mode parameter, CPM, the user can choose whether the FX and FY functions or the new mapping routines are invoked when using any of the primary entry points, current or obsolete, supported by Vectors and Streamlines. 
 
  Unlike the Version 3.2 mapping routines, whose input coordinates are in the data coordinate system, FX and FY take input in the grid coordinate system. Therefore, any required conversions into the data coordinate system must be performed within the function prior to the mapping into user coordinates. Vectors and Streamlines both provide common blocks (VVMAP and STMAP, respectively) that may be included by the FX and FY functions to supply the information necessary to perform the conversion into data coordinate space. No pre-defined mappings are supported using FX and FY. The default versions of these functions simply perform an identity mapping from grid to user coordinate space. 
 
@@ -33,21 +33,21 @@ FX - Given the X and Y coordinates of a point in the grid coordinate system, the
 <h2>Synopsis</h2>METAX = MXF (X,Y,U,V,SFX,SFY,MX,MY) 
  METAY = MYF (X,Y,U,V,SFX,SFY,MX,MY)
 <h2>Description</h2><dl COMPACT><dt>X
-<dd>(REAL, input): The X coordinate of a vector location in the grid coordinate system.
-<dt>Y
-<dd>(REAL, input) The Y coordinate of a vector location in the grid coordinate system.
-<dt>U
-<dd>(REAL, input) The U component of the vector at the data point specified by arguments X and Y.
-<dt>V
-<dd>(REAL, input) The V component of the vector at the data point specified by arguments X and Y.
-<dt>SFX
-<dd>(REAL, input) Scale factor used to convert the vector magnitude to a length in metacode coordinates.
-<dt>SFY
-<dd>(REAL, input) Scale factor used to convert the vector magnitude to a length in metacode coordinates. In the current implementation this value is the same as the value of SFX.
-<dt>MX
-<dd>(INTEGER, input) X coordinate of the vector location in metacode coordinates.
-<dt>MX
-<dd>(INTEGER, input) Y coordinate of the vector location in metacode coordinates.</dl><h2>Usage</h2>The user does not invoke the functions, MXF and MYF, directly. However, any time the Vectors utility is accessed with the compatibility mode parameter set such that the FX and FY routines are used to map the first endpoint of the vector, the functions MXF and MYF are used to determine the second endpoint. First FX and FY are invoked to determine the vector location in user coordinates, then this point is converted into metacode coordinates; MXF and MYF are passed the coordinates of the point both in grid space and in metacode space, along with the vector components and a scale factor used to convert the vector magnitude into a length in the metacode coordinate system. 
+</dt><dd>(REAL, input): The X coordinate of a vector location in the grid coordinate system.
+</dd><dt>Y
+</dt><dd>(REAL, input) The Y coordinate of a vector location in the grid coordinate system.
+</dd><dt>U
+</dt><dd>(REAL, input) The U component of the vector at the data point specified by arguments X and Y.
+</dd><dt>V
+</dt><dd>(REAL, input) The V component of the vector at the data point specified by arguments X and Y.
+</dd><dt>SFX
+</dt><dd>(REAL, input) Scale factor used to convert the vector magnitude to a length in metacode coordinates.
+</dd><dt>SFY
+</dt><dd>(REAL, input) Scale factor used to convert the vector magnitude to a length in metacode coordinates. In the current implementation this value is the same as the value of SFX.
+</dd><dt>MX
+</dt><dd>(INTEGER, input) X coordinate of the vector location in metacode coordinates.
+</dd><dt>MX
+</dt><dd>(INTEGER, input) Y coordinate of the vector location in metacode coordinates.</dd></dl><h2>Usage</h2>The user does not invoke the functions, MXF and MYF, directly. However, any time the Vectors utility is accessed with the compatibility mode parameter set such that the FX and FY routines are used to map the first endpoint of the vector, the functions MXF and MYF are used to determine the second endpoint. First FX and FY are invoked to determine the vector location in user coordinates, then this point is converted into metacode coordinates; MXF and MYF are passed the coordinates of the point both in grid space and in metacode space, along with the vector components and a scale factor used to convert the vector magnitude into a length in the metacode coordinate system. 
 
  The default version of MXF simply multiplies the U component of the vector (the component parallel to the X grid axis) by the scale factor, SFX, and adds it to the X coordinate of the first point in metacode coordinates, MX. MYF uses the same scale factor, SFX, but multiplies by the V component and adds to the Y coordinate in metacode coordinates. These values are respectively returned as the function value by each routine. Note that if a mapping is anywhere non-linear, the vector directional angle may change across the transformation, and an iterative differential technique must be employed to map the second endpoint of the vector. When creating a new mapping, the user is strongly urged to use the user-modifiable routine VVUMXY, rather than attempting to work with MXF and MYF.
 <h2>Access</h2>To use FX, FY, MXF, and MYF load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.

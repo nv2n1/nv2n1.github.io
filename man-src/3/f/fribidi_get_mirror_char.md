@@ -27,9 +27,9 @@ url: "/docs/linux/man/3-fribidi_get_mirror_char/"
 
 <dl>
 <dt><b>FriBidiChar ch</b>
-<dd> Input character.
-<dt><b>FriBidiChar *mirrored_ch</b>
-<dd> Output mirrored character.</dl>
+</dt><dd> Input character.
+</dd><dt><b>FriBidiChar *mirrored_ch</b>
+</dt><dd> Output mirrored character.</dd></dl>
 
 <h2>DESCRIPTION</h2>
 

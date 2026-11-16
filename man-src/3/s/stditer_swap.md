@@ -11,15 +11,11 @@ std::iter_swap - std::iter_swap
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class ForwardIt1, class ForwardIt2&gt;
     (until C++ 20)
-
         void iter_swap(ForwardIt1 a, ForwardIt2 b);
-
 template &lt;class ForwardIt1, class ForwardIt2&gt;
 (since C++ 20)
-
     constexpr void iter_swap(ForwardIt1 a, ForwardIt2 b);</code></pre> 
 Swaps the values of the elements the given iterators are pointing to. 
 
@@ -55,24 +51,17 @@ constant
 
 The following is an implementation of selection sort in C++ 
  // Run this code <pre><code>#include &lt;random&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;algorithm&gt;
-
 #include &lt;functional&gt;
 template &lt;class ForwardIt&gt;
-
 void selection_sort(ForwardIt begin, ForwardIt end)
-
 {
     for (ForwardIt i = begin; i != end; ++i)
         std::iter_swap(i, std::min_element(i, end));
 }
 int main()
-
 {
     std::random_device rd;
     std::mt19937 gen(rd());

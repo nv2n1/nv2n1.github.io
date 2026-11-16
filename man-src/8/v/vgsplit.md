@@ -20,11 +20,11 @@ description: "vgsplit – Move physical volumes into a new or existing volume gr
 <p>Split a VG by specified PVs. </p>
 <p> <code>vgsplit</code> <i>VG</i> <i>VG</i> <i>PV</i> &#8230; </p>
 <dl>
-<dd>[ COMMON_OPTIONS ]</dl>
+<dd>[ COMMON_OPTIONS ]</dd></dl>
 <p> Split a VG by PVs in a specified LV. </p>
 <p> <code>vgsplit</code> <code>-n</code>|<code>&#8211;name</code> <i>LV</i> <i>VG</i> <i>VG</i> </p>
 <dl>
-<dd>[ COMMON_OPTIONS ]</dl>
+<dd>[ COMMON_OPTIONS ]</dd></dl>
 <p> Common options for command:</p>
 <dl>
 <dd>[ <code>-A</code>|<code>&#8211;autobackup</code> <code>y</code>|<code>n</code> ]<br />
@@ -32,7 +32,7 @@ description: "vgsplit – Move physical volumes into a new or existing volume gr
  [ <code>-p</code>|<code>&#8211;maxphysicalvolumes</code> <i>Number</i> ]<br />
  [ <code>-M</code>|<code>&#8211;metadatatype</code> <code>lvm2</code> ]<br />
  [ <code>&#8211;alloc</code> <code>contiguous</code>|<code>cling</code>|<code>cling_by_tags</code>|<code>normal</code>|<code>anywhere</code>|<code>inherit</code> ]<br />
- [ <code>&#8211;[vg]metadatacopies</code> <code>all</code>|<code>unmanaged</code>|<i>Number</i> ]</dl>
+ [ <code>&#8211;[vg]metadatacopies</code> <code>all</code>|<code>unmanaged</code>|<i>Number</i> ]</dd></dl>
 <p> Common options for lvm:</p>
 <dl>
 <dd>[ <code>-d</code>|<code>&#8211;debug</code> ]<br />
@@ -48,86 +48,86 @@ description: "vgsplit – Move physical volumes into a new or existing volume gr
  [ <code>&#8211;longhelp</code> ]<br />
  [ <code>&#8211;nolocking</code> ]<br />
  [ <code>&#8211;profile</code> <i>String</i> ]<br />
- [ <code>&#8211;version</code> ]</dl>
+ [ <code>&#8211;version</code> ]</dd></dl>
 <h2>Options</h2>
 <dl>
-<dt> <code>&#8211;alloc</code> <code>contiguous</code>|<code>cling</code>|<code>cling_by_tags</code>|<code>normal</code>|<code>anywhere</code>|<code>inherit</code></p>
+<dt> <code>&#8211;alloc</code> <code>contiguous</code>|<code>cling</code>|<code>cling_by_tags</code>|<code>normal</code>|<code>anywhere</code>|<code>inherit</code></dt>
 <dd>
-<dd>Determines the allocation policy when a command needs to allocate Physical Extents (PEs) from the VG. Each VG and LV has an allocation policy which can be changed with vgchange/lvchange, or overriden on the command line. <code>normal</code> applies common sense rules such as not placing parallel stripes on the same PV. <code>inherit</code> applies the VG policy to an LV. <code>contiguous</code> requires new PEs be placed adjacent to existing PEs. <code>cling</code> places new PEs on the same PV as existing PEs in the same stripe of the LV. If there are sufficient PEs for an allocation, but normal does not use them, <code>anywhere</code> will use them even if it reduces performance, e.g. by placing two stripes on the same PV. Optional positional PV args on the command line can also be used to limit which PVs the command will use for allocation. See <code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) for more information about allocation.</p>
-<dt> <code>-A</code>|<code>&#8211;autobackup</code> <code>y</code>|<code>n</code></p>
+</dd><dd>Determines the allocation policy when a command needs to allocate Physical Extents (PEs) from the VG. Each VG and LV has an allocation policy which can be changed with vgchange/lvchange, or overriden on the command line. <code>normal</code> applies common sense rules such as not placing parallel stripes on the same PV. <code>inherit</code> applies the VG policy to an LV. <code>contiguous</code> requires new PEs be placed adjacent to existing PEs. <code>cling</code> places new PEs on the same PV as existing PEs in the same stripe of the LV. If there are sufficient PEs for an allocation, but normal does not use them, <code>anywhere</code> will use them even if it reduces performance, e.g. by placing two stripes on the same PV. Optional positional PV args on the command line can also be used to limit which PVs the command will use for allocation. See <code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) for more information about allocation.</dd>
+<dt> <code>-A</code>|<code>&#8211;autobackup</code> <code>y</code>|<code>n</code></dt>
 <dd>
-<dd>Specifies if metadata should be backed up automatically after a change. Enabling this is strongly advised! See <code><a href="/docs/linux/man/8-vgcfgbackup/">vgcfgbackup</a></code>(8) for more information.</p>
-<dt> <code>&#8211;commandprofile</code> <i>String</i></p>
+</dd><dd>Specifies if metadata should be backed up automatically after a change. Enabling this is strongly advised! See <code><a href="/docs/linux/man/8-vgcfgbackup/">vgcfgbackup</a></code>(8) for more information.</dd>
+<dt> <code>&#8211;commandprofile</code> <i>String</i></dt>
 <dd>
-<dd>The command profile to use for command configuration. See <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) for more information about profiles.</p>
-<dt> <code>&#8211;config</code> <i>String</i></p>
+</dd><dd>The command profile to use for command configuration. See <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) for more information about profiles.</dd>
+<dt> <code>&#8211;config</code> <i>String</i></dt>
 <dd>
-<dd>Config settings for the command. These override lvm.conf settings. The String arg uses the same format as lvm.conf, or may use section/field syntax. See <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) for more information about config.</p>
-<dt> <code>-d</code>|<code>&#8211;debug</code> &#8230;</p>
+</dd><dd>Config settings for the command. These override lvm.conf settings. The String arg uses the same format as lvm.conf, or may use section/field syntax. See <code><a href="/docs/linux/man/5-lvm-conf/">lvm.conf</a></code>(5) for more information about config.</dd>
+<dt> <code>-d</code>|<code>&#8211;debug</code> &#8230;</dt>
 <dd>
-<dd>Set debug level. Repeat from 1 to 6 times to increase the detail of messages sent to the log file and/or syslog (if configured).</p>
-<dt> <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code></p>
+</dd><dd>Set debug level. Repeat from 1 to 6 times to increase the detail of messages sent to the log file and/or syslog (if configured).</dd>
+<dt> <code>&#8211;driverloaded</code> <code>y</code>|<code>n</code></dt>
 <dd>
-<dd>If set to no, the command will not attempt to use device-mapper. For testing and debugging.</p>
-<dt> <code>-h</code>|<code>&#8211;help</code></p>
+</dd><dd>If set to no, the command will not attempt to use device-mapper. For testing and debugging.</dd>
+<dt> <code>-h</code>|<code>&#8211;help</code></dt>
 <dd>
-<dd>Display help text.</p>
-<dt> <code>&#8211;lockopt</code> <i>String</i></p>
+</dd><dd>Display help text.</dd>
+<dt> <code>&#8211;lockopt</code> <i>String</i></dt>
 <dd>
-<dd>Used to pass options for special cases to lvmlockd. See <code><a href="/docs/linux/man/8-lvmlockd/">lvmlockd</a></code>(8) for more information.</p>
-<dt> <code>&#8211;longhelp</code></p>
+</dd><dd>Used to pass options for special cases to lvmlockd. See <code><a href="/docs/linux/man/8-lvmlockd/">lvmlockd</a></code>(8) for more information.</dd>
+<dt> <code>&#8211;longhelp</code></dt>
 <dd>
-<dd>Display long help text.</p>
-<dt> <code>-l</code>|<code>&#8211;maxlogicalvolumes</code> <i>Number</i></p>
+</dd><dd>Display long help text.</dd>
+<dt> <code>-l</code>|<code>&#8211;maxlogicalvolumes</code> <i>Number</i></dt>
 <dd>
-<dd>Sets the maximum number of LVs allowed in a VG.</p>
-<dt> <code>-p</code>|<code>&#8211;maxphysicalvolumes</code> <i>Number</i></p>
+</dd><dd>Sets the maximum number of LVs allowed in a VG.</dd>
+<dt> <code>-p</code>|<code>&#8211;maxphysicalvolumes</code> <i>Number</i></dt>
 <dd>
-<dd>Sets the maximum number of PVs that can belong to the VG. The value 0 removes any limitation. For large numbers of PVs, also see options &#8211;pvmetadatacopies, and &#8211;vgmetadatacopies for improving performance.</p>
-<dt> <code>-M</code>|<code>&#8211;metadatatype</code> <code>lvm2</code></p>
+</dd><dd>Sets the maximum number of PVs that can belong to the VG. The value 0 removes any limitation. For large numbers of PVs, also see options &#8211;pvmetadatacopies, and &#8211;vgmetadatacopies for improving performance.</dd>
+<dt> <code>-M</code>|<code>&#8211;metadatatype</code> <code>lvm2</code></dt>
 <dd>
-<dd>Specifies the type of on-disk metadata to use. <code>lvm2</code> (or just <code>2</code>) is the current, standard format. <code>lvm1</code> (or just <code>1</code>) is no longer used.</p>
-<dt> <code>-n</code>|<code>&#8211;name</code> <i>String</i></p>
+</dd><dd>Specifies the type of on-disk metadata to use. <code>lvm2</code> (or just <code>2</code>) is the current, standard format. <code>lvm1</code> (or just <code>1</code>) is no longer used.</dd>
+<dt> <code>-n</code>|<code>&#8211;name</code> <i>String</i></dt>
 <dd>
-<dd>Move only PVs used by the named LV.</p>
-<dt> <code>&#8211;nolocking</code></p>
+</dd><dd>Move only PVs used by the named LV.</dd>
+<dt> <code>&#8211;nolocking</code></dt>
 <dd>
-<dd>Disable locking.</p>
-<dt> <code>&#8211;profile</code> <i>String</i></p>
+</dd><dd>Disable locking.</dd>
+<dt> <code>&#8211;profile</code> <i>String</i></dt>
 <dd>
-<dd>An alias for &#8211;commandprofile or &#8211;metadataprofile, depending on the command.</p>
-<dt> <code>-q</code>|<code>&#8211;quiet</code> &#8230;</p>
+</dd><dd>An alias for &#8211;commandprofile or &#8211;metadataprofile, depending on the command.</dd>
+<dt> <code>-q</code>|<code>&#8211;quiet</code> &#8230;</dt>
 <dd>
-<dd>Suppress output and log messages. Overrides &#8211;debug and &#8211;verbose. Repeat once to also suppress any prompts with answer &#8216;no&#8217;.</p>
-<dt> <code>-t</code>|<code>&#8211;test</code></p>
+</dd><dd>Suppress output and log messages. Overrides &#8211;debug and &#8211;verbose. Repeat once to also suppress any prompts with answer &#8216;no&#8217;.</dd>
+<dt> <code>-t</code>|<code>&#8211;test</code></dt>
 <dd>
-<dd>Run in test mode. Commands will not update metadata. This is implemented by disabling all metadata writing but nevertheless returning success to the calling function. This may lead to unusual error messages in multi-stage operations if a tool relies on reading back metadata it believes has changed but hasn&#8217;t.</p>
-<dt> <code>-v</code>|<code>&#8211;verbose</code> &#8230;</p>
+</dd><dd>Run in test mode. Commands will not update metadata. This is implemented by disabling all metadata writing but nevertheless returning success to the calling function. This may lead to unusual error messages in multi-stage operations if a tool relies on reading back metadata it believes has changed but hasn&#8217;t.</dd>
+<dt> <code>-v</code>|<code>&#8211;verbose</code> &#8230;</dt>
 <dd>
-<dd>Set verbose level. Repeat from 1 to 4 times to increase the detail of messages sent to stdout and stderr.</p>
-<dt> <code>&#8211;version</code></p>
+</dd><dd>Set verbose level. Repeat from 1 to 4 times to increase the detail of messages sent to stdout and stderr.</dd>
+<dt> <code>&#8211;version</code></dt>
 <dd>
-<dd>Display version information.</p>
-<dt> <code>&#8211;[vg]metadatacopies</code> <code>all</code>|<code>unmanaged</code>|<i>Number</i></p>
+</dd><dd>Display version information.</dd>
+<dt> <code>&#8211;[vg]metadatacopies</code> <code>all</code>|<code>unmanaged</code>|<i>Number</i></dt>
 <dd>
-<dd>Number of copies of the VG metadata that are kept. VG metadata is kept in VG metadata areas on PVs in the VG, i.e. reserved space at the start and/or end of the PVs. Keeping a copy of the VG metadata on every PV can reduce performance in VGs containing a large number of PVs. When this number is set to a non-zero value, LVM will automatically choose PVs on which to store metadata, using the metadataignore flags on PVs to achieve the specified number. The number can also be replaced with special string values: <code>unmanaged</code> causes LVM to not automatically manage the PV metadataignore flags. <code>all</code> causes LVM to first clear the metadataignore flags on all PVs, and then to become unmanaged.</p>
-<dt> <code>-y</code>|<code>&#8211;yes</code></p>
+</dd><dd>Number of copies of the VG metadata that are kept. VG metadata is kept in VG metadata areas on PVs in the VG, i.e. reserved space at the start and/or end of the PVs. Keeping a copy of the VG metadata on every PV can reduce performance in VGs containing a large number of PVs. When this number is set to a non-zero value, LVM will automatically choose PVs on which to store metadata, using the metadataignore flags on PVs to achieve the specified number. The number can also be replaced with special string values: <code>unmanaged</code> causes LVM to not automatically manage the PV metadataignore flags. <code>all</code> causes LVM to first clear the metadataignore flags on all PVs, and then to become unmanaged.</dd>
+<dt> <code>-y</code>|<code>&#8211;yes</code></dt>
 <dd>
-<dd>Do not prompt for confirmation interactively but always assume the answer yes. Use with extreme caution. (For automatic no, see -qq.)</dl>
+</dd><dd>Do not prompt for confirmation interactively but always assume the answer yes. Use with extreme caution. (For automatic no, see -qq.)</dd></dl>
 <h2>Variables</h2>
 <dl>
-<dt> <i>VG</i></p>
+<dt> <i>VG</i></dt>
 <dd>
-<dd>Volume Group name. See <code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) for valid names.</p>
-<dt> <i>PV</i></p>
+</dd><dd>Volume Group name. See <code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) for valid names.</dd>
+<dt> <i>PV</i></dt>
 <dd>
-<dd>Physical Volume name, a device path under /dev. For commands managing physical extents, a PV positional arg generally accepts a suffix indicating a range (or multiple ranges) of physical extents (PEs). When the first PE is omitted, it defaults to the start of the device, and when the last PE is omitted it defaults to end. Start and end range (inclusive): <i>PV</i>[<code>:</code><i>PE</i><code>&#8211;</code><i>PE</i>]&#8230; Start and length range (counting from 0): <i>PV</i>[<code>:</code><i>PE</i><code>+</code><i>PE</i>]&#8230;</p>
-<dt> <i>String</i></p>
+</dd><dd>Physical Volume name, a device path under /dev. For commands managing physical extents, a PV positional arg generally accepts a suffix indicating a range (or multiple ranges) of physical extents (PEs). When the first PE is omitted, it defaults to the start of the device, and when the last PE is omitted it defaults to end. Start and end range (inclusive): <i>PV</i>[<code>:</code><i>PE</i><code>&#8211;</code><i>PE</i>]&#8230; Start and length range (counting from 0): <i>PV</i>[<code>:</code><i>PE</i><code>+</code><i>PE</i>]&#8230;</dd>
+<dt> <i>String</i></dt>
 <dd>
-<dd>See the option description for information about the string content.</p>
-<dt> <i>Size</i>[UNIT]</p>
+</dd><dd>See the option description for information about the string content.</dd>
+<dt> <i>Size</i>[UNIT]</dt>
 <dd>
-<dd>Size is an input number that accepts an optional unit. Input units are always treated as base two values, regardless of capitalization, e.g. &#8216;k&#8217; and &#8216;K&#8217; both refer to 1024. The default input unit is specified by letter, followed by |UNIT. UNIT represents other possible input units: <code>bBsSkKmMgGtTpPeE</code>. b|B is bytes, s|S is sectors of 512 bytes, k|K is kilobytes, m|M is megabytes, g|G is gigabytes, t|T is terabytes, p|P is petabytes, e|E is exabytes. (This should not be confused with the output control &#8211;units, where capital letters mean multiple of 1000.)</dl>
+</dd><dd>Size is an input number that accepts an optional unit. Input units are always treated as base two values, regardless of capitalization, e.g. &#8216;k&#8217; and &#8216;K&#8217; both refer to 1024. The default input unit is specified by letter, followed by |UNIT. UNIT represents other possible input units: <code>bBsSkKmMgGtTpPeE</code>. b|B is bytes, s|S is sectors of 512 bytes, k|K is kilobytes, m|M is megabytes, g|G is gigabytes, t|T is terabytes, p|P is petabytes, e|E is exabytes. (This should not be confused with the output control &#8211;units, where capital letters mean multiple of 1000.)</dd></dl>
 <h2>Environment Variables</h2>
 <p>See <code><a href="/docs/linux/man/8-lvm/">lvm</a></code>(8) for information about environment variables used by lvm. For example, LVM_VG_NAME can generally be substituted for a required VG parameter.</p>
 <h2>See Also</h2>

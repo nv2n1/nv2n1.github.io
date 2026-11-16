@@ -10,15 +10,15 @@ description: "devkit-disks-daemon – DeviceKit-disks Daemon"
 <p>devkit-disks-daemon &#8211; DeviceKit-disks Daemon</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>devkit-disks-daemon</code> [<code>&#8211;help</code>]</dl>
+<dt> <code>devkit-disks-daemon</code> [<code>&#8211;help</code>]</dt></dl>
 <h2>Description</h2>
 <p><i>devkit-disks-daemon</i></p>
-<dd>provides the <i>org.freedesktop.DeviceKit.Disks</i> service on the system message bus. Users or administrators should never need to start this daemon as it will be automatically started by <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1) whenever an application calls into the <i>org.freedesktop.DeviceKit.Disks</i> service. </p>
+<dd>provides the <i>org.freedesktop.DeviceKit.Disks</i> service on the system message bus. Users or administrators should never need to start this daemon as it will be automatically started by <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1) whenever an application calls into the <i>org.freedesktop.DeviceKit.Disks</i> service. </dd>
 <p> See the <code><a href="/docs/linux/man/7-devicekit-disks/">DeviceKit-disks</a></code>(7) man page for information on how to customize how <i>devkit-disks-daemon</i> works.</p>
 <h2>Options</h2>
 <p><code>&#8211;help</code></p>
 <dl>
-<dd>Show help options.</dl>
+<dd>Show help options.</dd></dl>
 <h2>Author</h2>
 <p>Written by David Zeuthen david [at] fubar.dk with a lot of help from many others.</p>
 <h2>Bugs</h2>

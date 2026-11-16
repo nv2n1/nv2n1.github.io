@@ -37,31 +37,31 @@ nvme id - ns&lt;device&gt;[-v | --vendor - specific][-b | --raw - binary]
  -n &lt;nsid&gt;, --namespace-id=&lt;nsid&gt;
 <dl>
 <dt>
-<dd> Retrieve the identify namespace structure for the given nsid. This is required for the character devices, or overrides the block nsid if given.</dl>
+</dt><dd> Retrieve the identify namespace structure for the given nsid. This is required for the character devices, or overrides the block nsid if given.</dd></dl>
  
 
  -f, --force
 <dl>
 <dt>
-<dd> Request controller return the indentify namespace structure even if the namespace is not attached to the controller. This is valid only for controllers at or newer than revision 1.2. Controllers at revision lower than this may interpret the command incorrectly.</dl>
+</dt><dd> Request controller return the indentify namespace structure even if the namespace is not attached to the controller. This is valid only for controllers at or newer than revision 1.2. Controllers at revision lower than this may interpret the command incorrectly.</dd></dl>
  
 
  -b, --raw-binary
 <dl>
 <dt>
-<dd> Print the raw buffer to stdout. Structure is not parsed by program. This overrides the vendor specific and human readable options.</dl>
+</dt><dd> Print the raw buffer to stdout. Structure is not parsed by program. This overrides the vendor specific and human readable options.</dd></dl>
  
 
  -v, --vendor-specific
 <dl>
 <dt>
-<dd> In addition to parsing known fields, this option will dump the vendor specific region of the structure in hex with ascii interpretation.</dl>
+</dt><dd> In addition to parsing known fields, this option will dump the vendor specific region of the structure in hex with ascii interpretation.</dd></dl>
  
 
  -H, --human-readable
 <dl>
 <dt>
-<dd> This option will parse and format many of the bit fields into human-readable formats.</dl>
+</dt><dd> This option will parse and format many of the bit fields into human-readable formats.</dd></dl>
 
 <h2>EXAMPLES</h2>
 
@@ -69,40 +69,37 @@ nvme id - ns&lt;device&gt;[-v | --vendor - specific][-b | --raw - binary]
 
 <dl>
 <dt>
-<dd> &bull; Has the program interpret the returned buffer and display the known fields in a human readable format: 
-
-<dl>
+</dt><dd> &bull; Has the program interpret the returned buffer and display the known fields in a human readable format: 
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 # nvme id-ns /dev/nvme0n1
-</pre></dl>
+</pre></dd></dl>
 </dl>
  
 
 <dl>
 <dt>
-<dd> &bull; If using the character device or overriding namespace id: 
-
-<dl>
+</dt><dd> &bull; If using the character device or overriding namespace id: 
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 # nvme id-ns /dev/nvme0 -n 1
 # nvme id-ns /dev/nvme0n1 -n 1
 # nvme id-ns /dev/nvme0 --namespace-id=1
-</pre></dl>
+</pre></dd></dl>
 </dl>
  
 
 <dl>
 <dt>
-<dd> &bull; In addition to showing the known fields, have the program to display the vendor unique field: 
-
-<dl>
+</dt><dd> &bull; In addition to showing the known fields, have the program to display the vendor unique field: 
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 # nvme id-ns /dev/nvme0n1 --vendor-specific
 # nvme id-ns /dev/nvme0n1 -v
-</pre></dl>
+</pre></dd></dl>
  
 
  The above will dump the 'vs' buffer in hex since it doesn't know how to interpret it.</dl>
@@ -110,14 +107,13 @@ nvme id - ns&lt;device&gt;[-v | --vendor - specific][-b | --raw - binary]
 
 <dl>
 <dt>
-<dd> &bull; Have the program return the raw structure in binary: 
-
-<dl>
+</dt><dd> &bull; Have the program return the raw structure in binary: 
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 # nvme id-ns /dev/nvme0n1 --raw-binary &gt; id_ns.raw
 # nvme id-ns /dev/nvme0n1 -b &gt; id_ns.raw
-</pre></dl>
+</pre></dd></dl>
  
 
  It is probably a bad idea to not redirect stdout when using this mode.</dl>
@@ -125,13 +121,12 @@ nvme id - ns&lt;device&gt;[-v | --vendor - specific][-b | --raw - binary]
 
 <dl>
 <dt>
-<dd> &bull; Alternatively you may want to send the data to another program that can parse the raw buffer. 
-
-<dl>
+</dt><dd> &bull; Alternatively you may want to send the data to another program that can parse the raw buffer. 
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 # nvme id-ns /dev/nvme0n1 --raw-binary | nvme_parse_id_ns
-</pre></dl>
+</pre></dd></dl>
  
 
  The parse program in the above example can be a program that shows the structure in a way you like. The following program is such an example that will parse it and can accept the output through a pipe, '|', as shown in the above example, or you can 'cat' a saved output buffer to it.</dl>
@@ -139,7 +134,7 @@ nvme id - ns&lt;device&gt;[-v | --vendor - specific][-b | --raw - binary]
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 /* File: nvme_parse_id_ns.c */
 #include &lt;linux/nvme.h&gt;
 #include &lt;stdio.h&gt;
@@ -154,7 +149,7 @@ int main(int argc, char **argv)
     printf("ncap : %#llx\n", ns-&gt;ncap);
     return 0;
 }
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>NVME</h2>
 

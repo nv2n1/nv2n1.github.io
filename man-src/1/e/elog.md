@@ -17,32 +17,32 @@ description: "elog – utility program for Electronic Logbook ELOG"
 <h2>OPTIONS</h2>
 <p> <code>elog</code> accepts the following options:</p>
 <dl>
-<dt><code>-a</code><i> attribute=value</i></p>
-<dd> set attribute to value</p>
-<dt><code>-e</code><i> id</i></p>
-<dd> edit existing message of id</p>
-<dt><code>-f</code><i> file&#8230;</i></p>
-<dd> attach files while submitting</p>
-<dt><code>-h</code><i> host</i></p>
-<dd> host where <code>elogd</code> is running</p>
-<dt><code>-l</code><i> logbook</i></p>
-<dd> name of logbook or experiment</p>
-<dt><code>-m</code><i> textfile</i></p>
-<dd> submit message from textfile</p>
-<dt><code>-p</code><i> port</i></p>
-<dd> port where <code>elogd</code> is running</p>
-<dt><code>-r</code><i> id</i></p>
-<dd> reply to existing message of id</p>
-<dt><code>-s</code><i> dir</i></p>
-<dd> directory where logbooks reside</p>
-<dt><code>-u</code><i> username password</i></p>
-<dd> username and password</p>
-<dt><code>-v</code></p>
-<dd> verbose output</p>
-<dt><code>-w</code><i> password</i></p>
-<dd> write password defined on server</p>
-<dt><code>-x</code></p>
-<dd> suppress email notification</dl>
+<dt><code>-a</code><i> attribute=value</i></dt>
+<dd> set attribute to value</dd>
+<dt><code>-e</code><i> id</i></dt>
+<dd> edit existing message of id</dd>
+<dt><code>-f</code><i> file&#8230;</i></dt>
+<dd> attach files while submitting</dd>
+<dt><code>-h</code><i> host</i></dt>
+<dd> host where <code>elogd</code> is running</dd>
+<dt><code>-l</code><i> logbook</i></dt>
+<dd> name of logbook or experiment</dd>
+<dt><code>-m</code><i> textfile</i></dt>
+<dd> submit message from textfile</dd>
+<dt><code>-p</code><i> port</i></dt>
+<dd> port where <code>elogd</code> is running</dd>
+<dt><code>-r</code><i> id</i></dt>
+<dd> reply to existing message of id</dd>
+<dt><code>-s</code><i> dir</i></dt>
+<dd> directory where logbooks reside</dd>
+<dt><code>-u</code><i> username password</i></dt>
+<dd> username and password</dd>
+<dt><code>-v</code></dt>
+<dd> verbose output</dd>
+<dt><code>-w</code><i> password</i></dt>
+<dd> write password defined on server</dd>
+<dt><code>-x</code></dt>
+<dd> suppress email notification</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-elogd/">elogd</a></code>(8). </p>
 <p> The full documentation for <code>ELOG</code> is maintained as an html manual. You can reach it from the package document directory.</p>

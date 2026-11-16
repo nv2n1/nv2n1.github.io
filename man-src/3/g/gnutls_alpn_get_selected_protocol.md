@@ -14,10 +14,10 @@ description: "gnutls_alpn_get_selected_protocol – API function"
 <p> <code>int gnutls_alpn_get_selected_protocol(gnutls_session_t </code><i>session</i><code>, gnutls_datum_t * </code><i>protocol</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>gnutls_datum_t * protocol</p>
-<dd> will hold the protocol name</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>gnutls_datum_t * protocol</dt>
+<dd> will hold the protocol name</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function allows you to get the negotiated protocol name. The returned protocol should be treated as opaque, constant value and only valid during the session life. </p>
 <p> The selected protocol is the first supported by the list sent by the client.</p>
@@ -33,6 +33,6 @@ description: "gnutls_alpn_get_selected_protocol – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

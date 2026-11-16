@@ -15,9 +15,9 @@ description: "flow-stat – Generate reports with flow data."
 <p> The <code>flow-stat</code> utility generates usage reports for flow data sets by IP address, IP address pairs, ports, packets, bytes, interfaces, next hops, autonomous systems, ToS bits, exporters, and tags.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-d</code><i> debug_level</i></p>
-<dd> Enable debugging.</p>
-<dt><code>-f</code><i> format</i></p>
+<dt><code>-d</code><i> debug_level</i></dt>
+<dd> Enable debugging.</dd>
+<dt><code>-f</code><i> format</i></dt>
 <dd>
 <pre>
 Report format.  Choose from the following:
@@ -55,24 +55,24 @@ Report format.  Choose from the following:
     31 Destination Tag
     32 Source/Destination Tag
 </pre>
-<dt><code>-h</code></p>
-<dd> Display help.</p>
-<dt><code>-n</code></p>
-<dd> Use symbolic names where appropriate.</p>
-<dt><code>-p</code></p>
-<dd> Display header information.</p>
-<dt><code>-P</code></p>
-<dd> Report as percent total.</p>
-<dt><code>-s</code><i> sort_field</i></p>
-<dd> Sort ascending on field <i>sort_field</i>.</p>
-<dt><code>-S</code><i> sort_field</i></p>
-<dd> Sort descending on field <i>sort_field</i>.</p>
-<dt><code>-t</code><i> tally_lines</i></p>
-<dd> Tally totals every <i>tally_lines</i>lines.</p>
-<dt><code>-T</code><i> title</i></p>
-<dd> Set report title to <i>title</i>.</p>
-<dt><code>-w</code></p>
-<dd> Wide output.</dl>
+</dd><dt><code>-h</code></dt>
+<dd> Display help.</dd>
+<dt><code>-n</code></dt>
+<dd> Use symbolic names where appropriate.</dd>
+<dt><code>-p</code></dt>
+<dd> Display header information.</dd>
+<dt><code>-P</code></dt>
+<dd> Report as percent total.</dd>
+<dt><code>-s</code><i> sort_field</i></dt>
+<dd> Sort ascending on field <i>sort_field</i>.</dd>
+<dt><code>-S</code><i> sort_field</i></dt>
+<dd> Sort descending on field <i>sort_field</i>.</dd>
+<dt><code>-t</code><i> tally_lines</i></dt>
+<dd> Tally totals every <i>tally_lines</i>lines.</dd>
+<dt><code>-T</code><i> title</i></dt>
+<dd> Set report title to <i>title</i>.</dd>
+<dt><code>-w</code></dt>
+<dd> Wide output.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Provide a report on top source/destination IP pairs sorted by octets, report in percent total form for the flows in <i>/flows/krc4</i>. Use the preload option to flow-cat to preserve meta information and display it with flow-stat. </p>
 <p> <code>flow-cat -p /flows/krc4 | flow-stat -f10 -P -p -S4</code></p>

@@ -14,17 +14,17 @@ description: "rio_request_outb_dbell – request outbound doorbell message range
 <p><i>rdev</i></p>
 <dl>
 <dd>
-<dd>RIO device from which to allocate the doorbell resource</dl>
+</dd><dd>RIO device from which to allocate the doorbell resource</dd></dl>
 <p> <i>start</i></p>
 <dl>
-<dd>Doorbell message range start</dl>
+<dd>Doorbell message range start</dd></dl>
 <p> <i>end</i></p>
 <dl>
-<dd>Doorbell message range end</dl>
+<dd>Doorbell message range end</dd></dl>
 <h2>Description</h2>
 <p>Requests ownership of a doorbell message range. Returns a resource if the request has been satisfied or <code>NULL</code> on failure.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

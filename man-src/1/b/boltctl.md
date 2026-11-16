@@ -29,27 +29,27 @@ description: "boltctl – control the thunderbolt device manager"
 <p> <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Print version information and exit.</dl>
+</dt><dd> Print version information and exit.</dd></dl>
 <p> <code>-U | &#8211;uuid {</code><i>full</i><code> | </code><i>short</i><code> | </code><i>alias</i><code> | N}</code></p>
 <dl>
 <dt>
-<dd> Control how UUIDs are printed. Since they are somewhat sensitive data it is not advisable to share them publicly in full length. Instead <i>short</i> or <i>alias</i> can and should be used when sharing the output of <i>boltctl</i>. </p>
+</dt><dd> Control how UUIDs are printed. Since they are somewhat sensitive data it is not advisable to share them publicly in full length. Instead <i>short</i> or <i>alias</i> can and should be used when sharing the output of <i>boltctl</i>. </dd>
 <p> <i>full</i></p>
 <dl>
 <dt>
-<dd> Print all UUIDs in full length.</dl>
+</dt><dd> Print all UUIDs in full length.</dd></dl>
 <p> <i>short</i></p>
 <dl>
 <dt>
-<dd> Truncate all UUIDs so only the first 13 characters are printed.</dl>
+</dt><dd> Truncate all UUIDs so only the first 13 characters are printed.</dd></dl>
 <p> <i>alias</i></p>
 <dl>
 <dt>
-<dd> All UUIDs are replaced by a random string that is derived from the UUID, therefore the devices can be uniquely identified without revealing the original UUID.</dl>
+</dt><dd> All UUIDs are replaced by a random string that is derived from the UUID, therefore the devices can be uniquely identified without revealing the original UUID.</dd></dl>
 <p> N</p>
 <dl>
 <dt>
-<dd> If a integer <i>N</i> is specified, all UUIDs are truncated to only show up to <i>N</i>.</dl>
+</dt><dd> If a integer <i>N</i> is specified, all UUIDs are truncated to only show up to <i>N</i>.</dd></dl>
 </dl>
 <h2>COMMANDS</h2>
 <h3>authorize [-F | &#8211;first-time] <i>DEVICE</i></h3>
@@ -57,7 +57,7 @@ description: "boltctl – control the thunderbolt device manager"
 <p> <code>-F | &#8211;first-time</code></p>
 <dl>
 <dt>
-<dd> Normally, when attempting to authorize an already authorized device <code>boltctl</code> will do nothing and return a successful status code. When using this option, the attempt will fail and result in a negative exit code if the device is already authorized.</dl>
+</dt><dd> Normally, when attempting to authorize an already authorized device <code>boltctl</code> will do nothing and return a successful status code. When using this option, the attempt will fail and result in a negative exit code if the device is already authorized.</dd></dl>
 <h3>config &#8211;describe [global|domain|device]</h3>
 <p> List global, domain, or all (if nothing is specified) properties. The format is 3 columns: permission, name, description. Permission indicates if the property is only readable or can also be written.</p>
 <h3>config <i>KEY</i> [<i>VALUE</i>]</h3>
@@ -71,19 +71,19 @@ description: "boltctl – control the thunderbolt device manager"
 <p> <code>&#8211;policy {</code><i>default</i><code> | </code><i>auto</i><code> | </code><i>manual</i><code>}</code></p>
 <dl>
 <dt>
-<dd> Specify the policy to be used for the newly enrolled device. </p>
+</dt><dd> Specify the policy to be used for the newly enrolled device. </dd>
 <p> <i>default</i></p>
 <dl>
 <dt>
-<dd> Use the global default policy of the daemon; this can be changed, but is normally also <i>auto</i>.</dl>
+</dt><dd> Use the global default policy of the daemon; this can be changed, but is normally also <i>auto</i>.</dd></dl>
 <p> <i>auto</i></p>
 <dl>
 <dt>
-<dd> Automatically authorize this device whenever it is connected.</dl>
+</dt><dd> Automatically authorize this device whenever it is connected.</dd></dl>
 <p> <i>manual</i></p>
 <dl>
 <dt>
-<dd> Do <code>not</code> automatically authorize the device; instead require manual authorization via <code>boltctl authorize</code>.</dl>
+</dt><dd> Do <code>not</code> automatically authorize the device; instead require manual authorization via <code>boltctl authorize</code>.</dd></dl>
 </dl>
 <h3>forget <i>DEVICE</i></h3>
 <p> Remove the information about the device with the unique id <i>DEVICE</i> from the database. This includes the key, if one was previously generated. If you pass <i>&#8211;all</i> instead of the <i>DEVICE</i> all devices are removed instead of just one.</p>
@@ -94,7 +94,7 @@ description: "boltctl – control the thunderbolt device manager"
 <p> <code>-a | &#8211;all</code></p>
 <dl>
 <dt>
-<dd> Normally, the only the device type that will be shown is peripherals. Therefore the device that represents the host itself will be omitted. Using this option will instead include all device types in the list.</dl>
+</dt><dd> Normally, the only the device type that will be shown is peripherals. Therefore the device that represents the host itself will be omitted. Using this option will instead include all device types in the list.</dd></dl>
 <h3>monitor</h3>
 <p> Listen for and show changes in connected devices.</p>
 <h3>power [-t | &#8211;timeout <i>seconds</i>] [-q | &#8211;query]</h3>
@@ -102,13 +102,13 @@ description: "boltctl – control the thunderbolt device manager"
 <p> <code>-t | &#8211;timeout </code><i>seconds</i></p>
 <dl>
 <dt>
-<dd> Release the force power request after the specified amount of <i>seconds</i> and exit.</dl>
+</dt><dd> Release the force power request after the specified amount of <i>seconds</i> and exit.</dd></dl>
 <p> <code>-q | &#8211;query</code></p>
 <dl>
 <dt>
-<dd> Query the current force power status of the daemon.</dl>
+</dt><dd> Query the current force power status of the daemon.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Christian Kellner &lt;ckellner [at] redhat.com&gt;. </p>
 <h2>Index</h2>
-<dt><a href="#lbAR">AUTHOR</a></p>
-<dd></dl>
+<dt><a href="#lbAR">AUTHOR</a></dt>
+<dd></dd></dl>

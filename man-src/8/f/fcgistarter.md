@@ -22,13 +22,13 @@ description: "fcgistarter – Start a FastCGI program"
 <p>&nbsp;<br />
 &nbsp;</p>
 <dl>
-<dt><code>-c </code><i>command</i></p>
-<dd>Absolute path of the FastCGI program</p>
-<dt><code>-p </code><i>port</i></p>
-<dd>Port which the program will listen on</p>
-<dt><code>-i </code><i>interface</i></p>
-<dd>Interface which the program will listen on</p>
-<dt><code>-N </code><i>num</i></p>
+<dt><code>-c </code><i>command</i></dt>
+<dd>Absolute path of the FastCGI program</dd>
+<dt><code>-p </code><i>port</i></dt>
+<dd>Port which the program will listen on</dd>
+<dt><code>-i </code><i>interface</i></dt>
+<dd>Interface which the program will listen on</dd>
+<dt><code>-N </code><i>num</i></dt>
 <dd>Number of instances of the program<br />
-&nbsp; </p>
+&nbsp; </dd>
 </dl>

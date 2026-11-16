@@ -19,35 +19,35 @@ gdal_polygonize.py[-8][-nomask][-mask filename] raster_file[-b band]
 <p> The utility will create the output vector datasource if it does not already exist, defaulting to GML format. </p>
 <p> The utility is based on the GDALPolygonize() function which has additional details on the algorithm. </p>
 <dl>
-<dt><code>-8</code>:</p>
-<dd> (GDAL &gt;= 1.10) Use 8 connectedness. Default is 4 connectedness.</dl>
+<dt><code>-8</code>:</dt>
+<dd> (GDAL &gt;= 1.10) Use 8 connectedness. Default is 4 connectedness.</dd></dl>
 <dl>
-<dt><code>-nomask</code>:</p>
-<dd> Do not use the default validity mask for the input band (such as nodata, or alpha masks).</dl>
+<dt><code>-nomask</code>:</dt>
+<dd> Do not use the default validity mask for the input band (such as nodata, or alpha masks).</dd></dl>
 <dl>
-<dt><code>-mask</code> <i>filename</i>:</p>
-<dd> Use the first band of the specified file as a validity mask (zero is invalid, non-zero is valid).</dl>
+<dt><code>-mask</code> <i>filename</i>:</dt>
+<dd> Use the first band of the specified file as a validity mask (zero is invalid, non-zero is valid).</dd></dl>
 <dl>
-<dt><i>raster_file</i></p>
-<dd> The source raster file from which polygons are derived.</dl>
+<dt><i>raster_file</i></dt>
+<dd> The source raster file from which polygons are derived.</dd></dl>
 <dl>
-<dt><code>-b</code> <i>band</i>:</p>
-<dd> The band on <i>raster_file</i> to build the polygons from.</dl>
+<dt><code>-b</code> <i>band</i>:</dt>
+<dd> The band on <i>raster_file</i> to build the polygons from.</dd></dl>
 <dl>
-<dt><code>-f</code> <i>ogr_format</i></p>
-<dd> Select the output format of the file to be created. Default is GML.</dl>
+<dt><code>-f</code> <i>ogr_format</i></dt>
+<dd> Select the output format of the file to be created. Default is GML.</dd></dl>
 <dl>
-<dt><i>out_file</i></p>
-<dd> The destination vector file to which the polygons will be written.</dl>
+<dt><i>out_file</i></dt>
+<dd> The destination vector file to which the polygons will be written.</dd></dl>
 <dl>
-<dt><i>layer</i></p>
-<dd> The name of the layer created to hold the polygon features.</dl>
+<dt><i>layer</i></dt>
+<dd> The name of the layer created to hold the polygon features.</dd></dl>
 <dl>
-<dt><i>fieldname</i></p>
-<dd> The name of the field to create (defaults to &#8216;DN&#8217;).</dl>
+<dt><i>fieldname</i></dt>
+<dd> The name of the field to create (defaults to &#8216;DN&#8217;).</dd></dl>
 <dl>
-<dt><code>-q</code>:</p>
-<dd> The script runs in quiet mode. The progress monitor is supressed and routine messages are not displayed.</dl>
+<dt><code>-q</code>:</dt>
+<dd> The script runs in quiet mode. The progress monitor is supressed and routine messages are not displayed.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Frank Warmerdam warmerdam [at] pobox.com </p>
 <h2>Index</h2>

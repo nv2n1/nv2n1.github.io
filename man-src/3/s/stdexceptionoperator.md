@@ -12,7 +12,6 @@ std::exception::operator= - std::exception::operator=
 
 <pre><code>exception &amp;operator=(const exception &amp;other) throw();
 (until C++ 11)
-
     exception &amp;
     operator=(const exception &amp;other) noexcept;
 (since C++ 11)</code></pre> 

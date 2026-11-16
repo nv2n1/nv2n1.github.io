@@ -19,9 +19,9 @@ description: "ldns_rr_descriptor, ldns_rr_descript, ldns_rr_descriptor_minimum, 
 <p> ldns_rdf_type ldns_rr_descriptor_field_type(const ldns_rr_descriptor *descriptor, size_t field); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_rr_descriptor</i></p>
+<dt> <i>ldns_rr_descriptor</i></dt>
 <dd>
-<dd>Contains all information about resource record types. </p>
+</dd><dd>Contains all information about resource record types. </dd>
 <p> This structure contains, for all rr types, the rdata fields that are defined.<br />
  struct ldns_struct_rr_descriptor<br />
  {<br />
@@ -44,20 +44,20 @@ description: "ldns_rr_descriptor, ldns_rr_descript, ldns_rr_descriptor_minimum, 
 <p> };<br />
  typedef struct ldns_struct_rr_descriptor ldns_rr_descriptor;</dl>
 <dl>
-<dt> <i>ldns_rr_descript</i>()</p>
-<dd>returns the resource record descriptor for the given rr type. </p>
+<dt> <i>ldns_rr_descript</i>()</dt>
+<dd>returns the resource record descriptor for the given rr type. </dd>
 <p> .br <code>type</code>: the type value of the rr type .br Returns the ldns_rr_descriptor for this type</dl>
 <dl>
-<dt> <i>ldns_rr_descriptor_minimum</i>()</p>
-<dd>returns the minimum number of rdata fields of the rr type this descriptor describes. </p>
+<dt> <i>ldns_rr_descriptor_minimum</i>()</dt>
+<dd>returns the minimum number of rdata fields of the rr type this descriptor describes. </dd>
 <p> .br <code>descriptor</code>: for an rr type .br Returns the minimum number of rdata fields</dl>
 <dl>
-<dt> <i>ldns_rr_descriptor_maximum</i>()</p>
-<dd>returns the maximum number of rdata fields of the rr type this descriptor describes. </p>
+<dt> <i>ldns_rr_descriptor_maximum</i>()</dt>
+<dd>returns the maximum number of rdata fields of the rr type this descriptor describes. </dd>
 <p> .br <code>descriptor</code>: for an rr type .br Returns the maximum number of rdata fields</dl>
 <dl>
-<dt> <i>ldns_rr_descriptor_field_type</i>()</p>
-<dd>returns the rdf type for the given rdata field number of the rr type for the given descriptor. </p>
+<dt> <i>ldns_rr_descriptor_field_type</i>()</dt>
+<dd>returns the rdf type for the given rdata field number of the rr type for the given descriptor. </dd>
 <p> .br <code>descriptor</code>: for an rr type .br <code>field</code>: the field number .br Returns the rdf type for the field</dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
@@ -71,3 +71,4 @@ description: "ldns_rr_descriptor, ldns_rr_descript, ldns_rr_descriptor_minimum, 
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
 <h2>Index</h2>
+</p>

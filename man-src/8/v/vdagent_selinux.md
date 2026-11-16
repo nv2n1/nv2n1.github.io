@@ -94,14 +94,14 @@ description: "vdagent_selinux – Security Enhanced Linux Policy for the vdagent
 <p> <code>vdagent_log_t</code> </p>
 <p> &#8211; Set files with the vdagent_log_t type, if you want to treat the data as vdagent log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/spice-vdagentd(/.*)?, /var/log/spice-vdagentd.log.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/spice-vdagentd(/.*)?, /var/log/spice-vdagentd.log.* </dd>
 </dl>
 <p> <code>vdagent_var_run_t</code> </p>
 <p> &#8211; Set files with the vdagent_var_run_t type, if you want to store the vdagent files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/spice-vdagentd(/.*)?, /var/run/spice-vdagentd.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/spice-vdagentd(/.*)?, /var/run/spice-vdagentd.pid </dd>
 </dl>
 <p> <code>vdagentd_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the vdagentd_initrc_exec_t type, if you want to transition an executable to the vdagentd_initrc_t domain. </p>

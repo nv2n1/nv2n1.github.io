@@ -14,10 +14,10 @@ description: "IBPORTSTATE – handle port (physical) state and link speed of an 
 <p>ibportstate allows the port state and port physical state of an IB port to be queried (in addition to link width and speed being validated relative to the peer port when the port queried is a switch port), or a switch port to be disabled, enabled, or reset. It also allows the link speed/width enabled on any IB port to be adjusted.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&lt;op&gt;</code></p>
+<dt><code>&lt;op&gt;</code></dt>
 <dd>
-<dt><code>Supported ops: enable, disable, reset, speed, espeed, fdr10, width, query,</code></p>
-<dd>on, off, down, arm, active, vls, mtu, lid, smlid, lmc, mkey, mkeylease, mkeyprot (Default is query) </p>
+</dd><dt><code>Supported ops: enable, disable, reset, speed, espeed, fdr10, width, query,</code></dt>
+<dd>on, off, down, arm, active, vls, mtu, lid, smlid, lmc, mkey, mkeylease, mkeyprot (Default is query) </dd>
 <p> <code>enable, disable, and reset</code> are only allowed on switch ports (An error is indicated if attempted on CA or router ports) </p>
 <p> <code>off</code> change the port state to disable. </p>
 <p> <code>on</code> change the port state to enable(only when the current state is disable). </p>
@@ -45,10 +45,10 @@ description: "IBPORTSTATE – handle port (physical) state and link speed of an 
 <h3>Local port Selection</h3>
 <p>Multiple port/Multiple CA support: when no IB device or port is specified (see the &quot;local umad parameters&quot; below), the libibumad library selects the port to use by the following criteria:</p>
 <dl>
-<dt>1.</p>
-<dd>the first port that is ACTIVE.</p>
-<dt>2.</p>
-<dd>if not found, the first port that is UP (physical link up). </p>
+<dt>1.</dt>
+<dd>the first port that is ACTIVE.</dd>
+<dt>2.</dt>
+<dd>if not found, the first port that is UP (physical link up). </dd>
 <p> If a port and/or CA name is specified, the libibumad library attempts to fulfill the user request, and will fail if it is not possible. </p>
 <p> For example: </p>
 <pre>ibaddr # use the first port (criteria #1 above)
@@ -60,19 +60,19 @@ ibaddr -C mthca0 -P 2 # use the specified port only.</pre>
 <p><code>&#8211;config, -z &lt;config_file&gt;</code> Specify alternate config file. Default: /etc/infiniband-diags/ibdiag.conf </p>
 <p> <code>-t, &#8211;timeout &lt;timeout_ms&gt;</code> override the default timeout for the solicited mads.</p>
 <dl>
-<dt><code>-y, &#8211;m_key &lt;key&gt;</code></p>
-<dd>use the specified M_key for requests. If non-numeric value (like &#8216;x&#8217;) is specified then a value will be prompted for.</dl>
+<dt><code>-y, &#8211;m_key &lt;key&gt;</code></dt>
+<dd>use the specified M_key for requests. If non-numeric value (like &#8216;x&#8217;) is specified then a value will be prompted for.</dd></dl>
 <h3>Debugging flags</h3>
 <p><code>-h, &#8211;help</code> show the usage message</p>
 <dl>
-<dt><code>-d</code></p>
-<dd>raise the IB debugging level. May be used several times (-ddd or -d -d -d).</p>
-<dt><code>-e</code></p>
-<dd>show send and receive errors (timeouts and others)</p>
-<dt><code>-K, &#8211;show_keys</code></p>
-<dd>show security keys (mkey, smkey, etc.) associated with the request.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd>increase the application verbosity level. May be used several times (-vv or -v -v -v) </p>
+<dt><code>-d</code></dt>
+<dd>raise the IB debugging level. May be used several times (-ddd or -d -d -d).</dd>
+<dt><code>-e</code></dt>
+<dd>show send and receive errors (timeouts and others)</dd>
+<dt><code>-K, &#8211;show_keys</code></dt>
+<dd>show security keys (mkey, smkey, etc.) associated with the request.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd>increase the application verbosity level. May be used several times (-vv or -v -v -v) </dd>
 <p> <code>-V, &#8211;version</code> show the version info.</dl>
 <h2>Files</h2>
 <h3>Config File</h3>
@@ -80,10 +80,10 @@ ibaddr -C mthca0 -P 2 # use the specified port only.</pre>
 <p> A global config file is provided to set some of the common options for all tools. See supplied config file for details.</p>
 <h2>Examples</h2>
 <dl>
-<dt><code>::</code></p>
-<dd>ibportstate 3 1 disable # by lid ibportstate -G 0x2C9000100D051 1 enable # by guid ibportstate -D 0 1 # (query) by direct route ibportstate 3 1 reset # by lid ibportstate 3 1 speed 1 # by lid ibportstate 3 1 width 1 # by lid ibportstate -D 0 1 lid 0x1234 arm # by direct route</dl>
+<dt><code>::</code></dt>
+<dd>ibportstate 3 1 disable # by lid ibportstate -G 0x2C9000100D051 1 enable # by guid ibportstate -D 0 1 # (query) by direct route ibportstate 3 1 reset # by lid ibportstate 3 1 speed 1 # by lid ibportstate 3 1 width 1 # by lid ibportstate -D 0 1 lid 0x1234 arm # by direct route</dd></dl>
 <h2>Author</h2>
 <dl>
-<dt><code>Hal Rosenstock</code></p>
-<dd>&lt; <i>hal.rosenstock [at] gmail.com</i> &gt; </p>
+<dt><code>Hal Rosenstock</code></dt>
+<dd>&lt; <i>hal.rosenstock [at] gmail.com</i> &gt; </dd>
 </dl>

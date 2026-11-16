@@ -16,17 +16,17 @@ mongoc_database_create_collection (mongoc_database_t *database,
  bson_error_t *error);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>database</code></p>
-<dd>A <code>mongoc_database_t</code> \&amp;.</dl>
+<dt><code>database</code></dt>
+<dd>A <code>mongoc_database_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>name</code></p>
-<dd>The name of the new collection.</dl>
+<dt><code>name</code></dt>
+<dd>The name of the new collection.</dd></dl>
 <dl COMPACT>
-<dt><code>options</code></p>
-<dd>An optional <code>bson_t</code> for options to the <code>createDatabase</code> command.</dl>
+<dt><code>options</code></dt>
+<dd>An optional <code>bson_t</code> for options to the <code>createDatabase</code> command.</dd></dl>
 <dl COMPACT>
-<dt><code>error</code></p>
-<dd>A location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dl>
+<dt><code>error</code></dt>
+<dd>A location for a <code>bson_error_t</code> or <code>NULL</code> \&amp;.</dd></dl>
 <h2>Errors</h2>
 <p>Errors are propagated via the <code>error</code> parameter. </p>
 <h2>Returns</h2>

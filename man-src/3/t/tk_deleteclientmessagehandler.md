@@ -14,7 +14,7 @@ description: "Tk_CreateClientMessageHandler, Tk_DeleteClientMessageHandler – a
 <code>Tk_DeleteClientMessageHandler</code>(<i>proc</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tk_ClientMessageProc <i>*proc</i> (in) Procedure to invoke whenever a ClientMessage X event occurs on any display. </p>
+<dd>Tk_ClientMessageProc <i>*proc</i> (in) Procedure to invoke whenever a ClientMessage X event occurs on any display. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>Tk_CreateClientMessageHandler</code> arranges for <i>proc</i> to be invoked in the future whenever a ClientMessage X event occurs that is not handled by <code>WM_PROTOCOL</code>. <code>Tk_CreateClientMessageHandler</code> is intended for use by applications which need to watch X ClientMessage events, such as drag and drop applications. </p>
@@ -25,7 +25,7 @@ description: "Tk_CreateClientMessageHandler, Tk_DeleteClientMessageHandler – a
 <pre>typedef int Tk_ClientMessageProc(
  Tk_Window <i>tkwin</i>,
  XEvent *<i>eventPtr</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>tkwin</i> parameter to <i>proc</i> is the Tk window which is associated with this event. <i>EventPtr</i> is a pointer to the X event. </p>
 <p> Whenever an X ClientMessage event is processed by <code>Tk_HandleEvent</code>, the <i>proc</i> is called if it was not handled as a <code>WM_PROTOCOL</code>. The return value from <i>proc</i> is normally 0. A non-zero return value indicates that the event is not to be handled further; that is, <i>proc</i> has done all processing that is to be allowed for the event. </p>
 <p> If there are multiple ClientMessage event handlers, each one is called for each event, in the order in which they were established. </p>

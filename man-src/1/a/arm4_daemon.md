@@ -23,20 +23,20 @@ description: "arm4_daemon – ARM 4 collection agent"
 <p> The <code>arm4_daemon</code> program uses the Berkeley database to store transaction information. Rather than a single file, this database uses separate files fore each database table. For simplicity, all database files are stored in a single directory. Therefore specifying a database or database archive location is really specifying the directory in which the files are stored. The default location for the database files is <i>/var/lib/arm4/data</i>. For backup files, a time stamped directory is created under <i>/var/lib/arm4/data/backup</i>. Each of these directories can be changed using the <i>arm4.conf</i> configuration file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> display the command line options</p>
-<dt><code>-V</code>, <code>&#8211;Version</code></p>
-<dd> display the program version and exit</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> output diagnostic information as the program is run. This may not be suitable when running in the background as a true daemon but can be useful for debugging.</p>
-<dt><code>-C</code>, <code>&#8211;Config</code> <i>config_file</i></p>
-<dd> specifies a configuration file for this instance instead of using the default configuration file. The default configuration file <i>/etc/arm4.conf</i> is used if none is specified.</p>
-<dt><code>-d</code>, <code>&#8211;debug</code></p>
-<dd> run the daemon as a foreground process. This is primarily used for debugging.</p>
-<dt><code>-s</code>, <code>&#8211;stats</code></p>
-<dd> periodically display statistics on the message queues and database processes.</p>
-<dt><code>-o</code>, <code>&#8211;off</code></p>
-<dd> Start the agent as a &quot;null&quot; collector. Although the collector is active, no data is actually collected. This can be controlled using the <code>arm4_control</code> utility.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> display the command line options</dd>
+<dt><code>-V</code>, <code>&#8211;Version</code></dt>
+<dd> display the program version and exit</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> output diagnostic information as the program is run. This may not be suitable when running in the background as a true daemon but can be useful for debugging.</dd>
+<dt><code>-C</code>, <code>&#8211;Config</code> <i>config_file</i></dt>
+<dd> specifies a configuration file for this instance instead of using the default configuration file. The default configuration file <i>/etc/arm4.conf</i> is used if none is specified.</dd>
+<dt><code>-d</code>, <code>&#8211;debug</code></dt>
+<dd> run the daemon as a foreground process. This is primarily used for debugging.</dd>
+<dt><code>-s</code>, <code>&#8211;stats</code></dt>
+<dd> periodically display statistics on the message queues and database processes.</dd>
+<dt><code>-o</code>, <code>&#8211;off</code></dt>
+<dd> Start the agent as a &quot;null&quot; collector. Although the collector is active, no data is actually collected. This can be controlled using the <code>arm4_control</code> utility.</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs at &lt;<a rel="nofollow" href="http://www.arm4.org">http://www.arm4.org</a>&gt;</p>
 <h2>COPYRIGHT</h2>

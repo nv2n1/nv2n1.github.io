@@ -10,31 +10,13 @@ description: "QuantLib::DayCounter – day counter class"
 <p>QuantLib::DayCounter &#8211; day counter class </p>
 <h2>Synopsis</h2>
 <pre><code>bool empty () const
-
-
 Returns whether or not the day counter is initialized.
-
-
 std::string name () const
-
-
 Returns the name of the day counter.
-
-
 BigInteger dayCount (const Date &amp;, const Date &amp;) const
-
-
 Returns the number of days between two dates.
-
-
 Time yearFraction (const Date &amp;, const Date &amp;, const Date &amp;refPeriodStart=Date(), const Date &amp;refPeriodEnd=Date()) const
-
-
 Returns the period between two dates as a fraction of year.
-
-
-
-
 Protected Member Functions</code></pre>
 <p> Inherited by <code>Actual360</code>, <code>Actual365Fixed</code>, <code>ActualActual</code>, <code>Business252</code>, <code>OneDayCounter</code>, <code>SimpleDayCounter</code>, and <code>Thirty360</code>.</p>
 <h3>Classes</h3>
@@ -44,31 +26,13 @@ Protected Member Functions</code></pre>
 <p><code>DayCounter</code> ()<br />
  <code>DayCounter interface</code> </p>
 <pre><code>bool empty () const
-
-
 Returns whether or not the day counter is initialized.
-
-
 std::string name () const
-
-
 Returns the name of the day counter.
-
-
 BigInteger dayCount (const Date &amp;, const Date &amp;) const
-
-
 Returns the number of days between two dates.
-
-
 Time yearFraction (const Date &amp;, const Date &amp;, const Date &amp;refPeriodStart=Date(), const Date &amp;refPeriodEnd=Date()) const
-
-
 Returns the period between two dates as a fraction of year.
-
-
-
-
 Protected Member Functions</code></pre>
 <p> <code>DayCounter</code> (const boost::shared_ptr&lt; <code>Impl</code> &gt; &amp;impl)</p>
 <h3>Protected Attributes</h3>
@@ -94,7 +58,7 @@ Protected Member Functions</code></pre>
 <p>Returns the name of the day counter. </p>
 <p> <code>Warning</code></p>
 <dl>
-<dd>This method is used for output and comparison between day counters. It is <code>not</code> meant to be used for writing switch-on-type code.</dl>
+<dd>This method is used for output and comparison between day counters. It is <code>not</code> meant to be used for writing switch-on-type code.</dd></dl>
 <h2>Friends And Related Function Documentation</h2>
 <h3>bool operator== (const <code>DayCounter</code> &amp;, const <code>DayCounter</code> &amp;) [related]</h3>
 <p>Returns true iff the two day counters belong to the same derived class.</p>

@@ -19,7 +19,7 @@ description: "dpbsvx.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DPBSVX uses the Cholesky factorization A = U**T*U or A = L*L**T to
  compute the solution to a real system of linear equations
@@ -29,11 +29,11 @@ description: "dpbsvx.f –"
  Error bounds on the solution and a condition estimate are also
  provided.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Description: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
  The following steps are performed:
  1. If FACT = 'E', real scaling factors are computed to equilibrate
@@ -65,11 +65,11 @@ description: "dpbsvx.f –"
  so that it solves the original system before
      equilibration.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>FACT</i> </p>
+</dt><dd> <i>FACT</i> </dd>
 <pre>
           FACT is CHARACTER*1
           Specifies whether or not the factored form of the matrix A is
@@ -247,18 +247,18 @@ description: "dpbsvx.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> April 2012</dl>
+</dt><dd> April 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   The band storage scheme is illustrated by the following example, when
   N = 6, KD = 2, and UPLO = 'U':
@@ -279,8 +279,9 @@ description: "dpbsvx.f –"
      a31  a42  a53  a64   *    *
   Array elements marked * are not used by the routine.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 342 of file dpbsvx.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

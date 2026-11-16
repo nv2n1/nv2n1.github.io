@@ -10,15 +10,11 @@ description: "std::pmr::memory_resource::allocate – std::pmr::memory_resource:
 <p>std::pmr::memory_resource::allocate &#8211; std::pmr::memory_resource::allocate</p>
 <h2>Synopsis</h2>
 <pre><code>void *allocate(std::size_t bytes, (since C++ 17)
-
                                       std::size_t alignment = alignof(std::max_align_t));
 (until C++ 20)
-
     [[nodiscard]] void *allocate(std::size_t bytes, (since C++ 20)
-
                                                         std::size_t alignment = alignof(std::max_align_t));
 Allocates storage with a size of at least bytes bytes.The returned storage is aligned to the specified alignment if such alignment is supported, and to alignof(std::max_align_t) otherwise.
-
                                                                                                                                                      Equivalent to return do_allocate(bytes, alignment);
 .
 </code></pre>

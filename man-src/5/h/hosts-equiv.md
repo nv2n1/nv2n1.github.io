@@ -12,8 +12,8 @@ description: "hosts.equiv – list of hosts and users that are granted \"trusted
 <p>The file <i>/etc/hosts.equiv</i> allows or denies hosts and users to use the <code>r</code>-commands (e.g., <code>rlogin</code>, <code>rsh</code>, or <code>rcp</code>) without supplying a password. </p>
 <p> The file uses the following format:</p>
 <dl>
-<dt><i>+|[-]hostname|+@netgroup|-@netgroup</i> <i>[+|[-]username|+@netgroup|-@netgroup]</i></p>
-<dd></dl>
+<dt><i>+|[-]hostname|+@netgroup|-@netgroup</i> <i>[+|[-]username|+@netgroup|-@netgroup]</i></dt>
+<dd></dd></dl>
 <p> The <i>hostname</i> is the name of a host which is logically equivalent to the local host. Users logged into that host are allowed to access like-named user accounts on the local host without supplying a password. The <i>hostname</i> may be (optionally) preceded by a plus (+) sign. If the plus sign is used alone, it allows any host to access your system. You can explicitly deny access to a host by preceding the <i>hostname</i> by a minus (-) sign. Users from that host must always supply additional credentials, including possibly a password. For security reasons you should always use the FQDN of the hostname and not the short hostname. </p>
 <p> The <i>username</i> entry grants a specific user access to all user accounts (except root) without supplying a password. That means the user is NOT restricted to like-named accounts. The <i>username</i> may be (optionally) preceded by a plus (+) sign. You can also explicitly deny access to a specific user by preceding the <i>username</i> with a minus (-) sign. This says that the user is not trusted no matter what other entries for that host exist. </p>
 <p> Netgroups can be specified by preceding the netgroup by an @ sign. </p>

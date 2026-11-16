@@ -11,9 +11,7 @@ std::insert_iterator&lt;Container&gt;::insert_iterator - std::insert_iterator&lt
 <h2>Synopsis</h2>
 
 <pre><code>insert_iterator() = default;                                                (1) (since C++20)
-
 insert_iterator( Container&amp; c, typename Container::iterator i );            (2)               (until C++20)
-
 constexpr insert_iterator( Container&amp; c, ranges::iterator_t&lt;Container&gt; i );                   (since C++20)
 </code></pre> 
 1) Initializes the underlying pointer to container with nullptr and value-initializes the underlying iterator. <i>(since C++20)</i> 

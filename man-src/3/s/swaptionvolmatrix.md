@@ -11,13 +11,9 @@ description: "ql/termstructures/volatility/swaption/swaptionvolmatrix.hpp – Sw
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/termstructures/volatility/swaption/swaptionvoldiscrete.hpp&gt;
-
 #include &lt;ql/math/interpolations/interpolation2d.hpp&gt;
-
 #include &lt;ql/math/matrix.hpp&gt;
-
 #include &lt;boost/noncopyable.hpp&gt;
-
 #include &lt;vector&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>SwaptionVolatilityMatrix</code><br />

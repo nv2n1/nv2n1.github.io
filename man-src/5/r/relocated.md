@@ -21,23 +21,23 @@ description: "relocated – Postfix relocated table format"
 <h2>Table Format</h2>
 <p>The input format for the <code><a href="/docs/linux/man/1-postmap/">postmap</a></code>(1) command is as follows:</p>
 <dl>
-<dt>&bull;</p>
-<dd>An entry has one of the following form: </p>
+<dt>&bull;</dt>
+<dd>An entry has one of the following form: </dd>
 <pre> <i>pattern new_location</i></pre>
 <p>Where <i>new_location</i> specifies contact information such as an email address, or perhaps a street address or telephone number.</p>
-<dt>&bull;</p>
-<dd>Empty lines and whitespace-only lines are ignored, as are lines whose first non-whitespace character is a `#&#8217;.</p>
-<dt>&bull;</p>
-<dd>A logical line starts with non-whitespace text. A line that starts with whitespace continues a logical line.</dl>
+<dt>&bull;</dt>
+<dd>Empty lines and whitespace-only lines are ignored, as are lines whose first non-whitespace character is a `#&#8217;.</dd>
+<dt>&bull;</dt>
+<dd>A logical line starts with non-whitespace text. A line that starts with whitespace continues a logical line.</dd></dl>
 <h2>Table Search Order</h2>
 <p>With lookups from indexed files such as DB or DBM, or from networked tables such as NIS, LDAP or SQL, patterns are tried in the order as listed below:</p>
 <dl>
-<dt><i>user</i>@<i>domain</i></p>
-<dd>Matches <i>user</i>@<i>domain</i>. This form has precedence over all other forms.</p>
-<dt><i>user</i></p>
-<dd>Matches <i>user</i>@<i>site</i> when <i>site</i> is $<code>myorigin</code>, when <i>site</i> is listed in $<code>mydestination</code>, or when <i>site</i> is listed in $<code>inet_interfaces</code> or $<code>proxy_interfaces</code>.</p>
-<dt>@<i>domain</i></p>
-<dd>Matches other addresses in <i>domain</i>. This form has the lowest precedence.</dl>
+<dt><i>user</i>@<i>domain</i></dt>
+<dd>Matches <i>user</i>@<i>domain</i>. This form has precedence over all other forms.</dd>
+<dt><i>user</i></dt>
+<dd>Matches <i>user</i>@<i>site</i> when <i>site</i> is $<code>myorigin</code>, when <i>site</i> is listed in $<code>mydestination</code>, or when <i>site</i> is listed in $<code>inet_interfaces</code> or $<code>proxy_interfaces</code>.</dd>
+<dt>@<i>domain</i></dt>
+<dd>Matches other addresses in <i>domain</i>. This form has the lowest precedence.</dd></dl>
 <h2>Address Extension</h2>
 <p>When a mail address localpart contains the optional recipient delimiter (e.g., <i>user+foo</i>@<i>domain</i>), the lookup order becomes: <i>user+foo</i>@<i>domain</i>, <i>user</i>@<i>domain</i>, <i>user+foo</i>, <i>user</i>, and @<i>domain</i>.</p>
 <h2>Regular Expression Tables</h2>
@@ -54,18 +54,18 @@ description: "relocated – Postfix relocated table format"
 <h2>Configuration Parameters</h2>
 <p>The following <code>main.cf</code> parameters are especially relevant. The text below provides only a parameter summary. See <code><a href="/docs/linux/man/5-postconf/">postconf</a></code>(5) for more details including examples.</p>
 <dl>
-<dt><code>relocated_maps</code></p>
-<dd>List of lookup tables for relocated users or sites.</dl>
+<dt><code>relocated_maps</code></dt>
+<dd>List of lookup tables for relocated users or sites.</dd></dl>
 <p> Other parameters of interest:</p>
 <dl>
-<dt><code>inet_interfaces</code></p>
-<dd>The network interface addresses that this system receives mail on. You need to stop and start Postfix when this parameter changes.</p>
-<dt><code>mydestination</code></p>
-<dd>List of domains that this mail system considers local.</p>
-<dt><code>myorigin</code></p>
-<dd>The domain that is appended to locally-posted mail.</p>
-<dt><code>proxy_interfaces</code></p>
-<dd>Other interfaces that this machine receives mail on by way of a proxy agent or network address translator.</dl>
+<dt><code>inet_interfaces</code></dt>
+<dd>The network interface addresses that this system receives mail on. You need to stop and start Postfix when this parameter changes.</dd>
+<dt><code>mydestination</code></dt>
+<dd>List of domains that this mail system considers local.</dd>
+<dt><code>myorigin</code></dt>
+<dd>The domain that is appended to locally-posted mail.</dd>
+<dt><code>proxy_interfaces</code></dt>
+<dd>Other interfaces that this machine receives mail on by way of a proxy agent or network address translator.</dd></dl>
 <h2>See Also</h2>
 <pre><a href="//www.systutorials.com/docs/linux/man/8-trivial-rewrite/">trivial-rewrite</a>(8), address resolver
 <a href="//www.systutorials.com/docs/linux/man/1-postmap/">postmap</a>(1), Postfix lookup table manager

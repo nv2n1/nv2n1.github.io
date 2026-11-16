@@ -117,49 +117,49 @@ description: "Embryo.h – Embryo virtual machine library."
 <h3>anonymous enum</h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>EMBRYO_ERROR_ASSERT </i></p>
-<dd>Forced exit.</p>
-<dt><i>EMBRYO_ERROR_STACKERR </i></p>
-<dd>Assertion failed.</p>
-<dt><i>EMBRYO_ERROR_BOUNDS </i></p>
-<dd>Stack/heap collision.</p>
-<dt><i>EMBRYO_ERROR_MEMACCESS </i></p>
-<dd>Index out of bounds.</p>
-<dt><i>EMBRYO_ERROR_INVINSTR </i></p>
-<dd>Invalid memory access.</p>
-<dt><i>EMBRYO_ERROR_STACKLOW </i></p>
-<dd>Invalid instruction.</p>
-<dt><i>EMBRYO_ERROR_HEAPLOW </i></p>
-<dd>Stack underflow.</p>
-<dt><i>EMBRYO_ERROR_CALLBACK </i></p>
-<dd>Heap underflow.</p>
-<dt><i>EMBRYO_ERROR_NATIVE </i></p>
-<dd>No callback, or invalid callback.</p>
-<dt><i>EMBRYO_ERROR_DIVIDE </i></p>
-<dd>Native function failed.</p>
-<dt><i>EMBRYO_ERROR_SLEEP </i></p>
-<dd>Divide by zero.</p>
-<dt><i>EMBRYO_ERROR_MEMORY </i></p>
-<dd>Go into sleepmode &#8211; code can be restarted.</p>
-<dt><i>EMBRYO_ERROR_FORMAT </i></p>
-<dd>Out of memory.</p>
-<dt><i>EMBRYO_ERROR_VERSION </i></p>
-<dd>Invalid file format.</p>
-<dt><i>EMBRYO_ERROR_NOTFOUND </i></p>
-<dd>File is for a newer version of the Embryo_Program.</p>
-<dt><i>EMBRYO_ERROR_INDEX </i></p>
-<dd>Function not found.</p>
-<dt><i>EMBRYO_ERROR_DEBUG </i></p>
-<dd>Invalid index parameter (bad entry point).</p>
-<dt><i>EMBRYO_ERROR_INIT </i></p>
-<dd>Debugger cannot run.</p>
-<dt><i>EMBRYO_ERROR_USERDATA </i></p>
-<dd>Embryo_Program not initialized (or doubly initialized).</p>
-<dt><i>EMBRYO_ERROR_INIT_JIT </i></p>
-<dd>Unable to set user data field (table full).</p>
-<dt><i>EMBRYO_ERROR_PARAMS </i></p>
-<dd>Cannot initialize the JIT.</p>
-<dt><i>EMBRYO_ERROR_DOMAIN </i></p>
-<dd>Parameter error.</dl>
+<dt><i>EMBRYO_ERROR_ASSERT </i></dt>
+<dd>Forced exit.</dd>
+<dt><i>EMBRYO_ERROR_STACKERR </i></dt>
+<dd>Assertion failed.</dd>
+<dt><i>EMBRYO_ERROR_BOUNDS </i></dt>
+<dd>Stack/heap collision.</dd>
+<dt><i>EMBRYO_ERROR_MEMACCESS </i></dt>
+<dd>Index out of bounds.</dd>
+<dt><i>EMBRYO_ERROR_INVINSTR </i></dt>
+<dd>Invalid memory access.</dd>
+<dt><i>EMBRYO_ERROR_STACKLOW </i></dt>
+<dd>Invalid instruction.</dd>
+<dt><i>EMBRYO_ERROR_HEAPLOW </i></dt>
+<dd>Stack underflow.</dd>
+<dt><i>EMBRYO_ERROR_CALLBACK </i></dt>
+<dd>Heap underflow.</dd>
+<dt><i>EMBRYO_ERROR_NATIVE </i></dt>
+<dd>No callback, or invalid callback.</dd>
+<dt><i>EMBRYO_ERROR_DIVIDE </i></dt>
+<dd>Native function failed.</dd>
+<dt><i>EMBRYO_ERROR_SLEEP </i></dt>
+<dd>Divide by zero.</dd>
+<dt><i>EMBRYO_ERROR_MEMORY </i></dt>
+<dd>Go into sleepmode &#8211; code can be restarted.</dd>
+<dt><i>EMBRYO_ERROR_FORMAT </i></dt>
+<dd>Out of memory.</dd>
+<dt><i>EMBRYO_ERROR_VERSION </i></dt>
+<dd>Invalid file format.</dd>
+<dt><i>EMBRYO_ERROR_NOTFOUND </i></dt>
+<dd>File is for a newer version of the Embryo_Program.</dd>
+<dt><i>EMBRYO_ERROR_INDEX </i></dt>
+<dd>Function not found.</dd>
+<dt><i>EMBRYO_ERROR_DEBUG </i></dt>
+<dd>Invalid index parameter (bad entry point).</dd>
+<dt><i>EMBRYO_ERROR_INIT </i></dt>
+<dd>Debugger cannot run.</dd>
+<dt><i>EMBRYO_ERROR_USERDATA </i></dt>
+<dd>Embryo_Program not initialized (or doubly initialized).</dd>
+<dt><i>EMBRYO_ERROR_INIT_JIT </i></dt>
+<dd>Unable to set user data field (table full).</dd>
+<dt><i>EMBRYO_ERROR_PARAMS </i></dt>
+<dd>Cannot initialize the JIT.</dd>
+<dt><i>EMBRYO_ERROR_DOMAIN </i></dt>
+<dd>Parameter error.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Embryo from the source code.</p>

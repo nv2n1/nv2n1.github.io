@@ -11,7 +11,6 @@ std::ispunct - std::ispunct
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cctype&gt;
-
     int ispunct(int ch);</code></pre> 
 Checks if the given character is a punctuation character as classified by the current C locale. The default C locale classifies the characters !&quot;#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~ as punctuation. 
 The behavior is undefined if the value of ch is not representable as unsigned char and is not equal to EOF. 
@@ -46,12 +45,9 @@ Similarly, they should not be directly used with standard algorithms when the it
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cctype&gt;
-
 #include &lt;clocale&gt;
 int main()
-
 {
     unsigned char c = '\xd7'; // the character × (multiplication sign) in ISO-8859-1
     std::cout &lt;&lt; &quot;ispunct(\'\\xd7\', default C locale) returned &quot;

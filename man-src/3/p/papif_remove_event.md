@@ -13,10 +13,10 @@ description: "PAPIF_remove_event –"
 <h2>Detailed Description</h2>
 <p><code>Fortran interface:</code></p>
 <dl COMPACT>
-<dd>#include &#8216;fpapi.h&#8217; </p>
+<dd>#include &#8216;fpapi.h&#8217; </dd>
 <p>&nbsp;<wbr><code>PAPIF_remove_event(&nbsp;<wbr>C_INT EventSet, C_INT EventCode, C_INT check&nbsp;<wbr>)</code></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_remove_event</code></dl>
+<dd><code>PAPI_remove_event</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

@@ -18,16 +18,16 @@ description: "prover9 – resolution/paramodulation theorem prover"
 <h2>OPTIONS</h2>
 <p> A summary of options is included below.</p>
 <dl>
-<dt><code>-h</code></p>
-<dd> View a list of command-line options.</p>
-<dt><code>-x</code></p>
-<dd> Enables an experimental enhanced auto-mode. For more information consult the <code>prover9</code> manual.</p>
-<dt><code>-p</code></p>
-<dd> Fully parenthesize output.</p>
-<dt><code>-t </code><i>n</i></p>
-<dd> Constrain the search to last about <i>n</i> seconds. For UNIX-like systems, the `user CPU&#8217; time is used.</p>
-<dt><code>-f </code><i>file</i></p>
-<dd> Take input from <i>file</i> instead of from standard input.</dl>
+<dt><code>-h</code></dt>
+<dd> View a list of command-line options.</dd>
+<dt><code>-x</code></dt>
+<dd> Enables an experimental enhanced auto-mode. For more information consult the <code>prover9</code> manual.</dd>
+<dt><code>-p</code></dt>
+<dd> Fully parenthesize output.</dd>
+<dt><code>-t </code><i>n</i></dt>
+<dd> Constrain the search to last about <i>n</i> seconds. For UNIX-like systems, the `user CPU&#8217; time is used.</dd>
+<dt><code>-f </code><i>file</i></dt>
+<dd> Take input from <i>file</i> instead of from standard input.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mace4/">mace4</a></code>(1), <code>otter</code>(1).<br />
  On Debian systems, the manual is found in the <i>prover9-doc</i> package, at <i>/usr/share/doc/prover9-doc/manual/index.html</i>.</p>

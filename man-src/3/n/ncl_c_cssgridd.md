@@ -10,23 +10,23 @@ c_cssgridd - tension spline interpolation on a sphere
 <h2>Function Prototype</h2><pre>double *c_cssgridd(int, double [], double [], double [],
 <br>
  int, int, double [], double [], int *);</pre><h2>Synopsis</h2><pre>double *c_cssgridd (n, rlat, rlon, f, ni, nj, plat, plon, ier)</pre><h2>Description</h2><dl COMPACT><dt>n
-<dd>The number of input data points, n &gt; 2.
-<dt>rlat
-<dd>An array containing the latitudes of the input data, expressed in degrees. The first three points must not be collinear (lie on a common great circle).
-<dt>rlon
-<dd>An array containing the longitudes of the input data, expressed in degrees.
-<dt>f
-<dd>Array containing data values. f[i] is the functional value at (rlat[i],rlon[i]) for i = 0 to n-1.
-<dt>ni
-<dd>The number of latitudes in the interpolated grid.
-<dt>nj
-<dd>The number of longitudes in the interpolated grid. ni and nj can both be 1, allowing for interpolation at a single point.
-<dt>plat
-<dd>An array containing the latitudes of the points where interpolated values are to be computed. The values in plat should be in degrees.
-<dt>plon
-<dd>An array of length nj containing the longitudes the output grid lines. The values in plon should be in degrees.
-<dt>ier
-<dd>An error return value. If *ier is returned as 0, then no errors were detected. If *ier is non-zero, then refer to the error list in cssgrid_errors for details.</dl><h2>Usage</h2>c_cssgridd is called to find an interpolating tension spline for randomly positioned data on a unit sphere. c_cssgridd is a double precision version of c_cssgrid.
+</dt><dd>The number of input data points, n &gt; 2.
+</dd><dt>rlat
+</dt><dd>An array containing the latitudes of the input data, expressed in degrees. The first three points must not be collinear (lie on a common great circle).
+</dd><dt>rlon
+</dt><dd>An array containing the longitudes of the input data, expressed in degrees.
+</dd><dt>f
+</dt><dd>Array containing data values. f[i] is the functional value at (rlat[i],rlon[i]) for i = 0 to n-1.
+</dd><dt>ni
+</dt><dd>The number of latitudes in the interpolated grid.
+</dd><dt>nj
+</dt><dd>The number of longitudes in the interpolated grid. ni and nj can both be 1, allowing for interpolation at a single point.
+</dd><dt>plat
+</dt><dd>An array containing the latitudes of the points where interpolated values are to be computed. The values in plat should be in degrees.
+</dd><dt>plon
+</dt><dd>An array of length nj containing the longitudes the output grid lines. The values in plon should be in degrees.
+</dd><dt>ier
+</dt><dd>An error return value. If *ier is returned as 0, then no errors were detected. If *ier is non-zero, then refer to the error list in cssgrid_errors for details.</dd></dl><h2>Usage</h2>c_cssgridd is called to find an interpolating tension spline for randomly positioned data on a unit sphere. c_cssgridd is a double precision version of c_cssgrid.
 <h2>Return Value</h2>c_cssgridd returns a pointer to a linear array of data that contains interpolated values at user-specified lat/lon pairs. The returned array stores its values as if they were a 2-dimensional C array with latitude being the first dimension and longitude the second dimension. That is, if out is declared as 
 
  <pre> double *out;</pre>and we set: 

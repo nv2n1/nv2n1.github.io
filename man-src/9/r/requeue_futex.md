@@ -14,18 +14,18 @@ description: "requeue_futex – Requeue a futex_q from one hb to another"
 <p><i>q</i></p>
 <dl>
 <dd>
-<dd>the futex_q to requeue</dl>
+</dd><dd>the futex_q to requeue</dd></dl>
 <p> <i>hb1</i></p>
 <dl>
-<dd>the source hash_bucket</dl>
+<dd>the source hash_bucket</dd></dl>
 <p> <i>hb2</i></p>
 <dl>
-<dd>the target hash_bucket</dl>
+<dd>the target hash_bucket</dd></dl>
 <p> <i>key2</i></p>
 <dl>
-<dd>the new key for the requeued futex_q</dl>
+<dd>the new key for the requeued futex_q</dd></dl>
 <h2>Author</h2>
 <p><code>Rusty Russell</code> &lt;rusty [at] rustcorp.com.au&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -15,7 +15,7 @@ snd_soc_unregister_component - Unregister a component from the ASoC core
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>The device to unregister</dl>
+<dl><dd></dd><dd>The device to unregister</dd></dl>
 
 <h2>Copyright</h2>
 

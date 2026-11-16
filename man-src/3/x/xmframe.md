@@ -132,23 +132,23 @@ description: "XmFrame — The Frame widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNmarginWidth</code></p>
-<dd>Specifies the padding space on the left and right sides between Frame&#8217;s child and Frame&#8217;s shadow drawing.</p>
-<dt><code>XmNmarginHeight</code></p>
-<dd>Specifies the padding space on the top and bottom sides between Frame&#8217;s child and Frame&#8217;s shadow drawing. When a title is present, the top margin equals the value specified by this resource plus the distance (if any) that the title extends below the top shadow.</p>
-<dt><code>XmNshadowType</code></p>
-<dd>Describes the drawing style for Frame. This resource can have the following values:</p>
+<dt><code>XmNmarginWidth</code></dt>
+<dd>Specifies the padding space on the left and right sides between Frame&#8217;s child and Frame&#8217;s shadow drawing.</dd>
+<dt><code>XmNmarginHeight</code></dt>
+<dd>Specifies the padding space on the top and bottom sides between Frame&#8217;s child and Frame&#8217;s shadow drawing. When a title is present, the top margin equals the value specified by this resource plus the distance (if any) that the title extends below the top shadow.</dd>
+<dt><code>XmNshadowType</code></dt>
+<dd>Describes the drawing style for Frame. This resource can have the following values:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmSHADOW_IN</code></p>
-<dd>Draws Frame so that it appears inset. This means that the bottom shadow visuals and top shadow visuals are reversed.</p>
-<dt><code>XmSHADOW_OUT</code></p>
-<dd>Draws Frame so that it appears outset. This is the default if Frame&#8217;s parent is a Shell widget.</p>
-<dt><code>XmSHADOW_ETCHED_IN</code></p>
-<dd>Draws Frame using a double line giving the effect of a line etched into the window. The thickness of the double line is equal to the value of <code>XmNshadowThickness</code>. This is the default when Frame&#8217;s parent is not a Shell widget.</p>
-<dt><code>XmSHADOW_ETCHED_OUT</code></p>
-<dd>Draws Frame using a double line giving the effect of a line coming out of the window. The thickness of the double line is equal to the value of <code>XmNshadowThickness</code>.</dl>
+</dd><dl COMPACT>
+<dt><code>XmSHADOW_IN</code></dt>
+<dd>Draws Frame so that it appears inset. This means that the bottom shadow visuals and top shadow visuals are reversed.</dd>
+<dt><code>XmSHADOW_OUT</code></dt>
+<dd>Draws Frame so that it appears outset. This is the default if Frame&#8217;s parent is a Shell widget.</dd>
+<dt><code>XmSHADOW_ETCHED_IN</code></dt>
+<dd>Draws Frame using a double line giving the effect of a line etched into the window. The thickness of the double line is equal to the value of <code>XmNshadowThickness</code>. This is the default when Frame&#8217;s parent is not a Shell widget.</dd>
+<dt><code>XmSHADOW_ETCHED_OUT</code></dt>
+<dd>Draws Frame using a double line giving the effect of a line coming out of the window. The thickness of the double line is equal to the value of <code>XmNshadowThickness</code>.</dd></dl>
 </dl>
 </dl>
 <table BORDER>
@@ -312,52 +312,52 @@ description: "XmFrame — The Frame widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNchildType</code></p>
-<dd>Refer to the <code>XmNframeChildType</code> resource description. The <code>XmNchildType</code> resource is obsoleted by <code>XmNframeChildType</code>, but is kept here for backward compatibility.</p>
-<dt><code>XmNchildHorizontalAlignment</code></p>
-<dd>Specifies the alignment of the title. This resource has the following values:</p>
+<dt><code>XmNchildType</code></dt>
+<dd>Refer to the <code>XmNframeChildType</code> resource description. The <code>XmNchildType</code> resource is obsoleted by <code>XmNframeChildType</code>, but is kept here for backward compatibility.</dd>
+<dt><code>XmNchildHorizontalAlignment</code></dt>
+<dd>Specifies the alignment of the title. This resource has the following values:</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd><code>XmALIGNMENT_BEGINNING</code></p>
-<dt> &bull;</p>
-<dd><code>XmALIGNMENT_CENTER</code></p>
-<dt> &bull;</p>
-<dd><code>XmALIGNMENT_END</code></dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd><code>XmALIGNMENT_BEGINNING</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmALIGNMENT_CENTER</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmALIGNMENT_END</code></dd></dl>
 </dl>
-<dd>See the description of <code>XmNalignment</code> in the <code>XmLabel</code> reference page for an explanation of these values.</p>
-<dt><code>XmNchildHorizontalSpacing</code></p>
-<dd>Specifies the minimum distance between either edge of the title text and the inner edge of the Frame shadow. Clipping of the title text occurs in order to maintain this spacing. The default value is the margin width of the Frame.</p>
-<dt><code>XmNchildVerticalAlignment</code></p>
-<dd>Specifies the vertical alignment of the title text, or the title area in relation to the top shadow of the Frame.</p>
+<dd>See the description of <code>XmNalignment</code> in the <code>XmLabel</code> reference page for an explanation of these values.</dd>
+<dt><code>XmNchildHorizontalSpacing</code></dt>
+<dd>Specifies the minimum distance between either edge of the title text and the inner edge of the Frame shadow. Clipping of the title text occurs in order to maintain this spacing. The default value is the margin width of the Frame.</dd>
+<dt><code>XmNchildVerticalAlignment</code></dt>
+<dd>Specifies the vertical alignment of the title text, or the title area in relation to the top shadow of the Frame.</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><code>XmALIGNMENT_BASELINE_BOTTOM</code></p>
-<dd>Causes the baseline of the title to align vertically with the top shadow of the Frame. In the case of a multi-line title, the baseline of the last line of text aligns vertically with the top shadow of the Frame.</p>
-<dt><code>XmALIGNMENT_BASELINE_TOP</code></p>
-<dd>Causes the baseline of the first line of the title to align vertically with the top shadow of the Frame.</p>
-<dt><code>XmALIGNMENT_CHILD_TOP</code></p>
-<dd>Causes the top edge of the title area to align vertically with the top shadow of the Frame.</p>
-<dt><code>XmALIGNMENT_CENTER</code></p>
-<dd>Causes the center of the title area to align vertically with the top shadow of the Frame.</p>
-<dt><code>XmALIGNMENT_CHILD_BOTTOM</code></p>
-<dd>Causes the bottom edge of the title area to align vertically with the top shadow of the Frame.</dl>
+</dd><dl COMPACT>
+<dt><code>XmALIGNMENT_BASELINE_BOTTOM</code></dt>
+<dd>Causes the baseline of the title to align vertically with the top shadow of the Frame. In the case of a multi-line title, the baseline of the last line of text aligns vertically with the top shadow of the Frame.</dd>
+<dt><code>XmALIGNMENT_BASELINE_TOP</code></dt>
+<dd>Causes the baseline of the first line of the title to align vertically with the top shadow of the Frame.</dd>
+<dt><code>XmALIGNMENT_CHILD_TOP</code></dt>
+<dd>Causes the top edge of the title area to align vertically with the top shadow of the Frame.</dd>
+<dt><code>XmALIGNMENT_CENTER</code></dt>
+<dd>Causes the center of the title area to align vertically with the top shadow of the Frame.</dd>
+<dt><code>XmALIGNMENT_CHILD_BOTTOM</code></dt>
+<dd>Causes the bottom edge of the title area to align vertically with the top shadow of the Frame.</dd></dl>
 </dl>
-<dt><code>XmNframeChildType</code></p>
-<dd>Specifies whether a child is a title or work area. Frame supports a single title and/or work area child. The possible values are</p>
+<dt><code>XmNframeChildType</code></dt>
+<dd>Specifies whether a child is a title or work area. Frame supports a single title and/or work area child. The possible values are</dd>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt> &bull;</p>
-<dd><code>XmFRAME_TITLE_CHILD</code></p>
-<dt> &bull;</p>
-<dd><code>XmFRAME_WORKAREA_CHILD</code></p>
-<dt> &bull;</p>
-<dd><code>XmFRAME_GENERIC_CHILD</code></dl>
+</dd><dl COMPACT>
+<dt> &bull;</dt>
+<dd><code>XmFRAME_TITLE_CHILD</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmFRAME_WORKAREA_CHILD</code></dd>
+<dt> &bull;</dt>
+<dd><code>XmFRAME_GENERIC_CHILD</code></dd></dl>
 </dl>
-<dd>The Frame geometry manager ignores any child of type <code>XmFRAME_GENERIC_CHILD</code>. This resource replaces <code>XmNchildType</code>.</dl>
+<dd>The Frame geometry manager ignores any child of type <code>XmFRAME_GENERIC_CHILD</code>. This resource replaces <code>XmNchildType</code>.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>Frame inherits behavior and resources from the following superclasses. For a complete description of each resource, refer to the reference page for that superclass. </p>
 <table BORDER>

@@ -11,7 +11,6 @@ std::localeconv - std::localeconv
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;clocale&gt;
-
 std::lconv* localeconv();</code></pre> 
 The localeconv function obtains a pointer to a static object of type std::lconv, which represents numeric and monetary formatting rules of the current C locale. 
 
@@ -31,10 +30,8 @@ std::localeconv modifies a static object, calling it from different threads with
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;clocale&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::setlocale(LC_ALL, &quot;ja_JP.UTF-8&quot;);
     std::lconv *lc = std::localeconv();

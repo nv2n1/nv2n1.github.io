@@ -44,12 +44,12 @@ description: "fundisp – display data in a Funtools data file"
 <p> Note that the column specification is enclosed in single quotes to protect &#8216;$n&#8217; from begin expanded by the shell. </p>
 <p> In general, the rules for activating and de-activating columns are:</p>
 <dl>
-<dt>*</p>
-<dd> If only exclude columns are specified, then all columns but the exclude columns will be activated.</p>
-<dt>*</p>
-<dd> If only include columns are specified, then only the specified columns are activated.</p>
-<dt>*</p>
-<dd> If a mixture of include and exclude columns are specified, then all but the exclude columns will be active; this last case is ambiguous and the rule is arbitrary.</dl>
+<dt>*</dt>
+<dd> If only exclude columns are specified, then all columns but the exclude columns will be activated.</dd>
+<dt>*</dt>
+<dd> If only include columns are specified, then only the specified columns are activated.</dd>
+<dt>*</dt>
+<dd> If a mixture of include and exclude columns are specified, then all but the exclude columns will be active; this last case is ambiguous and the rule is arbitrary.</dd></dl>
 <p> In addition to specifying columns names explicitly, the special symbols <code>+</code> and <code>&#8211;</code> can be used to activate and de-activate <code>all</code> columns. This is useful if you want to activate the <tt>$REGION</tt> column along with all other columns. According to the rules, the syntax &#8220;$REGION&#8221; only activates the region column and de-activates the rest. Use &#8220;+ <tt>$REGION</tt>&#8221; to activate all columns as well as the region column. </p>
 <p> If the data being displayed are image data (either in a <font SIZE="-1">FITS</font> primary image, a <font SIZE="-1">FITS</font> image extension, or an array file), an mxn pixel display is produced, where m and n are the dimensions of the image. By default, pixel values are displayed using the same data type as in the file. However, for integer data where the <font SIZE="-1">BSCALE</font> and <font SIZE="-1">BZERO</font> header parameters are present, the data is displayed as floats. In either case, the display data type can be overridden using an optional second argument of the form: </p>
 <pre>

@@ -15,39 +15,39 @@ description: "cfetool create – Set up a new Database"
 <p> The <code>-d</code>, <code>-w</code>, and <code>-y</code> options specify the period over which the data will span, and may be combined to create multiple databases. If they are all ommitted, the default is weekly.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;path</code>|<code>-p</code></p>
-<dd>The directory in which to create the new database folder. If this argument is not provided, the current working directory will be used.</p>
-<dt><code>&#8211;step</code>|<code>-s</code></p>
-<dd>The interval, in minutes, with which the database will be updated. If this argument is not provided, cfetool assumes a default of 5 minutes.</p>
-<dt><code>&#8211;daily</code>|<code>-d</code></p>
-<dd>Create a database for recording daily patterns.</p>
-<dt><code>&#8211;weekly</code>|<code>-w</code></p>
-<dd>Create a database for recording weekly patterns.</p>
-<dt><code>&#8211;yearly</code>|<code>-y</code></p>
-<dd>Create a database for recording yearly patterns.</p>
-<dt><code>&#8211;cfenvd</code>|<code>-c</code></p>
-<dd>Communicate with cfengine. If this option is specified, cfetool will set classes understandable by cfagent. For more information, see the <code>cfenvd</code> documentation.</p>
-<dt><code>&#8211;histograms</code>|<code>-H</code></p>
-<dd>Create a histogram file, to store information about the probability distribiution of fluctuations about the mean value over all times of day. Cfetool won&#8217;t write anything to this file for the first four weeks, as it has to have reliable mean values in order to accurately calculate it.</p>
-<dt><code>&#8211;verbose</code>|<code>-v</code></p>
-<dd>Print details of the command&#8217;s execution to the standard output stream.</p>
-<dt><code>&#8211;file</code>|<code>-f</code></p>
-<dd>Specifies a file which contains measurements to feed into the database in batch mode. Used for testing purposes. Each line in the file should be in either of these formats: </p>
+<dt><code>&#8211;path</code>|<code>-p</code></dt>
+<dd>The directory in which to create the new database folder. If this argument is not provided, the current working directory will be used.</dd>
+<dt><code>&#8211;step</code>|<code>-s</code></dt>
+<dd>The interval, in minutes, with which the database will be updated. If this argument is not provided, cfetool assumes a default of 5 minutes.</dd>
+<dt><code>&#8211;daily</code>|<code>-d</code></dt>
+<dd>Create a database for recording daily patterns.</dd>
+<dt><code>&#8211;weekly</code>|<code>-w</code></dt>
+<dd>Create a database for recording weekly patterns.</dd>
+<dt><code>&#8211;yearly</code>|<code>-y</code></dt>
+<dd>Create a database for recording yearly patterns.</dd>
+<dt><code>&#8211;cfenvd</code>|<code>-c</code></dt>
+<dd>Communicate with cfengine. If this option is specified, cfetool will set classes understandable by cfagent. For more information, see the <code>cfenvd</code> documentation.</dd>
+<dt><code>&#8211;histograms</code>|<code>-H</code></dt>
+<dd>Create a histogram file, to store information about the probability distribiution of fluctuations about the mean value over all times of day. Cfetool won&#8217;t write anything to this file for the first four weeks, as it has to have reliable mean values in order to accurately calculate it.</dd>
+<dt><code>&#8211;verbose</code>|<code>-v</code></dt>
+<dd>Print details of the command&#8217;s execution to the standard output stream.</dd>
+<dt><code>&#8211;file</code>|<code>-f</code></dt>
+<dd>Specifies a file which contains measurements to feed into the database in batch mode. Used for testing purposes. Each line in the file should be in either of these formats: </dd>
 <p> <i>month</i>/<i>day</i>/<i>year</i> <i>hour</i>:<i>min</i>:<i>sec</i> <i>value</i> </p>
 <p> or </p>
 <p> <i>epoch</i> <i>value</i></p>
-<dt><code>&#8211;help</code>|<code>-h</code></p>
-<dd>Prints a short help message and then exits.</dl>
+<dt><code>&#8211;help</code>|<code>-h</code></dt>
+<dd>Prints a short help message and then exits.</dd></dl>
 <h2>Example</h2>
 <pre> % cfetool create temperature --path /my/path --histograms --step 10</pre>
 <p>Creates an empty database and histogram file in <code>/my/path/temperature/</code>, ready to store values over ten minute intervals spanning a one-week period.</p>
 <h2>Authors</h2>
 <p>The code and documentation were contributed by Stanford Linear Accelerator Center, a department of Stanford University. This documentation was written by</p>
 <dl>
-<dt>Elizabeth Cassell &lt;e_a_c [at] mailsnare.net&gt; and</p>
+<dt>Elizabeth Cassell &lt;e_a_c [at] mailsnare.net&gt; and</dt>
 <dd>
-<dt>Alf Wachsmann &lt;alfw [at] slac.stanford.edu&gt;</p>
-<dd></dl>
+</dd><dt>Alf Wachsmann &lt;alfw [at] slac.stanford.edu&gt;</dt>
+<dd></dd></dl>
 <h2>Copyright And Disclaimer</h2>
 <pre> Copyright 2004 Alf Wachsmann &lt;alfw [at] slac.stanford.edu&gt; and
  Elizabeth Cassell &lt;e_a_c [at] mailsnare.net&gt;

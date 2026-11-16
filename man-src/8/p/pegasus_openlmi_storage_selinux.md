@@ -115,8 +115,8 @@ description: "pegasus_openlmi_storage_selinux – Security Enhanced Linux Policy
 <p> <code>pegasus_openlmi_storage_exec_t</code> </p>
 <p> &#8211; Set files with the pegasus_openlmi_storage_exec_t type, if you want to transition an executable to the pegasus_openlmi_storage_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/libexec/pegasus/cmpiLMI_Hardware-cimprovagt, /usr/libexec/pegasus/pycmpiLMI_Storage-cimprovagt </p>
+<dt>Paths:</dt>
+<dd>/usr/libexec/pegasus/cmpiLMI_Hardware-cimprovagt, /usr/libexec/pegasus/pycmpiLMI_Storage-cimprovagt </dd>
 </dl>
 <p> <code>pegasus_openlmi_storage_lib_t</code> </p>
 <p> &#8211; Set files with the pegasus_openlmi_storage_lib_t type, if you want to treat the files as pegasus openlmi storage lib data. </p>

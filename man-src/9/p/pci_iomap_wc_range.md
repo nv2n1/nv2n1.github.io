@@ -14,24 +14,24 @@ description: "pci_iomap_wc_range – create a virtual WC mapping cookie for a PC
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>PCI device that owns the BAR</dl>
+</dd><dd>PCI device that owns the BAR</dd></dl>
 <p> <i>bar</i></p>
 <dl>
-<dd>BAR number</dl>
+<dd>BAR number</dd></dl>
 <p> <i>offset</i></p>
 <dl>
-<dd>map memory at the given offset in BAR</dl>
+<dd>map memory at the given offset in BAR</dd></dl>
 <p> <i>maxlen</i></p>
 <dl>
-<dd>max length of the memory to map</dl>
+<dd>max length of the memory to map</dd></dl>
 <h2>Description</h2>
 <p>Using this function you will get a __iomem address to your device BAR. You can access it using ioread*() and iowrite*(). These functions hide the details if this is a MMIO or PIO address space and will just do what you expect from them in the correct way. When possible write combining is used. </p>
 <p> <i>maxlen</i> specifies the maximum length to map. If you want to get access to the complete BAR from offset to the end, pass <code>0</code> here.</p>
 <h2>Authors</h2>
 <p><code>Matthew Wilcox</code> &lt;matthew [at] wil.cx&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Alan Cox</code> &lt;alan [at] lxorguk.ukuu.org.uk&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

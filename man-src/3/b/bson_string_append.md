@@ -16,11 +16,11 @@ void bson_string_append(bson_string_t *string,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>string</code></p>
-<dd> A <code>bson_string_t</code> \&amp;.</dl>
+<dt><code>string</code></dt>
+<dd> A <code>bson_string_t</code> \&amp;.</dd></dl>
 <dl>
-<dt><code>str</code></p>
-<dd> A string.</dl>
+<dt><code>str</code></dt>
+<dd> A string.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Appends the ASCII or UTF-8 encoded string <code>str</code> to <code>string</code> \&amp;. This is not suitable for embedding NULLs in strings. </p>
 <h2>COLOPHON</h2>

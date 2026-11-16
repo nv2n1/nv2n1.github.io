@@ -15,7 +15,7 @@ blk_rq_unprep_clone - Helper function to free all bios in a cloned request
 <h2>Arguments</h2>
 
 <i>rq</i>
-<dl><dd><dd>the clone request to be cleaned up</dl>
+<dl><dd></dd><dd>the clone request to be cleaned up</dd></dl>
 
 <h2>Description</h2>
 

@@ -16,17 +16,17 @@ description: "spix – Compile a .tex file, executing commands that are set insi
 <p> Commands are executed as-is, excepted that:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> &#8211; command are run from the directory of the file given in argument; </p>
-<p> &#8211; shell variables <i>$texname</i> and <i>$basename</i> are set to the name of the tex file (respectively with and without the .tex extension).</dl>
+<p> &#8211; shell variables <i>$texname</i> and <i>$basename</i> are set to the name of the tex file (respectively with and without the .tex extension).</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-n</code>, <code>&#8211;dry-run</code></p>
-<dd> Print the commands that would be executed, but do not execute them.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print help, and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print version, and exit.</dl>
+<dt><code>-n</code>, <code>&#8211;dry-run</code></dt>
+<dd> Print the commands that would be executed, but do not execute them.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print help, and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print version, and exit.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Let <i>foo.tex</i> be the following file. </p>
 <pre><code>

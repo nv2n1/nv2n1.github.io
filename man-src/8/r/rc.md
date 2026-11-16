@@ -14,20 +14,20 @@ description: "rc.news – Start or stop INN daemons"
 <p><code>rc.news</code> can be used to start or stop <code>innd</code> and supporting programs. It checks to make sure <font SIZE="-1">INN</font> is not already running, handles cases of unclean shutdown, finishes up tasks which might have been interrupted by the preceeding shutdown, e-mails certain boot-time warnings to <i>newsmaster</i> (as set in <i>inn.conf</i>), and is generally safer and easier than starting and stopping everything directly. It needs to be run as the news user so that files in <i>pathrun</i> are created with the right ownership (though this is less important for <tt>&quot;rc.news stop&quot;</tt>). </p>
 <p> Programs run and stopped by this script include:</p>
 <dl>
-<dt>*</p>
-<dd>Always: <code>innd</code> is started or stopped.</p>
-<dt>*</p>
-<dd>If <i>doinnwatch</i> is true in <i>inn.conf</i>: <code>innwatch</code> is started and stopped.</p>
-<dt>*</p>
-<dd>If <i>docnfsstat</i> is true in <i>inn.conf</i>: <code>ovdb_init</code> is run; <code>ovdb_server</code> and <code>ovdb_monitor</code> are stopped.</p>
-<dt>*</p>
-<dd>If <i>rc.news.local</i> exists in <i>pathbin</i>: <code>rc.news.local</code> is run with argument <tt>&quot;start&quot;</tt> or <tt>&quot;stop&quot;</tt> (to perform site-specific startup or shutdown tasks).</dl>
+<dt>*</dt>
+<dd>Always: <code>innd</code> is started or stopped.</dd>
+<dt>*</dt>
+<dd>If <i>doinnwatch</i> is true in <i>inn.conf</i>: <code>innwatch</code> is started and stopped.</dd>
+<dt>*</dt>
+<dd>If <i>docnfsstat</i> is true in <i>inn.conf</i>: <code>ovdb_init</code> is run; <code>ovdb_server</code> and <code>ovdb_monitor</code> are stopped.</dd>
+<dt>*</dt>
+<dd>If <i>rc.news.local</i> exists in <i>pathbin</i>: <code>rc.news.local</code> is run with argument <tt>&quot;start&quot;</tt> or <tt>&quot;stop&quot;</tt> (to perform site-specific startup or shutdown tasks).</dd></dl>
 <h2>Options</h2>
 <dl>
-<dt>start</p>
-<dd>If the first argument is <tt>&quot;start&quot;</tt>, or no first argument is given, <code>rc.news</code> initiates <font SIZE="-1">INN</font> startup.</p>
-<dt>stop</p>
-<dd>If the first argument is <tt>&quot;stop&quot;</tt>, <code>rc.news</code> initiates <font SIZE="-1">INN</font> shutdown. It is recommended to throttle the server first as described in <i><a href="/docs/linux/man/8-ctlinnd/">ctlinnd</a></i>(8).</dl>
+<dt>start</dt>
+<dd>If the first argument is <tt>&quot;start&quot;</tt>, or no first argument is given, <code>rc.news</code> initiates <font SIZE="-1">INN</font> startup.</dd>
+<dt>stop</dt>
+<dd>If the first argument is <tt>&quot;stop&quot;</tt>, <code>rc.news</code> initiates <font SIZE="-1">INN</font> shutdown. It is recommended to throttle the server first as described in <i><a href="/docs/linux/man/8-ctlinnd/">ctlinnd</a></i>(8).</dd></dl>
 <h2>Examples</h2>
 <p>To start <font SIZE="-1">INN</font> and leave certain error messages going to the terminal: </p>
 <pre> su -m news -c /etc/rc.news</pre>

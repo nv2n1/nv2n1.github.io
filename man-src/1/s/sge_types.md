@@ -60,7 +60,8 @@ description: "sge_types – Grid Engine type descriptions"
 <p> <i>userset_name</i> := <i>object_name</i></p>
 <h3><code>object_name</code></h3>
 <p> An object name is a sequence of up to 512 ASCII string characters except &quot;
-&quot;, &quot;	&quot;, &quot;&quot;, &quot; &quot;, &quot;/&quot;, &quot;:&quot;, &quot;&#8217;&quot;, &quot;\&quot;, &quot;[&quot;, &quot;]&quot;, &quot;{&quot;, &quot;}&quot;, &quot;|&quot;, &quot;(&quot;, &quot;)&quot;, &quot;@&quot;, &quot;%&quot;, &quot;,&quot; or the &quot; character itself.</p>
+&quot;, &quot;	&quot;, &quot;
+&quot;, &quot; &quot;, &quot;/&quot;, &quot;:&quot;, &quot;&#8217;&quot;, &quot;\&quot;, &quot;[&quot;, &quot;]&quot;, &quot;{&quot;, &quot;}&quot;, &quot;|&quot;, &quot;(&quot;, &quot;)&quot;, &quot;@&quot;, &quot;%&quot;, &quot;,&quot; or the &quot; character itself.</p>
 <h2>MATCHING TYPES</h2>
 <p> These types are used for matching Grid Engine configuration:</p>
 <h3><code>expression</code></h3>
@@ -80,14 +81,14 @@ expression = ["!"]["("] valExp[")"][AND_OR expression] *valExp = pattern | expre
 <p> e.g.</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 &quot;(lx*|sol*)&amp;*64*&quot; any string beginning with either &quot;lx&quot; or
                   &quot;sol&quot; and containing &quot;64&quot;
 &quot;rh_3*&amp;!rh_3.1&quot;   any string beginning with &quot;rh_3&quot;, except
                   &quot;rh_3.1&quot;
 </pre>
-</dl>
+</dd></dl>
 <h3><code>pattern</code></h3>
 <p> When patterns are used the following definitions apply: </p>
 <pre><code>
@@ -113,21 +114,21 @@ it is interpreted literally.For more details please see
 <p> A wildcard host specification (<i>wc_host</i>) is a wildcard expression which might match one or more hosts used in the cluster. The first character of that string never begins with an at-character (&#8216;@&#8217;), even if the expression begins with a wildcard character. </p>
 <pre>
 e.g.
-<dl><dt><dd>
+<dl><dt></dt><dd>
 *            all hosts
 a*           all host beginning with an 'a'
 </pre>
-</dl>
+</dd></dl>
 <h3><code>wc_hostgroup</code></h3>
 <p> A wildcard hostgroup specification (<i>wc_hostgroup</i>) is a wildcard expression which might match one or more hostgroups. The first character of that string is always an at-character (&#8216;@&#8217;). </p>
 <p> More information concerning hostgroups can be found in </p>
 <pre>
 e.g.
-<dl><dt><dd>
+<dl><dt></dt><dd>
 @*           all hostgroups in the cluster
 @solaris     the @solaris hostgroup
 </pre>
-</dl>
+</dd></dl>
 <h3><code>wc_job</code></h3>
 <p> The wildcard job specification is a placeholder for job ids, job names including job name patterns. A job id always references one job, while the name and pattern might reference multiple jobs. </p>
 <p> wc_job := job-id | job-name | pattern </p>
@@ -147,7 +148,7 @@ e.g.
 <p> <i>wc_qdomain</i> are used to address a group of queue instances. All queue instances residing on a hosts which is part of matching hostgroups will be addressed. Please note, that <i>wc_hostgroup</i> always begins with an at-character. </p>
 <pre>
 e.g.
-<dl><dt><dd>
+<dl><dt></dt><dd>
 *@@*         all queue instances whose underlying
              host is part of at least one hostgroup
 a*@@e*       all queue instances begins with a whose underlying
@@ -155,37 +156,37 @@ a*@@e*       all queue instances begins with a whose underlying
 *@@solaris   all queue instances on hosts part of
              the @solaris hostgroup
 </pre>
-</dl>
+</dd></dl>
 <h3><code>wc_cqueue</code></h3>
 <p> A wildcard expression cluster queue specification (<i>wc_cqueue</i>) is a wildcard expression which might match one or more cluster queues used in the cluster. That string never contains an at-character (&#8216;@&#8217;), even if the expression begins with a wildcard character. </p>
 <pre>
 e.g.
-<dl><dt><dd>
+<dl><dt></dt><dd>
 *            all cluster queues
 a*           all cluster queues beginning with an 'a'
 a*&amp;!adam     all cluster queues beginning with an 'a',but not adam
 </pre>
-</dl>
+</dd></dl>
 <h3><code>wc_qinstance</code></h3>
 <p> <i>wc_qinstance</i> := <i>wc_cqueue</i> &quot;@&quot; <i>wc_host</i> </p>
 <p> A wildcard expression queue instance specification (<i>wc_qinstance</i>) starts with a wildcard expression cluster queue name (<i>wc_cqueue</i>) followed by an at-character &#8216;@&#8217; and a wildcard expression hostname (<i>wc_host</i>). </p>
 <p> <i>wc_qinstance</i> expressions are used to address a group of queue instances whose underlying hostname matches the given expression. Please note that the first character of <i>wc_host</i> does never match the at-character &#8216;@&#8217;. </p>
 <pre>
 e.g.
-<dl><dt><dd>
+<dl><dt></dt><dd>
 *@*          all queue instances in the cluster
 *@b*         all queue instances whose 
              hostname begins with a 'b'
 *@b*|c*      all queue instances whose 
              hostname begins with a 'b' or 'c'
 </pre>
-</dl>
+</dd></dl>
 <h3><code>wc_queue</code></h3>
 <p> <i>wc_queue</i> := <i>wc_cqueue</i> | <i>wc_qdomain</i> | <i>wc_qinstance</i> </p>
 <p> A wildcard queue expression (<i>wc_queue</i>) might either be a wildcard expression cluster queue specification (<i>wc_cqueue</i>) or a wildcard expression queue domain specification (<i>wc_qdomain</i>) or a wildcard expression queue instance specification (<i>wc_qinstance</i>). </p>
 <pre>
 e.g.
-<dl><dt><dd>
+<dl><dt></dt><dd>
 big_*1           cluster queues which begin with 
                  &quot;big_&quot; and end with &quot;1&quot; 
 big_*&amp;!*1        cluster queues which begin with 
@@ -193,14 +194,14 @@ big_*&amp;!*1        cluster queues which begin with
 *@fangorn        all qinstances residing on host 
                  fangorn
 </pre>
-</dl>
+</dd></dl>
 <h3><code>wc_queue_list</code></h3>
 <p> <i>wc_queue_list</i> := <i>wc_queue</i> [&quot;,&quot; <i>wc_queue</i> &quot;,&quot; &#8230;] </p>
 <p> Comma separated list of wc_queue elements. </p>
 <p> e.g.</p>
 <dl>
 <dt>
-<dd> big, medium_*@@sol*, *@fangorn.sun.com </p>
+</dt><dd> big, medium_*@@sol*, *@fangorn.sun.com </dd>
 </dl>
 <h3><code>wc_user</code></h3>
 <p> A wildcard user name pattern is either a wildcard user name specification or a full user name. </p>
@@ -222,7 +223,7 @@ big_*&amp;!*1        cluster queues which begin with
 <p> The <code>date_time</code> value must conform to [[CC]]YY]MMDDhhmm[.SS], where: </p>
 <pre>
 e.g.
-<dl><dt><dd>
+<dl><dt></dt><dd>
 CC           denotes the century in 2 digits.
 YY           denotes the year in 2 digits.
 MM           denotes the month in 2 digits.
@@ -231,29 +232,30 @@ hh           denotes the hour in 2 digits.
 mm           denotes the minute in 2 digits.
 ss           denotes the seconds in 2 digits (default 00).
 </pre>
-</dl>
+</dd></dl>
 <h3><code>time</code></h3>
 <p> The <code>time</code> value must conform to hh:mm:ss, or seconds where: </p>
 <pre>
 e.g.
-<dl><dt><dd>
+<dl><dt></dt><dd>
 hh denotes the hour in 2 digits.
 mm denotes the minute in 2 digits.
 ss denotes the seconds in 2 digits (default 00).
 seconds  is a number of seconds (is used for duration values)
 </pre>
 <p> If any of the optional date fields are omitted, the corresponding value of the current date is assumed. If CC is not specified, a YY of &lt; 70 means 20YY.<br />
- Use of this option may cause unexpected results if the clocks of the hosts in the Grid Engine pool are out of sync. Also, the proper behavior of this option very much depends on the correct setting of the appropriate timezone, e.g. in the TZ environment variable (see for details), when the Grid Engine daemons and are invoked.</dl>
+ Use of this option may cause unexpected results if the clocks of the hosts in the Grid Engine pool are out of sync. Also, the proper behavior of this option very much depends on the correct setting of the appropriate timezone, e.g. in the TZ environment variable (see for details), when the Grid Engine daemons and are invoked.</dd></dl>
 <h3><code>name</code></h3>
 <p> The <code>name</code> may be any arbitrary alphanumeric ASCII string, but may not contain &quot;
-&quot;, &quot;	&quot;, &quot;&quot;, &quot;/&quot;, &quot;:&quot;, &quot;@&quot;, &quot;\&quot;, &quot;*&quot;, or &quot;?&quot;. </p>
+&quot;, &quot;	&quot;, &quot;
+&quot;, &quot;/&quot;, &quot;:&quot;, &quot;@&quot;, &quot;\&quot;, &quot;*&quot;, or &quot;?&quot;. </p>
 <h2>SEE ALSO</h2>
 <h2>COPYRIGHT</h2>
 <p> Copyright: 2004-2007 by Sun Microsystems, Inc. </p>
 <h2>Index</h2>
-<dt><a href="#lbAT">MATCHING TYPES</a></p>
+<dt><a href="#lbAT">MATCHING TYPES</a></dt>
 <dd>
-<dt><a href="#lbBS">SEE ALSO</a></p>
+</dd><dt><a href="#lbBS">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbBT">COPYRIGHT</a></p>
-<dd></dl>
+</dd><dt><a href="#lbBT">COPYRIGHT</a></dt>
+<dd></dd></dl>

@@ -101,8 +101,8 @@ description: "minidlna_selinux – Security Enhanced Linux Policy for the minidl
 <p> <code>minidlna_db_t</code> </p>
 <p> &#8211; Set files with the minidlna_db_t type, if you want to treat the files as minidlna database content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/minidlna(/.*)?, /var/cache/minidlna(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/minidlna(/.*)?, /var/cache/minidlna(/.*)? </dd>
 </dl>
 <p> <code>minidlna_exec_t</code> </p>
 <p> &#8211; Set files with the minidlna_exec_t type, if you want to transition an executable to the minidlna_t domain. </p>
@@ -111,8 +111,8 @@ description: "minidlna_selinux – Security Enhanced Linux Policy for the minidl
 <p> <code>minidlna_log_t</code> </p>
 <p> &#8211; Set files with the minidlna_log_t type, if you want to treat the data as minidlna log data, usually stored under the /var/log directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/log/minidlna(/.*)?, /var/log/minidlna.log.* </p>
+<dt>Paths:</dt>
+<dd>/var/log/minidlna(/.*)?, /var/log/minidlna.log.* </dd>
 </dl>
 <p> <code>minidlna_var_run_t</code> </p>
 <p> &#8211; Set files with the minidlna_var_run_t type, if you want to store the minidlna files under the /run or /var/run directory. </p>

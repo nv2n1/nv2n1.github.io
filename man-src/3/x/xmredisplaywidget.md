@@ -17,8 +17,8 @@ description: "XmRedisplayWidget — Synchronously activates the expose method of
 <p> This is primarily used in the context of X Printing if the programming model chosen by the application is <i>synchronous</i>; that is, it doesn&#8217;t rely of X Print events for the driving of page layout but wants to completely control the sequence of rendering requests. </p>
 <p> <code>XmRedisplayWidget</code> doesn&#8217;t clear the widget window prior to calling the <code>expose</code> method, since this is handled by calls to <code>XpStartPage</code> .</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>The widget to redisplay.</dl>
+<dt><i>widget</i></dt>
+<dd>The widget to redisplay.</dd></dl>
 <h2>Return Value</h2>
 <p>None.</p>
 <h2>Errors/Warnings</h2>

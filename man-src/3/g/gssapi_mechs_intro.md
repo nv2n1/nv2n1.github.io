@@ -17,11 +17,11 @@ url: "/docs/linux/man/3-gssapi_mechs_intro/"
 
 <dl>
 <dt>&bull;
-<dd> Kerberos 5 - GSS_KRB5_MECHANISM
-<dt>&bull;
-<dd> SPNEGO - GSS_SPNEGO_MECHANISM
-<dt>&bull;
-<dd> NTLM - GSS_NTLM_MECHANISM</dl>
+</dt><dd> Kerberos 5 - GSS_KRB5_MECHANISM
+</dd><dt>&bull;
+</dt><dd> SPNEGO - GSS_SPNEGO_MECHANISM
+</dd><dt>&bull;
+</dt><dd> NTLM - GSS_NTLM_MECHANISM</dd></dl>
  
 
  

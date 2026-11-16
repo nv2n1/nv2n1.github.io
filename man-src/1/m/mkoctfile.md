@@ -15,45 +15,45 @@ description: "mkoctfile – Compile dynamic-load modules for GNU Octave"
 <p> <code>mkoctfile</code> is used to compile C, C++, or Fortran source code in to a dynamically loadable <i>.oct</i> file for <code><a href="/docs/linux/man/1-octave/">octave</a></code>(1).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></p>
-<dd> Print help message.</p>
-<dt><code>-I</code><i>dir</i></p>
-<dd> Add include directory <i>dir</i> to compile commands.</p>
-<dt><code>-idirafter</code><i>dir</i></p>
-<dd> Add include directory to second include search path after &#8216;<code>-I</code>&#8216;.</p>
-<dt><code>-D</code><i>def</i></p>
-<dd> Add definition <i>def</i> to compiler command.</p>
-<dt><code>-l</code><i>lib</i></p>
-<dd> Add library <i>lib</i> to link command.</p>
-<dt><code>-L</code><i>dir</i></p>
-<dd> Add library directory <i>dir</i> to link command.</p>
-<dt><code>-R</code><i>dir</i></p>
-<dd> Pass <code>-R</code><i>dir</i> to link command.</p>
-<dt><code>-g</code></p>
-<dd> Enable debugging option for all compilers.</p>
-<dt><code>-pthread</code></p>
-<dd> Add <code>-pthread</code> to link command.</p>
-<dt><code>-W&#8230;</code></p>
-<dd> Pass flags to the compiler such as <code>-Wa,</code><i>OPTION</i>.</p>
-<dt><code>-Wl,&#8230;</code></p>
-<dd> Pass flags to the linker such as <code>-Wl,-rpath=&#8230;</code></p>
-<dt><code>-M</code>,<code> &#8211;depend</code></p>
-<dd> Generate dependency files (.d) for C and C++ source files.</p>
-<dt><code>-c</code></p>
-<dd> Compile but do not link.</p>
-<dt><code>&#8211;link-stand-alone</code></p>
-<dd> Link a stand-alone executable file.</p>
-<dt><code>-s</code>,<code> &#8211;strip</code></p>
-<dd> Strip the output file.</p>
-<dt><code>&#8211;mex</code></p>
-<dd> Create a MEX file. Set the default output extension to <code>.mex</code>.</p>
-<dt><code>-o </code><i>file</i>,<code> &#8211;output </code><i>file</i></p>
-<dd> Output file name. Default extension is <code>.oct</code> (or <code>.mex</code> if &#8211;mex is specified) unless linking a stand-alone executable.</p>
-<dt><code>-p </code><i>VAR</i>,<code> &#8211;print </code><i>VAR</i></p>
-<dd> Print configuration variable <i>VAR</i>. Recognized variables are:</p>
+<dt><code>-h</code>, <code>-?</code>, <code>&#8211;help</code></dt>
+<dd> Print help message.</dd>
+<dt><code>-I</code><i>dir</i></dt>
+<dd> Add include directory <i>dir</i> to compile commands.</dd>
+<dt><code>-idirafter</code><i>dir</i></dt>
+<dd> Add include directory to second include search path after &#8216;<code>-I</code>&#8216;.</dd>
+<dt><code>-D</code><i>def</i></dt>
+<dd> Add definition <i>def</i> to compiler command.</dd>
+<dt><code>-l</code><i>lib</i></dt>
+<dd> Add library <i>lib</i> to link command.</dd>
+<dt><code>-L</code><i>dir</i></dt>
+<dd> Add library directory <i>dir</i> to link command.</dd>
+<dt><code>-R</code><i>dir</i></dt>
+<dd> Pass <code>-R</code><i>dir</i> to link command.</dd>
+<dt><code>-g</code></dt>
+<dd> Enable debugging option for all compilers.</dd>
+<dt><code>-pthread</code></dt>
+<dd> Add <code>-pthread</code> to link command.</dd>
+<dt><code>-W&#8230;</code></dt>
+<dd> Pass flags to the compiler such as <code>-Wa,</code><i>OPTION</i>.</dd>
+<dt><code>-Wl,&#8230;</code></dt>
+<dd> Pass flags to the linker such as <code>-Wl,-rpath=&#8230;</code></dd>
+<dt><code>-M</code>,<code> &#8211;depend</code></dt>
+<dd> Generate dependency files (.d) for C and C++ source files.</dd>
+<dt><code>-c</code></dt>
+<dd> Compile but do not link.</dd>
+<dt><code>&#8211;link-stand-alone</code></dt>
+<dd> Link a stand-alone executable file.</dd>
+<dt><code>-s</code>,<code> &#8211;strip</code></dt>
+<dd> Strip the output file.</dd>
+<dt><code>&#8211;mex</code></dt>
+<dd> Create a MEX file. Set the default output extension to <code>.mex</code>.</dd>
+<dt><code>-o </code><i>file</i>,<code> &#8211;output </code><i>file</i></dt>
+<dd> Output file name. Default extension is <code>.oct</code> (or <code>.mex</code> if &#8211;mex is specified) unless linking a stand-alone executable.</dd>
+<dt><code>-p </code><i>VAR</i>,<code> &#8211;print </code><i>VAR</i></dt>
+<dd> Print configuration variable <i>VAR</i>. Recognized variables are:</dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
     ALL_CFLAGS                FFTW3F_LDFLAGS
     ALL_CXXFLAGS              FFTW3F_LIBS
@@ -79,14 +79,14 @@ description: "mkoctfile – Compile dynamic-load modules for GNU Octave"
     FFTW3_LDFLAGS             XTRA_CXXFLAGS
     FFTW3_LIBS
 </pre>
-</dl>
-<dt><code>-v</code>,<code> &#8211;verbose</code></p>
-<dd> Echo commands as they are executed.</p>
-<dt><code>file</code></p>
-<dd> Compile or link file. Recognized file types are</p>
+</dd></dl>
+<dt><code>-v</code>,<code> &#8211;verbose</code></dt>
+<dd> Echo commands as they are executed.</dd>
+<dt><code>file</code></dt>
+<dd> Compile or link file. Recognized file types are</dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
    .c    C source
    .cc   C++ source
@@ -99,7 +99,7 @@ description: "mkoctfile – Compile dynamic-load modules for GNU Octave"
    .o    object file
    .a    library file
 </pre>
-</dl>
+</dd></dl>
 </dl>
 <h2>AUTHOR</h2>
 <p> John W. Eaton &lt;jwe [at] octave.org&gt; </p>

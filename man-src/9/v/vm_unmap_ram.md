@@ -15,11 +15,11 @@ vm_unmap_ram - unmap linear kernel address space set up by vm_map_ram
 <h2>Arguments</h2>
 
 <i>mem</i>
-<dl><dd><dd>the pointer returned by vm_map_ram</dl>
+<dl><dd></dd><dd>the pointer returned by vm_map_ram</dd></dl>
  
 
  <i>count</i>
-<dl><dd>the count passed to that vm_map_ram call (cannot unmap partial)</dl>
+<dl><dd>the count passed to that vm_map_ram call (cannot unmap partial)</dd></dl>
 
 <h2>Copyright</h2>
 

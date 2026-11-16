@@ -13,125 +13,125 @@ description: "stap-server – systemtap compile server management"
 <h2>Description</h2>
 <p>A systemtap compile server listens for connections from stap clients on a secure SSL network port and accepts requests to run the <i>stap</i> front end. Each server advertises its presence and configuration on the local network using mDNS (<i>avahi</i>) allowing for automatic detection by clients. The stap-server script aims to provide:</p>
 <dl>
-<dt>&bull;</p>
-<dd>management of systemtap compile servers as a service.</p>
-<dt>&bull;</p>
-<dd>convenient control over configured servers and individual (ad-hoc) servers. </p>
+<dt>&bull;</dt>
+<dd>management of systemtap compile servers as a service.</dd>
+<dt>&bull;</dt>
+<dd>convenient control over configured servers and individual (ad-hoc) servers. </dd>
 <h2>Arguments</h2>
 <p>One of the actions below must be specified:</p>
 <dl>
-<dt><code>start</code></p>
-<dd>Start servers. The specified servers are started. If no server is specified, the configured servers are started. If no servers are configured, a server for the kernel release and architecture of the host is started. If a specified server is already started, this action will be ignored for that server. If a server fails to start, this action fails. </p>
-<dt><code>stop</code></p>
-<dd>Stop server(s). The specified servers are stopped. If no server is specified, all currently running servers are stopped. If a specified server is not running, this action will be successful for that server. If a server fails to stop, this action fails. </p>
-<dt><code>restart</code></p>
-<dd>Stop and restart servers. The specified servers are stopped and restarted. If no server is specified, all currently running servers are stopped and restarted. If no servers are running, this action behaves like <i>start</i>. </p>
-<dt><code>condrestart</code></p>
-<dd>Stop and restart servers. The specified servers are stopped and restarted. If a specified server is not running, it is not started. If no server is specified, all currently running servers are stopped and restarted. If no servers are running, none will be started. </p>
-<dt><code>try-restart</code></p>
-<dd>This action is identical to <i>condrestart</i>. </p>
-<dt><code>force-reload</code></p>
-<dd>Stop all running servers, reload config files and restart the service as if <i>start</i> was specified. </p>
-<dt><code>status</code></p>
-<dd>Print information about running servers. Information about the specified server(s) will be printed. If no server is specified, information about all running servers will be printed. </p>
+<dt><code>start</code></dt>
+<dd>Start servers. The specified servers are started. If no server is specified, the configured servers are started. If no servers are configured, a server for the kernel release and architecture of the host is started. If a specified server is already started, this action will be ignored for that server. If a server fails to start, this action fails. </dd>
+<dt><code>stop</code></dt>
+<dd>Stop server(s). The specified servers are stopped. If no server is specified, all currently running servers are stopped. If a specified server is not running, this action will be successful for that server. If a server fails to stop, this action fails. </dd>
+<dt><code>restart</code></dt>
+<dd>Stop and restart servers. The specified servers are stopped and restarted. If no server is specified, all currently running servers are stopped and restarted. If no servers are running, this action behaves like <i>start</i>. </dd>
+<dt><code>condrestart</code></dt>
+<dd>Stop and restart servers. The specified servers are stopped and restarted. If a specified server is not running, it is not started. If no server is specified, all currently running servers are stopped and restarted. If no servers are running, none will be started. </dd>
+<dt><code>try-restart</code></dt>
+<dd>This action is identical to <i>condrestart</i>. </dd>
+<dt><code>force-reload</code></dt>
+<dd>Stop all running servers, reload config files and restart the service as if <i>start</i> was specified. </dd>
+<dt><code>status</code></dt>
+<dd>Print information about running servers. Information about the specified server(s) will be printed. If no server is specified, information about all running servers will be printed. </dd>
 </dl>
 <h2>Options</h2>
 <p>The following options are used to provide additional configuration and to specify servers to be managed: </p>
 <dl>
-<dt><code>-c</code> <i>configfile</i></p>
-<dd>This option specifies a global configuration file in addition to the default global configuration file described below. This file will be processed after the default global configuration file. If the <code>-c</code> option is specified more than once, the last configuration file specified will be used. </p>
-<dt><code>-a</code> <i>architecture</i></p>
-<dd>This option specifies the target architecture of the server and is analogous to the <code>-a</code> option of <i>stap</i>. See the <i><a href="/docs/linux/man/1-stap/">stap</a></i>(1) manual page for more details. The default architecture is the architecture of the host. </p>
-<dt><code>-r</code> <i>kernel-release</i></p>
-<dd>This option specifies the target kernel release of the server and is analogous to the <code>-r</code> option of <i>stap</i>. See the <i><a href="/docs/linux/man/1-stap/">stap</a></i>(1) manual page for more details. The default release is that of the currently running kernel. </p>
-<dt><code>-I</code> <i>path</i></p>
-<dd>This option specifies an additional path to be searched by the server(s) for tapsets and is analogous to the <code>-I</code> option of <i>stap</i>. See the <i><a href="/docs/linux/man/1-stap/">stap</a></i>(1) manual page for more details. </p>
-<dt><code>-R</code> <i>path</i></p>
-<dd>This option specifies the location of the systemtap runtime to be used by the server(s) and is analogous to the <code>-R</code> option of <i>stap</i>. See the <i><a href="/docs/linux/man/1-stap/">stap</a></i>(1) manual page for more details. </p>
-<dt><code>-B</code> <i>options</i></p>
-<dd>This option specifies options to be passed to <i>make</i> when building systemtap modules and is analogous to the <code>-B</code> option of <i>stap</i>. See the <i><a href="/docs/linux/man/1-stap/">stap</a></i>(1) manual page for more details. </p>
-<dt><code>-i</code></p>
-<dd>This option is a shortcut which specifies one server for each kernel release installed in <i>/lib/modules/</i>. Previous <code>-I</code>, <code>-R</code>, <code>-B</code> and <code>-u</code> options will be applied to each server, however previous <code>-a</code> options will be ignored and the default architecture will be used. </p>
-<dt><code>-n</code> <i>nickname</i></p>
-<dd>This option allows the specification of a server configuration by nickname. When <code>-n</code> is specified, a currently running server with the given nickname will be searched for. If no currently running server with the given nickname is found, a server configuration with the given nickname will be searched for in the configuration files for default servers, or the path configured in the global configuration file or the configuration file specified by the <code>-c</code> option. If a server configuration for the given nickname is found, the <code>-a</code>, <code>-r</code>, <code>-I</code>, <code>-R</code>, <code>-B</code> and <code>-u</code> options for that server will be used as if they were specified on the command line. If no configuration with the given nickname is found, and the action is <i>start</i> (or an action behaving like <i>start</i> (see <code>ARGUMENTS</code>), the server will be started with the given nickname. If no configuration with the given nickname is found, and the action is not <i>start</i> (or an action behaving like <i>start</i>), it is an error. If a nickname is not specified for a server which is being started, its nickname will be its process id. </p>
-<dt><code>-p</code> <i>pid</i></p>
-<dd>This option allows the specification of a server configuration by process id. When <code>-p</code> is specified, a currently running server with the given process id will be searched for. If no such server is found, it is an error. If a server with the given process id is found, the <code>-a</code>, <code>-r</code>, <code>-I</code>, <code>-R</code>, <code>-B</code> and <code>-u</code> options for that server will be used as if they were specified on the command line. </p>
-<dt><code>-u</code> <i>user-name</i></p>
-<dd>Each systemtap compile server is normally run by the user name <i>stap-server</i> (for the initscript) or as the user invoking <i>stap-server</i>, unless otherwise configured (see <code>FILES</code>). This option specifies the user name used to run the server(s). The user name specified must be a member of the group <i>stap-server</i>. </p>
-<dt><code>&#8211;log</code> <i>logfile</i></p>
-<dd>This option allows the specification of a separate log file for each server. Each &#8211;log option is added to a list which will be applied, in turn, to each server specified. If more servers are specified than &#8211;log options, the default log file (see <code>FILES</code>) will be used for subsequent servers. </p>
-<dt><code>&#8211;port</code> <i>port-number</i></p>
-<dd>This option allows the specification of a specific network port for each server. Each &#8211;port option is added to a list which will be applied, in turn, to each server specified. If more servers are specified than &#8211;port options, a randomly selected port is used for subsequent servers. </p>
-<dt><code>&#8211;ssl</code> <i>certificate-db-path</i></p>
-<dd>This option allows the specification of a separate NSS certificate database for each server. Each &#8211;ssl option is added to a list which will be applied, in turn, to each server specified. If more servers are specified than &#8211;ssl options, the default certificate database (see <code>FILES</code>) for subsequent servers. </p>
-<dt><code>&#8211;max-threads</code> <i>threads</i></p>
-<dd>This option allows the specification of the maximum number of worker threads to handle concurrent requests. If <i>threads</i> == 0, each request will be handled on the main thread, serially. The default is the number of available processor cores. </p>
-<dt><code>&#8211;max-request-size</code> <i>size</i></p>
-<dd>This options allows the specification of the maximum size of an uncompressed client request. The arguement <i>size</i> is specified in bytes. The default is the 50000 bytes. </p>
-<dt><code>&#8211;max-compressed-request</code> <i>size</i></p>
-<dd>This options allows the specification of the maximum size of a compressed client request. The arguement <i>size</i> is specified in bytes. The default is the 5000 bytes. </p>
+<dt><code>-c</code> <i>configfile</i></dt>
+<dd>This option specifies a global configuration file in addition to the default global configuration file described below. This file will be processed after the default global configuration file. If the <code>-c</code> option is specified more than once, the last configuration file specified will be used. </dd>
+<dt><code>-a</code> <i>architecture</i></dt>
+<dd>This option specifies the target architecture of the server and is analogous to the <code>-a</code> option of <i>stap</i>. See the <i><a href="/docs/linux/man/1-stap/">stap</a></i>(1) manual page for more details. The default architecture is the architecture of the host. </dd>
+<dt><code>-r</code> <i>kernel-release</i></dt>
+<dd>This option specifies the target kernel release of the server and is analogous to the <code>-r</code> option of <i>stap</i>. See the <i><a href="/docs/linux/man/1-stap/">stap</a></i>(1) manual page for more details. The default release is that of the currently running kernel. </dd>
+<dt><code>-I</code> <i>path</i></dt>
+<dd>This option specifies an additional path to be searched by the server(s) for tapsets and is analogous to the <code>-I</code> option of <i>stap</i>. See the <i><a href="/docs/linux/man/1-stap/">stap</a></i>(1) manual page for more details. </dd>
+<dt><code>-R</code> <i>path</i></dt>
+<dd>This option specifies the location of the systemtap runtime to be used by the server(s) and is analogous to the <code>-R</code> option of <i>stap</i>. See the <i><a href="/docs/linux/man/1-stap/">stap</a></i>(1) manual page for more details. </dd>
+<dt><code>-B</code> <i>options</i></dt>
+<dd>This option specifies options to be passed to <i>make</i> when building systemtap modules and is analogous to the <code>-B</code> option of <i>stap</i>. See the <i><a href="/docs/linux/man/1-stap/">stap</a></i>(1) manual page for more details. </dd>
+<dt><code>-i</code></dt>
+<dd>This option is a shortcut which specifies one server for each kernel release installed in <i>/lib/modules/</i>. Previous <code>-I</code>, <code>-R</code>, <code>-B</code> and <code>-u</code> options will be applied to each server, however previous <code>-a</code> options will be ignored and the default architecture will be used. </dd>
+<dt><code>-n</code> <i>nickname</i></dt>
+<dd>This option allows the specification of a server configuration by nickname. When <code>-n</code> is specified, a currently running server with the given nickname will be searched for. If no currently running server with the given nickname is found, a server configuration with the given nickname will be searched for in the configuration files for default servers, or the path configured in the global configuration file or the configuration file specified by the <code>-c</code> option. If a server configuration for the given nickname is found, the <code>-a</code>, <code>-r</code>, <code>-I</code>, <code>-R</code>, <code>-B</code> and <code>-u</code> options for that server will be used as if they were specified on the command line. If no configuration with the given nickname is found, and the action is <i>start</i> (or an action behaving like <i>start</i> (see <code>ARGUMENTS</code>), the server will be started with the given nickname. If no configuration with the given nickname is found, and the action is not <i>start</i> (or an action behaving like <i>start</i>), it is an error. If a nickname is not specified for a server which is being started, its nickname will be its process id. </dd>
+<dt><code>-p</code> <i>pid</i></dt>
+<dd>This option allows the specification of a server configuration by process id. When <code>-p</code> is specified, a currently running server with the given process id will be searched for. If no such server is found, it is an error. If a server with the given process id is found, the <code>-a</code>, <code>-r</code>, <code>-I</code>, <code>-R</code>, <code>-B</code> and <code>-u</code> options for that server will be used as if they were specified on the command line. </dd>
+<dt><code>-u</code> <i>user-name</i></dt>
+<dd>Each systemtap compile server is normally run by the user name <i>stap-server</i> (for the initscript) or as the user invoking <i>stap-server</i>, unless otherwise configured (see <code>FILES</code>). This option specifies the user name used to run the server(s). The user name specified must be a member of the group <i>stap-server</i>. </dd>
+<dt><code>&#8211;log</code> <i>logfile</i></dt>
+<dd>This option allows the specification of a separate log file for each server. Each &#8211;log option is added to a list which will be applied, in turn, to each server specified. If more servers are specified than &#8211;log options, the default log file (see <code>FILES</code>) will be used for subsequent servers. </dd>
+<dt><code>&#8211;port</code> <i>port-number</i></dt>
+<dd>This option allows the specification of a specific network port for each server. Each &#8211;port option is added to a list which will be applied, in turn, to each server specified. If more servers are specified than &#8211;port options, a randomly selected port is used for subsequent servers. </dd>
+<dt><code>&#8211;ssl</code> <i>certificate-db-path</i></dt>
+<dd>This option allows the specification of a separate NSS certificate database for each server. Each &#8211;ssl option is added to a list which will be applied, in turn, to each server specified. If more servers are specified than &#8211;ssl options, the default certificate database (see <code>FILES</code>) for subsequent servers. </dd>
+<dt><code>&#8211;max-threads</code> <i>threads</i></dt>
+<dd>This option allows the specification of the maximum number of worker threads to handle concurrent requests. If <i>threads</i> == 0, each request will be handled on the main thread, serially. The default is the number of available processor cores. </dd>
+<dt><code>&#8211;max-request-size</code> <i>size</i></dt>
+<dd>This options allows the specification of the maximum size of an uncompressed client request. The arguement <i>size</i> is specified in bytes. The default is the 50000 bytes. </dd>
+<dt><code>&#8211;max-compressed-request</code> <i>size</i></dt>
+<dd>This options allows the specification of the maximum size of a compressed client request. The arguement <i>size</i> is specified in bytes. The default is the 5000 bytes. </dd>
 </dl>
 <h2>Configuration</h2>
 <p>Configuration files allow us to:</p>
 <dl>
-<dt>&bull;</p>
-<dd>specify global configuration of logging, server configuration files, status files and other global parameters.</p>
-<dt>&bull;</p>
-<dd>specify which servers are to be started by default. </p>
+<dt>&bull;</dt>
+<dd>specify global configuration of logging, server configuration files, status files and other global parameters.</dd>
+<dt>&bull;</dt>
+<dd>specify which servers are to be started by default. </dd>
 </dl>
 <h2>Global Configuration</h2>
 <p>The Global Configuration file contains variable assignments used to configure the overall operation of the service. Each line beginning with a &#8216;#&#8217; character is ignored. All other lines must be of the form <i>VARIABLE=VALUE</i>. This is not a shell script. The entire contents of the line after the = will be assigned as-is to the variable. </p>
 <p> The following variables may be assigned: </p>
 <dl>
-<dt><code>CONFIG_PATH</code></p>
-<dd>Specifies the absolute path of the directory containing the default server configurations. </p>
-<dt><code>STAT_PATH</code></p>
-<dd>Specifies the absolute path of the running server status directory. </p>
-<dt><code>LOG_FILE</code></p>
-<dd>Specifies the absolute path of the log file. </p>
-<dt><code>STAP_USER</code></p>
-<dd>Specifies the userid which will be used to run the server(s) (default: for the initscript <i>stap-server</i>, otherwise the user running <i>stap-server</i>). </p>
+<dt><code>CONFIG_PATH</code></dt>
+<dd>Specifies the absolute path of the directory containing the default server configurations. </dd>
+<dt><code>STAT_PATH</code></dt>
+<dd>Specifies the absolute path of the running server status directory. </dd>
+<dt><code>LOG_FILE</code></dt>
+<dd>Specifies the absolute path of the log file. </dd>
+<dt><code>STAP_USER</code></dt>
+<dd>Specifies the userid which will be used to run the server(s) (default: for the initscript <i>stap-server</i>, otherwise the user running <i>stap-server</i>). </dd>
 </dl>
 <p> Here is an example of a Global Configuration file: </p>
 <dl>
 <dd>
 <pre>CONFIG_PATH=~&lt;user&gt;/my-stap-server-configs
 LOG_FILE=/tmp/stap-server/log</pre>
-</dl>
+</dd></dl>
 <h2>Individual Server Configuration</h2>
 <p>Each server configuration file configures a server to be started when no server is specified for the <i>start</i> action, or an action behaving like the <i>start</i> action (see <i>ARGUMENTS</i>). Each configuration file contains variable assignments used to configure an individual server. </p>
 <p> Each line beginning with a &#8216;#&#8217; character is ignored. All other lines must be of the form <i>VARIABLE=VALUE</i>. This is not a shell script. The entire contents of the line after the = will be assigned as-is to the variable. </p>
 <p> Each configuration file must have a filename suffix of <i>.conf</i>. See <i><a href="/docs/linux/man/7-stappaths/">stappaths</a></i>(7) for the default location of these files. This default location can be overridden in the global configuration file using the <code>-c</code> option (see <i>OPTIONS</i>). </p>
 <p> The following variables may be assigned:</p>
 <dl>
-<dt><code>ARCH</code></p>
-<dd>Specifies the target architecture for this server and corresponds to the <code>-a</code> option (see <i>OPTIONS</i>). If <code>ARCH</code> is not set, the architecture of the host will be used. </p>
-<dt><code>RELEASE</code></p>
+<dt><code>ARCH</code></dt>
+<dd>Specifies the target architecture for this server and corresponds to the <code>-a</code> option (see <i>OPTIONS</i>). If <code>ARCH</code> is not set, the architecture of the host will be used. </dd>
+<dt><code>RELEASE</code></dt>
 <dd>Specifies the kernel release for this server and corresponds to the <code>-r</code> option (see <i>OPTIONS</i>). If <code>RELEASE</code> is not set, the release of the kernel running on the host will be used.<br />
-&nbsp;<wbr></p>
-<dt><code>BUILD</code></p>
+&nbsp;<wbr></dd>
+<dt><code>BUILD</code></dt>
 <dd>Specifies options to be passed to the <i>make</i> process used by <i>systemtap</i> to build kernel modules. This an array variable with each element corresponding to a <code>-B</code> option (see <i>OPTIONS</i>). Using the form <code>BUILD=STRING</code> clears the array and sets the first element to <code>STRING</code>. Using the form <code>BUILD+=STRING</code> adds <code>STRING</code> as an additional element to the array.<br />
-&nbsp;<wbr></p>
-<dt><code>INCLUDE</code></p>
-<dd>Specifies a list of directories to be searched by the server for tapsets. This is an array variable with each element corresponding to a <code>-I</code> option (see <i>OPTIONS</i>). Using the form <code>INCLUDE=PATH</code> clears the array and sets the first element to <code>PATH</code>. Using the form <code>INCLUDE+=PATH</code> adds <code>PATH</code> as an additional element to the array. </p>
-<dt><code>RUNTIME</code></p>
-<dd>Specifies the directory which contains the systemtap runtime code to be used by this server and corresponds to the <code>-R</code> option (see <i>OPTIONS</i>). </p>
-<dt><code>USER</code></p>
-<dd>Specifies the user name to be used to run this server and corresponds to the <code>-u</code> option (see <i>OPTIONS</i>). </p>
-<dt><code>NICKNAME</code></p>
-<dd>Specifies the nickname to be used to refer to this server and corresponds to the <code>-n</code> option (see <i>OPTIONS</i>). </p>
-<dt><code>LOG</code></p>
-<dd>Specifies the location of the log file to be used by this server and corresponds to the <code>&#8211;log</code> option (see <i>OPTIONS</i>). </p>
-<dt><code>PORT</code></p>
-<dd>Specifies the network port to be used by this server and corresponds to the <code>&#8211;port</code> option (see <i>OPTIONS</i>). </p>
-<dt><code>SSL</code></p>
-<dd>Specifies the location of the NSS certificate database to be used by this server and corresponds to the <code>&#8211;ssl</code> option (see <i>OPTIONS</i>). </p>
-<dt><code>MAXTHREADS</code></p>
-<dd>Specifies the maximum number of worker threads to handle concurrent requests to be used by this server and corresponds to the <code>&#8211;max-threads</code> option (see <i>OPTIONS</i>). </p>
-<dt><code>MAXREQSIZE</code></p>
-<dd>Specifies the maximum size of an uncompressed client request, to be used by this server and correspnds to the <code>&#8211;max-request-size</code> option (see <i>OPTIONS</i>). </p>
-<dt><code>MAXCOMPRESSEDREQ</code></p>
-<dd>Specifies the maximum size of an compressed client request, to be used by this server and correspnds to the <code>&#8211;max-compressed-request</code> option (see <i>OPTIONS</i>). </p>
+&nbsp;<wbr></dd>
+<dt><code>INCLUDE</code></dt>
+<dd>Specifies a list of directories to be searched by the server for tapsets. This is an array variable with each element corresponding to a <code>-I</code> option (see <i>OPTIONS</i>). Using the form <code>INCLUDE=PATH</code> clears the array and sets the first element to <code>PATH</code>. Using the form <code>INCLUDE+=PATH</code> adds <code>PATH</code> as an additional element to the array. </dd>
+<dt><code>RUNTIME</code></dt>
+<dd>Specifies the directory which contains the systemtap runtime code to be used by this server and corresponds to the <code>-R</code> option (see <i>OPTIONS</i>). </dd>
+<dt><code>USER</code></dt>
+<dd>Specifies the user name to be used to run this server and corresponds to the <code>-u</code> option (see <i>OPTIONS</i>). </dd>
+<dt><code>NICKNAME</code></dt>
+<dd>Specifies the nickname to be used to refer to this server and corresponds to the <code>-n</code> option (see <i>OPTIONS</i>). </dd>
+<dt><code>LOG</code></dt>
+<dd>Specifies the location of the log file to be used by this server and corresponds to the <code>&#8211;log</code> option (see <i>OPTIONS</i>). </dd>
+<dt><code>PORT</code></dt>
+<dd>Specifies the network port to be used by this server and corresponds to the <code>&#8211;port</code> option (see <i>OPTIONS</i>). </dd>
+<dt><code>SSL</code></dt>
+<dd>Specifies the location of the NSS certificate database to be used by this server and corresponds to the <code>&#8211;ssl</code> option (see <i>OPTIONS</i>). </dd>
+<dt><code>MAXTHREADS</code></dt>
+<dd>Specifies the maximum number of worker threads to handle concurrent requests to be used by this server and corresponds to the <code>&#8211;max-threads</code> option (see <i>OPTIONS</i>). </dd>
+<dt><code>MAXREQSIZE</code></dt>
+<dd>Specifies the maximum size of an uncompressed client request, to be used by this server and correspnds to the <code>&#8211;max-request-size</code> option (see <i>OPTIONS</i>). </dd>
+<dt><code>MAXCOMPRESSEDREQ</code></dt>
+<dd>Specifies the maximum size of an compressed client request, to be used by this server and correspnds to the <code>&#8211;max-compressed-request</code> option (see <i>OPTIONS</i>). </dd>
 </dl>
 <p> Here is an example of a server configuration file: </p>
 <dl>
@@ -140,7 +140,7 @@ LOG_FILE=/tmp/stap-server/log</pre>
 USER=
 RELEASE=
 NICKNAME=native</pre>
-</dl>
+</dd></dl>
 <p> By keeping the ARCH, USER, and RELEASE fields blank, they will default to the current arch and release and use the default user. </p>
 <p> A more specific example: </p>
 <dl>
@@ -149,7 +149,7 @@ NICKNAME=native</pre>
 RELEASE=2.6.18-128.el5
 PORT=5001
 LOG=/path/to/log/file</pre>
-</dl>
+</dd></dl>
 <p> And here is a more complicated example: </p>
 <dl>
 <dd>
@@ -163,7 +163,7 @@ DEFINE+=DEBUG_TRANS
 RUNTIME=/myruntime
 NICKNAME=my-server
 SSL=/path/to/NSS/certificate/database</pre>
-</dl>
+</dd></dl>
 <h2>Server Authentication</h2>
 <p>The security of the SSL network connection between the client and server depends on the proper management of server certificates. </p>
 <p> The trustworthiness of a given systemtap compile server can not be determined automatically without a trusted certificate authority issuing systemtap compile server certificates. This is not practical in everyday use and so, clients must authenticate servers against their own database of trusted server certificates. In this context, establishing a given server as trusted by a given client means adding that server&#8217;s certificate to the client&#8217;s database of trusted servers. </p>
@@ -176,28 +176,28 @@ SSL=/path/to/NSS/certificate/database</pre>
 <p>Systemtap is an administrative tool. It exposes kernel internal data structures and potentially private user information. See the <i><a href="/docs/linux/man/1-stap/">stap</a></i>(1) manual page for additional information on safety and security. </p>
 <p> As a network server, stap-server should be activated with care in order to limit the potential effects of bugs or mischevious users. Consider the following prophylactic measures.</p>
 <dl>
-<dt>1</p>
-<dd>Run stap-server as an unprivileged user, never as root. </p>
+<dt>1</dt>
+<dd>Run stap-server as an unprivileged user, never as root. </dd>
 <p> When invoked as a service (i.e. <code>service stap-server</code> &#8230;), each server is run, by default, as the user <i>stap-server</i>. When invoked directly (i.e. <code>stap-server</code> &#8230;), each server is run, by default, as the invoking user. In each case, another user may be selected by using the <i>-u</i> option on invocation, by specifying <i>STAP_USER=</i>username in the global configuration file or by specifying <i>USER=</i>username in an individual server configuration file. The invoking user must have authority to run processes as another user. See <i>CONFIGURATION</i>. </p>
 <p> The selected user must have write access to the server log file. The location of the server log file may be changed by setting <i>LOG_FILE=</i>path in the global configuration file. See <i>CONFIGURATION</i>. </p>
 <p> The selected user must have read/write access to the directory containing the server status files. The location of the server status files may be changed by setting <i>STAT_PATH=</i>path in the global configuration file. See <i>CONFIGURATION</i>. </p>
 <p> The selected user must have read/write access to the uprobes.ko build directory and its files. </p>
 <p> Neither form of stap-server will run if the selected user is root. </p>
-<dt>2</p>
-<dd>Run stap-server requests with resource limits that impose maximum cpu time, file size, memory consumption, in order to bound the effects of processing excessively large or bogus inputs. </p>
+<dt>2</dt>
+<dd>Run stap-server requests with resource limits that impose maximum cpu time, file size, memory consumption, in order to bound the effects of processing excessively large or bogus inputs. </dd>
 <p> When the user running the server is <i>stap-server</i>, each server request is run with limits specified in <i>~stap-server/.systemtap/rc</i> otherwise, no limits are imposed. </p>
-<dt>3</p>
-<dd>Run stap-server with a TMPDIR environment variable that points to a separate and/or quota-enforced directory, in order to prevent filling up of important filesystems. </p>
+<dt>3</dt>
+<dd>Run stap-server with a TMPDIR environment variable that points to a separate and/or quota-enforced directory, in order to prevent filling up of important filesystems. </dd>
 <p> The default TMPDIR is <i>/tmp/</i>. </p>
-<dt>4</p>
-<dd>Activate network firewalls to limit stap client connections to relatively trustworthy networks. </p>
+<dt>4</dt>
+<dd>Activate network firewalls to limit stap client connections to relatively trustworthy networks. </dd>
 <p> For automatic selection of servers by clients, <i>avahi</i> must be installed on both the server and client hosts and <i>mDNS</i> messages must be allowed through the firewall. </p>
 </dl>
 <p> The systemtap compile server and its related utilities use the Secure Socket Layer (SSL) as implemented by Network Security Services (NSS) for network security. NSS is also used for the generation and management of certificates. The related certificate databases must be protected in order to maintain the security of the system. Use of the utilities provided will help to ensure that the proper protection is maintained. The systemtap client will check for proper access permissions before making use of any certificate database.</p>
 <h2>Files</h2>
 <dl>
-<dt>Important files and their corresponding paths can be located in the</p>
-<dd>stappaths (7) manual page. </p>
+<dt>Important files and their corresponding paths can be located in the</dt>
+<dd>stappaths (7) manual page. </dd>
 </dl>
 <h2>See Also</h2>
 <pre><i><a href="//www.systutorials.com/docs/linux/man/1-stap/">stap</a></i>(1),
@@ -210,3 +210,4 @@ SSL=/path/to/NSS/certificate/database</pre>
 <i>NSS</i></pre>
 <h2>Bugs</h2>
 <p>Use the Bugzilla link of the project web page or our mailing list. <code><a rel="nofollow" href="http://sourceware.org/systemtap/">http://sourceware.org/systemtap/</a></code>, <code>&lt;systemtap [at] sourceware.org&gt;</code>. </p>
+</dl>

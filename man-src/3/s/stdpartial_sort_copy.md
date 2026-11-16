@@ -11,62 +11,37 @@ std::partial_sort_copy - std::partial_sort_copy
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class InputIt, class RandomIt&gt;
-
     RandomIt partial_sort_copy(InputIt first, InputIt last, (until C++ 20)
-
                                                                 RandomIt d_first,
                                RandomIt d_last);
-
 template &lt;class InputIt, class RandomIt&gt;
-
 constexpr RandomIt partial_sort_copy(InputIt first, InputIt last, (since C++ 20)
-
                                                                       RandomIt d_first,
                                      RandomIt d_last);
-
 template &lt;class ExecutionPolicy, class ForwardIt, class RandomIt&gt;
-
 RandomIt partial_sort_copy(ExecutionPolicy &amp;&amp;policy, ForwardIt first, ForwardIt last, (2)(since C++ 17)
-
                                                                                           RandomIt d_first,
                            RandomIt d_last);
-
 template &lt;class InputIt, class RandomIt, class Compare&gt;
-
 RandomIt partial_sort_copy(InputIt first, InputIt last, (1)(until C++ 20)
-
                                                             RandomIt d_first,
                            RandomIt d_last,
-
                            Compare comp);
-
 template &lt;class InputIt, class RandomIt, class Compare&gt;
-
 constexpr RandomIt partial_sort_copy(InputIt first, InputIt last, (3)(since C++ 20)
-
                                                                       RandomIt d_first,
                                      RandomIt d_last,
-
                                      Compare comp);
-
 template &lt;class ExecutionPolicy, class ForwardIt, class RandomIt, class Compare&gt;
-
 RandomIt partial_sort_copy(ExecutionPolicy &amp;&amp;policy, ForwardIt first, ForwardIt last, (4)(since C++ 17)
-
                                                                                           RandomIt d_first,
                            RandomIt d_last,
-
                            Compare comp);
 Sorts some of the elements in the range [first, last) in ascending order, storing the result in the range [d_first, d_last).
-
 At most d_last - d_first of the elements are placed sorted to the range [d_first, d_first + n). n is the number of elements to sort (n = min(last - first, d_last - d_first)). The order of equal elements is not guaranteed to be preserved.
-
 1) Elements are compared using operator&lt;.
-
 3) Elements are compared using the given binary comparison function comp.
-
 2,4) Same as (1,3), but executed according to policy. This overload only participates in overload resolution if std::is_execution_policy_v&lt;std::decay_t&lt;ExecutionPolicy&gt;&gt; is true
 </code></pre>
 
@@ -114,14 +89,10 @@ The overloads with a template parameter named ExecutionPolicy report errors as f
 
 The following code sorts a vector of integers and copies them into a smaller and a larger vector. 
  // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;vector&gt;
-
 #include &lt;functional&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v0{4, 2, 5, 1, 3};
     std::vector&lt;int&gt; v1{10, 11, 12};

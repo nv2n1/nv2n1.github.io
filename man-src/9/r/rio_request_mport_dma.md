@@ -14,11 +14,11 @@ description: "rio_request_mport_dma – request RapidIO capable DMA channel asso
 <p><i>mport</i></p>
 <dl>
 <dd>
-<dd>RIO mport to perform DMA data transfers</dl>
+</dd><dd>RIO mport to perform DMA data transfers</dd></dl>
 <h2>Description</h2>
 <p>Returns pointer to allocated DMA channel or NULL if failed.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -14,15 +14,15 @@ description: "sys_get_robust_list – Get the robust-futex list head of a task"
 <p><i>pid</i></p>
 <dl>
 <dd>
-<dd>pid of the process [zero for current task]</dl>
+</dd><dd>pid of the process [zero for current task]</dd></dl>
 <p> <i>head_ptr</i></p>
 <dl>
-<dd>pointer to a list-head pointer, the kernel fills it in</dl>
+<dd>pointer to a list-head pointer, the kernel fills it in</dd></dl>
 <p> <i>len_ptr</i></p>
 <dl>
-<dd>pointer to a length field, the kernel fills in the header size</dl>
+<dd>pointer to a length field, the kernel fills in the header size</dd></dl>
 <h2>Author</h2>
 <p><code>Rusty Russell</code> &lt;rusty [at] rustcorp.com.au&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

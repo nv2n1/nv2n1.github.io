@@ -15,10 +15,10 @@ mongoc_client_pool_min_size(mongoc_client_pool_t *pool,
 <p>This function sets the minimum number of pooled connections kept in <code>mongoc_client_pool_t</code> \&amp;. </p>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>pool</code></p>
-<dd>A <code>mongoc_client_pool_t</code> \&amp;.</dl>
+<dt><code>pool</code></dt>
+<dd>A <code>mongoc_client_pool_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>min_pool_size</code></p>
-<dd>The minimum number of connections which shall be kept in the pool.</dl>
+<dt><code>min_pool_size</code></dt>
+<dd>The minimum number of connections which shall be kept in the pool.</dd></dl>
 <h2>Colophon</h2>
 <p>This page is part of MongoDB C Driver. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a></p>

@@ -30,54 +30,54 @@ description: "struct_ccw_driver – device driver for channel attached devices"
 <h2>Members</h2>
 <p>ids</p>
 <dl>
-<dd>ids supported by this driver</dl>
+<dd>ids supported by this driver</dd></dl>
 <p> probe</p>
 <dl>
-<dd>function called on probe</dl>
+<dd>function called on probe</dd></dl>
 <p> remove</p>
 <dl>
-<dd>function called on remove</dl>
+<dd>function called on remove</dd></dl>
 <p> set_online</p>
 <dl>
-<dd>called when setting device online</dl>
+<dd>called when setting device online</dd></dl>
 <p> set_offline</p>
 <dl>
-<dd>called when setting device offline</dl>
+<dd>called when setting device offline</dd></dl>
 <p> notify</p>
 <dl>
-<dd>notify driver of device state changes</dl>
+<dd>notify driver of device state changes</dd></dl>
 <p> path_event</p>
 <dl>
-<dd>notify driver of channel path events</dl>
+<dd>notify driver of channel path events</dd></dl>
 <p> shutdown</p>
 <dl>
-<dd>called at device shutdown</dl>
+<dd>called at device shutdown</dd></dl>
 <p> prepare</p>
 <dl>
-<dd>prepare for pm state transition</dl>
+<dd>prepare for pm state transition</dd></dl>
 <p> complete</p>
 <dl>
-<dd>undo work done in <i>prepare</i></dl>
+<dd>undo work done in <i>prepare</i></dd></dl>
 <p> freeze</p>
 <dl>
-<dd>callback for freezing during hibernation snapshotting</dl>
+<dd>callback for freezing during hibernation snapshotting</dd></dl>
 <p> thaw</p>
 <dl>
-<dd>undo work done in <i>freeze</i></dl>
+<dd>undo work done in <i>freeze</i></dd></dl>
 <p> restore</p>
 <dl>
-<dd>callback for restoring after hibernation</dl>
+<dd>callback for restoring after hibernation</dd></dl>
 <p> uc_handler</p>
 <dl>
-<dd>callback for unit check handler</dl>
+<dd>callback for unit check handler</dd></dl>
 <p> driver</p>
 <dl>
-<dd>embedded device driver structure</dl>
+<dd>embedded device driver structure</dd></dl>
 <p> int_class</p>
 <dl>
-<dd>interruption class to use for accounting interrupts</dl>
+<dd>interruption class to use for accounting interrupts</dd></dl>
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

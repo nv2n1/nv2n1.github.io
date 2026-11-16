@@ -20,33 +20,33 @@ description: "kpropd – Kerberos V5 slave KDC update server"
 <p> <i><a href="/docs/linux/man/8-kproplog/">kproplog</a>(8)</i> can be used to force full replication when iprop is enabled.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-r</code> <i>realm</i></p>
-<dd>Specifies the realm of the master server.</p>
-<dt><code>-A</code> <i>admin_server</i></p>
-<dd>Specifies the server to be contacted for incremental updates; by default, the master admin server is contacted.</p>
-<dt><code>-f</code> <i>file</i></p>
-<dd>Specifies the filename where the dumped principal database file is to be stored; by default the dumped database file is <code>/var/kerberos</code><code>/krb5kdc</code><code>/from_master</code>.</p>
-<dt><code>-p</code></p>
-<dd>Allows the user to specify the pathname to the <i><a href="/docs/linux/man/8-kdb5_util/">kdb5_util</a>(8)</i> program; by default the pathname used is <code>/usr/sbin</code><code>/kdb5_util</code>.</p>
-<dt><code>-d</code></p>
-<dd>Turn on debug mode. In this mode, kpropd will not detach itself from the current job and run in the background. Instead, it will run in the foreground and print out debugging messages during the database propagation.</p>
-<dt><code>-t</code></p>
-<dd>In standalone mode without incremental propagation, exit after one dump file is received. In incremental propagation mode, exit as soon as the database is up to date, or if the master returns an error.</p>
-<dt><code>-P</code></p>
-<dd>Allow for an alternate port number for kpropd to listen on. This is only useful in combination with the <code>-S</code> option.</p>
-<dt><code>-a</code> <i>acl_file</i></p>
-<dd>Allows the user to specify the path to the kpropd.acl file; by default the path used is <code>/var/kerberos</code><code>/krb5kdc</code><code>/kpropd.acl</code>.</dl>
+<dt><code>-r</code> <i>realm</i></dt>
+<dd>Specifies the realm of the master server.</dd>
+<dt><code>-A</code> <i>admin_server</i></dt>
+<dd>Specifies the server to be contacted for incremental updates; by default, the master admin server is contacted.</dd>
+<dt><code>-f</code> <i>file</i></dt>
+<dd>Specifies the filename where the dumped principal database file is to be stored; by default the dumped database file is <code>/var/kerberos</code><code>/krb5kdc</code><code>/from_master</code>.</dd>
+<dt><code>-p</code></dt>
+<dd>Allows the user to specify the pathname to the <i><a href="/docs/linux/man/8-kdb5_util/">kdb5_util</a>(8)</i> program; by default the pathname used is <code>/usr/sbin</code><code>/kdb5_util</code>.</dd>
+<dt><code>-d</code></dt>
+<dd>Turn on debug mode. In this mode, kpropd will not detach itself from the current job and run in the background. Instead, it will run in the foreground and print out debugging messages during the database propagation.</dd>
+<dt><code>-t</code></dt>
+<dd>In standalone mode without incremental propagation, exit after one dump file is received. In incremental propagation mode, exit as soon as the database is up to date, or if the master returns an error.</dd>
+<dt><code>-P</code></dt>
+<dd>Allow for an alternate port number for kpropd to listen on. This is only useful in combination with the <code>-S</code> option.</dd>
+<dt><code>-a</code> <i>acl_file</i></dt>
+<dd>Allows the user to specify the path to the kpropd.acl file; by default the path used is <code>/var/kerberos</code><code>/krb5kdc</code><code>/kpropd.acl</code>.</dd></dl>
 <h2>Environment</h2>
 <p>kpropd uses the following environment variables:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>KRB5_CONFIG</code></p>
-<dt>&bull;</p>
-<dd><code>KRB5_KDC_PROFILE</code></dl>
+<dt>&bull;</dt>
+<dd><code>KRB5_CONFIG</code></dd>
+<dt>&bull;</dt>
+<dd><code>KRB5_KDC_PROFILE</code></dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>kpropd.acl</code></p>
-<dd>Access file for kpropd; the default location is <code>/usr/local/var/krb5kdc/kpropd.acl</code>. Each entry is a line containing the principal of a host from which the local machine will allow Kerberos database propagation via <i><a href="/docs/linux/man/8-kprop/">kprop</a>(8)</i>.</dl>
+<dt><code>kpropd.acl</code></dt>
+<dd>Access file for kpropd; the default location is <code>/usr/local/var/krb5kdc/kpropd.acl</code>. Each entry is a line containing the principal of a host from which the local machine will allow Kerberos database propagation via <i><a href="/docs/linux/man/8-kprop/">kprop</a>(8)</i>.</dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-kprop/">kprop</a>(8)</i>, <i><a href="/docs/linux/man/8-kdb5_util/">kdb5_util</a>(8)</i>, <i><a href="/docs/linux/man/8-krb5kdc/">krb5kdc</a>(8)</i>, inetd(8)</p>
 <h2>Author</h2>

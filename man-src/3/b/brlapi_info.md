@@ -23,3 +23,4 @@ description: "Getting Terminal information –"
 <h2>Macro Definition Documentation</h2>
 <h3>#define BRLAPI_MAXNAMELENGTH 31</h3>
 <p> Maximum name length for names embeded in BrlAPI packets, not counting any termination 
+</p>

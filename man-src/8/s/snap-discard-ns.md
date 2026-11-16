@@ -24,7 +24,7 @@ The --from-snap-confine option is used internally by snap-confine to tell snap-d
 
 <i>snap-discard-ns</i> responds to the following environment variables
 <dl><dt><i>SNAP_CONFINE_DEBUG</i>:
-<dd>When defined the program will print additional diagnostic information about the actions being performed. All the output goes to stderr.</dl>
+</dt><dd>When defined the program will print additional diagnostic information about the actions being performed. All the output goes to stderr.</dd></dl>
 
 <h2>Files</h2>
 

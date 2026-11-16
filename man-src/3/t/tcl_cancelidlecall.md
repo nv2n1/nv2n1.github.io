@@ -14,8 +14,8 @@ description: "Tcl_DoWhenIdle, Tcl_CancelIdleCall – invoke a procedure when the
 <code>Tcl_CancelIdleCall</code>(<i>proc, clientData</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tcl_IdleProc <i>*proc</i> (in) Procedure to invoke.</p>
-<dd>ClientData <i>clientData</i> (in) Arbitrary one-word value to pass to <i>proc</i>. </p>
+<dd>Tcl_IdleProc <i>*proc</i> (in) Procedure to invoke.</dd>
+<dd>ClientData <i>clientData</i> (in) Arbitrary one-word value to pass to <i>proc</i>. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>Tcl_DoWhenIdle</code> arranges for <i>proc</i> to be invoked when the application becomes idle. The application is considered to be idle when <code>Tcl_DoOneEvent</code> has been called, could not find any events to handle, and is about to go to sleep waiting for an event to occur. At this point all pending <code>Tcl_DoWhenIdle</code> handlers are invoked. For each call to <code>Tcl_DoWhenIdle</code> there will be a single call to <i>proc</i>; after <i>proc</i> is invoked the handler is automatically removed. <code>Tcl_DoWhenIdle</code> is only usable in programs that use <code>Tcl_DoOneEvent</code> to dispatch events. </p>
@@ -23,7 +23,7 @@ description: "Tcl_DoWhenIdle, Tcl_CancelIdleCall – invoke a procedure when the
 <dl COMPACT>
 <dd>
 <pre>typedef void Tcl_IdleProc(ClientData <i>clientData</i>);</pre>
-</dl>
+</dd></dl>
 <p> The <i>clientData</i> parameter to <i>proc</i> is a copy of the <i>clientData</i> argument given to <code>Tcl_DoWhenIdle</code>. Typically, <i>clientData</i> points to a data structure containing application-specific information about what <i>proc</i> should do. </p>
 <p> <code>Tcl_CancelIdleCall</code> may be used to cancel one or more previous calls to <code>Tcl_DoWhenIdle</code>: if there is a <code>Tcl_DoWhenIdle</code> handler registered for <i>proc</i> and <i>clientData</i>, then it is removed without invoking it. If there is more than one handler on the idle list that refers to <i>proc</i> and <i>clientData</i>, all of the handlers are removed. If no existing handlers match <i>proc</i> and <i>clientData</i> then nothing happens. </p>
 <p> <code>Tcl_DoWhenIdle</code> is most useful in situations where (a) a piece of work will have to be done but (b) it is possible that something will happen in the near future that will change what has to be done or require something different to be done. <code>Tcl_DoWhenIdle</code> allows the actual work to be deferred until all pending events have been processed. At this point the exact work to be done will presumably be known and it can be done exactly once. </p>

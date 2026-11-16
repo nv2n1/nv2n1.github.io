@@ -20,18 +20,18 @@ description: "ocamllex – The OCaml lexer generator"
 <h2>OPTIONS</h2>
 <p> The <code><a href="/docs/linux/man/1-ocamllex/">ocamllex</a></code>(1) command recognizes the following options:</p>
 <dl>
-<dt><code>-ml</code></p>
-<dd> Output code that does not use OCaml&#8217;s built-in automata interpreter. Instead, the automaton is encoded by OCaml functions. This option is mainly useful for debugging <code><a href="/docs/linux/man/1-ocamllex/">ocamllex</a></code>(1), using it for production lexers is not recommended.</p>
-<dt><code>-o</code><i>&nbsp;<wbr>output-file</i></p>
-<dd> Specify the name of the output file produced by <code><a href="/docs/linux/man/1-ocamllex/">ocamllex</a></code>(1). The default is the input file name, with its extension replaced by .ml.</p>
-<dt><code>-q</code></p>
-<dd> Quiet mode. <code><a href="/docs/linux/man/1-ocamllex/">ocamllex</a></code>(1) normally outputs informational messages to standard output. They are suppressed if option <code>-q</code> is used.</p>
-<dt><code>-v</code>&nbsp;<wbr>or<code>&nbsp;<wbr>-version</code></p>
-<dd> Print version string and exit.</p>
-<dt><code>-vnum</code></p>
-<dd> Print short version number and exit.</p>
-<dt><code>-help</code>&nbsp;<wbr>or<code>&nbsp;<wbr>&#8211;help</code></p>
-<dd> Display a short usage summary and exit. </p>
+<dt><code>-ml</code></dt>
+<dd> Output code that does not use OCaml&#8217;s built-in automata interpreter. Instead, the automaton is encoded by OCaml functions. This option is mainly useful for debugging <code><a href="/docs/linux/man/1-ocamllex/">ocamllex</a></code>(1), using it for production lexers is not recommended.</dd>
+<dt><code>-o</code><i>&nbsp;<wbr>output-file</i></dt>
+<dd> Specify the name of the output file produced by <code><a href="/docs/linux/man/1-ocamllex/">ocamllex</a></code>(1). The default is the input file name, with its extension replaced by .ml.</dd>
+<dt><code>-q</code></dt>
+<dd> Quiet mode. <code><a href="/docs/linux/man/1-ocamllex/">ocamllex</a></code>(1) normally outputs informational messages to standard output. They are suppressed if option <code>-q</code> is used.</dd>
+<dt><code>-v</code>&nbsp;<wbr>or<code>&nbsp;<wbr>-version</code></dt>
+<dd> Print version string and exit.</dd>
+<dt><code>-vnum</code></dt>
+<dd> Print short version number and exit.</dd>
+<dt><code>-help</code>&nbsp;<wbr>or<code>&nbsp;<wbr>&#8211;help</code></dt>
+<dd> Display a short usage summary and exit. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ocamlyacc/">ocamlyacc</a></code>(1).<br />

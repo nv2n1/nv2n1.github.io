@@ -16,14 +16,14 @@ description: "statgrab-make-mrtg-config – generates MRTG configuration"
 <h2>OPTIONS</h2>
 <p> The following options are supported.</p>
 <dl>
-<dt><code>&#8211;no-header</code></p>
-<dd> Don&#8217;t print MRTG global options; useful if you want to include the output of this script in another MRTG config file</p>
-<dt><code>&#8211;workdir</code> <i>PATH</i></p>
-<dd> Use PATH for MRTG&#8217;s WorkDir option</p>
-<dt><code>&#8211;statgrab</code> <i>PATH</i></p>
-<dd> Specify location of statgrab binary (default &quot;statgrab&quot;)</p>
-<dt><code>&#8211;help</code></p>
-<dd> Display help and exit</dl>
+<dt><code>&#8211;no-header</code></dt>
+<dd> Don&#8217;t print MRTG global options; useful if you want to include the output of this script in another MRTG config file</dd>
+<dt><code>&#8211;workdir</code> <i>PATH</i></dt>
+<dd> Use PATH for MRTG&#8217;s WorkDir option</dd>
+<dt><code>&#8211;statgrab</code> <i>PATH</i></dt>
+<dd> Specify location of statgrab binary (default &quot;statgrab&quot;)</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display help and exit</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-statgrab/">statgrab</a></code>(1) <code><a href="/docs/linux/man/1-statgrab-make-mrtg-index/">statgrab-make-mrtg-index</a></code>(1)</p>
 <h2>AUTHORS</h2>

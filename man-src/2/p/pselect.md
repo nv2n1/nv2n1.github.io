@@ -32,60 +32,58 @@ int pselect(int nfds, fd_set *readfds, fd_set *writefds,
 <p> <code>Note well</code>: Upon return, each of the file descriptor sets is modified in place to indicate which file descriptors are currently &quot;ready&quot;. Thus, if using <code>select</code>() within a loop, the sets <i>must be reinitialized</i> before each call. The implementation of the <i>fd_set</i> arguments as value-result arguments is a design error that is avoided in <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2) and <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7). </p>
 <p> The contents of a file descriptor set can be manipulated using the following macros:</p>
 <dl>
-<dt><code>FD_ZERO</code>()</p>
-<dd> This macro clears (removes all file descriptors from) <i>set</i>. It should be employed as the first step in initializing a file descriptor set.</p>
-<dt><code>FD_SET</code>()</p>
-<dd> This macro adds the file descriptor <i>fd</i> to <i>set</i>. Adding a file descriptor that is already present in the set is a no-op, and does not produce an error.</p>
-<dt><code>FD_CLR</code>()</p>
-<dd> This macro removes the file descriptor <i>fd</i> from <i>set</i>. Removing a file descriptor that is not present in the set is a no-op, and does not produce an error.</p>
-<dt><code>FD_ISSET</code>()</p>
-<dd> <code>select</code>() modifies the contents of the sets according to the rules described below. After calling <code>select</code>(), the <code>FD_ISSET</code>() macro can be used to test if a file descriptor is still present in a set. <code>FD_ISSET</code>() returns nonzero if the file descriptor <i>fd</i> is present in <i>set</i>, and zero if it is not.</dl>
+<dt><code>FD_ZERO</code>()</dt>
+<dd> This macro clears (removes all file descriptors from) <i>set</i>. It should be employed as the first step in initializing a file descriptor set.</dd>
+<dt><code>FD_SET</code>()</dt>
+<dd> This macro adds the file descriptor <i>fd</i> to <i>set</i>. Adding a file descriptor that is already present in the set is a no-op, and does not produce an error.</dd>
+<dt><code>FD_CLR</code>()</dt>
+<dd> This macro removes the file descriptor <i>fd</i> from <i>set</i>. Removing a file descriptor that is not present in the set is a no-op, and does not produce an error.</dd>
+<dt><code>FD_ISSET</code>()</dt>
+<dd> <code>select</code>() modifies the contents of the sets according to the rules described below. After calling <code>select</code>(), the <code>FD_ISSET</code>() macro can be used to test if a file descriptor is still present in a set. <code>FD_ISSET</code>() returns nonzero if the file descriptor <i>fd</i> is present in <i>set</i>, and zero if it is not.</dd></dl>
 <h3>Arguments</h3>
 <p> The arguments of <code>select</code>() are as follows:</p>
 <dl>
-<dt><i>readfds</i></p>
-<dd> The file descriptors in this set are watched to see if they are ready for reading. A file descriptor is ready for reading if a read operation will not block; in particular, a file descriptor is also ready on end-of-file.</p>
+<dt><i>readfds</i></dt>
+<dd> The file descriptors in this set are watched to see if they are ready for reading. A file descriptor is ready for reading if a read operation will not block; in particular, a file descriptor is also ready on end-of-file.</dd>
 <dt>
-<dd> After <code>select</code>() has returned, <i>readfds</i> will be cleared of all file descriptors except for those that are ready for reading.</p>
-<dt><i>writefds</i></p>
-<dd> The file descriptors in this set are watched to see if they are ready for writing. A file descriptor is ready for writing if a write operation will not block. However, even if a file descriptor indicates as writable, a large write may still block.</p>
+</dt><dd> After <code>select</code>() has returned, <i>readfds</i> will be cleared of all file descriptors except for those that are ready for reading.</dd>
+<dt><i>writefds</i></dt>
+<dd> The file descriptors in this set are watched to see if they are ready for writing. A file descriptor is ready for writing if a write operation will not block. However, even if a file descriptor indicates as writable, a large write may still block.</dd>
 <dt>
-<dd> After <code>select</code>() has returned, <i>writefds</i> will be cleared of all file descriptors except for those that are ready for writing.</p>
-<dt><i>exceptfds</i></p>
-<dd> The file descriptors in this set are watched for &quot;exceptional conditions&quot;. For examples of some exceptional conditions, see the discussion of <code>POLLPRI</code> in <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2).</p>
+</dt><dd> After <code>select</code>() has returned, <i>writefds</i> will be cleared of all file descriptors except for those that are ready for writing.</dd>
+<dt><i>exceptfds</i></dt>
+<dd> The file descriptors in this set are watched for &quot;exceptional conditions&quot;. For examples of some exceptional conditions, see the discussion of <code>POLLPRI</code> in <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2).</dd>
 <dt>
-<dd> After <code>select</code>() has returned, <i>exceptfds</i> will be cleared of all file descriptors except for those for which an exceptional condition has occurred.</p>
-<dt><i>nfds</i></p>
-<dd> This argument should be set to the highest-numbered file descriptor in any of the three sets, plus 1. The indicated file descriptors in each set are checked, up to this limit (but see BUGS).</p>
-<dt><i>timeout</i></p>
-<dd> The <i>timeout</i> argument is a <i>timeval</i> structure (shown below) that specifies the interval that <code>select</code>() should block waiting for a file descriptor to become ready. The call will block until either:</p>
+</dt><dd> After <code>select</code>() has returned, <i>exceptfds</i> will be cleared of all file descriptors except for those for which an exceptional condition has occurred.</dd>
+<dt><i>nfds</i></dt>
+<dd> This argument should be set to the highest-numbered file descriptor in any of the three sets, plus 1. The indicated file descriptors in each set are checked, up to this limit (but see BUGS).</dd>
+<dt><i>timeout</i></dt>
+<dd> The <i>timeout</i> argument is a <i>timeval</i> structure (shown below) that specifies the interval that <code>select</code>() should block waiting for a file descriptor to become ready. The call will block until either:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> a file descriptor becomes ready;</p>
-<dt>&bull;</p>
-<dd> the call is interrupted by a signal handler; or</p>
-<dt>&bull;</p>
-<dd> the timeout expires.</dl>
+<dt>&bull;</dt>
+<dd> a file descriptor becomes ready;</dd>
+<dt>&bull;</dt>
+<dd> the call is interrupted by a signal handler; or</dd>
+<dt>&bull;</dt>
+<dd> the timeout expires.</dd></dl>
 </dl>
 <dt>
-<dd> Note that the <i>timeout</i> interval will be rounded up to the system clock granularity, and kernel scheduling delays mean that the blocking interval may overrun by a small amount.</p>
+</dt><dd> Note that the <i>timeout</i> interval will be rounded up to the system clock granularity, and kernel scheduling delays mean that the blocking interval may overrun by a small amount.</dd>
 <dt>
-<dd> If both fields of the <i>timeval</i> structure are zero, then <code>select</code>() returns immediately. (This is useful for polling.)</p>
+</dt><dd> If both fields of the <i>timeval</i> structure are zero, then <code>select</code>() returns immediately. (This is useful for polling.)</dd>
 <dt>
-<dd> If <i>timeout</i> is specified as NULL, <code>select</code>() blocks indefinitely waiting for a file descriptor to become ready.</dl>
+</dt><dd> If <i>timeout</i> is specified as NULL, <code>select</code>() blocks indefinitely waiting for a file descriptor to become ready.</dd></dl>
 <h3>pselect()</h3>
 <p> The <code>pselect</code>() system call allows an application to safely wait until either a file descriptor becomes ready or until a signal is caught. </p>
 <p> The operation of <code>select</code>() and <code>pselect</code>() is identical, other than these three differences:</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>select</code>() uses a timeout that is a <i>struct timeval</i> (with seconds and microseconds), while <code>pselect</code>() uses a <i>struct timespec</i> (with seconds and nanoseconds).</p>
-<dt>&bull;</p>
-<dd> <code>select</code>() may update the <i>timeout</i> argument to indicate how much time was left. <code>pselect</code>() does not change this argument.</p>
-<dt>&bull;</p>
-<dd> <code>select</code>() has no <i>sigmask</i> argument, and behaves as <code>pselect</code>() called with NULL <i>sigmask</i>.</dl>
+<dt>&bull;</dt>
+<dd> <code>select</code>() uses a timeout that is a <i>struct timeval</i> (with seconds and microseconds), while <code>pselect</code>() uses a <i>struct timespec</i> (with seconds and nanoseconds).</dd>
+<dt>&bull;</dt>
+<dd> <code>select</code>() may update the <i>timeout</i> argument to indicate how much time was left. <code>pselect</code>() does not change this argument.</dd>
+<dt>&bull;</dt>
+<dd> <code>select</code>() has no <i>sigmask</i> argument, and behaves as <code>pselect</code>() called with NULL <i>sigmask</i>.</dd></dl>
 <p> <i>sigmask</i> is a pointer to a signal mask (see <code><a href="/docs/linux/man/2-sigprocmask/">sigprocmask</a></code>(2)); if it is not NULL, then <code>pselect</code>() first replaces the current signal mask by the one pointed to by <i>sigmask</i>, then does the &quot;select&quot; function, and then restores the original signal mask. (If <i>sigmask</i> is NULL, the signal mask is not modified during the <code>pselect</code>() call.) </p>
 <p> Other than the difference in the precision of the <i>timeout</i> argument, the following <code>pselect</code>() call: </p>
 <p> ready = pselect(nfds, &amp;readfds, &amp;writefds, &amp;exceptfds,<br />
@@ -109,16 +107,16 @@ int pselect(int nfds, fd_set *readfds, fd_set *writefds,
 <p> On error, -1 is returned, and <i>errno</i> is set to indicate the error; the file descriptor sets are unmodified, and <i>timeout</i> becomes undefined.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> An invalid file descriptor was given in one of the sets. (Perhaps a file descriptor that was already closed, or one on which an error has occurred.) However, see BUGS.</p>
-<dt><code>EINTR</code></p>
-<dd> A signal was caught; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>nfds</i> is negative or exceeds the <code>RLIMIT_NOFILE</code> resource limit (see <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2)).</p>
-<dt><code>EINVAL</code></p>
-<dd> The value contained within <i>timeout</i> is invalid.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Unable to allocate memory for internal tables.</dl>
+<dt><code>EBADF</code></dt>
+<dd> An invalid file descriptor was given in one of the sets. (Perhaps a file descriptor that was already closed, or one on which an error has occurred.) However, see BUGS.</dd>
+<dt><code>EINTR</code></dt>
+<dd> A signal was caught; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7).</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>nfds</i> is negative or exceeds the <code>RLIMIT_NOFILE</code> resource limit (see <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2)).</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The value contained within <i>timeout</i> is invalid.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Unable to allocate memory for internal tables.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>pselect</code>() was added to Linux in kernel 2.6.16. Prior to this, <code>pselect</code>() was emulated in glibc (but see BUGS).</p>
 <h2>CONFORMING TO</h2>

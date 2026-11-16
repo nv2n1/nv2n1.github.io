@@ -21,31 +21,31 @@ CALL POINTS (PX,PY,NP,IC,IL)
 <h2>Description</h2>
 
 <dl><dt>PX
-<dd>(an input array of type REAL) defines the X user coordinates where a series of NP markers are to be drawn.
-<dt>PY
-<dd>(an input array of type REAL) defines the Y user coordinates where a series of NP markers are to be drawn.
-<dt>NP
-<dd>(an input expression of type INTEGER) specifies the number of markers to be drawn.
-<dt>IC
-<dd>(an input expression of type INTEGER) describes the type of marker to be drawn, as follows:
-<dd>IC &lt; 0 - draw a GKS polymarker of type -IC, as follows:
-<dl><dd><dl><dt> -1
-<dd>requests a dot (.),
-<dt> -2
-<dd>requests a plus (+),
-<dt> -3
-<dd>requests an asterisk (*),
-<dt> -4
-<dd>requests a circle (o), and
-<dt> -5
-<dd>requests a cross (x).</dl></dl><dd>The polymarker size and color can be set by calling the GKS routines GSMKSC, GSCR, and GSPMCI before calling POINTS.
-<dd>IC = 0 - draw a dot (.). Effect is the same as IC = -1.
-<dd>IC &gt; 0 - draw the FORTRAN77 character CHAR(IC).
-<dd>In this case, the GKS routine GTX is used to draw the specified character CHAR(IC) at each of the NP points. Each character is drawn with the horizontal and vertical text alignment centered at the specified point with a call to the GKS routine GSTXAL. The horizontal and vertical text alignment parameters are then restored to their previous values. Other text attributes such as character orientation, character height, and color, can be set by calling GKS text attribute setting routines before the call to the routine POINTS.
-<dt>IL
-<dd>(a input expression of type INTEGER) determines if the markers are to be connected with line segments.
-<dd>IL = 0 - do not connect the markers with line segments.
-<dd>IL .NE. 0 - connect the markers with line segments.</dl>
+</dt><dd>(an input array of type REAL) defines the X user coordinates where a series of NP markers are to be drawn.
+</dd><dt>PY
+</dt><dd>(an input array of type REAL) defines the Y user coordinates where a series of NP markers are to be drawn.
+</dd><dt>NP
+</dt><dd>(an input expression of type INTEGER) specifies the number of markers to be drawn.
+</dd><dt>IC
+</dt><dd>(an input expression of type INTEGER) describes the type of marker to be drawn, as follows:
+</dd><dd>IC &lt; 0 - draw a GKS polymarker of type -IC, as follows:
+</dd><dl><dd></dd><dl><dt> -1
+</dt><dd>requests a dot (.),
+</dd><dt> -2
+</dt><dd>requests a plus (+),
+</dd><dt> -3
+</dt><dd>requests an asterisk (*),
+</dd><dt> -4
+</dt><dd>requests a circle (o), and
+</dd><dt> -5
+</dt><dd>requests a cross (x).</dd></dl></dl><dd>The polymarker size and color can be set by calling the GKS routines GSMKSC, GSCR, and GSPMCI before calling POINTS.
+</dd><dd>IC = 0 - draw a dot (.). Effect is the same as IC = -1.
+</dd><dd>IC &gt; 0 - draw the FORTRAN77 character CHAR(IC).
+</dd><dd>In this case, the GKS routine GTX is used to draw the specified character CHAR(IC) at each of the NP points. Each character is drawn with the horizontal and vertical text alignment centered at the specified point with a call to the GKS routine GSTXAL. The horizontal and vertical text alignment parameters are then restored to their previous values. Other text attributes such as character orientation, character height, and color, can be set by calling GKS text attribute setting routines before the call to the routine POINTS.
+</dd><dt>IL
+</dt><dd>(a input expression of type INTEGER) determines if the markers are to be connected with line segments.
+</dd><dd>IL = 0 - do not connect the markers with line segments.
+</dd><dd>IL .NE. 0 - connect the markers with line segments.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

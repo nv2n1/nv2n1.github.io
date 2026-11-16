@@ -26,158 +26,158 @@ description: "updmap – manage TeX font maps updmap-sys – manage TeX font map
 <p> &#8211; updmap.cfg files are mainly about listing other files, namely the</p>
 <dl>
 <dt>
-<dd> font-specific .maps, in which each line gives information about a different TeX (.tfm) font.</dl>
+</dt><dd> font-specific .maps, in which each line gives information about a different TeX (.tfm) font.</dd></dl>
 <p> &#8211; updmap reads the updmap.cfg files and then concatenates the</p>
 <dl>
 <dt>
-<dd> contents of those .map files into the main output files: psfonts.map for dvips and pdftex.map for pdftex and dvipdfmx.</dl>
+</dt><dd> contents of those .map files into the main output files: psfonts.map for dvips and pdftex.map for pdftex and dvipdfmx.</dd></dl>
 <p> &#8211; The updmap.cfg files themselves are created and updated at package</p>
 <dl>
 <dt>
-<dd> installation time, by the system installer or the package manager or by hand, and not (by default) by updmap.</dl>
+</dt><dd> installation time, by the system installer or the package manager or by hand, and not (by default) by updmap.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;cnffile</code> FILE</p>
-<dd> read FILE for the updmap configuration (can be given multiple times, in which case all the files are used)</p>
-<dt><code>&#8211;dvipdfmxoutputdir</code> DIR</p>
-<dd> specify output directory (dvipdfm(x) syntax)</p>
-<dt><code>&#8211;dvipsoutputdir</code> DIR</p>
-<dd> specify output directory (dvips syntax)</p>
-<dt><code>&#8211;pdftexoutputdir</code> DIR</p>
-<dd> specify output directory (pdftex syntax)</p>
-<dt><code>&#8211;pxdvioutputdir</code> DIR</p>
-<dd> specify output directory (pxdvi syntax)</p>
-<dt><code>&#8211;outputdir</code> DIR</p>
-<dd> specify output directory (for all files)</p>
-<dt><code>&#8211;copy</code></p>
-<dd> cp generic files rather than using symlinks</p>
-<dt><code>&#8211;force</code></p>
-<dd> recreate files even if config hasn&#8217;t changed</p>
-<dt><code>&#8211;nomkmap</code></p>
-<dd> do not recreate map files</p>
-<dt><code>&#8211;nohash</code></p>
-<dd> do not run mktexlsr (a.k.a. texhash)</p>
-<dt><code>&#8211;sys</code></p>
-<dd> affect system-wide files (equivalent to updmap-sys)</p>
-<dt><code>&#8211;user</code></p>
-<dd> affect personal files (equivalent to updmap-user)</p>
-<dt><code>-n</code>, <code>&#8211;dry-run</code></p>
-<dd> only show the configuration, no output</p>
-<dt><code>&#8211;quiet</code>, <code>&#8211;silent</code></p>
-<dd> reduce verbosity</dl>
+<dt><code>&#8211;cnffile</code> FILE</dt>
+<dd> read FILE for the updmap configuration (can be given multiple times, in which case all the files are used)</dd>
+<dt><code>&#8211;dvipdfmxoutputdir</code> DIR</dt>
+<dd> specify output directory (dvipdfm(x) syntax)</dd>
+<dt><code>&#8211;dvipsoutputdir</code> DIR</dt>
+<dd> specify output directory (dvips syntax)</dd>
+<dt><code>&#8211;pdftexoutputdir</code> DIR</dt>
+<dd> specify output directory (pdftex syntax)</dd>
+<dt><code>&#8211;pxdvioutputdir</code> DIR</dt>
+<dd> specify output directory (pxdvi syntax)</dd>
+<dt><code>&#8211;outputdir</code> DIR</dt>
+<dd> specify output directory (for all files)</dd>
+<dt><code>&#8211;copy</code></dt>
+<dd> cp generic files rather than using symlinks</dd>
+<dt><code>&#8211;force</code></dt>
+<dd> recreate files even if config hasn&#8217;t changed</dd>
+<dt><code>&#8211;nomkmap</code></dt>
+<dd> do not recreate map files</dd>
+<dt><code>&#8211;nohash</code></dt>
+<dd> do not run mktexlsr (a.k.a. texhash)</dd>
+<dt><code>&#8211;sys</code></dt>
+<dd> affect system-wide files (equivalent to updmap-sys)</dd>
+<dt><code>&#8211;user</code></dt>
+<dd> affect personal files (equivalent to updmap-user)</dd>
+<dt><code>-n</code>, <code>&#8211;dry-run</code></dt>
+<dd> only show the configuration, no output</dd>
+<dt><code>&#8211;quiet</code>, <code>&#8211;silent</code></dt>
+<dd> reduce verbosity</dd></dl>
 <h3>Commands:</h3>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> show this message and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> show version information and exit</p>
-<dt><code>&#8211;showoption</code> OPTION</p>
-<dd> show the current setting of OPTION</p>
-<dt><code>&#8211;showoptions</code> OPTION</p>
-<dd> show possible settings for OPTION</p>
-<dt><code>&#8211;setoption</code> OPTION VALUE</p>
-<dd> set OPTION to value; option names below</p>
-<dt><code>&#8211;setoption</code> OPTION=VALUE</p>
-<dd> as above, just different syntax</p>
-<dt><code>&#8211;enable</code> MAPTYPE MAPFILE</p>
-<dd> add &quot;MAPTYPE MAPFILE&quot; to updmap.cfg, where MAPTYPE is Map, MixedMap, or KanjiMap</p>
-<dt><code>&#8211;enable</code> Map=MAPFILE</p>
-<dd> add &quot;Map MAPFILE&quot; to updmap.cfg</p>
-<dt><code>&#8211;enable</code> MixedMap=MAPFILE</p>
-<dd> add &quot;MixedMap MAPFILE&quot; to updmap.cfg</p>
-<dt><code>&#8211;enable</code> KanjiMap=MAPFILE</p>
-<dd> add &quot;KanjiMap MAPFILE&quot; to updmap.cfg</p>
-<dt><code>&#8211;disable</code> MAPFILE</p>
-<dd> disable MAPFILE, of whatever type</p>
-<dt><code>&#8211;listmaps</code></p>
-<dd> list all maps (details below)</p>
-<dt><code>&#8211;listavailablemaps</code></p>
-<dd> list available maps (details below)</p>
-<dt><code>&#8211;syncwithtrees</code></p>
-<dd> disable unavailable map files in updmap.cfg</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> show this message and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> show version information and exit</dd>
+<dt><code>&#8211;showoption</code> OPTION</dt>
+<dd> show the current setting of OPTION</dd>
+<dt><code>&#8211;showoptions</code> OPTION</dt>
+<dd> show possible settings for OPTION</dd>
+<dt><code>&#8211;setoption</code> OPTION VALUE</dt>
+<dd> set OPTION to value; option names below</dd>
+<dt><code>&#8211;setoption</code> OPTION=VALUE</dt>
+<dd> as above, just different syntax</dd>
+<dt><code>&#8211;enable</code> MAPTYPE MAPFILE</dt>
+<dd> add &quot;MAPTYPE MAPFILE&quot; to updmap.cfg, where MAPTYPE is Map, MixedMap, or KanjiMap</dd>
+<dt><code>&#8211;enable</code> Map=MAPFILE</dt>
+<dd> add &quot;Map MAPFILE&quot; to updmap.cfg</dd>
+<dt><code>&#8211;enable</code> MixedMap=MAPFILE</dt>
+<dd> add &quot;MixedMap MAPFILE&quot; to updmap.cfg</dd>
+<dt><code>&#8211;enable</code> KanjiMap=MAPFILE</dt>
+<dd> add &quot;KanjiMap MAPFILE&quot; to updmap.cfg</dd>
+<dt><code>&#8211;disable</code> MAPFILE</dt>
+<dd> disable MAPFILE, of whatever type</dd>
+<dt><code>&#8211;listmaps</code></dt>
+<dd> list all maps (details below)</dd>
+<dt><code>&#8211;listavailablemaps</code></dt>
+<dd> list available maps (details below)</dd>
+<dt><code>&#8211;syncwithtrees</code></dt>
+<dd> disable unavailable map files in updmap.cfg</dd></dl>
 <p> The main output:</p>
 <dl>
 <dt>
-<dd> The main output of updmap is the files containing the individual font map lines which the drivers (dvips, pdftex, etc.) read to handle fonts.</p>
+</dt><dd> The main output of updmap is the files containing the individual font map lines which the drivers (dvips, pdftex, etc.) read to handle fonts.</dd>
 <dt>
-<dd> The map files for dvips (psfonts.map) and pdftex and dvipdfmx (pdftex.map) are written to TEXMFVAR/fonts/map/updmap/{dvips,pdftex}/.</p>
+</dt><dd> The map files for dvips (psfonts.map) and pdftex and dvipdfmx (pdftex.map) are written to TEXMFVAR/fonts/map/updmap/{dvips,pdftex}/.</dd>
 <dt>
-<dd> In addition, information about Kanji fonts is written to TEXMFVAR/fonts/map/updmap/dvipdfmx/kanjix.map, and optionally to TEXMFVAR/fonts/map/updmap/pxdvi/xdvi-ptex.map. These are for Kanji only and are not like other map files. dvipdfmx reads pdftex.map for the map entries for non-Kanji fonts.</p>
+</dt><dd> In addition, information about Kanji fonts is written to TEXMFVAR/fonts/map/updmap/dvipdfmx/kanjix.map, and optionally to TEXMFVAR/fonts/map/updmap/pxdvi/xdvi-ptex.map. These are for Kanji only and are not like other map files. dvipdfmx reads pdftex.map for the map entries for non-Kanji fonts.</dd>
 <dt>
-<dd> If no option is given, so the invocation is just &quot;updmap-user&quot; or &quot;updmap-sys&quot;, these output files are always recreated.</p>
+</dt><dd> If no option is given, so the invocation is just &quot;updmap-user&quot; or &quot;updmap-sys&quot;, these output files are always recreated.</dd>
 <dt>
-<dd> Otherwise, if an option such as <code>&#8211;enable</code> or <code>&#8211;disable</code> is given, the output files are recreated if the list of enabled map files (from updmap.cfg) has changed. The <code>&#8211;force</code> option overrides this, always recreating the output files.</dl>
+</dt><dd> Otherwise, if an option such as <code>&#8211;enable</code> or <code>&#8211;disable</code> is given, the output files are recreated if the list of enabled map files (from updmap.cfg) has changed. The <code>&#8211;force</code> option overrides this, always recreating the output files.</dd></dl>
 <p> Explanation of the map types:</p>
 <dl>
 <dt>
-<dd> The normal type is Map.</p>
+</dt><dd> The normal type is Map.</dd>
 <dt>
-<dd> The only difference between Map and MixedMap is that MixedMap entries are not added to psfonts_pk.map. The purpose is to help users with devices that render Type 1 outline fonts worse than mode-tuned Type 3 bitmap fonts. So, MixedMap is used for fonts that are available as both Type 1 and Metafont.</p>
+</dt><dd> The only difference between Map and MixedMap is that MixedMap entries are not added to psfonts_pk.map. The purpose is to help users with devices that render Type 1 outline fonts worse than mode-tuned Type 3 bitmap fonts. So, MixedMap is used for fonts that are available as both Type 1 and Metafont.</dd>
 <dt>
-<dd> KanjiMap entries are added to psfonts_t1.map and kanjix.map.</dl>
+</dt><dd> KanjiMap entries are added to psfonts_t1.map and kanjix.map.</dd></dl>
 <p> Explanation of the OPTION names for <code>&#8211;showoptions</code>, <code>&#8211;showoption</code>, <code>&#8211;setoption</code>:</p>
 <dl>
-<dt>dvipsPreferOutline</p>
-<dd> true,false (default true)</p>
+<dt>dvipsPreferOutline</dt>
+<dd> true,false (default true)</dd>
 <dt>
-<dd> Whether dvips uses bitmaps or outlines, when both are available.</p>
-<dt>dvipsDownloadBase35</p>
-<dd> true,false (default true)</p>
+</dt><dd> Whether dvips uses bitmaps or outlines, when both are available.</dd>
+<dt>dvipsDownloadBase35</dt>
+<dd> true,false (default true)</dd>
 <dt>
-<dd> Whether dvips includes the standard 35 PostScript fonts in its output.</p>
-<dt>pdftexDownloadBase14</p>
-<dd> true,false (default true)</p>
+</dt><dd> Whether dvips includes the standard 35 PostScript fonts in its output.</dd>
+<dt>pdftexDownloadBase14</dt>
+<dd> true,false (default true)</dd>
 <dt>
-<dd> Whether pdftex includes the standard 14 PDF fonts in its output.</p>
-<dt>pxdviUse</p>
-<dd> true,false (default false)</p>
+</dt><dd> Whether pdftex includes the standard 14 PDF fonts in its output.</dd>
+<dt>pxdviUse</dt>
+<dd> true,false (default false)</dd>
 <dt>
-<dd> Whether maps for pxdvi (Japanese-patched xdvi) are under updmap&#8217;s control.</p>
-<dt>jaEmbed</p>
-<dd> (any string)</p>
-<dt>jaVariant</p>
-<dd> (any string)</p>
-<dt>scEmbed</p>
-<dd> (any string)</p>
-<dt>tcEmbed</p>
-<dd> (any string)</p>
-<dt>koEmbed</p>
-<dd> (any string)</p>
+</dt><dd> Whether maps for pxdvi (Japanese-patched xdvi) are under updmap&#8217;s control.</dd>
+<dt>jaEmbed</dt>
+<dd> (any string)</dd>
+<dt>jaVariant</dt>
+<dd> (any string)</dd>
+<dt>scEmbed</dt>
+<dd> (any string)</dd>
+<dt>tcEmbed</dt>
+<dd> (any string)</dd>
+<dt>koEmbed</dt>
+<dd> (any string)</dd>
 <dt>
-<dd> See below.</p>
-<dt>LW35</p>
-<dd> URWkb,URW,ADOBEkb,ADOBE (default URWkb)</p>
+</dt><dd> See below.</dd>
+<dt>LW35</dt>
+<dd> URWkb,URW,ADOBEkb,ADOBE (default URWkb)</dd>
 <dt>
-<dd> Adapt the font and file names of the standard 35 PostScript fonts. </p>
+</dt><dd> Adapt the font and file names of the standard 35 PostScript fonts. </dd>
 <pre>
-<dt>URWkb<dd>URW fonts with &quot;berry&quot; filenames    (e.g. uhvbo8ac.pfb)
-<dt>URW<dd>URW fonts with &quot;vendor&quot; filenames   (e.g. n019064l.pfb)
+<dt>URWkb</dt><dd>URW fonts with &quot;berry&quot; filenames    (e.g. uhvbo8ac.pfb)
+</dd><dt>URW</dt><dd>URW fonts with &quot;vendor&quot; filenames   (e.g. n019064l.pfb)
 </pre>
-<dt>ADOBEkb</p>
-<dd> Adobe fonts with &quot;berry&quot; filenames (e.g. phvbo8an.pfb)</p>
-<dt>ADOBE</p>
-<dd> Adobe fonts with &quot;vendor&quot; filenames (e.g. hvnbo___.pfb)</p>
+</dd><dt>ADOBEkb</dt>
+<dd> Adobe fonts with &quot;berry&quot; filenames (e.g. phvbo8an.pfb)</dd>
+<dt>ADOBE</dt>
+<dd> Adobe fonts with &quot;vendor&quot; filenames (e.g. hvnbo___.pfb)</dd>
 <dt>
-<dd> These options are only read and acted on by updmap; dvips, pdftex, etc., do not know anything about them. They work by changing the default map file which the programs read, so they can be overridden by specifying command-line options or configuration files to the programs, as explained at the beginning of updmap.cfg.</p>
+</dt><dd> These options are only read and acted on by updmap; dvips, pdftex, etc., do not know anything about them. They work by changing the default map file which the programs read, so they can be overridden by specifying command-line options or configuration files to the programs, as explained at the beginning of updmap.cfg.</dd>
 <dt>
-<dd> The options jaEmbed and jaVariant (formerly kanjiEmbed and kanjiVariant) specify special replacements in the map lines. If a map contains the string @jaEmbed@, then this will be replaced by the value of that option; similarly for jaVariant. In this way, users of Japanese TeX can select different fonts to be included in the final output. The counterpart for Simplified Chinese, Traditional Chinese and Korean fonts are scEmbed, tcEmbed and koEmbed respectively.</dl>
+</dt><dd> The options jaEmbed and jaVariant (formerly kanjiEmbed and kanjiVariant) specify special replacements in the map lines. If a map contains the string @jaEmbed@, then this will be replaced by the value of that option; similarly for jaVariant. In this way, users of Japanese TeX can select different fonts to be included in the final output. The counterpart for Simplified Chinese, Traditional Chinese and Korean fonts are scEmbed, tcEmbed and koEmbed respectively.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> Explanation of trees and files normally used:</p>
 <dl>
 <dt>
-<dd> If <code>&#8211;cnffile</code> is specified on the command line (can be given multiple times), its value(s) is(are) used. Otherwise, updmap reads all the updmap.cfg files found by running `kpsewhich <code>-all</code> updmap.cfg&#8217;, in the order returned by kpsewhich (which is the order of trees defined in texmf.cnf).</p>
+</dt><dd> If <code>&#8211;cnffile</code> is specified on the command line (can be given multiple times), its value(s) is(are) used. Otherwise, updmap reads all the updmap.cfg files found by running `kpsewhich <code>-all</code> updmap.cfg&#8217;, in the order returned by kpsewhich (which is the order of trees defined in texmf.cnf).</dd>
 <dt>
-<dd> In either case, if multiple updmap.cfg files are found, all the maps mentioned in all the updmap.cfg files are merged.</p>
+</dt><dd> In either case, if multiple updmap.cfg files are found, all the maps mentioned in all the updmap.cfg files are merged.</dd>
 <dt>
-<dd> Thus, if updmap.cfg files are present in all trees, and the default layout is used as shipped with TeX Live on Debian, the following files are read, in the given order. </p>
+</dt><dd> Thus, if updmap.cfg files are present in all trees, and the default layout is used as shipped with TeX Live on Debian, the following files are read, in the given order. </dd>
 <pre>
-<dt><dd>For updmap-sys:
+<dt></dt><dd>For updmap-sys:
 TEXMFSYSCONFIG <i>,/etc/texmf/web2c/updmap.cfg/</i>
 TEXMFSYSVAR    <i>,/var/lib/texmf/web2c/updmap.cfg/</i>
 TEXMFLOCAL     <i>,/usr/local/share/texmf/web2c/updmap.cfg/</i>
 TEXMFDEBIAN    <i>,/usr/share/texmf/web2c/updmap.cfg/</i>
 TEXMFDIST      <i>,/usr/share/texlive/texmf/web2c/updmap.cfg/</i>
-<dt><dd>For updmap-user:
+</dd><dt></dt><dd>For updmap-user:
 TEXMFCONFIG    $HOME/.texmf-config/web2c/updmap.cfg
 TEXMFVAR       $HOME/.texmf-var/web2c/updmap.cfg
 TEXMFHOME      <i>,$HOME/texmf/web2c/updmap.cfg/</i>
@@ -186,59 +186,59 @@ TEXMFSYSVAR    <i>,/var/lib/texmf/web2c/updmap.cfg/</i>
 TEXMFLOCAL     <i>,/usr/local/share/texmf/web2c/updmap.cfg/</i>
 TEXMFDEBIAN    <i>,/usr/share/texmf/web2c/updmap.cfg/</i>
 TEXMFDIST      <i>,/usr/share/texlive/texmf/web2c/updmap.cfg/</i>
-<dt><dd></pre>
-<dt>
-<dd> According to the actions, updmap might write to one of the given files or create a new updmap.cfg, described further below.</dl>
+</dd><dt></dt><dd></pre>
+</dd><dt>
+</dt><dd> According to the actions, updmap might write to one of the given files or create a new updmap.cfg, described further below.</dd></dl>
 <p> Where and which updmap.cfg changes are saved:</p>
 <dl>
 <dt>
-<dd> When no options are given, the updmap.cfg file(s) are only read, not written. It&#8217;s when an option <code>&#8211;setoption</code>, <code>&#8211;enable</code> or <code>&#8211;disable</code> is specified that an updmap.cfg needs to be updated. In this case:</p>
+</dt><dd> When no options are given, the updmap.cfg file(s) are only read, not written. It&#8217;s when an option <code>&#8211;setoption</code>, <code>&#8211;enable</code> or <code>&#8211;disable</code> is specified that an updmap.cfg needs to be updated. In this case:</dd>
 <dt>
-<dd> 1) If config files are given on the command line, then the first one given is used to save any such changes.</p>
+</dt><dd> 1) If config files are given on the command line, then the first one given is used to save any such changes.</dd>
 <dt>
-<dd> 2) If the config files are taken from kpsewhich output, then the algorithm is more complex:</p>
+</dt><dd> 2) If the config files are taken from kpsewhich output, then the algorithm is more complex:</dd>
 <dt>
-<dd> 2a) If <i>,$TEXMFCONFIG/web2c/updmap.cfg/</i> or <i>,$TEXMFHOME/web2c/updmap.cfg/</i> appears in the list of used files, then the one listed first by kpsewhich <code>&#8211;all</code> (equivalently, the one returned by kpsewhich updmap.cfg), is used.</p>
+</dt><dd> 2a) If <i>,$TEXMFCONFIG/web2c/updmap.cfg/</i> or <i>,$TEXMFHOME/web2c/updmap.cfg/</i> appears in the list of used files, then the one listed first by kpsewhich <code>&#8211;all</code> (equivalently, the one returned by kpsewhich updmap.cfg), is used.</dd>
 <dt>
-<dd> 2b) If neither of the above two are present and changes are made, a new config file is created in <i>,$TEXMFCONFIG/web2c/updmap.cfg/</i>.</p>
+</dt><dd> 2b) If neither of the above two are present and changes are made, a new config file is created in <i>,$TEXMFCONFIG/web2c/updmap.cfg/</i>.</dd>
 <dt>
-<dd> In general, the idea is that if the user cannot write to a given config file, a higher-level one can be used. That way, the distribution&#8217;s settings can be overridden system-wide using TEXMFLOCAL, and system settings can be overridden again in a particular user&#8217;s TEXMFHOME or TEXMFCONFIG.</dl>
+</dt><dd> In general, the idea is that if the user cannot write to a given config file, a higher-level one can be used. That way, the distribution&#8217;s settings can be overridden system-wide using TEXMFLOCAL, and system settings can be overridden again in a particular user&#8217;s TEXMFHOME or TEXMFCONFIG.</dd></dl>
 <p> Resolving multiple definitions of a font:</p>
 <dl>
 <dt>
-<dd> If a font is defined in more than one map file, then the definition coming from the first-listed updmap.cfg is used. If a font is defined multiple times within the same map file, one is chosen arbitrarily. In both cases a warning is issued.</dl>
+</dt><dd> If a font is defined in more than one map file, then the definition coming from the first-listed updmap.cfg is used. If a font is defined multiple times within the same map file, one is chosen arbitrarily. In both cases a warning is issued.</dd></dl>
 <p> Disabling maps:</p>
 <dl>
 <dt>
-<dd> updmap.cfg files with higher priority (listed earlier) can disable maps mentioned in lower priority (listed later) updmap.cfg files by writing, e.g.,</p>
+</dt><dd> updmap.cfg files with higher priority (listed earlier) can disable maps mentioned in lower priority (listed later) updmap.cfg files by writing, e.g.,</dd>
 <dt>
-<dd> #! Map mapname.map</p>
+</dt><dd> #! Map mapname.map</dd>
 <dt>
-<dd> or</p>
+</dt><dd> or</dd>
 <dt>
-<dd> #! MixedMap mapname.map</p>
-<dt>in the higher-priority updmap.cfg file.</p>
-<dd> (The #! must be at the</p>
+</dt><dd> #! MixedMap mapname.map</dd>
+<dt>in the higher-priority updmap.cfg file.</dt>
+<dd> (The #! must be at the</dd>
 <dt>
-<dd> beginning of the line, with at least one space or tab afterward, and whitespace between each word on the list.)</p>
+</dt><dd> beginning of the line, with at least one space or tab afterward, and whitespace between each word on the list.)</dd>
 <dt>
-<dd> As an example, suppose you have a copy of MathTime Pro fonts and want to disable the Belleek version of the fonts; that is, disable the map belleek.map. You can create the file <i>,$TEXMFCONFIG/web2c/updmap.cfg/</i> with the content</p>
+</dt><dd> As an example, suppose you have a copy of MathTime Pro fonts and want to disable the Belleek version of the fonts; that is, disable the map belleek.map. You can create the file <i>,$TEXMFCONFIG/web2c/updmap.cfg/</i> with the content</dd>
 <dt>
-<dd> #! Map belleek.map Map mt-plus.map Map mt-yy.map</p>
+</dt><dd> #! Map belleek.map Map mt-plus.map Map mt-yy.map</dd>
 <dt>
-<dd> and call updmap.</dl>
+</dt><dd> and call updmap.</dd></dl>
 <p> Listing of maps:</p>
 <dl>
 <dt>
-<dd> The two options <code>&#8211;listmaps</code> and <code>&#8211;listavailablemaps</code> list all maps defined in any of the updmap.cfg files (for <code>&#8211;listmaps</code>), and only those actually found on the system (for <code>&#8211;listavailablemaps</code>). The output format is one line per font map, with the following fields separated by tabs: map, type (Map, MixedMap, KanjiMap), status (enabled, disabled), origin (the updmap.cfg file where it is mentioned, or &#8216;builtin&#8217; for the three basic maps).</p>
+</dt><dd> The two options <code>&#8211;listmaps</code> and <code>&#8211;listavailablemaps</code> list all maps defined in any of the updmap.cfg files (for <code>&#8211;listmaps</code>), and only those actually found on the system (for <code>&#8211;listavailablemaps</code>). The output format is one line per font map, with the following fields separated by tabs: map, type (Map, MixedMap, KanjiMap), status (enabled, disabled), origin (the updmap.cfg file where it is mentioned, or &#8216;builtin&#8217; for the three basic maps).</dd>
 <dt>
-<dd> In the case of <code>&#8211;listmaps</code> there can be one additional fields (again separated by tab) containing &#8216;(not available)&#8217; for those map files that cannot be found.</dl>
+</dt><dd> In the case of <code>&#8211;listmaps</code> there can be one additional fields (again separated by tab) containing &#8216;(not available)&#8217; for those map files that cannot be found.</dd></dl>
 <p> updmap-user vs. updmap-sys:</p>
 <dl>
 <dt>
-<dd> When updmap-sys is run, TEXMFSYSCONFIG and TEXMFSYSVAR are used instead of TEXMFCONFIG and TEXMFVAR, respectively. This is the primary difference between updmap-sys and updmap-user.</p>
+</dt><dd> When updmap-sys is run, TEXMFSYSCONFIG and TEXMFSYSVAR are used instead of TEXMFCONFIG and TEXMFVAR, respectively. This is the primary difference between updmap-sys and updmap-user.</dd>
 <dt>
-<dd> Other locations may be used if you give them on the command line, or these trees don&#8217;t exist, or you are not using the original TeX Live.</dl>
+</dt><dd> Other locations may be used if you give them on the command line, or these trees don&#8217;t exist, or you are not using the original TeX Live.</dd></dl>
 <p> To see the precise locations of the various files that will be read and written, give the <code>-n</code> option (or read the source).</p>
 <h2>EXAMPLES</h2>
 <p> The log file is written to TEXMFVAR/web2c/updmap.log. </p>
@@ -246,50 +246,50 @@ TEXMFDIST      <i>,/usr/share/texlive/texmf/web2c/updmap.cfg/</i>
 <h2>FILES</h2>
 <p> Configuration and input files:</p>
 <dl>
-<dt><i>updmap.cfg</i></p>
-<dd> Main configuration file. In <i>texmf-dist/web2c</i> by default, but may be located elsewhere depending on your distribution. Each texmf tree read should have its own <i>updmap.cfg</i>.</p>
-<dt><i>dvips35.map</i></p>
-<dd> Map file for standard 35 PostScript fonts for use with <code><a href="/docs/linux/man/1-dvips/">dvips</a></code>(1).</p>
-<dt><i>pdftex35.map</i></p>
-<dd> Map file for standard 35 PostScript fonts for use with <code><a href="/docs/linux/man/1-pdftex/">pdftex</a></code>(1).</p>
-<dt><i>ps2pk35.map</i></p>
-<dd> Map file for standard 35 PostScript fonts for use with <code><a href="/docs/linux/man/1-ps2pk/">ps2pk</a></code>(1).</dl>
+<dt><i>updmap.cfg</i></dt>
+<dd> Main configuration file. In <i>texmf-dist/web2c</i> by default, but may be located elsewhere depending on your distribution. Each texmf tree read should have its own <i>updmap.cfg</i>.</dd>
+<dt><i>dvips35.map</i></dt>
+<dd> Map file for standard 35 PostScript fonts for use with <code><a href="/docs/linux/man/1-dvips/">dvips</a></code>(1).</dd>
+<dt><i>pdftex35.map</i></dt>
+<dd> Map file for standard 35 PostScript fonts for use with <code><a href="/docs/linux/man/1-pdftex/">pdftex</a></code>(1).</dd>
+<dt><i>ps2pk35.map</i></dt>
+<dd> Map file for standard 35 PostScript fonts for use with <code><a href="/docs/linux/man/1-ps2pk/">ps2pk</a></code>(1).</dd></dl>
 <p> Output files:</p>
 <dl>
-<dt><i>psfonts.map</i></p>
-<dd> For <code><a href="/docs/linux/man/1-dvips/">dvips</a></code>(1). Same as <i>psfonts_t1.map</i> if option <code>dvipsPreferOutline</code> active, else as <i>psfonts_pk.map</i>.</p>
-<dt><i>psfonts_pk.map</i></p>
-<dd> For <code><a href="/docs/linux/man/1-dvips/">dvips</a></code>(1). Without information from MixedMap files. (Setting of <code>dvipsPreferOutline</code> ignored.)</p>
-<dt><i>psfonts_t1.map</i></p>
-<dd> For <code><a href="/docs/linux/man/1-dvips/">dvips</a></code>(1). With information from MixedMap files. (Setting of <code>dvipsPreferOutline</code> ignored.)</p>
-<dt><i>download35.map</i></p>
-<dd> For <code><a href="/docs/linux/man/1-dvips/">dvips</a></code>(1). Always downloads the standard 35 fonts. (Setting of <code>dvipsDownloadBase35</code> ignored.)</p>
-<dt><i>builtin35.map</i></p>
-<dd> For <code><a href="/docs/linux/man/1-dvips/">dvips</a></code>(1). Never downloads the standard 35 fonts. (Setting of <code>dvipsDownloadBase35</code> ignored.)</p>
-<dt><i>pdftex.map</i></p>
-<dd> For <code><a href="/docs/linux/man/1-pdftex/">pdftex</a></code>(1). Same as <i>pdftex_dl14.map</i> if option <code>pdftexDownloadBase14</code> active, else as <i>pdftex_ndl14.map</i>.</p>
-<dt><i>pdftex_dl14.map</i></p>
-<dd> For <code><a href="/docs/linux/man/1-pdftex/">pdftex</a></code>(1). Always downloads the standard 14 fonts.</p>
-<dt><i>pdftex_ndl14.map</i></p>
-<dd> For <code><a href="/docs/linux/man/1-pdftex/">pdftex</a></code>(1). Never downloads the standard 14 fonts.</p>
-<dt><i>ps2pk.map</i></p>
-<dd> Similar to <i>psfonts.map</i> file, but forces all fonts to be downloaded, so this map file can be used with <code><a href="/docs/linux/man/1-xdvi/">xdvi</a></code>(1) and <code><a href="/docs/linux/man/1-ps2pk/">ps2pk</a></code>(1).</dl>
+<dt><i>psfonts.map</i></dt>
+<dd> For <code><a href="/docs/linux/man/1-dvips/">dvips</a></code>(1). Same as <i>psfonts_t1.map</i> if option <code>dvipsPreferOutline</code> active, else as <i>psfonts_pk.map</i>.</dd>
+<dt><i>psfonts_pk.map</i></dt>
+<dd> For <code><a href="/docs/linux/man/1-dvips/">dvips</a></code>(1). Without information from MixedMap files. (Setting of <code>dvipsPreferOutline</code> ignored.)</dd>
+<dt><i>psfonts_t1.map</i></dt>
+<dd> For <code><a href="/docs/linux/man/1-dvips/">dvips</a></code>(1). With information from MixedMap files. (Setting of <code>dvipsPreferOutline</code> ignored.)</dd>
+<dt><i>download35.map</i></dt>
+<dd> For <code><a href="/docs/linux/man/1-dvips/">dvips</a></code>(1). Always downloads the standard 35 fonts. (Setting of <code>dvipsDownloadBase35</code> ignored.)</dd>
+<dt><i>builtin35.map</i></dt>
+<dd> For <code><a href="/docs/linux/man/1-dvips/">dvips</a></code>(1). Never downloads the standard 35 fonts. (Setting of <code>dvipsDownloadBase35</code> ignored.)</dd>
+<dt><i>pdftex.map</i></dt>
+<dd> For <code><a href="/docs/linux/man/1-pdftex/">pdftex</a></code>(1). Same as <i>pdftex_dl14.map</i> if option <code>pdftexDownloadBase14</code> active, else as <i>pdftex_ndl14.map</i>.</dd>
+<dt><i>pdftex_dl14.map</i></dt>
+<dd> For <code><a href="/docs/linux/man/1-pdftex/">pdftex</a></code>(1). Always downloads the standard 14 fonts.</dd>
+<dt><i>pdftex_ndl14.map</i></dt>
+<dd> For <code><a href="/docs/linux/man/1-pdftex/">pdftex</a></code>(1). Never downloads the standard 14 fonts.</dd>
+<dt><i>ps2pk.map</i></dt>
+<dd> Similar to <i>psfonts.map</i> file, but forces all fonts to be downloaded, so this map file can be used with <code><a href="/docs/linux/man/1-xdvi/">xdvi</a></code>(1) and <code><a href="/docs/linux/man/1-ps2pk/">ps2pk</a></code>(1).</dd></dl>
 <p> Configuration files for <code><a href="/docs/linux/man/1-dvips/">dvips</a></code>(1):</p>
 <dl>
-<dt><i>config.builtin35</i></p>
-<dd> Loads <i>builtin35.map</i> instead of <i>psfonts.map</i>.</p>
-<dt><i>config.download35</i></p>
-<dd> Loads <i>download35.map</i> instead of <i>psfonts.map</i>.</p>
-<dt><i>config.outline</i></p>
-<dd> Loads <i>psfonts_t1.map</i> instead of <i>psfonts.map</i>.</p>
-<dt><i>config.pdf</i></p>
-<dd> Loads <i>psfonts_t1.map</i> instead of <i>psfonts.map</i> and has additional settings for PDF generation.</p>
-<dt><i>config.pk</i></p>
-<dd> Loads <i>psfonts_pk.map</i> instead of <i>psfonts.map</i>.</p>
-<dt><i>config.www</i></p>
-<dd> Loads <i>psfonts_t1.map</i> instead of <i>psfonts.map</i>. (For compatibility with old versions.)</p>
-<dt><i>config.gstopk</i></p>
-<dd> Loads <i>psfonts_t1.map</i> instead of <i>psfonts.map</i>.</dl>
+<dt><i>config.builtin35</i></dt>
+<dd> Loads <i>builtin35.map</i> instead of <i>psfonts.map</i>.</dd>
+<dt><i>config.download35</i></dt>
+<dd> Loads <i>download35.map</i> instead of <i>psfonts.map</i>.</dd>
+<dt><i>config.outline</i></dt>
+<dd> Loads <i>psfonts_t1.map</i> instead of <i>psfonts.map</i>.</dd>
+<dt><i>config.pdf</i></dt>
+<dd> Loads <i>psfonts_t1.map</i> instead of <i>psfonts.map</i> and has additional settings for PDF generation.</dd>
+<dt><i>config.pk</i></dt>
+<dd> Loads <i>psfonts_pk.map</i> instead of <i>psfonts.map</i>.</dd>
+<dt><i>config.www</i></dt>
+<dd> Loads <i>psfonts_t1.map</i> instead of <i>psfonts.map</i>. (For compatibility with old versions.)</dd>
+<dt><i>config.gstopk</i></dt>
+<dd> Loads <i>psfonts_t1.map</i> instead of <i>psfonts.map</i>.</dd></dl>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to: tex-live [at] tug.org<br />
  TeX Live home page: &lt;<a rel="nofollow" href="https://tug.org/texlive/">https://tug.org/texlive/</a>&gt; </p>

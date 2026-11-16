@@ -55,9 +55,9 @@ description: "ktalkd_selinux – Security Enhanced Linux Policy for the ktalkd p
 <p> Policy governs the access confined processes have to these ports. SELinux ktalkd policy is very flexible allowing users to setup their ktalkd processes in as secure a method as possible. </p>
 <p> The following port types are defined for ktalkd: </p>
 <dl>
-<dt><code>ktalkd_port_t</code></p>
+<dt><code>ktalkd_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: udp 517,518</dl>
+</dd><dd>Default Defined Ports: udp 517,518</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type ktalkd_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -99,8 +99,8 @@ description: "ktalkd_selinux – Security Enhanced Linux Policy for the ktalkd p
 <p> <code>ktalkd_exec_t</code> </p>
 <p> &#8211; Set files with the ktalkd_exec_t type, if you want to transition an executable to the ktalkd_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/ktalkd, /usr/sbin/ktalkd, /usr/sbin/in.talkd, /usr/sbin/in.ntalkd </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/ktalkd, /usr/sbin/ktalkd, /usr/sbin/in.talkd, /usr/sbin/in.ntalkd </dd>
 </dl>
 <p> <code>ktalkd_log_t</code> </p>
 <p> &#8211; Set files with the ktalkd_log_t type, if you want to treat the data as ktalkd log data, usually stored under the /var/log directory. </p>

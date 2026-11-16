@@ -10,19 +10,14 @@ description: "sd_seat_get_active, sd_seat_get_sessions, sd_seat_can_multi_sessio
 <p>sd_seat_get_active, sd_seat_get_sessions, sd_seat_can_multi_session, sd_seat_can_tty, sd_seat_can_graphical &#8211; Determine state of a specific seat</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;systemd/sd-login.h&gt;
-
 int sd_seat_get_active(const char *seat, char **session, uid_t *uid);
-
 int sd_seat_get_sessions(const char *seat, char ***sessions, uid_t **uid, unsigned int *n_uids);
-
 int sd_seat_can_multi_session(const char *seat);
-
 int sd_seat_can_tty(const char *seat);
-
 int sd_seat_can_graphical(const char *seat);</code></pre>
 <h2>Description</h2>
 <p><code>sd_seat_get_active()</code></p>
-<dd>may be used to determine which session is currently active on a seat, if there is any. Returns the session identifier and the user identifier of the Unix user the session is belonging to. Either the session or the user identifier parameter can be passed <code>NULL</code>, in case only one of the parameters shall be queried. The returned string needs to be freed with the libc <code><a href="/docs/linux/man/3-free/">free</a></code>(3) call after use. </p>
+<dd>may be used to determine which session is currently active on a seat, if there is any. Returns the session identifier and the user identifier of the Unix user the session is belonging to. Either the session or the user identifier parameter can be passed <code>NULL</code>, in case only one of the parameters shall be queried. The returned string needs to be freed with the libc <code><a href="/docs/linux/man/3-free/">free</a></code>(3) call after use. </dd>
 <p> <code>sd_seat_get_sessions()</code> may be used to determine all sessions on the specified seat. Returns two arrays, one (<code>NULL</code> terminated) with the session identifiers of the sessions and one with the user identifiers of the Unix users the sessions belong to. An additional parameter may be used to return the number of entries in the latter array. The two arrays and the latter parameter may be passed as <code>NULL</code> in case these values need not to be determined. The arrays and the strings referenced by them need to be freed with the libc <code><a href="/docs/linux/man/3-free/">free</a></code>(3) call after use. Note that instead of an empty array <code>NULL</code> may be returned and should be considered equivalent to an empty array. </p>
 <p> <code>sd_seat_can_multi_session()</code> may be used to determine whether a specific seat is capable of multi-session, i.e. allows multiple login sessions in parallel (with only one being active at a time). </p>
 <p> <code>sd_seat_can_tty()</code> may be used to determine whether a specific seat provides TTY functionality, i.e. is useful as a text console. </p>

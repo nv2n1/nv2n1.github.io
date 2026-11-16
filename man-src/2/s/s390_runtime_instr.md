@@ -22,14 +22,14 @@ int s390_runtime_instr(int command, int signum);
 <p> On success, <code>s390_runtime_instr</code>() returns 0 and enables the thread for run-time instrumentation by assigning the thread a default run-time instrumentation control block. The caller can then read and modify the control block and start the run-time instrumentation. On error, -1 is returned and <i>errno</i> is set to one of the error codes listed below.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> The value specified in <i>command</i> is not a valid command.</p>
-<dt><code>EINVAL</code></p>
-<dd> The value specified in <i>signum</i> is not a real-time signal number. From Linux 4.4 onwards, the <i>signum</i> argument has no effect, so that an invalid signal number will not result in an error.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Allocating memory for the run-time instrumentation control block failed.</p>
-<dt><code>EOPNOTSUPP</code></p>
-<dd> The run-time instrumentation facility is not available.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> The value specified in <i>command</i> is not a valid command.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The value specified in <i>signum</i> is not a real-time signal number. From Linux 4.4 onwards, the <i>signum</i> argument has no effect, so that an invalid signal number will not result in an error.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Allocating memory for the run-time instrumentation control block failed.</dd>
+<dt><code>EOPNOTSUPP</code></dt>
+<dd> The run-time instrumentation facility is not available.</dd></dl>
 <h2>VERSIONS</h2>
 <p> This system call is available since Linux 3.7.</p>
 <h2>CONFORMING TO</h2>

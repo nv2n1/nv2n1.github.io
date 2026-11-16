@@ -36,19 +36,19 @@ nvme id - ctrl&lt;device&gt;[-v | --vendor - specific][-b | --raw - binary]
  -b, --raw-binary
 <dl>
 <dt>
-<dd> Print the raw buffer to stdout. Structure is not parsed by program. This overrides the vendor specific and human readable options.</dl>
+</dt><dd> Print the raw buffer to stdout. Structure is not parsed by program. This overrides the vendor specific and human readable options.</dd></dl>
  
 
  -v, --vendor-specific
 <dl>
 <dt>
-<dd> In addition to parsing known fields, this option will dump the vendor specific region of the structure in hex with ascii interpretation.</dl>
+</dt><dd> In addition to parsing known fields, this option will dump the vendor specific region of the structure in hex with ascii interpretation.</dd></dl>
  
 
  -H, --human-readable
 <dl>
 <dt>
-<dd> This option will parse and format many of the bit fields into human-readable formats.</dl>
+</dt><dd> This option will parse and format many of the bit fields into human-readable formats.</dd></dl>
 
 <h2>EXAMPLES</h2>
 
@@ -56,26 +56,24 @@ nvme id - ctrl&lt;device&gt;[-v | --vendor - specific][-b | --raw - binary]
 
 <dl>
 <dt>
-<dd> &bull; Has the program interpret the returned buffer and display the known fields in a human readable format: 
-
-<dl>
+</dt><dd> &bull; Has the program interpret the returned buffer and display the known fields in a human readable format: 
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 # nvme id-ctrl /dev/nvme0
-</pre></dl>
+</pre></dd></dl>
 </dl>
  
 
 <dl>
 <dt>
-<dd> &bull; In addition to showing the known fields, has the program to display the vendor unique field: 
-
-<dl>
+</dt><dd> &bull; In addition to showing the known fields, has the program to display the vendor unique field: 
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 # nvme id-ctrl /dev/nvme0 --vendor-specific
 # nvme id-ctrl /dev/nvme0 -v
-</pre></dl>
+</pre></dd></dl>
  
 
  The above will dump the <i>vs</i> buffer in hex since it doesn't know how to interpret it.</dl>
@@ -83,14 +81,13 @@ nvme id - ctrl&lt;device&gt;[-v | --vendor - specific][-b | --raw - binary]
 
 <dl>
 <dt>
-<dd> &bull; Have the program return the raw structure in binary: 
-
-<dl>
+</dt><dd> &bull; Have the program return the raw structure in binary: 
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 # nvme id-ctrl /dev/nvme0 --raw-binary &gt; id_ctrl.raw
 # nvme id-ctrl /dev/nvme0 -b &gt; id_ctrl.raw
-</pre></dl>
+</pre></dd></dl>
  
 
  It is probably a bad idea to not redirect stdout when using this mode.</dl>
@@ -98,13 +95,12 @@ nvme id - ctrl&lt;device&gt;[-v | --vendor - specific][-b | --raw - binary]
 
 <dl>
 <dt>
-<dd> &bull; Alternatively you may want to send the data to another program that can parse the raw buffer. 
-
-<dl>
+</dt><dd> &bull; Alternatively you may want to send the data to another program that can parse the raw buffer. 
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 # nvme id-ctrl /dev/nvme0 --raw-binary | nvme_parse_id_ctrl
-</pre></dl>
+</pre></dd></dl>
  
 
  The parse program in the above example can be a program that shows the structure in a way you like. The following program is such an example that will parse it and can accept the output through a pipe, '|', as shown in the above example, or you can 'cat' a saved output buffer to it.</dl>
@@ -112,7 +108,7 @@ nvme id - ctrl&lt;device&gt;[-v | --vendor - specific][-b | --raw - binary]
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 /* File: nvme_parse_id_ctrl.c */
 #include &lt;linux/nvme.h&gt;
 #include &lt;stdio.h&gt;
@@ -127,7 +123,7 @@ int main(int argc, char **argv)
     printf("ssvid : %#x\n", ctrl-&gt;ssvid);
     return 0;
 }
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>NVME</h2>
 

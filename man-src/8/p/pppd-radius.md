@@ -16,14 +16,14 @@ description: "radius.so – RADIUS authentication plugin for"
 <h2>Options</h2>
 <p>The RADIUS plugin introduces one additional pppd option:</p>
 <dl>
-<dt><code>radius-config-file </code><i>filename</i></p>
-<dd>The file <i>filename</i> is taken as the radiusclient configuration file. If this option is not used, then the plugin uses <i>/etc/radiusclient/radiusclient.conf</i> as the configuration file.</p>
-<dt><code>avpair </code><i>attribute=value</i></p>
-<dd>Adds an Attribute-Value pair to be passed on to the RADIUS server on each request.</p>
-<dt><code>map-to-ifname</code></p>
-<dd>Sets Radius NAS-Port attribute to number equal to interface name (Default)</p>
-<dt><code>map-to-ttyname</code></p>
-<dd>Sets Radius NAS-Port attribute value via libradiusclient library </p>
+<dt><code>radius-config-file </code><i>filename</i></dt>
+<dd>The file <i>filename</i> is taken as the radiusclient configuration file. If this option is not used, then the plugin uses <i>/etc/radiusclient/radiusclient.conf</i> as the configuration file.</dd>
+<dt><code>avpair </code><i>attribute=value</i></dt>
+<dd>Adds an Attribute-Value pair to be passed on to the RADIUS server on each request.</dd>
+<dt><code>map-to-ifname</code></dt>
+<dd>Sets Radius NAS-Port attribute to number equal to interface name (Default)</dd>
+<dt><code>map-to-ttyname</code></dt>
+<dd>Sets Radius NAS-Port attribute value via libradiusclient library </dd>
 </dl>
 <h2>Usage</h2>
 <p>To use the plugin, simply supply the <code>plugin radius.so</code> option to pppd, and edit <i>/etc/radiusclient/radiusclient.conf</i> appropriately. If you use the RADIUS plugin, the normal pppd authentication schemes (login, checking the /etc/ppp/*-secrets files) are skipped. The RADIUS server should assign an IP address to the peer using the RADIUS Framed-IP-Address attribute.</p>

@@ -13,8 +13,8 @@ description: "mongoc_stream_socket_get_socket() – Retrieves the underlying mon
 mongoc_stream_socket_get_socket (mongoc_stream_socket_t *stream);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>stream</code></p>
-<dd>A <code>mongoc_stream_socket_t</code> \&amp;.</dl>
+<dt><code>stream</code></dt>
+<dd>A <code>mongoc_stream_socket_t</code> \&amp;.</dd></dl>
 <p> Retrieves the underlying <code>mongoc_socket_t</code> for a <code>mongoc_stream_socket_t</code> \&amp;. </p>
 <h2>Returns</h2>
 <p>A <code>mongoc_stream_socket_t</code> \&amp;. </p>

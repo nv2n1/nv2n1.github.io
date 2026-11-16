@@ -14,20 +14,20 @@ description: "trace_workqueue_queue_work – called when a work gets queued"
 <p><i>req_cpu</i></p>
 <dl>
 <dd>
-<dd>the requested cpu</dl>
+</dd><dd>the requested cpu</dd></dl>
 <p> <i>pwq</i></p>
 <dl>
-<dd>pointer to struct pool_workqueue</dl>
+<dd>pointer to struct pool_workqueue</dd></dl>
 <p> <i>work</i></p>
 <dl>
-<dd>pointer to struct work_struct</dl>
+<dd>pointer to struct work_struct</dd></dl>
 <h2>Description</h2>
 <p>This event occurs when a work is queued immediately or once a delayed work is actually queued on a workqueue (ie: once the delay has been reached).</p>
 <h2>Authors</h2>
 <p><code>Jason Baron</code> &lt;jbaron [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>William Cohen</code> &lt;wcohen [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

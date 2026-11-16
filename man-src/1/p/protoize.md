@@ -11,11 +11,11 @@ description: "protoize, unprotoize – automatically add or remove function prot
 <p> protoize, unprotoize &#8211; automatically add or remove function prototypes</p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>protoize</code> [-CfgklNnqv] [-B <i>DIRECTORY</i>] [-c <i>COMPILATION-OPTIONS</i>] [-d <i>DIRECTORY</i>] [-i <i>STRING</i>] [-p <i>PROGRAM</i>] [-x <i>FILE</i>] [<i>FILE</i>&#8230;]</p>
-<dt> <code>unprotoize</code> [-fkNnqv] [-c <i>COMPILATION-OPTIONS</i>] [-d <i>DIRECTORY</i>] [-i <i>STRING</i>] [-p <i>PROGRAM</i>] [-x <i>FILE</i>] [<i>FILE</i>&#8230;]</dl>
+<dt> <code>protoize</code> [-CfgklNnqv] [-B <i>DIRECTORY</i>] [-c <i>COMPILATION-OPTIONS</i>] [-d <i>DIRECTORY</i>] [-i <i>STRING</i>] [-p <i>PROGRAM</i>] [-x <i>FILE</i>] [<i>FILE</i>&#8230;]</dt>
+<dt> <code>unprotoize</code> [-fkNnqv] [-c <i>COMPILATION-OPTIONS</i>] [-d <i>DIRECTORY</i>] [-i <i>STRING</i>] [-p <i>PROGRAM</i>] [-x <i>FILE</i>] [<i>FILE</i>&#8230;]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>protoize</code> is an optional part of GCC.</p>
-<dd>You can use it to add prototypes to a program, thus converting the program to ANSI C in one respect. The companion program <code>unprotoize</code> does the reverse: it removes argument types from any prototypes that are found. </p>
+<dd>You can use it to add prototypes to a program, thus converting the program to ANSI C in one respect. The companion program <code>unprotoize</code> does the reverse: it removes argument types from any prototypes that are found. </dd>
 <p> When you run these programs, you must specify a set of source files as command line arguments. The conversion programs start out by compiling these files to see what functions they define. The information gathered about a file <i>FOO</i> is saved in a file named <i>FOO.X</i>. </p>
 <p> After scanning comes the actual conversion. The specified files are all eligible to be converted; any files they include (whether sources or just headers) are eligible as well. </p>
 <p> But not all the eligible files are converted. By default, <code>protoize</code> and <code>unprotoize</code> convert only source and header files in the current directory. You can specify additional directories whose files should be converted with the <code>-d</code> <i>DIRECTORY</i> option. You can also specify particular files to exclude with the <code>-x</code> <i>FILE</i> option. A file is converted if it is eligible, its directory name matches one of the specified directory names, and its name within the directory has not been excluded. </p>
@@ -27,34 +27,34 @@ description: "protoize, unprotoize – automatically add or remove function prot
 <p> <code>protoize</code> and <code>unprotoize</code> both depend on <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1) to scan the program and collect information about the functions it uses. </p>
 <p> The options are as follows:</p>
 <dl>
-<dt><code>-B</code> <i>DIRECTORY</i></p>
-<dd> Look for the file <i>SYSCALLS.c.X</i> in <i>directory</i>, instead of the usual directory (normally <i>/usr/local/lib</i>). This file contains prototype information about standard system functions. This option applies only to <code>protoize</code>.</p>
-<dt><code>-C</code></p>
-<dd> Rename files to end in <i>.C</i> instead of <i>.c</i>. This is convenient if you are converting a C program to C++. This option applies only to <code>protoize</code>.</p>
-<dt><code>-c</code> <i>COMPILATION-OPTIONS</i></p>
-<dd> Use <i>COMPILATION-OPTIONS</i> as the options when running <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1) to produce the <i>.X</i> files. The special option <code>-aux-info</code> is always passed in addition, to tell gcc to write a <i>.X</i> file. Note that the compilation options must be given as a single argument to <code>protoize</code> or <code>unprotoize</code>. If you want to specify several gcc options, you must quote the entire set of compilation options to make them a single word in the shell. There are certain gcc arguments that you cannot use, because they would produce the wrong kind of output. These include <code>-g</code>, <code>-O</code>, <code>-c</code>, <code>-S</code>,<code>-o</code>. If you include these in the <i>COMPILATION-OPTIONS</i>, they are ignored.</p>
-<dt><code>-d</code> <i>DIRECTORY</i></p>
-<dd> Specify additional directories whose files should be converted.</p>
-<dt><code>-g</code></p>
-<dd> Add explicit global declarations. This means inserting explicit declarations at the beginning of each source file for each function that is called in the file and was not declared. These declarations precede the first function definition that contains a call to an undeclared function. This option applies only to <code> protoize</code>.</p>
-<dt><code>-i</code> <i>STRING</i></p>
-<dd> Indent old-style parameter declarations with the string <i>STRING</i>. This option applies only to <code>protoize</code>. <code>unprotoize</code> converts prototyped function definitions to old-style function definitions, where the arguments are declared between the argument list and the initial <code>{</code>. By default, <code>unprotoize</code> uses five spaces as the indentation. If you want to indent with just one space instead, use <code>-i &quot; &quot;</code>.</p>
-<dt><code>-k</code></p>
-<dd> Keep the <i>.X</i> files. Normally, they are deleted after conversion is finished.</p>
-<dt><code>-l</code></p>
-<dd> Add explicit local declarations. <code>protoize</code> with <code>-l</code> inserts a prototype declaration for each function in each block which calls the function without any declaration. This option applies only to <code>protoize</code>.</p>
-<dt><code>-N</code></p>
-<dd> Make no <i>.save</i> files. The original files are simply deleted. Use this option with caution.</p>
-<dt><code>-n</code></p>
-<dd> Make no real changes. This mode just prints information about the conversions that would have been done without <code>-n</code>.</p>
-<dt><code>-p</code> <i>PROGRAM</i></p>
-<dd> Use the program <code>PROGRAM</code> as the compiler. Normally, the name <code>gcc</code> is used.</p>
-<dt><code>-q</code></p>
-<dd> Work quietly. Most warnings are suppressed.</p>
-<dt><code>-v</code></p>
-<dd> Print the version number, just like <code>-v</code> for gcc.</p>
-<dt><code>-x</code> <code>FILE</code></p>
-<dd> List of files to exclude from the conversion process.</dl>
+<dt><code>-B</code> <i>DIRECTORY</i></dt>
+<dd> Look for the file <i>SYSCALLS.c.X</i> in <i>directory</i>, instead of the usual directory (normally <i>/usr/local/lib</i>). This file contains prototype information about standard system functions. This option applies only to <code>protoize</code>.</dd>
+<dt><code>-C</code></dt>
+<dd> Rename files to end in <i>.C</i> instead of <i>.c</i>. This is convenient if you are converting a C program to C++. This option applies only to <code>protoize</code>.</dd>
+<dt><code>-c</code> <i>COMPILATION-OPTIONS</i></dt>
+<dd> Use <i>COMPILATION-OPTIONS</i> as the options when running <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1) to produce the <i>.X</i> files. The special option <code>-aux-info</code> is always passed in addition, to tell gcc to write a <i>.X</i> file. Note that the compilation options must be given as a single argument to <code>protoize</code> or <code>unprotoize</code>. If you want to specify several gcc options, you must quote the entire set of compilation options to make them a single word in the shell. There are certain gcc arguments that you cannot use, because they would produce the wrong kind of output. These include <code>-g</code>, <code>-O</code>, <code>-c</code>, <code>-S</code>,<code>-o</code>. If you include these in the <i>COMPILATION-OPTIONS</i>, they are ignored.</dd>
+<dt><code>-d</code> <i>DIRECTORY</i></dt>
+<dd> Specify additional directories whose files should be converted.</dd>
+<dt><code>-g</code></dt>
+<dd> Add explicit global declarations. This means inserting explicit declarations at the beginning of each source file for each function that is called in the file and was not declared. These declarations precede the first function definition that contains a call to an undeclared function. This option applies only to <code> protoize</code>.</dd>
+<dt><code>-i</code> <i>STRING</i></dt>
+<dd> Indent old-style parameter declarations with the string <i>STRING</i>. This option applies only to <code>protoize</code>. <code>unprotoize</code> converts prototyped function definitions to old-style function definitions, where the arguments are declared between the argument list and the initial <code>{</code>. By default, <code>unprotoize</code> uses five spaces as the indentation. If you want to indent with just one space instead, use <code>-i &quot; &quot;</code>.</dd>
+<dt><code>-k</code></dt>
+<dd> Keep the <i>.X</i> files. Normally, they are deleted after conversion is finished.</dd>
+<dt><code>-l</code></dt>
+<dd> Add explicit local declarations. <code>protoize</code> with <code>-l</code> inserts a prototype declaration for each function in each block which calls the function without any declaration. This option applies only to <code>protoize</code>.</dd>
+<dt><code>-N</code></dt>
+<dd> Make no <i>.save</i> files. The original files are simply deleted. Use this option with caution.</dd>
+<dt><code>-n</code></dt>
+<dd> Make no real changes. This mode just prints information about the conversions that would have been done without <code>-n</code>.</dd>
+<dt><code>-p</code> <i>PROGRAM</i></dt>
+<dd> Use the program <code>PROGRAM</code> as the compiler. Normally, the name <code>gcc</code> is used.</dd>
+<dt><code>-q</code></dt>
+<dd> Work quietly. Most warnings are suppressed.</dd>
+<dt><code>-v</code></dt>
+<dd> Print the version number, just like <code>-v</code> for gcc.</dd>
+<dt><code>-x</code> <code>FILE</code></dt>
+<dd> List of files to exclude from the conversion process.</dd></dl>
 <p> If you need special compiler options to compile one of your program&#8217;s source files, then you should generate that file&#8217;s <i>.X</i> file specially, by running gcc on that source file with the appropriate options and the option <code>-aux-info</code>. Then run <code>protoize</code> on the entire set of files. <code>protoize</code> will use the existing <i>.X</i> file because it is newer than the source file. For example: </p>
 <p> You need to include the special files along with the rest in the <code>protoize</code> command, even though their <i>.X</i> files already exist, because otherwise they won&#8217;t get converted. </p>
 <h2>SEE ALSO</h2>

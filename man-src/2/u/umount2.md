@@ -20,39 +20,39 @@ int umount2(const char *target, int flags);
 <p> Appropriate privilege (Linux: the <code>CAP_SYS_ADMIN</code> capability) is required to unmount filesystems. </p>
 <p> Linux 2.1.116 added the <code>umount2</code>() system call, which, like <code>umount</code>(), unmounts a target, but allows additional <i>flags</i> controlling the behavior of the operation:</p>
 <dl>
-<dt><code>MNT_FORCE</code> (since Linux 2.1.116)</p>
-<dd> Ask the filesystem to abort pending requests before attempting the unmount. This may allow the unmount to complete without waiting for an inaccessible server, but could cause data loss. If, after aborting requests, some processes still have active references to the filesystem, the unmount will still fail. As at Linux 4.12, <code>MNT_FORCE</code> is supported only on the following filesystems: 9p (since Linux 2.6.16), ceph (since Linux 2.6.34), cifs (since Linux 2.6.12), fuse (since Linux 2.6.16), lustre (since Linux 3.11), and NFS (since Linux 2.1.116).</p>
-<dt><code>MNT_DETACH</code> (since Linux 2.4.11)</p>
-<dd> Perform a lazy unmount: make the mount point unavailable for new accesses, immediately disconnect the filesystem and all filesystems mounted below it from each other and from the mount table, and actually perform the unmount when the mount point ceases to be busy.</p>
-<dt><code>MNT_EXPIRE</code> (since Linux 2.6.8)</p>
-<dd> Mark the mount point as expired. If a mount point is not currently in use, then an initial call to <code>umount2</code>() with this flag fails with the error <code>EAGAIN</code>, but marks the mount point as expired. The mount point remains expired as long as it isn&#8217;t accessed by any process. A second <code>umount2</code>() call specifying <code>MNT_EXPIRE</code> unmounts an expired mount point. This flag cannot be specified with either <code>MNT_FORCE</code> or <code>MNT_DETACH</code>.</p>
-<dt><code>UMOUNT_NOFOLLOW</code> (since Linux 2.6.34)</p>
-<dd> Don&#8217;t dereference <i>target</i> if it is a symbolic link. This flag allows security problems to be avoided in set-user-ID-<i>root</i> programs that allow unprivileged users to unmount filesystems.</dl>
+<dt><code>MNT_FORCE</code> (since Linux 2.1.116)</dt>
+<dd> Ask the filesystem to abort pending requests before attempting the unmount. This may allow the unmount to complete without waiting for an inaccessible server, but could cause data loss. If, after aborting requests, some processes still have active references to the filesystem, the unmount will still fail. As at Linux 4.12, <code>MNT_FORCE</code> is supported only on the following filesystems: 9p (since Linux 2.6.16), ceph (since Linux 2.6.34), cifs (since Linux 2.6.12), fuse (since Linux 2.6.16), lustre (since Linux 3.11), and NFS (since Linux 2.1.116).</dd>
+<dt><code>MNT_DETACH</code> (since Linux 2.4.11)</dt>
+<dd> Perform a lazy unmount: make the mount point unavailable for new accesses, immediately disconnect the filesystem and all filesystems mounted below it from each other and from the mount table, and actually perform the unmount when the mount point ceases to be busy.</dd>
+<dt><code>MNT_EXPIRE</code> (since Linux 2.6.8)</dt>
+<dd> Mark the mount point as expired. If a mount point is not currently in use, then an initial call to <code>umount2</code>() with this flag fails with the error <code>EAGAIN</code>, but marks the mount point as expired. The mount point remains expired as long as it isn&#8217;t accessed by any process. A second <code>umount2</code>() call specifying <code>MNT_EXPIRE</code> unmounts an expired mount point. This flag cannot be specified with either <code>MNT_FORCE</code> or <code>MNT_DETACH</code>.</dd>
+<dt><code>UMOUNT_NOFOLLOW</code> (since Linux 2.6.34)</dt>
+<dd> Don&#8217;t dereference <i>target</i> if it is a symbolic link. This flag allows security problems to be avoided in set-user-ID-<i>root</i> programs that allow unprivileged users to unmount filesystems.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <p> The error values given below result from filesystem type independent errors. Each filesystem type may have its own special errors and its own special behavior. See the Linux kernel source code for details.</p>
 <dl>
-<dt><code>EAGAIN</code></p>
-<dd> A call to <code>umount2</code>() specifying <code>MNT_EXPIRE</code> successfully marked an unbusy filesystem as expired.</p>
-<dt><code>EBUSY</code></p>
-<dd> <i>target</i> could not be unmounted because it is busy.</p>
-<dt><code>EFAULT</code></p>
-<dd> <i>target</i> points outside the user address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>target</i> is not a mount point.</p>
-<dt><code>EINVAL</code></p>
-<dd> <code>umount2</code>() was called with <code>MNT_EXPIRE</code> and either <code>MNT_DETACH</code> or <code>MNT_FORCE</code>.</p>
-<dt><code>EINVAL</code> (since Linux 2.6.34)</p>
-<dd> <code>umount2</code>() was called with an invalid flag value in <i>flags</i>.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd> A pathname was longer than <code>MAXPATHLEN</code>.</p>
-<dt><code>ENOENT</code></p>
-<dd> A pathname was empty or had a nonexistent component.</p>
-<dt><code>ENOMEM</code></p>
-<dd> The kernel could not allocate a free page to copy filenames or data into.</p>
-<dt><code>EPERM</code></p>
-<dd> The caller does not have the required privileges.</dl>
+<dt><code>EAGAIN</code></dt>
+<dd> A call to <code>umount2</code>() specifying <code>MNT_EXPIRE</code> successfully marked an unbusy filesystem as expired.</dd>
+<dt><code>EBUSY</code></dt>
+<dd> <i>target</i> could not be unmounted because it is busy.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> <i>target</i> points outside the user address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>target</i> is not a mount point.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <code>umount2</code>() was called with <code>MNT_EXPIRE</code> and either <code>MNT_DETACH</code> or <code>MNT_FORCE</code>.</dd>
+<dt><code>EINVAL</code> (since Linux 2.6.34)</dt>
+<dd> <code>umount2</code>() was called with an invalid flag value in <i>flags</i>.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd> A pathname was longer than <code>MAXPATHLEN</code>.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> A pathname was empty or had a nonexistent component.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> The kernel could not allocate a free page to copy filenames or data into.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The caller does not have the required privileges.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>MNT_DETACH</code> and <code>MNT_EXPIRE</code> are available in glibc since version 2.11.</p>
 <h2>CONFORMING TO</h2>

@@ -18,8 +18,8 @@ bson_iter_date_time(const bson_iter_t *iter);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>iter</code></p>
-<dd> A <code>bson_iter_t</code> \&amp;.</dl>
+<dt><code>iter</code></dt>
+<dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The bson_iter_date_time() function shall return the number of miliseconds since the UNIX epoch, as contained in the BSON_TYPE_DATE_TIME element. </p>
 <h2>RETURNS</h2>

@@ -25,7 +25,6 @@ A call to this function that is the first reference to the time zone database wi
 <h2>See also</h2>
 
 <pre><code>return the local time zone
-
 current_zone   (public member function of std::chrono::tzdb)</code></pre> 
 get_tzdb 
 get_tzdb_list accesses and controls the global time zone database information 

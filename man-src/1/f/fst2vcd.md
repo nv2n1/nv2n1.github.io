@@ -15,20 +15,20 @@ description: "fst2vcd – Converts FST files to VCD"
 <p> Converts FST files to VCD files. If an output filename is not specified, the VCD is emitted to stdout. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f,&#8211;fstname</code> &lt;<i>filename</i>&gt;</p>
-<dd> Specify FST input filename.</p>
-<dt><code>-o,&#8211;output</code> &lt;<i>filename</i>&gt;</p>
-<dd> Specify optional VCD output filename.</p>
-<dt><code>-e,&#8211;extensionsFr</p>
-<dd> Emit FST extensions to VCD. Enabling this may create VCD files unreadable by other tools. This is generally intended to be used as a debugging tool when developing FST writer interfaces to simulators.</p>
-<dt>-h,&#8211;help</code></p>
-<dd> Display help then exit. </p>
+<dt><code>-f,&#8211;fstname</code> &lt;<i>filename</i>&gt;</dt>
+<dd> Specify FST input filename.</dd>
+<dt><code>-o,&#8211;output</code> &lt;<i>filename</i>&gt;</dt>
+<dd> Specify optional VCD output filename.</dd>
+<dt><code>-e,&#8211;extensionsFr</dt>
+<dd> Emit FST extensions to VCD. Enabling this may create VCD files unreadable by other tools. This is generally intended to be used as a debugging tool when developing FST writer interfaces to simulators.</dd>
+<dt>-h,&#8211;help</code></dt>
+<dd> Display help then exit. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> To run this program the standard way type:</p>
 <dl>
-<dt>fst2vcd filename.fst</p>
-<dd> The VCD conversion is emitted to stdout.</dl>
+<dt>fst2vcd filename.fst</dt>
+<dd> The VCD conversion is emitted to stdout.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Anthony Bybell &lt;bybell [at] rocketmail.com&gt;</p>
 <h2>SEE ALSO</h2>

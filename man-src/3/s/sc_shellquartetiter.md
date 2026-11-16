@@ -22,93 +22,27 @@ description: "sc::ShellQuartetIter –"
 <p> double <code>val</code> () const</p>
 <h3>Protected Attributes</h3>
 <pre><code>const double * buf
-
-
-
 double scale_
-
-
-
 int redund_
-
-
-
 int e12
-
-
-
 int e34
-
-
-
 int e13e24
-
-
-
 int index
-
-
-
 int istart
-
-
-
 int jstart
-
-
-
 int kstart
-
-
-
 int lstart
-
-
-
 int iend
-
-
-
 int jend
-
-
-
 int kend
-
-
-
 int lend
-
-
-
 int icur
-
-
-
 int jcur
-
-
-
 int kcur
-
-
-
 int lcur
-
-
-
 int i_
-
-
-
 int j_
-
-
-
 int k_
-
-
-
 int l_
 </code></pre>
 <h2>Author</h2>

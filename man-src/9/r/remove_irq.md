@@ -15,11 +15,11 @@ remove_irq - free an interrupt
 <h2>Arguments</h2>
 
 <i>irq</i>
-<dl><dd><dd>Interrupt line to free</dl>
+<dl><dd></dd><dd>Interrupt line to free</dd></dl>
  
 
  <i>act</i>
-<dl><dd>irqaction for the interrupt</dl>
+<dl><dd>irqaction for the interrupt</dd></dl>
 
 <h2>Description</h2>
 

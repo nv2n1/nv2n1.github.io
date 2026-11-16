@@ -14,27 +14,27 @@ description: "futex_lock_pi_atomic – Atomic work required to acquire a pi awar
 <p><i>uaddr</i></p>
 <dl>
 <dd>
-<dd>the pi futex user address</dl>
+</dd><dd>the pi futex user address</dd></dl>
 <p> <i>hb</i></p>
 <dl>
-<dd>the pi futex hash bucket</dl>
+<dd>the pi futex hash bucket</dd></dl>
 <p> <i>key</i></p>
 <dl>
-<dd>the futex key associated with uaddr and hb</dl>
+<dd>the futex key associated with uaddr and hb</dd></dl>
 <p> <i>ps</i></p>
 <dl>
-<dd>the pi_state pointer where we store the result of the lookup</dl>
+<dd>the pi_state pointer where we store the result of the lookup</dd></dl>
 <p> <i>task</i></p>
 <dl>
-<dd>the task to perform the atomic lock work for. This will be &#8220;current&#8221; except in the case of requeue pi.</dl>
+<dd>the task to perform the atomic lock work for. This will be &#8220;current&#8221; except in the case of requeue pi.</dd></dl>
 <p> <i>set_waiters</i></p>
 <dl>
-<dd>force setting the FUTEX_WAITERS bit (1) or not (0)</dl>
+<dd>force setting the FUTEX_WAITERS bit (1) or not (0)</dd></dl>
 <h2>Return</h2>
 <p>0 &#8211; ready to wait; 1 &#8211; acquired the lock; &lt;0 &#8211; error </p>
 <p> The hb-&gt;lock and futex_key refs shall be held by the caller.</p>
 <h2>Author</h2>
 <p><code>Rusty Russell</code> &lt;rusty [at] rustcorp.com.au&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

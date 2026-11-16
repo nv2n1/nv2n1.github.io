@@ -15,11 +15,11 @@ eth_mac_addr - set new Ethernet hardware address
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>network device</dl>
+<dl><dd></dd><dd>network device</dd></dl>
  
 
  <i>p</i>
-<dl><dd>socket address</dl>
+<dl><dd>socket address</dd></dl>
 
 <h2>Description</h2>
 

@@ -12,22 +12,18 @@ scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl - multiply floating-point 
 
 <pre><code>#include &lt;math.h&gt;
 double scalbln(double x, long exp);
-
 float scalblnf(float x, long exp);
-
 long double scalblnl(long double x, long exp);
 double scalbn(double x, int exp);
-
 float scalbnf(float x, int exp);
-
 long double scalbnl(long double x, int exp);</code></pre> Link with <i>-lm</i>. Feature Test Macro Requirements for glibc (see <b><a HREF="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></b>(7)): <b>scalbln</b>(), <b>scalblnf</b>(), <b>scalblnl</b>():
 <dl><dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L 
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE</dd></dl>
  
  <b>scalbn</b>(), <b>scalbnf</b>(), <b>scalbnl</b>():
 <dl><dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE 
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 
 <h2>Description</h2>
 
@@ -55,9 +51,9 @@ See <b><a HREF="/docs/linux/man/7-math_error/">math_error</a></b>(7) for informa
 
  The following errors can occur:
 <dl><dt>Range error, overflow
-<dd>An overflow floating-point exception (<b>FE_OVERFLOW</b>) is raised.
-<dt>Range error, underflow
-<dd><i>errno</i> is set to <b>ERANGE</b>. An underflow floating-point exception (<b>FE_UNDERFLOW</b>) is raised.</dl>
+</dt><dd>An overflow floating-point exception (<b>FE_OVERFLOW</b>) is raised.
+</dd><dt>Range error, underflow
+</dt><dd><i>errno</i> is set to <b>ERANGE</b>. An underflow floating-point exception (<b>FE_UNDERFLOW</b>) is raised.</dd></dl>
 
 <h2>Versions</h2>
 

@@ -17,191 +17,191 @@ description: "nasm – the Netwide Assembler, a portable 80×86 assembler"
 <p> <code>-@</code> <i>filename</i></p>
 <dl>
 <dt>
-<dd> Causes <code>nasm</code> to process options from filename as if they were included on the command line.</dl>
+</dt><dd> Causes <code>nasm</code> to process options from filename as if they were included on the command line.</dd></dl>
 <p> <code>-a</code></p>
 <dl>
 <dt>
-<dd> Causes <code>nasm</code> to assemble the given input file without first applying the macro preprocessor.</dl>
+</dt><dd> Causes <code>nasm</code> to assemble the given input file without first applying the macro preprocessor.</dd></dl>
 <p> <code>-D</code>|<code>-d</code> <i>macro[=value]</i></p>
 <dl>
 <dt>
-<dd> Pre-defines a single-line macro.</dl>
+</dt><dd> Pre-defines a single-line macro.</dd></dl>
 <p> <code>-E</code>|<code>-e</code></p>
 <dl>
 <dt>
-<dd> Causes <code>nasm</code> to preprocess the given input file, and write the output to <i>stdout</i> (or the specified output file name), and not actually assemble anything.</dl>
+</dt><dd> Causes <code>nasm</code> to preprocess the given input file, and write the output to <i>stdout</i> (or the specified output file name), and not actually assemble anything.</dd></dl>
 <p> <code>-f</code> <i>format</i></p>
 <dl>
 <dt>
-<dd> Specifies the output file format. To see a list of valid output formats, use the <code>-hf</code> option.</dl>
+</dt><dd> Specifies the output file format. To see a list of valid output formats, use the <code>-hf</code> option.</dd></dl>
 <p> <code>-F</code> <i>format</i></p>
 <dl>
 <dt>
-<dd> Specifies the debug information format. To see a list of valid output formats, use the <code>-y</code> option (for example <code>-felf -y</code>).</dl>
+</dt><dd> Specifies the debug information format. To see a list of valid output formats, use the <code>-y</code> option (for example <code>-felf -y</code>).</dd></dl>
 <p> <code>-g</code></p>
 <dl>
 <dt>
-<dd> Causes <code>nasm</code> to generate debug information in selected format.</dl>
+</dt><dd> Causes <code>nasm</code> to generate debug information in selected format.</dd></dl>
 <p> <code>-h</code></p>
 <dl>
 <dt>
-<dd> Causes <code>nasm</code> to exit immediately, after giving a summary of its invocation options.</dl>
+</dt><dd> Causes <code>nasm</code> to exit immediately, after giving a summary of its invocation options.</dd></dl>
 <p> <code>-hf</code></p>
 <dl>
 <dt>
-<dd> Same as <code>-h</code> , but also lists all valid output formats.</dl>
+</dt><dd> Same as <code>-h</code> , but also lists all valid output formats.</dd></dl>
 <p> <code>-I</code>|<code>-i</code> <i>directory</i></p>
 <dl>
 <dt>
-<dd> Adds a directory to the search path for include files. The directory specification must include the trailing slash, as it will be directly prepended to the name of the include file.</dl>
+</dt><dd> Adds a directory to the search path for include files. The directory specification must include the trailing slash, as it will be directly prepended to the name of the include file.</dd></dl>
 <p> <code>-l</code> <i>listfile</i></p>
 <dl>
 <dt>
-<dd> Causes an assembly listing to be directed to the given file, in which the original source is displayed on the right hand side (plus the source for included files and the expansions of multi-line macros) and the generated code is shown in hex on the left.</dl>
+</dt><dd> Causes an assembly listing to be directed to the given file, in which the original source is displayed on the right hand side (plus the source for included files and the expansions of multi-line macros) and the generated code is shown in hex on the left.</dd></dl>
 <p> <code>-M</code></p>
 <dl>
 <dt>
-<dd> Causes <code>nasm</code> to output Makefile-style dependencies to stdout; normal output is suppressed.</dl>
+</dt><dd> Causes <code>nasm</code> to output Makefile-style dependencies to stdout; normal output is suppressed.</dd></dl>
 <p> <code>-MG</code> <i>file</i></p>
 <dl>
 <dt>
-<dd> Same as <code>-M</code> but assumes that missing Makefile dependecies are generated and added to dependency list without a prefix.</dl>
+</dt><dd> Same as <code>-M</code> but assumes that missing Makefile dependecies are generated and added to dependency list without a prefix.</dd></dl>
 <p> <code>-MF</code> <i>file</i></p>
 <dl>
 <dt>
-<dd> Output Makefile-style dependencies to the specified file.</dl>
+</dt><dd> Output Makefile-style dependencies to the specified file.</dd></dl>
 <p> <code>-MD</code> <i>file</i></p>
 <dl>
 <dt>
-<dd> Same as a combination of <code>-M</code> and <code>-MF</code> options.</dl>
+</dt><dd> Same as a combination of <code>-M</code> and <code>-MF</code> options.</dd></dl>
 <p> <code>-MT</code> <i>file</i></p>
 <dl>
 <dt>
-<dd> Override the default name of the dependency target dependency target name. This is normally the same as the output filename, specified by the <code>-o</code> option.</dl>
+</dt><dd> Override the default name of the dependency target dependency target name. This is normally the same as the output filename, specified by the <code>-o</code> option.</dd></dl>
 <p> <code>-MQ</code> <i>file</i></p>
 <dl>
 <dt>
-<dd> The same as <code>-MT</code> except it tries to quote characters that have special meaning in Makefile syntax. This is not foolproof, as not all characters with special meaning are quotable in Make.</dl>
+</dt><dd> The same as <code>-MT</code> except it tries to quote characters that have special meaning in Makefile syntax. This is not foolproof, as not all characters with special meaning are quotable in Make.</dd></dl>
 <p> <code>-MP</code></p>
 <dl>
 <dt>
-<dd> Emit phony target.</dl>
+</dt><dd> Emit phony target.</dd></dl>
 <p> <code>-O</code> <i>number</i></p>
 <dl>
 <dt>
-<dd> Optimize branch offsets. </p>
+</dt><dd> Optimize branch offsets. </dd>
 <dl>
 <dt>
-<dd> &bull; <code>-O0</code>: No optimization</dl>
+</dt><dd> &bull; <code>-O0</code>: No optimization</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>-O1</code>: Minimal optimization</dl>
+</dt><dd> &bull; <code>-O1</code>: Minimal optimization</dd></dl>
 <dl>
 <dt>
-<dd> &bull; <code>-Ox</code>: Multipass optimization (default)</dl>
+</dt><dd> &bull; <code>-Ox</code>: Multipass optimization (default)</dd></dl>
 </dl>
 <p> <code>-o</code> <i>outfile</i></p>
 <dl>
 <dt>
-<dd> Specifies a precise name for the output file, overriding <code>nasm</code>&#8216;s default means of determining it.</dl>
+</dt><dd> Specifies a precise name for the output file, overriding <code>nasm</code>&#8216;s default means of determining it.</dd></dl>
 <p> <code>-P</code>|<code>-p</code> <i>file</i></p>
 <dl>
 <dt>
-<dd> Specifies a file to be pre-included, before the main source file starts to be processed.</dl>
+</dt><dd> Specifies a file to be pre-included, before the main source file starts to be processed.</dd></dl>
 <p> <code>-s</code></p>
 <dl>
 <dt>
-<dd> Causes <code>nasm</code> to send its error messages and/or help text to stdout instead of stderr.</dl>
+</dt><dd> Causes <code>nasm</code> to send its error messages and/or help text to stdout instead of stderr.</dd></dl>
 <p> <code>-t</code></p>
 <dl>
 <dt>
-<dd> Causes <code>nasm</code> to assemble in SciTech TASM compatible mode.</dl>
+</dt><dd> Causes <code>nasm</code> to assemble in SciTech TASM compatible mode.</dd></dl>
 <p> <code>-U</code>|<code>-u</code> <i>macro</i></p>
 <dl>
 <dt>
-<dd> Undefines a single-line macro.</dl>
+</dt><dd> Undefines a single-line macro.</dd></dl>
 <p> <code>-v</code></p>
 <dl>
 <dt>
-<dd> Causes <code>nasm</code> to exit immediately, after displaying its version number.</dl>
+</dt><dd> Causes <code>nasm</code> to exit immediately, after displaying its version number.</dd></dl>
 <p> *-W[no-]foo&#8217;</p>
 <dl>
 <dt>
-<dd> Causes <code>nasm</code> to enable or disable certain classes of warning messages, in gcc-like style, for example <code>-Worphan-labels</code> or <code>-Wno-orphan-labels</code>.</dl>
+</dt><dd> Causes <code>nasm</code> to enable or disable certain classes of warning messages, in gcc-like style, for example <code>-Worphan-labels</code> or <code>-Wno-orphan-labels</code>.</dd></dl>
 <p> <code>-w</code><i>[+-]foo</i></p>
 <dl>
 <dt>
-<dd> Causes <code>nasm</code> to enable or disable certain classes of warning messages, for example <code>-w+orphan-labels</code> or <code>-w-macro-params</code>.</dl>
+</dt><dd> Causes <code>nasm</code> to enable or disable certain classes of warning messages, for example <code>-w+orphan-labels</code> or <code>-w-macro-params</code>.</dd></dl>
 <p> <code>-X</code> <i>format</i></p>
 <dl>
 <dt>
-<dd> Specifies error reporting format (gnu or vc).</dl>
+</dt><dd> Specifies error reporting format (gnu or vc).</dd></dl>
 <p> <code>-y</code></p>
 <dl>
 <dt>
-<dd> Causes <code>nasm</code> to list supported debug formats.</dl>
+</dt><dd> Causes <code>nasm</code> to list supported debug formats.</dd></dl>
 <p> <code>-Z</code> <i>filename</i></p>
 <dl>
 <dt>
-<dd> Causes <code>nasm</code> to redirect error messages to <i>filename</i>. This option exists to support operating systems on which stderr is not easily redirected.</dl>
+</dt><dd> Causes <code>nasm</code> to redirect error messages to <i>filename</i>. This option exists to support operating systems on which stderr is not easily redirected.</dd></dl>
 <p> &#8211;prefix, &#8211;postfix</p>
 <dl>
 <dt>
-<dd> Prepend or append (respectively) the given argument to all global or extern variables.</dl>
+</dt><dd> Prepend or append (respectively) the given argument to all global or extern variables.</dd></dl>
 <h2>SYNTAX</h2>
 <p> This man page does not fully describe the syntax of <code>nasm</code>&#8216;s assembly language, but does give a summary of the differences from other assemblers. </p>
 <p> <i>Registers</i> have no leading &#8216;%&#8217; sign, unlike <code>gas</code>, and floating-point stack registers are referred to as <i>st0</i>, <i>st1</i>, and so on. </p>
 <p> <i>Floating-point instructions</i> may use either the single-operand form or the double. A <i>TO</i> keyword is provided; thus, one could either write </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 fadd st0,st1
 fadd st1,st0
 </pre>
-</dl>
+</dd></dl>
 <p> or one could use the alternative single-operand forms </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 fadd st1
 fadd to st1
 </pre>
-</dl>
+</dd></dl>
 <p> <i>Uninitialised storage</i> is reserved using the <i>RESB</i>, <i>RESW</i>, <i>RESD</i>, <i>RESQ</i>, <i>REST</i> and <i>RESO</i> pseudo-opcodes, each taking one parameter which gives the number of bytes, words, doublewords, quadwords or ten-byte words to reserve. </p>
 <p> <i>Repetition</i> of data items is not done by the <i>DUP</i> keyword as seen in DOS assemblers, but by the use of the <i>TIMES</i> prefix, like this: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 message: times 3 db 'abc'
          times 64-$+message db 0
 </pre>
-</dl>
+</dd></dl>
 <p> which defines the string abcabcabc, followed by the right number of zero bytes to make the total length up to 64 bytes. </p>
 <p> <i>Symbol references</i> are always understood to be immediate (i.e. the address of the symbol), unless square brackets are used, in which case the contents of the memory location are used. Thus: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 mov ax,wordvar
 </pre>
-</dl>
+</dd></dl>
 <p> loads AX with the address of the variable wordvar, whereas </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 mov ax, [wordvar] mov ax, [wordvar + 1] mov ax, [es:wordvar + bx]
 </code></pre>
-</dl>
+</dd></dl>
 <p> all refer to the <i>contents</i> of memory locations. The syntaxes </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 mov ax, es : wordvar[bx] es mov ax, wordvar[1]
-</dl>
+</dd></dl>
 <p> are not legal at all, although the use of a segment register name as an instruction prefix is valid, and can be used with instructions such as <i>LODSB</i> which can&#8217;t be overridden any other way. </p>
 <p> <i>Constants</i> may be expressed numerically in most formats: a trailing H, Q or B denotes hex, octal or binary respectively, and a leading &#8216;0x&#8217; or &#8216;$&#8217; denotes hex as well. Leading zeros are not treated specially at all. Character constants may be enclosed in single or double quotes; there is no escape character. The ordering is little-endian (reversed), so that the character constant <i>&#8216;abcd</i>&#8216; denotes 0x64636261 and not 0x61626364. </p>
 <p> Local labels begin with a period, and their &#8216;locality&#8217; is granted by the assembler prepending the name of the previous non-local symbol. Thus declaring a label &#8216;.loop&#8217; after a label &#8216;label&#8217; has actually defined a symbol called &#8216;label.loop&#8217;.</p>
@@ -220,11 +220,11 @@ mov ax, es : wordvar[bx] es mov ax, wordvar[1]
 <p> Multi-line macros are defined using <i>%macro</i> and <i>%imacro</i> (the distinction is the same as that between <i>%define</i> and <i>%idefine</i>), whose syntax is as follows </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 % macro name minprm[-maxprm][+][.nolist][defaults]&lt;some lines of macro expansion text&gt; % endmacro
 </code></pre>
-</dl>
+</dd></dl>
 <p> Again, these macros may be overloaded. The trailing plus sign indicates that any parameters after the last one get subsumed, with their separating commas, into the last parameter. The <i>defaults</i> part can be used to specify defaults for unspecified macro parameters after <i>minparam</i>. <i>%endm</i> is a valid synonym for <i>%endmacro</i>. </p>
 <p> To refer to the macro parameters within a macro expansion, you use <i>%1</i>, <i>%2</i> and so on. You can also enforce that a macro parameter should contain a condition code by using <i>%+1</i>, and you can invert the condition code by using <i>%-1</i>. You can also define a label specific to a macro invocation by prefixing it with a double &#8216;%&#8217; sign. </p>
 <p> Files can be included using the <i>%include</i> directive, which works like C. </p>

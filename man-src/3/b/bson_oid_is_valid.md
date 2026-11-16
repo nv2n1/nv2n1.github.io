@@ -16,11 +16,11 @@ bool bson_oid_is_valid(const char *str,
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>str</code></p>
-<dd> A string.</dl>
+<dt><code>str</code></dt>
+<dd> A string.</dd></dl>
 <dl>
-<dt><code>length</code></p>
-<dd> The length of <code>str</code> \&amp;.</dl>
+<dt><code>length</code></dt>
+<dd> The length of <code>str</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Checks if a string containing a hex encoded string is a valid BSON ObjectID. </p>
 <h2>RETURNS</h2>

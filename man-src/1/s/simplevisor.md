@@ -58,12 +58,12 @@ description: "simplevisor 1.2 – simple daemons supervisor"
 <p> <code>positional arguments:</code> </p>
 <dl>
 <dt>
-<dd> <code>command</code> check, check_configuration, help, pod, restart, restart_child, rst, single, start, status, stop, stop_children, stop_supervisor, wake_up </p>
+</dt><dd> <code>command</code> check, check_configuration, help, pod, restart, restart_child, rst, single, start, status, stop, stop_children, stop_supervisor, wake_up </dd>
 <p> <code>path</code> path to a service, subset of commands available: start, stop, status, check, restart</dl>
 <p> <code>optional arguments:</code> </p>
 <dl>
 <dt>
-<dd> <code>&#8211;conf </code><font SIZE="-1"><code>CONF</code></font> configuration file </p>
+</dt><dd> <code>&#8211;conf </code><font SIZE="-1"><code>CONF</code></font> configuration file </dd>
 <p> <code>&#8211;conftype </code><font SIZE="-1"><code>CONFTYPE</code></font> configuration file type (default: apache) </p>
 <p> <code>&#8211;daemon</code> daemonize, <font SIZE="-1">ONLY</font> with start </p>
 <p> <code>&#8211;interval </code><font SIZE="-1"><code>INTERVAL</code></font> interval to wait between supervision cycles (default: 60) </p>
@@ -100,3 +100,4 @@ description: "simplevisor 1.2 – simple daemons supervisor"
 <p> Massimo Paladin &lt;massimo.paladin [at] gmail.com&gt; </p>
 <p> Copyright (C) <font SIZE="-1">CERN 2013-2016</font> </p>
 <h2>Index</h2>
+</p>

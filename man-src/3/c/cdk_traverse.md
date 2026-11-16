@@ -26,7 +26,6 @@ void resetCDKScreen(CDKSCREEN *screen);
 void exitOKCDKScreenOf(CDKOBJS *obj);
 void exitCancelCDKScreenOf(CDKOBJS *obj);
 void resetCDKScreenOf(CDKOBJS *obj);
-
 void traverseCDKOnce(
     CDKSCREEN *screen,
     CDKOBJS *curobj,
@@ -59,87 +58,85 @@ void traverseCDKOnce(
 <p> <code>int traverseCDKScreen (CDKSCREEN *</code><i>screen</i>);</p>
 <dl>
 <dt>
-<dd> This function contains the main screen traversal engine. It does the following:</p>
+</dt><dd> This function contains the main screen traversal engine. It does the following:</dd>
 <dl>
 <dt>
-&nbsp;<wbr>1.</p>
-<dd> Calls the refreshData method on each of the widgets to tell them to update their appearance to match the data which are referenced by their respective data pointers.</p>
+&nbsp;<wbr>1.</dt>
+<dd> Calls the refreshData method on each of the widgets to tell them to update their appearance to match the data which are referenced by their respective data pointers.</dd>
 <dt>
-&nbsp;<wbr>2.</p>
-<dd> Calls the focusObject method on the first widget.</p>
+&nbsp;<wbr>2.</dt>
+<dd> Calls the focusObject method on the first widget.</dd>
 <dt>
-&nbsp;<wbr>3.</p>
-<dd> Repeats the following until one of the exit functions listed above has been called:</p>
+&nbsp;<wbr>3.</dt>
+<dd> Repeats the following until one of the exit functions listed above has been called:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> Read a keystroke from the keyboard.</p>
-<dt>*</p>
-<dd> If the keystroke is ESCAPE and a menu widget is present, activate the menu and traverse it until the user selects an entry or hits TAB.</p>
-<dt>*</p>
-<dd> If the keystroke is TAB/BACKTAB then call the unfocusObject method on the current widget, and move focus to the next/previous widget (not counting menu widgets). Call the focusObject method on the newly current widget.</p>
-<dt>*</p>
-<dd> If the keystroke is the EXIT-SAVE keystroke, then call the saveData method on each widget and return 1.</p>
-<dt>*</p>
-<dd> If the keystroke is the EXIT-CANCEL keystroke, return 0 without saving changes made by the user.</p>
-<dt>*</p>
-<dd> If the keystroke is the RESET-DATA keystroke, then call the refreshData method on each of the widgets to reset their appearance to match the data values that were present upon entry.</p>
-<dt>*</p>
-<dd> Otherwise, pass the keystroke to the current widget.</dl>
+<dt>*</dt>
+<dd> Read a keystroke from the keyboard.</dd>
+<dt>*</dt>
+<dd> If the keystroke is ESCAPE and a menu widget is present, activate the menu and traverse it until the user selects an entry or hits TAB.</dd>
+<dt>*</dt>
+<dd> If the keystroke is TAB/BACKTAB then call the unfocusObject method on the current widget, and move focus to the next/previous widget (not counting menu widgets). Call the focusObject method on the newly current widget.</dd>
+<dt>*</dt>
+<dd> If the keystroke is the EXIT-SAVE keystroke, then call the saveData method on each widget and return 1.</dd>
+<dt>*</dt>
+<dd> If the keystroke is the EXIT-CANCEL keystroke, return 0 without saving changes made by the user.</dd>
+<dt>*</dt>
+<dd> If the keystroke is the RESET-DATA keystroke, then call the refreshData method on each of the widgets to reset their appearance to match the data values that were present upon entry.</dd>
+<dt>*</dt>
+<dd> Otherwise, pass the keystroke to the current widget.</dd></dl>
 </dl>
 </dl>
 </dl>
 <dl>
-<dt><code>CDKOBJS *getCDKFocusCurrent (CDKSCREEN *</code><i>screen</i>);</p>
-<dd> Return a pointer to the object which currently has focus in the given screen.</p>
-<dt><code>CDKOBJS *setCDKFocusCurrent (CDKSCREEN *</code><i>screen</i>, CDKOBJS *<i>obj</i>);</p>
-<dd> Set the focus to the given object, if the screen contains that object. If the screen does not contain the object, return null. Otherwise, return the object.</p>
-<dt><code>CDKOBJS *setCDKFocusFirst (CDKSCREEN *</code><i>screen</i>);</p>
-<dd> Set focus on the first object in the given screen.</p>
-<dt><code>CDKOBJS *setCDKFocusLast (CDKSCREEN *</code><i>screen</i>);</p>
-<dd> Set focus on the last object in the given screen.</p>
-<dt><code>CDKOBJS *setCDKFocusNext (CDKSCREEN *</code><i>screen</i>);</p>
-<dd> Set focus on the next object in the given screen.</p>
-<dt><code>CDKOBJS *setCDKFocusPrevious (CDKSCREEN *</code><i>screen</i>);</p>
-<dd> Set focus on the previous object in the given screen.</p>
-<dt><code>exitOKCDKScreen</code></p>
+<dt><code>CDKOBJS *getCDKFocusCurrent (CDKSCREEN *</code><i>screen</i>);</dt>
+<dd> Return a pointer to the object which currently has focus in the given screen.</dd>
+<dt><code>CDKOBJS *setCDKFocusCurrent (CDKSCREEN *</code><i>screen</i>, CDKOBJS *<i>obj</i>);</dt>
+<dd> Set the focus to the given object, if the screen contains that object. If the screen does not contain the object, return null. Otherwise, return the object.</dd>
+<dt><code>CDKOBJS *setCDKFocusFirst (CDKSCREEN *</code><i>screen</i>);</dt>
+<dd> Set focus on the first object in the given screen.</dd>
+<dt><code>CDKOBJS *setCDKFocusLast (CDKSCREEN *</code><i>screen</i>);</dt>
+<dd> Set focus on the last object in the given screen.</dd>
+<dt><code>CDKOBJS *setCDKFocusNext (CDKSCREEN *</code><i>screen</i>);</dt>
+<dd> Set focus on the next object in the given screen.</dd>
+<dt><code>CDKOBJS *setCDKFocusPrevious (CDKSCREEN *</code><i>screen</i>);</dt>
+<dd> Set focus on the previous object in the given screen.</dd>
+<dt><code>exitOKCDKScreen</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Causes the traversal engine to exit after calling the saveData method for each of the widgets.</dl>
-<dt><code>exitOKCDKScreenOf</code></p>
+</dt><dd> Causes the traversal engine to exit after calling the saveData method for each of the widgets.</dd></dl>
+<dt><code>exitOKCDKScreenOf</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Calls <code>exitOKCDKScreen()</code> on the screen associated with widget <i>obj</i>. This function was designed to be used as a callback routine for a button widget used as an OK button on a data-entry screen.</dl>
-<dt><code>exitCancelCDKScreen </code></p>
+</dt><dd> Calls <code>exitOKCDKScreen()</code> on the screen associated with widget <i>obj</i>. This function was designed to be used as a callback routine for a button widget used as an OK button on a data-entry screen.</dd></dl>
+<dt><code>exitCancelCDKScreen </code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Causes the traversal engine to exit without saving user modified data.</dl>
-<dt><code>exitCancelCDKScreenOf</code></p>
+</dt><dd> Causes the traversal engine to exit without saving user modified data.</dd></dl>
+<dt><code>exitCancelCDKScreenOf</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Calls <code>exitCancelCDKScreen()</code> on the screen associated with widget <i>obj</i>. This function was designed to be used as a callback routine for a button widget used as a Cancel button on a data-entry screen.</dl>
-<dt><code>resetCDKScreen</code></p>
+</dt><dd> Calls <code>exitCancelCDKScreen()</code> on the screen associated with widget <i>obj</i>. This function was designed to be used as a callback routine for a button widget used as a Cancel button on a data-entry screen.</dd></dl>
+<dt><code>resetCDKScreen</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
+</dt><dd>
+<p> Causes the traversal engine to call the refreshData method for each widget. This will cause any unsaved changes to be discarded and the widget states will be restored to their initial values.</dd></dl>
+<dt><code>resetCDKScreenOf</code></dt>
 <dd>
-<p> Causes the traversal engine to call the refreshData method for each widget. This will cause any unsaved changes to be discarded and the widget states will be restored to their initial values.</dl>
-<dt><code>resetCDKScreenOf</code></p>
-<dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> Calls <code>resetCDKScreen()</code> on the screen associated with widget <i>obj</i>. This function was designed to be used as a callback routine for a button widget used as a Reset button on a data-entry screen.</dl>
-<dt><code>traverseCDKOnce</code></p>
+</dt><dd> Calls <code>resetCDKScreen()</code> on the screen associated with widget <i>obj</i>. This function was designed to be used as a callback routine for a button widget used as a Reset button on a data-entry screen.</dd></dl>
+<dt><code>traverseCDKOnce</code></dt>
 <dd>
-<dl>
+</dd><dl>
 <dt>
-<dd> This is a utility function, one of the pieces from which you can construct a customized version of <code>traverseCDKScreen</code>.</dl>
+</dt><dd> This is a utility function, one of the pieces from which you can construct a customized version of <code>traverseCDKScreen</code>.</dd></dl>
 </dl>
 <h2>BUGS</h2>
 <p> Not all widgets have had the extra methods added so that they work with the screen traversal engine.</p>

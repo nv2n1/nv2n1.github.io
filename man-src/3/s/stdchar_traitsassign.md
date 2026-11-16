@@ -12,18 +12,13 @@ std::char_traits&lt;CharT&gt;::assign - std::char_traits&lt;CharT&gt;::assign
 
 <pre><code>static void assign(char_type &amp;r, const char_type &amp;a);
 (until C++ 11)
-
     static void assign(char_type &amp;r, const char_type &amp;a) noexcept;
 (since C++ 11)(until C++ 17)
-
     static constexpr void assign(char_type &amp;r, const char_type &amp;a) noexcept;
 (1)(since C++ 17)
-
     static char_type *assign(char_type *p, std::size_t count, char_type a);
 (until C++ 20)
-
     static constexpr char_type *assign(char_type *p, (2)(since C++ 20)
-
                                                          std::size_t count,
                                        char_type a);</code></pre> 
 Assigns a character. 

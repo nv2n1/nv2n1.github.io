@@ -18,24 +18,24 @@ description: "rotd – Hamlib rotator service daemon"
 <p>This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). </p>
 <p> Here is a summary of the supported options:</p>
 <dl>
-<dt><code>-m, &#8211;model=id</code></p>
+<dt><code>-m, &#8211;model=id</code></dt>
 <dd>Select rotator model number. See model list (use &#8216;rotctl -l&#8217;).<br />
- NB: <code>rotctl</code> (or third party software) will use rotor model 101 when using <code>rotd</code>.</p>
-<dt><code>-r, &#8211;rot-file=device</code></p>
-<dd>Use <i>device</i> as the file name of the port the rotator is connected. Often a serial port, but could be a USB to serial adapter. Typically /dev/ttyS0, /dev/ttyS1, /dev/ttyUSB0, etc.</p>
-<dt><code>-s, &#8211;serial-speed=baud</code></p>
-<dd>Set serial speed to <i>baud</i> rate. Uses maximum serial speed from rotor backend as the default.</p>
-<dt><code>-C, &#8211;set-conf=parm=val[,parm=val]*</code></p>
+ NB: <code>rotctl</code> (or third party software) will use rotor model 101 when using <code>rotd</code>.</dd>
+<dt><code>-r, &#8211;rot-file=device</code></dt>
+<dd>Use <i>device</i> as the file name of the port the rotator is connected. Often a serial port, but could be a USB to serial adapter. Typically /dev/ttyS0, /dev/ttyS1, /dev/ttyUSB0, etc.</dd>
+<dt><code>-s, &#8211;serial-speed=baud</code></dt>
+<dd>Set serial speed to <i>baud</i> rate. Uses maximum serial speed from rotor backend as the default.</dd>
+<dt><code>-C, &#8211;set-conf=parm=val[,parm=val]*</code></dt>
 <dd>Set config parameter. e.g. stop_bits=2<br />
- Use -L option of <code>rotctl</code> for a list.</p>
-<dt><code>-t, &#8211;prog=number</code></p>
-<dd>Use <i>number</i> as the RPC program number. The default is 536873369.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd>Set verbose mode, cumulative (see DIAGNOSTICS below).</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Show summary of these options and exit.</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd>Show version of <code>rpc.rotd</code> and exit.</dl>
+ Use -L option of <code>rotctl</code> for a list.</dd>
+<dt><code>-t, &#8211;prog=number</code></dt>
+<dd>Use <i>number</i> as the RPC program number. The default is 536873369.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd>Set verbose mode, cumulative (see DIAGNOSTICS below).</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Show summary of these options and exit.</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd>Show version of <code>rpc.rotd</code> and exit.</dd></dl>
 <p> Please note that the backend for the rotator to be controlled, or the rotator itself may not support some commands. In that case, the operation will fail with a <code>Hamlib</code> error code.</p>
 <h2>Examples</h2>
 <p>Start <code>rotd</code> as root for a RotorEZ using a USB to serial adapter and backgrounding: </p>

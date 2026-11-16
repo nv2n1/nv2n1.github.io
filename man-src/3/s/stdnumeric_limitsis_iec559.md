@@ -11,7 +11,6 @@ description: "std::numeric_limits<T>::is_iec559 – std::numeric_limits<T>::is_i
 <h2>Synopsis</h2>
 <pre><code>static const bool is_iec559;
 (until C++ 11)
-
     static constexpr bool is_iec559;
 (since C++ 11)</code></pre>
 <p>The value of std::numeric_limits&lt;T&gt;::is_iec559 is true for all floating-point types T which fulfill the requirements of IEC 559 (IEEE_754) standard. If std::numeric_limits&lt;T&gt;::is_iec559 is true, then std::numeric_limits&lt;T&gt;::has_infinity, std::numeric_limits&lt;T&gt;::has_quiet_NaN, and std::numeric_limits&lt;T&gt;::has_signaling_NaN are also true. </p>

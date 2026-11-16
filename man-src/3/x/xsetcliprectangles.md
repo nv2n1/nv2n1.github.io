@@ -10,27 +10,27 @@ description: "XSetClipOrigin, XSetClipMask, XSetClipRectangles – GC convenienc
 <p>XSetClipOrigin, XSetClipMask, XSetClipRectangles &#8211; GC convenience routines </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>int XSetClipOrigin(Display *<i>display</i>, GC <i>gc</i>, int <i>clip_x_origin</i>, int <i>clip_y_origin</i>);</p>
-<dd>int XSetClipMask(Display *<i>display</i>, GC <i>gc</i>, Pixmap <i>pixmap</i>);</p>
-<dd>int XSetClipRectangles(Display *<i>display</i>, GC <i>gc</i>, int <i>clip_x_origin</i>, int <i>clip_y_origin</i>, XRectangle <i>rectangles</i>[], int <i>n</i>, int <i>ordering</i>);</dl>
+<dd>int XSetClipOrigin(Display *<i>display</i>, GC <i>gc</i>, int <i>clip_x_origin</i>, int <i>clip_y_origin</i>);</dd>
+<dd>int XSetClipMask(Display *<i>display</i>, GC <i>gc</i>, Pixmap <i>pixmap</i>);</dd>
+<dd>int XSetClipRectangles(Display *<i>display</i>, GC <i>gc</i>, int <i>clip_x_origin</i>, int <i>clip_y_origin</i>, XRectangle <i>rectangles</i>[], int <i>n</i>, int <i>ordering</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>clip_x_origin</i></p>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>clip_x_origin</i></dt>
 <dd>
-<dt><i>clip_y_origin</i></p>
-<dd>Specify the x and y coordinates of the clip-mask origin.</p>
-<dt><i>gc</i></p>
-<dd>Specifies the GC.</p>
-<dt><i>n</i></p>
-<dd>Specifies the number of rectangles.</p>
-<dt><i>ordering</i></p>
-<dd>Specifies the ordering relations on the rectangles. You can pass <code>Unsorted</code>, <code>YSorted</code>, <code>YXSorted</code>, or <code>YXBanded</code>.</p>
-<dt><i>pixmap</i></p>
-<dd>Specifies the pixmap or <code>None</code>.</p>
-<dt><i>rectangles</i></p>
-<dd>Specifies an array of rectangles that define the clip-mask.</dl>
+</dd><dt><i>clip_y_origin</i></dt>
+<dd>Specify the x and y coordinates of the clip-mask origin.</dd>
+<dt><i>gc</i></dt>
+<dd>Specifies the GC.</dd>
+<dt><i>n</i></dt>
+<dd>Specifies the number of rectangles.</dd>
+<dt><i>ordering</i></dt>
+<dd>Specifies the ordering relations on the rectangles. You can pass <code>Unsorted</code>, <code>YSorted</code>, <code>YXSorted</code>, or <code>YXBanded</code>.</dd>
+<dt><i>pixmap</i></dt>
+<dd>Specifies the pixmap or <code>None</code>.</dd>
+<dt><i>rectangles</i></dt>
+<dd>Specifies an array of rectangles that define the clip-mask.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XSetClipOrigin</code> function sets the clip origin in the specified GC. The clip-mask origin is interpreted relative to the origin of whatever destination drawable is specified in the graphics request. </p>
 <p> <code>XSetClipOrigin</code> can generate <code>BadAlloc</code> and <code>BadGC</code> errors. </p>
@@ -41,14 +41,14 @@ description: "XSetClipOrigin, XSetClipMask, XSetClipRectangles – GC convenienc
 <p> <code>XSetClipRectangles</code> can generate <code>BadAlloc</code>, <code>BadGC</code>, <code>BadMatch</code>, and <code>BadValue</code> errors.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>The server failed to allocate the requested resource or server memory.</p>
-<dt><code>BadGC</code></p>
-<dd>A value for a GContext argument does not name a defined GContext.</p>
-<dt><code>BadMatch</code></p>
-<dd>Some argument or pair of arguments has the correct type and range but fails to match in some other way required by the request.</p>
-<dt><code>BadValue</code></p>
-<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>The server failed to allocate the requested resource or server memory.</dd>
+<dt><code>BadGC</code></dt>
+<dd>A value for a GContext argument does not name a defined GContext.</dd>
+<dt><code>BadMatch</code></dt>
+<dd>Some argument or pair of arguments has the correct type and range but fails to match in some other way required by the request.</dd>
+<dt><code>BadValue</code></dt>
+<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xcreategc/">XCreateGC</a>(3), <a href="/docs/linux/man/3-xdrawrectangle/">XDrawRectangle</a>(3), <a href="/docs/linux/man/3-xquerybestsize/">XQueryBestSize</a>(3), <a href="/docs/linux/man/3-xsetarcmode/">XSetArcMode</a>(3), <a href="/docs/linux/man/3-xsetfillstyle/">XSetFillStyle</a>(3), <a href="/docs/linux/man/3-xsetfont/">XSetFont</a>(3), <a href="/docs/linux/man/3-xsetlineattributes/">XSetLineAttributes</a>(3), <a href="/docs/linux/man/3-xsetstate/">XSetState</a>(3), <a href="/docs/linux/man/3-xsettile/">XSetTile</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

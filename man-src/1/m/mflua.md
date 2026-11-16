@@ -16,13 +16,13 @@ description: "mflua, mflua-nowin, mfluajit, mfluajit-nowin – implementation of
 <h2>DESCRIPTION</h2>
 <dl>
 <dt>
-<dd> Run MFLua on MFNAME, usually creating MFNAME.tfm and MFNAME.NNNNgf, where NNNN is the resolution of the specified mode (2602 by default). Any following COMMANDS are processed as Metafont input, after MFNAME is read. If the first line of MFNAME is %&amp;BASE, and BASE is an existing .base file, use it. Else use `NAME.base&#8217;, where NAME is the program invocation name, most commonly `mf&#8217;.</p>
+</dt><dd> Run MFLua on MFNAME, usually creating MFNAME.tfm and MFNAME.NNNNgf, where NNNN is the resolution of the specified mode (2602 by default). Any following COMMANDS are processed as Metafont input, after MFNAME is read. If the first line of MFNAME is %&amp;BASE, and BASE is an existing .base file, use it. Else use `NAME.base&#8217;, where NAME is the program invocation name, most commonly `mf&#8217;.</dd>
 <dt>
-<dd> Alternatively, if the first non-option argument begins with a backslash, interpret all non-option arguments as a line of Metafont input.</p>
+</dt><dd> Alternatively, if the first non-option argument begins with a backslash, interpret all non-option arguments as a line of Metafont input.</dd>
 <dt>
-<dd> Alternatively, if the first non-option argument begins with a &amp;, the next word is taken as the BASE to read, overriding all else. Any remaining arguments are processed as above.</p>
+</dt><dd> Alternatively, if the first non-option argument begins with a &amp;, the next word is taken as the BASE to read, overriding all else. Any remaining arguments are processed as above.</dd>
 <dt>
-<dd> If no arguments or options are specified, prompt for input.</dl>
+</dt><dd> If no arguments or options are specified, prompt for input.</dd></dl>
 <p> <code>-base</code>=<i>,BASENAME/</i> use BASENAME instead of program name or a %&amp; line </p>
 <p> <code>[-no]-file-line-error</code> disable/enable file:line:error style messages </p>
 <p> <code>-halt-on-error</code> stop processing at the first error </p>

@@ -14,11 +14,11 @@ mongoc_read_prefs_set_tags (mongoc_read_prefs_t *read_prefs,
  const bson_t *tags);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>read_prefs</code></p>
-<dd>A <code>mongoc_read_prefs_t</code> \&amp;.</dl>
+<dt><code>read_prefs</code></dt>
+<dd>A <code>mongoc_read_prefs_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>tags</code></p>
-<dd>A <code>bson_t</code> \&amp;.</dl>
+<dt><code>tags</code></dt>
+<dd>A <code>bson_t</code> \&amp;.</dd></dl>
 <h2>Description</h2>
 <p>Sets the tags to be used for the read preference. Only mongod instances matching these tags will be suitable for handling the request. </p>
 <h2>Colophon</h2>

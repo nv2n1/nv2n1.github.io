@@ -15,19 +15,19 @@ phy_register_fixup - creates a new phy_fixup and adds it to the list
 <h2>Arguments</h2>
 
 <i>bus_id</i>
-<dl><dd><dd>A string which matches phydev-&gt;mdio.dev.bus_id (or PHY_ANY_ID)</dl>
+<dl><dd></dd><dd>A string which matches phydev-&gt;mdio.dev.bus_id (or PHY_ANY_ID)</dd></dl>
  
 
  <i>phy_uid</i>
-<dl><dd>Used to match against phydev-&gt;phy_id (the UID of the PHY) It can also be PHY_ANY_UID</dl>
+<dl><dd>Used to match against phydev-&gt;phy_id (the UID of the PHY) It can also be PHY_ANY_UID</dd></dl>
  
 
  <i>phy_uid_mask</i>
-<dl><dd>Applied to phydev-&gt;phy_id and fixup-&gt;phy_uid before comparison</dl>
+<dl><dd>Applied to phydev-&gt;phy_id and fixup-&gt;phy_uid before comparison</dd></dl>
  
 
  <i>run</i>
-<dl><dd>The actual code to be run when a matching PHY is found</dl>
+<dl><dd>The actual code to be run when a matching PHY is found</dd></dl>
 
 <h2>Copyright</h2>
 

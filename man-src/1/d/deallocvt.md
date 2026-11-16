@@ -16,10 +16,10 @@ description: "deallocvt – deallocate unused virtual consoles"
 <p> A virtual console is unused if it is not the foreground console, and no process has it open for reading or writing, and no text has been selected on its screen.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>-V, &#8211;version</i></p>
-<dd> print program version and exit.</p>
-<dt><i>-h, &#8211;help</i></p>
-<dd> show this text and exit.</dl>
+<dt><i>-V, &#8211;version</i></dt>
+<dd> print program version and exit.</dd>
+<dt><i>-h, &#8211;help</i></dt>
+<dd> show this text and exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-chvt/">chvt</a></code>(1), <code><a href="/docs/linux/man/1-openvt/">openvt</a></code>(1) </p>
 <h2>Index</h2>

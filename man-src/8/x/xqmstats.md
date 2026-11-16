@@ -14,23 +14,23 @@ description: "xqmstats – Display XFS quota manager statistics from /proc"
 <p><code>xqmstat</code> queries the kernel for the XFS Quota Manager dquot statistics. It displays: </p>
 <dl>
 <dd>
-<dl>
-<dt>&bull;</p>
-<dd>Reclaims</p>
-<dt>&bull;</p>
-<dd>Missed reclaims</p>
-<dt>&bull;</p>
-<dd>Dquot dups</p>
-<dt>&bull;</p>
-<dd>Cache misses</p>
-<dt>&bull;</p>
-<dd>Cache hits</p>
-<dt>&bull;</p>
-<dd>Dquot wants</p>
-<dt>&bull;</p>
-<dd>Shake reclaims</p>
-<dt>&bull;</p>
-<dd>Inact reclaims</dl>
+</dd><dl>
+<dt>&bull;</dt>
+<dd>Reclaims</dd>
+<dt>&bull;</dt>
+<dd>Missed reclaims</dd>
+<dt>&bull;</dt>
+<dd>Dquot dups</dd>
+<dt>&bull;</dt>
+<dd>Cache misses</dd>
+<dt>&bull;</dt>
+<dd>Cache hits</dd>
+<dt>&bull;</dt>
+<dd>Dquot wants</dd>
+<dt>&bull;</dt>
+<dd>Shake reclaims</dd>
+<dt>&bull;</dt>
+<dd>Inact reclaims</dd></dl>
 </dl>
 <h2>Options</h2>
 <p>None.</p>

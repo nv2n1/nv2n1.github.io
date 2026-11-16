@@ -18,7 +18,7 @@ description: "cherk.f –"
 <p> <code>CHERK</code> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CHERK  performs one of the hermitian rank k operations
     C := alpha*A*A**H + beta*C,
@@ -28,11 +28,11 @@ description: "cherk.f –"
  matrix and  A  is an  n by k  matrix in the  first case and a  k by n
  matrix in the second case.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>UPLO</i> </p>
+</dt><dd> <i>UPLO</i> </dd>
 <pre>
           UPLO is CHARACTER*1
            On  entry,   UPLO  specifies  whether  the  upper  or  lower
@@ -122,18 +122,18 @@ description: "cherk.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> November 2011</dl>
+</dt><dd> November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   Level 3 Blas routine.
   -- Written on 8-February-1989.
@@ -144,8 +144,9 @@ description: "cherk.f –"
   -- Modified 8-Nov-93 to set C(J,J) to REAL( C(J,J) ) when BETA = 1.
      Ed Anderson, Cray Research Inc.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 174 of file cherk.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

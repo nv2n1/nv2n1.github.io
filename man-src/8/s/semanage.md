@@ -15,8 +15,8 @@ description: "semanage – SELinux Policy Management tool"
 <p>semanage is used to configure certain elements of SELinux policy without requiring modification to or recompilation from policy sources. This includes the mapping from Linux usernames to SELinux user identities (which controls the initial security context assigned to Linux users when they login and bounds their authorized role set) as well as security context mappings for various kinds of objects, such as network ports, interfaces, and nodes (hosts) as well as the file context mapping. Note that the semanage login command deals with the mapping from Linux usernames (logins) to SELinux user identities, while the semanage user command deals with the mapping from SELinux user identities to authorized role sets. In most cases, only the former mapping needs to be adjusted by the administrator; the latter is principally defined by the base policy and usually does not require modification. </p>
 <h2>Options</h2>
 <dl>
-<dt><i>-h, &#8211;help</i></p>
-<dd>List help information </p>
+<dt><i>-h, &#8211;help</i></dt>
+<dd>List help information </dd>
 </dl>
 <h2>See Also</h2>
 <p><code>selinux (8),</code> <code>semanage-boolean (8),</code> <code>semanage-dontaudit (8),</code> <code>semanage-export (8),</code> <code>semanage-fcontext (8),</code> <code>semanage-import (8),</code> <code>semanage-interface (8),</code> <code>semanage-login (8),</code> <code>semanage-module (8),</code> <code>semanage-node (8),</code> <code>semanage-permissive (8),</code> <code>semanage-port (8),</code> <code>semanage-user (8)</code> </p>

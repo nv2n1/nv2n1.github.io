@@ -12,11 +12,11 @@ description: "npm-update – Update a package"
 <h3>Synopsis</h3>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 npm update[-g][&lt;pkg&gt;...] aliases : up, upgrade
 </code></pre>
-</dl>
+</dd></dl>
 <h3>Description</h3>
 <p> This command will update all the packages listed to the latest version (specified by the <code>tag</code> config), respecting semver. </p>
 <p> It will also install missing packages. As with all commands that install packages, the <code>&#8211;dev</code> flag will cause <code>devDependencies</code> to be processed as well. </p>
@@ -29,7 +29,7 @@ npm update[-g][&lt;pkg&gt;...] aliases : up, upgrade
 <p> For the examples below, assume that the current package is <code>app</code> and it depends on dependencies, <code>dep1</code> (<code>dep2</code>, .. etc.). The published versions of <code>dep1</code> are: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 {
     "dist-tags" : {"latest" : "1.2.2"},
@@ -46,53 +46,53 @@ npm update[-g][&lt;pkg&gt;...] aliases : up, upgrade
                   ]
 }
 </code></pre>
-</dl>
+</dd></dl>
 <h3>Caret Dependencies</h3>
 <p> If <code>app</code>&#8216;s <code>package.json</code> contains: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 &quot;dependencies&quot;: {
   &quot;dep1&quot;: &quot;^1.1.1&quot;
 }
 </pre>
-</dl>
+</dd></dl>
 <p> Then <code>npm update</code> will install <code>dep1 [at] 1.2.2</code>, because <code>1.2.2</code> is <code>latest</code> and <code>1.2.2</code> satisfies <code>^1.1.1</code>.</p>
 <h3>Tilde Dependencies</h3>
 <p> However, if <code>app</code>&#8216;s <code>package.json</code> contains: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 &quot;dependencies&quot;: {
   &quot;dep1&quot;: &quot;~1.1.1&quot;
 }
 </pre>
-</dl>
+</dd></dl>
 <p> In this case, running <code>npm update</code> will install <code>dep1 [at] 1.1.2</code>. Even though the <code>latest</code> tag points to <code>1.2.2</code>, this version does not satisfy <code>~1.1.1</code>, which is equivalent to <code>&gt;=1.1.1 &lt;1.2.0</code>. So the highest-sorting version that satisfies <code>~1.1.1</code> is used, which is <code>1.1.2</code>.</p>
 <h3>Caret Dependencies below 1.0.0</h3>
 <p> Suppose <code>app</code> has a caret dependency on a version below <code>1.0.0</code>, for example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 &quot;dependencies&quot;: {
   &quot;dep1&quot;: &quot;^0.2.0&quot;
 }
 </pre>
-</dl>
+</dd></dl>
 <p> <code>npm update</code> will install <code>dep1 [at] 0.2.0</code>, because there are no other versions which satisfy <code>^0.2.0</code>. </p>
 <p> If the dependence were on <code>^0.4.0</code>: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 &quot;dependencies&quot;: {
   &quot;dep1&quot;: &quot;^0.4.0&quot;
 }
 </pre>
-</dl>
+</dd></dl>
 <p> Then <code>npm update</code> will install <code>dep1 [at] 0.4.1</code>, because that is the highest-sorting version that satisfies <code>^0.4.0</code> (<code>&gt;= 0.4.0 &lt;0.5.0</code>)</p>
 <h3>Updating Globally-Installed Packages</h3>
 <p> <code>npm update -g</code> will apply the <code>update</code> action to each globally installed package that is <code>outdated</code> &#8212; that is, has a version that is different from <code>wanted</code>. </p>
@@ -100,21 +100,19 @@ npm update[-g][&lt;pkg&gt;...] aliases : up, upgrade
 <p> NOTE: If a package has been upgraded to a version newer than <code>latest</code>, it will be <i>downgraded</i>.</p>
 <h3>See Also</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> npm help install</p>
-<dt>&bull;</p>
-<dd> npm help outdated</p>
-<dt>&bull;</p>
-<dd> npm help shrinkwrap</p>
-<dt>&bull;</p>
-<dd> npm help registry</p>
-<dt>&bull;</p>
-<dd> npm help folders</p>
-<dt>&bull;</p>
-<dd> npm help ls </p>
+<dt>&bull;</dt>
+<dd> npm help install</dd>
+<dt>&bull;</dt>
+<dd> npm help outdated</dd>
+<dt>&bull;</dt>
+<dd> npm help shrinkwrap</dd>
+<dt>&bull;</dt>
+<dd> npm help registry</dd>
+<dt>&bull;</dt>
+<dd> npm help folders</dd>
+<dt>&bull;</dt>
+<dd> npm help ls </dd>
 </dl>
 </dl>
 <h2>Index</h2>

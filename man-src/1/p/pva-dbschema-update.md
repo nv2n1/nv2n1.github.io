@@ -15,20 +15,20 @@ description: "pva-dbschema-update – PHP VOMS-Admin(PVA) tool to update databas
 <p> <code>pva-dbschema-update [-f] [-h &lt;host&gt;] -d &lt;database&gt; -u &lt;user&gt; -p &lt;password&gt;</code> </p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt><code>-f</code></p>
-<dd> force database schema update invocation (assuming database version is oldest)</dl>
+<dt><code>-f</code></dt>
+<dd> force database schema update invocation (assuming database version is oldest)</dd></dl>
 <dl>
-<dt><code>-h &lt;host&gt;</code></p>
-<dd> database server host (localhost is used by default)</dl>
+<dt><code>-h &lt;host&gt;</code></dt>
+<dd> database server host (localhost is used by default)</dd></dl>
 <dl>
-<dt><code>-d &lt;database&gt;</code></p>
-<dd> target database name for schema update</dl>
+<dt><code>-d &lt;database&gt;</code></dt>
+<dd> target database name for schema update</dd></dl>
 <dl>
-<dt><code>-u &lt;user&gt;</code></p>
-<dd> username to access database on server</dl>
+<dt><code>-u &lt;user&gt;</code></dt>
+<dd> username to access database on server</dd></dl>
 <dl>
-<dt><code>-p &lt;password&gt;</code></p>
-<dd> passwoed to access database on server</dl>
+<dt><code>-p &lt;password&gt;</code></dt>
+<dd> passwoed to access database on server</dd></dl>
 <h2>EXTENDED DESCRIPTION</h2>
 <p> The <code>pva-dbschema-update </code> command designed to be called within package post-install script to authomatically update all served VO databases on PHP VOMS-Admin update. </p>
 <p> In case database migration from another server that runs older version of PHP VOMS-Admin it is required to update database schema manually. </p>

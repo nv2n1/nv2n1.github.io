@@ -31,23 +31,23 @@ ucmatose[-s server_address][-b bind_address]
 
 <dl>
 <dt>-s server_address
-<dd> The network name or IP address of the server system listening for connections. The used name or address must route over an RDMA device. This option must be specified by the client.
-<dt>-b bind_address
-<dd> The local network address to bind to. To bind to any address with IPv6 use -b ::0 .
-<dt>-f address_format
-<dd> Specifies the format of the server and bind address. Be default, the format is determined by getaddrinfo() as either being a hostname, an IPv4 address, or an IPv6 address. This option may be used to indicate that a specific address format has been provided. Supported address_format values are: name, ip, ipv6, and gid.
-<dt>-P port_space
-<dd> Specifies the port space for the connection. Be default, the port space is the RDMA TCP port space. (Note that the RDMA port space may be separate from that used for IP.) Supported port_space values are: tcp and ib.
-<dt>-c connections
-<dd> The number of connections to establish between the client and server. (default 1)
-<dt>-C message_count
-<dd> The number of messages to transfer over each connection. (default 10)
-<dt>-S message_size
-<dd> The size of each message transferred, in bytes. (default 100)
-<dt>-t tos
-<dd> Indicates the type of service used for the communication. Type of service is implementation dependent based on subnet configuration.
-<dt>-m
-<dd> Tests event channel migration. Migrates all communication identifiers to a different event channel for disconnect events.</dl>
+</dt><dd> The network name or IP address of the server system listening for connections. The used name or address must route over an RDMA device. This option must be specified by the client.
+</dd><dt>-b bind_address
+</dt><dd> The local network address to bind to. To bind to any address with IPv6 use -b ::0 .
+</dd><dt>-f address_format
+</dt><dd> Specifies the format of the server and bind address. Be default, the format is determined by getaddrinfo() as either being a hostname, an IPv4 address, or an IPv6 address. This option may be used to indicate that a specific address format has been provided. Supported address_format values are: name, ip, ipv6, and gid.
+</dd><dt>-P port_space
+</dt><dd> Specifies the port space for the connection. Be default, the port space is the RDMA TCP port space. (Note that the RDMA port space may be separate from that used for IP.) Supported port_space values are: tcp and ib.
+</dd><dt>-c connections
+</dt><dd> The number of connections to establish between the client and server. (default 1)
+</dd><dt>-C message_count
+</dt><dd> The number of messages to transfer over each connection. (default 10)
+</dd><dt>-S message_size
+</dt><dd> The size of each message transferred, in bytes. (default 100)
+</dd><dt>-t tos
+</dt><dd> Indicates the type of service used for the communication. Type of service is implementation dependent based on subnet configuration.
+</dd><dt>-m
+</dt><dd> Tests event channel migration. Migrates all communication identifiers to a different event channel for disconnect events.</dd></dl>
 
 <h2>NOTES</h2>
 

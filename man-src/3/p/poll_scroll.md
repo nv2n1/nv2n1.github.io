@@ -10,7 +10,6 @@ description: "poll_scroll – Checks the status of a scroll request with triple 
 <p>poll_scroll &#8211; Checks the status of a scroll request with triple buffering. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int poll_scroll();</code></pre>
 <h2>Description</h2>
 <p>This function is used for triple buffering. It checks the status of a hardware scroll previously initiated by the request_scroll() routine.</p>

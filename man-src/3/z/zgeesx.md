@@ -32,10 +32,10 @@ description: "zgeesx.f –"
  and RCONDV, see Section 4.10 of the LAPACK Users' Guide (where
  these quantities are called s and sep respectively).
  A complex matrix is in Schur form if it is upper triangular.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>JOBVS</i> </p>
+<dd><i>JOBVS</i> </dd>
 <pre> JOBVS is CHARACTER*1
  = 'N': Schur vectors are not computed;
  = 'V': Schur vectors are computed.</pre>
@@ -140,13 +140,13 @@ description: "zgeesx.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 238 of file zgeesx.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

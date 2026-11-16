@@ -13,12 +13,12 @@ description: "lv2ls – List all installed LV2 plugins."
 <p> <code>lv2ls [OPTION]&#8230;</code> </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-n</code>, <code>&#8211;names</code></p>
-<dd> Show names instead of URIs </p>
-<dt><code>&#8211;help</code></p>
-<dd> Display help and exit </p>
-<dt><code>&#8211;version</code></p>
-<dd> Display version information and exit </p>
+<dt><code>-n</code>, <code>&#8211;names</code></dt>
+<dd> Show names instead of URIs </dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Display help and exit </dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Display version information and exit </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code>lilv(3),</code> <code><a href="/docs/linux/man/1-lv2info/">lv2info</a>(1)</code> </p>

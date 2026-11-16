@@ -49,32 +49,32 @@ virt - df[--options] - d domname virt - df[--options] - a disk.img[-a disk.img..
 </pre>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display brief help.</p>
-<dt><code>-a</code> file</p>
+<dt><code>&#8211;help</code></dt>
+<dd> Display brief help.</dd>
+<dt><code>-a</code> file</dt>
 <dd>
-<dt><code>&#8211;add</code> file</p>
-<dd> Add <i>file</i> which should be a disk image from a virtual machine. If the virtual machine has multiple block devices, you must supply all of them with separate <i>-a</i> options. </p>
+</dd><dt><code>&#8211;add</code> file</dt>
+<dd> Add <i>file</i> which should be a disk image from a virtual machine. If the virtual machine has multiple block devices, you must supply all of them with separate <i>-a</i> options. </dd>
 <p> The format of the disk image is auto-detected. To override this and force a particular format use the <i>&#8211;format=..</i> option.</p>
-<dt><code>-a </code><font SIZE="-1"><code>URI</code></font></p>
+<dt><code>-a </code><font SIZE="-1"><code>URI</code></font></dt>
 <dd>
-<dt><code>&#8211;add </code><font SIZE="-1"><code>URI</code></font></p>
-<dd> Add a remote disk. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</p>
-<dt><code>-c</code> <font SIZE="-1">URI</font></p>
+</dd><dt><code>&#8211;add </code><font SIZE="-1"><code>URI</code></font></dt>
+<dd> Add a remote disk. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</dd>
+<dt><code>-c</code> <font SIZE="-1">URI</font></dt>
 <dd>
-<dt><code>&#8211;connect</code> <font SIZE="-1">URI</font></p>
-<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </p>
+</dd><dt><code>&#8211;connect</code> <font SIZE="-1">URI</font></dt>
+<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
 <p> If you specify guest block devices directly (<i>-a</i>), then libvirt is not used at all.</p>
-<dt><code>&#8211;csv</code></p>
-<dd> Write out the results in <font SIZE="-1">CSV</font> format (comma-separated values). This format can be imported easily into databases and spreadsheets, but read &#8220;<font SIZE="-1">NOTE ABOUT CSV FORMAT&#8221;</font> below.</p>
-<dt><code>-d</code> guest</p>
+<dt><code>&#8211;csv</code></dt>
+<dd> Write out the results in <font SIZE="-1">CSV</font> format (comma-separated values). This format can be imported easily into databases and spreadsheets, but read &#8220;<font SIZE="-1">NOTE ABOUT CSV FORMAT&#8221;</font> below.</dd>
+<dt><code>-d</code> guest</dt>
 <dd>
-<dt><code>&#8211;domain</code> guest</p>
-<dd> Add all the disks from the named libvirt guest. Domain UUIDs can be used instead of names.</p>
-<dt><code>&#8211;format=raw|qcow2|..</code></p>
+</dd><dt><code>&#8211;domain</code> guest</dt>
+<dd> Add all the disks from the named libvirt guest. Domain UUIDs can be used instead of names.</dd>
+<dt><code>&#8211;format=raw|qcow2|..</code></dt>
 <dd>
-<dt><code>&#8211;format</code></p>
-<dd> The default for the <i>-a</i> option is to auto-detect the format of the disk image. Using this forces the disk format for <i>-a</i> options which follow on the command line. Using <i>&#8211;format</i> with no argument switches back to auto-detection for subsequent <i>-a</i> options. </p>
+</dd><dt><code>&#8211;format</code></dt>
+<dd> The default for the <i>-a</i> option is to auto-detect the format of the disk image. Using this forces the disk format for <i>-a</i> options which follow on the command line. Using <i>&#8211;format</i> with no argument switches back to auto-detection for subsequent <i>-a</i> options. </dd>
 <p> For example: </p>
 <pre>
  virt-df --format=raw -a disk.img
@@ -85,44 +85,44 @@ virt - df[--options] - d domname virt - df[--options] - a disk.img[-a disk.img..
 </pre>
 <p> forces raw format (no auto-detection) for <i>disk.img</i> and reverts to auto-detection for <i>another.img</i>. </p>
 <p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (<font SIZE="-1">CVE-2010-3851</font>).</p>
-<dt><code>-h</code></p>
+<dt><code>-h</code></dt>
 <dd>
-<dt><code>&#8211;human-readable</code></p>
-<dd> Print sizes in human-readable format. </p>
+</dd><dt><code>&#8211;human-readable</code></dt>
+<dd> Print sizes in human-readable format. </dd>
 <p> You are not allowed to use <i>-h</i> and <i>&#8211;csv</i> at the same time.</p>
-<dt><code>-i</code></p>
+<dt><code>-i</code></dt>
 <dd>
-<dt><code>&#8211;inodes</code></p>
-<dd> Print inodes instead of blocks.</p>
-<dt><code>&#8211;one-per-guest</code></p>
-<dd> Since libguestfs 1.22, this is the default. This option does nothing and is left here for backwards compatibility with older scripts.</p>
-<dt><code>-P</code> nr_threads</p>
-<dd> Since libguestfs 1.22, virt-df is multithreaded and examines guests in parallel. By default the number of threads to use is chosen based on the amount of free memory available at the time that virt-df is started. You can force virt-df to use at most <tt>&quot;nr_threads&quot;</tt> by using the <i>-P</i> option. </p>
+</dd><dt><code>&#8211;inodes</code></dt>
+<dd> Print inodes instead of blocks.</dd>
+<dt><code>&#8211;one-per-guest</code></dt>
+<dd> Since libguestfs 1.22, this is the default. This option does nothing and is left here for backwards compatibility with older scripts.</dd>
+<dt><code>-P</code> nr_threads</dt>
+<dd> Since libguestfs 1.22, virt-df is multithreaded and examines guests in parallel. By default the number of threads to use is chosen based on the amount of free memory available at the time that virt-df is started. You can force virt-df to use at most <tt>&quot;nr_threads&quot;</tt> by using the <i>-P</i> option. </dd>
 <p> Note that <i>-P 0</i> means to autodetect, and <i>-P 1</i> means to use a single thread.</p>
-<dt><code>&#8211;uuid</code></p>
-<dd> Print UUIDs instead of names. This is useful for following a guest even when the guest is migrated or renamed, or when two guests happen to have the same name. </p>
+<dt><code>&#8211;uuid</code></dt>
+<dd> Print UUIDs instead of names. This is useful for following a guest even when the guest is migrated or renamed, or when two guests happen to have the same name. </dd>
 <p> Note that only domains that we fetch from libvirt come with UUIDs. For disk images, we still print the disk image name even when this option is specified.</p>
-<dt><code>-v</code></p>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;verbose</code></p>
-<dd> Enable verbose messages for debugging.</p>
-<dt><code>-V</code></p>
+</dd><dt><code>&#8211;verbose</code></dt>
+<dd> Enable verbose messages for debugging.</dd>
+<dt><code>-V</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Display version number and exit.</p>
-<dt><code>-x</code></p>
-<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</dl>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Display version number and exit.</dd>
+<dt><code>-x</code></dt>
+<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</dd></dl>
 <h2>STATVFS NUMBERS</h2>
 <p> <tt>&quot;virt-df&quot;</tt> (and <i><a href="/docs/linux/man/1-df/">df</a></i>(1)) get information by issuing a <i><a href="/docs/linux/man/3-statvfs/">statvfs</a></i>(3) system call. You can get the same information directly, either from the host (using libguestfs) or inside the guest:</p>
 <dl>
-<dt>From the host</p>
-<dd> Run this command: </p>
+<dt>From the host</dt>
+<dd> Run this command: </dd>
 <pre>
  guestfish --ro -d GuestName -i statvfs /
 </pre>
 <p> (change <i>/</i> to see stats for other filesystems).</p>
-<dt>From inside the guest</p>
-<dd> Run this command: </p>
+<dt>From inside the guest</dt>
+<dd> Run this command: </dd>
 <pre><code>
 python - c 'import os; s = os.statvfs ("/"); print s'
 </code></pre>
@@ -158,13 +158,13 @@ python - c 'import os; s = os.statvfs ("/"); print s'
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> When reporting a bug, please supply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The version of libguestfs.</p>
-<dt>&bull;</p>
-<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</p>
-<dt>&bull;</p>
-<dd> Describe the bug accurately and give a way to reproduce it.</p>
-<dt>&bull;</p>
-<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
 <h2>Index</h2>

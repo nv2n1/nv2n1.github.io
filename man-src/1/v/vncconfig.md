@@ -24,29 +24,29 @@ description: "vncconfig – configure and control a VNC server"
 <p> Note that the DISPLAY environment variable or the <code>-display</code> option must be set as appropriate to control Xvnc. If you run it on an ordinary X server (or on a version 3 Xvnc) you will get an error message saying that there is no VNC extension. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-connect </code><i>host</i>[:<i>port</i>]</p>
-<dd> Tells an Xvnc server to make a &quot;reverse&quot; connection to a listening VNC viewer (normally connections are made the other way round &#8211; the viewer connects to the server). <i>host</i> is the host where the listening viewer is running. If it&#8217;s not listening on the default port of 5500, you can specify <i>host:port</i> instead.</p>
-<dt><code>-disconnect</code></p>
-<dd> This causes Xvnc to disconnect from all viewers so that the VNC desktop is not displayed anywhere.</p>
-<dt>[<code>-set</code>] <i>Xvnc-param</i>=<i>value</i></p>
-<dd> Sets an Xvnc parameter to the given value. Note that some of Xvnc&#8217;s parameters are read only once at startup so that changing them in this way may not have any effect.</p>
-<dt><code>-list</code></p>
-<dd> Lists all the parameters supported by Xvnc.</p>
-<dt><code>-get </code><i>Xvnc-param</i></p>
-<dd> Prints the current value of the given Xvnc parameter.</p>
-<dt><code>-desc </code><i>Xvnc-param</i></p>
-<dd> Prints a short description of the given Xvnc parameter. </p>
+<dt><code>-connect </code><i>host</i>[:<i>port</i>]</dt>
+<dd> Tells an Xvnc server to make a &quot;reverse&quot; connection to a listening VNC viewer (normally connections are made the other way round &#8211; the viewer connects to the server). <i>host</i> is the host where the listening viewer is running. If it&#8217;s not listening on the default port of 5500, you can specify <i>host:port</i> instead.</dd>
+<dt><code>-disconnect</code></dt>
+<dd> This causes Xvnc to disconnect from all viewers so that the VNC desktop is not displayed anywhere.</dd>
+<dt>[<code>-set</code>] <i>Xvnc-param</i>=<i>value</i></dt>
+<dd> Sets an Xvnc parameter to the given value. Note that some of Xvnc&#8217;s parameters are read only once at startup so that changing them in this way may not have any effect.</dd>
+<dt><code>-list</code></dt>
+<dd> Lists all the parameters supported by Xvnc.</dd>
+<dt><code>-get </code><i>Xvnc-param</i></dt>
+<dd> Prints the current value of the given Xvnc parameter.</dd>
+<dt><code>-desc </code><i>Xvnc-param</i></dt>
+<dd> Prints a short description of the given Xvnc parameter. </dd>
 </dl>
 <h2>PARAMETERS</h2>
 <p> <code>vncconfig</code> also has parameters of its own which can be set on the command line. These should not be confused with Xvnc&#8217;s parameters which are manipulated with the <code>-set</code>, <code>-get</code>, <code>-list</code> and <code>-desc</code> options. </p>
 <p> Parameters can be turned on with &#8211;<i>param</i> or off with &#8211;<i>param</i>=0. Parameters which take a value can be specified as &#8211;<i>param</i> <i>value</i>. Other valid forms are <i>param</i><code>=</code><i>value</i> &#8211;<i>param</i>=<i>value</i> &#8212;<i>param</i>=<i>value</i>. Parameter names are case-insensitive. </p>
 <dl>
-<dt><code>-display </code><i>Xdisplay</i></p>
-<dd> Specifies the Xvnc server to control.</p>
-<dt><code>-nowin</code></p>
-<dd> When run as a &quot;helper&quot; app, don&#8217;t put up a window.</p>
-<dt><code>-iconic</code></p>
-<dd> When run as a &quot;helper&quot; app, make the window iconified at startup. </p>
+<dt><code>-display </code><i>Xdisplay</i></dt>
+<dd> Specifies the Xvnc server to control.</dd>
+<dt><code>-nowin</code></dt>
+<dd> When run as a &quot;helper&quot; app, don&#8217;t put up a window.</dd>
+<dt><code>-iconic</code></dt>
+<dd> When run as a &quot;helper&quot; app, make the window iconified at startup. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-vncpasswd/">vncpasswd</a></code>(1), <code><a href="/docs/linux/man/1-vncviewer/">vncviewer</a></code>(1), <code><a href="/docs/linux/man/1-vncserver/">vncserver</a></code>(1), <code><a href="/docs/linux/man/1-xvnc/">Xvnc</a></code>(1)<br />

@@ -16,8 +16,8 @@ description: "ldns_rr2canonical"
 <p> void ldns_rr2canonical(ldns_rr *rr); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_rr2canonical</i>()</p>
-<dd>converts each dname in a rr to its canonical form. .br <code>rr</code>: the rr to work on .br Returns void</dl>
+<dt> <i>ldns_rr2canonical</i>()</dt>
+<dd>converts each dname in a rr to its canonical form. .br <code>rr</code>: the rr to work on .br Returns void</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

@@ -22,3 +22,4 @@ void perror(const char *s);
 <h2>Description</h2>
 <p>The <code>perror</code>() function produces a message on standard error describing the last error encountered during a call to a system or library function. </p>
 <p> First (if <i>s</i> is not NULL and <i>*s</i> is not a null byte (&#8216;
+</p>

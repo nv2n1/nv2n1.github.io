@@ -16,8 +16,8 @@ description: "addwords – Adding words to specified dictionary collectively"
 <p> <i>dicname</i> must be a &#8220;Text Dictionary format&#8221; which can be rewritten.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-is <i>cannaserver</i> (or -cannaserver <i>cannaserver</i>)</p>
-<dd> Specifies the hostname on which the specified dictionary is expected to exist.</dl>
+<dt>-is <i>cannaserver</i> (or -cannaserver <i>cannaserver</i>)</dt>
+<dd> Specifies the hostname on which the specified dictionary is expected to exist.</dd></dl>
 <h2>EXAMPLE</h2>
 <pre>
   % addwords mydic &lt; newwords

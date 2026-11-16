@@ -33,16 +33,16 @@ description: "perldsc – Perl Data Structures Cookbook"
 <p> This document is meant to be a detailed but understandable treatment of the many different sorts of data structures you might want to develop. It should also serve as a cookbook of examples. That way, when you need to create one of these complex data structures, you can just pinch, pilfer, or purloin a drop-in example from here. </p>
 <p> Let&#8217;s look at each of these possible constructs in detail. There are separate sections on each of the following:</p>
 <dl>
-<dt>&bull;</p>
-<dd> arrays of arrays</p>
-<dt>&bull;</p>
-<dd> hashes of arrays</p>
-<dt>&bull;</p>
-<dd> arrays of hashes</p>
-<dt>&bull;</p>
-<dd> hashes of hashes</p>
-<dt>&bull;</p>
-<dd> more elaborate constructs</dl>
+<dt>&bull;</dt>
+<dd> arrays of arrays</dd>
+<dt>&bull;</dt>
+<dd> hashes of arrays</dd>
+<dt>&bull;</dt>
+<dd> arrays of hashes</dd>
+<dt>&bull;</dt>
+<dd> hashes of hashes</dd>
+<dt>&bull;</dt>
+<dd> more elaborate constructs</dd></dl>
 <p> But for now, let&#8217;s look at general issues common to all these types of data structures.</p>
 <h2>REFERENCES</h2>
 <p> The most important thing to understand about all data structures in Perl&#8212;including multidimensional arrays&#8212;is that even though they might appear otherwise, Perl <tt>@ARRAY</tt>s and <tt>%HASH</tt>es are all internally one-dimensional. They can hold only scalar values (meaning a string, number, or a reference). They cannot directly contain other arrays or hashes, but instead contain <i>references</i> to other arrays or hashes. </p>
@@ -239,3 +239,4 @@ while (&lt;&gt;) {<br />
 $AoA[0][0] = &#8220;Fred&#8221;;<br />
 #another element<br />
 $AoA[1][1] = ~s / (\w) /
+</p>

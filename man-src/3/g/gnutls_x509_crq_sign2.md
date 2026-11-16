@@ -14,14 +14,14 @@ description: "gnutls_x509_crq_sign2 – API function"
 <p> <code>int gnutls_x509_crq_sign2(gnutls_x509_crq_t </code><i>crq</i><code>, gnutls_x509_privkey_t </code><i>key</i><code>, gnutls_digest_algorithm_t </code><i>dig</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crq_t crq</p>
-<dd> should contain a <code>gnutls_x509_crq_t</code> structure</p>
-<dt>gnutls_x509_privkey_t key</p>
-<dd> holds a private key</p>
-<dt>gnutls_digest_algorithm_t dig</p>
-<dd> The message digest to use, i.e., <code>GNUTLS_DIG_SHA1</code></p>
-<dt>unsigned int flags</p>
-<dd> must be 0</dl>
+<dt>gnutls_x509_crq_t crq</dt>
+<dd> should contain a <code>gnutls_x509_crq_t</code> structure</dd>
+<dt>gnutls_x509_privkey_t key</dt>
+<dd> holds a private key</dd>
+<dt>gnutls_digest_algorithm_t dig</dt>
+<dd> The message digest to use, i.e., <code>GNUTLS_DIG_SHA1</code></dd>
+<dt>unsigned int flags</dt>
+<dd> must be 0</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will sign the certificate request with a private key. This must be the same key as the one used in <code>gnutls_x509_crt_set_key()</code> since a certificate request is self signed. </p>
 <p> This must be the last step in a certificate request generation since all the previously set parameters are now signed.</p>
@@ -36,6 +36,6 @@ description: "gnutls_x509_crq_sign2 – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

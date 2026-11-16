@@ -10,10 +10,10 @@ description: "kfifo_size – returns the size of the fifo in elements"
 <p>kfifo_size &#8211; returns the size of the fifo in elements</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>kfifo_size(</code><i>fifo</i><code>);</code></dl>
+<dt> <code>kfifo_size(</code><i>fifo</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>fifo</i></p>
 <dl>
 <dd>
-<dd>address of the fifo to be used</dl>
+</dd><dd>address of the fifo to be used</dd></dl>
 <h2>Copyright</h2>

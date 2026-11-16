@@ -17,19 +17,18 @@ description: "e2pall – convert all EPS files in a LaTeX document to PDF"
 <h2>BUGS</h2>
 <dl>
 <dt>
-<dd> Seems to be broken</p>
+</dt><dd> Seems to be broken</dd>
 <dt>
-<dd> Cannot handle \input{<i>filename</i>} or \includegraphics{<i>filename</i>} split over more than one line</p>
+</dt><dd> Cannot handle \input{<i>filename</i>} or \includegraphics{<i>filename</i>} split over more than one line</dd>
 <dt>
-<dd> Must be run from same directory as the LaTeX file</p>
+</dt><dd> Must be run from same directory as the LaTeX file</dd>
 <dt>
-<dd> Does not look down $TEXINPUTS</p>
+</dt><dd> Does not look down $TEXINPUTS</dd>
 <dt>
-<dd> Cannot handle documents that use \include commands</p>
+</dt><dd> Cannot handle documents that use \include commands</dd>
 <dt>
-<dd> Assumes <i>all</i> files included with \includegraphics are EPS files</p>
-<dt>
-<dd></dl>
+</dt><dd> Assumes <i>all</i> files included with \includegraphics are EPS files</dd>
+</dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-epstopdf/">epstopdf</a></code>(1) </p>
 <h2>AUTHOR</h2>

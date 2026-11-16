@@ -34,6 +34,6 @@ description: "QuantLib::CoxIngersollRoss – Cox-Ingersoll-Ross model class."
 <p> This class implements the Cox-Ingersoll-Ross model defined by [ dr_t = k( heta &#8211; r_t)dt + qrt{r_t}igma dW_t . ] </p>
 <p> <code>Bug</code></p>
 <dl COMPACT>
-<dd>this class was not tested enough to guarantee its functionality.</dl>
+<dd>this class was not tested enough to guarantee its functionality.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

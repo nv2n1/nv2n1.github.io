@@ -17,18 +17,18 @@ description: "cccheck – Perform static code contracts verification for CLR ass
 <p> Currently only Contract.Assume() and Contract.Assert() methods are supported. Only non-null analysis is supported, the consecutive analyses are in development. An error message will be shown if cccheck is unable to process all or some of the methods of specified assembly.</p>
 <h2>CONFIGURATION OPTIONS</h2>
 <dl>
-<dt><i>&#8211;assembly &lt;assembly-name&gt;</i></p>
-<dd> The assembly to perform static verification.</p>
-<dt><i>&#8211;debug</i></p>
-<dd> Shows debug information about process of proving the assertions. It shows four layers of abstraction, raw layer, stack layer, heap layer, and substituted expression level.</p>
-<dt><i>&#8211;method=&lt;method-name-substring&gt;</i></p>
-<dd> String for finding method. It filters all methods in assembly where method name has this parameter as a substring.</p>
-<dt><i>&#8211;help</i></p>
-<dd> Show help for cccheck, listing configuration options. </p>
+<dt><i>&#8211;assembly &lt;assembly-name&gt;</i></dt>
+<dd> The assembly to perform static verification.</dd>
+<dt><i>&#8211;debug</i></dt>
+<dd> Shows debug information about process of proving the assertions. It shows four layers of abstraction, raw layer, stack layer, heap layer, and substituted expression level.</dd>
+<dt><i>&#8211;method=&lt;method-name-substring&gt;</i></dt>
+<dd> String for finding method. It filters all methods in assembly where method name has this parameter as a substring.</dd>
+<dt><i>&#8211;help</i></dt>
+<dd> Show help for cccheck, listing configuration options. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <dl>
-<dt>Suppose you have a method:</p>
+<dt>Suppose you have a method:</dt>
 <dd>
 &nbsp;<wbr>&nbsp;<wbr>void Method()&nbsp;<wbr>{<br />
 &nbsp;<wbr>object x&nbsp;<wbr>=&nbsp;<wbr>null;<br />
@@ -36,7 +36,7 @@ description: "cccheck – Perform static code contracts verification for CLR ass
 &nbsp;<wbr>if&nbsp;<wbr>(y&nbsp;<wbr>%&nbsp;<wbr>2&nbsp;<wbr>==&nbsp;<wbr>1)<br />
 x&nbsp;<wbr>=&nbsp;<wbr>new object();<br />
 &nbsp;<wbr>else<br />
-x&nbsp;<wbr>=&nbsp;<wbr>new string(); </p>
+x&nbsp;<wbr>=&nbsp;<wbr>new string(); </dd>
 <p>Contract.Assert(x&nbsp;<wbr>!=&nbsp;<wbr>null); } </p>
 <p> After the verification the tool will have results in following format: &quot;Assertion at : [Subroutine: &lt;id&gt; Block &lt;blockId&gt; PC &lt;id&gt;] :<br />
 &nbsp;<wbr>is&nbsp;<wbr>(true|false|unproven|unreachable)&quot;. (PC is a program counter) </p>

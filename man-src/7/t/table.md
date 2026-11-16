@@ -36,26 +36,26 @@ TABLE { [ ONLY ] <i>table_name</i> [ * ] | <i>with_query_name</i> }</pre>
 <h2>Description</h2>
 <p><code>SELECT</code> retrieves rows from zero or more tables. The general processing of <code>SELECT</code> is as follows:</p>
 <dl>
-<dt>1.</p>
-<dd>All queries in the WITH list are computed. These effectively serve as temporary tables that can be referenced in the FROM list. A WITH query that is referenced more than once in FROM is computed only once. (See WITH Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] below.)</p>
-<dt>2.</p>
-<dd>All elements in the FROM list are computed. (Each element in the FROM list is a real or virtual table.) If more than one element is specified in the FROM list, they are cross-joined together. (See FROM Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] below.)</p>
-<dt>3.</p>
-<dd>If the WHERE clause is specified, all rows that do not satisfy the condition are eliminated from the output. (See WHERE Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] below.)</p>
-<dt>4.</p>
-<dd>If the GROUP BY clause is specified, the output is divided into groups of rows that match on one or more values. If the HAVING clause is present, it eliminates groups that do not satisfy the given condition. (See GROUP BY Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] and HAVING Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] below.)</p>
-<dt>5.</p>
-<dd>The actual output rows are computed using the <code>SELECT</code> output expressions for each selected row. (See SELECT List [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] below.)</p>
-<dt>6.</p>
-<dd>Using the operators UNION, INTERSECT, and EXCEPT, the output of more than one <code>SELECT</code> statement can be combined to form a single result set. The UNION operator returns all rows that are in one or both of the result sets. The INTERSECT operator returns all rows that are strictly in both result sets. The EXCEPT operator returns the rows that are in the first result set but not in the second. In all three cases, duplicate rows are eliminated unless ALL is specified. (See UNION Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)], INTERSECT Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)], and EXCEPT Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] below.)</p>
-<dt>7.</p>
-<dd>If the ORDER BY clause is specified, the returned rows are sorted in the specified order. If ORDER BY is not given, the rows are returned in whatever order the system finds fastest to produce. (See ORDER BY Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] below.)</p>
-<dt>8.</p>
-<dd>DISTINCT eliminates duplicate rows from the result. DISTINCT ON eliminates rows that match on all the specified expressions. ALL (the default) will return all candidate rows, including duplicates. (See DISTINCT Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] below.)</p>
-<dt>9.</p>
-<dd>If the LIMIT (or FETCH FIRST) or OFFSET clause is specified, the <code>SELECT</code> statement only returns a subset of the result rows. (See LIMIT Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] below.)</p>
-<dt>10.</p>
-<dd>If FOR UPDATE or FOR SHARE is specified, the <code>SELECT</code> statement locks the selected rows against concurrent updates. (See FOR UPDATE/FOR SHARE Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] below.)</dl>
+<dt>1.</dt>
+<dd>All queries in the WITH list are computed. These effectively serve as temporary tables that can be referenced in the FROM list. A WITH query that is referenced more than once in FROM is computed only once. (See WITH Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] below.)</dd>
+<dt>2.</dt>
+<dd>All elements in the FROM list are computed. (Each element in the FROM list is a real or virtual table.) If more than one element is specified in the FROM list, they are cross-joined together. (See FROM Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] below.)</dd>
+<dt>3.</dt>
+<dd>If the WHERE clause is specified, all rows that do not satisfy the condition are eliminated from the output. (See WHERE Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] below.)</dd>
+<dt>4.</dt>
+<dd>If the GROUP BY clause is specified, the output is divided into groups of rows that match on one or more values. If the HAVING clause is present, it eliminates groups that do not satisfy the given condition. (See GROUP BY Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] and HAVING Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] below.)</dd>
+<dt>5.</dt>
+<dd>The actual output rows are computed using the <code>SELECT</code> output expressions for each selected row. (See SELECT List [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] below.)</dd>
+<dt>6.</dt>
+<dd>Using the operators UNION, INTERSECT, and EXCEPT, the output of more than one <code>SELECT</code> statement can be combined to form a single result set. The UNION operator returns all rows that are in one or both of the result sets. The INTERSECT operator returns all rows that are strictly in both result sets. The EXCEPT operator returns the rows that are in the first result set but not in the second. In all three cases, duplicate rows are eliminated unless ALL is specified. (See UNION Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)], INTERSECT Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)], and EXCEPT Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] below.)</dd>
+<dt>7.</dt>
+<dd>If the ORDER BY clause is specified, the returned rows are sorted in the specified order. If ORDER BY is not given, the rows are returned in whatever order the system finds fastest to produce. (See ORDER BY Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] below.)</dd>
+<dt>8.</dt>
+<dd>DISTINCT eliminates duplicate rows from the result. DISTINCT ON eliminates rows that match on all the specified expressions. ALL (the default) will return all candidate rows, including duplicates. (See DISTINCT Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] below.)</dd>
+<dt>9.</dt>
+<dd>If the LIMIT (or FETCH FIRST) or OFFSET clause is specified, the <code>SELECT</code> statement only returns a subset of the result rows. (See LIMIT Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] below.)</dd>
+<dt>10.</dt>
+<dd>If FOR UPDATE or FOR SHARE is specified, the <code>SELECT</code> statement locks the selected rows against concurrent updates. (See FOR UPDATE/FOR SHARE Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] below.)</dd></dl>
 <p> You must have SELECT privilege on each column used in a <code>SELECT</code> command. The use of FOR UPDATE or FOR SHARE requires UPDATE privilege as well (for at least one column of each table so selected).</p>
 <h2>Parameters</h2>
 <h3>With Clause</h3>
@@ -71,31 +71,31 @@ TABLE { [ ONLY ] <i>table_name</i> [ * ] | <i>with_query_name</i> }</pre>
 <p>The FROM clause specifies one or more source tables for the <code>SELECT</code>. If multiple sources are specified, the result is the Cartesian product (cross join) of all the sources. But usually qualification conditions are added to restrict the returned rows to a small subset of the Cartesian product. </p>
 <p> The FROM clause can contain the following elements:</p>
 <dl>
-<dt><i>table_name</i></p>
-<dd>The name (optionally schema-qualified) of an existing table or view. If ONLY is specified, only that table is scanned. If ONLY is not specified, the table and any descendant tables are scanned.</p>
-<dt><i>alias</i></p>
-<dd>A substitute name for the FROM item containing the alias. An alias is used for brevity or to eliminate ambiguity for self-joins (where the same table is scanned multiple times). When an alias is provided, it completely hides the actual name of the table or function; for example given FROM foo AS f, the remainder of the <code>SELECT</code> must refer to this FROM item as f not foo. If an alias is written, a column alias list can also be written to provide substitute names for one or more columns of the table.</p>
-<dt><i>select</i></p>
-<dd>A sub-<code>SELECT</code> can appear in the FROM clause. This acts as though its output were created as a temporary table for the duration of this single <code>SELECT</code> command. Note that the sub-<code>SELECT</code> must be surrounded by parentheses, and an alias <code>must</code> be provided for it. A VALUES [<code><a href="/docs/linux/man/7-values/">values</a></code>(7)] command can also be used here.</p>
-<dt><i>with_query_name</i></p>
-<dd>A WITH query is referenced by writing its name, just as though the query&#8217;s name were a table name. (In fact, the WITH query hides any real table of the same name for the purposes of the primary query. If necessary, you can refer to a real table of the same name by schema-qualifying the table&#8217;s name.) An alias can be provided in the same way as for a table.</p>
-<dt><i>function_name</i></p>
-<dd>Function calls can appear in the FROM clause. (This is especially useful for functions that return result sets, but any function can be used.) This acts as though its output were created as a temporary table for the duration of this single <code>SELECT</code> command. An alias can also be used. If an alias is written, a column alias list can also be written to provide substitute names for one or more attributes of the function&#8217;s composite return type. If the function has been defined as returning the <code>record</code> data type, then an alias or the key word AS must be present, followed by a column definition list in the form ( <i>column_name</i> <i>data_type</i> [, &#8230; ] ). The column definition list must match the actual number and types of columns returned by the function.</p>
-<dt><i>join_type</i></p>
-<dd>One of</p>
+<dt><i>table_name</i></dt>
+<dd>The name (optionally schema-qualified) of an existing table or view. If ONLY is specified, only that table is scanned. If ONLY is not specified, the table and any descendant tables are scanned.</dd>
+<dt><i>alias</i></dt>
+<dd>A substitute name for the FROM item containing the alias. An alias is used for brevity or to eliminate ambiguity for self-joins (where the same table is scanned multiple times). When an alias is provided, it completely hides the actual name of the table or function; for example given FROM foo AS f, the remainder of the <code>SELECT</code> must refer to this FROM item as f not foo. If an alias is written, a column alias list can also be written to provide substitute names for one or more columns of the table.</dd>
+<dt><i>select</i></dt>
+<dd>A sub-<code>SELECT</code> can appear in the FROM clause. This acts as though its output were created as a temporary table for the duration of this single <code>SELECT</code> command. Note that the sub-<code>SELECT</code> must be surrounded by parentheses, and an alias <code>must</code> be provided for it. A VALUES [<code><a href="/docs/linux/man/7-values/">values</a></code>(7)] command can also be used here.</dd>
+<dt><i>with_query_name</i></dt>
+<dd>A WITH query is referenced by writing its name, just as though the query&#8217;s name were a table name. (In fact, the WITH query hides any real table of the same name for the purposes of the primary query. If necessary, you can refer to a real table of the same name by schema-qualifying the table&#8217;s name.) An alias can be provided in the same way as for a table.</dd>
+<dt><i>function_name</i></dt>
+<dd>Function calls can appear in the FROM clause. (This is especially useful for functions that return result sets, but any function can be used.) This acts as though its output were created as a temporary table for the duration of this single <code>SELECT</code> command. An alias can also be used. If an alias is written, a column alias list can also be written to provide substitute names for one or more attributes of the function&#8217;s composite return type. If the function has been defined as returning the <code>record</code> data type, then an alias or the key word AS must be present, followed by a column definition list in the form ( <i>column_name</i> <i>data_type</i> [, &#8230; ] ). The column definition list must match the actual number and types of columns returned by the function.</dd>
+<dt><i>join_type</i></dt>
+<dd>One of</dd>
 <dl>
 <dd>
-<dl>
-<dt>*</p>
-<dd>[ INNER ] JOIN</p>
-<dt>*</p>
-<dd>LEFT [ OUTER ] JOIN</p>
-<dt>*</p>
-<dd>RIGHT [ OUTER ] JOIN</p>
-<dt>*</p>
-<dd>FULL [ OUTER ] JOIN</p>
-<dt>*</p>
-<dd>CROSS JOIN</dl>
+</dd><dl>
+<dt>*</dt>
+<dd>[ INNER ] JOIN</dd>
+<dt>*</dt>
+<dd>LEFT [ OUTER ] JOIN</dd>
+<dt>*</dt>
+<dd>RIGHT [ OUTER ] JOIN</dd>
+<dt>*</dt>
+<dd>FULL [ OUTER ] JOIN</dd>
+<dt>*</dt>
+<dd>CROSS JOIN</dd></dl>
 </dl>
 </dl>
 <p> For the INNER and OUTER join types, a join condition must be specified, namely exactly one of NATURAL, ON <i>join_condition</i>, or USING (<i>join_column</i> [, &#8230;]). See below for the meaning. For CROSS JOIN, none of these clauses can appear. </p>
@@ -105,12 +105,12 @@ TABLE { [ ONLY ] <i>table_name</i> [ * ] | <i>with_query_name</i> }</pre>
 <p> Conversely, RIGHT OUTER JOIN returns all the joined rows, plus one row for each unmatched right-hand row (extended with nulls on the left). This is just a notational convenience, since you could convert it to a LEFT OUTER JOIN by switching the left and right inputs. </p>
 <p> FULL OUTER JOIN returns all the joined rows, plus one row for each unmatched left-hand row (extended with nulls on the right), plus one row for each unmatched right-hand row (extended with nulls on the left).</p>
 <dl>
-<dt><code>ON </code><i>join_condition</i></p>
-<dd><i>join_condition</i> is an expression resulting in a value of type <code>boolean</code> (similar to a WHERE clause) that specifies which rows in a join are considered to match.</p>
-<dt><code>USING ( </code><i>join_column</i><code> [, &#8230;] )</code></p>
-<dd>A clause of the form USING ( a, b, &#8230; ) is shorthand for ON left_table.a = right_table.a AND left_table.b = right_table.b &#8230;. Also, USING implies that only one of each pair of equivalent columns will be included in the join output, not both.</p>
-<dt><code>NATURAL</code></p>
-<dd>NATURAL is shorthand for a USING list that mentions all columns in the two tables that have the same names.</dl>
+<dt><code>ON </code><i>join_condition</i></dt>
+<dd><i>join_condition</i> is an expression resulting in a value of type <code>boolean</code> (similar to a WHERE clause) that specifies which rows in a join are considered to match.</dd>
+<dt><code>USING ( </code><i>join_column</i><code> [, &#8230;] )</code></dt>
+<dd>A clause of the form USING ( a, b, &#8230; ) is shorthand for ON left_table.a = right_table.a AND left_table.b = right_table.b &#8230;. Also, USING implies that only one of each pair of equivalent columns will be included in the join output, not both.</dd>
+<dt><code>NATURAL</code></dt>
+<dd>NATURAL is shorthand for a USING list that mentions all columns in the two tables that have the same names.</dd></dl>
 <h3>Where Clause</h3>
 <p>The optional WHERE clause has the general form </p>
 <pre>WHERE <i>condition</i></pre>
@@ -223,7 +223,7 @@ FETCH { FIRST | NEXT } [ <i>count</i> ] { ROW | ROWS } ONLY</pre>
 <p> Multiple FOR UPDATE and FOR SHARE clauses can be written if it is necessary to specify different locking behavior for different tables. If the same table is mentioned (or implicitly affected) by both FOR UPDATE and FOR SHARE clauses, then it is processed as FOR UPDATE. Similarly, a table is processed as NOWAIT if that is specified in any of the clauses affecting it. </p>
 <p> FOR UPDATE and FOR SHARE cannot be used in contexts where returned rows cannot be clearly identified with individual table rows; for example they cannot be used with aggregation. </p>
 <dl>
-<dd><code>Caution:</code> Avoid locking a row and then modifying it within a later savepoint or <code>PL/pgSQL</code> exception block. A subsequent rollback would cause the lock to be lost. For example: </p>
+<dd><code>Caution:</code> Avoid locking a row and then modifying it within a later savepoint or <code>PL/pgSQL</code> exception block. A subsequent rollback would cause the lock to be lost. For example: </dd>
 <pre>BEGIN;
 SELECT * FROM mytable WHERE key = 1 FOR UPDATE;
 SAVEPOINT s;
@@ -231,9 +231,9 @@ UPDATE mytable SET ... WHERE key = 1;
 ROLLBACK TO s;</pre>
 <p>After the <code>ROLLBACK</code>, the row is effectively unlocked, rather than returned to its pre-savepoint state of being locked but not modified. This hazard occurs if a row locked in the current transaction is updated or deleted, or if a shared lock is upgraded to exclusive: in all these cases, the former lock state is forgotten. If the transaction is then rolled back to a state between the original locking command and the subsequent change, the row will appear not to be locked at all. This is an implementation deficiency which will be addressed in a future release of PostgreSQL.</dl>
 <dl>
-<dd><code>Caution:</code> It is possible for a <code>SELECT</code> command using both LIMIT and FOR UPDATE/SHARE clauses to return fewer rows than specified by LIMIT. This is because LIMIT is applied first. The command selects the specified number of rows, but might then block trying to obtain a lock on one or more of them. Once the SELECT unblocks, the row might have been deleted or updated so that it does not meet the query WHERE condition anymore, in which case it will not be returned.</dl>
+<dd><code>Caution:</code> It is possible for a <code>SELECT</code> command using both LIMIT and FOR UPDATE/SHARE clauses to return fewer rows than specified by LIMIT. This is because LIMIT is applied first. The command selects the specified number of rows, but might then block trying to obtain a lock on one or more of them. Once the SELECT unblocks, the row might have been deleted or updated so that it does not meet the query WHERE condition anymore, in which case it will not be returned.</dd></dl>
 <dl>
-<dd><code>Caution:</code> Similarly, it is possible for a <code>SELECT</code> command using ORDER BY and FOR UPDATE/SHARE to return rows out of order. This is because ORDER BY is applied first. The command orders the result, but might then block trying to obtain a lock on one or more of the rows. Once the SELECT unblocks, one of the ordered columns might have been modified and be returned out of order. A workaround is to perform <code>SELECT &#8230; FOR UPDATE/SHARE</code> and then <code>SELECT &#8230; ORDER BY</code>.</dl>
+<dd><code>Caution:</code> Similarly, it is possible for a <code>SELECT</code> command using ORDER BY and FOR UPDATE/SHARE to return rows out of order. This is because ORDER BY is applied first. The command orders the result, but might then block trying to obtain a lock on one or more of the rows. Once the SELECT unblocks, one of the ordered columns might have been modified and be returned out of order. A workaround is to perform <code>SELECT &#8230; FOR UPDATE/SHARE</code> and then <code>SELECT &#8230; ORDER BY</code>.</dd></dl>
 <h3>Table Command</h3>
 <p>The command </p>
 <pre>TABLE <i>name</i></pre>
@@ -344,7 +344,6 @@ SELECT * FROM t
     SELECT 1, employee_name, manager_name FROM employee WHERE manager_name = 'Mary' UNION ALL SELECT er.distance + 1, e.employee_name, e.manager_name FROM employee_recursive er, employee e WHERE er.employee_name = e.manager_name)
     SELECT distance,
     employee_name FROM employee_recursive;
-
 Notice the typical form of recursive queries:
 an initial condition, followed by UNION,
 followed by the recursive part of the query. Be sure that the

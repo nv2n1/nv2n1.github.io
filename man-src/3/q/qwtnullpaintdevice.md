@@ -70,63 +70,63 @@ description: "QwtNullPaintDevice –"
 <p>Render mode. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setMode()</code>, <code>mode()</code></dl>
+<dd><code>setMode()</code>, <code>mode()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>NormalMode </i></p>
-<dd>All vector graphic primitives are painted by the corresponding draw methods</p>
-<dt><i>PolygonPathMode </i></p>
-<dd>Vector graphic primitives ( beside polygons ) are mapped to a QPainterPath and are painted by drawPath. In PathMode mode only a few draw methods are called:</dl>
+<dt><i>NormalMode </i></dt>
+<dd>All vector graphic primitives are painted by the corresponding draw methods</dd>
+<dt><i>PolygonPathMode </i></dt>
+<dd>Vector graphic primitives ( beside polygons ) are mapped to a QPainterPath and are painted by drawPath. In PathMode mode only a few draw methods are called:</dd></dl>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd><code>drawPath()</code></p>
-<dt>&bull;</p>
-<dd><code>drawPixmap()</code></p>
-<dt>&bull;</p>
-<dd><code>drawImage()</code></p>
-<dt>&bull;</p>
-<dd><code>drawPolygon()</code></dl>
+<dt>&bull;</dt>
+<dd><code>drawPath()</code></dd>
+<dt>&bull;</dt>
+<dd><code>drawPixmap()</code></dd>
+<dt>&bull;</dt>
+<dd><code>drawImage()</code></dd>
+<dt>&bull;</dt>
+<dd><code>drawPolygon()</code></dd></dl>
 <dl COMPACT>
-<dt><i>PathMode </i></p>
-<dd>Vector graphic primitives are mapped to a QPainterPath and are painted by drawPath. In PathMode mode only a few draw methods are called:</dl>
+<dt><i>PathMode </i></dt>
+<dd>Vector graphic primitives are mapped to a QPainterPath and are painted by drawPath. In PathMode mode only a few draw methods are called:</dd></dl>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd><code>drawPath()</code></p>
-<dt>&bull;</p>
-<dd><code>drawPixmap()</code></p>
-<dt>&bull;</p>
-<dd><code>drawImage()</code></dl>
+<dt>&bull;</dt>
+<dd><code>drawPath()</code></dd>
+<dt>&bull;</dt>
+<dd><code>drawPixmap()</code></dd>
+<dt>&bull;</dt>
+<dd><code>drawImage()</code></dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>int QwtNullPaintDevice::metric (PaintDeviceMetricdeviceMetric) const [virtual]</h3>
 <p>See QPaintDevice::metric() </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>deviceMetric</i> Type of metric</dl>
+<dd><i>deviceMetric</i> Type of metric</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>Metric information for the given paint device metric.</dl>
+<dd>Metric information for the given paint device metric.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>sizeMetrics()</code></dl>
+<dd><code>sizeMetrics()</code></dd></dl>
 <h3><code>QwtNullPaintDevice::Mode</code> QwtNullPaintDevice::mode () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Render mode</dl>
+<dd>Render mode</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setMode()</code></dl>
+<dd><code>setMode()</code></dd></dl>
 <h3>void QwtNullPaintDevice::setMode (<code>Mode</code>mode)</h3>
 <p>Set the render mode </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>mode</i> New mode</dl>
+<dd><i>mode</i> New mode</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>mode()</code></dl>
+<dd><code>mode()</code></dd></dl>
 <h3>virtual QSize QwtNullPaintDevice::sizeMetrics () const [protected], [pure virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Size needed to implement <code>metric()</code></dl>
+<dd>Size needed to implement <code>metric()</code></dd></dl>
 <p> Implemented in <code>QwtGraphic</code>. </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

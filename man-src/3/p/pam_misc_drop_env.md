@@ -10,10 +10,9 @@ description: "pam_misc_drop_env – liberating a locally saved environment"
 <p>pam_misc_drop_env &#8211; liberating a locally saved environment</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;security/pam_misc.h&gt;
-
 int pam_misc_drop_env(char **env);</code></pre>
 <h2>Description</h2>
-<dd>This function is defined to complement the <code><a href="/docs/linux/man/3-pam_getenvlist/">pam_getenvlist</a></code>(3) function. It liberates the memory associated with <i>env</i>, <i>overwriting</i> with <i>0</i> all memory before <code>free()</code>ing it.</p>
+<dd>This function is defined to complement the <code><a href="/docs/linux/man/3-pam_getenvlist/">pam_getenvlist</a></code>(3) function. It liberates the memory associated with <i>env</i>, <i>overwriting</i> with <i>0</i> all memory before <code>free()</code>ing it.</dd>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/3-pam_getenvlist/">pam_getenvlist</a></code>(3), <code><a href="/docs/linux/man/8-pam/">pam</a></code>(8)</p>
 <h2>Standards</h2>

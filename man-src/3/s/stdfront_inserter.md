@@ -11,13 +11,9 @@ std::front_inserter - std::front_inserter
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;iterator&gt;
-
 template&lt; class Container &gt;                                                      (until C++20)
-
 std::front_insert_iterator&lt;Container&gt; front_inserter( Container&amp; c );
-
 template&lt; class Container &gt;                                                      (since C++20)
-
 constexpr std::front_insert_iterator&lt;Container&gt; front_inserter( Container&amp; c );</code></pre> 
 front_inserter is a convenience function template that constructs a std::front_insert_iterator for the container c with the type deduced from the type of the argument. 
 
@@ -40,17 +36,11 @@ A std::front_insert_iterator which can be used to add elements to the beginning 
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;vector&gt;
-
 #include &lt;deque&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;iterator&gt;
-
 #include &lt;algorithm&gt;
-
 int main()
-
 {
     std::vector&lt;int&gt; v{1, 2, 3, 4, 5};
     std::deque&lt;int&gt; d;

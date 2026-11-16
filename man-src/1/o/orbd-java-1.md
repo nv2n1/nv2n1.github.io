@@ -14,39 +14,39 @@ description: "orbd – Enables clients to locate and call persistent objects on 
 <code>orbd</code> [ <i>options</i> ]
 </pre>
 <dl>
-<dt><i>options</i></p>
-<dd> Command-line options. See Options.</dl>
+<dt><i>options</i></dt>
+<dd> Command-line options. See Options.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code>orbd</code> command enables clients to transparently locate and call persistent objects on servers in the CORBA environment. The Server Manager included with the orbd tool is used to enable clients to transparently locate and call persistent objects on servers in the CORBA environment. The persistent servers, while publishing the persistent object references in the naming service, include the port number of the ORBD in the object reference instead of the port number of the server. The inclusion of an ORBD port number in the object reference for persistent object references has the following advantages:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The object reference in the naming service remains independent of the server life cycle. For example, the object reference could be published by the server in the Naming Service when it is first installed, and then, independent of how many times the server is started or shut down, the ORBD returns the correct object reference to the calling client.</p>
-<dt>&bull;</p>
-<dd> The client needs to look up the object reference in the naming service only once, and can keep reusing this reference independent of the changes introduced due to server life cycle.</dl>
+<dt>&bull;</dt>
+<dd> The object reference in the naming service remains independent of the server life cycle. For example, the object reference could be published by the server in the Naming Service when it is first installed, and then, independent of how many times the server is started or shut down, the ORBD returns the correct object reference to the calling client.</dd>
+<dt>&bull;</dt>
+<dd> The client needs to look up the object reference in the naming service only once, and can keep reusing this reference independent of the changes introduced due to server life cycle.</dd></dl>
 <p> To access the ORBD Server Manager, the server must be started using <code>servertool</code>, which is a command-line interface for application programmers to register, unregister, start up, and shut down a persistent server. For more information on the Server Manager, see Server Manager. </p>
 <p> When <code>orbd</code> starts, it also starts a naming service. For more information about the naming service. See Start and Stop the Naming Service.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-ORBInitialPort <i>nameserverport</i></p>
+<dt>-ORBInitialPort <i>nameserverport</i></dt>
 <dd>
- Required. Specifies the port on which the name server should be started. After it is started, <code>orbd</code> listens for incoming requests on this port. On Oracle Solaris software, you must become the root user to start a process on a port below 1024. For this reason, Oracle recommends that you use a port number above or equal to 1024.</dl>
+ Required. Specifies the port on which the name server should be started. After it is started, <code>orbd</code> listens for incoming requests on this port. On Oracle Solaris software, you must become the root user to start a process on a port below 1024. For this reason, Oracle recommends that you use a port number above or equal to 1024.</dd></dl>
 <h3>NONREQUIRED OPTIONS</h3>
 <dl>
-<dt>-port <i>port</i></p>
+<dt>-port <i>port</i></dt>
 <dd>
- Specifies the activation port where ORBD should be started, and where ORBD will be accepting requests for persistent objects. The default value for this port is 1049. This port number is added to the port field of the persistent Interoperable Object References (IOR).</p>
-<dt>-defaultdb <i>directory</i></p>
+ Specifies the activation port where ORBD should be started, and where ORBD will be accepting requests for persistent objects. The default value for this port is 1049. This port number is added to the port field of the persistent Interoperable Object References (IOR).</dd>
+<dt>-defaultdb <i>directory</i></dt>
 <dd>
- Specifies the base where the ORBD persistent storage directory, <code>orb.db</code>, is created. If this option is not specified, then the default value is <code>./orb.db</code>.</p>
-<dt>-serverPollingTime <i>milliseconds</i></p>
+ Specifies the base where the ORBD persistent storage directory, <code>orb.db</code>, is created. If this option is not specified, then the default value is <code>./orb.db</code>.</dd>
+<dt>-serverPollingTime <i>milliseconds</i></dt>
 <dd>
- Specifies how often ORBD checks for the health of persistent servers registered through <code>servertool</code>. The default value is 1000 ms. The value specified for <code>milliseconds</code> must be a valid positive integer.</p>
-<dt>-serverStartupDelay milliseconds</p>
+ Specifies how often ORBD checks for the health of persistent servers registered through <code>servertool</code>. The default value is 1000 ms. The value specified for <code>milliseconds</code> must be a valid positive integer.</dd>
+<dt>-serverStartupDelay milliseconds</dt>
 <dd>
- Specifies how long ORBD waits before sending a location forward exception after a persistent server that is registered through <code>servertool</code> is restarted. The default value is 1000 ms. The value specified for <code>milliseconds</code> must be a valid positive integer.</p>
-<dt>-J<i>option</i></p>
+ Specifies how long ORBD waits before sending a location forward exception after a persistent server that is registered through <code>servertool</code> is restarted. The default value is 1000 ms. The value specified for <code>milliseconds</code> must be a valid positive integer.</dd>
+<dt>-J<i>option</i></dt>
 <dd>
- Passes <code>option</code> to the Java Virtual Machine, where <code>option</code> is one of the options described on the reference page for the Java application launcher. For example, <code>-J-Xms48m</code> sets the startup memory to 48 MB. See <a href="/docs/linux/man/1-java/">java</a>(1).</dl>
+ Passes <code>option</code> to the Java Virtual Machine, where <code>option</code> is one of the options described on the reference page for the Java application launcher. For example, <code>-J-Xms48m</code> sets the startup memory to 48 MB. See <a href="/docs/linux/man/1-java/">java</a>(1).</dd></dl>
 <h3>START AND STOP THE NAMING SERVICE</h3>
 <p> A naming service is a CORBA service that allows CORBA objects to be named by means of binding a name to an object reference. The name binding can be stored in the naming service, and a client can supply the name to obtain the desired object reference. </p>
 <p> Before running a client or a server, you will start ORBD. ORBD includes a persistent naming service and a transient naming service, both of which are an implementation of the COS Naming Service. </p>
@@ -105,9 +105,9 @@ description: "orbd – Enables clients to locate and call persistent objects on 
 <p> To shut down <code>orbd</code> from an Oracle Solaris shell, find the process, and terminate with the <code>kill</code> command. The server continues to wait for invocations until it is explicitly stopped. To shut down the <code>servertool</code>, type <i>quit</i> and press the <i>Enter</i> key.</p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>&bull;</p>
-<dd> servertool(1)</p>
-<dt>&bull;</p>
-<dd> Naming Service at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/technotes/guides/idl/jidlNaming.html">http://docs.oracle.com/javase/8/docs/technotes/guides/idl/jidlNaming.html</a> </p>
+<dt>&bull;</dt>
+<dd> servertool(1)</dd>
+<dt>&bull;</dt>
+<dd> Naming Service at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/technotes/guides/idl/jidlNaming.html">http://docs.oracle.com/javase/8/docs/technotes/guides/idl/jidlNaming.html</a> </dd>
 </dl>
 <h2>Index</h2>

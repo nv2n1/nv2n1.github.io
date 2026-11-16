@@ -14,50 +14,50 @@ description: "git-web–browse – Git helper script to launch a web browser"
 <p>This script tries, as much as possible, to display the URLs and FILEs that are passed as arguments, as HTML pages in new tabs on an already opened web browser. </p>
 <p> The following browsers (or commands) are currently supported: </p>
 <dl>
-<dd>&bull; firefox (this is the default under X Window when not using KDE)</dl>
+<dd>&bull; firefox (this is the default under X Window when not using KDE)</dd></dl>
 <dl>
-<dd>&bull; iceweasel</dl>
+<dd>&bull; iceweasel</dd></dl>
 <dl>
-<dd>&bull; seamonkey</dl>
+<dd>&bull; seamonkey</dd></dl>
 <dl>
-<dd>&bull; iceape</dl>
+<dd>&bull; iceape</dd></dl>
 <dl>
-<dd>&bull; chromium (also supported as chromium-browser)</dl>
+<dd>&bull; chromium (also supported as chromium-browser)</dd></dl>
 <dl>
-<dd>&bull; google-chrome (also supported as chrome)</dl>
+<dd>&bull; google-chrome (also supported as chrome)</dd></dl>
 <dl>
-<dd>&bull; konqueror (this is the default under KDE, see <i>Note about konqueror</i> below)</dl>
+<dd>&bull; konqueror (this is the default under KDE, see <i>Note about konqueror</i> below)</dd></dl>
 <dl>
-<dd>&bull; opera</dl>
+<dd>&bull; opera</dd></dl>
 <dl>
-<dd>&bull; w3m (this is the default outside graphical environments)</dl>
+<dd>&bull; w3m (this is the default outside graphical environments)</dd></dl>
 <dl>
-<dd>&bull; elinks</dl>
+<dd>&bull; elinks</dd></dl>
 <dl>
-<dd>&bull; links</dl>
+<dd>&bull; links</dd></dl>
 <dl>
-<dd>&bull; lynx</dl>
+<dd>&bull; lynx</dd></dl>
 <dl>
-<dd>&bull; dillo</dl>
+<dd>&bull; dillo</dd></dl>
 <dl>
-<dd>&bull; open (this is the default under Mac OS X GUI)</dl>
+<dd>&bull; open (this is the default under Mac OS X GUI)</dd></dl>
 <dl>
-<dd>&bull; start (this is the default under MinGW)</dl>
+<dd>&bull; start (this is the default under MinGW)</dd></dl>
 <dl>
-<dd>&bull; cygstart (this is the default under Cygwin)</dl>
+<dd>&bull; cygstart (this is the default under Cygwin)</dd></dl>
 <dl>
-<dd>&bull; xdg-open</dl>
+<dd>&bull; xdg-open</dd></dl>
 <p> Custom commands may also be specified.</p>
 <h2>Options</h2>
 <p>-b &lt;browser&gt;, &#8211;browser=&lt;browser&gt;</p>
 <dl>
-<dd>Use the specified browser. It must be in the list of supported browsers.</dl>
+<dd>Use the specified browser. It must be in the list of supported browsers.</dd></dl>
 <p> -t &lt;browser&gt;, &#8211;tool=&lt;browser&gt;</p>
 <dl>
-<dd>Same as above.</dl>
+<dd>Same as above.</dd></dl>
 <p> -c &lt;conf.var&gt;, &#8211;config=&lt;conf.var&gt;</p>
 <dl>
-<dd>CONF.VAR is looked up in the Git config files. If it&#8217;s set, then its value specifies the browser that should be used.</dl>
+<dd>CONF.VAR is looked up in the Git config files. If it&#8217;s set, then its value specifies the browser that should be used.</dd></dl>
 <h2>Configuration Variables</h2>
 <h3>CONF.VAR (from -c option) and web.browser</h3>
 <p>The web browser can be specified using a configuration variable passed with the -c (or &#8211;config) command-line option, or the <code>web.browser</code> configuration variable if the former is not used.</p>
@@ -75,13 +75,13 @@ description: "git-web–browse – Git helper script to launch a web browser"
  browser = konq
  [browser &quot;konq&quot;]
  cmd = A_PATH_TO/konqueror</pre>
-</dl>
+</dd></dl>
 <h3>Note about git-config &#8211;global</h3>
 <p>Note that these configuration variables should probably be set using the <code>&#8211;global</code> flag, for example like this: </p>
 <dl>
 <dd>
 <pre>$ git config --global web.browser firefox</pre>
-</dl>
+</dd></dl>
 <p> as they are probably more user specific than repository specific. See <code><a href="/docs/linux/man/1-git-config/">git-config</a></code>(1) for more information about this.</p>
 <h2>Git</h2>
 <p>Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite</p>

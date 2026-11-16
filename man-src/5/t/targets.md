@@ -19,8 +19,8 @@ description: "targets – configuration file for iSCSI targets"
 <p> The <i>target</i> definition specifies an iSCSI target, which is presented to the iSCSI initiator. Multiple targets can be specified. The first field in the definition is the target name, which must begin with either of the words &#8220;target&#8221; or &#8220;lun&#8221; and be followed by a number. Optionally, if a target is followed by an &#8220;=&#8221; sign and some text, the text is taken to be that of the iSCSI Qualified Name of the target. This IQN is used by the initiator to connect to the appropriate target. The next field is a selector for whether the storage should be presented as writable, or merely as read-only storage. The field of &#8220;rw&#8221; denotes read-write storage, whilst &#8220;ro&#8221; denotes read-only storage. The next field is the device or extent name that will be used as persistent storage for this target. The fourth field is a slash-notation netmask which will be used, during the discovery phase, to control the network addresses to which targets will be presented. The magic values &#8220;any&#8221; and &#8220;all&#8221; will expand to be the same as &#8220;0/0&#8221; If an attempt is made to discover a target which is not allowed by the netmask, a warning will be issued using <a href="/docs/linux/man/3-syslog/">syslog</a>(3) to make administrators aware of this attempt. The administrator can still use tcp wrapper functionality, as found in hosts_access5 and hosts.deny5 to allow or deny discovery attempts from initiators as well as using the inbuilt netmask functionality.</p>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/iscsi/targets </code></p>
-<dd>the list of exported storage <code>targets</code></dl>
+<dt><code>/etc/iscsi/targets </code></dt>
+<dd>the list of exported storage <code>targets</code></dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-syslog/">syslog</a>(3), hosts_access5, hosts.deny5, iscsi-target8</p>
 <h2>History</h2>

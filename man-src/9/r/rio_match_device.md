@@ -14,14 +14,14 @@ description: "rio_match_device – Tell if a RIO device has a matching RIO devic
 <p><i>id</i></p>
 <dl>
 <dd>
-<dd>the RIO device id structure to match against</dl>
+</dd><dd>the RIO device id structure to match against</dd></dl>
 <p> <i>rdev</i></p>
 <dl>
-<dd>the RIO device structure to match against</dl>
+<dd>the RIO device structure to match against</dd></dl>
 <h2>Description</h2>
 <p>Used from driver probe and bus matching to check whether a RIO device matches a device id structure provided by a RIO driver. Returns the matching struct rio_device_id or <code>NULL</code> if there is no match.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

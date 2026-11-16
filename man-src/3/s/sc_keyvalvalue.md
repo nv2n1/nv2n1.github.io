@@ -14,45 +14,15 @@ description: "sc::KeyValValue –"
 <p>enum <code>KeyValValueError</code> { <code>OK</code>, <code>WrongType</code> }</p>
 <h3>Public Member Functions</h3>
 <pre><code>KeyValValue (const KeyValValue &amp;)
-
-
-
 virtual KeyValValue::KeyValValueError doublevalue (double &amp;) const
-
-
-
 virtual KeyValValue::KeyValValueError booleanvalue (int &amp;) const
-
-
-
 virtual KeyValValue::KeyValValueError floatvalue (float &amp;) const
-
-
-
 virtual KeyValValue::KeyValValueError charvalue (char &amp;) const
-
-
-
 virtual KeyValValue::KeyValValueError intvalue (int &amp;) const
-
-
-
 virtual KeyValValue::KeyValValueError sizevalue (size_t &amp;) const
-
-
-
 virtual KeyValValue::KeyValValueError pcharvalue (const char *&amp;) const
-
-
-
 virtual KeyValValue::KeyValValueError stringvalue (std::string &amp;) const
-
-
-
 virtual KeyValValue::KeyValValueError describedclassvalue (Ref&lt; DescribedClass &gt; &amp;) const
-
-
-
 virtual void print (std::ostream &amp;o=ExEnv::out0()) const
 </code></pre>
 <h2>Author</h2>

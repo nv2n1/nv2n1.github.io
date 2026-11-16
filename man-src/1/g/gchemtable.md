@@ -17,11 +17,11 @@ description: "gchemtable – periodic table of the elements"
 <p> <code>Jean Br&#8217;efort</code> &lt;jean.brefort [at] normalesup.org&gt; </p>
 <dl>
 <dt>
-<dd> Program author.</dl>
+</dt><dd> Program author.</dd></dl>
 <p> <code>Daniel Leidert</code> &lt;daniel.leidert [at] wgdd.de&gt; </p>
 <dl>
 <dt>
-<dd> Manpage author.</dl>
+</dt><dd> Manpage author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2002-2007 Jean Br&#8217;efort<br />
  Copyright &#169; 2004-2007 Daniel Leidert </p>

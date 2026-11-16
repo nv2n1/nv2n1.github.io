@@ -10,24 +10,24 @@ description: "XRaiseWindow, XLowerWindow, XCirculateSubwindows, XCirculateSubwin
 <p>XRaiseWindow, XLowerWindow, XCirculateSubwindows, XCirculateSubwindowsUp, XCirculateSubwindowsDown, XRestackWindows &#8211; change window stacking order </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>int XRaiseWindow(Display *<i>display</i>, Window <i>w</i>);</p>
-<dd>int XLowerWindow(Display *<i>display</i>, Window <i>w</i>);</p>
-<dd>int XCirculateSubwindows(Display *<i>display</i>, Window <i>w</i>, int <i>direction</i>);</p>
-<dd>int XCirculateSubwindowsUp(Display *<i>display</i>, Window <i>w</i>);</p>
-<dd>int XCirculateSubwindowsDown(Display *<i>display</i>, Window <i>w</i>);</p>
-<dd>int XRestackWindows(Display *<i>display</i>, Window <i>windows</i>[], int <i>nwindows</i>);</dl>
+<dd>int XRaiseWindow(Display *<i>display</i>, Window <i>w</i>);</dd>
+<dd>int XLowerWindow(Display *<i>display</i>, Window <i>w</i>);</dd>
+<dd>int XCirculateSubwindows(Display *<i>display</i>, Window <i>w</i>, int <i>direction</i>);</dd>
+<dd>int XCirculateSubwindowsUp(Display *<i>display</i>, Window <i>w</i>);</dd>
+<dd>int XCirculateSubwindowsDown(Display *<i>display</i>, Window <i>w</i>);</dd>
+<dd>int XRestackWindows(Display *<i>display</i>, Window <i>windows</i>[], int <i>nwindows</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>direction</i></p>
-<dd>Specifies the direction (up or down) that you want to circulate the window. You can pass <code>RaiseLowest</code> or <code>LowerHighest</code>.</p>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>nwindows</i></p>
-<dd>Specifies the number of windows to be restacked.</p>
-<dt><i>w</i></p>
-<dd>Specifies the window.</p>
-<dt><i>windows</i></p>
-<dd>Specifies an array containing the windows to be restacked.</dl>
+<dt><i>direction</i></dt>
+<dd>Specifies the direction (up or down) that you want to circulate the window. You can pass <code>RaiseLowest</code> or <code>LowerHighest</code>.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>nwindows</i></dt>
+<dd>Specifies the number of windows to be restacked.</dd>
+<dt><i>w</i></dt>
+<dd>Specifies the window.</dd>
+<dt><i>windows</i></dt>
+<dd>Specifies an array containing the windows to be restacked.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XRaiseWindow</code> function raises the specified window to the top of the stack so that no sibling window obscures it. If the windows are regarded as overlapping sheets of paper stacked on a desk, then raising a window is analogous to moving the sheet to the top of the stack but leaving its x and y location on the desk constant. Raising a mapped window may generate <code>Expose</code> events for the window and any mapped subwindows that were formerly obscured. </p>
 <p> If the override-redirect attribute of the window is <code>False</code> and some other client has selected <code>SubstructureRedirectMask</code> on the parent, the X server generates a <code>ConfigureRequest</code> event, and no processing is performed. Otherwise, the window is raised. </p>
@@ -46,10 +46,10 @@ description: "XRaiseWindow, XLowerWindow, XCirculateSubwindows, XCirculateSubwin
 <p> <code>XRestackWindows</code> can generate <code>BadWindow</code> error.</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadValue</code></p>
-<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</p>
-<dt><code>BadWindow</code></p>
-<dd>A value for a Window argument does not name a defined Window.</dl>
+<dt><code>BadValue</code></dt>
+<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd>
+<dt><code>BadWindow</code></dt>
+<dd>A value for a Window argument does not name a defined Window.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xchangewindowattributes/">XChangeWindowAttributes</a>(3), <a href="/docs/linux/man/3-xconfigurewindow/">XConfigureWindow</a>(3), <a href="/docs/linux/man/3-xcreatewindow/">XCreateWindow</a>(3), <a href="/docs/linux/man/3-xdestroywindow/">XDestroyWindow</a>(3), <a href="/docs/linux/man/3-xmapwindow/">XMapWindow</a>(3), <a href="/docs/linux/man/3-xunmapwindow/">XUnmapWindow</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

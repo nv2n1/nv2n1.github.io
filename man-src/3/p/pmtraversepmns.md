@@ -24,10 +24,10 @@ int pmTraversePMNS_r(const char *<i>name</i>, void (*<i>dometric_r</i>)(const ch
 <p><code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3) and <code><a href="/docs/linux/man/3-pmgetchildren/">pmGetChildren</a></code>(3).</p>
 <h2>Diagnostics</h2>
 <dl>
-<dt><code>PM_ERR_NOPMNS</code></p>
-<dd>Failed to access a PMNS for operation. Note that if the application hasn&#8217;t a priori called <a href="/docs/linux/man/3-pmloadnamespace/">pmLoadNameSpace</a>(3) and wants to use the distributed PMNS, then a call to <code>pmTraversePMNS</code> must be made inside a current context.</p>
-<dt><code>PM_ERR_NAME</code></p>
-<dd>The initial pathname <i>name</i> is not valid in the current PMNS.</p>
-<dt><code>PM_ERR_*</code></p>
-<dd>Other diagnostics are for protocol failures when accessing the distributed PMNS. </p>
+<dt><code>PM_ERR_NOPMNS</code></dt>
+<dd>Failed to access a PMNS for operation. Note that if the application hasn&#8217;t a priori called <a href="/docs/linux/man/3-pmloadnamespace/">pmLoadNameSpace</a>(3) and wants to use the distributed PMNS, then a call to <code>pmTraversePMNS</code> must be made inside a current context.</dd>
+<dt><code>PM_ERR_NAME</code></dt>
+<dd>The initial pathname <i>name</i> is not valid in the current PMNS.</dd>
+<dt><code>PM_ERR_*</code></dt>
+<dd>Other diagnostics are for protocol failures when accessing the distributed PMNS. </dd>
 </dl>

@@ -15,41 +15,14 @@ std::__detail::_StateSeq -
 <h3>Public Member Functions</h3>
 
 <pre><code>_StateSeq (_Nfa &amp;__ss, _StateIdT __s, _StateIdT __e=_S_invalid_state_id)
-
-
-
 _StateSeq (const _StateSeq &amp;__e1, const _StateSeq &amp;__e2)
-
-
-
 _StateSeq (const _StateSeq &amp;__e, _StateIdT __id)
-
-
-
 _StateSeq (const _StateSeq &amp;__rhs)
-
-
-
 void _M_append (_StateIdT __id)
-
-
-
 void _M_append (_StateSeq &amp;__rhs)
-
-
-
 _StateIdT _M_clone ()
-
-
-
 _StateIdT _M_front () const
-
-
-
 void _M_push_back (_StateIdT __id)
-
-
-
 _StateSeq &amp; operator= (const _StateSeq &amp;__rhs)</code></pre>
 
 <h2>Detailed Description</h2>

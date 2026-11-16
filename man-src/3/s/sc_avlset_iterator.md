@@ -15,37 +15,13 @@ sc::AVLSet::iterator -
 <h3>Public Member Functions</h3>
 
 <pre><code>iterator (const EAVLMMap&lt; K, AVLMapNode&lt; K, int &gt; &gt; *m, const AVLMapNode&lt; K, int &gt; *n)
-
-
-
 iterator (const eavl_typename AVLSet&lt; K &gt;::iterator &amp;i)
-
-
-
 void operator++ ()
-
-
-
 void operator++ (int)
-
-
-
 int operator== (const eavl_typename AVLSet&lt; K &gt;::iterator &amp;i) const
-
-
-
 int operator!= (const eavl_typename AVLSet&lt; K &gt;::iterator &amp;i) const
-
-
-
 void operator= (const eavl_typename AVLSet&lt; K &gt;::iterator &amp;i)
-
-
-
 const K &amp; key () const
-
-
-
 const K &amp; operator* () const</code></pre>
 
 <h3>template&lt;class K&gt; class sc::AVLSet&lt; K &gt;::iterator</h3>

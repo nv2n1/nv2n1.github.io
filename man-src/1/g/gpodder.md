@@ -17,17 +17,17 @@ description: "gpodder – A Media aggregator and Podcast catcher"
 <p> See gpo(1) for the command-line interface.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> show program&#8217;s version number and exit</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> show this help message and exit</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Print debugging output to stdout</p>
-<dt><code>-m</code>, <code>&#8211;maemo</code></p>
-<dd> Start the Maemo 4 user interface</p>
-<dt><code>-f</code>, <code>&#8211;fremantle</code></p>
-<dd> Start the Maemo 5 user interface</p>
-<dt><code>-s</code> URL, <code>&#8211;subscribe</code>=<i>URL</i></p>
-<dd> Subscribe to the given URL </p>
+<dt><code>&#8211;version</code></dt>
+<dd> show program&#8217;s version number and exit</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> show this help message and exit</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Print debugging output to stdout</dd>
+<dt><code>-m</code>, <code>&#8211;maemo</code></dt>
+<dd> Start the Maemo 4 user interface</dd>
+<dt><code>-f</code>, <code>&#8211;fremantle</code></dt>
+<dd> Start the Maemo 5 user interface</dd>
+<dt><code>-s</code> URL, <code>&#8211;subscribe</code>=<i>URL</i></dt>
+<dd> Subscribe to the given URL </dd>
 </dl>
 <h2>Index</h2>

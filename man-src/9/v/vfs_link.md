@@ -15,19 +15,19 @@ vfs_link - create a new link
 <h2>Arguments</h2>
 
 <i>old_dentry</i>
-<dl><dd><dd>object to be linked</dl>
+<dl><dd></dd><dd>object to be linked</dd></dl>
  
 
  <i>dir</i>
-<dl><dd>new parent</dl>
+<dl><dd>new parent</dd></dl>
  
 
  <i>new_dentry</i>
-<dl><dd>where to create the new link</dl>
+<dl><dd>where to create the new link</dd></dl>
  
 
  <i>delegated_inode</i>
-<dl><dd>returns inode needing a delegation break</dl>
+<dl><dd>returns inode needing a delegation break</dd></dl>
 
 <h2>Description</h2>
 

@@ -24,13 +24,13 @@ description: "dnssec-trust-anchors.d, systemd.positive, systemd.negative – DNS
 <dl>
 <dd>
 <pre>. IN DS 19036 8 2 49aac11d7b6f6446702e54a1607371607a1a41855200fd2ce1cdde32f24e8fb5</pre>
-</dl>
+</dd></dl>
 <p> The first word specifies the domain, use &quot;.&quot; for the root domain. The domain may be specified with or without trailing dot, which is considered equivalent. The second word must be &quot;IN&quot; the third word &quot;DS&quot;. The following words specify the key tag, signature algorithm, digest algorithm, followed by the hex-encoded key fingerprint. See m[blue]<code>RFC 4034, Section 5</code>m[]<font SIZE="-2">[3]</font> for details about the precise syntax and meaning of these fields. </p>
 <p> Alternatively, <code>DNSKEY</code> resource records may be used to define trust anchors, like in the following example: </p>
 <dl>
 <dd>
 <pre>. IN DNSKEY 257 3 8 AwEAAagAIKlVZrpC6Ia7gEzahOR+9W29euxhJhVVLOyQbSEW0O8gcCjFFVQUTf6v58fLjwBd0YI0EzrAcQqBGCzh/RStIoO8g0NfnfL2MTJRkxoXbfDaUeVPQuYEhg37NZWAJQ9VnMVDxP/VHL496M/QZxkjf5/Efucp2gaDX6RS6CXpoY68LsvPVjR0ZSwzz1apAzvN9dlzEheX7ICJBBtuA6G3LQpzW5hOA2hzCTMjJPJ8LbqF6dsV6DoBQzgul0sGIcGOYl7OyQdXfZ57relSQageu+ipAdTTJ25AsRTAoub8ONGcLmqrAmRLKBP1dfwhYB4N7knNnulqQxA+Uk1ihz0=</pre>
-</dl>
+</dd></dl>
 <p> The first word specifies the domain again, the second word must be &quot;IN&quot;, followed by &quot;DNSKEY&quot;. The subsequent words encode the <code>DNSKEY</code> flags, protocol and algorithm fields, followed by the key data encoded in Base64. See m[blue]<code>RFC 4034, Section 2</code>m[]<font SIZE="-2">[4]</font> for details about the precise syntax and meaning of these fields. </p>
 <p> If multiple <code>DS</code> or <code>DNSKEY</code> records are defined for the same domain (possibly even in different trust anchor files), all keys are used and are considered equivalent as base for DNSSEC proofs. </p>
 <p> Note that systemd-resolved will automatically use a built-in trust anchor key for the Internet root domain if no positive trust anchors are defined for the root domain. In most cases it is hence unnecessary to define an explicit key with trust anchor files. The built-in key is disabled as soon as at least one trust anchor key for the root domain is defined in trust anchor files. </p>
@@ -49,7 +49,7 @@ description: "dnssec-trust-anchors.d, systemd.positive, systemd.negative – DNS
 # Some custom domains
 prod
 stag</pre>
-</dl>
+</dd></dl>
 <p> Negative trust anchors are useful to support private DNS subtrees that are not referenced from the Internet DNS hierarchy, and not signed. </p>
 <p> m[blue]<code>RFC 7646</code>m[]<font SIZE="-2">[7]</font> for details on negative trust anchors. </p>
 <p> If no negative trust anchor files are configured a built-in set of well-known private DNS zone domains is used as negative trust anchors. </p>
@@ -58,31 +58,32 @@ stag</pre>
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/8-systemd-resolved-service/">systemd-resolved.service</a></code>(8), <code><a href="/docs/linux/man/5-resolved-conf/">resolved.conf</a></code>(5), <code><a href="/docs/linux/man/5-systemd-network/">systemd.network</a></code>(5)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>RFC 4035, Section 4.4</p>
+<dt> 1.</dt>
+<dd>RFC 4035, Section 4.4</dd>
 <dl>
-<dd><a rel="nofollow" href="https://tools.ietf.org/html/rfc4035#section-4.4">https://tools.ietf.org/html/rfc4035#section-4.4</a></dl>
-<dt> 2.</p>
-<dd>RFC 1035, Section 5</p>
+<dd><a rel="nofollow" href="https://tools.ietf.org/html/rfc4035#section-4.4">https://tools.ietf.org/html/rfc4035#section-4.4</a></dd></dl>
+<dt> 2.</dt>
+<dd>RFC 1035, Section 5</dd>
 <dl>
-<dd><a rel="nofollow" href="https://tools.ietf.org/html/rfc1035#section-5">https://tools.ietf.org/html/rfc1035#section-5</a></dl>
-<dt> 3.</p>
-<dd>RFC 4034, Section 5</p>
+<dd><a rel="nofollow" href="https://tools.ietf.org/html/rfc1035#section-5">https://tools.ietf.org/html/rfc1035#section-5</a></dd></dl>
+<dt> 3.</dt>
+<dd>RFC 4034, Section 5</dd>
 <dl>
-<dd><a rel="nofollow" href="https://tools.ietf.org/html/rfc4034#section-5">https://tools.ietf.org/html/rfc4034#section-5</a></dl>
-<dt> 4.</p>
-<dd>RFC 4034, Section 2</p>
+<dd><a rel="nofollow" href="https://tools.ietf.org/html/rfc4034#section-5">https://tools.ietf.org/html/rfc4034#section-5</a></dd></dl>
+<dt> 4.</dt>
+<dd>RFC 4034, Section 2</dd>
 <dl>
-<dd><a rel="nofollow" href="https://tools.ietf.org/html/rfc4034#section-2">https://tools.ietf.org/html/rfc4034#section-2</a></dl>
-<dt> 5.</p>
-<dd>RFC 5011</p>
+<dd><a rel="nofollow" href="https://tools.ietf.org/html/rfc4034#section-2">https://tools.ietf.org/html/rfc4034#section-2</a></dd></dl>
+<dt> 5.</dt>
+<dd>RFC 5011</dd>
 <dl>
-<dd><a rel="nofollow" href="https://tools.ietf.org/html/rfc5011">https://tools.ietf.org/html/rfc5011</a></dl>
-<dt> 6.</p>
-<dd>IANA Trust Anchor and Keys</p>
+<dd><a rel="nofollow" href="https://tools.ietf.org/html/rfc5011">https://tools.ietf.org/html/rfc5011</a></dd></dl>
+<dt> 6.</dt>
+<dd>IANA Trust Anchor and Keys</dd>
 <dl>
-<dd><a rel="nofollow" href="https://data.iana.org/root-anchors/root-anchors.xml">https://data.iana.org/root-anchors/root-anchors.xml</a></dl>
-<dt> 7.</p>
-<dd>RFC 7646</p>
+<dd><a rel="nofollow" href="https://data.iana.org/root-anchors/root-anchors.xml">https://data.iana.org/root-anchors/root-anchors.xml</a></dd></dl>
+<dt> 7.</dt>
+<dd>RFC 7646</dd>
 <dl>
-<dd><a rel="nofollow" href="https://tools.ietf.org/html/rfc7646">https://tools.ietf.org/html/rfc7646</a></dl>
+<dd><a rel="nofollow" href="https://tools.ietf.org/html/rfc7646">https://tools.ietf.org/html/rfc7646</a></dd></dl>
+</dl>

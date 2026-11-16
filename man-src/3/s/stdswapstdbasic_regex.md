@@ -12,7 +12,6 @@ std::swap(std::basic_regex) - std::swap(std::basic_regex)
 
 <pre><code>template &lt;class CharT, class Traits&gt;
 (since C++ 11)
-
     void swap(basic_regex&lt;CharT, Traits&gt; &amp;lhs, basic_regex&lt;CharT, Traits&gt; &amp;rhs) noexcept;</code></pre> 
 Overloads the std::swap algorithm for std::basic_regex. Exchanges the state of lhs with that of rhs. Effectively calls lhs.swap(rhs). 
 

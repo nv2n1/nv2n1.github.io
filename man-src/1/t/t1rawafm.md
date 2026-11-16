@@ -15,12 +15,12 @@ description: "t1rawafm – produce raw AFM metrics from a PostScript Type 1 font
 <p> <code>T1rawafm</code> generates an AFM file with the information available in a PostScript Type~1 font. The AFM file will lack kerns, ligature information, and composite characters, but is otherwise usable. The AFM file is written to the standard output (but see the <code>&#8211;output</code> option). If no input font file is supplied, <code>t1rawafm</code> reads a PFA or PFB font from the standard input.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;output</code>=<i>file</i>, <code>-o</code> <i>file</i></p>
-<dd> Send output to <i>file</i> instead of standard output. </p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print usage information and exit. </p>
-<dt><code>&#8211;version</code></p>
-<dd> Print the version number and some short non-warranty information and exit.</dl>
+<dt><code>&#8211;output</code>=<i>file</i>, <code>-o</code> <i>file</i></dt>
+<dd> Send output to <i>file</i> instead of standard output. </dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print usage information and exit. </dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print the version number and some short non-warranty information and exit.</dd></dl>
 <h2>RETURN VALUES</h2>
 <p> <code>T1rawafm</code> exits with value 0 if an AFM metrics file was successfully generated, and 1 otherwise.</p>
 <h2>SEE ALSO</h2>

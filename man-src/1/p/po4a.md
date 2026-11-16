@@ -98,71 +98,69 @@ description: "po4a – update both the po files and translated documents in one 
 <p> If two POs have different translations for the same string, po4a will mark this string as fuzzy and will submit both translations in all the POs which contain this string. Then, when a translator updates the translation and removes the fuzzy tag in one <font SIZE="-1">PO</font>, the translation of this string will be updated in every POs automatically.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-k, &#8211;keep</p>
-<dd> Minimal threshold for translation percentage to keep (ie, write) the resulting file (default: 80). Ie, by default, files have to be translated at at least 80% to get written.</p>
-<dt>-h, &#8211;help</p>
-<dd> Show a short help message.</p>
-<dt>-M, &#8211;master-charset</p>
-<dd> Charset of the files containing the documents to translate. Note that all master documents must use the same charset for now. This is a known limitation, and we are working on solving this.</p>
-<dt>-L, &#8211;localized-charset</p>
-<dd> Charset of the files containing the localized documents. Note that all translated documents will use the same charset for now. This is a known limitation, and we are working on solving this.</p>
-<dt>-A, &#8211;addendum-charset</p>
-<dd> Charset of the addenda. Note that all the addenda should be in the same charset.</p>
-<dt>-V, &#8211;version</p>
-<dd> Display the version of the script and exit.</p>
-<dt>-v, &#8211;verbose</p>
-<dd> Increase the verbosity of the program.</p>
-<dt>-q, &#8211;quiet</p>
-<dd> Decrease the verbosity of the program.</p>
-<dt>-d, &#8211;debug</p>
-<dd> Output some debugging information.</p>
-<dt>-f, &#8211;force</p>
-<dd> Always generate the <font SIZE="-1">POT</font> and <font SIZE="-1">PO</font> files, even if po4a considers it is not necessary. </p>
+<dt>-k, &#8211;keep</dt>
+<dd> Minimal threshold for translation percentage to keep (ie, write) the resulting file (default: 80). Ie, by default, files have to be translated at at least 80% to get written.</dd>
+<dt>-h, &#8211;help</dt>
+<dd> Show a short help message.</dd>
+<dt>-M, &#8211;master-charset</dt>
+<dd> Charset of the files containing the documents to translate. Note that all master documents must use the same charset for now. This is a known limitation, and we are working on solving this.</dd>
+<dt>-L, &#8211;localized-charset</dt>
+<dd> Charset of the files containing the localized documents. Note that all translated documents will use the same charset for now. This is a known limitation, and we are working on solving this.</dd>
+<dt>-A, &#8211;addendum-charset</dt>
+<dd> Charset of the addenda. Note that all the addenda should be in the same charset.</dd>
+<dt>-V, &#8211;version</dt>
+<dd> Display the version of the script and exit.</dd>
+<dt>-v, &#8211;verbose</dt>
+<dd> Increase the verbosity of the program.</dd>
+<dt>-q, &#8211;quiet</dt>
+<dd> Decrease the verbosity of the program.</dd>
+<dt>-d, &#8211;debug</dt>
+<dd> Output some debugging information.</dd>
+<dt>-f, &#8211;force</dt>
+<dd> Always generate the <font SIZE="-1">POT</font> and <font SIZE="-1">PO</font> files, even if po4a considers it is not necessary. </dd>
 <p> The default behavior (when &#8211;force is not specified) is the following:</p>
-<dt>-o, &#8211;option</p>
-<dd> Extra option(s) to pass to the format plugin. Specify each option in the &#8216;name=value&#8217; format. See the documentation of each plugin for more information about the valid options and their meanings.</p>
+<dt>-o, &#8211;option</dt>
+<dd> Extra option(s) to pass to the format plugin. Specify each option in the &#8216;name=value&#8217; format. See the documentation of each plugin for more information about the valid options and their meanings.</dd>
+<dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd> If the <font SIZE="-1">POT</font> file already exists, it is regenerated if a master document or the configuration file is more recent. The <font SIZE="-1">POT</font> file is also written in a temporary document and po4a verifies that the changes are really needed. </p>
+</dt><dd> If the <font SIZE="-1">POT</font> file already exists, it is regenerated if a master document or the configuration file is more recent. The <font SIZE="-1">POT</font> file is also written in a temporary document and po4a verifies that the changes are really needed. </dd>
 <p> Also, a translation is regenerated only if its master document, the <font SIZE="-1">PO</font> file, one of its addenda or the configuration file is more recent. To avoid trying to regenerate translations which do not pass the threshold test (see <code>&#8211;keep</code>), a file with the &#8216;.po4a-stamp&#8217; extension can be created (see <code>&#8211;stamp</code>).</dl>
 </dl>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> If a master document includes files, you should use the <code>&#8211;force</code> flag because the modification time of these included files are not taken into account. </p>
-<p> The <font SIZE="-1">PO</font> files are always re-generated based on the <font SIZE="-1">POT</font> with <code>msgmerge -U</code>.</dl>
-<dt>&#8211;stamp</p>
-<dd> Tells po4a to create stamp files when a translation is not generated because it it does not reach the threshold. These stamp files are named according to the expected translated document, with the <i>.po4a-stamp</i> extension. </p>
+<p> The <font SIZE="-1">PO</font> files are always re-generated based on the <font SIZE="-1">POT</font> with <code>msgmerge -U</code>.</dd></dl>
+<dt>&#8211;stamp</dt>
+<dd> Tells po4a to create stamp files when a translation is not generated because it it does not reach the threshold. These stamp files are named according to the expected translated document, with the <i>.po4a-stamp</i> extension. </dd>
 <p> Note: This only activates the creation of the <i>.po4a-stamp</i> files. The stamp files are always used if they exist, and they are removed with <code>&#8211;rm-translations</code> or when the file is finally translated.</p>
-<dt>&#8211;no-translations</p>
-<dd> Do not generate the translated documents, only update the <font SIZE="-1">POT</font> and <font SIZE="-1">PO</font> files.</p>
-<dt>&#8211;rm-translations</p>
-<dd> Remove the translated files (implies &#8211;no-translations).</p>
-<dt>&#8211;no-backups</p>
-<dd> Do not generate the .po~ backup files.</p>
-<dt>&#8211;rm-backups</p>
-<dd> Remove the .po~ backup files (implies &#8211;no-backups).</p>
-<dt>&#8211;variable <i>var</i>=<i>value</i></p>
-<dd> Define a variable that will be expanded in the po4a configuration file. Every occurrence of <i>$(var)</i> will be replaced by <i>value</i>. This option can be used multiple times.</p>
-<dt>&#8211;msgid-bugs-address email [at] address</p>
-<dd> Set the report address for msgid bugs. By default, the created <font SIZE="-1">POT</font> files have no Report-Msgid-Bugs-To fields.</p>
-<dt>&#8211;copyright-holder string</p>
-<dd> Set the copyright holder in the <font SIZE="-1">POT</font> header. The default value is &#8220;Free Software Foundation, Inc.&#8221;</p>
-<dt>&#8211;package-name string</p>
-<dd> Set the package name for the <font SIZE="-1">POT</font> header. The default is &#8220;<font SIZE="-1">PACKAGE</font>&#8221;.</p>
-<dt>&#8211;package-version string</p>
-<dd> Set the package version for the <font SIZE="-1">POT</font> header. The default is &#8220;<font SIZE="-1">VERSION</font>&#8221;.</p>
-<dt>&#8211;msgmerge-opt options</p>
-<dd> Extra options for msgmerge.</p>
-<dt>&#8211;previous</p>
-<dd> This option adds &#8216;&#8211;previous&#8217; to the options passed to msgmerge. It requires gettext 0.16 or later.</dl>
+<dt>&#8211;no-translations</dt>
+<dd> Do not generate the translated documents, only update the <font SIZE="-1">POT</font> and <font SIZE="-1">PO</font> files.</dd>
+<dt>&#8211;rm-translations</dt>
+<dd> Remove the translated files (implies &#8211;no-translations).</dd>
+<dt>&#8211;no-backups</dt>
+<dd> Do not generate the .po~ backup files.</dd>
+<dt>&#8211;rm-backups</dt>
+<dd> Remove the .po~ backup files (implies &#8211;no-backups).</dd>
+<dt>&#8211;variable <i>var</i>=<i>value</i></dt>
+<dd> Define a variable that will be expanded in the po4a configuration file. Every occurrence of <i>$(var)</i> will be replaced by <i>value</i>. This option can be used multiple times.</dd>
+<dt>&#8211;msgid-bugs-address email [at] address</dt>
+<dd> Set the report address for msgid bugs. By default, the created <font SIZE="-1">POT</font> files have no Report-Msgid-Bugs-To fields.</dd>
+<dt>&#8211;copyright-holder string</dt>
+<dd> Set the copyright holder in the <font SIZE="-1">POT</font> header. The default value is &#8220;Free Software Foundation, Inc.&#8221;</dd>
+<dt>&#8211;package-name string</dt>
+<dd> Set the package name for the <font SIZE="-1">POT</font> header. The default is &#8220;<font SIZE="-1">PACKAGE</font>&#8221;.</dd>
+<dt>&#8211;package-version string</dt>
+<dd> Set the package version for the <font SIZE="-1">POT</font> header. The default is &#8220;<font SIZE="-1">VERSION</font>&#8221;.</dd>
+<dt>&#8211;msgmerge-opt options</dt>
+<dd> Extra options for msgmerge.</dd>
+<dt>&#8211;previous</dt>
+<dd> This option adds &#8216;&#8211;previous&#8217; to the options passed to msgmerge. It requires gettext 0.16 or later.</dd></dl>
 <h2>SHORTCOMINGS</h2>
 <dl>
-<dt>*</p>
-<dd> Duplicates some code with the po4a-* programs.</dl>
+<dt>*</dt>
+<dd> Duplicates some code with the po4a-* programs.</dd></dl>
 <p> Patch welcome ;)</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/7-po4a/">po4a</a></i>(7), <i><a href="/docs/linux/man/1-po4a-gettextize/">po4a-gettextize</a></i>(1), <i><a href="/docs/linux/man/1-po4a-updatepo/">po4a-updatepo</a></i>(1), <i><a href="/docs/linux/man/1-po4a-translate/">po4a-translate</a></i>(1), <i><a href="/docs/linux/man/1-po4a-normalize/">po4a-normalize</a></i>(1).</p>

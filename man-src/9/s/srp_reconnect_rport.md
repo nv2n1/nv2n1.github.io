@@ -14,7 +14,7 @@ description: "srp_reconnect_rport – reconnect to an SRP target port"
 <p><i>rport</i></p>
 <dl>
 <dd>
-<dd>SRP target port.</dl>
+</dd><dd>SRP target port.</dd></dl>
 <h2>Description</h2>
 <p>Blocks SCSI command queueing before invoking <code>reconnect</code> such that <code>queuecommand</code> won&#8217;t be invoked concurrently with <code>reconnect</code> from outside the SCSI EH. This is important since a <code>reconnect</code> implementation may reallocate resources needed by <code>queuecommand</code>.</p>
 <h2>Notes</h2>
@@ -22,8 +22,8 @@ description: "srp_reconnect_rport – reconnect to an SRP target port"
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

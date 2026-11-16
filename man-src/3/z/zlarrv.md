@@ -11,8 +11,6 @@ description: "zlarrv.f –"
 <h2>Synopsis</h2>
 <h3>Functions/Subroutines</h3>
 <pre><code>subroutine zlarrv (N, VL, VU, D, L, PIVMIN, ISPLIT, M, DOL, DOU, MINRGP, RTOL1, RTOL2, W, WERR, WGAP, IBLOCK, INDEXW, GERS, Z, LDZ, ISUPPZ, WORK, IWORK, INFO)
-
-
 ZLARRV computes the eigenvectors of the tridiagonal matrix T = L D LT given L, D and the eigenvalues of L D LT.</code></pre>
 <h2>Function/Subroutine Documentation</h2>
 <h3>subroutine zlarrv (integerN, double precisionVL, double precisionVU, double precision, dimension( * )D, double precision, dimension( * )L, double precisionPIVMIN, integer, dimension( * )ISPLIT, integerM, integerDOL, integerDOU, double precisionMINRGP, double precisionRTOL1, double precisionRTOL2, double precision, dimension( * )W, double precision, dimension( * )WERR, double precision, dimension( * )WGAP, integer, dimension( * )IBLOCK, integer, dimension( * )INDEXW, double precision, dimension( * )GERS, complex*16, dimension( ldz, * )Z, integerLDZ, integer, dimension( * )ISUPPZ, double precision, dimension( * )WORK, integer, dimension( * )IWORK, integerINFO)</h3>
@@ -23,10 +21,10 @@ ZLARRV computes the eigenvectors of the tridiagonal matrix T = L D LT given L, D
 <pre> ZLARRV computes the eigenvectors of the tridiagonal matrix
  T = L D L**T given L, D and APPROXIMATIONS to the eigenvalues of L D L**T.
  The input eigenvalues should have been computed by DLARRE.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>N</i> </p>
+<dd><i>N</i> </dd>
 <pre> N is INTEGER
  The order of the matrix. N &gt;= 0.</pre>
 <p><i>VL</i> </p>
@@ -157,16 +155,16 @@ ZLARRV computes the eigenvectors of the tridiagonal matrix T = L D LT given L, D
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
-<dd>Beresford Parlett, University of California, Berkeley, USA </p>
+<dd>Beresford Parlett, University of California, Berkeley, USA </dd>
 <p>&nbsp;<wbr>Jim Demmel, University of California, Berkeley, USA&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>Inderjit Dhillon, University of Texas, Austin, USA&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>Osni Marques, LBNL/NERSC, USA&nbsp;<wbr> </p>
@@ -174,3 +172,4 @@ ZLARRV computes the eigenvectors of the tridiagonal matrix T = L D LT given L, D
 <p> Definition at line 280 of file zlarrv.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

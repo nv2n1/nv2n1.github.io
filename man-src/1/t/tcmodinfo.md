@@ -17,28 +17,28 @@ description: "tcmodinfo – Get and Set information in transcode modules"
 <p> <code>tcmodinfo</code> loads a supplied <a href="/docs/linux/man/1-transcode/">transcode</a>(1) module and prints its parameters, or inquiry about default settings. It can also connect to transcode through a socket to do runtime configuration of transcode and its filters. Anyway, this last feature may be moved to some other helper program in future releases.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-i</code> <i>name</i></p>
-<dd> Specify the name of the module. <i>Name</i> is specified without the prefix <code>(i.e., filter_)_</code> and without the suffix <code>.so</code> So if you want information about filter_smooth.so, just supply <code>smooth</code></p>
-<dt><code>-m</code> <i>path</i></p>
-<dd> Look in <i>Path</i> instead of the compiled-in module path for a module.</p>
-<dt><code>-t</code> <i>type</i></p>
-<dd> Specify the <i>Type</i> of module to load. Default is filter modules. In current (1.1.0) release, tcmodinfo support &#8216;filter&#8217;, &#8216;encode&#8217; and &#8216;multiplex&#8217; module types. More types will be added in future releases, to cover all the transcode module range.</p>
-<dt><code>-M</code> <i>parameter</i></p>
+<dt><code>-i</code> <i>name</i></dt>
+<dd> Specify the name of the module. <i>Name</i> is specified without the prefix <code>(i.e., filter_)_</code> and without the suffix <code>.so</code> So if you want information about filter_smooth.so, just supply <code>smooth</code></dd>
+<dt><code>-m</code> <i>path</i></dt>
+<dd> Look in <i>Path</i> instead of the compiled-in module path for a module.</dd>
+<dt><code>-t</code> <i>type</i></dt>
+<dd> Specify the <i>Type</i> of module to load. Default is filter modules. In current (1.1.0) release, tcmodinfo support &#8216;filter&#8217;, &#8216;encode&#8217; and &#8216;multiplex&#8217; module types. More types will be added in future releases, to cover all the transcode module range.</dd>
+<dt><code>-M</code> <i>parameter</i></dt>
 <dd> Print out the default setting of given parameter of a given (use -i/-t options too) module. If parameter isn&#8217;t known, nothing will be print out.<br />
- Caution: -M can&#8217;t be used together with -C</p>
-<dt><code>-C</code> <i>configuration string</i></p>
+ Caution: -M can&#8217;t be used together with -C</dd>
+<dt><code>-C</code> <i>configuration string</i></dt>
 <dd> Request to configure the module using given configuration string. Meaning of configuration string is of course module dependent, but format is always<br />
  param1:key1=val1:param2:param3:key2=val2<br />
  This option is used for debug purposes, you usually shouldn&#8217;t need it.<br />
- Caution: -C can&#8217;t be used together with -M</p>
-<dt><code>-s</code> <i>socket</i></p>
-<dd> Connect to socket <i>socket</i>. You can use this socket to do runtime configuration of transcode. For all the boring details about the socket protocol have a look at /docs/filter-socket.txt. transcode has to be started with the <code>&#8211;socket</code> option to open the socket.</p>
-<dt><code>-d</code> <i>verbosity</i></p>
-<dd> Specify the verbosiness level to use, like transcode does. Default value is 1 (TC_INFO verbosiness).</p>
-<dt><code>-p</code></p>
-<dd> Print the compiled-in module path and exit.</p>
-<dt><code>-v</code></p>
-<dd> Print version information and exit.</dl>
+ Caution: -C can&#8217;t be used together with -M</dd>
+<dt><code>-s</code> <i>socket</i></dt>
+<dd> Connect to socket <i>socket</i>. You can use this socket to do runtime configuration of transcode. For all the boring details about the socket protocol have a look at /docs/filter-socket.txt. transcode has to be started with the <code>&#8211;socket</code> option to open the socket.</dd>
+<dt><code>-d</code> <i>verbosity</i></dt>
+<dd> Specify the verbosiness level to use, like transcode does. Default value is 1 (TC_INFO verbosiness).</dd>
+<dt><code>-p</code></dt>
+<dd> Print the compiled-in module path and exit.</dd>
+<dt><code>-v</code></dt>
+<dd> Print version information and exit.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> The command </p>
 <p> <code>tcmodinfo -i smooth</code> </p>

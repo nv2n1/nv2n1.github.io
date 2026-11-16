@@ -23,12 +23,12 @@ description: "pamtopfm – Convert Netpbm image to PFM (Portable Float Map)"
 &nbsp;<wbr>to convert a PFM image to Netpbm format. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-scale=</code><i>float</i></p>
+<dt><code>-scale=</code><i>float</i></dt>
 <dd>
 <p> This specifies the scale factor of the PFM image.<br />
 &nbsp;<wbr>&nbsp;<wbr>Scale factor is a component of the PFM format.<br />
 &nbsp;<wbr>&nbsp;<wbr>Default is 1.0. </p>
-<dt><code>-endian=</code>{<code>big</code>|<code>little</code>}</p>
+</dd><dt><code>-endian=</code>{<code>big</code>|<code>little</code>}</dt>
 <dd>
 <p> This specifies the endianness of the PFM image. The samples<br />
 &nbsp;<wbr>&nbsp;<wbr>in the raster of a PFM image are 4 byte IEEE floating point<br />
@@ -39,7 +39,7 @@ description: "pamtopfm – Convert Netpbm image to PFM (Portable Float Map)"
 &nbsp;<wbr>&nbsp;<wbr><code>little</code>&nbsp;<wbr>means little-endian, the Intel-friendly ordering. </p>
 <p> Default is whichever endianness the machine on which <code>pamtopfm</code><br />
 &nbsp;<wbr>&nbsp;<wbr>runs uses internally, which results in the faster execution. </p>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) , <code><a href="/docs/linux/man/1-pfmtopam/">pfmtopam</a></code>(1) , <code>pam</code>(1) </p>
 <h2>HISTORY</h2>

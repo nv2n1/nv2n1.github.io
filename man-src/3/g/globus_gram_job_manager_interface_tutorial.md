@@ -44,12 +44,12 @@ BEGIN<br />
 }</p>
 <p> The job interface methods are called with only one argument, the scheduler object itself. That object contains the a Globus::GRAM::JobDescription object ($self-&gt;{JobDescription}) which includes the values from the RSL string associated with the request, as well as a few extra values:</p>
 <dl>
-<dt><code>job_id </code></p>
-<dd> The string returned as the value of JOB_ID in the return hash from submit. This won&#8217;t be present for methods called before the job is submitted.</p>
-<dt><code>uniq_id </code></p>
-<dd> A string associated with this job request by the job manager program. It will be unique for all jobs on a host for all time.</p>
-<dt><code>cache_tag </code></p>
-<dd> The GASS cache tag related to this job submission. Files in the cache with this tag will be cleaned by the cleanup_cache() method.</dl>
+<dt><code>job_id </code></dt>
+<dd> The string returned as the value of JOB_ID in the return hash from submit. This won&#8217;t be present for methods called before the job is submitted.</dd>
+<dt><code>uniq_id </code></dt>
+<dd> A string associated with this job request by the job manager program. It will be unique for all jobs on a host for all time.</dd>
+<dt><code>cache_tag </code></dt>
+<dd> The GASS cache tag related to this job submission. Files in the cache with this tag will be cleaned by the cleanup_cache() method.</dd></dl>
 <p> Now, let&#8217;s look at the methods which will interface to the scheduler.</p>
 <h3>Submitting Jobs</h3>
 <p> All scheduler modules must implement the submit method. This method is called when the job manager wishes to submit the job to the scheduler. The information in the original job request RSL string is available to the scheduler interface through the JobDescription data member of it&#8217;s hash. </p>
@@ -202,14 +202,14 @@ ERROR =&gt; Globus::GRAM::Error::&lt;ERROR_TYPE&gt;-&gt;value
 <p> Once we&#8217;ve written the job manager script, we need to get it installed so that the gatekeeper will be able to run our new service. We do this by writing a setup script. For LSF, we will write the script setup-globus-job-manager-lsf.pl, which we will list in the LSF package as the <code>Post_Install_Program</code>. </p>
 <p> To set up the Gatekeeper service, our LSF setup script does the following:</p>
 <dl>
-<dt>1.</p>
-<dd> Perform system-specific configuration.</p>
-<dt>2.</p>
-<dd> Install the GRAM scheduler Perl module and register as a gatekeeper service.</p>
-<dt>3.</p>
-<dd> <code>(Optional)</code> Install an RSL validation file defining extra scheduler-specific RSL attributes which the scheduler interface will support.</p>
-<dt>4.</p>
-<dd> Update the GPT metadata to indicate that the job manager service has been set up.</dl>
+<dt>1.</dt>
+<dd> Perform system-specific configuration.</dd>
+<dt>2.</dt>
+<dd> Install the GRAM scheduler Perl module and register as a gatekeeper service.</dd>
+<dt>3.</dt>
+<dd> <code>(Optional)</code> Install an RSL validation file defining extra scheduler-specific RSL attributes which the scheduler interface will support.</dd>
+<dt>4.</dt>
+<dd> Update the GPT metadata to indicate that the job manager service has been set up.</dd></dl>
 <h3>System-Specific Configuration</h3>
 <p> First, our scheduler setup script probes for any system-specific information needed to interface with the local scheduler. For example, the LSF scheduler uses the mpirun, bsub, bqueues, bjobs, and bkill commands to submit, poll, and cancel jobs. We&#8217;ll assume that the administrator who is installing the package has these commands in their path. We&#8217;ll use an autoconf script to locate the executable paths for these commands and substitute them into our scheduler Perl module. In the LSF package, we have the find-lsf-tools script, which is generated during bootstrap by autoconf from the find-lsf-tools.in file: </p>
 <p>##Required Prolog<br />
@@ -273,12 +273,12 @@ $metadata-&gt;finish();</p>
 <h2>Packaging</h2>
 <p> Now that we&#8217;ve written a job manager scheduler interface, we&#8217;ll package it using GPT to make it easy for our users to build and install. We&#8217;ll start by gathering the different files we&#8217;ve written above into a single directory lsf.</p>
 <dl>
-<dt>*</p>
-<dd> lsf.in</p>
-<dt>*</p>
-<dd> find-lsf-tools.in</p>
-<dt>*</p>
-<dd> setup-globus-job-manager.pl</dl>
+<dt>*</dt>
+<dd> lsf.in</dd>
+<dt>*</dt>
+<dd> find-lsf-tools.in</dd>
+<dt>*</dt>
+<dd> setup-globus-job-manager.pl</dd></dl>
 <h3>Package Documentation</h3>
 <p> If there are any scheduler-specific options defined for this scheduler module, or if there any any optional setup items, then it is good to provide a documentation page which describes these. For LSF, we describe the changes since the last version of this package in the file globus_gram_job_manager_lsf.dox. This file consists of a doxygen mainpage. See <a rel="nofollow" href="http://www.doxygen.org">www.doxygen.org</a> for information on how to write documentation with that tool.</p>
 <h3>configure.in</h3>

@@ -14,10 +14,10 @@ description: "relay_alloc_buf – allocate a channel buffer"
 <p><i>buf</i></p>
 <dl>
 <dd>
-<dd>the buffer struct</dl>
+</dd><dd>the buffer struct</dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>total size of the buffer</dl>
+<dd>total size of the buffer</dd></dl>
 <h2>Description</h2>
 <p>Returns a pointer to the resulting buffer, <code>NULL</code> if unsuccessful. The passed in size will get page aligned, if it isn&#8217;t already.</p>
 <h2>Copyright</h2>

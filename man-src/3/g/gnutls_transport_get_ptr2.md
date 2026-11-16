@@ -14,12 +14,12 @@ description: "gnutls_transport_get_ptr2 – API function"
 <p> <code>void gnutls_transport_get_ptr2(gnutls_session_t </code><i>session</i><code>, gnutls_transport_ptr_t * </code><i>recv_ptr</i><code>, gnutls_transport_ptr_t * </code><i>send_ptr</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>gnutls_transport_ptr_t * recv_ptr</p>
-<dd> will hold the value for the pull function</p>
-<dt>gnutls_transport_ptr_t * send_ptr</p>
-<dd> will hold the value for the push function</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>gnutls_transport_ptr_t * recv_ptr</dt>
+<dd> will hold the value for the pull function</dd>
+<dt>gnutls_transport_ptr_t * send_ptr</dt>
+<dd> will hold the value for the push function</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Used to get the arguments of the transport functions (like PUSH and PULL). These should have been set using <code>gnutls_transport_set_ptr2()</code>.</p>
 <h2>REPORTING BUGS</h2>
@@ -31,6 +31,6 @@ description: "gnutls_transport_get_ptr2 – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

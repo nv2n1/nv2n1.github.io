@@ -33,13 +33,12 @@ url: "/docs/linux/man/1-nvme-show-regs/"
 
 <dl>
 <dt>
-<dd> &bull; Has the program map the nvme pci controller registers and prints them in a human readable format: 
-
-<dl>
+</dt><dd> &bull; Has the program map the nvme pci controller registers and prints them in a human readable format: 
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 # nvme show-regs /dev/nvme0
-</pre></dl>
+</pre></dd></dl>
 </dl>
 
 <h2>NVME</h2>

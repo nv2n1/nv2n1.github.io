@@ -15,15 +15,15 @@ rpc_add_pipe_dir_object - associate a rpc_pipe_dir_object to a directory
 <h2>Arguments</h2>
 
 <i>net</i>
-<dl><dd><dd>pointer to struct net</dl>
+<dl><dd></dd><dd>pointer to struct net</dd></dl>
  
 
  <i>pdh</i>
-<dl><dd>pointer to struct rpc_pipe_dir_head</dl>
+<dl><dd>pointer to struct rpc_pipe_dir_head</dd></dl>
  
 
  <i>pdo</i>
-<dl><dd>pointer to struct rpc_pipe_dir_object</dl>
+<dl><dd>pointer to struct rpc_pipe_dir_object</dd></dl>
 
 <h2>Copyright</h2>
 

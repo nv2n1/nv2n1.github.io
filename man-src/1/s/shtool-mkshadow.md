@@ -16,12 +16,12 @@ description: "shtool mkshadow – GNU shtool create shadow tree using symlinks"
 <h2>OPTIONS</h2>
 <p> The following command line options are available.</p>
 <dl>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Display some processing information.</p>
-<dt><code>-t</code>, <code>&#8211;trace</code></p>
-<dd> Enable the output of the essential shell commands which are executed.</p>
-<dt><code>-a</code>, <code>&#8211;all</code></p>
-<dd> Really shadow all files and directories in <i>src-dir</i>. Default is to skip <font SIZE="-1">CVS</font> related files and directories, backup files, object files, etc.</dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Display some processing information.</dd>
+<dt><code>-t</code>, <code>&#8211;trace</code></dt>
+<dd> Enable the output of the essential shell commands which are executed.</dd>
+<dt><code>-a</code>, <code>&#8211;all</code></dt>
+<dd> Really shadow all files and directories in <i>src-dir</i>. Default is to skip <font SIZE="-1">CVS</font> related files and directories, backup files, object files, etc.</dd></dl>
 <h2>EXAMPLE</h2>
 <pre>
  #   shell script

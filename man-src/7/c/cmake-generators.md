@@ -35,17 +35,17 @@ description: "cmake-generators – CMake Generators Reference"
 <p> A hierarchy of UNIX makefiles is generated into the build tree. Use any standard UNIX-style make program to build the project through the <code>all</code> target and install the project through the <code>install</code> (or <code>install/strip</code>) target. </p>
 <p> For each subdirectory <code>sub/dir</code> of the project a UNIX makefile will be created, containing the following targets:</p>
 <dl>
-<dt><code>all</code></p>
-<dd>Depends on all targets required by the subdirectory.</p>
-<dt><code>install</code></p>
-<dd>Runs the install step in the subdirectory, if any.</p>
-<dt><code>install/strip</code></p>
-<dd>Runs the install step in the subdirectory followed by a <code>CMAKE_STRIP</code> command, if any. </p>
+<dt><code>all</code></dt>
+<dd>Depends on all targets required by the subdirectory.</dd>
+<dt><code>install</code></dt>
+<dd>Runs the install step in the subdirectory, if any.</dd>
+<dt><code>install/strip</code></dt>
+<dd>Runs the install step in the subdirectory followed by a <code>CMAKE_STRIP</code> command, if any. </dd>
 <p> The <code>CMAKE_STRIP</code> variable will contain the platform&#8217;s <code>strip</code> utility, which removes symbols information from generated binaries.</p>
-<dt><code>test</code></p>
-<dd>Runs the test step in the subdirectory, if any.</p>
-<dt><code>package</code></p>
-<dd>Runs the package step in the subdirectory, if any.</dl>
+<dt><code>test</code></dt>
+<dd>Runs the test step in the subdirectory, if any.</dd>
+<dt><code>package</code></dt>
+<dd>Runs the package step in the subdirectory, if any.</dd></dl>
 <h3>Watcom WMake</h3>
 <p>Generates Watcom WMake makefiles.</p>
 <h3>Ninja Generators</h3>
@@ -76,14 +76,14 @@ description: "cmake-generators – CMake Generators Reference"
 <p> Each <code>build-&lt;Config&gt;.ninja</code> file contains <code>&lt;target&gt;</code> targets as well as <code>&lt;target&gt;:&lt;Config&gt;</code> targets, where <code>&lt;Config&gt;</code> is the same as the configuration specified in <code>build-&lt;Config&gt;.ninja</code> Additionally, if cross-config mode is enabled, <code>build-&lt;Config&gt;.ninja</code> may contain <code>&lt;target&gt;:&lt;OtherConfig&gt;</code> targets, where <code>&lt;OtherConfig&gt;</code> is a cross-config, as well as <code>&lt;target&gt;:all</code>, which builds the target in all cross-configs. See below for how to enable cross-config mode. </p>
 <p> The <code>Ninja Multi-Config</code> generator recognizes the following variables:</p>
 <dl>
-<dt><code>CMAKE_CONFIGURATION_TYPES</code></p>
-<dd>Specifies the total set of configurations to build. Unlike with other multi-config generators, this variable has a value of <code>Debug;Release;RelWithDebInfo</code> by default.</p>
-<dt><code>CMAKE_CROSS_CONFIGS</code></p>
-<dd>Specifies a semicolon-separated list of configurations available from all <code>build-&lt;Config&gt;.ninja</code> files.</p>
-<dt><code>CMAKE_DEFAULT_BUILD_TYPE</code></p>
-<dd>Specifies the configuration to use by default in a <code>build.ninja</code> file.</p>
-<dt><code>CMAKE_DEFAULT_CONFIGS</code></p>
-<dd>Specifies a semicolon-separated list of configurations to build for a target in <code>build.ninja</code> if no <code>:&lt;Config&gt;</code> suffix is specified. </p>
+<dt><code>CMAKE_CONFIGURATION_TYPES</code></dt>
+<dd>Specifies the total set of configurations to build. Unlike with other multi-config generators, this variable has a value of <code>Debug;Release;RelWithDebInfo</code> by default.</dd>
+<dt><code>CMAKE_CROSS_CONFIGS</code></dt>
+<dd>Specifies a semicolon-separated list of configurations available from all <code>build-&lt;Config&gt;.ninja</code> files.</dd>
+<dt><code>CMAKE_DEFAULT_BUILD_TYPE</code></dt>
+<dd>Specifies the configuration to use by default in a <code>build.ninja</code> file.</dd>
+<dt><code>CMAKE_DEFAULT_CONFIGS</code></dt>
+<dd>Specifies a semicolon-separated list of configurations to build for a target in <code>build.ninja</code> if no <code>:&lt;Config&gt;</code> suffix is specified. </dd>
 <p> Consider the following example: </p>
 <pre>cmake_minimum_required(VERSION 3.16)
 project(MultiConfigNinja C)
@@ -148,21 +148,21 @@ add_custom_command(
 <p>The default target platform name (architecture) is <code>Win32</code>. </p>
 <p> New in version 3.1: The <code>CMAKE_GENERATOR_PLATFORM</code> variable may be set, perhaps via the <code><a href="/docs/linux/man/1-cmake/">cmake</a>(1)</code> <code>-A</code> option, to specify a target platform name (architecture). For example:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 9 2008&quot; -A Win32</code></p>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 9 2008&quot; -A x64</code></p>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 9 2008&quot; -A Itanium</code></p>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 9 2008&quot; -A &lt;WinCE-SDK&gt;</code> (Specify a target platform matching a Windows CE SDK name.) </p>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 9 2008&quot; -A Win32</code></dd>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 9 2008&quot; -A x64</code></dd>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 9 2008&quot; -A Itanium</code></dd>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 9 2008&quot; -A &lt;WinCE-SDK&gt;</code> (Specify a target platform matching a Windows CE SDK name.) </dd>
 <p> For compatibility with CMake versions prior to 3.1, one may specify a target platform name optionally at the end of the generator name. This is supported only for:</p>
-<dt><code>Visual Studio 9 2008 Win64</code></p>
-<dd>Specify target platform <code>x64</code>.</p>
-<dt><code>Visual Studio 9 2008 IA64</code></p>
-<dd>Specify target platform <code>Itanium</code>.</p>
-<dt><code>Visual Studio 9 2008 &lt;WinCE-SDK&gt;</code></p>
-<dd>Specify target platform matching a Windows CE SDK name.</dl>
+<dt><code>Visual Studio 9 2008 Win64</code></dt>
+<dd>Specify target platform <code>x64</code>.</dd>
+<dt><code>Visual Studio 9 2008 IA64</code></dt>
+<dd>Specify target platform <code>Itanium</code>.</dd>
+<dt><code>Visual Studio 9 2008 &lt;WinCE-SDK&gt;</code></dt>
+<dd>Specify target platform matching a Windows CE SDK name.</dd></dl>
 <h3>Visual Studio 10 2010</h3>
 <p>Deprecated. Generates Visual Studio 10 (VS 2010) project files. </p>
 <p> <code>NOTE:</code> This generator is deprecated and will be removed in a future version of CMake. It will still be possible to build with VS 10 2010 tools using the <code>Visual Studio 11 2012</code> (or above) generator with <code>CMAKE_GENERATOR_TOOLSET</code> set to <code>v100</code>, or by using the <code>NMake Makefiles</code> generator. </p>
@@ -173,17 +173,17 @@ add_custom_command(
 <p>The default target platform name (architecture) is <code>Win32</code>. </p>
 <p> New in version 3.1: The <code>CMAKE_GENERATOR_PLATFORM</code> variable may be set, perhaps via the <code><a href="/docs/linux/man/1-cmake/">cmake</a>(1)</code> <code>-A</code> option, to specify a target platform name (architecture). For example:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 10 2010&quot; -A Win32</code></p>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 10 2010&quot; -A x64</code></p>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 10 2010&quot; -A Itanium</code> </p>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 10 2010&quot; -A Win32</code></dd>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 10 2010&quot; -A x64</code></dd>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 10 2010&quot; -A Itanium</code> </dd>
 <p> For compatibility with CMake versions prior to 3.1, one may specify a target platform name optionally at the end of the generator name. This is supported only for:</p>
-<dt><code>Visual Studio 10 2010 Win64</code></p>
-<dd>Specify target platform <code>x64</code>.</p>
-<dt><code>Visual Studio 10 2010 IA64</code></p>
-<dd>Specify target platform <code>Itanium</code>.</dl>
+<dt><code>Visual Studio 10 2010 Win64</code></dt>
+<dd>Specify target platform <code>x64</code>.</dd>
+<dt><code>Visual Studio 10 2010 IA64</code></dt>
+<dd>Specify target platform <code>Itanium</code>.</dd></dl>
 <h3>Toolset Selection</h3>
 <p>The <code>v100</code> toolset that comes with Visual Studio 10 2010 is selected by default. The <code>CMAKE_GENERATOR_TOOLSET</code> option may be set, perhaps via the <code><a href="/docs/linux/man/1-cmake/">cmake</a>(1)</code> <code>-T</code> option, to specify another toolset.</p>
 <h3>Visual Studio 11 2012</h3>
@@ -195,21 +195,21 @@ add_custom_command(
 <p>The default target platform name (architecture) is <code>Win32</code>. </p>
 <p> New in version 3.1: The <code>CMAKE_GENERATOR_PLATFORM</code> variable may be set, perhaps via the <code><a href="/docs/linux/man/1-cmake/">cmake</a>(1)</code> <code>-A</code> option, to specify a target platform name (architecture). For example:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 11 2012&quot; -A Win32</code></p>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 11 2012&quot; -A x64</code></p>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 11 2012&quot; -A ARM</code></p>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 11 2012&quot; -A &lt;WinCE-SDK&gt;</code> (Specify a target platform matching a Windows CE SDK name.) </p>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 11 2012&quot; -A Win32</code></dd>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 11 2012&quot; -A x64</code></dd>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 11 2012&quot; -A ARM</code></dd>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 11 2012&quot; -A &lt;WinCE-SDK&gt;</code> (Specify a target platform matching a Windows CE SDK name.) </dd>
 <p> For compatibility with CMake versions prior to 3.1, one may specify a target platform name optionally at the end of the generator name. This is supported only for:</p>
-<dt><code>Visual Studio 11 2012 Win64</code></p>
-<dd>Specify target platform <code>x64</code>.</p>
-<dt><code>Visual Studio 11 2012 ARM</code></p>
-<dd>Specify target platform <code>ARM</code>.</p>
-<dt><code>Visual Studio 11 2012 &lt;WinCE-SDK&gt;</code></p>
-<dd>Specify target platform matching a Windows CE SDK name.</dl>
+<dt><code>Visual Studio 11 2012 Win64</code></dt>
+<dd>Specify target platform <code>x64</code>.</dd>
+<dt><code>Visual Studio 11 2012 ARM</code></dt>
+<dd>Specify target platform <code>ARM</code>.</dd>
+<dt><code>Visual Studio 11 2012 &lt;WinCE-SDK&gt;</code></dt>
+<dd>Specify target platform matching a Windows CE SDK name.</dd></dl>
 <h3>Toolset Selection</h3>
 <p>The <code>v110</code> toolset that comes with Visual Studio 11 2012 is selected by default. The <code>CMAKE_GENERATOR_TOOLSET</code> option may be set, perhaps via the <code><a href="/docs/linux/man/1-cmake/">cmake</a>(1)</code> <code>-T</code> option, to specify another toolset.</p>
 <h3>Visual Studio 12 2013</h3>
@@ -221,17 +221,17 @@ add_custom_command(
 <p>The default target platform name (architecture) is <code>Win32</code>. </p>
 <p> New in version 3.1: The <code>CMAKE_GENERATOR_PLATFORM</code> variable may be set, perhaps via the <code><a href="/docs/linux/man/1-cmake/">cmake</a>(1)</code> <code>-A</code> option, to specify a target platform name (architecture). For example:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 12 2013&quot; -A Win32</code></p>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 12 2013&quot; -A x64</code></p>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 12 2013&quot; -A ARM</code> </p>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 12 2013&quot; -A Win32</code></dd>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 12 2013&quot; -A x64</code></dd>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 12 2013&quot; -A ARM</code> </dd>
 <p> For compatibility with CMake versions prior to 3.1, one may specify a target platform name optionally at the end of the generator name. This is supported only for:</p>
-<dt><code>Visual Studio 12 2013 Win64</code></p>
-<dd>Specify target platform <code>x64</code>.</p>
-<dt><code>Visual Studio 12 2013 ARM</code></p>
-<dd>Specify target platform <code>ARM</code>.</dl>
+<dt><code>Visual Studio 12 2013 Win64</code></dt>
+<dd>Specify target platform <code>x64</code>.</dd>
+<dt><code>Visual Studio 12 2013 ARM</code></dt>
+<dd>Specify target platform <code>ARM</code>.</dd></dl>
 <h3>Toolset Selection</h3>
 <p>The <code>v120</code> toolset that comes with Visual Studio 12 2013 is selected by default. The <code>CMAKE_GENERATOR_TOOLSET</code> option may be set, perhaps via the <code><a href="/docs/linux/man/1-cmake/">cmake</a>(1)</code> <code>-T</code> option, to specify another toolset. </p>
 <p> New in version 3.8: For each toolset that comes with this version of Visual Studio, there are variants that are themselves compiled for 32-bit (<code>x86</code>) and 64-bit (<code>x64</code>) hosts (independent of the architecture they target). By default this generator uses the 32-bit variant even on a 64-bit host. One may explicitly request use of either the 32-bit or 64-bit host tools by adding either <code>host=x86</code> or <code>host=x64</code> to the toolset specification. See the <code>CMAKE_GENERATOR_TOOLSET</code> variable for details. </p>
@@ -245,17 +245,17 @@ add_custom_command(
 <p>The default target platform name (architecture) is <code>Win32</code>. </p>
 <p> The <code>CMAKE_GENERATOR_PLATFORM</code> variable may be set, perhaps via the <code><a href="/docs/linux/man/1-cmake/">cmake</a>(1)</code> <code>-A</code> option, to specify a target platform name (architecture). For example:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 14 2015&quot; -A Win32</code></p>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 14 2015&quot; -A x64</code></p>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 14 2015&quot; -A ARM</code> </p>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 14 2015&quot; -A Win32</code></dd>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 14 2015&quot; -A x64</code></dd>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 14 2015&quot; -A ARM</code> </dd>
 <p> For compatibility with CMake versions prior to 3.1, one may specify a target platform name optionally at the end of the generator name. This is supported only for:</p>
-<dt><code>Visual Studio 14 2015 Win64</code></p>
-<dd>Specify target platform <code>x64</code>.</p>
-<dt><code>Visual Studio 14 2015 ARM</code></p>
-<dd>Specify target platform <code>ARM</code>.</dl>
+<dt><code>Visual Studio 14 2015 Win64</code></dt>
+<dd>Specify target platform <code>x64</code>.</dd>
+<dt><code>Visual Studio 14 2015 ARM</code></dt>
+<dd>Specify target platform <code>ARM</code>.</dd></dl>
 <h3>Toolset Selection</h3>
 <p>The <code>v140</code> toolset that comes with Visual Studio 14 2015 is selected by default. The <code>CMAKE_GENERATOR_TOOLSET</code> option may be set, perhaps via the <code><a href="/docs/linux/man/1-cmake/">cmake</a>(1)</code> <code>-T</code> option, to specify another toolset. </p>
 <p> New in version 3.8: For each toolset that comes with this version of Visual Studio, there are variants that are themselves compiled for 32-bit (<code>x86</code>) and 64-bit (<code>x64</code>) hosts (independent of the architecture they target). By default this generator uses the 32-bit variant even on a 64-bit host. One may explicitly request use of either the 32-bit or 64-bit host tools by adding either <code>host=x86</code> or <code>host=x64</code> to the toolset specification. See the <code>CMAKE_GENERATOR_TOOLSET</code> variable for details. </p>
@@ -277,19 +277,19 @@ add_custom_command(
 <p>The default target platform name (architecture) is <code>Win32</code>. </p>
 <p> The <code>CMAKE_GENERATOR_PLATFORM</code> variable may be set, perhaps via the <code><a href="/docs/linux/man/1-cmake/">cmake</a>(1)</code> <code>-A</code> option, to specify a target platform name (architecture). For example:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 15 2017&quot; -A Win32</code></p>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 15 2017&quot; -A x64</code></p>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 15 2017&quot; -A ARM</code></p>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 15 2017&quot; -A ARM64</code> </p>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 15 2017&quot; -A Win32</code></dd>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 15 2017&quot; -A x64</code></dd>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 15 2017&quot; -A ARM</code></dd>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 15 2017&quot; -A ARM64</code> </dd>
 <p> For compatibility with CMake versions prior to 3.1, one may specify a target platform name optionally at the end of the generator name. This is supported only for:</p>
-<dt><code>Visual Studio 15 2017 Win64</code></p>
-<dd>Specify target platform <code>x64</code>.</p>
-<dt><code>Visual Studio 15 2017 ARM</code></p>
-<dd>Specify target platform <code>ARM</code>.</dl>
+<dt><code>Visual Studio 15 2017 Win64</code></dt>
+<dd>Specify target platform <code>x64</code>.</dd>
+<dt><code>Visual Studio 15 2017 ARM</code></dt>
+<dd>Specify target platform <code>ARM</code>.</dd></dl>
 <h3>Toolset Selection</h3>
 <p>The <code>v141</code> toolset that comes with Visual Studio 15 2017 is selected by default. The <code>CMAKE_GENERATOR_TOOLSET</code> option may be set, perhaps via the <code><a href="/docs/linux/man/1-cmake/">cmake</a>(1)</code> <code>-T</code> option, to specify another toolset. </p>
 <p> New in version 3.8: For each toolset that comes with this version of Visual Studio, there are variants that are themselves compiled for 32-bit (<code>x86</code>) and 64-bit (<code>x64</code>) hosts (independent of the architecture they target). By default this generator uses the 32-bit variant even on a 64-bit host. One may explicitly request use of either the 32-bit or 64-bit host tools by adding either <code>host=x86</code> or <code>host=x64</code> to the toolset specification. See the <code>CMAKE_GENERATOR_TOOLSET</code> variable for details. </p>
@@ -306,14 +306,14 @@ add_custom_command(
 <p>The default target platform name (architecture) is that of the host and is provided in the <code>CMAKE_VS_PLATFORM_NAME_DEFAULT</code> variable. </p>
 <p> The <code>CMAKE_GENERATOR_PLATFORM</code> variable may be set, perhaps via the <code><a href="/docs/linux/man/1-cmake/">cmake</a>(1)</code> <code>-A</code> option, to specify a target platform name (architecture). For example:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 16 2019&quot; -A Win32</code></p>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 16 2019&quot; -A x64</code></p>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 16 2019&quot; -A ARM</code></p>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 16 2019&quot; -A ARM64</code></dl>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 16 2019&quot; -A Win32</code></dd>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 16 2019&quot; -A x64</code></dd>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 16 2019&quot; -A ARM</code></dd>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 16 2019&quot; -A ARM64</code></dd></dl>
 <h3>Toolset Selection</h3>
 <p>The <code>v142</code> toolset that comes with Visual Studio 16 2019 is selected by default. The <code>CMAKE_GENERATOR_TOOLSET</code> option may be set, perhaps via the <code><a href="/docs/linux/man/1-cmake/">cmake</a>(1)</code> <code>-T</code> option, to specify another toolset. </p>
 <p> For each toolset that comes with this version of Visual Studio, there are variants that are themselves compiled for 32-bit (<code>x86</code>) and 64-bit (<code>x64</code>) hosts (independent of the architecture they target). By default this generator uses the 64-bit variant on x64 hosts and the 32-bit variant otherwise. One may explicitly request use of either the 32-bit or 64-bit host tools by adding either <code>host=x86</code> or <code>host=x64</code> to the toolset specification. See the <code>CMAKE_GENERATOR_TOOLSET</code> variable for details.</p>
@@ -329,14 +329,14 @@ add_custom_command(
 <p>The default target platform name (architecture) is that of the host and is provided in the <code>CMAKE_VS_PLATFORM_NAME_DEFAULT</code> variable. </p>
 <p> The <code>CMAKE_GENERATOR_PLATFORM</code> variable may be set, perhaps via the <code><a href="/docs/linux/man/1-cmake/">cmake</a>(1)</code> <code>-A</code> option, to specify a target platform name (architecture). For example:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 17 2022&quot; -A Win32</code></p>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 17 2022&quot; -A x64</code></p>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 17 2022&quot; -A ARM</code></p>
-<dt>&bull;</p>
-<dd><code>cmake -G &quot;Visual Studio 17 2022&quot; -A ARM64</code></dl>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 17 2022&quot; -A Win32</code></dd>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 17 2022&quot; -A x64</code></dd>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 17 2022&quot; -A ARM</code></dd>
+<dt>&bull;</dt>
+<dd><code>cmake -G &quot;Visual Studio 17 2022&quot; -A ARM64</code></dd></dl>
 <h3>Toolset Selection</h3>
 <p>The <code>v143</code> toolset that comes with VS 17 2022 is selected by default. The <code>CMAKE_GENERATOR_TOOLSET</code> option may be set, perhaps via the <code><a href="/docs/linux/man/1-cmake/">cmake</a>(1)</code> <code>-T</code> option, to specify another toolset. </p>
 <p> For each toolset that comes with this version of Visual Studio, there are variants that are themselves compiled for 32-bit (<code>x86</code>) and 64-bit (<code>x64</code>) hosts (independent of the architecture they target). By default this generator uses the 64-bit variant on x64 hosts and the 32-bit variant otherwise. One may explicitly request use of either the 32-bit or 64-bit host tools by adding either <code>host=x86</code> or <code>host=x64</code> to the toolset specification. See the <code>CMAKE_GENERATOR_TOOLSET</code> variable for details.</p>
@@ -347,47 +347,47 @@ add_custom_command(
 <p> Generates Green Hills MULTI project files (experimental, work-in-progress). </p>
 <p> Customizations are available through the following cache variables:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>GHS_CUSTOMIZATION</code></p>
-<dt>&bull;</p>
-<dd><code>GHS_GPJ_MACROS</code> </p>
+<dt>&bull;</dt>
+<dd><code>GHS_CUSTOMIZATION</code></dd>
+<dt>&bull;</dt>
+<dd><code>GHS_GPJ_MACROS</code> </dd>
 <p> New in version 3.14: The buildsystem has predetermined build-configuration settings that can be controlled via the <code>CMAKE_BUILD_TYPE</code> variable. </p>
 </dl>
 <h3>Toolset and Platform Selection</h3>
 <p>New in version 3.13. </p>
 <p> Customizations that are used to pick toolset and target system:</p>
 <dl>
-<dt>&bull;</p>
-<dd>The <code>-A &lt;arch&gt;</code> can be supplied for setting the target architecture. <code>&lt;arch&gt;</code> usually is one of <code>arm</code>, <code>ppc</code>, <code>86</code>, etcetera. If the target architecture is not specified then the default architecture of <code>arm</code> will be used.</p>
-<dt>&bull;</p>
-<dd>The <code>-T &lt;toolset&gt;</code> option can be used to set the directory location of the toolset. Both absolute and relative paths are valid. Relative paths use <code>GHS_TOOLSET_ROOT</code> as the root. If the toolset is not specified then the latest toolset found in <code>GHS_TOOLSET_ROOT</code> will be used. </p>
+<dt>&bull;</dt>
+<dd>The <code>-A &lt;arch&gt;</code> can be supplied for setting the target architecture. <code>&lt;arch&gt;</code> usually is one of <code>arm</code>, <code>ppc</code>, <code>86</code>, etcetera. If the target architecture is not specified then the default architecture of <code>arm</code> will be used.</dd>
+<dt>&bull;</dt>
+<dd>The <code>-T &lt;toolset&gt;</code> option can be used to set the directory location of the toolset. Both absolute and relative paths are valid. Relative paths use <code>GHS_TOOLSET_ROOT</code> as the root. If the toolset is not specified then the latest toolset found in <code>GHS_TOOLSET_ROOT</code> will be used. </dd>
 <p> Cache variables that are used for toolset and target system customization:</p>
-<dt>&bull;</p>
-<dd><code>GHS_TARGET_PLATFORM</code> </p>
+<dt>&bull;</dt>
+<dd><code>GHS_TARGET_PLATFORM</code> </dd>
 <pre>Defaults to <code>integrity</code>.
 Usual values are <code>integrity</code>, <code>threadx</code>, <code>uvelosity</code>, <code>velosity</code>,
 <code>vxworks</code>, <code>standalone</code>.</pre>
-<dt>&bull;</p>
-<dd><code>GHS_PRIMARY_TARGET</code> </p>
+<dt>&bull;</dt>
+<dd><code>GHS_PRIMARY_TARGET</code> </dd>
 <pre>Sets <code>primaryTarget</code> entry in project file.
 Defaults to <code>&lt;arch&gt;_&lt;GHS_TARGET_PLATFORM&gt;.tgt</code>.</pre>
-<dt>&bull;</p>
-<dd><code>GHS_TOOLSET_ROOT</code> </p>
+<dt>&bull;</dt>
+<dd><code>GHS_TOOLSET_ROOT</code> </dd>
 <pre>Root path for <code>toolset</code> searches.
 Defaults to <code>C:/ghs</code> in Windows or <code>/usr/ghs</code> in Linux.</pre>
-<dt>&bull;</p>
-<dd><code>GHS_OS_ROOT</code> </p>
+<dt>&bull;</dt>
+<dd><code>GHS_OS_ROOT</code> </dd>
 <pre>Root path for RTOS searches.
 Defaults to <code>C:/ghs</code> in Windows or <code>/usr/ghs</code> in Linux.</pre>
-<dt>&bull;</p>
-<dd><code>GHS_OS_DIR</code> and <code>GHS_OS_DIR_OPTION</code> </p>
+<dt>&bull;</dt>
+<dd><code>GHS_OS_DIR</code> and <code>GHS_OS_DIR_OPTION</code> </dd>
 <pre>Sets <code>-os_dir</code> entry in project file.
 Defaults to latest platform OS installation at <code>GHS_OS_ROOT</code>. Set this value if
 a specific RTOS is to be used.
 <code>GHS_OS_DIR_OPTION</code> default value is <code>-os_dir</code>.</pre>
 <p>New in version 3.15: The <code>GHS_OS_DIR_OPTION</code> variable. </p>
-<dt>&bull;</p>
-<dd><code>GHS_BSP_NAME</code> </p>
+<dt>&bull;</dt>
+<dd><code>GHS_BSP_NAME</code> </dd>
 <pre>Sets <code>-bsp</code> entry in project file.
 Defaults to <code>sim&lt;arch&gt;</code> for <code>integrity</code> platforms.</pre>
 </dl>
@@ -395,10 +395,10 @@ Defaults to <code>sim&lt;arch&gt;</code> for <code>integrity</code> platforms.</
 <p>New in version 3.14. </p>
 <p> The following properties are available:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>GHS_INTEGRITY_APP</code></p>
-<dt>&bull;</p>
-<dd><code>GHS_NO_SOURCE_GROUP_FILE</code> </p>
+<dt>&bull;</dt>
+<dd><code>GHS_INTEGRITY_APP</code></dd>
+<dt>&bull;</dt>
+<dd><code>GHS_NO_SOURCE_GROUP_FILE</code> </dd>
 <p> <code>NOTE:</code> This generator is deemed experimental as of CMake 3.22.1 and is still a work in progress. Future versions of CMake may make breaking changes as the generator matures.</dl>
 <h3>Xcode</h3>
 <p>Generate Xcode project files. </p>
@@ -407,16 +407,16 @@ Defaults to <code>sim&lt;arch&gt;</code> for <code>integrity</code> platforms.</
 <p>By default Xcode is allowed to select its own default toolchain. The <code>CMAKE_GENERATOR_TOOLSET</code> option may be set, perhaps via the <code><a href="/docs/linux/man/1-cmake/">cmake</a>(1)</code> <code>-T</code> option, to specify another toolset. </p>
 <p> New in version 3.19: This generator supports toolset specification using one of these forms: </p>
 <dl>
-<dt>&bull;</p>
-<dd><code>toolset</code></p>
-<dt>&bull;</p>
-<dd><code>toolset[,key=value]*</code></p>
-<dt>&bull;</p>
-<dd><code>key=value[,key=value]*</code> </p>
+<dt>&bull;</dt>
+<dd><code>toolset</code></dd>
+<dt>&bull;</dt>
+<dd><code>toolset[,key=value]*</code></dd>
+<dt>&bull;</dt>
+<dd><code>key=value[,key=value]*</code> </dd>
 <p> The <code>toolset</code> specifies the toolset name. The selected toolset name is provided in the <code>CMAKE_XCODE_PLATFORM_TOOLSET</code> variable. </p>
 <p> The <code>key=value</code> pairs form a comma-separated list of options to specify generator-specific details of the toolset selection. Supported pairs are:</p>
-<dt><code>buildsystem=&lt;variant&gt;</code></p>
-<dd>Specify the buildsystem variant to use. See the <code>CMAKE_XCODE_BUILD_SYSTEM</code> variable for allowed values. </p>
+<dt><code>buildsystem=&lt;variant&gt;</code></dt>
+<dd>Specify the buildsystem variant to use. See the <code>CMAKE_XCODE_BUILD_SYSTEM</code> variable for allowed values. </dd>
 <p> For example, to select the original build system under Xcode 12, run <code><a href="/docs/linux/man/1-cmake/">cmake</a>(1)</code> with the option <code>-T buildsystem=1</code>.</dl>
 <h3>Swift Support</h3>
 <p>New in version 3.4. </p>
@@ -429,68 +429,68 @@ Defaults to <code>sim&lt;arch&gt;</code> for <code>integrity</code> platforms.</
 <p> New in version 3.10: The <code>CMAKE_CODEBLOCKS_EXCLUDE_EXTERNAL_FILES</code> variable may be set to <code>ON</code> to exclude any files which are located outside of the project root directory. </p>
 <p> This &quot;extra&quot; generator may be specified as:</p>
 <dl>
-<dt><code>CodeBlocks &#8211; MinGW Makefiles</code></p>
-<dd>Generate with <code>MinGW Makefiles</code>.</p>
-<dt><code>CodeBlocks &#8211; NMake Makefiles</code></p>
-<dd>Generate with <code>NMake Makefiles</code>.</p>
-<dt><code>CodeBlocks &#8211; NMake Makefiles JOM</code></p>
-<dd>New in version 3.8: Generate with <code>NMake Makefiles JOM</code>. </p>
-<dt><code>CodeBlocks &#8211; Ninja</code></p>
-<dd>Generate with <code>Ninja</code>.</p>
-<dt><code>CodeBlocks &#8211; Unix Makefiles</code></p>
-<dd>Generate with <code>Unix Makefiles</code>.</dl>
+<dt><code>CodeBlocks &#8211; MinGW Makefiles</code></dt>
+<dd>Generate with <code>MinGW Makefiles</code>.</dd>
+<dt><code>CodeBlocks &#8211; NMake Makefiles</code></dt>
+<dd>Generate with <code>NMake Makefiles</code>.</dd>
+<dt><code>CodeBlocks &#8211; NMake Makefiles JOM</code></dt>
+<dd>New in version 3.8: Generate with <code>NMake Makefiles JOM</code>. </dd>
+<dt><code>CodeBlocks &#8211; Ninja</code></dt>
+<dd>Generate with <code>Ninja</code>.</dd>
+<dt><code>CodeBlocks &#8211; Unix Makefiles</code></dt>
+<dd>Generate with <code>Unix Makefiles</code>.</dd></dl>
 <h3>CodeLite</h3>
 <p>Generates CodeLite project files. </p>
 <p> Project files for CodeLite will be created in the top directory and in every subdirectory which features a CMakeLists.txt file containing a <code>project()</code> call. The appropriate make program can build the project through the default <code>all</code> target. An <code>install</code> target is also provided. </p>
 <p> New in version 3.7: The <code>CMAKE_CODELITE_USE_TARGETS</code> variable may be set to <code>ON</code> to change the default behavior from projects to targets as the basis for project files. </p>
 <p> This &quot;extra&quot; generator may be specified as:</p>
 <dl>
-<dt><code>CodeLite &#8211; MinGW Makefiles</code></p>
-<dd>Generate with <code>MinGW Makefiles</code>.</p>
-<dt><code>CodeLite &#8211; NMake Makefiles</code></p>
-<dd>Generate with <code>NMake Makefiles</code>.</p>
-<dt><code>CodeLite &#8211; Ninja</code></p>
-<dd>Generate with <code>Ninja</code>.</p>
-<dt><code>CodeLite &#8211; Unix Makefiles</code></p>
-<dd>Generate with <code>Unix Makefiles</code>.</dl>
+<dt><code>CodeLite &#8211; MinGW Makefiles</code></dt>
+<dd>Generate with <code>MinGW Makefiles</code>.</dd>
+<dt><code>CodeLite &#8211; NMake Makefiles</code></dt>
+<dd>Generate with <code>NMake Makefiles</code>.</dd>
+<dt><code>CodeLite &#8211; Ninja</code></dt>
+<dd>Generate with <code>Ninja</code>.</dd>
+<dt><code>CodeLite &#8211; Unix Makefiles</code></dt>
+<dd>Generate with <code>Unix Makefiles</code>.</dd></dl>
 <h3>Eclipse CDT4</h3>
 <p>Generates Eclipse CDT 4.0 project files. </p>
 <p> Project files for Eclipse will be created in the top directory. In out of source builds, a linked resource to the top level source directory will be created. Additionally a hierarchy of makefiles is generated into the build tree. The appropriate make program can build the project through the default <code>all</code> target. An <code>install</code> target is also provided. </p>
 <p> This &quot;extra&quot; generator may be specified as:</p>
 <dl>
-<dt><code>Eclipse CDT4 &#8211; MinGW Makefiles</code></p>
-<dd>Generate with <code>MinGW Makefiles</code>.</p>
-<dt><code>Eclipse CDT4 &#8211; NMake Makefiles</code></p>
-<dd>Generate with <code>NMake Makefiles</code>.</p>
-<dt><code>Eclipse CDT4 &#8211; Ninja</code></p>
-<dd>Generate with <code>Ninja</code>.</p>
-<dt><code>Eclipse CDT4 &#8211; Unix Makefiles</code></p>
-<dd>Generate with <code>Unix Makefiles</code>.</dl>
+<dt><code>Eclipse CDT4 &#8211; MinGW Makefiles</code></dt>
+<dd>Generate with <code>MinGW Makefiles</code>.</dd>
+<dt><code>Eclipse CDT4 &#8211; NMake Makefiles</code></dt>
+<dd>Generate with <code>NMake Makefiles</code>.</dd>
+<dt><code>Eclipse CDT4 &#8211; Ninja</code></dt>
+<dd>Generate with <code>Ninja</code>.</dd>
+<dt><code>Eclipse CDT4 &#8211; Unix Makefiles</code></dt>
+<dd>Generate with <code>Unix Makefiles</code>.</dd></dl>
 <h3>Kate</h3>
 <p>Generates Kate project files. </p>
 <p> A project file for Kate will be created in the top directory in the top level build directory. To use it in Kate, the Project plugin must be enabled. The project file is loaded in Kate by opening the <code>ProjectName.kateproject</code> file in the editor. If the Kate Build-plugin is enabled, all targets generated by CMake are available for building. </p>
 <p> This &quot;extra&quot; generator may be specified as:</p>
 <dl>
-<dt><code>Kate &#8211; MinGW Makefiles</code></p>
-<dd>Generate with <code>MinGW Makefiles</code>.</p>
-<dt><code>Kate &#8211; NMake Makefiles</code></p>
-<dd>Generate with <code>NMake Makefiles</code>.</p>
-<dt><code>Kate &#8211; Ninja</code></p>
-<dd>Generate with <code>Ninja</code>.</p>
-<dt><code>Kate &#8211; Unix Makefiles</code></p>
-<dd>Generate with <code>Unix Makefiles</code>.</dl>
+<dt><code>Kate &#8211; MinGW Makefiles</code></dt>
+<dd>Generate with <code>MinGW Makefiles</code>.</dd>
+<dt><code>Kate &#8211; NMake Makefiles</code></dt>
+<dd>Generate with <code>NMake Makefiles</code>.</dd>
+<dt><code>Kate &#8211; Ninja</code></dt>
+<dd>Generate with <code>Ninja</code>.</dd>
+<dt><code>Kate &#8211; Unix Makefiles</code></dt>
+<dd>Generate with <code>Unix Makefiles</code>.</dd></dl>
 <h3>Sublime Text 2</h3>
 <p>Generates Sublime Text 2 project files. </p>
 <p> Project files for Sublime Text 2 will be created in the top directory and in every subdirectory which features a <code>CMakeLists.txt</code> file containing a <code>project()</code> call. Additionally <code>Makefiles</code> (or <code>build.ninja</code> files) are generated into the build tree. The appropriate make program can build the project through the default <code>all</code> target. An <code>install</code> target is also provided. </p>
 <p> This &quot;extra&quot; generator may be specified as:</p>
 <dl>
-<dt><code>Sublime Text 2 &#8211; MinGW Makefiles</code></p>
-<dd>Generate with <code>MinGW Makefiles</code>.</p>
-<dt><code>Sublime Text 2 &#8211; NMake Makefiles</code></p>
-<dd>Generate with <code>NMake Makefiles</code>.</p>
-<dt><code>Sublime Text 2 &#8211; Ninja</code></p>
-<dd>Generate with <code>Ninja</code>.</p>
-<dt><code>Sublime Text 2 &#8211; Unix Makefiles</code></p>
-<dd>Generate with <code>Unix Makefiles</code>.</dl>
+<dt><code>Sublime Text 2 &#8211; MinGW Makefiles</code></dt>
+<dd>Generate with <code>MinGW Makefiles</code>.</dd>
+<dt><code>Sublime Text 2 &#8211; NMake Makefiles</code></dt>
+<dd>Generate with <code>NMake Makefiles</code>.</dd>
+<dt><code>Sublime Text 2 &#8211; Ninja</code></dt>
+<dd>Generate with <code>Ninja</code>.</dd>
+<dt><code>Sublime Text 2 &#8211; Unix Makefiles</code></dt>
+<dd>Generate with <code>Unix Makefiles</code>.</dd></dl>
 <h2>Copyright</h2>
 <p>2000-2022 Kitware, Inc. and Contributors</p>

@@ -12,7 +12,6 @@ std::filesystem::filesystem_error::path1,std::filesystem::filesystem_error::path
 
 <pre><code>const std::filesystem::path &amp;path1() const noexcept;
 (since C++ 17)
-
     const std::filesystem::path &amp;path2() const noexcept;
 (since C++ 17)</code></pre> 
 Returns the paths that were stored in the exception object. 

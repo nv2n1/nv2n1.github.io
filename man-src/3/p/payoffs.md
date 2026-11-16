@@ -11,7 +11,6 @@ description: "ql/instruments/payoffs.hpp – Payoffs for various options."
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/option.hpp&gt;
-
 #include &lt;ql/payoff.hpp&gt;</code></pre>
 <h3>Classes</h3>
 <p>class <code>NullPayoff</code><br />

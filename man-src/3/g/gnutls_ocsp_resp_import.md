@@ -14,10 +14,10 @@ description: "gnutls_ocsp_resp_import – API function"
 <p> <code>int gnutls_ocsp_resp_import(gnutls_ocsp_resp_t </code><i>resp</i><code>, const gnutls_datum_t * </code><i>data</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_ocsp_resp_t resp</p>
-<dd> The structure to store the parsed response.</p>
-<dt>const gnutls_datum_t * data</p>
-<dd> DER encoded OCSP response.</dl>
+<dt>gnutls_ocsp_resp_t resp</dt>
+<dd> The structure to store the parsed response.</dd>
+<dt>const gnutls_datum_t * data</dt>
+<dd> DER encoded OCSP response.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will convert the given DER encoded OCSP response to the native <code>gnutls_ocsp_resp_t</code> format. It also decodes the Basic OCSP Response part, if any. The output will be stored in <i>resp</i> .</p>
 <h2>RETURNS</h2>
@@ -31,6 +31,6 @@ description: "gnutls_ocsp_resp_import – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

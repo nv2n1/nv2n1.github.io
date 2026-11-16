@@ -13,11 +13,11 @@ description: "mwaw2raw – debug the conversion library"
 <p> <code>mwaw2raw</code> [<i>OPTION</i>] <i>&lt;Text Document&gt;</i></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;callgraph</code>:</p>
-<dd> Display the call graph nesting level</p>
-<dt><code>-h</code>, <code>&#8211;help</code>:</p>
-<dd> Shows this help message</p>
-<dt><code>-v</code>, <code>&#8211;version</code>:</p>
-<dd> Output mwaw2raw version </p>
+<dt><code>&#8211;callgraph</code>:</dt>
+<dd> Display the call graph nesting level</dd>
+<dt><code>-h</code>, <code>&#8211;help</code>:</dt>
+<dd> Shows this help message</dd>
+<dt><code>-v</code>, <code>&#8211;version</code>:</dt>
+<dd> Output mwaw2raw version </dd>
 </dl>
 <h2>Index</h2>

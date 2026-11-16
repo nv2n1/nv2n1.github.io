@@ -23,10 +23,10 @@ description: "catopen, catclose – open/close a message catalog"
 <p> The function <code>catclose</code>() returns 0 on success, or -1 on failure.</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>LC_MESSAGES</code></p>
-<dd> May be the source of the <code>LC_MESSAGES</code> locale setting, and thus determine the language to use if <i>flag</i> is set to <code>NL_CAT_LOCALE</code>.</p>
-<dt><code>LANG</code></p>
-<dd> The language to use if <i>flag</i> is 0.</dl>
+<dt><code>LC_MESSAGES</code></dt>
+<dd> May be the source of the <code>LC_MESSAGES</code> locale setting, and thus determine the language to use if <i>flag</i> is set to <code>NL_CAT_LOCALE</code>.</dd>
+<dt><code>LANG</code></dt>
+<dd> The language to use if <i>flag</i> is 0.</dd></dl>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

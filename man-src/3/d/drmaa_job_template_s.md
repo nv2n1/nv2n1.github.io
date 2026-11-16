@@ -39,5 +39,5 @@ description: "drmaa_job_template_s –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for torque from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAL">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAL">Author</a></dt>
+<dd></dd></dl>

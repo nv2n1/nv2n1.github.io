@@ -14,13 +14,13 @@ description: "sata_std_hardreset – COMRESET w/o waiting or classification"
 <p><i>link</i></p>
 <dl>
 <dd>
-<dd>link to reset</dl>
+</dd><dd>link to reset</dd></dl>
 <p> <i>class</i></p>
 <dl>
-<dd>resulting class of attached device</dl>
+<dd>resulting class of attached device</dd></dl>
 <p> <i>deadline</i></p>
 <dl>
-<dd>deadline jiffies for the operation</dl>
+<dd>deadline jiffies for the operation</dd></dl>
 <h2>Description</h2>
 <p>Standard SATA COMRESET w/o waiting or classification. </p>
 <p> LOCKING: Kernel thread context (may sleep)</p>
@@ -29,5 +29,5 @@ description: "sata_std_hardreset – COMRESET w/o waiting or classification"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

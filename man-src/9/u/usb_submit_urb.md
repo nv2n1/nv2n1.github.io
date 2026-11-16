@@ -14,10 +14,10 @@ description: "usb_submit_urb – issue an asynchronous transfer request for an e
 <p><i>urb</i></p>
 <dl>
 <dd>
-<dd>pointer to the urb describing the request</dl>
+</dd><dd>pointer to the urb describing the request</dd></dl>
 <p> <i>mem_flags</i></p>
 <dl>
-<dd>the type of memory to allocate, see <code>kmalloc</code> for a list of valid options for this.</dl>
+<dd>the type of memory to allocate, see <code>kmalloc</code> for a list of valid options for this.</dd></dl>
 <h2>Description</h2>
 <p>This submits a transfer request, and transfers control of the URB describing that request to the USB subsystem. Request completion will be indicated later, asynchronously, by calling the completion handler. The three types of completion are success, error, and unlink (a software-induced fault, also called &#8220;request cancellation&#8221;). </p>
 <p> URBs may be submitted in interrupt context. </p>

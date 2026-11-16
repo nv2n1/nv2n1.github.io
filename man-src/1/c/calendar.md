@@ -15,24 +15,24 @@ description: "calendar – reminder service"
 <p> The <code>calendar</code> utility checks the current directory or the directory specified by the <code>CALENDAR_DIR</code> environment variable for a file named calendar and displays lines that begin with either today&#8217;s date or tomorrow&#8217;s. On Fridays, events on Friday through Monday are displayed. </p>
 <p> The options are as follows:</p>
 <dl>
-<dt><code>-A </code><i>num</i></p>
-<dd> Print lines from today and next <i>num</i> days (forward, future). Defaults to one. (same as -l)</p>
-<dt><code>-a</code></p>
-<dd> Process the &#8220;calendar&#8221; files of all users and mail the results to them. This requires superuser privileges.</p>
-<dt><code>-B </code><i>num</i></p>
-<dd> Print lines from today and previous <i>num</i> days (backward, past).</p>
-<dt><code>-b</code></p>
-<dd> Enforce special date calculation mode for Cyrillic calendars.</p>
-<dt><code>-l </code><i>num</i></p>
-<dd> Print lines from today and next <i>num</i> days (forward, future). Defaults to one. (same as -A)</p>
-<dt><code>-e </code><i>num</i></p>
-<dd> Print lines from today and next <i>num</i> days, only if today is Friday (forward, future). Defaults to two, which causes <code>calendar</code> to print entries through the weekend on Fridays.</p>
-<dt><code>-f </code><i>calendarfile</i></p>
-<dd> Use <i>calendarfile</i> as the default calendar file. If this file is not accessible, the system-wide default is used.</p>
-<dt><code>-t </code>[[[<i>cc </i><i>yy </i><i>mm </i><i>dd</i> ] ] ]</p>
-<dd> Act like the specified value is &#8220;today&#8221; instead of using the current date. If yy is specified, but cc is not, a value for yy between 69 and 99 results in a cc value of 19. Otherwise, a cc value of 20 is used.</p>
-<dt><code>-w</code></p>
-<dd> Print day of the week name in front of each event.</dl>
+<dt><code>-A </code><i>num</i></dt>
+<dd> Print lines from today and next <i>num</i> days (forward, future). Defaults to one. (same as -l)</dd>
+<dt><code>-a</code></dt>
+<dd> Process the &#8220;calendar&#8221; files of all users and mail the results to them. This requires superuser privileges.</dd>
+<dt><code>-B </code><i>num</i></dt>
+<dd> Print lines from today and previous <i>num</i> days (backward, past).</dd>
+<dt><code>-b</code></dt>
+<dd> Enforce special date calculation mode for Cyrillic calendars.</dd>
+<dt><code>-l </code><i>num</i></dt>
+<dd> Print lines from today and next <i>num</i> days (forward, future). Defaults to one. (same as -A)</dd>
+<dt><code>-e </code><i>num</i></dt>
+<dd> Print lines from today and next <i>num</i> days, only if today is Friday (forward, future). Defaults to two, which causes <code>calendar</code> to print entries through the weekend on Fridays.</dd>
+<dt><code>-f </code><i>calendarfile</i></dt>
+<dd> Use <i>calendarfile</i> as the default calendar file. If this file is not accessible, the system-wide default is used.</dd>
+<dt><code>-t </code>[[[<i>cc </i><i>yy </i><i>mm </i><i>dd</i> ] ] ]</dt>
+<dd> Act like the specified value is &#8220;today&#8221; instead of using the current date. If yy is specified, but cc is not, a value for yy between 69 and 99 results in a cc value of 19. Otherwise, a cc value of 20 is used.</dd>
+<dt><code>-w</code></dt>
+<dd> Print day of the week name in front of each event.</dd></dl>
 <p> To handle calendars in your national code table you can specify &#8220;LANG=&lt;locale_name&gt;&#8221; in the calendar file as early as possible. To handle national Easter names in the calendars, &#8220;Easter=&lt;national_name&gt;&#8221; (for Catholic Easter) or &#8220;Paskha=&lt;national_name&gt;&#8221; (for Orthodox Easter) can be used. </p>
 <p> A special locale name exists: `utf-8&#8242; Specifying &#8220;LANG=utf-8&#8221; indicates that the dates will be read using the C locale, and the descriptions will be encoded in UTF-8. This is usually used for the distributed calendar files. The &#8220;CALENDAR&#8221; variable can be used to specify the style. Only `Julian&#8217; and `Gregorian&#8217; styles are currently supported. Use &#8220;CALENDAR=&#8221; to return to the default (Gregorian). </p>
 <p> To enforce special date calculation mode for Cyrillic calendars you should specify &#8220;LANG=&lt;local_name&gt;&#8221; and &#8220;BODUN=&lt;bodun_prefix&gt;&#8221; where &lt;local_name&gt; can be ru_RU.UTF-8, uk_UA.UTF-8 or by_BY.UTF-8. </p>
@@ -60,60 +60,60 @@ LANG = C
 </blockquote>
 <h2>FILES</h2>
 <dl>
-<dt><code>calendar </code></p>
-<dd> File in current directory.</p>
-<dt><code>~/.calendar </code></p>
-<dd> Directory in the user&#8217;s home directory (which <code>calendar</code> changes into, if it exists).</p>
-<dt><code>~/.calendar/calendar </code></p>
-<dd> File to use if no calendar file exists in the current directory.</p>
-<dt><code>~/.calendar/nomail </code></p>
-<dd> <code>calendar</code> will not send mail if this file exists.</p>
-<dt><code>calendar.all </code></p>
-<dd> International and national calendar files.</p>
-<dt><code>calendar.birthday </code></p>
-<dd> Births and deaths of famous (and not-so-famous) people.</p>
-<dt><code>calendar.canada </code></p>
-<dd> Canadian holidays.</p>
-<dt><code>calendar.christian </code></p>
-<dd> Christian holidays (should be updated yearly by the local system administrator so that roving holidays are set correctly for the current year).</p>
-<dt><code>calendar.computer </code></p>
-<dd> Days of special significance to computer people.</p>
-<dt><code>calendar.croatian </code></p>
-<dd> Croatian calendar.</p>
-<dt><code>calendar.discord </code></p>
-<dd> Discordian calendar (all rites reversed).</p>
-<dt><code>calendar.fictional </code></p>
-<dd> Fantasy and fiction dates (mostly LOTR).</p>
-<dt><code>calendar.french </code></p>
-<dd> French calendar.</p>
-<dt><code>calendar.german </code></p>
-<dd> German calendar.</p>
-<dt><code>calendar.history </code></p>
-<dd> Miscellaneous history.</p>
-<dt><code>calendar.holiday </code></p>
-<dd> Other holidays (including the not-well-known, obscure, and <i>really</i> obscure).</p>
-<dt><code>calendar.judaic </code></p>
-<dd> Jewish holidays (should be updated yearly by the local system administrator so that roving holidays are set correctly for the current year).</p>
-<dt><code>calendar.music </code></p>
-<dd> Musical events, births, and deaths (strongly oriented toward rock n&#8217; roll).</p>
-<dt><code>calendar.nz </code></p>
-<dd> New Zealand calendar.</p>
-<dt><code>calendar.openbsd </code></p>
-<dd> Ox related events.</p>
-<dt><code>calendar.pagan </code></p>
-<dd> Pagan holidays, celebrations and festivals.</p>
-<dt><code>calendar.russian </code></p>
-<dd> Russian calendar.</p>
-<dt><code>calendar.space </code></p>
-<dd> Cosmic history.</p>
-<dt><code>calendar.uk </code></p>
-<dd> UK calendar.</p>
-<dt><code>calendar.ushistory </code></p>
-<dd> U.S. history.</p>
-<dt><code>calendar.usholiday </code></p>
-<dd> U.S. holidays.</p>
-<dt><code>calendar.world </code></p>
-<dd> World wide calendar.</dl>
+<dt><code>calendar </code></dt>
+<dd> File in current directory.</dd>
+<dt><code>~/.calendar </code></dt>
+<dd> Directory in the user&#8217;s home directory (which <code>calendar</code> changes into, if it exists).</dd>
+<dt><code>~/.calendar/calendar </code></dt>
+<dd> File to use if no calendar file exists in the current directory.</dd>
+<dt><code>~/.calendar/nomail </code></dt>
+<dd> <code>calendar</code> will not send mail if this file exists.</dd>
+<dt><code>calendar.all </code></dt>
+<dd> International and national calendar files.</dd>
+<dt><code>calendar.birthday </code></dt>
+<dd> Births and deaths of famous (and not-so-famous) people.</dd>
+<dt><code>calendar.canada </code></dt>
+<dd> Canadian holidays.</dd>
+<dt><code>calendar.christian </code></dt>
+<dd> Christian holidays (should be updated yearly by the local system administrator so that roving holidays are set correctly for the current year).</dd>
+<dt><code>calendar.computer </code></dt>
+<dd> Days of special significance to computer people.</dd>
+<dt><code>calendar.croatian </code></dt>
+<dd> Croatian calendar.</dd>
+<dt><code>calendar.discord </code></dt>
+<dd> Discordian calendar (all rites reversed).</dd>
+<dt><code>calendar.fictional </code></dt>
+<dd> Fantasy and fiction dates (mostly LOTR).</dd>
+<dt><code>calendar.french </code></dt>
+<dd> French calendar.</dd>
+<dt><code>calendar.german </code></dt>
+<dd> German calendar.</dd>
+<dt><code>calendar.history </code></dt>
+<dd> Miscellaneous history.</dd>
+<dt><code>calendar.holiday </code></dt>
+<dd> Other holidays (including the not-well-known, obscure, and <i>really</i> obscure).</dd>
+<dt><code>calendar.judaic </code></dt>
+<dd> Jewish holidays (should be updated yearly by the local system administrator so that roving holidays are set correctly for the current year).</dd>
+<dt><code>calendar.music </code></dt>
+<dd> Musical events, births, and deaths (strongly oriented toward rock n&#8217; roll).</dd>
+<dt><code>calendar.nz </code></dt>
+<dd> New Zealand calendar.</dd>
+<dt><code>calendar.openbsd </code></dt>
+<dd> Ox related events.</dd>
+<dt><code>calendar.pagan </code></dt>
+<dd> Pagan holidays, celebrations and festivals.</dd>
+<dt><code>calendar.russian </code></dt>
+<dd> Russian calendar.</dd>
+<dt><code>calendar.space </code></dt>
+<dd> Cosmic history.</dd>
+<dt><code>calendar.uk </code></dt>
+<dd> UK calendar.</dd>
+<dt><code>calendar.ushistory </code></dt>
+<dd> U.S. history.</dd>
+<dt><code>calendar.usholiday </code></dt>
+<dd> U.S. holidays.</dd>
+<dt><code>calendar.world </code></dt>
+<dd> World wide calendar.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-at/">at</a>(1), <a href="/docs/linux/man/1-cal/">cal</a>(1), <a href="/docs/linux/man/1-cpp/">cpp</a>(1), <a href="/docs/linux/man/1-mail/">mail</a>(1), <a href="/docs/linux/man/8-cron/">cron</a>(8)</p>
 <h2>STANDARDS</h2>

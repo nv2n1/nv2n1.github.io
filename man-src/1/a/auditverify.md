@@ -15,18 +15,18 @@ description: "AuditVerify – Command-Line utility for verifying Certificate Sys
 <p> <code>Note: An auditor can be any user that has the privilege to peruse the pki audit logs.</code> </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d &lt;dbdir&gt;</code></p>
-<dd>Specifies the directory containing the security databases with the imported audit log signing certificate. This directory is almost always the auditor&#8217;s own personal certificate databases in a personal directory, such as ~jsmith/auditVerifyDir/. </p>
-<dt><code>-n &lt;signing_certificate_nickname&gt;</code></p>
-<dd>Gives the nickname of the certificate used to sign the log files. The nickname is whatever was used when the log signing certificate was imported into that database. </p>
-<dt><code>[-P cert/key_db_prefix]</code></p>
-<dd>Optional. The prefix to prepend to the certificate and key database filenames. If used, a value of empty quotation marks (“”) should be specified for this argument, since the auditor is using separate certificate and key databases from the Certificate System instance and it is unlikely that the prefix should be prepended to the new audit security database files. </p>
-<dt><code>-a &lt;logListFile&gt;</code></p>
-<dd>Specifies the file which contains the comma-separate list of file paths (in chronological order) of the signed audit logs to be verified. This file should be created in a directory which is writeable by the auditor, such as a special auditing directory like ~jsmith/auditDir. The contents of the logListFile are the full paths to the audit logs. For example:</dl>
+<dt><code>-d &lt;dbdir&gt;</code></dt>
+<dd>Specifies the directory containing the security databases with the imported audit log signing certificate. This directory is almost always the auditor&#8217;s own personal certificate databases in a personal directory, such as ~jsmith/auditVerifyDir/. </dd>
+<dt><code>-n &lt;signing_certificate_nickname&gt;</code></dt>
+<dd>Gives the nickname of the certificate used to sign the log files. The nickname is whatever was used when the log signing certificate was imported into that database. </dd>
+<dt><code>[-P cert/key_db_prefix]</code></dt>
+<dd>Optional. The prefix to prepend to the certificate and key database filenames. If used, a value of empty quotation marks (“”) should be specified for this argument, since the auditor is using separate certificate and key databases from the Certificate System instance and it is unlikely that the prefix should be prepended to the new audit security database files. </dd>
+<dt><code>-a &lt;logListFile&gt;</code></dt>
+<dd>Specifies the file which contains the comma-separate list of file paths (in chronological order) of the signed audit logs to be verified. This file should be created in a directory which is writeable by the auditor, such as a special auditing directory like ~jsmith/auditDir. The contents of the logListFile are the full paths to the audit logs. For example:</dd></dl>
 <pre> /var/log/pki/pki-ca/ca/signedAudit/ca_audit,/var/log/pki/pki-ca/ca/signedAudit/ca_audit.20030227102711,/var/log/pki/pki-ca/ca/signedAudit/ca_audit.20030226094015</pre>
 <dl>
-<dt><code>[-v]</code></p>
-<dd>Optional. Specifies verbose output. </p>
+<dt><code>[-v]</code></dt>
+<dd>Optional. Specifies verbose output. </dd>
 </dl>
 <h2>Setting up the Auditor&#8217;s Database</h2>
 <p><code>AuditVerify</code> needs access to a set of security databases (usually the auditor&#8217;s personal security databases) containing the signed audit log signing certificate and its chain of issuing certificates. One of the CA certificates in the issuance chain must be marked as trusted in the database. </p>

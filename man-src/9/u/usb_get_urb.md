@@ -15,7 +15,7 @@ usb_get_urb - increments the reference count of the urb
 <h2>Arguments</h2>
 
 <i>urb</i>
-<dl><dd><dd>pointer to the urb to modify, may be NULL</dl>
+<dl><dd></dd><dd>pointer to the urb to modify, may be NULL</dd></dl>
 
 <h2>Description</h2>
 

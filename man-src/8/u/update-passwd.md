@@ -15,32 +15,32 @@ description: "update-passwd – safely update /etc/passwd, /etc/shadow and /etc/
 <h2>Options</h2>
 <p><code>update-passwd</code> follows the usual GNU command line syntax, with long options starting with two dashes (&#8216;-&#8216;).</p>
 <dl>
-<dt><code>-p</code>,&nbsp;<code>&#8211;passwd-master=FILE</code></p>
-<dd>Use FILE as the master copy of the passwd database. The default value is <i>/usr/share/base-passwd/passwd.master</i>.</p>
-<dt><code>-g</code>,&nbsp;<code>&#8211;group-master=FILE</code></p>
-<dd>Use FILE as the master copy of the group database. The default value is <i>/usr/share/base-passwd/group.master</i>.</p>
-<dt><code>-P</code>,&nbsp;<code>&#8211;passwd=FILE</code></p>
-<dd>Use FILE as the system passwd database. The default value is <i>/etc/passwd</i>.</p>
-<dt><code>-S</code>,&nbsp;<code>&#8211;shadow=FILE</code></p>
-<dd>Use FILE as the system shadow database. The default value is <i>/etc/shadow</i>.</p>
-<dt><code>-G</code>,&nbsp;<code>&#8211;group=FILE</code></p>
-<dd>Use FILE as the system group database. The default value is <i>/etc/group</i>.</p>
-<dt><code>-s</code>,&nbsp;<code>&#8211;sanity-check</code></p>
-<dd>Only perform sanity-checks but don&#8217;t do anything.</p>
-<dt><code>-v</code>,&nbsp;<code>&#8211;verbose</code></p>
-<dd>Give detailed information about what we are doing. A second -v gives additional detail.</p>
-<dt><code>-n</code>,&nbsp;<code>&#8211;dry-run</code></p>
-<dd>Don&#8217;t do anything but only show what we would do.</p>
-<dt><code>-L</code>,&nbsp;<code>&#8211;no-locking</code></p>
-<dd>Don&#8217;t attempt to lock the account database. This should only be used for debugging purposes. <code>I repeat: do not do this unless you are really sure you need this!</code></p>
-<dt><code>-h</code>,&nbsp;<code>&#8211;help</code></p>
-<dd>Show a summary of how to use <code>update-passwd</code>.</p>
-<dt><code>-V</code>,&nbsp;<code>&#8211;version</code></p>
-<dd>Show the version number</dl>
+<dt><code>-p</code>,&nbsp;<code>&#8211;passwd-master=FILE</code></dt>
+<dd>Use FILE as the master copy of the passwd database. The default value is <i>/usr/share/base-passwd/passwd.master</i>.</dd>
+<dt><code>-g</code>,&nbsp;<code>&#8211;group-master=FILE</code></dt>
+<dd>Use FILE as the master copy of the group database. The default value is <i>/usr/share/base-passwd/group.master</i>.</dd>
+<dt><code>-P</code>,&nbsp;<code>&#8211;passwd=FILE</code></dt>
+<dd>Use FILE as the system passwd database. The default value is <i>/etc/passwd</i>.</dd>
+<dt><code>-S</code>,&nbsp;<code>&#8211;shadow=FILE</code></dt>
+<dd>Use FILE as the system shadow database. The default value is <i>/etc/shadow</i>.</dd>
+<dt><code>-G</code>,&nbsp;<code>&#8211;group=FILE</code></dt>
+<dd>Use FILE as the system group database. The default value is <i>/etc/group</i>.</dd>
+<dt><code>-s</code>,&nbsp;<code>&#8211;sanity-check</code></dt>
+<dd>Only perform sanity-checks but don&#8217;t do anything.</dd>
+<dt><code>-v</code>,&nbsp;<code>&#8211;verbose</code></dt>
+<dd>Give detailed information about what we are doing. A second -v gives additional detail.</dd>
+<dt><code>-n</code>,&nbsp;<code>&#8211;dry-run</code></dt>
+<dd>Don&#8217;t do anything but only show what we would do.</dd>
+<dt><code>-L</code>,&nbsp;<code>&#8211;no-locking</code></dt>
+<dd>Don&#8217;t attempt to lock the account database. This should only be used for debugging purposes. <code>I repeat: do not do this unless you are really sure you need this!</code></dd>
+<dt><code>-h</code>,&nbsp;<code>&#8211;help</code></dt>
+<dd>Show a summary of how to use <code>update-passwd</code>.</dd>
+<dt><code>-V</code>,&nbsp;<code>&#8211;version</code></dt>
+<dd>Show the version number</dd></dl>
 <h2>Environment</h2>
 <dl>
-<dt>DEBIAN_HAS_FRONTEND</p>
-<dd>If this environment variable is set and the <code>&#8211;dry-run</code> flag was not given, <code>update-passwd</code> uses debconf to prompt for whether to make changes. Each proposed change will produce a separate prompt. User or group removals, UID or GID changes, and home directory changes will be asked with high priority. User or group additions and shell changes will be asked with medium priority. Questions about whether to move entries above the NIS compat inclusion entry or whether to change the GECOS of a user are asked at low priority.</dl>
+<dt>DEBIAN_HAS_FRONTEND</dt>
+<dd>If this environment variable is set and the <code>&#8211;dry-run</code> flag was not given, <code>update-passwd</code> uses debconf to prompt for whether to make changes. Each proposed change will produce a separate prompt. User or group removals, UID or GID changes, and home directory changes will be asked with high priority. User or group additions and shell changes will be asked with medium priority. Questions about whether to move entries above the NIS compat inclusion entry or whether to change the GECOS of a user are asked at low priority.</dd></dl>
 <h2>Bugs</h2>
 <p>At this moment <code>update-passwd</code> does not verify the shadow-file. It should check if the entries in the passwd are also in shadow and vice versa, and that passwords are not present in both files.</p>
 <h2>Author</h2>

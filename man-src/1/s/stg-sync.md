@@ -19,15 +19,15 @@ stg sync[options][--][&lt;patch1&gt;][&lt;patch2&gt;][&lt;patch3&gt;..&lt;patch4
 <p> -a, &#8211;all</p>
 <dl>
 <dt>
-<dd> Synchronise all the applied patches.</dl>
+</dt><dd> Synchronise all the applied patches.</dd></dl>
 <p> -B REF-BRANCH, &#8211;ref-branch REF-BRANCH</p>
 <dl>
 <dt>
-<dd> Syncronise patches with BRANCH.</dl>
+</dt><dd> Syncronise patches with BRANCH.</dd></dl>
 <p> -s SERIES, &#8211;series SERIES</p>
 <dl>
 <dt>
-<dd> Syncronise patches with SERIES.</dl>
+</dt><dd> Syncronise patches with SERIES.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
 <h2>Index</h2>

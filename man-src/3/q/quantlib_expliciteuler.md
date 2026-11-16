@@ -42,6 +42,6 @@ description: "QuantLib::ExplicitEuler – Forward Euler scheme for finite differ
  Operator operator-(const Operator&amp;, const Operator&amp;);</pre>
 <p><code>Possible enhancements</code></p>
 <dl COMPACT>
-<dd>add Richardson extrapolation</dl>
+<dd>add Richardson extrapolation</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

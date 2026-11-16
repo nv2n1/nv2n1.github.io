@@ -17,16 +17,16 @@ dcmsign[options] dcmfile - in[dcmfile - out]
 <p> The <code>dcmsign</code> utility reads a DICOM file (<i>dcmfile-in</i>), performs a digital signature operation and, if any modification has taken place, writes the DICOM object to an output file (<i>dcmfile-out</i>). </p>
 <p> Five digital signature operations are supported: </p>
 <dl>
-<dt>&bull;</p>
-<dd> verification of all signatures in the DICOM file</p>
-<dt>&bull;</p>
-<dd> creation of a new digital signature located in the main dataset,</p>
-<dt>&bull;</p>
-<dd> creation of a new digital signature in an item of a sequence embedded within the dataset,</p>
-<dt>&bull;</p>
-<dd> removal of a single digital signature from the DICOM file, and</p>
-<dt>&bull;</p>
-<dd> removal of all digital signatures from the DICOM file.</dl>
+<dt>&bull;</dt>
+<dd> verification of all signatures in the DICOM file</dd>
+<dt>&bull;</dt>
+<dd> creation of a new digital signature located in the main dataset,</dd>
+<dt>&bull;</dt>
+<dd> creation of a new digital signature in an item of a sequence embedded within the dataset,</dd>
+<dt>&bull;</dt>
+<dd> removal of a single digital signature from the DICOM file, and</dd>
+<dt>&bull;</dt>
+<dd> removal of all digital signatures from the DICOM file.</dd></dl>
 <h2>PARAMETERS</h2>
 <pre>
 dcmfile-in   DICOM input filename to be processed

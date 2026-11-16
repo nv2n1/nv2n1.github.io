@@ -12,55 +12,49 @@ description: "ncgen3 – From a CDL file generate a netCDF classic or 64 bit cla
 <h2>SYNOPSIS</h2>
 <dl>
 <dt>
-<dd>ncgen3 [-b] [-c] [-f] [-k <i>kind_of_file</i>] [-x] [-n] [-o <i>netcdf_filename</i>] <i>input_file</i></dl>
+</dt><dd>ncgen3 [-b] [-c] [-f] [-k <i>kind_of_file</i>] [-x] [-n] [-o <i>netcdf_filename</i>] <i>input_file</i></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>ncgen3</code> generates either a netCDF file, or C or Fortran source code to create a netCDF file. The input to <code>ncgen3</code> is a description of a netCDF file in a small language known as CDL (network Common Data form Language), described below. If no options are specified in invoking <code>ncgen3</code>, it merely checks the syntax of the input CDL file, producing error messages for any violations of CDL syntax. Other options can be used to create the corresponding netCDF file, to generate a C program that uses the netCDF C interface to create the netCDF file, or to generate a Fortran program that uses the netCDF Fortran interface to create the same netCDF file. </p>
 <p> <code>ncgen3</code> may be used with the companion program <code>ncdump</code> to perform some simple operations on netCDF files. For example, to rename a dimension in a netCDF file, use <code>ncdump</code> to get a CDL version of the netCDF file, edit the CDL file to change the name of the dimensions, and use <code>ncgen3</code> to generate the corresponding netCDF file from the edited CDL file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code></p>
-<dd> Create a (binary) netCDF file. If the <code>-o</code> option is absent, a default file name will be constructed from the netCDF name (specified after the <code>netcdf</code> keyword in the input) by appending the `.nc&#8217; extension. If a file already exists with the specified name, it will be overwritten.</p>
-<dt><code>-c</code></p>
-<dd> Generate <code>C</code> source code that will create a netCDF file matching the netCDF specification. The C source code is written to standard output.</p>
-<dt><code>-f</code></p>
-<dd> Generate <code>Fortran</code> source code that will create a netCDF file matching the netCDF specification. The Fortran source code is written to standard output.</p>
-<dt><code>-o</code> netcdf_file</p>
-<dd> Name for the binary netCDF file created. If this option is specified, it implies the &quot;<code>-b</code>&quot; option. (This option is necessary because netCDF files cannot be written directly to standard output, since standard output is not seekable.)</p>
-<dt><code>-k </code>kind_of_file</p>
-<dd> Using -k2 or -k &quot;64-bit offset&quot; specifies that generated file (or program) should use version 2 of format that employs 64-bit file offsets. The default is to use version 1 (&quot;classic&quot;) format with 32-bit file offsets, although this limits the size of the netCDF file, variables, and records to the sizes supported by the classic format. (NetCDF-4 will support additional kinds of netCDF files, &quot;netCDF-4&quot; and &quot;netCDF-4 classic model&quot;.) Note: -v is also accepted to mean the same thing as -k for backward compatibility, but -k is preferred, to match the corresponding ncdump option.</p>
-<dt><code>-x</code></p>
-<dd> Don&#8217;t initialize data with fill values. This can speed up creation of large netCDF files greatly, but later attempts to read unwritten data from the generated file will not be easily detectable.</dl>
+<dt><code>-b</code></dt>
+<dd> Create a (binary) netCDF file. If the <code>-o</code> option is absent, a default file name will be constructed from the netCDF name (specified after the <code>netcdf</code> keyword in the input) by appending the `.nc&#8217; extension. If a file already exists with the specified name, it will be overwritten.</dd>
+<dt><code>-c</code></dt>
+<dd> Generate <code>C</code> source code that will create a netCDF file matching the netCDF specification. The C source code is written to standard output.</dd>
+<dt><code>-f</code></dt>
+<dd> Generate <code>Fortran</code> source code that will create a netCDF file matching the netCDF specification. The Fortran source code is written to standard output.</dd>
+<dt><code>-o</code> netcdf_file</dt>
+<dd> Name for the binary netCDF file created. If this option is specified, it implies the &quot;<code>-b</code>&quot; option. (This option is necessary because netCDF files cannot be written directly to standard output, since standard output is not seekable.)</dd>
+<dt><code>-k </code>kind_of_file</dt>
+<dd> Using -k2 or -k &quot;64-bit offset&quot; specifies that generated file (or program) should use version 2 of format that employs 64-bit file offsets. The default is to use version 1 (&quot;classic&quot;) format with 32-bit file offsets, although this limits the size of the netCDF file, variables, and records to the sizes supported by the classic format. (NetCDF-4 will support additional kinds of netCDF files, &quot;netCDF-4&quot; and &quot;netCDF-4 classic model&quot;.) Note: -v is also accepted to mean the same thing as -k for backward compatibility, but -k is preferred, to match the corresponding ncdump option.</dd>
+<dt><code>-x</code></dt>
+<dd> Don&#8217;t initialize data with fill values. This can speed up creation of large netCDF files greatly, but later attempts to read unwritten data from the generated file will not be easily detectable.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Check the syntax of the CDL file `<code>foo.cdl</code>&#8216;:</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>ncgen3 foo.cdl</dl>
+</dt><dd>ncgen3 foo.cdl</dd></dl>
 </dl>
 <p> From the CDL file `<code>foo.cdl</code>&#8216;, generate an equivalent binary netCDF file named `<code>x.nc</code>&#8216;:</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>ncgen3 -o x.nc foo.cdl</dl>
+</dt><dd>ncgen3 -o x.nc foo.cdl</dd></dl>
 </dl>
 <p> From the CDL file `<code>foo.cdl</code>&#8216;, generate a C program containing the netCDF function invocations necessary to create an equivalent binary netCDF file named `<code>x.nc</code>&#8216;:</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>ncgen3 -c -o x.nc foo.cdl</dl>
+</dt><dd>ncgen3 -c -o x.nc foo.cdl</dd></dl>
 </dl>
 <h2>USAGE</h2>
 <h3>CDL Syntax Summary</h3>
 <p> Below is an example of CDL syntax, describing a netCDF file with several named dimensions (lat, lon, and time), variables (Z, t, p, rh, lat, lon, time), variable attributes (units, long_name, valid_range, _FillValue), and some data. CDL keywords are in boldface. (This example is intended to illustrate the syntax; a real CDL file would have a more complete set of attributes so that the data would be more completely self-describing.) </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 netcdf foo
 { // an example netCDF specification in CDL
@@ -95,7 +89,7 @@ data:
     lon = -140, -118, -96, -84, -52;
 }
 </code></pre>
-</dl>
+</dd></dl>
 <p> All CDL statements are terminated by a semicolon. Spaces, tabs, and newlines can be used freely for readability. Comments may follow the characters `//&#8217; on any line. </p>
 <p> A CDL description consists of three optional parts: <i>dimensions</i>, <i>variables</i>, and <i>data</i>, beginning with the keyword <code>dimensions:</code>, <code>variables:</code>, and <code>data</code>, respectively. The variable part may contain <i>variable declarations</i> and <i>attribute assignments</i>. </p>
 <p> A netCDF <i>dimension</i> is used to define the shape of one or more of the multidimensional variables contained in the netCDF file. A netCDF dimension has a name and a size. At most one dimension in a netCDF file can have the <code>unlimited</code> size, which means a variable using this dimension can grow to any length (like a record number in a file). </p>
@@ -107,13 +101,13 @@ data:
 <h3>Primitive Data Types</h3>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 char characters
         byte 8 -
     bit data short 16 - bit signed integers long 32 - bit signed integers int(synonymous with long) float IEEE single precision floating point(32 bits) real(synonymous with float) double IEEE double precision floating point(64 bits)
 </code></pre>
-</dl>
+</dd></dl>
 <p> Except for the added data-type <code>byte</code> and the lack of <code>unsigned</code>, CDL supports the same primitive data types as C. The names for the primitive data types are reserved words in CDL, so the names of variables, dimensions, and attributes must not be type names. In declarations, type names may be specified in either upper or lower case. </p>
 <p> Bytes differ from characters in that they are intended to hold a full eight bits of data, and the zero byte has no special significance, as it does for character data. <code>ncgen3</code> converts <code>byte</code> declarations to <code>char</code> declarations in the output C code and to the nonstandard <code>BYTE</code> declaration in output Fortran code. </p>
 <p> Shorts can hold values between -32768 and 32767. <code>ncgen3</code> converts <code>short</code> declarations to <code>short</code> declarations in the output C code and to the nonstandard <code>INTEGER*2</code> declaration in output Fortran code. </p>
@@ -125,7 +119,9 @@ char characters
 <p> A <i>byte</i> constant is represented by a single character or multiple character escape sequence enclosed in single quotes. For example,</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  'a'            // ASCII `a'
  '
+</dd></dl>
+</pre>

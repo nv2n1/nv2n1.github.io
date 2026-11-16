@@ -19,7 +19,7 @@ description: "zsh-lovers – tips, tricks and examples for the Z shell"
 <p> This section provides some examples for often needed shellscript-stuff. Notice that you should not use otherwise most examples won&#8217;t work. Parse options in shellscripts. Example taken from ZWS by Adam Chodorowski (<a rel="nofollow" href="http://www.chodorowski.com/projects/zws/">http://www.chodorowski.com/projects/zws/</a>): </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 parse_options()
 {
@@ -37,87 +37,87 @@ parse_options()
 #now use the function:
 parse_options $ *
 </code></pre>
-</dl>
+</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Available subsections are <code>Aliases</code>, <code>Completion</code>, <code>Unsorted/Misc examples</code>, <code>(Recursive) Globbing &#8211; Examples</code>, <code>Modifiers usage</code>, <code>Redirection-Examples</code>, <code>ZMV-Examples</code> and <code>Module-Examples</code>.</p>
 <h3>ALIASES</h3>
 <p> Suffix aliases are supported in zsh since version 4.2.0. Some examples: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 alias -s tex=vim
 alias -s html=w3m
 alias -s org=w3m
 </pre>
-</dl>
+</dd></dl>
 <p> Now pressing return-key after entering <i>foobar.tex</i> starts vim with foobar.tex. Calling a html-file runs browser w3m. <i><a rel="nofollow" href="http://www.zsh.org">www.zsh.org</a></i> and pressing enter starts w3m with argument <a href="http://www.zsh.org">www.zsh.org</a>. Global aliases can be used anywhere in the command line. Example: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ alias -g C='| wc -l'
 $ grep alias ~/.zsh/* C
 443
 </pre>
-</dl>
+</dd></dl>
 <p> Some more or less useful global aliases (choose whether they are useful or not for you on your own): </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 alias &#8211; g&#8230; = &#8216;../..&#8217; alias &#8211; g&#8230;.= &#8216;../../..&#8217; alias &#8211; g&#8230;..= &#8216;../../../..&#8217; alias &#8211; g CA = &#8220;2&gt;&amp;1 | cat -A&#8221; alias &#8211; g C = &#8216;| wc -l&#8217; alias &#8211; g D = &#8220;DISPLAY=:0.0&#8221; alias &#8211; g DN = / dev / null alias &#8211; g ED = &#8220;export DISPLAY=:0.0&#8221; alias &#8211; g EG = &#8216;|&amp; egrep&#8217; alias &#8211; g EH = &#8216;|&amp; head&#8217; alias &#8211; g EL = &#8216;|&amp; less&#8217; alias &#8211; g ELS = &#8216;|&amp; less -S&#8217; alias &#8211; g ETL = &#8216;|&amp; tail -20&#8217; alias &#8211; g ET = &#8216;|&amp; tail&#8217; alias &#8211; g F = &#8216; | fmt -&#8216; alias &#8211; g G = &#8216;| egrep&#8217; alias &#8211; g H = &#8216;| head&#8217; alias &#8211; g HL = &#8216;|&amp; head -20&#8217; alias &#8211; g Sk = &#8220;*~(*.bz2|*.gz|*.tgz|*.zip|*.z)&#8221; alias &#8211; g LL = &#8220;2&gt;&amp;1 | less&#8221; alias &#8211; g L = &#8220;| less&#8221; alias &#8211; g LS = &#8216;| less -S&#8217; alias &#8211; g MM = &#8216;| most&#8217; alias &#8211; g M = &#8216;| more&#8217; alias &#8211; g NE = &#8220;2&gt; /dev/null&#8221; alias &#8211; g NS = &#8216;| sort -n&#8217; alias &#8211; g NUL = &#8220;&gt; /dev/null 2&gt;&amp;1&#8221; alias &#8211; g PIPE = &#8216;|&#8217; alias &#8211; g R = &#8216; &gt; /c/aaa/tee.txt &#8216; alias &#8211; g RNS = &#8216;| sort -nr&#8217; alias &#8211; g S = &#8216;| sort&#8217; alias &#8211; g TL = &#8216;| tail -20&#8217; alias &#8211; g T = &#8216;| tail&#8217; alias &#8211; g US = &#8216;| sort -u&#8217; alias &#8211; g VM = / var / log / messages alias &#8211; g X0G = &#8216;| xargs -0 egrep&#8217; alias &#8211; g X0 = &#8216;| xargs -0&#8217; alias &#8211; g XG = &#8216;| xargs egrep&#8217; alias &#8211; g X = &#8216;| xargs&#8217;
-</dl>
+</dd></dl>
 <h3>COMPLETION</h3>
 <p> See also man 1 zshcompctl zshcompsys zshcompwid. zshcompctl is the old style of zsh programmable completion, zshcompsys is the new completion system, zshcompwid are the zsh completion widgets. </p>
 <p> Some functions, like _apt and _dpkg, are very slow. You can use a cache in order to proxy the list of results (like the list of available debian packages) Use a cache: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 </pre>
-</dl>
+</dd></dl>
 <p> Prevent CVS files/directories from being completed: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 zstyle ':completion:*:(all-|)files' ignored-patterns '(|*/)CVS'
 zstyle ':completion:*:cd:*' ignored-patterns '(*/)#CVS'
 </pre>
-</dl>
+</dd></dl>
 <p> Fuzzy matching of completions for when you mistype them: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 zstyle ':completion:*' completer _complete _match _approximate
 zstyle ':completion:*:match:*' original only
 zstyle ':completion:*:approximate:*' max-errors 1 numeric
 </pre>
-</dl>
+</dd></dl>
 <p> And if you want the number of errors allowed by _approximate to increase with the length of what you have typed so far: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 zstyle -e ':completion:*:approximate:*' \
         max-errors 'reply=($((($#PREFIX+$#SUFFIX)/3))numeric)'
 </pre>
-</dl>
+</dd></dl>
 <p> Ignore completion functions for commands you don&#8217;t have: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 zstyle ':completion:*:functions' ignored-patterns '_*'
 </pre>
-</dl>
+</dd></dl>
 <p> With helper functions like: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 xdvi()<br />
 {<br />
     command xdvi $<br />
@@ -125,45 +125,45 @@ xdvi()<br />
         * : -*.dvi(om[1])<br />
     }<br />
 }
-</dl>
+</dd></dl>
 <p> you can avoid having to complete at all in many cases, but if you do, you might want to fall into menu selection immediately and to have the words sorted by time: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 zstyle ':completion:*:*:xdvi:*' menu yes select
 zstyle ':completion:*:*:xdvi:*' file-sort time
 </pre>
-</dl>
+</dd></dl>
 <p> Completing process IDs with menu selection: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 zstyle ':completion:*:*:kill:*' menu yes select
 zstyle ':completion:*:kill:*'   force-list always
 </pre>
-</dl>
+</dd></dl>
 <p> If you end up using a directory as argument, this will remove the trailing slash (usefull in ln) </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 zstyle ':completion:*' squeeze-slashes true
 </pre>
-</dl>
+</dd></dl>
 <p> cd will never select the parent directory (e.g.: cd ../&lt;TAB&gt;): </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 zstyle ':completion:*:cd:*' ignore-parents parent pwd
 </pre>
-</dl>
+</dd></dl>
 <p> Another method for <i>quick change directories</i>. Add this to your ~/.zshrc, then just enter &#8220;cd &#8230;./dir&#8221; </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 rationalise &#8211; dot()<br />
 {<br />
     if<br />
@@ -172,12 +172,12 @@ rationalise &#8211; dot()<br />
         LBUFFER += /..else LBUFFER +=.fi<br />
 }<br />
 zle &#8211; N rationalise &#8211; dot bindkey.rationalise &#8211; dot
-</dl>
+</dd></dl>
 <h3>UNSORTED/MISC examples</h3>
 <p> Hint: A list of valid glob Qualifiers can be found in <a href="/docs/linux/man/1-zshexpn/">zshexpn</a>(1). See &#8220;man 1 zshexpn | less -p&#8221; Qualifiers for details. </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 #Get the names of all files that *don&#8217;t* match a pattern *anywhere* on the<br />
 #file(and without &#8220;-L&#8221; because its GNUish)<br />
 $ print &#8211; rl&#8211; *(.^ e{&#8216;grep -q pattern $REPLY&#8217;})<br />
@@ -466,3 +466,4 @@ $ print &#8211; rl&#8211; *(.^ e{&#8216;grep -q pattern $REPLY&#8217;})<br />
   $ print -l ${^path}/*vim*(*N)<br />
 # gzip files when containing a certain string<br />
   $ gzip ${(ps:
+</dd></dl>

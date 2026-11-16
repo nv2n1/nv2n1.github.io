@@ -16,26 +16,26 @@ description: "rdisc – ICMPv6 Router Discovery tool"
 <p> The name of the network interface to probe routers for must be specified.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-1</code> or <code>&#8211;single</code></p>
-<dd>Exit as soon as the first advertisement is received. </p>
-<dt><code>-h</code> or <code>&#8211;help</code></p>
-<dd>Display some help and exit. </p>
-<dt><code>-m</code> or <code>&#8211;multiple</code></p>
-<dd>Wait for possible multiple advertisements and print all of them (default). </p>
-<dt><code>-n</code> or <code>&#8211;numeric</code></p>
-<dd>If the optional parameter is not a valid IPv6 address, do not try to resolve it as a DNS hostname. </p>
-<dt><code>-q</code> or <code>&#8211;quiet</code></p>
-<dd>Only display advertised IPv6 prefixes. Display nothing in case of failure. That is mostly useful when calling the program from a shell script. </p>
-<dt><code>-r attempts</code> or <code>&#8211;retry attempts</code></p>
-<dd>Send ICMPv6 Router Discovery that many times until a reply is received, or abort. By default, rdisc6 will try 3 times before aborting (MAX_RTR_SOLICITATIONS from RFC2461). </p>
-<dt><code>-s source_ip</code> or <code>&#8211;source source_ip</code></p>
-<dd>Specify the IPv6 address to be used as the source for the router solicitation packets. </p>
-<dt><code>-V</code> or <code>&#8211;version</code></p>
-<dd>Display program version and license and exit. </p>
-<dt><code>-v</code> or <code>&#8211;verbose</code></p>
-<dd>Display verbose information. That is the default. </p>
-<dt><code>-w wait_ms</code> or <code>&#8211;wait wait_ms</code></p>
-<dd>Wait <i>wait_ms</i> milliseconds for a response before retrying. By default, rdisc6 waits 4 second between each attempts (RTR_SOLICITATION_INTERVAL from RFC2461). </p>
+<dt><code>-1</code> or <code>&#8211;single</code></dt>
+<dd>Exit as soon as the first advertisement is received. </dd>
+<dt><code>-h</code> or <code>&#8211;help</code></dt>
+<dd>Display some help and exit. </dd>
+<dt><code>-m</code> or <code>&#8211;multiple</code></dt>
+<dd>Wait for possible multiple advertisements and print all of them (default). </dd>
+<dt><code>-n</code> or <code>&#8211;numeric</code></dt>
+<dd>If the optional parameter is not a valid IPv6 address, do not try to resolve it as a DNS hostname. </dd>
+<dt><code>-q</code> or <code>&#8211;quiet</code></dt>
+<dd>Only display advertised IPv6 prefixes. Display nothing in case of failure. That is mostly useful when calling the program from a shell script. </dd>
+<dt><code>-r attempts</code> or <code>&#8211;retry attempts</code></dt>
+<dd>Send ICMPv6 Router Discovery that many times until a reply is received, or abort. By default, rdisc6 will try 3 times before aborting (MAX_RTR_SOLICITATIONS from RFC2461). </dd>
+<dt><code>-s source_ip</code> or <code>&#8211;source source_ip</code></dt>
+<dd>Specify the IPv6 address to be used as the source for the router solicitation packets. </dd>
+<dt><code>-V</code> or <code>&#8211;version</code></dt>
+<dd>Display program version and license and exit. </dd>
+<dt><code>-v</code> or <code>&#8211;verbose</code></dt>
+<dd>Display verbose information. That is the default. </dd>
+<dt><code>-w wait_ms</code> or <code>&#8211;wait wait_ms</code></dt>
+<dd>Wait <i>wait_ms</i> milliseconds for a response before retrying. By default, rdisc6 waits 4 second between each attempts (RTR_SOLICITATION_INTERVAL from RFC2461). </dd>
 </dl>
 <p> If <code>rdisc6</code> does not receive any response after the specified number of attempts waiting for <i>wait_ms</i> milliseconds each time, it will exit with code 2. On error, it exits with code 1. Otherwise it exits with code 0.</p>
 <h2>Security</h2>

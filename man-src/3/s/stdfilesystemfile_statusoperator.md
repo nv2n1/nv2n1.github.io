@@ -12,7 +12,6 @@ std::filesystem::file_status::operator= - std::filesystem::file_status::operator
 
 <pre><code>file_status &amp;operator=(const file_status &amp;other) noexcept = default;
 (1)(since C++ 17)
-
     file_status &amp;
     operator=(file_status &amp;&amp;other) noexcept = default;
 (2)(since C++ 17)</code></pre> 

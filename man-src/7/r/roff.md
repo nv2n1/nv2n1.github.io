@@ -24,21 +24,21 @@ description: "roff – concepts and history of roff typesetting"
 <p> BCPL and <code>runoff</code> were ported to the GCOS system at Bell Labs when BTL left the development of Multics. </p>
 <p> There is a free archive about <i>historical RUNOFF</i> documents. You can get it anonymously by the shell command</p>
 <dl>
-<dd>$git clone <a rel="nofollow" href="https://github.com/bwarken/RUNOFF_historical.git">https://github.com/bwarken/RUNOFF_historical.git</a></dl>
+<dd>$git clone <a rel="nofollow" href="https://github.com/bwarken/RUNOFF_historical.git">https://github.com/bwarken/RUNOFF_historical.git</a></dd></dl>
 <p> As well, there is a new project for writing a program that can read <i>RUNOFF files ,</i> but it does not yet work so far. You can get an early version anonymously by the shell command</p>
 <dl>
-<dd>$git clone <a rel="nofollow" href="https://github.com/bwarken/runoff.git">https://github.com/bwarken/runoff.git</a></dl>
+<dd>$git clone <a rel="nofollow" href="https://github.com/bwarken/runoff.git">https://github.com/bwarken/runoff.git</a></dd></dl>
 <h3>The Classical nroff/troff System</h3>
 <p>At BTL, there was a need to drive the <i>Graphic Systems CAT</i> typesetter, a graphical output device from a PDP-11 computer running Unix. As <code>runoff</code> was too limited for this task it was further developed into a more powerful text formatting system by <i>Joseph F. Ossanna</i>, who already programmed several runoff ports. </p>
 <p> The name <i>runoff</i> was shortened to <i>roff</i>. The greatly enlarged language of Ossanna&#8217;s version already included all elements of a full <i>roff system</i>. All modern <i>roff</i> systems try to implement compatibility to this system. So Joe Ossanna can be called the father of all <i>roff</i> systems. </p>
 <p> This first <i>roff system</i> had three formatter programs.</p>
 <dl>
-<dt><code>troff</code></p>
-<dd>(<i>typesetter roff/</i>) generated a graphical output for the <i>CAT</i> typesetter as its only device.</p>
-<dt><code>nroff</code></p>
-<dd>produced text output suitable for terminals and line printers.</p>
-<dt><code>roff</code></p>
-<dd>was the reimplementation of the former <code>runoff</code> program with its limited features; this program was abandoned in later versions. Today, the name <i>roff</i> is used to refer to a <i>troff/:nroff</i> system as a whole.</dl>
+<dt><code>troff</code></dt>
+<dd>(<i>typesetter roff/</i>) generated a graphical output for the <i>CAT</i> typesetter as its only device.</dd>
+<dt><code>nroff</code></dt>
+<dd>produced text output suitable for terminals and line printers.</dd>
+<dt><code>roff</code></dt>
+<dd>was the reimplementation of the former <code>runoff</code> program with its limited features; this program was abandoned in later versions. Today, the name <i>roff</i> is used to refer to a <i>troff/:nroff</i> system as a whole.</dd></dl>
 <p> Ossanna&#8217;s first version was written in the PDP-11 assembly language and released in 1973. <i>Brian Kernighan</i> joined the <i>roff</i> development by rewriting it in the C~programming language. The C~version was released in 1975. </p>
 <p> The syntax of the formatting language of the <code>nroff</code>/:<code>troff</code> programs was documented in the famous <i>Troff User&#8217;s Manual</i> [CSTR~#54], first published in 1976, with further revisions up to 1992 by Brian Kernighan. This document is the specification of the <i>classical troff</i>. All later <i>roff</i> systems tried to establish compatibility with this specification. </p>
 <p> After Ossanna&#8217;s death in 1977, Kernighan went on with developing <i>troff</i>. In the late 1970s, Kernighan equipped <i>troff</i> with a general interface to support more devices, the intermediate output format, and the postprocessor system. This completed the structure of a <i>roff system</i> as it is still in use today; see section &#8220;Using Roff&#8221; below. In 1979, these novelties were described in the paper [CSTR~#97]. This new <i>troff</i> version is the basis for all existing newer troff systems, including <i>groff</i>. On some systems, this <i>device independent troff</i> got a binary of its own, called <code><a href="/docs/linux/man/7-ditroff/">ditroff</a></code>(7). All modern <code>troff</code> programs already provide the full <code>ditroff</code> capabilities automatically.</p>
@@ -50,7 +50,7 @@ description: "roff – concepts and history of roff typesetting"
 <h3>Free Heirloom roff</h3>
 <p>An alternative is <i>Gunnar Ritter&#8217;s Heirloom roff project</i> project, started in 2005, which provides enhanced versions of the various roff tools found in the OpenSolaris and Plan~9 operating systems, now available under free licenses. You can get this package with the shell command:</p>
 <dl>
-<dd>$ git clone <a rel="nofollow" href="https://github.com/n-t-roff/heirloom-doctools">https://github.com/n-t-roff/heirloom-doctools</a></dl>
+<dd>$ git clone <a rel="nofollow" href="https://github.com/n-t-roff/heirloom-doctools">https://github.com/n-t-roff/heirloom-doctools</a></dd></dl>
 <p> Moreover, one finds there the <i>Original Documenter&#8217;s Workbench Release 3.3</i></p>
 <h2>Using Roff</h2>
 <p>Most people won&#8217;t even notice that they are actually using <i>roff</i>. When you read a system manual page (man page) <i>roff</i> is working in the background. But using <i>roff</i> explicitly isn&#8217;t difficult either. </p>
@@ -58,7 +58,7 @@ description: "roff – concepts and history of roff typesetting"
 <h3>The roff Pipe</h3>
 <p>Each <i>roff</i> system consists of preprocessors, <i>roff</i> formatter programs, and a set of device postprocessors. This concept makes heavy use of the <i>piping</i> mechanism, that is, a series of programs is called one after the other, where the output of each program in the queue is taken as the input for the next program.</p>
 <dl>
-<dd>cat file | &#8230; | preproc | &#8230; | troff options | postproc</dl>
+<dd>cat file | &#8230; | preproc | &#8230; | troff options | postproc</dd></dl>
 <p> The preprocessors generate <i>roff</i> code that is fed into a <i>roff</i> formatter (e.g. <code>troff</code>), which in turn generates <i>intermediate output</i> that is fed into a device postprocessor program for printing or final output. </p>
 <p> All of these parts use programming languages of their own; each language is totally unrelated to the other parts. Moreover, <i>roff</i> macro packages that were tailored for special purposes can be included. </p>
 <p> Most <i>roff</i> documents use the macros of some package, intermixed with code for one or more preprocessors, spiced with some elements from the plain <i>roff</i> language. The full power of the <i>roff</i> formatting language is seldom needed by users; only programmers of macro packages need to know about the gory details.</p>
@@ -99,7 +99,7 @@ description: "roff – concepts and history of roff typesetting"
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <p> Other known preprocessors that are not available on all systems include</p>
 <dl>
 <dd>
@@ -115,7 +115,7 @@ description: "roff – concepts and history of roff typesetting"
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <h3>Formatter Programs</h3>
 <p>A <i>roff formatter</i> is a program that parses documents written in the <i>roff</i> formatting language or uses some of the <i>roff</i> macro packages. It generates <i>intermediate output</i>, which is intended to be fed into a single device postprocessor that must be specified by a command-line option to the formatter program. The documents must have been run through all necessary preprocessors before. </p>
 <p> The output produced by a <i>roff</i> formatter is represented in yet another language, the <i>intermediate output format</i> or <i>troff output</i>. This language was first specified in [CSTR~#97]; its GNU extension is documented in <code><a href="/docs/linux/man/5-groff_out/">groff_out</a></code>(5). The intermediate output language is a kind of assembly language compared to the high-level <i>roff</i> language. The generated intermediate output is optimized for a special device, but the language is the same for every device. </p>
@@ -147,51 +147,51 @@ description: "roff – concepts and history of roff typesetting"
 <p> But there is no general naming scheme for <i>roff</i> documents, though <i>file.</i><code>tr</code> for <i>troff file</i> is seen now and then. Maybe there should be a standardization for the filename extensions of <i>roff</i> files. </p>
 <p> File name extensions can be very handy in conjunction with the <code><a href="/docs/linux/man/1-less/">less</a></code>(1) pager. It provides the possibility to feed all input into a command-line pipe that is specified in the shell environment variable <code>LESSOPEN</code>. This process is not well documented, so here an example:</p>
 <dl>
-<dd>LESSOPEN=&#8217;|lesspipe %s&#8217;</dl>
+<dd>LESSOPEN=&#8217;|lesspipe %s&#8217;</dd></dl>
 <p> where <code>lesspipe</code> is either a system supplied command or a shell script of your own. </p>
 <p> More details for <i>file name extensions</i> can be found at <code><a href="/docs/linux/man/5-groff_filenames/">groff_filenames</a></code>(5).</p>
 <h2>Editing Roff</h2>
 <p>All <i>roff</i> formatters provide automated line breaks and horizontal and vertical spacing. In order to not disturb this, the following tips can be helpful.</p>
 <dl>
-<dt>&bull;</p>
-<dd>Never include empty or blank lines in a <i>roff</i> document. Instead, use the empty request (a line consisting of a dot only) or a line comment <code>.\if a structuring element is needed.</code></p>
-<dt>&bull;</p>
-<dd>Never start a line with whitespace because this can lead to unexpected behavior. Indented paragraphs can be constructed in a controlled way by <i>roff</i> requests.</p>
-<dt>&bull;</p>
-<dd>Start each sentence on a line of its own, for the spacing after a dot is handled differently depending on whether it terminates an abbreviation or a sentence. To distinguish both cases, do a line break after each sentence.</p>
-<dt>&bull;</p>
-<dd>To additionally use the auto-fill mode in Emacs, it is best to insert an empty <i>roff</i> request (a line consisting of a dot only) after each sentence.</dl>
+<dt>&bull;</dt>
+<dd>Never include empty or blank lines in a <i>roff</i> document. Instead, use the empty request (a line consisting of a dot only) or a line comment <code>.\if a structuring element is needed.</code></dd>
+<dt>&bull;</dt>
+<dd>Never start a line with whitespace because this can lead to unexpected behavior. Indented paragraphs can be constructed in a controlled way by <i>roff</i> requests.</dd>
+<dt>&bull;</dt>
+<dd>Start each sentence on a line of its own, for the spacing after a dot is handled differently depending on whether it terminates an abbreviation or a sentence. To distinguish both cases, do a line break after each sentence.</dd>
+<dt>&bull;</dt>
+<dd>To additionally use the auto-fill mode in Emacs, it is best to insert an empty <i>roff</i> request (a line consisting of a dot only) after each sentence.</dd></dl>
 <p> The following example shows judicious line breaking in a <i>roff</i> input file.</p>
 <dl>
-<dd>This is an example of a .I roff document that you can type into your text editor. . This is the next sentence in the same paragraph. . This is a longer sentence stretching over several input lines; abbreviations like cf. are easily identified because the dot is not followed by a line break. . In the output, this sentence continues the same paragraph.</dl>
+<dd>This is an example of a .I roff document that you can type into your text editor. . This is the next sentence in the same paragraph. . This is a longer sentence stretching over several input lines; abbreviations like cf. are easily identified because the dot is not followed by a line break. . In the output, this sentence continues the same paragraph.</dd></dl>
 <h3>Editing with Emacs</h3>
 <p>The best program for editing a <i>roff</i> document is Emacs (or XEmacs); see <code><a href="/docs/linux/man/1-emacs/">emacs</a></code>(1). It provides an <i>nroff</i> mode that is suitable for all kinds of <i>roff</i> dialects. This mode can be activated by the following methods. </p>
 <p> When editing a file within Emacs the mode can be changed by typing &#8216;<i>M-x nroff-mode</i>&#8216;, where <code>M-x</code> means to hold down the <code>Meta</code> key (or <code>Alt</code>) and press the <code>x~</code>key at the same time. </p>
 <p> But it is also possible to have the mode automatically selected when the file is loaded into the editor.</p>
 <dl>
-<dt>&bull;</p>
-<dd>The most general method is to include the following 3 comment lines at the end of the file.</p>
+<dt>&bull;</dt>
+<dd>The most general method is to include the following 3 comment lines at the end of the file.</dd>
 <dl>
 <dd>
-<dl>
-<dd>.\&quot; Local Variables: .\&quot; mode: nroff .\&quot; End:</dl>
+</dd><dl>
+<dd>.\&quot; Local Variables: .\&quot; mode: nroff .\&quot; End:</dd></dl>
 </dl>
-<dt>&bull;</p>
-<dd>There is a set of file name extensions, e.g. the man pages that trigger the automatic activation of the <i>nroff</i> mode.</p>
-<dt>&bull;</p>
-<dd>Theoretically, it is possible to write the sequence</p>
+<dt>&bull;</dt>
+<dd>There is a set of file name extensions, e.g. the man pages that trigger the automatic activation of the <i>nroff</i> mode.</dd>
+<dt>&bull;</dt>
+<dd>Theoretically, it is possible to write the sequence</dd>
 <dl>
 <dd>
-<dl>
-<dd>.\&quot; -*- nroff -*-</dl>
+</dd><dl>
+<dd>.\&quot; -*- nroff -*-</dd></dl>
 </dl>
-<dd>as the first line of a file to have it started in <i>nroff</i> mode when loaded. Unfortunately, some applications such as the <code>man</code> program are confused by this; so this is deprecated.</dl>
+<dd>as the first line of a file to have it started in <i>nroff</i> mode when loaded. Unfortunately, some applications such as the <code>man</code> program are confused by this; so this is deprecated.</dd></dl>
 <h3>Editing with Vim</h3>
 <p>Besides Emacs, some other editors provide <i>nroff</i> style files too, e.g. <code><a href="/docs/linux/man/1-vim/">vim</a></code>(1), an extension of the <code><a href="/docs/linux/man/1-vi/">vi</a></code>(1) program. Vim&#8217;s highlighting can be made to recognize <i>roff</i> files by setting the <i>filetype</i> option in a Vim <i>modeline</i>. For this feature to work, your copy of <code>vim</code> must be built with support for, and configured to enable, several features; consult the editor&#8217;s online help topics &#8220;auto-setting&#8221;, &#8220;filetype&#8221;, and &#8220;syntax&#8221;. Then put the following at the end of your <i>roff</i> files, after any Emacs configuration: </p>
 <dl>
 <dd>
-<dl>
-<dd>.\&quot; vim: set filetype=groff:</dl>
+</dd><dl>
+<dd>.\&quot; vim: set filetype=groff:</dd></dl>
 </dl>
 <p> Replace &#8220;groff&#8221; in the above with &#8220;nroff&#8221; if you want highlighing that does <i>not</i> recognize many of the GNU extensions to <i>roff</i>, such as request, register, and string names longer than two characters.</p>
 <h2>Authors</h2>
@@ -200,41 +200,41 @@ description: "roff – concepts and history of roff typesetting"
 <p>There is a lot of documentation on <i>roff</i>. The original papers on classical <i>troff</i> are still available, and all aspects of <i>groff</i> are documented in great detail.</p>
 <h3>Internet sites</h3>
 <dl>
-<dt>History of Unix Manpages</p>
-<dd>The history page of the mdocml project provides an overview of <i>roff</i> development up to date, with links to original documentation and comments of the original authors.</p>
-<dt>troff.org</p>
-<dd>The historical troff site provides an overview and pointers to the historical aspects of <i>roff</i>.</p>
-<dt>Multics</p>
-<dd>The Multics site contains a lot of information on the MIT projects, CTSS, Multics, early Unix, including <i>runoff</i>; especially useful are a glossary and the many links to ancient documents.</p>
-<dt>Unix Archive</p>
-<dd>The Ancient Unixes Archive provides the source code and some binaries of the ancient Unixes (including the source code of <i>troff</i> and its documentation) that were made public by Caldera since 2001, e.g. of the famous Unix version~7 for PDP-11 at the Unix V7 site</p>
-<dt>Developers at AT&amp;T Bell Labs</p>
-<dd>Bell Labs Computing and Mathematical Sciences Research provides a search facility for tracking information on the early developers.</p>
-<dt>Plan 9</p>
-<dd>The Plan~9 operating system by AT&amp;T Bell Labs.</p>
-<dt>runoff</p>
-<dd>Jerry Saltzer&#8217;s home page stores some documents using the ancient RUNOFF formatting language.</p>
-<dt>CSTR Papers</p>
-<dd>The Bell Labs (now Alcatel) CSTR site stores the original <i>troff</i> manuals (CSTR #54, #97, #114, #116, #122) and famous historical documents on programming.</p>
-<dt>GNU roff</p>
-<dd>The groff web site provides the free <i>roff</i> implementation <i>groff</i>, the actual standard <i>roff</i>.</dl>
+<dt>History of Unix Manpages</dt>
+<dd>The history page of the mdocml project provides an overview of <i>roff</i> development up to date, with links to original documentation and comments of the original authors.</dd>
+<dt>troff.org</dt>
+<dd>The historical troff site provides an overview and pointers to the historical aspects of <i>roff</i>.</dd>
+<dt>Multics</dt>
+<dd>The Multics site contains a lot of information on the MIT projects, CTSS, Multics, early Unix, including <i>runoff</i>; especially useful are a glossary and the many links to ancient documents.</dd>
+<dt>Unix Archive</dt>
+<dd>The Ancient Unixes Archive provides the source code and some binaries of the ancient Unixes (including the source code of <i>troff</i> and its documentation) that were made public by Caldera since 2001, e.g. of the famous Unix version~7 for PDP-11 at the Unix V7 site</dd>
+<dt>Developers at AT&amp;T Bell Labs</dt>
+<dd>Bell Labs Computing and Mathematical Sciences Research provides a search facility for tracking information on the early developers.</dd>
+<dt>Plan 9</dt>
+<dd>The Plan~9 operating system by AT&amp;T Bell Labs.</dd>
+<dt>runoff</dt>
+<dd>Jerry Saltzer&#8217;s home page stores some documents using the ancient RUNOFF formatting language.</dd>
+<dt>CSTR Papers</dt>
+<dd>The Bell Labs (now Alcatel) CSTR site stores the original <i>troff</i> manuals (CSTR #54, #97, #114, #116, #122) and famous historical documents on programming.</dd>
+<dt>GNU roff</dt>
+<dd>The groff web site provides the free <i>roff</i> implementation <i>groff</i>, the actual standard <i>roff</i>.</dd></dl>
 <h3>Historical roff Documentation</h3>
 <p>Many classical <code>troff</code> documents are still available on-line. The two main manuals of the <i>troff</i> language are</p>
 <dl>
-<dt>[CSTR~#54]</p>
-<dd>J. F. Ossanna, <i>Nroff/:Troff User&#8217;s Manual</i> Bell Labs, 1976; revised by Brian Kernighan, 1992.</p>
-<dt>[CSTR~#97]</p>
-<dd>Brian Kernighan, <i>A Typesetter-independent TROFF</i> Bell Labs, 1981, revised March 1982.</dl>
+<dt>[CSTR~#54]</dt>
+<dd>J. F. Ossanna, <i>Nroff/:Troff User&#8217;s Manual</i> Bell Labs, 1976; revised by Brian Kernighan, 1992.</dd>
+<dt>[CSTR~#97]</dt>
+<dd>Brian Kernighan, <i>A Typesetter-independent TROFF</i> Bell Labs, 1981, revised March 1982.</dd></dl>
 <p> The &#8220;little language&#8221; <i>roff</i> papers are</p>
 <dl>
-<dt>[CSTR~#114]</p>
-<dd>Jon L. Bentley and Brian W. Kernighan, <i>GRAP &#8211; A Language for Typesetting Graphs</i> Bell Labs, August 1984.</p>
-<dt>[CSTR~#116]</p>
-<dd>Brian W. Kernighan, <i>PIC &#8211; A Graphics Language for Typesetting</i> Bell Labs, December 1984.</p>
-<dt>[CSTR~#122]</p>
-<dd>J. L. Bentley, L. W. Jelinski, and B. W. Kernighan, <i>CHEM &#8211; A Program for Typesetting Chemical Structure Diagrams,</i> <i>Computers and Chemistry</i> Bell Labs, April 1986.</dl>
+<dt>[CSTR~#114]</dt>
+<dd>Jon L. Bentley and Brian W. Kernighan, <i>GRAP &#8211; A Language for Typesetting Graphs</i> Bell Labs, August 1984.</dd>
+<dt>[CSTR~#116]</dt>
+<dd>Brian W. Kernighan, <i>PIC &#8211; A Graphics Language for Typesetting</i> Bell Labs, December 1984.</dd>
+<dt>[CSTR~#122]</dt>
+<dd>J. L. Bentley, L. W. Jelinski, and B. W. Kernighan, <i>CHEM &#8211; A Program for Typesetting Chemical Structure Diagrams,</i> <i>Computers and Chemistry</i> Bell Labs, April 1986.</dd></dl>
 <p> You can get an archive with most <i>classical roff documentation</i> as reasonable <i>PDF files</i> at <i>github</i> using the <i>shell command</i></p>
 <dl>
-<dd>$ git clone <a rel="nofollow" href="https://github.com/bwarken/roff_classical.git">https://github.com/bwarken/roff_classical.git</a></dl>
+<dd>$ git clone <a rel="nofollow" href="https://github.com/bwarken/roff_classical.git">https://github.com/bwarken/roff_classical.git</a></dd></dl>
 <h3>Manual Pages</h3>
 <p>Due to its complex structure, a full <i>roff</i> system has many man pages, each describing a single aspect of <i>roff</i>. Unfortunately, there is no general naming scheme for the documentation among the different <i>roff</i> implementations. In <i>groff</i>, the man page <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1) contains a survey of all documentation available in <i>groff</i>. On other systems, you are on your own, but <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1) might be a good starting point. </p>

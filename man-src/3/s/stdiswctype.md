@@ -11,7 +11,6 @@ std::iswctype - std::iswctype
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cwctype&gt;
-
     int iswctype(std::wint_t wc, std::wctype_t desc);</code></pre> 
 Classifies the wide character wc using the current C locale's LC_CTYPE category identified by desc. 
 If the value of wc is neither representable as a wchar_t nor equal to the value of the macro WEOF, the behavior is undefined. 
@@ -28,19 +27,13 @@ Non-zero if the character ch has the property identified by desc in LC_CTYPE fac
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;clocale&gt;
-
 #include &lt;cwctype&gt;
-
 #include &lt;iostream&gt;
-
 bool classify(wchar_t wc, const std::string &amp;cat)
-
 {
     return std::iswctype(wc, std::wctype(cat.c_str()));
 }
-
 int main()
-
 {
     std::setlocale(LC_ALL, &quot;ja_JP.UTF-8&quot;);
     std::cout &lt;&lt; &quot;The character \u6c34 is...\n&quot;;

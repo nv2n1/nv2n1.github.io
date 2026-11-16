@@ -11,15 +11,11 @@ description: "std::chrono::year_month_day_last::year,std::chrono::year_month_day
 <h2>Synopsis</h2>
 <pre><code>constexpr std::chrono::year year() const noexcept;
 (1)(since C++ 20)
-
     constexpr std::chrono::month month() const noexcept;
 (2)(since C++ 20)
-
     constexpr std::chrono::day day() const noexcept;
 (3)(since C++ 20)
-
     constexpr std::chrono::month_day_last month_day_last() const(4)(since C++ 20)
-
         noexcept;</code></pre>
 <p>Retrieves the field values stored in this year_month_day_last object. </p>
 <h2>Return values</h2>

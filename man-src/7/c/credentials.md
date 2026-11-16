@@ -28,42 +28,42 @@ description: "credentials – process identifiers"
 <p>Each process has various associated user and group IDs. These IDs are integers, respectively represented using the types <i>uid_t</i> and <i>gid_t</i> (defined in <i>&lt;sys/types.h&gt;</i>). </p>
 <p> On Linux, each process has the following user and group identifiers:</p>
 <dl>
-<dt>*</p>
-<dd>Real user ID and real group ID. These IDs determine who owns the process. A process can obtain its real user (group) ID using <code><a href="/docs/linux/man/2-getuid/">getuid</a></code>(2) (<code><a href="/docs/linux/man/2-getgid/">getgid</a></code>(2)).</p>
-<dt>*</p>
-<dd>Effective user ID and effective group ID. These IDs are used by the kernel to determine the permissions that the process will have when accessing shared resources such as message queues, shared memory, and semaphores. On most UNIX systems, these IDs also determine the permissions when accessing files. However, Linux uses the filesystem IDs described below for this task. A process can obtain its effective user (group) ID using <code><a href="/docs/linux/man/2-geteuid/">geteuid</a></code>(2) (<code><a href="/docs/linux/man/2-getegid/">getegid</a></code>(2)).</p>
-<dt>*</p>
-<dd>Saved set-user-ID and saved set-group-ID. These IDs are used in set-user-ID and set-group-ID programs to save a copy of the corresponding effective IDs that were set when the program was executed (see <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2)). A set-user-ID program can assume and drop privileges by switching its effective user ID back and forth between the values in its real user ID and saved set-user-ID. This switching is done via calls to <code><a href="/docs/linux/man/2-seteuid/">seteuid</a></code>(2), <code><a href="/docs/linux/man/2-setreuid/">setreuid</a></code>(2), or <code><a href="/docs/linux/man/2-setresuid/">setresuid</a></code>(2). A set-group-ID program performs the analogous tasks using <code><a href="/docs/linux/man/2-setegid/">setegid</a></code>(2), <code><a href="/docs/linux/man/2-setregid/">setregid</a></code>(2), or <code><a href="/docs/linux/man/2-setresgid/">setresgid</a></code>(2). A process can obtain its saved set-user-ID (set-group-ID) using <code><a href="/docs/linux/man/2-getresuid/">getresuid</a></code>(2) (<code><a href="/docs/linux/man/2-getresgid/">getresgid</a></code>(2)).</p>
-<dt>*</p>
-<dd>Filesystem user ID and filesystem group ID (Linux-specific). These IDs, in conjunction with the supplementary group IDs described below, are used to determine permissions for accessing files; see <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7) for details. Whenever a process&#8217;s effective user (group) ID is changed, the kernel also automatically changes the filesystem user (group) ID to the same value. Consequently, the filesystem IDs normally have the same values as the corresponding effective ID, and the semantics for file-permission checks are thus the same on Linux as on other UNIX systems. The filesystem IDs can be made to differ from the effective IDs by calling <code><a href="/docs/linux/man/2-setfsuid/">setfsuid</a></code>(2) and <code><a href="/docs/linux/man/2-setfsgid/">setfsgid</a></code>(2).</p>
-<dt>*</p>
-<dd>Supplementary group IDs. This is a set of additional group IDs that are used for permission checks when accessing files and other shared resources. On Linux kernels before 2.6.4, a process can be a member of up to 32 supplementary groups; since kernel 2.6.4, a process can be a member of up to 65536 supplementary groups. The call <i>sysconf(_SC_NGROUPS_MAX)</i> can be used to determine the number of supplementary groups of which a process may be a member. A process can obtain its set of supplementary group IDs using <code><a href="/docs/linux/man/2-getgroups/">getgroups</a></code>(2).</dl>
+<dt>*</dt>
+<dd>Real user ID and real group ID. These IDs determine who owns the process. A process can obtain its real user (group) ID using <code><a href="/docs/linux/man/2-getuid/">getuid</a></code>(2) (<code><a href="/docs/linux/man/2-getgid/">getgid</a></code>(2)).</dd>
+<dt>*</dt>
+<dd>Effective user ID and effective group ID. These IDs are used by the kernel to determine the permissions that the process will have when accessing shared resources such as message queues, shared memory, and semaphores. On most UNIX systems, these IDs also determine the permissions when accessing files. However, Linux uses the filesystem IDs described below for this task. A process can obtain its effective user (group) ID using <code><a href="/docs/linux/man/2-geteuid/">geteuid</a></code>(2) (<code><a href="/docs/linux/man/2-getegid/">getegid</a></code>(2)).</dd>
+<dt>*</dt>
+<dd>Saved set-user-ID and saved set-group-ID. These IDs are used in set-user-ID and set-group-ID programs to save a copy of the corresponding effective IDs that were set when the program was executed (see <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2)). A set-user-ID program can assume and drop privileges by switching its effective user ID back and forth between the values in its real user ID and saved set-user-ID. This switching is done via calls to <code><a href="/docs/linux/man/2-seteuid/">seteuid</a></code>(2), <code><a href="/docs/linux/man/2-setreuid/">setreuid</a></code>(2), or <code><a href="/docs/linux/man/2-setresuid/">setresuid</a></code>(2). A set-group-ID program performs the analogous tasks using <code><a href="/docs/linux/man/2-setegid/">setegid</a></code>(2), <code><a href="/docs/linux/man/2-setregid/">setregid</a></code>(2), or <code><a href="/docs/linux/man/2-setresgid/">setresgid</a></code>(2). A process can obtain its saved set-user-ID (set-group-ID) using <code><a href="/docs/linux/man/2-getresuid/">getresuid</a></code>(2) (<code><a href="/docs/linux/man/2-getresgid/">getresgid</a></code>(2)).</dd>
+<dt>*</dt>
+<dd>Filesystem user ID and filesystem group ID (Linux-specific). These IDs, in conjunction with the supplementary group IDs described below, are used to determine permissions for accessing files; see <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7) for details. Whenever a process&#8217;s effective user (group) ID is changed, the kernel also automatically changes the filesystem user (group) ID to the same value. Consequently, the filesystem IDs normally have the same values as the corresponding effective ID, and the semantics for file-permission checks are thus the same on Linux as on other UNIX systems. The filesystem IDs can be made to differ from the effective IDs by calling <code><a href="/docs/linux/man/2-setfsuid/">setfsuid</a></code>(2) and <code><a href="/docs/linux/man/2-setfsgid/">setfsgid</a></code>(2).</dd>
+<dt>*</dt>
+<dd>Supplementary group IDs. This is a set of additional group IDs that are used for permission checks when accessing files and other shared resources. On Linux kernels before 2.6.4, a process can be a member of up to 32 supplementary groups; since kernel 2.6.4, a process can be a member of up to 65536 supplementary groups. The call <i>sysconf(_SC_NGROUPS_MAX)</i> can be used to determine the number of supplementary groups of which a process may be a member. A process can obtain its set of supplementary group IDs using <code><a href="/docs/linux/man/2-getgroups/">getgroups</a></code>(2).</dd></dl>
 <p> A child process created by <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) inherits copies of its parent&#8217;s user and groups IDs. During an <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2), a process&#8217;s real user and group ID and supplementary group IDs are preserved; the effective and saved set IDs may be changed, as described in <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2). </p>
 <p> Aside from the purposes noted above, a process&#8217;s user IDs are also employed in a number of other contexts:</p>
 <dl>
-<dt>*</p>
-<dd>when determining the permissions for sending signals (see <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2));</p>
-<dt>*</p>
-<dd>when determining the permissions for setting process-scheduling parameters (nice value, real time scheduling policy and priority, CPU affinity, I/O priority) using <code><a href="/docs/linux/man/2-setpriority/">setpriority</a></code>(2), <code><a href="/docs/linux/man/2-sched_setaffinity/">sched_setaffinity</a></code>(2), <code><a href="/docs/linux/man/2-sched_setscheduler/">sched_setscheduler</a></code>(2), <code><a href="/docs/linux/man/2-sched_setparam/">sched_setparam</a></code>(2), <code><a href="/docs/linux/man/2-sched_setattr/">sched_setattr</a></code>(2), and <code><a href="/docs/linux/man/2-ioprio_set/">ioprio_set</a></code>(2);</p>
-<dt>*</p>
-<dd>when checking resource limits (see <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2));</p>
-<dt>*</p>
-<dd>when checking the limit on the number of inotify instances that the process may create (see <code><a href="/docs/linux/man/7-inotify/">inotify</a></code>(7)).</dl>
+<dt>*</dt>
+<dd>when determining the permissions for sending signals (see <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2));</dd>
+<dt>*</dt>
+<dd>when determining the permissions for setting process-scheduling parameters (nice value, real time scheduling policy and priority, CPU affinity, I/O priority) using <code><a href="/docs/linux/man/2-setpriority/">setpriority</a></code>(2), <code><a href="/docs/linux/man/2-sched_setaffinity/">sched_setaffinity</a></code>(2), <code><a href="/docs/linux/man/2-sched_setscheduler/">sched_setscheduler</a></code>(2), <code><a href="/docs/linux/man/2-sched_setparam/">sched_setparam</a></code>(2), <code><a href="/docs/linux/man/2-sched_setattr/">sched_setattr</a></code>(2), and <code><a href="/docs/linux/man/2-ioprio_set/">ioprio_set</a></code>(2);</dd>
+<dt>*</dt>
+<dd>when checking resource limits (see <code><a href="/docs/linux/man/2-getrlimit/">getrlimit</a></code>(2));</dd>
+<dt>*</dt>
+<dd>when checking the limit on the number of inotify instances that the process may create (see <code><a href="/docs/linux/man/7-inotify/">inotify</a></code>(7)).</dd></dl>
 <h3>Modifying process user and group IDs</h3>
 <p>Subject to rules described in the relevant manual pages, a process can use the following APIs to modify its user and group IDs:</p>
 <dl>
-<dt><code><a href="/docs/linux/man/2-setuid/">setuid</a></code>(2) (<code><a href="/docs/linux/man/2-setgid/">setgid</a></code>(2))</p>
-<dd>Modify the process&#8217;s real (and possibly effective and saved-set) user (group) IDs.</p>
-<dt><code><a href="/docs/linux/man/2-seteuid/">seteuid</a></code>(2) (<code><a href="/docs/linux/man/2-setegid/">setegid</a></code>(2))</p>
-<dd>Modify the process&#8217;s effective user (group) ID.</p>
-<dt><code><a href="/docs/linux/man/2-setfsuid/">setfsuid</a></code>(2) (<code><a href="/docs/linux/man/2-setfsgid/">setfsgid</a></code>(2))</p>
-<dd>Modify the process&#8217;s filesystem user (group) ID.</p>
-<dt><code><a href="/docs/linux/man/2-setreuid/">setreuid</a></code>(2) (<code><a href="/docs/linux/man/2-setregid/">setregid</a></code>(2))</p>
-<dd>Modify the process&#8217;s real and effective (and possibly saved-set) user (group) IDs.</p>
-<dt><code><a href="/docs/linux/man/2-setresuid/">setresuid</a></code>(2) (<code><a href="/docs/linux/man/2-setresgid/">setresgid</a></code>(2))</p>
-<dd>Modify the process&#8217;s real, effective, and saved-set user (group) IDs.</p>
-<dt><code><a href="/docs/linux/man/2-setgroups/">setgroups</a></code>(2)</p>
-<dd>Modify the process&#8217;s supplementary group list.</dl>
+<dt><code><a href="/docs/linux/man/2-setuid/">setuid</a></code>(2) (<code><a href="/docs/linux/man/2-setgid/">setgid</a></code>(2))</dt>
+<dd>Modify the process&#8217;s real (and possibly effective and saved-set) user (group) IDs.</dd>
+<dt><code><a href="/docs/linux/man/2-seteuid/">seteuid</a></code>(2) (<code><a href="/docs/linux/man/2-setegid/">setegid</a></code>(2))</dt>
+<dd>Modify the process&#8217;s effective user (group) ID.</dd>
+<dt><code><a href="/docs/linux/man/2-setfsuid/">setfsuid</a></code>(2) (<code><a href="/docs/linux/man/2-setfsgid/">setfsgid</a></code>(2))</dt>
+<dd>Modify the process&#8217;s filesystem user (group) ID.</dd>
+<dt><code><a href="/docs/linux/man/2-setreuid/">setreuid</a></code>(2) (<code><a href="/docs/linux/man/2-setregid/">setregid</a></code>(2))</dt>
+<dd>Modify the process&#8217;s real and effective (and possibly saved-set) user (group) IDs.</dd>
+<dt><code><a href="/docs/linux/man/2-setresuid/">setresuid</a></code>(2) (<code><a href="/docs/linux/man/2-setresgid/">setresgid</a></code>(2))</dt>
+<dd>Modify the process&#8217;s real, effective, and saved-set user (group) IDs.</dd>
+<dt><code><a href="/docs/linux/man/2-setgroups/">setgroups</a></code>(2)</dt>
+<dd>Modify the process&#8217;s supplementary group list.</dd></dl>
 <p> Any changes to a process&#8217;s effective user (group) ID are automatically carried over to the process&#8217;s filesystem user (group) ID. Changes to a process&#8217;s effective user or group ID can also affect the process &quot;dumpable&quot; attribute, as described in <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2). </p>
 <p> Changes to process user and group IDs can affect the capabilities of the process, as described in <code><a href="/docs/linux/man/7-capabilities/">capabilities</a></code>(7).</p>
 <h2>Conforming To</h2>

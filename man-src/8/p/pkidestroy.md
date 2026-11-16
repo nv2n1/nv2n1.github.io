@@ -14,18 +14,18 @@ description: "pkidestroy – Removes a subsystem from an instance of Certificate
 <p>Removes a subsystem from an instance of Certificate Server. This utility removes any of the Java-based Certificate Server subsystems (CA, KRA, OCSP, and TKS). An instance can contain multiple subsystems, although it may contain at most one of each type of subsystem. So, for example, an instance could contain CA and KRA subsystems, but not two CA subsystems. If <code>pkidestroy</code> is invoked on the last subsystem in the instance, then that instance is removed. Typically, as subsystems need to contact the CA to update the security domain, the CA instance should be the last instance to be removed. </p>
 <h2>Options</h2>
 <dl>
-<dt><code>-s &lt;subsystem&gt;</code></p>
-<dd>Specifies the subsystem to be removed, where &lt;subsystem&gt; is CA, KRA, OCSP, or TKS. If this option is not specified, <code>pkidestroy</code> will prompt for its value.</p>
-<dt><code>-i &lt;instance&gt;</code></p>
-<dd>Specifies the name of the instance from which the subsystem should be removed. The instance is located at /var/log/pki/&lt;instance&gt;. If this option is not specified, <code>pkidestroy</code> will prompt for its value.</p>
-<dt><code>-u &lt;security domain username&gt; </code></p>
-<dd>Specifies the username of the security domain of the subsystem. This is an <code>optional</code> parameter.</p>
-<dt><code>-W &lt;security domain password file&gt; </code></p>
-<dd>Specifies the file containing the password of the security domain of the subsystem. This is an <code>optional</code> parameter.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Prints additional help information.</p>
-<dt><code>-v</code></p>
-<dd>Displays verbose information about the installation. This flag can be provided multiple times to increase verbosity. See <code>pkidestroy -h </code> for details. </p>
+<dt><code>-s &lt;subsystem&gt;</code></dt>
+<dd>Specifies the subsystem to be removed, where &lt;subsystem&gt; is CA, KRA, OCSP, or TKS. If this option is not specified, <code>pkidestroy</code> will prompt for its value.</dd>
+<dt><code>-i &lt;instance&gt;</code></dt>
+<dd>Specifies the name of the instance from which the subsystem should be removed. The instance is located at /var/log/pki/&lt;instance&gt;. If this option is not specified, <code>pkidestroy</code> will prompt for its value.</dd>
+<dt><code>-u &lt;security domain username&gt; </code></dt>
+<dd>Specifies the username of the security domain of the subsystem. This is an <code>optional</code> parameter.</dd>
+<dt><code>-W &lt;security domain password file&gt; </code></dt>
+<dd>Specifies the file containing the password of the security domain of the subsystem. This is an <code>optional</code> parameter.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Prints additional help information.</dd>
+<dt><code>-v</code></dt>
+<dd>Displays verbose information about the installation. This flag can be provided multiple times to increase verbosity. See <code>pkidestroy -h </code> for details. </dd>
 </dl>
 <h2>Bugs</h2>
 <p>Report bugs to <a rel="nofollow" href="http://bugzilla.redhat.com.">http://bugzilla.redhat.com.</a> </p>

@@ -16,21 +16,21 @@ description: "pngtopnm – convert a Portable Network Graphics file into portabl
 <p> Reads a Portable Network Graphics as input. Produces a portable anymap as output. The type of the output file depends on the input file &#8211; if it&#8217;s black &amp; white, a <i>pbm</i> file is written, else if it&#8217;s grayscale a <i>pgm</i> file, else a <i>ppm</i> file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-verbose</code></p>
-<dd> Display the format of the input file and the type of the output file. If the chunks are part of the <i>png-file,</i> the alpha, transparency and gamma-values will be indicated.</p>
-<dt><code>-alpha</code></p>
-<dd> Output the alpha channel or transparency mask of the image. The result is either a <i>pbm</i> file or <i>pgm</i> file, depending on whether different levels of transparency appear.</p>
-<dt><code>-mix</code></p>
-<dd> Compose the image with the transparency or alpha mask against a the background. When a background chunk is available that color is taken, else black will do.</p>
-<dt><code>-background color</code></p>
-<dd> If no background color chunck is present in the <i>png-file,</i> or when another color is required this parameter can be used to set the background color of images. This is especially useful for alpha-channel images or those with transparency chunks. The format, to specify the color in, is either (in the case of orange) &quot;1.0,0.5,0.0&quot;, where the values are floats between zero and one, or with the syntax &quot;#RGB&quot;, &quot;#RRGGBB&quot; or &quot;#RRRRGGGGBBBB&quot; where R, G and B are hexa-decimal numbers.</p>
-<dt><code>-gamma value</code></p>
+<dt><code>-verbose</code></dt>
+<dd> Display the format of the input file and the type of the output file. If the chunks are part of the <i>png-file,</i> the alpha, transparency and gamma-values will be indicated.</dd>
+<dt><code>-alpha</code></dt>
+<dd> Output the alpha channel or transparency mask of the image. The result is either a <i>pbm</i> file or <i>pgm</i> file, depending on whether different levels of transparency appear.</dd>
+<dt><code>-mix</code></dt>
+<dd> Compose the image with the transparency or alpha mask against a the background. When a background chunk is available that color is taken, else black will do.</dd>
+<dt><code>-background color</code></dt>
+<dd> If no background color chunck is present in the <i>png-file,</i> or when another color is required this parameter can be used to set the background color of images. This is especially useful for alpha-channel images or those with transparency chunks. The format, to specify the color in, is either (in the case of orange) &quot;1.0,0.5,0.0&quot;, where the values are floats between zero and one, or with the syntax &quot;#RGB&quot;, &quot;#RRGGBB&quot; or &quot;#RRRRGGGGBBBB&quot; where R, G and B are hexa-decimal numbers.</dd>
+<dt><code>-gamma value</code></dt>
 <dd> Converts the image to a new display-gamma value. When a gAMA chunk is present in the <i>png-file,</i> the image-gamma value will be used. When not, the image-gamma is considered to be 1.0. Based on the image-gamma and the display-gamma given with this option the colors written to the <i>pnm-file</i> will be adjusted.<br />
- Because the gamma&#8217;s of uncompensated monitors are around 2.6, which results in an image-gamma of 0.45, some typical situations are: when the image-gamma is 0.45 (use -verbose to check) and the picture is too light, your system is gamma-corrected, so convert with &quot;-gamma 1.0&quot;. When no gAMA chunk is present or the image-gamma is 1.0, use 2.2 to make the picture lighter and 0.45 to make the picture darker.</p>
-<dt><code>-text file</code></p>
-<dd> Writes the tEXt and zTXt chunks to a file, in a format as described in the <i>pnmtopng</i> man-page. These chunks contain text comments or annotations.</p>
-<dt><code>-time</code></p>
-<dd> Prints the tIME chunk to stderr.</dl>
+ Because the gamma&#8217;s of uncompensated monitors are around 2.6, which results in an image-gamma of 0.45, some typical situations are: when the image-gamma is 0.45 (use -verbose to check) and the picture is too light, your system is gamma-corrected, so convert with &quot;-gamma 1.0&quot;. When no gAMA chunk is present or the image-gamma is 1.0, use 2.2 to make the picture lighter and 0.45 to make the picture darker.</dd>
+<dt><code>-text file</code></dt>
+<dd> Writes the tEXt and zTXt chunks to a file, in a format as described in the <i>pnmtopng</i> man-page. These chunks contain text comments or annotations.</dd>
+<dt><code>-time</code></dt>
+<dd> Prints the tIME chunk to stderr.</dd></dl>
 <p> All flags can be abbreviated to their shortest unique prefix.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-pnmtopng/">pnmtopng</a>(1), ptot(1), <a href="/docs/linux/man/1-pnmgamma/">pnmgamma</a>(1), <a href="/docs/linux/man/5-pnm/">pnm</a>(5)</p>

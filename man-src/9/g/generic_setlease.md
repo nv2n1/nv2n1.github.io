@@ -14,16 +14,16 @@ description: "generic_setlease – sets a lease on an open file"
 <p><i>filp</i></p>
 <dl>
 <dd>
-<dd>file pointer</dl>
+</dd><dd>file pointer</dd></dl>
 <p> <i>arg</i></p>
 <dl>
-<dd>type of lease to obtain</dl>
+<dd>type of lease to obtain</dd></dl>
 <p> <i>flp</i></p>
 <dl>
-<dd>input &#8211; file_lock to use, output &#8211; file_lock inserted</dl>
+<dd>input &#8211; file_lock to use, output &#8211; file_lock inserted</dd></dl>
 <p> <i>priv</i></p>
 <dl>
-<dd>private data for lm_setup (may be NULL if lm_setup doesn&#8217;t require it)</dl>
+<dd>private data for lm_setup (may be NULL if lm_setup doesn&#8217;t require it)</dd></dl>
 <h2>Description</h2>
 <p>The (input) flp-&gt;fl_lmops-&gt;lm_break function is required by <code>break_lease</code>.</p>
 <h2>Copyright</h2>

@@ -18,8 +18,8 @@ env n_partitions=1 aoe-mkdevs {device-dir}</code></pre>
 <p> If you are not using dynamic device numbers, and you built your aoe driver to support only one partition per device (whole-disk partitions), then the device files must match, and you should use the <i>n_partitions</i> environment variable described below.</p>
 <h3>Arguments</h3>
 <dl>
-<dt><code>device-dir</code></p>
-<dd>This should be the name of the directory where the special device files will be created.</dl>
+<dt><code>device-dir</code></dt>
+<dd>This should be the name of the directory where the special device files will be created.</dd></dl>
 <h2>Environment Variables</h2>
 <p>If the <i>n_partitions</i> variable is set in the environment, it will override the default number of partitions per aoe disk, namely 16.</p>
 <h2>Example</h2>
@@ -34,7 +34,7 @@ nai:~# rm -rf /dev/etherd
 nai:~# n_partitions=1 aoe-mkdevs /dev/etherd
 nai:~# ls /dev/etherd | wc -l
 103</pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-aoe-discover/">aoe-discover</a></i>(8), <i><a href="/docs/linux/man/8-aoe-interfaces/">aoe-interfaces</a></i>(8), <i><a href="/docs/linux/man/8-aoe-mkshelf/">aoe-mkshelf</a></i>(8), <i><a href="/docs/linux/man/8-aoe-stat/">aoe-stat</a></i>(8), <i>aoetools</i>(8), <i><a href="/docs/linux/man/7-udev/">udev</a></i>(7).</p>
 <h2>Author</h2>

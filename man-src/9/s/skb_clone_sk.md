@@ -15,7 +15,7 @@ skb_clone_sk - create clone of skb, and take reference to socket
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>the skb to clone</dl>
+<dl><dd></dd><dd>the skb to clone</dd></dl>
 
 <h2>Description</h2>
 

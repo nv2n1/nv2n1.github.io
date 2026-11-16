@@ -12,10 +12,8 @@ description: "PCRE – Perl-compatible regular expressions"
 <pre><code>#include &lt;pcre.h&gt;
 int pcre_get_stringtable_entries(const pcre *code,
                                  const char *name, char **first, char **last);
-
 int pcre16_get_stringtable_entries(const pcre16 *code,
                                    PCRE_SPTR16 name, PCRE_UCHAR16 **first, PCRE_UCHAR16 **last);
-
 int pcre32_get_stringtable_entries(const pcre32 *code,
                                    PCRE_SPTR32 name, PCRE_UCHAR32 **first, PCRE_UCHAR32 **last);</code></pre>
 <h2>Description</h2>

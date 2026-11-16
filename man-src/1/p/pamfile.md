@@ -15,8 +15,8 @@ description: "pamfile – describe a Netpbm (PAM or PNM) file"
 <p> Reads one or more Netpbm files as input. Writes out short descriptions of the image type, size, etc. This is mostly for use in shell scripts, so the format is not particularly pretty. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-allimages</code></p>
-<dd> Describe every image in each input file. Without this option, <code>pamfile</code> describes only the first image in each input file. Note that before July 2000, a file could not contain more than one image and many programs ignore all but the first. </p>
+<dt><code>-allimages</code></dt>
+<dd> Describe every image in each input file. Without this option, <code>pamfile</code> describes only the first image in each input file. Note that before July 2000, a file could not contain more than one image and many programs ignore all but the first. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-pam/">pam</a></code>(5), <code><a href="/docs/linux/man/1-file/">file</a></code>(1) </p>

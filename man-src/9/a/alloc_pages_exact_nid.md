@@ -14,13 +14,13 @@ description: "alloc_pages_exact_nid – allocate an exact number of physically-c
 <p><i>nid</i></p>
 <dl>
 <dd>
-<dd>the preferred node ID where memory should be allocated</dl>
+</dd><dd>the preferred node ID where memory should be allocated</dd></dl>
 <p> <i>size</i></p>
 <dl>
-<dd>the number of bytes to allocate</dl>
+<dd>the number of bytes to allocate</dd></dl>
 <p> <i>gfp_mask</i></p>
 <dl>
-<dd>GFP flags for the allocation</dl>
+<dd>GFP flags for the allocation</dd></dl>
 <h2>Description</h2>
 <p>Like <code>alloc_pages_exact</code>, but try to allocate on node nid first before falling back.</p>
 <h2>Copyright</h2>

@@ -15,11 +15,11 @@ audit_list_rules_send - list the audit rules
 <h2>Arguments</h2>
 
 <i>request_skb</i>
-<dl><dd><dd>skb of request we are replying to (used to target the reply)</dl>
+<dl><dd></dd><dd>skb of request we are replying to (used to target the reply)</dd></dl>
  
 
  <i>seq</i>
-<dl><dd>netlink audit message sequence (serial) number</dl>
+<dl><dd>netlink audit message sequence (serial) number</dd></dl>
 
 <h2>Copyright</h2>
 

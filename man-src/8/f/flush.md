@@ -16,18 +16,18 @@ description: "flush – Postfix fast flush server"
 <p> Per-destination logfiles of deferred mail are maintained only for eligible destinations. The list of eligible destinations is specified with the <code>fast_flush_domains</code> configuration parameter, which defaults to <code>$relay_domains</code>. </p>
 <p> This server implements the following requests:</p>
 <dl>
-<dt><code>add</code><i> sitename queueid</i></p>
-<dd>Inform the <code><a href="/docs/linux/man/8-flush/">flush</a></code>(8) server that the message with the specified queue ID is queued for the specified destination.</p>
-<dt><code>send_site</code><i> sitename</i></p>
-<dd>Request delivery of mail that is queued for the specified destination.</p>
-<dt><code>send_file</code><i> queueid</i></p>
-<dd>Request delivery of the specified deferred message.</p>
-<dt><code>refresh</code></p>
-<dd>Refresh non-empty per-destination logfiles that were not read in <code>$fast_flush_refresh_time</code> hours, by simulating send requests (see above) for the corresponding destinations. </p>
+<dt><code>add</code><i> sitename queueid</i></dt>
+<dd>Inform the <code><a href="/docs/linux/man/8-flush/">flush</a></code>(8) server that the message with the specified queue ID is queued for the specified destination.</dd>
+<dt><code>send_site</code><i> sitename</i></dt>
+<dd>Request delivery of mail that is queued for the specified destination.</dd>
+<dt><code>send_file</code><i> queueid</i></dt>
+<dd>Request delivery of the specified deferred message.</dd>
+<dt><code>refresh</code></dt>
+<dd>Refresh non-empty per-destination logfiles that were not read in <code>$fast_flush_refresh_time</code> hours, by simulating send requests (see above) for the corresponding destinations. </dd>
 <p> Delete empty per-destination logfiles that were not updated in <code>$fast_flush_purge_time</code> days. </p>
 <p> This request completes in the background.</p>
-<dt><code>purge</code></p>
-<dd>Do a <code>refresh</code> for all per-destination logfiles.</dl>
+<dt><code>purge</code></dt>
+<dd>Do a <code>refresh</code> for all per-destination logfiles.</dd></dl>
 <h2>Security</h2>
 <p>The <code><a href="/docs/linux/man/8-flush/">flush</a></code>(8) server is not security-sensitive. It does not talk to the network, and it does not talk to local users. The fast flush server can run chrooted at fixed low privilege.</p>
 <h2>Diagnostics</h2>
@@ -39,34 +39,34 @@ description: "flush – Postfix fast flush server"
 <p>Changes to <code>main.cf</code> are picked up automatically as <code><a href="/docs/linux/man/8-flush/">flush</a></code>(8) processes run for only a limited amount of time. Use the command &quot;<code>postfix reload</code>&quot; to speed up a change. </p>
 <p> The text below provides only a parameter summary. See <code><a href="/docs/linux/man/5-postconf/">postconf</a></code>(5) for more details including examples.</p>
 <dl>
-<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The default location of the Postfix main.cf and master.cf configuration files.</p>
-<dt><code>daemon_timeout (18000s)</code></p>
-<dd>How much time a Postfix daemon process may take to handle a request before it is terminated by a built-in watchdog timer.</p>
-<dt><code>fast_flush_domains ($relay_domains)</code></p>
-<dd>Optional list of destinations that are eligible for per-destination logfiles with mail that is queued to those destinations.</p>
-<dt><code>fast_flush_refresh_time (12h)</code></p>
-<dd>The time after which a non-empty but unread per-destination &quot;fast flush&quot; logfile needs to be refreshed.</p>
-<dt><code>fast_flush_purge_time (7d)</code></p>
-<dd>The time after which an empty per-destination &quot;fast flush&quot; logfile is deleted.</p>
-<dt><code>ipc_timeout (3600s)</code></p>
-<dd>The time limit for sending or receiving information over an internal communication channel.</p>
-<dt><code>max_idle (100s)</code></p>
-<dd>The maximum amount of time that an idle Postfix daemon process waits for an incoming connection before terminating voluntarily.</p>
-<dt><code>max_use (100)</code></p>
-<dd>The maximal number of incoming connections that a Postfix daemon process will service before terminating voluntarily.</p>
-<dt><code>parent_domain_matches_subdomains (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>What Postfix features match subdomains of &quot;domain.tld&quot; automatically, instead of requiring an explicit &quot;.domain.tld&quot; pattern.</p>
-<dt><code>process_id (read-only)</code></p>
-<dd>The process ID of a Postfix command or daemon process.</p>
-<dt><code>process_name (read-only)</code></p>
-<dd>The process name of a Postfix command or daemon process.</p>
-<dt><code>queue_directory (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The location of the Postfix top-level queue directory.</p>
-<dt><code>syslog_facility (mail)</code></p>
-<dd>The syslog facility of Postfix logging.</p>
-<dt><code>syslog_name (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The mail system name that is prepended to the process name in syslog records, so that &quot;smtpd&quot; becomes, for example, &quot;postfix/smtpd&quot;.</dl>
+<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The default location of the Postfix main.cf and master.cf configuration files.</dd>
+<dt><code>daemon_timeout (18000s)</code></dt>
+<dd>How much time a Postfix daemon process may take to handle a request before it is terminated by a built-in watchdog timer.</dd>
+<dt><code>fast_flush_domains ($relay_domains)</code></dt>
+<dd>Optional list of destinations that are eligible for per-destination logfiles with mail that is queued to those destinations.</dd>
+<dt><code>fast_flush_refresh_time (12h)</code></dt>
+<dd>The time after which a non-empty but unread per-destination &quot;fast flush&quot; logfile needs to be refreshed.</dd>
+<dt><code>fast_flush_purge_time (7d)</code></dt>
+<dd>The time after which an empty per-destination &quot;fast flush&quot; logfile is deleted.</dd>
+<dt><code>ipc_timeout (3600s)</code></dt>
+<dd>The time limit for sending or receiving information over an internal communication channel.</dd>
+<dt><code>max_idle (100s)</code></dt>
+<dd>The maximum amount of time that an idle Postfix daemon process waits for an incoming connection before terminating voluntarily.</dd>
+<dt><code>max_use (100)</code></dt>
+<dd>The maximal number of incoming connections that a Postfix daemon process will service before terminating voluntarily.</dd>
+<dt><code>parent_domain_matches_subdomains (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>What Postfix features match subdomains of &quot;domain.tld&quot; automatically, instead of requiring an explicit &quot;.domain.tld&quot; pattern.</dd>
+<dt><code>process_id (read-only)</code></dt>
+<dd>The process ID of a Postfix command or daemon process.</dd>
+<dt><code>process_name (read-only)</code></dt>
+<dd>The process name of a Postfix command or daemon process.</dd>
+<dt><code>queue_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The location of the Postfix top-level queue directory.</dd>
+<dt><code>syslog_facility (mail)</code></dt>
+<dd>The syslog facility of Postfix logging.</dd>
+<dt><code>syslog_name (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The mail system name that is prepended to the process name in syslog records, so that &quot;smtpd&quot; becomes, for example, &quot;postfix/smtpd&quot;.</dd></dl>
 <h2>Files</h2>
 <pre>/var/spool/postfix/flush, &quot;fast flush&quot; logfiles.</pre>
 <h2>See Also</h2>

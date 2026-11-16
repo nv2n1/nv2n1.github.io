@@ -18,24 +18,24 @@ description: "fakeroot – run a command in an environment faking root privilege
 <p> Also, note that it&#8217;s best not to do the building of the binaries themselves under fakeroot. Especially configure and friends don&#8217;t like it when the system suddenly behaves differently from what they expect. (or, they randomly unset some environment variables, some of which fakeroot needs). </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-l</code> <i>library</i>, <code>&#8211;lib</code> <i>library</i></p>
-<dd> Specify an alternative wrapper library.</p>
-<dt><code>&#8211;faked</code><i>&nbsp;binary</i></p>
-<dd> Specify an alternative binary to use as faked.</p>
-<dt><code>[&#8211;]</code><i>&nbsp;command</i></p>
-<dd> Any command you want to be ran as fakeroot. Use &#8216;&#8211;&#8216; if in the command you have other options that may confuse fakeroot&#8217;s option parsing.</p>
-<dt><code>-s</code><i>&nbsp;save-file</i></p>
-<dd> Save the fakeroot environment to save-file on exit. This file can be used to restore the environment later using -i. However, this file will leak and fakeroot will behave in odd ways unless you leave the files touched inside the fakeroot alone when outside the environment. Still, this can be useful. For example, it can be used with <a href="/docs/linux/man/1-rsync/">rsync</a>(1) to back up and restore whole directory trees complete with user, group and device information without needing to be root. See <i>/usr/share/doc/fakeroot/README.saving</i> for more details.</p>
-<dt><code>-i</code><i>&nbsp;load-file</i></p>
-<dd> Load a fakeroot environment previously saved using -s from load-file. Note that this does not implicitly save the file, use -s as well for that behaviour. Using the same file for both -i and -s in a single <code>fakeroot</code> invocation is safe.</p>
-<dt><code>-u</code>, <code>&#8211;unknown-is-real</code></p>
-<dd> Use the real ownership of files previously unknown to fakeroot instead of pretending they are owned by root:root.</p>
-<dt><code>-b</code><i>&nbsp;fd</i></p>
-<dd> Specify fd base (TCP mode only). fd is the minimum file descriptor number to use for TCP connections; this may be important to avoid conflicts with the file descriptors used by the programs being run under fakeroot.</p>
-<dt><code>-h</code></p>
-<dd> Display help.</p>
-<dt><code>-v</code></p>
-<dd> Display version. </p>
+<dt><code>-l</code> <i>library</i>, <code>&#8211;lib</code> <i>library</i></dt>
+<dd> Specify an alternative wrapper library.</dd>
+<dt><code>&#8211;faked</code><i>&nbsp;binary</i></dt>
+<dd> Specify an alternative binary to use as faked.</dd>
+<dt><code>[&#8211;]</code><i>&nbsp;command</i></dt>
+<dd> Any command you want to be ran as fakeroot. Use &#8216;&#8211;&#8216; if in the command you have other options that may confuse fakeroot&#8217;s option parsing.</dd>
+<dt><code>-s</code><i>&nbsp;save-file</i></dt>
+<dd> Save the fakeroot environment to save-file on exit. This file can be used to restore the environment later using -i. However, this file will leak and fakeroot will behave in odd ways unless you leave the files touched inside the fakeroot alone when outside the environment. Still, this can be useful. For example, it can be used with <a href="/docs/linux/man/1-rsync/">rsync</a>(1) to back up and restore whole directory trees complete with user, group and device information without needing to be root. See <i>/usr/share/doc/fakeroot/README.saving</i> for more details.</dd>
+<dt><code>-i</code><i>&nbsp;load-file</i></dt>
+<dd> Load a fakeroot environment previously saved using -s from load-file. Note that this does not implicitly save the file, use -s as well for that behaviour. Using the same file for both -i and -s in a single <code>fakeroot</code> invocation is safe.</dd>
+<dt><code>-u</code>, <code>&#8211;unknown-is-real</code></dt>
+<dd> Use the real ownership of files previously unknown to fakeroot instead of pretending they are owned by root:root.</dd>
+<dt><code>-b</code><i>&nbsp;fd</i></dt>
+<dd> Specify fd base (TCP mode only). fd is the minimum file descriptor number to use for TCP connections; this may be important to avoid conflicts with the file descriptors used by the programs being run under fakeroot.</dd>
+<dt><code>-h</code></dt>
+<dd> Display help.</dd>
+<dt><code>-v</code></dt>
+<dd> Display version. </dd>
 </dl>
 <h2>EXAMPLES</h2>
 <p> Here is an example session with <code>fakeroot</code>. Notice that inside the fake root environment file manipulation that requires root privileges succeeds, but is not really happening. </p>
@@ -80,20 +80,20 @@ $ whoami
 <h2>ENVIRONMENT</h2>
 <p> <code></p>
 <dl>
-<dt>FAKEROOTKEY</p>
-<dd> </code> The key used to communicate with the fakeroot daemon. Any program started with the right <code>LD_PRELOAD</code> and a <code>FAKEROOTKEY</code> of a running daemon will automatically connect to that daemon, and have the same &quot;fake&quot; view of the file system&#8217;s permissions/ownerships. (assuming the daemon and connecting program were started by the same user). <code></p>
-<dt>LD_LIBRARY_PATH</p>
-<dd> </code> <code></p>
-<dt>LD_PRELOAD</p>
-<dd> </code> Fakeroot is implemented by wrapping system calls. This is accomplished by setting LD_LIBRARY_PATH=/usr/lib/fakeroot and LD_PRELOAD=libfakeroot.so.0. That library is loaded before the system&#8217;s C library, and so most of the library functions are intercepted by it. If you need to set either <code>LD_LIBRARY_PATH</code> or <code>LD_PRELOAD</code> from within a fakeroot environment, it should be set relative to the given paths, as in <code>LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/foo/bar/</code> </p>
+<dt>FAKEROOTKEY</dt>
+<dd> </code> The key used to communicate with the fakeroot daemon. Any program started with the right <code>LD_PRELOAD</code> and a <code>FAKEROOTKEY</code> of a running daemon will automatically connect to that daemon, and have the same &quot;fake&quot; view of the file system&#8217;s permissions/ownerships. (assuming the daemon and connecting program were started by the same user). <code></dd>
+<dt>LD_LIBRARY_PATH</dt>
+<dd> </code> <code></dd>
+<dt>LD_PRELOAD</dt>
+<dd> </code> Fakeroot is implemented by wrapping system calls. This is accomplished by setting LD_LIBRARY_PATH=/usr/lib/fakeroot and LD_PRELOAD=libfakeroot.so.0. That library is loaded before the system&#8217;s C library, and so most of the library functions are intercepted by it. If you need to set either <code>LD_LIBRARY_PATH</code> or <code>LD_PRELOAD</code> from within a fakeroot environment, it should be set relative to the given paths, as in <code>LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/foo/bar/</code> </dd>
 </dl>
 <h2>LIMITATIONS</h2>
 <p> <code></p>
 <dl>
-<dt>Library versions</p>
-<dd> </code> Every command executed within <code>fakeroot </code> needs to be linked to the same version of the C library as <code>fakeroot</code> itself. <code></p>
-<dt>open()/create()</p>
-<dd> </code> fakeroot doesn&#8217;t wrap open(), create(), etc. So, if user <code>joost</code> does either </p>
+<dt>Library versions</dt>
+<dd> </code> Every command executed within <code>fakeroot </code> needs to be linked to the same version of the C library as <code>fakeroot</code> itself. <code></dd>
+<dt>open()/create()</dt>
+<dd> </code> fakeroot doesn&#8217;t wrap open(), create(), etc. So, if user <code>joost</code> does either </dd>
 <pre>
 touch foo
 fakeroot 
@@ -106,20 +106,20 @@ touch foo
 ls -al foo
 </pre>
 <p> fakeroot has no way of knowing that in the first case, the owner of foo really should be <code>joost</code> while the second case it should have been <code>root</code>. For the Debian packaging, defaulting to giving all &quot;unknown&quot; files uid=gid=0, is always OK. The real way around this is to wrap <code>open() </code> and <code>create()</code>, but that creates other problems, as demonstrated by the libtricks package. This package wrapped many more functions, and tried to do a lot more than <code>fakeroot .</code> It turned out that a minor upgrade of libc (from one where the <code>stat()</code> function didn&#8217;t use <code>open()</code> to one with a <code>stat()</code> function that did (in some cases) use <code>open()</code>), would cause unexplainable segfaults (that is, the libc6 <code>stat()</code> called the wrapped <code>open()</code>, which would then call the libc6 <code>stat()</code>, etc). Fixing them wasn&#8217;t all that easy, but once fixed, it was just a matter of time before another function started to use open(), never mind trying to port it to a different operating system. Thus I decided to keep the number of functions wrapped by fakeroot as small as possible, to limit the likelihood of &#8216;collisions&#8217;. <code></p>
-<dt>GNU configure (and other such programs)</p>
-<dd> </code> fakeroot, in effect, is changing the way the system behaves. Programs that probe the system like GNU configure may get confused by this (or if they don&#8217;t, they may stress fakeroot so much that fakeroot itself becomes confused). So, it&#8217;s advisable not to run &quot;configure&quot; from within fakeroot. As configure should be called in the &quot;debian/rules build&quot; target, running &quot;dpkg-buildpackage -rfakeroot&quot; correctly takes care of this.</dl>
+<dt>GNU configure (and other such programs)</dt>
+<dd> </code> fakeroot, in effect, is changing the way the system behaves. Programs that probe the system like GNU configure may get confused by this (or if they don&#8217;t, they may stress fakeroot so much that fakeroot itself becomes confused). So, it&#8217;s advisable not to run &quot;configure&quot; from within fakeroot. As configure should be called in the &quot;debian/rules build&quot; target, running &quot;dpkg-buildpackage -rfakeroot&quot; correctly takes care of this.</dd></dl>
 <h2>BUGS</h2>
 <p> It doesn&#8217;t wrap open(). This isn&#8217;t bad by itself, but if a program does open(&quot;file&quot;, O_WRONLY, 000), writes to file &quot;file&quot;, closes it, and then again tries to open to read the file, then that open fails, as the mode of the file will be 000. The bug is that if root does the same, open() will succeed, as the file permissions aren&#8217;t checked at all for root. I choose not to wrap open(), as open() is used by many other functions in libc (also those that are already wrapped), thus creating loops (or possible future loops, when the implementation of various libc functions slightly change).</p>
 <h2>COPYING</h2>
 <p> <code>fakeroot</code> is distributed under the GNU General Public License. (GPL 2.0 or greater).</p>
 <h2>AUTHORS</h2>
 <dl>
-<dt>joost witteveen</p>
-<dd> &lt;<i>joostje [at] debian.org</i>&gt;</p>
-<dt>Clint Adams</p>
-<dd> &lt;<i>clint [at] debian.org</i>&gt;</p>
-<dt>Timo Savola</p>
-<dd></dl>
+<dt>joost witteveen</dt>
+<dd> &lt;<i>joostje [at] debian.org</i>&gt;</dd>
+<dt>Clint Adams</dt>
+<dd> &lt;<i>clint [at] debian.org</i>&gt;</dd>
+<dt>Timo Savola</dt>
+<dd></dd></dl>
 <h2>MANUAL PAGE</h2>
 <p> mostly by J.H.M. Dassen &lt;jdassen [at] debian.org&gt; Rather a lot mods/additions by joost and Clint.</p>
 <h2>SEE ALSO</h2>

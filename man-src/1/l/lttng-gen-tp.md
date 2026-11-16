@@ -20,12 +20,12 @@ lttng-gen-tp [OPTIONS] TEMPLATE_FILE
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax with long options starting with two dashes. Below is a summary of the available options. </p>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show summary of possible options and commands.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Increase verbosity.</p>
-<dt><code>-o, &#8211;output</code></p>
-<dd> Specify the generated file. The type of the generated file depend on the file extension (.h, .c, .o). This option can be specified multiple times to generate different file type. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show summary of possible options and commands.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Increase verbosity.</dd>
+<dt><code>-o, &#8211;output</code></dt>
+<dd> Specify the generated file. The type of the generated file depend on the file extension (.h, .c, .o). This option can be specified multiple times to generate different file type. </dd>
 </dl>
 <p> When no output is specified the default files are generated with the same base filename as the template file. The default files are: .h, .c, .o. </p>
 <h2>TEMPLATE FILE FORMAT</h2>
@@ -33,13 +33,13 @@ lttng-gen-tp [OPTIONS] TEMPLATE_FILE
 <p> You write them as you would write them in a C header file. You can add comments with <code>/* */</code>, <code>//</code> and <code>#</code>. </p>
 <p> The provider name (the first field of TRACEPOINT_EVENT) must be the same for the whole file. </p>
 <dl>
-<dt></dl>
+<dt></dt></dl>
 <h2>Example</h2>
 <dd>
-<dl>
+</dd><dl>
 <dt>
 <pre>
-<dd>TRACEPOINT_EVENT(
+</dt><dd>TRACEPOINT_EVENT(
     sample_tracepoint,
     message, // Comment
     TP_ARGS(char *, text),
@@ -48,15 +48,15 @@ lttng-gen-tp [OPTIONS] TEMPLATE_FILE
         ctf_string(message, text)
     )
 )
-</dl>
+</dd></dl>
 </pre>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> When the tool generates a .o file, it will look for the following environment variables </p>
 <dl>
-<dt>CC</p>
-<dd> Specify which C compiler to use. If the variable is not specified, the tool will try &quot;cc&quot; and &quot;gcc&quot; </p>
-<dt>CFLAGS</p>
-<dd> Flags directly passed to the compiler</dl>
+<dt>CC</dt>
+<dd> Specify which C compiler to use. If the variable is not specified, the tool will try &quot;cc&quot; and &quot;gcc&quot; </dd>
+<dt>CFLAGS</dt>
+<dd> Flags directly passed to the compiler</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-lttng-ust/">lttng-ust</a>(3), <a href="/docs/linux/man/1-lttng/">lttng</a>(1) </p>
 <h2>BUGS</h2>

@@ -18,47 +18,47 @@ rrsync[-ro | -rw][-munge][-no - del][-no - lock] DIR
 <h2>DESCRIPTION</h2>
 <p> A user&#8217;s ssh login can be restricted to only allow the running of an rsync transfer in one of two easy ways: </p>
 <dl>
-<dt>o</p>
-<dd> forcing the running of the rrsync script</p>
-<dt>o</p>
-<dd> forcing the running of an rsync daemon-over-ssh command.</dl>
+<dt>o</dt>
+<dd> forcing the running of the rrsync script</dd>
+<dt>o</dt>
+<dd> forcing the running of an rsync daemon-over-ssh command.</dd></dl>
 <p> Both of these setups use a feature of ssh that allows a command to be forced to run instead of an interactive shell. However, if the user&#8217;s home shell is bash, please see BASH SECURITY ISSUE for a potential issue. </p>
 <p> To use the rrsync script, edit the user&#8217;s <code>~/.ssh/authorized_keys</code> file and add a prefix like one of the following (followed by a space) in front of each ssh-key line that should be restricted:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 command=&quot;rrsync DIR&quot;
 command=&quot;rrsync -ro DIR&quot;
 command=&quot;rrsync -munge -no-del DIR&quot;
 </pre>
-</dl>
+</dd></dl>
 <p> Then, ensure that the rrsync script has your desired option restrictions. You may want to copy the script to a local bin dir with a unique name if you want to have multiple configurations. One or more rrsync options can be specified prior to the <i>DIR</i> if you want to further restrict the transfer. </p>
 <p> To use an rsync daemon setup, edit the user&#8217;s <code>~/.ssh/authorized_keys</code> file and add a prefix like one of the following (followed by a space) in front of each ssh-key line that should be restricted:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 command = "rsync --server --daemon ." command = "rsync --server --daemon --config=/PATH/TO/rsyncd.conf ."
 </code></pre>
-</dl>
+</dd></dl>
 <p> Then, ensure that the rsyncd.conf file is created with one or more module names with the appropriate path and option restrictions. If rsync&#8217;s <code>&#8211;config</code> option is omitted, it defaults to <code>~/rsyncd.conf</code>. See the <code><a href="/docs/linux/man/5-rsyncd-conf/">rsyncd.conf</a></code>(5) manpage for details of how to configure an rsync daemon. </p>
 <p> When using rrsync, there can be just one restricted dir per authorized key. A daemon setup, on the other hand, allows multiple module names inside the config file, each one with its own path setting. </p>
 <p> The remainder of this manpage is dedicated to using the rrsync script. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-ro</code></p>
-<dd> Allow only reading from the DIR. Implies <code>-no-del</code> and <code>-no-lock</code>.</p>
-<dt><code>-wo</code></p>
-<dd> Allow only writing to the DIR.</p>
-<dt><code>-munge</code></p>
-<dd> Enable rsync&#8217;s <code>&#8211;munge-links</code> on the server side.</p>
-<dt><code>-no-del</code></p>
-<dd> Disable rsync&#8217;s <code>&#8211;delete*</code> and <code>&#8211;remove*</code> options.</p>
-<dt><code>-no-lock</code></p>
-<dd> Avoid the single-run (per-user) lock check. Useful with <code>-munge</code>.</p>
-<dt><code>-help</code>, <code>-h</code></p>
-<dd> Output this help message and exit.</dl>
+<dt><code>-ro</code></dt>
+<dd> Allow only reading from the DIR. Implies <code>-no-del</code> and <code>-no-lock</code>.</dd>
+<dt><code>-wo</code></dt>
+<dd> Allow only writing to the DIR.</dd>
+<dt><code>-munge</code></dt>
+<dd> Enable rsync&#8217;s <code>&#8211;munge-links</code> on the server side.</dd>
+<dt><code>-no-del</code></dt>
+<dd> Disable rsync&#8217;s <code>&#8211;delete*</code> and <code>&#8211;remove*</code> options.</dd>
+<dt><code>-no-lock</code></dt>
+<dd> Avoid the single-run (per-user) lock check. Useful with <code>-munge</code>.</dd>
+<dt><code>-help</code>, <code>-h</code></dt>
+<dd> Output this help message and exit.</dd></dl>
 <h2>SECURITY RESTRICTIONS</h2>
 <p> The rrsync script validates the path arguments it is sent to try to restrict them to staying within the specified DIR. </p>
 <p> The rrsync script rejects rsync&#8217;s <code>&#8211;copy-links</code> option (by default) so that a copy cannot dereference a symlink within the DIR to get to a file outside the DIR. </p>
@@ -74,12 +74,12 @@ command = "rsync --server --daemon ." command = "rsync --server --daemon --confi
 <p> The <code>~/.ssh/authorized_keys</code> file might have lines in it like this:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 command=&quot;rrsync client/logs&quot; ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAzG...
 command=&quot;rrsync -ro results&quot; ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAmk...
 </pre>
-</dl>
+</dd></dl>
 <h2>FILES</h2>
 <p> ~/.ssh/authorized_keys </p>
 <h2>SEE ALSO</h2>

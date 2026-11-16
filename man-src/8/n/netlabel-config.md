@@ -13,10 +13,10 @@ description: "netlabel-config – NetLabel configuration utility"
 <h2>Description</h2>
 <p>The NetLabel configuration utility, netlabel-config, is a script designed to make it easier for system administratiors to create, manage, and use complex NetLabel configurations. The netlabel-config script uses the <a href="/docs/linux/man/8-netlabelctl/">netlabelctl</a>(8) tool and /etc/netlabel.rules configuration file to load a saved NetLabel configuration into the kernel and reset the kernel&#8217;s NetLabel configuration to the default state when needed.</p>
 <dl>
-<dt><code>reset</code></p>
-<dd>Removes any NetLabel configuration loaded into the kernel and resets the kernel&#8217;s NetLabel state to the default.</p>
-<dt><code>load</code></p>
-<dd>Loads the NetLabel configuration specified by /etc/netlabel.rules into the kernel.</dl>
+<dt><code>reset</code></dt>
+<dd>Removes any NetLabel configuration loaded into the kernel and resets the kernel&#8217;s NetLabel state to the default.</dd>
+<dt><code>load</code></dt>
+<dd>Loads the NetLabel configuration specified by /etc/netlabel.rules into the kernel.</dd></dl>
 <h2>Exit Status</h2>
 <p>Returns zero on success, errno values on failure.</p>
 <h2>Notes</h2>

@@ -16,20 +16,20 @@ description: "fail2ban-server – start the server"
 <p> Only use this command for debugging purpose. Start the server with fail2ban-client instead. The default behaviour is to start the server in background.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code></p>
-<dd> start in background</p>
-<dt><code>-f</code></p>
-<dd> start in foreground</p>
-<dt><code>-s</code> &lt;FILE&gt;</p>
-<dd> socket path</p>
-<dt><code>-p</code> &lt;FILE&gt;</p>
-<dd> pidfile path</p>
-<dt><code>-x</code></p>
-<dd> force execution of the server (remove socket file)</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> display this help message</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> print the version</dl>
+<dt><code>-b</code></dt>
+<dd> start in background</dd>
+<dt><code>-f</code></dt>
+<dd> start in foreground</dd>
+<dt><code>-s</code> &lt;FILE&gt;</dt>
+<dd> socket path</dd>
+<dt><code>-p</code> &lt;FILE&gt;</dt>
+<dd> pidfile path</dd>
+<dt><code>-x</code></dt>
+<dd> force execution of the server (remove socket file)</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> display this help message</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> print the version</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Cyril Jaquier &lt;cyril.jaquier [at] fail2ban.org&gt;. Many contributions by Yaroslav O. Halchenko &lt;debian [at] onerussian.com&gt;.</p>
 <h2>REPORTING BUGS</h2>

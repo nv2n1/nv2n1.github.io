@@ -18,16 +18,16 @@ description: "bbkeys – a general XWindow keygrabber"
 <h2>OPTIONS</h2>
 <p> A summary of the options supported by <code>bbkeys</code> is included below. </p>
 <dl>
-<dt><code>-d or &#8211;display</code> <i>&lt;display name&gt;</i></p>
-<dd> use alternate config file. (default is ~/.bbkeysrc)</p>
-<dt><code>-D or &#8211;debug</code></p>
-<dd> print debugging information</p>
-<dt><code>-c or &#8211;config</code> <i>&lt;filename&gt;</i></p>
-<dd> use alternate config file. (default is ~/.bbkeysrc)</p>
-<dt><code>-v or &#8211;version</code></p>
-<dd> display version number and exit</p>
-<dt><code>-h or &#8211;help</code></p>
-<dd> display help message </p>
+<dt><code>-d or &#8211;display</code> <i>&lt;display name&gt;</i></dt>
+<dd> use alternate config file. (default is ~/.bbkeysrc)</dd>
+<dt><code>-D or &#8211;debug</code></dt>
+<dd> print debugging information</dd>
+<dt><code>-c or &#8211;config</code> <i>&lt;filename&gt;</i></dt>
+<dd> use alternate config file. (default is ~/.bbkeysrc)</dd>
+<dt><code>-v or &#8211;version</code></dt>
+<dd> display version number and exit</dd>
+<dt><code>-h or &#8211;help</code></dt>
+<dd> display help message </dd>
 </dl>
 <h2>FILES</h2>
 <p> <i></i><br />

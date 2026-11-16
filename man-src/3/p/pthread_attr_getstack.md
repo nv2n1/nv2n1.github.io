@@ -10,16 +10,14 @@ description: "pthread_attr_setstack, pthread_attr_getstack – set/get stack att
 <p>pthread_attr_setstack, pthread_attr_getstack &#8211; set/get stack attributes in thread attributes object</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;pthread.h&gt;
-
 int pthread_attr_setstack(pthread_attr_t *attr,
                           void *stackaddr, size_t stacksize);
 int pthread_attr_getstack(const pthread_attr_t *attr,
                           void **stackaddr, size_t *stacksize);
-
 Compile and link with - pthread.</code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>pthread_attr_getstack</code>(), <code>pthread_attr_setstack</code>():</p>
 <dl>
-<dd>_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+<dd>_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <h2>Description</h2>
 <p>The <code>pthread_attr_setstack</code>() function sets the stack address and stack size attributes of the thread attributes object referred to by <i>attr</i> to the values specified in <i>stackaddr</i> and <i>stacksize</i>, respectively. These attributes specify the location and size of the stack that should be used by a thread that is created using the thread attributes object <i>attr</i>. </p>
 <p> <i>stackaddr</i> should point to the lowest addressable byte of a buffer of <i>stacksize</i> bytes that was allocated by the caller. The pages of the allocated buffer should be both readable and writable. </p>
@@ -29,8 +27,8 @@ Compile and link with - pthread.</code></pre>
 <h2>Errors</h2>
 <p><code>pthread_attr_setstack</code>() can fail with the following error:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd><i>stacksize</i> is less than <code>PTHREAD_STACK_MIN</code> (16384) bytes. On some systems, this error may also occur if <i>stackaddr</i> or <i>stackaddr&nbsp;+&nbsp;stacksize</i> is not suitably aligned.</dl>
+<dt><code>EINVAL</code></dt>
+<dd><i>stacksize</i> is less than <code>PTHREAD_STACK_MIN</code> (16384) bytes. On some systems, this error may also occur if <i>stackaddr</i> or <i>stackaddr&nbsp;+&nbsp;stacksize</i> is not suitably aligned.</dd></dl>
 <p> POSIX.1 also documents an <code>EACCES</code> error if the stack area described by <i>stackaddr</i> and <i>stacksize</i> is not both readable and writable by the caller.</p>
 <h2>Versions</h2>
 <p>These functions are provided by glibc since version 2.2.</p>

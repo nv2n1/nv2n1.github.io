@@ -12,13 +12,12 @@ rdma_destroy_qp - Deallocate a QP.
 
 <pre><code>#include &lt;rdma/rdma_cma.h&gt;
 void rdma_destroy_qp
-
     (struct rdma_cm_id *id);</code></pre>
 
 <h2>Arguments</h2>
 
 <dl><dt>id
-<dd>RDMA identifier.</dl>
+</dt><dd>RDMA identifier.</dd></dl>
 
 <h2>Description</h2>
 

@@ -17,8 +17,8 @@ description: "gnome-panel – Display the GNOME panel"
 <p> Small applications called <code>applets</code> can also be embedded in the panels. The applets usually provide quick access to specific features.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>&#8211;replace</i></p>
-<dd> Replace an already running panel.</dl>
+<dt><i>&#8211;replace</i></dt>
+<dd> Replace an already running panel.</dd></dl>
 <h2>BUGS</h2>
 <p> If you find bugs in the <i>gnome-panel</i> program, please report these on <a rel="nofollow" href="https://bugzilla.gnome.org.">https://bugzilla.gnome.org.</a> </p>
 <h2>Index</h2>

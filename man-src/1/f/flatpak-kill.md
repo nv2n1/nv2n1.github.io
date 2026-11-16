@@ -11,24 +11,24 @@ description: "flatpak-kill – Stop a running application"
 <p> flatpak-kill &#8211; Stop a running application </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>flatpak kill</code> INSTANCE</dl>
+<dt> <code>flatpak kill</code> INSTANCE</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>Stop a running Flatpak instance. </p>
+<dd>Stop a running Flatpak instance. </dd>
 <p> INSTANCE can be either the numeric instance ID or the application ID of a running Flatpak. You can use <code>flatpak ps</code> to find the instance IDs of running flatpaks.</p>
 <h2>OPTIONS</h2>
 <p> The following options are understood: </p>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Show help options and exit.</dl>
+</dt><dd> Show help options and exit.</dd></dl>
 <p> <code>-v</code>, <code>&#8211;verbose</code></p>
 <dl>
 <dt>
-<dd> Print debug information during command processing.</dl>
+</dt><dd> Print debug information during command processing.</dd></dl>
 <p> <code>&#8211;ostree-verbose</code></p>
 <dl>
 <dt>
-<dd> Print OSTree debug information during command processing.</dl>
+</dt><dd> Print OSTree debug information during command processing.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> <code>$ flatpak kill org.gnome.Todo</code></p>
 <h2>SEE ALSO</h2>

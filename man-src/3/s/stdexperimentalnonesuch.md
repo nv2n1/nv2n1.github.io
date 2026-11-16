@@ -11,14 +11,10 @@ std::experimental::nonesuch - std::experimental::nonesuch
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / type_traits&gt;
-
     struct nonesuch {
-
     ~nonesuch() = delete;
-
     nonesuch(nonesuch const &amp;) = delete;
     (library fundamentals TS v2)
-
         void
         operator=(nonesuch const &amp;) = delete;
 };</code></pre> 

@@ -15,42 +15,42 @@ description: "luatools – ConTeXt TDS Management Tool (aka luatools)"
 <p> <code>ConTeXt TDS Management Tool (aka luatools)</code></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;generate</code></p>
-<dd> generate file database</p>
-<dt><code>&#8211;variables</code></p>
-<dd> show configuration variables</p>
-<dt><code>&#8211;configurations</code></p>
-<dd> show configuration order</p>
-<dt><code>&#8211;expand-braces</code></p>
-<dd> expand complex variable</p>
-<dt><code>&#8211;expand-path</code></p>
-<dd> expand variable (resolve paths)</p>
-<dt><code>&#8211;expand-var</code></p>
-<dd> expand variable (resolve references)</p>
-<dt><code>&#8211;show-path</code></p>
-<dd> show path expansion of &#8230;</p>
-<dt><code>&#8211;var-value</code></p>
-<dd> report value of variable</p>
-<dt><code>&#8211;find-file</code></p>
-<dd> report file location</p>
-<dt><code>&#8211;find-path</code></p>
-<dd> report path of file</p>
-<dt><code>&#8211;make</code></p>
-<dd> [or &#8211;ini] make luatex format</p>
-<dt><code>&#8211;run</code></p>
-<dd> [or &#8211;fmt] run luatex format</p>
-<dt><code>&#8211;compile</code></p>
-<dd> assemble and compile lua inifile</p>
-<dt><code>&#8211;verbose</code></p>
-<dd> give a bit more info</p>
-<dt><code>&#8211;all</code></p>
-<dd> show all found files</p>
-<dt><code>&#8211;format=str</code></p>
-<dd> filter cf format specification (default &#8216;tex&#8217;, use &#8216;any&#8217; for any match)</p>
-<dt><code>&#8211;pattern=str</code></p>
-<dd> filter variables</p>
-<dt><code>&#8211;trackers=list</code></p>
-<dd> enable given trackers</dl>
+<dt><code>&#8211;generate</code></dt>
+<dd> generate file database</dd>
+<dt><code>&#8211;variables</code></dt>
+<dd> show configuration variables</dd>
+<dt><code>&#8211;configurations</code></dt>
+<dd> show configuration order</dd>
+<dt><code>&#8211;expand-braces</code></dt>
+<dd> expand complex variable</dd>
+<dt><code>&#8211;expand-path</code></dt>
+<dd> expand variable (resolve paths)</dd>
+<dt><code>&#8211;expand-var</code></dt>
+<dd> expand variable (resolve references)</dd>
+<dt><code>&#8211;show-path</code></dt>
+<dd> show path expansion of &#8230;</dd>
+<dt><code>&#8211;var-value</code></dt>
+<dd> report value of variable</dd>
+<dt><code>&#8211;find-file</code></dt>
+<dd> report file location</dd>
+<dt><code>&#8211;find-path</code></dt>
+<dd> report path of file</dd>
+<dt><code>&#8211;make</code></dt>
+<dd> [or &#8211;ini] make luatex format</dd>
+<dt><code>&#8211;run</code></dt>
+<dd> [or &#8211;fmt] run luatex format</dd>
+<dt><code>&#8211;compile</code></dt>
+<dd> assemble and compile lua inifile</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> give a bit more info</dd>
+<dt><code>&#8211;all</code></dt>
+<dd> show all found files</dd>
+<dt><code>&#8211;format=str</code></dt>
+<dd> filter cf format specification (default &#8216;tex&#8217;, use &#8216;any&#8217; for any match)</dd>
+<dt><code>&#8211;pattern=str</code></dt>
+<dd> filter variables</dd>
+<dt><code>&#8211;trackers=list</code></dt>
+<dd> enable given trackers</dd></dl>
 <h2>AUTHOR</h2>
 <p> More information about ConTeXt and the tools that come with it can be found at: </p>
 <p> <code>maillist:</code> ntg-context [at] ntg.nl / <a rel="nofollow" href="http://www.ntg.nl/mailman/listinfo/ntg-context">http://www.ntg.nl/mailman/listinfo/ntg-context</a> </p>

@@ -16,8 +16,8 @@ description: "ldns_rr_list_clone"
 <p> ldns_rr_list* ldns_rr_list_clone(const ldns_rr_list *rrlist); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_rr_list_clone</i>()</p>
-<dd>clones an rrlist. .br <code>rrlist</code>: the rrlist to clone .br Returns the cloned rr list</dl>
+<dt> <i>ldns_rr_list_clone</i>()</dt>
+<dd>clones an rrlist. .br <code>rrlist</code>: the rrlist to clone .br Returns the cloned rr list</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

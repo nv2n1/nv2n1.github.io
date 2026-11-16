@@ -13,8 +13,8 @@ description: "pskc_valueformat2str – API function"
 const char *pskc_valueformat2str(pskc_valueformat valueformat);</code></pre>
 <h2>Arguments</h2>
 <dl>
-<dt>pskc_valueformat valueformat</p>
-<dd>an <code>pskc_valueformat</code> enumeration type</dl>
+<dt>pskc_valueformat valueformat</dt>
+<dd>an <code>pskc_valueformat</code> enumeration type</dd></dl>
 <h2>Description</h2>
 <p>Convert <code>pskc_valueformat</code> to a string. For example, pskc_valueformat2str(<code>PSKC_VALUEFORMAT_DECIMAL</code>) will return &quot;DECIMAL&quot;. The returned string must not be deallocated.</p>
 <h2>Returns</h2>

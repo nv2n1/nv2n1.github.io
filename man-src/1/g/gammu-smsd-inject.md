@@ -17,35 +17,35 @@ description: "gammu-smsd-inject – Inject messages into queue of SMS daemon for
 <p> Support for this program depends on features available in currently used SMSD service backend, currently only files (<a href="/docs/linux/man/7-gammu-smsd-files/">gammu-smsd-files</a>(7)) does not support this feature. </p>
 <p> Program accepts following options (please note that long options might be not accepted on some platforms):</p>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Shows help.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Shows version information and compiled in features.</p>
-<dt><code>-c</code>, <code>&#8211;config</code>=<i>file</i></p>
-<dd> Configuration file to use, default is /etc/gammu-smsdrc, on Windows there is no default and configuration file path has to be always specified.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Shows help.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Shows version information and compiled in features.</dd>
+<dt><code>-c</code>, <code>&#8211;config</code>=<i>file</i></dt>
+<dd> Configuration file to use, default is /etc/gammu-smsdrc, on Windows there is no default and configuration file path has to be always specified.</dd></dl>
 <p> For description of message types and their parameters, please check <a href="/docs/linux/man/1-gammu/">gammu</a>(1). The options are identical to ones you can use for gammu sendsms. </p>
 <h2>EXAMPLE</h2>
 <p> To check it out, you need to have configuration file for SMSD, see <a href="/docs/linux/man/5-gammu-smsdrc/">gammu-smsdrc</a>(5) for more details about it. </p>
 <dl>
-<dt>Inject text message up to standard 160 chars:</p>
+<dt>Inject text message up to standard 160 chars:</dt>
 <dd>
 <p> echo &quot;All your base are belong to us&quot; | gammu-smsd-inject TEXT 123456 </p>
 <p> or </p>
 <p> gammu-smsd-inject TEXT 123456 -text &quot;All your base are belong to us&quot; </p>
-<dt>Inject long text message:</p>
+</dd><dt>Inject long text message:</dt>
 <dd>
 <p> echo &quot;All your base are belong to us&quot; | gammu-smsd-inject TEXT 123456 -len 400 </p>
 <p> or </p>
 <p> gammu-smsd-inject TEXT 123456 -len 400 -text &quot;All your base are belong to us&quot; </p>
 <p> or </p>
 <p> gammu-smsd-inject EMS 123456 -text &quot;All your base are belong to us&quot; </p>
-<dt>Inject some funky message with predefined sound and animation from 2 bitmaps:</p>
+</dd><dt>Inject some funky message with predefined sound and animation from 2 bitmaps:</dt>
 <dd>
 <p> gammu-smsd-inject EMS 123456 -text &quot;Greetings&quot; -defsound 1 -text &quot;from Gammu&quot; -tone10 axelf.txt -animation 2 file1.bmp file2.bmp </p>
-<dt>Inject protected message with ringtone:</p>
+</dd><dt>Inject protected message with ringtone:</dt>
 <dd>
 <p> gammu-smsd-inject EMS 123456 -protected 2 -variablebitmaplong ala.bmp -toneSElong axelf.txt -toneSE ring.txt </p>
-</dl>
+</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-gammu-smsdrc/">gammu-smsdrc</a>(5), <a href="/docs/linux/man/1-gammu/">gammu</a>(1), <a href="/docs/linux/man/1-gammu-smsd/">gammu-smsd</a>(1)</p>
 <h2>AUTHOR</h2>

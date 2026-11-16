@@ -17,5 +17,5 @@ description: "npm-load — Load config settings"
 <pre>{
  &quot;dev&quot;: true
 }</pre>
-<dd></dl>
+</dd><dd></dd></dl>
 <p> For a list of all the available command-line configs, see <code>npm help config</code> </p>

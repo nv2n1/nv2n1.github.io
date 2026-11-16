@@ -15,38 +15,38 @@ description: "lnav – ncurses-based log file viewer"
 <p> The log file navigator, lnav, is an enhanced log file viewer that takes advantage of any semantic information that can be gleaned from the files being viewed, such as timestamps and log levels. Using this extra semantic information, lnav can do things like interleaving messages from different files, generate histograms of messages over time, and providing hotkeys for navigating through the file. It is hoped that these features will allow the user to quickly and efficiently zero in on problems.</p>
 <h2>KEY BINDINGS</h2>
 <dl>
-<dt>?</p>
-<dd> View/leave the online help text.</p>
-<dt>q</p>
-<dd> Quit the program.</dl>
+<dt>?</dt>
+<dd> View/leave the online help text.</dd>
+<dt>q</dt>
+<dd> Quit the program.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> Print help and exit</p>
-<dt><code>-H</code></p>
-<dd> Display the internal help text.</p>
-<dt><code>-I</code> path</p>
-<dd> Add the given configuration directory to the search path.</p>
-<dt><code>-i</code></p>
-<dd> Install the given format files in the $HOME/.lnav/formats/installed directory and exit.</p>
-<dt><code>-C</code></p>
-<dd> Check the configuration and exit.</p>
-<dt><code>-d</code> file</p>
-<dd> Write debug messages to the given file.</p>
-<dt><code>-V</code></p>
-<dd> Print version information.</p>
-<dt><code>-a</code></p>
-<dd> Load all of the most recent log file types.</p>
-<dt><code>-r</code></p>
-<dd> Load older rotated log files as well.</p>
-<dt><code>-t</code></p>
-<dd> Prepend timestamps to the lines of data being read in on the standard input.</p>
-<dt><code>-w</code> file</p>
-<dd> Write the contents of the standard input to this file.</dl>
+<dt><code>-h</code></dt>
+<dd> Print help and exit</dd>
+<dt><code>-H</code></dt>
+<dd> Display the internal help text.</dd>
+<dt><code>-I</code> path</dt>
+<dd> Add the given configuration directory to the search path.</dd>
+<dt><code>-i</code></dt>
+<dd> Install the given format files in the $HOME/.lnav/formats/installed directory and exit.</dd>
+<dt><code>-C</code></dt>
+<dd> Check the configuration and exit.</dd>
+<dt><code>-d</code> file</dt>
+<dd> Write debug messages to the given file.</dd>
+<dt><code>-V</code></dt>
+<dd> Print version information.</dd>
+<dt><code>-a</code></dt>
+<dd> Load all of the most recent log file types.</dd>
+<dt><code>-r</code></dt>
+<dd> Load older rotated log files as well.</dd>
+<dt><code>-t</code></dt>
+<dd> Prepend timestamps to the lines of data being read in on the standard input.</dd>
+<dt><code>-w</code> file</dt>
+<dd> Write the contents of the standard input to this file.</dd></dl>
 <h3>Optional arguments:</h3>
 <dl>
-<dt>logfile1</p>
-<dd> The log files or directories to view. If a directory is given, all of the files in the directory will be loaded.</dl>
+<dt>logfile1</dt>
+<dd> The log files or directories to view. If a directory is given, all of the files in the directory will be loaded.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To load and follow the syslog file: </p>
 <pre>

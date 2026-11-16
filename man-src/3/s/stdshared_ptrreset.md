@@ -11,20 +11,14 @@ description: "std::shared_ptr<T>::reset – std::shared_ptr<T>::reset"
 <h2>Synopsis</h2>
 <pre><code>void reset() noexcept;
 (1)(since C++ 11)
-
     template &lt;class Y&gt;
     (2)(since C++ 11)
-
         void reset(Y *ptr);
-
 template &lt;class Y, class Deleter&gt;
 (3)(since C++ 11)
-
     void reset(Y *ptr, Deleter d);
-
 template &lt;class Y, class Deleter, class Alloc&gt;
 (4)(since C++ 11)
-
     void reset(Y *ptr, Deleter d, Alloc alloc);</code></pre>
 <p>Replaces the managed object with an object pointed to by ptr. Optional deleter d can be supplied, which is later used to destroy the new object when no shared_ptr objects own it. By default, delete expression is used as deleter. Proper delete expression corresponding to the supplied type is always selected, this is the reason why the function is implemented as template using a separate parameter Y.<br />
 If *this already owns an object and it is the last shared_ptr owning it, the object is destroyed through the owned deleter.<br />
@@ -46,7 +40,6 @@ alloc &#8211; allocator to use for internal allocations</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;memory&gt;
-
 #include &lt;iostream&gt;
 struct Foo {
     Foo(int n = 0) noexcept
@@ -64,12 +57,10 @@ struct Foo {
     {
         return bar;
     }
-
   private:
     int bar;
 };
 int main()
-
 {
     std::shared_ptr&lt;Foo&gt; sptr = std::make_shared&lt;Foo&gt;(1);
     std::cout &lt;&lt; &quot;The first Foo's bar is &quot; &lt;&lt; sptr-&gt;getBar() &lt;&lt; &quot;

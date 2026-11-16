@@ -17,30 +17,30 @@ description: "tosh1800-smcinit – initialize the IrDA controler on Toshiba lapt
 <p> Testing was carried on a Toshiba Satellite 1800-514 with Linux kernel 2.4.17. I hope this work could be helpful, it was quite funny to do it however.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a</code>, <code>&#8211;skip-decoding-cfg</code></p>
-<dd>Skip ISA bridge decoding configuration.</p>
-<dt><code>-b</code>, <code>&#8211;skip-smc-ircc-cfg</code></p>
-<dd>Skip SMC-IRCC configuration.</p>
-<dt><code>-v</code>, <code>&#8211;vendor</code>=<i>VALUE</i></p>
-<dd>Look for the specified ISA bridge PCI vendor ID</p>
-<dt><code>-x</code>, <code>&#8211;device</code>=<i>VALUE</i></p>
-<dd>Look for the specified ISA bridge PCI device ID</p>
-<dt><code>-c</code>, <code>&#8211;cfgbase</code>=<i>VALUE</i></p>
-<dd>Set SMC-IRCC IO cfgbase address. Usual value can be 0x2e.</p>
-<dt><code>-s</code>, <code>&#8211;sirbase</code>=<i>VALUE</i></p>
-<dd>Set SMC-IRCC IO sirbase address. Usual value can be 0x2e8.</p>
-<dt><code>-f</code>, <code>&#8211;firbase</code>=<i>VALUE</i></p>
-<dd>Set SMC-IRCC IO firbase address. Usual value can be 0x2f8.</p>
-<dt><code>-m</code>, <code>&#8211;dma</code>=<i>VALUE</i></p>
-<dd>Set SMC-IRCC DMA channel. Usual value can be 3.</p>
-<dt><code>-i</code>, <code>&#8211;irq</code>=<i>VALUE</i></p>
-<dd>Set SMC-IRCC IRQ. Usual value can be 7.</p>
-<dt><code>-p</code>, <code>&#8211;print</code></p>
-<dd>Print ISA bridge configuration.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Show program version.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>Show program options.</dl>
+<dt><code>-a</code>, <code>&#8211;skip-decoding-cfg</code></dt>
+<dd>Skip ISA bridge decoding configuration.</dd>
+<dt><code>-b</code>, <code>&#8211;skip-smc-ircc-cfg</code></dt>
+<dd>Skip SMC-IRCC configuration.</dd>
+<dt><code>-v</code>, <code>&#8211;vendor</code>=<i>VALUE</i></dt>
+<dd>Look for the specified ISA bridge PCI vendor ID</dd>
+<dt><code>-x</code>, <code>&#8211;device</code>=<i>VALUE</i></dt>
+<dd>Look for the specified ISA bridge PCI device ID</dd>
+<dt><code>-c</code>, <code>&#8211;cfgbase</code>=<i>VALUE</i></dt>
+<dd>Set SMC-IRCC IO cfgbase address. Usual value can be 0x2e.</dd>
+<dt><code>-s</code>, <code>&#8211;sirbase</code>=<i>VALUE</i></dt>
+<dd>Set SMC-IRCC IO sirbase address. Usual value can be 0x2e8.</dd>
+<dt><code>-f</code>, <code>&#8211;firbase</code>=<i>VALUE</i></dt>
+<dd>Set SMC-IRCC IO firbase address. Usual value can be 0x2f8.</dd>
+<dt><code>-m</code>, <code>&#8211;dma</code>=<i>VALUE</i></dt>
+<dd>Set SMC-IRCC DMA channel. Usual value can be 3.</dd>
+<dt><code>-i</code>, <code>&#8211;irq</code>=<i>VALUE</i></dt>
+<dd>Set SMC-IRCC IRQ. Usual value can be 7.</dd>
+<dt><code>-p</code>, <code>&#8211;print</code></dt>
+<dd>Print ISA bridge configuration.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Show program version.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>Show program options.</dd></dl>
 <h2>Author</h2>
 <p>This program was made by Daniele Peri &lt;peri [at] csai.unipa.it&gt;</p>
 <h2>Credits</h2>

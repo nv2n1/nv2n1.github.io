@@ -11,37 +11,38 @@ description: "shigofumi – ISDS client"
 <p> shigofumi &#8211; ISDS client </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>shigofumi</code> [<code>-c</code>&nbsp;<wbr><i>FILE</i>]</p>
-<dt> <code>shigofumi</code> [<code>-c</code>&nbsp;<wbr><i>FILE</i>] <code>-e</code>&nbsp;<wbr><i>COMMANDS</i></p>
-<dt> <code>shigofumi</code> <code>-V</code></dl>
+<dt> <code>shigofumi</code> [<code>-c</code>&nbsp;<wbr><i>FILE</i>]</dt>
+<dt> <code>shigofumi</code> [<code>-c</code>&nbsp;<wbr><i>FILE</i>] <code>-e</code>&nbsp;<wbr><i>COMMANDS</i></dt>
+<dt> <code>shigofumi</code> <code>-V</code></dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>Shigofumi is an ISDS client based on libisds library. The client can access ISDS, processes local message and delivery details, and submit file to authorized conversion. </p>
+<dd>Shigofumi is an ISDS client based on libisds library. The client can access ISDS, processes local message and delivery details, and submit file to authorized conversion. </dd>
 <p> Shigofumi is command line oriented program. Once you start it, use <code>help</code> to get list of embedded commands. Use <code>help </code><i>COMMAND</i> to get details about selected <i>COMMAND</i>. Be ware that command listing changes contextually. User can use casual readline shortcuts for line editing (like tab completing). </p>
 <p> While transmitting data over Internet, a progress-bar is updated. User can cancel current network operation by emitting SIGINT signal (Ctrl+C usually).</p>
 <h2>OPTIONS</h2>
 <p> <code>-c </code><i>FILE</i></p>
 <dl>
 <dt>
-<dd> Use configuration <i>FILE</i> instead of default one.</dl>
+</dt><dd> Use configuration <i>FILE</i> instead of default one.</dd></dl>
 <p> <code>-e </code><i>COMMANDS</i></p>
 <dl>
 <dt>
-<dd> Run shigofumi in batch mode: execute each command and terminate then. </p>
+</dt><dd> Run shigofumi in batch mode: execute each command and terminate then. </dd>
 <p> Commands are delimited by new line (
- or ). If any command fails, other commands will not be processed and shigofumi will quit immediately with non-zero exit code. If all commands succeed, shigofumi will return zero code. </p>
+ or 
+). If any command fails, other commands will not be processed and shigofumi will quit immediately with non-zero exit code. If all commands succeed, shigofumi will return zero code. </p>
 <p> <code>Example 1. Authorized Conversion from Shell</code> </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ shigofumi -e 'convert /etc/passwd'
 </pre>
-</dl>
+</dd></dl>
 <p> The command submits /etc/passwd file to authorized conversion. Although it&#8217;s syntactically correct, it will fail because plain text files are not allowed to be converted. Check always return code in your scripts.</dl>
 <p> <code>-V</code></p>
 <dl>
 <dt>
-<dd> Show program version and linked libraries details and exit.</dl>
+</dt><dd> Show program version and linked libraries details and exit.</dd></dl>
 <h2>SHIGOFUMI COMMAND LANGUAGE</h2>
 <p> The language is straightforward. Each command is one case sensitive word followed by (empty) sequence of arguments. Command and arguments are separated by one or more white spaces. If you need to embed white space into argument, use backslash (\) to escape it. If you need to write backslash, escape it with backslash again. Also quotation is supported with double quotes (&quot;). White space and pipe symbol loose their delimiting properties until next double quotes. Backslash is still meta-character inside quoted string and it can be used to embed double quotes into quoted string. </p>
 <p> The argument list can be terminated prematurely with pipe character (|). In that case, the rest of the line will be considered as shell command and output of preceding shigofumi command will be passed to standard input of the shell command. </p>
@@ -62,41 +63,41 @@ $ shigofumi -e 'convert /etc/passwd'
 <p> <code>EDITOR</code></p>
 <dl>
 <dt>
-<dd> Text editor to use if <code>VISUAL</code> is not set.</dl>
+</dt><dd> Text editor to use if <code>VISUAL</code> is not set.</dd></dl>
 <p> <code>VISUAL</code></p>
 <dl>
 <dt>
-<dd> Text editor to use.</dl>
+</dt><dd> Text editor to use.</dd></dl>
 <h2>FILES</h2>
 <p> ~/.shigofumirc</p>
 <dl>
 <dt>
-<dd> Default configuration file location.</dl>
+</dt><dd> Default configuration file location.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-shigofumirc/">shigofumirc</a></code>(5)</p>
 <h2>AUTHOR</h2>
 <p> <code>Petr Písař</code></p>
 <dl>
 <dt>
-<dd> He&#8217;s written Shigofumi and libisds.</dl>
+</dt><dd> He&#8217;s written Shigofumi and libisds.</dd></dl>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
+<dt> 1.</dt>
 <dd> Czech<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ISDS Act&nbsp;<wbr>(300/2008 Coll.)</p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ISDS Act&nbsp;<wbr>(300/2008 Coll.)</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://portal.gov.cz/zakon/300/2008">http://portal.gov.cz/zakon/300/2008</a></dl>
-<dt> 2.</p>
+</dt><dd> <a rel="nofollow" href="http://portal.gov.cz/zakon/300/2008">http://portal.gov.cz/zakon/300/2008</a></dd></dl>
+<dt> 2.</dt>
 <dd> Dokumenty ke stažení section of<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ISDS Information Portal</p>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>ISDS Information Portal</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://www.datoveschranky.info/ke-stazeni">http://www.datoveschranky.info/ke-stazeni</a></dl>
-<dt> 3.</p>
-<dd> Czech POINT web site</p>
+</dt><dd> <a rel="nofollow" href="http://www.datoveschranky.info/ke-stazeni">http://www.datoveschranky.info/ke-stazeni</a></dd></dl>
+<dt> 3.</dt>
+<dd> Czech POINT web site</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="https://www.czechpoint.cz/">https://www.czechpoint.cz/</a></dl>
+</dt><dd> <a rel="nofollow" href="https://www.czechpoint.cz/">https://www.czechpoint.cz/</a></dd></dl>
 </dl>
 <h2>Index</h2>

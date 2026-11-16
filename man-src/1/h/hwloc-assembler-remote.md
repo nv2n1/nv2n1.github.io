@@ -13,16 +13,16 @@ description: "hwloc-assembler-remote – Assemble multiple remote host topologie
 <p> <code>hwloc-assembler-remote</code> [<i>options</i>] output.xml host1 host2 &#8230;</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;ssh &lt;ssh&gt;</code></p>
-<dd> Use the given ssh command (and options) to connect to remote hosts.</p>
-<dt><code>&#8211;lstopo-path &lt;path&gt;</code></p>
-<dd> Use the given path as the remote lstopo command when gathering remote topologies. By default, lstopo is taken from the PATH environment variable.</p>
-<dt><code>&#8211;lstopo-opts &lt;opts&gt;</code></p>
-<dd> Pass the given lstopo options when gathering remote topologies.</p>
-<dt><code>&#8211;show</code></p>
-<dd> Display the resulting topology before exit.</p>
-<dt><code>-f &#8211;force</code></p>
-<dd> Ignore failure to load a remote host topology.</dl>
+<dt><code>&#8211;ssh &lt;ssh&gt;</code></dt>
+<dd> Use the given ssh command (and options) to connect to remote hosts.</dd>
+<dt><code>&#8211;lstopo-path &lt;path&gt;</code></dt>
+<dd> Use the given path as the remote lstopo command when gathering remote topologies. By default, lstopo is taken from the PATH environment variable.</dd>
+<dt><code>&#8211;lstopo-opts &lt;opts&gt;</code></dt>
+<dd> Pass the given lstopo options when gathering remote topologies.</dd>
+<dt><code>&#8211;show</code></dt>
+<dd> Display the resulting topology before exit.</dd>
+<dt><code>-f &#8211;force</code></dt>
+<dd> Ignore failure to load a remote host topology.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> hwloc-assembler-remote is a frontend to hwloc-assembler. It takes care of retrieving the remote nodes&#8217; topologies before assembling them with hwloc-assembler.</p>
 <h2>EXAMPLES</h2>

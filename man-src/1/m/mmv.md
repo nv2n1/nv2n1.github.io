@@ -32,20 +32,20 @@ description: "mmv – move/copy/append/link multiple files by wildcard patterns"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>mln<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>-l</p>
 <p> The task option choices are:</p>
 <dl>
-<dt>-m :</p>
-<dd> move source file to target name. Both must be on the same device. Will not move directories.</p>
-<dt>-x :</p>
-<dd> same as -m, except cross-device moves are done by copying, then deleting source. When copying, sets the permission bits and file modification time of the target file to that of the source file.</p>
-<dt>-r :</p>
-<dd> rename source file or directory to target name. The target name must not include a path: the file remains in the same directory in all cases. This option is the only way of renaming directories under <i>mmv</i>.</p>
-<dt>-c :</p>
-<dd> copy source file to target name. Sets the file modification time and permission bits of the target file to that of the source file, regardless of whether the target file already exists. Chains and cycles (to be explained below) are not allowed.</p>
-<dt>-o :</p>
-<dd> overwrite target name with source file. If target file exists, it is overwritten, keeping its original owner and permission bits. If it does not exist, it is created, with read-write permission bits set according to <i><a href="/docs/linux/man/1-umask/">umask</a></i>(1), and the execute permission bits copied from the source file. In either case, the file modification time is set to the current time.</p>
-<dt>-a :</p>
-<dd> append contents of source file to target name. Target file modification time is set to the current time. If target file does not exist, it is created with permission bits set as under -o. Unlike all other options, -a allows multiple source files to have the same target name, e.g. &quot;mmv -a \*.c big&quot; will append all &quot;.c&quot; files to &quot;big&quot;. Chains and cycles are also allowed, so &quot;mmv -a f f&quot; will double up &quot;f&quot;.</p>
-<dt>-l :</p>
-<dd> link target name to source file. Both must be on the same device, and the source must not be a directory. Chains and cycles are not allowed.</dl>
+<dt>-m :</dt>
+<dd> move source file to target name. Both must be on the same device. Will not move directories.</dd>
+<dt>-x :</dt>
+<dd> same as -m, except cross-device moves are done by copying, then deleting source. When copying, sets the permission bits and file modification time of the target file to that of the source file.</dd>
+<dt>-r :</dt>
+<dd> rename source file or directory to target name. The target name must not include a path: the file remains in the same directory in all cases. This option is the only way of renaming directories under <i>mmv</i>.</dd>
+<dt>-c :</dt>
+<dd> copy source file to target name. Sets the file modification time and permission bits of the target file to that of the source file, regardless of whether the target file already exists. Chains and cycles (to be explained below) are not allowed.</dd>
+<dt>-o :</dt>
+<dd> overwrite target name with source file. If target file exists, it is overwritten, keeping its original owner and permission bits. If it does not exist, it is created, with read-write permission bits set according to <i><a href="/docs/linux/man/1-umask/">umask</a></i>(1), and the execute permission bits copied from the source file. In either case, the file modification time is set to the current time.</dd>
+<dt>-a :</dt>
+<dd> append contents of source file to target name. Target file modification time is set to the current time. If target file does not exist, it is created with permission bits set as under -o. Unlike all other options, -a allows multiple source files to have the same target name, e.g. &quot;mmv -a \*.c big&quot; will append all &quot;.c&quot; files to &quot;big&quot;. Chains and cycles are also allowed, so &quot;mmv -a f f&quot; will double up &quot;f&quot;.</dd>
+<dt>-l :</dt>
+<dd> link target name to source file. Both must be on the same device, and the source must not be a directory. Chains and cycles are not allowed.</dd></dl>
 <p> Only one of these option may be given, and it applies to all matching files. Remaining options need not be given separately, i.e. &quot;mmv -mk&quot; is allowed. </p>
 <p> <center> Multiple Pattern Pairs / Reading Patterns from STDIN<br />
  </center> </p>

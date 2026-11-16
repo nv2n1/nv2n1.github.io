@@ -10,9 +10,6 @@ description: "QuantLib::CappedFlooredCoupon – Capped and/or floored floating-r
 <p>QuantLib::CappedFlooredCoupon &#8211; Capped and/or floored floating-rate coupon. </p>
 <h2>Synopsis</h2>
 <pre><code>void update ()
-
-
-
 Visitability</code></pre>
 <p> Inherits <code>QuantLib::FloatingRateCoupon</code>. Inherited by CappedFlooredCmsCoupon, and CappedFlooredIborCoupon.</p>
 <h3>Public Member Functions</h3>
@@ -23,9 +20,6 @@ Visitability</code></pre>
  <code>Rate</code> <code>convexityAdjustment</code> () const<br />
  <i>convexity adjustment </i> <code>Observer interface</code> </p>
 <pre><code>void update ()
-
-
-
 Visitability</code></pre>
 <p> boost::shared_ptr&lt; <code>FloatingRateCoupon</code> &gt; <code>underlying_</code> </p>
 <p> bool <code>isCapped_</code> </p>

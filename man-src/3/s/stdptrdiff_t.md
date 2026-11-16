@@ -11,7 +11,6 @@ std::ptrdiff_t - std::ptrdiff_t
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;cstddef&gt;
-
 typedef /*implementation-defined*/ ptrdiff_t;</code></pre> 
 std::ptrdiff_t is the signed integer type of the result of subtracting two pointers. 
 
@@ -44,13 +43,7 @@ int main()
 <h2>See also</h2>
 
 <pre><code>unsigned integer type returned by the sizeof operator
-
 size_t   (typedef)
 byte offset from the beginning of a standard-layout type to specified member
-
 offsetof (function macro)
-
-
-
-
 </code></pre>

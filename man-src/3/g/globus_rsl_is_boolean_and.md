@@ -47,11 +47,11 @@ description: "RSL Predicates –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ast</i> Pointer to an RSL parse tree structure.</dl>
+</dt><dd> <i>ast</i> Pointer to an RSL parse tree structure.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The <code>globus_rsl_is_boolean()</code> function returns GLOBUS_TRUE if the RSL parse tree pointed to by <i>ast</i> is a boolean composition; otherwise, it returns GLOBUS_FALSE.</dl>
+</dt><dd> The <code>globus_rsl_is_boolean()</code> function returns GLOBUS_TRUE if the RSL parse tree pointed to by <i>ast</i> is a boolean composition; otherwise, it returns GLOBUS_FALSE.</dd></dl>
 <h3>int globus_rsl_is_boolean_and (globus_rsl_t *ast)</h3>
 <p> RSL boolean and test. The <code>globus_rsl_is_boolean_and()</code> function tests whether the the RSL pointed to by the <i>ast</i> parameter is a boolean &#8216;and&#8217; composition of RSL trees. </p>
 <p> An example of a boolean and relation is </p>
@@ -61,11 +61,11 @@ description: "RSL Predicates –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ast</i> Pointer to an RSL parse tree structure.</dl>
+</dt><dd> <i>ast</i> Pointer to an RSL parse tree structure.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The <code>globus_rsl_is_boolean_and()</code> function returns GLOBUS_TRUE if the RSL parse tree pointed to by <i>ast</i> is a boolean and of RSL parse trees; otherwise, it returns GLOBUS_FALSE.</dl>
+</dt><dd> The <code>globus_rsl_is_boolean_and()</code> function returns GLOBUS_TRUE if the RSL parse tree pointed to by <i>ast</i> is a boolean and of RSL parse trees; otherwise, it returns GLOBUS_FALSE.</dd></dl>
 <h3>int globus_rsl_is_boolean_multi (globus_rsl_t *ast)</h3>
 <p> RSL boolean multi test. The <code>globus_rsl_is_boolean_multi()</code> function tests whether the the RSL pointed to by the <i>ast</i> parameter is a boolean &#8216;multi-request&#8217; composition of RSL trees. </p>
 <p> An example of a boolean multie-request relation is </p>
@@ -76,11 +76,11 @@ description: "RSL Predicates –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ast</i> Pointer to an RSL parse tree structure.</dl>
+</dt><dd> <i>ast</i> Pointer to an RSL parse tree structure.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The <code>globus_rsl_is_boolean_multi()</code> function returns GLOBUS_TRUE if the RSL parse tree pointed to by <i>ast</i> is a boolean multi-request of RSL parse trees; otherwise, it returns GLOBUS_FALSE.</dl>
+</dt><dd> The <code>globus_rsl_is_boolean_multi()</code> function returns GLOBUS_TRUE if the RSL parse tree pointed to by <i>ast</i> is a boolean multi-request of RSL parse trees; otherwise, it returns GLOBUS_FALSE.</dd></dl>
 <h3>int globus_rsl_is_boolean_or (globus_rsl_t *ast)</h3>
 <p> RSL boolean or test. The <code>globus_rsl_is_boolean_or()</code> function tests whether the the RSL pointed to by the <i>ast</i> parameter is a boolean &#8216;or&#8217; composition of RSL trees. </p>
 <p> An example of a boolean or relation is </p>
@@ -90,28 +90,28 @@ description: "RSL Predicates –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ast</i> Pointer to an RSL parse tree structure.</dl>
+</dt><dd> <i>ast</i> Pointer to an RSL parse tree structure.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The <code>globus_rsl_is_boolean_or()</code> function returns GLOBUS_TRUE if the RSL parse tree pointed to by <i>ast</i> is a boolean and of RSL parse trees; otherwise, it returns GLOBUS_FALSE.</dl>
+</dt><dd> The <code>globus_rsl_is_boolean_or()</code> function returns GLOBUS_TRUE if the RSL parse tree pointed to by <i>ast</i> is a boolean and of RSL parse trees; otherwise, it returns GLOBUS_FALSE.</dd></dl>
 <h3>int globus_rsl_is_relation (globus_rsl_t *ast)</h3>
 <p> RSL relation test. The <code>globus_rsl_is_relation()</code> function tests whether the the RSL pointed to by the <i>ast</i> parameter is a relation. The RSL syntax supports the following relation operations:</p>
 <dl>
-<dt><code>= </code></p>
-<dd> Equal</p>
-<dt><code>!= </code></p>
-<dd> Not Equal</p>
-<dt><code>&gt; </code></p>
-<dd> Greater Than</p>
-<dt><code>&gt;= </code></p>
-<dd> Greater Than or Equal</p>
-<dt><code>&lt; </code></p>
-<dd> Less Than</p>
-<dt><code>&lt;= </code></p>
-<dd> Less Than or Equal</p>
-<dt><code>&lt;= </code></p>
-<dd> Less Than or Equal</dl>
+<dt><code>= </code></dt>
+<dd> Equal</dd>
+<dt><code>!= </code></dt>
+<dd> Not Equal</dd>
+<dt><code>&gt; </code></dt>
+<dd> Greater Than</dd>
+<dt><code>&gt;= </code></dt>
+<dd> Greater Than or Equal</dd>
+<dt><code>&lt; </code></dt>
+<dd> Less Than</dd>
+<dt><code>&lt;= </code></dt>
+<dd> Less Than or Equal</dd>
+<dt><code>&lt;= </code></dt>
+<dd> Less Than or Equal</dd></dl>
 <p> Some examples of RSL relations are </p>
 <pre>
 &quot;queue&quot; = &quot;debug&quot;
@@ -124,26 +124,26 @@ description: "RSL Predicates –"
 <p> <code>Note:</code></p>
 <dl>
 <dt>
-<dd> GRAM only supports equality relations.</dl>
+</dt><dd> GRAM only supports equality relations.</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ast</i> Pointer to an RSL parse tree structure.</dl>
+</dt><dd> <i>ast</i> Pointer to an RSL parse tree structure.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The <code>globus_rsl_is_relation()</code> function returns GLOBUS_TRUE if the RSL parse tree pointed to by <i>ast</i> is a relation; otherwise, it returns GLOBUS_FALSE.</dl>
+</dt><dd> The <code>globus_rsl_is_relation()</code> function returns GLOBUS_TRUE if the RSL parse tree pointed to by <i>ast</i> is a relation; otherwise, it returns GLOBUS_FALSE.</dd></dl>
 <h3>int globus_rsl_is_relation_attribute_equal (globus_rsl_t *ast, char *attribute)</h3>
 <p> RSL attribute name test. The <code>globus_rsl_is_relation_attribute_equal()</code> function tests whether the the RSL pointed to by the <i>ast</i> parameter is a relation with the attribute name which matches the string pointed to by the <i>attribute</i> parameter. This attribute name comparision is case-insensitive. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ast</i> Pointer to an RSL parse tree structure.<br />
- <i>attribute</i> Name of the attribute to test</dl>
+</dt><dd> <i>ast</i> Pointer to an RSL parse tree structure.<br />
+ <i>attribute</i> Name of the attribute to test</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The <code>globus_rsl_is_relation_attribute_equal()</code> function returns GLOBUS_TRUE if the RSL parse tree pointed to by <i>ast</i> is a relation and its attribute name matches the <i>attribute</i> parameter; otherwise, it returns GLOBUS_FALSE.</dl>
+</dt><dd> The <code>globus_rsl_is_relation_attribute_equal()</code> function returns GLOBUS_TRUE if the RSL parse tree pointed to by <i>ast</i> is a relation and its attribute name matches the <i>attribute</i> parameter; otherwise, it returns GLOBUS_FALSE.</dd></dl>
 <h3>int globus_rsl_is_relation_eq (globus_rsl_t *ast)</h3>
 <p> RSL equality operation test. The <code>globus_rsl_is_relation_eq()</code> function tests whether the the RSL pointed to by the <i>ast</i> parameter is an equality relation. An example of an equality relation is </p>
 <pre>
@@ -152,11 +152,11 @@ description: "RSL Predicates –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ast</i> Pointer to an RSL parse tree structure.</dl>
+</dt><dd> <i>ast</i> Pointer to an RSL parse tree structure.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The <code>globus_rsl_is_relation_eq()</code> function returns GLOBUS_TRUE if the RSL parse tree pointed to by <i>ast</i> is an equality relation; otherwise, it returns GLOBUS_FALSE.</dl>
+</dt><dd> The <code>globus_rsl_is_relation_eq()</code> function returns GLOBUS_TRUE if the RSL parse tree pointed to by <i>ast</i> is an equality relation; otherwise, it returns GLOBUS_FALSE.</dd></dl>
 <h3>int globus_rsl_is_relation_lessthan (globus_rsl_t *ast)</h3>
 <p> RSL less than operation test. The <code>globus_rsl_is_relation_lessthan()</code> function tests whether the the RSL pointed to by the <i>ast</i> parameter is a less-than relation. An example of a less-than relation is </p>
 <pre>
@@ -165,11 +165,11 @@ description: "RSL Predicates –"
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ast</i> Pointer to an RSL parse tree structure.</dl>
+</dt><dd> <i>ast</i> Pointer to an RSL parse tree structure.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The <code>globus_rsl_is_relation_lessthan()</code> function returns GLOBUS_TRUE if the RSL parse tree pointed to by <i>ast</i> is a less-than relation; otherwise, it returns GLOBUS_FALSE.</dl>
+</dt><dd> The <code>globus_rsl_is_relation_lessthan()</code> function returns GLOBUS_TRUE if the RSL parse tree pointed to by <i>ast</i> is a less-than relation; otherwise, it returns GLOBUS_FALSE.</dd></dl>
 <h3>int globus_rsl_value_is_concatenation (globus_rsl_value_t *ast)</h3>
 <p> RSL value concatenation test. The <code>globus_rsl_value_is_concatenation()</code> function tests whether the the RSL value pointed to by the <i>ast</i> parameter is a concatenation of RSL values. An example of an RSL value concatenation is </p>
 <pre>
@@ -178,11 +178,11 @@ $( &quot;GLOBUSRUN_GASS_URL&quot; ) # &quot;/input&quot;
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ast</i> Pointer to an RSL value structure.</dl>
+</dt><dd> <i>ast</i> Pointer to an RSL value structure.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The <code>globus_rsl_value_is_concatenation()</code> function returns GLOBUS_TRUE if the RSL value pointed to by <i>ast</i> is a value concatenation; otherwise, it returns GLOBUS_FALSE.</dl>
+</dt><dd> The <code>globus_rsl_value_is_concatenation()</code> function returns GLOBUS_TRUE if the RSL value pointed to by <i>ast</i> is a value concatenation; otherwise, it returns GLOBUS_FALSE.</dd></dl>
 <h3>int globus_rsl_value_is_literal (globus_rsl_value_t *ast)</h3>
 <p> RSL literal string test. The <code>globus_rsl_value_is_literal()</code> function tests whether the the RSL value pointed to by the <i>ast</i> parameter is a literal string value. </p>
 <p> An example of a literal string is </p>
@@ -192,11 +192,11 @@ $( &quot;GLOBUSRUN_GASS_URL&quot; ) # &quot;/input&quot;
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ast</i> Pointer to an RSL value structure.</dl>
+</dt><dd> <i>ast</i> Pointer to an RSL value structure.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The <code>globus_rsl_value_is_literal()</code> function returns GLOBUS_TRUE if the RSL value pointed to by <i>ast</i> is a literal string value; otherwise, it returns GLOBUS_FALSE.</dl>
+</dt><dd> The <code>globus_rsl_value_is_literal()</code> function returns GLOBUS_TRUE if the RSL value pointed to by <i>ast</i> is a literal string value; otherwise, it returns GLOBUS_FALSE.</dd></dl>
 <h3>int globus_rsl_value_is_sequence (globus_rsl_value_t *ast)</h3>
 <p> RSL value sequence test. The <code>globus_rsl_value_is_sequence()</code> function tests whether the the RSL value pointed to by the <i>ast</i> parameter is a sequence of RSL values. An example of a sequence of values is </p>
 <pre>
@@ -205,11 +205,11 @@ $( &quot;GLOBUSRUN_GASS_URL&quot; ) # &quot;/input&quot;
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ast</i> Pointer to an RSL value structure.</dl>
+</dt><dd> <i>ast</i> Pointer to an RSL value structure.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The <code>globus_rsl_value_is_sequence()</code> function returns GLOBUS_TRUE if the RSL value pointed to by <i>ast</i> is a value sequnce; otherwise, it returns GLOBUS_FALSE.</dl>
+</dt><dd> The <code>globus_rsl_value_is_sequence()</code> function returns GLOBUS_TRUE if the RSL value pointed to by <i>ast</i> is a value sequnce; otherwise, it returns GLOBUS_FALSE.</dd></dl>
 <h3>int globus_rsl_value_is_variable (globus_rsl_value_t *ast)</h3>
 <p> RSL value variable test. The <code>globus_rsl_value_is_variable()</code> function tests whether the the RSL value pointed to by the <i>ast</i> parameter is a variable reference. RSL values. An example of a variable reference is </p>
 <pre>
@@ -218,11 +218,11 @@ $( &quot;GLOBUSRUN_GASS_URL&quot; )
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>ast</i> Pointer to an RSL value structure.</dl>
+</dt><dd> <i>ast</i> Pointer to an RSL value structure.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> The <code>globus_rsl_value_is_sequence()</code> function returns GLOBUS_TRUE if the RSL value pointed to by <i>ast</i> is a value sequnce; otherwise, it returns GLOBUS_FALSE.</dl>
+</dt><dd> The <code>globus_rsl_value_is_sequence()</code> function returns GLOBUS_TRUE if the RSL value pointed to by <i>ast</i> is a value sequnce; otherwise, it returns GLOBUS_FALSE.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_rsl from the source code. </p>
 <h2>Index</h2>

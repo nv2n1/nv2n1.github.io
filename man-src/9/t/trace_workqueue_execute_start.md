@@ -14,14 +14,14 @@ description: "trace_workqueue_execute_start – called immediately before the wo
 <p><i>work</i></p>
 <dl>
 <dd>
-<dd>pointer to struct work_struct</dl>
+</dd><dd>pointer to struct work_struct</dd></dl>
 <h2>Description</h2>
 <p>Allows to track workqueue execution.</p>
 <h2>Authors</h2>
 <p><code>Jason Baron</code> &lt;jbaron [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>William Cohen</code> &lt;wcohen [at] redhat.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

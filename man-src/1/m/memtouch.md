@@ -16,15 +16,15 @@ description: "memtouch – libmemcached Documentation"
 <h2>OPTIONS</h2>
 <p> You can specify servers via the option:</p>
 <dl>
-<dt><code>&#8211;servers</code></p>
+<dt><code>&#8211;servers</code></dt>
 <dd>
 <p> or via the environment variable:</p>
-<dt><code>`MEMCACHED_SERVERS`</code></p>
+</dd><dt><code>`MEMCACHED_SERVERS`</code></dt>
 <dd>
 <p> If you do not specify either these, the final value in the command line list is the name of a server(s). </p>
 <p> For a full list of operations run the tool with the option:</p>
-<dt><code>&#8211;help</code></p>
-<dd></dl>
+</dd><dt><code>&#8211;help</code></dt>
+<dd></dd></dl>
 <h2>HOME</h2>
 <p> To find out more information please check: <i><a rel="nofollow" href="http://libmemcached.org/">http://libmemcached.org/</a></i></p>
 <h2>AUTHOR</h2>

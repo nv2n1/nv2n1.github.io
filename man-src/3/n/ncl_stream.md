@@ -27,17 +27,17 @@ CALL STREAM (U,V,P,IAM,STUMSL,WRK)
 <h2>Description</h2>
 
 <dl><dt>U
-<dd>(REAL 2 dimensional array, dimensioned as specified in last call to STINIT, input): By default, assumed to contain the first dimensional axis components of the vector field. However, if PLR is non-zero, it is treated as containing the vector magnitudes.
-<dt>V
-<dd>(REAL 2 dimensional array, dimensioned as specified in last call to STINIT, input): By default, assumed to contain the second dimensional axis components of the vector field. However, if PLR is non-zero, it is treated as containing the vector angles.
-<dt>P
-<dd>(REAL, input, DUMMY): This argument is currently ignored. May be assigned a dummy value.
-<dt>IAM
-<dd>(INTEGER array, unknown dimension, input): Area map array previously established by calls to routines in the Areas utility. It is checked to see that the number of area groups is within the limits allowed by Streamlines, then simply passed through to an Areas routine for further processing. Required only if MSK is set to a non-zero value; otherwise it is ignored and may be assigned a dummy value.
-<dt>STUMSL
-<dd>(EXTERNAL subroutine, input): User-definable masked drawing subroutine. Required only if MSK is set to a non-zero value; otherwise it is ignored and may be assigned a dummy value.
-<dt>WRK
-<dd>(REAL array, dimensioned as specified in last call to STINIT, input/output): Work array used to store normalized values of the U and V vector components while the streamlines are calculated. It also holds bit flags indicating whether a grid location is eligible for starting a streamline or placing a directional arrowhead.</dl>
+</dt><dd>(REAL 2 dimensional array, dimensioned as specified in last call to STINIT, input): By default, assumed to contain the first dimensional axis components of the vector field. However, if PLR is non-zero, it is treated as containing the vector magnitudes.
+</dd><dt>V
+</dt><dd>(REAL 2 dimensional array, dimensioned as specified in last call to STINIT, input): By default, assumed to contain the second dimensional axis components of the vector field. However, if PLR is non-zero, it is treated as containing the vector angles.
+</dd><dt>P
+</dt><dd>(REAL, input, DUMMY): This argument is currently ignored. May be assigned a dummy value.
+</dd><dt>IAM
+</dt><dd>(INTEGER array, unknown dimension, input): Area map array previously established by calls to routines in the Areas utility. It is checked to see that the number of area groups is within the limits allowed by Streamlines, then simply passed through to an Areas routine for further processing. Required only if MSK is set to a non-zero value; otherwise it is ignored and may be assigned a dummy value.
+</dd><dt>STUMSL
+</dt><dd>(EXTERNAL subroutine, input): User-definable masked drawing subroutine. Required only if MSK is set to a non-zero value; otherwise it is ignored and may be assigned a dummy value.
+</dd><dt>WRK
+</dt><dd>(REAL array, dimensioned as specified in last call to STINIT, input/output): Work array used to store normalized values of the U and V vector components while the streamlines are calculated. It also holds bit flags indicating whether a grid location is eligible for starting a streamline or placing a directional arrowhead.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

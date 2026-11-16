@@ -12,10 +12,8 @@ std::experimental::atomic_shared_ptr&lt;T&gt;::atomic_shared_ptr - std::experime
 
 <pre><code>constexpr atomic_shared_ptr() noexcept;
 (1)
-
     constexpr atomic_shared_ptr(shared_ptr&lt;T&gt; desired) noexcept;
 (2)
-
     atomic_shared_ptr(const atomic_shared_ptr &amp;) = delete;
 (3)</code></pre> 
 Constructs a new atomic_shared_ptr object. 

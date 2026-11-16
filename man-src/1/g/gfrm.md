@@ -14,32 +14,32 @@ description: "gfrm – manual page for gfrm (glusterfs-coreutils) 0.2.0"
 <h2>DESCRIPTION</h2>
 <p> Remove (unlink) the files (or directories) from a remote Gluster volume.</p>
 <dl>
-<dt><code>-f</code>, <code>&#8211;force</code></p>
-<dd> ignore nonexistent files, never prompt</p>
-<dt><code>-o</code>, <code>&#8211;xlator-option</code>=<i>OPTION</i></p>
-<dd> specify a translator option for the connection. Multiple options are supported and take the form xlator.key=value.</p>
-<dt><code>-p</code>, <code>&#8211;port</code>=<i>PORT</i></p>
-<dd> specify the port on which to connect</p>
-<dt><code>-r</code>, <code>&#8211;recursive</code></p>
-<dd> remove directories and their contents recursively</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-f</code>, <code>&#8211;force</code></dt>
+<dd> ignore nonexistent files, never prompt</dd>
+<dt><code>-o</code>, <code>&#8211;xlator-option</code>=<i>OPTION</i></dt>
+<dd> specify a translator option for the connection. Multiple options are supported and take the form xlator.key=value.</dd>
+<dt><code>-p</code>, <code>&#8211;port</code>=<i>PORT</i></dt>
+<dd> specify the port on which to connect</dd>
+<dt><code>-r</code>, <code>&#8211;recursive</code></dt>
+<dd> remove directories and their contents recursively</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd> gfrm <a href="glfs://localhost/groot/path/to/file">glfs://localhost/groot/path/to/file</a></p>
+</dt><dd> gfrm <a href="glfs://localhost/groot/path/to/file">glfs://localhost/groot/path/to/file</a></dd>
 <dt>
-<dd> Remove the file /path/to/file on the Gluster volume of groot on host localhost.</p>
+</dt><dd> Remove the file /path/to/file on the Gluster volume of groot on host localhost.</dd>
 <dt>
-<dd> gfrm -r <a href="glfs://localhost/groot/path/to/directory">glfs://localhost/groot/path/to/directory</a></p>
+</dt><dd> gfrm -r <a href="glfs://localhost/groot/path/to/directory">glfs://localhost/groot/path/to/directory</a></dd>
 <dt>
-<dd> Recursively remove the directory /path/to/directory on the Gluster volume of groot on host localhost.</p>
+</dt><dd> Recursively remove the directory /path/to/directory on the Gluster volume of groot on host localhost.</dd>
 <dt>
-<dd> gfcli (localhost/groot)&gt; rm /file</p>
+</dt><dd> gfcli (localhost/groot)&gt; rm /file</dd>
 <dt>
-<dd> In the context of a shell with a connection established, remove the file on the root of the Gluster volume groot on localhost.</dl>
+</dt><dd> In the context of a shell with a connection established, remove the file on the root of the Gluster volume groot on localhost.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Craig Cabrey.</p>
 <h2>COPYRIGHT</h2>

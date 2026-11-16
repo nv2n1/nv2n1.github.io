@@ -11,24 +11,20 @@ description: "scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl – multiply
 <h2>Synopsis</h2>
 <pre><code>#include &lt;math.h&gt;
 double scalbln(double x, long exp);
-
 float scalblnf(float x, long exp);
-
 long double scalblnl(long double x, long exp);
 double scalbn(double x, int exp);
-
 float scalbnf(float x, int exp);
-
 long double scalbnl(long double x, int exp);</code></pre>
 <p> Link with <i>-lm</i>. Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): <code>scalbln</code>(), <code>scalblnf</code>(), <code>scalblnl</code>():</p>
 <dl>
 <dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE</dd></dl>
 <p> <code>scalbn</code>(), <code>scalbnf</code>(), <code>scalbnl</code>():</p>
 <dl>
 <dd>_ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 <h2>Description</h2>
 <p>These functions multiply their first argument <i>x</i> by <code>FLT_RADIX</code> (probably 2) to the power of <i>exp</i>, that is: </p>
 <pre> x * FLT_RADIX ** exp</pre>
@@ -44,10 +40,10 @@ long double scalbnl(long double x, int exp);</code></pre>
 <p>See <code><a href="/docs/linux/man/7-math_error/">math_error</a></code>(7) for information on how to determine whether an error has occurred when calling these functions. </p>
 <p> The following errors can occur:</p>
 <dl>
-<dt>Range error, overflow</p>
-<dd>An overflow floating-point exception (<code>FE_OVERFLOW</code>) is raised.</p>
-<dt>Range error, underflow</p>
-<dd><i>errno</i> is set to <code>ERANGE</code>. An underflow floating-point exception (<code>FE_UNDERFLOW</code>) is raised.</dl>
+<dt>Range error, overflow</dt>
+<dd>An overflow floating-point exception (<code>FE_OVERFLOW</code>) is raised.</dd>
+<dt>Range error, underflow</dt>
+<dd><i>errno</i> is set to <code>ERANGE</code>. An underflow floating-point exception (<code>FE_UNDERFLOW</code>) is raised.</dd></dl>
 <h2>Versions</h2>
 <p>These functions first appeared in glibc in version 2.1.</p>
 <h2>Attributes</h2>

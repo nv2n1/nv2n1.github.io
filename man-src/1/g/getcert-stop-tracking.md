@@ -15,26 +15,26 @@ description: "getcert"
 <p> Tells <i>certmonger</i> to stop monitoring or attempting to obtain or refresh a certificate. </p>
 <h2>TRACKING OPTIONS</h2>
 <dl>
-<dt><code>-i</code> NAME</p>
-<dd> The certificate was tracked using the request with the specified nickname. If this option is not specified, some combination of <code>-d</code> and <code>-n</code> or <code>-f</code> can be used to specify which certificate should henceforth be forgotten. </p>
+<dt><code>-i</code> NAME</dt>
+<dd> The certificate was tracked using the request with the specified nickname. If this option is not specified, some combination of <code>-d</code> and <code>-n</code> or <code>-f</code> can be used to specify which certificate should henceforth be forgotten. </dd>
 </dl>
 <h2>KEY AND CERTIFICATE STORAGE OPTIONS</h2>
 <dl>
-<dt><code>-d</code> DIR</p>
-<dd> The certificate is the one stored in the specified NSS database.</p>
-<dt><code>-n</code> NAME</p>
-<dd> The certificate is the one which has this nickname. Only valid with <code>-d</code>.</p>
-<dt><code>-t</code> TOKEN</p>
-<dd> If the NSS database has more than one token available, the certificate is stored in this token. This argument only rarely needs to be specified. Only valid with <code>-d</code>.</p>
-<dt><code>-f</code> FILE</p>
-<dd> The certificate is or was to be stored in this file.</p>
-<dt><code>-k</code> FILE</p>
-<dd> The private key is or was to be stored in this file. Only valid with <code>-f</code>. </p>
+<dt><code>-d</code> DIR</dt>
+<dd> The certificate is the one stored in the specified NSS database.</dd>
+<dt><code>-n</code> NAME</dt>
+<dd> The certificate is the one which has this nickname. Only valid with <code>-d</code>.</dd>
+<dt><code>-t</code> TOKEN</dt>
+<dd> If the NSS database has more than one token available, the certificate is stored in this token. This argument only rarely needs to be specified. Only valid with <code>-d</code>.</dd>
+<dt><code>-f</code> FILE</dt>
+<dd> The certificate is or was to be stored in this file.</dd>
+<dt><code>-k</code> FILE</dt>
+<dd> The private key is or was to be stored in this file. Only valid with <code>-f</code>. </dd>
 </dl>
 <h2>OTHER OPTIONS</h2>
 <dl>
-<dt><code>-v</code></p>
-<dd> Be verbose about errors. Normally, the details of an error received from the daemon will be suppressed if the client can make a diagnostic suggestion. </p>
+<dt><code>-v</code></dt>
+<dd> Be verbose about errors. Normally, the details of an error received from the daemon will be suppressed if the client can make a diagnostic suggestion. </dd>
 </dl>
 <h2>BUGS</h2>
 <p> Please file tickets for any that you find at <a rel="nofollow" href="https://fedorahosted.org/certmonger/">https://fedorahosted.org/certmonger/</a> </p>

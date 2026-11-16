@@ -15,12 +15,12 @@ description: "llvm-ranlib – Generate index for LLVM archive"
 <p> The <code>llvm-ranlib</code> command is similar to the common Unix utility, <tt>&quot;ranlib&quot;</tt>. It adds or updates the symbol table in an <font SIZE="-1">LLVM</font> archive file. Note that using the <code>llvm-ar</code> modifier <i>s</i> is usually more efficient than running <code>llvm-ranlib</code> which is only provided only for completness and compatibility. Unlike other implementations of <tt>&quot;ranlib&quot;</tt>, <code>llvm-ranlib</code> indexes <font SIZE="-1">LLVM</font> bitcode files, not native object modules. You can list the contents of the symbol table with the <tt>&quot;llvm-nm -s&quot;</tt> command.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><i>archive-file</i></p>
-<dd> Specifies the archive-file to which the symbol table is added or updated.</p>
-<dt><i>&#8211;version</i></p>
-<dd> Print the version of <code>llvm-ranlib</code> and exit without building a symbol table.</p>
-<dt><i>-help</i></p>
-<dd> Print usage help for <code>llvm-ranlib</code> and exit without building a symbol table.</dl>
+<dt><i>archive-file</i></dt>
+<dd> Specifies the archive-file to which the symbol table is added or updated.</dd>
+<dt><i>&#8211;version</i></dt>
+<dd> Print the version of <code>llvm-ranlib</code> and exit without building a symbol table.</dd>
+<dt><i>-help</i></dt>
+<dd> Print usage help for <code>llvm-ranlib</code> and exit without building a symbol table.</dd></dl>
 <h2>EXIT STATUS</h2>
 <p> If <code>llvm-ranlib</code> succeeds, it will exit with 0. If an error occurs, a non-zero exit code will be returned.</p>
 <h2>SEE ALSO</h2>

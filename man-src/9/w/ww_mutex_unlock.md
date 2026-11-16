@@ -14,12 +14,12 @@ description: "ww_mutex_unlock – release the w/w mutex"
 <p><i>lock</i></p>
 <dl>
 <dd>
-<dd>the mutex to be released</dl>
+</dd><dd>the mutex to be released</dd></dl>
 <h2>Description</h2>
 <p>Unlock a mutex that has been locked by this task previously with any of the ww_mutex_lock* functions (with or without an acquire context). It is forbidden to release the locks after releasing the acquire context. </p>
 <p> This function must not be used in interrupt context. Unlocking of a unlocked mutex is not allowed.</p>
 <h2>Author</h2>
 <p><code>Rusty Russell</code> &lt;rusty [at] rustcorp.com.au&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

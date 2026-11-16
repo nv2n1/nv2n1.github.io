@@ -16,16 +16,16 @@ description: "sg_scan – scans sg devices (or SCSI/ATAPI/ATA devices) and print
 <p> In Linux 2.6 and 3 series kernels, the lsscsi utility may be helpful. Apart from providing more information (by data-mining in the sysfs pseudo file system), it does not need root permissions to execute, as this utility would typically need.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a</code></p>
-<dd>do alphabetical scan (i.e. sga, sgb, sgc). Note that sg device nodes with an alphabetical index have been deprecated since the Linux kernel 2.2 series.</p>
-<dt><code>-i</code></p>
-<dd>do a SCSI INQUIRY, output results in a second (indented) line. If the device is an ATA disk then output information from an ATA IDENTIFY command</p>
-<dt><code>-n</code></p>
-<dd>do numeric scan (i.e. sg0, sg1&#8230;) [default]</p>
-<dt><code>-w</code></p>
-<dd>use a read/write flag when opening sg device (default is read-only)</p>
-<dt><code>-x</code></p>
-<dd>extra information output about queuing</dl>
+<dt><code>-a</code></dt>
+<dd>do alphabetical scan (i.e. sga, sgb, sgc). Note that sg device nodes with an alphabetical index have been deprecated since the Linux kernel 2.2 series.</dd>
+<dt><code>-i</code></dt>
+<dd>do a SCSI INQUIRY, output results in a second (indented) line. If the device is an ATA disk then output information from an ATA IDENTIFY command</dd>
+<dt><code>-n</code></dt>
+<dd>do numeric scan (i.e. sg0, sg1&#8230;) [default]</dd>
+<dt><code>-w</code></dt>
+<dd>use a read/write flag when opening sg device (default is read-only)</dd>
+<dt><code>-x</code></dt>
+<dd>extra information output about queuing</dd></dl>
 <h2>Notes</h2>
 <p>This utility was written at a time when hotplugging of SCSI devices was not supported in Linux. It used a simple algorithm to scan sg device nodes in ascending numeric or alphabetical order, stopping after there were 4 consecutive errors. </p>
 <p> In the Linux kernel 2.6 series, this utility uses sysfs to find which sg device nodes are active and only checks those. Hence there can be large &quot;holes&quot; in the numbering of sg device nodes (e.g. after an adapter has been removed) and still all active sg device nodes will be listed. This utility assumes that sg device nodes are named using the normal conventions and searches from /dev/sg0 to /dev/sg4095 inclusive.</p>

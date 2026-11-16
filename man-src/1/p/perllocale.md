@@ -32,21 +32,19 @@ url: "/docs/linux/man/1-perllocale/"
  A locale is a set of data that describes various aspects of how various communities in the world categorize their world. These categories are broken down into the following types (some of which include a brief note here):
 <dl>
 <dt>Category &quot;LC_NUMERIC&quot;: Numeric formatting
-<dd> This indicates how numbers should be formatted for human readability, for example the character used as the decimal point.
-<dt>Category &quot;LC_MONETARY&quot;: Formatting of monetary amounts
-<dd> 
-
-<dt>Category &quot;LC_TIME&quot;: Date/Time formatting
-<dd> 
-
-<dt>Category &quot;LC_MESSAGES&quot;: Error and other messages
-<dd> This is used by Perl itself only for accessing operating system error messages via $! and $^E.
-<dt>Category &quot;LC_COLLATE&quot;: Collation
-<dd> This indicates the ordering of letters for comparison and sorting. In Latin alphabets, for example, ``b'', generally follows ``a''.
-<dt>Category &quot;LC_CTYPE&quot;: Character Types
-<dd> This indicates, for example if a character is an uppercase letter.
-<dt>Other categories
-<dd> Some platforms have other categories, dealing with such things as measurement units and paper sizes. None of these are used directly by Perl, but outside operations that Perl interacts with may use these. See ``Not within the scope of ''use locale&quot;&quot; below.</dl>
+</dt><dd> This indicates how numbers should be formatted for human readability, for example the character used as the decimal point.
+</dd><dt>Category &quot;LC_MONETARY&quot;: Formatting of monetary amounts
+</dt><dd> 
+</dd><dt>Category &quot;LC_TIME&quot;: Date/Time formatting
+</dt><dd> 
+</dd><dt>Category &quot;LC_MESSAGES&quot;: Error and other messages
+</dt><dd> This is used by Perl itself only for accessing operating system error messages via $! and $^E.
+</dd><dt>Category &quot;LC_COLLATE&quot;: Collation
+</dt><dd> This indicates the ordering of letters for comparison and sorting. In Latin alphabets, for example, ``b'', generally follows ``a''.
+</dd><dt>Category &quot;LC_CTYPE&quot;: Character Types
+</dt><dd> This indicates, for example if a character is an uppercase letter.
+</dd><dt>Other categories
+</dt><dd> Some platforms have other categories, dealing with such things as measurement units and paper sizes. None of these are used directly by Perl, but outside operations that Perl interacts with may use these. See ``Not within the scope of ''use locale&quot;&quot; below.</dd></dl>
  
 
  More details on the categories used by Perl are given below in ``<font SIZE="-1">LOCALE CATEGORIES''</font>. 
@@ -58,19 +56,19 @@ url: "/docs/linux/man/1-perllocale/"
  Perl itself (outside the <font SIZE="-1">POSIX</font> module) will not use locales unless specifically requested to (but again note that Perl may interact with code that does use them). Even if there is such a request, <b>all</b> of the following must be true for it to work properly:
 <dl>
 <dt>&bull;
-<dd> <b>Your operating system must support the locale system</b>. If it does, you should find that the <tt>&quot;setlocale()&quot;</tt> function is a documented part of its C library.
-<dt>&bull;
-<dd> <b>Definitions for locales that you use must be installed</b>. You, or your system administrator, must make sure that this is the case. The available locales, the location in which they are kept, and the manner in which they are installed all vary from system to system. Some systems provide only a few, hard-wired locales and do not allow more to be added. Others allow you to add ``canned'' locales provided by the system supplier. Still others allow you or the system administrator to define and add arbitrary locales. (You may have to ask your supplier to provide canned locales that are not delivered with your operating system.) Read your system documentation for further illumination.
-<dt>&bull;
-<dd> <b>Perl must believe that the locale system is supported</b>. If it does, <tt>&quot;perl -V:d_setlocale&quot;</tt> will say that the value for <tt>&quot;d_setlocale&quot;</tt> is <tt>&quot;define&quot;</tt>.</dl>
+</dt><dd> <b>Your operating system must support the locale system</b>. If it does, you should find that the <tt>&quot;setlocale()&quot;</tt> function is a documented part of its C library.
+</dd><dt>&bull;
+</dt><dd> <b>Definitions for locales that you use must be installed</b>. You, or your system administrator, must make sure that this is the case. The available locales, the location in which they are kept, and the manner in which they are installed all vary from system to system. Some systems provide only a few, hard-wired locales and do not allow more to be added. Others allow you to add ``canned'' locales provided by the system supplier. Still others allow you or the system administrator to define and add arbitrary locales. (You may have to ask your supplier to provide canned locales that are not delivered with your operating system.) Read your system documentation for further illumination.
+</dd><dt>&bull;
+</dt><dd> <b>Perl must believe that the locale system is supported</b>. If it does, <tt>&quot;perl -V:d_setlocale&quot;</tt> will say that the value for <tt>&quot;d_setlocale&quot;</tt> is <tt>&quot;define&quot;</tt>.</dd></dl>
  
 
  If you want a Perl application to process and present your data according to a particular locale, the application code should include the <tt>&quot;use locale&quot;</tt> pragma (see ``The ''use locale`` pragma'') where appropriate, and <b>at least one</b> of the following must be true:
 <dl>
 <dt>1.
-<dd> <b>The locale-determining environment variables (see ``</b><font SIZE="-1"><b>ENVIRONMENT''</b></font><b>) must be correctly set up</b> at the time the application is started, either by yourself or by whomever set up your system account; or
-<dt>2.
-<dd> <b>The application must set its own locale</b> using the method described in ``The setlocale function''.</dl>
+</dt><dd> <b>The locale-determining environment variables (see ``</b><font SIZE="-1"><b>ENVIRONMENT''</b></font><b>) must be correctly set up</b> at the time the application is started, either by yourself or by whomever set up your system account; or
+</dd><dt>2.
+</dt><dd> <b>The application must set its own locale</b> using the method described in ``The setlocale function''.</dd></dl>
 
 <h2>USING LOCALES</h2>
 
@@ -85,76 +83,58 @@ url: "/docs/linux/man/1-perllocale/"
  The operations that are affected by locale are:
 <dl>
 <dt><b>Not within the scope of </b>&quot;use locale&quot;
-<dd> Only certain operations (all originating outside Perl) should be affected, as follows:
-<dl>
-<dt>
-<dd>
+</dt><dd> Only certain operations (all originating outside Perl) should be affected, as follows:
+</dd><dl>
 <dl>
 <dt>&bull;
-<dd> The current locale is used when going outside of Perl with operations like <b>system()</b> or qx//, if those operations are locale-sensitive.
-<dt>&bull;
-<dd> Also Perl gives access to various C library functions through the <font SIZE="-1">POSIX</font> module. Some of those functions are always affected by the current locale. For example, <tt>&quot;POSIX::strftime()&quot;</tt> uses <tt>&quot;LC_TIME&quot;</tt>; <tt>&quot;POSIX::strtod()&quot;</tt> uses <tt>&quot;LC_NUMERIC&quot;</tt>; <tt>&quot;POSIX::strcoll()&quot;</tt> and <tt>&quot;POSIX::strxfrm()&quot;</tt> use <tt>&quot;LC_COLLATE&quot;</tt>. All such functions will behave according to the current underlying locale, even if that locale isn't exposed to Perl space. 
-
+</dt><dd> The current locale is used when going outside of Perl with operations like <b>system()</b> or qx//, if those operations are locale-sensitive.
+</dd><dt>&bull;
+</dt><dd> Also Perl gives access to various C library functions through the <font SIZE="-1">POSIX</font> module. Some of those functions are always affected by the current locale. For example, <tt>&quot;POSIX::strftime()&quot;</tt> uses <tt>&quot;LC_TIME&quot;</tt>; <tt>&quot;POSIX::strtod()&quot;</tt> uses <tt>&quot;LC_NUMERIC&quot;</tt>; <tt>&quot;POSIX::strcoll()&quot;</tt> and <tt>&quot;POSIX::strxfrm()&quot;</tt> use <tt>&quot;LC_COLLATE&quot;</tt>. All such functions will behave according to the current underlying locale, even if that locale isn't exposed to Perl space. 
  This applies as well to I18N::Langinfo.
-<dt>&bull;
-<dd> <font SIZE="-1">XS</font> modules for all categories but <tt>&quot;LC_NUMERIC&quot;</tt> get the underlying locale, and hence any C library functions they call will use that underlying locale. For more discussion, see ``<font SIZE="-1">CAVEATS''</font> in perlxs.</dl>
+</dd><dt>&bull;
+</dt><dd> <font SIZE="-1">XS</font> modules for all categories but <tt>&quot;LC_NUMERIC&quot;</tt> get the underlying locale, and hence any C library functions they call will use that underlying locale. For more discussion, see ``<font SIZE="-1">CAVEATS''</font> in perlxs.</dd></dl>
 </dl>
 
 <dl>
 <dt>
-<dd> 
-
+</dt><dd> 
  Note that all C programs (including the perl interpreter, which is written in C) always have an underlying locale. That locale is the ``C'' locale unless changed by a call to <b>setlocale()</b>. When Perl starts up, it changes the underlying locale to the one which is indicated by the ``<font SIZE="-1">ENVIRONMENT''</font>. When using the <font SIZE="-1">POSIX</font> module or writing <font SIZE="-1">XS</font> code, it is important to keep in mind that the underlying locale may be something other than ``C'', even if the program hasn't explicitly changed it. 
-
- 
-
-</dl>
+</dd></dl>
 
 <dt><b>Lingering effects of </b>&quot;use locale&quot;
-<dd> Certain Perl operations that are set-up within the scope of a <tt>&quot;use locale&quot;</tt> retain that effect even outside the scope. These include:
-<dl>
-<dt>
-<dd>
+</dt><dd> Certain Perl operations that are set-up within the scope of a <tt>&quot;use locale&quot;</tt> retain that effect even outside the scope. These include:
+</dd><dl>
 <dl>
 <dt>&bull;
-<dd> The output format of a <b>write()</b> is determined by an earlier format declaration (``format'' in perlfunc), so whether or not the output is affected by locale is determined by if the <tt>&quot;format()&quot;</tt> is within the scope of a <tt>&quot;use locale&quot;</tt>, not whether the <tt>&quot;write()&quot;</tt> is.
-<dt>&bull;
-<dd> Regular expression patterns can be compiled using qr// with actual matching deferred to later. Again, it is whether or not the compilation was done within the scope of <tt>&quot;use locale&quot;</tt> that determines the match behavior, not if the matches are done within such a scope or not.</dl>
+</dt><dd> The output format of a <b>write()</b> is determined by an earlier format declaration (``format'' in perlfunc), so whether or not the output is affected by locale is determined by if the <tt>&quot;format()&quot;</tt> is within the scope of a <tt>&quot;use locale&quot;</tt>, not whether the <tt>&quot;write()&quot;</tt> is.
+</dd><dt>&bull;
+</dt><dd> Regular expression patterns can be compiled using qr// with actual matching deferred to later. Again, it is whether or not the compilation was done within the scope of <tt>&quot;use locale&quot;</tt> that determines the match behavior, not if the matches are done within such a scope or not.</dd></dl>
 </dl>
 
 <dl>
-<dt>
-<dd> 
-
- 
-
 </dl>
 
 <dt><b>Under </b>&quot;&quot;use locale&quot;;&quot;
-<dd>
-<dl>
-<dt>
-<dd>
+</dt><dd>
+</dd><dl>
 <dl>
 <dt>&bull;
-<dd> All the above operations
-<dt>&bull;
-<dd> <b>Format declarations</b> (``format'' in perlfunc) and hence any subsequent <tt>&quot;write()&quot;</tt>s use <tt>&quot;LC_NUMERIC&quot;</tt>.
-<dt>&bull;
-<dd> <b>stringification and output</b> use <tt>&quot;LC_NUMERIC&quot;</tt>. These include the results of <tt>&quot;print()&quot;</tt>, <tt>&quot;printf()&quot;</tt>, <tt>&quot;say()&quot;</tt>, and <tt>&quot;sprintf()&quot;</tt>.
-<dt>&bull;
-<dd> <b>The comparison operators</b> (<tt>&quot;lt&quot;</tt>, <tt>&quot;le&quot;</tt>, <tt>&quot;cmp&quot;</tt>, <tt>&quot;ge&quot;</tt>, and <tt>&quot;gt&quot;</tt>) use <tt>&quot;LC_COLLATE&quot;</tt>. <tt>&quot;sort()&quot;</tt> is also affected if used without an explicit comparison function, because it uses <tt>&quot;cmp&quot;</tt> by default. 
-
+</dt><dd> All the above operations
+</dd><dt>&bull;
+</dt><dd> <b>Format declarations</b> (``format'' in perlfunc) and hence any subsequent <tt>&quot;write()&quot;</tt>s use <tt>&quot;LC_NUMERIC&quot;</tt>.
+</dd><dt>&bull;
+</dt><dd> <b>stringification and output</b> use <tt>&quot;LC_NUMERIC&quot;</tt>. These include the results of <tt>&quot;print()&quot;</tt>, <tt>&quot;printf()&quot;</tt>, <tt>&quot;say()&quot;</tt>, and <tt>&quot;sprintf()&quot;</tt>.
+</dd><dt>&bull;
+</dt><dd> <b>The comparison operators</b> (<tt>&quot;lt&quot;</tt>, <tt>&quot;le&quot;</tt>, <tt>&quot;cmp&quot;</tt>, <tt>&quot;ge&quot;</tt>, and <tt>&quot;gt&quot;</tt>) use <tt>&quot;LC_COLLATE&quot;</tt>. <tt>&quot;sort()&quot;</tt> is also affected if used without an explicit comparison function, because it uses <tt>&quot;cmp&quot;</tt> by default. 
  <b>Note:</b> <tt>&quot;eq&quot;</tt> and <tt>&quot;ne&quot;</tt> are unaffected by locale: they always perform a char-by-char comparison of their scalar operands. What's more, if <tt>&quot;cmp&quot;</tt> finds that its operands are equal according to the collation sequence specified by the current locale, it goes on to perform a char-by-char comparison, and only returns <i>0</i> (equal) if the operands are char-for-char identical. If you really want to know whether two strings---which <tt>&quot;eq&quot;</tt> and <tt>&quot;cmp&quot;</tt> may consider different---are equal as far as collation in the locale is concerned, see the discussion in &quot;Category <tt>&quot;LC_COLLATE&quot;</tt>: Collation&quot;.
-<dt>&bull;
-<dd> <b>Regular expressions and case-modification functions</b> (<tt>&quot;uc()&quot;</tt>, <tt>&quot;lc()&quot;</tt>, <tt>&quot;ucfirst()&quot;</tt>, and <tt>&quot;lcfirst()&quot;</tt>) use <tt>&quot;LC_CTYPE&quot;</tt>
-<dt>&bull;
-<dd> <b>The variables $!</b> (and its synonyms <tt>$ERRNO</tt> and <tt>$OS_ERROR</tt>) <b>and $^E</b> (and its synonym <tt>$EXTENDED_OS_ERROR</tt>) when used as strings use <tt>&quot;LC_MESSAGES&quot;</tt>.</dl>
+</dd><dt>&bull;
+</dt><dd> <b>Regular expressions and case-modification functions</b> (<tt>&quot;uc()&quot;</tt>, <tt>&quot;lc()&quot;</tt>, <tt>&quot;ucfirst()&quot;</tt>, and <tt>&quot;lcfirst()&quot;</tt>) use <tt>&quot;LC_CTYPE&quot;</tt>
+</dd><dt>&bull;
+</dt><dd> <b>The variables $!</b> (and its synonyms <tt>$ERRNO</tt> and <tt>$OS_ERROR</tt>) <b>and $^E</b> (and its synonym <tt>$EXTENDED_OS_ERROR</tt>) when used as strings use <tt>&quot;LC_MESSAGES&quot;</tt>.</dd></dl>
 </dl>
 
 <dl>
-<dt>
-<dd></dl>
+</dl>
 </dl>
  
 
@@ -592,15 +572,15 @@ for (0..11) {
  Although the main discussion of Perl security issues can be found in perlsec, a discussion of Perl's locale handling would be incomplete if it did not draw your attention to locale-dependent security issues. Locales---particularly on systems that allow unprivileged users to build their own locales---are untrustworthy. A malicious (or just plain broken) locale can make a locale-aware application give unexpected results. Here are a few possibilities:
 <dl>
 <dt>&bull;
-<dd> Regular expression checks for safe file names or mail addresses using <tt>&quot;\w&quot;</tt> may be spoofed by an <tt>&quot;LC_CTYPE&quot;</tt> locale that claims that characters such as <tt>&quot;&gt;&quot;</tt> and <tt>&quot;|&quot;</tt> are alphanumeric.
-<dt>&bull;
-<dd> String interpolation with case-mapping, as in, say, <tt>&quot;$dest = &quot;C:\U$name.$ext&quot;&quot;</tt>, may produce dangerous results if a bogus <tt>&quot;LC_CTYPE&quot;</tt> case-mapping table is in effect.
-<dt>&bull;
-<dd> A sneaky <tt>&quot;LC_COLLATE&quot;</tt> locale could result in the names of students with ``D'' grades appearing ahead of those with ``A''s.
-<dt>&bull;
-<dd> An application that takes the trouble to use information in <tt>&quot;LC_MONETARY&quot;</tt> may format debits as if they were credits and vice versa if that locale has been subverted. Or it might make payments in <font SIZE="-1">US</font> dollars instead of Hong Kong dollars.
-<dt>&bull;
-<dd> The date and day names in dates formatted by <tt>&quot;strftime()&quot;</tt> could be manipulated to advantage by a malicious user able to subvert the <tt>&quot;LC_DATE&quot;</tt> locale. (``Look---it says I wasn't in the building on Sunday.'')</dl>
+</dt><dd> Regular expression checks for safe file names or mail addresses using <tt>&quot;\w&quot;</tt> may be spoofed by an <tt>&quot;LC_CTYPE&quot;</tt> locale that claims that characters such as <tt>&quot;&gt;&quot;</tt> and <tt>&quot;|&quot;</tt> are alphanumeric.
+</dd><dt>&bull;
+</dt><dd> String interpolation with case-mapping, as in, say, <tt>&quot;$dest = &quot;C:\U$name.$ext&quot;&quot;</tt>, may produce dangerous results if a bogus <tt>&quot;LC_CTYPE&quot;</tt> case-mapping table is in effect.
+</dd><dt>&bull;
+</dt><dd> A sneaky <tt>&quot;LC_COLLATE&quot;</tt> locale could result in the names of students with ``D'' grades appearing ahead of those with ``A''s.
+</dd><dt>&bull;
+</dt><dd> An application that takes the trouble to use information in <tt>&quot;LC_MONETARY&quot;</tt> may format debits as if they were credits and vice versa if that locale has been subverted. Or it might make payments in <font SIZE="-1">US</font> dollars instead of Hong Kong dollars.
+</dd><dt>&bull;
+</dt><dd> The date and day names in dates formatted by <tt>&quot;strftime()&quot;</tt> could be manipulated to advantage by a malicious user able to subvert the <tt>&quot;LC_DATE&quot;</tt> locale. (``Look---it says I wasn't in the building on Sunday.'')</dd></dl>
  
 
  Such dangers are not peculiar to the locale system: any aspect of an application's environment which may be modified maliciously presents similar challenges. Similarly, they are not specific to Perl: any programming language that allows you to write programs that take account of their environment exposes you to these issues. 
@@ -608,39 +588,29 @@ for (0..11) {
  Perl cannot protect you from all possibilities shown in the examples---there is no substitute for your own vigilance---but, when <tt>&quot;use locale&quot;</tt> is in effect, Perl uses the tainting mechanism (see perlsec) to mark string results that become locale-dependent, and which may be untrustworthy in consequence. Here is a summary of the tainting behavior of operators and functions that may be affected by the locale:
 <dl>
 <dt>&bull;
-<dd> <b>Comparison operators</b> (<tt>&quot;lt&quot;</tt>, <tt>&quot;le&quot;</tt>, <tt>&quot;ge&quot;</tt>, <tt>&quot;gt&quot;</tt> and <tt>&quot;cmp&quot;</tt>): 
-
+</dt><dd> <b>Comparison operators</b> (<tt>&quot;lt&quot;</tt>, <tt>&quot;le&quot;</tt>, <tt>&quot;ge&quot;</tt>, <tt>&quot;gt&quot;</tt> and <tt>&quot;cmp&quot;</tt>): 
  Scalar true/false (or less/equal/greater) result is never tainted.
-<dt>&bull;
-<dd> <b>Case-mapping interpolation</b> (with <tt>&quot;\l&quot;</tt>, <tt>&quot;\L&quot;</tt>, <tt>&quot;\u&quot;</tt>, <tt>&quot;\U&quot;</tt>, or <tt>&quot;\F&quot;</tt>) 
-
+</dd><dt>&bull;
+</dt><dd> <b>Case-mapping interpolation</b> (with <tt>&quot;\l&quot;</tt>, <tt>&quot;\L&quot;</tt>, <tt>&quot;\u&quot;</tt>, <tt>&quot;\U&quot;</tt>, or <tt>&quot;\F&quot;</tt>) 
  The result string containing interpolated material is tainted if a <tt>&quot;use locale&quot;</tt> form that includes <tt>&quot;LC_CTYPE&quot;</tt> is in effect.
-<dt>&bull;
-<dd> <b>Matching operator</b> (<tt>&quot;m//&quot;</tt>): 
-
+</dd><dt>&bull;
+</dt><dd> <b>Matching operator</b> (<tt>&quot;m//&quot;</tt>): 
  Scalar true/false result never tainted. 
-
  All subpatterns, either delivered as a list-context result or as <tt>$1</tt> <i>etc</i>., are tainted if a <tt>&quot;use locale&quot;</tt> form that includes <tt>&quot;LC_CTYPE&quot;</tt> is in effect, and the subpattern regular expression contains a locale-dependent construct. These constructs include <tt>&quot;\w&quot;</tt> (to match an alphanumeric character), <tt>&quot;\W&quot;</tt> (non-alphanumeric character), <tt>&quot;\b&quot;</tt> and <tt>&quot;\B&quot;</tt> (word-boundary and non-boundardy, which depend on what <tt>&quot;\w&quot;</tt> and <tt>&quot;\W&quot;</tt> match), <tt>&quot;\s&quot;</tt> (whitespace character), <tt>&quot;\S&quot;</tt> (non whitespace character), <tt>&quot;\d&quot;</tt> and <tt>&quot;\D&quot;</tt> (digits and non-digits), and the <font SIZE="-1">POSIX</font> character classes, such as <tt>&quot;[:alpha:]&quot;</tt> (see ``<font SIZE="-1">POSIX</font> Character Classes'' in perlrecharclass). 
-
  Tainting is also likely if the pattern is to be matched case-insensitively (via <tt>&quot;/i&quot;</tt>). The exception is if all the code points to be matched this way are above 255 and do not have folds under Unicode rules to below 256. Tainting is not done for these because Perl only uses Unicode rules for such code points, and those rules are the same no matter what the current locale. 
-
  The matched-pattern variables, <tt>$&amp;</tt>, <tt>&quot;$`&quot;</tt> (pre-match), <tt>&quot;$'&quot;</tt> (post-match), and <tt>$+</tt> (last match) also are tainted.
-<dt>&bull;
-<dd> <b>Substitution operator</b> (<tt>&quot;s///&quot;</tt>): 
-
+</dd><dt>&bull;
+</dt><dd> <b>Substitution operator</b> (<tt>&quot;s///&quot;</tt>): 
  Has the same behavior as the match operator. Also, the left operand of <tt>&quot;=~&quot;</tt> becomes tainted when a <tt>&quot;use locale&quot;</tt> form that includes <tt>&quot;LC_CTYPE&quot;</tt> is in effect, if modified as a result of a substitution based on a regular expression match involving any of the things mentioned in the previous item, or of case-mapping, such as <tt>&quot;\l&quot;</tt>, <tt>&quot;\L&quot;</tt>,<tt>&quot;\u&quot;</tt>, <tt>&quot;\U&quot;</tt>, or <tt>&quot;\F&quot;</tt>.
-<dt>&bull;
-<dd> <b>Output formatting functions</b> (<tt>&quot;printf()&quot;</tt> and <tt>&quot;write()&quot;</tt>): 
-
+</dd><dt>&bull;
+</dt><dd> <b>Output formatting functions</b> (<tt>&quot;printf()&quot;</tt> and <tt>&quot;write()&quot;</tt>): 
  Results are never tainted because otherwise even output from print, for example <tt>&quot;print(1/7)&quot;</tt>, should be tainted if <tt>&quot;use locale&quot;</tt> is in effect.
-<dt>&bull;
-<dd> <b>Case-mapping functions</b> (<tt>&quot;lc()&quot;</tt>, <tt>&quot;lcfirst()&quot;</tt>, <tt>&quot;uc()&quot;</tt>, <tt>&quot;ucfirst()&quot;</tt>): 
-
+</dd><dt>&bull;
+</dt><dd> <b>Case-mapping functions</b> (<tt>&quot;lc()&quot;</tt>, <tt>&quot;lcfirst()&quot;</tt>, <tt>&quot;uc()&quot;</tt>, <tt>&quot;ucfirst()&quot;</tt>): 
  Results are tainted if a <tt>&quot;use locale&quot;</tt> form that includes <tt>&quot;LC_CTYPE&quot;</tt> is in effect.
-<dt>&bull;
-<dd> <font SIZE="-1"><b>POSIX</b></font><b> locale-dependent functions</b> (<tt>&quot;localeconv()&quot;</tt>, <tt>&quot;strcoll()&quot;</tt>, <tt>&quot;strftime()&quot;</tt>, <tt>&quot;strxfrm()&quot;</tt>): 
-
- Results are never tainted.</dl>
+</dd><dt>&bull;
+</dt><dd> <font SIZE="-1"><b>POSIX</b></font><b> locale-dependent functions</b> (<tt>&quot;localeconv()&quot;</tt>, <tt>&quot;strcoll()&quot;</tt>, <tt>&quot;strftime()&quot;</tt>, <tt>&quot;strxfrm()&quot;</tt>): 
+ Results are never tainted.</dd></dl>
  
 
  Three examples illustrate locale-dependent tainting. The first program, which ignores its locale, won't run: a value taken directly from the command line may not be used to name an output file when taint checks are enabled. 
@@ -681,35 +651,33 @@ open(F, "&gt;$localized_output_file") or warn "Open of $localized_output_file fa
 
 <dl>
 <dt><font SIZE="-1">PERL_SKIP_LOCALE_INIT</font>
-<dd> This environment variable, available starting in Perl v5.20, if set (to any value), tells Perl to not use the rest of the environment variables to initialize with. Instead, Perl uses whatever the current locale settings are. This is particularly useful in embedded environments, see ``Using embedded Perl with <font SIZE="-1">POSIX</font> locales'' in perlembed.
-<dt><font SIZE="-1">PERL_BADLANG</font>
-<dd> A string that can suppress Perl's warning about failed locale settings at startup. Failure can occur if the locale support in the operating system is lacking (broken) in some way---or if you mistyped the name of a locale when you set up your environment. If this environment variable is absent, or has a value other than ``0'' or &quot;&quot;, Perl will complain about locale setting failures. 
-
+</dt><dd> This environment variable, available starting in Perl v5.20, if set (to any value), tells Perl to not use the rest of the environment variables to initialize with. Instead, Perl uses whatever the current locale settings are. This is particularly useful in embedded environments, see ``Using embedded Perl with <font SIZE="-1">POSIX</font> locales'' in perlembed.
+</dd><dt><font SIZE="-1">PERL_BADLANG</font>
+</dt><dd> A string that can suppress Perl's warning about failed locale settings at startup. Failure can occur if the locale support in the operating system is lacking (broken) in some way---or if you mistyped the name of a locale when you set up your environment. If this environment variable is absent, or has a value other than ``0'' or &quot;&quot;, Perl will complain about locale setting failures. 
  <font SIZE="-1"><b>NOTE</b></font>: <tt>&quot;PERL_BADLANG&quot;</tt> only gives you a way to hide the warning message. The message tells about some problem in your system's locale support, and you should investigate what the problem is.
-<dt><font SIZE="-1">DPKG_RUNNING_VERSION</font>
-<dd> On Debian systems, if the <font SIZE="-1">DPKG_RUNNING_VERSION</font> environment variable is set (to any value), the locale failure warnings will be suppressed just like with a zero <font SIZE="-1">PERL_BADLANG</font> setting. This is done to avoid floods of spurious warnings during system upgrades. See &lt;<a rel="nofollow" HREF="http://bugs.debian.org/508764">http://bugs.debian.org/508764</a>&gt;.</dl>
+</dd><dt><font SIZE="-1">DPKG_RUNNING_VERSION</font>
+</dt><dd> On Debian systems, if the <font SIZE="-1">DPKG_RUNNING_VERSION</font> environment variable is set (to any value), the locale failure warnings will be suppressed just like with a zero <font SIZE="-1">PERL_BADLANG</font> setting. This is done to avoid floods of spurious warnings during system upgrades. See &lt;<a rel="nofollow" HREF="http://bugs.debian.org/508764">http://bugs.debian.org/508764</a>&gt;.</dd></dl>
  
 
  The following environment variables are not specific to Perl: They are part of the standardized (<font SIZE="-1">ISO C, XPG4, POSIX 1</font>.c) <tt>&quot;setlocale()&quot;</tt> method for controlling an application's opinion on data. Windows is non-POSIX, but Perl arranges for the following to work as described anyway. If the locale given by an environment variable is not valid, Perl tries the next lower one in priority. If none are valid, on Windows, the system default locale is then tried. If all else fails, the <tt>&quot;C&quot;</tt> locale is used. If even that doesn't work, something is badly broken, but Perl tries to forge ahead with whatever the locale settings might be.
 <dl>
 <dt>&quot;LC_ALL&quot;
-<dd> <tt>&quot;LC_ALL&quot;</tt> is the ``override-all'' locale environment variable. If set, it overrides all the rest of the locale environment variables.
-<dt>&quot;LANGUAGE&quot;
-<dd> <font SIZE="-1"><b>NOTE</b></font>: <tt>&quot;LANGUAGE&quot;</tt> is a <font SIZE="-1">GNU</font> extension, it affects you only if you are using the <font SIZE="-1">GNU</font> libc. This is the case if you are using e.g. Linux. If you are using ``commercial'' Unixes you are most probably <i>not</i> using <font SIZE="-1">GNU</font> libc and you can ignore <tt>&quot;LANGUAGE&quot;</tt>. 
-
+</dt><dd> <tt>&quot;LC_ALL&quot;</tt> is the ``override-all'' locale environment variable. If set, it overrides all the rest of the locale environment variables.
+</dd><dt>&quot;LANGUAGE&quot;
+</dt><dd> <font SIZE="-1"><b>NOTE</b></font>: <tt>&quot;LANGUAGE&quot;</tt> is a <font SIZE="-1">GNU</font> extension, it affects you only if you are using the <font SIZE="-1">GNU</font> libc. This is the case if you are using e.g. Linux. If you are using ``commercial'' Unixes you are most probably <i>not</i> using <font SIZE="-1">GNU</font> libc and you can ignore <tt>&quot;LANGUAGE&quot;</tt>. 
  However, in the case you are using <tt>&quot;LANGUAGE&quot;</tt>: it affects the language of informational, warning, and error messages output by commands (in other words, it's like <tt>&quot;LC_MESSAGES&quot;</tt>) but it has higher priority than <tt>&quot;LC_ALL&quot;</tt>. Moreover, it's not a single value but instead a ``path'' (``:''-separated list) of <i>languages</i> (not locales). See the <font SIZE="-1">GNU</font> <tt>&quot;gettext&quot;</tt> library documentation for more information.
-<dt>&quot;LC_CTYPE&quot;
-<dd> In the absence of <tt>&quot;LC_ALL&quot;</tt>, <tt>&quot;LC_CTYPE&quot;</tt> chooses the character type locale. In the absence of both <tt>&quot;LC_ALL&quot;</tt> and <tt>&quot;LC_CTYPE&quot;</tt>, <tt>&quot;LANG&quot;</tt> chooses the character type locale.
-<dt>&quot;LC_COLLATE&quot;
-<dd> In the absence of <tt>&quot;LC_ALL&quot;</tt>, <tt>&quot;LC_COLLATE&quot;</tt> chooses the collation (sorting) locale. In the absence of both <tt>&quot;LC_ALL&quot;</tt> and <tt>&quot;LC_COLLATE&quot;</tt>, <tt>&quot;LANG&quot;</tt> chooses the collation locale.
-<dt>&quot;LC_MONETARY&quot;
-<dd> In the absence of <tt>&quot;LC_ALL&quot;</tt>, <tt>&quot;LC_MONETARY&quot;</tt> chooses the monetary formatting locale. In the absence of both <tt>&quot;LC_ALL&quot;</tt> and <tt>&quot;LC_MONETARY&quot;</tt>, <tt>&quot;LANG&quot;</tt> chooses the monetary formatting locale.
-<dt>&quot;LC_NUMERIC&quot;
-<dd> In the absence of <tt>&quot;LC_ALL&quot;</tt>, <tt>&quot;LC_NUMERIC&quot;</tt> chooses the numeric format locale. In the absence of both <tt>&quot;LC_ALL&quot;</tt> and <tt>&quot;LC_NUMERIC&quot;</tt>, <tt>&quot;LANG&quot;</tt> chooses the numeric format.
-<dt>&quot;LC_TIME&quot;
-<dd> In the absence of <tt>&quot;LC_ALL&quot;</tt>, <tt>&quot;LC_TIME&quot;</tt> chooses the date and time formatting locale. In the absence of both <tt>&quot;LC_ALL&quot;</tt> and <tt>&quot;LC_TIME&quot;</tt>, <tt>&quot;LANG&quot;</tt> chooses the date and time formatting locale.
-<dt>&quot;LANG&quot;
-<dd> <tt>&quot;LANG&quot;</tt> is the ``catch-all'' locale environment variable. If it is set, it is used as the last resort after the overall <tt>&quot;LC_ALL&quot;</tt> and the category-specific <tt>&quot;LC_</tt>foo<tt>&quot;</tt>.</dl>
+</dd><dt>&quot;LC_CTYPE&quot;
+</dt><dd> In the absence of <tt>&quot;LC_ALL&quot;</tt>, <tt>&quot;LC_CTYPE&quot;</tt> chooses the character type locale. In the absence of both <tt>&quot;LC_ALL&quot;</tt> and <tt>&quot;LC_CTYPE&quot;</tt>, <tt>&quot;LANG&quot;</tt> chooses the character type locale.
+</dd><dt>&quot;LC_COLLATE&quot;
+</dt><dd> In the absence of <tt>&quot;LC_ALL&quot;</tt>, <tt>&quot;LC_COLLATE&quot;</tt> chooses the collation (sorting) locale. In the absence of both <tt>&quot;LC_ALL&quot;</tt> and <tt>&quot;LC_COLLATE&quot;</tt>, <tt>&quot;LANG&quot;</tt> chooses the collation locale.
+</dd><dt>&quot;LC_MONETARY&quot;
+</dt><dd> In the absence of <tt>&quot;LC_ALL&quot;</tt>, <tt>&quot;LC_MONETARY&quot;</tt> chooses the monetary formatting locale. In the absence of both <tt>&quot;LC_ALL&quot;</tt> and <tt>&quot;LC_MONETARY&quot;</tt>, <tt>&quot;LANG&quot;</tt> chooses the monetary formatting locale.
+</dd><dt>&quot;LC_NUMERIC&quot;
+</dt><dd> In the absence of <tt>&quot;LC_ALL&quot;</tt>, <tt>&quot;LC_NUMERIC&quot;</tt> chooses the numeric format locale. In the absence of both <tt>&quot;LC_ALL&quot;</tt> and <tt>&quot;LC_NUMERIC&quot;</tt>, <tt>&quot;LANG&quot;</tt> chooses the numeric format.
+</dd><dt>&quot;LC_TIME&quot;
+</dt><dd> In the absence of <tt>&quot;LC_ALL&quot;</tt>, <tt>&quot;LC_TIME&quot;</tt> chooses the date and time formatting locale. In the absence of both <tt>&quot;LC_ALL&quot;</tt> and <tt>&quot;LC_TIME&quot;</tt>, <tt>&quot;LANG&quot;</tt> chooses the date and time formatting locale.
+</dd><dt>&quot;LANG&quot;
+</dt><dd> <tt>&quot;LANG&quot;</tt> is the ``catch-all'' locale environment variable. If it is set, it is used as the last resort after the overall <tt>&quot;LC_ALL&quot;</tt> and the category-specific <tt>&quot;LC_</tt>foo<tt>&quot;</tt>.</dd></dl>
 
 <h3>Examples</h3>
 
@@ -870,11 +838,11 @@ print "\n";
  <font SIZE="-1">POSIX</font> does not define a way to get the name of the current per-thread locale. Some systems, such as Darwin and NetBSD do implement a function, <b>querylocale</b>(3) to do this. On non-Windows systems without it, such as Linux, there are some additional caveats:
 <dl>
 <dt>&bull;
-<dd> An embedded perl needs to be started up while the global locale is in effect. See ``Using embedded Perl with <font SIZE="-1">POSIX</font> locales'' in perlembed.
-<dt>&bull;
-<dd> It becomes more important for perl to know about all the possible locale categories on the platform, even if they aren't apparently used in your program. Perl knows all of the Linux ones. If your platform has others, you can send email to &lt;mailto:perlbug [at] perl.org&gt; for inclusion of it in the next release. In the meantime, it is possible to edit the Perl source to teach it about the category, and then recompile. Search for instances of, say, <tt>&quot;LC_PAPER&quot;</tt> in the source, and use that as a template to add the omitted one.
-<dt>&bull;
-<dd> It is possible, though hard to do, to call <tt>&quot;POSIX::setlocale&quot;</tt> with a locale that it doesn't recognize as syntactically legal, but actually is legal on that system. This should happen only with embedded perls, or if you hand-craft a locale name yourself.</dl>
+</dt><dd> An embedded perl needs to be started up while the global locale is in effect. See ``Using embedded Perl with <font SIZE="-1">POSIX</font> locales'' in perlembed.
+</dd><dt>&bull;
+</dt><dd> It becomes more important for perl to know about all the possible locale categories on the platform, even if they aren't apparently used in your program. Perl knows all of the Linux ones. If your platform has others, you can send email to &lt;mailto:perlbug [at] perl.org&gt; for inclusion of it in the next release. In the meantime, it is possible to edit the Perl source to teach it about the category, and then recompile. Search for instances of, say, <tt>&quot;LC_PAPER&quot;</tt> in the source, and use that as a template to add the omitted one.
+</dd><dt>&bull;
+</dt><dd> It is possible, though hard to do, to call <tt>&quot;POSIX::setlocale&quot;</tt> with a locale that it doesn't recognize as syntactically legal, but actually is legal on that system. This should happen only with embedded perls, or if you hand-craft a locale name yourself.</dd></dl>
 
 <h3>Broken systems</h3>
 
@@ -895,26 +863,26 @@ print "\n";
 
 
 <dt><a HREF="#lbAS">LOCALE CATEGORIES</a>
-<dd>
+</dt><dd>
 
 
-<dt><a HREF="#lbAZ">SECURITY</a>
-<dd>
-<dt><a HREF="#lbBA">ENVIRONMENT</a>
-<dd>
+</dd><dt><a HREF="#lbAZ">SECURITY</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBA">ENVIRONMENT</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbBC">NOTES</a>
-<dd>
+</dd><dt><a HREF="#lbBC">NOTES</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbBK">Unicode and UTF-8</a>
-<dd>
-<dt><a HREF="#lbBL">BUGS</a>
-<dd>
+</dd><dt><a HREF="#lbBK">Unicode and UTF-8</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBL">BUGS</a>
+</dt><dd>
 
 
-<dt><a HREF="#lbBP">SEE ALSO</a>
-<dd>
-<dt><a HREF="#lbBQ">HISTORY</a>
-<dd></dl>
+</dd><dt><a HREF="#lbBP">SEE ALSO</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBQ">HISTORY</a>
+</dt><dd></dd></dl>

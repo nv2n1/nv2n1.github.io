@@ -19,32 +19,32 @@ description: "ucf – Update Configuration File: preserve user changes in config
 <p> During the course of operations, when working with configuration files, <code>ucf</code> optionally creates copies of versions of the configuration file in question. For example, a file with the suffix <i>ucf-old</i> holds the old version of a configuration file replaced by <code>ucf.</code> Also, copies of the configuration file with the suffixes <i>ucf-new</i> and <i>ucf-dist</i> may be created; and the maintainer scripts should consider purging copies of the configuration file with these extensions during purge.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Print a short usage message</p>
-<dt><code>-n, &#8211;no-action</code></p>
-<dd> Dry run. Print the actions that would be taken if the script is invoked, but take no action.</p>
-<dt><code>-d[n], &#8211;debug=[n]</code></p>
-<dd> Set the debug level to the (optional) level <i>n</i> (n defaults to 1). Please note there must be no spaces before the optional digit n. This turns on copious debugging information.</p>
-<dt><code>-p, &#8211;purge</code></p>
-<dd> Removes all vestiges of the file from the state hashfile. This is required to allow a package to be reinstalled after it is purged; since otherwise, the real configuration file is removed, but it remains in the hash file; and on reinstall no action is taken, since the md5sum of the new file matches that in the hashfile. In short, remember to use this option in the postrm for every configuration file managed by ucf when the package is being purged (assuming ucf itself exists). <i>Note:</i> ucf does not actually touch the file on disk in this operation, so any file removals are still the responsibility of the calling package.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Make the script be very verbose about setting internal variables.</p>
-<dt><code>-P foo, &#8211;package foo</code></p>
-<dd> Don&#8217;t follow dpkg-divert diversions by package foo when updating configuration files.</p>
-<dt><code>-s foo, &#8211;src-dir foo</code></p>
-<dd> Set the source directory (historical md5sums are expected to live in files and sub directories of this directory) to foo. By default, the directory the new_file lives in is assumed to be the source directory. Setting this option overrides settings in the environment variable <code>UCF_SOURCE_DIR,</code> and in the configuration file variable <code>conf_source_dir.</code></p>
-<dt><code>&#8211;sum-file foo</code></p>
-<dd> Force the historical md5sums to be read from this file, rather than defaulting to living in the source directory. Setting this option overrides settings in the environment variable <code>UCF_OLD_MDSUM_FILE,</code> and in the configuration file variable <code>conf_old_mdsum_file.</code></p>
-<dt><code>&#8211;three-way</code></p>
-<dd> This turns on the option, during installation, for the user to be offered a chance to see a merge of the changes between old maintainer version and the new maintainer version into the local copy of the configuration file. If the user likes what they see, they can ask to have these changes merged in. This allows one to get new upstream changes merged in even while retaining local modifications to the configuration file. This is accomplished by taking the configuration file and stashing it in a cache area during registration, and using diff3 during the install (the stashed file name is a munged version of the full path of the configuration file to avoid name space clashes).</p>
-<dt><code>&#8211;debconf-ok</code></p>
-<dd> Indicate that it is ok for <i>ucf</i> to use an already running debconf instance for prompting (it has always been ok to use ucf when debconf is not running &#8212; it shall invoke debconf as needed).</p>
-<dt><code>&#8211;debconf-template foo</code></p>
-<dd> Instruct ucf to use the named multiselect debconf template instead of the normal ucf-provided debconf template. The caller is responsible for ensuring that the named template exists and has a list of choices matching those for the default ucf template, and should set Choices-C: ${CHOICES} to ensure the returned values match those from the default template. Note that the choices must be different according to whether the <code>&#8211;three-way</code> option is also set.</p>
-<dt><code>&#8211;state-dir /path/to/dir</code></p>
-<dd> Set the state directory to /path/to/dir instead of the default <i>/var/lib/ucf.</i> Used mostly for testing.</p>
-<dt><code>-Z</code></p>
-<dd> Set SELinux security context of destination file to default type.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Print a short usage message</dd>
+<dt><code>-n, &#8211;no-action</code></dt>
+<dd> Dry run. Print the actions that would be taken if the script is invoked, but take no action.</dd>
+<dt><code>-d[n], &#8211;debug=[n]</code></dt>
+<dd> Set the debug level to the (optional) level <i>n</i> (n defaults to 1). Please note there must be no spaces before the optional digit n. This turns on copious debugging information.</dd>
+<dt><code>-p, &#8211;purge</code></dt>
+<dd> Removes all vestiges of the file from the state hashfile. This is required to allow a package to be reinstalled after it is purged; since otherwise, the real configuration file is removed, but it remains in the hash file; and on reinstall no action is taken, since the md5sum of the new file matches that in the hashfile. In short, remember to use this option in the postrm for every configuration file managed by ucf when the package is being purged (assuming ucf itself exists). <i>Note:</i> ucf does not actually touch the file on disk in this operation, so any file removals are still the responsibility of the calling package.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Make the script be very verbose about setting internal variables.</dd>
+<dt><code>-P foo, &#8211;package foo</code></dt>
+<dd> Don&#8217;t follow dpkg-divert diversions by package foo when updating configuration files.</dd>
+<dt><code>-s foo, &#8211;src-dir foo</code></dt>
+<dd> Set the source directory (historical md5sums are expected to live in files and sub directories of this directory) to foo. By default, the directory the new_file lives in is assumed to be the source directory. Setting this option overrides settings in the environment variable <code>UCF_SOURCE_DIR,</code> and in the configuration file variable <code>conf_source_dir.</code></dd>
+<dt><code>&#8211;sum-file foo</code></dt>
+<dd> Force the historical md5sums to be read from this file, rather than defaulting to living in the source directory. Setting this option overrides settings in the environment variable <code>UCF_OLD_MDSUM_FILE,</code> and in the configuration file variable <code>conf_old_mdsum_file.</code></dd>
+<dt><code>&#8211;three-way</code></dt>
+<dd> This turns on the option, during installation, for the user to be offered a chance to see a merge of the changes between old maintainer version and the new maintainer version into the local copy of the configuration file. If the user likes what they see, they can ask to have these changes merged in. This allows one to get new upstream changes merged in even while retaining local modifications to the configuration file. This is accomplished by taking the configuration file and stashing it in a cache area during registration, and using diff3 during the install (the stashed file name is a munged version of the full path of the configuration file to avoid name space clashes).</dd>
+<dt><code>&#8211;debconf-ok</code></dt>
+<dd> Indicate that it is ok for <i>ucf</i> to use an already running debconf instance for prompting (it has always been ok to use ucf when debconf is not running &#8212; it shall invoke debconf as needed).</dd>
+<dt><code>&#8211;debconf-template foo</code></dt>
+<dd> Instruct ucf to use the named multiselect debconf template instead of the normal ucf-provided debconf template. The caller is responsible for ensuring that the named template exists and has a list of choices matching those for the default ucf template, and should set Choices-C: ${CHOICES} to ensure the returned values match those from the default template. Note that the choices must be different according to whether the <code>&#8211;three-way</code> option is also set.</dd>
+<dt><code>&#8211;state-dir /path/to/dir</code></dt>
+<dd> Set the state directory to /path/to/dir instead of the default <i>/var/lib/ucf.</i> Used mostly for testing.</dd>
+<dt><code>-Z</code></dt>
+<dd> Set SELinux security context of destination file to default type.</dd></dl>
 <h2>USAGE</h2>
 <p> The most common case usage is pretty simple: a single line invocation in the postinst on configure, and another single line in the postrm to tell <code>ucf</code> to forget about the configuration file on purge (using the &#8211;purge option) is all that is needed (assuming ucf is still on the system). </p>
 <p> It is recommended that you also register any file being managed by <code>ucf</code> with the ucf registry; this associates the configuration file with the package it belongs to. This is done with a simple call to <code>ucfr.</code> Users may then query the association between a configuration file and the package using the tool <code>ucfq.</code> Please see the appropriate manual pages for details. </p>

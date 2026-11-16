@@ -19,7 +19,7 @@ description: "clarft.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  CLARFT forms the triangular factor T of a complex block reflector H
  of order n, which is defined as a product of k elementary reflectors.
@@ -32,11 +32,11 @@ description: "clarft.f –"
  H(i) is stored in the i-th row of the array V, and
     H  =  I - V**H * T * V
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>DIRECT</i> </p>
+</dt><dd> <i>DIRECT</i> </dd>
 <pre>
           DIRECT is CHARACTER*1
           Specifies the order in which the elementary reflectors are
@@ -100,18 +100,18 @@ if STOREV
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
   The shape of the matrix V and the storage of the vectors which define
   the H(i) is best illustrated by the following example with n = 5 and
@@ -129,8 +129,9 @@ if STOREV
                    (     1 v3 )
                    (        1 )
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 164 of file clarft.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

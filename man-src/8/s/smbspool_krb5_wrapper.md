@@ -10,7 +10,7 @@ description: "smbspool_krb5_wrapper – This is a CUPS printing backend which ca
 <p>smbspool_krb5_wrapper &#8211; This is a CUPS printing backend which calls smbspool</p>
 <h2>Synopsis</h2>
 <dl>
-<dd>smbspool_krb5_wrapper {job} {user} {title} {copies} {options} [filename]</dl>
+<dd>smbspool_krb5_wrapper {job} {user} {title} {copies} {options} [filename]</dd></dl>
 <h2>Description</h2>
 <p>This tool is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> smbspool_krb5_wrapper is a tool that can be used to print using Kerberos credentials. To get this working smbspool_krb5_wrapper needs to be the smb backend of CUPS. It needs to be owned by root and the permissions for the binary need to be 0700. Once smbspool_krb5_wrapper switched to the user trying to print it executes smbspool. It should not be called by a user.</p>

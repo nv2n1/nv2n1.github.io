@@ -14,10 +14,10 @@ description: "ata_qc_complete_multiple – Complete multiple qcs successfully"
 <p><i>ap</i></p>
 <dl>
 <dd>
-<dd>port in question</dl>
+</dd><dd>port in question</dd></dl>
 <p> <i>qc_active</i></p>
 <dl>
-<dd>new qc_active mask</dl>
+<dd>new qc_active mask</dd></dl>
 <h2>Description</h2>
 <p>Complete in-flight commands. This functions is meant to be called from low-level driver&#8217;s interrupt routine to complete requests normally. ap-&gt;qc_active and <i>qc_active</i> is compared and commands are completed accordingly. </p>
 <p> Always use this function when completing multiple NCQ commands from IRQ handlers instead of calling <code>ata_qc_complete</code> multiple times to keep IRQ expect status properly in sync. </p>
@@ -27,5 +27,5 @@ description: "ata_qc_complete_multiple – Complete multiple qcs successfully"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

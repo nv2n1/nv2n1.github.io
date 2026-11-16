@@ -32,22 +32,22 @@ description: "xvattr – Query/Set X11 XVideo Setting(s)"
      Current value: 66046
 </pre>
 <dl>
-<dt>{-a | &#8211;attribute} <i>attribute name</i></p>
-<dd> Show value of attribute <i>attribute name</i> </p>
+<dt>{-a | &#8211;attribute} <i>attribute name</i></dt>
+<dd> Show value of attribute <i>attribute name</i> </dd>
 <p> Example: </p>
 <pre>
   &gt; xvattr -a XV_BRIGHTNESS
   XV_BRIGHTNESS = 24
 </pre>
-<dt>{-a | &#8211;attribute} <i>attribute name</i> [-v | &#8211;value] <i>value</i></p>
-<dd> Set attribute <i>attribute name</i> to value <i>value</i>. </p>
+<dt>{-a | &#8211;attribute} <i>attribute name</i> [-v | &#8211;value] <i>value</i></dt>
+<dd> Set attribute <i>attribute name</i> to value <i>value</i>. </dd>
 <p> Example: </p>
 <pre>
   &gt; xvattr -a XV_COLORKEY -v 10
   XV_COLORKEY set to 10
 </pre>
-<dt>{-p | &#8211;port} <i>port number</i></p>
-<dd> Get the attribute on the specified port. If -p is not set, the first available port is used. </p>
+<dt>{-p | &#8211;port} <i>port number</i></dt>
+<dd> Get the attribute on the specified port. If -p is not set, the first available port is used. </dd>
 <p> Example: </p>
 <pre>
   &gt; xvattr -p 66
@@ -94,9 +94,9 @@ if
 not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111 - 1307 USA
 </code></pre>
 <h2>Index</h2>
-<dt><a href="#lbAE">AUTHOR</a></p>
+<dt><a href="#lbAE">AUTHOR</a></dt>
 <dd>
-<dt><a href="#lbAF">SEE ALSO</a></p>
+</dd><dt><a href="#lbAF">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAG">COPYRIGHT</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAG">COPYRIGHT</a></dt>
+<dd></dd></dl>

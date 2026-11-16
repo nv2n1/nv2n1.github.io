@@ -15,8 +15,8 @@ description: "archdetect – detect hardware architecture"
 <p> displays the current machine architecture and subarchitecture. The architecture corresponds to that built into <code>dpkg</code> and describes the CPU (and possibly kernel) types; the subarchitecture distinguishes machines with different boot arrangements that require special handling. </p>
 <p> The following option is available:</p>
 <dl>
-<dt><code>-g</code></p>
-<dd> When bringing up new subarchitectures, may not yet have been taught about this specific machine. This option asks that try to guess a generic subarchitecture that may be compatible with this machine. This is only necessary on certain architectures, and simply has no effect elsewhere.</dl>
+<dt><code>-g</code></dt>
+<dd> When bringing up new subarchitectures, may not yet have been taught about this specific machine. This option asks that try to guess a generic subarchitecture that may be compatible with this machine. This is only necessary on certain architectures, and simply has no effect elsewhere.</dd></dl>
 <h2>AUTHORS</h2>
 <p> was written by the Debian Installer team. </p>
 <h2>Index</h2>

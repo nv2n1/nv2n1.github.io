@@ -22,28 +22,28 @@ description: "struct_usb_composite_dev – represents one composite usb gadget"
 <h2>Members</h2>
 <p>gadget</p>
 <dl>
-<dd>read-only, abstracts the gadget&#8217;s usb peripheral controller</dl>
+<dd>read-only, abstracts the gadget&#8217;s usb peripheral controller</dd></dl>
 <p> req</p>
 <dl>
-<dd>used for control responses; buffer is pre-allocated</dl>
+<dd>used for control responses; buffer is pre-allocated</dd></dl>
 <p> os_desc_req</p>
 <dl>
-<dd>used for OS descriptors responses; buffer is pre-allocated</dl>
+<dd>used for OS descriptors responses; buffer is pre-allocated</dd></dl>
 <p> config</p>
 <dl>
-<dd>the currently active configuration</dl>
+<dd>the currently active configuration</dd></dl>
 <p> qw_sign[OS_STRING_QW_SIGN_LEN]</p>
 <dl>
-<dd>qwSignature part of the OS string</dl>
+<dd>qwSignature part of the OS string</dd></dl>
 <p> b_vendor_code</p>
 <dl>
-<dd>bMS_VendorCode part of the OS string</dl>
+<dd>bMS_VendorCode part of the OS string</dd></dl>
 <p> os_desc_config</p>
 <dl>
-<dd>the configuration to be used with OS descriptors</dl>
+<dd>the configuration to be used with OS descriptors</dd></dl>
 <p> use_os_string</p>
 <dl>
-<dd>false by default, interested gadgets set it</dl>
+<dd>false by default, interested gadgets set it</dd></dl>
 <h2>Description</h2>
 <p>One of these devices is allocated and initialized before the associated device driver&#8217;s <code>bind</code> is called. </p>
 <p> OPEN ISSUE: it appears that some WUSB devices will need to be built by combining a normal (wired) gadget with a wireless one. This revision of the gadget framework should probably try to make sure doing that won&#8217;t hurt too much. </p>
@@ -51,5 +51,5 @@ description: "struct_usb_composite_dev – represents one composite usb gadget"
 <h2>Author</h2>
 <p><code>David Brownell</code> &lt;dbrownell [at] users.sourceforge.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

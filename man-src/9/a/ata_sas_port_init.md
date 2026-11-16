@@ -14,7 +14,7 @@ description: "ata_sas_port_init – Initialize a SATA device"
 <p><i>ap</i></p>
 <dl>
 <dd>
-<dd>SATA port to initialize</dl>
+</dd><dd>SATA port to initialize</dd></dl>
 <h2>Description</h2>
 <p>LOCKING: PCI/etc. bus probe sem.</p>
 <h2>Return</h2>
@@ -22,5 +22,5 @@ description: "ata_sas_port_init – Initialize a SATA device"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

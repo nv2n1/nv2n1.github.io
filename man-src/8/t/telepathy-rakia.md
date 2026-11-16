@@ -17,13 +17,13 @@ description: "telepathy-rakia – Telepathy connection manager for SIP"
 <p>There are no command-line options.</p>
 <h2>Environment</h2>
 <dl>
-<dt><code>RAKIA_DEBUG</code>=<i>type</i></p>
-<dd>May be set to &quot;all&quot; for full debug output, or various undocumented options (which may change from release to release) to filter the output.</p>
-<dt><code>RAKIA_LOGFILE</code>=<i>filename</i></p>
-<dd>May be set to the name of a file to overwrite with log messages. The filename may be prefixed with <code>+</code> to append messages to an existing file instead of overwriting it.</p>
-<dt><code>RAKIA_PERSIST</code></p>
-<dd>May be set to any value to avoid telepathy-rakia&#8217;s usual automatic exit when there have been no connections for a few seconds.</p>
-<dt><code>TPORT_LOG</code></p>
-<dd>May be set to any value to print all parsed SIP messages at the transport layer (this functionality is provided by the underlying Sofia-SIP library, which also offers various more specialized debugging options).</dl>
+<dt><code>RAKIA_DEBUG</code>=<i>type</i></dt>
+<dd>May be set to &quot;all&quot; for full debug output, or various undocumented options (which may change from release to release) to filter the output.</dd>
+<dt><code>RAKIA_LOGFILE</code>=<i>filename</i></dt>
+<dd>May be set to the name of a file to overwrite with log messages. The filename may be prefixed with <code>+</code> to append messages to an existing file instead of overwriting it.</dd>
+<dt><code>RAKIA_PERSIST</code></dt>
+<dd>May be set to any value to avoid telepathy-rakia&#8217;s usual automatic exit when there have been no connections for a few seconds.</dd>
+<dt><code>TPORT_LOG</code></dt>
+<dd>May be set to any value to print all parsed SIP messages at the transport layer (this functionality is provided by the underlying Sofia-SIP library, which also offers various more specialized debugging options).</dd></dl>
 <h2>See Also</h2>
 <p><i><a rel="nofollow" href="http://telepathy.freedesktop.org/">http://telepathy.freedesktop.org/</a></i>, <code><a href="/docs/linux/man/1-empathy/">empathy</a></code>(1) </p>

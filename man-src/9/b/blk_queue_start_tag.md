@@ -15,11 +15,11 @@ blk_queue_start_tag - find a free tag and assign it
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>the request queue for the device</dl>
+<dl><dd></dd><dd>the request queue for the device</dd></dl>
  
 
  <i>rq</i>
-<dl><dd>the block request that needs tagging</dl>
+<dl><dd>the block request that needs tagging</dd></dl>
 
 <h2>Description</h2>
 

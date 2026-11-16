@@ -10,7 +10,6 @@ description: "std::mbrlen – std::mbrlen"
 <p>std::mbrlen &#8211; std::mbrlen</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;cwchar&gt;
-
     std::size_t mbrlen(const char *s, std::size_t n, std::mbstate_t *ps);</code></pre>
 <p>Determines the size, in bytes, of the remainder of the multibyte character whose first byte is pointed to by s, given the current conversion state ps.<br />
 This function is equivalent to the call std::mbrtowc(nullptr, s, n, ps?ps:&amp;internal) for some hidden object internal of type std::mbstate_t, except that the expression ps is evaluated only once. </p>
@@ -26,14 +25,10 @@ The number of bytes (between 1 and n) that complete a valid multibyte character<
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;clocale&gt;
-
 #include &lt;string&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;cwchar&gt;
 int main()
-
 {
     // allow mbrlen() to work with UTF-8 multibyte encoding
     std::setlocale(LC_ALL, &quot;en_US.utf8&quot;);

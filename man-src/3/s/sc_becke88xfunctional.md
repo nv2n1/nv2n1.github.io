@@ -11,7 +11,6 @@ description: "sc::Becke88XFunctional –"
 <p> Implements Becke&#8217;s 1988 exchange functional.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;functional.h&gt;</code></pre>
 <p> Inherits <code>sc::DenFunctional</code>.</p>
 <h3>Public Member Functions</h3>
@@ -23,9 +22,6 @@ description: "sc::Becke88XFunctional –"
 <p> void <code>point</code> (const <code>PointInputData</code> &amp;, <code>PointOutputData</code> &amp;)</p>
 <h3>Protected Attributes</h3>
 <pre><code>double beta_
-
-
-
 double beta6_</code></pre>
 <h2>Detailed Description</h2>
 <p>Implements Becke&#8217;s 1988 exchange functional. </p>

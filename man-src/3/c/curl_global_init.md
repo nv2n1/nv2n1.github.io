@@ -20,18 +20,18 @@ description: "curl_global_init – Global libcurl initialisation"
 <p> See the description in <code><a href="/docs/linux/man/3-libcurl/">libcurl</a></code>(3) of global environment requirements for details of how to use this function. </p>
 <h2>FLAGS</h2>
 <dl>
-<dt><code>CURL_GLOBAL_ALL</code></p>
-<dd> Initialize everything possible. This sets all known bits.</p>
-<dt><code>CURL_GLOBAL_SSL</code></p>
-<dd> Initialize SSL</p>
-<dt><code>CURL_GLOBAL_WIN32</code></p>
-<dd> Initialize the Win32 socket libraries.</p>
-<dt><code>CURL_GLOBAL_NOTHING</code></p>
-<dd> Initialise nothing extra. This sets no bit.</p>
-<dt><code>CURL_GLOBAL_DEFAULT</code></p>
-<dd> A sensible default. It will init both SSL and Win32. Right now, this equals the functionality of the <code>CURL_GLOBAL_ALL</code> mask.</p>
-<dt><code>CURL_GLOBAL_ACK_EINTR</code></p>
-<dd> When this flag is set, curl will acknowledge EINTR condition when connecting or when waiting for data. Otherwise, curl waits until full timeout elapses.</dl>
+<dt><code>CURL_GLOBAL_ALL</code></dt>
+<dd> Initialize everything possible. This sets all known bits.</dd>
+<dt><code>CURL_GLOBAL_SSL</code></dt>
+<dd> Initialize SSL</dd>
+<dt><code>CURL_GLOBAL_WIN32</code></dt>
+<dd> Initialize the Win32 socket libraries.</dd>
+<dt><code>CURL_GLOBAL_NOTHING</code></dt>
+<dd> Initialise nothing extra. This sets no bit.</dd>
+<dt><code>CURL_GLOBAL_DEFAULT</code></dt>
+<dd> A sensible default. It will init both SSL and Win32. Right now, this equals the functionality of the <code>CURL_GLOBAL_ALL</code> mask.</dd>
+<dt><code>CURL_GLOBAL_ACK_EINTR</code></dt>
+<dd> When this flag is set, curl will acknowledge EINTR condition when connecting or when waiting for data. Otherwise, curl waits until full timeout elapses.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> If this function returns non-zero, something went wrong and you cannot use the other curl functions.</p>
 <h2>SEE ALSO</h2>

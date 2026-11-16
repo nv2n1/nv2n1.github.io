@@ -57,55 +57,55 @@ description: "QwtPlotShapeItem –"
 <p> <code>QwtPlotShapeItem</code> offers a couple of optimizations like clipping or weeding. These algorithms need to convert the painter path into polygons that might be less performant for paths built from curves and ellipses. </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd>QwtPlotZone</dl>
+<dd>QwtPlotZone</dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>QwtPlotShapeItem::LegendMode</code></h3>
 <p>Mode how to display the item on the legend. </p>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>LegendShape </i></p>
-<dd>Display a scaled down version of the shape.</p>
-<dt><i>LegendColor </i></p>
-<dd>Display a filled rectangle.</dl>
+<dt><i>LegendShape </i></dt>
+<dd>Display a scaled down version of the shape.</dd>
+<dt><i>LegendColor </i></dt>
+<dd>Display a filled rectangle.</dd></dl>
 <h3>enum <code>QwtPlotShapeItem::PaintAttribute</code></h3>
 <p>Attributes to modify the drawing algorithm. The default disables all attributes </p>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPaintAttribute()</code>, <code>testPaintAttribute()</code></dl>
+<dd><code>setPaintAttribute()</code>, <code>testPaintAttribute()</code></dd></dl>
 <p> <code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>ClipPolygons </i></p>
-<dd>Clip polygons before painting them. In situations, where points are far outside the visible area (f.e when zooming deep) this might be a substantial improvement for the painting performance</dl>
+<dt><i>ClipPolygons </i></dt>
+<dd>Clip polygons before painting them. In situations, where points are far outside the visible area (f.e when zooming deep) this might be a substantial improvement for the painting performance</dd></dl>
 <p> But polygon clipping will convert the painter path into polygons what might introduce a negative impact on the performance of paths composed from curves or ellipses.</p>
 <h2>Constructor &amp; Destructor Documentation</h2>
 <h3>QwtPlotShapeItem::QwtPlotShapeItem (const QString &amp;title = QString::null) [explicit]</h3>
 <p>Constructor. Sets the following item attributes:</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd><code>QwtPlotItem::AutoScale</code>: true</p>
-<dt>&bull;</p>
-<dd><code>QwtPlotItem::Legend</code>: false</dl>
+<dt>&bull;</dt>
+<dd><code>QwtPlotItem::AutoScale</code>: true</dd>
+<dt>&bull;</dt>
+<dd><code>QwtPlotItem::Legend</code>: false</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>title</i> Title</dl>
+<dd><i>title</i> Title</dd></dl>
 <h3>QwtPlotShapeItem::QwtPlotShapeItem (const <code>QwtText</code> &amp;title) [explicit]</h3>
 <p>Constructor. Sets the following item attributes:</p>
 <dl COMPACT>
-<dt>&bull;</p>
-<dd><code>QwtPlotItem::AutoScale</code>: true</p>
-<dt>&bull;</p>
-<dd><code>QwtPlotItem::Legend</code>: false</dl>
+<dt>&bull;</dt>
+<dd><code>QwtPlotItem::AutoScale</code>: true</dd>
+<dt>&bull;</dt>
+<dd><code>QwtPlotItem::Legend</code>: false</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>title</i> Title</dl>
+<dd><i>title</i> Title</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>QBrush QwtPlotShapeItem::brush () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Brush used to fill the shape</dl>
+<dd>Brush used to fill the shape</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setBrush()</code>, <code>pen()</code></dl>
+<dd><code>setBrush()</code>, <code>pen()</code></dd></dl>
 <h3>void QwtPlotShapeItem::draw (QPainter *painter, const <code>QwtScaleMap</code> &amp;xMap, const <code>QwtScaleMap</code> &amp;yMap, const QRectF &amp;canvasRect) const [virtual]</h3>
 <p>Draw the shape item </p>
 <p> <code>Parameters:</code></p>
@@ -113,72 +113,72 @@ description: "QwtPlotShapeItem –"
 <dd><i>painter</i> Painter<br />
  <i>xMap</i> X-Scale Map<br />
  <i>yMap</i> Y-Scale Map<br />
- <i>canvasRect</i> Contents rect of the plot canvas</dl>
+ <i>canvasRect</i> Contents rect of the plot canvas</dd></dl>
 <p> Implements <code>QwtPlotItem</code>.</p>
 <h3><code>QwtGraphic</code> QwtPlotShapeItem::legendIcon (intindex, const QSizeF &amp;size) const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>A rectangle filled with the color of the brush ( or the pen )</dl>
+<dd>A rectangle filled with the color of the brush ( or the pen )</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>index</i> Index of the legend entry ( usually there is only one )<br />
- <i>size</i> Icon size</dl>
+ <i>size</i> Icon size</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setLegendIconSize()</code>, <code>legendData()</code></dl>
+<dd><code>setLegendIconSize()</code>, <code>legendData()</code></dd></dl>
 <p> Reimplemented from <code>QwtPlotItem</code>.</p>
 <h3><code>QwtPlotShapeItem::LegendMode</code> QwtPlotShapeItem::legendMode () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Mode how to represent the item on the legend</dl>
+<dd>Mode how to represent the item on the legend</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>legendMode()</code></dl>
+<dd><code>legendMode()</code></dd></dl>
 <h3>QPen QwtPlotShapeItem::pen () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Pen used to draw the outline of the shape</dl>
+<dd>Pen used to draw the outline of the shape</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPen()</code>, <code>brush()</code></dl>
+<dd><code>setPen()</code>, <code>brush()</code></dd></dl>
 <h3>double QwtPlotShapeItem::renderTolerance () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Tolerance for the weeding optimization</dl>
+<dd>Tolerance for the weeding optimization</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setRenderTolerance()</code></dl>
+<dd><code>setRenderTolerance()</code></dd></dl>
 <h3>int QwtPlotShapeItem::rtti () const [virtual]</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd><code>QwtPlotItem::Rtti_PlotShape</code></dl>
+<dd><code>QwtPlotItem::Rtti_PlotShape</code></dd></dl>
 <p> Reimplemented from <code>QwtPlotItem</code>.</p>
 <h3>void QwtPlotShapeItem::setBrush (const QBrush &amp;brush)</h3>
 <p>Assign a brush. </p>
 <p> The brush is used to fill the path </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>brush</i> Brush</dl>
+<dd><i>brush</i> Brush</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>brush()</code>, <code>pen()</code></dl>
+<dd><code>brush()</code>, <code>pen()</code></dd></dl>
 <h3>void QwtPlotShapeItem::setLegendMode (<code>LegendMode</code>mode)</h3>
 <p>Set the mode how to represent the item on the legend </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>mode</i> Mode</dl>
+<dd><i>mode</i> Mode</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>legendMode()</code></dl>
+<dd><code>legendMode()</code></dd></dl>
 <h3>void QwtPlotShapeItem::setPaintAttribute (<code>PaintAttribute</code>attribute, boolon = true)</h3>
 <p>Specify an attribute how to draw the shape </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>attribute</i> Paint attribute<br />
- <i>on</i> On/Off</dl>
+ <i>on</i> On/Off</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>testPaintAttribute()</code></dl>
+<dd><code>testPaintAttribute()</code></dd></dl>
 <h3>void QwtPlotShapeItem::setPen (const QColor &amp;color, qrealwidth = 0.0, Qt::PenStylestyle = Qt::SolidLine)</h3>
 <p>Build and assign a pen </p>
 <p> In Qt5 the default pen width is 1.0 ( 0.0 in Qt4 ) what makes it non cosmetic ( see QPen::isCosmetic() ). This method has been introduced to hide this incompatibility. </p>
@@ -186,64 +186,64 @@ description: "QwtPlotShapeItem –"
 <dl COMPACT>
 <dd><i>color</i> Pen color<br />
  <i>width</i> Pen width<br />
- <i>style</i> Pen style</dl>
+ <i>style</i> Pen style</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>pen()</code>, <code>brush()</code></dl>
+<dd><code>pen()</code>, <code>brush()</code></dd></dl>
 <h3>void QwtPlotShapeItem::setPen (const QPen &amp;pen)</h3>
 <p>Assign a pen. The pen is used to draw the outline of the shape </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>pen</i> Pen</dl>
+<dd><i>pen</i> Pen</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>pen()</code>, <code>brush()</code></dl>
+<dd><code>pen()</code>, <code>brush()</code></dd></dl>
 <h3>void QwtPlotShapeItem::setPolygon (const QPolygonF &amp;polygon)</h3>
 <p>Set a path built from a polygon. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>polygon</i> Polygon</dl>
+<dd><i>polygon</i> Polygon</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setShape()</code>, <code>setRect()</code>, <code>shape()</code></dl>
+<dd><code>setShape()</code>, <code>setRect()</code>, <code>shape()</code></dd></dl>
 <h3>void QwtPlotShapeItem::setRect (const QRectF &amp;rect)</h3>
 <p>Set a path built from a rectangle. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>rect</i> Rectangle</dl>
+<dd><i>rect</i> Rectangle</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setShape()</code>, <code>setPolygon()</code>, <code>shape()</code></dl>
+<dd><code>setShape()</code>, <code>setPolygon()</code>, <code>shape()</code></dd></dl>
 <h3>void QwtPlotShapeItem::setRenderTolerance (doubletolerance)</h3>
 <p>Set the tolerance for the weeding optimization. After translating the shape into target device coordinate ( usually widget geometries ) the painter path can be simplified by a point weeding algorithm ( Douglas-Peucker ). </p>
 <p> For shapes built from curves and ellipses weeding might have the opposite effect because they have to be expanded to polygons. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>tolerance</i> Accepted error when reducing the number of points A value &lt;= 0.0 disables weeding.</dl>
+<dd><i>tolerance</i> Accepted error when reducing the number of points A value &lt;= 0.0 disables weeding.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>renderTolerance()</code>, <code>QwtWeedingCurveFitter</code></dl>
+<dd><code>renderTolerance()</code>, <code>QwtWeedingCurveFitter</code></dd></dl>
 <h3>void QwtPlotShapeItem::setShape (const QPainterPath &amp;shape)</h3>
 <p>Set the shape to be displayed. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>shape</i> Shape</dl>
+<dd><i>shape</i> Shape</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setShape()</code>, <code>shape()</code></dl>
+<dd><code>setShape()</code>, <code>shape()</code></dd></dl>
 <h3>QPainterPath QwtPlotShapeItem::shape () const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>Shape to be displayed</dl>
+<dd>Shape to be displayed</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setShape()</code></dl>
+<dd><code>setShape()</code></dd></dl>
 <h3>bool QwtPlotShapeItem::testPaintAttribute (<code>PaintAttribute</code>attribute) const</h3>
 <p><code>Returns:</code></p>
 <dl COMPACT>
-<dd>True, when attribute is enabled</dl>
+<dd>True, when attribute is enabled</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>setPaintAttribute()</code></dl>
+<dd><code>setPaintAttribute()</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Qwt User&#8217;s Guide from the source code.</p>

@@ -15,14 +15,14 @@ description: "loaderinfo – report SCSI tape device info"
 <p> The <code>loaderinfo</code> command reads various information from SCSI tape loaders. Its intended use is for high-level programs that are trying to decide what the capabilities of a device are. </p>
 <p> The following are printed:</p>
 <dl>
-<dt><code>Element Address Assignment Page:</code></p>
-<dd> This tells how many elements are in the loader, and what their raw hardware addresses are. </p>
-<dt><code>Transport Geometry Descriptor Page:</code></p>
-<dd> Will display whether media is invertible or not (usable with some optical jukeboxes for detirmining whether to &quot;flip&quot; media after writing to the first side). </p>
-<dt><code>Device Capabilities Page</code></p>
-<dd> Currently will only display whether we can transfer between slots (i.e. whether &#8216;mtx transfer&#8217; works). </p>
-<dt><code>Inquiry Page</code></p>
-<dd> Aside from the normal inquiry info, will also print out whether we have a bar code reader (for loaders that support the Exabyte extension for reporting presense of said reader). </p>
+<dt><code>Element Address Assignment Page:</code></dt>
+<dd> This tells how many elements are in the loader, and what their raw hardware addresses are. </dd>
+<dt><code>Transport Geometry Descriptor Page:</code></dt>
+<dd> Will display whether media is invertible or not (usable with some optical jukeboxes for detirmining whether to &quot;flip&quot; media after writing to the first side). </dd>
+<dt><code>Device Capabilities Page</code></dt>
+<dd> Currently will only display whether we can transfer between slots (i.e. whether &#8216;mtx transfer&#8217; works). </dd>
+<dt><code>Inquiry Page</code></dt>
+<dd> Aside from the normal inquiry info, will also print out whether we have a bar code reader (for loaders that support the Exabyte extension for reporting presense of said reader). </dd>
 </dl>
 <h2>OPTIONS</h2>
 <p> The first argument, given following <code>-f</code> , is the SCSI generic device corresponding to your tape loader. Consult your operating system&#8217;s documentation for more information (for example, under Linux these are generally start at /dev/sg0 under FreeBSD these start at /dev/pass0). </p>

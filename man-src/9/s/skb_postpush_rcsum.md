@@ -15,15 +15,15 @@ skb_postpush_rcsum - update checksum for received skb after push
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>buffer to update</dl>
+<dl><dd></dd><dd>buffer to update</dd></dl>
  
 
  <i>start</i>
-<dl><dd>start of data after push</dl>
+<dl><dd>start of data after push</dd></dl>
  
 
  <i>len</i>
-<dl><dd>length of data pushed</dl>
+<dl><dd>length of data pushed</dd></dl>
 
 <h2>Description</h2>
 

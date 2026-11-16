@@ -19,26 +19,26 @@ description: "jcf-dump – print information about Java class files"
 <p> This is a class file examiner, similar to <tt>&quot;javap&quot;</tt>. It will print information about a number of classes, which are specified by class name or file name.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code></p>
-<dd> Disassemble method bodies. By default method bodies are not printed.</p>
-<dt><code>&#8211;print-constants</code></p>
-<dd> Print the constant pool. When printing a reference to a constant also print its index in the constant pool.</p>
-<dt><code>&#8211;javap</code></p>
-<dd> Generate output in <tt>&quot;javap&quot;</tt> format. The implementation of this feature is very incomplete.</p>
-<dt><code>&#8211;classpath=</code><i>path</i></p>
+<dt><code>-c</code></dt>
+<dd> Disassemble method bodies. By default method bodies are not printed.</dd>
+<dt><code>&#8211;print-constants</code></dt>
+<dd> Print the constant pool. When printing a reference to a constant also print its index in the constant pool.</dd>
+<dt><code>&#8211;javap</code></dt>
+<dd> Generate output in <tt>&quot;javap&quot;</tt> format. The implementation of this feature is very incomplete.</dd>
+<dt><code>&#8211;classpath=</code><i>path</i></dt>
 <dd>
-<dt><code>&#8211;CLASSPATH=</code><i>path</i></p>
+</dd><dt><code>&#8211;CLASSPATH=</code><i>path</i></dt>
 <dd>
-<dt><code>-I</code><i>directory</i></p>
+</dd><dt><code>-I</code><i>directory</i></dt>
 <dd>
-<dt><code>-o</code> <i>file</i></p>
-<dd> These options as the same as the corresponding <code>gcj</code> options.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Print help, then exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print version number, then exit.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> Print extra information while running. Implies <tt>&quot;--print-constants&quot;</tt>.</dl>
+</dd><dt><code>-o</code> <i>file</i></dt>
+<dd> These options as the same as the corresponding <code>gcj</code> options.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Print help, then exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print version number, then exit.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> Print extra information while running. Implies <tt>&quot;--print-constants&quot;</tt>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-gcc/">gcc</a></i>(1), <i><a href="/docs/linux/man/1-gcj/">gcj</a></i>(1), <i><a href="/docs/linux/man/1-gcjh/">gcjh</a></i>(1), <i><a href="/docs/linux/man/1-gij/">gij</a></i>(1), <i><a href="/docs/linux/man/1-jcf-dump/">jcf-dump</a></i>(1), <i>gfdl</i>(7), and the Info entries for <i>gcj</i> and <i>gcc</i>.</p>
 <h2>COPYRIGHT</h2>

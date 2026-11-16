@@ -14,10 +14,10 @@ description: "pci_wake_from_d3 – enable/disable device to wake up from D3_hot 
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>PCI device to prepare</dl>
+</dd><dd>PCI device to prepare</dd></dl>
 <p> <i>enable</i></p>
 <dl>
-<dd>True to enable wake-up event generation; false to disable</dl>
+<dd>True to enable wake-up event generation; false to disable</dd></dl>
 <h2>Description</h2>
 <p>Many drivers want the device to wake up the system from D3_hot or D3_cold and this function allows them to set that up cleanly &#8211; <code>pci_enable_wake</code> should not be called twice in a row to enable wake-up due to PCI PM vs ACPI ordering constraints. </p>
 <p> This function only returns error code if the device is not capable of generating PME# from both D3_hot and D3_cold, and the platform is unable to enable wake-up power for it.</p>

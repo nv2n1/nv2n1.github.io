@@ -10,7 +10,6 @@ description: "std::numeric_limits<T>::signaling_NaN – std::numeric_limits<T>::
 <p>std::numeric_limits&lt;T&gt;::signaling_NaN &#8211; std::numeric_limits&lt;T&gt;::signaling_NaN</p>
 <h2>Synopsis</h2>
 <pre><code>static T signaling_NaN() throw();             (until C++11)
-
 static constexpr T signaling_NaN() noexcept;  (since C++11)</code></pre>
 <p>Returns the special value &quot;signaling not-a-number&quot;, as represented by the floating-point type T. Only meaningful if std::numeric_limits&lt;T&gt;::has_signaling_NaN == true. In IEEE 754, the most common binary representation of floating-point numbers, any value with all bits of the exponent set and at least one bit of the fraction set represents a NaN. It is implementation-defined which values of the fraction represent quiet or signaling NaNs, and whether the sign bit is meaningful. </p>
 <h2>Return value</h2>
@@ -42,15 +41,10 @@ When a signaling NaN is used as an argument to an arithmetic expression, the app
 <p>Demonstrates the use of a signaling NaN to raise a floating-point exception<br />
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;limits&gt;
-
 #include &lt;cfenv&gt;
-
 #pragma STDC_FENV_ACCESS on
-
 void show_fe_exceptions()
-
 {
     int n = std::fetestexcept(FE_ALL_EXCEPT);
     if (n &amp; FE_INVALID)
@@ -61,9 +55,7 @@ void show_fe_exceptions()
 &quot;;
     std::feclearexcept(FE_ALL_EXCEPT);
 }
-
 int main()
-
 {
     double snan = std::numeric_limits&lt;double&gt;::signaling_NaN();
     std::cout &lt;&lt; &quot;After sNaN was obtained &quot;;

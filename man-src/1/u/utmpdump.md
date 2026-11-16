@@ -17,30 +17,30 @@ description: "utmpdump – dump UTMP and WTMP files in raw format"
 <p> <code>-f</code>, <code>&#8211;follow</code></p>
 <dl>
 <dt>
-<dd> Output appended data as the file grows.</dl>
+</dt><dd> Output appended data as the file grows.</dd></dl>
 <p> <code>-o</code>, <code>&#8211;output</code> <i>file</i></p>
 <dl>
 <dt>
-<dd> Write command output to <i>file</i> instead of standard output.</dl>
+</dt><dd> Write command output to <i>file</i> instead of standard output.</dd></dl>
 <p> <code>-r</code>, <code>&#8211;reverse</code></p>
 <dl>
 <dt>
-<dd> Undump, write back edited login information into the utmp or wtmp files.</dl>
+</dt><dd> Undump, write back edited login information into the utmp or wtmp files.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit.</dl>
+</dt><dd> Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit.</dl>
+</dt><dd> Display help text and exit.</dd></dl>
 <h2>NOTES</h2>
 <p> <code>utmpdump</code> can be useful in cases of corrupted utmp or wtmp entries. It can dump out utmp/wtmp to an ASCII file, which can then be edited to remove bogus entries, and reintegrated using:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p> <code>utmpdump -r &lt; ascii_file &gt; wtmp</code>
-</dl>
+</dd></dl>
 <p> But be warned, <code>utmpdump</code> was written for debugging purposes only.</p>
 <h3>File formats</h3>
 <p> Only the binary version of the <code><a href="/docs/linux/man/5-utmp/">utmp</a></code>(5) is standardised. Textual dumps may become incompatible in future. </p>
@@ -56,3 +56,4 @@ description: "utmpdump – dump UTMP and WTMP files in raw format"
 <h2>AVAILABILITY</h2>
 <p> The <code>utmpdump</code> command is part of the util-linux package which can be downloaded from <i>Linux Kernel Archive</i> &lt;<a rel="nofollow" href="https://www.kernel.org/pub/linux/utils/util-linux/">https://www.kernel.org/pub/linux/utils/util-linux/</a>&gt;. </p>
 <h2>Index</h2>
+</p>

@@ -16,31 +16,31 @@ description: "xbindkeys – a grabbing keys program for X"
 <h2>COMMAND LINE OPTIONS</h2>
 <p> Available command line options are as follows:</p>
 <dl>
-<dt><code>-d, &#8211;defaults</code></p>
-<dd> Print a default rc file</p>
-<dt><code>-f, &#8211;file</code></p>
-<dd> Use an alternative rc file</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Short help on options plus version/author info.</p>
-<dt><code>-X, &#8211;display</code></p>
-<dd> Set X display to use</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd> More information on xbindkeys when it run </p>
-<dt><code>-k, &#8211;key</code></p>
-<dd> Identify one key pressed (useful to fill the configuration file) </p>
-<dt><code>-mk, &#8211;multikey</code></p>
-<dd> Identify multi key pressed (useful to fill the configuration file) </p>
-<dt><code>-g, &#8211;geometry</code></p>
-<dd> size and position of window with -k|-mk option </p>
-<dt><code>-n, &#8211;nodaemon</code></p>
-<dd> don&#8217;t start as daemon </p>
+<dt><code>-d, &#8211;defaults</code></dt>
+<dd> Print a default rc file</dd>
+<dt><code>-f, &#8211;file</code></dt>
+<dd> Use an alternative rc file</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Short help on options plus version/author info.</dd>
+<dt><code>-X, &#8211;display</code></dt>
+<dd> Set X display to use</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd> More information on xbindkeys when it run </dd>
+<dt><code>-k, &#8211;key</code></dt>
+<dd> Identify one key pressed (useful to fill the configuration file) </dd>
+<dt><code>-mk, &#8211;multikey</code></dt>
+<dd> Identify multi key pressed (useful to fill the configuration file) </dd>
+<dt><code>-g, &#8211;geometry</code></dt>
+<dd> size and position of window with -k|-mk option </dd>
+<dt><code>-n, &#8211;nodaemon</code></dt>
+<dd> don&#8217;t start as daemon </dd>
 </dl>
 <p> If guile support have not been disabled:</p>
 <dl>
-<dt><code>-dg, &#8211;defaults-guile</code></p>
-<dd> Print a default guile configuration file </p>
-<dt><code>-fg, &#8211;file-guile</code></p>
-<dd> Use an alternative guile configuration file </p>
+<dt><code>-dg, &#8211;defaults-guile</code></dt>
+<dd> Print a default guile configuration file </dd>
+<dt><code>-fg, &#8211;file-guile</code></dt>
+<dd> Use an alternative guile configuration file </dd>
 </dl>
 <h2>XBINDKEYSRC</h2>
 <p> XBindKeys uses a configuration files. This file is $HOME/.xbindkeysrc, used only for one user. All whitespace is ignored in the files except for within the commands names double quotes. </p>

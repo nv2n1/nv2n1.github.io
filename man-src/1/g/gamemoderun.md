@@ -19,20 +19,20 @@ description: "gamemoderun – invoke gamemode into any program"
 <p> <code>libgamemodeauto.so.0</code> can be pre-loaded into any program to request <code>gamemoded</code> begin or end the mode, like so: </p>
 <dl>
 <dt>
-<dd> gamemoderun ./game</dl>
+</dt><dd> gamemoderun ./game</dd></dl>
 <p> Or by setting the Steam launch options for a game: </p>
 <dl>
 <dt>
-<dd> gamemoderun %command%</dl>
+</dt><dd> gamemoderun %command%</dd></dl>
 <p> The library can be manually preloaded if needed: </p>
 <dl>
 <dt>
-<dd> LD_PRELOAD=$LD_PRELOAD:/usr/\$LIB/libgamemodeauto.so.0 ./game</dl>
+</dt><dd> LD_PRELOAD=$LD_PRELOAD:/usr/\$LIB/libgamemodeauto.so.0 ./game</dd></dl>
 <h2>CONFIG</h2>
 <p> It is possible to set additional start commands to gamemoderun by setting the environment variable: </p>
 <dl>
 <dt>
-<dd> GAMEMODERUNEXEC=&quot;command&quot;</dl>
+</dt><dd> GAMEMODERUNEXEC=&quot;command&quot;</dd></dl>
 <p> When this is set, gamemoderun will execute the command given by that environment variable, and the command line passed to gamemoderun will be passed as arguments to that command. GameMode will not be applied to the wrapper command, just the game itself. </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-gamemoded/">gamemoded</a>(8) </p>

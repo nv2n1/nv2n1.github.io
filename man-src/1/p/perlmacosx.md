@@ -188,8 +188,8 @@ url: "/docs/linux/man/1-perlmacosx/"
 
 
 <dt><a HREF="#lbAM">Starting From Scratch</a>
-<dd>
-<dt><a HREF="#lbAN">AUTHOR</a>
-<dd>
-<dt><a HREF="#lbAO">DATE</a>
-<dd></dl>
+</dt><dd>
+</dd><dt><a HREF="#lbAN">AUTHOR</a>
+</dt><dd>
+</dd><dt><a HREF="#lbAO">DATE</a>
+</dt><dd></dd></dl>

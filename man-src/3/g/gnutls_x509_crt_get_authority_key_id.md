@@ -14,14 +14,14 @@ description: "gnutls_x509_crt_get_authority_key_id – API function"
 <p> <code>int gnutls_x509_crt_get_authority_key_id(gnutls_x509_crt_t </code><i>cert</i><code>, void * </code><i>id</i><code>, size_t * </code><i>id_size</i><code>, unsigned int * </code><i>critical</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_x509_crt_t cert</p>
-<dd> should contain a <code>gnutls_x509_crt_t</code> structure</p>
-<dt>void * id</p>
-<dd> The place where the identifier will be copied</p>
-<dt>size_t * id_size</p>
-<dd> Holds the size of the id field.</p>
-<dt>unsigned int * critical</p>
-<dd> will be non-zero if the extension is marked as critical (may be null)</dl>
+<dt>gnutls_x509_crt_t cert</dt>
+<dd> should contain a <code>gnutls_x509_crt_t</code> structure</dd>
+<dt>void * id</dt>
+<dd> The place where the identifier will be copied</dd>
+<dt>size_t * id_size</dt>
+<dd> Holds the size of the id field.</dd>
+<dt>unsigned int * critical</dt>
+<dd> will be non-zero if the extension is marked as critical (may be null)</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This function will return the X.509v3 certificate authority&#8217;s key identifier. This is obtained by the X.509 Authority Key identifier extension field (2.5.29.35). Note that this function only returns the keyIdentifier field of the extension and <code>GNUTLS_E_X509_UNSUPPORTED_EXTENSION</code>, if the extension contains the name and serial number of the certificate. In that case <code>gnutls_x509_crt_get_authority_key_gn_serial()</code> may be used.</p>
 <h2>RETURNS</h2>
@@ -35,6 +35,6 @@ description: "gnutls_x509_crt_get_authority_key_id – API function"
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the /usr/share/doc/gnutls/ directory does not contain the HTML form visit <code></p>
 <dl>
-<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></p>
-<dd> </code></dl>
+<dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
+<dd> </code></dd></dl>
 <h2>Index</h2>

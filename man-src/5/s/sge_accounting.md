@@ -27,8 +27,8 @@ description: "accounting – Grid Engine accounting file format"
 <h3><code>account</code></h3>
 <p>An account string as specified by the or <code>-A</code> option.</p>
 <dl>
-<dt><code>priority</code></p>
-<dd>Priority value assigned to the job corresponding to the <code>priority</code> parameter in the queue configuration (see</dl>
+<dt><code>priority</code></dt>
+<dd>Priority value assigned to the job corresponding to the <code>priority</code> parameter in the queue configuration (see</dd></dl>
 <h3><code>submission_time</code></h3>
 <p>Submission time (GMT unix time stamp).</p>
 <h3><code>start_time</code></h3>
@@ -40,11 +40,11 @@ description: "accounting – Grid Engine accounting file format"
 <h3><code>exit_status</code></h3>
 <p>Exit status of the job script (or Grid Engine specific status in case of certain error conditions). The exit status is determined by following the normal shell conventions. If the command terminates normally the value of the command is its exit status. However, in the case that the command exits abnormally, a value of 0200 (octal), 128 (decimal) is added to the value of the command to make up the exit status.</p>
 <dl>
-<dd>For example: If a job dies through signal 9 (SIGKILL) then the exit status becomes 128 + 9 = 137.</dl>
+<dd>For example: If a job dies through signal 9 (SIGKILL) then the exit status becomes 128 + 9 = 137.</dd></dl>
 <h3><code>ru_wallclock</code></h3>
 <p>Difference between <code>end_time</code> and <code>start_time</code> (see above). </p>
 <p> The remainder of the accounting entries follows the contents of the standard UNIX rusage structure as described in Depending on the operating system where the job was executed some of the fields may be 0. The following entries are provided: </p>
-<pre><dl><dt><dd><code>ru_utime</code>
+<pre><dl><dt></dt><dd><code>ru_utime</code>
 <code>ru_stime</code>
 <code>ru_maxrss</code>
 <code>ru_ixrss</code>
@@ -61,7 +61,7 @@ description: "accounting – Grid Engine accounting file format"
 <code>ru_nsignals</code>
 <code>ru_nvcsw</code>
 <code>ru_nivcsw</code>
-</dl></pre>
+</dd></dl></pre>
 <h3><code>project</code></h3>
 <p>The project which was assigned to the job.</p>
 <h3><code>department</code></h3>

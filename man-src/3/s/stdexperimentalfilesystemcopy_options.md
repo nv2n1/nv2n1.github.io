@@ -11,29 +11,17 @@ std::experimental::filesystem::copy_options - std::experimental::filesystem::cop
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;experimental/filesystem&gt;
-
 enum class copy_options {
-
     none = 0,
-
     skip_existing = 1,
-
     overwrite_existing = 2,
-
     update_existing = 4,
-
     recursive = 8,                               (filesystem TS)
-
     copy_symlinks = 16,
-
     skip_symlinks = 32,
-
     directories_only = 64,
-
     create_symlinks = 128,
-
     create_hard_links = 256
-
 };</code></pre> 
 This type represents available options that control the behavior of the copy() and copy_file() function. 
 copy_options satisfies the requirements of BitmaskType (which means the bitwise operators operator&amp;, operator|, operator^, operator~, operator&amp;=, operator|=, and operator^= are defined for this type) 
@@ -61,14 +49,10 @@ create_hard_links 256 Instead of creating copies of files, create hardlinks that
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
 int main()
-
 {
     fs::create_directories(&quot;sandbox/dir/subdir&quot;);
     std::ofstream(&quot;sandbox/file1.txt&quot;).put('a');

@@ -13,17 +13,17 @@ description: "vpRenderRawVolume, vpRenderClassifiedVolume – render a volume"
 </code></pre>
 <p> vpResult</p>
 <dl>
-<dt> <code>vpRenderRawVolume(</code><i>vpc</i><code>)</code></p>
+<dt> <code>vpRenderRawVolume(</code><i>vpc</i><code>)</code></dt>
 <dd>
-<dd>vpContext *<i>vpc;</i>  vpResult</p>
+</dd><dd>vpContext *<i>vpc;</i>  vpResult</dd>
 <dl>
-<dt> <code>vpRenderClassifiedVolume(</code><i>vpc</i><code>)</code></p>
+<dt> <code>vpRenderClassifiedVolume(</code><i>vpc</i><code>)</code></dt>
 <dd>
-<dd>vpContext *<i>vpc;</i></dl>
+</dd><dd>vpContext *<i>vpc;</i></dd></dl>
 <h2>Arguments</h2>
 <dl>
-<dt><i>vpc</i></p>
-<dd>VolPack context from <code>vpCreateContext.</code></dl>
+<dt><i>vpc</i></dt>
+<dd>VolPack context from <code>vpCreateContext.</code></dd></dl>
 <h2>Description</h2>
 <p>These routines are used to render a volume using the parameters in a rendering context. <code>vpRenderRawVolume</code> renders the data in the current voxel array and stores the result in the current image array. If an octree is present in the context (see <a href="/docs/linux/man/3-vpcreateminmaxoctree/">vpCreateMinMaxOctree</a>(3)) then it is used to accelerate rendering. <code>vpRenderClassifiedVolume</code> is identical in function except that it renders the current preclassified volume (see <a href="/docs/linux/man/3-vpclassifyvolume/">vpClassifyVolume</a>(3)) instead of the voxel array, and the octree is not used. </p>
 <p> <code>vpRenderClassifiedVolume</code> should be used when the same volume is rendered multiple times with the same opacity transfer function. This rendering mode is the fastest. The opacity transfer function must not change because the voxel opacities must be fixed to compute a preclassified volume. </p>
@@ -34,17 +34,18 @@ description: "vpRenderRawVolume, vpRenderClassifiedVolume – render a volume"
 <h2>Errors</h2>
 <p>The normal return value is VP_OK. The following error return values are possible:</p>
 <dl>
-<dt>VPERROR_BAD_SHADER</p>
-<dd>The shading lookup tables are sized incorrectly, or one of the voxel fields used to index the tables is invalid, or the number of material types is invalid.</p>
-<dt>VPERROR_SINGULAR</p>
-<dd>One of the current view transformation matrices is singular.</p>
-<dt>VPERROR_BAD_VOLUME</p>
-<dd>The volume size has not been set or is invalid, or there is no volume data.</p>
-<dt>VPERROR_BAD_VOXEL</p>
-<dd>The voxel size or the voxel fields have not been specified or have been incorrectly specified.</p>
-<dt>VPERROR_BAD_CLASSIFIER</p>
-<dd>The opacity transfer function tables have invalid sizes or are associated with invalid voxel fields or have been incorrectly specified. (<code>vpRenderRawVolume</code> only)</p>
-<dt>VPERROR_BAD_SHADOW</p>
-<dd>The angle between the shadow light vector and the viewing direction is too large (must be less than 45 degrees). Either change the light direction or disable shadows (see vpSetShadowLookupShader).</dl>
+<dt>VPERROR_BAD_SHADER</dt>
+<dd>The shading lookup tables are sized incorrectly, or one of the voxel fields used to index the tables is invalid, or the number of material types is invalid.</dd>
+<dt>VPERROR_SINGULAR</dt>
+<dd>One of the current view transformation matrices is singular.</dd>
+<dt>VPERROR_BAD_VOLUME</dt>
+<dd>The volume size has not been set or is invalid, or there is no volume data.</dd>
+<dt>VPERROR_BAD_VOXEL</dt>
+<dd>The voxel size or the voxel fields have not been specified or have been incorrectly specified.</dd>
+<dt>VPERROR_BAD_CLASSIFIER</dt>
+<dd>The opacity transfer function tables have invalid sizes or are associated with invalid voxel fields or have been incorrectly specified. (<code>vpRenderRawVolume</code> only)</dd>
+<dt>VPERROR_BAD_SHADOW</dt>
+<dd>The angle between the shadow light vector and the viewing direction is too large (must be less than 45 degrees). Either change the light direction or disable shadows (see vpSetShadowLookupShader).</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-volpack/">VolPack</a>(3), <a href="/docs/linux/man/3-vpcreatecontext/">vpCreateContext</a>(3) </p>
+</dl>

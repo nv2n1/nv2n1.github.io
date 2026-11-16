@@ -11,9 +11,7 @@ std::normal_distribution - std::normal_distribution
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;random&gt;
-
 template&lt; class RealType = double &gt;  (since C++11)
-
 class normal_distribution;</code></pre> 
 Generates random numbers according to the Normal_(or_Gaussian)_random_number_distribution. It is defined as: 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;f(x; μ,σ) = 
@@ -86,19 +84,12 @@ operator&gt;&gt;
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;iomanip&gt;
-
 #include &lt;string&gt;
-
 #include &lt;map&gt;
-
 #include &lt;random&gt;
-
 #include &lt;cmath&gt;
-
 int main()
-
 {
     std::random_device rd{};
     std::mt19937 gen{rd()};

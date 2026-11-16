@@ -14,14 +14,14 @@ description: "ccw_device_clear_options – clear some options"
 <p><i>cdev</i></p>
 <dl>
 <dd>
-<dd>device for which the options are to be cleared</dl>
+</dd><dd>device for which the options are to be cleared</dd></dl>
 <p> <i>flags</i></p>
 <dl>
-<dd>options to be cleared</dl>
+<dd>options to be cleared</dd></dl>
 <h2>Description</h2>
 <p>All flags specified in <i>flags</i> are cleared, the remainder is left untouched.</p>
 <h2>Author</h2>
 <p><code>Cornelia Huck</code> &lt;cornelia.huck [at] de.ibm.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

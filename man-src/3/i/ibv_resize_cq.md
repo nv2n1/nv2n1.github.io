@@ -17,10 +17,10 @@ url: "/docs/linux/man/3-ibv_resize_cq/"
 
 <dl>
 <dt>
-<dd> <pre><code>
+</dt><dd> <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 int ibv_resize_cq(struct ibv_cq *cq, int cqe);
-</code></pre></dl>
+</code></pre></dd></dl>
 
 <h2>DESCRIPTION</h2>
 

@@ -15,7 +15,7 @@ skb_frag_address - gets the address of the data contained in a paged fragment
 <h2>Arguments</h2>
 
 <i>frag</i>
-<dl><dd><dd>the paged fragment buffer</dl>
+<dl><dd></dd><dd>the paged fragment buffer</dd></dl>
 
 <h2>Description</h2>
 

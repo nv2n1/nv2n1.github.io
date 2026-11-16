@@ -16,64 +16,64 @@ description: "ldclt – load test program for LDAP"
 <h2>OPTIONS</h2>
 <p> The valid options are:</p>
 <dl>
-<dt><code>-a</code></p>
-<dd> Asynchronous mode, with max pending operations.</p>
-<dt><code>-b</code></p>
-<dd> Give the base DN to use. Default &quot;dc=example,dc=com&quot;.</p>
-<dt><code>-D</code></p>
-<dd> Bind DN. See <code>-w</code></p>
-<dt><code>-E</code></p>
-<dd> Max errors allowed. Default 1000.</p>
-<dt><code>-f</code></p>
-<dd> Filter for searches.</p>
-<dt><code>-h</code></p>
-<dd> Host to connect. Default &quot;localhost&quot;.</p>
-<dt><code>-H</code></p>
-<dd> Ldap URL to connect to. Example, <a href="ldap://localhost:389.">ldap://localhost:389.</a> This takes precedence over -h and -p.</p>
-<dt><code>-i</code></p>
-<dd> Number of times inactivity allowed. Default 3 (30 seconds)</p>
-<dt><code>-I</code></p>
-<dd> Ignore errors (cf. <code>-E</code>). Default none.</p>
-<dt><code>-n</code></p>
-<dd> Number of threads. Default 10.</p>
-<dt><code>-N</code></p>
-<dd> Number of samples (10 seconds each). Default infinite.</p>
-<dt><code>-o</code></p>
-<dd> SASL Option.</p>
-<dt><code>-p</code></p>
-<dd> Server port. Default 389.</p>
-<dt><code>-P</code></p>
-<dd> Master port (to check replication). Default 16000.</p>
-<dt><code>-q</code></p>
-<dd> Quiet mode. See option <code>-I</code>.</p>
-<dt><code>-Q</code></p>
-<dd> Super quiet mode.</p>
-<dt><code>-r</code></p>
-<dd> Range&#8217;s low value.</p>
-<dt><code>-R</code></p>
-<dd> Range&#8217;s high value.</p>
-<dt><code>-s</code></p>
-<dd> Scope. May be base, subtree or one. Default subtree.</p>
-<dt><code>-S</code></p>
-<dd> Slave to check.</p>
-<dt><code>-t</code></p>
-<dd> LDAP operations timeout. Default 30 seconds.</p>
-<dt><code>-T</code></p>
-<dd> Total number of operations per thread. Default infinite.</p>
-<dt><code>-v</code></p>
-<dd> Verbose.</p>
-<dt><code>-V</code></p>
-<dd> Very verbose.</p>
-<dt><code>-w</code></p>
-<dd> Bind passwd. See <code>-D</code>.</p>
-<dt><code>-W</code></p>
-<dd> Wait between two operations. Default 0 seconds.</p>
-<dt><code>-Z</code></p>
-<dd> certfile. Turn on SSL and use certfile as the certificate DB</p>
-<dt><code>-e</code></p>
-<dd> Execution parameters:</p>
+<dt><code>-a</code></dt>
+<dd> Asynchronous mode, with max pending operations.</dd>
+<dt><code>-b</code></dt>
+<dd> Give the base DN to use. Default &quot;dc=example,dc=com&quot;.</dd>
+<dt><code>-D</code></dt>
+<dd> Bind DN. See <code>-w</code></dd>
+<dt><code>-E</code></dt>
+<dd> Max errors allowed. Default 1000.</dd>
+<dt><code>-f</code></dt>
+<dd> Filter for searches.</dd>
+<dt><code>-h</code></dt>
+<dd> Host to connect. Default &quot;localhost&quot;.</dd>
+<dt><code>-H</code></dt>
+<dd> Ldap URL to connect to. Example, <a href="ldap://localhost:389.">ldap://localhost:389.</a> This takes precedence over -h and -p.</dd>
+<dt><code>-i</code></dt>
+<dd> Number of times inactivity allowed. Default 3 (30 seconds)</dd>
+<dt><code>-I</code></dt>
+<dd> Ignore errors (cf. <code>-E</code>). Default none.</dd>
+<dt><code>-n</code></dt>
+<dd> Number of threads. Default 10.</dd>
+<dt><code>-N</code></dt>
+<dd> Number of samples (10 seconds each). Default infinite.</dd>
+<dt><code>-o</code></dt>
+<dd> SASL Option.</dd>
+<dt><code>-p</code></dt>
+<dd> Server port. Default 389.</dd>
+<dt><code>-P</code></dt>
+<dd> Master port (to check replication). Default 16000.</dd>
+<dt><code>-q</code></dt>
+<dd> Quiet mode. See option <code>-I</code>.</dd>
+<dt><code>-Q</code></dt>
+<dd> Super quiet mode.</dd>
+<dt><code>-r</code></dt>
+<dd> Range&#8217;s low value.</dd>
+<dt><code>-R</code></dt>
+<dd> Range&#8217;s high value.</dd>
+<dt><code>-s</code></dt>
+<dd> Scope. May be base, subtree or one. Default subtree.</dd>
+<dt><code>-S</code></dt>
+<dd> Slave to check.</dd>
+<dt><code>-t</code></dt>
+<dd> LDAP operations timeout. Default 30 seconds.</dd>
+<dt><code>-T</code></dt>
+<dd> Total number of operations per thread. Default infinite.</dd>
+<dt><code>-v</code></dt>
+<dd> Verbose.</dd>
+<dt><code>-V</code></dt>
+<dd> Very verbose.</dd>
+<dt><code>-w</code></dt>
+<dd> Bind passwd. See <code>-D</code>.</dd>
+<dt><code>-W</code></dt>
+<dd> Wait between two operations. Default 0 seconds.</dd>
+<dt><code>-Z</code></dt>
+<dd> certfile. Turn on SSL and use certfile as the certificate DB</dd>
+<dt><code>-e</code></dt>
+<dd> Execution parameters:</dd>
 <dt>
-<dd> <code>add</code> ldap_add() entries.<br />
+</dt><dd> <code>add</code> ldap_add() entries.<br />
  <code>append</code> entries to the genldif file.<br />
  <code>ascii</code> ascii 7-bits strings.<br />
  <code>attreplace=name:mask</code> replace attribute of existing entry.<br />
@@ -120,7 +120,7 @@ description: "ldclt – load test program for LDAP"
  <code>withnewparent</code> rename with newparent specified as argument.<br />
  <code>randomauthid</code> random SASL Authid.<br />
  <code>randomauthidlow=value</code> low value for random SASL Authid.<br />
- <code>randomauthidhigh=value</code> high value for random SASL Authid.</dl>
+ <code>randomauthidhigh=value</code> high value for random SASL Authid.</dd></dl>
 <h2>AUTHOR</h2>
 <p> ldclt was written by the 389 Project.</p>
 <h2>REPORTING BUGS</h2>

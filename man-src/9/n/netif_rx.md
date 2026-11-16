@@ -15,7 +15,7 @@ netif_rx - post buffer to the network code
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>buffer to post</dl>
+<dl><dd></dd><dd>buffer to post</dd></dl>
 
 <h2>Description</h2>
 

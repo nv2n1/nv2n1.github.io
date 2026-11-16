@@ -60,17 +60,17 @@ Type=Ethernet</pre>
 <h2>Options</h2>
 <dl>
 <dt>
-<dt><code>-d</code></p>
+</dt><dt><code>-d</code></dt>
 <dd>
-<dd>Reads the configuration file, dumps its contents and exits.</p>
-<dt><code>-l&nbsp;<wbr></code><i>listen_address</i></p>
-<dd>Use the <i>listen_address</i> to where wait connections.</p>
-<dt><code>-f&nbsp;<wbr></code><i>configuration_file</i></p>
-<dd>Use the specified configuration file instead of <code>.lecs_conf</code>.</dl>
+</dd><dd>Reads the configuration file, dumps its contents and exits.</dd>
+<dt><code>-l&nbsp;<wbr></code><i>listen_address</i></dt>
+<dd>Use the <i>listen_address</i> to where wait connections.</dd>
+<dt><code>-f&nbsp;<wbr></code><i>configuration_file</i></dt>
+<dd>Use the specified configuration file instead of <code>.lecs_conf</code>.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>.lecs_conf</code></p>
-<dd>configuration file</dl>
+<dt><code>.lecs_conf</code></dt>
+<dd>configuration file</dd></dl>
 <h2>Bugs</h2>
 <p>Undocumented.</p>
 <h2>Author</h2>

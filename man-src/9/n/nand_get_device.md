@@ -14,14 +14,14 @@ description: "nand_get_device – [GENERIC] Get chip for selected access"
 <p><i>mtd</i></p>
 <dl>
 <dd>
-<dd>MTD device structure</dl>
+</dd><dd>MTD device structure</dd></dl>
 <p> <i>new_state</i></p>
 <dl>
-<dd>the state which is requested</dl>
+<dd>the state which is requested</dd></dl>
 <h2>Description</h2>
 <p>Get the device and lock it for exclusive access</p>
 <h2>Author</h2>
 <p><code>Thomas Gleixner</code> &lt;tglx [at] linutronix.de&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

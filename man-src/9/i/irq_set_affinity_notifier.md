@@ -14,10 +14,10 @@ description: "irq_set_affinity_notifier – control notification of IRQ affinity
 <p><i>irq</i></p>
 <dl>
 <dd>
-<dd>Interrupt for which to enable/disable notification</dl>
+</dd><dd>Interrupt for which to enable/disable notification</dd></dl>
 <p> <i>notify</i></p>
 <dl>
-<dd>Context for notification, or <code>NULL</code> to disable notification. Function pointers must be initialised; the other fields will be initialised by this function.</dl>
+<dd>Context for notification, or <code>NULL</code> to disable notification. Function pointers must be initialised; the other fields will be initialised by this function.</dd></dl>
 <h2>Description</h2>
 <p>Must be called in process context. Notification may only be enabled after the IRQ is allocated and must be disabled before the IRQ is freed using <code>free_irq</code>.</p>
 <h2>Copyright</h2>

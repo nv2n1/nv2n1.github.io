@@ -16,7 +16,6 @@ description: "fixtof – Converts a fixed point to floating point. Allegro game 
 <p> Converts fixed point to floating point. Example: </p>
 <pre><code>
 float result;
-
 /* This will put 33.33333 into `result'. */
 result = fixtof(itofix(100) / 3);
 /* This will put 16.66666 into `result'. */

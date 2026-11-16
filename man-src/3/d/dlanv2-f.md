@@ -26,10 +26,10 @@ description: "dlanv2.f –"
  1) CC = 0 so that AA and DD are real eigenvalues of the matrix, or
  2) AA = DD and BB*CC &lt; 0, so that AA + or - sqrt(BB*CC) are complex
  conjugate eigenvalues.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>A</i> </p>
+<dd><i>A</i> </dd>
 <pre> A is DOUBLE PRECISION</pre>
 <p><i>B</i> </p>
 <pre> B is DOUBLE PRECISION</pre>
@@ -58,13 +58,13 @@ description: "dlanv2.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
@@ -72,7 +72,8 @@ description: "dlanv2.f –"
  Romania, to reduce the risk of cancellation errors,
  when computing real eigenvalues, and to ensure, if possible, that
  abs(RT1R) &gt;= abs(RT2R).</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 128 of file dlanv2.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

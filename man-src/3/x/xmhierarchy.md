@@ -229,20 +229,20 @@ description: "XmHierarchy — The Hierarchy widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNautoClose</code></p>
-<dd>This resource determines if the hierarchy should automatically restore a parent node&#8217;s children when the parent node is reopened. If autoClose is False, and the hierarchy is fully expanded when the root node is closed, then the entire hierarchy will be displayed as expanded when the root node is reopened. If autoClose is True, then the root node&#8217;s children are closed when the root node is reopened.</p>
-<dt><code>XmNcloseFolderPixmap</code></p>
-<dd>This resource defines a pixmap for the closed representation of the folder pixmap to be used throughout the tree. It can be a color pixmap or bitmap. If the user does not specify a pixmap the default bitmap will be used.</p>
-<dt><code>XmNhorizontalMargin</code></p>
+<dt><code>XmNautoClose</code></dt>
+<dd>This resource determines if the hierarchy should automatically restore a parent node&#8217;s children when the parent node is reopened. If autoClose is False, and the hierarchy is fully expanded when the root node is closed, then the entire hierarchy will be displayed as expanded when the root node is reopened. If autoClose is True, then the root node&#8217;s children are closed when the root node is reopened.</dd>
+<dt><code>XmNcloseFolderPixmap</code></dt>
+<dd>This resource defines a pixmap for the closed representation of the folder pixmap to be used throughout the tree. It can be a color pixmap or bitmap. If the user does not specify a pixmap the default bitmap will be used.</dd>
+<dt><code>XmNhorizontalMargin</code></dt>
 <dd>
-<dt><code>XmNverticalMargin</code></p>
-<dd>The exact definition of these resources are left to the subclass of the hierarchy widget that does the geometry layout. They are intended to be used as the amount of space between the object and the edges of the window it is displayed in. They are included here for consistency.</p>
-<dt><code>XmNopenFolderPixmap</code></p>
-<dd>This resource defines a pixmap for the open representation of the folder pixmap to be used throughout the tree . It can be a color pixmap or bitmap. If the user does not specify a pixmap the default opened folder bitmap.</p>
-<dt><code>XmNnodeStateCallback</code></p>
-<dd>The list of callback routines called when a folder button is clicked. See &quot;Callback Routine&quot; for more details.</p>
-<dt><code>XmNrefigureMode</code></p>
-<dd>This resource determines whether the Hierarchy should adjust the sizes of the children after a geometry or resize request, or simply ignore the request. This resource is very useful in improving the performance of an application that is making a large number of geometry changes all at once. </p>
+</dd><dt><code>XmNverticalMargin</code></dt>
+<dd>The exact definition of these resources are left to the subclass of the hierarchy widget that does the geometry layout. They are intended to be used as the amount of space between the object and the edges of the window it is displayed in. They are included here for consistency.</dd>
+<dt><code>XmNopenFolderPixmap</code></dt>
+<dd>This resource defines a pixmap for the open representation of the folder pixmap to be used throughout the tree . It can be a color pixmap or bitmap. If the user does not specify a pixmap the default opened folder bitmap.</dd>
+<dt><code>XmNnodeStateCallback</code></dt>
+<dd>The list of callback routines called when a folder button is clicked. See &quot;Callback Routine&quot; for more details.</dd>
+<dt><code>XmNrefigureMode</code></dt>
+<dd>This resource determines whether the Hierarchy should adjust the sizes of the children after a geometry or resize request, or simply ignore the request. This resource is very useful in improving the performance of an application that is making a large number of geometry changes all at once. </dd>
 <table BORDER>
 <tr>
 <td>
@@ -353,12 +353,12 @@ description: "XmHierarchy — The Hierarchy widget class"
 </tr>
 </table>
 </table>
-<dt><code>XmNinsertBefore</code></p>
-<dd>Specifies another node that has the same parentNode. This node will then be placed immediately before that node in the hierarchy. If this value is NULL then the node will be inserted at the end of the list. This resource allows the hierarchy&#8217;s children to be reordered.</p>
-<dt><code>XmNnodeState</code></p>
-<dd>The state of this node. Acceptable values are: XmOpen, XmClosed, XmAlwaysOpen, and XmHidden. A type converter has been registered that can convert the following strings: &quot;open&quot;, &quot;close&quot;, &quot;alwaysOpen&quot;, and &quot;hidden&quot;.</p>
-<dt><code>XmNparentNode</code></p>
-<dd>The hierarchy parent of this node. The parent node MUST be a widget sibling of the current node.</dl>
+<dt><code>XmNinsertBefore</code></dt>
+<dd>Specifies another node that has the same parentNode. This node will then be placed immediately before that node in the hierarchy. If this value is NULL then the node will be inserted at the end of the list. This resource allows the hierarchy&#8217;s children to be reordered.</dd>
+<dt><code>XmNnodeState</code></dt>
+<dd>The state of this node. Acceptable values are: XmOpen, XmClosed, XmAlwaysOpen, and XmHidden. A type converter has been registered that can convert the following strings: &quot;open&quot;, &quot;close&quot;, &quot;alwaysOpen&quot;, and &quot;hidden&quot;.</dd>
+<dt><code>XmNparentNode</code></dt>
+<dd>The hierarchy parent of this node. The parent node MUST be a widget sibling of the current node.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>Hierarchy inherits behavior and resources from the superclasses described in the following tables. For a complete description of each resource, refer to the reference page for that superclass. </p>
 <table BORDER>
@@ -1447,11 +1447,11 @@ description: "XmHierarchy — The Hierarchy widget class"
  Widget <i>widget</i>;
  XmHierarchyNodeState <i>state</i>;
 } XmHierarchyNodeStateData;
-<dl COMPACT><dt><i>widget</i><dd>the child node of Hierarchy being opened or closed.
-<dt><i>state</i><dd>the current XmNnodeState (after the click) of the 
+<dl COMPACT><dt><i>widget</i></dt><dd>the child node of Hierarchy being opened or closed.
+</dd><dt><i>state</i></dt><dd>the current XmNnodeState (after the click) of the 
 node. Legal values are XmOpen, XmClosed, XmAlwaysOpen, 
 and XmHidden.
-</dl></pre>
+</dd></dl></pre>
 <h3>Children</h3>
 <p>The hierarchy maintains IconButtons for each node in the hierarchy. Setting openFolderPixmap or closeFolderPixmap is done through XtSetValues. IconButtons may only be manipulated by the Hierarchy.</p>
 <h2>Related</h2>

@@ -33,16 +33,16 @@ Since glibc 2.21 : _DEFAULT_SOURCE
 <h2>ERRORS</h2>
 <p> <code>setdomainname</code>() can fail with the following errors:</p>
 <dl>
-<dt><code>EFAULT</code></p>
-<dd> <i>name</i> pointed outside of user address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>len</i> was negative or too large.</p>
-<dt><code>EPERM</code></p>
-<dd> The caller did not have the <code>CAP_SYS_ADMIN</code> capability in the user namespace associated with its UTS namespace (see <code><a href="/docs/linux/man/7-namespaces/">namespaces</a></code>(7)).</dl>
+<dt><code>EFAULT</code></dt>
+<dd> <i>name</i> pointed outside of user address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>len</i> was negative or too large.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The caller did not have the <code>CAP_SYS_ADMIN</code> capability in the user namespace associated with its UTS namespace (see <code><a href="/docs/linux/man/7-namespaces/">namespaces</a></code>(7)).</dd></dl>
 <p> <code>getdomainname</code>() can fail with the following errors:</p>
 <dl>
-<dt><code>EINVAL</code></p>
-<dd> For <code>getdomainname</code>() under libc: <i>name</i> is NULL or <i>name</i> is longer than <i>len</i> bytes.</dl>
+<dt><code>EINVAL</code></dt>
+<dd> For <code>getdomainname</code>() under libc: <i>name</i> is NULL or <i>name</i> is longer than <i>len</i> bytes.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX does not specify these calls.</p>
 <h2>NOTES</h2>

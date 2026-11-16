@@ -34,8 +34,8 @@ Reflecta DigitDia 6000 Ok</pre>
 <p>The <code>sane-pieusb</code> backend supports dirt removal based on infrared scan information. Since SANE does not provide post-processing in the backend, <code>sane-pieusb</code> does the scanning and dirt removal during the setup phase. The &#8216;scan&#8217; phase is only used to transfer the completed image. Therefore <code>sane-pieusb</code> does not multi-thread making a typical frontend appear as &#8216;blocked&#8217;. Also cancel requests are only honored between scans.</p>
 <h2>Environment</h2>
 <dl>
-<dt><code>SANE_DEBUG_PIEUSB</code></p>
-<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. E.g., a value of 128 requests all debug output to be printed. Smaller levels reduce verbosity. </p>
+<dt><code>SANE_DEBUG_PIEUSB</code></dt>
+<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. E.g., a value of 128 requests all debug output to be printed. Smaller levels reduce verbosity. </dd>
 </dl>
 <dl>
 <dd>
@@ -50,15 +50,15 @@ Reflecta DigitDia 6000 Ok</pre>
 11 scanner functions
 13 usb functions
 15 image buffer functions</pre>
-</dl>
+</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/sane.d/pieusb.conf</i></p>
-<dd>The backend configuration file</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-pieusb.a</i></p>
-<dd>The static library implementing this backend.</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-pieusb.so</i></p>
-<dd>The shared library implementing this backend (present on systems that support dynamic loading).</dl>
+<dt><i>/etc/sane.d/pieusb.conf</i></dt>
+<dd>The backend configuration file</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-pieusb.a</i></dt>
+<dd>The static library implementing this backend.</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-pieusb.so</i></dt>
+<dd>The shared library implementing this backend (present on systems that support dynamic loading).</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7) </p>
 <h2>Contact And Bug-Reports</h2>

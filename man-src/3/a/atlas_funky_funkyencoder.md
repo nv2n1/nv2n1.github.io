@@ -24,6 +24,6 @@ description: "Atlas::Funky::FunkyEncoder – The root encoder in ‘stream’ st
 <p>The root encoder in &#8216;stream&#8217; state. </p>
 <p> <code>See also:</code></p>
 <dl COMPACT>
-<dd><code>Atlas Funky Encoder</code></dl>
+<dd><code>Atlas Funky Encoder</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Atlas-C++ from the source code.</p>

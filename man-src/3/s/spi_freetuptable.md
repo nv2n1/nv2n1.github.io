@@ -16,4 +16,4 @@ description: "SPI_freetuptable – free a row set created by SPI_execute or a si
 <h2>Arguments</h2>
 <p>SPITupleTable * <i>tuptable</i></p>
 <dl COMPACT>
-<dd>pointer to row set to free</dl>
+<dd>pointer to row set to free</dd></dl>

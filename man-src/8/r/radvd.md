@@ -15,49 +15,49 @@ description: "radvd – router advertisement daemon for IPv6"
 <h2>Options</h2>
 <p>For every one character option there is also a long option, which is listed right next to the &quot;short&quot; option name: </p>
 <dl>
-<dt><code>-v</code>,<code> &#8211;version</code></p>
-<dd>Displays the version of <i>radvd</i> and then aborts.</p>
-<dt><code>-h</code>,<code> &#8211;help</code></p>
-<dd>Displays a short usage description and then aborts.</p>
-<dt><code>-s</code>,<code> &#8211;singleprocess</code></p>
-<dd>On Linux if <i>username</i> is specified, privilege separation is enabled and there will be two processes. This option disables privilege separation, and as a result, the non-privileged radvd process does not have permissions to change interface configuration.</p>
-<dt><code>-n</code>,<code> &#8211;nodaemon</code></p>
-<dd>Prevent the daemonizing.</p>
-<dt><code>-c</code>,<code> &#8211;configtest</code></p>
-<dd>Test configuration and do startup tests and then exit.</p>
-<dt><code>-d </code>debuglevel,<code> &#8211;debug </code>debuglevel</p>
-<dd>With this option you turn on debugging information. The debugging level is an integer in the range from 1 to 5, from quiet to very verbose. A debugging level of 0 completely turns off debugging. If a debugging level greater than 0 is used, <i>radvd</i> doesn&#8217;t background itself on start. The default debugging level is 0.</p>
-<dt><code>-C </code>configfile,<code> &#8211;config </code>configfile</p>
-<dd>Specifies an alternate config file. Normally the compiled in default <i>/etc/radvd.conf</i> is used.</p>
-<dt><code>-p </code>pidfile,<code> &#8211;pidfile </code>pidfile</p>
-<dd>Specifies an alternate pidfile. Normally the compiled in default <i>/var/run/radvd/radvd.pid</i> is used.</p>
-<dt><code>-m </code>method,<code> &#8211;logmethod </code>method</p>
-<dd>Specifies the logging method to use. Possibly values are:</p>
+<dt><code>-v</code>,<code> &#8211;version</code></dt>
+<dd>Displays the version of <i>radvd</i> and then aborts.</dd>
+<dt><code>-h</code>,<code> &#8211;help</code></dt>
+<dd>Displays a short usage description and then aborts.</dd>
+<dt><code>-s</code>,<code> &#8211;singleprocess</code></dt>
+<dd>On Linux if <i>username</i> is specified, privilege separation is enabled and there will be two processes. This option disables privilege separation, and as a result, the non-privileged radvd process does not have permissions to change interface configuration.</dd>
+<dt><code>-n</code>,<code> &#8211;nodaemon</code></dt>
+<dd>Prevent the daemonizing.</dd>
+<dt><code>-c</code>,<code> &#8211;configtest</code></dt>
+<dd>Test configuration and do startup tests and then exit.</dd>
+<dt><code>-d </code>debuglevel,<code> &#8211;debug </code>debuglevel</dt>
+<dd>With this option you turn on debugging information. The debugging level is an integer in the range from 1 to 5, from quiet to very verbose. A debugging level of 0 completely turns off debugging. If a debugging level greater than 0 is used, <i>radvd</i> doesn&#8217;t background itself on start. The default debugging level is 0.</dd>
+<dt><code>-C </code>configfile,<code> &#8211;config </code>configfile</dt>
+<dd>Specifies an alternate config file. Normally the compiled in default <i>/etc/radvd.conf</i> is used.</dd>
+<dt><code>-p </code>pidfile,<code> &#8211;pidfile </code>pidfile</dt>
+<dd>Specifies an alternate pidfile. Normally the compiled in default <i>/var/run/radvd/radvd.pid</i> is used.</dd>
+<dt><code>-m </code>method,<code> &#8211;logmethod </code>method</dt>
+<dd>Specifies the logging method to use. Possibly values are:</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>none</code></p>
-<dd>Completely disables any logging.</p>
-<dt><code>logfile</code></p>
-<dd>Logs to the logfile which is specified by the <i>-l</i> option. If no logfile is specified on the command line, then a compiled in default is used (see next option).</p>
-<dt><code>stderr</code></p>
-<dd>Logs to standard error.</p>
-<dt><code>stderr_syslog</code></p>
-<dd>Logs only the high messages (of at least LOG_ERR priority) to standard error, and everything to syslog (default method).</p>
-<dt><code>syslog</code></p>
-<dd>Logs to syslog.</dl>
+</dd><dl>
+<dt><code>none</code></dt>
+<dd>Completely disables any logging.</dd>
+<dt><code>logfile</code></dt>
+<dd>Logs to the logfile which is specified by the <i>-l</i> option. If no logfile is specified on the command line, then a compiled in default is used (see next option).</dd>
+<dt><code>stderr</code></dt>
+<dd>Logs to standard error.</dd>
+<dt><code>stderr_syslog</code></dt>
+<dd>Logs only the high messages (of at least LOG_ERR priority) to standard error, and everything to syslog (default method).</dd>
+<dt><code>syslog</code></dt>
+<dd>Logs to syslog.</dd></dl>
 </dl>
 </dl>
 <dl>
-<dt><code>-l </code>logfile,<code> &#8211;logfile </code>logfile</p>
-<dd>Specifies the logfile to use when using the logging method <i>logfile</i>. The default logfile is <i>/var/log/radvd.log</i>.</p>
-<dt><code>-f </code>facility,<code> &#8211;facility </code>facility</p>
-<dd>Specifies the facility (as an integer) when using syslog logging. Default is LOG_DAEMON.</p>
-<dt><code>-t </code>chrootdir,<code> &#8211;chrootdir </code>chrootdir</p>
-<dd>If specified, switches to <i>chrootdir</i> before doing anything else. This directory and its subdirectories must have been populated first. For security reasons, <i>-u </i> must always be used when using <i>chrootdir</i>. </p>
+<dt><code>-l </code>logfile,<code> &#8211;logfile </code>logfile</dt>
+<dd>Specifies the logfile to use when using the logging method <i>logfile</i>. The default logfile is <i>/var/log/radvd.log</i>.</dd>
+<dt><code>-f </code>facility,<code> &#8211;facility </code>facility</dt>
+<dd>Specifies the facility (as an integer) when using syslog logging. Default is LOG_DAEMON.</dd>
+<dt><code>-t </code>chrootdir,<code> &#8211;chrootdir </code>chrootdir</dt>
+<dd>If specified, switches to <i>chrootdir</i> before doing anything else. This directory and its subdirectories must have been populated first. For security reasons, <i>-u </i> must always be used when using <i>chrootdir</i>. </dd>
 <p> Note that on Linux <i>radvd</i> requires access to the <i>/proc</i> filesystem, so it is more challenging to set up the chroot environment.</p>
-<dt><code>-u </code>username,<code> &#8211;username </code>username</p>
-<dd>If specified, drops root privileges and changes user ID to <i>username</i> and group ID to the primary group of <i>username</i>. This is recommended for security reasons. You might also need to use <i>-p</i> to point to a file in a <i>username</i> -writable directory (e.g. /var/run/radvd/radvd.pid).</dl>
+<dt><code>-u </code>username,<code> &#8211;username </code>username</dt>
+<dd>If specified, drops root privileges and changes user ID to <i>username</i> and group ID to the primary group of <i>username</i>. This is recommended for security reasons. You might also need to use <i>-p</i> to point to a file in a <i>username</i> -writable directory (e.g. /var/run/radvd/radvd.pid).</dd></dl>
 <h2>Files</h2>
 <pre>/usr/sbin/radvd
 /etc/radvd.conf

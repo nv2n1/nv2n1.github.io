@@ -18,8 +18,8 @@ description: "svc_selinux – Security Enhanced Linux Policy for the svc process
 <p> svc_conf_t </code> </p>
 <p> &#8211; Set files with the svc_conf_t type, if you want to treat the files as svc configuration data, usually stored under the /etc directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/dnscache/env(/.*)?, /var/tinydns/env(/.*)?, /var/axfrdns/env(/.*)?, /var/service/.*/env(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/dnscache/env(/.*)?, /var/tinydns/env(/.*)?, /var/axfrdns/env(/.*)?, /var/service/.*/env(/.*)? </dd>
 </dl>
 <p> <code>svc_log_t </code> </p>
 <p> &#8211; Set files with the svc_log_t type, if you want to treat the data as svc log data, usually stored under the /var/log directory. </p>
@@ -28,20 +28,20 @@ description: "svc_selinux – Security Enhanced Linux Policy for the svc process
 <p> <code>svc_run_exec_t </code> </p>
 <p> &#8211; Set files with the svc_run_exec_t type, if you want to transition an executable to the svc_run_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/tinydns/run, /var/qmail/supervise/.*/run, /var/axfrdns/log/run, /usr/bin/setuidgid, /usr/bin/fghack, /var/tinydns/log/run, /var/service/.*/log/run, /var/axfrdns/run, /var/qmail/supervise/.*/log/run, /usr/bin/envuidgid, /usr/bin/envdir, /var/dnscache/run, /usr/bin/softlimit, /var/service/.*/run.*, /usr/bin/pgrphack, /var/dnscache/log/run, /usr/bin/setlock </p>
+<dt>Paths:</dt>
+<dd>/var/tinydns/run, /var/qmail/supervise/.*/run, /var/axfrdns/log/run, /usr/bin/setuidgid, /usr/bin/fghack, /var/tinydns/log/run, /var/service/.*/log/run, /var/axfrdns/run, /var/qmail/supervise/.*/log/run, /usr/bin/envuidgid, /usr/bin/envdir, /var/dnscache/run, /usr/bin/softlimit, /var/service/.*/run.*, /usr/bin/pgrphack, /var/dnscache/log/run, /usr/bin/setlock </dd>
 </dl>
 <p> <code>svc_start_exec_t </code> </p>
 <p> &#8211; Set files with the svc_start_exec_t type, if you want to transition an executable to the svc_start_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/svok, /usr/bin/svscan, /usr/bin/svc, /usr/bin/svscanboot, /usr/bin/supervise </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/svok, /usr/bin/svscan, /usr/bin/svc, /usr/bin/svscanboot, /usr/bin/supervise </dd>
 </dl>
 <p> <code>svc_svc_t </code> </p>
 <p> &#8211; Set files with the svc_svc_t type, if you want to treat the files as svc svc data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/service, /var/tinydns(/.*)?, /service/.*, /var/service/.*, /var/qmail/supervise(/.*)?, /var/dnscache(/.*)?, /var/axfrdns(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/service, /var/tinydns(/.*)?, /service/.*, /var/service/.*, /var/qmail/supervise(/.*)?, /var/dnscache(/.*)?, /var/axfrdns(/.*)? </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanantly change the file context you need to use the <code>semanage fcontext </code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Process Types</h2>

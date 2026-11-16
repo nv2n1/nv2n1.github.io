@@ -15,7 +15,7 @@ truncate_inode_pages_final - truncate *all* pages before inode dies
 <h2>Arguments</h2>
 
 <i>mapping</i>
-<dl><dd><dd>mapping to truncate</dl>
+<dl><dd></dd><dd>mapping to truncate</dd></dl>
 
 <h2>Description</h2>
 

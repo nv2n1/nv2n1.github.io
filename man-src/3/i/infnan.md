@@ -23,10 +23,10 @@ double infnan(int error);
 <p> If <i>error</i> is anything else, NAN is returned.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EDOM</code></p>
-<dd> The value of <i>error</i> is &quot;not-a-number&quot; (NaN).</p>
-<dt><code>ERANGE</code></p>
-<dd> The value of <i>error</i> is positive infinity or negative infinity.</dl>
+<dt><code>EDOM</code></dt>
+<dd> The value of <i>error</i> is &quot;not-a-number&quot; (NaN).</dd>
+<dt><code>ERANGE</code></dt>
+<dd> The value of <i>error</i> is positive infinity or negative infinity.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> 4.3BSD.</p>
 <h2>NOTES</h2>

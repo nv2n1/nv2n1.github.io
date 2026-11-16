@@ -25,18 +25,18 @@ description: "perl5140delta – what is new for perl v5.14.0"
 <p> This feature avoids most forms of the &#8220;Unicode Bug&#8221; (see &#8220;The &#8221;Unicode Bug&quot;&quot; in perlunicode for details). If there is any possibility that your code will process Unicode strings, you are <i>strongly</i> encouraged to use this subpragma to avoid nasty surprises. </p>
 <p> <i></i>&quot;\N{NAME}&quot;<i> and </i>&quot;charnames&quot;<i> enhancements</i></p>
 <dl>
-<dt>&bull;</p>
-<dd> <tt>&quot;\N{</tt>NAME<tt>}&quot;</tt> and <tt>&quot;charnames::vianame&quot;</tt> now know about the abbreviated character names listed by Unicode, such as <font SIZE="-1">NBSP, SHY, LRO, ZWJ,</font> etc.; all customary abbreviations for the C0 and C1 control characters (such as <font SIZE="-1">ACK, BEL, CAN,</font> etc.); and a few new variants of some C1 full names that are in common usage.</p>
-<dt>&bull;</p>
-<dd> Unicode has several <i>named character sequences</i>, in which particular sequences of code points are given names. <tt>&quot;\N{</tt>NAME<tt>}&quot;</tt> now recognizes these.</p>
-<dt>&bull;</p>
-<dd> <tt>&quot;\N{</tt>NAME<tt>}&quot;</tt>, <tt>&quot;charnames::vianame&quot;</tt>, and <tt>&quot;charnames::viacode&quot;</tt> now know about every character in Unicode. In earlier releases of Perl, they didn&#8217;t know about the Hangul syllables nor several <font SIZE="-1">CJK</font> (Chinese/Japanese/Korean) characters.</p>
-<dt>&bull;</p>
-<dd> It is now possible to override Perl&#8217;s abbreviations with your own custom aliases.</p>
-<dt>&bull;</p>
-<dd> You can now create a custom alias of the ordinal of a character, known by <tt>&quot;\N{</tt>NAME<tt>}&quot;</tt>, <tt>&quot;charnames::vianame()&quot;</tt>, and <tt>&quot;charnames::viacode()&quot;</tt>. Previously, aliases had to be to official Unicode character names. This made it impossible to create an alias for unnamed code points, such as those reserved for private use.</p>
-<dt>&bull;</p>
-<dd> The new function <code>charnames::string_vianame()</code> is a run-time version of <tt>&quot;\N{</tt>NAME<tt>}}&quot;</tt>, returning the string of characters whose Unicode name is its parameter. It can handle Unicode named character sequences, whereas the pre-existing <code>charnames::vianame()</code> cannot, as the latter returns a single code point.</dl>
+<dt>&bull;</dt>
+<dd> <tt>&quot;\N{</tt>NAME<tt>}&quot;</tt> and <tt>&quot;charnames::vianame&quot;</tt> now know about the abbreviated character names listed by Unicode, such as <font SIZE="-1">NBSP, SHY, LRO, ZWJ,</font> etc.; all customary abbreviations for the C0 and C1 control characters (such as <font SIZE="-1">ACK, BEL, CAN,</font> etc.); and a few new variants of some C1 full names that are in common usage.</dd>
+<dt>&bull;</dt>
+<dd> Unicode has several <i>named character sequences</i>, in which particular sequences of code points are given names. <tt>&quot;\N{</tt>NAME<tt>}&quot;</tt> now recognizes these.</dd>
+<dt>&bull;</dt>
+<dd> <tt>&quot;\N{</tt>NAME<tt>}&quot;</tt>, <tt>&quot;charnames::vianame&quot;</tt>, and <tt>&quot;charnames::viacode&quot;</tt> now know about every character in Unicode. In earlier releases of Perl, they didn&#8217;t know about the Hangul syllables nor several <font SIZE="-1">CJK</font> (Chinese/Japanese/Korean) characters.</dd>
+<dt>&bull;</dt>
+<dd> It is now possible to override Perl&#8217;s abbreviations with your own custom aliases.</dd>
+<dt>&bull;</dt>
+<dd> You can now create a custom alias of the ordinal of a character, known by <tt>&quot;\N{</tt>NAME<tt>}&quot;</tt>, <tt>&quot;charnames::vianame()&quot;</tt>, and <tt>&quot;charnames::viacode()&quot;</tt>. Previously, aliases had to be to official Unicode character names. This made it impossible to create an alias for unnamed code points, such as those reserved for private use.</dd>
+<dt>&bull;</dt>
+<dd> The new function <code>charnames::string_vianame()</code> is a run-time version of <tt>&quot;\N{</tt>NAME<tt>}}&quot;</tt>, returning the string of characters whose Unicode name is its parameter. It can handle Unicode named character sequences, whereas the pre-existing <code>charnames::vianame()</code> cannot, as the latter returns a single code point.</dd></dl>
 <p> See charnames for details on all these changes. </p>
 <p> <i>New warnings categories for problematic (non-)Unicode code points.</i> </p>
 <p> Three new warnings subcategories of &#8220;utf8&#8221; have been added. These allow you to turn off some &#8220;utf8&#8221; warnings, while allowing other warnings to remain on. The three categories are: <tt>&quot;surrogate&quot;</tt> when <font SIZE="-1">UTF-16</font> surrogates are encountered; <tt>&quot;nonchar&quot;</tt> when Unicode non-character code points are encountered; and <tt>&quot;non_unicode&quot;</tt> when code points above the legal Unicode maximum of 0x10FFFF are encountered. </p>
@@ -54,14 +54,14 @@ description: "perl5140delta – what is new for perl v5.14.0"
 <p> <i></i>&quot;/d&quot;<i>, </i>&quot;/l&quot;<i>, </i>&quot;/u&quot;<i>, and </i>&quot;/a&quot;<i> modifiers</i> </p>
 <p> Four new regular expression modifiers have been added. These are mutually exclusive: one only can be turned on at a time.</p>
 <dl>
-<dt>&bull;</p>
-<dd> The <tt>&quot;/l&quot;</tt> modifier says to compile the regular expression as if it were in the scope of <tt>&quot;use locale&quot;</tt>, even if it is not.</p>
-<dt>&bull;</p>
-<dd> The <tt>&quot;/u&quot;</tt> modifier says to compile the regular expression as if it were in the scope of a <tt>&quot;use feature 'unicode_strings'&quot;</tt> pragma.</p>
-<dt>&bull;</p>
-<dd> The <tt>&quot;/d&quot;</tt> (default) modifier is used to override any <tt>&quot;use locale&quot;</tt> and <tt>&quot;use feature 'unicode_strings'&quot;</tt> pragmas in effect at the time of compiling the regular expression.</p>
-<dt>&bull;</p>
-<dd> The <tt>&quot;/a&quot;</tt> regular expression modifier restricts <tt>&quot;\s&quot;</tt>, <tt>&quot;\d&quot;</tt> and <tt>&quot;\w&quot;</tt> and the <font SIZE="-1">POSIX</font> (<tt>&quot;[[:posix:]]&quot;</tt>) character classes to the <font SIZE="-1">ASCII</font> range. Their complements and <tt>&quot;&quot;</tt> and <tt>&quot;\B&quot;</tt> are correspondingly affected. Otherwise, <tt>&quot;/a&quot;</tt> behaves like the <tt>&quot;/u&quot;</tt> modifier, in that case-insensitive matching uses Unicode semantics. </p>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;/l&quot;</tt> modifier says to compile the regular expression as if it were in the scope of <tt>&quot;use locale&quot;</tt>, even if it is not.</dd>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;/u&quot;</tt> modifier says to compile the regular expression as if it were in the scope of a <tt>&quot;use feature 'unicode_strings'&quot;</tt> pragma.</dd>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;/d&quot;</tt> (default) modifier is used to override any <tt>&quot;use locale&quot;</tt> and <tt>&quot;use feature 'unicode_strings'&quot;</tt> pragmas in effect at the time of compiling the regular expression.</dd>
+<dt>&bull;</dt>
+<dd> The <tt>&quot;/a&quot;</tt> regular expression modifier restricts <tt>&quot;\s&quot;</tt>, <tt>&quot;\d&quot;</tt> and <tt>&quot;\w&quot;</tt> and the <font SIZE="-1">POSIX</font> (<tt>&quot;[[:posix:]]&quot;</tt>) character classes to the <font SIZE="-1">ASCII</font> range. Their complements and <tt>&quot;&quot;</tt> and <tt>&quot;\B&quot;</tt> are correspondingly affected. Otherwise, <tt>&quot;/a&quot;</tt> behaves like the <tt>&quot;/u&quot;</tt> modifier, in that case-insensitive matching uses Unicode semantics. </dd>
 <p> If the <tt>&quot;/a&quot;</tt> modifier is repeated, then additionally in case-insensitive matching, no <font SIZE="-1">ASCII</font> character can match a non-ASCII character. For example, </p>
 <pre>
     &quot;k&quot;     =~ /\N{KELVIN SIGN}/ai
@@ -141,12 +141,12 @@ description: "perl5140delta – what is new for perl v5.14.0"
 <h3>Exception Handling</h3>
 <p> To make them more reliable and consistent, several changes have been made to how <tt>&quot;die&quot;</tt>, <tt>&quot;warn&quot;</tt>, and <tt>$@</tt> behave.</p>
 <dl>
-<dt>&bull;</p>
-<dd> When an exception is thrown inside an <tt>&quot;eval&quot;</tt>, the exception is no longer at risk of being clobbered by destructor code running during unwinding. Previously, the exception was written into <tt>$@</tt> early in the throwing process, and would be overwritten if <tt>&quot;eval&quot;</tt> was used internally in the destructor for an object that had to be freed while exiting from the outer <tt>&quot;eval&quot;</tt>. Now the exception is written into <tt>$@</tt> last thing before exiting the outer <tt>&quot;eval&quot;</tt>, so the code running immediately thereafter can rely on the value in <tt>$@</tt> correctly corresponding to that <tt>&quot;eval&quot;</tt>. (<tt>$@</tt> is still also set before exiting the <tt>&quot;eval&quot;</tt>, for the sake of destructors that rely on this.) </p>
+<dt>&bull;</dt>
+<dd> When an exception is thrown inside an <tt>&quot;eval&quot;</tt>, the exception is no longer at risk of being clobbered by destructor code running during unwinding. Previously, the exception was written into <tt>$@</tt> early in the throwing process, and would be overwritten if <tt>&quot;eval&quot;</tt> was used internally in the destructor for an object that had to be freed while exiting from the outer <tt>&quot;eval&quot;</tt>. Now the exception is written into <tt>$@</tt> last thing before exiting the outer <tt>&quot;eval&quot;</tt>, so the code running immediately thereafter can rely on the value in <tt>$@</tt> correctly corresponding to that <tt>&quot;eval&quot;</tt>. (<tt>$@</tt> is still also set before exiting the <tt>&quot;eval&quot;</tt>, for the sake of destructors that rely on this.) </dd>
 <p> Likewise, a <tt>&quot;local $@&quot;</tt> inside an <tt>&quot;eval&quot;</tt> no longer clobbers any exception thrown in its scope. Previously, the restoration of <tt>$@</tt> upon unwinding would overwrite any exception being thrown. Now the exception gets to the <tt>&quot;eval&quot;</tt> anyway. So <tt>&quot;local $@&quot;</tt> is safe before a <tt>&quot;die&quot;</tt>. </p>
 <p> Exceptions thrown from object destructors no longer modify the <tt>$@</tt> of the surrounding context. (If the surrounding context was exception unwinding, this used to be another way to clobber the exception being thrown.) Previously such an exception was sometimes emitted as a warning, and then either was string-appended to the surrounding <tt>$@</tt> or completely replaced the surrounding <tt>$@</tt>, depending on whether that exception and the surrounding <tt>$@</tt> were strings or objects. Now, an exception in this situation is always emitted as a warning, leaving the surrounding <tt>$@</tt> untouched. In addition to object destructors, this also affects any function call run by <font SIZE="-1">XS</font> code using the <tt>&quot;G_KEEPERR&quot;</tt> flag.</p>
-<dt>&bull;</p>
-<dd> Warnings for <tt>&quot;warn&quot;</tt> can now be objects in the same way as exceptions for <tt>&quot;die&quot;</tt>. If an object-based warning gets the default handling of writing to standard error, it is stringified as before with the filename and line number appended. But a <tt>$SIG{__WARN__}</tt> handler now receives an object-based warning as an object, where previously it was passed the result of stringifying the object.</dl>
+<dt>&bull;</dt>
+<dd> Warnings for <tt>&quot;warn&quot;</tt> can now be objects in the same way as exceptions for <tt>&quot;die&quot;</tt>. If an object-based warning gets the default handling of writing to standard error, it is stringified as before with the filename and line number appended. But a <tt>$SIG{__WARN__}</tt> handler now receives an object-based warning as an object, where previously it was passed the result of stringifying the object.</dd></dl>
 <h3>Other Enhancements</h3>
 <p> <i>Assignment to </i>$0<i> sets the legacy process name with </i>prctl()<i> on Linux</i> </p>
 <p> On Linux the legacy process name is now set with <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2), in addition to altering the <font SIZE="-1">POSIX</font> name via <tt>&quot;argv[0]&quot;</tt>, as Perl has done since version 4.000. Now system utilities that read the legacy process name such as <i>ps</i>, <i>top</i>, and <i>killall</i> recognize the name you set when assigning to <tt>$0</tt>. The string you supply is truncated at 16 bytes; this limitation is imposed by Linux. </p>
@@ -160,10 +160,10 @@ description: "perl5140delta – what is new for perl v5.14.0"
 <p> <i></i>&quot;-d:-foo&quot;<i> calls </i>&quot;Devel::foo::unimport&quot;<i></i> </p>
 <p> The syntax <code>-d:foo</code> was extended in 5.6.1 to make <code>-d:foo=bar</code> equivalent to <code>-MDevel::foo=bar</code>, which expands internally to <tt>&quot;use Devel::foo 'bar'&quot;</tt>. Perl now allows prefixing the module name with <code>&#8211;</code>, with the same semantics as <code>-M</code>; that is:</p>
 <dl>
-<dt>&quot;-d:-foo&quot;</p>
-<dd> Equivalent to <code>-M-Devel::foo</code>: expands to <tt>&quot;no Devel::foo&quot;</tt> and calls <tt>&quot;Devel::foo-&gt;unimport()&quot;</tt> if that method exists.</p>
-<dt>&quot;-d:-foo=bar&quot;</p>
-<dd> Equivalent to <code>-M-Devel::foo=bar</code>: expands to <tt>&quot;no Devel::foo 'bar'&quot;</tt>, and calls <tt>&quot;Devel::foo-&gt;unimport(&quot;bar&quot;)&quot;</tt> if that method exists.</dl>
+<dt>&quot;-d:-foo&quot;</dt>
+<dd> Equivalent to <code>-M-Devel::foo</code>: expands to <tt>&quot;no Devel::foo&quot;</tt> and calls <tt>&quot;Devel::foo-&gt;unimport()&quot;</tt> if that method exists.</dd>
+<dt>&quot;-d:-foo=bar&quot;</dt>
+<dd> Equivalent to <code>-M-Devel::foo=bar</code>: expands to <tt>&quot;no Devel::foo 'bar'&quot;</tt>, and calls <tt>&quot;Devel::foo-&gt;unimport(&quot;bar&quot;)&quot;</tt> if that method exists.</dd></dl>
 <p> This is particularly useful for suppressing the default actions of a <tt>&quot;Devel::*&quot;</tt> module&#8217;s <tt>&quot;import&quot;</tt> method whilst still loading it for debugging. </p>
 <p> <i>Filehandle method calls load IO::File on demand</i> </p>
 <p> When a method call on a filehandle would die because the method cannot be resolved and IO::File has not been loaded, Perl now loads IO::File via <tt>&quot;require&quot;</tt> and attempts method resolution again: </p>
@@ -216,3 +216,4 @@ $fh-&gt;autoflush(1);<br />
 <p> Earlier releases of Perl did allow this multi-character matching, but due to bugs, it mostly did not work. </p>
 <p> <i>\400-\777</i> </p>
 <p> In certain circumstances, <tt>&quot;\400&quot;</tt>&#8211;<tt>&quot;\777&quot;</tt> in regexes have behaved differently than they behave in all other doublequote-like contexts. Since 5.10.1, Perl has issued a deprecation warning when this happens. Now, these literals behave the same in all doublequote-like contexts, namely to be equivalent to <tt>&quot;
+</p>

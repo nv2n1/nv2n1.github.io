@@ -20,28 +20,28 @@ gdaltransform[--help - general]
 <h2>DESCRIPTION</h2>
 <p> The gdaltransform utility reprojects a list of coordinates into any supported projection,including GCP-based transformations. </p>
 <dl>
-<dt><code>-s_srs</code> <i>srs def</i>:</p>
-<dd> source spatial reference set. The coordinate systems that can be passed are anything supported by the OGRSpatialReference.SetFromUserInput() call, which includes EPSG PCS and GCSes (ie. EPSG:4296), PROJ.4 declarations (as above), or the name of a .prf file containing well known text.</p>
-<dt><code>-t_srs</code> <i>srs_def</i>:</p>
-<dd> target spatial reference set. The coordinate systems that can be passed are anything supported by the OGRSpatialReference.SetFromUserInput() call, which includes EPSG PCS and GCSes (ie. EPSG:4296), PROJ.4 declarations (as above), or the name of a .prf file containing well known text.</p>
-<dt><code>-to</code> <i>NAME=VALUE</i>:</p>
-<dd> set a transformer option suitable to pass to GDALCreateGenImgProjTransformer2().</p>
-<dt><code>-order</code> <i>n</i>:</p>
-<dd> order of polynomial used for warping (1 to 3). The default is to select a polynomial order based on the number of GCPs.</p>
-<dt><code>-tps</code>:</p>
-<dd> Force use of thin plate spline transformer based on available GCPs.</p>
-<dt><code>-rpc</code>:</p>
-<dd> Force use of RPCs.</p>
-<dt><code>-geoloc</code>:</p>
-<dd> Force use of Geolocation Arrays.</p>
-<dt><code>-i</code></p>
-<dd> Inverse transformation: from destination to source.</p>
-<dt><code>-gcp</code><i>pixel line easting northing [elevation]</i>:</p>
-<dd> Provide a GCP to be used for transformation (generally three or more are required)</p>
-<dt><i>srcfile</i>:</p>
-<dd> File with source projection definition or GCP&#8217;s. If not given, source projection is read from the command-line -s_srs or -gcp parameters</p>
-<dt><i>dstfile</i>:</p>
-<dd> File with destination projection definition.</dl>
+<dt><code>-s_srs</code> <i>srs def</i>:</dt>
+<dd> source spatial reference set. The coordinate systems that can be passed are anything supported by the OGRSpatialReference.SetFromUserInput() call, which includes EPSG PCS and GCSes (ie. EPSG:4296), PROJ.4 declarations (as above), or the name of a .prf file containing well known text.</dd>
+<dt><code>-t_srs</code> <i>srs_def</i>:</dt>
+<dd> target spatial reference set. The coordinate systems that can be passed are anything supported by the OGRSpatialReference.SetFromUserInput() call, which includes EPSG PCS and GCSes (ie. EPSG:4296), PROJ.4 declarations (as above), or the name of a .prf file containing well known text.</dd>
+<dt><code>-to</code> <i>NAME=VALUE</i>:</dt>
+<dd> set a transformer option suitable to pass to GDALCreateGenImgProjTransformer2().</dd>
+<dt><code>-order</code> <i>n</i>:</dt>
+<dd> order of polynomial used for warping (1 to 3). The default is to select a polynomial order based on the number of GCPs.</dd>
+<dt><code>-tps</code>:</dt>
+<dd> Force use of thin plate spline transformer based on available GCPs.</dd>
+<dt><code>-rpc</code>:</dt>
+<dd> Force use of RPCs.</dd>
+<dt><code>-geoloc</code>:</dt>
+<dd> Force use of Geolocation Arrays.</dd>
+<dt><code>-i</code></dt>
+<dd> Inverse transformation: from destination to source.</dd>
+<dt><code>-gcp</code><i>pixel line easting northing [elevation]</i>:</dt>
+<dd> Provide a GCP to be used for transformation (generally three or more are required)</dd>
+<dt><i>srcfile</i>:</dt>
+<dd> File with source projection definition or GCP&#8217;s. If not given, source projection is read from the command-line -s_srs or -gcp parameters</dd>
+<dt><i>dstfile</i>:</dt>
+<dd> File with destination projection definition.</dd></dl>
 <p> Coordinates are read as pairs (or triples) of numbers per line from standard input, transformed, and written out to standard output in the same way. All transformations offered by gdalwarp are handled, including gcp-based ones. </p>
 <p> Note that input and output must always be in decimal form. There is currently no support for DMS input or output. </p>
 <p> If an input image file is provided, input is in pixel/line coordinates on that image. If an output file is provided, output is in pixel/line coordinates on that image.</p>

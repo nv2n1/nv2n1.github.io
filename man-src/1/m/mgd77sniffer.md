@@ -18,27 +18,27 @@ description: "mgd77sniffer – Along-track quality control of MGD77 cruises"
 <p> The mgd77sniffer links with Generic Mapping Tools 4.0 or later along with the supplemental GMT packages x2sys and mgd77. See <i><a rel="nofollow" href="http://gmt.soest.hawaii.edu">http://gmt.soest.hawaii.edu</a></i> for GMT details. Grids for comparison with cruise data may be downloaded via the web.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>
-<dt><i>NGDC-ids</i></p>
-<dd> Can be one or more of five kinds of specifiers:</p>
-<dt>1.</p>
-<dd> 8-character NGDC IDs, e.g., 01010083, JA010010etc., etc.</p>
-<dt>2.</p>
-<dd> 2-character &lt;agency&gt; codes which will return all cruises from each agency.</p>
-<dt>3.</p>
-<dd> 4-character &lt;agency&gt;&lt;vessel&gt; codes, which will return all cruises from those vessels.</p>
-<dt>4.</p>
-<dd> =&lt;list&gt;, where &lt;list&gt; is a table with NGDC IDs, one per line.</p>
-<dt>5.</p>
-<dd> If nothing is specified we return all cruises in the data base. </p>
+<dt><i>NGDC-ids</i></dt>
+<dd> Can be one or more of five kinds of specifiers:</dd>
+<dt>1.</dt>
+<dd> 8-character NGDC IDs, e.g., 01010083, JA010010etc., etc.</dd>
+<dt>2.</dt>
+<dd> 2-character &lt;agency&gt; codes which will return all cruises from each agency.</dd>
+<dt>3.</dt>
+<dd> 4-character &lt;agency&gt;&lt;vessel&gt; codes, which will return all cruises from those vessels.</dd>
+<dt>4.</dt>
+<dd> =&lt;list&gt;, where &lt;list&gt; is a table with NGDC IDs, one per line.</dd>
+<dt>5.</dt>
+<dd> If nothing is specified we return all cruises in the data base. </dd>
 <p> (See mgd77info <code>-L</code> for agency and vessel codes). The &quot;.mgd77&quot; or &quot;.nc&quot; extensions will automatically be appended, if needed (use <code>-I</code> to ignore certain file types). Cruise files will be looked for first in the current directory and second in all directories listed in <code>$MGD77_HOME</code>/mgd77_paths.txt [If <code>$MGD77_HOME</code> is not set it will default to <code>$GMT_SHAREDIR</code>/mgd77].</dl>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><code>-A</code><i>fieldabbrev</i>,<i>scale</i>,<i>offset</i></p>
-<dd> Apply scale factor and DC adjustment to specified data field. Allows adjustment of cruise data prior to along-track analysis. CAUTION: data must be thoroughly examined before applying these global data adjustments. May not be used for multiple cruises.</p>
-<dt><code>-C</code><i>maxspd</i></p>
-<dd> Set maximum ship speed in m/s, or knots with <code>-N</code> option. Ship speeds exceeding 10 m/s (~20 knots) are flagged as excessive by default.</p>
-<dt><code>-D</code><code>d</code>|<code>e</code>|<code>E</code>|<code>f</code>|<code>l</code>|<code>m</code>|<code>s</code>|<code>v</code>[<i>r</i>]</p>
-<dd> Suppress default warning output and only dump cruise data row-by-row such as values, gradients, grid-cruise differences, E77 error summaries for each record, re-created MGD77 records or sniffer limits. Append r to include all records (default omits records where navigation errors were detected). </p>
+<dt><code>-A</code><i>fieldabbrev</i>,<i>scale</i>,<i>offset</i></dt>
+<dd> Apply scale factor and DC adjustment to specified data field. Allows adjustment of cruise data prior to along-track analysis. CAUTION: data must be thoroughly examined before applying these global data adjustments. May not be used for multiple cruises.</dd>
+<dt><code>-C</code><i>maxspd</i></dt>
+<dd> Set maximum ship speed in m/s, or knots with <code>-N</code> option. Ship speeds exceeding 10 m/s (~20 knots) are flagged as excessive by default.</dd>
+<dt><code>-D</code><code>d</code>|<code>e</code>|<code>E</code>|<code>f</code>|<code>l</code>|<code>m</code>|<code>s</code>|<code>v</code>[<i>r</i>]</dt>
+<dd> Suppress default warning output and only dump cruise data row-by-row such as values, gradients, grid-cruise differences, E77 error summaries for each record, re-created MGD77 records or sniffer limits. Append r to include all records (default omits records where navigation errors were detected). </dd>
 <p> <code>-Dd</code> output differences between cruise and grid data. Requires <code>-G</code> option. Output columns include: </p>
 <p> <i>lat lon dist cruiseZ gridZ diff [cruiseZ2 gridZ2 diff2 &#8230;]</i> </p>
 <p> Note: grid values are subtracted from cruise data so a positive difference implies cruise &gt; grid. For multiple grid comparison, <i>cruiseZ gridZ diff</i> are repeated for each grid comparison in command line order. </p>
@@ -57,20 +57,20 @@ description: "mgd77sniffer – Along-track quality control of MGD77 cruises"
 <p> <code>-Dv</code> display values for the twelve position and geophysical fields for each MGD77 data record (in this order): </p>
 <p> <i>lat lon twt depth mtf1 mtf2 mag diur msens gobs eot faa</i> </p>
 <p> See below for <code>MGD77 FIELD INFO</code>.</p>
-<dt><code>-G</code><i>information</i></p>
-<dd> Compare cruise data to GMT or IMG grids. Use one of the formats below. <code>-G</code><i>fieldabbrev</i>,<i>imggrid</i>,<i>scale</i>,<i>mode</i> Compare cruise data to the specified grid in Sandwell/Smith Mercator format. Requires a valid MGD77 field abbreviation (see <code>MGD77 FIELD INFO</code> below) followed by a comma, the path (if not in current directory) and grid filename, a scale to multiply the data (1 or 0.1), and mode which stand for the following: (0) Img files with no constraint code, returns data at all points, (1) Img file with constraints coded, return data at all points, (2) Img file with constraints coded, return data only at constrained points and NaN elsewhere, and (3) Img file with constraints coded, return 1 at constraints and 0 elsewhere. <code>-G</code><i>fieldabbrev</i>,<i>grid</i> Compare cruise data to the specified grid. Requires a valid MGD77 field abbreviation (see <code>MGD77 FIELD INFO</code> below) followed by a comma, then the path (if not in current directory) and grid filename. Multiple grid comparison is supported by using separate <code>-G</code> calls for each grid. See <code>GRID FILE INFO</code> below. </p>
+<dt><code>-G</code><i>information</i></dt>
+<dd> Compare cruise data to GMT or IMG grids. Use one of the formats below. <code>-G</code><i>fieldabbrev</i>,<i>imggrid</i>,<i>scale</i>,<i>mode</i> Compare cruise data to the specified grid in Sandwell/Smith Mercator format. Requires a valid MGD77 field abbreviation (see <code>MGD77 FIELD INFO</code> below) followed by a comma, the path (if not in current directory) and grid filename, a scale to multiply the data (1 or 0.1), and mode which stand for the following: (0) Img files with no constraint code, returns data at all points, (1) Img file with constraints coded, return data at all points, (2) Img file with constraints coded, return data only at constrained points and NaN elsewhere, and (3) Img file with constraints coded, return 1 at constraints and 0 elsewhere. <code>-G</code><i>fieldabbrev</i>,<i>grid</i> Compare cruise data to the specified grid. Requires a valid MGD77 field abbreviation (see <code>MGD77 FIELD INFO</code> below) followed by a comma, then the path (if not in current directory) and grid filename. Multiple grid comparison is supported by using separate <code>-G</code> calls for each grid. See <code>GRID FILE INFO</code> below. </dd>
 <p> Grid comparison activates several additional error checks. (1) Re-weighted Least Squares Regression of ship versus grid data determines slope and DC shift, which when differing from expected 1 and 0, respectively, may indicate incorrectly scaled ship data, including incorrect units or instrument drift as well as erroneous gravity tie-in. (2) Accumulated ship grid offsets are computed along-track and excessive offsets are flagged according to <i>maxArea</i> threshold (use <code>-L</code> option to adjust <i>maxArea</i>). Warning: predicted bathymetry grids are constrained by cruise data so grids and cruise data are not always independent. Comparison of cruise bathymetry with predicted bathymetry grids also activates a &quot;navigation crossing over land&quot; check.</p>
-<dt><code>-H</code></p>
-<dd> (with <code>-G</code>|<code>g</code> only) disable (or force) decimation during RLS analysis of ship and gridded data. By default mgd77sniffer analyses both the full and decimated data sets then reports RLS statistics for the higher correlation regression. </p>
+<dt><code>-H</code></dt>
+<dd> (with <code>-G</code>|<code>g</code> only) disable (or force) decimation during RLS analysis of ship and gridded data. By default mgd77sniffer analyses both the full and decimated data sets then reports RLS statistics for the higher correlation regression. </dd>
 <p> <code>-Hb</code> analyze both (default), report better of two. </p>
 <p> <code>-Hd</code> to disable data decimation (equivalent to -H with no argument). </p>
 <p> <code>-Hf</code> to force data decimation.</p>
-<dt><code>-I</code><i>fieldabbrev</i>,<i>rec1</i>,<i>recN</i></p>
-<dd> Append a field abbreviation and the first and last record in a range of records that should be flagged as bad (and set to NaN prior to the analysis). Repeat as many times as needed. May not be used for multiple cruises.</p>
-<dt><code>-K</code></p>
-<dd> Reverse navigation quality flags (good to bad and vice versa). May be necessary when a majority of navigation fixes are erroneously flagged bad, which can happen when a cruise&#8217;s first navigation fix is extremely erroneous. Caution! This will affect sniffer output and should only be attempted after careful manual navigation review.</p>
-<dt><code>-L</code><i>custom-limits-file</i></p>
-<dd> Override mgd77sniffer default error detection limits. Supply path and filename to the custom limits file. Rows not beginning with a valid MGD77 field abbreviation are ignored. Field abbreviations are listed below in exact form under MGD77 FIELD INFO. Multiple field limits may be modified using one default file, one field per line. Field min, max, max slope and max area may be changed for each field. Max slope pertains to the gradient type selected using the <code>-S</code> option. Max area is used by the <code>-G</code> option as the threshold for flagging excessive offsets from the specified grid. Dump defaults <code>-Dl</code> to view syntax or to quickly create an editable custom limits file. </p>
+<dt><code>-I</code><i>fieldabbrev</i>,<i>rec1</i>,<i>recN</i></dt>
+<dd> Append a field abbreviation and the first and last record in a range of records that should be flagged as bad (and set to NaN prior to the analysis). Repeat as many times as needed. May not be used for multiple cruises.</dd>
+<dt><code>-K</code></dt>
+<dd> Reverse navigation quality flags (good to bad and vice versa). May be necessary when a majority of navigation fixes are erroneously flagged bad, which can happen when a cruise&#8217;s first navigation fix is extremely erroneous. Caution! This will affect sniffer output and should only be attempted after careful manual navigation review.</dd>
+<dt><code>-L</code><i>custom-limits-file</i></dt>
+<dd> Override mgd77sniffer default error detection limits. Supply path and filename to the custom limits file. Rows not beginning with a valid MGD77 field abbreviation are ignored. Field abbreviations are listed below in exact form under MGD77 FIELD INFO. Multiple field limits may be modified using one default file, one field per line. Field min, max, max slope and max area may be changed for each field. Max slope pertains to the gradient type selected using the <code>-S</code> option. Max area is used by the <code>-G</code> option as the threshold for flagging excessive offsets from the specified grid. Dump defaults <code>-Dl</code> to view syntax or to quickly create an editable custom limits file. </dd>
 <p> Example custom default file contents (see below for units): <center></p>
 <table>
 <tr VALIGN=top>
@@ -146,36 +146,36 @@ description: "mgd77sniffer – Along-track quality control of MGD77 cruises"
 </table>
 <p></center> </p>
 <p> Use a dash &#8216;-&#8216; to retain a default limit. Hint: to test your custom limits, try: mgd77sniffer <code>-Dl</code> <code>-L</code>&lt;yourlimitsfile&gt;</p>
-<dt><code>-N</code></p>
-<dd> Use nautical units.</p>
-<dt><code>-P</code></p>
-<dd> Flag regression statistics that are outside the specified confidence level. (i.e., -P5 flags coefficients m, b, rms, and r that fall outside 95%.)</p>
-<dt><code>-R</code>[<i>unit</i>]<i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[/<i>zmin</i>/<i>zmax</i>][<code>r</code>]</p>
-<dd> <i>west</i>, <i>east</i>, <i>south</i>, and <i>north</i> specify the region of interest, and you may specify them in decimal degrees or in [+-]dd:mm[:ss.xxx][W|E|S|N] format. Append <code>r</code> if lower left and upper right map coordinates are given instead of w/e/s/n. The two shorthands <code>-Rg</code> and <code>-Rd</code> stand for global domain (0/360 and -180/+180 in longitude respectively, with -90/+90 in latitude). Alternatively for grid creation, give <code>R</code><i>code</i><i>lon</i>/<i>lat</i>/<i>nx</i>/<i>ny</i>, where <i>code</i> is a 2-character combination of L, C, R (for left, center, or right) and T, M, B for top, middle, or bottom. e.g., BL for lower left. This indicates which point on a rectangular region the <i>lon</i>/<i>lat</i> coordinate refers to, and the grid dimensions <i>nx</i> and <i>ny</i> with grid spacings via <code>-I</code> is used to create the corresponding region. Alternatively, specify the name of an existing grid file and the <code>-R</code> settings (and grid spacing, if applicable) are copied from the grid. Using <code>-R</code><i>unit</i> expects projected (Cartesian) coordinates compatible with chosen <code>-J</code> and we inversely project to determine actual rectangular geographic region. For perspective view (<code>-p</code>), optionally append /<i>zmin</i>/<i>zmax</i>. In case of perspective view (<code>-p</code>), a z-range (<i>zmin</i>, <i>zmax</i>) can be appended to indicate the third dimension. This needs to be done only when using the <code>-Jz</code> option, not when using only the <code>-p</code> option. In the latter case a perspective view of the plane is plotted, with no third dimension.</p>
-<dt><code>-S</code><code>d</code>|<code>s</code>|<code>t</code></p>
-<dd> Specify gradient type for along-track excessive slope checking. <code>-Sd</code> Calculate change in z values along track (dz). Output is given in geophysical units, e.g., mGal. <code>-Ss</code> Calculate spatial gradients (dz/ds). Output is given in geophysical units per km along the survey track, e.g., mGal/km. <code>-St</code> Calculate time gradients (dz/dt) [default]. Output is given in geophysical units per second along the survey track, e.g., mGal/sec.</p>
-<dt><code>-T</code><i>gap</i></p>
-<dd> Adjusts mgd77sniffer gap handling. By default, data gaps greater than 5 km are skipped. Set to zero to de-activate gap skipping.</p>
-<dt><code>-W</code><code>c</code>|<code>g</code>|<code>o</code>|<code>s</code>|<code>t</code>|<code>v</code>|<code>x</code></p>
-<dd> Print out only certain warning types for verbose error messages. Comma delimit any combination of <code>c|g|o|s|t|v|x</code>: where (<code>c</code>) type code warnings, (<code>g</code>)radient out of range, (<code>o</code>)ffsets from grid (requires <code>-G</code>|<code>g</code>), (<code>s</code>)peed out of range, (<code>t</code>)ime warnings, (<code>v</code>)alue out of range, (<code>x</code>) warning summaries. By default ALL warning messages are printed.Not compatible with any <code>-D</code> options.</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c].</p>
-<dt><code>-bo</code>[<i>ncols</i>][<i>type</i>] <i>(more &#8230;)</i></p>
-<dd> Select native binary output. Output binary data for <code>-D</code>d|f|s|v option.</p>
-<dt><code>-do</code><i>nodata</i> <i>(more &#8230;)</i></p>
-<dd> Replace output columns that equal NaN with <i>nodata</i>.</p>
-<dt><code>-n</code>[<code>b</code>|<code>c</code>|<code>l</code>|<code>n</code>][<code>+a</code>][<code>+b</code><i>BC</i>][<code>+c</code>][<code>+t</code><i>threshold</i>] <i>(more &#8230;)</i></p>
-<dd> Select interpolation mode for grids.</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit.</dl>
+<dt><code>-N</code></dt>
+<dd> Use nautical units.</dd>
+<dt><code>-P</code></dt>
+<dd> Flag regression statistics that are outside the specified confidence level. (i.e., -P5 flags coefficients m, b, rms, and r that fall outside 95%.)</dd>
+<dt><code>-R</code>[<i>unit</i>]<i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[/<i>zmin</i>/<i>zmax</i>][<code>r</code>]</dt>
+<dd> <i>west</i>, <i>east</i>, <i>south</i>, and <i>north</i> specify the region of interest, and you may specify them in decimal degrees or in [+-]dd:mm[:ss.xxx][W|E|S|N] format. Append <code>r</code> if lower left and upper right map coordinates are given instead of w/e/s/n. The two shorthands <code>-Rg</code> and <code>-Rd</code> stand for global domain (0/360 and -180/+180 in longitude respectively, with -90/+90 in latitude). Alternatively for grid creation, give <code>R</code><i>code</i><i>lon</i>/<i>lat</i>/<i>nx</i>/<i>ny</i>, where <i>code</i> is a 2-character combination of L, C, R (for left, center, or right) and T, M, B for top, middle, or bottom. e.g., BL for lower left. This indicates which point on a rectangular region the <i>lon</i>/<i>lat</i> coordinate refers to, and the grid dimensions <i>nx</i> and <i>ny</i> with grid spacings via <code>-I</code> is used to create the corresponding region. Alternatively, specify the name of an existing grid file and the <code>-R</code> settings (and grid spacing, if applicable) are copied from the grid. Using <code>-R</code><i>unit</i> expects projected (Cartesian) coordinates compatible with chosen <code>-J</code> and we inversely project to determine actual rectangular geographic region. For perspective view (<code>-p</code>), optionally append /<i>zmin</i>/<i>zmax</i>. In case of perspective view (<code>-p</code>), a z-range (<i>zmin</i>, <i>zmax</i>) can be appended to indicate the third dimension. This needs to be done only when using the <code>-Jz</code> option, not when using only the <code>-p</code> option. In the latter case a perspective view of the plane is plotted, with no third dimension.</dd>
+<dt><code>-S</code><code>d</code>|<code>s</code>|<code>t</code></dt>
+<dd> Specify gradient type for along-track excessive slope checking. <code>-Sd</code> Calculate change in z values along track (dz). Output is given in geophysical units, e.g., mGal. <code>-Ss</code> Calculate spatial gradients (dz/ds). Output is given in geophysical units per km along the survey track, e.g., mGal/km. <code>-St</code> Calculate time gradients (dz/dt) [default]. Output is given in geophysical units per second along the survey track, e.g., mGal/sec.</dd>
+<dt><code>-T</code><i>gap</i></dt>
+<dd> Adjusts mgd77sniffer gap handling. By default, data gaps greater than 5 km are skipped. Set to zero to de-activate gap skipping.</dd>
+<dt><code>-W</code><code>c</code>|<code>g</code>|<code>o</code>|<code>s</code>|<code>t</code>|<code>v</code>|<code>x</code></dt>
+<dd> Print out only certain warning types for verbose error messages. Comma delimit any combination of <code>c|g|o|s|t|v|x</code>: where (<code>c</code>) type code warnings, (<code>g</code>)radient out of range, (<code>o</code>)ffsets from grid (requires <code>-G</code>|<code>g</code>), (<code>s</code>)peed out of range, (<code>t</code>)ime warnings, (<code>v</code>)alue out of range, (<code>x</code>) warning summaries. By default ALL warning messages are printed.Not compatible with any <code>-D</code> options.</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c].</dd>
+<dt><code>-bo</code>[<i>ncols</i>][<i>type</i>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary output. Output binary data for <code>-D</code>d|f|s|v option.</dd>
+<dt><code>-do</code><i>nodata</i> <i>(more &#8230;)</i></dt>
+<dd> Replace output columns that equal NaN with <i>nodata</i>.</dd>
+<dt><code>-n</code>[<code>b</code>|<code>c</code>|<code>l</code>|<code>n</code>][<code>+a</code>][<code>+b</code><i>BC</i>][<code>+c</code>][<code>+t</code><i>threshold</i>] <i>(more &#8230;)</i></dt>
+<dd> Select interpolation mode for grids.</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
 <h2>CONSEQUENCES OF GRID RESAMPLING</h2>
 <p> Resample or sampling of grids will use various algorithms (see <code>-n</code>) that may lead to possible distortions or unexpected results in the resampled values. One expected effect of resampling with splines is the tendency for the new resampled values to slightly exceed the global min/max limits of the original grid. If this is unacceptable, you can impose clipping of the resampled values values so they do not exceed the input min/max values by adding <code>+c</code> to your <code>-n</code> option.</p>
 <h2>MGD77 FIELD INFO</h2>
@@ -323,8 +323,8 @@ gmt grdraster 1 -R0/359:55/-90/90 -Getopo5_hdr.i2
 <p> The new grid, etopo5_hdr.i2 in this example, contains a GMT header and can be used in the <code>-G</code> option to compare cruise depth with grid values.</p>
 <h2>E77 ERROR FORMAT</h2>
 <dl>
-<dt><code>Header</code></p>
-<dd> Information pertaining to an entire cruise, such as NGDC and survey institution identification codes, cruise examination time, two-way travel time corrector information, data precision warnings, as well as systematic scales, DC shifts and correlation coefficients from global grid comparisons are reported as E77 header information. </p>
+<dt><code>Header</code></dt>
+<dd> Information pertaining to an entire cruise, such as NGDC and survey institution identification codes, cruise examination time, two-way travel time corrector information, data precision warnings, as well as systematic scales, DC shifts and correlation coefficients from global grid comparisons are reported as E77 header information. </dd>
 <p> <code>Sample</code> </p>
 <p> # Cruise 08010039 ID 74010908 MGD77 FILE VERSION: 19801230 N_RECS: 3066 </p>
 <p> # Examined: Wed Oct 3 16:30:13 2007 by mtchandl </p>
@@ -341,14 +341,14 @@ gmt grdraster 1 -R0/359:55/-90/90 -Getopo5_hdr.i2
 <p> Y-W-08010039-twt-09: More recent bathymetry correction table available </p>
 <p> Y-W-08010039-mtf1-10: Integer precision </p>
 <p> Y-W-08010039-mag-10: Integer precision</p>
-<dt><code>Error Record</code></p>
-<dd> Individual error records have strict format. Included is a time or distance column followed by record number, a formatted error code string, and finally a verbose description of errors detected in the record. Three error classes are encoded into the error code string with different alphabetic characters representing unique error types. See below for error code format description. </p>
+<dt><code>Error Record</code></dt>
+<dd> Individual error records have strict format. Included is a time or distance column followed by record number, a formatted error code string, and finally a verbose description of errors detected in the record. Three error classes are encoded into the error code string with different alphabetic characters representing unique error types. See below for error code format description. </dd>
 <p> <code>Format</code> &lt;time/distance&gt; &lt;record number&gt; &lt;error code string&gt; &lt;description&gt; </p>
 <p> <code>Sample</code> </p>
 <p> # Errata: Data </p>
 <p> Y 08010039 1975-05-10T22:16:05.88 74 C-0-0 NAV: excessive speed</p>
-<dt><code>Error Code Description</code></p>
-<dd> Each of the three error classes is separated by a dash <code>&#8211;</code> and described by a combination of alphabetic characters or 0 signifying no detected problems. </p>
+<dt><code>Error Code Description</code></dt>
+<dd> Each of the three error classes is separated by a dash <code>&#8211;</code> and described by a combination of alphabetic characters or 0 signifying no detected problems. </dd>
 <p> Error classes: NAV-VAL-GRAD </p>
 <p> <code>Error Class Descriptions</code> </p>
 <p> NAV (navigation): </p>
@@ -369,8 +369,8 @@ gmt grdraster 1 -R0/359:55/-90/90 -Getopo5_hdr.i2
 <p> 0 &#8211; fine </p>
 <p> K &#8211; d[twt] excessive </p>
 <p> L &#8211; d[depth] excessive</p>
-<dt><code>O &#8211; d[mtf1] excessive</code></p>
-<dd> etc. </p>
+<dt><code>O &#8211; d[mtf1] excessive</code></dt>
+<dd> etc. </dd>
 <p> The NAV error class has unique cases while VAL and GRAD classes are described by alphabetic characters for each of the 24 numeric fields in MGD77 format order. </p>
 <p> MGD77 bit-pattern w/ E77 alpha characters </p>
 <p> |&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-|&#8212;&#8212;&#8212;-| </p>
@@ -407,3 +407,4 @@ mgd77sniffer 08010001 -Gdepth,/data/GRIDS/etopo5_hdr.i2 \
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
 <h2>Index</h2>
+</p>

@@ -256,22 +256,22 @@ description: "Shell — The Shell widget class"
 </table>
 </table>
 <dl COMPACT>
-<dt><code>XmNallowShellResize</code></p>
-<dd>Specifies that if this resource is False, the Shell widget instance returns <code>XtGeometryNo</code> to all geometry requests from its children. All Motif convenience create dialog functions override this default value and set <code>XmNallowShellResize</code> to True.</p>
-<dt><code>XmNcreatePopupChildProc</code></p>
-<dd>Specifies the pointer to a function that is called when the Shell widget instance is popped up by <code>XtPopup</code>. The function creates the child widget when the shell is popped up instead of when the application starts up. This can be used if the child needs to be reconfigured each time the shell is popped up. The function takes one argument, the popup shell, and returns no result. It is called after the popup callbacks specified by <code>XmNpopupCallback</code>.</p>
-<dt><code>XmNgeometry</code></p>
-<dd>Specifies the desired geometry for the widget instance. This resource is examined only when the widget instance is unrealized and the number of its managed children is changed. It is used to change the values of the <code>XmNx</code>, <code>XmNy</code>, <code>XmNwidth</code>, and <code>XmNheight</code> resources. When <code>XtGetValues</code> is called on this resource, the returned value is a pointer to the actual resource value and should not be freed. In addition, this resource is not copied on creation or by <code>XtSetValues</code>. The application must ensure that the string remains valid until the shell is realized.</p>
-<dt><code>XmNoverrideRedirect</code></p>
-<dd>If True, specifies that the widget instance is a temporary window that should be ignored by the window manager. Applications and users should not normally alter this resource.</p>
-<dt><code>XmNpopdownCallback</code></p>
-<dd>Specifies a list of callbacks that is called when the widget instance is popped down by <code>XtPopdown</code>.</p>
-<dt><code>XmNpopupCallback</code></p>
-<dd>Specifies a list of callbacks that is called when the widget instance is popped up by <code>XtPopup</code>. The second argument to <code>XtPopup</code> must be <code>XtGrabNone</code>.</p>
-<dt><code>XmNsaveUnder</code></p>
-<dd>If True, specifies that it is desirable to save the contents of the screen beneath this widget instance, avoiding expose events when the instance is unmapped. This is a hint, and an implementation may save contents whenever it desires, including always or never.</p>
-<dt><code>XmNvisual</code></p>
-<dd>Specifies the visual used in creating the widget.</dl>
+<dt><code>XmNallowShellResize</code></dt>
+<dd>Specifies that if this resource is False, the Shell widget instance returns <code>XtGeometryNo</code> to all geometry requests from its children. All Motif convenience create dialog functions override this default value and set <code>XmNallowShellResize</code> to True.</dd>
+<dt><code>XmNcreatePopupChildProc</code></dt>
+<dd>Specifies the pointer to a function that is called when the Shell widget instance is popped up by <code>XtPopup</code>. The function creates the child widget when the shell is popped up instead of when the application starts up. This can be used if the child needs to be reconfigured each time the shell is popped up. The function takes one argument, the popup shell, and returns no result. It is called after the popup callbacks specified by <code>XmNpopupCallback</code>.</dd>
+<dt><code>XmNgeometry</code></dt>
+<dd>Specifies the desired geometry for the widget instance. This resource is examined only when the widget instance is unrealized and the number of its managed children is changed. It is used to change the values of the <code>XmNx</code>, <code>XmNy</code>, <code>XmNwidth</code>, and <code>XmNheight</code> resources. When <code>XtGetValues</code> is called on this resource, the returned value is a pointer to the actual resource value and should not be freed. In addition, this resource is not copied on creation or by <code>XtSetValues</code>. The application must ensure that the string remains valid until the shell is realized.</dd>
+<dt><code>XmNoverrideRedirect</code></dt>
+<dd>If True, specifies that the widget instance is a temporary window that should be ignored by the window manager. Applications and users should not normally alter this resource.</dd>
+<dt><code>XmNpopdownCallback</code></dt>
+<dd>Specifies a list of callbacks that is called when the widget instance is popped down by <code>XtPopdown</code>.</dd>
+<dt><code>XmNpopupCallback</code></dt>
+<dd>Specifies a list of callbacks that is called when the widget instance is popped up by <code>XtPopup</code>. The second argument to <code>XtPopup</code> must be <code>XtGrabNone</code>.</dd>
+<dt><code>XmNsaveUnder</code></dt>
+<dd>If True, specifies that it is desirable to save the contents of the screen beneath this widget instance, avoiding expose events when the instance is unmapped. This is a hint, and an implementation may save contents whenever it desires, including always or never.</dd>
+<dt><code>XmNvisual</code></dt>
+<dd>Specifies the visual used in creating the widget.</dd></dl>
 <h3>Inherited Resources</h3>
 <p>Shell inherits behavior and resources from the superclass described in the following table. For a complete description of each resource, refer to the reference page for that superclass. </p>
 <table BORDER>

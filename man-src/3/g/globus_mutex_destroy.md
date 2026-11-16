@@ -46,85 +46,85 @@ description: "Mutual Exclusion –"
 <h2>Detailed Description</h2>
 <p> The Globus runtime includes three portable, related mutual exclusion primitives that can be used in applications and libraries. These are</p>
 <dl>
-<dt>&bull;</p>
-<dd> <code>globus_mutex_t</code>: a non-recursive, non-shared lock</p>
-<dt>&bull;</p>
-<dd> <code>globus_rmutex_t</code>: a recursive non-shared lock</p>
-<dt>&bull;</p>
-<dd> globus_rw_mutex_t: a reader-writer lock</dl>
+<dt>&bull;</dt>
+<dd> <code>globus_mutex_t</code>: a non-recursive, non-shared lock</dd>
+<dt>&bull;</dt>
+<dd> <code>globus_rmutex_t</code>: a recursive non-shared lock</dd>
+<dt>&bull;</dt>
+<dd> globus_rw_mutex_t: a reader-writer lock</dd></dl>
 <h2>Function Documentation</h2>
 <h3>int globus_mutex_destroy (<code>globus_mutex_t</code> *mutex)</h3>
 <p> Destroy a mutex. The <code>globus_mutex_destroy()</code> function destroys the mutex pointed to by its <i>mutex</i> parameter. After a mutex is destroyed it may no longer be used unless it is again initialized by <code>globus_mutex_init()</code>. Behavior is undefined if <code>globus_mutex_destroy()</code> is called with a pointer to a locked mutex. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>mutex</i> The mutex to destroy</dl>
+</dt><dd> <i>mutex</i> The mutex to destroy</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> On success, <code>globus_mutex_destroy()</code> returns GLOBUS_SUCCESS. Otherwise, a non-zero implementation-specific error value is returned.</dl>
+</dt><dd> On success, <code>globus_mutex_destroy()</code> returns GLOBUS_SUCCESS. Otherwise, a non-zero implementation-specific error value is returned.</dd></dl>
 <h3>int globus_mutex_init (<code>globus_mutex_t</code> *mutex, <code>globus_mutexattr_t</code> *attr)</h3>
 <p> Initialize a mutex. The <code>globus_mutex_init()</code> function creates a mutex variable that can be used for synchronization. Currently, the <i>attr</i> parameter is ignored. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>mutex</i> Pointer to the mutex to initialize.<br />
- <i>attr</i> Ignored.</dl>
+</dt><dd> <i>mutex</i> Pointer to the mutex to initialize.<br />
+ <i>attr</i> Ignored.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> On success, <code>globus_mutex_init()</code> initializes the mutex and returns GLOBUS_SUCCESS. Otherwise, a non-0 value is returned.</dl>
+</dt><dd> On success, <code>globus_mutex_init()</code> initializes the mutex and returns GLOBUS_SUCCESS. Otherwise, a non-0 value is returned.</dd></dl>
 <h3>int globus_mutex_lock (<code>globus_mutex_t</code> *mutex)</h3>
 <p> Lock a mutex. The <code>globus_mutex_lock()</code> function locks the mutex pointed to by its <i>mutex</i> parameter. </p>
 <p> Upon successful return, the thread calling <code>globus_mutex_lock()</code> has an exclusive lock on the resources protected by <i>mutex</i>. Other threads calling <code>globus_mutex_lock()</code> will wait until that thread later calls <code>globus_mutex_unlock()</code> or <code>globus_cond_wait()</code> with that mutex. Depending on the thread model, calling globus_mutex_lock on a mutex locked by the current thread will either return an error or result in deadlock. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>mutex</i> The mutex to lock.</dl>
+</dt><dd> <i>mutex</i> The mutex to lock.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> On success, <code>globus_mutex_lock()</code> returns GLOBUS_SUCCESS. Otherwise, a non-zero implementation-specific error value is returned.</dl>
+</dt><dd> On success, <code>globus_mutex_lock()</code> returns GLOBUS_SUCCESS. Otherwise, a non-zero implementation-specific error value is returned.</dd></dl>
 <h3>int globus_mutex_trylock (<code>globus_mutex_t</code> *mutex)</h3>
 <p> Lock a mutex if it is not locked. The <code>globus_mutex_trylock()</code> function locks the mutex pointed to by its <i>mutex</i> parameter if no thread has already locked the mutex. If <i>mutex</i> is locked, then <code>globus_mutex_trylock()</code> returns EBUSY and does not block the current thread or lock the mutex. Upon successful return, the thread calling <code>globus_mutex_trylock()</code> has an exclusive lock on the resources protected by <i>mutex</i>. Other threads calling <code>globus_mutex_lock()</code> will wait until that thread later calls <code>globus_mutex_unlock()</code> or <code>globus_cond_wait()</code> with that mutex. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>mutex</i> The mutex to lock.</dl>
+</dt><dd> <i>mutex</i> The mutex to lock.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> On success, <code>globus_mutex_trylock()</code> returns GLOBUS_SUCCESS and locks the mutex. If another thread holds the lock, <code>globus_mutex_trylock()</code> returns EBUSY. Otherwise, a non-zero implementation-specific error value is returned.</dl>
+</dt><dd> On success, <code>globus_mutex_trylock()</code> returns GLOBUS_SUCCESS and locks the mutex. If another thread holds the lock, <code>globus_mutex_trylock()</code> returns EBUSY. Otherwise, a non-zero implementation-specific error value is returned.</dd></dl>
 <h3>int globus_mutex_unlock (<code>globus_mutex_t</code> *mutex)</h3>
 <p> Unlock a mutex. The <code>globus_mutex_unlock()</code> function unlocks the mutex pointed to by its <i>mutex</i> parameter. Upon successful return, the thread calling <code>globus_mutex_unlock()</code> no longer has an exclusive lock on the resources protected by <i>mutex</i>. Another thread calling <code>globus_mutex_lock()</code> may be unblocked so that it may acquire the mutex. Behavior is undefined if globus_mutex_unlock is called with an unlocked mutex. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>mutex</i> The mutex to unlock.</dl>
+</dt><dd> <i>mutex</i> The mutex to unlock.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> On success, <code>globus_mutex_unlock()</code> returns GLOBUS_SUCCESS. Otherwise, a non-zero implementation-specific error value is returned.</dl>
+</dt><dd> On success, <code>globus_mutex_unlock()</code> returns GLOBUS_SUCCESS. Otherwise, a non-zero implementation-specific error value is returned.</dd></dl>
 <h3>int globus_mutexattr_destroy (<code>globus_mutexattr_t</code> *attr)</h3>
 <p> Destroy a mutex attribute. The <code>globus_mutexattr_destroy()</code> function destroys the mutex attribute structure pointed to by its <i>attr</i> parameter. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>attr</i> Attribute structure to destroy.</dl>
+</dt><dd> <i>attr</i> Attribute structure to destroy.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> Upon success, <code>globus_mutexattr_destroy()</code> returns GLOBUS_SUCCESS and modifies the attribute pointed to by <i>attr</i>. If an error occurs, <code>globus_mutexattr_destroy()</code> returns an implementation-specific non-zero error code.</dl>
+</dt><dd> Upon success, <code>globus_mutexattr_destroy()</code> returns GLOBUS_SUCCESS and modifies the attribute pointed to by <i>attr</i>. If an error occurs, <code>globus_mutexattr_destroy()</code> returns an implementation-specific non-zero error code.</dd></dl>
 <h3>int globus_mutexattr_init (<code>globus_mutexattr_t</code> *attr)</h3>
 <p> Initialize a mutex attribute. The <code>globus_mutexattr_init()</code> function initializes the mutex attribute structure pointed to by its <i>attr</i> parameter. Currently there are no attribute values that can be set via this API, so there&#8217;s no real use to calling this function. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>attr</i> Attribute structure to initialize.</dl>
+</dt><dd> <i>attr</i> Attribute structure to initialize.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> Upon success, <code>globus_mutexattr_init()</code> returns GLOBUS_SUCCESS and modifies the attribute pointed to by <i>attr</i>. If an error occurs, <code>globus_mutexattr_init()</code> returns an implementation-specific non-zero error code.</dl>
+</dt><dd> Upon success, <code>globus_mutexattr_init()</code> returns GLOBUS_SUCCESS and modifies the attribute pointed to by <i>attr</i>. If an error occurs, <code>globus_mutexattr_init()</code> returns an implementation-specific non-zero error code.</dd></dl>
 <h3>int globus_rmutex_destroy (<code>globus_rmutex_t</code> *rmutex)</h3>
 <p> Destroy a recursive mutex. </p>
 <pre>
@@ -134,11 +134,11 @@ If the mutex is currently locked, behavior is undefined.
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>rmutex</i> Mutex to unlock</dl>
+</dt><dd> <i>rmutex</i> Mutex to unlock</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS</dl>
+</dt><dd> GLOBUS_SUCCESS</dd></dl>
 <h3>int globus_rmutex_init (<code>globus_rmutex_t</code> *rmutex, <code>globus_rmutexattr_t</code> *rattr)</h3>
 <p> Initialize a recursive mutex. </p>
 <pre>
@@ -150,12 +150,12 @@ without causing deadlock.
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>rmutex</i> A pointer to the mutex to initialize<br />
- <i>rattr</i> IGNORED</dl>
+</dt><dd> <i>rmutex</i> A pointer to the mutex to initialize<br />
+ <i>rattr</i> IGNORED</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> On success, <code>globus_rmutex_init()</code> initializes the mutex and returns GLOBUS_SUCCESS; otherwise, it returns a non-zero error code.</dl>
+</dt><dd> On success, <code>globus_rmutex_init()</code> initializes the mutex and returns GLOBUS_SUCCESS; otherwise, it returns a non-zero error code.</dd></dl>
 <h3>int globus_rmutex_lock (<code>globus_rmutex_t</code> *rmutex)</h3>
 <p> Lock a recursive mutex. </p>
 <pre>
@@ -169,11 +169,11 @@ mutex is completely unlocked.
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>rmutex</i> A pointer to the mutex to lock</dl>
+</dt><dd> <i>rmutex</i> A pointer to the mutex to lock</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> On success, <code>globus_rmutex_init()</code> increases the lock level for the mutex, blocks other threads trying to acquire the same mutex, and returns GLOBUS_SUCCESS; otherwise, it returns a non-zero error code.</dl>
+</dt><dd> On success, <code>globus_rmutex_init()</code> increases the lock level for the mutex, blocks other threads trying to acquire the same mutex, and returns GLOBUS_SUCCESS; otherwise, it returns a non-zero error code.</dd></dl>
 <h3>int globus_rmutex_unlock (<code>globus_rmutex_t</code> *rmutex)</h3>
 <p> Unlock a recursive mutex. </p>
 <pre>
@@ -185,13 +185,13 @@ if there is one.
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>rmutex</i> Mutex to unlock</dl>
+</dt><dd> <i>rmutex</i> Mutex to unlock</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
 <dt>
-<dd> GLOBUS_SUCCESS</dl>
+</dt><dd> GLOBUS_SUCCESS</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAT">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAT">Author</a></dt>
+<dd></dd></dl>

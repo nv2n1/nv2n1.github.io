@@ -50,14 +50,14 @@ description: "Atlas::Objects::Operation::CreateData – Create new things from n
 <p>Get the reference object that contains the default values for attributes of instances of the same class as this object. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a pointer to the default object.</dl>
+<dd>a pointer to the default object.</dd></dl>
 <p> Reimplemented from <code>Atlas::Objects::Operation::ActionData</code>. </p>
 <p> Reimplemented in <code>Atlas::Objects::Operation::CombineData</code>, <code>Atlas::Objects::Operation::DivideData</code>, <code>Atlas::Objects::Operation::CommunicateData</code>, and <code>Atlas::Objects::Operation::TalkData</code>.</p>
 <h3>static <code>CreateData</code>* Atlas::Objects::Operation::CreateData::getDefaultObjectInstance () [static]</h3>
 <p>Get the reference object that contains the default values for attributes of instances of this class. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>a pointer to the default object.</dl>
+<dd>a pointer to the default object.</dd></dl>
 <p> Reimplemented from <code>Atlas::Objects::Operation::ActionData</code>. </p>
 <p> Reimplemented in <code>Atlas::Objects::Operation::CombineData</code>, <code>Atlas::Objects::Operation::DivideData</code>, <code>Atlas::Objects::Operation::CommunicateData</code>, and <code>Atlas::Objects::Operation::TalkData</code>. </p>
 <h2>Author</h2>

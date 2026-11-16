@@ -18,22 +18,22 @@ description: "xcmsdb – Device Color Characterization utility for X Color Manag
 <h2>OPTIONS</h2>
 <p> <i>xcmsdb</i> program accepts the following options:</p>
 <dl>
-<dt><code>-query</code></p>
-<dd> This option attempts to read the XDCCC properties off the screen&#8217;s root window. If successful, it transforms the data into a more readable format, then sends the data to standard out.</p>
-<dt><code>-remove</code></p>
-<dd> This option attempts to remove the XDCCC properties on the screen&#8217;s root window.</p>
-<dt><code>-format 32</code>|<code>16</code>|<code>8</code></p>
-<dd> Specifies the property format (32, 16, or 8 bits per entry) for the XDCCC_LINEAR_RGB_CORRECTION property. Precision of encoded floating point values increases with the increase in bits per entry. The default is 32 bits per entry.</p>
-<dt><code>-help</code></p>
-<dd> This option prints a summary of the available options and exits.</p>
-<dt><code>-version</code></p>
-<dd> This option prints the program version and exits.</dl>
+<dt><code>-query</code></dt>
+<dd> This option attempts to read the XDCCC properties off the screen&#8217;s root window. If successful, it transforms the data into a more readable format, then sends the data to standard out.</dd>
+<dt><code>-remove</code></dt>
+<dd> This option attempts to remove the XDCCC properties on the screen&#8217;s root window.</dd>
+<dt><code>-format 32</code>|<code>16</code>|<code>8</code></dt>
+<dd> Specifies the property format (32, 16, or 8 bits per entry) for the XDCCC_LINEAR_RGB_CORRECTION property. Precision of encoded floating point values increases with the increase in bits per entry. The default is 32 bits per entry.</dd>
+<dt><code>-help</code></dt>
+<dd> This option prints a summary of the available options and exits.</dd>
+<dt><code>-version</code></dt>
+<dd> This option prints the program version and exits.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-xprop/">xprop</a>(1), Xlib documentation</p>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>DISPLAY</code></p>
-<dd> to figure out which display and screen to use.</dl>
+<dt><code>DISPLAY</code></dt>
+<dd> to figure out which display and screen to use.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Chuck Adams, Tektronix Inc. Al Tabayoyon, SynChromatics Inc. (added multi-visual support) </p>
 <h2>Index</h2>

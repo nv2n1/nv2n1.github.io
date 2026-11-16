@@ -9,16 +9,16 @@ description: "uri, url, urn – uniform resource identifier (URI), including a U
 
 <p>uri, url, urn &#8211; uniform resource identifier (URI), including a URL or URN</p>
 <h2>Synopsis</h2>
-<pre><dl><dt><dd>URI = [ absoluteURI | relativeURI ] [ &quot;#&quot; fragment ]
-<dt><dd>absoluteURI = scheme &quot;:&quot; ( hierarchical_part | opaque_part )
-<dt><dd>relativeURI = ( net_path | absolute_path | relative_path ) [ &quot;?&quot; query ]
-<dt><dd>scheme = &quot;http&quot; | &quot;ftp&quot; | &quot;gopher&quot; | &quot;mailto&quot; | &quot;news&quot; | &quot;telnet&quot; |
+<pre><dl><dt></dt><dd>URI = [ absoluteURI | relativeURI ] [ &quot;#&quot; fragment ]
+</dd><dt></dt><dd>absoluteURI = scheme &quot;:&quot; ( hierarchical_part | opaque_part )
+</dd><dt></dt><dd>relativeURI = ( net_path | absolute_path | relative_path ) [ &quot;?&quot; query ]
+</dd><dt></dt><dd>scheme = &quot;http&quot; | &quot;ftp&quot; | &quot;gopher&quot; | &quot;mailto&quot; | &quot;news&quot; | &quot;telnet&quot; |
  &quot;file&quot; | &quot;man&quot; | &quot;info&quot; | &quot;whatis&quot; | &quot;ldap&quot; | &quot;wais&quot; | ...
-<dt><dd>hierarchical_part = ( net_path | absolute_path ) [ &quot;?&quot; query ]
-<dt><dd>net_path = &quot;//&quot; authority [ absolute_path ]
-<dt><dd>absolute_path = &quot;/&quot; path_segments
-<dt><dd>relative_path = relative_segment [ absolute_path ]</pre>
-</dl>
+</dd><dt></dt><dd>hierarchical_part = ( net_path | absolute_path ) [ &quot;?&quot; query ]
+</dd><dt></dt><dd>net_path = &quot;//&quot; authority [ absolute_path ]
+</dd><dt></dt><dd>absolute_path = &quot;/&quot; path_segments
+</dd><dt></dt><dd>relative_path = relative_segment [ absolute_path ]</pre>
+</dd></dl>
 <h2>Description</h2>
 <p>A Uniform Resource Identifier (URI) is a short string of characters identifying an abstract or physical resource (for example, a web page). A Uniform Resource Locator (URL) is a URI that identifies a resource through its primary access mechanism (e.g., its network &quot;location&quot;), rather than by name or some other attribute of that resource. A Uniform Resource Name (URN) is a URI that must remain globally unique and persistent even when the resource ceases to exist or becomes unavailable. </p>
 <p> URIs are the standard way to name hypertext link destinations for tools such as web browsers. The string &quot;<a rel="nofollow" href="http://www.kernel.org">http://www.kernel.org</a>&quot; is a URL (and thus it is also a URI). Many people use the term URL loosely as a synonym for URI (though technically URLs are a subset of URIs). </p>
@@ -27,8 +27,8 @@ description: "uri, url, urn – uniform resource identifier (URI), including a U
 <h3>Usage</h3>
 <p>There are many different URI schemes, each with specific additional rules and meanings, but they are intentionally made to be as similar as possible. For example, many URL schemes permit the authority to be the following format, called here an <i>ip_server</i> (square brackets show what&#8217;s optional):</p>
 <dl>
-<dt> <i>ip_server = </i>[<i>user</i> [ : <i>password</i> ] @ ] <i>host</i> [ : <i>port</i>]</dl>
-<dd>This format allows you to optionally insert a username, a user plus password, and/or a port number. The <i>host</i> is the name of the host computer, either its name as determined by DNS or an IP address (numbers separated by periods). Thus the URI &lt;<a rel="nofollow" href="http://fred:fredpassword@example.com:8080/">http://fred:fredpassword@example.com:8080/</a>&gt; logs into a web server on host example.com as fred (using fredpassword) using port 8080. Avoid including a password in a URI if possible because of the many security risks of having a password written down. If the URL supplies a username but no password, and the remote server requests a password, the program interpreting the URL should request one from the user. </p>
+<dt> <i>ip_server = </i>[<i>user</i> [ : <i>password</i> ] @ ] <i>host</i> [ : <i>port</i>]</dt></dl>
+<dd>This format allows you to optionally insert a username, a user plus password, and/or a port number. The <i>host</i> is the name of the host computer, either its name as determined by DNS or an IP address (numbers separated by periods). Thus the URI &lt;<a rel="nofollow" href="http://fred:fredpassword@example.com:8080/">http://fred:fredpassword@example.com:8080/</a>&gt; logs into a web server on host example.com as fred (using fredpassword) using port 8080. Avoid including a password in a URI if possible because of the many security risks of having a password written down. If the URL supplies a username but no password, and the remote server requests a password, the program interpreting the URL should request one from the user. </dd>
 <p> Here are some of the most common schemes in use on UNIX-like systems that are understood by many tools. Note that many tools using URIs also have internal schemes or specialized schemes; see those tools&#8217; documentation for information on those schemes. </p>
 <p> <code>http &#8211; Web (HTTP) server</code> </p>
 <p> http://<i>ip_server</i>/<i>path</i><br />
@@ -86,18 +86,18 @@ description: "uri, url, urn – uniform resource identifier (URI), including a U
  ldap://<i>hostport</i>/<i>dn</i>?<i>attributes</i>?<i>scope</i>?<i>filter</i>?<i>extensions</i> </p>
 <p> This scheme supports queries to the Lightweight Directory Access Protocol (LDAP), a protocol for querying a set of servers for hierarchically organized information (such as people and computing resources). See RFC 2255 for more information on the LDAP URL scheme. The components of this URL are:</p>
 <dl>
-<dt>hostport</p>
-<dd>the LDAP server to query, written as a hostname optionally followed by a colon and the port number. The default LDAP port is TCP port 389. If empty, the client determines which the LDAP server to use.</p>
-<dt>dn</p>
-<dd>the LDAP Distinguished Name, which identifies the base object of the LDAP search (see RFC 2253 section 3).</p>
-<dt>attributes</p>
-<dd>a comma-separated list of attributes to be returned; see RFC 2251 section 4.1.5. If omitted, all attributes should be returned.</p>
-<dt>scope</p>
-<dd>specifies the scope of the search, which can be one of &quot;base&quot; (for a base object search), &quot;one&quot; (for a one-level search), or &quot;sub&quot; (for a subtree search). If scope is omitted, &quot;base&quot; is assumed.</p>
-<dt>filter</p>
-<dd>specifies the search filter (subset of entries to return). If omitted, all entries should be returned. See RFC 2254 section 4.</p>
-<dt>extensions</p>
-<dd>a comma-separated list of type=value pairs, where the =value portion may be omitted for options not requiring it. An extension prefixed with a &#8216;!&#8217; is critical (must be supported to be valid), otherwise it is noncritical (optional).</dl>
+<dt>hostport</dt>
+<dd>the LDAP server to query, written as a hostname optionally followed by a colon and the port number. The default LDAP port is TCP port 389. If empty, the client determines which the LDAP server to use.</dd>
+<dt>dn</dt>
+<dd>the LDAP Distinguished Name, which identifies the base object of the LDAP search (see RFC 2253 section 3).</dd>
+<dt>attributes</dt>
+<dd>a comma-separated list of attributes to be returned; see RFC 2251 section 4.1.5. If omitted, all attributes should be returned.</dd>
+<dt>scope</dt>
+<dd>specifies the scope of the search, which can be one of &quot;base&quot; (for a base object search), &quot;one&quot; (for a one-level search), or &quot;sub&quot; (for a subtree search). If scope is omitted, &quot;base&quot; is assumed.</dd>
+<dt>filter</dt>
+<dd>specifies the search filter (subset of entries to return). If omitted, all entries should be returned. See RFC 2254 section 4.</dd>
+<dt>extensions</dt>
+<dd>a comma-separated list of type=value pairs, where the =value portion may be omitted for options not requiring it. An extension prefixed with a &#8216;!&#8217; is critical (must be supported to be valid), otherwise it is noncritical (optional).</dd></dl>
 <p> LDAP queries are easiest to explain by example. Here&#8217;s a query that asks ldap.itd.umich.edu for information about the University of Michigan in the U.S.: </p>
 <pre><a href="ldap://ldap.itd.umich.edu/o=University%20of%20Michigan,c=US">ldap://ldap.itd.umich.edu/o=University%20of%20Michigan,c=US</a></pre>
 <p>To just get its postal address attribute, request: </p>
@@ -116,18 +116,18 @@ description: "uri, url, urn – uniform resource identifier (URI), including a U
 <p>URIs use a limited number of characters so that they can be typed in and used in a variety of situations. </p>
 <p> The following characters are reserved, that is, they may appear in a URI but their use is limited to their reserved purpose (conflicting data must be escaped before forming the URI):</p>
 <dl>
-<dd>&nbsp;<wbr>&nbsp;<wbr>&nbsp;;&nbsp;/&nbsp;?&nbsp;:&nbsp;@&nbsp;&amp;&nbsp;=&nbsp;+&nbsp;$&nbsp;,</dl>
+<dd>&nbsp;<wbr>&nbsp;<wbr>&nbsp;;&nbsp;/&nbsp;?&nbsp;:&nbsp;@&nbsp;&amp;&nbsp;=&nbsp;+&nbsp;$&nbsp;,</dd></dl>
 <p> Unreserved characters may be included in a URI. Unreserved characters include uppercase and lowercase English letters, decimal digits, and the following limited set of punctuation marks and symbols:</p>
 <dl>
-<dd>&nbsp;&#8211;&nbsp;_&nbsp;.&nbsp;!&nbsp;~&nbsp;*&nbsp;&#8216;&nbsp;(&nbsp;)</dl>
+<dd>&nbsp;&#8211;&nbsp;_&nbsp;.&nbsp;!&nbsp;~&nbsp;*&nbsp;&#8216;&nbsp;(&nbsp;)</dd></dl>
 <p> All other characters must be escaped. An escaped octet is encoded as a character triplet, consisting of the percent character &quot;%&quot; followed by the two hexadecimal digits representing the octet code (you can use uppercase or lowercase letters for the hexadecimal digits). For example, a blank space must be escaped as &quot;%20&quot;, a tab character as &quot;%09&quot;, and the &quot;&amp;&quot; as &quot;%26&quot;. Because the percent &quot;%&quot; character always has the reserved purpose of being the escape indicator, it must be escaped as &quot;%25&quot;. It is common practice to escape space characters as the plus symbol (+) in query text; this practice isn&#8217;t uniformly defined in the relevant RFCs (which recommend %20 instead) but any tool accepting URIs with query text should be prepared for them. A URI is always shown in its &quot;escaped&quot; form. </p>
 <p> Unreserved characters can be escaped without changing the semantics of the URI, but this should not be done unless the URI is being used in a context that does not allow the unescaped character to appear. For example, &quot;%7e&quot; is sometimes used instead of &quot;~&quot; in an HTTP URL path, but the two are equivalent for an HTTP URL. </p>
 <p> For URIs which must handle characters outside the US ASCII character set, the HTML 4.01 specification (section B.2) and IETF RFC 2718 (section 2.2.5) recommend the following approach:</p>
 <dl>
-<dt>1.</p>
-<dd>translate the character sequences into UTF-8 (IETF RFC 2279)&#8212;see <code><a href="/docs/linux/man/7-utf-8/">utf-8</a></code>(7)&#8212;and then</p>
-<dt>2.</p>
-<dd>use the URI escaping mechanism, that is, use the %HH encoding for unsafe octets.</dl>
+<dt>1.</dt>
+<dd>translate the character sequences into UTF-8 (IETF RFC 2279)&#8212;see <code><a href="/docs/linux/man/7-utf-8/">utf-8</a></code>(7)&#8212;and then</dd>
+<dt>2.</dt>
+<dd>use the URI escaping mechanism, that is, use the %HH encoding for unsafe octets.</dd></dl>
 <h3>Writing a URI</h3>
 <p>When written, URIs should be placed inside double quotes (e.g., &quot;<a rel="nofollow" href="http://www.kernel.org">http://www.kernel.org</a>&quot;), enclosed in angle brackets (e.g., &lt;<a rel="nofollow" href="http://lwn.net">http://lwn.net</a>&gt;), or placed on a line by themselves. A warning for those who use double-quotes: <code>never</code> move extraneous punctuation (such as the period ending a sentence or the comma in a list) inside a URI, since this will change the value of the URI. Instead, use angle brackets instead, or switch to a quoting system that never includes extraneous characters inside quotation marks. This latter system, called the &#8216;new&#8217; or &#8216;logical&#8217; quoting system by &quot;Hart&#8217;s Rules&quot; and the &quot;Oxford Dictionary for Writers and Editors&quot;, is preferred practice in Great Britain and hackers worldwide (see the Jargon File&#8217;s section on Hacker Writing Style, for more information). Older documents suggested inserting the prefix &quot;URL:&quot; just before the URI, but this form has never caught on. </p>
 <p> The URI syntax was designed to be unambiguous. However, as URIs have become commonplace, traditional media (television, radio, newspapers, billboards, etc.) have increasingly used abbreviated URI references consisting of only the authority and path portions of the identified resource (e.g., &lt;<a rel="nofollow" href="http://www.w3.org">www.w3.org</a>/Addressing&gt;). Such references are primarily intended for human interpretation rather than machine, with the assumption that context-based heuristics are sufficient to complete the URI (e.g., hostnames beginning with &quot;www&quot; are likely to have a URI prefix of &quot;http://&quot; and hostnames beginning with &quot;ftp&quot; likely to have a prefix of &quot;ftp://&quot;). Many client implementations heuristically resolve these references. Such heuristics may change over time, particularly when new schemes are introduced. Since an abbreviated URI has the same syntax as a relative URL path, abbreviated URI references cannot be used where relative URIs are permitted, and can be used only when there is no defined base (such as in dialog boxes). Don&#8217;t use abbreviated URIs as hypertext links inside a document; use the standard format as described here.</p>

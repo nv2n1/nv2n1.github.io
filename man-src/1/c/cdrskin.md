@@ -91,219 +91,215 @@ description: "cdrskin – burns preformatted data to CD, DVD, and BD via libburn
  Note: &#8211;allow_emulated_drives is restricted to stdio:/dev/null if cdrskin is run by the <code>superuser</code> or if it has changed user identity via the <code>setuid</code> bit of its access permissions. The ban for the superuser can be lifted by a skillfully created file. See section FILES below. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Show non-cdrecord compatible options.</p>
-<dt><code>-help</code></p>
+<dt><code>&#8211;help</code></dt>
+<dd> Show non-cdrecord compatible options.</dd>
+<dt><code>-help</code></dt>
 <dd> Show cdrecord compatible options.<br />
- Note that some of the help texts are quite wrong &#8211; for cdrecord as well as for cdrskin (e.g. -format, blank=, -load). They are, nevertheless, traditional indicators for the availability of the listed options. Some frontend programs make decisions after reading them.</p>
-<dt><code>-version</code></p>
-<dd> Print cdrskin id line, compatibility lure line, libburn version, cdrskin version, version timestamp, build timestamp (if available), and then exit.</dl>
+ Note that some of the help texts are quite wrong &#8211; for cdrecord as well as for cdrskin (e.g. -format, blank=, -load). They are, nevertheless, traditional indicators for the availability of the listed options. Some frontend programs make decisions after reading them.</dd>
+<dt><code>-version</code></dt>
+<dd> Print cdrskin id line, compatibility lure line, libburn version, cdrskin version, version timestamp, build timestamp (if available), and then exit.</dd></dl>
 <p> Alphabetical list of options which are intended to be compatible with original cdrecord by Joerg Schilling:</p>
 <dl>
-<dt><code>-atip</code></p>
-<dd> Retrieve some info about media state. With CD-RW print &quot;Is erasable&quot;. With DVD media print &quot;book type:&quot; and a media type text. With BD media print &quot;Mounted Media:&quot; and media type text.</p>
-<dt><code>-audio</code></p>
+<dt><code>-atip</code></dt>
+<dd> Retrieve some info about media state. With CD-RW print &quot;Is erasable&quot;. With DVD media print &quot;book type:&quot; and a media type text. With BD media print &quot;Mounted Media:&quot; and media type text.</dd>
+<dt><code>-audio</code></dt>
 <dd> Announces that the subsequent tracks are to be burned as audio. The source is supposed to be uncompressed headerless PCM, 44100 Hz, 16 bit, stereo. For little-endian byte order (which is usual on PCs) use option -swab. Unless marked explicitly by option -data, input files with suffix &quot;.wav&quot; are examined wether they have a header in MS-WAVE format confirming those parameters and eventually raw audio data get extracted and burned as audio track. Same is done for suffix &quot;.au&quot; and SUN Audio.<br />
- Option -audio may be used only with CD media and not with DVD or BD.</p>
-<dt><code>blank=</code><i>type</i></p>
-<dd> Blank a CD-RW, DVD-RW, or format a DVD-RW, DVD+RW, DVD-RAM, BD. This is combinable with burning in the same run of cdrskin. The type given with blank= selects the particular behavior:</p>
+ Option -audio may be used only with CD media and not with DVD or BD.</dd>
+<dt><code>blank=</code><i>type</i></dt>
+<dd> Blank a CD-RW, DVD-RW, or format a DVD-RW, DVD+RW, DVD-RAM, BD. This is combinable with burning in the same run of cdrskin. The type given with blank= selects the particular behavior:</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>as_needed</p>
+<dt>as_needed</dt>
 <dd> Try to make the media ready for writing from scratch. If it needs formatting, then format it. If it is not blank, then try to apply blank=fast. It is a reason to abort if the media cannot assume thoroughly writeable state, e.g. if it is non-blank write-once.<br />
  This leaves unformatted DVD-RW in unformatted blank state. To format DVD-RW use blank=format_overwriteable. Blank unformatted BD-R stay unformatted.<br />
- (Note: blank=as_needed is not an original cdrecord option.)</p>
-<dt>The following blank types are specific to particular media familes. Use them if special features are desired.</p>
+ (Note: blank=as_needed is not an original cdrecord option.)</dd>
+<dt>The following blank types are specific to particular media familes. Use them if special features are desired.</dt>
 <dd>
-<dt>all</p>
-<dd> Blank an entire CD-RW or an unformatted DVD-RW. (See also &#8211;prodvd_cli_compatible, &#8211;grow_overwriteable_iso)</p>
-<dt>fast</p>
-<dd> Minimally blank an entire CD-RW or blank an unformatted DVD-RW. (See also &#8211;prodvd_cli_compatible, &#8211;grow_overwriteable_iso)</p>
-<dt>deformat_sequential</p>
+</dd><dt>all</dt>
+<dd> Blank an entire CD-RW or an unformatted DVD-RW. (See also &#8211;prodvd_cli_compatible, &#8211;grow_overwriteable_iso)</dd>
+<dt>fast</dt>
+<dd> Minimally blank an entire CD-RW or blank an unformatted DVD-RW. (See also &#8211;prodvd_cli_compatible, &#8211;grow_overwriteable_iso)</dd>
+<dt>deformat_sequential</dt>
 <dd> Like blank=all but with the additional ability to blank overwriteable DVD-RW. This will destroy their formatting and make them sequentially recordable. Another peculiarity is the ability to blank media which appear already blank. This is similar to option -force but does not try to blank media other than recognizable CD-RW and DVD-RW.<br />
- (Note: blank=deformat_* are not original cdrecord options.)</p>
-<dt>deformat_sequential_quickest</p>
-<dd> Like blank=deformat_sequential but blanking DVD-RW only minimally. This is faster than full blanking but may yield media incapable of Incremental Streaming (-tao).</p>
-<dt>format_if_needed</p>
+ (Note: blank=deformat_* are not original cdrecord options.)</dd>
+<dt>deformat_sequential_quickest</dt>
+<dd> Like blank=deformat_sequential but blanking DVD-RW only minimally. This is faster than full blanking but may yield media incapable of Incremental Streaming (-tao).</dd>
+<dt>format_if_needed</dt>
 <dd> Format a media if it is not formatted yet, and if cdrskin supports formatting for the media type, and if formatting will not happen automatically during write. This currently applies to unformatted DVD-RW, DVD-RAM, BD-RE, and blank unformatted BD-R. Eventually the appropriate default formatting is chosen. If other media or states are encountered then nothing happens.<br />
- The following formatting types are more specialized to particular media families.</p>
-<dt>format_overwrite</p>
+ The following formatting types are more specialized to particular media families.</dd>
+<dt>format_overwrite</dt>
 <dd> Format a DVD-RW to &quot;Restricted Overwrite&quot;. The user should bring some patience.<br />
- (Note: blank=format_* are not original cdrecord options.)</p>
-<dt>format_overwrite_quickest</p>
-<dd> Like format_overwrite without creating a 128 MiB trailblazer session. Leads to &quot;intermediate&quot; state which only allows sequential write beginning from address 0. The &quot;intermediate&quot; state ends after the first session of writing data.</p>
-<dt>format_overwrite_full</p>
+ (Note: blank=format_* are not original cdrecord options.)</dd>
+<dt>format_overwrite_quickest</dt>
+<dd> Like format_overwrite without creating a 128 MiB trailblazer session. Leads to &quot;intermediate&quot; state which only allows sequential write beginning from address 0. The &quot;intermediate&quot; state ends after the first session of writing data.</dd>
+<dt>format_overwrite_full</dt>
 <dd> For DVD-RW this is like format_overwrite but claims full media size rather than just 128 MiB. Most traditional formatting is attempted. No data get written. Much patience is required.<br />
  This option treats already formatted media even if not option -force is given.<br />
- For DVD+RW this is the only supported explicit formatting type. It provides complete &quot;de-icing&quot; so no reader slips on unwritten data areas.</p>
-<dt>format_defectmgt</p>
+ For DVD+RW this is the only supported explicit formatting type. It provides complete &quot;de-icing&quot; so no reader slips on unwritten data areas.</dd>
+<dt>format_defectmgt</dt>
 <dd> Format DVD-RAM or BD to reserve the default amount of spare blocks for defect management.<br />
- The following format_defectmgt_* allow to submit user wishes which nevertheless have to match one of the available formats. These formats are offered by the drive after examining the media.</p>
-<dt>format_defectmgt_cert_off</p>
+ The following format_defectmgt_* allow to submit user wishes which nevertheless have to match one of the available formats. These formats are offered by the drive after examining the media.</dd>
+<dt>format_defectmgt_cert_off</dt>
 <dd> Disable the usual media quality certification in order to save time and format to default size. The certification setting persists even if subsequent blank= options override the size of the format selection.<br />
- Whether formatting without certification works properly depends much on the drive. One should check the &quot;Format status:&quot; from &#8211;list_formats afterwards.</p>
-<dt>format_defectmgt_cert_on</p>
+ Whether formatting without certification works properly depends much on the drive. One should check the &quot;Format status:&quot; from &#8211;list_formats afterwards.</dd>
+<dt>format_defectmgt_cert_on</dt>
 <dd> Re-enable the usual media quality certification and format to default size. The certification setting persists like with format_defectmgt_cert_off.<br />
- Whether there happens certification at all depends much on the media state and the actually selected format descriptor.</p>
-<dt>format_defectmgt_max</p>
-<dd> Format DVD-RAM or BD to reserve a maximum number of spare blocks.</p>
-<dt>format_defectmgt_min</p>
-<dd> Format DVD-RAM or BD to reserve a minimum number of spare blocks. It might be necessary to format format_defectmgt_none first in order to get offered the most minmal spare blocks sizes for format_defectmgt_min.</p>
-<dt>format_defectmgt_none</p>
-<dd> Format DVD-RAM or BD-RE to the largest available payload in the hope to disable defect management at all. This may or may not have a speed increasing effect. Unformatted blank BD-R will be left unformatted.</p>
-<dt>format_defectmgt_payload_&lt;size&gt;</p>
-<dd> Format DVD-RAM or BD. The text after &quot;format_defectmgt_payload_&quot; gives a number of bytes, eventually with suffixes &quot;s&quot;, &quot;k&quot;, &quot;m&quot;. The largest number of spare blocks will be chosen which allows at least the given payload size.</p>
-<dt>format_by_index_&lt;number&gt;</p>
-<dd> Format DVD-RW, DVD+RW, DVD-RAM or BD. The number after &quot;format_by_index_&quot; is used as index to the list of available format descriptors. This list can be obtained by option &#8211;list_formats. The numbers after text &quot;Format idx&quot; are the ones to be used with format_by_index_. Format descriptor lists are volatile. Do neither eject nor write the media between the run of &#8211;list_formats and the run of blank=format_by_index_ or else you may get a different format than desired.</p>
-<dt>help</p>
-<dd> Print this list of blanking types.</dl>
+ Whether there happens certification at all depends much on the media state and the actually selected format descriptor.</dd>
+<dt>format_defectmgt_max</dt>
+<dd> Format DVD-RAM or BD to reserve a maximum number of spare blocks.</dd>
+<dt>format_defectmgt_min</dt>
+<dd> Format DVD-RAM or BD to reserve a minimum number of spare blocks. It might be necessary to format format_defectmgt_none first in order to get offered the most minmal spare blocks sizes for format_defectmgt_min.</dd>
+<dt>format_defectmgt_none</dt>
+<dd> Format DVD-RAM or BD-RE to the largest available payload in the hope to disable defect management at all. This may or may not have a speed increasing effect. Unformatted blank BD-R will be left unformatted.</dd>
+<dt>format_defectmgt_payload_&lt;size&gt;</dt>
+<dd> Format DVD-RAM or BD. The text after &quot;format_defectmgt_payload_&quot; gives a number of bytes, eventually with suffixes &quot;s&quot;, &quot;k&quot;, &quot;m&quot;. The largest number of spare blocks will be chosen which allows at least the given payload size.</dd>
+<dt>format_by_index_&lt;number&gt;</dt>
+<dd> Format DVD-RW, DVD+RW, DVD-RAM or BD. The number after &quot;format_by_index_&quot; is used as index to the list of available format descriptors. This list can be obtained by option &#8211;list_formats. The numbers after text &quot;Format idx&quot; are the ones to be used with format_by_index_. Format descriptor lists are volatile. Do neither eject nor write the media between the run of &#8211;list_formats and the run of blank=format_by_index_ or else you may get a different format than desired.</dd>
+<dt>help</dt>
+<dd> Print this list of blanking types.</dd></dl>
 </dl>
-<dt><code>-checkdrive</code></p>
-<dd> Retrieve some info about the addressed drive and then exit. Exits with non-zero value if the drive cannot be found and opened.</p>
-<dt><code>-copy</code></p>
-<dd> Create the subsequent tracks with permission for an unlimited number of copies.</p>
-<dt><code>cuefile=</code><i>path</i></p>
+<dt><code>-checkdrive</code></dt>
+<dd> Retrieve some info about the addressed drive and then exit. Exits with non-zero value if the drive cannot be found and opened.</dd>
+<dt><code>-copy</code></dt>
+<dd> Create the subsequent tracks with permission for an unlimited number of copies.</dd>
+<dt><code>cuefile=</code><i>path</i></dt>
 <dd> Read a session description from a cue sheet file in CDRWIN format. Base the tracks on a single file which is given in the sheet by command FILE. To enable CD-TEXT from the cue sheet file, cdrskin option -text has to be present.<br />
  cdrskin currently supports TRACK datatypes AUDIO and MODE1/2048 which may not be mixed. Data source may be of FILE type BINARY, MOTOROLA, or WAVE.<br />
  Non-CDRWIN commands ARRANGER, COMPOSER, MESSAGE are supported.<br />
  Cue sheet file commands CATALOG and ISRC may be overridden by option mcn= and by input_sheet_v07t= purpose specifiers &quot;UPC / EAN&quot; and &quot;ISRC&quot;. This does not affect their appearance in CD-TEXT, but only on Q sub-channel.<br />
- The track numbers may be overridden by option cd_start_tno=.</p>
-<dt><code>-dao</code></p>
-<dd> Alias for option -sao. Write CD in Session at Once mode or DVD-R[W] in Disc-at-once mode.</p>
-<dt><code>-data</code></p>
+ The track numbers may be overridden by option cd_start_tno=.</dd>
+<dt><code>-dao</code></dt>
+<dd> Alias for option -sao. Write CD in Session at Once mode or DVD-R[W] in Disc-at-once mode.</dd>
+<dt><code>-data</code></dt>
 <dd> Subsequent tracks are data tracks. This option is default and only needed to mark the end of the range of an eventual option -audio or -xa1.<br />
- Options -mode2, -xa, and -xa2 get mapped to -data, not using the desired CD sector formats and thus not taking advantage of eventual higher payload. <code>-xa1</code> Subsequent tracks are data tracks with input suitable for CD-ROM XA mode 2 form 1. This differs from -data input by 8 additional header bytes per block. cdrskin will not write CD-ROM XA but rather strip the header bytes and write as -data tracks.</p>
-<dt><code>dev=</code><i>target</i></p>
+ Options -mode2, -xa, and -xa2 get mapped to -data, not using the desired CD sector formats and thus not taking advantage of eventual higher payload. <code>-xa1</code> Subsequent tracks are data tracks with input suitable for CD-ROM XA mode 2 form 1. This differs from -data input by 8 additional header bytes per block. cdrskin will not write CD-ROM XA but rather strip the header bytes and write as -data tracks.</dd>
+<dt><code>dev=</code><i>target</i></dt>
 <dd> Set the address of the drive to use. Valid are at least the addresses listed with options &#8211;devices or &#8211;device_links, X,Y,Z addresses listed with option -scanbus, ATA:X,Y,Z addresses listed with options dev=ATA -scanbus, and volatile libburn drive numbers (numbering starts at &quot;0&quot;). Other device file addresses which lead to the same drive might work too.<br />
  If no dev= is given, volatile address &quot;dev=0&quot; is assumed. That is the first drive found being available. Better avoid this ambiguity on systems with more than one drive.<br />
- The special target &quot;help&quot; lists hints about available addressing formats. Be aware that deprecated option &#8211;old_pseudo_scsi_adr may change the meaning of Bus,Target,Lun addresses.</p>
-<dt><code>driveropts=</code><i>opt</i></p>
-<dd> Set &quot;driveropts=noburnfree&quot; to disable the drive&#8217;s eventual protection mechanism against temporary lack of source data (i.e. buffer underrun). A drive that announces no such capabilities will not get them enabled anyway, even if attempted explicitly via &quot;driveropts=burnfree&quot;.</p>
-<dt><code>-dummy</code></p>
-<dd> Try to perform the drive operations without actually affecting the inserted media. There is no warranty that this will work with a particular combination of drive, media, and write mode. Blanking is prevented reliably, though. To avoid inadverted real burning, -dummy refuses burn runs on anything but CD-R[W], DVD-R[W], or emulated stdio-drives.</p>
-<dt><code>-eject</code></p>
-<dd> Eject the disc after work is done.</p>
-<dt><code>-force</code></p>
+ The special target &quot;help&quot; lists hints about available addressing formats. Be aware that deprecated option &#8211;old_pseudo_scsi_adr may change the meaning of Bus,Target,Lun addresses.</dd>
+<dt><code>driveropts=</code><i>opt</i></dt>
+<dd> Set &quot;driveropts=noburnfree&quot; to disable the drive&#8217;s eventual protection mechanism against temporary lack of source data (i.e. buffer underrun). A drive that announces no such capabilities will not get them enabled anyway, even if attempted explicitly via &quot;driveropts=burnfree&quot;.</dd>
+<dt><code>-dummy</code></dt>
+<dd> Try to perform the drive operations without actually affecting the inserted media. There is no warranty that this will work with a particular combination of drive, media, and write mode. Blanking is prevented reliably, though. To avoid inadverted real burning, -dummy refuses burn runs on anything but CD-R[W], DVD-R[W], or emulated stdio-drives.</dd>
+<dt><code>-eject</code></dt>
+<dd> Eject the disc after work is done.</dd>
+<dt><code>-force</code></dt>
 <dd> Assume that the user knows better in situations when cdrskin or libburn are insecure about drive or media state. This includes the attempt to blank media which are classified as unknown or unsuitable, and the attempt to use write modes which libburn believes they are not supported by the drive.<br />
  Another application is to enforce blanking or re-formatting of media which appear to be in the desired blank or format state already.<br />
  This option enables a burn run with option -dummy even if libburn believes that drive and media will not simulate the write mode but will write for real.<br />
  It enables a burn run where cdrskin expects to exceed the available media capacity.<br />
- <code>Caution:</code> Use this only when in urgent need.</p>
-<dt><code>-format</code></p>
-<dd> Same as blank=format_overwrite_full -force but restricted to DVD+RW.</p>
-<dt><code>fs=</code><i>size</i></p>
+ <code>Caution:</code> Use this only when in urgent need.</dd>
+<dt><code>-format</code></dt>
+<dd> Same as blank=format_overwrite_full -force but restricted to DVD+RW.</dd>
+<dt><code>fs=</code><i>size</i></dt>
 <dd> Set the fifo size to the given value. The value may have appended letters which multiply the preceding number:<br />
  &quot;k&quot; or &quot;K&quot; = 1024 , &quot;m&quot; or &quot;M&quot; = 1024k , &quot;g&quot; or &quot;G&quot; = 1024m , &quot;s&quot; or &quot;S&quot; = 2048<br />
  Set size to 0 in order to disable the fifo (default is &quot;4m&quot;).<br />
- The fifo buffers an eventual temporary surplus of track source data in order to provide the drive with a steady stream during times of temporary lack of track source supply. The larger the fifo, the longer periods of poor source supply can be compensated. But a large fifo needs substantial time to fill up if not curbed via option fifo_start_at=size.</p>
-<dt><code>gracetime=</code><i>seconds</i></p>
-<dd> Set the grace time before starting to write. (Default is 0)</p>
-<dt><code>-immed</code></p>
+ The fifo buffers an eventual temporary surplus of track source data in order to provide the drive with a steady stream during times of temporary lack of track source supply. The larger the fifo, the longer periods of poor source supply can be compensated. But a large fifo needs substantial time to fill up if not curbed via option fifo_start_at=size.</dd>
+<dt><code>gracetime=</code><i>seconds</i></dt>
+<dd> Set the grace time before starting to write. (Default is 0)</dd>
+<dt><code>-immed</code></dt>
 <dd> Equivalent to:<br />
  modesty_on_drive=1:min_percent=75:max_percent=95<br />
- The name of this cdrecord option stems from the &quot;Immed&quot; bit which can make some long running drive commands asynchronous and thus eases the load on some wiring hardware types. Regardless of option -immed, cdrskin uses asynchronous commands where possible and appropriate.</p>
-<dt><code>index=</code><i>list</i></p>
+ The name of this cdrecord option stems from the &quot;Immed&quot; bit which can make some long running drive commands asynchronous and thus eases the load on some wiring hardware types. Regardless of option -immed, cdrskin uses asynchronous commands where possible and appropriate.</dd>
+<dt><code>index=</code><i>list</i></dt>
 <dd> Set a comma separated list of index start address numbers for the next track. This applies to CD SAO sessions only.<br />
  The addresses count sectors from the start of the next track. The first number is for index 1 and must be 0. The following numbers have to be larger than their respective predecessors. Up to 99 numbers are allowed.<br />
- Sector numbers are computed from Min:Sec:Frame addresses by </p>
+ Sector numbers are computed from Min:Sec:Frame addresses by </dd>
 <p>&nbsp;<wbr>Sector&nbsp;<wbr>=&nbsp;<wbr>((Min*60)+Sec)*75+Frame<br />
  E.g.: &quot;0,7512,20408&quot; sets index 2 to 01:40:12 and index 3 to 04:32:08.</p>
-<dt><code>-inq</code></p>
-<dd> Print the identification of the drive and then exit.</p>
-<dt><code>-isosize</code></p>
+<dt><code>-inq</code></dt>
+<dd> Print the identification of the drive and then exit.</dd>
+<dt><code>-isosize</code></dt>
 <dd> The next track following this option will try to obtain its source size from the header information out of the first few blocks of the source data. If these blocks indicate an ISO-9660 filesystem then its declared size will be used under the assumption that it is a single session filesystem.<br />
  If not, then the burn run will be aborted.<br />
  The range of -isosize is exactly one track. Further tracks may be preceded by further -isosize options, though. At least 15 blocks of padding will be added to each -isosize track. But be advised to rather use padsize=300k.<br />
- This option can be performed on track sources which are regular files or block devices. For the first track of the session it can be performed on any type of source if there is a fifo of at least 64 kiB. See option fs= .</p>
-<dt><code>isrc=</code><i>text</i></p>
+ This option can be performed on track sources which are regular files or block devices. For the first track of the session it can be performed on any type of source if there is a fifo of at least 64 kiB. See option fs= .</dd>
+<dt><code>isrc=</code><i>text</i></dt>
 <dd> Set the ISRC for the next track source to the given text, which must be exactly 13 characters long. It must comply to the format CCOOOYYSSSSS.<br />
  CC is the country code. OOO is the owner code. Both may consist of capital letters A to Z and of decimal digits 0 to 9. YY depicts the year (00 to 99). SSSSS is the serial number (00000 to 99999).<br />
- This option does not affect CD-TEXT but only the Q sub-channel.</p>
-<dt><code>-load</code></p>
-<dd> Load the media and exit. Exit value is 0 if any kind of media was found, non zero else. Note: Option -eject will unload the media even if -load is given.</p>
-<dt><code>-lock</code></p>
+ This option does not affect CD-TEXT but only the Q sub-channel.</dd>
+<dt><code>-load</code></dt>
+<dd> Load the media and exit. Exit value is 0 if any kind of media was found, non zero else. Note: Option -eject will unload the media even if -load is given.</dd>
+<dt><code>-lock</code></dt>
 <dd> Like option -load but leave the drive&#8217;s eject button disabled if there is any media found and not option -eject is given.<br />
- Use program &quot;eject&quot; or cdrskin -eject to get the tray out of the drive. Runs of programs like cdrecord, growisofs, wodim, cdrskin will not be hampered and normally enable the drive&#8217;s eject button when they are done.</p>
-<dt><code>mcn=</code><i>text</i></p>
+ Use program &quot;eject&quot; or cdrskin -eject to get the tray out of the drive. Runs of programs like cdrecord, growisofs, wodim, cdrskin will not be hampered and normally enable the drive&#8217;s eject button when they are done.</dd>
+<dt><code>mcn=</code><i>text</i></dt>
 <dd> Set the CD Media Catalog Number to text, which must be exactly 13 characters long and should consist of decimal digits.<br />
- This option does not affect CD-TEXT but only the Q sub-channel.</p>
-<dt><code>minbuf=</code><i>percentage</i></p>
+ This option does not affect CD-TEXT but only the Q sub-channel.</dd>
+<dt><code>minbuf=</code><i>percentage</i></dt>
 <dd> Equivalent to:<br />
  modesty_on_drive=1:min_percent=&lt;percentage&gt;:max_percent=95<br />
- Percentage is permissible between 25 and 95.</p>
-<dt><code>-minfo</code></p>
-<dd> Print information about the loaded media. This includes media type, writability state, and a quite readable table of content.</p>
-<dt><code>msifile=</code><i>path</i></p>
+ Percentage is permissible between 25 and 95.</dd>
+<dt><code>-minfo</code></dt>
+<dd> Print information about the loaded media. This includes media type, writability state, and a quite readable table of content.</dd>
+<dt><code>msifile=</code><i>path</i></dt>
 <dd> Run option -msinfo and copy the result line into the file given by path. Unlike -msinfo this option does not redirect all normal output away from standard output. But it may be combined with -msinfo to achieve this.<br />
- Note: msifile=path is actually an option of wodim and not of cdrecord.</p>
-<dt><code>-msinfo</code></p>
+ Note: msifile=path is actually an option of wodim and not of cdrecord.</dd>
+<dt><code>-msinfo</code></dt>
 <dd> Retrieve multi-session info for preparing a follow-up session by option -C of programs mkisofs, genisoimage, or xorriso -as mkisofs. Print result to standard output. This option redirects to stderr all message output except the one of option &#8211;tell_media_space and its own result string, which consists of two numbers. The result string shall be used as argument of option -C with said programs. It gives the start address of the most recent session and the predicted start address of the next session to be appended. The string is empty if the most recent session was not written with option -multi.<br />
- To have a chance for working on overwriteable media, this option has to be accompanied by option &#8211;grow_overwriteable_iso.</p>
-<dt><code>-multi</code></p>
+ To have a chance for working on overwriteable media, this option has to be accompanied by option &#8211;grow_overwriteable_iso.</dd>
+<dt><code>-multi</code></dt>
 <dd> This option keeps CD, unformatted DVD-R[W], DVD+R, or BD-R appendable after the current session has been written. Without it the disc gets closed and may not be written any more &#8211; unless it is a -RW and gets blanked which causes loss of its content.<br />
  The following sessions can only be written in -tao mode. -multi is prohibited with DVD-R[W] DAO write mode and on DVD-R DL media. Option &#8211;prodvd_cli_compatible eventually makes -multi tolerable but cannot make it work.<br />
  In order to have all filesystem content accessible, the eventual ISO-9660 filesystem of a follow-up session needs to be prepared in a special way by the filesystem formatter program. mkisofs and genisoimage expect particular info about the situation which can be retrieved by cdrskin option -msinfo.<br />
  To retrieve an archive file which was written as follow-up session, you may use option -toc to learn about the &quot;lba&quot; of the desired track number. This lba is the address of the 2048 byte block where the archive begins.<br />
  With overwriteable DVD or BD media, -multi cannot mark the end of the session. So when adding a new session this end has to be determined from the payload. Currently only ISO-9660 filesystems can be used that way. See option <code>&#8211;grow_overwriteable_iso</code> for lifting the ban on -multi.<br />
- Note: -multi might make DVD media unreadable in some DVD-ROM drives.</p>
-<dt><code>-nocopy</code></p>
-<dd> Create subsequent tracks with permission for a single level of copies. I.e. those copies would then be marked by -scms as offering no permission for further copies.</p>
-<dt><code>-nopad</code></p>
-<dd> Do not add trailing zeros to the data stream. Nevertheless, since there seems to be no use for audio tracks with incomplete last sector, this option applies only to data tracks. There it is default.</p>
-<dt><code>-nopreemp</code></p>
-<dd> Indicate for subsequent tracks that they were mastered without pre-emphasis.</p>
-<dt><code>-pad</code></p>
-<dd> Add 30 kiB of trailing zeros to each data track. (This is not sufficient to avoid problems with various CD-ROM read drivers.)</p>
-<dt><code>padsize=</code><i>size</i></p>
-<dd> Add the given amount of trailing zeros to the next data track. This option gets reset to padsize=0 after that next track is written. It may be set again before the next track argument. About size specifiers, see option fs=.</p>
-<dt><code>-preemp</code></p>
-<dd> Indicate for subsequent tracks that they were mastered with pre-emphasis.</p>
-<dt><code>-sao</code></p>
+ Note: -multi might make DVD media unreadable in some DVD-ROM drives.</dd>
+<dt><code>-nocopy</code></dt>
+<dd> Create subsequent tracks with permission for a single level of copies. I.e. those copies would then be marked by -scms as offering no permission for further copies.</dd>
+<dt><code>-nopad</code></dt>
+<dd> Do not add trailing zeros to the data stream. Nevertheless, since there seems to be no use for audio tracks with incomplete last sector, this option applies only to data tracks. There it is default.</dd>
+<dt><code>-nopreemp</code></dt>
+<dd> Indicate for subsequent tracks that they were mastered without pre-emphasis.</dd>
+<dt><code>-pad</code></dt>
+<dd> Add 30 kiB of trailing zeros to each data track. (This is not sufficient to avoid problems with various CD-ROM read drivers.)</dd>
+<dt><code>padsize=</code><i>size</i></dt>
+<dd> Add the given amount of trailing zeros to the next data track. This option gets reset to padsize=0 after that next track is written. It may be set again before the next track argument. About size specifiers, see option fs=.</dd>
+<dt><code>-preemp</code></dt>
+<dd> Indicate for subsequent tracks that they were mastered with pre-emphasis.</dd>
+<dt><code>-sao</code></dt>
 <dd> Write CD in Session At Once mode or sequential DVD-R[W] in Disc-at-once (DAO) mode.<br />
  With CD this mode is able to put several audio tracks on media without producing audible gaps between them.<br />
  With DVD-R[W] this mode can only write a single track. No -multi is allowed with DVD-R[W] -sao.<br />
  -sao is permissible with overwriteable DVD, or DVD+R[/DL], or BD but actually only imposes restrictions without providing known advantages.<br />
  -sao can only be used for tracks of fixely predicted size. This implies that track arguments which depict stdin or named pipes need to be preceded by option tsize= or by option tao_to_sao_tsize=.<br />
- -sao cannot be used on appendable media.</p>
-<dt><code>-scanbus</code></p>
+ -sao cannot be used on appendable media.</dd>
+<dt><code>-scanbus</code></dt>
 <dd> Scan the system for drives. On Linux the drives at /dev/s* and at /dev/hd* are to be scanned by two separate runs. One without dev= for /dev/s* and one with dev=ATA for /dev/hd* devices. (Option &#8211;drives lists all available drives in a single run.)<br />
  Drives which are busy or which offer no rw-permission to the user of cdrskin are not listed. Busy drives get reported in form of warning messages.<br />
  The useful fields in a result line are:<br />
- Bus,Target,Lun Number) &#8216;Vendor&#8217; &#8216;Mode&#8217; &#8216;Revision&#8217;</p>
-<dt><code>-scms</code></p>
+ Bus,Target,Lun Number) &#8216;Vendor&#8217; &#8216;Mode&#8217; &#8216;Revision&#8217;</dd>
+<dt><code>-scms</code></dt>
 <dd> Create subsequent tracks without permission for being copied. This is usually done for tracks which are copies of tracks that were marked with -nocopy (but not yet with -scms). So copies of copies are prohibited.<br />
- This option gets reset by option -copy. Thus the combination -copy -nocopy means -nocopy surely without -scms.</p>
-<dt><code>speed=</code><i>number</i></p>
+ This option gets reset by option -copy. Thus the combination -copy -nocopy means -nocopy surely without -scms.</dd>
+<dt><code>speed=</code><i>number</i></dt>
 <dd> Set speed of drive. With data CD, 1x speed corresponds to a throughput of 150,000 bytes/second. With DVD, 1x = 1,385,000 bytes/second. With BD 1x = 4,495,625 bytes/second. It is not an error to set a speed higher than is suitable for drive and media. One should stay within a realistic speed range, though. Special speed settings are:<br />
- 0 = minimal speed , -1 = maximal speed (default), text &quot;any&quot; = like -1.</p>
-<dt><code>-swab</code></p>
-<dd> Announce that the raw audio data source of subsequent tracks is byte swapped versus the expectations of cdrecord. This option is suitable for audio where the least significant byte of a 16 bit word is first (little-endian, Intel). Most raw audio data on PC systems are available in this byte order. Less guesswork is needed if track sources are in format MS-WAVE in a file with suffix &quot;.wav&quot;.</p>
-<dt><code>-tao</code></p>
+ 0 = minimal speed , -1 = maximal speed (default), text &quot;any&quot; = like -1.</dd>
+<dt><code>-swab</code></dt>
+<dd> Announce that the raw audio data source of subsequent tracks is byte swapped versus the expectations of cdrecord. This option is suitable for audio where the least significant byte of a 16 bit word is first (little-endian, Intel). Most raw audio data on PC systems are available in this byte order. Less guesswork is needed if track sources are in format MS-WAVE in a file with suffix &quot;.wav&quot;.</dd>
+<dt><code>-tao</code></dt>
 <dd> Write CD in Track At Once (TAO) mode, sequential DVD-R[W] in Incremental Streaming mode, or DVD+R[/DL] without traditional -sao restrictions. This mode also applies pro-forma to overwriteable media<br />
  Mode -tao can be used with track sources of unpredictable size, like standard input or named pipes. It is also the only mode that can be used for writing to appendable media which already hold data. With unformatted DVD-R[W] it is the only mode which allows -multi.<br />
- Mode -tao is not usable for minimally blanked DVD-RW and for DVD-R DL.</p>
-<dt><code>-text</code></p>
-<dd> Enable writing of CD-TEXT attributes read by option cuefile=. Without option -text, cue sheet file command CDTEXTFILE will be ignored and no CD-TEXT attributes will be read from the file. Nevertheless, CATALOG and ISRC will have the same effect as options mcn= and isrc=.</p>
-<dt><code>textfile=</code><i>path</i></p>
+ Mode -tao is not usable for minimally blanked DVD-RW and for DVD-R DL.</dd>
+<dt><code>-text</code></dt>
+<dd> Enable writing of CD-TEXT attributes read by option cuefile=. Without option -text, cue sheet file command CDTEXTFILE will be ignored and no CD-TEXT attributes will be read from the file. Nevertheless, CATALOG and ISRC will have the same effect as options mcn= and isrc=.</dd>
+<dt><code>textfile=</code><i>path</i></dt>
 <dd> Read CD-TEXT packs from the file depicted by path and put them into the Lead-in of the emerging session. This session has to be done by Session At Once (SAO) mode and may only contain audio tracks.<br />
  path must lead to a regular file, which consists of an optional header of four bytes and one or more text packs of 18 bytes each. Suitable would be the file &#8216;cdtext.dat&#8217; which gets extracted from CD media by options -vv -toc and shown in human readable form by -vvv -toc.<br />
  The header, if present, must tell the file size minus 2, encoded as big-endian 16 bit word. The other two bytes must be 0.<br />
  If there is no 4-byte header, then a trailing 0-byte, as of Sony specification, is tolerated and ignored.<br />
  A text pack consists of a pack type byte, a track number byte, a counter byte, a Block Number and Character Indicator byte, 12 text characters or data bytes, two optional CRC bytes. For details see libburn documentation file doc/cdtext.txt.<br />
  By default, the input file is checked for correct CRC bytes. If all CRC bytes are 0, then the correct values get silently inserted. If there are non-zero CRC bytes, then a mismatch causes the abort of the burn run. This check can be disabled by option -force.<br />
- Note that this option overrides option input_sheet_v07t= .</p>
-<dt><code>-toc</code></p>
+ Note that this option overrides option input_sheet_v07t= .</dd>
+<dt><code>-toc</code></dt>
 <dd> Print the table of content (TOC) which describes the tracks recorded on disc. The output contains all info from option -atip plus lines which begin with &quot;track:&quot;, the track number, the word &quot;lba:&quot; and a number which gives the start address of the track. Addresses are counted in CD sectors which with SAO or TAO data tracks hold 2048 bytes each.<br />
  If verbosity is set to level 2 (-v -v) then the CD-TEXT packs from the lead-in of an audio CD get extracted and written into file &#8216;cdtext.dat&#8217;, if that file does not yet exist. Prepended is a 4 byte header, followed by one or more packs of 18 bytes each.<br />
  Verbosity level 3 causes the CD-TEXT packs to be printed as hex numbers to standard output. Bytes 4 to 15 of certain pack types are printed as ASCII characters if they have values in the range of 32 to 126.<br />
- See option textfile= for more information about the text pack format.</p>
+ See option textfile= for more information about the text pack format.</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>Example. Retrieve an afio archive from track number 2:</p>
+<dt>Example. Retrieve an afio archive from track number 2:</dt>
 <dd>
  tracknumber=2<br />
  lba=$(cdrskin dev=/dev/cdrom -toc 2&gt;&amp;1 | \<br />
@@ -311,68 +307,68 @@ description: "cdrskin – burns preformatted data to CD, DVD, and BD via libburn
  tail +&quot;$tracknumber&quot; | head -1 | \<br />
  awk &#8216;{ print $4}&#8217; )<br />
  dd if=/dev/cdrom bs=2048 skip=&quot;$lba&quot; | \<br />
- afio -t &#8211; | less</dl>
+ afio -t &#8211; | less</dd></dl>
 </dl>
-<dt><code>tsize=</code><i>size</i></p>
+<dt><code>tsize=</code><i>size</i></dt>
 <dd> Announces the exact size of the next track source. This is necessary with any write mode other than -tao if the track source is not a regular disk file, but e.g. &quot;-&quot; (standard input) or a named pipe. About size specifiers, see option fs=.<br />
- If the track source does not deliver the predicted amount of bytes, the remainder of the track is padded with zeros. This is not considered an error. If on the other hand the track source delivers more than the announced bytes then the track on media gets truncated to the predicted size and cdrskin exits with non-zero value.</p>
-<dt><code>-v</code></p>
-<dd> Increment verbosity level by one. Startlevel is 0 with only few messages. Level 1 prints progress report with long running operations and also causes some extra lines to be put out with info retrieval options. Level 2 additionally reports about option settings derived from arguments or startup files. Level 3 is for debugging and useful mainly in conjunction with somebody who had a look into the program sourcecode.</p>
-<dt><code>-V</code></p>
-<dd> Enable logging of SCSI commands to stderr. This allows expert examination of the interaction between libburn and the drive. The commands are specified in SCSI-3 standards SPC, SBC, MMC.</p>
-<dt><code>-waiti</code></p>
+ If the track source does not deliver the predicted amount of bytes, the remainder of the track is padded with zeros. This is not considered an error. If on the other hand the track source delivers more than the announced bytes then the track on media gets truncated to the predicted size and cdrskin exits with non-zero value.</dd>
+<dt><code>-v</code></dt>
+<dd> Increment verbosity level by one. Startlevel is 0 with only few messages. Level 1 prints progress report with long running operations and also causes some extra lines to be put out with info retrieval options. Level 2 additionally reports about option settings derived from arguments or startup files. Level 3 is for debugging and useful mainly in conjunction with somebody who had a look into the program sourcecode.</dd>
+<dt><code>-V</code></dt>
+<dd> Enable logging of SCSI commands to stderr. This allows expert examination of the interaction between libburn and the drive. The commands are specified in SCSI-3 standards SPC, SBC, MMC.</dd>
+<dt><code>-waiti</code></dt>
 <dd> Wait until input data is available at stdin or EOF occurs at stdin. Only then begin to access any drives.<br />
  One should use this if cdrskin is working at the end of a pipe where the feeder process reads from the drive before it starts writing its output into cdrskin. Example:<br />
  mkisofs &#8230; -C 0,12800 -M /dev/sr0 | \<br />
  cdrskin dev=/dev/sr0 &#8230; -waiti &#8211;<br />
- This option works even if stdin is not among the track sources. If no process is piping in, then the Enter key of your terminal will act as trigger for cdrskin. Note that this input line will not be consumed by cdrskin if stdin is not among the track sources. It will end up as shell command, usually.</dl>
+ This option works even if stdin is not among the track sources. If no process is piping in, then the Enter key of your terminal will act as trigger for cdrskin. Note that this input line will not be consumed by cdrskin if stdin is not among the track sources. It will end up as shell command, usually.</dd></dl>
 <p> Alphabetical list of options which are genuine to cdrskin and intended for normal use:</p>
 <dl>
-<dt><code>&#8211;adjust_speed_to_drive</code></p>
-<dd> Curb explicitly given speed= values to the maximum which is announced by the drive for the loaded media. By default, such an adjustment is only made with pseudo-speeds 0 and -1 whereas speed settings &gt; 0 are sent unchanged to the drive which will then choose an appropriate speed on its own.</p>
-<dt><code>&#8211;allow_emulated_drives</code></p>
-<dd> Enable drive addresses of the form dev=stdio:&lt;path&gt;. See above, paragraph &quot;Drive preparation and addressing&quot;.</p>
-<dt><code>&#8211;allow_setuid</code></p>
-<dd> Disable the loud warning about insecure discrepance between login user and effective user which indicates application of chmod u+s to the program binary. One should not do this chmod u+s , but it is an old cdrecord tradition.</p>
-<dt><code>&#8211;any_track</code></p>
-<dd> Allow source_addresses to begin with &quot;-&quot; (plus further characters) or to contain a &quot;=&quot; character. By default such arguments are seen as misspelled options. It is nevertheless not possible to use one of the options listed with &#8211;list_ignored_options.</p>
-<dt><code>assert_write_lba=</code><i>block_number</i><code>|</code><i>byte_address</i></p>
+<dt><code>&#8211;adjust_speed_to_drive</code></dt>
+<dd> Curb explicitly given speed= values to the maximum which is announced by the drive for the loaded media. By default, such an adjustment is only made with pseudo-speeds 0 and -1 whereas speed settings &gt; 0 are sent unchanged to the drive which will then choose an appropriate speed on its own.</dd>
+<dt><code>&#8211;allow_emulated_drives</code></dt>
+<dd> Enable drive addresses of the form dev=stdio:&lt;path&gt;. See above, paragraph &quot;Drive preparation and addressing&quot;.</dd>
+<dt><code>&#8211;allow_setuid</code></dt>
+<dd> Disable the loud warning about insecure discrepance between login user and effective user which indicates application of chmod u+s to the program binary. One should not do this chmod u+s , but it is an old cdrecord tradition.</dd>
+<dt><code>&#8211;any_track</code></dt>
+<dd> Allow source_addresses to begin with &quot;-&quot; (plus further characters) or to contain a &quot;=&quot; character. By default such arguments are seen as misspelled options. It is nevertheless not possible to use one of the options listed with &#8211;list_ignored_options.</dd>
+<dt><code>assert_write_lba=</code><i>block_number</i><code>|</code><i>byte_address</i></dt>
 <dd> Abort if the write address given with this option is not the same as predicted immediately before the write session starts. This option can ensure that a start address which was presumed by a formatter like mkisofs -C is really used by the drive for writing. assert_write_lba=0 effectively demands blank media and excludes appendables.<br />
- Block numbering is peculiar: If the last character of the option string is a letter [a-zA-Z] then the usual unit scaling by &quot;s&quot;, &quot;k&quot;, &quot;m&quot;, etc. applies and the result is divided by 2048. Else the number value of the string is taken as plain block number with block size 2048 byte. (E.g &#8230;=1000 or &#8230;=1000s means block 1000, &#8230;=1m means block 512, &#8230;=4096b means block number 2)</p>
-<dt><code>cd_start_tno=</code><i>number</i></p>
+ Block numbering is peculiar: If the last character of the option string is a letter [a-zA-Z] then the usual unit scaling by &quot;s&quot;, &quot;k&quot;, &quot;m&quot;, etc. applies and the result is divided by 2048. Else the number value of the string is taken as plain block number with block size 2048 byte. (E.g &#8230;=1000 or &#8230;=1000s means block 1000, &#8230;=1m means block 512, &#8230;=4096b means block number 2)</dd>
+<dt><code>cd_start_tno=</code><i>number</i></dt>
 <dd> Set the number which shall be written as CD track number with the first track of the session. The following tracks will then get written with consecutive CD track numbers. The resulting number of the last track must not exceed 99. The lowest possible start number is 1, which is also the default.<br />
- This setting applies only to CD SAO writing. It overrides the track number settings caused by options cuefile= or input_sheet_v07t=.</p>
-<dt><code>&#8211;demand_a_drive</code></p>
-<dd> Exit with a nonzero value if no drive can be found during a bus scan.</p>
-<dt><code>&#8211;devices</code></p>
+ This setting applies only to CD SAO writing. It overrides the track number settings caused by options cuefile= or input_sheet_v07t=.</dd>
+<dt><code>&#8211;demand_a_drive</code></dt>
+<dd> Exit with a nonzero value if no drive can be found during a bus scan.</dd>
+<dt><code>&#8211;devices</code></dt>
 <dd> List the device file addresses of all accessible CD drives. In order to get listed, a drive has to offer rw-permission for the cdrskin user and it may not be busy. The superuser should be able to see all idle drives listed and busy drives reported as &quot;SORRY&quot; messages.<br />
  Each available drive gets listed by a line containing the following fields:<br />
  Number dev=&#8217;Devicefile&#8217; rw-Permissions : &#8216;Vendor&#8217; &#8216;Model&#8217;<br />
- Number and Devicefile can both be used with option dev=, but number is volatile (numbering changes if drives become busy).</p>
-<dt><code>&#8211;device_links</code></p>
+ Number and Devicefile can both be used with option dev=, but number is volatile (numbering changes if drives become busy).</dd>
+<dt><code>&#8211;device_links</code></dt>
 <dd> Like &#8211;devices, but presenting the drives with addresses of symbolic links which point to the actual device files.<br />
- Modern GNU/Linux systems may shuffle drive addresses from boot to boot. The udev daemon is supposed to create links which always point to the same drive, regardless of its system address. Option &#8211;device_links shows the addresses of such links if they begin by &quot;/dev/dvd&quot; or &quot;/dev/cd&quot;. Precedence is: &quot;dvdrw&quot;, &quot;cdrw&quot;, &quot;dvd&quot;, &quot;cdrom&quot;, &quot;cd&quot;.</p>
-<dt><code>direct_write_amount=</code><i>size</i></p>
+ Modern GNU/Linux systems may shuffle drive addresses from boot to boot. The udev daemon is supposed to create links which always point to the same drive, regardless of its system address. Option &#8211;device_links shows the addresses of such links if they begin by &quot;/dev/dvd&quot; or &quot;/dev/cd&quot;. Precedence is: &quot;dvdrw&quot;, &quot;cdrw&quot;, &quot;dvd&quot;, &quot;cdrom&quot;, &quot;cd&quot;.</dd>
+<dt><code>direct_write_amount=</code><i>size</i></dt>
 <dd> Do not write a session with tracks but rather make an appropriate number of direct write operations with no preparations. Flushing the drive buffer will be the only finalization. It is advised to eject the media afterwards because the write operations circumvent the usual system i/o with its caches and buffers. By ejecting, those invalid memory copies get surely discarded.<br />
  Only few media can be written this way: DVD-RAM, BD-RE, RVD+RW and overwriteable DVD-RW. Writing is restricted to the already formatted area of the media.<br />
  Writing starts at byte 0 of the media or at the address given by option <code>write_start_address= .</code> Only the first track source is used as input for the write operations. The fifo (fs=) is disabled.<br />
  Parameter <code>size</code> controls the amount of data to be written. Size 0 means that the track source shall be used up until EOF. In this case, the last write transaction gets padded up to the necessary size by zeros. Size -1 revokes direct writing and switches back to normal session oriented writing.<br />
- Both, write_start_address and direct_write_amount size must be aligned to a media dependend transaction size. With DVD-RAM, BD-RE, DVD+RW this is 2k, with overwriteable DVD-RW it is 32k.</p>
-<dt><code>dvd_obs=</code><i>default|32k|64k</i></p>
-<dd> Linux specific: Set the number of bytes to be transmitted with each write operation to DVD or BD media. With most write types, tracks get padded up to the next multiple of this write size (see option &#8211;obs_pad). A number of 64 KB may improve throughput with systems which show latency problems. The default depends on media type, option stream_recording=, and on compile time options.</p>
-<dt><code>fallback_program=</code><i>command</i></p>
+ Both, write_start_address and direct_write_amount size must be aligned to a media dependend transaction size. With DVD-RAM, BD-RE, DVD+RW this is 2k, with overwriteable DVD-RW it is 32k.</dd>
+<dt><code>dvd_obs=</code><i>default|32k|64k</i></dt>
+<dd> Linux specific: Set the number of bytes to be transmitted with each write operation to DVD or BD media. With most write types, tracks get padded up to the next multiple of this write size (see option &#8211;obs_pad). A number of 64 KB may improve throughput with systems which show latency problems. The default depends on media type, option stream_recording=, and on compile time options.</dd>
+<dt><code>fallback_program=</code><i>command</i></dt>
 <dd> Set a command name to be executed if cdrskin encounters a known cdrecord option which it does not yet support. If a non-empty command is given with fallback_program=, and if no essential options are given which are specific to cdrskin, then cdrskin will delegate the job to said command.<br />
  The natural commands to be given are cdrecord or wodim but one may well submit the address of an own program.<br />
  The fallback program will get all arguments of cdrskin which do not match the shell patterns &#8211;?* or *_*=* . This eventually suppresses path names of track sources which happen to match those patterns. The options from the startup files are not handed to the fallback program.<br />
  Fallback program execution is disabled if cdrskin is run setuid and not option &#8211;allow_setuid is given. In general, the drive&#8217;s device files and the involved programs should be set up so that each program runs under its advised conditions. (E.g. cdrskin as member of group floppy, cdrecord setuid root.)<br />
  Two alias names for cdrskin are predefined with default fallback programs:<br />
  <code>unicord</code> implies fallback_program=cdrecord<br />
- <code>codim</code> implies fallback_program=wodim</p>
-<dt><code>&#8211;four_channel</code></p>
-<dd> Indicate for subsequent tracks that they were mastered with four channels.</p>
-<dt><code>fifo_start_at=</code><i>size</i></p>
-<dd> Do not wait for full fifo but start burning as soon as the given number of bytes is read. This option may be helpful to bring the average throughput near to the maximum throughput of a drive. A large fs= and a small fifo_start_at= combine a quick burn start and a large savings buffer to compensate for temporary lack of source data. At the beginning of burning, the software protection against buffer underun is as weak as the size of fifo_start_at= . So it is best if the drive offers hardware protection which is enabled automatically if not driveropts=noburnfree is given.</p>
-<dt><code>&#8211;grow_overwriteable_iso</code></p>
+ <code>codim</code> implies fallback_program=wodim</dd>
+<dt><code>&#8211;four_channel</code></dt>
+<dd> Indicate for subsequent tracks that they were mastered with four channels.</dd>
+<dt><code>fifo_start_at=</code><i>size</i></dt>
+<dd> Do not wait for full fifo but start burning as soon as the given number of bytes is read. This option may be helpful to bring the average throughput near to the maximum throughput of a drive. A large fs= and a small fifo_start_at= combine a quick burn start and a large savings buffer to compensate for temporary lack of source data. At the beginning of burning, the software protection against buffer underun is as weak as the size of fifo_start_at= . So it is best if the drive offers hardware protection which is enabled automatically if not driveropts=noburnfree is given.</dd>
+<dt><code>&#8211;grow_overwriteable_iso</code></dt>
 <dd> Enable emulation of multi-session writing on overwriteable media which contain an ISO-9660 filesystem. This emulation is learned from growisofs -M but adapted to the usage model of<br />
  <code>cdrskin -msinfo </code><br />
  <code>mkisofs -C -M | cdrskin -waiti [-multi] &#8211;</code><br />
@@ -383,10 +379,10 @@ description: "cdrskin – burns preformatted data to CD, DVD, and BD via libburn
  An equivalent of growisofs -Z for overwriteable media is:<br />
  <code>mkisofs | cdrskin &#8211;grow_overwriteable_iso blank=fast [-multi] &#8211;</code><br />
  With multi-session DVD, blank=fast will act like dvd+rw-format -blank=full .<br />
- growisofs -dvd-compat is roughly equivalent to cdrskin without option -multi.</p>
-<dt><code>input_sheet_v07t=</code><i>path</i></p>
+ growisofs -dvd-compat is roughly equivalent to cdrskin without option -multi.</dd>
+<dt><code>input_sheet_v07t=</code><i>path</i></dt>
 <dd> Read CD-TEXT definitions from a Sony Input Sheet version 0.7T. Up to eight or seven such sheets can be read by multiple input_sheet_v07t= options. Each will define a CD-TEXT language block.<br />
- The information in such a sheet is given by text lines of the following form: </p>
+ The information in such a sheet is given by text lines of the following form: </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>purpose specifier&nbsp;<wbr>[whitespace]&nbsp;<wbr>=&nbsp;<wbr>[whitespace]&nbsp;<wbr>content text<br />
  [whitespace] is zero or more ASCII 32 (space) or ASCII 9 (tab) characters. The purpose specifier tells the meaning of the content text. Empty content text does not cause a CD-TEXT attribute to be attached.<br />
  The following purpose specifiers apply to the session as a whole: </p>
@@ -424,122 +420,122 @@ description: "cdrskin – burns preformatted data to CD, DVD, and BD via libburn
  If options -text cuefile= are given and if the cue sheet file defines CD-TEXT, then only seven input_sheet_v07t= options may be given. They will then be used as CD-TEXT language blocks 1 to 7.<br />
  This option will get into effect only if no option textfile= is given. The write mode must be SAO on CD. All tracks must be -audio tracks.<br />
  The track numbers may be overridden by option cd_start_tno=.</p>
-<dt><code>&#8211;list_formats</code></p>
+<dt><code>&#8211;list_formats</code></dt>
 <dd> List the available format descriptors as reported by the drive for the loaded media. Each descriptor line begins with &quot;Format idx&quot; and the descriptor&#8217;s list index, followed by a &quot;:&quot;, the format type, the number of payload blocks and that same number converted to MiB.<br />
- The meaning of the format types is defined by the MMC standard with command FORMAT UNIT. A user will more be interested in the sizes than in the types.</p>
-<dt><code>&#8211;list_ignored_options</code></p>
-<dd> List all ignored cdrecord options. The &quot;-&quot; options cannot be used as addresses of track sources. No track source address may begin with a text equal to an option which ends by &quot;=&quot;. The list is ended by an empty line.</p>
-<dt><code>&#8211;list_speeds</code></p>
+ The meaning of the format types is defined by the MMC standard with command FORMAT UNIT. A user will more be interested in the sizes than in the types.</dd>
+<dt><code>&#8211;list_ignored_options</code></dt>
+<dd> List all ignored cdrecord options. The &quot;-&quot; options cannot be used as addresses of track sources. No track source address may begin with a text equal to an option which ends by &quot;=&quot;. The list is ended by an empty line.</dd>
+<dt><code>&#8211;list_speeds</code></dt>
 <dd> Put out a list of speed values as reported by the output drive with the loaded medium. This does not necessarily mean that the medium is writable or that these speeds are actually achievable. Especially the lists reported with empty drive or with ROM media obviously advertise speeds for other media.<br />
  It is not mandatory to use speed values out of the listed range. The drive is supposed to choose a safe speed that is as near to the desired speed as possible.<br />
  At the end of the list, &quot;Write speed L&quot; and &quot;Write speed H&quot; are the best guesses for lower and upper speed limit. &quot;Write speed l&quot; and &quot;Write speed h&quot; may appear only with CD and eventually override the list of other speed offers.<br />
- Only if the drive reports contradicting speed information there will appear &quot;Write speed 0&quot; or &quot;Write speed-1&quot;, which tell the outcome of speed selection by options speed=0 resp. speed=-1, if it deviates from &quot;Write speed L&quot; resp. &quot;Write speed H&quot;.</p>
-<dt><code>&#8211;long_toc</code></p>
-<dd> Like option -toc but marking each session start by a line &quot;first: X last: Y&quot; and each session end by &quot;track:lout &#8230;&quot;.</p>
-<dt><code>&#8211;no_load</code></p>
-<dd> When aquiring the optical drive, do not try to load its tray. This yields the same behavior for desktop drives with tray loader as is shown by laptop drives which usually lack a motorized tray loader.</p>
-<dt><code>&#8211;no_rc</code></p>
-<dd> Only if used as first command line argument this option prevents reading and interpretation of eventual startup files. See section FILES below.</p>
-<dt><code>&#8211;prodvd_cli_compatible</code></p>
+ Only if the drive reports contradicting speed information there will appear &quot;Write speed 0&quot; or &quot;Write speed-1&quot;, which tell the outcome of speed selection by options speed=0 resp. speed=-1, if it deviates from &quot;Write speed L&quot; resp. &quot;Write speed H&quot;.</dd>
+<dt><code>&#8211;long_toc</code></dt>
+<dd> Like option -toc but marking each session start by a line &quot;first: X last: Y&quot; and each session end by &quot;track:lout &#8230;&quot;.</dd>
+<dt><code>&#8211;no_load</code></dt>
+<dd> When aquiring the optical drive, do not try to load its tray. This yields the same behavior for desktop drives with tray loader as is shown by laptop drives which usually lack a motorized tray loader.</dd>
+<dt><code>&#8211;no_rc</code></dt>
+<dd> Only if used as first command line argument this option prevents reading and interpretation of eventual startup files. See section FILES below.</dd>
+<dt><code>&#8211;prodvd_cli_compatible</code></dt>
 <dd> Activates behavior modifications with some DVD situations which bring cdrskin nearer to the behavior of cdrecord-ProDVD:<br />
  Option -multi with unsuitable media is not an error but simply has no effect.<br />
  Options blank=fast and blank=all deformat overwriteable DVD-RW media.<br />
- Option blank=fast does indeed minmal blanking with DVD-RW. This may yield media which can only do DAO but not Incremental Streaming.</p>
-<dt><code>&#8211;single_track</code></p>
-<dd> Accept only the last argument of the command line as track source address.</p>
-<dt><code>stdio_sync=</code><i>on|off|number</i></p>
-<dd> Set the number of bytes after which to force output to drives with prefix &quot;stdio:&quot;. This forcing keeps the memory from being clogged with lots of pending data for slow devices. Default &quot;on&quot; is the same as &quot;16m&quot;. Forced output can be disabled by &quot;off&quot;.</p>
-<dt><code>stream_recording=</code><i>on|off|number</i></p>
+ Option blank=fast does indeed minmal blanking with DVD-RW. This may yield media which can only do DAO but not Incremental Streaming.</dd>
+<dt><code>&#8211;single_track</code></dt>
+<dd> Accept only the last argument of the command line as track source address.</dd>
+<dt><code>stdio_sync=</code><i>on|off|number</i></dt>
+<dd> Set the number of bytes after which to force output to drives with prefix &quot;stdio:&quot;. This forcing keeps the memory from being clogged with lots of pending data for slow devices. Default &quot;on&quot; is the same as &quot;16m&quot;. Forced output can be disabled by &quot;off&quot;.</dd>
+<dt><code>stream_recording=</code><i>on|off|number</i></dt>
 <dd> By setting &quot;on&quot; request that compliance to the desired speed setting is preferred over management of write errors. With DVD-RAM and BD this can bring effective write speed near to the nominal write speed of the media. But it will also disable the automatic use of replacement blocks if write errors occur. It might as well be disliked or ignored by the drive.<br />
- If a number is given, then error management stays enabled for all byte addresses below that number. Any number below 16s is the same as &quot;off&quot;.</p>
-<dt><code>tao_to_sao_tsize=</code><i>size</i></p>
+ If a number is given, then error management stays enabled for all byte addresses below that number. Any number below 16s is the same as &quot;off&quot;.</dd>
+<dt><code>tao_to_sao_tsize=</code><i>size</i></dt>
 <dd> Set an exact fixed size for the next track to be in effect only if the track source cannot deliver a size prediction and no tsize= was specified and an exact track size prediction is demanded by the write mode.<br />
  This was the fallback from bad old times when cdrskin was unable to burn in mode -tao . It came back with minimally blanked DVD-RW which allow no Incremental Streaming (-tao) resp. with explicitly selected write mode -sao for best DVD-ROM compatibility.<br />
- If the track source delivers less bytes than announced then the missing ones will be filled with zeros.</p>
-<dt><code>&#8211;tell_media_space</code></p>
+ If the track source delivers less bytes than announced then the missing ones will be filled with zeros.</dd>
+<dt><code>&#8211;tell_media_space</code></dt>
 <dd> Prepare a recording session, do not perform it but rather inquire the maximum number of 2048 byte data blocks which may be written in the current state of media with the prepared setup. So this option disables recording of data. It does allow blanking, though, and will measure space afterwards.<br />
  It is not mandatory to give track sources but their nature may influence the available capacity. So for most realistic results one may set up the full burn session and add &#8211;tell_media_space. But if one has to expect a cdrskin version prior to 0.3.3 no track source should be given in order not to start an involuntary burn session. In this case set at least -sao or -tao explicitly.<br />
- The result gets printed to standard output. It is 0 or empty if no writing is possible with the given options. This option redirects to stderr all message output except its own result string and eventual output of -msinfo.</p>
-<dt><code>&#8211;two_channel</code></p>
-<dd> Indicate for subsequent tracks that they were mastered with two channels.</p>
-<dt><code>write_start_address=</code><i>byte_offset</i></p>
+ The result gets printed to standard output. It is 0 or empty if no writing is possible with the given options. This option redirects to stderr all message output except its own result string and eventual output of -msinfo.</dd>
+<dt><code>&#8211;two_channel</code></dt>
+<dd> Indicate for subsequent tracks that they were mastered with two channels.</dd>
+<dt><code>write_start_address=</code><i>byte_offset</i></dt>
 <dd> Set the address on media where to start writing the track. With DVD+RW, DVD-RAM or BD-RE byte_offset must be aligned to 2 kiB blocks, but better is 32 kiB. With DVD-RW 32 kiB alignment is mandatory.<br />
- Other media are not suitable for this option yet.</dl>
+ Other media are not suitable for this option yet.</dd></dl>
 <p> Alphabetical list of options which are only intended for very special situations and not for normal use:</p>
 <dl>
-<dt><code>&#8211;abort_handler</code></p>
-<dd> Establish default signal handling not to leave a drive in busy state but rather to shut it down and to wait until it has ended the final operations. This option is only needed for revoking eventual &#8211;ignore_signals or &#8211;no_abort_handler.</p>
-<dt><code>&#8211;allow_untested_media</code></p>
+<dt><code>&#8211;abort_handler</code></dt>
+<dd> Establish default signal handling not to leave a drive in busy state but rather to shut it down and to wait until it has ended the final operations. This option is only needed for revoking eventual &#8211;ignore_signals or &#8211;no_abort_handler.</dd>
+<dt><code>&#8211;allow_untested_media</code></dt>
 <dd> Enable the use of media profiles which have been implemented but not yet tested. Currently this option is without effect because no media types are under test reservation.<br />
- (If you really test experimental media, then please report the outcome on libburn-hackers [at] pykix.org)</p>
-<dt><code>&#8211;cdtext_dummy</code></p>
+ (If you really test experimental media, then please report the outcome on libburn-hackers [at] pykix.org)</dd>
+<dt><code>&#8211;cdtext_dummy</code></dt>
 <dd> Prepare a burn run, report the effective array of CD-TEXT packs to stdout, and then end the program run without starting to burn the session. A blank CD-R or CD-RW has to be present in the drive, nevertheless.<br />
- The output is formatted in lines which describe 18 bytes as 2-digit hex numbers or as single printable characters. See libburn document doc/cdtext.txt about the format of these records.</p>
-<dt><code>&#8211;cdtext_verbose</code></p>
-<dd> Like &#8211;cdtext_dummy but without preventing the burn run. Combinable with option -dummy to exercise a CD burn run with no persistent impact on the medium.</p>
-<dt><code>dev_translation=</code><i>&lt;sep&gt;&lt;from&gt;&lt;sep&gt;&lt;to&gt;</i></p>
+ The output is formatted in lines which describe 18 bytes as 2-digit hex numbers or as single printable characters. See libburn document doc/cdtext.txt about the format of these records.</dd>
+<dt><code>&#8211;cdtext_verbose</code></dt>
+<dd> Like &#8211;cdtext_dummy but without preventing the burn run. Combinable with option -dummy to exercise a CD burn run with no persistent impact on the medium.</dd>
+<dt><code>dev_translation=</code><i>&lt;sep&gt;&lt;from&gt;&lt;sep&gt;&lt;to&gt;</i></dt>
 <dd> Set drive address alias. This was necessary before cdrskin-0.2.4 to manually translate cdrecord addresses into cdrskin addresses.<br />
  &lt;sep&gt; is a single character which may not occur in the address string &lt;from&gt;. &lt;from&gt; is an address as expected to be given by the user via option dev=. &lt;to&gt; is the address to be used instead whenever &lt;from&gt; is given. More than one translation instruction can be given in one cdrskin run.<br />
- E.g.: dev_translation=+ATA:1,0,0+/dev/sr1 dev_translation=+ATA:1,1,0+/dev/sr2</p>
-<dt><code>&#8211;drive_abort_on_busy</code></p>
-<dd> Linux specific: Abort process if a busy drive is encountered.</p>
-<dt><code>&#8211;drive_blocking</code></p>
-<dd> Linux specific: Try to wait for a busy drive to become free. This is not guaranteed to work with all drivers. Some need nonblocking i/o.</p>
-<dt><code>&#8211;drive_f_setlk</code></p>
-<dd> Linux specific: Try to get exclusive lock on drive device file via <a href="/docs/linux/man/2-fcntl/">fcntl</a>(2).</p>
-<dt><code>&#8211;drive_not_exclusive</code></p>
-<dd> Linux specific: Combine &#8211;drive_not_f_setlk and &#8211;drive_not_o_excl.</p>
-<dt><code>&#8211;drive_not_f_setlk</code></p>
-<dd> Linux specific: Do not try to get exclusive lock on drive device file via <a href="/docs/linux/man/2-fcntl/">fcntl</a>(2).</p>
-<dt><code>&#8211;drive_not_o_excl</code></p>
-<dd> Linux specific: Do not ask the operating system to prevent opening busy drives. Wether this leads to senseful behavior depends on operating system and kernel.</p>
-<dt><code>drive_scsi_dev_family=</code><i>sr</i><code>|</code><i>scd</i><code>|</code><i>sg</i></p>
+ E.g.: dev_translation=+ATA:1,0,0+/dev/sr1 dev_translation=+ATA:1,1,0+/dev/sr2</dd>
+<dt><code>&#8211;drive_abort_on_busy</code></dt>
+<dd> Linux specific: Abort process if a busy drive is encountered.</dd>
+<dt><code>&#8211;drive_blocking</code></dt>
+<dd> Linux specific: Try to wait for a busy drive to become free. This is not guaranteed to work with all drivers. Some need nonblocking i/o.</dd>
+<dt><code>&#8211;drive_f_setlk</code></dt>
+<dd> Linux specific: Try to get exclusive lock on drive device file via <a href="/docs/linux/man/2-fcntl/">fcntl</a>(2).</dd>
+<dt><code>&#8211;drive_not_exclusive</code></dt>
+<dd> Linux specific: Combine &#8211;drive_not_f_setlk and &#8211;drive_not_o_excl.</dd>
+<dt><code>&#8211;drive_not_f_setlk</code></dt>
+<dd> Linux specific: Do not try to get exclusive lock on drive device file via <a href="/docs/linux/man/2-fcntl/">fcntl</a>(2).</dd>
+<dt><code>&#8211;drive_not_o_excl</code></dt>
+<dd> Linux specific: Do not ask the operating system to prevent opening busy drives. Wether this leads to senseful behavior depends on operating system and kernel.</dd>
+<dt><code>drive_scsi_dev_family=</code><i>sr</i><code>|</code><i>scd</i><code>|</code><i>sg</i></dt>
 <dd> Linux specific: Select a SCSI device file family to be scanned for by options &#8211;devices, &#8211;device_links and -scanbus. Normally this is /dev/sgN on kernel versions &lt; 2.6 and /dev/srN on kernels &gt;= 2.6 . This option allows to explicitly override that default in order to meet other programs at a common device file for each drive. On kernel 2.4 families sr and scd will find no drives.<br />
- Device file family /dev/hdX on kernel &gt;= 2.6 is not affected by this setting.</p>
-<dt><code>&#8211;drive_scsi_exclusive</code></p>
-<dd> Linux specific: Try to exclusively reserve device files /dev/srN, /dev/scdM, /dev/sgK of drives. This would be helpful to protect against collisions with program growisofs. Regrettably on Linux kernel 2.4 with ide-scsi emulation this seems not to work. Wether it becomes helpful with new Linux systems has to be evaluated.</p>
-<dt><code>&#8211;fifo_disable</code></p>
-<dd> Disable fifo despite any fs=.</p>
-<dt><code>&#8211;fifo_per_track</code></p>
-<dd> Use a separate fifo for each track.</p>
-<dt><code>&#8211;fill_up_media</code></p>
+ Device file family /dev/hdX on kernel &gt;= 2.6 is not affected by this setting.</dd>
+<dt><code>&#8211;drive_scsi_exclusive</code></dt>
+<dd> Linux specific: Try to exclusively reserve device files /dev/srN, /dev/scdM, /dev/sgK of drives. This would be helpful to protect against collisions with program growisofs. Regrettably on Linux kernel 2.4 with ide-scsi emulation this seems not to work. Wether it becomes helpful with new Linux systems has to be evaluated.</dd>
+<dt><code>&#8211;fifo_disable</code></dt>
+<dd> Disable fifo despite any fs=.</dd>
+<dt><code>&#8211;fifo_per_track</code></dt>
+<dd> Use a separate fifo for each track.</dd>
+<dt><code>&#8211;fill_up_media</code></dt>
 <dd> Expand the last track of the session to occupy all remaining free space on the media.<br />
  This option overrides option -multi. It will not fill up media if option -sao is given with CD media.<br />
  <code>Caution:</code> With multi-session media this option might increase readatibility on DVD-ROM drives but with some DVD recorders and media types it might also fail to produce readable media at all. &quot;Your mileage may vary&quot;.<br />
- You can expect the best possible read compatibility if you do not use -multi at all.</p>
-<dt><code>grab_drive_and_wait=</code><i>seconds</i></p>
-<dd> Open the addressed drive, wait the given number of seconds, release the drive, and do normal work as indicated by the other options used. This option helps to explore the program behavior when faced with busy drives. Just start a second cdrskin with option &#8211;devices while grab_drive_and_wait= is still active.</p>
-<dt><code>&#8211;ignore_signals</code></p>
-<dd> Try to ignore any signals rather than to abort the program. This is not a very good idea. You might end up waiting a very long time for cdrskin to finish.</p>
-<dt><code>modesty_on_drive=</code><i>&lt;mode&gt;[:min_percent=&lt;num&gt;][:max_percent=&lt;num&gt;]</i></p>
+ You can expect the best possible read compatibility if you do not use -multi at all.</dd>
+<dt><code>grab_drive_and_wait=</code><i>seconds</i></dt>
+<dd> Open the addressed drive, wait the given number of seconds, release the drive, and do normal work as indicated by the other options used. This option helps to explore the program behavior when faced with busy drives. Just start a second cdrskin with option &#8211;devices while grab_drive_and_wait= is still active.</dd>
+<dt><code>&#8211;ignore_signals</code></dt>
+<dd> Try to ignore any signals rather than to abort the program. This is not a very good idea. You might end up waiting a very long time for cdrskin to finish.</dd>
+<dt><code>modesty_on_drive=</code><i>&lt;mode&gt;[:min_percent=&lt;num&gt;][:max_percent=&lt;num&gt;]</i></dt>
 <dd> Mode 1 keeps the program from trying to write to the burner drive while its buffer is in danger to be filled by more than max_percent. If this filling is exceeded then the program will wait until the filling is at most min_percent.<br />
  This can ease the load on operating system and drive controller and thus help with achieving better input bandwidth if disk and burner are not on independent controllers (like hda and hdb). Unsufficient input bandwidth is indicated by output &quot;(fifo xy%)&quot; of option -v if xy is lower than 90 for some time. modesty_on_drive= might hamper output bandwidth and cause buffer underruns.<br />
  To have max_percent larger than the burner&#8217;s best actual buffer fill has the same effect as min_percent==max_percent. Some burners do not use their full buffer with all media types. Watch output &quot;[buf xy%]&quot; of option -v to get an impression of the actual buffer usage. Some burners are not suitable because they report buffer fill with granularity too large in size or time.<br />
  Mode 0 disables this feature. Mode -1 keeps it unchanged. Default is:<br />
  modesty_on_drive=0:min_percent=65:max_percent=95<br />
- Percentages are permissible in the range of 25 to 100.</p>
-<dt><code>&#8211;no_abort_handler</code></p>
-<dd> On signals exit even if the drive is in busy state. This is not a very good idea. You might end up with a stuck drive that refuses to hand out the media.</p>
-<dt><code>&#8211;no_blank_appendable</code></p>
-<dd> Refuse to blank appendable CD-RW or DVD-RW. This is a feature that was once builtin with libburn. No information available for what use case it was needed.</p>
-<dt><code>&#8211;no_convert_fs_adr</code></p>
+ Percentages are permissible in the range of 25 to 100.</dd>
+<dt><code>&#8211;no_abort_handler</code></dt>
+<dd> On signals exit even if the drive is in busy state. This is not a very good idea. You might end up with a stuck drive that refuses to hand out the media.</dd>
+<dt><code>&#8211;no_blank_appendable</code></dt>
+<dd> Refuse to blank appendable CD-RW or DVD-RW. This is a feature that was once builtin with libburn. No information available for what use case it was needed.</dd>
+<dt><code>&#8211;no_convert_fs_adr</code></dt>
 <dd> Do only literal translations of dev=. This prevents cdrskin from test-opening device files in order to find one that matches the given dev= specifier.<br />
- Partly Linux specific: Such opening is needed for Bus,Target,Lun addresses unless option &#8211;old_pseudo_scsi_adr is given. It is also needed to resolve device file addresses which are not listed with cdrskin &#8211;devices but nevertheless point to a usable drive. (Like /dev/sg0 using the same SCSI address as /dev/sr0.)</p>
-<dt><code>&#8211;obs_pad</code></p>
+ Partly Linux specific: Such opening is needed for Bus,Target,Lun addresses unless option &#8211;old_pseudo_scsi_adr is given. It is also needed to resolve device file addresses which are not listed with cdrskin &#8211;devices but nevertheless point to a usable drive. (Like /dev/sg0 using the same SCSI address as /dev/sr0.)</dd>
+<dt><code>&#8211;obs_pad</code></dt>
 <dd> Pad the data of last write operation of a DVD-R[W] DAO session or stdio: pseudo-drive up to the full size of an output chunk. This padding has to be applied automatically to the other DVD and BD media types, where it causes e.g. ISO images to have trailing unclaimed blocks.<br />
  Use this option if there is the suspicion that DAO sessions abort with your kernel and/or DVD drive, if their size is not a multiple of 16 blocks.<br />
- This option may also get enabled at compile time of libburn.</p>
-<dt><code>&#8211;old_pseudo_scsi_adr</code></p>
-<dd> Linux specific: Use and report literal Bus,Target,Lun addresses rather than real SCSI and pseudo ATA addresses. This method is outdated and was never compatible with original cdrecord.</p>
-<dt><code>sao_postgap=</code><i>off|number</i></p>
+ This option may also get enabled at compile time of libburn.</dd>
+<dt><code>&#8211;old_pseudo_scsi_adr</code></dt>
+<dd> Linux specific: Use and report literal Bus,Target,Lun addresses rather than real SCSI and pseudo ATA addresses. This method is outdated and was never compatible with original cdrecord.</dd>
+<dt><code>sao_postgap=</code><i>off|number</i></dt>
 <dd> Define whether a post-gap shall be written at the end of the track and how many sectors this gap shall have. A post-gap occupies the range of an additional index of the track. It contains zeros. No bytes from the track source will be read for writing the post-gap.<br />
- This setting affects only CD SAO write runs.</p>
-<dt><code>sao_pregap=</code><i>off|number</i></p>
+ This setting affects only CD SAO write runs.</dd>
+<dt><code>sao_pregap=</code><i>off|number</i></dt>
 <dd> Define whether a pre-gap shall be written before the track and how many sectors this pre-gap shall have. A pre-gap is written in the range of track index 0 and contains zeros resp. silence. No bytes from the track source will be read for writing the pre-gap.<br />
  This setting affects only CD SAO write runs.<br />
- The first track automatically gets a pre-gap of at least 150 sectors. Its size can only be enlarged by this call.</p>
-<dt><code>&#8211;xa1-ignore</code></p>
-<dd> Silently interpret option -xa1 as -data. This may be necessary if a frontent does not prepare -xa1 block headers but insists in using option -xa1.</dl>
+ The first track automatically gets a pre-gap of at least 150 sectors. Its size can only be enlarged by this call.</dd>
+<dt><code>&#8211;xa1-ignore</code></dt>
+<dd> Silently interpret option -xa1 as -data. This may be necessary if a frontent does not prepare -xa1 block headers but insists in using option -xa1.</dd></dl>
 <h2>EXAMPLES</h2>
 <h3><code>Get an overview of drives and their addresses:</code></h3>
 <p> cdrskin -scanbus<br />
@@ -598,27 +594,27 @@ description: "cdrskin – burns preformatted data to CD, DVD, and BD via libburn
  Warning: Superusers must take care not to spoil their hard disk via its raw block device (like stdio:/dev/hda or stdio:/dev/sd0). </p>
 <h2>SEE ALSO</h2>
 <dl>
-<dt>Formatting data track sources for cdrskin:</p>
+<dt>Formatting data track sources for cdrskin:</dt>
 <dd>
- <code>mkisofs</code>(8), <code>genisoimage</code>(8), <code>xorriso</code>(1), <code>afio</code>(1), <code><a href="/docs/linux/man/1-star/">star</a></code>(1) </p>
-<dt>Other CD/DVD/BD burn programs:</p>
+ <code>mkisofs</code>(8), <code>genisoimage</code>(8), <code>xorriso</code>(1), <code>afio</code>(1), <code><a href="/docs/linux/man/1-star/">star</a></code>(1) </dd>
+<dt>Other CD/DVD/BD burn programs:</dt>
 <dd>
- <code>cdrecord</code>(1), <code><a href="/docs/linux/man/1-wodim/">wodim</a></code>(1), <code>xorriso</code>(1) </p>
-<dt>For DVD/BD burning (also tutor of libburn&#8217;s DVD/BD capabilities):</p>
+ <code>cdrecord</code>(1), <code><a href="/docs/linux/man/1-wodim/">wodim</a></code>(1), <code>xorriso</code>(1) </dd>
+<dt>For DVD/BD burning (also tutor of libburn&#8217;s DVD/BD capabilities):</dt>
 <dd>
  <code><a href="/docs/linux/man/1-growisofs/">growisofs</a></code>(1)
-</dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> cdrskin was written by Thomas Schmitt &lt;scdbackup [at] gmx.net&gt;. </p>
 <p> This manual page was started by George Danchev &lt;danchev [at] spnet.net&gt; and is now maintained by Thomas Schmitt. </p>
 <h2>Index</h2>
-<dt><a href="#lbAN">OPTIONS</a></p>
+<dt><a href="#lbAN">OPTIONS</a></dt>
 <dd>
-<dt><a href="#lbAO">EXAMPLES</a></p>
+</dd><dt><a href="#lbAO">EXAMPLES</a></dt>
 <dd>
-<dt><a href="#lbBA">FILES</a></p>
+</dd><dt><a href="#lbBA">FILES</a></dt>
 <dd>
-<dt><a href="#lbBD">SEE ALSO</a></p>
+</dd><dt><a href="#lbBD">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbBE">AUTHOR</a></p>
-<dd></dl>
+</dd><dt><a href="#lbBE">AUTHOR</a></dt>
+<dd></dd></dl>

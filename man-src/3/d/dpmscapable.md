@@ -13,18 +13,18 @@ description: "DPMSCapable – returns the DPMS capability of the X server"
 #include &lt;X11/extensions/dpms.h&gt;
 <dl COMPACT><dt><code>Bool DPMSCapable</code> ( Display *<i>display</i> );
 <br>
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl></pre>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl></pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
+<dt><i>display</i></dt>
 <dd>
-<dd>Specifies the connection to the X server</dl>
+</dd><dd>Specifies the connection to the X server</dd></dl>
 <h2>Description</h2>
 <p>The <i>DPMSCapable</i> function returns the Display Power Management Signaling (DPMS) capability of the X server, either TRUE (capable of DPMS) or FALSE (incapable of DPMS).</p>
 <h2>Return Values</h2>
 <dl COMPACT>
-<dt>True</p>
-<dd>The <i>DPMSCapable</i> function returns True if the X server is capable of DPMS.</p>
-<dt>False</p>
-<dd>The <i>DPMSCapable</i> function returns True if the X server is incapable of DPMS. </p>
+<dt>True</dt>
+<dd>The <i>DPMSCapable</i> function returns True if the X server is capable of DPMS.</dd>
+<dt>False</dt>
+<dd>The <i>DPMSCapable</i> function returns True if the X server is incapable of DPMS. </dd>
 </dl>

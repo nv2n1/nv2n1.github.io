@@ -83,22 +83,22 @@ description: "varnishlog_selinux – Security Enhanced Linux Policy for the varn
 <p> <code>varnishlog_exec_t</code> </p>
 <p> &#8211; Set files with the varnishlog_exec_t type, if you want to transition an executable to the varnishlog_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/varnishlog, /usr/bin/varnisncsa </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/varnishlog, /usr/bin/varnisncsa </dd>
 </dl>
 <p> <code>varnishlog_initrc_exec_t</code> </p>
 <p> &#8211; Set files with the varnishlog_initrc_exec_t type, if you want to transition an executable to the varnishlog_initrc_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/rc.d/init.d/varnishlog, /etc/rc.d/init.d/varnishncsa </p>
+<dt>Paths:</dt>
+<dd>/etc/rc.d/init.d/varnishlog, /etc/rc.d/init.d/varnishncsa </dd>
 </dl>
 <p> <code>varnishlog_log_t</code> </p>
 <p> &#8211; Set files with the varnishlog_log_t type, if you want to treat the data as varnishlog log data, usually stored under the /var/log directory. </p>
 <p> <code>varnishlog_var_run_t</code> </p>
 <p> &#8211; Set files with the varnishlog_var_run_t type, if you want to store the varnishlog files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/varnishlog.pid, /var/run/varnishncsa.pid </p>
+<dt>Paths:</dt>
+<dd>/var/run/varnishlog.pid, /var/run/varnishncsa.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

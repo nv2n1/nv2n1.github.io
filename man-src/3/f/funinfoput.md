@@ -28,30 +28,27 @@ description: "FunInfoPut – put information into a Funtools struct"
 <p> For example, in a binary table, after resetting <font SIZE="-1">FUN_IFUN</font> you can then call <i>FunColumnSelect()</i> to select the columns for output. When you then call <i>FunImagePut()</i> or &lt;A href=&#8220;./library.html#funtablerowput&#8221;&gt;<i>FunTableRowPut()</i>, a new extension will be written that contains the header parameters from the reference extension. Remember to call <i>FunFlush()</i> to complete output of a given extension. </p>
 <p> A complete example of this capability is given in the evcol example code. The central algorithm is:</p>
 <dl>
-<dt>*</p>
-<dd> open the output file without a reference handle</p>
-<dt>*</p>
-<dd> loop: open each input extension in turn</p>
+<dt>*</dt>
+<dd> open the output file without a reference handle</dd>
+<dt>*</dt>
+<dd> loop: open each input extension in turn</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>*</p>
-<dd> set the reference handle for output to the newly opened input extension</p>
-<dt>*</p>
-<dd> read the input rows or image and perform processing</p>
-<dt>*</p>
-<dd> write new rows or image to the output file</p>
-<dt>*</p>
-<dd> flush the output</p>
-<dt>*</p>
-<dd> close input extension</dl>
+<dt>*</dt>
+<dd> set the reference handle for output to the newly opened input extension</dd>
+<dt>*</dt>
+<dd> read the input rows or image and perform processing</dd>
+<dt>*</dt>
+<dd> write new rows or image to the output file</dd>
+<dt>*</dt>
+<dd> flush the output</dd>
+<dt>*</dt>
+<dd> close input extension</dd></dl>
 </dl>
 <dl>
-<dt>
-<dd></dl>
-<dt>*</p>
-<dd> close output file</dl>
+</dl>
+<dt>*</dt>
+<dd> close output file</dd></dl>
 <p> Note that <i>FunFlush()</i> is called after processing each input extension in order to ensure that the proper padding is written to the output file. A call to <i>FunFlush()</i> also ensures that the extension header is written to the output file in the case where there are no rows to output. </p>
 <p> If you wish to output a new extension without using a Funtools reference handle, you can call <i>FunInfoPut()</i> to reset the <font SIZE="-1">FUN_OPS</font> value directly. For a binary table, you would then call <i>FunColumnSelect()</i> to set up the columns for this new extension. </p>
 <pre><code>

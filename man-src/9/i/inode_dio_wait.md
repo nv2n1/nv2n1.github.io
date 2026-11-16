@@ -15,7 +15,7 @@ inode_dio_wait - wait for outstanding DIO requests to finish
 <h2>Arguments</h2>
 
 <i>inode</i>
-<dl><dd><dd>inode to wait for</dl>
+<dl><dd></dd><dd>inode to wait for</dd></dl>
 
 <h2>Description</h2>
 

@@ -15,26 +15,26 @@ description: "Pacemaker – Part of the Pacemaker cluster resource manager"
 <p> Check, enable or disable standby mode for a cluster node. Nodes in standby mode may not host cluster resources.</p>
 <h3>Commands:</h3>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd>Display this text and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd>Display version information and exit</p>
-<dt><code>-G</code>, <code>&#8211;query</code></p>
-<dd>Display the current value of standby mode (on/off)</p>
-<dt><code>-v</code>, <code>&#8211;update=</code>&lt;value&gt;</p>
-<dd>Update the value of standby mode (on/off)</p>
-<dt><code>-D</code>, <code>&#8211;delete</code></p>
-<dd>Let standby mode use default value</dl>
+<dt><code>&#8211;help</code></dt>
+<dd>Display this text and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Display version information and exit</dd>
+<dt><code>-G</code>, <code>&#8211;query</code></dt>
+<dd>Display the current value of standby mode (on/off)</dd>
+<dt><code>-v</code>, <code>&#8211;update=</code>&lt;value&gt;</dt>
+<dd>Update the value of standby mode (on/off)</dd>
+<dt><code>-D</code>, <code>&#8211;delete</code></dt>
+<dd>Let standby mode use default value</dd></dl>
 <h2>Options</h2>
 <dl>
-<dt><code>-V</code>, <code>&#8211;verbose</code></p>
-<dd>Increase debug output (may be specified multiple times)</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd>Print nothing on stdout except the standby status</p>
-<dt><code>-N</code>, <code>&#8211;node=</code>&lt;value&gt;</p>
-<dd>Operate on the named node instead of the current one</p>
-<dt> <code>-l</code>, <code>&#8211;lifetime=</code>&lt;value&gt; Until when the setting should take effect (reboot/forever)</p>
-<dt><code>-i</code>, <code>&#8211;id=</code>&lt;value&gt;</p>
-<dd>(Advanced) ID used to identify the XML attribute</dl>
+<dt><code>-V</code>, <code>&#8211;verbose</code></dt>
+<dd>Increase debug output (may be specified multiple times)</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd>Print nothing on stdout except the standby status</dd>
+<dt><code>-N</code>, <code>&#8211;node=</code>&lt;value&gt;</dt>
+<dd>Operate on the named node instead of the current one</dd>
+<dt> <code>-l</code>, <code>&#8211;lifetime=</code>&lt;value&gt; Until when the setting should take effect (reboot/forever)</dt>
+<dt><code>-i</code>, <code>&#8211;id=</code>&lt;value&gt;</dt>
+<dd>(Advanced) ID used to identify the XML attribute</dd></dl>
 <h2>Author</h2>
-<dd>Written by Andrew Beekhof</p>
+<dd>Written by Andrew Beekhof</dd>

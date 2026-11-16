@@ -11,9 +11,7 @@ description: "sc::ThreadLockHolder –"
 <p> Acquire a lock on creation and release it on destruction.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;thread.h&gt;
-
 Public Member Functions</code></pre>
 <p> <code>ThreadLockHolder</code> (const <code>Ref</code>&lt; <code>ThreadLock</code> &gt; &amp;l)<br />
  <i>Acquires the lock. </i><br />

@@ -13,13 +13,13 @@ description: "jdb – The Java Debugger"
 <pre><code>jdb</code> [ options ] [ class ] [ arguments ] </pre>
 <dl>
 <dd>
-<dl>
-<dt>options</p>
-<dd>Command-line options, as specified below.</p>
-<dt>class</p>
-<dd>Name of the class to begin debugging.</p>
-<dt>arguments</p>
-<dd>Arguments passed to the <i>main()</i> method of <i>class</i>.</dl>
+</dd><dl>
+<dt>options</dt>
+<dd>Command-line options, as specified below.</dd>
+<dt>class</dt>
+<dd>Name of the class to begin debugging.</dd>
+<dt>arguments</dt>
+<dd>Arguments passed to the <i>main()</i> method of <i>class</i>.</dd></dl>
 </dl>
 <h2>Description</h2>
 <p>The Java Debugger, <code>jdb</code>, is a simple command-line debugger for Java classes. It is a demonstration of the <i>Java Platform Debugger Architecture</i> @ <a rel="nofollow" href="http://java.sun.com/javase/6/docs/technotes/guides/jpda/index.html">http://java.sun.com/javase/6/docs/technotes/guides/jpda/index.html</a> that provides inspection and debugging of a local or remote Java Virtual Machine. </p>
@@ -39,62 +39,62 @@ description: "jdb – The Java Debugger"
 <p>The following is a list of the basic <code>jdb</code> commands. The Java debugger supports other commands which you can list using <code>jdb</code>&#8216;s <i>help</i> command. </p>
 <dl>
 <dd>
-<dl>
-<dt>help, or ?</p>
-<dd>The most important <code>jdb</code> command, <i>help</i> displays the list of recognized commands with a brief description.</p>
-<dt>run</p>
-<dd>After starting <code>jdb</code>, and setting any necessary breakpoints, you can use this command to start the execution the debugged application. This command is available only when <code>jdb</code> launches the debugged application (as opposed to attaching to an existing VM).</p>
-<dt>cont</p>
-<dd>Continues execution of the debugged application after a breakpoint, exception, or step.</p>
-<dt>print</p>
-<dd>Displays Java objects and primitive values. For variables or fields of primitive types, the actual value is printed. For objects, a short description is printed. See the <i>dump</i> command below for getting more information about an object.</dl>
+</dd><dl>
+<dt>help, or ?</dt>
+<dd>The most important <code>jdb</code> command, <i>help</i> displays the list of recognized commands with a brief description.</dd>
+<dt>run</dt>
+<dd>After starting <code>jdb</code>, and setting any necessary breakpoints, you can use this command to start the execution the debugged application. This command is available only when <code>jdb</code> launches the debugged application (as opposed to attaching to an existing VM).</dd>
+<dt>cont</dt>
+<dd>Continues execution of the debugged application after a breakpoint, exception, or step.</dd>
+<dt>print</dt>
+<dd>Displays Java objects and primitive values. For variables or fields of primitive types, the actual value is printed. For objects, a short description is printed. See the <i>dump</i> command below for getting more information about an object.</dd></dl>
 <p> <i>NOTE: To display local variables, the containing class must have been compiled with the </i><i>javac</i><i> </i><i>-g</i> option. </p>
 <p> <i>print</i> supports many simple Java expressions including those with method invocations, for example:</p>
 <dl>
 <dd>
-<dl>
-<dt>*</p>
-<dd><i>print MyClass.myStaticField</i></p>
-<dt>*</p>
-<dd><i>print myObj.myInstanceField</i></p>
-<dt>*</p>
-<dd><i>print i + j + k</i> <i>(i, j, k are primities and either fields or local variables)</i></p>
-<dt>*</p>
-<dd><i>print myObj.myMethod()</i> <i>(if myMethod returns a non-null)</i></p>
-<dt>*</p>
-<dd><i>print new java.lang.String(&quot;Hello&quot;).length()</i></dl>
+</dd><dl>
+<dt>*</dt>
+<dd><i>print MyClass.myStaticField</i></dd>
+<dt>*</dt>
+<dd><i>print myObj.myInstanceField</i></dd>
+<dt>*</dt>
+<dd><i>print i + j + k</i> <i>(i, j, k are primities and either fields or local variables)</i></dd>
+<dt>*</dt>
+<dd><i>print myObj.myMethod()</i> <i>(if myMethod returns a non-null)</i></dd>
+<dt>*</dt>
+<dd><i>print new java.lang.String(&quot;Hello&quot;).length()</i></dd></dl>
 </dl>
 <dl>
-<dt>dump</p>
-<dd>For primitive values, this command is identical to <i>print</i>. For objects, it prints the current value of each field defined in the object. Static and instance fields are included.</dl>
+<dt>dump</dt>
+<dd>For primitive values, this command is identical to <i>print</i>. For objects, it prints the current value of each field defined in the object. Static and instance fields are included.</dd></dl>
 <p> The <i>dump</i> command supports the same set of expressions as the <i>print</i> command.</p>
 <dl>
-<dt>threads</p>
-<dd>List the threads that are currently running. For each thread, its name and current status are printed, as well as an index that can be used for other commands, for example:</p>
+<dt>threads</dt>
+<dd>List the threads that are currently running. For each thread, its name and current status are printed, as well as an index that can be used for other commands, for example:</dd>
 <dl>
 <dd>
 <pre><code>4. (java.lang.Thread)0x1 main running</code></pre>
-</dl>
+</dd></dl>
 <p> In this example, the thread index is 4, the thread is an instance of java.lang.Thread, the thread name is &quot;main&quot;, and it is currently running,</p>
-<dt>thread</p>
-<dd>Select a thread to be the current thread. Many <code>jdb</code> commands are based on the setting of the current thread. The thread is specified with the thread index described in the <i>threads</i> command above.</p>
-<dt>where</p>
-<dd><i>where</i> with no arguments dumps the stack of the current thread. <i>where all</i> dumps the stack of all threads in the current thread group. <i>where</i> <i>threadindex</i> dumps the stack of the specified thread.</dl>
+<dt>thread</dt>
+<dd>Select a thread to be the current thread. Many <code>jdb</code> commands are based on the setting of the current thread. The thread is specified with the thread index described in the <i>threads</i> command above.</dd>
+<dt>where</dt>
+<dd><i>where</i> with no arguments dumps the stack of the current thread. <i>where all</i> dumps the stack of all threads in the current thread group. <i>where</i> <i>threadindex</i> dumps the stack of the specified thread.</dd></dl>
 <p> If the current thread is suspended (either through an event such as a breakpoint or through the <i>suspend</i> command), local variables and fields can be displayed with the <i>print</i> and <i>dump</i> commands. The <i>up</i> and <i>down</i> commands select which stack frame is current. </p>
 </dl>
 <h3>Breakpoints</h3>
 <p>Breakpoints can be set in <code>jdb</code> at line numbers or at the first instruction of a method, for example: </p>
 <dl>
 <dd>
-<dl>
-<dt>*</p>
-<dd><i>stop at MyClass:22</i> <i>(sets a breakpoint at the first instruction for line 22 of the source file containing MyClass)</i></p>
-<dt>*</p>
-<dd><i>stop in java.lang.String.length</i> <i>(sets a breakpoint at the beginnig of the method </i><i>java.lang.String.length</i>)</p>
-<dt>*</p>
-<dd><i>stop in MyClass.&lt;init&gt;</i> <i>(&lt;init&gt; identifies the MyClass constructor)</i></p>
-<dt>*</p>
-<dd><i>stop in MyClass.&lt;clinit&gt;</i> <i>(&lt;clinit&gt; identifies the static initialization code for MyClass)</i></dl>
+</dd><dl>
+<dt>*</dt>
+<dd><i>stop at MyClass:22</i> <i>(sets a breakpoint at the first instruction for line 22 of the source file containing MyClass)</i></dd>
+<dt>*</dt>
+<dd><i>stop in java.lang.String.length</i> <i>(sets a breakpoint at the beginnig of the method </i><i>java.lang.String.length</i>)</dd>
+<dt>*</dt>
+<dd><i>stop in MyClass.&lt;init&gt;</i> <i>(&lt;init&gt; identifies the MyClass constructor)</i></dd>
+<dt>*</dt>
+<dd><i>stop in MyClass.&lt;clinit&gt;</i> <i>(&lt;clinit&gt; identifies the static initialization code for MyClass)</i></dd></dl>
 </dl>
 <p> If a method is overloaded, you must also specify its argument types so that the proper method can be selected for a breakpoint. For example, &quot;<i>MyClass.myMethod(int,java.lang.String)</i>&quot;, or &quot;<i>MyClass.myMethod()</i>&quot;. </p>
 <p> The <i>clear</i> command removes breakpoints using a syntax as in &quot;<i>clear MyClass:45</i>&quot;. Using the <i>clear</i> or command with no argument displays a list of all breakpoints currently set. The <i>cont</i> command continues execution. </p>
@@ -109,41 +109,41 @@ description: "jdb – The Java Debugger"
 <p>When you use <code>jdb</code> in place of the Java application launcher on the command line, <code>jdb</code> accepts many of the same options as the java command, including <i>-D</i>, <i>-classpath</i>, and <i>-X&lt;option&gt;</i>. </p>
 <p> The following additional options are accepted by <code>jdb</code>: </p>
 <dl>
-<dt>-help</p>
-<dd>Displays a help message.</p>
-<dt>-sourcepath &lt;dir1:dir2:&#8230;&gt;</p>
-<dd>Uses the given path in searching for source files in the specified path. If this option is not specified, the default path of &quot;.&quot; is used.</p>
-<dt>-attach &lt;address&gt;</p>
-<dd>Attaches the debugger to previously running VM using the default connection mechanism.</p>
-<dt>-listen &lt;address&gt;</p>
-<dd>Waits for a running VM to connect at the specified address using standard connector.</p>
-<dt>-listenany</p>
-<dd>Waits for a running VM to connect at any available address using standard connector.</p>
-<dt>-launch</p>
-<dd>Launches the debugged application immediately upon startup of jdb. This option removes the need for using the <i>run</i> command. The debuged application is launched and then stopped just before the initial application class is loaded. At that point you can set any necessary breakpoints and use the <i>cont</i> to continue execution.</p>
-<dt>-listconnectors</p>
-<dd>List the connectors available in this VM</p>
-<dt>-connect</p>
-<dd>&lt;connector-name&gt;:&lt;name1&gt;=&lt;value1&gt;,&#8230; Connects to target VM using named connector with listed argument values.</p>
-<dt>-dbgtrace [flags]</p>
-<dd>Prints info for debugging jdb.</p>
-<dt>-tclient</p>
-<dd>Runs the application in the Java HotSpot(tm) VM (Client).</p>
-<dt>-tserver</p>
-<dd>Runs the application in the Java HotSpot(tm) VM (Server).</p>
-<dt>-Joption</p>
-<dd>Pass <i>option</i> to the Java virtual machine used to run jdb. (Options for the application Java virtual machine are passed to the <code>run</code> command.) For example, <code>-J-Xms48m</code> sets the startup memory to 48 megabytes.</dl>
+<dt>-help</dt>
+<dd>Displays a help message.</dd>
+<dt>-sourcepath &lt;dir1:dir2:&#8230;&gt;</dt>
+<dd>Uses the given path in searching for source files in the specified path. If this option is not specified, the default path of &quot;.&quot; is used.</dd>
+<dt>-attach &lt;address&gt;</dt>
+<dd>Attaches the debugger to previously running VM using the default connection mechanism.</dd>
+<dt>-listen &lt;address&gt;</dt>
+<dd>Waits for a running VM to connect at the specified address using standard connector.</dd>
+<dt>-listenany</dt>
+<dd>Waits for a running VM to connect at any available address using standard connector.</dd>
+<dt>-launch</dt>
+<dd>Launches the debugged application immediately upon startup of jdb. This option removes the need for using the <i>run</i> command. The debuged application is launched and then stopped just before the initial application class is loaded. At that point you can set any necessary breakpoints and use the <i>cont</i> to continue execution.</dd>
+<dt>-listconnectors</dt>
+<dd>List the connectors available in this VM</dd>
+<dt>-connect</dt>
+<dd>&lt;connector-name&gt;:&lt;name1&gt;=&lt;value1&gt;,&#8230; Connects to target VM using named connector with listed argument values.</dd>
+<dt>-dbgtrace [flags]</dt>
+<dd>Prints info for debugging jdb.</dd>
+<dt>-tclient</dt>
+<dd>Runs the application in the Java HotSpot(tm) VM (Client).</dd>
+<dt>-tserver</dt>
+<dd>Runs the application in the Java HotSpot(tm) VM (Server).</dd>
+<dt>-Joption</dt>
+<dd>Pass <i>option</i> to the Java virtual machine used to run jdb. (Options for the application Java virtual machine are passed to the <code>run</code> command.) For example, <code>-J-Xms48m</code> sets the startup memory to 48 megabytes.</dd></dl>
 <p> Other options are supported for alternate mechanisms for connecting the debugger and the VM it is to debug. The Java Platform Debugger Architecture has additional <i>documentation</i> @ <a rel="nofollow" href="http://java.sun.com/javase/6/docs/technotes/guides/jpda/conninv.html">http://java.sun.com/javase/6/docs/technotes/guides/jpda/conninv.html</a> on these connection alternatives. </p>
 <h3>Options Forwarded to Debuggee Process</h3>
 <dl>
-<dt>-v -verbose[:class|gc|jni]</p>
-<dd>Turns on verbose mode.</p>
-<dt>-D&lt;name&gt;=&lt;value&gt;</p>
-<dd>Sets a system property.</p>
-<dt>-classpath &lt;directories separated by</p>
-<dd>&quot;:&quot;&gt; Lists directories in which to look for classes.</p>
-<dt>-X&lt;option&gt;</p>
-<dd>Non-standard target VM option</dl>
+<dt>-v -verbose[:class|gc|jni]</dt>
+<dd>Turns on verbose mode.</dd>
+<dt>-D&lt;name&gt;=&lt;value&gt;</dt>
+<dd>Sets a system property.</dd>
+<dt>-classpath &lt;directories separated by</dt>
+<dd>&quot;:&quot;&gt; Lists directories in which to look for classes.</dd>
+<dt>-X&lt;option&gt;</dt>
+<dd>Non-standard target VM option</dd></dl>
 <h2>See Also</h2>
 <p>javac, java, javah, javap, javadoc. </p>
 <p>&nbsp;<wbr></p>

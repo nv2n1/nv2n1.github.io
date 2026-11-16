@@ -29,40 +29,40 @@ int bind(int sockfd, const struct sockaddr *addr,
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> The address is protected, and the user is not the superuser.</p>
-<dt><code>EADDRINUSE</code></p>
-<dd> The given address is already in use.</p>
-<dt><code>EADDRINUSE</code></p>
-<dd> (Internet domain sockets) The port number was specified as zero in the socket address structure, but, upon attempting to bind to an ephemeral port, it was determined that all port numbers in the ephemeral port range are currently in use. See the discussion of <i>/proc/sys/net/ipv4/ip_local_port_range</i> <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7).</p>
-<dt><code>EBADF</code></p>
-<dd> <i>sockfd</i> is not a valid file descriptor.</p>
-<dt><code>EINVAL</code></p>
-<dd> The socket is already bound to an address.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>addrlen</i> is wrong, or <i>addr</i> is not a valid address for this socket&#8217;s domain.</p>
-<dt><code>ENOTSOCK</code></p>
-<dd> The file descriptor <i>sockfd</i> does not refer to a socket.</dl>
+<dt><code>EACCES</code></dt>
+<dd> The address is protected, and the user is not the superuser.</dd>
+<dt><code>EADDRINUSE</code></dt>
+<dd> The given address is already in use.</dd>
+<dt><code>EADDRINUSE</code></dt>
+<dd> (Internet domain sockets) The port number was specified as zero in the socket address structure, but, upon attempting to bind to an ephemeral port, it was determined that all port numbers in the ephemeral port range are currently in use. See the discussion of <i>/proc/sys/net/ipv4/ip_local_port_range</i> <code><a href="/docs/linux/man/7-ip/">ip</a></code>(7).</dd>
+<dt><code>EBADF</code></dt>
+<dd> <i>sockfd</i> is not a valid file descriptor.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The socket is already bound to an address.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>addrlen</i> is wrong, or <i>addr</i> is not a valid address for this socket&#8217;s domain.</dd>
+<dt><code>ENOTSOCK</code></dt>
+<dd> The file descriptor <i>sockfd</i> does not refer to a socket.</dd></dl>
 <p> The following errors are specific to UNIX domain (<code>AF_UNIX</code>) sockets:</p>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> Search permission is denied on a component of the path prefix. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</p>
-<dt><code>EADDRNOTAVAIL</code></p>
-<dd> A nonexistent interface was requested or the requested address was not local.</p>
-<dt><code>EFAULT</code></p>
-<dd> <i>addr</i> points outside the user&#8217;s accessible address space.</p>
-<dt><code>ELOOP</code></p>
-<dd> Too many symbolic links were encountered in resolving <i>addr</i>.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd> <i>addr</i> is too long.</p>
-<dt><code>ENOENT</code></p>
-<dd> A component in the directory prefix of the socket pathname does not exist.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Insufficient kernel memory was available.</p>
-<dt><code>ENOTDIR</code></p>
-<dd> A component of the path prefix is not a directory.</p>
-<dt><code>EROFS</code></p>
-<dd> The socket inode would reside on a read-only filesystem.</dl>
+<dt><code>EACCES</code></dt>
+<dd> Search permission is denied on a component of the path prefix. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</dd>
+<dt><code>EADDRNOTAVAIL</code></dt>
+<dd> A nonexistent interface was requested or the requested address was not local.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> <i>addr</i> points outside the user&#8217;s accessible address space.</dd>
+<dt><code>ELOOP</code></dt>
+<dd> Too many symbolic links were encountered in resolving <i>addr</i>.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd> <i>addr</i> is too long.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> A component in the directory prefix of the socket pathname does not exist.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Insufficient kernel memory was available.</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> A component of the path prefix is not a directory.</dd>
+<dt><code>EROFS</code></dt>
+<dd> The socket inode would reside on a read-only filesystem.</dd></dl>
 <h2>CONFORMING TO</h2>
 <p> POSIX.1-2001, POSIX.1-2008, SVr4, 4.4BSD (<code>bind</code>() first appeared in 4.2BSD).</p>
 <h2>NOTES</h2>

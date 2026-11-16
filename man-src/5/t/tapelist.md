@@ -22,4 +22,4 @@ description: "tapelist – The list of Amanda volumes in use"
 <p> <code>Stefan G. Weichinger</code> &lt;sgw [at] amanda.org&gt; </p>
 <p> <code>Dustin J. Mitchell</code> &lt;dustin [at] zmanda.com&gt;</p>
 <dl>
-<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>

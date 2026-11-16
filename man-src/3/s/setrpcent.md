@@ -10,15 +10,10 @@ description: "getrpcent, getrpcbyname, getrpcbynumber, setrpcent, endrpcent – 
 <p>getrpcent, getrpcbyname, getrpcbynumber, setrpcent, endrpcent &#8211; get RPC entry</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;netdb.h&gt;
-
 struct rpcent *getrpcent(void);
-
 struct rpcent *getrpcbyname(const char *name);
-
 struct rpcent *getrpcbynumber(int number);
-
 void setrpcent(int stayopen);
-
 void endrpcent(void);</code></pre>
 <h2>Description</h2>
 <p>The <code>getrpcent</code>(), <code>getrpcbyname</code>(), and <code>getrpcbynumber</code>() functions each return a pointer to an object with the following structure containing the broken-out fields of an entry in the RPC program number data base. </p>
@@ -29,19 +24,19 @@ void endrpcent(void);</code></pre>
 };</code></pre>
 <p> The members of this structure are:</p>
 <dl>
-<dt><i>r_name</i></p>
-<dd>The name of the server for this RPC program.</p>
-<dt><i>r_aliases</i></p>
-<dd>A NULL-terminated list of alternate names for the RPC program.</p>
-<dt><i>r_number</i></p>
-<dd>The RPC program number for this service.</dl>
+<dt><i>r_name</i></dt>
+<dd>The name of the server for this RPC program.</dd>
+<dt><i>r_aliases</i></dt>
+<dd>A NULL-terminated list of alternate names for the RPC program.</dd>
+<dt><i>r_number</i></dt>
+<dd>The RPC program number for this service.</dd></dl>
 <p> The <code>getrpcent</code>() function reads the next entry from the database. A connection is opened to the database if necessary. The <code>setrpcent</code>() function opens a connection to the database, and sets the next entry to the first entry. If <i>stayopen</i> is nonzero, then the connection to the database will not be closed between calls to one of the <code>getrpc*</code>() functions. The <code>endrpcent</code>() function closes the connection to the database. The <code>getrpcbyname</code>() and <code>getrpcbynumber</code>() functions sequentially search from the beginning of the file until a matching RPC program name or program number is found, or until end-of-file is encountered.</p>
 <h2>Return Value</h2>
 <p>On success, <code>getrpcent</code>(), <code>getrpcbyname</code>(), and <code>getrpcbynumber</code>() return a pointer to a statically allocated <i>rpcent</i> structure. NULL is returned on EOF or error.</p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/rpc</i></p>
-<dd>RPC program number database.</dl>
+<dt><i>/etc/rpc</i></dt>
+<dd>RPC program number database.</dd></dl>
 <h2>Attributes</h2>
 <p>For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>
 <table BORDER>

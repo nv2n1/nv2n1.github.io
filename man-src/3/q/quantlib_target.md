@@ -15,27 +15,27 @@ description: "QuantLib::TARGET – TARGET calendar"
 <p>TARGET calendar </p>
 <p> Holidays (see <a rel="nofollow" href="http://www.ecb.int">http://www.ecb.int</a>): </p>
 <dl COMPACT>
-<dt>*</p>
-<dd>Saturdays</p>
-<dt>*</p>
-<dd>Sundays</p>
-<dt>*</p>
-<dd>New Year&#8217;s Day, January 1st</p>
-<dt>*</p>
-<dd>Good Friday (since 2000)</p>
-<dt>*</p>
-<dd>Easter Monday (since 2000)</p>
-<dt>*</p>
-<dd>Labour Day, May 1st (since 2000)</p>
-<dt>*</p>
-<dd>Christmas, December 25th</p>
-<dt>*</p>
-<dd>Day of Goodwill, December 26th (since 2000)</p>
-<dt>*</p>
-<dd>December 31st (1998, 1999, and 2001)</dl>
+<dt>*</dt>
+<dd>Saturdays</dd>
+<dt>*</dt>
+<dd>Sundays</dd>
+<dt>*</dt>
+<dd>New Year&#8217;s Day, January 1st</dd>
+<dt>*</dt>
+<dd>Good Friday (since 2000)</dd>
+<dt>*</dt>
+<dd>Easter Monday (since 2000)</dd>
+<dt>*</dt>
+<dd>Labour Day, May 1st (since 2000)</dd>
+<dt>*</dt>
+<dd>Christmas, December 25th</dd>
+<dt>*</dt>
+<dd>Day of Goodwill, December 26th (since 2000)</dd>
+<dt>*</dt>
+<dd>December 31st (1998, 1999, and 2001)</dd></dl>
 <p> <code>Tests</code></p>
 <dl COMPACT>
-<dd>the correctness of the returned results is tested against a list of known holidays.</dl>
+<dd>the correctness of the returned results is tested against a list of known holidays.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>BermudanSwaption.cpp</code>, <code>Bonds.cpp</code>, <code>CDS.cpp</code>, <code>ConvertibleBonds.cpp</code>, <code>DiscreteHedging.cpp</code>, <code>EquityOption.cpp</code>, and <code>swapvaluation.cpp</code>. </p>
 <h2>Author</h2>

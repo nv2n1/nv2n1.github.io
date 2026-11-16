@@ -10,7 +10,6 @@ description: "get_ordered_context_list, get_ordered_context_list_with_level, get
 <p>get_ordered_context_list, get_ordered_context_list_with_level, get_default_context, get_default_context_with_level, get_default_context_with_role, get_default_context_with_rolelevel, query_user_context, manual_user_enter_context, get_default_role &#8211; determine SELinux context(s) for user sessions</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;selinux/selinux.h&gt;
-
 #include &lt;selinux/get_context_list.h&gt;
 int get_ordered_context_list(const char *user, char *fromcon, char ***list);
 int get_ordered_context_list_with_level(const char *user, const char *level, char *fromcon, char ***list);

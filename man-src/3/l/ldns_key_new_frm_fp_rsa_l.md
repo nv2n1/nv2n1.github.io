@@ -17,11 +17,11 @@ description: "ldns_key_new_frm_fp_rsa, ldns_key_new_frm_fp_rsa_l"
 <p> RSA* ldns_key_new_frm_fp_rsa_l(FILE *fp, int *line_nr); </p>
 <h2>DESCRIPTION</h2>
 <dl>
-<dt> <i>ldns_key_new_frm_fp_rsa</i>()</p>
-<dd>frm_fp helper function. This function parses the remainder of the (RSA) priv. key file generated from bind9 .br <code>fp</code>: the file to parse .br Returns NULL on failure otherwise a RSA structure</dl>
+<dt> <i>ldns_key_new_frm_fp_rsa</i>()</dt>
+<dd>frm_fp helper function. This function parses the remainder of the (RSA) priv. key file generated from bind9 .br <code>fp</code>: the file to parse .br Returns NULL on failure otherwise a RSA structure</dd></dl>
 <dl>
-<dt> <i>ldns_key_new_frm_fp_rsa_l</i>()</p>
-<dd>frm_fp helper function. This function parses the remainder of the (RSA) priv. key file generated from bind9 .br <code>fp</code>: the file to parse .br <code>line_nr</code>: pointer to an integer containing the current line number (for debugging purposes) .br Returns NULL on failure otherwise a RSA structure</dl>
+<dt> <i>ldns_key_new_frm_fp_rsa_l</i>()</dt>
+<dd>frm_fp helper function. This function parses the remainder of the (RSA) priv. key file generated from bind9 .br <code>fp</code>: the file to parse .br <code>line_nr</code>: pointer to an integer containing the current line number (for debugging purposes) .br Returns NULL on failure otherwise a RSA structure</dd></dl>
 <h2>AUTHOR</h2>
 <p> The ldns team at NLnet Labs. Which consists out of Jelte Jansen and Miek Gieben. </p>
 <h2>REPORTING BUGS</h2>

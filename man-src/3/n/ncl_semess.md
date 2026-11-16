@@ -31,7 +31,7 @@ In any routine that references SEMESS, it must be declared to be of type CHARACT
  The argument of SEMESS is as follows: 
 
 <dl><dt>ITRIM
-<dd>(an input expression of type INTEGER) - Says what part of the error message is to be returned, as detailed above.</dl>
+</dt><dd>(an input expression of type INTEGER) - Says what part of the error message is to be returned, as detailed above.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

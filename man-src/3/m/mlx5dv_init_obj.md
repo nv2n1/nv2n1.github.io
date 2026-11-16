@@ -125,5 +125,5 @@ MLX5DV_OBJ_PD = 1 &lt;&lt; 6,
 <p><code><a href="/docs/linux/man/7-mlx5dv/">mlx5dv</a></code>(7)</p>
 <h2>Authors</h2>
 <dl COMPACT>
-<dt>Leon Romanovsky &lt;leonro [at] mellanox.com&gt;</p>
-<dd></dl>
+<dt>Leon Romanovsky &lt;leonro [at] mellanox.com&gt;</dt>
+<dd></dd></dl>

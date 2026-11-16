@@ -16,20 +16,20 @@ description: "fwb_ipt – Policy compiler for Cisco IOS ACL"
 <p> The data file and the name of the firewall objects must be specified on the command line. Other command line parameters are optional. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>-4</p>
-<dd> Generate iptables script for IPv4 part of the policy. If any rules of the firewall refer to IPv6 addresses, compiler will skip these rules. Options &quot;-4&quot; and &quot;-6&quot; are exclusive. If neither option is used, compiler tries to generate both parts of the script, although generation of the IPv6 part is controlled by the option &quot;Enable IPv6 support&quot; in the &quot;IPv6&quot; tab of the firewall object advanced settings dialog. This option is off by default. </p>
-<dt>-6</p>
-<dd> Generate iptables script for IPv6 part of the policy. If any rules of the firewall refer to IPv6 addresses, compiler will skip these rules. </p>
-<dt>-f FILE</p>
-<dd> Specify the name of the data file to be processed. </p>
-<dt>-d wdir</p>
-<dd> Specify working directory. Compiler creates file with ACL configuration in this directory. If this parameter is missing, then generated ACL will be placed in the current working directory. </p>
-<dt>-v</p>
-<dd> Be verbose: compiler prints diagnostic messages when it works. </p>
-<dt>-V</p>
-<dd> Print version number and quit. </p>
-<dt>-i</p>
-<dd> When this option is present, the last argument on the command line is supposed to be firewall object ID rather than its name </p>
+<dt>-4</dt>
+<dd> Generate iptables script for IPv4 part of the policy. If any rules of the firewall refer to IPv6 addresses, compiler will skip these rules. Options &quot;-4&quot; and &quot;-6&quot; are exclusive. If neither option is used, compiler tries to generate both parts of the script, although generation of the IPv6 part is controlled by the option &quot;Enable IPv6 support&quot; in the &quot;IPv6&quot; tab of the firewall object advanced settings dialog. This option is off by default. </dd>
+<dt>-6</dt>
+<dd> Generate iptables script for IPv6 part of the policy. If any rules of the firewall refer to IPv6 addresses, compiler will skip these rules. </dd>
+<dt>-f FILE</dt>
+<dd> Specify the name of the data file to be processed. </dd>
+<dt>-d wdir</dt>
+<dd> Specify working directory. Compiler creates file with ACL configuration in this directory. If this parameter is missing, then generated ACL will be placed in the current working directory. </dd>
+<dt>-v</dt>
+<dd> Be verbose: compiler prints diagnostic messages when it works. </dd>
+<dt>-V</dt>
+<dd> Print version number and quit. </dd>
+<dt>-i</dt>
+<dd> When this option is present, the last argument on the command line is supposed to be firewall object ID rather than its name </dd>
 </dl>
 <h2>URL</h2>
 <p> Firewall Builder home page is located at the following URL: <code><a rel="nofollow" href="http://www.fwbuilder.org/">http://www.fwbuilder.org/</a></code> </p>

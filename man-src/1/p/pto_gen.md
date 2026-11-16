@@ -20,18 +20,18 @@ description: "pto_gen – Generate a Hugin project file from a list of images."
 <p> This creates a project file from all jpg images, in the same folder as the first photo. The project file is named first_file-last_file.pto using the same convention as the Hugin <font SIZE="-1">GUI. </font></p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-o|&#8211;output</code> <i>file</i></p>
-<dd> Output Hugin <font SIZE="-1">PTO</font> file.</p>
-<dt><code>-p|&#8211;projection</code> <i>num</i></p>
-<dd> Projection type (default: 0)</p>
-<dt><code>-f|&#8211;fov</code> <i>float</i></p>
-<dd> Horizontal field of view of images (default: 50)</p>
-<dt><code>-s|&#8211;stacklength</code> <i>num</i></p>
-<dd> Number of images in stack (default: 1, no stacks)</p>
-<dt><code>-l|&#8211;linkstacks</code></p>
-<dd> Link image positions in stacks</p>
-<dt><code>-h|&#8211;help</code></p>
-<dd> shows help</dl>
+<dt><code>-o|&#8211;output</code> <i>file</i></dt>
+<dd> Output Hugin <font SIZE="-1">PTO</font> file.</dd>
+<dt><code>-p|&#8211;projection</code> <i>num</i></dt>
+<dd> Projection type (default: 0)</dd>
+<dt><code>-f|&#8211;fov</code> <i>float</i></dt>
+<dd> Horizontal field of view of images (default: 50)</dd>
+<dt><code>-s|&#8211;stacklength</code> <i>num</i></dt>
+<dd> Number of images in stack (default: 1, no stacks)</dd>
+<dt><code>-l|&#8211;linkstacks</code></dt>
+<dd> Link image positions in stacks</dd>
+<dt><code>-h|&#8211;help</code></dt>
+<dd> shows help</dd></dl>
 <h2>AUTHORS</h2>
 <p> Thomas Modes </p>
 <h2>Index</h2>

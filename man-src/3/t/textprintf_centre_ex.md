@@ -10,9 +10,7 @@ description: "textprintf_centre_ex – Formatted centered output of a string. Al
 <p>textprintf_centre_ex &#8211; Formatted centered output of a string. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void textprintf_centre_ex(BITMAP *bmp, const FONT *f, int x, int y,
-
                           int color, int bg, const char *fmt, ...);</code></pre>
 <h2>Description</h2>
 <p>Like textprintf_ex(), but interprets the x coordinate as the centre rather than the left edge of the string. This function shares the text length limitation of textprintf_ex(). Example: </p>

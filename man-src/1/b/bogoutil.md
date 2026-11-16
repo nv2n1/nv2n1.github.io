@@ -11,15 +11,15 @@ description: "bogoutil – Dumps, loads, and maintains bogofilter database files
 <p> bogoutil &#8211; Dumps, loads, and maintains bogofilter database files </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>bogoutil</code> {-h | -V}</p>
-<dt> <code>bogoutil</code> [options] {-d&nbsp;<wbr><i>file</i> | -H&nbsp;<wbr><i>file</i> | -l&nbsp;<wbr><i>file</i> | -m&nbsp;<wbr><i>file</i> | -w&nbsp;<wbr><i>file</i> | -p&nbsp;<wbr><i>file</i>}</p>
-<dt> <code>bogoutil</code> {-r&nbsp;<wbr><i>file</i> | -R&nbsp;<wbr><i>file</i>}</p>
-<dt> <code>bogoutil</code> {&#8211;db-print-leafpage-count&nbsp;<wbr><i>file</i> | &#8211;db-print-pagesize&nbsp;<wbr><i>file</i> | &#8211;db-verify&nbsp;<wbr><i>file</i> | &#8211;db-checkpoint&nbsp;<wbr><i>directory</i>&nbsp;<wbr>[flag&#8230;] | &#8211;db-list-logfiles&nbsp;<wbr><i>directory</i> | &#8211;db-prune&nbsp;<wbr><i>directory</i> | &#8211;db-recover&nbsp;<wbr><i>directory</i> | &#8211;db-recover-harder&nbsp;<wbr><i>directory</i> | &#8211;db-remove-environment&nbsp;<wbr><i>directory</i>}</dl>
-<dd>where <code>options</code> is</p>
+<dt> <code>bogoutil</code> {-h | -V}</dt>
+<dt> <code>bogoutil</code> [options] {-d&nbsp;<wbr><i>file</i> | -H&nbsp;<wbr><i>file</i> | -l&nbsp;<wbr><i>file</i> | -m&nbsp;<wbr><i>file</i> | -w&nbsp;<wbr><i>file</i> | -p&nbsp;<wbr><i>file</i>}</dt>
+<dt> <code>bogoutil</code> {-r&nbsp;<wbr><i>file</i> | -R&nbsp;<wbr><i>file</i>}</dt>
+<dt> <code>bogoutil</code> {&#8211;db-print-leafpage-count&nbsp;<wbr><i>file</i> | &#8211;db-print-pagesize&nbsp;<wbr><i>file</i> | &#8211;db-verify&nbsp;<wbr><i>file</i> | &#8211;db-checkpoint&nbsp;<wbr><i>directory</i>&nbsp;<wbr>[flag&#8230;] | &#8211;db-list-logfiles&nbsp;<wbr><i>directory</i> | &#8211;db-prune&nbsp;<wbr><i>directory</i> | &#8211;db-recover&nbsp;<wbr><i>directory</i> | &#8211;db-recover-harder&nbsp;<wbr><i>directory</i> | &#8211;db-remove-environment&nbsp;<wbr><i>directory</i>}</dt></dl>
+<dd>where <code>options</code> is</dd>
 <dl>
-<dt> <code>bogoutil</code> [-v] [-n] [-C] [-D] [-a&nbsp;<wbr><i>age</i>] [-c&nbsp;<wbr><i>count</i>] [-s&nbsp;<wbr><i>min,max</i>] [-y&nbsp;<wbr><i>date</i>] [-I&nbsp;<wbr><i>file</i>] [-O&nbsp;<wbr><i>file</i>] [-x&nbsp;<wbr><i>flags</i>] [&#8211;config-file&nbsp;<wbr><i>file</i>]</dl>
+<dt> <code>bogoutil</code> [-v] [-n] [-C] [-D] [-a&nbsp;<wbr><i>age</i>] [-c&nbsp;<wbr><i>count</i>] [-s&nbsp;<wbr><i>min,max</i>] [-y&nbsp;<wbr><i>date</i>] [-I&nbsp;<wbr><i>file</i>] [-O&nbsp;<wbr><i>file</i>] [-x&nbsp;<wbr><i>flags</i>] [&#8211;config-file&nbsp;<wbr><i>file</i>]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>Bogoutil is part of the bogofilter Bayesian spam filter package. </p>
+<dd>Bogoutil is part of the bogofilter Bayesian spam filter package. </dd>
 <p> It is used to dump and load bogofilter&#8217;s Berkeley DB databases to and from text files, perform database maintenance functions, and to display the values for specific words.</p>
 <h2>OPTIONS</h2>
 <p> The <code>-d </code><i>file</i> option tells bogoutil to print the contents of the database file to <code>stdout</code>. </p>
@@ -67,10 +67,10 @@ description: "bogoutil – Dumps, loads, and maintains bogofilter database files
 <p> <a href="/docs/linux/man/1-bogofilter/">bogofilter</a>(1), <a href="/docs/linux/man/1-bogolexer/">bogolexer</a>(1), <a href="/docs/linux/man/1-bogotune/">bogotune</a>(1), <a href="/docs/linux/man/1-bogoupgrade/">bogoupgrade</a>(1)</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> the bogofilter project page</p>
+<dt> 1.</dt>
+<dd> the bogofilter project page</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://bogofilter.sourceforge.net/">http://bogofilter.sourceforge.net/</a></dl>
+</dt><dd> <a rel="nofollow" href="http://bogofilter.sourceforge.net/">http://bogofilter.sourceforge.net/</a></dd></dl>
 </dl>
 <h2>Index</h2>

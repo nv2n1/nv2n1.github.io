@@ -18,38 +18,38 @@ description: "nfstest_file – Find all packets for a specific file"
 <p> Note: A packet call can be displayed out of order if the call is not matched by any of the file handles, state ids or names but its reply is matched so its corresponding call is displayed right before the reply. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&#8211;version</p>
-<dd> show program&#8217;s version number and exit</p>
-<dt>-h, &#8211;help</p>
-<dd> show this help message and exit</p>
-<dt>-p PATH, &#8211;path=PATH</p>
-<dd> Path relative to the mount point, the path can be specified by its file handle &#8216;FH:0xc3f001b4&#8217;. Also the relative path could start with a directory file handle &#8216;DH:0x0c35bb58/file_name&#8217;</p>
-<dt>&#8211;stid=STID</p>
-<dd> State id to include in the search</p>
-<dt>-v VERBOSE, &#8211;verbose=VERBOSE</p>
-<dd> Verbose level bitmask [default: 1]. bitmap 0x01: one line per packet. bitmap 0x02: one line per layer. bitmap 0x04: real verbose.</p>
-<dt>-s START, &#8211;start=START</p>
-<dd> Start index [default: 0]</p>
-<dt>-e END, &#8211;end=END</p>
-<dd> End index [default: 0]</p>
-<dt>-z TZ, &#8211;tz=TZ</p>
-<dd> Time zone to use to display timestamps </p>
+<dt>&#8211;version</dt>
+<dd> show program&#8217;s version number and exit</dd>
+<dt>-h, &#8211;help</dt>
+<dd> show this help message and exit</dd>
+<dt>-p PATH, &#8211;path=PATH</dt>
+<dd> Path relative to the mount point, the path can be specified by its file handle &#8216;FH:0xc3f001b4&#8217;. Also the relative path could start with a directory file handle &#8216;DH:0x0c35bb58/file_name&#8217;</dd>
+<dt>&#8211;stid=STID</dt>
+<dd> State id to include in the search</dd>
+<dt>-v VERBOSE, &#8211;verbose=VERBOSE</dt>
+<dd> Verbose level bitmask [default: 1]. bitmap 0x01: one line per packet. bitmap 0x02: one line per layer. bitmap 0x04: real verbose.</dd>
+<dt>-s START, &#8211;start=START</dt>
+<dd> Start index [default: 0]</dd>
+<dt>-e END, &#8211;end=END</dt>
+<dd> End index [default: 0]</dd>
+<dt>-z TZ, &#8211;tz=TZ</dt>
+<dd> Time zone to use to display timestamps </dd>
 </dl>
 <h3>Packet display:</h3>
 <dl>
-<dt>&#8211;crc16=CRC16</p>
-<dd> Display CRC16 encoded strings [default: True]</p>
-<dt>&#8211;crc32=CRC32</p>
-<dd> Display CRC32 encoded strings [default: True]</p>
-<dt>&#8211;strsize=STRSIZE</p>
-<dd> Truncate all strings to this size [default: 0] </p>
+<dt>&#8211;crc16=CRC16</dt>
+<dd> Display CRC16 encoded strings [default: True]</dd>
+<dt>&#8211;crc32=CRC32</dt>
+<dd> Display CRC32 encoded strings [default: True]</dd>
+<dt>&#8211;strsize=STRSIZE</dt>
+<dd> Truncate all strings to this size [default: 0] </dd>
 </dl>
 <h3>Debug:</h3>
 <dl>
-<dt>&#8211;enum-check=ENUM_CHECK</p>
-<dd> If set to True, enums are strictly enforced [default: True]</p>
-<dt>&#8211;debug-level=DEBUG_LEVEL</p>
-<dd> Set debug level messages</dl>
+<dt>&#8211;enum-check=ENUM_CHECK</dt>
+<dd> If set to True, enums are strictly enforced [default: True]</dd>
+<dt>&#8211;debug-level=DEBUG_LEVEL</dt>
+<dd> Set debug level messages</dd></dl>
 <h2>EXAMPLES</h2>
 <p> # Find all packets for relative path: nfstest_file -p data/name_d_1/name_d_2/name_f_13 nested_dir_v3.cap </p>
 <p> # Find all packets for relative path, starting with a directory file handle: nfstest_file -p DH:0x34ac5f28/name_d_1/name_d_2/name_f_13 nested_dir_v3.cap </p>

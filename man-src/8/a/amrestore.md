@@ -10,8 +10,8 @@ description: "amrestore – low-level data-extraction from Amanda volumes"
 <p>amrestore &#8211; low-level data-extraction from Amanda volumes</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>amrestore</code> [&#8211;config&nbsp;<wbr><i>config</i>] [-r | -c | -C] [-b&nbsp;<wbr><i>blocksize</i>] [-f&nbsp;<wbr><i>filenum</i>] [-l&nbsp;<wbr><i>label</i>] [-p] [-h] [&#8211;exact-match] [<code>-o</code>&nbsp;<wbr><i>configoption</i>&#8230;] [{<i>changerspec</i>} | {[&#8211;holding]&nbsp;<wbr><i>holdingfile</i>}] [<i>hostname</i>&nbsp;<wbr>[&nbsp;<wbr><i>diskname</i>&nbsp;<wbr>[&nbsp;<wbr><i>datestamp</i>&nbsp;<wbr>[&nbsp;<wbr><i>hostname</i>&nbsp;<wbr>[&nbsp;<wbr><i>diskname</i>&nbsp;<wbr>[&nbsp;<wbr><i>datestamp</i>&nbsp;<wbr>&#8230;&nbsp;<wbr>]&nbsp;<wbr>]&nbsp;<wbr>]&nbsp;<wbr>]&nbsp;<wbr>]]</dl>
-<dd>Note that this is the only Amanda command which does not take a configuration name as its first argument.</p>
+<dt> <code>amrestore</code> [&#8211;config&nbsp;<wbr><i>config</i>] [-r | -c | -C] [-b&nbsp;<wbr><i>blocksize</i>] [-f&nbsp;<wbr><i>filenum</i>] [-l&nbsp;<wbr><i>label</i>] [-p] [-h] [&#8211;exact-match] [<code>-o</code>&nbsp;<wbr><i>configoption</i>&#8230;] [{<i>changerspec</i>} | {[&#8211;holding]&nbsp;<wbr><i>holdingfile</i>}] [<i>hostname</i>&nbsp;<wbr>[&nbsp;<wbr><i>diskname</i>&nbsp;<wbr>[&nbsp;<wbr><i>datestamp</i>&nbsp;<wbr>[&nbsp;<wbr><i>hostname</i>&nbsp;<wbr>[&nbsp;<wbr><i>diskname</i>&nbsp;<wbr>[&nbsp;<wbr><i>datestamp</i>&nbsp;<wbr>&#8230;&nbsp;<wbr>]&nbsp;<wbr>]&nbsp;<wbr>]&nbsp;<wbr>]&nbsp;<wbr>]]</dt></dl>
+<dd>Note that this is the only Amanda command which does not take a configuration name as its first argument.</dd>
 <h2>Description</h2>
 <p><i>Amrestore</i> is a very low-level tool for extracting data from Amanda volumes. It does not consult any catalog information or other metadata, basing its operations only on the headers found on the volume. This makes it an appropriate tool for bare-metal restores of an Amanda server, or other situations where the catalog is not available. </p>
 <p> See <code><a href="/docs/linux/man/8-amfetchdump/">amfetchdump</a></code>(8) and <code><a href="/docs/linux/man/8-amrecover/">amrecover</a></code>(8) for higher-level recoveries. </p>
@@ -22,31 +22,31 @@ description: "amrestore – low-level data-extraction from Amanda volumes"
 <h2>Options</h2>
 <p><code>-b </code><i>blocksize</i></p>
 <dl>
-<dd>Use the given blocksize to read the volume. The default is defined by the device.</dl>
+<dd>Use the given blocksize to read the volume. The default is defined by the device.</dd></dl>
 <p> <code>-f </code><i>filenum</i></p>
 <dl>
-<dd>Seek to file <i>filenum</i> before beginning the restore operation.</dl>
+<dd>Seek to file <i>filenum</i> before beginning the restore operation.</dd></dl>
 <p> <code>-l </code><i>label</i></p>
 <dl>
-<dd>Check that the volume has label <i>label</i>.</dl>
+<dd>Check that the volume has label <i>label</i>.</dd></dl>
 <p> <code>-p</code></p>
 <dl>
-<dd>Pipe the first matching file to standard output. This is typically used in a shell pipeline to send the data to a process like <code>tar</code> for extraction.</dl>
+<dd>Pipe the first matching file to standard output. This is typically used in a shell pipeline to send the data to a process like <code>tar</code> for extraction.</dd></dl>
 <p> <code>-c</code>, <code>-C</code></p>
 <dl>
-<dd>If the file is not already compressed, compress it using the fastest (<code>-c</code>) or best (<code>-C</code>) compression algorithm. Note that <code>amrestore</code> will not re-compress an already-compressed file. Without either of these options, <code>amrestore</code> will automatically uncompress any compressed files. This option is useful when the destination disk is small.</dl>
+<dd>If the file is not already compressed, compress it using the fastest (<code>-c</code>) or best (<code>-C</code>) compression algorithm. Note that <code>amrestore</code> will not re-compress an already-compressed file. Without either of these options, <code>amrestore</code> will automatically uncompress any compressed files. This option is useful when the destination disk is small.</dd></dl>
 <p> <code>-h</code></p>
 <dl>
-<dd>Include 32k headers on all output files, similar to a holding file. This header can be read by another application or utility (see <code>Amanda::Header</code>) during the next phase of processing.</dl>
+<dd>Include 32k headers on all output files, similar to a holding file. This header can be read by another application or utility (see <code>Amanda::Header</code>) during the next phase of processing.</dd></dl>
 <p> <code>-r</code></p>
 <dl>
-<dd>Output raw files. This is similar to <code>-h</code>, but also disables any automatic decompression. Output file names will have a .RAW extension.</dl>
+<dd>Output raw files. This is similar to <code>-h</code>, but also disables any automatic decompression. Output file names will have a .RAW extension.</dd></dl>
 <p> <code>&#8211;exact-match</code></p>
 <dl>
-<dd>The host and disk are parsed as exact values</dl>
+<dd>The host and disk are parsed as exact values</dd></dl>
 <p> <code>-o </code><i>configoption</i></p>
 <dl>
-<dd>See the &quot;CONFIGURATION OVERRIDE&quot; section in <code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8).</dl>
+<dd>See the &quot;CONFIGURATION OVERRIDE&quot; section in <code><a href="/docs/linux/man/8-amanda/">amanda</a></code>(8).</dd></dl>
 <h2>Examples</h2>
 <p>The following does an interactive restore of disk <i>rz3g</i> from host <i>seine</i>, to restore particular files. Note the use of the <i>b</i> option to <i>restore</i>, which causes it to read in units of two 512-byte blocks (1 Kbyte) at a time. This helps keep it from complaining about short reads. </p>
 <pre> amrestore -p /dev/nrmt9 seine rz3g | tar -xv</pre>
@@ -67,4 +67,4 @@ description: "amrestore – low-level data-extraction from Amanda volumes"
 <p> <code>Stefan G. Weichinger</code> &lt;sgw [at] amanda.org&gt; </p>
 <p> <code>Dustin J. Mitchell</code> &lt;dustin [at] zmanda.com&gt;</p>
 <dl>
-<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dl>
+<dd>Zmanda, Inc. (<a rel="nofollow" href="http://www.zmanda.com)">http://www.zmanda.com)</a></dd></dl>

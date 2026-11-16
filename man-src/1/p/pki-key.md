@@ -19,55 +19,55 @@ pki[CLI options]&lt;subsystem&gt; - key pki[CLI options]&lt;subsystem&gt; - key 
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-key</code></p>
 <dl>
 <dt>
-<dd> This command is to list available key commands.</dl>
+</dt><dd> This command is to list available key commands.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-key-find</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to list keys.</dl>
+</dt><dd> This command is to list keys.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-key-show</code> &lt;Key ID&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to view the details of a key in the KRA.</dl>
+</dt><dd> This command is to view the details of a key in the KRA.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-key-request-find</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to list key requests.</dl>
+</dt><dd> This command is to list key requests.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-key-request-show</code> &lt;Request ID&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to view the details of a key request submitted to the KRA.</dl>
+</dt><dd> This command is to view the details of a key request submitted to the KRA.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-key-mod</code> &lt;Key ID&gt; &#8211;status &lt;status&gt;[command options]</p>
 <dl>
 <dt>
-<dd> This command is to modify the status of a particular key in the KRA.</dl>
+</dt><dd> This command is to modify the status of a particular key in the KRA.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-key-template-find</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to list the templates for all types of requests in the system.</dl>
+</dt><dd> This command is to list the templates for all types of requests in the system.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-key-template-show</code> &lt;Template ID&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to view details of the template of a specific key request.</dl>
+</dt><dd> This command is to view details of the template of a specific key request.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-key-archive</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to archive a secret in the DRM.</dl>
+</dt><dd> This command is to archive a secret in the DRM.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-key-retrieve</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to retrieve a secret stored in the DRM.</dl>
+</dt><dd> This command is to retrieve a secret stored in the DRM.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-key-generate</code> &lt;Client Key ID&gt; &#8211;key-algorithm &lt;algorithm&gt; [command options]</p>
 <dl>
 <dt>
-<dd> This command is to generate a key in the DRM.</dl>
+</dt><dd> This command is to generate a key in the DRM.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-key-recover</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to recover details of a key in the DRM.</dl>
+</dt><dd> This command is to recover details of a key in the DRM.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-key-request-review</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to review a key request submitted ot the DRM.</dl>
+</dt><dd> This command is to review a key request submitted ot the DRM.</dd></dl>
 <h2>OPTIONS</h2>
 <p> The CLI options are described in <code><a href="/docs/linux/man/1-pki/">pki</a></code>(1). </p>
 <h2>OPERATIONS</h2>

@@ -17,20 +17,20 @@ description: "avahi-dnsconfd – Unicast DNS server from mDNS/DNS-SD configurati
 <p>avahi-dnsconfd connects to a running avahi-daemon and runs the script <i>/etc/avahi/dnsconfd.action</i> for each unicast DNS server that is announced on the local LAN. This is useful for configuring unicast DNS servers in a DHCP-like fashion with mDNS.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-D | &#8211;daemonize</code></p>
-<dd>Daemonize after startup and redirect log messages to syslog.</p>
-<dt><code>-s | &#8211;syslog</code></p>
-<dd>Log to syslog instead of STDERR. Implied by <code>&#8211;daemonize</code>.</p>
-<dt><code>-k | &#8211;kill</code></p>
-<dd>Kill an already running avahi-dnsconfd. (equivalent to sending a SIGTERM)</p>
-<dt><code>-r | &#8211;refresh</code></p>
-<dd>Tell an already running avahi-dnsconfd to refresh the DNS server data. (equivalent to sending a SIGHUP)</p>
-<dt><code>-c | &#8211;check</code></p>
-<dd>Return 0 as return code when avahi-dnsconfd is already running.</p>
-<dt><code>-h | &#8211;help</code></p>
-<dd>Show help</p>
-<dt><code>-v | &#8211;version</code></p>
-<dd>Show version information</dl>
+<dt><code>-D | &#8211;daemonize</code></dt>
+<dd>Daemonize after startup and redirect log messages to syslog.</dd>
+<dt><code>-s | &#8211;syslog</code></dt>
+<dd>Log to syslog instead of STDERR. Implied by <code>&#8211;daemonize</code>.</dd>
+<dt><code>-k | &#8211;kill</code></dt>
+<dd>Kill an already running avahi-dnsconfd. (equivalent to sending a SIGTERM)</dd>
+<dt><code>-r | &#8211;refresh</code></dt>
+<dd>Tell an already running avahi-dnsconfd to refresh the DNS server data. (equivalent to sending a SIGHUP)</dd>
+<dt><code>-c | &#8211;check</code></dt>
+<dd>Return 0 as return code when avahi-dnsconfd is already running.</dd>
+<dt><code>-h | &#8211;help</code></dt>
+<dd>Show help</dd>
+<dt><code>-v | &#8211;version</code></dt>
+<dd>Show version information</dd></dl>
 <h2>Files</h2>
 <p><i>/etc/avahi/avahi-dnsconfd.action</i>: the script to run when a DNS server is found or removed.</p>
 <h2>Signals</h2>

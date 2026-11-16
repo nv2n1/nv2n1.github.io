@@ -27,7 +27,7 @@ The FORTRAN statement &quot;CALL RETSR(IROLD)&quot; is normally used to return t
  The argument of RETSR is as follows: 
 
 <dl><dt>IROLD
-<dd>(an input expression of type INTEGER) - Specifies a desired value for the internal flag that indicates whether recovery mode is in effect or not. The value 1 turns recovery mode on and the value 2 turns it off. Normally, one uses a value of IROLD that was previously returned by a call to ENTSR.</dl>
+</dt><dd>(an input expression of type INTEGER) - Specifies a desired value for the internal flag that indicates whether recovery mode is in effect or not. The value 1 turns recovery mode on and the value 2 turns it off. Normally, one uses a value of IROLD that was previously returned by a call to ENTSR.</dd></dl>
 
 <h2>C-Binding Description</h2>
 

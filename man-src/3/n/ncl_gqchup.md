@@ -12,11 +12,11 @@ GQCHUP (Inquire character up vector) - retrieves the current value of the charac
 
  void ginq_char_up_vec(Gint *err_ind, Gvec *char_up_vec);
 <h2>Description</h2><dl COMPACT><dt>ERRIND
-<dd>(Integer, Output) - If the inquired values cannot be returned correctly, a non-zero error indicator is returned in ERRIND, otherwise a zero is returned. Consult &quot;User's Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.
-<dt>CHUX
-<dd>(Real, Output) - Gives the X world coordinate of a the up vector.
-<dt>CHUY
-<dd>(Real, Output) - Gives the Y world coordinate of a the up vector.</dl><h2>Usage</h2>The up vector is that vector formed by the two coordinate points (0.,0.) and (CHUX,CHUY). See GSCHUP for more details on the meaning of the character up vector.
+</dt><dd>(Integer, Output) - If the inquired values cannot be returned correctly, a non-zero error indicator is returned in ERRIND, otherwise a zero is returned. Consult &quot;User's Guide for NCAR GKS-0A Graphics&quot; for a description of the meaning of the error indicators.
+</dd><dt>CHUX
+</dt><dd>(Real, Output) - Gives the X world coordinate of a the up vector.
+</dd><dt>CHUY
+</dt><dd>(Real, Output) - Gives the Y world coordinate of a the up vector.</dd></dl><h2>Usage</h2>The up vector is that vector formed by the two coordinate points (0.,0.) and (CHUX,CHUY). See GSCHUP for more details on the meaning of the character up vector.
 <h2>Access</h2>To use GKS routines, load the NCAR GKS-0A library ncarg_gks.
 <h2>See Also</h2>Online: gtx, gstxp, gstxal, gstxfp, gschh, gschsp, gschup, gschxp, gscr, gstxci, gqtxp, gqtxal, gqtxfp, gqchh, gqchsp, gqchxp, plotchar, ginq_char_up_vec 
 

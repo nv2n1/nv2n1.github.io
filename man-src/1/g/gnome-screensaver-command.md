@@ -15,20 +15,20 @@ description: "gnome-screensaver-command – controls GNOME screensaver"
 <p> gnome-screensaver-command is a tool for controlling an already running instance of gnome-screensaver.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;exit</code></p>
-<dd> Causes the screensaver to exit gracefully</p>
-<dt><code>-q, &#8211;query</code></p>
-<dd> Query the state of the screensaver</p>
-<dt><code>-t, &#8211;time</code></p>
-<dd> Query the length of time the screensaver has been active</p>
-<dt><code>-l, &#8211;lock</code></p>
-<dd> Tells the running screensaver process to lock the screen immediately</p>
-<dt><code>-a, &#8211;activate</code></p>
-<dd> Turn the screensaver on (blank the screen)</p>
-<dt><code>-d, &#8211;deactivate</code></p>
-<dd> If the screensaver is active then deactivate it (un-blank the screen)</p>
-<dt><code>-V, &#8211;version</code></p>
-<dd> Version of this application</dl>
+<dt><code>&#8211;exit</code></dt>
+<dd> Causes the screensaver to exit gracefully</dd>
+<dt><code>-q, &#8211;query</code></dt>
+<dd> Query the state of the screensaver</dd>
+<dt><code>-t, &#8211;time</code></dt>
+<dd> Query the length of time the screensaver has been active</dd>
+<dt><code>-l, &#8211;lock</code></dt>
+<dd> Tells the running screensaver process to lock the screen immediately</dd>
+<dt><code>-a, &#8211;activate</code></dt>
+<dd> Turn the screensaver on (blank the screen)</dd>
+<dt><code>-d, &#8211;deactivate</code></dt>
+<dd> If the screensaver is active then deactivate it (un-blank the screen)</dd>
+<dt><code>-V, &#8211;version</code></dt>
+<dd> Version of this application</dd></dl>
 <h2>AUTHORS</h2>
 <p> <code>gnome-screensaver-command</code> is written by William Jon McCann &lt;mccann [at] jhu.edu&gt;. </p>
 <p> This manual page was written by Sven Arvidsson &lt;sa [at] whiz.se&gt;.</p>

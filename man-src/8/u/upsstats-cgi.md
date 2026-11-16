@@ -12,7 +12,7 @@ description: "upsstats.cgi – Web-based UPS status viewer"
 <p><code>upsstats.cgi</code></p>
 <dl>
 <dd><font SIZE="+1"> <code>Note</code> </font><br />
- As a CGI program, this should be invoked through your web server. If you run it from the command line, it will either complain about unauthorized access or spew a bunch of HTML at you. </p>
+ As a CGI program, this should be invoked through your web server. If you run it from the command line, it will either complain about unauthorized access or spew a bunch of HTML at you. </dd>
 <h2>Description</h2>
 <p><code>upsstats.cgi</code> uses template files to build web pages containing status information from UPS hardware. It can repeat sections of those template files to monitor several UPSes simultaneously, or focus on a single UPS. </p>
 <p> These templates can also include references to <code><a href="/docs/linux/man/8-upsimage-cgi/">upsimage.cgi</a></code>(8) for graphical displays of battery charge levels, voltage readings, and the UPS load.</p>
@@ -28,3 +28,4 @@ description: "upsstats.cgi – Web-based UPS status viewer"
 <p><code><a href="/docs/linux/man/8-upsimage-cgi/">upsimage.cgi</a></code>(8)</p>
 <h3>Internet resources:</h3>
 <p>The NUT (Network UPS Tools) home page: <a rel="nofollow" href="http://www.networkupstools.org/">http://www.networkupstools.org/</a> </p>
+</dl>

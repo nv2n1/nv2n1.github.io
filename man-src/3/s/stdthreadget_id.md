@@ -24,17 +24,13 @@ A value of type std::thread::id identifying the thread associated with *this. If
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;thread&gt;
-
 #include &lt;chrono&gt;
 void foo()
-
 {
     std::this_thread::sleep_for(std::chrono::seconds(1));
 }
 int main()
-
 {
     std::thread t1(foo);
     std::thread::id t1_id = t1.get_id();

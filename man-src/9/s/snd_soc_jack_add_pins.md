@@ -15,15 +15,15 @@ snd_soc_jack_add_pins - Associate DAPM pins with an ASoC jack
 <h2>Arguments</h2>
 
 <i>jack</i>
-<dl><dd><dd>ASoC jack</dl>
+<dl><dd></dd><dd>ASoC jack</dd></dl>
  
 
  <i>count</i>
-<dl><dd>Number of pins</dl>
+<dl><dd>Number of pins</dd></dl>
  
 
  <i>pins</i>
-<dl><dd>Array of pins</dl>
+<dl><dd>Array of pins</dd></dl>
 
 <h2>Description</h2>
 

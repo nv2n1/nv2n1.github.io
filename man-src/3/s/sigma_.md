@@ -10,20 +10,9 @@ description: "QuantLib::Vasicek – Vasicek model class"
 <p>QuantLib::Vasicek &#8211; Vasicek model class </p>
 <h2>Synopsis</h2>
 <pre><code>Vasicek (Rate r0=0.05, Real a=0.1, Real b=0.05, Real sigma=0.01, Real lambda=0.0)
-
-
-
 virtual Real discountBondOption (Option::Type type, Real strike, Time maturity, Time bondMaturity) const
-
-
-
 virtual boost::shared_ptr&lt; ShortRateDynamics &gt; dynamics () const
-
-
 returns the short-rate dynamics
-
-
-
 Protected Member Functions</code></pre>
 <p> Inherits <code>QuantLib::OneFactorAffineModel</code>. Inherited by <code>HullWhite</code>.</p>
 <h3>Classes</h3>
@@ -31,20 +20,9 @@ Protected Member Functions</code></pre>
  <i>Short-rate dynamics in the Vasicek model. </i></p>
 <h3>Public Member Functions</h3>
 <pre><code>Vasicek (Rate r0=0.05, Real a=0.1, Real b=0.05, Real sigma=0.01, Real lambda=0.0)
-
-
-
 virtual Real discountBondOption (Option::Type type, Real strike, Time maturity, Time bondMaturity) const
-
-
-
 virtual boost::shared_ptr&lt; ShortRateDynamics &gt; dynamics () const
-
-
 returns the short-rate dynamics
-
-
-
 Protected Member Functions</code></pre>
 <p> virtual Real <code>A</code> (Time t, Time T) const </p>
 <p> virtual Real <code>B</code> (Time t, Time T) const </p>

@@ -28,7 +28,7 @@ description: "PAPI_set_granularity –"
 <dl COMPACT>
 <dd><i>PAPI_OK</i><br />
  <i>PAPI_EINVAL</i> One or more of the arguments is invalid.<br />
-&nbsp;<wbr></dl>
+&nbsp;<wbr></dd></dl>
 <p> <code>PAPI_set_granularity</code> sets the default counting granularity for all new event sets created by <code>PAPI_create_eventset</code>. This call implicitly sets the granularity for the cpu component (component 0) and is included to preserve backward compatibility. </p>
 <p> <code>Example:</code></p>
 <dl COMPACT>
@@ -47,9 +47,9 @@ if (ret != PAPI_OK) handle_error(ret);
 ret = PAPI_create_eventset(&amp;EventSet);
 if (ret != PAPI_OK) handle_error(ret);
  * </pre>
-</dl>
+</dd></dl>
 <p> <code>See Also:</code></p>
 <dl COMPACT>
-<dd><code>PAPI_set_cmp_granularity</code> <code>PAPI_set_domain</code> <code>PAPI_set_opt</code> <code>PAPI_get_opt</code></dl>
+<dd><code>PAPI_set_cmp_granularity</code> <code>PAPI_set_domain</code> <code>PAPI_set_opt</code> <code>PAPI_get_opt</code></dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for PAPI from the source code.</p>

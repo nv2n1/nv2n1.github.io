@@ -23,18 +23,18 @@ description: "qmake – distributed parallel make, scheduling by Grid Engine."
 <p> In dynamic allocation mode, additional resource requests for individual rules can be specified by preceding the rule by the definition of an environment variable SGE_RREQ. The rule then takes the form SGE_RREQ=&quot;&lt;request&gt;&quot; &lt;rule&gt;, e.g. SGE_RREQ=&quot;-l lic=1&quot; cc -c &#8230; If such makefile rules are executed in a make utility other than qmake, the environment variable SGE_RREQ will be set in the environment established for the rule&#8217;s execution &#8211; without any effect.</p>
 <h2>EXAMPLES</h2>
 <pre>
-<dl><dt><dd>qmake -cwd -v PATH -pe compiling 1-10 --
-</dl>
+<dl><dt></dt><dd>qmake -cwd -v PATH -pe compiling 1-10 --
+</dd></dl>
 </pre>
 <p> will request between 1 and 10 slots in parallel environment &quot;compiling&quot;. If the SGE_ARCH environment variable is set to the machines architecture, a resource request will be inserted into the qmake command line to start the qmake job on the same architecture as the submit host. The <i>make</i> tasks will inherit the complete environment of the calling shell. It will execute as many parallel tasks as slots have been granted by Grid Engine. </p>
 <pre>
-<dl><dt><dd>qmake -l arch=sol-sparc -cwd -v PATH -- -j 4
-</dl>
+<dl><dt></dt><dd>qmake -l arch=sol-sparc -cwd -v PATH -- -j 4
+</dd></dl>
 </pre>
 <p> will submit each make rule as an individual qrsh job. A maximum of 4 tasks will be processed in parallel. The qmake job will be started on a machine of architecture sol-sparc, this resource request will also be inherited by the make tasks, i.e. all jobs created for the execution of make tasks will request the architecture sol-sparc. </p>
 <p> If the following Makefile is submitted with the above command line, additional resource requests will be made for individual rules: For the compile and link rules, compiler licenses (comp) and linker licenses (link) will be requested, in addition to the resource request made for the whole job (-l arch=sol-sparc) on the command line. </p>
 <pre>
-<dl><dt><dd>all: test
+<dl><dt></dt><dd>all: test
 clean:
         rm -f test main.o functions.o
 test: main.o functions.o
@@ -42,45 +42,43 @@ test: main.o functions.o
 main.o: main.c
         SGE_RREQ=&quot;-l comp=1&quot; cc -c -DALIASPATH=
 functions.o: functions.c
-        SGE_RREQ=&quot;-l comp=1&quot; cc -c -DALIASPATH=</dl>
+        SGE_RREQ=&quot;-l comp=1&quot; cc -c -DALIASPATH=</dd></dl>
 </pre>
 <p> The command line</p>
 <pre>
-<dl><dt><dd>qmake -cwd -v PATH -l arch=sol-sparc64 -pe make 3 --
-</dl>
+<dl><dt></dt><dd>qmake -cwd -v PATH -l arch=sol-sparc64 -pe make 3 --
+</dd></dl>
 </pre>
 <p> will request 3 parallel <i>make</i> tasks to be executed on hosts of architecture &quot;sol-sparc64&quot;. The submit may be done on a host of any architecture. </p>
 <p> The shell script </p>
 <pre>
-<dl><dt><dd>#!/bin/sh
+<dl><dt></dt><dd>#!/bin/sh
 qmake -inherit -- 
-</dl>
+</dd></dl>
 </pre>
 <p> can be submitted by </p>
 <pre>
-<dl><dt><dd>qsub -cwd -v PATH -pe make 1-10 [further ge options] &lt;script&gt;
-</dl>
+<dl><dt></dt><dd>qsub -cwd -v PATH -pe make 1-10 [further ge options] &lt;script&gt;
+</dd></dl>
 </pre>
 <p> <i>Qmake</i> will inherit the resources granted for the job submitted above under parallel environment &quot;make&quot;.</p>
 <h2>ENVIRONMENTAL VARIABLES</h2>
 <dl>
-<dt><code>GE_ROOT</code></p>
-<dd> Specifies the location of the Grid Engine standard configuration files.</p>
-<dt><code>GE_CELL</code></p>
-<dd> If set, specifies the default Grid Engine cell. To address a Grid Engine cell <i>qmake</i> uses (in the order of precedence): </p>
+<dt><code>GE_ROOT</code></dt>
+<dd> Specifies the location of the Grid Engine standard configuration files.</dd>
+<dt><code>GE_CELL</code></dt>
+<dd> If set, specifies the default Grid Engine cell. To address a Grid Engine cell <i>qmake</i> uses (in the order of precedence): </dd>
+<dl>
 <dl>
 <dt>
-<dd>
-<dl>
-<dt>
-<dd> The name of the cell specified in the environment variable GE_CELL, if it is set. </p>
+</dt><dd> The name of the cell specified in the environment variable GE_CELL, if it is set. </dd>
 <p> The name of the default cell, i.e. <code>default</code>. </p>
 </dl>
 </dl>
-<dt><code>GE_DEBUG_LEVEL</code></p>
-<dd> If set, specifies that debug information should be written to stderr. In addition the level of detail in which debug information is generated is defined.</p>
-<dt><code>SGE_ARCH</code></p>
-<dd> The architecture of the submit host. If this variable is set in the submission environment, qmake will request the given architecture for job execution (see DESCRIPTION above).</dl>
+<dt><code>GE_DEBUG_LEVEL</code></dt>
+<dd> If set, specifies that debug information should be written to stderr. In addition the level of detail in which debug information is generated is defined.</dd>
+<dt><code>SGE_ARCH</code></dt>
+<dd> The architecture of the submit host. If this variable is set in the submission environment, qmake will request the given architecture for job execution (see DESCRIPTION above).</dd></dl>
 <h2>KNOWN PROBLEMS</h2>
 <h3>Slow NFS server</h3>
 <p> Very low file server performance may lead to problems on depending files. </p>
@@ -89,25 +87,25 @@ qmake -inherit --
 <p> If multiple commands are executed in one rule, the makefile has to ensure that they are handled as one command line. </p>
 <p> Example: </p>
 <pre>
-<dl><dt><dd>libx.a:
-<dl><dt><dd>cd x
+<dl><dt></dt><dd>libx.a:
+</dd><dl><dt></dt><dd>cd x
 ar ru libx.a x.o
-</dl>
+</dd></dl>
 </dl>
 </pre>
 <p> Building libx.a will fail, if the commands are executed in parallel (and possibly on different hosts). Write the following instead: </p>
 <pre>
-<dl><dt><dd>libx.a:
-<dl><dt><dd>cd x ; ar ru libx.a x.o
-</dl>
+<dl><dt></dt><dd>libx.a:
+</dd><dl><dt></dt><dd>cd x ; ar ru libx.a x.o
+</dd></dl>
 </dl>
 </pre>
 <p> or </p>
 <pre>
-<dl><dt><dd>libx.a:
-<dl><dt><dd>cd x ; \
+<dl><dt></dt><dd>libx.a:
+</dd><dl><dt></dt><dd>cd x ; \
 ar ru libx.a x.o
-</dl>
+</dd></dl>
 </dl>
 </pre>
 <h2>SEE ALSO</h2>

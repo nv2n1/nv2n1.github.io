@@ -21,7 +21,8 @@ description: "systemd-ask-password-console.service, systemd-ask-password-console
 <p><code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-systemd-tty-ask-password-agent/">systemd-tty-ask-password-agent</a></code>(1), <code><a href="/docs/linux/man/1-wall/">wall</a></code>(1)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>developer documentation</p>
+<dt> 1.</dt>
+<dd>developer documentation</dd>
 <dl>
-<dd><a rel="nofollow" href="http://www.freedesktop.org/wiki/Software/systemd/PasswordAgents">http://www.freedesktop.org/wiki/Software/systemd/PasswordAgents</a></dl>
+<dd><a rel="nofollow" href="http://www.freedesktop.org/wiki/Software/systemd/PasswordAgents">http://www.freedesktop.org/wiki/Software/systemd/PasswordAgents</a></dd></dl>
+</dl>

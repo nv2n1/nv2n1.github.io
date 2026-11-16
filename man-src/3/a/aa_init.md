@@ -19,12 +19,12 @@ description: "aa_init – open the output display for AA-lib."
 <p> ); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>const struct aa_driver *driver</code></p>
-<dd> Driver you want to use. Available drivers are listed in the NULL terminated aa_drivers array.</p>
-<dt><code>const struct aa_hardware_params *defparams</code></p>
-<dd> Hardware parameters you want. Use aa_defparams for default values.</p>
-<dt><code>const void *driverdata</code></p>
-<dd> This pointer is passed dirrectly to driver used to specify additional driver dependent parameters.</dl>
+<dt><code>const struct aa_driver *driver</code></dt>
+<dd> Driver you want to use. Available drivers are listed in the NULL terminated aa_drivers array.</dd>
+<dt><code>const struct aa_hardware_params *defparams</code></dt>
+<dd> Hardware parameters you want. Use aa_defparams for default values.</dd>
+<dt><code>const void *driverdata</code></dt>
+<dd> This pointer is passed dirrectly to driver used to specify additional driver dependent parameters.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> This is the most primitive AA-lib initialization function. Allows better control over the process than the easier to use aa_autoinit function. </p>
 <p> Every AA-lib program ought to have call to aa_parseoptions before first call to aa_init.</p>

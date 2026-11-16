@@ -24,17 +24,16 @@ description: "git-standup – Recall the commit history"
 <p> This shows your commits since yesterday:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git standup
 a26d1f9 - add profile hook (69 minutes ago) &lt;spacewander&gt;
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> This shows the author&#8217;s commits since last week:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git standup spacewander &quot;last week&quot;
 a26d1f9 - add profile hook (70 minutes ago) &lt;spacewander&gt;
@@ -43,12 +42,11 @@ a26d1f9 - add profile hook (70 minutes ago) &lt;spacewander&gt;
 8e4182a - add watermark.png (7 days ago) &lt;spacewander&gt;
 46fef1d - use tinyXML to configure (7 days ago) &lt;spacewander&gt;
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> If current directory is not a git repo, git-standup will fetch data from all top-level git repos under it:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ cd ..
 $ git standup spacewander &quot;last week&quot; yesterday
@@ -58,8 +56,7 @@ someProject/
 8e4182a - add watermark.png (7 days ago) &lt;spacewander&gt;
 46fef1d - use tinyXML to configure (7 days ago) &lt;spacewander&gt;
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> Originally from <a rel="nofollow" href="https://github.com/kamranahmedse/git-standup">https://github.com/kamranahmedse/git-standup</a></p>
 <h2>REPORTING BUGS</h2>

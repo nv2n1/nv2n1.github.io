@@ -11,31 +11,31 @@ description: "XtDisplayInitialize, XtOpenDisplay, XtDatabase, XtScreenDatabase, 
 <h2>Syntax</h2>
 <p>#include &lt;X11/Intrinsic.h&gt;</p>
 <dl COMPACT>
-<dd>void XtDisplayInitialize(XtAppContext <i>app_context</i>, Display *<i>display</i>, const char *<i>application_name</i>, const char *<i>application_class</i>, XrmOptionDescRec *<i>options</i>, Cardinal <i>num_options</i>, int *<i>argc</i>, char **<i>argv</i>);</p>
-<dd>Display *XtOpenDisplay(XtAppContext <i>app_context</i>, const char *<i>display_string</i>, const char *<i>application_name</i>, const char *<i>application_class</i>, XrmOptionDescRec *<i>options</i>, Cardinal <i>num_options</i>, int *<i>argc</i>, char **<i>argv</i>);</p>
-<dd>void XtCloseDisplay(Display *<i>display</i>);</p>
-<dd>XrmDatabase XtDatabase(Display *<i>display</i>);</p>
-<dd>XrmDatabase XtScreenDatabase(Screen* <i>screen</i>);</dl>
+<dd>void XtDisplayInitialize(XtAppContext <i>app_context</i>, Display *<i>display</i>, const char *<i>application_name</i>, const char *<i>application_class</i>, XrmOptionDescRec *<i>options</i>, Cardinal <i>num_options</i>, int *<i>argc</i>, char **<i>argv</i>);</dd>
+<dd>Display *XtOpenDisplay(XtAppContext <i>app_context</i>, const char *<i>display_string</i>, const char *<i>application_name</i>, const char *<i>application_class</i>, XrmOptionDescRec *<i>options</i>, Cardinal <i>num_options</i>, int *<i>argc</i>, char **<i>argv</i>);</dd>
+<dd>void XtCloseDisplay(Display *<i>display</i>);</dd>
+<dd>XrmDatabase XtDatabase(Display *<i>display</i>);</dd>
+<dd>XrmDatabase XtScreenDatabase(Screen* <i>screen</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>argc</i></p>
-<dd>Specifies a pointer to the number of command line parameters.</p>
-<dt><i>argv</i></p>
-<dd>Specifies the command line parameters.</p>
-<dt><i>app_context</i></p>
-<dd>Specifies the application context.</p>
-<dt><i>application_class</i></p>
-<dd>Specifies the class name of this application, which usually is the generic name for all instances of this application.</p>
-<dt><i>application_name</i></p>
-<dd>Specifies the name of the application instance.</p>
-<dt><i>display</i></p>
-<dd>Specifies the display. Note that a display can be in at most one application context.</p>
-<dt><i>num_options</i></p>
-<dd>Specifies the number of entries in the options list.</p>
-<dt><i>options</i></p>
-<dd>Specifies how to parse the command line for any application-specific resources. The options argument is passed as a parameter to <code>XrmParseCommand</code>. For further information, see <i>Xlib &#8211; C Language X Interface</i>.</p>
-<dt><i>screen</i></p>
-<dd>Specifies the screen whose resource database is to be returned.</dl>
+<dt><i>argc</i></dt>
+<dd>Specifies a pointer to the number of command line parameters.</dd>
+<dt><i>argv</i></dt>
+<dd>Specifies the command line parameters.</dd>
+<dt><i>app_context</i></dt>
+<dd>Specifies the application context.</dd>
+<dt><i>application_class</i></dt>
+<dd>Specifies the class name of this application, which usually is the generic name for all instances of this application.</dd>
+<dt><i>application_name</i></dt>
+<dd>Specifies the name of the application instance.</dd>
+<dt><i>display</i></dt>
+<dd>Specifies the display. Note that a display can be in at most one application context.</dd>
+<dt><i>num_options</i></dt>
+<dd>Specifies the number of entries in the options list.</dd>
+<dt><i>options</i></dt>
+<dd>Specifies how to parse the command line for any application-specific resources. The options argument is passed as a parameter to <code>XrmParseCommand</code>. For further information, see <i>Xlib &#8211; C Language X Interface</i>.</dd>
+<dt><i>screen</i></dt>
+<dd>Specifies the screen whose resource database is to be returned.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XtDisplayInitialize</code> function builds the resource database, calls the Xlib <code>XrmParseCommand</code> function to parse the command line, and performs other per display initialization. After <code>XrmParseCommand</code> has been called, argc and argv contain only those parameters that were not in the standard option table or in the table specified by the options argument. If the modified argc is not zero, most applications simply print out the modified argv along with a message listing the allowable options. On UNIX-based systems, the application name is usually the final component of argv[0]. If the synchronize resource is <code>True</code> for the specified application, <code>XtDisplayInitialize</code> calls the Xlib <code>XSynchronize</code> function to put Xlib into synchronous mode for this display connection. If the reverseVideo resource is <code>True</code>, the Intrinsics exchange <code>XtDefaultForeground</code> and <code>XtDefaultBackground</code> for widgets created on this display. (See Section 9.6.1). </p>
 <p> The <code>XtOpenDisplay</code> function calls <code>XOpenDisplay</code> the specified display name. If display_string is NULL, <code>XtOpenDisplay</code> uses the current value of the -display option specified in argv and if no display is specified in argv, uses the user&#8217;s default display (on UNIX-based systems, this is the value of the DISPLAY environment variable). </p>

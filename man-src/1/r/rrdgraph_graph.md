@@ -31,66 +31,66 @@ description: "rrdgraph_graph – rrdtool graph command reference"
 <p> Any text in <i>format</i> is printed literally with one exception: The percent character introduces a formatter string. This string can be: </p>
 <p> For printing values:</p>
 <dl>
-<dt><code>%%</code></p>
-<dd> just prints a literal &#8216;%&#8217; character</p>
-<dt><code>%#.#le</code></p>
-<dd> prints numbers like 1.2346e+04. The optional integers # denote field width and decimal precision.</p>
-<dt><code>%#.#lf</code></p>
-<dd> prints numbers like 12345.6789, with optional field width and precision.</p>
-<dt><code>%s</code></p>
-<dd> place this after %le, %lf or %lg. This will be replaced by the appropriate <font SIZE="-1">SI</font> magnitude unit and the value will be scaled accordingly (123456 -&gt; 123.456 k).</p>
-<dt><code>%S</code></p>
-<dd> is similar to %s. It does, however, use a previously defined magnitude unit. If there is no such unit yet, it tries to define one (just like %s) unless the value is zero, in which case the magnitude unit stays undefined. Thus, formatter strings using %S and no %s will all use the same magnitude unit except for zero values.</dl>
+<dt><code>%%</code></dt>
+<dd> just prints a literal &#8216;%&#8217; character</dd>
+<dt><code>%#.#le</code></dt>
+<dd> prints numbers like 1.2346e+04. The optional integers # denote field width and decimal precision.</dd>
+<dt><code>%#.#lf</code></dt>
+<dd> prints numbers like 12345.6789, with optional field width and precision.</dd>
+<dt><code>%s</code></dt>
+<dd> place this after %le, %lf or %lg. This will be replaced by the appropriate <font SIZE="-1">SI</font> magnitude unit and the value will be scaled accordingly (123456 -&gt; 123.456 k).</dd>
+<dt><code>%S</code></dt>
+<dd> is similar to %s. It does, however, use a previously defined magnitude unit. If there is no such unit yet, it tries to define one (just like %s) unless the value is zero, in which case the magnitude unit stays undefined. Thus, formatter strings using %S and no %s will all use the same magnitude unit except for zero values.</dd></dl>
 <p> If you <font SIZE="-1">PRINT</font> a <font SIZE="-1">VDEF</font> value, you can also print the time associated with it by appending the string <code>:strftime</code> to the format. Note that RRDtool uses the strftime function of your OSs C library. This means that the conversion specifier may vary. Check the manual page if you are uncertain. The following is a list of conversion specifiers usually supported across the board.</p>
 <dl>
-<dt><code>%a</code></p>
-<dd> The abbreviated weekday name according to the current locale.</p>
-<dt><code>%A</code></p>
-<dd> The full weekday name according to the current locale.</p>
-<dt><code>%b</code></p>
-<dd> The abbreviated month name according to the current locale.</p>
-<dt><code>%B</code></p>
-<dd> The full month name according to the current locale.</p>
-<dt><code>%c</code></p>
-<dd> The preferred date and time representation for the current locale.</p>
-<dt><code>%d</code></p>
-<dd> The day of the month as a decimal number (range 01 to 31).</p>
-<dt><code>%H</code></p>
-<dd> The hour as a decimal number using a 24-hour clock (range 00 to 23).</p>
-<dt><code>%I</code></p>
-<dd> The hour as a decimal number using a 12-hour clock (range 01 to 12).</p>
-<dt><code>%j</code></p>
-<dd> The day of the year as a decimal number (range 001 to 366).</p>
-<dt><code>%m</code></p>
-<dd> The month as a decimal number (range 01 to 12).</p>
-<dt><code>%M</code></p>
-<dd> The minute as a decimal number (range 00 to 59).</p>
-<dt><code>%p</code></p>
-<dd> Either `<font SIZE="-1">AM</font>&#8216; or `<font SIZE="-1">PM</font>&#8216; according to the given time value, or the corresponding strings for the current locale. Noon is treated as `pm&#8217; and midnight as `am&#8217;. Note that in many locales and `pm&#8217; notation is unsupported and in such cases <tt>%p</tt> will return an empty string.</p>
-<dt><code>%s</code></p>
-<dd> The second as a decimal number (range 00 to 61).</p>
-<dt><code>%S</code></p>
-<dd> The seconds since the epoch (1.1.1970) (libc dependent non standard!)</p>
-<dt><code>%U</code></p>
-<dd> The week number of the current year as a decimal number, range 00 to 53, starting with the first Sunday as the first day of week 01. See also <tt>%V</tt> and <tt>%W</tt>.</p>
-<dt><code>%V</code></p>
-<dd> The <font SIZE="-1">ISO</font> 8601:1988 week number of the current year as a decimal number, range 01 to 53, where week 1 is the first week that has at least 4 days in the current year, and with Monday as the first day of the week. See also <tt>%U</tt> and <tt>%W</tt>.</p>
-<dt><code>%w</code></p>
-<dd> The day of the week as a decimal, range 0 to 6, Sunday being 0. See also <tt>%u</tt>.</p>
-<dt><code>%W</code></p>
-<dd> The week number of the current year as a decimal number, range 00 to 53, starting with the first Monday as the first day of week 01.</p>
-<dt><code>%x</code></p>
-<dd> The preferred date representation for the current locale without the time.</p>
-<dt><code>%X</code></p>
-<dd> The preferred time representation for the current locale without the date.</p>
-<dt><code>%y</code></p>
-<dd> The year as a decimal number without a century (range 00 to 99).</p>
-<dt><code>%Y</code></p>
-<dd> The year as a decimal number including the century.</p>
-<dt><code>%Z</code></p>
-<dd> The time zone or name or abbreviation.</p>
-<dt><code>%%</code></p>
-<dd> A literal `%&#8217; character.</dl>
+<dt><code>%a</code></dt>
+<dd> The abbreviated weekday name according to the current locale.</dd>
+<dt><code>%A</code></dt>
+<dd> The full weekday name according to the current locale.</dd>
+<dt><code>%b</code></dt>
+<dd> The abbreviated month name according to the current locale.</dd>
+<dt><code>%B</code></dt>
+<dd> The full month name according to the current locale.</dd>
+<dt><code>%c</code></dt>
+<dd> The preferred date and time representation for the current locale.</dd>
+<dt><code>%d</code></dt>
+<dd> The day of the month as a decimal number (range 01 to 31).</dd>
+<dt><code>%H</code></dt>
+<dd> The hour as a decimal number using a 24-hour clock (range 00 to 23).</dd>
+<dt><code>%I</code></dt>
+<dd> The hour as a decimal number using a 12-hour clock (range 01 to 12).</dd>
+<dt><code>%j</code></dt>
+<dd> The day of the year as a decimal number (range 001 to 366).</dd>
+<dt><code>%m</code></dt>
+<dd> The month as a decimal number (range 01 to 12).</dd>
+<dt><code>%M</code></dt>
+<dd> The minute as a decimal number (range 00 to 59).</dd>
+<dt><code>%p</code></dt>
+<dd> Either `<font SIZE="-1">AM</font>&#8216; or `<font SIZE="-1">PM</font>&#8216; according to the given time value, or the corresponding strings for the current locale. Noon is treated as `pm&#8217; and midnight as `am&#8217;. Note that in many locales and `pm&#8217; notation is unsupported and in such cases <tt>%p</tt> will return an empty string.</dd>
+<dt><code>%s</code></dt>
+<dd> The second as a decimal number (range 00 to 61).</dd>
+<dt><code>%S</code></dt>
+<dd> The seconds since the epoch (1.1.1970) (libc dependent non standard!)</dd>
+<dt><code>%U</code></dt>
+<dd> The week number of the current year as a decimal number, range 00 to 53, starting with the first Sunday as the first day of week 01. See also <tt>%V</tt> and <tt>%W</tt>.</dd>
+<dt><code>%V</code></dt>
+<dd> The <font SIZE="-1">ISO</font> 8601:1988 week number of the current year as a decimal number, range 01 to 53, where week 1 is the first week that has at least 4 days in the current year, and with Monday as the first day of the week. See also <tt>%U</tt> and <tt>%W</tt>.</dd>
+<dt><code>%w</code></dt>
+<dd> The day of the week as a decimal, range 0 to 6, Sunday being 0. See also <tt>%u</tt>.</dd>
+<dt><code>%W</code></dt>
+<dd> The week number of the current year as a decimal number, range 00 to 53, starting with the first Monday as the first day of week 01.</dd>
+<dt><code>%x</code></dt>
+<dd> The preferred date representation for the current locale without the time.</dd>
+<dt><code>%X</code></dt>
+<dd> The preferred time representation for the current locale without the date.</dd>
+<dt><code>%y</code></dt>
+<dd> The year as a decimal number without a century (range 00 to 99).</dd>
+<dt><code>%Y</code></dt>
+<dd> The year as a decimal number including the century.</dd>
+<dt><code>%Z</code></dt>
+<dd> The time zone or name or abbreviation.</dd>
+<dt><code>%%</code></dt>
+<dd> A literal `%&#8217; character.</dd></dl>
 <p> <i></i><font SIZE="-1">PRINT:</font><i>vname</i>:<i></i><font SIZE="-1"><i>CF</i></font><i></i>:<i>format</i> </p>
 <p> <i>Deprecated. Use the new form of this command in new scripts.</i> The first form of this command is to be used with <font SIZE="-1"><code>CDEF</code></font> <i>vname</i>s.</p>
 <h3><font SIZE="-1">GRAPH</font></h3>
@@ -129,4 +129,7 @@ description: "rrdgraph_graph – rrdtool graph command reference"
 <p> A colon &#8216;:&#8217; in a <i>legend</i> argument will mark the end of the legend. To enter a &#8216;:&#8217; as part of a legend, the colon must be escaped with a backslash &#8216;\:&#8217;. Beware that many environments process backslashes themselves, so it may be necessary to write two backslashes in order to one being passed onto rrd_graph.</p>
 <h3>String Formatting</h3>
 <p> The text printed below the actual graph can be formatted by appending special escape characters at the end of a text. When ever such a character occurs, all pending text is pushed onto the graph according to the character specified. </p>
-<p> Valid markers are: <code>\j</code> for justified, <code>\l</code> for left aligned, <code></code> for right aligned, and <code>
+<p> Valid markers are: <code>\j</code> for justified, <code>\l</code> for left aligned, <code>
+</code> for right aligned, and <code>
+</p>
+</code>

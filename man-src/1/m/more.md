@@ -18,159 +18,159 @@ description: "more – file perusal filter for crt viewing"
 <p> <code>-d</code>, <code>&#8211;silent</code></p>
 <dl>
 <dt>
-<dd> Prompt with &quot;[Press space to continue, &#8216;q&#8217; to quit.]&quot;, and display &quot;[Press &#8216;h&#8217; for instructions.]&quot; instead of ringing the bell when an illegal key is pressed.</dl>
+</dt><dd> Prompt with &quot;[Press space to continue, &#8216;q&#8217; to quit.]&quot;, and display &quot;[Press &#8216;h&#8217; for instructions.]&quot; instead of ringing the bell when an illegal key is pressed.</dd></dl>
 <p> <code>-l</code>, <code>&#8211;logical</code></p>
 <dl>
 <dt>
-<dd> Do not pause after any line containing a <code>^L</code> (form feed).</dl>
+</dt><dd> Do not pause after any line containing a <code>^L</code> (form feed).</dd></dl>
 <p> <code>-f</code>, <code>&#8211;no-pause</code></p>
 <dl>
 <dt>
-<dd> Count logical lines, rather than screen lines (i.e., long lines are not folded).</dl>
+</dt><dd> Count logical lines, rather than screen lines (i.e., long lines are not folded).</dd></dl>
 <p> <code>-p</code>, <code>&#8211;print-over</code></p>
 <dl>
 <dt>
-<dd> Do not scroll. Instead, clear the whole screen and then display the text. Notice that this option is switched on automatically if the executable is named <code>page</code>.</dl>
+</dt><dd> Do not scroll. Instead, clear the whole screen and then display the text. Notice that this option is switched on automatically if the executable is named <code>page</code>.</dd></dl>
 <p> <code>-c</code>, <code>&#8211;clean-print</code></p>
 <dl>
 <dt>
-<dd> Do not scroll. Instead, paint each screen from the top, clearing the remainder of each line as it is displayed.</dl>
+</dt><dd> Do not scroll. Instead, paint each screen from the top, clearing the remainder of each line as it is displayed.</dd></dl>
 <p> <code>-s</code>, <code>&#8211;squeeze</code></p>
 <dl>
 <dt>
-<dd> Squeeze multiple blank lines into one.</dl>
+</dt><dd> Squeeze multiple blank lines into one.</dd></dl>
 <p> <code>-u</code>, <code>&#8211;plain</code></p>
 <dl>
 <dt>
-<dd> Suppress underlining. This option is silently ignored as backwards compatibility.</dl>
+</dt><dd> Suppress underlining. This option is silently ignored as backwards compatibility.</dd></dl>
 <p> <code>-n</code>, <code>&#8211;lines</code> <i>number</i></p>
 <dl>
 <dt>
-<dd> Specify the <i>number</i> of lines per screenful. The <i>number</i> argument is a positive decimal integer. The <code>&#8211;lines</code> option shall override any values obtained from any other source, such as number of lines reported by terminal.</dl>
+</dt><dd> Specify the <i>number</i> of lines per screenful. The <i>number</i> argument is a positive decimal integer. The <code>&#8211;lines</code> option shall override any values obtained from any other source, such as number of lines reported by terminal.</dd></dl>
 <p> <code>&#8211;</code><i>number</i></p>
 <dl>
 <dt>
-<dd> A numeric option means the same as <code>&#8211;lines</code> option argument.</dl>
+</dt><dd> A numeric option means the same as <code>&#8211;lines</code> option argument.</dd></dl>
 <p> <code>+</code><i>number</i></p>
 <dl>
 <dt>
-<dd> Start displaying each file at line <i>number</i>.</dl>
+</dt><dd> Start displaying each file at line <i>number</i>.</dd></dl>
 <p> <code>+</code>/<i>string</i></p>
 <dl>
 <dt>
-<dd> The <i>string</i> to be searched in each file before starting to display it.</dl>
+</dt><dd> The <i>string</i> to be searched in each file before starting to display it.</dd></dl>
 <p> <code>&#8211;help</code></p>
 <dl>
 <dt>
-<dd> Display help text and exit.</dl>
+</dt><dd> Display help text and exit.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
 <dt>
-<dd> Display version information and exit.</dl>
+</dt><dd> Display version information and exit.</dd></dl>
 <h2>COMMANDS</h2>
 <p> Interactive commands for <code>more</code> are based on <code><a href="/docs/linux/man/1-vi/">vi</a></code>(1). Some commands may be preceded by a decimal number, called k in the descriptions below. In the following descriptions, <code>^X</code> means <code>control-X</code>. </p>
 <p> <code>h</code> or <code>?</code></p>
 <dl>
 <dt>
-<dd> Help; display a summary of these commands. If you forget all other commands, remember this one.</dl>
+</dt><dd> Help; display a summary of these commands. If you forget all other commands, remember this one.</dd></dl>
 <p> <code>SPACE</code></p>
 <dl>
 <dt>
-<dd> Display next k lines of text. Defaults to current screen size.</dl>
+</dt><dd> Display next k lines of text. Defaults to current screen size.</dd></dl>
 <p> <code>z</code></p>
 <dl>
 <dt>
-<dd> Display next k lines of text. Defaults to current screen size. Argument becomes new default.</dl>
+</dt><dd> Display next k lines of text. Defaults to current screen size. Argument becomes new default.</dd></dl>
 <p> <code>RETURN</code></p>
 <dl>
 <dt>
-<dd> Display next k lines of text. Defaults to 1. Argument becomes new default.</dl>
+</dt><dd> Display next k lines of text. Defaults to 1. Argument becomes new default.</dd></dl>
 <p> <code>d</code> or <code>^D</code></p>
 <dl>
 <dt>
-<dd> Scroll k lines. Default is current scroll size, initially 11. Argument becomes new default.</dl>
+</dt><dd> Scroll k lines. Default is current scroll size, initially 11. Argument becomes new default.</dd></dl>
 <p> <code>q</code> or <code>Q</code> or <code>INTERRUPT</code></p>
 <dl>
 <dt>
-<dd> Exit.</dl>
+</dt><dd> Exit.</dd></dl>
 <p> <code>s</code></p>
 <dl>
 <dt>
-<dd> Skip forward k lines of text. Defaults to 1.</dl>
+</dt><dd> Skip forward k lines of text. Defaults to 1.</dd></dl>
 <p> <code>f</code></p>
 <dl>
 <dt>
-<dd> Skip forward k screenfuls of text. Defaults to 1.</dl>
+</dt><dd> Skip forward k screenfuls of text. Defaults to 1.</dd></dl>
 <p> <code>b</code> or <code>^B</code></p>
 <dl>
 <dt>
-<dd> Skip backwards k screenfuls of text. Defaults to 1. Only works with files, not pipes.</dl>
+</dt><dd> Skip backwards k screenfuls of text. Defaults to 1. Only works with files, not pipes.</dd></dl>
 <p> <code>&#8216;</code></p>
 <dl>
 <dt>
-<dd> Go to the place where the last search started.</dl>
+</dt><dd> Go to the place where the last search started.</dd></dl>
 <p> <code>=</code></p>
 <dl>
 <dt>
-<dd> Display current line number.</dl>
+</dt><dd> Display current line number.</dd></dl>
 <p> <code>/pattern</code></p>
 <dl>
 <dt>
-<dd> Search for kth occurrence of regular expression. Defaults to 1.</dl>
+</dt><dd> Search for kth occurrence of regular expression. Defaults to 1.</dd></dl>
 <p> <code>n</code></p>
 <dl>
 <dt>
-<dd> Search for kth occurrence of last regular expression. Defaults to 1.</dl>
+</dt><dd> Search for kth occurrence of last regular expression. Defaults to 1.</dd></dl>
 <p> <code>!command</code> or <code>:!command</code></p>
 <dl>
 <dt>
-<dd> Execute <i>command</i> in a subshell.</dl>
+</dt><dd> Execute <i>command</i> in a subshell.</dd></dl>
 <p> <code>v</code></p>
 <dl>
 <dt>
-<dd> Start up an editor at current line. The editor is taken from the environment variable <code>VISUAL</code> if defined, or <code>EDITOR</code> if <code>VISUAL</code> is not defined, or defaults to <code><a href="/docs/linux/man/1-vi/">vi</a></code>(1) if neither <code>VISUAL</code> nor <code>EDITOR</code> is defined.</dl>
+</dt><dd> Start up an editor at current line. The editor is taken from the environment variable <code>VISUAL</code> if defined, or <code>EDITOR</code> if <code>VISUAL</code> is not defined, or defaults to <code><a href="/docs/linux/man/1-vi/">vi</a></code>(1) if neither <code>VISUAL</code> nor <code>EDITOR</code> is defined.</dd></dl>
 <p> <code>^L</code></p>
 <dl>
 <dt>
-<dd> Redraw screen.</dl>
+</dt><dd> Redraw screen.</dd></dl>
 <p> <code>:n</code></p>
 <dl>
 <dt>
-<dd> Go to kth next file. Defaults to 1.</dl>
+</dt><dd> Go to kth next file. Defaults to 1.</dd></dl>
 <p> <code>:p</code></p>
 <dl>
 <dt>
-<dd> Go to kth previous file. Defaults to 1.</dl>
+</dt><dd> Go to kth previous file. Defaults to 1.</dd></dl>
 <p> <code>:f</code></p>
 <dl>
 <dt>
-<dd> Display current file name and line number.</dl>
+</dt><dd> Display current file name and line number.</dd></dl>
 <p> <code>.</code></p>
 <dl>
 <dt>
-<dd> Repeat previous command.</dl>
+</dt><dd> Repeat previous command.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> The <code>more</code> command respects the following environment variables, if they exist: </p>
 <p> <code>MORE</code></p>
 <dl>
 <dt>
-<dd> This variable may be set with favored options to <code>more</code>.</dl>
+</dt><dd> This variable may be set with favored options to <code>more</code>.</dd></dl>
 <p> <code>SHELL</code></p>
 <dl>
 <dt>
-<dd> Current shell in use (normally set by the shell at login time).</dl>
+</dt><dd> Current shell in use (normally set by the shell at login time).</dd></dl>
 <p> <code>TERM</code></p>
 <dl>
 <dt>
-<dd> The terminal type used by <code>more</code> to get the terminal characteristics necessary to manipulate the screen.</dl>
+</dt><dd> The terminal type used by <code>more</code> to get the terminal characteristics necessary to manipulate the screen.</dd></dl>
 <p> <code>VISUAL</code></p>
 <dl>
 <dt>
-<dd> The editor the user prefers. Invoked when command key <i>v</i> is pressed.</dl>
+</dt><dd> The editor the user prefers. Invoked when command key <i>v</i> is pressed.</dd></dl>
 <p> <code>EDITOR</code></p>
 <dl>
 <dt>
-<dd> The editor of choice when <code>VISUAL</code> is not specified.</dl>
+</dt><dd> The editor of choice when <code>VISUAL</code> is not specified.</dd></dl>
 <h2>HISTORY</h2>
 <p> The <code>more</code> command appeared in 3.0BSD. This man page documents <code>more</code> version 5.19 (Berkeley 6/29/88), which is currently in use in the Linux community. Documentation was produced using several other versions of the man page, and extensive inspection of the source code.</p>
 <h2>AUTHORS</h2>

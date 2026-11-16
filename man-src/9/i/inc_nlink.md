@@ -14,7 +14,7 @@ description: "inc_nlink – directly increment an inode’s link count"
 <p><i>inode</i></p>
 <dl>
 <dd>
-<dd>inode</dl>
+</dd><dd>inode</dd></dl>
 <h2>Description</h2>
 <p>This is a low-level filesystem helper to replace any direct filesystem manipulation of i_nlink. Currently, it is only here for parity with <code>dec_nlink</code>.</p>
 <h2>Copyright</h2>

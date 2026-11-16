@@ -29,22 +29,22 @@ description: "hwlocality_levels – Object levels, depths and types"
 <h3>enum <code>hwloc_get_type_depth_e</code></h3>
 <p><code>Enumerator</code></p>
 <dl COMPACT>
-<dt><i>HWLOC_TYPE_DEPTH_UNKNOWN </i></p>
-<dd>No object of given type exists in the topology.</p>
-<dt><i>HWLOC_TYPE_DEPTH_MULTIPLE </i></p>
-<dd>Objects of given type exist at different depth in the topology.</p>
-<dt><i>HWLOC_TYPE_DEPTH_BRIDGE </i></p>
-<dd>Virtual depth for bridge object level.</p>
-<dt><i>HWLOC_TYPE_DEPTH_PCI_DEVICE </i></p>
-<dd>Virtual depth for PCI device object level.</p>
-<dt><i>HWLOC_TYPE_DEPTH_OS_DEVICE </i></p>
-<dd>Virtual depth for software device object level.</dl>
+<dt><i>HWLOC_TYPE_DEPTH_UNKNOWN </i></dt>
+<dd>No object of given type exists in the topology.</dd>
+<dt><i>HWLOC_TYPE_DEPTH_MULTIPLE </i></dt>
+<dd>Objects of given type exist at different depth in the topology.</dd>
+<dt><i>HWLOC_TYPE_DEPTH_BRIDGE </i></dt>
+<dd>Virtual depth for bridge object level.</dd>
+<dt><i>HWLOC_TYPE_DEPTH_PCI_DEVICE </i></dt>
+<dd>Virtual depth for PCI device object level.</dd>
+<dt><i>HWLOC_TYPE_DEPTH_OS_DEVICE </i></dt>
+<dd>Virtual depth for software device object level.</dd></dl>
 <h2>Function Documentation</h2>
 <h3><code>hwloc_obj_type_t</code> hwloc_get_depth_type (<code>hwloc_topology_t</code> topology, unsigned depth)</h3>
 <p>Returns the type of objects at depth depth. depth should between 0 and <code>hwloc_topology_get_depth()</code>-1. </p>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>-1 if depth depth does not exist.</dl>
+<dd>-1 if depth depth does not exist.</dd></dl>
 <h3>unsigned hwloc_get_nbobjs_by_depth (<code>hwloc_topology_t</code> topology, unsigned depth)</h3>
 <p>Returns the width of level at depth depth.</p>
 <h3>static int hwloc_get_nbobjs_by_type (<code>hwloc_topology_t</code> topology, <code>hwloc_obj_type_t</code> type) [inline], [static]</h3>

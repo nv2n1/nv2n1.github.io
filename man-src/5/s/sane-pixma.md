@@ -48,10 +48,10 @@ description: "sane-pixma – SANE backend for Canon Multi-Function Printers and 
  imageRUNNER 1020/1024/1025, 1133<br />
  CanoScan 8800F, 9000F, 9000F Mark II<br />
  CanoScan LiDE 300, 400<br />
- MAXIFY MB2000, MB2100, MB2300, MB2700, MB5000, MB5100, MB5400</dl>
+ MAXIFY MB2000, MB2100, MB2300, MB2700, MB5000, MB5100, MB5400</dd></dl>
 <p> The following models are not well tested and/or the scanner sometimes hangs and must be switched off and on. </p>
 <dl>
-<dd>PIXMA MP760, MP770, MP780, MP790</dl>
+<dd>PIXMA MP760, MP770, MP780, MP790</dd></dl>
 <p> The following models may use the same Pixma protocol as those listed above, but have not yet been reported to work (or not). They are declared in the backend so that they get recognized and activated. Feedback in the sane-devel mailing list welcome. </p>
 <dl>
 <dd>PIXMA E400, E460, E470, E480, E500, E560, E600, E610<br />
@@ -72,17 +72,17 @@ description: "sane-pixma – SANE backend for Canon Multi-Function Printers and 
  imageCLASS MPC190, D550<br />
  i-SENSYS MF110, MF220, MF260, MF410, MF420, MF510, MF520, MF740<br />
  i-SENSYS MF5880dn, MF5900, MF6680dn, MF8500C<br />
- MAXIFY MB5300</dl>
+ MAXIFY MB5300</dd></dl>
 <p> The following models may use partly the same Pixma protocol as other devices listed above, but may still need some work. They are declared in the backend as experimental and need the environment variable PIXMA_EXPERIMENT=1 to get recognized and activated. Snoop logs are required to further investigate, please contact the sane-devel mailing list. </p>
 <dl>
-<dd>&#8212; none &#8212;</dl>
+<dd>&#8212; none &#8212;</dd></dl>
 <p> The backend supports: </p>
 <dl>
 <dd>* resolutions of 75, 150, 300, 600, 1200, 2400, 4800, and 9600 DPI (some maybe buggy),<br />
  * color and grayscale mode, as well as lineart on certain models,<br />
  * a custom gamma table,<br />
  * Automatic Document Feeder, Simplex and Duplex.<br />
- * Transparency Unit, 24 or 48 bits depth. Infrared channel on certain models.</dl>
+ * Transparency Unit, 24 or 48 bits depth. Infrared channel on certain models.</dd></dl>
 <p> The device name for USB devices is in the form pixma:xxxxyyyy_zzzzz where x, y and z are vendor ID, product ID and serial number respectively. </p>
 <p> Example: pixma:04A91709_123456 is a MP150. </p>
 <p> Device names for BJNP/MFNP devices is in the form pixma:aaaa_bbbbb where aaaa is the scanners model and bbbb is the hostname or ip-adress. </p>
@@ -93,39 +93,39 @@ description: "sane-pixma – SANE backend for Canon Multi-Function Printers and 
  The button status can be polled i.e. with <i>scanimage -A.</i><br />
  Button scan is disabled on MAC OS X due to darwin libusb not handling timeouts in usb interrupt reads, but may work when using the network protocol.</p>
 <dl>
-<dt><i>adf-wait</i></p>
-<dd>This option enables and sets the time in seconds waiting for a document inserted into the <code>Automatic</code> <code>Document</code> <code>Feeder</code>. The maximum allowed waiting time is 3600 sec (= 1 hour).</p>
-<dt><i>button-controlled</i></p>
-<dd>This option can be used by applications (like <code><a href="/docs/linux/man/1-scanadf/">scanadf</a></code>(1) and <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1)) in batch mode, for example when you want to scan many photos or multiple-page documents. If it is enabled (i.e. is set to true or yes), the backend waits before every scan until the user presses the &quot;SCAN&quot; button (for MP150) or the color-scan button (for other models). Just put the first page in the scanner, press the button, then the next page, press the button and so on. When you finished, press the gray-scan button. (For MP150 you have to stop the frontend by pressing Ctrl-C for example.)</p>
-<dt><i>button-update (deprecated)</i></p>
-<dd>(write only) In the past this option was required to be set to force reading of the button status for <i>button-1</i> and <i>button-2.</i> The <code>sane-pixma</code> backend no longer requires this option to be used: if no fresh data is available, it will be now requested automatically from the scanner. This option is left for backward compatibility reasons.</p>
-<dt><i>button-1 button-2</i></p>
-<dd>(read only) These options will return the value of the respective buttons. value 0 means that the button was not pressed, 1 is returned when the button was pressed. Some scanners with more than two buttons send the button number as target.</p>
-<dt><i>original</i></p>
-<dd>(read only) Returns the value of the type or size of original to be scanned if the scanner provides that data. Known values of type: 1 = document, 2 = photo, 5 = film. Known values of size: 1 = A4, 2 = Letter, 8 = 10&#215;15, 9 = 13&#215;18, b = auto. Not all scanners can provide this data.</p>
-<dt><i>target</i></p>
-<dd>(read only) Returns the value of the target of the scan operation if the scanner provides that data. The values depend on the scanner type. Known values: 1 = save to disk, 2 = save to pdf, 3 = send to email, 4 = send to application or 1 = JPEG, 2 = TIFF, 3 = PDF, 4 = Compact PDF. For some scanners this value is equivalent to the number of the pressed button. Not all scanners can provide this data.</p>
-<dt><i>scan-resolution</i></p>
-<dd>(read only) Returns the resolution of the scan operation if the scanner provides that data. Known values: 1 = 75 dpi, 2 = 150 dpi, 3 = 300 dpi, 4 = 600 dpi. Not all scanners can provide this data.</p>
-<dt><i>document-type</i></p>
-<dd>(read only) Returns the type of the scanned document if the scanner provides that data. Known values: 1 = Document, 2 = Photo, 3 = Auto scan. Not all scanners can provide this data.</p>
-<dt><i>adf-status</i></p>
-<dd>(read only) Returns the status of the document feeder if the scanner provides that data. Known values: 1 = ADF empty, 2 = ADF filled. Not all scanners can provide this data.</p>
-<dt><i>adf-orientation</i></p>
-<dd>(read only) Returns the scan orientation of the medium scanned from ADF if the scanner provides that data. Known values: 1 = Portrait, 2 = Landscape. Not all scanners can provide this data.</dl>
+<dt><i>adf-wait</i></dt>
+<dd>This option enables and sets the time in seconds waiting for a document inserted into the <code>Automatic</code> <code>Document</code> <code>Feeder</code>. The maximum allowed waiting time is 3600 sec (= 1 hour).</dd>
+<dt><i>button-controlled</i></dt>
+<dd>This option can be used by applications (like <code><a href="/docs/linux/man/1-scanadf/">scanadf</a></code>(1) and <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1)) in batch mode, for example when you want to scan many photos or multiple-page documents. If it is enabled (i.e. is set to true or yes), the backend waits before every scan until the user presses the &quot;SCAN&quot; button (for MP150) or the color-scan button (for other models). Just put the first page in the scanner, press the button, then the next page, press the button and so on. When you finished, press the gray-scan button. (For MP150 you have to stop the frontend by pressing Ctrl-C for example.)</dd>
+<dt><i>button-update (deprecated)</i></dt>
+<dd>(write only) In the past this option was required to be set to force reading of the button status for <i>button-1</i> and <i>button-2.</i> The <code>sane-pixma</code> backend no longer requires this option to be used: if no fresh data is available, it will be now requested automatically from the scanner. This option is left for backward compatibility reasons.</dd>
+<dt><i>button-1 button-2</i></dt>
+<dd>(read only) These options will return the value of the respective buttons. value 0 means that the button was not pressed, 1 is returned when the button was pressed. Some scanners with more than two buttons send the button number as target.</dd>
+<dt><i>original</i></dt>
+<dd>(read only) Returns the value of the type or size of original to be scanned if the scanner provides that data. Known values of type: 1 = document, 2 = photo, 5 = film. Known values of size: 1 = A4, 2 = Letter, 8 = 10&#215;15, 9 = 13&#215;18, b = auto. Not all scanners can provide this data.</dd>
+<dt><i>target</i></dt>
+<dd>(read only) Returns the value of the target of the scan operation if the scanner provides that data. The values depend on the scanner type. Known values: 1 = save to disk, 2 = save to pdf, 3 = send to email, 4 = send to application or 1 = JPEG, 2 = TIFF, 3 = PDF, 4 = Compact PDF. For some scanners this value is equivalent to the number of the pressed button. Not all scanners can provide this data.</dd>
+<dt><i>scan-resolution</i></dt>
+<dd>(read only) Returns the resolution of the scan operation if the scanner provides that data. Known values: 1 = 75 dpi, 2 = 150 dpi, 3 = 300 dpi, 4 = 600 dpi. Not all scanners can provide this data.</dd>
+<dt><i>document-type</i></dt>
+<dd>(read only) Returns the type of the scanned document if the scanner provides that data. Known values: 1 = Document, 2 = Photo, 3 = Auto scan. Not all scanners can provide this data.</dd>
+<dt><i>adf-status</i></dt>
+<dd>(read only) Returns the status of the document feeder if the scanner provides that data. Known values: 1 = ADF empty, 2 = ADF filled. Not all scanners can provide this data.</dd>
+<dt><i>adf-orientation</i></dt>
+<dd>(read only) Returns the scan orientation of the medium scanned from ADF if the scanner provides that data. Known values: 1 = Portrait, 2 = Landscape. Not all scanners can provide this data.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-pixma.a</i></p>
-<dd>The static library implementing this backend.</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-pixma.so</i></p>
-<dd>The shared library implementing this backend (present on systems that support dynamic loading).</p>
-<dt><i>/etc/sane.d/pixma.conf</i></p>
-<dd>The backend configuration file (see also description of <code>SANE_CONFIG_DIR</code> below).</p>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-pixma.a</i></dt>
+<dd>The static library implementing this backend.</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-pixma.so</i></dt>
+<dd>The shared library implementing this backend (present on systems that support dynamic loading).</dd>
+<dt><i>/etc/sane.d/pixma.conf</i></dt>
+<dd>The backend configuration file (see also description of <code>SANE_CONFIG_DIR</code> below).</dd>
 <dl>
-<dd>The file contains an optional list of networked scanners using the BJNP or MFNP protools (See below for datails on networking support for scanners). Normally only scanners that cannot be auto-detected because they are on a different subnet shall be listed here. If you do not use Linux and your OS does not allow enumeration of interfaces (i.e. it does not support the <code>getifaddrs</code>() qfunction) you also may need to add your scanner here as well. </p>
+<dd>The file contains an optional list of networked scanners using the BJNP or MFNP protools (See below for datails on networking support for scanners). Normally only scanners that cannot be auto-detected because they are on a different subnet shall be listed here. If you do not use Linux and your OS does not allow enumeration of interfaces (i.e. it does not support the <code>getifaddrs</code>() qfunction) you also may need to add your scanner here as well. </dd>
 <p> Scanners shall be listed in the configuration file as follows: </p>
 <dl>
-<dd><i>&lt;method&gt;://&lt;host&gt;[:port][/timeout=&lt;value&gt;]</i></dl>
+<dd><i>&lt;method&gt;://&lt;host&gt;[:port][/timeout=&lt;value&gt;]</i></dd></dl>
 <p> where method indicates the protocol used (bjnp is used for inkjet multi-functionals and mfnp is used for laser multi-functionals). </p>
 <p> host is the hostname or IP address of the scanner, e.g. <a href="bjnp://10.0.1.4">bjnp://10.0.1.4</a> for IPv4, <a href="bjnp://[2001:888:118e:18e2:21e:8fff:fe36:b64a]">bjnp://[2001:888:118e:18e2:21e:8fff:fe36:b64a]</a> for a literal IPv6-address or <a href="bjnp://myscanner.mydomain.org">bjnp://myscanner.mydomain.org</a> for a hostname. </p>
 <p> The port number is optional and in normally implied by the method. Port 8610 is the standard port for mfnp, 8612 for bjnp. </p>
@@ -133,7 +133,7 @@ description: "sane-pixma – SANE backend for Canon Multi-Function Printers and 
 <p> Define scanners each on a new line. </p>
 <p> More globally applicable timeouts can be set using the bjnp-timeout parameter as follows: </p>
 <dl>
-<dd><i>bjnp-timeout=&lt;value&gt;</i></dl>
+<dd><i>bjnp-timeout=&lt;value&gt;</i></dd></dl>
 <p> A timeout defined using bjnp-timeout will apply to the following scanner definitions in the file. If required the bjnp-timeout setting can be defined multiple times, where each setting will apply only to the scanners that follow the setting. The last setting is used for the auto discovered scanners. If not explicitly set, the default 1000ms setting will apply. </p>
 <p> Setting timeouts should only be required in exceptional cases. </p>
 </dl>
@@ -141,11 +141,11 @@ description: "sane-pixma – SANE backend for Canon Multi-Function Printers and 
 <p> If so desired networking can be disabled as follows:</p>
 <dl>
 <dd>
-<dl>
-<dt>&#8211;</p>
-<dd>If the first non-commented line contains <code>networking=no</code> all networking will be disabled. This will cause all further statements in the configuration file to be ignored.</p>
-<dt>&#8211;</p>
-<dd>A line that contains <code>auto_detection=no</code> will cause auto-detection to be skipped. Explicitly defined network scanners will still be probed.</dl>
+</dd><dl>
+<dt>&#8211;</dt>
+<dd>If the first non-commented line contains <code>networking=no</code> all networking will be disabled. This will cause all further statements in the configuration file to be ignored.</dd>
+<dt>&#8211;</dt>
+<dd>A line that contains <code>auto_detection=no</code> will cause auto-detection to be skipped. Explicitly defined network scanners will still be probed.</dd></dl>
 </dl>
 <h2>Usb Support</h2>
 <p>USB scanners will be auto-detected and require no configuration.</p>
@@ -163,8 +163,8 @@ description: "sane-pixma – SANE backend for Canon Multi-Function Printers and 
 <p> With the firewall rules above there is no need to add the scanner to the <i>pixma.conf</i> file, unless the scanner is on a network that is not directly connected to your computer.</p>
 <h2>Environment</h2>
 <dl>
-<dt><code>SANE_DEBUG_PIXMA</code></p>
-<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend itself. Higher value increases the verbosity and includes the information printed at the lower levels.</p>
+<dt><code>SANE_DEBUG_PIXMA</code></dt>
+<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend itself. Higher value increases the verbosity and includes the information printed at the lower levels.</dd>
 <dl>
 <dd>0 print nothing (default)<br />
  1 print error and warning messages (recommended)<br />
@@ -173,20 +173,20 @@ description: "sane-pixma – SANE backend for Canon Multi-Function Printers and 
  4 print verbose debug-level messages<br />
  11 dump USB traffic<br />
  21 full dump USB traffic
-</dl>
-<dt><code>SANE_DEBUG_BJNP</code></p>
-<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for the <code>BJNP and MFNP</code> network protocols for this backend. Higher value increases the verbosity and includes the information printed at the lower levels.</p>
+</dd></dl>
+<dt><code>SANE_DEBUG_BJNP</code></dt>
+<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for the <code>BJNP and MFNP</code> network protocols for this backend. Higher value increases the verbosity and includes the information printed at the lower levels.</dd>
 <dl>
 <dd>0 print nothing (default)<br />
  1 Print error and warning messages (recommended)<br />
  2 Print high level function tracing information<br />
  3 Print more detailed protocol tracing information<br />
  4 Print protocol headers<br />
- 5 Print full protocol contents</dl>
-<dt><code>PIXMA_EXPERIMENT</code></p>
-<dd>Setting to a non-zero value will enable the support for experimental models. You should also set SANE_DEBUG_PIXMA to 11.</p>
-<dt><code>SANE_CONFIG_DIR</code></p>
-<dd>This environment variable specifies the list of directories that may contain the configuration file. On *NIX systems, the directories are separated by a colon (`:&#8217;), under OS/2, they are separated by a semi-colon (`;&#8217;). If this variable is not set, the configuration file is searched in two default directories: first, the current working directory (&quot;.&quot;) and then in <i>/etc/sane.d</i>. If the value of the environment variable ends with the directory separator character, then the default directories are searched after the explicitly specified directories. For example, setting <code>SANE_CONFIG_DIR</code> to &quot;/tmp/config:&quot; would result in directories <i>tmp/config</i>, <i>.</i>, and <i>/etc/sane.d</i> being searched (in this order).</dl>
+ 5 Print full protocol contents</dd></dl>
+<dt><code>PIXMA_EXPERIMENT</code></dt>
+<dd>Setting to a non-zero value will enable the support for experimental models. You should also set SANE_DEBUG_PIXMA to 11.</dd>
+<dt><code>SANE_CONFIG_DIR</code></dt>
+<dd>This environment variable specifies the list of directories that may contain the configuration file. On *NIX systems, the directories are separated by a colon (`:&#8217;), under OS/2, they are separated by a semi-colon (`;&#8217;). If this variable is not set, the configuration file is searched in two default directories: first, the current working directory (&quot;.&quot;) and then in <i>/etc/sane.d</i>. If the value of the environment variable ends with the directory separator character, then the default directories are searched after the explicitly specified directories. For example, setting <code>SANE_CONFIG_DIR</code> to &quot;/tmp/config:&quot; would result in directories <i>tmp/config</i>, <i>.</i>, and <i>/etc/sane.d</i> being searched (in this order).</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-dll/">sane-dll</a></code>(5), <code><a href="/docs/linux/man/1-scanimage/">scanimage</a></code>(1), <code><a href="/docs/linux/man/1-scanadf/">scanadf</a></code>(1), <code><a href="/docs/linux/man/1-gamma4scanimage/">gamma4scanimage</a></code>(1), <code><a href="/docs/linux/man/3-getifaddrs/">getifaddrs</a></code>(3) In case of trouble with a recent Pixma model, try the latest code for the <code>sane-pixma</code> backend, available in the Sane git repository at:<br />
  <i><a rel="nofollow" href="https://gitlab.com/sane-project/backends.git">https://gitlab.com/sane-project/backends.git</a></i> You can also post into the Sane-devel mailing list for support. </p>

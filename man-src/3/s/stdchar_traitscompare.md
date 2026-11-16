@@ -12,7 +12,6 @@ std::char_traits&lt;CharT&gt;::compare - std::char_traits&lt;CharT&gt;::compare
 
 <pre><code>static int compare(const char_type *s1, const char_type *s2, std::size_t count);
 (until C++ 17)
-
     static constexpr int compare(const char_type *s1, const char_type *s2, std::size_t count);
 (since C++ 17)</code></pre> 
 Compares the first count characters of the character strings s1 and s2. The comparison is done lexicographically. 

@@ -14,10 +14,10 @@ description: "usb_ifnum_to_if – get the interface object with a given interfac
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>the device whose current configuration is considered</dl>
+</dd><dd>the device whose current configuration is considered</dd></dl>
 <p> <i>ifnum</i></p>
 <dl>
-<dd>the desired interface</dl>
+<dd>the desired interface</dd></dl>
 <h2>Description</h2>
 <p>This walks the device descriptor for the currently active configuration to find the interface object with the particular interface number. </p>
 <p> Note that configuration descriptors are not required to assign interface numbers sequentially, so that it would be incorrect to assume that the first interface in that descriptor corresponds to interface zero. This routine helps device drivers avoid such mistakes. However, you should make sure that you do the right thing with any alternate settings available for this interfaces. </p>

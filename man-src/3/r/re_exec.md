@@ -10,9 +10,7 @@ description: "re_comp, re_exec – BSD regex functions"
 <p>re_comp, re_exec &#8211; BSD regex functions</p>
 <h2>Synopsis</h2>
 <pre><code>#define _REGEX_RE_COMP
-
 #include &lt;sys/types.h&gt;
-
 #include &lt;regex.h&gt;
 char *re_comp(const char *regex);
 int re_exec(const char *string);</code></pre>

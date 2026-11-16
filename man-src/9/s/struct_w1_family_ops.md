@@ -17,15 +17,15 @@ description: "struct_w1_family_ops – operations for a family type"
 <h2>Members</h2>
 <p>add_slave</p>
 <dl>
-<dd>add_slave</dl>
+<dd>add_slave</dd></dl>
 <p> remove_slave</p>
 <dl>
-<dd>remove_slave</dl>
+<dd>remove_slave</dd></dl>
 <p> groups</p>
 <dl>
-<dd>sysfs group</dl>
+<dd>sysfs group</dd></dl>
 <h2>Author</h2>
 <p><code>David Fries</code> &lt;David [at] Fries.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

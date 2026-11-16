@@ -15,28 +15,28 @@ description: "flow-split – Split flow files into smaller files."
 <p> The <code>flow-split</code> utility will split a flow file into smaller files based on the the number of flows or the ammount of time that has passed.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code><i> big</i><code>|</code><i>little</i></p>
-<dd> Byte order of output.</p>
-<dt><code>-C</code><i> Comment</i></p>
-<dd> Add a comment.</p>
-<dt><code>-d</code><i> debug_level</i></p>
-<dd> Enable debugging.</p>
-<dt><code>-g</code></p>
-<dd> Split on source tag.</p>
-<dt><code>-G</code></p>
-<dd> Split on destination tag.</p>
-<dt><code>-h</code></p>
-<dd> Display help.</p>
-<dt><code>-n</code></p>
-<dd> Use symbols for tag field in filename.</p>
-<dt><code>-N</code><i> nflows</i></p>
-<dd> Split after processing <i>nflows</i>.</p>
-<dt><code>-o</code><i> outfile_basename</i></p>
-<dd> The basename of the resulting files.</p>
-<dt><code>-T</code><i> nsecond</i></p>
-<dd> Split after processing an interval of <i>nseconds</i> flows.</p>
-<dt><code>-z</code><i> z_level</i></p>
-<dd> Configure compression level to <i> z_level</i>. 0 is disabled (no compression), 9 is highest compression.</dl>
+<dt><code>-b</code><i> big</i><code>|</code><i>little</i></dt>
+<dd> Byte order of output.</dd>
+<dt><code>-C</code><i> Comment</i></dt>
+<dd> Add a comment.</dd>
+<dt><code>-d</code><i> debug_level</i></dt>
+<dd> Enable debugging.</dd>
+<dt><code>-g</code></dt>
+<dd> Split on source tag.</dd>
+<dt><code>-G</code></dt>
+<dd> Split on destination tag.</dd>
+<dt><code>-h</code></dt>
+<dd> Display help.</dd>
+<dt><code>-n</code></dt>
+<dd> Use symbols for tag field in filename.</dd>
+<dt><code>-N</code><i> nflows</i></dt>
+<dd> Split after processing <i>nflows</i>.</dd>
+<dt><code>-o</code><i> outfile_basename</i></dt>
+<dd> The basename of the resulting files.</dd>
+<dt><code>-T</code><i> nsecond</i></dt>
+<dd> Split after processing an interval of <i>nseconds</i> flows.</dd>
+<dt><code>-z</code><i> z_level</i></dt>
+<dd> Configure compression level to <i> z_level</i>. 0 is disabled (no compression), 9 is highest compression.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Create 1 minute flow files from the flow archive in <i>/flows/krc4</i>. Store the results in <i>/flows/krc4.split</i> </p>
 <p> <code>flow-cat /flows/krc4 | flow-split -T60 -o /flows/krc4.split/1min</code>.</p>

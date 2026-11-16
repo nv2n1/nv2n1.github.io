@@ -21,7 +21,6 @@ description: "units — unit conversion and calculation program"
 <pre>
 Currency exchange rates from 04/23/12 
 2516 units, 85 prefixes, 65 nonlinear units
-    
 You have:
 </pre>
 <p> At the &#8216;You have:&#8217; prompt, type the quantity and units that you are converting <i>from</i>. For example, if you want to convert ten meters to feet, type &#8216;<i>10 meters</i>&#8216;. Next, &#8216;units&#8217; will print &#8216;You want:&#8217;. You should type the units you want to convert <i>to</i>. To convert to feet, you would type &#8216;<i>feet</i>&#8216;. If the &#8216;readline&#8217; library was compiled in then the tab key can be used to complete unit names. See <i>Readline Support</i> for more information about &#8216;readline&#8217;. To quit the program press Ctrl-C or Ctrl-D under Unix. Under Windows press Ctrl-Z. </p>
@@ -188,7 +187,6 @@ You have: 2 hours + 23 minutes + 32 seconds
 You want: seconds
         * 8612
         / 0.00011611705
-    
 You have: 12 ft + 3 in
 You want: cm
         * 373.38
@@ -219,7 +217,6 @@ You have: 2 ft 3 ft 12 ft
 You want: stere
         * 2.038813
         / 0.49048148
-    
 You have: $ 5 / yard
 You want: cents / inch
         * 13.888889
@@ -246,11 +243,9 @@ You have: sqrt(acre)
 You want: feet
         * 208.71074
         / 0.0047913202
-    
 You have: (400 W/m^2 / stefanboltzmann)^(1/4)
 You have:
         Definition: 289.80882 K
-    
 You have: cuberoot(hectare)
                           ^
 Unit not a root
@@ -259,13 +254,13 @@ Unit not a root
 <p> The &#8216;units&#8217; program is especially helpful in ensuring accuracy and dimensional consistency when converting lengthy unit expressions. For example, one form of the Darcy-Weisbach fluid-flow equation is</p>
 <dl>
 <dt>
-<dd>
-<p> Delta <i>P</i> = (8 / pi)^2 (rho <i>fLQ</i>^2) / <i>d</i>^5,</dl>
+</dt><dd>
+<p> Delta <i>P</i> = (8 / pi)^2 (rho <i>fLQ</i>^2) / <i>d</i>^5,</dd></dl>
 <p> where Delta <i>P</i> is the pressure drop, rho is the mass density, <i>f</i> is the (dimensionless) friction factor, <i>L</i> is the length of the pipe, <i>Q</i> is the volumetric flow rate, and <i>d</i> is the pipe diameter. It might be desired to have the equation in the form</p>
 <dl>
 <dt>
-<dd>
-<p> Delta <i>P</i> = A1 rho <i>fLQ</i>^2 / <i>d</i>^5</dl>
+</dt><dd>
+<p> Delta <i>P</i> = A1 rho <i>fLQ</i>^2 / <i>d</i>^5</dd></dl>
 <p> that accepted the user&#8217;s normal units; for typical units used in the US, the required conversion could be something like </p>
 <pre>
 You have: (8/pi^2)(lbm/ft^3)ft(ft^3/s)^2(1/in^5)
@@ -549,68 +544,68 @@ tbsp 4;<br />
 <p> If the <i>from-unit</i> and <i>to-unit</i> are omitted, then the program will use interactive prompts to determine which conversions to perform. See <i>Interactive Use</i>. If both <i>from-unit</i> and <i>to-unit</i> are given, &#8216;units&#8217; will print the result of that single conversion and then exit. If only <i>from-unit</i> appears on the command line, &#8216;units&#8217; will display the definition of that unit and exit. Units specified on the command line may need to be quoted to protect them from shell interpretation and to group them into two arguments. See <i>Command Line Use</i>. </p>
 <p> The following options allow you to read in an alternative units file, check your units file, or change the output format: </p>
 <dl>
-<dt><code>-c</code>, <code>&#8211;check</code></p>
-<dd> Check that all units and prefixes defined in the units data file reduce to primitive units. Print a list of all units that cannot be reduced. Also display some other diagnostics about suspicious definitions in the units data file. Only definitions active in the current locale are checked. You should always run &#8216;units&#8217; with this option after modifying a units data file.</dl>
+<dt><code>-c</code>, <code>&#8211;check</code></dt>
+<dd> Check that all units and prefixes defined in the units data file reduce to primitive units. Print a list of all units that cannot be reduced. Also display some other diagnostics about suspicious definitions in the units data file. Only definitions active in the current locale are checked. You should always run &#8216;units&#8217; with this option after modifying a units data file.</dd></dl>
 <dl>
-<dt><code>&#8211;check-verbose</code>, <code>&#8211;verbose-check</code></p>
-<dd> Like the &#8216;&#8211;check&#8217; option, this option prints a list of units that cannot be reduced. But to help find unit definitions that cause endless loops, it lists the units as they are checked. If &#8216;units&#8217; hangs, then the last unit to be printed has a bad definition. Only definitions active in the current locale are checked.</dl>
+<dt><code>&#8211;check-verbose</code>, <code>&#8211;verbose-check</code></dt>
+<dd> Like the &#8216;&#8211;check&#8217; option, this option prints a list of units that cannot be reduced. But to help find unit definitions that cause endless loops, it lists the units as they are checked. If &#8216;units&#8217; hangs, then the last unit to be printed has a bad definition. Only definitions active in the current locale are checked.</dd></dl>
 <dl>
-<dt><code>-o </code><i>format</i>, <code>&#8211;output-format </code><i>format</i></p>
-<dd> Use the specified <i>format</i> for numeric output; the format is a subset of that for the printf function in the ANSI C standard. Only a numeric format &#8216;(&#8216;E or &#8216;e&#8217; for scientific notation, &#8216;f&#8217; for fixed-point decimal, or &#8216;G&#8217; or &#8216;g&#8217; to specify the number of significant figures) is allowed. The default format is &#8216;%.8g&#8217;; for greater precision, you could specify &#8216;-o %.15g&#8217;. See <i>Numeric Output Format</i> and the documentation for printf() for more detailed descriptions of the format specification.</dl>
+<dt><code>-o </code><i>format</i>, <code>&#8211;output-format </code><i>format</i></dt>
+<dd> Use the specified <i>format</i> for numeric output; the format is a subset of that for the printf function in the ANSI C standard. Only a numeric format &#8216;(&#8216;E or &#8216;e&#8217; for scientific notation, &#8216;f&#8217; for fixed-point decimal, or &#8216;G&#8217; or &#8216;g&#8217; to specify the number of significant figures) is allowed. The default format is &#8216;%.8g&#8217;; for greater precision, you could specify &#8216;-o %.15g&#8217;. See <i>Numeric Output Format</i> and the documentation for printf() for more detailed descriptions of the format specification.</dd></dl>
 <dl>
-<dt><code>-e</code>, <code>&#8211;exponential</code></p>
-<dd> Set the numeric output format to exponential (i.e., scientific notation), like that used in the Unix &#8216;units&#8217; program.</dl>
+<dt><code>-e</code>, <code>&#8211;exponential</code></dt>
+<dd> Set the numeric output format to exponential (i.e., scientific notation), like that used in the Unix &#8216;units&#8217; program.</dd></dl>
 <dl>
-<dt><code>-f </code><i>filename</i>, <code>&#8211;file </code><i>filename</i></p>
-<dd> Instruct &#8216;units&#8217; to load the units file &#8216;filename&#8217;. You can specify up to 25 units files on the command line. When you use this option, &#8216;units&#8217; will load <i>only</i> the files you list on the command line; it will not load the standard file or your personal units file unless you explicitly list them. If <i>filename</i> is the empty string &#8216;(&#8216;-f &quot;&quot; the default units file (or that specified by &#8216;UNITSFILE&#8217;) will be loaded in addition to any others specified with &#8216;-f&#8217;.</dl>
+<dt><code>-f </code><i>filename</i>, <code>&#8211;file </code><i>filename</i></dt>
+<dd> Instruct &#8216;units&#8217; to load the units file &#8216;filename&#8217;. You can specify up to 25 units files on the command line. When you use this option, &#8216;units&#8217; will load <i>only</i> the files you list on the command line; it will not load the standard file or your personal units file unless you explicitly list them. If <i>filename</i> is the empty string &#8216;(&#8216;-f &quot;&quot; the default units file (or that specified by &#8216;UNITSFILE&#8217;) will be loaded in addition to any others specified with &#8216;-f&#8217;.</dd></dl>
 <dl>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Print out a summary of the options for &#8216;units&#8217;.</dl>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Print out a summary of the options for &#8216;units&#8217;.</dd></dl>
 <dl>
-<dt><code>-m</code>, <code>&#8211;minus</code></p>
-<dd> Causes &#8216;-&#8216; to be interpreted as a subtraction operator. This is the default behavior.</dl>
+<dt><code>-m</code>, <code>&#8211;minus</code></dt>
+<dd> Causes &#8216;-&#8216; to be interpreted as a subtraction operator. This is the default behavior.</dd></dl>
 <dl>
-<dt><code>-p</code>, <code>&#8211;product</code></p>
-<dd> Causes &#8216;-&#8216; to be interpreted as a multiplication operator when it has two operands. It will act as a negation operator when it has only one operand: &#8216;(-3)&#8217;. By default &#8216;-&#8216; is treated as a subtraction operator.</dl>
+<dt><code>-p</code>, <code>&#8211;product</code></dt>
+<dd> Causes &#8216;-&#8216; to be interpreted as a multiplication operator when it has two operands. It will act as a negation operator when it has only one operand: &#8216;(-3)&#8217;. By default &#8216;-&#8216; is treated as a subtraction operator.</dd></dl>
 <dl>
-<dt><code>&#8211;oldstar</code></p>
-<dd> Causes &#8216;*&#8217; to have the old-style precedence, higher than the precedence of division so that &#8216;1/2*3&#8217; will equal &#8216;1/6&#8217;.</dl>
+<dt><code>&#8211;oldstar</code></dt>
+<dd> Causes &#8216;*&#8217; to have the old-style precedence, higher than the precedence of division so that &#8216;1/2*3&#8217; will equal &#8216;1/6&#8217;.</dd></dl>
 <dl>
-<dt><code>&#8211;newstar</code></p>
-<dd> Forces &#8216;*&#8217; to have the new (default) precedence that follows the usual rules of algebra: the precedence of &#8216;*&#8217; is the same as the precedence of &#8216;/&#8217;, so that &#8216;1/2*3&#8217; will equal &#8216;3/2&#8217;.</dl>
+<dt><code>&#8211;newstar</code></dt>
+<dd> Forces &#8216;*&#8217; to have the new (default) precedence that follows the usual rules of algebra: the precedence of &#8216;*&#8217; is the same as the precedence of &#8216;/&#8217;, so that &#8216;1/2*3&#8217; will equal &#8216;3/2&#8217;.</dd></dl>
 <dl>
-<dt><code>&#8211;compact</code></p>
-<dd> Give compact output featuring only the conversion factor. This turns off the &#8216;&#8211;verbose&#8217; option.</dl>
+<dt><code>&#8211;compact</code></dt>
+<dd> Give compact output featuring only the conversion factor. This turns off the &#8216;&#8211;verbose&#8217; option.</dd></dl>
 <dl>
-<dt><code>-q</code>, <code>&#8211;quiet</code>, <code>&#8211;silent</code></p>
-<dd> Suppress prompting of the user for units and the display of statistics about the number of units loaded.</dl>
+<dt><code>-q</code>, <code>&#8211;quiet</code>, <code>&#8211;silent</code></dt>
+<dd> Suppress prompting of the user for units and the display of statistics about the number of units loaded.</dd></dl>
 <dl>
-<dt><code>-n</code>, <code>&#8211;nolists</code></p>
-<dd> Disable conversion to unit lists.</dl>
+<dt><code>-n</code>, <code>&#8211;nolists</code></dt>
+<dd> Disable conversion to unit lists.</dd></dl>
 <dl>
-<dt><code>-r</code>, <code>&#8211;round</code></p>
-<dd> When converting to a combination of units given by a unit list, round the value of the last unit in the list to the nearest integer.</dl>
+<dt><code>-r</code>, <code>&#8211;round</code></dt>
+<dd> When converting to a combination of units given by a unit list, round the value of the last unit in the list to the nearest integer.</dd></dl>
 <dl>
-<dt><code>-S</code>, <code>&#8211;show-factor</code></p>
-<dd> When converting to a combination of units specified in a list, always show a non-unity factor before a unit that begins with a fraction with a unity denominator. By default, if the unit in a list begins with fraction of the form 1|<i>x</i> and its multiplier is an integer other than 1, the fraction is given as the product of the multiplier and the numerator (e.g., &#8216;3|8 in&#8217; rather than &#8216;3 * 1|8 in&#8217;). In some cases, this is not what is wanted; for example, the results for a cooking recipe might show &#8216;3 * 1|2 cup&#8217; as &#8216;3|2 cup&#8217;. With the &#8216;&#8211;show-factor&#8217; option, a result equivalent to 1.5 cups will display as &#8216;3 * 1|2 cup&#8217; rather than &#8216;3|2 cup&#8217;. A user-specified fractional unit with a numerator other than 1 is never overridden, however&#8212;if a unit list specifies &#8216;3|4 cup;1|2 cup&#8217;, a result equivalent to 1 1/2 cups will always be shown as &#8216;2 * 3|4 cup&#8217; whether or not the &#8216;&#8211;show-factor&#8217; option is given.</dl>
+<dt><code>-S</code>, <code>&#8211;show-factor</code></dt>
+<dd> When converting to a combination of units specified in a list, always show a non-unity factor before a unit that begins with a fraction with a unity denominator. By default, if the unit in a list begins with fraction of the form 1|<i>x</i> and its multiplier is an integer other than 1, the fraction is given as the product of the multiplier and the numerator (e.g., &#8216;3|8 in&#8217; rather than &#8216;3 * 1|8 in&#8217;). In some cases, this is not what is wanted; for example, the results for a cooking recipe might show &#8216;3 * 1|2 cup&#8217; as &#8216;3|2 cup&#8217;. With the &#8216;&#8211;show-factor&#8217; option, a result equivalent to 1.5 cups will display as &#8216;3 * 1|2 cup&#8217; rather than &#8216;3|2 cup&#8217;. A user-specified fractional unit with a numerator other than 1 is never overridden, however&#8212;if a unit list specifies &#8216;3|4 cup;1|2 cup&#8217;, a result equivalent to 1 1/2 cups will always be shown as &#8216;2 * 3|4 cup&#8217; whether or not the &#8216;&#8211;show-factor&#8217; option is given.</dd></dl>
 <dl>
-<dt><code>-s</code>, <code>&#8211;strict</code></p>
-<dd> Suppress conversion of units to their reciprocal units. For example, &#8216;units&#8217; will normally convert hertz to seconds because these units are reciprocals of each other. The strict option requires that units be strictly conformable to perform a conversion, and will give an error if you attempt to convert hertz to seconds.</dl>
+<dt><code>-s</code>, <code>&#8211;strict</code></dt>
+<dd> Suppress conversion of units to their reciprocal units. For example, &#8216;units&#8217; will normally convert hertz to seconds because these units are reciprocals of each other. The strict option requires that units be strictly conformable to perform a conversion, and will give an error if you attempt to convert hertz to seconds.</dd></dl>
 <dl>
-<dt><code>-1</code>, <code>&#8211;one-line</code></p>
-<dd> Give only one line of output (the forward conversion). Do not print the reverse conversion. If a reciprocal conversion is performed then &#8216;units&#8217; will still print the &#8220;reciprocal conversion&#8221; line.</dl>
+<dt><code>-1</code>, <code>&#8211;one-line</code></dt>
+<dd> Give only one line of output (the forward conversion). Do not print the reverse conversion. If a reciprocal conversion is performed then &#8216;units&#8217; will still print the &#8220;reciprocal conversion&#8221; line.</dd></dl>
 <dl>
-<dt><code>-t</code>, <code>&#8211;terse</code></p>
-<dd> Give terse output when converting units. This option can be used when calling &#8216;units&#8217; from another program so that the output is easy to parse. This option has the combined effect of these options: &#8216;&#8211;strict&#8217; &#8216;&#8211;quiet&#8217; &#8216;&#8211;one-line&#8217; &#8216;&#8211;compact&#8217;.</dl>
+<dt><code>-t</code>, <code>&#8211;terse</code></dt>
+<dd> Give terse output when converting units. This option can be used when calling &#8216;units&#8217; from another program so that the output is easy to parse. This option has the combined effect of these options: &#8216;&#8211;strict&#8217; &#8216;&#8211;quiet&#8217; &#8216;&#8211;one-line&#8217; &#8216;&#8211;compact&#8217;.</dd></dl>
 <dl>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Give slightly more verbose output when converting units. When combined with the &#8216;-c&#8217; option this gives the same effect as &#8216;&#8211;check-verbose&#8217;.</dl>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Give slightly more verbose output when converting units. When combined with the &#8216;-c&#8217; option this gives the same effect as &#8216;&#8211;check-verbose&#8217;.</dd></dl>
 <dl>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd> Print program version number, tell whether the &#8216;readline&#8217; library has been included, and give the location of the default units data file.</dl>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd> Print program version number, tell whether the &#8216;readline&#8217; library has been included, and give the location of the default units data file.</dd></dl>
 <dl>
-<dt><code>-l </code><i>locale</i>, <code>&#8211;locale </code><i>locale</i></p>
-<dd> Force a specified locale such as &#8216;en_GB&#8217; to get British definitions by default. This overrides the locale determined from system settings or environment variables. See <i>Locale</i> for a description of locale format.</dl>
+<dt><code>-l </code><i>locale</i>, <code>&#8211;locale </code><i>locale</i></dt>
+<dd> Force a specified locale such as &#8216;en_GB&#8217; to get British definitions by default. This overrides the locale determined from system settings or environment variables. See <i>Locale</i> for a description of locale format.</dd></dl>
 <h2>ADDING YOUR OWN DEFINITIONS</h2>
 <h3>Units Data Files</h3>
 <p> The units and prefixes that &#8216;units&#8217; can convert are defined in the units data file, typically &#8216;/usr/share/units/definitions.units&#8217;. Although you can extend or modify this data file if you have appropriate user privileges, it&#8217;s usually better to put extensions in separate files so that the definitions will be preserved when you update &#8216;units&#8217;. </p>
@@ -805,23 +800,23 @@ line          1|12 inch
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> The &#8216;units&#8217; program uses the following environment variables: </p>
 <dl>
-<dt><code>HOME</code></p>
-<dd> Specifies the location of your home directory; it is used by &#8216;units&#8217; to find a personal units data file &#8216;.units&#8217;. On systems running Microsoft Windows, &#8216;units&#8217; tries to determine your home directory from the &#8216;HOMEDRIVE&#8217; and &#8216;HOMEPATH&#8217; environment variables if &#8216;HOME&#8217; does not exist.</dl>
+<dt><code>HOME</code></dt>
+<dd> Specifies the location of your home directory; it is used by &#8216;units&#8217; to find a personal units data file &#8216;.units&#8217;. On systems running Microsoft Windows, &#8216;units&#8217; tries to determine your home directory from the &#8216;HOMEDRIVE&#8217; and &#8216;HOMEPATH&#8217; environment variables if &#8216;HOME&#8217; does not exist.</dd></dl>
 <dl>
-<dt><code>LC_CTYPE, LANG</code></p>
-<dd> Checked to determine the locale if &#8216;units&#8217; cannot obtain it from the operating system. Sections of the standard units data file are specific to certain locales.</dl>
+<dt><code>LC_CTYPE, LANG</code></dt>
+<dd> Checked to determine the locale if &#8216;units&#8217; cannot obtain it from the operating system. Sections of the standard units data file are specific to certain locales.</dd></dl>
 <dl>
-<dt><code>MYUNITSFILE</code></p>
-<dd> Specifies your personal units data file. If this variable exists, &#8216;units&#8217; uses its value rather than searching your home directory for &#8216;.units&#8217;. The personal units file will not be loaded if any data files are given using the &#8216;-f&#8217; option.</dl>
+<dt><code>MYUNITSFILE</code></dt>
+<dd> Specifies your personal units data file. If this variable exists, &#8216;units&#8217; uses its value rather than searching your home directory for &#8216;.units&#8217;. The personal units file will not be loaded if any data files are given using the &#8216;-f&#8217; option.</dd></dl>
 <dl>
-<dt><code>PAGER</code></p>
-<dd> Specifies the pager to use for help and for displaying the conformable units. The help function browses the units database and calls the pager using the &#8216;+n&#8217;<i>n</i> syntax for specifying a line number. The default pager is &#8216;more&#8217;; &#8216;PAGER&#8217; can be used to specify alternatives such as &#8216;less&#8217;, &#8216;pg&#8217;, &#8217;emacs&#8217;, or &#8216;vi&#8217;.</dl>
+<dt><code>PAGER</code></dt>
+<dd> Specifies the pager to use for help and for displaying the conformable units. The help function browses the units database and calls the pager using the &#8216;+n&#8217;<i>n</i> syntax for specifying a line number. The default pager is &#8216;more&#8217;; &#8216;PAGER&#8217; can be used to specify alternatives such as &#8216;less&#8217;, &#8216;pg&#8217;, &#8217;emacs&#8217;, or &#8216;vi&#8217;.</dd></dl>
 <dl>
-<dt><code>UNITS_ENGLISH</code></p>
-<dd> Set to either &#8216;US&#8217; or &#8216;GB&#8217; to choose United States or British volume definitions, overriding the default from your locale.</dl>
+<dt><code>UNITS_ENGLISH</code></dt>
+<dd> Set to either &#8216;US&#8217; or &#8216;GB&#8217; to choose United States or British volume definitions, overriding the default from your locale.</dd></dl>
 <dl>
-<dt><code>UNITSFILE</code></p>
-<dd> Specifies the units data file to use (instead of the default). You can only specify a single units data file using this environment variable. If units data files are given using the &#8216;-f&#8217; option, the file specified by &#8216;UNITSFILE&#8217; will be not be loaded unless the &#8216;-f&#8217; option is given with the empty string &#8216;(&#8216;units -f&nbsp;<wbr>&quot;&quot;</dl>
+<dt><code>UNITSFILE</code></dt>
+<dd> Specifies the units data file to use (instead of the default). You can only specify a single units data file using this environment variable. If units data files are given using the &#8216;-f&#8217; option, the file specified by &#8216;UNITSFILE&#8217; will be not be loaded unless the &#8216;-f&#8217; option is given with the empty string &#8216;(&#8216;units -f&nbsp;<wbr>&quot;&quot;</dd></dl>
 <h2>UNICODE SUPPORT</h2>
 <p> The standard units data file is written in Unicode using the UTF-8 encoding. Portions of the file that are not plain ASCII begin with &#8216;!utf8&#8217; and end with &#8216;!endutf8&#8217;. As usual, the &#8216;!&#8217; must appear as the first character on the line. If a line of a data file contains byte sequences that are invalid UTF-8 or non-printing UTF-8 then &#8216;units&#8217; ignores the entire line. </p>
 <p> When &#8216;units&#8217; runs it checks the locale to determine the character set. If UTF-8 is listed, then &#8216;units&#8217; reads the utf8 definitions. If any other character set is in use, then &#8216;units&#8217; works in plain ASCII without support for extended characters. </p>
@@ -841,50 +836,50 @@ You have: metr
 <p> The units program includes currency exchange rates and prices for some precious metals in the database. Of course, these values change over time, sometimes very rapidly, and &#8216;units&#8217; cannot provide real time values. To update the exchange rates run the &#8216;units_cur&#8217;, which rewrites the files containing the currency rates, typically &#8216;/usr/local/share/units/currency.units&#8217;. This program must be run with suitable permissions to write the file. To keep the rates updated automatically, it could be run by a cron job on a Unix-like system, or a similar scheduling program on a different system. Currency exchange rates are taken from Time Genie (<a rel="nofollow" href="http://www.timegenie.com)">http://www.timegenie.com)</a> and precious metals pricing from Packetizer (<a rel="nofollow" href="http://www.packetizer.com">www.packetizer.com</a>). These sites update once per day, so there is no benefit in running the update script more often than daily. You can run &#8216;units_cur&#8217; with a filename specified on the command line and it will write the data to that file. If you give &#8216;-&#8216; for the file it will write to standard output. </p>
 <h2>DATABASE COMMAND SYNTAX</h2>
 <dl>
-<dt><i>unit</i> <i>definition</i></p>
-<dd> Define a regular unit.</dl>
+<dt><i>unit</i> <i>definition</i></dt>
+<dd> Define a regular unit.</dd></dl>
 <dl>
-<dt><i>prefix</i>&#8211; <i>definition</i></p>
-<dd> Define a prefix.</dl>
+<dt><i>prefix</i>&#8211; <i>definition</i></dt>
+<dd> Define a prefix.</dd></dl>
 <dl>
-<dt><i>funcname</i>(<i>var</i>) units=[<i>in-units</i>,<i>out-units</i>] domain=[<i>x1</i>,<i>x2</i>] range=[<i>y1</i>,<i>y2</i>] <i>definition(var)</i> ; <i>inverse(funcname)</i></p>
-<dd> Define a nonlinear unit or unit function. The three optional keywords &#8216;units=&#8217;, &#8216;range=&#8217; and &#8216;domain=&#8217; can appear in any order. The definition of the inverse is optional.</dl>
+<dt><i>funcname</i>(<i>var</i>) units=[<i>in-units</i>,<i>out-units</i>] domain=[<i>x1</i>,<i>x2</i>] range=[<i>y1</i>,<i>y2</i>] <i>definition(var)</i> ; <i>inverse(funcname)</i></dt>
+<dd> Define a nonlinear unit or unit function. The three optional keywords &#8216;units=&#8217;, &#8216;range=&#8217; and &#8216;domain=&#8217; can appear in any order. The definition of the inverse is optional.</dd></dl>
 <dl>
-<dt><i>tabname</i>[<i>out-units</i>] <i>pair-list</i></p>
-<dd> Define a piecewise linear unit. The pair list gives the points on the table listed in ascending order.</dl>
+<dt><i>tabname</i>[<i>out-units</i>] <i>pair-list</i></dt>
+<dd> Define a piecewise linear unit. The pair list gives the points on the table listed in ascending order.</dd></dl>
 <dl>
-<dt><code>!endlocale</code></p>
-<dd> End a block of definitions beginning with &#8216;!locale&#8217;</dl>
+<dt><code>!endlocale</code></dt>
+<dd> End a block of definitions beginning with &#8216;!locale&#8217;</dd></dl>
 <dl>
-<dt><code>!endutf8</code></p>
-<dd> End a block of definitions begun with &#8216;!utf8&#8217;</dl>
+<dt><code>!endutf8</code></dt>
+<dd> End a block of definitions begun with &#8216;!utf8&#8217;</dd></dl>
 <dl>
-<dt><code>!endvar</code></p>
-<dd> End a block of definitions begun with &#8216;!var&#8217; or &#8216;!varnot&#8217;</dl>
+<dt><code>!endvar</code></dt>
+<dd> End a block of definitions begun with &#8216;!var&#8217; or &#8216;!varnot&#8217;</dd></dl>
 <dl>
-<dt><code>!include </code><i>file</i></p>
-<dd> Include the specified file.</dl>
+<dt><code>!include </code><i>file</i></dt>
+<dd> Include the specified file.</dd></dl>
 <dl>
-<dt><code>!locale </code><i>value</i></p>
-<dd> Load the following definitions only of the locale is set to <i>value</i>.</dl>
+<dt><code>!locale </code><i>value</i></dt>
+<dd> Load the following definitions only of the locale is set to <i>value</i>.</dd></dl>
 <dl>
-<dt><code>!message </code><i>text</i></p>
-<dd> Display <i>text</i> when the database is read unless the quiet option &#8216;(&#8216;-q is enabled.</dl>
+<dt><code>!message </code><i>text</i></dt>
+<dd> Display <i>text</i> when the database is read unless the quiet option &#8216;(&#8216;-q is enabled.</dd></dl>
 <dl>
-<dt><code>!set </code><i>variable</i> <i>value</i></p>
-<dd> Sets the environment variable, <i>variable</i>, to the specified value <i>only if</i> it is not already set.</dl>
+<dt><code>!set </code><i>variable</i> <i>value</i></dt>
+<dd> Sets the environment variable, <i>variable</i>, to the specified value <i>only if</i> it is not already set.</dd></dl>
 <dl>
-<dt><code>!unitlist </code><i>alias</i> <i>definition</i></p>
-<dd> Define a unit list alias.</dl>
+<dt><code>!unitlist </code><i>alias</i> <i>definition</i></dt>
+<dd> Define a unit list alias.</dd></dl>
 <dl>
-<dt><code>!utf8</code></p>
-<dd> Load the following definitions only if &#8216;units&#8217; is running with UTF-8 enabled.</dl>
+<dt><code>!utf8</code></dt>
+<dd> Load the following definitions only if &#8216;units&#8217; is running with UTF-8 enabled.</dd></dl>
 <dl>
-<dt><code>!var </code><i>variable</i> <i>value-list</i></p>
-<dd> Load the following definitions only if the environment variable, <i>variable</i> is set to one of the values listed on the space separated value list. If <i>variable</i> is not set then &#8216;units&#8217; prints an error message and ignores the following definitions.</dl>
+<dt><code>!var </code><i>variable</i> <i>value-list</i></dt>
+<dd> Load the following definitions only if the environment variable, <i>variable</i> is set to one of the values listed on the space separated value list. If <i>variable</i> is not set then &#8216;units&#8217; prints an error message and ignores the following definitions.</dd></dl>
 <dl>
-<dt><code>!varnot </code><i>variable</i> <i>value-list</i></p>
-<dd> Load the following definitions only if the environment variable, <i>variable</i> is <i>not</i> set to one of the values listed on the space separated value list. If <i>variable</i> is not set then &#8216;units&#8217; prints an error message and ignores the following definitions.</dl>
+<dt><code>!varnot </code><i>variable</i> <i>value-list</i></dt>
+<dd> Load the following definitions only if the environment variable, <i>variable</i> is <i>not</i> set to one of the values listed on the space separated value list. If <i>variable</i> is not set then &#8216;units&#8217; prints an error message and ignores the following definitions.</dd></dl>
 <h2>GNU FREE DOCUMENTATION LICENSE</h2>
 <h2>FILES</h2>
 <p> /usr/share/units/definitions.units &#8212; the standard units data file</p>

@@ -10,43 +10,43 @@ description: "XChangeKeyboardMapping, XGetKeyboardMapping, XDisplayKeycodes, XSe
 <p>XChangeKeyboardMapping, XGetKeyboardMapping, XDisplayKeycodes, XSetModifierMapping, XGetModifierMapping, XNewModifiermap, XInsertModifiermapEntry, XDeleteModifiermapEntry, XFreeModifiermap, XModifierKeymap &#8211; manipulate keyboard encoding and keyboard encoding structure </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>int XChangeKeyboardMapping(Display *<i>display</i>, int <i>first_keycode</i>, int <i>keysyms_per_keycode</i>, KeySym *<i>keysyms</i>, int <i>num_codes</i>);</p>
-<dd>KeySym *XGetKeyboardMapping(Display *<i>display</i>, KeyCode <i>first_keycode</i>, int <i>keycode_count</i>, int *<i>keysyms_per_keycode_return</i>);</p>
-<dd>int XDisplayKeycodes(Display *<i>display</i>, int *<i>min_keycodes_return</i>, int *<i>max_keycodes_return</i>);</p>
-<dd>int XSetModifierMapping(Display *<i>display</i>, XModifierKeymap *<i>modmap</i>);</p>
-<dd>XModifierKeymap *XGetModifierMapping(Display *<i>display</i>);</p>
-<dd>XModifierKeymap *XNewModifiermap(int <i>max_keys_per_mod</i>);</p>
-<dd>XModifierKeymap *XInsertModifiermapEntry(XModifierKeymap *<i>modmap</i>, KeyCode <i>keycode_entry</i>, int <i>modifier</i>);</p>
-<dd>XModifierKeymap *XDeleteModifiermapEntry(XModifierKeymap *<i>modmap</i>, KeyCode <i>keycode_entry</i>, int <i>modifier</i>);</p>
-<dd>int XFreeModifiermap(XModifierKeymap *<i>modmap</i>);</dl>
+<dd>int XChangeKeyboardMapping(Display *<i>display</i>, int <i>first_keycode</i>, int <i>keysyms_per_keycode</i>, KeySym *<i>keysyms</i>, int <i>num_codes</i>);</dd>
+<dd>KeySym *XGetKeyboardMapping(Display *<i>display</i>, KeyCode <i>first_keycode</i>, int <i>keycode_count</i>, int *<i>keysyms_per_keycode_return</i>);</dd>
+<dd>int XDisplayKeycodes(Display *<i>display</i>, int *<i>min_keycodes_return</i>, int *<i>max_keycodes_return</i>);</dd>
+<dd>int XSetModifierMapping(Display *<i>display</i>, XModifierKeymap *<i>modmap</i>);</dd>
+<dd>XModifierKeymap *XGetModifierMapping(Display *<i>display</i>);</dd>
+<dd>XModifierKeymap *XNewModifiermap(int <i>max_keys_per_mod</i>);</dd>
+<dd>XModifierKeymap *XInsertModifiermapEntry(XModifierKeymap *<i>modmap</i>, KeyCode <i>keycode_entry</i>, int <i>modifier</i>);</dd>
+<dd>XModifierKeymap *XDeleteModifiermapEntry(XModifierKeymap *<i>modmap</i>, KeyCode <i>keycode_entry</i>, int <i>modifier</i>);</dd>
+<dd>int XFreeModifiermap(XModifierKeymap *<i>modmap</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</p>
-<dt><i>first_keycode</i></p>
-<dd>Specifies the first KeyCode that is to be changed or returned.</p>
-<dt><i>keycode_count</i></p>
-<dd>Specifies the number of KeyCodes that are to be returned.</p>
-<dt><i>keycode_entry</i></p>
-<dd>Specifies the KeyCode.</p>
-<dt><i>keysyms</i></p>
-<dd>Specifies an array of KeySyms.</p>
-<dt><i>keysyms_per_keycode</i></p>
-<dd>Specifies the number of KeySyms per KeyCode.</p>
-<dt><i>keysyms_per_keycode_return</i></p>
-<dd>Returns the number of KeySyms per KeyCode.</p>
-<dt><i>max_keys_per_mod</i></p>
-<dd>Specifies the number of KeyCode entries preallocated to the modifiers in the map.</p>
-<dt><i>max_keycodes_return</i></p>
-<dd>Returns the maximum number of KeyCodes.</p>
-<dt><i>min_keycodes_return</i></p>
-<dd>Returns the minimum number of KeyCodes.</p>
-<dt><i>modifier</i></p>
-<dd>Specifies the modifier.</p>
-<dt><i>modmap</i></p>
-<dd>Specifies the <code>XModifierKeymap</code> structure.</p>
-<dt><i>num_codes</i></p>
-<dd>Specifies the number of KeyCodes that are to be changed.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd>
+<dt><i>first_keycode</i></dt>
+<dd>Specifies the first KeyCode that is to be changed or returned.</dd>
+<dt><i>keycode_count</i></dt>
+<dd>Specifies the number of KeyCodes that are to be returned.</dd>
+<dt><i>keycode_entry</i></dt>
+<dd>Specifies the KeyCode.</dd>
+<dt><i>keysyms</i></dt>
+<dd>Specifies an array of KeySyms.</dd>
+<dt><i>keysyms_per_keycode</i></dt>
+<dd>Specifies the number of KeySyms per KeyCode.</dd>
+<dt><i>keysyms_per_keycode_return</i></dt>
+<dd>Returns the number of KeySyms per KeyCode.</dd>
+<dt><i>max_keys_per_mod</i></dt>
+<dd>Specifies the number of KeyCode entries preallocated to the modifiers in the map.</dd>
+<dt><i>max_keycodes_return</i></dt>
+<dd>Returns the maximum number of KeyCodes.</dd>
+<dt><i>min_keycodes_return</i></dt>
+<dd>Returns the minimum number of KeyCodes.</dd>
+<dt><i>modifier</i></dt>
+<dd>Specifies the modifier.</dd>
+<dt><i>modmap</i></dt>
+<dd>Specifies the <code>XModifierKeymap</code> structure.</dd>
+<dt><i>num_codes</i></dt>
+<dd>Specifies the number of KeyCodes that are to be changed.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XChangeKeyboardMapping</code> function defines the symbols for the specified number of KeyCodes starting with first_keycode. The symbols for KeyCodes outside this range remain unchanged. The number of elements in keysyms must be: </p>
 <p> num_codes * keysyms_per_keycode </p>
@@ -81,10 +81,10 @@ description: "XChangeKeyboardMapping, XGetKeyboardMapping, XDisplayKeycodes, XSe
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;KeyCode&nbsp;*modifiermap;&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;An 8 by max_keypermod array of the modifiers&nbsp;*/ } XModifierKeymap;</p>
 <h2>Diagnostics</h2>
 <dl COMPACT>
-<dt><code>BadAlloc</code></p>
-<dd>The server failed to allocate the requested resource or server memory.</p>
-<dt><code>BadValue</code></p>
-<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dl>
+<dt><code>BadAlloc</code></dt>
+<dd>The server failed to allocate the requested resource or server memory.</dd>
+<dt><code>BadValue</code></dt>
+<dd>Some numeric value falls outside the range of values accepted by the request. Unless a specific range is specified for an argument, the full range defined by the argument&#8217;s type is accepted. Any argument defined as a set of alternatives can generate this error.</dd></dl>
 <h2>See Also</h2>
 <p><a href="/docs/linux/man/3-xfree/">XFree</a>(3), <a href="/docs/linux/man/3-xkbgetmap/">XkbGetMap</a>(3), <a href="/docs/linux/man/3-xsetpointermapping/">XSetPointerMapping</a>(3)<br />
  <i>Xlib &#8211; C Language X Interface</i></p>

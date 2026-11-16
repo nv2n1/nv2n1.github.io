@@ -26,26 +26,24 @@ description: "git-alias – Define, search and show aliases"
 <p> Defining a new alias:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git alias last &quot;cat-file commit HEAD&quot;
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> Providing only one argument, <code>git-alias</code> searchs for aliases matching the given value:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 $ git alias ^la
 last = cat-file commit HEAD
 </pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <p> <code>git-alias</code> will show all aliases if no argument is given:</p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 $ git alias
     s = status
@@ -53,8 +51,7 @@ $ git alias
             rank = shortlog - sn-- no - merges whatis = show - s-- pretty = 'tformat:%h (%s, %ad)' --date = short
                                                             whois = !sh - c 'git log -i -1 --pretty="format:%an &lt;%ae&gt;
 </code></pre>
-<dt>
-<dd></dl>
+</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Jonhnny Weslley &lt;<i>jw [at] jonhnnyweslley.net</i>&gt;</p>
 <h2>REPORTING BUGS</h2>

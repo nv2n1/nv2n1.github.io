@@ -11,7 +11,6 @@ description: "ql/types.hpp – Custom types."
 <h2>Synopsis</h2>
 <pre><code>
 #include &lt;ql/qldefines.hpp&gt;
-
 #include &lt;cstddef&gt;</code></pre>
 <h3>Typedefs</h3>
 <p>typedef QL_INTEGER <code>Integer</code><br />

@@ -22,10 +22,10 @@ description: "cgbbrd.f –"
  bidiagonal form B by a unitary transformation: Q**H * A * P = B.
  The routine computes B, and optionally forms Q or P**H, or computes
  Q**H*C for a given matrix C.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>VECT</i> </p>
+<dd><i>VECT</i> </dd>
 <pre> VECT is CHARACTER*1
  Specifies whether or not the matrices Q and P**H are to be
  formed.
@@ -101,13 +101,13 @@ description: "cgbbrd.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 193 of file cgbbrd.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

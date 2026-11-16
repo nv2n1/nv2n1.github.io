@@ -15,19 +15,19 @@ vm_insert_pfn_prot - insert single pfn into user vma with specified pgprot
 <h2>Arguments</h2>
 
 <i>vma</i>
-<dl><dd><dd>user vma to map to</dl>
+<dl><dd></dd><dd>user vma to map to</dd></dl>
  
 
  <i>addr</i>
-<dl><dd>target user address of this page</dl>
+<dl><dd>target user address of this page</dd></dl>
  
 
  <i>pfn</i>
-<dl><dd>source kernel pfn</dl>
+<dl><dd>source kernel pfn</dd></dl>
  
 
  <i>pgprot</i>
-<dl><dd>pgprot flags for the inserted page</dl>
+<dl><dd>pgprot flags for the inserted page</dd></dl>
 
 <h2>Description</h2>
 

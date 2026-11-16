@@ -10,80 +10,30 @@ description: "QuantLib::ExtendedBlackVarianceCurve – Black volatility curve mo
 <p>QuantLib::ExtendedBlackVarianceCurve &#8211; Black volatility curve modelled as variance curve. </p>
 <h2>Synopsis</h2>
 <pre><code>ExtendedBlackVarianceCurve (const Date &amp;referenceDate, const std::vector&lt; Date &gt; &amp;dates, const std::vector&lt; Handle&lt; Quote &gt; &gt; &amp;volatilities, const DayCounter &amp;dayCounter, bool forceMonotoneVariance=true)
-
-
-
 DayCounter dayCounter () const
-
-
 the day counter used for date/time conversion
-
-
 Date maxDate () const
-
-
 the latest date for which the curve can return values
-
-
 Real minStrike () const
-
-
 the minimum strike for which the term structure can return vols
-
-
 Real maxStrike () const
-
-
 the maximum strike for which the term structure can return vols
-
-
 template&lt;class Interpolator &gt; void setInterpolation (const Interpolator &amp;i=Interpolator())
-
-
-
 void accept (AcyclicVisitor &amp;)
-
-
-
 void update ()</code></pre>
 <p> Inherits <code>QuantLib::BlackVarianceTermStructure</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>ExtendedBlackVarianceCurve (const Date &amp;referenceDate, const std::vector&lt; Date &gt; &amp;dates, const std::vector&lt; Handle&lt; Quote &gt; &gt; &amp;volatilities, const DayCounter &amp;dayCounter, bool forceMonotoneVariance=true)
-
-
-
 DayCounter dayCounter () const
-
-
 the day counter used for date/time conversion
-
-
 Date maxDate () const
-
-
 the latest date for which the curve can return values
-
-
 Real minStrike () const
-
-
 the minimum strike for which the term structure can return vols
-
-
 Real maxStrike () const
-
-
 the maximum strike for which the term structure can return vols
-
-
 template&lt;class Interpolator &gt; void setInterpolation (const Interpolator &amp;i=Interpolator())
-
-
-
 void accept (AcyclicVisitor &amp;)
-
-
-
 void update ()</code></pre>
 <h2>Detailed Description</h2>
 <p>Black volatility curve modelled as variance curve. </p>

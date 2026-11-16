@@ -199,7 +199,7 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -211,15 +211,15 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A Kerberos 5 context 
+</dt><dd> <i>context</i> A Kerberos 5 context 
  <i>type</i> optional type to iterate over, if NULL, the default cache is used. 
- <i>cursor</i> cursor should be freed with <b>krb5_cc_cache_end_seq_get()</b>.</dl>
+ <i>cursor</i> cursor should be freed with <b>krb5_cc_cache_end_seq_get()</b>.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -231,15 +231,15 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A Kerberos 5 context 
+</dt><dd> <i>context</i> A Kerberos 5 context 
  <i>client</i> The principal to search for 
- <i>id</i> the returned credential cache</dl>
+ <i>id</i> the returned credential cache</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> On failure, error code is returned and `id' is set to NULL.</dl>
+</dt><dd> On failure, error code is returned and `id' is set to NULL.</dd></dl>
  
 
  
@@ -251,15 +251,15 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A Kerberos 5 context 
+</dt><dd> <i>context</i> A Kerberos 5 context 
  <i>cursor</i> the iterator cursor, returned by <b>krb5_cc_cache_get_first()</b> 
- <i>id</i> next ccache</dl>
+ <i>id</i> next ccache</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return 0 or an error code. Returns KRB5_CC_END when the end of caches is reached, see <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return 0 or an error code. Returns KRB5_CC_END when the end of caches is reached, see <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -275,7 +275,7 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -297,18 +297,18 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A Kerberos 5 context. 
+</dt><dd> <i>context</i> A Kerberos 5 context. 
  <i>from</i> the cache to copy data from. 
  <i>to</i> the cache to copy data to. 
  <i>match</i> a match function that should return TRUE if cred argument should be copied, if NULL, all credentials are copied. 
  <i>matchctx</i> context passed to match function. 
- <i>matched</i> set to true if there was a credential that matched, may be NULL.</dl>
+ <i>matched</i> set to true if there was a credential that matched, may be NULL.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -320,7 +320,7 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -332,7 +332,7 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> String to the default credential cache name.</dl>
+</dt><dd> String to the default credential cache name.</dd></dl>
  
 
  
@@ -344,7 +344,7 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -362,7 +362,7 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -374,11 +374,11 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> a Keberos context 
+</dt><dd> <i>context</i> a Keberos context 
  <i>id</i> the credential cache to store the data for 
  <i>principal</i> configuration for a specific principal, if NULL, global for the whole cache. 
  <i>name</i> name under which the configuraion is stored. 
- <i>data</i> data to fetched, free with <b>krb5_data_free()</b></dl>
+ <i>data</i> data to fetched, free with <b>krb5_data_free()</b></dd></dl>
  
 
  
@@ -394,7 +394,7 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -406,15 +406,15 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> a Keberos context 
+</dt><dd> <i>context</i> a Keberos context 
  <i>id</i> return pointer to a found credential cache 
- <i>str</i> the returned name of a credential cache, free with krb5_xfree()</dl>
+ <i>str</i> the returned name of a credential cache, free with krb5_xfree()</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Returns 0 or an error (and then *str is set to NULL).</dl>
+</dt><dd> Returns 0 or an error (and then *str is set to NULL).</dd></dl>
  
 
  
@@ -428,15 +428,15 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A Kerberos 5 context. 
+</dt><dd> <i>context</i> A Kerberos 5 context. 
  <i>id</i> a credential cache 
- <i>offset</i> the offset in seconds</dl>
+ <i>offset</i> the offset in seconds</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -450,15 +450,15 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A Kerberos 5 context. 
+</dt><dd> <i>context</i> A Kerberos 5 context. 
  <i>id</i> a credential cache 
- <i>t</i> the relative lifetime of the initial ticket</dl>
+ <i>t</i> the relative lifetime of the initial ticket</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  If we find a krbtgt in the cache, use that as the lifespan. 
@@ -480,7 +480,7 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Returns NULL if ops not found.</dl>
+</dt><dd> Returns NULL if ops not found.</dd></dl>
  
 
  
@@ -492,7 +492,7 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -512,7 +512,7 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -524,15 +524,15 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A Kerberos 5 context 
+</dt><dd> <i>context</i> A Kerberos 5 context 
  <i>id</i> The credential cache to probe 
- <i>mtime</i> the last modification time, set to 0 on error.</dl>
+ <i>mtime</i> the last modification time, set to 0 on error.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return 0 or and error. See <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return 0 or and error. See <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -544,15 +544,15 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> a Keberos context 
+</dt><dd> <i>context</i> a Keberos context 
  <i>from</i> the credential cache to move the content from 
- <i>to</i> the credential cache to move the content to</dl>
+ <i>to</i> the credential cache to move the content to</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> On sucess, from is freed. On failure, error code is returned and from and to are both still allocated, see <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> On sucess, from is freed. On failure, error code is returned and from and to are both still allocated, see <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -564,7 +564,7 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -576,7 +576,7 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -588,15 +588,15 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> a Keberos context 
+</dt><dd> <i>context</i> a Keberos context 
  <i>ops</i> type of plugin symbol 
- <i>override</i> flag to select if the registration is to overide an existing ops with the same name.</dl>
+ <i>override</i> flag to select if the registration is to overide an existing ops with the same name.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -612,15 +612,15 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> a Keberos context. 
+</dt><dd> <i>context</i> a Keberos context. 
  <i>name</i> string name of a credential cache. 
- <i>id</i> return pointer to a found credential cache.</dl>
+ <i>id</i> return pointer to a found credential cache.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return 0 or an error code. In case of an error, id is set to NULL, see <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return 0 or an error code. In case of an error, id is set to NULL, see <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -632,17 +632,17 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A Kerberos 5 context 
+</dt><dd> <i>context</i> A Kerberos 5 context 
  <i>id</i> a Kerberos 5 credential cache 
  <i>whichfields</i> what fields to use for matching credentials, same flags as whichfields in <b>krb5_compare_creds()</b> 
  <i>mcreds</i> template credential to use for comparing 
- <i>creds</i> returned credential, free with <b>krb5_free_cred_contents()</b></dl>
+ <i>creds</i> returned credential, free with <b>krb5_free_cred_contents()</b></dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -654,11 +654,11 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> a Keberos context 
+</dt><dd> <i>context</i> a Keberos context 
  <i>id</i> the credential cache to store the data for 
  <i>principal</i> configuration for a specific principal, if NULL, global for the whole cache. 
  <i>name</i> name under which the configuraion is stored. 
- <i>data</i> data to store, if NULL, configure is removed.</dl>
+ <i>data</i> data to store, if NULL, configure is removed.</dd></dl>
  
 
  
@@ -678,7 +678,7 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -692,15 +692,15 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A Kerberos 5 context. 
+</dt><dd> <i>context</i> A Kerberos 5 context. 
  <i>id</i> a credential cache 
- <i>offset</i> the offset in seconds</dl>
+ <i>offset</i> the offset in seconds</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -712,7 +712,7 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -724,7 +724,7 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -740,7 +740,7 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return an error code or 0, see <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -752,14 +752,14 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A Kerberos 5 context 
- <i>cursor</i> the iteration cursor to be freed.</dl>
+</dt><dd> <i>context</i> A Kerberos 5 context 
+ <i>cursor</i> the iteration cursor to be freed.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return 0 or and error, KRB5_CC_END is returned at the end of iteration. See <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return 0 or and error, KRB5_CC_END is returned at the end of iteration. See <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -771,14 +771,14 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> a Keberos context 
- <i>cursor</i> passed into <b>krb5_cccol_cursor_next()</b> and free with <b>krb5_cccol_cursor_free()</b>.</dl>
+</dt><dd> <i>context</i> a Keberos context 
+ <i>cursor</i> passed into <b>krb5_cccol_cursor_next()</b> and free with <b>krb5_cccol_cursor_free()</b>.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Returns 0 or and error code, see <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Returns 0 or and error code, see <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -790,15 +790,15 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A Kerberos 5 context 
+</dt><dd> <i>context</i> A Kerberos 5 context 
  <i>cursor</i> the iteration cursor 
- <i>cache</i> the returned cursor, pointer is set to NULL on failure and a cache on success. The returned cache needs to be freed with <b>krb5_cc_close()</b> or destroyed with <b>krb5_cc_destroy()</b>. MIT Kerberos behavies slightly diffrent and sets cache to NULL when all caches are iterated over and return 0.</dl>
+ <i>cache</i> the returned cursor, pointer is set to NULL on failure and a cache on success. The returned cache needs to be freed with <b>krb5_cc_close()</b> or destroyed with <b>krb5_cc_destroy()</b>. MIT Kerberos behavies slightly diffrent and sets cache to NULL when all caches are iterated over and return 0.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return 0 or and error, KRB5_CC_END is returned at the end of iteration. See <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return 0 or and error, KRB5_CC_END is returned at the end of iteration. See <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -810,15 +810,15 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> A Kerberos 5 context 
+</dt><dd> <i>context</i> A Kerberos 5 context 
  <i>type</i> The credential cache to probe, if NULL, all type are traversed. 
- <i>mtime</i> the last modification time, set to 0 on error.</dl>
+ <i>mtime</i> the last modification time, set to 0 on error.</dd></dl>
  
 
  <b>Returns:</b>
 <dl>
 <dt>
-<dd> Return 0 or and error. See <b>krb5_get_error_message()</b>.</dl>
+</dt><dd> Return 0 or and error. See <b>krb5_get_error_message()</b>.</dd></dl>
  
 
  
@@ -834,11 +834,11 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> a Kerberos 5 context 
+</dt><dd> <i>context</i> a Kerberos 5 context 
  <i>creds</i> the credentials to verify 
  <i>client</i> the client name to match up 
  <i>ccache</i> the credential cache to use 
- <i>service</i> a service name to use, used with <b>krb5_sname_to_principal()</b> to build a hostname to use to verify.</dl>
+ <i>service</i> a service name to use, used with <b>krb5_sname_to_principal()</b> to build a hostname to use to verify.</dd></dl>
  
 
  
@@ -850,8 +850,8 @@ url: "/docs/linux/man/3-krb5_cc_switch/"
  <b>Parameters:</b>
 <dl>
 <dt>
-<dd> <i>context</i> a Keberos context 
- <i>principal</i> principal to check if it a configuration principal</dl>
+</dt><dd> <i>context</i> a Keberos context 
+ <i>principal</i> principal to check if it a configuration principal</dd></dl>
  
 
  

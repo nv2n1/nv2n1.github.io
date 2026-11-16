@@ -10,14 +10,12 @@ description: "nlopt – Nonlinear optimization library"
 <p>nlopt &#8211; Nonlinear optimization library</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;nlopt.h&gt;
-
 nlopt_opt opt = nlopt_create(algorithm, n);
 nlopt_set_min_objective(opt, f, f_data);
 nlopt_set_ftol_rel(opt, tol);
 ...
 nlopt_optimize(opt, x , &amp;opt_f);
 nlopt_destroy(opt);
-
 The &quot;...&quot; indicates any number of calls to NLopt functions, below, to
 set parameters of the optimization, constraints, and stopping
 criteria.  Here, nlopt_set_ftol_rel is merely an example of a
@@ -81,99 +79,99 @@ with the linker flags -lnlopt -lm on Unix.</code></pre>
 <p> <code> nlopt_algorithm nlopt_get_algorithm(nlopt_opt </code><i>opt</i><code>);</code> </p>
 <p> The available algorithms are:</p>
 <dl>
-<dt><code>NLOPT_GN_DIRECT_L</code></p>
-<dd>Perform a global (G) derivative-free (N) optimization using the DIRECT-L search algorithm by Jones et al. as modified by Gablonsky et al. to be more weighted towards local search. Does not support unconstrainted optimization. There are also several other variants of the DIRECT algorithm that are supported: <code>NLOPT_GLOBAL_DIRECT</code>, which is the original DIRECT algorithm; <code>NLOPT_GLOBAL_DIRECT_L_RAND</code>, a slightly randomized version of DIRECT-L that may be better in high-dimensional search spaces; <code>NLOPT_GLOBAL_DIRECT_NOSCAL</code>, <code>NLOPT_GLOBAL_DIRECT_L_NOSCAL</code>, and <code>NLOPT_GLOBAL_DIRECT_L_RAND_NOSCAL</code>, which are versions of DIRECT where the dimensions are not rescaled to a unit hypercube (which means that dimensions with larger bounds are given more weight).</p>
-<dt><code>NLOPT_GN_ORIG_DIRECT_L</code></p>
-<dd>A global (G) derivative-free optimization using the DIRECT-L algorithm as above, along with <code>NLOPT_GN_ORIG_DIRECT</code> which is the original DIRECT algorithm. Unlike <code>NLOPT_GN_DIRECT_L </code> above, these two algorithms refer to code based on the original Fortran code of Gablonsky et al., which has some hard-coded limitations on the number of subdivisions etc. and does not support all of the NLopt stopping criteria, but on the other hand it supports arbitrary nonlinear inequality constraints.</p>
-<dt><code>NLOPT_GD_STOGO</code></p>
-<dd>Global (G) optimization using the StoGO algorithm by Madsen et al. StoGO exploits gradient information (D) (which must be supplied by the objective) for its local searches, and performs the global search by a branch-and-bound technique. Only bound-constrained optimization is supported. There is also another variant of this algorithm, <code>NLOPT_GD_STOGO_RAND</code>, which is a randomized version of the StoGO search scheme. The StoGO algorithms are only available if NLopt is compiled with C++ code enabled, and should be linked via -lnlopt_cxx instead of -lnlopt (via a C++ compiler, in order to link the C++ standard libraries).</p>
-<dt><code>NLOPT_LN_NELDERMEAD</code></p>
-<dd>Perform a local (L) derivative-free (N) optimization, starting at <i>x</i>, using the Nelder-Mead simplex algorithm, modified to support bound constraints. Nelder-Mead, while popular, is known to occasionally fail to converge for some objective functions, so it should be used with caution. Anecdotal evidence, on the other hand, suggests that it works fairly well for some cases that are hard to handle otherwise, e.g. noisy/discontinuous objectives. See also <code>NLOPT_LN_SBPLX</code> below.</p>
-<dt><code>NLOPT_LN_SBPLX</code></p>
-<dd>Perform a local (L) derivative-free (N) optimization, starting at <i>x</i>, using an algorithm based on the Subplex algorithm of Rowan et al., which is an improved variant of Nelder-Mead (above). Our implementation does not use Rowan&#8217;s original code, and has some minor modifications such as explicit support for bound constraints. (Like Nelder-Mead, Subplex often works well in practice, even for noisy/discontinuous objectives, but there is no rigorous guarantee that it will converge.)</p>
-<dt><code>NLOPT_LN_PRAXIS</code></p>
-<dd>Local (L) derivative-free (N) optimization using the principal-axis method, based on code by Richard Brent. Designed for unconstrained optimization, although bound constraints are supported too (via the inefficient method of returning +Inf when the constraints are violated).</p>
-<dt><code>NLOPT_LD_LBFGS</code></p>
-<dd>Local (L) gradient-based (D) optimization using the limited-memory BFGS (L-BFGS) algorithm. (The objective function must supply the gradient.) Unconstrained optimization is supported in addition to simple bound constraints (see above). Based on an implementation by Luksan et al.</p>
-<dt><code>NLOPT_LD_VAR2</code></p>
-<dd>Local (L) gradient-based (D) optimization using a shifted limited-memory variable-metric method based on code by Luksan et al., supporting both unconstrained and bound-constrained optimization. <code>NLOPT_LD_VAR2</code> uses a rank-2 method, while <code>.B NLOPT_LD_VAR1</code> is another variant using a rank-1 method.</p>
-<dt><code>NLOPT_LD_TNEWTON_PRECOND_RESTART</code></p>
-<dd>Local (L) gradient-based (D) optimization using an LBFGS-preconditioned truncated Newton method with steepest-descent restarting, based on code by Luksan et al., supporting both unconstrained and bound-constrained optimization. There are several other variants of this algorithm: <code>NLOPT_LD_TNEWTON_PRECOND </code> (same without restarting), <code>NLOPT_LD_TNEWTON_RESTART</code> (same without preconditioning), and <code>NLOPT_LD_TNEWTON</code> (same without restarting or preconditioning).</p>
-<dt><code>NLOPT_GN_CRS2_LM</code></p>
-<dd>Global (G) derivative-free (N) optimization using the controlled random search (CRS2) algorithm of Price, with the &quot;local mutation&quot; (LM) modification suggested by Kaelo and Ali.</p>
-<dt><code>NLOPT_GN_ISRES</code></p>
-<dd>Global (G) derivative-free (N) optimization using a genetic algorithm (mutation and differential evolution), using a stochastic ranking to handle nonlinear inequality and equality constraints as suggested by Runarsson and Yao.</p>
-<dt><code>NLOPT_G_MLSL_LDS</code>, <code>NLOPT_G_MLSL</code></p>
-<dd>Global (G) optimization using the multi-level single-linkage (MLSL) algorithm with a low-discrepancy sequence (LDS) or pseudorandom numbers, respectively. This algorithm executes a low-discrepancy or pseudorandom sequence of local searches, with a clustering heuristic to avoid multiple local searches for the same local optimum. The local search algorithm must be specified, along with termination criteria/tolerances for the local searches, by <i>nlopt_set_local_optimizer</i>. (This subsidiary algorithm can be with or without derivatives, and determines whether the objective function needs gradients.)</p>
-<dt><code>NLOPT_LD_MMA</code>, <code>NLOPT_LD_CCSAQ</code></p>
-<dd>Local (L) gradient-based (D) optimization using the method of moving asymptotes (MMA), or rather a refined version of the algorithm as published by Svanberg (2002). (NLopt uses an independent free-software/open-source implementation of Svanberg&#8217;s algorithm.) CCSAQ is a related algorithm from Svanberg&#8217;s paper which uses a local quadratic approximation rather than the more-complicated MMA model; the two usually have similar convergence rates. The <code>NLOPT_LD_MMA</code> algorithm supports both bound-constrained and unconstrained optimization, and also supports an arbitrary number (<i>m</i>) of nonlinear inequality (not equality) constraints as described above.</p>
-<dt><code>NLOPT_LD_SLSQP</code></p>
-<dd>Local (L) gradient-based (D) optimization using sequential quadratic programming and BFGS updates, supporting arbitrary nonlinear inequality and equality constraints, based on the code by Dieter Kraft (1988) adapted for use by the SciPy project. Note that this algorithm uses dense-matrix methods requiring O(<i>n</i>^2) storage and O(<i>n</i>^3) time, making it less practical for problems involving more than a few thousand parameters.</p>
-<dt><code>NLOPT_LN_COBYLA</code></p>
-<dd>Local (L) derivative-free (N) optimization using the COBYLA algorithm of Powell (Constrained Optimization BY Linear Approximations). The <code>NLOPT_LN_COBYLA</code> algorithm supports both bound-constrained and unconstrained optimization, and also supports an arbitrary number (<i>m</i>) of nonlinear inequality/equality constraints as described above.</p>
-<dt><code>NLOPT_LN_NEWUOA</code></p>
-<dd>Local (L) derivative-free (N) optimization using a variant of the NEWUOA algorithm of Powell, based on successive quadratic approximations of the objective function. We have modified the algorithm to support bound constraints. The original NEWUOA algorithm is also available, as <code>NLOPT_LN_NEWUOA</code>, but this algorithm ignores the bound constraints <i>lb</i> and <i>ub</i>, and so it should only be used for unconstrained problems. Mostly superseded by BOBYQA.</p>
-<dt><code>NLOPT_LN_BOBYQA</code></p>
-<dd>Local (L) derivative-free (N) optimization using the BOBYQA algorithm of Powell, based on successive quadratic approximations of the objective function, supporting bound constraints.</p>
-<dt><code>NLOPT_AUGLAG</code></p>
-<dd>Optimize an objective with nonlinear inequality/equality constraints via an unconstrained (or bound-constrained) optimization algorithm, using a gradually increasing &quot;augmented Lagrangian&quot; penalty for violated constraints. Requires you to specify another optimization algorithm for optimizing the objective+penalty function, using <i>nlopt_set_local_optimizer</i>. (This subsidiary algorithm can be global or local and with or without derivatives, but you must specify its own termination criteria.) A variant, <code>NLOPT_AUGLAG_EQ</code>, only uses the penalty approach for equality constraints, while inequality constraints are handled directly by the subsidiary algorithm (restricting the choice of subsidiary algorithms to those that can handle inequality constraints).</dl>
+<dt><code>NLOPT_GN_DIRECT_L</code></dt>
+<dd>Perform a global (G) derivative-free (N) optimization using the DIRECT-L search algorithm by Jones et al. as modified by Gablonsky et al. to be more weighted towards local search. Does not support unconstrainted optimization. There are also several other variants of the DIRECT algorithm that are supported: <code>NLOPT_GLOBAL_DIRECT</code>, which is the original DIRECT algorithm; <code>NLOPT_GLOBAL_DIRECT_L_RAND</code>, a slightly randomized version of DIRECT-L that may be better in high-dimensional search spaces; <code>NLOPT_GLOBAL_DIRECT_NOSCAL</code>, <code>NLOPT_GLOBAL_DIRECT_L_NOSCAL</code>, and <code>NLOPT_GLOBAL_DIRECT_L_RAND_NOSCAL</code>, which are versions of DIRECT where the dimensions are not rescaled to a unit hypercube (which means that dimensions with larger bounds are given more weight).</dd>
+<dt><code>NLOPT_GN_ORIG_DIRECT_L</code></dt>
+<dd>A global (G) derivative-free optimization using the DIRECT-L algorithm as above, along with <code>NLOPT_GN_ORIG_DIRECT</code> which is the original DIRECT algorithm. Unlike <code>NLOPT_GN_DIRECT_L </code> above, these two algorithms refer to code based on the original Fortran code of Gablonsky et al., which has some hard-coded limitations on the number of subdivisions etc. and does not support all of the NLopt stopping criteria, but on the other hand it supports arbitrary nonlinear inequality constraints.</dd>
+<dt><code>NLOPT_GD_STOGO</code></dt>
+<dd>Global (G) optimization using the StoGO algorithm by Madsen et al. StoGO exploits gradient information (D) (which must be supplied by the objective) for its local searches, and performs the global search by a branch-and-bound technique. Only bound-constrained optimization is supported. There is also another variant of this algorithm, <code>NLOPT_GD_STOGO_RAND</code>, which is a randomized version of the StoGO search scheme. The StoGO algorithms are only available if NLopt is compiled with C++ code enabled, and should be linked via -lnlopt_cxx instead of -lnlopt (via a C++ compiler, in order to link the C++ standard libraries).</dd>
+<dt><code>NLOPT_LN_NELDERMEAD</code></dt>
+<dd>Perform a local (L) derivative-free (N) optimization, starting at <i>x</i>, using the Nelder-Mead simplex algorithm, modified to support bound constraints. Nelder-Mead, while popular, is known to occasionally fail to converge for some objective functions, so it should be used with caution. Anecdotal evidence, on the other hand, suggests that it works fairly well for some cases that are hard to handle otherwise, e.g. noisy/discontinuous objectives. See also <code>NLOPT_LN_SBPLX</code> below.</dd>
+<dt><code>NLOPT_LN_SBPLX</code></dt>
+<dd>Perform a local (L) derivative-free (N) optimization, starting at <i>x</i>, using an algorithm based on the Subplex algorithm of Rowan et al., which is an improved variant of Nelder-Mead (above). Our implementation does not use Rowan&#8217;s original code, and has some minor modifications such as explicit support for bound constraints. (Like Nelder-Mead, Subplex often works well in practice, even for noisy/discontinuous objectives, but there is no rigorous guarantee that it will converge.)</dd>
+<dt><code>NLOPT_LN_PRAXIS</code></dt>
+<dd>Local (L) derivative-free (N) optimization using the principal-axis method, based on code by Richard Brent. Designed for unconstrained optimization, although bound constraints are supported too (via the inefficient method of returning +Inf when the constraints are violated).</dd>
+<dt><code>NLOPT_LD_LBFGS</code></dt>
+<dd>Local (L) gradient-based (D) optimization using the limited-memory BFGS (L-BFGS) algorithm. (The objective function must supply the gradient.) Unconstrained optimization is supported in addition to simple bound constraints (see above). Based on an implementation by Luksan et al.</dd>
+<dt><code>NLOPT_LD_VAR2</code></dt>
+<dd>Local (L) gradient-based (D) optimization using a shifted limited-memory variable-metric method based on code by Luksan et al., supporting both unconstrained and bound-constrained optimization. <code>NLOPT_LD_VAR2</code> uses a rank-2 method, while <code>.B NLOPT_LD_VAR1</code> is another variant using a rank-1 method.</dd>
+<dt><code>NLOPT_LD_TNEWTON_PRECOND_RESTART</code></dt>
+<dd>Local (L) gradient-based (D) optimization using an LBFGS-preconditioned truncated Newton method with steepest-descent restarting, based on code by Luksan et al., supporting both unconstrained and bound-constrained optimization. There are several other variants of this algorithm: <code>NLOPT_LD_TNEWTON_PRECOND </code> (same without restarting), <code>NLOPT_LD_TNEWTON_RESTART</code> (same without preconditioning), and <code>NLOPT_LD_TNEWTON</code> (same without restarting or preconditioning).</dd>
+<dt><code>NLOPT_GN_CRS2_LM</code></dt>
+<dd>Global (G) derivative-free (N) optimization using the controlled random search (CRS2) algorithm of Price, with the &quot;local mutation&quot; (LM) modification suggested by Kaelo and Ali.</dd>
+<dt><code>NLOPT_GN_ISRES</code></dt>
+<dd>Global (G) derivative-free (N) optimization using a genetic algorithm (mutation and differential evolution), using a stochastic ranking to handle nonlinear inequality and equality constraints as suggested by Runarsson and Yao.</dd>
+<dt><code>NLOPT_G_MLSL_LDS</code>, <code>NLOPT_G_MLSL</code></dt>
+<dd>Global (G) optimization using the multi-level single-linkage (MLSL) algorithm with a low-discrepancy sequence (LDS) or pseudorandom numbers, respectively. This algorithm executes a low-discrepancy or pseudorandom sequence of local searches, with a clustering heuristic to avoid multiple local searches for the same local optimum. The local search algorithm must be specified, along with termination criteria/tolerances for the local searches, by <i>nlopt_set_local_optimizer</i>. (This subsidiary algorithm can be with or without derivatives, and determines whether the objective function needs gradients.)</dd>
+<dt><code>NLOPT_LD_MMA</code>, <code>NLOPT_LD_CCSAQ</code></dt>
+<dd>Local (L) gradient-based (D) optimization using the method of moving asymptotes (MMA), or rather a refined version of the algorithm as published by Svanberg (2002). (NLopt uses an independent free-software/open-source implementation of Svanberg&#8217;s algorithm.) CCSAQ is a related algorithm from Svanberg&#8217;s paper which uses a local quadratic approximation rather than the more-complicated MMA model; the two usually have similar convergence rates. The <code>NLOPT_LD_MMA</code> algorithm supports both bound-constrained and unconstrained optimization, and also supports an arbitrary number (<i>m</i>) of nonlinear inequality (not equality) constraints as described above.</dd>
+<dt><code>NLOPT_LD_SLSQP</code></dt>
+<dd>Local (L) gradient-based (D) optimization using sequential quadratic programming and BFGS updates, supporting arbitrary nonlinear inequality and equality constraints, based on the code by Dieter Kraft (1988) adapted for use by the SciPy project. Note that this algorithm uses dense-matrix methods requiring O(<i>n</i>^2) storage and O(<i>n</i>^3) time, making it less practical for problems involving more than a few thousand parameters.</dd>
+<dt><code>NLOPT_LN_COBYLA</code></dt>
+<dd>Local (L) derivative-free (N) optimization using the COBYLA algorithm of Powell (Constrained Optimization BY Linear Approximations). The <code>NLOPT_LN_COBYLA</code> algorithm supports both bound-constrained and unconstrained optimization, and also supports an arbitrary number (<i>m</i>) of nonlinear inequality/equality constraints as described above.</dd>
+<dt><code>NLOPT_LN_NEWUOA</code></dt>
+<dd>Local (L) derivative-free (N) optimization using a variant of the NEWUOA algorithm of Powell, based on successive quadratic approximations of the objective function. We have modified the algorithm to support bound constraints. The original NEWUOA algorithm is also available, as <code>NLOPT_LN_NEWUOA</code>, but this algorithm ignores the bound constraints <i>lb</i> and <i>ub</i>, and so it should only be used for unconstrained problems. Mostly superseded by BOBYQA.</dd>
+<dt><code>NLOPT_LN_BOBYQA</code></dt>
+<dd>Local (L) derivative-free (N) optimization using the BOBYQA algorithm of Powell, based on successive quadratic approximations of the objective function, supporting bound constraints.</dd>
+<dt><code>NLOPT_AUGLAG</code></dt>
+<dd>Optimize an objective with nonlinear inequality/equality constraints via an unconstrained (or bound-constrained) optimization algorithm, using a gradually increasing &quot;augmented Lagrangian&quot; penalty for violated constraints. Requires you to specify another optimization algorithm for optimizing the objective+penalty function, using <i>nlopt_set_local_optimizer</i>. (This subsidiary algorithm can be global or local and with or without derivatives, but you must specify its own termination criteria.) A variant, <code>NLOPT_AUGLAG_EQ</code>, only uses the penalty approach for equality constraints, while inequality constraints are handled directly by the subsidiary algorithm (restricting the choice of subsidiary algorithms to those that can handle inequality constraints).</dd></dl>
 <h2>Stopping Criteria</h2>
 <p>Multiple stopping criteria for the optimization are supported, as specified by the functions to modify a given optimization problem <code>opt</code>. The optimization halts whenever any one of these criteria is satisfied. In some cases, the precise interpretation of the stopping criterion depends on the optimization algorithm above (although we have tried to make them as consistent as reasonably possible), and some algorithms do not support all of the stopping criteria. </p>
 <p> Important: you do not need to use all of the stopping criteria! In most cases, you only need one or two, and can omit the remainder (all criteria are disabled by default).</p>
 <dl>
-<dt><code>nlopt_result nlopt_set_stopval(nlopt_opt </code><i>opt</i><code>,</code></p>
-<dd><code> double </code><i>stopval</i><code>);</code> </p>
+<dt><code>nlopt_result nlopt_set_stopval(nlopt_opt </code><i>opt</i><code>,</code></dt>
+<dd><code> double </code><i>stopval</i><code>);</code> </dd>
 <p> Stop when an objective value of at least <i>stopval</i> is found: stop minimizing when a value &lt;= <i>stopval</i> is found, or stop maximizing when a value &gt;= <i>stopval</i> is found. (Setting <i>stopval</i> to -HUGE_VAL for minimizing or +HUGE_VAL for maximizing disables this stopping criterion.)</p>
-<dt><code>nlopt_result nlopt_set_ftol_rel(nlopt_opt </code><i>opt</i><code>,</code></p>
-<dd><code> double </code><i>tol</i><code>);</code> </p>
+<dt><code>nlopt_result nlopt_set_ftol_rel(nlopt_opt </code><i>opt</i><code>,</code></dt>
+<dd><code> double </code><i>tol</i><code>);</code> </dd>
 <p> Set relative tolerance on function value: stop when an optimization step (or an estimate of the optimum) changes the function value by less than <i>tol</i> multiplied by the absolute value of the function value. (If there is any chance that your optimum function value is close to zero, you might want to set an absolute tolerance with <code>nlopt_set_ftol_abs</code> as well.) Criterion is disabled if <i>tol</i> is non-positive.</p>
-<dt><code>nlopt_result nlopt_set_ftol_abs(nlopt_opt </code><i>opt</i><code>,</code></p>
-<dd><code> double </code><i>tol</i><code>);</code> </p>
+<dt><code>nlopt_result nlopt_set_ftol_abs(nlopt_opt </code><i>opt</i><code>,</code></dt>
+<dd><code> double </code><i>tol</i><code>);</code> </dd>
 <p> Set absolute tolerance on function value: stop when an optimization step (or an estimate of the optimum) changes the function value by less than <i>tol</i>. Criterion is disabled if <i>tol</i> is non-positive.</p>
-<dt><code>nlopt_result nlopt_set_xtol_rel(nlopt_opt </code><i>opt</i><code>,</code></p>
-<dd><code> double </code><i>tol</i><code>);</code> </p>
+<dt><code>nlopt_result nlopt_set_xtol_rel(nlopt_opt </code><i>opt</i><code>,</code></dt>
+<dd><code> double </code><i>tol</i><code>);</code> </dd>
 <p> Set relative tolerance on design variables: stop when an optimization step (or an estimate of the optimum) changes every design variable by less than <i>tol</i> multiplied by the absolute value of the design variable. (If there is any chance that an optimal design variable is close to zero, you might want to set an absolute tolerance with <code>nlopt_set_xtol_abs</code> as well.) Criterion is disabled if <i>tol</i> is non-positive.</p>
-<dt><code>nlopt_result nlopt_set_xtol_abs(nlopt_opt </code><i>opt</i><code>,</code></p>
-<dd><code> const double* </code><i>tol</i><code>);</code> </p>
+<dt><code>nlopt_result nlopt_set_xtol_abs(nlopt_opt </code><i>opt</i><code>,</code></dt>
+<dd><code> const double* </code><i>tol</i><code>);</code> </dd>
 <p> Set absolute tolerances on design variables. <i>tol</i> is a pointer to an array of length <i>n giving the tolerances: stop when an</i> optimization step (or an estimate of the optimum) changes every design variable <i>x</i>[i] by less than <i>tol</i>[i]. </p>
 <p> For convenience, the following function may be used to set the absolute tolerances in all <i>n</i> design variables to the same value: </p>
 <p> <code> nlopt_result nlopt_set_xtol_abs1(nlopt_opt </code><i>opt</i><code>,</code><br />
  <code> double </code><i>tol</i><code>);</code> </p>
 <p> Criterion is disabled if <i>tol</i> is non-positive.</p>
-<dt><code>nlopt_result nlopt_set_maxeval(nlopt_opt </code><i>opt</i><code>,</code></p>
-<dd><code> int </code><i>maxeval</i><code>);</code> </p>
+<dt><code>nlopt_result nlopt_set_maxeval(nlopt_opt </code><i>opt</i><code>,</code></dt>
+<dd><code> int </code><i>maxeval</i><code>);</code> </dd>
 <p> Stop when the number of function evaluations exceeds <i>maxeval</i>. (This is not a strict maximum: the number of function evaluations may exceed <i>maxeval </i> slightly, depending upon the algorithm.) Criterion is disabled if <i>maxeval</i> is non-positive.</p>
-<dt><code>nlopt_result nlopt_set_maxtime(nlopt_opt </code><i>opt</i><code>,</code></p>
-<dd><code> double </code><i>maxtime</i><code>);</code> </p>
+<dt><code>nlopt_result nlopt_set_maxtime(nlopt_opt </code><i>opt</i><code>,</code></dt>
+<dd><code> double </code><i>maxtime</i><code>);</code> </dd>
 <p> Stop when the optimization time (in seconds) exceeds <i>maxtime</i>. (This is not a strict maximum: the time may exceed <i>maxtime</i> slightly, depending upon the algorithm and on how slow your function evaluation is.) Criterion is disabled if <i>maxtime</i> is non-positive.</dl>
 <h2>Return Value</h2>
 <p>Most of the NLopt functions return an enumerated constant of type <code>nlopt_result</code>, which takes on one of the following values:</p>
 <h3>Successful termination (positive return values):</h3>
 <dl>
-<dt><code>NLOPT_SUCCESS</code></p>
-<dd>Generic success return value.</p>
-<dt><code>NLOPT_STOPVAL_REACHED</code></p>
-<dd>Optimization stopped because <i>stopval</i> (above) was reached.</p>
-<dt><code>NLOPT_FTOL_REACHED</code></p>
-<dd>Optimization stopped because <i>ftol_rel</i> or <i>ftol_abs</i> (above) was reached.</p>
-<dt><code>NLOPT_XTOL_REACHED</code></p>
-<dd>Optimization stopped because <i>xtol_rel</i> or <i>xtol_abs</i> (above) was reached.</p>
-<dt><code>NLOPT_MAXEVAL_REACHED</code></p>
-<dd>Optimization stopped because <i>maxeval</i> (above) was reached.</p>
-<dt><code>NLOPT_MAXTIME_REACHED</code></p>
-<dd>Optimization stopped because <i>maxtime</i> (above) was reached.</dl>
+<dt><code>NLOPT_SUCCESS</code></dt>
+<dd>Generic success return value.</dd>
+<dt><code>NLOPT_STOPVAL_REACHED</code></dt>
+<dd>Optimization stopped because <i>stopval</i> (above) was reached.</dd>
+<dt><code>NLOPT_FTOL_REACHED</code></dt>
+<dd>Optimization stopped because <i>ftol_rel</i> or <i>ftol_abs</i> (above) was reached.</dd>
+<dt><code>NLOPT_XTOL_REACHED</code></dt>
+<dd>Optimization stopped because <i>xtol_rel</i> or <i>xtol_abs</i> (above) was reached.</dd>
+<dt><code>NLOPT_MAXEVAL_REACHED</code></dt>
+<dd>Optimization stopped because <i>maxeval</i> (above) was reached.</dd>
+<dt><code>NLOPT_MAXTIME_REACHED</code></dt>
+<dd>Optimization stopped because <i>maxtime</i> (above) was reached.</dd></dl>
 <h3>Error codes (negative return values):</h3>
 <dl>
-<dt><code>NLOPT_FAILURE</code></p>
-<dd>Generic failure code.</p>
-<dt><code>NLOPT_INVALID_ARGS</code></p>
-<dd>Invalid arguments (e.g. lower bounds are bigger than upper bounds, an unknown algorithm was specified, etcetera).</p>
-<dt><code>NLOPT_OUT_OF_MEMORY</code></p>
-<dd>Ran out of memory.</p>
-<dt><code>NLOPT_ROUNDOFF_LIMITED</code></p>
-<dd>Halted because roundoff errors limited progress.</p>
-<dt><code>NLOPT_FORCED_STOP</code></p>
-<dd>Halted because the user called <code>nlopt_force_stop</code>(<i>opt</i>) on the optimization&#8217;s <code>nlopt_opt</code> object <i>opt</i> from the user&#8217;s objective function.</dl>
+<dt><code>NLOPT_FAILURE</code></dt>
+<dd>Generic failure code.</dd>
+<dt><code>NLOPT_INVALID_ARGS</code></dt>
+<dd>Invalid arguments (e.g. lower bounds are bigger than upper bounds, an unknown algorithm was specified, etcetera).</dd>
+<dt><code>NLOPT_OUT_OF_MEMORY</code></dt>
+<dd>Ran out of memory.</dd>
+<dt><code>NLOPT_ROUNDOFF_LIMITED</code></dt>
+<dd>Halted because roundoff errors limited progress.</dd>
+<dt><code>NLOPT_FORCED_STOP</code></dt>
+<dd>Halted because the user called <code>nlopt_force_stop</code>(<i>opt</i>) on the optimization&#8217;s <code>nlopt_opt</code> object <i>opt</i> from the user&#8217;s objective function.</dd></dl>
 <h2>Local Optimizer</h2>
 <p>Some of the algorithms, especially MLSL and AUGLAG, use a different optimization algorithm as a subroutine, typically for local optimization. You can change the local search algorithm and its tolerances by calling: </p>
 <p> <code> nlopt_result nlopt_set_local_optimizer(nlopt_opt </code><i>opt</i><code>,</code><br />

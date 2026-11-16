@@ -38,10 +38,10 @@ description: "zgges.f –"
  A pair of matrices (S,T) is in generalized complex Schur form if S
  and T are upper triangular and, in addition, the diagonal elements
  of T are non-negative real numbers.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>JOBVSL</i> </p>
+<dd><i>JOBVSL</i> </dd>
 <pre> JOBVSL is CHARACTER*1
  = 'N': do not compute the left Schur vectors;
  = 'V': compute the left Schur vectors.</pre>
@@ -156,13 +156,13 @@ description: "zgges.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 269 of file zgges.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>

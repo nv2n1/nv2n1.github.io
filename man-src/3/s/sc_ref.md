@@ -11,7 +11,6 @@ description: "sc::Ref –"
 <p> A template class that maintains references counts.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;ref.h&gt;</code></pre>
 <p> Inherits <code>sc::RefBase</code>.</p>
 <h3>Public Member Functions</h3>

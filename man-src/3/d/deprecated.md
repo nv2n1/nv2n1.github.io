@@ -10,9 +10,9 @@ description: "deprecated – Deprecated List"
 <h2 class="name">NAME</h2>
 <p> deprecated &#8211; Deprecated List </p>
 <dl>
-<dt><code>Global dmlite_any_new_long_array</code> (unsigned n, long *lv)</p>
-<dd> Use dmlite_set_array instead.</p>
-<dt><code>Global dmlite_any_new_string_array</code> (unsigned n, const char **strv)</p>
-<dd> Use dmlite_set_array instead.</dl>
+<dt><code>Global dmlite_any_new_long_array</code> (unsigned n, long *lv)</dt>
+<dd> Use dmlite_set_array instead.</dd>
+<dt><code>Global dmlite_any_new_string_array</code> (unsigned n, const char **strv)</dt>
+<dd> Use dmlite_set_array instead.</dd></dl>
 <hr>
 <h2>Index</h2>

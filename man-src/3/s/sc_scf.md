@@ -11,7 +11,6 @@ description: "sc::SCF –"
 <p> The <code>SCF</code> class is the base for all classes that use a self-consistent field procedure to solve an effective one body problem.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;scf.h&gt;</code></pre>
 <p> Inherits <code>sc::OneBodyWavefunction</code>. Inherited by <code>sc::CLSCF</code>, <code>sc::HSOSSCF</code>, <code>sc::OSSSCF</code>, <code>sc::TCSCF</code>, and <code>sc::UnrestrictedSCF</code>.</p>
 <h3>Public Member Functions</h3>
@@ -41,220 +40,60 @@ description: "sc::SCF –"
  enum <code>Access</code> { <code>Read</code>, <code>Write</code>, <code>Accum</code> }</p>
 <h3>Protected Member Functions</h3>
 <pre><code>virtual void init_threads ()
-
-
-
 virtual void done_threads ()
-
-
-
 virtual void compute ()
-
-
 Recompute at least the results that have compute true and are not already computed.
-
-
 virtual double compute_vector (double &amp;, double enuclear)
-
-
-
 virtual Ref&lt; SCExtrapError &gt; extrap_error ()
-
-
-
 virtual void compute_gradient (const RefSCVector &amp;)
-
-
-
 virtual void compute_hessian (const RefSymmSCMatrix &amp;)
-
-
-
 virtual void savestate_iter (int)
-
-
-
 virtual void savestate_to_file (const std::string &amp;filename)
-
-
-
 signed char * init_pmax (double *)
-
-
-
 RefSymmSCMatrix get_local_data (const RefSymmSCMatrix &amp;, double *&amp;, Access)
-
-
-
 virtual void initial_vector (int needv=1)
-
-
-
 void init_mem (int)
-
-
-
 void so_density (const RefSymmSCMatrix &amp;d, double occ, int alp=1)
-
-
-
 int * read_occ (const Ref&lt; KeyVal &gt; &amp;, const char *name, int nirrep)
-
-
-
 virtual void set_occupations (const RefDiagSCMatrix &amp;)=0
-
-
-
 virtual void init_vector ()=0
-
-
-
 virtual void done_vector ()=0
-
-
-
 virtual double new_density ()=0
-
-
-
 virtual void reset_density ()=0
-
-
-
 virtual double scf_energy ()=0
-
-
-
 virtual Ref&lt; SCExtrapData &gt; extrap_data ()=0
-
-
-
 virtual void ao_fock (double accuracy)=0
-
-
-
 virtual void init_gradient ()=0
-
-
-
 virtual void done_gradient ()=0
-
-
-
 virtual RefSymmSCMatrix lagrangian ()=0
-
-
-
 virtual RefSymmSCMatrix gradient_density ()=0
-
-
-
 virtual void two_body_deriv (double *)=0
-
-
-
 virtual void init_hessian ()=0
-
-
-
 virtual void done_hessian ()=0
-
-
-
 Protected Attributes
 int need_vec_
-
-
-
 int compute_guess_
-
-
-
 int keep_guess_wfn_
-
-
-
 Ref&lt; OneBodyWavefunction &gt; guess_wfn_
-
-
-
 int always_use_guess_wfn_
-
-
-
 Ref&lt; SelfConsistentExtrapolation &gt; extrap_
-
-
-
 Ref&lt; AccumH &gt; accumdih_
-
-
-
 Ref&lt; AccumH &gt; accumddh_
-
-
-
 int maxiter_
-
-
-
 int dens_reset_freq_
-
-
-
 int reset_occ_
-
-
-
 int local_dens_
-
-
-
 size_t storage_
-
-
-
 int print_all_evals_
-
-
-
 int print_occ_evals_
-
-
-
 double level_shift_
-
-
-
 Ref&lt; MessageGrp &gt; scf_grp_
-
-
-
 Ref&lt; ThreadGrp &gt; threadgrp_
-
-
-
 int local_
-
-
-
 Ref&lt; TwoBodyInt &gt; * tbis_
-
-
-
 std::string previous_savestate_file_
-
-
-
 RefSCMatrix oso_scf_vector_
-
-
-
 RefSCMatrix oso_scf_vector_beta_
-
-
-
 RefSymmSCMatrix hcore_</code></pre>
 <h2>Detailed Description</h2>
 <p>The <code>SCF</code> class is the base for all classes that use a self-consistent field procedure to solve an effective one body problem.</p>
@@ -262,38 +101,38 @@ RefSymmSCMatrix hcore_</code></pre>
 <h3>sc::SCF::SCF (const <code>Ref</code>&lt; <code>KeyVal</code> &gt; &amp;)</h3>
 <p>The <code>KeyVal</code> constructor. .IP &quot;maxiter&quot; 1c This integer specifies the maximum number of <code>SCF</code> iterations. The default is 40. </p>
 <dl>
-<dt>density_reset_frequency</p>
-<dd>This integer specifies how often, in term of <code>SCF</code> iterations, $Delta D$ will be reset to $D$. The default is 10.</dl>
+<dt>density_reset_frequency</dt>
+<dd>This integer specifies how often, in term of <code>SCF</code> iterations, $Delta D$ will be reset to $D$. The default is 10.</dd></dl>
 <dl>
-<dt>reset_occuptions</p>
-<dd>Reassign the occupations after each iteration based on the eigenvalues. This only has an effect for molecules with higher than $C_1$ symmetry. The default is false.</dl>
+<dt>reset_occuptions</dt>
+<dd>Reassign the occupations after each iteration based on the eigenvalues. This only has an effect for molecules with higher than $C_1$ symmetry. The default is false.</dd></dl>
 <dl>
-<dt>level_shift</p>
-<dd>The default is 0.</dl>
+<dt>level_shift</dt>
+<dd>The default is 0.</dd></dl>
 <dl>
-<dt>extrap</p>
-<dd>This specifies an object of type <code>SelfConsistentExtrapolation</code>. The default is a <code>DIIS</code> object.</dl>
+<dt>extrap</dt>
+<dd>This specifies an object of type <code>SelfConsistentExtrapolation</code>. The default is a <code>DIIS</code> object.</dd></dl>
 <dl>
-<dt>memory</p>
-<dd>The amount of memory that each processor may use. The default is 0 (minimal memory use).</dl>
+<dt>memory</dt>
+<dd>The amount of memory that each processor may use. The default is 0 (minimal memory use).</dd></dl>
 <dl>
-<dt>local_density</p>
-<dd>If this is true, a local copy of the density and $G$ matrix will be made on all nodes, even if a distributed matrix specialization is used. The default is true.</dl>
+<dt>local_density</dt>
+<dd>If this is true, a local copy of the density and $G$ matrix will be made on all nodes, even if a distributed matrix specialization is used. The default is true.</dd></dl>
 <dl>
-<dt>guess_wavefunction</p>
-<dd>This specifies the initial guess for the solution to the <code>SCF</code> equations. This can be either a <code>OneBodyWavefunction</code> object or the name of file that contains the saved state of a <code>OneBodyWavefunction</code> object. By default the one-electron hamiltonian will be diagonalized to obtain the initial guess.</dl>
+<dt>guess_wavefunction</dt>
+<dd>This specifies the initial guess for the solution to the <code>SCF</code> equations. This can be either a <code>OneBodyWavefunction</code> object or the name of file that contains the saved state of a <code>OneBodyWavefunction</code> object. By default the one-electron hamiltonian will be diagonalized to obtain the initial guess.</dd></dl>
 <dl>
-<dt>keep_guess_wavefunction</p>
-<dd>The guess wavefunction is normally discarded after it is projected. Setting this boolean variable to true will cause the guess to be kept. This is useful when doing frequencies of symmetric molecules by finite displacements, because the wavefunction is lost whenever the molecule is displaced into lower symmetry.</dl>
+<dt>keep_guess_wavefunction</dt>
+<dd>The guess wavefunction is normally discarded after it is projected. Setting this boolean variable to true will cause the guess to be kept. This is useful when doing frequencies of symmetric molecules by finite displacements, because the wavefunction is lost whenever the molecule is displaced into lower symmetry.</dd></dl>
 <dl>
-<dt>always_use_guess_wavefunction</p>
-<dd>If the orbitals must be recomputed after they have already been computed once, then the old orbitals are used as the initial guess by default. However, if this option is true, then the guess wavefunction will be used, if available. If a guess wavefunction is not available, then a core Hamiltonian guess will be used. If this option is set to true, then keep_guess_wavefunction should also be set to true.</dl>
+<dt>always_use_guess_wavefunction</dt>
+<dd>If the orbitals must be recomputed after they have already been computed once, then the old orbitals are used as the initial guess by default. However, if this option is true, then the guess wavefunction will be used, if available. If a guess wavefunction is not available, then a core Hamiltonian guess will be used. If this option is set to true, then keep_guess_wavefunction should also be set to true.</dd></dl>
 <dl>
-<dt>print_evals</p>
-<dd>Takes a boolean value. If true, print all eigenvalues after the <code>SCF</code> procedure converges. Takes a boolean value. The default is false.</dl>
+<dt>print_evals</dt>
+<dd>Takes a boolean value. If true, print all eigenvalues after the <code>SCF</code> procedure converges. Takes a boolean value. The default is false.</dd></dl>
 <dl>
-<dt>print_occ_evals</p>
-<dd>Takes a boolean value. If true, print the occupied eigenvalues after the <code>SCF</code> procedure converges. The default is false.</dl>
+<dt>print_occ_evals</dt>
+<dd>Takes a boolean value. If true, print the occupied eigenvalues after the <code>SCF</code> procedure converges. The default is false.</dd></dl>
 <h2>Member Function Documentation</h2>
 <h3>virtual void sc::SCF::compute () [protected, virtual]</h3>
 <p>Recompute at least the results that have compute true and are not already computed. This should only be called by Result&#8217;s members. </p>

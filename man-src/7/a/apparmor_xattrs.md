@@ -24,7 +24,6 @@ security.apparmor=&quot;trusted&quot; The priority of each profile is determined
 profile example1 /usr/bin/example-tool {
 # ...
 }
-
 # Lower priority than the longer path, but higher priority than a rule
 # with fewer xattr matches.
 profile example2 /usr/** xattrs=(
@@ -33,7 +32,6 @@ user.domain=&quot;**&quot;
 ) {
 # ...
 }
-
 # Lowest priority. Same path length as the second profile, but has
 # fewer xattr matches.
 profile example2 /usr/** {

@@ -17,13 +17,13 @@ description: "dsecndtst.f –"
 <h3>program __dsecndtst.f__ ()</h3>
 <p><code>DSECNDTST</code> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> Definition at line 37 of file dsecndtst.f.</p>
 <h3>subroutine mysub (integerN, double precision, dimension(n)X, double precision, dimension(n)Y)</h3>
 <p>Definition at line 120 of file dsecndtst.f.</p>

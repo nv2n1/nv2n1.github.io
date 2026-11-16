@@ -18,8 +18,8 @@ whisper-dump path
 <p> The options are described below.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd> Show the embedded help.</dl>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> Show the embedded help.</dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>whisper</code> is a fixed size database, created by Chris Davis. </p>
 <p> This manual page was written by Jonas Genannt &lt;jonas.genannt [at] capi2name.de&gt;, for the Debian project (but may be used by others). </p>

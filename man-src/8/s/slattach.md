@@ -14,32 +14,32 @@ description: "slattach – attach a network interface to a serial line"
 <p><code>Slattach</code> is a tiny little program that can be used to put a normal terminal (&quot;serial&quot;) line into one of several &quot;network&quot; modes, thus allowing you to use it for point-to-point links to other computers.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>tty</code></p>
-<dd>Path to a serial device like <i>/dev/ttyS*</i>, <i>/dev/cua*</i> or <i>/dev/ptmx</i> to spawn a new pseudo tty.</p>
-<dt><code>[-c command]</code></p>
-<dd>Execute <code>command</code> when the line is hung up. This can be used to run scripts or re-establish connections when a link goes down.</p>
-<dt><code>[-d]</code></p>
-<dd>Enable debugging output. Useful when determining why a given setup doesn&#8217;t work.</p>
-<dt><code>[-h]</code></p>
-<dd>Exit when the carrier is lost. This works on both /dev/tty and /dev/cua devices by directly monitoring the carrier status every 15 seconds.</p>
-<dt><code>[-v]</code></p>
-<dd>Enable verbose output. Useful in shell scripts.</p>
-<dt><code>[-q]</code></p>
-<dd>Operate in quiet mode &#8211; no messages at all.</p>
-<dt><code>[-l]</code></p>
-<dd>Create an UUCP-style lockfile for the device in /var/lock.</p>
-<dt><code>[-n]</code></p>
-<dd>Equivalent to the &quot;mesg n&quot; command.</p>
-<dt><code>[-m]</code></p>
-<dd>Do <code>not</code> initialize the line into 8 bits raw mode.</p>
-<dt><code>[-e]</code></p>
-<dd>Exit right after initializing device, instead of waiting for the line to hang up.</p>
-<dt><code>[-L]</code></p>
-<dd>Enable 3 wire operation. The terminal is moved into CLOCAL mode, carrier watching is disabled.</p>
-<dt><code>[-p proto]</code></p>
-<dd>Set a specific kind of protocol to use on the line. The default is set to <code>cslip</code>, i.e. compressed SLIP. Other possible values are <code>slip</code> (normal SLIP), <code>adaptive</code> (adaptive CSLIP/SLIP), <code>ppp</code> (Point-to-Point Protocol) and <code>kiss</code> (a protocol used for communicating with AX.25 packet radio terminal node controllers). The special argument <code>tty</code> can be used to put the device back into normal serial operation. Using &#8216;ppp&#8217; mode is not normally useful as ppp requires an additional ppp daemon <code>pppd</code> to be active on the line. For kiss connections the <code>kissattach</code> program should be used.</p>
-<dt><code>[-s speed]</code></p>
-<dd>Set a specific line speed, other than the default.</dl>
+<dt><code>tty</code></dt>
+<dd>Path to a serial device like <i>/dev/ttyS*</i>, <i>/dev/cua*</i> or <i>/dev/ptmx</i> to spawn a new pseudo tty.</dd>
+<dt><code>[-c command]</code></dt>
+<dd>Execute <code>command</code> when the line is hung up. This can be used to run scripts or re-establish connections when a link goes down.</dd>
+<dt><code>[-d]</code></dt>
+<dd>Enable debugging output. Useful when determining why a given setup doesn&#8217;t work.</dd>
+<dt><code>[-h]</code></dt>
+<dd>Exit when the carrier is lost. This works on both /dev/tty and /dev/cua devices by directly monitoring the carrier status every 15 seconds.</dd>
+<dt><code>[-v]</code></dt>
+<dd>Enable verbose output. Useful in shell scripts.</dd>
+<dt><code>[-q]</code></dt>
+<dd>Operate in quiet mode &#8211; no messages at all.</dd>
+<dt><code>[-l]</code></dt>
+<dd>Create an UUCP-style lockfile for the device in /var/lock.</dd>
+<dt><code>[-n]</code></dt>
+<dd>Equivalent to the &quot;mesg n&quot; command.</dd>
+<dt><code>[-m]</code></dt>
+<dd>Do <code>not</code> initialize the line into 8 bits raw mode.</dd>
+<dt><code>[-e]</code></dt>
+<dd>Exit right after initializing device, instead of waiting for the line to hang up.</dd>
+<dt><code>[-L]</code></dt>
+<dd>Enable 3 wire operation. The terminal is moved into CLOCAL mode, carrier watching is disabled.</dd>
+<dt><code>[-p proto]</code></dt>
+<dd>Set a specific kind of protocol to use on the line. The default is set to <code>cslip</code>, i.e. compressed SLIP. Other possible values are <code>slip</code> (normal SLIP), <code>adaptive</code> (adaptive CSLIP/SLIP), <code>ppp</code> (Point-to-Point Protocol) and <code>kiss</code> (a protocol used for communicating with AX.25 packet radio terminal node controllers). The special argument <code>tty</code> can be used to put the device back into normal serial operation. Using &#8216;ppp&#8217; mode is not normally useful as ppp requires an additional ppp daemon <code>pppd</code> to be active on the line. For kiss connections the <code>kissattach</code> program should be used.</dd>
+<dt><code>[-s speed]</code></dt>
+<dd>Set a specific line speed, other than the default.</dd></dl>
 <p> If no arguments are given, the current terminal line (usually: the login device) is used. Otherwise, an attempt is made to claim the indicated terminal port, lock it, and open it.</p>
 <h2>Files</h2>
 <p><i>/dev/cua* /var/lock/LCK.* /dev/ttyS* /dev/ptmx</i></p>

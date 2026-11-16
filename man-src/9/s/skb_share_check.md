@@ -15,11 +15,11 @@ skb_share_check - check if buffer is shared and if so clone it
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>buffer to check</dl>
+<dl><dd></dd><dd>buffer to check</dd></dl>
  
 
  <i>pri</i>
-<dl><dd>priority for memory allocation</dl>
+<dl><dd>priority for memory allocation</dd></dl>
 
 <h2>Description</h2>
 

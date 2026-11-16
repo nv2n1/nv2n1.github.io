@@ -18,16 +18,16 @@ description: "flatpak-installation – Configuration for an installation locatio
 <p> The following keys are recognized: </p>
 <p> <code>Path</code> (string)</p>
 <dl>
-<dd>The path for this installation. This key is mandatory.</dl>
+<dd>The path for this installation. This key is mandatory.</dd></dl>
 <p> <code>DisplayName</code> (string)</p>
 <dl>
-<dd>The name to use when showing this installation in the UI.</dl>
+<dd>The name to use when showing this installation in the UI.</dd></dl>
 <p> <code>Priority</code> (integer)</p>
 <dl>
-<dd>A priority for this installation.</dl>
+<dd>A priority for this installation.</dd></dl>
 <p> <code>StorageType</code> (string)</p>
 <dl>
-<dd>The type of storage used for this installation. Possible values include: network, mmc, sdcard, harddisk.</dl>
+<dd>The type of storage used for this installation. Possible values include: network, mmc, sdcard, harddisk.</dd></dl>
 <h2>Examples</h2>
 <dl>
 <dd>
@@ -35,4 +35,4 @@ description: "flatpak-installation – Configuration for an installation locatio
 Path=/location/of/sdcard
 DisplayName=Extra Installation
 StorageType=sdcard</pre>
-</dl>
+</dd></dl>

@@ -37,13 +37,12 @@ url: "/docs/linux/man/1-nvme-reset/"
 
 <dl>
 <dt>
-<dd> &bull; Resets the controller. 
-
-<dl>
+</dt><dd> &bull; Resets the controller. 
+</dd><dl>
 <dt>
-<dd> <pre>
+</dt><dd> <pre>
 # nvme reset /dev/nvme0
-</pre></dl>
+</pre></dd></dl>
 </dl>
 
 <h2>NVME</h2>

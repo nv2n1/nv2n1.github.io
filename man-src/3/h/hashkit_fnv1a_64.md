@@ -13,27 +13,27 @@ description: "hashkit_fnv1a_64 – libhashkit Documentation"
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libhashkit/hashkit.h&gt;</p>
 <dl>
-<dt><code>uint32_t hashkit_default(const char</code><i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>)</p>
+<dt><code>uint32_t hashkit_default(const char</code><i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>)</dt>
 <dd>
-<dt><code>uint32_t hashkit_fnv1_64(const char</code><i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>)</p>
+</dd><dt><code>uint32_t hashkit_fnv1_64(const char</code><i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>)</dt>
 <dd>
-<dt><code>uint32_t hashkit_fnv1a_64(const char</code><i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>)</p>
+</dd><dt><code>uint32_t hashkit_fnv1a_64(const char</code><i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>)</dt>
 <dd>
-<dt><code>uint32_t hashkit_fnv1_32(const char</code><i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>)</p>
+</dd><dt><code>uint32_t hashkit_fnv1_32(const char</code><i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>)</dt>
 <dd>
-<dt><code>uint32_t hashkit_fnv1a_32(const char</code><i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>)</p>
+</dd><dt><code>uint32_t hashkit_fnv1a_32(const char</code><i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>)</dt>
 <dd>
-<dt><code>uint32_t hashkit_crc32(const char</code><i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>)</p>
+</dd><dt><code>uint32_t hashkit_crc32(const char</code><i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>)</dt>
 <dd>
-<dt><code>uint32_t hashkit_hsieh(const char</code><i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>)</p>
+</dd><dt><code>uint32_t hashkit_hsieh(const char</code><i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>)</dt>
 <dd>
-<dt><code>uint32_t hashkit_murmur(const char</code><i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>)</p>
+</dd><dt><code>uint32_t hashkit_murmur(const char</code><i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>)</dt>
 <dd>
-<dt><code>uint32_t hashkit_jenkins(const char</code><i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>)</p>
+</dd><dt><code>uint32_t hashkit_jenkins(const char</code><i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>)</dt>
 <dd>
-<dt><code>uint32_t hashkit_md5(const char</code><i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>)</p>
+</dd><dt><code>uint32_t hashkit_md5(const char</code><i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>)</dt>
 <dd>
-<p> Compile and link with -lhashkit</dl>
+<p> Compile and link with -lhashkit</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> These functions generate hash values from a key using a variety of algorithms. These functions can be used standalone, or as arguments to hashkit_set_hash_fn(3) or hashkit_set_continuum_hash_fn(3). </p>
 <p> The hashkit_hsieh is only available if the library is built with the appropriate flag enabled.</p>
@@ -48,3 +48,4 @@ description: "hashkit_fnv1a_64 – libhashkit Documentation"
 <h2>COPYRIGHT</h2>
 <p> 2011-2013, Brian Aker DataDifferential, <a rel="nofollow" href="http://datadifferential.com/">http://datadifferential.com/</a> </p>
 <h2>Index</h2>
+</p>

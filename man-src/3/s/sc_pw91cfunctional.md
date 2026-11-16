@@ -11,7 +11,6 @@ description: "sc::PW91CFunctional –"
 <p> The Perdew-Wang 1991 correlation functional computes energies and densities using the designated local correlation functional.</p>
 <h2>Synopsis</h2>
 <pre><code>
-
 #include &lt;functional.h&gt;</code></pre>
 <p> Inherits <code>sc::DenFunctional</code>.</p>
 <h3>Public Member Functions</h3>
@@ -24,13 +23,7 @@ description: "sc::PW91CFunctional –"
 <p> void <code>set_spin_polarized</code> (int)</p>
 <h3>Protected Member Functions</h3>
 <pre><code>void init_constants ()
-
-
-
 double limit_df_drhoa (double rhoa, double gamma, double ec, double decdrhoa)
-
-
-
 Protected Attributes</code></pre>
 <p> <code>Ref</code>&lt; <code>LSDACFunctional</code> &gt; <code>local_</code> </p>
 <p> double <code>a</code> </p>

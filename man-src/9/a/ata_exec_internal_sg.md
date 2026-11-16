@@ -14,25 +14,25 @@ description: "ata_exec_internal_sg – execute libata internal command"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>Device to which the command is sent</dl>
+</dd><dd>Device to which the command is sent</dd></dl>
 <p> <i>tf</i></p>
 <dl>
-<dd>Taskfile registers for the command and the result</dl>
+<dd>Taskfile registers for the command and the result</dd></dl>
 <p> <i>cdb</i></p>
 <dl>
-<dd>CDB for packet command</dl>
+<dd>CDB for packet command</dd></dl>
 <p> <i>dma_dir</i></p>
 <dl>
-<dd>Data transfer direction of the command</dl>
+<dd>Data transfer direction of the command</dd></dl>
 <p> <i>sgl</i></p>
 <dl>
-<dd>sg list for the data buffer of the command</dl>
+<dd>sg list for the data buffer of the command</dd></dl>
 <p> <i>n_elem</i></p>
 <dl>
-<dd>Number of sg entries</dl>
+<dd>Number of sg entries</dd></dl>
 <p> <i>timeout</i></p>
 <dl>
-<dd>Timeout in msecs (0 for default)</dl>
+<dd>Timeout in msecs (0 for default)</dd></dl>
 <h2>Description</h2>
 <p>Executes libata internal command with timeout. <i>tf</i> contains command on entry and result on return. Timeout and error conditions are reported via return value. No recovery action is taken after a command times out. It&#8217;s caller&#8217;s duty to clean up after timeout. </p>
 <p> LOCKING: None. Should be called with kernel context, might sleep.</p>
@@ -41,5 +41,5 @@ description: "ata_exec_internal_sg – execute libata internal command"
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

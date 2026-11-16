@@ -57,7 +57,7 @@ description: "QuantLib::BlackCalculator – Black 1976 calculator class."
 <p> <code>Bug</code></p>
 <dl>
 <dt>
-<dd> When the variance is null, division by zero occur during the calculation of delta, delta forward, gamma, gamma forward, rho, dividend rho, vega, and strike sensitivity.</dl>
+</dt><dd> When the variance is null, division by zero occur during the calculation of delta, delta forward, gamma, gamma forward, rho, dividend rho, vega, and strike sensitivity.</dd></dl>
 <p> <code>Examples: </code> </p>
 <p> <code>DiscreteHedging.cpp</code>.</p>
 <h2>Member Function Documentation</h2>
@@ -92,5 +92,5 @@ description: "QuantLib::BlackCalculator – Black 1976 calculator class."
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAW">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAW">Author</a></dt>
+<dd></dd></dl>

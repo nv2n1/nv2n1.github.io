@@ -13,44 +13,44 @@ description: "pki-upgrade – Tool for upgrading system-wide configuration for C
 <h2>Description</h2>
 <p>There are two parts to upgrading Certificate System: upgrading the system configuration files used by both the client and the server processes and upgrading the server configuration files. When upgrading Certificate System, the existing system configuration files (e.g. <code>/etc/pki/pki.conf</code>) may need to be upgraded because the content may have changed from one version to another. The configuration upgrade is executed automatically during RPM upgrade. However, in case there is a problem, the process can also be run manually using <code>pki-upgrade</code>. The system upgrade process is done incrementally using upgrade scriptlets. The upgrade process and scriptlet execution is monitored in upgrade trackers. A counter shows the latest index number for the most recently executed scriptlet; when all scriptlets have run, the component tracker shows the updated version number. The scriptlets are stored in the upgrade directory:</p>
 <dl>
-<dd>/usr/share/pki/upgrade/&lt;version&gt;/&lt;index&gt;-&lt;name&gt;</dl>
+<dd>/usr/share/pki/upgrade/&lt;version&gt;/&lt;index&gt;-&lt;name&gt;</dd></dl>
 <p> The <code>version</code> is the system version to be upgraded. The <code>index</code> is the script execution order. The <code>name</code> is the scriptlet name. During upgrade, the scriptlets will back up all changes to the filesystem into the following folder:</p>
 <dl>
-<dd>/var/log/pki/upgrade/&lt;version&gt;/&lt;index&gt;</dl>
+<dd>/var/log/pki/upgrade/&lt;version&gt;/&lt;index&gt;</dd></dl>
 <p> The <code>version</code> and <code>index</code> values indicate the scriptlet being executed. A copy of the files and folders that are being modified or removed will be stored in <code>oldfiles</code>. The names of the newly-added files and folders will be stored in <code>newfiles</code>. The system upgrade process is tracked using this file:</p>
 <dl>
-<dd>/etc/pki/pki.version</dl>
+<dd>/etc/pki/pki.version</dd></dl>
 <p> The file stores the current configuration version and the last successful scriptlet index. </p>
 <h2>Options</h2>
 <h3>General options</h3>
 <dl>
-<dt><code>&#8211;silent</code></p>
-<dd>Upgrade in silent mode.</p>
-<dt><code>&#8211;status</code></p>
-<dd>Show upgrade status only <code>without</code> performing the upgrade.</p>
-<dt><code>&#8211;revert</code></p>
-<dd>Revert the last version.</p>
-<dt><code>-X</code></p>
-<dd>Show advanced options.</p>
-<dt><code>-v, &#8211;verbose</code></p>
-<dd>Run in verbose mode.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Show this help message. </p>
+<dt><code>&#8211;silent</code></dt>
+<dd>Upgrade in silent mode.</dd>
+<dt><code>&#8211;status</code></dt>
+<dd>Show upgrade status only <code>without</code> performing the upgrade.</dd>
+<dt><code>&#8211;revert</code></dt>
+<dd>Revert the last version.</dd>
+<dt><code>-X</code></dt>
+<dd>Show advanced options.</dd>
+<dt><code>-v, &#8211;verbose</code></dt>
+<dd>Run in verbose mode.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Show this help message. </dd>
 </dl>
 <h3>Advanced options</h3>
 <p>The advanced options circumvent the normal component tracking process by changing the scriptlet order or changing the tracker information. </p>
 <p> <code>WARNING:</code> These options may render the system unusable. </p>
 <dl>
-<dt><code>&#8211;scriptlet-version &lt;version&gt;</code></p>
-<dd>Run scriptlets for a specific version only.</p>
-<dt><code>&#8211;scriptlet-index &lt;index&gt;</code></p>
-<dd>Run a specific scriptlet only.</p>
-<dt><code>&#8211;remove-tracker</code></p>
-<dd>Remove the tracker.</p>
-<dt><code>&#8211;reset-tracker</code></p>
-<dd>Reset the tracker to match the package version.</p>
-<dt><code>&#8211;set-tracker &lt;version&gt;</code></p>
-<dd>Set the tracker to a specific version. </p>
+<dt><code>&#8211;scriptlet-version &lt;version&gt;</code></dt>
+<dd>Run scriptlets for a specific version only.</dd>
+<dt><code>&#8211;scriptlet-index &lt;index&gt;</code></dt>
+<dd>Run a specific scriptlet only.</dd>
+<dt><code>&#8211;remove-tracker</code></dt>
+<dd>Remove the tracker.</dd>
+<dt><code>&#8211;reset-tracker</code></dt>
+<dd>Reset the tracker to match the package version.</dd>
+<dt><code>&#8211;set-tracker &lt;version&gt;</code></dt>
+<dd>Set the tracker to a specific version. </dd>
 </dl>
 <h2>Operations</h2>
 <h3>Interactive mode</h3>

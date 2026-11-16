@@ -16,9 +16,9 @@ PDL::Delta - PDL changes between V1.0 and V2.0
 
  There are also many core enhancements to support Dataflow and Slicing tricks, but these do not introduce any incompatibilities.
 <h3>Incompatible Changes vs 1.11</h3><dl><dt>rgrep
-<dd>Order of the arguments has changed.
-<dt>copy method
-<dd>No longer copies the header. This may not be a misfeature.</dl><h2>Documentation Changes</h2>Many of the base and library pods were updated.
+</dt><dd>Order of the arguments has changed.
+</dd><dt>copy method
+</dt><dd>No longer copies the header. This may not be a misfeature.</dd></dl><h2>Documentation Changes</h2>Many of the base and library pods were updated.
 <h2>See Also</h2>The <i>Changes</i> file for exhaustive details on what changed. 
 
  The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build <font SIZE="-1">PDL.</font> 

@@ -16,32 +16,32 @@ description: "pycompile – byte compile Python source files"
 <p> Wrapper around Python standard library&#8217;s py_compile module to byte-compile Python files.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;version</code></p>
-<dd> show program&#8217;s version number and exit</p>
-<dt><code>-h</code>,<code> &#8211;help</code></p>
-<dd> show this help message and exit</p>
-<dt><code>-f</code>,<code> &#8211;force</code></p>
-<dd> force rebuild of byte-code files even if timestamps are up-to-date</p>
-<dt><code>-O</code></p>
-<dd> byte-compile to .pyo files</p>
-<dt><code>-q</code>,<code> &#8211;quiet</code></p>
-<dd> be quiet</p>
-<dt><code>-v</code>,<code> &#8211;verbose</code></p>
-<dd> turn verbose mode on</p>
-<dt><code>-p</code><i>&nbsp;PACKAGE</i>,<code>&nbsp;&#8211;package=</code><i>PACKAGE</i></p>
-<dd> specify Debian package name whose files should be bytecompiled (combining with DIR_OR_FILE will additionally limit list of files)</p>
-<dt><code>-V</code><i>&nbsp;VRANGE</i></p>
-<dd> force private modules to be bytecompiled with Python version from given range, regardless of the default Python version in the system. If there are no other options, bytecompile all public modules for installed Python versions that match given range. VERSION_RANGE examples:</p>
-<dt>&bull;</p>
-<dd> <code>2.5</code> version 2.5 only</p>
-<dt>&bull;</p>
-<dd> <code>2.5-</code> version 2.5 or newer</p>
-<dt>&bull;</p>
-<dd> <code>2.5-2.7</code> version 2.5 or 2.6</p>
-<dt>&bull;</p>
-<dd> <code>-3.0</code> all supported 2.X versions</p>
-<dt><code>-X</code><i>&nbsp;REGEXPR</i>,<code>&nbsp;&#8211;exclude=</code><i>REGEXPR</i></p>
-<dd> exclude items that match given REGEXPR. You may use this option multiple times to build up a list of things to exclude</dl>
+<dt><code>&#8211;version</code></dt>
+<dd> show program&#8217;s version number and exit</dd>
+<dt><code>-h</code>,<code> &#8211;help</code></dt>
+<dd> show this help message and exit</dd>
+<dt><code>-f</code>,<code> &#8211;force</code></dt>
+<dd> force rebuild of byte-code files even if timestamps are up-to-date</dd>
+<dt><code>-O</code></dt>
+<dd> byte-compile to .pyo files</dd>
+<dt><code>-q</code>,<code> &#8211;quiet</code></dt>
+<dd> be quiet</dd>
+<dt><code>-v</code>,<code> &#8211;verbose</code></dt>
+<dd> turn verbose mode on</dd>
+<dt><code>-p</code><i>&nbsp;PACKAGE</i>,<code>&nbsp;&#8211;package=</code><i>PACKAGE</i></dt>
+<dd> specify Debian package name whose files should be bytecompiled (combining with DIR_OR_FILE will additionally limit list of files)</dd>
+<dt><code>-V</code><i>&nbsp;VRANGE</i></dt>
+<dd> force private modules to be bytecompiled with Python version from given range, regardless of the default Python version in the system. If there are no other options, bytecompile all public modules for installed Python versions that match given range. VERSION_RANGE examples:</dd>
+<dt>&bull;</dt>
+<dd> <code>2.5</code> version 2.5 only</dd>
+<dt>&bull;</dt>
+<dd> <code>2.5-</code> version 2.5 or newer</dd>
+<dt>&bull;</dt>
+<dd> <code>2.5-2.7</code> version 2.5 or 2.6</dd>
+<dt>&bull;</dt>
+<dd> <code>-3.0</code> all supported 2.X versions</dd>
+<dt><code>-X</code><i>&nbsp;REGEXPR</i>,<code>&nbsp;&#8211;exclude=</code><i>REGEXPR</i></dt>
+<dd> exclude items that match given REGEXPR. You may use this option multiple times to build up a list of things to exclude</dd></dl>
 <h2>AUTHOR</h2>
 <p> Piotr Ożarowski, 2012-2013 </p>
 <h2>Index</h2>

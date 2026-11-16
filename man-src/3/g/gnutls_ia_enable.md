@@ -14,10 +14,10 @@ description: "gnutls_ia_enable – Indicate willingness for TLS/IA application p
 <p> <code>void gnutls_ia_enable(gnutls_session_t </code><i>session</i><code>, int </code><i>allow_skip_on_resume</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
-<dt>gnutls_session_t session</p>
-<dd> is a <code>gnutls_session_t</code> structure.</p>
-<dt>int allow_skip_on_resume</p>
-<dd> non-zero if local party allows to skip the TLS/IA application phases for a resumed session.</dl>
+<dt>gnutls_session_t session</dt>
+<dd> is a <code>gnutls_session_t</code> structure.</dd>
+<dt>int allow_skip_on_resume</dt>
+<dd> non-zero if local party allows to skip the TLS/IA application phases for a resumed session.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Specify whether we must advertise support for the TLS/IA extension during the handshake. </p>
 <p> At the client side, we always advertise TLS/IA if gnutls_ia_enable was called before the handshake; at the server side, we also require that the client has advertised that it wants to run TLS/IA before including the advertisement, as required by the protocol. </p>
@@ -32,6 +32,6 @@ description: "gnutls_ia_enable – Indicate willingness for TLS/IA application p
 <p> The full documentation for <code>gnutls</code> is maintained as a Texinfo manual. If the <code>info</code> and <code>gnutls</code> programs are properly installed at your site, the command</p>
 <dl>
 <dt>
-<dd> <code>info gnutls</code></dl>
+</dt><dd> <code>info gnutls</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <h2>Index</h2>

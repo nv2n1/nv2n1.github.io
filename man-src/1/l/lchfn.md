@@ -17,8 +17,8 @@ description: "lchfn – Change finger information"
 <p> Entering an empty string (by pressing Enter) at a prompt is interpreted as accepting a default value; to erase an attribute (or to use an empty string as the attribute value), enter a single dot character. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-i</code>, <code>&#8211;interactive</code></p>
-<dd> Ask all questions when connecting to the user database, even if default answers are set up in <code>libuser</code> configuration. </p>
+<dt><code>-i</code>, <code>&#8211;interactive</code></dt>
+<dd> Ask all questions when connecting to the user database, even if default answers are set up in <code>libuser</code> configuration. </dd>
 </dl>
 <h2>EXIT STATUS</h2>
 <p> The exit status is 0 on success, 1 on error. </p>

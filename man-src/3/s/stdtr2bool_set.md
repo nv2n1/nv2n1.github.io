@@ -20,13 +20,7 @@ description: "std::tr2::bool_set –"
 <p> <code>operator bool</code> () const</p>
 <h3>Static Public Member Functions</h3>
 <pre><code>static bool_set emptyset ()
-
-
-
 static bool_set indeterminate ()
-
-
-
 Friends</code></pre>
 <p> <code>bool_set</code> <code>operator!</code> (<code>bool_set</code> __b) </p>
 <p> <code>bool_set</code> <code>operator&amp;</code> (<code>bool_set</code> __s, <code>bool_set</code> __t) </p>

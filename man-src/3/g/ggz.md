@@ -295,11 +295,11 @@ description: "ggz.h –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Brent M. Hendricks</dl>
+</dt><dd> Brent M. Hendricks</dd></dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> Fri Nov 2 23:32:17 2001 </p>
+</dt><dd> Fri Nov 2 23:32:17 2001 </dd>
 <p> <code>Id</code>.RS 4 <code>ggz.h</code>,v 1.59 2005/05/21 10:19:22 josef Exp</dl>
 <p> Header file for ggz components lib </p>
 <p> Copyright (C) 2001 Brent Hendricks. </p>
@@ -313,3 +313,4 @@ description: "ggz.h –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LibGGZ from the source code. </p>
 <h2>Index</h2>
+</p>

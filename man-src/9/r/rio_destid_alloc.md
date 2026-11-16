@@ -10,16 +10,16 @@ description: "rio_destid_alloc – Allocate next available destID for given netw
 <p>rio_destid_alloc &#8211; Allocate next available destID for given network</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>u16 rio_destid_alloc(struct rio_net&nbsp;<wbr>*&nbsp;<wbr></code><i>net</i><code>);</code></dl>
+<dt> <code>u16 rio_destid_alloc(struct rio_net&nbsp;<wbr>*&nbsp;<wbr></code><i>net</i><code>);</code></dt></dl>
 <h2>Arguments</h2>
 <p><i>net</i></p>
 <dl>
 <dd>
-<dd>RIO network</dl>
+</dd><dd>RIO network</dd></dl>
 <h2>Description</h2>
 <p>Returns next available device destination ID for the specified RIO network. Marks allocated ID as one in use. Returns RIO_INVALID_DESTID if new destID is not available.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -15,14 +15,14 @@ description: "mdconvert – Maildir mailbox UID storage scheme converter"
 <p> <code>mdconvert</code> converts Maildir mailboxes between the two UID storage schemes supported by <code>mbsync</code>. See <code>mbsync</code>&#8216;s manual page for details on these schemes.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code>, <code>&#8211;alt</code></p>
-<dd> Convert to the <code>alternative</code> (Berkeley DB based) UID storage scheme.</p>
-<dt><code>-n</code>, <code>&#8211;native</code></p>
-<dd> Convert to the <code>native</code> (file name based) UID storage scheme. This is the default.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Displays a summary of command line options.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Displays version information.</dl>
+<dt><code>-a</code>, <code>&#8211;alt</code></dt>
+<dd> Convert to the <code>alternative</code> (Berkeley DB based) UID storage scheme.</dd>
+<dt><code>-n</code>, <code>&#8211;native</code></dt>
+<dd> Convert to the <code>native</code> (file name based) UID storage scheme. This is the default.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Displays a summary of command line options.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Displays version information.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-mbsync/">mbsync</a>(1)</p>
 <h2>AUTHOR</h2>

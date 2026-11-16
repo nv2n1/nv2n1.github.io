@@ -14,11 +14,11 @@ description: "ata_is_40wire – check drive side detection"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device</dl>
+</dd><dd>device</dd></dl>
 <h2>Description</h2>
 <p>Perform drive side detection decoding, allowing for device vendors who can&#8217;t follow the documentation.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

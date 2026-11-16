@@ -15,24 +15,24 @@ description: "toe – table of (terminfo) entries"
 <p> With no options, <code>toe</code> lists all available terminal types by primary name with descriptions. File arguments specify the directories to be scanned; if no such arguments are given, your default terminfo directory is scanned. If you also specify the <code>-h</code> option, a directory header will be issued as each directory is entered. </p>
 <p> There are other options intended for use by terminfo file maintainers:</p>
 <dl>
-<dt><code>-a</code></p>
-<dd> report on all of the terminal databases which ncurses would search, rather than only the first one that it finds.</p>
+<dt><code>-a</code></dt>
+<dd> report on all of the terminal databases which ncurses would search, rather than only the first one that it finds.</dd>
 <dt>
-<dd> If the <code>-s</code> is also given, <code>toe</code> adds a column to the report, showing (like <code>conflict</code>(1)) which entries which belong to a given terminal database. An &quot;*&quot; marks entries which differ, and &quot;+&quot; marks equivalent entries.</p>
+</dt><dd> If the <code>-s</code> is also given, <code>toe</code> adds a column to the report, showing (like <code>conflict</code>(1)) which entries which belong to a given terminal database. An &quot;*&quot; marks entries which differ, and &quot;+&quot; marks equivalent entries.</dd>
 <dt>
-<dd> Without the <code>-s</code> option, <code>toe</code> does not attempt to merge duplicates in its report</p>
-<dt><code>-s</code></p>
-<dd> sort the output by the entry names.</p>
-<dt><code>-u</code> <i>file</i></p>
-<dd> says to write a report to the standard output, listing dependencies in the given terminfo/termcap source file. The report condenses the &#8220;use&#8221; relation: each line consists of the primary name of a terminal that has use capabilities, followed by a colon, followed by the whitespace-separated primary names of all terminals which occur in those use capabilities, followed by a newline</p>
-<dt><code>-U</code> <i>file</i></p>
-<dd> says to write a report to the standard output, listing reverse dependencies in the given terminfo/termcap source file. The report reverses the &#8220;use&#8221; relation: each line consists of the primary name of a terminal that occurs in use capabilities, followed by a colon, followed by the whitespace-separated primary names of all terminals which depend on it, followed by a newline.</p>
-<dt><code>-v</code><i>n</i></p>
-<dd> specifies that (verbose) output be written to standard error, showing <code>toe</code>&#8216;s progress.</p>
+</dt><dd> Without the <code>-s</code> option, <code>toe</code> does not attempt to merge duplicates in its report</dd>
+<dt><code>-s</code></dt>
+<dd> sort the output by the entry names.</dd>
+<dt><code>-u</code> <i>file</i></dt>
+<dd> says to write a report to the standard output, listing dependencies in the given terminfo/termcap source file. The report condenses the &#8220;use&#8221; relation: each line consists of the primary name of a terminal that has use capabilities, followed by a colon, followed by the whitespace-separated primary names of all terminals which occur in those use capabilities, followed by a newline</dd>
+<dt><code>-U</code> <i>file</i></dt>
+<dd> says to write a report to the standard output, listing reverse dependencies in the given terminfo/termcap source file. The report reverses the &#8220;use&#8221; relation: each line consists of the primary name of a terminal that occurs in use capabilities, followed by a colon, followed by the whitespace-separated primary names of all terminals which depend on it, followed by a newline.</dd>
+<dt><code>-v</code><i>n</i></dt>
+<dd> specifies that (verbose) output be written to standard error, showing <code>toe</code>&#8216;s progress.</dd>
 <dt>
-<dd> The optional parameter <i>n</i> is a number from 1 to 10, interpreted as for <code><a href="/docs/linux/man/1-tic/">tic</a></code>(1). If ncurses is built without tracing support, the optional parameter is ignored.</p>
-<dt><code>-V</code></p>
-<dd> reports the version of ncurses which was used in this program, and exits.</dl>
+</dt><dd> The optional parameter <i>n</i> is a number from 1 to 10, interpreted as for <code><a href="/docs/linux/man/1-tic/">tic</a></code>(1). If ncurses is built without tracing support, the optional parameter is ignored.</dd>
+<dt><code>-V</code></dt>
+<dd> reports the version of ncurses which was used in this program, and exits.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> Without sorting, the <code>-a</code> option reports all of the names found in all of the terminal databases found by the <code>TERMINFO</code> and <code>TERMINFO_DIRS</code> environment variables:<br />
 &nbsp;.sp<br />
@@ -75,8 +75,8 @@ qansi-t         QNX ansi without console writes
 <p>&nbsp;.in -4</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>/etc/terminfo/?/*</code></p>
-<dd> Compiled terminal description database.</dl>
+<dt><code>/etc/terminfo/?/*</code></dt>
+<dd> Compiled terminal description database.</dd></dl>
 <h2>HISTORY</h2>
 <p> This utility is not provided by other implementations. There is no relevant X/Open or POSIX standard for <code>toe</code>. </p>
 <p> The program name refers to a developer&#8217;s pun:<br />

@@ -19,8 +19,8 @@ description: "raxml – convert argus(8) data to XML."
 <p> See the <code>ArgusRecord.dtd</code> file for specifics regarding the XML output schema. </p>
 <h2>RAXML SPECIFIC OPTIONS</h2>
 <dl>
-<dt><code>-e</code></p>
-<dd> Specify data encoding scheme. Supported options are <code>Ascii</code> and <code>Encode64</code>. </p>
+<dt><code>-e</code></dt>
+<dd> Specify data encoding scheme. Supported options are <code>Ascii</code> and <code>Encode64</code>. </dd>
 </dl>
 <h2>AUTHORS</h2>
 <pre>

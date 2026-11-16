@@ -20,10 +20,10 @@ description: "ztrttf.f –"
 <dd>
 <pre> ZTRTTF copies a triangular matrix A from standard full format (TR)
  to rectangular full packed format (TF) .</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>TRANSR</i> </p>
+<dd><i>TRANSR</i> </dd>
 <pre> TRANSR is CHARACTER*1
  = 'N': ARF in Normal mode is wanted;
  = 'C': ARF in Conjugate Transpose mode is wanted;</pre>
@@ -57,13 +57,13 @@ description: "ztrttf.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
-<dd>September 2012</dl>
+<dd>September 2012</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl>
 <dd>
@@ -144,7 +144,8 @@ description: "ztrttf.f –"
  03 13 23 33 11 33 11 21 31 41 51
  -- -- -- -- -- -- -- -- --
  04 14 24 34 44 43 44 22 32 42 52</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 217 of file ztrttf.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

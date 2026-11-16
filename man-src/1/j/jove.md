@@ -24,33 +24,33 @@ description: "jove – an interactive display-oriented text editor"
 <p> The names of all of the files specified on the command line are saved in a buffer, called <i>*minibuf*.</i> The mini-buffer is a special JOVE buffer that is used when JOVE is prompting for some input to many commands (for example, when JOVE is prompting for a file name). When you are being prompted for a file name, you can type ^N (that&#8217;s Control-N) and ^P to cycle through the list of files that were specified on the command line. The file name will be inserted where you are typing and then you can edit it as if you typed it in yourself. </p>
 <p> JOVE recognizes the following switches:</p>
 <dl>
-<dt><code>-d</code><i>&nbsp;<wbr>dirname</i></p>
-<dd> <i>dirname</i> is taken to be the name of the current directory. This is for systems that don&#8217;t have a version of C shell that automatically maintains the <i>CWD</i> environment variable. If <code>-d</code> is not specified on a system without a modified C shell, JOVE will have to figure out the current directory itself, and that can be slow. You can simulate the modified C shell by putting the following lines in your C shell initialization file (.cshrc): </p>
+<dt><code>-d</code><i>&nbsp;<wbr>dirname</i></dt>
+<dd> <i>dirname</i> is taken to be the name of the current directory. This is for systems that don&#8217;t have a version of C shell that automatically maintains the <i>CWD</i> environment variable. If <code>-d</code> is not specified on a system without a modified C shell, JOVE will have to figure out the current directory itself, and that can be slow. You can simulate the modified C shell by putting the following lines in your C shell initialization file (.cshrc): </dd>
 <pre>
         alias cd        'cd \!*; setenv CWD $cwd'
         alias popd      'popd \!*; setenv CWD $cwd'
         alias pushd     'pushd \!*; setenv CWD $cwd'
 </pre>
-<dt><code>-l</code><i>&nbsp;<wbr>libdir</i></p>
-<dd> Allows the user to specify the directory in which binary files required by JOVE can be found (default /usr/lib64/jove).</p>
-<dt><code>-s</code><i>&nbsp;<wbr>sharedir</i></p>
-<dd> Allows the user to specify the directory in which initialization files required by JOVE can be found (default /usr/share/jove).</p>
-<dt><code>-ls</code><i>&nbsp;<wbr>bothdir</i></p>
-<dd> Allows the user to specify the directory in which binary files and initialization files required by JOVE can be found.</p>
-<dt><code>-J</code></p>
-<dd> Inhibits reading of the system-wide initialization file (/usr/share/jove/jove.rc).</p>
-<dt><code>-j</code></p>
-<dd> Inhibits reading of the user&#8217;s initialization file (~/.joverc).</p>
-<dt><code>+</code><i>n</i></p>
-<dd> Reads the file designated by the following argument, and positions point at the <i>n&#8217;th</i> line instead of the (default) first line. This can be specified more than once but it doesn&#8217;t make sense to use it twice on the same file; in that case the second one wins. If no numeric argument is given after the +, the point is positioned at the end of the file.</p>
-<dt><code>+/</code><i>pattern</i></p>
-<dd> Reads the file designated by the following argument, and positions point at the first match of the pattern.</p>
-<dt><code>-p</code><i>&nbsp;<wbr>file</i></p>
-<dd> Parses the error messages in <i>file</i>. The error messages are assumed to be in a format similar to the C compiler, LINT, or GREP output.</p>
-<dt><code>-t</code><i>&nbsp;<wbr>tag</i></p>
-<dd> Runs the <i>find-tag</i> command on <i>tag</i> (see <a href="/docs/linux/man/1-ctags/">ctags</a>(1)).</p>
-<dt><code>-w</code><i>n</i></p>
-<dd> Divides the window into <i>n</i> windows (if <i>n</i> is omitted, it is taken to be 2). Subsequent files in the list are read in and displayed in succeeding windows.</dl>
+<dt><code>-l</code><i>&nbsp;<wbr>libdir</i></dt>
+<dd> Allows the user to specify the directory in which binary files required by JOVE can be found (default /usr/lib64/jove).</dd>
+<dt><code>-s</code><i>&nbsp;<wbr>sharedir</i></dt>
+<dd> Allows the user to specify the directory in which initialization files required by JOVE can be found (default /usr/share/jove).</dd>
+<dt><code>-ls</code><i>&nbsp;<wbr>bothdir</i></dt>
+<dd> Allows the user to specify the directory in which binary files and initialization files required by JOVE can be found.</dd>
+<dt><code>-J</code></dt>
+<dd> Inhibits reading of the system-wide initialization file (/usr/share/jove/jove.rc).</dd>
+<dt><code>-j</code></dt>
+<dd> Inhibits reading of the user&#8217;s initialization file (~/.joverc).</dd>
+<dt><code>+</code><i>n</i></dt>
+<dd> Reads the file designated by the following argument, and positions point at the <i>n&#8217;th</i> line instead of the (default) first line. This can be specified more than once but it doesn&#8217;t make sense to use it twice on the same file; in that case the second one wins. If no numeric argument is given after the +, the point is positioned at the end of the file.</dd>
+<dt><code>+/</code><i>pattern</i></dt>
+<dd> Reads the file designated by the following argument, and positions point at the first match of the pattern.</dd>
+<dt><code>-p</code><i>&nbsp;<wbr>file</i></dt>
+<dd> Parses the error messages in <i>file</i>. The error messages are assumed to be in a format similar to the C compiler, LINT, or GREP output.</dd>
+<dt><code>-t</code><i>&nbsp;<wbr>tag</i></dt>
+<dd> Runs the <i>find-tag</i> command on <i>tag</i> (see <a href="/docs/linux/man/1-ctags/">ctags</a>(1)).</dd>
+<dt><code>-w</code><i>n</i></dt>
+<dd> Divides the window into <i>n</i> windows (if <i>n</i> is omitted, it is taken to be 2). Subsequent files in the list are read in and displayed in succeeding windows.</dd></dl>
 <h2>RECOVERING BUFFERS AFTER A CRASH</h2>
 <p> The <code>-r</code> option of jove runs the JOVE recover program. Use this when the system crashes, or JOVE crashes, or you accidently get logged out while in JOVE. If there are any buffers to be recovered, this will find them. </p>
 <p> Recover looks for JOVE buffers that are left around and are owned by you. (You cannot recover other peoples&#8217; buffers, obviously.) If there were no buffers that were modified at the time of the crash or there were but recover can&#8217;t get its hands on them, you will be informed with the message, &#8220;There is nothing to recover.&#8221; Otherwise, recover prints the date and time of the version of the buffers it has, and then waits for you type a command. </p>
@@ -84,8 +84,8 @@ description: "jove – an interactive display-oriented text editor"
 <h2>ENVIRONMENT</h2>
 <p> If the variable <font SIZE="-1"><code>&quot;LC_CTYPE&quot;</code></font> (see <code><a href="/docs/linux/man/5-environ/">environ</a></code>(5)) is not set in the environment, the operational behavior of JOVE for the <font SIZE="-1"><code>&quot;LC_CTYPE&quot;</code></font> locale category is determined by the value of the <font SIZE="-1"><code>LANG</code></font> environment variable. If <font SIZE="-1"><code>LC_ALL</code></font> is set, its contents are used to override both the <font SIZE="-1"><code>LANG</code></font> and the <font SIZE="-1"><code>&quot;LC_CTYPE&quot;</code></font> variable. If none of the above variables is set in the environment, the &quot;C&quot; (U.S. style) locale determines how JOVE behaves.</p>
 <dl>
-<dt><font SIZE="-1"><code>LC_CTYPE</code></font></p>
-<dd> Determines how JOVE handles characters. When <font SIZE="-1"><code>LC_CTYPE</code></font> is set to a valid value, JOVE can display and handle text and filenames containing valid characters for that locale. In particular, characters will be correctly recognised as upper or lower case and displayed if printable. However JOVE cannot display or handle Extended Unix Code (EUC) characters which are more than 1 byte wide. In the &quot;C&quot; locale, only characters from 7-bit ASCII are valid (all characters with the eighth bit set being displayed in octal). In the &quot;iso_8859_1&quot; locale (if supported by the OS), the full Latin-1 alphabet is available. The JOVE variable &#8220;lc-ctype&#8221; can be used to change the locale while JOVE is running.</dl>
+<dt><font SIZE="-1"><code>LC_CTYPE</code></font></dt>
+<dd> Determines how JOVE handles characters. When <font SIZE="-1"><code>LC_CTYPE</code></font> is set to a valid value, JOVE can display and handle text and filenames containing valid characters for that locale. In particular, characters will be correctly recognised as upper or lower case and displayed if printable. However JOVE cannot display or handle Extended Unix Code (EUC) characters which are more than 1 byte wide. In the &quot;C&quot; locale, only characters from 7-bit ASCII are valid (all characters with the eighth bit set being displayed in octal). In the &quot;iso_8859_1&quot; locale (if supported by the OS), the full Latin-1 alphabet is available. The JOVE variable &#8220;lc-ctype&#8221; can be used to change the locale while JOVE is running.</dd></dl>
 <h2>SOME MINOR DETAILS</h2>
 <p> You should type ^\ instead of ^S in many instances. For example, the way to search for a string is documented as being &#8220;^S&#8221; but in reality you should type &#8220;^\&#8221;. This is because ^S is the XOFF character (what gets sent when you type the NO SCROLL key), and clearly that won&#8217;t work. The XON character is &#8220;^Q&#8221; (what gets sent when you type NO SCROLL again) which is documented as the way to do a quoted-insert. The alternate key for this is &#8220;^^&#8221; (typed as &#8220;^`&#8221; on vt100&#8217;s and its look-alikes). If you want to enable ^S and ^Q and you know what you are doing, you can put the line: </p>
 <pre>

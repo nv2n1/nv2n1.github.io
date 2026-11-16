@@ -31,13 +31,13 @@ description: "QuantLib::Dividend – Predetermined cash flow."
 <h3><code>Date</code> date () const [virtual]</h3>
 <p><code>Note:</code></p>
 <dl COMPACT>
-<dd>This is inheriited from the event class</dl>
+<dd>This is inheriited from the event class</dd></dl>
 <p> Implements <code>CashFlow</code>.</p>
 <h3>virtual Real amount () const [pure virtual]</h3>
 <p>returns the amount of the cash flow </p>
 <p> <code>Note:</code></p>
 <dl COMPACT>
-<dd>The amount is not discounted, i.e., it is the actual amount paid at the cash flow date.</dl>
+<dd>The amount is not discounted, i.e., it is the actual amount paid at the cash flow date.</dd></dl>
 <p> Implements <code>CashFlow</code>. </p>
 <p> Implemented in <code>FixedDividend</code>, and <code>FractionalDividend</code>. </p>
 <h2>Author</h2>

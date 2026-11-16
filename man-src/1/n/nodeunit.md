@@ -16,18 +16,17 @@ nodeunit[options]&lt;file - or -directory&gt;[ &lt; file - or -directory &gt; ..
 <h2>DESCRIPTION</h2>
 <p> Nodeunit is a simple unit testing tool based on the node.js assert module.</p>
 <dl>
-<dt>&bull;</p>
-<dd> Simple to use</p>
-<dt>&bull;</p>
-<dd> Just export the tests from a module</p>
-<dt>&bull;</p>
-<dd> Helps you avoid common pitfalls when testing asynchronous code</p>
-<dt>&bull;</p>
-<dd> Easy to add test cases with setUp and tearDown functions if you wish</p>
-<dt>&bull;</p>
-<dd> Allows the use of mocks and stubs</p>
-<dt>
-<dd></dl>
+<dt>&bull;</dt>
+<dd> Simple to use</dd>
+<dt>&bull;</dt>
+<dd> Just export the tests from a module</dd>
+<dt>&bull;</dt>
+<dd> Helps you avoid common pitfalls when testing asynchronous code</dd>
+<dt>&bull;</dt>
+<dd> Easy to add test cases with setUp and tearDown functions if you wish</dd>
+<dt>&bull;</dt>
+<dd> Allows the use of mocks and stubs</dd>
+</dl>
 <h2>OPTIONS</h2>
 <p>&nbsp;<wbr>&nbsp;<wbr><code>&#8211;config FILE</code>: </p>
 <p>Load config options from a JSON file, allows the customisation<br />

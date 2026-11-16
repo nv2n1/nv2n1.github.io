@@ -11,7 +11,6 @@ std::clock_t - std::clock_t
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;ctime&gt;
-
 typedef /* unspecified */ clock_t;</code></pre> 
 Arithmetic type capable of representing the process running time of implementation-defined range and precision. 
 

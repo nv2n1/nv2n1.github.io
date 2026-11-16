@@ -11,10 +11,8 @@ std::erase_if(std::unordered_multiset) - std::erase_if(std::unordered_multiset)
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;unordered_set&gt;
-
     template &lt;class Key, class Hash, class KeyEqual, class Alloc, class Pred&gt;
     (1)(since C++ 20)
-
         void erase_if(std::unordered_multiset&lt;Key, Hash, KeyEqual, Alloc&gt; &amp;c, Pred pred);</code></pre> 
 Erases all elements that satisfy the predicate pred from the container. Equivalent to <pre><code>for (auto i = c.begin(), last = c.end(); i != last;) {
     if (pred(*i)) {

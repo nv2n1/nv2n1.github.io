@@ -93,8 +93,8 @@ description: "courier_authdaemon_selinux – Security Enhanced Linux Policy for 
 <p> <code>courier_authdaemon_exec_t</code> </p>
 <p> &#8211; Set files with the courier_authdaemon_exec_t type, if you want to transition an executable to the courier_authdaemon_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/lib/courier/authlib/.*, /usr/sbin/authdaemond </p>
+<dt>Paths:</dt>
+<dd>/usr/lib/courier/authlib/.*, /usr/sbin/authdaemond </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

@@ -17,22 +17,22 @@ description: "gpvc – GNU PIC COD file viewer"
 <p> <code>gpvc</code> is an COD file viewer for Microchip (TM) PIC (TM) micro-controllers. COD files are and output from gpasm. They contain information used for simulation. <code>gpvc</code> is part of gputils. Check the <code><a href="/docs/linux/man/1-gputils/">gputils</a></code>(1) manpage for details on other GNU PIC utilities.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code>, &#8211;all</p>
-<dd> Display all information in the COD file.</p>
-<dt><code>-d</code>, &#8211;directory</p>
-<dd> Display directory header.</p>
-<dt><code>-l</code>, &#8211;listing</p>
-<dd> Display source listing.</p>
-<dt><code>-m</code>, &#8211;message</p>
-<dd> Display debug message area.</p>
-<dt><code>-h</code>, &#8211;help</p>
-<dd> Show the usage message and exit.</p>
-<dt><code>-r</code>, &#8211;rom</p>
-<dd> Display ROM.</p>
-<dt><code>-s</code>, &#8211;symbols</p>
-<dd> Display symbols.</p>
-<dt><code>-v</code>, &#8211;version</p>
-<dd> Show the version information and exit.</dl>
+<dt><code>-a</code>, &#8211;all</dt>
+<dd> Display all information in the COD file.</dd>
+<dt><code>-d</code>, &#8211;directory</dt>
+<dd> Display directory header.</dd>
+<dt><code>-l</code>, &#8211;listing</dt>
+<dd> Display source listing.</dd>
+<dt><code>-m</code>, &#8211;message</dt>
+<dd> Display debug message area.</dd>
+<dt><code>-h</code>, &#8211;help</dt>
+<dd> Show the usage message and exit.</dd>
+<dt><code>-r</code>, &#8211;rom</dt>
+<dd> Display ROM.</dd>
+<dt><code>-s</code>, &#8211;symbols</dt>
+<dd> Display symbols.</dd>
+<dt><code>-v</code>, &#8211;version</dt>
+<dd> Show the version information and exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gputils/">gputils</a></code>(1)</p>
 <h2>AUTHOR</h2>

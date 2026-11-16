@@ -82,14 +82,14 @@ description: "udev_selinux – Security Enhanced Linux Policy for the udev proce
 <p> <code>udev_exec_t</code> </p>
 <p> &#8211; Set files with the udev_exec_t type, if you want to transition an executable to the udev_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/udev, /sbin/udevd, /bin/udevadm, /sbin/udevadm, /sbin/udevsend, /usr/sbin/udev, /lib/udev/udevd, /sbin/udevstart, /usr/sbin/udevd, /sbin/start_udev, /usr/bin/udevadm, /usr/bin/udevinfo, /usr/sbin/udevadm, /lib/udev/udev-acl, /usr/sbin/udevsend, /usr/sbin/udevstart, /usr/lib/udev/udevd, /sbin/wait_for_sysfs, /usr/sbin/start_udev, /usr/lib/udev/udev-acl, /usr/sbin/wait_for_sysfs, /usr/lib/systemd/systemd-udevd </p>
+<dt>Paths:</dt>
+<dd>/sbin/udev, /sbin/udevd, /bin/udevadm, /sbin/udevadm, /sbin/udevsend, /usr/sbin/udev, /lib/udev/udevd, /sbin/udevstart, /usr/sbin/udevd, /sbin/start_udev, /usr/bin/udevadm, /usr/bin/udevinfo, /usr/sbin/udevadm, /lib/udev/udev-acl, /usr/sbin/udevsend, /usr/sbin/udevstart, /usr/lib/udev/udevd, /sbin/wait_for_sysfs, /usr/sbin/start_udev, /usr/lib/udev/udev-acl, /usr/sbin/wait_for_sysfs, /usr/lib/systemd/systemd-udevd </dd>
 </dl>
 <p> <code>udev_helper_exec_t</code> </p>
 <p> &#8211; Set files with the udev_helper_exec_t type, if you want to transition an executable to the udev_helper_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/dev.d/.+, /etc/udev/scripts/.+, /etc/hotplug.d/default/udev.* </p>
+<dt>Paths:</dt>
+<dd>/etc/dev.d/.+, /etc/udev/scripts/.+, /etc/hotplug.d/default/udev.* </dd>
 </dl>
 <p> <code>udev_rules_t</code> </p>
 <p> &#8211; Set files with the udev_rules_t type, if you want to treat the files as udev rules data. </p>
@@ -98,8 +98,8 @@ description: "udev_selinux – Security Enhanced Linux Policy for the udev proce
 <p> <code>udev_var_run_t</code> </p>
 <p> &#8211; Set files with the udev_var_run_t type, if you want to store the udev files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/dev/.udev(/.*)?, /var/run/udev(/.*)?, /var/run/libgpod(/.*)?, /var/run/PackageKit/udev(/.*)?, /dev/.udevdb, /dev/udev.tbl </p>
+<dt>Paths:</dt>
+<dd>/dev/.udev(/.*)?, /var/run/udev(/.*)?, /var/run/libgpod(/.*)?, /var/run/PackageKit/udev(/.*)?, /dev/.udevdb, /dev/udev.tbl </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

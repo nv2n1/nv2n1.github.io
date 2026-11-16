@@ -34,18 +34,12 @@ If the implementation supports IEEE floating-point arithmetic (IEC 60559), </p>
 * If arg is NaN, NaN is returned</p>
 <h2>Notes</h2>
 <pre><code>FE_INEXACT may be (but isn't required to be) raised when rounding a non-integer finite value.
-
 The largest representable floating-point values are exact integers in all standard floating-point formats, so this function never overflows on its own; however the result may overflow any integer type (including std::intmax_t), when stored in an integer variable.
-
 This function (for double argument) behaves as if (except for the freedom to not raise FE_INEXACT) implemented by the following code:
 #include &lt;cmath&gt;
-
 #include &lt;cfenv&gt;
-
 #pragma STDC FENV_ACCESS ON
-
   double ceil(double x)
-
   {
     double result;
     int save_round = std::fegetround();
@@ -53,17 +47,13 @@ This function (for double argument) behaves as if (except for the freedom to not
     result = std::rint(x); // or std::nearbyint
     std::fesetround(save_round);
     return result;
-
   }
 </code></pre>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;cmath&gt;
-
 #include &lt;iostream&gt;
-
 int main()
-
 {
     std::cout &lt;&lt; std::fixed
               &lt;&lt; &quot;ceil(+2.4) = &quot; &lt;&lt; std::ceil(+2.4) &lt;&lt; '

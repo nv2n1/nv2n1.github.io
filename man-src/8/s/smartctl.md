@@ -13,57 +13,57 @@ description: "smartctl – Control and Monitor Utility for SMART Disks"
 <h2>Description</h2>
 <p>[This man page is generated for the Linux version of smartmontools. It does not contain info specific to other platforms.] <code>smartctl</code> controls the Self-Monitoring, Analysis and Reporting Technology (SMART) system built into most ATA/SATA and SCSI/SAS hard drives and solid-state drives. The purpose of SMART is to monitor the reliability of the hard drive and predict drive failures, and to carry out different types of drive self-tests. <code>smartctl</code> also supports some features not related to SMART. This version of <code>smartctl</code> is compatible with ACS-3, ACS-2, ATA8-ACS, ATA/ATAPI-7 and earlier standards (see <code>REFERENCES</code> below). <code>smartctl</code> also provides support for polling TapeAlert messages from SCSI tape drives and changers. The user must specify the device to be controlled or interrogated as the final argument to <code>smartctl</code>. The command set used by the device is often derived from the device path but may need help with the &#8216;-d&#8217; option (for more information see the section on &quot;ATA, SCSI command sets and SAT&quot; below). Device paths are as follows:</p>
 <dl>
-<dt><code>LINUX</code>:</p>
-<dd>Use the forms <code>&quot;/dev/sd[a-z]&quot;</code> for ATA/SATA and SCSI/SAS devices. For SCSI Tape Drives and Changers with TapeAlert support use the devices <code>&quot;/dev/nst*&quot;</code> and <code>&quot;/dev/sg*&quot;</code>. For disks behind 3ware controllers you may need <code>&quot;/dev/sd[a-z]&quot;</code> or <code>&quot;/dev/twe[0-9]&quot;</code>, <code>&quot;/dev/twa[0-9]&quot;</code> or <code>&quot;/dev/twl[0-9]&quot;</code>: see details below. For disks behind HighPoint RocketRAID controllers you may need <code>&quot;/dev/sd[a-z]&quot;</code>. For disks behind Areca SATA RAID controllers, you need <code>&quot;/dev/sg[2-9]&quot;</code> (note that smartmontools interacts with the Areca controllers via a SCSI generic device which is different than the SCSI device used for reading and writing data)! For HP Smart Array RAID controllers, there are three currently supported drivers: cciss, hpsa, and hpahcisr. For disks accessed via the cciss driver the device nodes are of the form <code>&quot;/dev/cciss/c[0-9]d0&quot;</code>. For disks accessed via the hpahcisr and hpsa drivers, the device nodes you need are <code>&quot;/dev/sg[0-9]*&quot;</code>. (&quot;lsscsi -g&quot; is helpful in determining which scsi generic device node corresponds to which device.) Use the nodes corresponding to the RAID controllers, not the nodes corresponding to logical drives. See the <code>-d</code> option below, as well. Use the forms <code>&quot;/dev/nvme[0-9]&quot;</code> (broadcast namespace) or <code>&quot;/dev/nvme[0-9]n[1-9]&quot;</code> (specific namespace 1-9) for NVMe devices.</dl>
+<dt><code>LINUX</code>:</dt>
+<dd>Use the forms <code>&quot;/dev/sd[a-z]&quot;</code> for ATA/SATA and SCSI/SAS devices. For SCSI Tape Drives and Changers with TapeAlert support use the devices <code>&quot;/dev/nst*&quot;</code> and <code>&quot;/dev/sg*&quot;</code>. For disks behind 3ware controllers you may need <code>&quot;/dev/sd[a-z]&quot;</code> or <code>&quot;/dev/twe[0-9]&quot;</code>, <code>&quot;/dev/twa[0-9]&quot;</code> or <code>&quot;/dev/twl[0-9]&quot;</code>: see details below. For disks behind HighPoint RocketRAID controllers you may need <code>&quot;/dev/sd[a-z]&quot;</code>. For disks behind Areca SATA RAID controllers, you need <code>&quot;/dev/sg[2-9]&quot;</code> (note that smartmontools interacts with the Areca controllers via a SCSI generic device which is different than the SCSI device used for reading and writing data)! For HP Smart Array RAID controllers, there are three currently supported drivers: cciss, hpsa, and hpahcisr. For disks accessed via the cciss driver the device nodes are of the form <code>&quot;/dev/cciss/c[0-9]d0&quot;</code>. For disks accessed via the hpahcisr and hpsa drivers, the device nodes you need are <code>&quot;/dev/sg[0-9]*&quot;</code>. (&quot;lsscsi -g&quot; is helpful in determining which scsi generic device node corresponds to which device.) Use the nodes corresponding to the RAID controllers, not the nodes corresponding to logical drives. See the <code>-d</code> option below, as well. Use the forms <code>&quot;/dev/nvme[0-9]&quot;</code> (broadcast namespace) or <code>&quot;/dev/nvme[0-9]n[1-9]&quot;</code> (specific namespace 1-9) for NVMe devices.</dd></dl>
 <p> if &#8216;-&#8216; is specified as the device path, <code>smartctl</code> reads and interprets it&#8217;s own debug output from standard input. See &#8216;-r ataioctl&#8217; below for details. Based on the device path, <code>smartctl</code> will guess the device type (ATA or SCSI). If necessary, the &#8216;-d&#8217; option can be used to override this guess Note that the printed output of <code>smartctl</code> displays most numerical values in base 10 (decimal), but some values are displayed in base 16 (hexadecimal). To distinguish them, the base 16 values are always displayed with a leading <code>&quot;0x&quot;</code>, for example: &quot;0xff&quot;. This man page follows the same convention. </p>
 <h2>Options</h2>
 <p>The options are grouped below into several categories. <code>smartctl</code> will execute the corresponding commands in the order: INFORMATION, ENABLE/DISABLE, DISPLAY DATA, RUN/ABORT TESTS. </p>
 <dl>
-<dt><code>SHOW INFORMATION OPTIONS:</code></p>
+<dt><code>SHOW INFORMATION OPTIONS:</code></dt>
 <dd>
-<dt><code>-h, &#8211;help, &#8211;usage</code></p>
-<dd>Prints a usage message to STDOUT and exits.</p>
-<dt><code>-V, &#8211;version, &#8211;copyright, &#8211;license</code></p>
-<dd>Prints version, copyright, license, home page and SVN revision information for your copy of <code>smartctl</code> to STDOUT and then exits. Please include this information if you are reporting bugs or problems.</p>
-<dt><code>-i, &#8211;info</code></p>
-<dd>Prints the device model number, serial number, firmware version, and ATA Standard version/revision information. Says if the device supports SMART, and if so, whether SMART support is currently enabled or disabled. If the device supports Logical Block Address mode (LBA mode) print current user drive capacity in bytes. (If drive is has a user protected area reserved, or is &quot;clipped&quot;, this may be smaller than the potential maximum drive capacity.) Indicates if the drive is in the smartmontools database (see &#8216;-v&#8217; options below). If so, the drive model family may also be printed. If &#8216;-n&#8217; (see below) is specified, the power mode of the drive is printed. </p>
+</dd><dt><code>-h, &#8211;help, &#8211;usage</code></dt>
+<dd>Prints a usage message to STDOUT and exits.</dd>
+<dt><code>-V, &#8211;version, &#8211;copyright, &#8211;license</code></dt>
+<dd>Prints version, copyright, license, home page and SVN revision information for your copy of <code>smartctl</code> to STDOUT and then exits. Please include this information if you are reporting bugs or problems.</dd>
+<dt><code>-i, &#8211;info</code></dt>
+<dd>Prints the device model number, serial number, firmware version, and ATA Standard version/revision information. Says if the device supports SMART, and if so, whether SMART support is currently enabled or disabled. If the device supports Logical Block Address mode (LBA mode) print current user drive capacity in bytes. (If drive is has a user protected area reserved, or is &quot;clipped&quot;, this may be smaller than the potential maximum drive capacity.) Indicates if the drive is in the smartmontools database (see &#8216;-v&#8217; options below). If so, the drive model family may also be printed. If &#8216;-n&#8217; (see below) is specified, the power mode of the drive is printed. </dd>
 <p> [NVMe] [FreeBSD, Linux, Windows and Cygwin only] [NEW EXPERIMENTAL SMARTCTL FEATURE] For NVMe devices the information is obtained from the Identify Controller and the Identify Namespace data structure.</p>
-<dt><code>&#8211;identify[=[w][nvb]]</code></p>
-<dd>[ATA only] Prints an annotated table of the IDENTIFY DEVICE data. By default, only valid words (words not equal to 0x0000 or 0xffff) and nonzero bits and bit fields are printed. This can be changed by the optional argument which consists of one or two characters from the set &#8216;wnvb&#8217;. The character &#8216;w&#8217; enables printing of all 256 words. The character &#8216;n&#8217; suppresses printing of bits, &#8216;v&#8217; enables printing of all bits from valid words, &#8216;b&#8217; enables printing of all bits. For example &#8216;&#8211;identify=n&#8217; (valid words, no bits) produces the shortest output and &#8216;&#8211;identify=wb&#8217; (all words, all bits) produces the longest output.</p>
-<dt><code>-a, &#8211;all</code></p>
-<dd>Prints all SMART information about the disk, or TapeAlert information about the tape drive or changer. For ATA devices this is equivalent to </p>
+<dt><code>&#8211;identify[=[w][nvb]]</code></dt>
+<dd>[ATA only] Prints an annotated table of the IDENTIFY DEVICE data. By default, only valid words (words not equal to 0x0000 or 0xffff) and nonzero bits and bit fields are printed. This can be changed by the optional argument which consists of one or two characters from the set &#8216;wnvb&#8217;. The character &#8216;w&#8217; enables printing of all 256 words. The character &#8216;n&#8217; suppresses printing of bits, &#8216;v&#8217; enables printing of all bits from valid words, &#8216;b&#8217; enables printing of all bits. For example &#8216;&#8211;identify=n&#8217; (valid words, no bits) produces the shortest output and &#8216;&#8211;identify=wb&#8217; (all words, all bits) produces the longest output.</dd>
+<dt><code>-a, &#8211;all</code></dt>
+<dd>Prints all SMART information about the disk, or TapeAlert information about the tape drive or changer. For ATA devices this is equivalent to </dd>
 <pre>'-H -i -c -A -l error -l selftest -l selective'</pre>
 <p>and for SCSI, this is equivalent to </p>
 <pre>'-H -i -A -l error -l selftest'.</pre>
 <p>For NVMe, this is equivalent to </p>
 <pre>'-H -i -c -A -l error'.</pre>
 <p>Note that for ATA disks this does <code>not</code> enable the non-SMART options and the SMART options which require support for 48-bit ATA commands.</p>
-<dt><code>-x, &#8211;xall</code></p>
-<dd>Prints all SMART and non-SMART information about the device. For ATA devices this is equivalent to </p>
+<dt><code>-x, &#8211;xall</code></dt>
+<dd>Prints all SMART and non-SMART information about the device. For ATA devices this is equivalent to </dd>
 <pre>'-H -i -g all -c -A -f brief -l xerror,error -l xselftest,selftest
 -l selective -l directory -l scttemp -l scterc -l devstat -l sataphy'.</pre>
 <p>and for SCSI, this is equivalent to </p>
 <pre>'-H -i -A -l error -l selftest -l background -l sasphy'.</pre>
 <p>For NVMe, this is equivalent to </p>
 <pre>'-H -i -c -A -l error'.</pre>
-<dt><code>&#8211;scan</code></p>
-<dd>Scans for devices and prints each device name, device type and protocol ([ATA] or [SCSI]) info. May be used in conjunction with &#8216;-d TYPE&#8217; to restrict the scan to a specific TYPE. See also info about platform specific device scan and the <code>DEVICESCAN</code> directive on <code><a href="/docs/linux/man/8-smartd/">smartd</a></code>(8) man page.</p>
-<dt><code>&#8211;scan-open</code></p>
-<dd>Same as &#8211;scan, but also tries to open each device before printing device info. The device open may change the device type due to autodetection (see also &#8216;-d test&#8217;). </p>
+<dt><code>&#8211;scan</code></dt>
+<dd>Scans for devices and prints each device name, device type and protocol ([ATA] or [SCSI]) info. May be used in conjunction with &#8216;-d TYPE&#8217; to restrict the scan to a specific TYPE. See also info about platform specific device scan and the <code>DEVICESCAN</code> directive on <code><a href="/docs/linux/man/8-smartd/">smartd</a></code>(8) man page.</dd>
+<dt><code>&#8211;scan-open</code></dt>
+<dd>Same as &#8211;scan, but also tries to open each device before printing device info. The device open may change the device type due to autodetection (see also &#8216;-d test&#8217;). </dd>
 <p> This option can be used to create a draft <code>smartd.conf</code> file. All options after &#8216;&#8211;&#8216; are appended to each output line. For example: </p>
 <pre>smartctl --scan-open -- -a -W 4,45,50 -m admin [at] work &gt; smartd.conf</pre>
 <p>[NEW EXPERIMENTAL SMARTCTL FEATURE] Multiple &#8216;-d TYPE&#8217; options may be specified with &#8216;&#8211;scan[-open]&#8217; to combine the scan results of more than one TYPE.</p>
-<dt><code>-g NAME, &#8211;get=NAME</code></p>
-<dd>Get non-SMART device settings. See &#8216;-s, &#8211;set&#8217; below for further info. </p>
-<dt><code>RUN-TIME BEHAVIOR OPTIONS:</code></p>
+<dt><code>-g NAME, &#8211;get=NAME</code></dt>
+<dd>Get non-SMART device settings. See &#8216;-s, &#8211;set&#8217; below for further info. </dd>
+<dt><code>RUN-TIME BEHAVIOR OPTIONS:</code></dt>
 <dd>
-<dt><code>-q TYPE, &#8211;quietmode=TYPE</code></p>
-<dd>Specifies that <code>smartctl</code> should run in one of the two quiet modes described here. The valid arguments to this option are: </p>
+</dd><dt><code>-q TYPE, &#8211;quietmode=TYPE</code></dt>
+<dd>Specifies that <code>smartctl</code> should run in one of the two quiet modes described here. The valid arguments to this option are: </dd>
 <p> <i>errorsonly</i> &#8211; only print: For the &#8216;-l error&#8217; option, if nonzero, the number of errors recorded in the SMART error log and the power-on time when they occurred; For the &#8216;-l selftest&#8217; option, errors recorded in the device self-test log; For the &#8216;-H&#8217; option, SMART &quot;disk failing&quot; status or device Attributes (pre-failure or usage) which failed either now or in the past; For the &#8216;-A&#8217; option, device Attributes (pre-failure or usage) which failed either now or in the past. </p>
 <p> <i>silent</i> &#8211; print no output. The only way to learn about what was found is to use the exit status of <code>smartctl</code> (see EXIT STATUS below). </p>
 <p> <i>noserial</i> &#8211; Do not print the serial number of the device.</p>
-<dt><code>-d TYPE, &#8211;device=TYPE</code></p>
-<dd>Specifies the type of the device. The valid arguments to this option are: </p>
+<dt><code>-d TYPE, &#8211;device=TYPE</code></dt>
+<dd>Specifies the type of the device. The valid arguments to this option are: </dd>
 <p> <i>auto</i> &#8211; attempt to guess the device type from the device name or from controller type info provided by the operating system or from a matching USB ID entry in the drive database. This is the default. </p>
 <p> <i>test</i> &#8211; prints the guessed type, then opens the device and prints the (possibly changed) TYPE name and then exists without performing any further commands. </p>
 <p> <i>ata</i> &#8211; the device type is ATA. This prevents <code>smartctl</code> from issuing SCSI commands to an ATA device. </p>
@@ -118,43 +118,43 @@ description: "smartctl – Control and Monitor Utility for SMART Disks"
 <pre><code>smartctl -a -d hpt,1/3 /dev/sda</code> (under Linux)</pre>
 <pre><code>smartctl -a -d hpt,1/2/3 /dev/sda</code> (under Linux)</pre>
 <p>Note that the /dev/sda-z form should be the device node which stands for the disks derived from the HighPoint RocketRAID controllers under Linux and under FreeBSD, it is the character device which the driver registered (eg, /dev/hptrr, /dev/hptmv6).</p>
-<dt><code>-T TYPE, &#8211;tolerance=TYPE</code></p>
-<dd>[ATA only] Specifies how tolerant <code>smartctl</code> should be of ATA and SMART command failures. </p>
+<dt><code>-T TYPE, &#8211;tolerance=TYPE</code></dt>
+<dd>[ATA only] Specifies how tolerant <code>smartctl</code> should be of ATA and SMART command failures. </dd>
 <p> The behavior of <code>smartctl</code> depends upon whether the command is &quot;<code>optional</code>&quot; or &quot;<code>mandatory</code>&quot;. Here &quot;<code>mandatory</code>&quot; means &quot;required by the ATA Specification if the device implements the SMART command set&quot; and &quot;<code>optional</code>&quot; means &quot;not required by the ATA Specification even if the device implements the SMART command set.&quot; The &quot;<code>mandatory</code>&quot; ATA and SMART commands are: (1) ATA IDENTIFY DEVICE, (2) SMART ENABLE/DISABLE ATTRIBUTE AUTOSAVE, (3) SMART ENABLE/DISABLE, and (4) SMART RETURN STATUS. </p>
 <p> The valid arguments to this option are: </p>
 <p> <i>normal</i> &#8211; exit on failure of any <code>mandatory</code> SMART command, and ignore all failures of <code>optional</code> SMART commands. This is the default. Note that on some devices, issuing unimplemented optional SMART commands doesn&#8217;t cause an error. This can result in misleading <code>smartctl</code> messages such as &quot;Feature X not implemented&quot;, followed shortly by &quot;Feature X: enabled&quot;. In most such cases, contrary to the final message, Feature X is <code>not</code> enabled. </p>
 <p> <i>conservative</i> &#8211; exit on failure of any <code>optional</code> SMART command. </p>
 <p> <i>permissive</i> &#8211; ignore failure(s) of <code>mandatory</code> SMART commands. This option may be given more than once. Each additional use of this option will cause one more additional failure to be ignored. Note that the use of this option can lead to messages like &quot;Feature X not supported&quot;, followed shortly by &quot;Feature X enable failed&quot;. In a few such cases, contrary to the final message, Feature X <code>is</code> enabled. </p>
 <p> <i>verypermissive</i> &#8211; equivalent to giving a large number of &#8216;-T permissive&#8217; options: ignore failures of <code>any number</code> of <code>mandatory</code> SMART commands. Please see the note above.</p>
-<dt><code>-b TYPE, &#8211;badsum=TYPE</code></p>
-<dd>[ATA only] Specifies the action <code>smartctl</code> should take if a checksum error is detected in the: (1) Device Identity Structure, (2) SMART Self-Test Log Structure, (3) SMART Attribute Value Structure, (4) SMART Attribute Threshold Structure, or (5) ATA Error Log Structure. </p>
+<dt><code>-b TYPE, &#8211;badsum=TYPE</code></dt>
+<dd>[ATA only] Specifies the action <code>smartctl</code> should take if a checksum error is detected in the: (1) Device Identity Structure, (2) SMART Self-Test Log Structure, (3) SMART Attribute Value Structure, (4) SMART Attribute Threshold Structure, or (5) ATA Error Log Structure. </dd>
 <p> The valid arguments to this option are: </p>
 <p> <i>warn</i> &#8211; report the incorrect checksum but carry on in spite of it. This is the default. </p>
 <p> <i>exit</i> &#8211; exit <code>smartctl</code>. </p>
 <p> <i>ignore</i> &#8211; continue silently without issuing a warning.</p>
-<dt><code>-r TYPE, &#8211;report=TYPE</code></p>
-<dd>Intended primarily to help <code>smartmontools</code> developers understand the behavior of <code>smartmontools</code> on non-conforming or poorly conforming hardware. This option reports details of <code>smartctl</code> transactions with the device. The option can be used multiple times. When used just once, it shows a record of the ioctl() transactions with the device. When used more than once, the detail of these ioctl() transactions are reported in greater detail. The valid arguments to this option are: </p>
+<dt><code>-r TYPE, &#8211;report=TYPE</code></dt>
+<dd>Intended primarily to help <code>smartmontools</code> developers understand the behavior of <code>smartmontools</code> on non-conforming or poorly conforming hardware. This option reports details of <code>smartctl</code> transactions with the device. The option can be used multiple times. When used just once, it shows a record of the ioctl() transactions with the device. When used more than once, the detail of these ioctl() transactions are reported in greater detail. The valid arguments to this option are: </dd>
 <p> <i>ioctl</i> &#8211; report all ioctl() transactions. </p>
 <p> <i>ataioctl</i> &#8211; report only ioctl() transactions with ATA devices. </p>
 <p> <i>scsiioctl</i> &#8211; report only ioctl() transactions with SCSI devices. Invoking this once shows the SCSI commands in hex and the corresponding status. Invoking it a second time adds a hex listing of the first 64 bytes of data send to, or received from the device. </p>
 <p> <i>nvmeioctl</i> &#8211; [FreeBSD, Linux, Windows and Cygwin only] [NEW EXPERIMENTAL SMARTCTL FEATURE] report only ioctl() transactions with NVMe devices. </p>
 <p> Any argument may include a positive integer to specify the level of detail that should be reported. The argument should be followed by a comma then the integer with no spaces. For example, <i>ataioctl,2</i> The default level is 1, so &#8216;-r ataioctl,1&#8217; and &#8216;-r ataioctl&#8217; are equivalent. </p>
 <p> For testing purposes, the output of &#8216;-r ataioctl,2&#8217; can later be parsed by <code>smartctl</code> itself if &#8216;-&#8216; is used as device path argument. The ATA command input parameters, sector data and return values are reconstructed from the debug report read from stdin. Then <code>smartctl</code> internally simulates an ATA device with the same behaviour. This is does not work for SCSI devices yet.</p>
-<dt><code>-n POWERMODE, &#8211;nocheck=POWERMODE</code></p>
-<dd>[ATA only] Specifies if <code>smartctl</code> should exit before performing any checks when the device is in a low-power mode. It may be used to prevent a disk from being spun-up by <code>smartctl</code>. The power mode is ignored by default. A nonzero exit status is returned if the device is in one of the specified low-power modes (see EXIT STATUS below). </p>
+<dt><code>-n POWERMODE, &#8211;nocheck=POWERMODE</code></dt>
+<dd>[ATA only] Specifies if <code>smartctl</code> should exit before performing any checks when the device is in a low-power mode. It may be used to prevent a disk from being spun-up by <code>smartctl</code>. The power mode is ignored by default. A nonzero exit status is returned if the device is in one of the specified low-power modes (see EXIT STATUS below). </dd>
 <p> Note: If this option is used it may also be necessary to specify the device type with the &#8216;-d&#8217; option. Otherwise the device may spin up due to commands issued during device type autodetection. </p>
 <p> The valid arguments to this option are: </p>
 <p> <i>never</i> &#8211; check the device always, but print the power mode if &#8216;-i&#8217; is specified. </p>
 <p> <i>sleep</i> &#8211; check the device unless it is in SLEEP mode. </p>
 <p> <i>standby</i> &#8211; check the device unless it is in SLEEP or STANDBY mode. In these modes most disks are not spinning, so if you want to prevent a disk from spinning up, this is probably what you want. </p>
 <p> <i>idle</i> &#8211; check the device unless it is in SLEEP, STANDBY or IDLE mode. In the IDLE state, most disks are still spinning, so this is probably not what you want. </p>
-<dt><code>SMART FEATURE ENABLE/DISABLE COMMANDS:</code></p>
+<dt><code>SMART FEATURE ENABLE/DISABLE COMMANDS:</code></dt>
 <dd>
-<dd><code>Note: </code> if multiple options are used to both enable and disable a feature, then <code>both</code> the enable and disable commands will be issued. The enable command will always be issued <code>before</code> the corresponding disable command.</p>
-<dt><code>-s VALUE, &#8211;smart=VALUE </code></p>
-<dd>Enables or disables SMART on device. The valid arguments to this option are <i>on</i> and <i>off</i>. Note that the command &#8216;-s on&#8217; (perhaps used with with the &#8216;-o on&#8217; and &#8216;-S on&#8217; options) should be placed in a start-up script for your machine, for example in rc.local or rc.sysinit. In principle the SMART feature settings are preserved over power-cycling, but it doesn&#8217;t hurt to be sure. It is not necessary (or useful) to enable SMART to see the TapeAlert messages.</p>
-<dt><code>-o VALUE, &#8211;offlineauto=VALUE</code></p>
-<dd>[ATA only] Enables or disables SMART automatic offline test, which scans the drive every four hours for disk defects. This command can be given during normal system operation. The valid arguments to this option are <i>on</i> and <i>off</i>. </p>
+</dd><dd><code>Note: </code> if multiple options are used to both enable and disable a feature, then <code>both</code> the enable and disable commands will be issued. The enable command will always be issued <code>before</code> the corresponding disable command.</dd>
+<dt><code>-s VALUE, &#8211;smart=VALUE </code></dt>
+<dd>Enables or disables SMART on device. The valid arguments to this option are <i>on</i> and <i>off</i>. Note that the command &#8216;-s on&#8217; (perhaps used with with the &#8216;-o on&#8217; and &#8216;-S on&#8217; options) should be placed in a start-up script for your machine, for example in rc.local or rc.sysinit. In principle the SMART feature settings are preserved over power-cycling, but it doesn&#8217;t hurt to be sure. It is not necessary (or useful) to enable SMART to see the TapeAlert messages.</dd>
+<dt><code>-o VALUE, &#8211;offlineauto=VALUE</code></dt>
+<dd>[ATA only] Enables or disables SMART automatic offline test, which scans the drive every four hours for disk defects. This command can be given during normal system operation. The valid arguments to this option are <i>on</i> and <i>off</i>. </dd>
 <p> Note that the SMART automatic offline test command is listed as &quot;Obsolete&quot; in every version of the ATA and ATA/ATAPI Specifications. It was originally part of the SFF-8035i Revision 2.0 specification, but was never part of any ATA specification. However it is implemented and used by many vendors. You can tell if automatic offline testing is supported by seeing if this command enables and disables it, as indicated by the &#8216;Auto Offline Data Collection&#8217; part of the SMART capabilities report (displayed with &#8216;-c&#8217;). </p>
 <p> SMART provides <code>three</code> basic categories of testing. The <code>first</code> category, called &quot;online&quot; testing, has no effect on the performance of the device. It is turned on by the &#8216;-s on&#8217; option. </p>
 <p> The <code>second</code> category of testing is called &quot;offline&quot; testing. This type of test can, in principle, degrade the device performance. The &#8216;-o on&#8217; option causes this offline testing to be carried out, automatically, on a regular scheduled basis. Normally, the disk will suspend offline testing while disk accesses are taking place, and then automatically resume it when the disk would otherwise be idle, so in practice it has little effect. Note that a one-time offline test can also be carried out immediately upon receipt of a user command. See the &#8216;-t offline&#8217; option below, which causes a one-time offline test to be carried out immediately. </p>
@@ -164,12 +164,12 @@ description: "smartctl – Control and Monitor Utility for SMART Disks"
 <p> The <code>third</code> category of testing (and the <i>only</i> category for which the word &#8216;testing&#8217; is really an appropriate choice) is &quot;self&quot; testing. This third type of test is only performed (immediately) when a command to run it is issued. The &#8216;-t&#8217; and &#8216;-X&#8217; options can be used to carry out and abort such self-tests; please see below for further details. </p>
 <p> Any errors detected in the self testing will be shown in the SMART self-test log, which can be examined using the &#8216;-l selftest&#8217; option. </p>
 <p> <code>Note:</code> in this manual page, the word <code>&quot;Test&quot;</code> is used in connection with the second category just described, e.g. for the &quot;offline&quot; testing. The words <code>&quot;Self-test&quot;</code> are used in connection with the third category.</p>
-<dt><code>-S VALUE, &#8211;saveauto=VALUE</code></p>
-<dd>[ATA] Enables or disables SMART autosave of device vendor-specific Attributes. The valid arguments to this option are <i>on</i> and <i>off</i>. Note that this feature is preserved across disk power cycles, so you should only need to issue it once. </p>
+<dt><code>-S VALUE, &#8211;saveauto=VALUE</code></dt>
+<dd>[ATA] Enables or disables SMART autosave of device vendor-specific Attributes. The valid arguments to this option are <i>on</i> and <i>off</i>. Note that this feature is preserved across disk power cycles, so you should only need to issue it once. </dd>
 <p> The ATA standard does not specify a method to check whether SMART autosave is enabled. Unlike SCSI (below), smartctl is unable to print a warning if autosave is disabled. </p>
 <p> [SCSI] For SCSI devices this toggles the value of the Global Logging Target Save Disabled (GLTSD) bit in the Control Mode Page. Some disk manufacturers set this bit by default. This prevents error counters, power-up hours and other useful data from being placed in non-volatile storage, so these values may be reset to zero the next time the device is power-cycled. If the GLTSD bit is set then &#8216;smartctl -a&#8217; will issue a warning. Use <i>on</i> to clear the GLTSD bit and thus enable saving counters to non-volatile storage. For extreme streaming-video type applications you might consider using <i>off</i> to set the GLTSD bit.</p>
-<dt><code>-g NAME, &#8211;get=NAME, -s NAME[,VALUE], &#8211;set=NAME[,VALUE]</code></p>
-<dd>Gets/sets non-SMART device settings. Note that the &#8216;&#8211;set&#8217; option shares its short option &#8216;-s&#8217; with &#8216;&#8211;smart&#8217;. Valid arguments are: </p>
+<dt><code>-g NAME, &#8211;get=NAME, -s NAME[,VALUE], &#8211;set=NAME[,VALUE]</code></dt>
+<dd>Gets/sets non-SMART device settings. Note that the &#8216;&#8211;set&#8217; option shares its short option &#8216;-s&#8217; with &#8216;&#8211;smart&#8217;. Valid arguments are: </dd>
 <p> <i>all</i> &#8211; Gets all values. This is equivalent to </p>
 <pre>'-g aam -g apm -g lookahead -g security -g wcache'</pre>
 <p><i>aam[,N|off]</i> &#8211; [ATA only] Gets/sets the Automatic Acoustic Management (AAM) feature (if supported). A value of 128 sets the most quiet (slowest) mode and 254 the fastest (loudest) mode, &#8216;off&#8217; disables AAM. Devices may support intermediate levels. Values below 128 are defined as vendor specific (0) or retired (1 to 127). Note that the AAM feature was declared obsolete in ATA ACS-2 Revision 4a (Dec 2010). </p>
@@ -183,21 +183,21 @@ description: "smartctl – Control and Monitor Utility for SMART Disks"
 <p> <i>wcache[,on|off]</i> &#8211; [SCSI] Gets/sets the &#8216;Write Cache Enable&#8217; (WCE) bit (if supported). The write cache is usually enabled by default. </p>
 <p> <i>wcreorder[,on|off]</i> &#8211; [ATA only] Gets/sets Write Cache Reordering. If it is disabled (off), disk write scheduling is executed on a first-in-first-out (FIFO) basis. If Write Cache Reordering is enabled (on), then disk write scheduling may be reordered by the drive. If write cache is disabled, the current Write Cache Reordering state is remembered but has no effect on non-cached writes, which are always written in the order received. The state of Write Cache Reordering has no effect on either NCQ or LCQ queued commands. </p>
 <p> <i>rcache[,on|off]</i> &#8211; [SCSI only] Gets/sets the &#8216;Read Cache Disable&#8217; (RCE) bit. &#8216;Off&#8217; value disables read cache (if supported). The read cache is usually enabled by default. </p>
-<dt><code>SMART READ AND DISPLAY DATA OPTIONS:</code></p>
+<dt><code>SMART READ AND DISPLAY DATA OPTIONS:</code></dt>
 <dd>
-<dt><code>-H, &#8211;health</code></p>
-<dd>Prints the health status of the device or pending TapeAlert messages. </p>
+</dd><dt><code>-H, &#8211;health</code></dt>
+<dd>Prints the health status of the device or pending TapeAlert messages. </dd>
 <p> If the device reports failing health status, this means <code>either</code> that the device has already failed, <code>or </code> that it is predicting its own failure within the next 24 hours. If this happens, use the &#8216;-a&#8217; option to get more information, and <code>get your data off the disk and to someplace safe as soon as you can.</code> </p>
 <p> [ATA] Health status is obtained by checking the (boolean) result returned by the SMART RETURN STATUS command. The return value of this ATA command may be unknown due to limitations or bugs in some layer (e.g. RAID controller or USB bridge firmware) between disk and operating system. In this case, <code>smartctl</code> prints a warning and checks whether any Prefailure SMART Attribute value is less than or equal to its threshold (see &#8216;-A&#8217; below). </p>
 <p> [SCSI] Health status is obtained by checking the Additional Sense Code (ASC) and Additional Sense Code Qualifier (ASCQ) from Informal Exceptions (IE) log page (if supported) and/or from SCSI sense data. </p>
 <p> [SCSI tape drive or changer] TapeAlert status is obtained by reading the TapeAlert log page. Please note that the TapeAlert log page flags are cleared for the initiator when the page is read. This means that each alert condition is reported only once by <code>smartctl</code> for each initiator for each activation of the condition. </p>
 <p> [NVMe] [FreeBSD, Linux, Windows and Cygwin only] [NEW EXPERIMENTAL SMARTCTL FEATURE] NVMe status is obtained by reading the &quot;Critical Warning&quot; byte from the SMART/Health Information log.</p>
-<dt><code>-c, &#8211;capabilities</code></p>
-<dd>[ATA] Prints only the generic SMART capabilities. These show what SMART features are implemented and how the device will respond to some of the different SMART commands. For example it shows if the device logs errors, if it supports offline surface scanning, and so on. If the device can carry out self-tests, this option also shows the estimated time required to run those tests. </p>
+<dt><code>-c, &#8211;capabilities</code></dt>
+<dd>[ATA] Prints only the generic SMART capabilities. These show what SMART features are implemented and how the device will respond to some of the different SMART commands. For example it shows if the device logs errors, if it supports offline surface scanning, and so on. If the device can carry out self-tests, this option also shows the estimated time required to run those tests. </dd>
 <p> Note that the time required to run the Self-tests (listed in minutes) are fixed. However the time required to run the Immediate Offline Test (listed in seconds) is variable. This means that if you issue a command to perform an Immediate Offline test with the &#8216;-t offline&#8217; option, then the time may jump to a larger value and then count down as the Immediate Offline Test is carried out. Please see REFERENCES below for further information about the the flags and capabilities described by this option. </p>
 <p> [NVMe] [FreeBSD, Linux, Windows and Cygwin only] [NEW EXPERIMENTAL SMARTCTL FEATURE] Prints various NVMe device capabilities obtained from the Identify Controller and the Identify Namespace data structure.</p>
-<dt><code>-A, &#8211;attributes</code></p>
-<dd>[ATA] Prints only the vendor specific SMART Attributes. The Attributes are numbered from 1 to 253 and have specific names and ID numbers. For example Attribute 12 is &quot;power cycle count&quot;: how many times has the disk been powered up. </p>
+<dt><code>-A, &#8211;attributes</code></dt>
+<dd>[ATA] Prints only the vendor specific SMART Attributes. The Attributes are numbered from 1 to 253 and have specific names and ID numbers. For example Attribute 12 is &quot;power cycle count&quot;: how many times has the disk been powered up. </dd>
 <p> Each Attribute has a &quot;Raw&quot; value, printed under the heading &quot;RAW_VALUE&quot;, and a &quot;Normalized&quot; value printed under the heading &quot;VALUE&quot;. [Note: <code>smartctl</code> prints these values in base-10.] In the example just given, the &quot;Raw Value&quot; for Attribute 12 would be the actual number of times that the disk has been power-cycled, for example 365 if the disk has been turned on once per day for exactly one year. Each vendor uses their own algorithm to convert this &quot;Raw&quot; value to a &quot;Normalized&quot; value in the range from 1 to 254. Please keep in mind that <code>smartctl</code> only reports the different Attribute types, values, and thresholds as read from the device. It does <code>not</code> carry out the conversion between &quot;Raw&quot; and &quot;Normalized&quot; values: this is done by the disk&#8217;s firmware. </p>
 <p> The conversion from Raw value to a quantity with physical units is not specified by the SMART standard. In most cases, the values printed by <code>smartctl</code> are sensible. For example the temperature Attribute generally has its raw value equal to the temperature in Celsius. However in some cases vendors use unusual conventions. For example the Hitachi disk on my laptop reports its power-on hours in minutes, not hours. Some IBM disks track three temperatures rather than one, in their raw values. And so on. </p>
 <p> Each Attribute also has a Threshold value (whose range is 0 to 255) which is printed under the heading &quot;THRESH&quot;. If the Normalized value is <code>less than or equal to</code> the Threshold value, then the Attribute is said to have failed. If the Attribute is a pre-failure Attribute, then disk failure is imminent. </p>
@@ -210,15 +210,15 @@ description: "smartctl – Control and Monitor Utility for SMART Disks"
 <p> Solid-state drives use different meanings for some of the attributes. In this case the attribute name printed by smartctl is incorrect unless the drive is already in the smartmontools drive database. </p>
 <p> [SCSI] For SCSI devices the &quot;attributes&quot; are obtained from the temperature and start-stop cycle counter log pages. Certain vendor specific attributes are listed if recognised. The attributes are output in a relatively free format (compared with ATA disk attributes). </p>
 <p> [NVMe] [FreeBSD, Linux, Windows and Cygwin only] [NEW EXPERIMENTAL SMARTCTL FEATURE] For NVMe devices the attributes are obtained from the SMART/Health Information log.</p>
-<dt><code>-f FORMAT, &#8211;format=FORMAT</code></p>
-<dd>[ATA only] Selects the output format of the attributes: </p>
+<dt><code>-f FORMAT, &#8211;format=FORMAT</code></dt>
+<dd>[ATA only] Selects the output format of the attributes: </dd>
 <p> <i>old</i> &#8211; Old smartctl format. This is the default unless the &#8216;-x&#8217; option is specified. </p>
 <p> <i>brief</i> &#8211; New format which fits into 80 colums (except in some rare cases). This format also decodes four additional attribute flags. This is the default if the &#8216;-x&#8217; option is specified. </p>
 <p> <i>hex,id</i> &#8211; Print all attribute IDs as hexadecimal numbers. </p>
 <p> <i>hex,val</i> &#8211; Print all normalized values as hexadecimal numbers. </p>
 <p> <i>hex</i> &#8211; Same as &#8216;-f hex,id -f hex,val&#8217;.</p>
-<dt><code>-l TYPE, &#8211;log=TYPE</code></p>
-<dd>Prints either the SMART Error Log, the SMART Self-Test Log, the SMART Selective Self-Test Log [ATA only], the Log Directory [ATA only], or the Background Scan Results Log [SCSI only]. The valid arguments to this option are: </p>
+<dt><code>-l TYPE, &#8211;log=TYPE</code></dt>
+<dd>Prints either the SMART Error Log, the SMART Self-Test Log, the SMART Selective Self-Test Log [ATA only], the Log Directory [ATA only], or the Background Scan Results Log [SCSI only]. The valid arguments to this option are: </dd>
 <p> <i>error</i> &#8211; [ATA] prints the Summary SMART error log. SMART disks maintain a log of the most recent five non-trivial errors. For each of these errors, the disk power-on lifetime at which the error occurred is recorded, as is the device status (idle, standby, etc) at the time of the error. For some common types of errors, the Error Register (ER) and Status Register (SR) values are decoded and printed as text. The meanings of these are: </p>
 <pre> <code>ABRT</code>: Command <code>AB</code>o<code>RT</code>ed
  <code>AMNF</code>: <code>A</code>ddress <code>M</code>ark <code>N</code>ot <code>F</code>ound
@@ -273,8 +273,8 @@ description: "smartctl – Control and Monitor Utility for SMART Disks"
 <p> <i>nvmelog,PAGE,SIZE</i> &#8211; [NVMe only] [FreeBSD, Linux, Windows and Cygwin only] [NEW EXPERIMENTAL SMARTCTL FEATURE] prints a hex dump of the first SIZE bytes from the NVMe log with identifier PAGE. PAGE is a hexadecimal number in the range from 0x1 to 0xff. SIZE is a hexadecimal number in the range from 0x4 to 0x4000 (16 KiB). <code>WARNING: Do not specify the identifier of an unknown log page. Reading a log page may have undesirable side effects.</code> </p>
 <p> <i>ssd</i> &#8211; [ATA] prints the Solid State Device Statistics log page. This has the same effect as &#8216;-l devstat,7&#8217;, see above. </p>
 <p> <i>ssd</i> &#8211; [SCSI] prints the Solid State Media percentage used endurance indicator. A value of 0 indicates as new condition while 100 indicates the device is at the end of its lifetime as projected by the manufacturer. The value may reach 255.</p>
-<dt><code>-v ID,FORMAT[:BYTEORDER][,NAME], &#8211;vendorattribute=ID,FORMAT[:BYTEORDER][,NAME]</code></p>
-<dd>[ATA only] Sets a vendor-specific raw value print FORMAT, an optional BYTEORDER and an optional NAME for Attribute ID. This option may be used multiple times. </p>
+<dt><code>-v ID,FORMAT[:BYTEORDER][,NAME], &#8211;vendorattribute=ID,FORMAT[:BYTEORDER][,NAME]</code></dt>
+<dd>[ATA only] Sets a vendor-specific raw value print FORMAT, an optional BYTEORDER and an optional NAME for Attribute ID. This option may be used multiple times. </dd>
 <p> The Attribute ID can be in the range 1 to 255. If &#8216;N&#8217; is specified as ID, the settings for all Attributes are changed. </p>
 <p> The optional BYTEORDER consists of 1 to 8 characters from the set &#8216;012345rvwz&#8217;. The characters &#8216;0&#8217; to &#8216;5&#8217; select the byte 0 to 5 from the 48-bit raw value, &#8216;r&#8217; selects the reserved byte of the attribute data block, &#8216;v&#8217; selects the normalized value, &#8216;w&#8217; selects the worst value and &#8216;z&#8217; inserts a zero byte. The default BYTEORDER is &#8216;543210&#8217; for all 48-bit formats, &#8216;r543210&#8217; for the 54-bit formats, and &#8216;543210wv&#8217; for the 64-bit formats. For example, &#8216;-v 5,raw48:012345&#8217; prints the raw value of attribute 5 with big endian instead of little endian byte ordering. </p>
 <p> The NAME is a string of letters, digits and underscore. Its length should not exceed 23 characters. The &#8216;-P showall&#8217; option reports an error if this is the case. </p>
@@ -314,8 +314,8 @@ description: "smartctl – Control and Monitor Utility for SMART Disks"
 <p> <i>200,writeerrorcount</i> &#8211; same as: <i>200,raw48,Write_Error_Count.</i> </p>
 <p> <i>201,detectedtacount</i> &#8211; same as: <i>201,raw48,Detected_TA_Count.</i> </p>
 <p> <i>220,temp</i> &#8211; same as: <i>220,tempminmax,Temperature_Celsius.</i></p>
-<dt><code>-F TYPE, &#8211;firmwarebug=TYPE</code></p>
-<dd>[ATA only] Modifies the behavior of <code>smartctl</code> to compensate for some known and understood device firmware or driver bug. This option may be used multiple times. The valid arguments are: </p>
+<dt><code>-F TYPE, &#8211;firmwarebug=TYPE</code></dt>
+<dd>[ATA only] Modifies the behavior of <code>smartctl</code> to compensate for some known and understood device firmware or driver bug. This option may be used multiple times. The valid arguments are: </dd>
 <p> <i>none</i> &#8211; Assume that the device firmware obeys the ATA specifications. This is the default, unless the device has presets for &#8216;-F&#8217; in the drive database. Using this option on the command line will override any preset values. </p>
 <p> <i>nologdir</i> &#8211; Suppresses read attempts of SMART or GP Log Directory. Support for all standard logs is assumed without an actual check. Some Intel SSDs may freeze if log address 0 is read. </p>
 <p> <i>samsung</i> &#8211; In some Samsung disks (example: model SV4012H Firmware Version: RM100-08) some of the two- and four-byte quantities in the SMART data structures are byte-swapped (relative to the ATA specification). Enabling this option tells <code>smartctl</code> to evaluate these quantities in byte-reversed order. Some signs that your disk needs this option are (1) no self-test log printed, even though you have run self-tests; (2) very large numbers of ATA errors reported in the ATA error log; (3) strange and impossible values for the ATA error log timestamps. </p>
@@ -323,8 +323,8 @@ description: "smartctl – Control and Monitor Utility for SMART Disks"
 <p> <i>samsung3</i> &#8211; Some Samsung disks (at least SP2514N with Firmware VF100-37) report a self-test still in progress with 0% remaining when the test was already completed. Enabling this option modifies the output of the self-test execution status (see options &#8216;-c&#8217; or &#8216;-a&#8217; above) accordingly. </p>
 <p> <i>xerrorlba</i> &#8211; Fixes LBA byte ordering in Extended Comprehensive SMART error log. Some disks use little endian byte ordering instead of ATA register ordering to specifiy the LBA addresses in the log entries. </p>
 <p> <i>swapid</i> &#8211; Fixes byte swapped ATA identify strings (device name, serial number, firmware version) returned by some buggy device drivers.</p>
-<dt><code>-P TYPE, &#8211;presets=TYPE</code></p>
-<dd>[ATA only] Specifies whether <code>smartctl</code> should use any preset options that are available for this drive. By default, if the drive is recognized in the <code>smartmontools</code> database, then the presets are used. </p>
+<dt><code>-P TYPE, &#8211;presets=TYPE</code></dt>
+<dd>[ATA only] Specifies whether <code>smartctl</code> should use any preset options that are available for this drive. By default, if the drive is recognized in the <code>smartmontools</code> database, then the presets are used. </dd>
 <p> The argument <i>show</i> will show any preset options for your drive and the argument <i>showall</i> will show all known drives in the <code>smartmontools</code> database, along with their preset options. If there are no presets for your drive and you think there should be (for example, a -v or -F option is needed to get <code>smartctl</code> to display correct values) then please contact the <code>smartmontools</code> developers so that this information can be added to the <code>smartmontools</code> database. Contact information is at the end of this man page. </p>
 <p> The valid arguments to this option are: </p>
 <p> <i>use</i> &#8211; if a drive is recognized, then use the stored presets for it. This is the default. Note that presets will NOT override additional Attribute interpretation (&#8216;-v N,something&#8217;) command-line options or explicit &#8216;-F&#8217; command-line options.. </p>
@@ -338,8 +338,8 @@ description: "smartctl – Control and Monitor Utility for SMART Disks"
 <p>lists all entries matching MODEL, and the command: </p>
 <pre> smartctl -P showall 'MODEL' 'FIRMWARE'</pre>
 <p>lists all entries for this MODEL and a specific FIRMWARE version.</p>
-<dt><code>-B [+]FILE, &#8211;drivedb=[+]FILE</code></p>
-<dd>[ATA only] Read the drive database from FILE. The new database replaces the built in database by default. If &#8216;+&#8217; is specified, then the new entries prepend the built in entries. </p>
+<dt><code>-B [+]FILE, &#8211;drivedb=[+]FILE</code></dt>
+<dd>[ATA only] Read the drive database from FILE. The new database replaces the built in database by default. If &#8216;+&#8217; is specified, then the new entries prepend the built in entries. </dd>
 <p> Optional entries are read from the file <code>/etc/smart_drivedb.h</code> if this option is not specified. </p>
 <p> If <code>/var/lib/smartmontools/drivedb/drivedb.h</code> is present, the contents of this file is used instead of the built in table. </p>
 <p> Run <code>/usr/sbin/update-smart-drivedb</code> to update this file from the smartmontools SVN repository. </p>
@@ -369,10 +369,10 @@ description: "smartctl – Control and Monitor Utility for SMART Disks"
  &quot;-d sat&quot; // String with device type option.
  },
  /* ... */</pre>
-<dt><code>SMART RUN/ABORT OFFLINE TEST AND self-test OPTIONS:</code></p>
+<dt><code>SMART RUN/ABORT OFFLINE TEST AND self-test OPTIONS:</code></dt>
 <dd>
-<dt><code>-t TEST, &#8211;test=TEST</code></p>
-<dd>Executes TEST immediately. The &#8216;-C&#8217; option can be used in conjunction with this option to run the short or long (and also for ATA devices, selective or conveyance) self-tests in captive mode (known as &quot;foreground mode&quot; for SCSI devices). Note that only one test type can be run at a time, so only one test type should be specified per command line. Note also that if a computer is shutdown or power cycled during a self-test, no harm should result. The self-test will either be aborted or will resume automatically. </p>
+</dd><dt><code>-t TEST, &#8211;test=TEST</code></dt>
+<dd>Executes TEST immediately. The &#8216;-C&#8217; option can be used in conjunction with this option to run the short or long (and also for ATA devices, selective or conveyance) self-tests in captive mode (known as &quot;foreground mode&quot; for SCSI devices). Note that only one test type can be run at a time, so only one test type should be specified per command line. Note also that if a computer is shutdown or power cycled during a self-test, no harm should result. The self-test will either be aborted or will resume automatically. </dd>
 <p> All &#8216;-t TEST&#8217; commands can be given during normal system operation unless captive mode (&#8216;-C&#8217; option) is used. A running self-test can, however, degrade performance of the drive. Frequent I/O requests from the operating system increase the duration of a test. These impacts may vary from device to device. </p>
 <p> If a test failure occurs then the device may discontinue the testing and report the result immediately. </p>
 <p> The valid arguments to this option are: </p>
@@ -425,12 +425,12 @@ description: "smartctl – Control and Monitor Utility for SMART Disks"
 <p> <code>WARNING: Only run subcommands documented by the vendor of the device.</code> </p>
 <p> Example for some Intel SSDs only: The subcommand 0x40 (&#8216;-t vendor,0x40&#8217;) clears the timed workload related SMART attributes (226, 227, 228). Note that the raw values of these attributes are held at 65535 (0xffff) until the workload timer reaches 60 minutes. </p>
 <p> <i>force</i> &#8211; start new self-test even if another test is already running. By default a running self-test will not be interrupted to begin another test.</p>
-<dt><code>-C, &#8211;captive</code></p>
-<dd>[ATA] Runs self-tests in captive mode. This has no effect with &#8216;-t offline&#8217; or if the &#8216;-t&#8217; option is not used. </p>
+<dt><code>-C, &#8211;captive</code></dt>
+<dd>[ATA] Runs self-tests in captive mode. This has no effect with &#8216;-t offline&#8217; or if the &#8216;-t&#8217; option is not used. </dd>
 <p> <code>WARNING: Tests run in captive mode may busy out the drive for the length of the test. Only run captive tests on drives without any mounted partitions!</code> </p>
 <p> [SCSI] Runs the self-test in &quot;Foreground&quot; mode.</p>
-<dt><code>-X, &#8211;abort</code></p>
-<dd>Aborts non-captive SMART Self Tests. Note that this command will abort the Offline Immediate Test routine only if your disk has the &quot;Abort Offline collection upon new command&quot; capability. </p>
+<dt><code>-X, &#8211;abort</code></dt>
+<dd>Aborts non-captive SMART Self Tests. Note that this command will abort the Offline Immediate Test routine only if your disk has the &quot;Abort Offline collection upon new command&quot; capability. </dd>
 </dl>
 <h2>ATA, SCSI command sets and SAT</h2>
 <p>In the past there has been a clear distinction between storage devices that used the ATA and SCSI command sets. This distinction was often reflected in their device naming and hardware. Now various SCSI transports (e.g. SAS, FC and iSCSI) can interconnect to both SCSI disks (e.g. FC and SAS) and ATA disks (especially SATA). USB and IEEE 1394 storage devices use the SCSI command set externally but almost always contain ATA or SATA disks (or flash). The storage subsystems in some operating systems have started to remove the distinction between ATA and SCSI in their device naming policies. </p>
@@ -480,22 +480,22 @@ description: "smartctl – Control and Monitor Utility for SMART Disks"
 <h2>Exit Status</h2>
 <p>The exit statuses of <code>smartctl</code> are defined by a bitmask. If all is well with the disk, the exit status (return value) of <code>smartctl</code> is 0 (all bits turned off). If a problem occurs, or an error, potential error, or fault is detected, then a non-zero status is returned. In this case, the eight different bits in the exit status have the following meanings for ATA disks; some of these values may also be returned for SCSI disks.</p>
 <dl>
-<dt><code>Bit 0:</code></p>
-<dd>Command line did not parse.</p>
-<dt><code>Bit 1:</code></p>
-<dd>Device open failed, device did not return an IDENTIFY DEVICE structure, or device is in a low-power mode (see &#8216;-n&#8217; option above).</p>
-<dt><code>Bit 2:</code></p>
-<dd>Some SMART or other ATA command to the disk failed, or there was a checksum error in a SMART data structure (see &#8216;-b&#8217; option above).</p>
-<dt><code>Bit 3:</code></p>
-<dd>SMART status check returned &quot;DISK FAILING&quot;.</p>
-<dt><code>Bit 4:</code></p>
-<dd>We found prefail Attributes &lt;= threshold.</p>
-<dt><code>Bit 5:</code></p>
-<dd>SMART status check returned &quot;DISK OK&quot; but we found that some (usage or prefail) Attributes have been &lt;= threshold at some time in the past.</p>
-<dt><code>Bit 6:</code></p>
-<dd>The device error log contains records of errors.</p>
-<dt><code>Bit 7:</code></p>
-<dd>The device self-test log contains records of errors. [ATA only] Failed self-tests outdated by a newer successful extended self-test are ignored.</dl>
+<dt><code>Bit 0:</code></dt>
+<dd>Command line did not parse.</dd>
+<dt><code>Bit 1:</code></dt>
+<dd>Device open failed, device did not return an IDENTIFY DEVICE structure, or device is in a low-power mode (see &#8216;-n&#8217; option above).</dd>
+<dt><code>Bit 2:</code></dt>
+<dd>Some SMART or other ATA command to the disk failed, or there was a checksum error in a SMART data structure (see &#8216;-b&#8217; option above).</dd>
+<dt><code>Bit 3:</code></dt>
+<dd>SMART status check returned &quot;DISK FAILING&quot;.</dd>
+<dt><code>Bit 4:</code></dt>
+<dd>We found prefail Attributes &lt;= threshold.</dd>
+<dt><code>Bit 5:</code></dt>
+<dd>SMART status check returned &quot;DISK OK&quot; but we found that some (usage or prefail) Attributes have been &lt;= threshold at some time in the past.</dd>
+<dt><code>Bit 6:</code></dt>
+<dd>The device error log contains records of errors.</dd>
+<dt><code>Bit 7:</code></dt>
+<dd>The device self-test log contains records of errors. [ATA only] Failed self-tests outdated by a newer successful extended self-test are ignored.</dd></dl>
 <p> To test within the shell for whether or not the different bits are turned on or off, you can use the following type of construction (which should work with any POSIX compatible shell): </p>
 <pre><code>smartstat=$(($? &amp; 8))</code></pre>
 <p>This looks at only at bit 3 of the exit status <code>$?</code> (since 8=2^3). The shell variable $smartstat will be nonzero if SMART status check returned &quot;disk failing&quot; and zero otherwise. </p>
@@ -507,12 +507,12 @@ for i in 0 1 2 3 4 5 6 7; do
 done</pre>
 <h2>Files</h2>
 <dl>
-<dt><code>/usr/sbin/smartctl</code></p>
-<dd>full path of this executable.</p>
-<dt><code>/var/lib/smartmontools/drivedb/drivedb.h</code></p>
-<dd>drive database (see &#8216;-B&#8217; option).</p>
-<dt><code>/etc/smart_drivedb.h</code></p>
-<dd>optional local drive database (see &#8216;-B&#8217; option). </p>
+<dt><code>/usr/sbin/smartctl</code></dt>
+<dd>full path of this executable.</dd>
+<dt><code>/var/lib/smartmontools/drivedb/drivedb.h</code></dt>
+<dd>drive database (see &#8216;-B&#8217; option).</dd>
+<dt><code>/etc/smart_drivedb.h</code></dt>
+<dd>optional local drive database (see &#8216;-B&#8217; option). </dd>
 </dl>
 <h2>Authors</h2>
 <p><code>Bruce Allen</code> (project initiator),<br />

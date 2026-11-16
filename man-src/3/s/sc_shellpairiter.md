@@ -15,41 +15,14 @@ sc::ShellPairIter -
 <h3>Public Member Functions</h3>
 
 <pre><code>void init (const double *buffer, int ishell, int jshell, int ioff, int joff, int nfunci, int nfuncj, int redund=0, double scale=1.0)
-
-
-
 void start ()
-
-
-
 int ready () const
-
-
-
 void next ()
-
-
-
 int current_i () const
-
-
-
 int current_j () const
-
-
-
 int i () const
-
-
-
 int j () const
-
-
-
 int nint () const
-
-
-
 double val () const
 </code></pre>
 

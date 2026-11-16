@@ -112,22 +112,22 @@ UT12 P98003 u12
 <p>To use your scanner with this backend, you need at least two entries in the configuration file <i>/etc/sane.d/plustek.conf</i></p>
 <dl>
 <dd><i>[usb] vendor-id product-id</i><br />
- <i>device /dev/usbscanner</i></dl>
+ <i>device /dev/usbscanner</i></dd></dl>
 <p> <i>[usb]</i> tells the backend, that the following devicename (here <i>/dev/usbscanner</i>) has to be interpreted as USB scanner device. If vendor- and product-id has not been specified, the backend tries to detect this by its own. If device is set to <i>auto</i> then the next matching device is used.<br />
  The following options can be used for a default setup of your device. Most of them are also available through the frontend. </p>
 <p> <code>The Options:</code> </p>
 <p> option warmup t</p>
 <dl>
-<dd><i>t</i> specifies the warmup period in seconds, if set to -1, the automatic warmup function will be used</dl>
+<dd><i>t</i> specifies the warmup period in seconds, if set to -1, the automatic warmup function will be used</dd></dl>
 <p> option lampOff t</p>
 <dl>
-<dd><i>t</i> is the time in seconds for switching off the lamps in standby mode</dl>
+<dd><i>t</i> is the time in seconds for switching off the lamps in standby mode</dd></dl>
 <p> option lOffonEnd b</p>
 <dl>
-<dd><i>b</i> specifies the behaviour when closing the backend, 1 &#8211;&gt; switch lamps off, 0 &#8211;&gt; do not change lamp status</dl>
+<dd><i>b</i> specifies the behaviour when closing the backend, 1 &#8211;&gt; switch lamps off, 0 &#8211;&gt; do not change lamp status</dd></dl>
 <p> option mov m</p>
 <dl>
-<dd><i>m</i> is the model override switch. It works only with Mustek BearPaw devices. </p>
+<dd><i>m</i> is the model override switch. It works only with Mustek BearPaw devices. </dd>
 <pre>m/PID | 0x1000 | 0x1001
 ------+--------------+--------------
  0 | BearPaw 1200 | BearPaw 2400
@@ -136,35 +136,35 @@ UT12 P98003 u12
 <p> option invertNegatives b</p>
 <dl>
 <dd><i>b</i> 0 &#8211;&gt; do not invert the picture during negative scans,<br />
- 1 &#8211;&gt; invert picture</dl>
+ 1 &#8211;&gt; invert picture</dd></dl>
 <p> option cacheCalData b</p>
 <dl>
 <dd><i>b</i> 0 &#8211;&gt; do not save calibration results,<br />
- 1 &#8211;&gt; save results of calibration in <i>~/.sane/</i> directory</dl>
+ 1 &#8211;&gt; save results of calibration in <i>~/.sane/</i> directory</dd></dl>
 <p> option altCalibration b</p>
 <dl>
 <dd><i>b</i> 0 &#8211;&gt; use standard calibration routines,<br />
- 1 &#8211;&gt; use alternate calibration (only non Plustek devices, standard for CIS devices)</dl>
+ 1 &#8211;&gt; use alternate calibration (only non Plustek devices, standard for CIS devices)</dd></dl>
 <p> option skipFine b</p>
 <dl>
 <dd><i>b</i> 0 &#8211;&gt; perform fine calibration,<br />
- 1 &#8211;&gt; skip fine calibration (only non Plustek devices)</dl>
+ 1 &#8211;&gt; skip fine calibration (only non Plustek devices)</dd></dl>
 <p> option skipFineWhite b</p>
 <dl>
 <dd><i>b</i> 0 &#8211;&gt; perform white fine calibration,<br />
- 1 &#8211;&gt; skip white fine calibration (only non Plustek devices)</dl>
+ 1 &#8211;&gt; skip white fine calibration (only non Plustek devices)</dd></dl>
 <p> option skipDarkStrip b</p>
 <dl>
 <dd><i>b</i> 0 &#8211;&gt; perform dark calibration, with enabled lamp using the dark calibration strip of the scanner. If the scanner does not have such a strip, the alternative way is to switch off the lamp during this step.<br />
- 1 &#8211;&gt; always switch off the lamp for dark calibration, even a black strip is available</dl>
+ 1 &#8211;&gt; always switch off the lamp for dark calibration, even a black strip is available</dd></dl>
 <p> option skipCalibration b</p>
 <dl>
 <dd><i>b</i> 0 &#8211;&gt; perform calibration,<br />
- 1 &#8211;&gt; skip calibration (only non Plustek devices)</dl>
+ 1 &#8211;&gt; skip calibration (only non Plustek devices)</dd></dl>
 <p> option enableTPA b</p>
 <dl>
 <dd><i>b</i> 0 &#8211;&gt; default behaviour, specified by the internal tables,<br />
- 1 &#8211;&gt; override internal tables and allow TPA mode (EPSON/UMAX only)</dl>
+ 1 &#8211;&gt; override internal tables and allow TPA mode (EPSON/UMAX only)</dd></dl>
 <p> option posOffX x<br />
  option posOffY y<br />
  option tpaOffX x<br />
@@ -172,18 +172,18 @@ UT12 P98003 u12
  option negOffX x<br />
  option negOffY y</p>
 <dl>
-<dd><i>x y</i> By using this settings, the user can adjust the given image positions. <code>Please note, that there&#8217;s no internal range checking for</code> <code>this feature.</code></dl>
+<dd><i>x y</i> By using this settings, the user can adjust the given image positions. <code>Please note, that there&#8217;s no internal range checking for</code> <code>this feature.</code></dd></dl>
 <p> option posShadingY p<br />
  option tpaShadingY p<br />
  option negShadingY p</p>
 <dl>
-<dd><i>p</i> overrides the internal shading position. The values are in steps. <code>Please note, that there&#8217;s no internal range checking for</code> <code>this feature.</code></dl>
+<dd><i>p</i> overrides the internal shading position. The values are in steps. <code>Please note, that there&#8217;s no internal range checking for</code> <code>this feature.</code></dd></dl>
 <p> option redGamma r<br />
  option greenGamma g<br />
  option blueGamma b<br />
  option grayGamma gr</p>
 <dl>
-<dd><i>r g b gr</i></dl>
+<dd><i>r g b gr</i></dd></dl>
 <p> By using these values, the internal linear gamma table (r,g,b,gr = 1.0) can be adjusted. </p>
 <p> option red_gain r<br />
  option red_offset ro<br />
@@ -192,7 +192,7 @@ UT12 P98003 u12
  option blue_gain b<br />
  option blue_offset bo</p>
 <dl>
-<dd><i>r g b ro go bo</i> These values can be used to set the gain and offset values of the AFE for each channel. The range is between 0 and 63. -1 means autocalibration.</dl>
+<dd><i>r g b ro go bo</i> These values can be used to set the gain and offset values of the AFE for each channel. The range is between 0 and 63. -1 means autocalibration.</dd></dl>
 <p> See the plustek.conf file for examples. </p>
 <p> <code>Note:</code><br />
  You have to make sure, that the USB subsystem is loaded correctly and you have access to the device-node. For more details see <code><a href="/docs/linux/man/5-sane-usb/">sane-usb</a></code>(5) manpage. You might use <code><a href="/docs/linux/man/1-sane-find-scanner/">sane-find-scanner</a></code>(1) to check that you have access to your device. </p>
@@ -200,19 +200,19 @@ UT12 P98003 u12
  If there&#8217;s no configuration file, the backend defaults to <code>device auto</code></p>
 <h2>Files</h2>
 <dl>
-<dt><i>/etc/sane.d/plustek.conf</i></p>
-<dd>The backend configuration file</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-plustek.a</i></p>
-<dd>The static library implementing this backend.</p>
-<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-plustek.so</i></p>
-<dd>The shared library implementing this backend (present on systems that support dynamic loading). </p>
+<dt><i>/etc/sane.d/plustek.conf</i></dt>
+<dd>The backend configuration file</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-plustek.a</i></dt>
+<dd>The static library implementing this backend.</dd>
+<dt><i>/usr/lib/x86_64-linux-gnu/sane/libsane-plustek.so</i></dt>
+<dd>The shared library implementing this backend (present on systems that support dynamic loading). </dd>
 </dl>
 <h2>Environment</h2>
 <dl>
-<dt><code>SANE_CONFIG_DIR</code></p>
-<dd>This environment variable specifies the list of directories that may contain the configuration file. On *NIX systems, the directories are separated by a colon (`:&#8217;), under OS/2, they are separated by a semi-colon (`;&#8217;). If this variable is not set, the configuration file is searched in two default directories: first, the current working directory (&quot;.&quot;) and then in <i>/etc/sane.d</i>. If the value of the environment variable ends with the directory separator character, then the default directories are searched after the explicitly specified directories. For example, setting <code>SANE_CONFIG_DIR</code> to &quot;/tmp/config:&quot; would result in directories <i>tmp/config</i>, <i>.</i>, and <i>/etc/sane.d</i> being searched (in this order).</p>
-<dt><code>SANE_DEBUG_PLUSTEK</code></p>
-<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. </p>
+<dt><code>SANE_CONFIG_DIR</code></dt>
+<dd>This environment variable specifies the list of directories that may contain the configuration file. On *NIX systems, the directories are separated by a colon (`:&#8217;), under OS/2, they are separated by a semi-colon (`;&#8217;). If this variable is not set, the configuration file is searched in two default directories: first, the current working directory (&quot;.&quot;) and then in <i>/etc/sane.d</i>. If the value of the environment variable ends with the directory separator character, then the default directories are searched after the explicitly specified directories. For example, setting <code>SANE_CONFIG_DIR</code> to &quot;/tmp/config:&quot; would result in directories <i>tmp/config</i>, <i>.</i>, and <i>/etc/sane.d</i> being searched (in this order).</dd>
+<dt><code>SANE_DEBUG_PLUSTEK</code></dt>
+<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. Higher debug levels increase the verbosity of the output. </dd>
 <p> Example: export SANE_DEBUG_PLUSTEK=10 </p>
 </dl>
 <h2>See Also</h2>

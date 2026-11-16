@@ -18,9 +18,8 @@ description: "condor_master The master HTCondor Daemon"
 <p> <code>-n </code> <i>name</i></p>
 <dl>
 <dt>
-<dd> Provides an alternate name for the <i>condor_master</i> to override that given by the MASTER_NAME configuration variable.</p>
-<dt>
-<dd></dl>
+</dt><dd> Provides an alternate name for the <i>condor_master</i> to override that given by the MASTER_NAME configuration variable.</dd>
+</dl>
 <h2>Author</h2>
 <p> Center for High Throughput Computing, University of Wisconsin-Madison</p>
 <h2>Copyright</h2>

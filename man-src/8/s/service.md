@@ -21,14 +21,14 @@ description: "service – run a System V init script"
 <p><code>service</code> calls the init script and returns the status returned by it.</p>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/init.d</code></p>
-<dd>The directory containing System V init scripts.</p>
-<dt><code>/{lib,run,etc}/systemd/system</code></p>
-<dd>The directories containing systemd units.</dl>
+<dt><code>/etc/init.d</code></dt>
+<dd>The directory containing System V init scripts.</dd>
+<dt><code>/{lib,run,etc}/systemd/system</code></dt>
+<dd>The directories containing systemd units.</dd></dl>
 <h2>Environment</h2>
 <dl>
-<dt><code>LANG</code>, <code>LANGUAGE</code>, <code>LC_CTYPE</code>, <code>LC_NUMERIC</code>, <code>LC_TIME</code>, <code>LC_COLLATE</code>, <code>LC_MONETARY</code>, <code>LC_MESSAGES</code>, <code>LC_PAPER</code>, <code>LC_NAME</code>, <code>LC_ADDRESS</code>, <code>LC_TELEPHONE</code>, <code>LC_MEASUREMENT</code>, <code>LC_IDENTIFICATION</code>, <code>LC_ALL</code>, <code>TERM</code>, <code>PATH</code></p>
-<dd>The only environment variables passed to the init scripts.</dl>
+<dt><code>LANG</code>, <code>LANGUAGE</code>, <code>LC_CTYPE</code>, <code>LC_NUMERIC</code>, <code>LC_TIME</code>, <code>LC_COLLATE</code>, <code>LC_MONETARY</code>, <code>LC_MESSAGES</code>, <code>LC_PAPER</code>, <code>LC_NAME</code>, <code>LC_ADDRESS</code>, <code>LC_TELEPHONE</code>, <code>LC_MEASUREMENT</code>, <code>LC_IDENTIFICATION</code>, <code>LC_ALL</code>, <code>TERM</code>, <code>PATH</code></dt>
+<dd>The only environment variables passed to the init scripts.</dd></dl>
 <h2>See Also</h2>
 <pre><i>/etc/init.d/skeleton</i>
 <code>update-rc.d</code>(8)

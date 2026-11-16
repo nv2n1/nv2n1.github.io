@@ -21,11 +21,9 @@ description: "cmap_track_add – Set tracking function for values in CMAP"
 <p> <i>notify_fn</i> is pointer to function which is called when value is changed. It&#8217;s definition and meaning of parameters is discussed below. <i>user_data</i> argument is passed directly to <i>notify_fn</i> without any changes. <i>cmap_track_handle</i> is used for removing of tracking when no longer needed by calling <code><a href="/docs/linux/man/3-cmap_track_delete/">cmap_track_delete</a>(3)</code> function. </p>
 <p> Callback function is defined as:</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 typedef void (*cmap_notify_fn_t)(
     cmap_handle_t cmap_handle,
@@ -36,16 +34,13 @@ typedef void (*cmap_notify_fn_t)(
     struct cmap_notify_value old_value,
     void *user_data);
 </code></pre>
+</dd></dl>
 </dl>
-<dt>
-<dd></dl>
 <p> where <i>cmap_handle</i> is handle used in registration of track function. <i>cmap_track_handle</i> is handle returned by <code>cmap_track_add</code> function. <i>event</i> is one of <code>CMAP_TRACK_ADD</code>, <code>CMAP_TRACK_DELETE</code> or <code>CMAP_TRACK_MODIFY</code>. <i>key_name</i> is name of changed key. <i>new_value</i> is new value of key, or unset if <i>event</i> is <code>CMAP_TRACK_DELETE</code>. <i>old_value</i> is previous value of key or unset if <i>event</i> is <code>CMAP_TRACK_ADD</code> or for some special keys set directly by Corosync due to speed optimalizations. Both <i>new_value</i> and <i>old_value</i> are structures defined as:</p>
 <dl>
-<dt>
-<dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 struct cmap_notify_value {
     cmap_value_types_t type;
@@ -53,9 +48,8 @@ struct cmap_notify_value {
     const void *data;
 };
 </code></pre>
+</dd></dl>
 </dl>
-<dt>
-<dd></dl>
 <p> If value is unset, all fields are set to 0. Otherwise <i>type</i> is one of cmap types (as described in <code><a href="/docs/linux/man/3-cmap_get/">cmap_get</a>(3)</code> function), <i>len</i> is length of value in cmap and <i>data</i> is pointer to value of item. Data storage is dynamically allocated by caller and notify function must not try to free it. </p>
 <h2>RETURN VALUE</h2>
 <p> This call returns the CS_OK value if successful. It can return CS_ERR_INVALID_PARAM if notify_fn is NULL or track_type is invalid value. </p>

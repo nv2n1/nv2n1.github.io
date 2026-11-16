@@ -55,9 +55,9 @@ description: "gdomap_selinux – Security Enhanced Linux Policy for the gdomap p
 <p> Policy governs the access confined processes have to these ports. SELinux gdomap policy is very flexible allowing users to setup their gdomap processes in as secure a method as possible. </p>
 <p> The following port types are defined for gdomap: </p>
 <dl>
-<dt><code>gdomap_port_t</code></p>
+<dt><code>gdomap_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 538 udp 538</dl>
+</dd><dd>Default Defined Ports: tcp 538 udp 538</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type gdomap_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>

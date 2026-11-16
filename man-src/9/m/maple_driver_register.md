@@ -14,11 +14,11 @@ description: "maple_driver_register – register a maple driver"
 <p><i>drv</i></p>
 <dl>
 <dd>
-<dd>maple driver to be registered.</dl>
+</dd><dd>maple driver to be registered.</dd></dl>
 <h2>Description</h2>
 <p>Registers the passed in <i>drv</i>, while updating the bus type. Devices with matching function IDs will be automatically probed.</p>
 <h2>Author</h2>
 <p><code>Paul Mundt</code> &lt;lethal [at] linux-sh.org&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

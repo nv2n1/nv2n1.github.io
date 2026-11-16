@@ -94,8 +94,8 @@ description: "arpwatch_selinux – Security Enhanced Linux Policy for the arpwat
 <p> <code>arpwatch_data_t</code> </p>
 <p> &#8211; Set files with the arpwatch_data_t type, if you want to treat the files as arpwatch content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/arpwatch(/.*)?, /var/lib/arpwatch(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/arpwatch(/.*)?, /var/lib/arpwatch(/.*)? </dd>
 </dl>
 <p> <code>arpwatch_exec_t</code> </p>
 <p> &#8211; Set files with the arpwatch_exec_t type, if you want to transition an executable to the arpwatch_t domain. </p>

@@ -21,40 +21,40 @@ description: "slapd-monitor – Monitor backend to slapd"
 <h2>Usage</h2>
 <p>The usage is:</p>
 <dl>
-<dt>1) enable the <code>monitor</code> backend at configure:</p>
-<dd></dl>
+<dt>1) enable the <code>monitor</code> backend at configure:</dt>
+<dd></dd></dl>
 <dl>
 <dd>
 <pre>configure --enable-monitor</pre>
-</dl>
+</dd></dl>
 <dl>
-<dt>2) activate the <code>monitor</code> database in the <code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5) file:</p>
-<dd></dl>
+<dt>2) activate the <code>monitor</code> database in the <code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5) file:</dt>
+<dd></dd></dl>
 <dl>
 <dd>
 <pre>database monitor</pre>
-</dl>
+</dd></dl>
 <dl>
-<dt>3) add ACLs as detailed in <code><a href="/docs/linux/man/5-slapd-access/">slapd.access</a></code>(5) to control access to the database, e.g.:</p>
-<dd></dl>
+<dt>3) add ACLs as detailed in <code><a href="/docs/linux/man/5-slapd-access/">slapd.access</a></code>(5) to control access to the database, e.g.:</dt>
+<dd></dd></dl>
 <dl>
 <dd>
 <pre>access to dn.subtree=&quot;cn=Monitor&quot;
  by dn.exact=&quot;uid=Admin,dc=my,dc=org&quot; write
  by users read
  by * none</pre>
-</dl>
+</dd></dl>
 <dl>
-<dt>4) ensure that the <code>core.schema</code> file is loaded.</p>
-<dd>The <code>monitor </code> backend relies on some standard track attributeTypes that must be already defined when the backend is started.</dl>
+<dt>4) ensure that the <code>core.schema</code> file is loaded.</dt>
+<dd>The <code>monitor </code> backend relies on some standard track attributeTypes that must be already defined when the backend is started.</dd></dl>
 <h2>Access Control</h2>
 <p>The <code>monitor</code> backend honors access control semantics as indicated in <code><a href="/docs/linux/man/5-slapd-access/">slapd.access</a></code>(5), including the <code>disclose</code> access privilege, on all currently implemented operations.</p>
 <h2>Known Limitations</h2>
 <p>The <code>monitor </code> backend does not honor size/time limits in search operations.</p>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/openldap/slapd.conf</code></p>
-<dd>default slapd configuration file</dl>
+<dt><code>/etc/openldap/slapd.conf</code></dt>
+<dd>default slapd configuration file</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/5-slapd-conf/">slapd.conf</a></code>(5), <code><a href="/docs/linux/man/5-slapd-config/">slapd-config</a></code>(5), <code><a href="/docs/linux/man/5-slapd-access/">slapd.access</a></code>(5), <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8), <code><a href="/docs/linux/man/3-ldap/">ldap</a></code>(3).</p>
 <h2>Acknowledgements</h2>

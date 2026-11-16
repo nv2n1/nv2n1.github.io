@@ -103,8 +103,8 @@ description: "cardmgr_selinux – Security Enhanced Linux Policy for the cardmgr
 <p> <code>cardmgr_exec_t</code> </p>
 <p> &#8211; Set files with the cardmgr_exec_t type, if you want to transition an executable to the cardmgr_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/cardmgr, /usr/sbin/cardmgr, /etc/apm/event.d/pcmcia </p>
+<dt>Paths:</dt>
+<dd>/sbin/cardmgr, /usr/sbin/cardmgr, /etc/apm/event.d/pcmcia </dd>
 </dl>
 <p> <code>cardmgr_lnk_t</code> </p>
 <p> &#8211; Set files with the cardmgr_lnk_t type, if you want to treat the files as cardmgr lnk data. </p>
@@ -113,8 +113,8 @@ description: "cardmgr_selinux – Security Enhanced Linux Policy for the cardmgr
 <p> <code>cardmgr_var_run_t</code> </p>
 <p> &#8211; Set files with the cardmgr_var_run_t type, if you want to store the cardmgr files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/pcmcia(/.*)?, /var/run/stab, /var/run/cardmgr.pid </p>
+<dt>Paths:</dt>
+<dd>/var/lib/pcmcia(/.*)?, /var/run/stab, /var/run/cardmgr.pid </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

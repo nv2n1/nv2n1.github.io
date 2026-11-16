@@ -12,41 +12,14 @@ description: "sc::OOGLRender –"
 <p> Inherits <code>sc::FileRender</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>OOGLRender (const char *filename)
-
-
-
 OOGLRender (std::ostream &amp;o=ExEnv::out0())
-
-
-
 OOGLRender (const Ref&lt; KeyVal &gt; &amp;)
-
-
-
 void render (const Ref&lt; RenderedObject &gt; &amp;)
-
-
-
 void animate (const Ref&lt; AnimatedObject &gt; &amp;)
-
-
-
 const char * file_extension ()
-
-
-
 void set (const Ref&lt; RenderedObjectSet &gt; &amp;)
-
-
-
 void sphere (const Ref&lt; RenderedSphere &gt; &amp;)
-
-
-
 void polygons (const Ref&lt; RenderedPolygons &gt; &amp;)
-
-
-
 void polylines (const Ref&lt; RenderedPolylines &gt; &amp;)
 </code></pre>
 <h2>Author</h2>

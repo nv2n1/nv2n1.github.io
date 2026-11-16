@@ -23,17 +23,17 @@ description: "sane-coolscan – SANE backend for Nikon film-scanners"
 <p>Some SCSI-adapters and low-level SCSI drivers do not work correctly with this backend and the Coolscan scanners. These systems hang when the autofocus command is send to the Scanner. To see a list of which card/driver combinations work or don&#8217;t work have a look at: <i><a rel="nofollow" href="http://andreas.rick.free.fr/sane/autofocus.html.">http://andreas.rick.free.fr/sane/autofocus.html.</a></i></p>
 <h2>Files</h2>
 <dl>
-<dt>The backend configuration file:</p>
-<dd><i>/etc/sane.d/coolscan.conf</i></p>
-<dt>The static library implementing this backend:</p>
-<dd><i>/usr/lib/x86_64-linux-gnu/sane/libsane-coolscan.a</i></p>
-<dt>The shared library implementing this backend:</p>
-<dd><i>/usr/lib/x86_64-linux-gnu/sane/libsane-coolscan.so</i> (present on systems that support dynamic loading) </p>
+<dt>The backend configuration file:</dt>
+<dd><i>/etc/sane.d/coolscan.conf</i></dd>
+<dt>The static library implementing this backend:</dt>
+<dd><i>/usr/lib/x86_64-linux-gnu/sane/libsane-coolscan.a</i></dd>
+<dt>The shared library implementing this backend:</dt>
+<dd><i>/usr/lib/x86_64-linux-gnu/sane/libsane-coolscan.so</i> (present on systems that support dynamic loading) </dd>
 </dl>
 <h2>Environment</h2>
 <dl>
-<dt><code>SANE_DEBUG_COOLSCAN</code></p>
-<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. E.g., a value of 128 requests all debug output to be printed. Smaller levels reduce verbosity. </p>
+<dt><code>SANE_DEBUG_COOLSCAN</code></dt>
+<dd>If the library was compiled with debug support enabled, this environment variable controls the debug level for this backend. E.g., a value of 128 requests all debug output to be printed. Smaller levels reduce verbosity. </dd>
 <p> Examples: </p>
 <p> On bash:<br />
  export SANE_DEBUG_COOLSCAN=8 </p>
@@ -45,10 +45,10 @@ description: "sane-coolscan – SANE backend for Nikon film-scanners"
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/7-sane/">sane</a></code>(7), <code><a href="/docs/linux/man/5-sane-scsi/">sane-scsi</a></code>(5)</p>
 <dl>
-<dt><i><a rel="nofollow" href="http://andreas.rick.free.fr/sane/">http://andreas.rick.free.fr/sane/</a></i></p>
-<dd>The homepage of this backend.</p>
-<dt><i><a rel="nofollow" href="http://www.sema.be/coolscan/">http://www.sema.be/coolscan/</a></i></p>
-<dd>The original version of the coolscan backend by Didier. </p>
+<dt><i><a rel="nofollow" href="http://andreas.rick.free.fr/sane/">http://andreas.rick.free.fr/sane/</a></i></dt>
+<dd>The homepage of this backend.</dd>
+<dt><i><a rel="nofollow" href="http://www.sema.be/coolscan/">http://www.sema.be/coolscan/</a></i></dt>
+<dd>The original version of the coolscan backend by Didier. </dd>
 <h2>Thanks To</h2>
 <p>Didier Carlier &#8211; For writing the original Coolscan backend (without it I would not have started this). </p>
 <p> Oliver Rauch &#8211; For adapting xsane so quickly to the infrared stuff. </p>
@@ -57,3 +57,4 @@ description: "sane-coolscan – SANE backend for Nikon film-scanners"
 <p>Andreas Rick</p>
 <h2>Email-Contact</h2>
 <p><i>andreas.rick [at] free.fr</i></p>
+</dl>

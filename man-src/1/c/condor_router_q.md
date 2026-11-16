@@ -17,51 +17,43 @@ description: "condor_router_q Display information about routed jobs in the queue
 <p> <code>-S</code></p>
 <dl>
 <dt>
-<dd> Summarize the state of the jobs on each route.</p>
-<dt>
-<dd></dl>
+</dt><dd> Summarize the state of the jobs on each route.</dd>
+</dl>
 <p> <code>-R</code></p>
 <dl>
 <dt>
-<dd> Summarize the running jobs on each route.</p>
-<dt>
-<dd></dl>
+</dt><dd> Summarize the running jobs on each route.</dd>
+</dl>
 <p> <code>-I</code></p>
 <dl>
 <dt>
-<dd> Summarize the idle jobs on each route.</p>
-<dt>
-<dd></dl>
+</dt><dd> Summarize the idle jobs on each route.</dd>
+</dl>
 <p> <code>-H</code></p>
 <dl>
 <dt>
-<dd> Summarize the held jobs on each route.</p>
-<dt>
-<dd></dl>
+</dt><dd> Summarize the held jobs on each route.</dd>
+</dl>
 <p> <code>-route </code> <i>name</i></p>
 <dl>
 <dt>
-<dd> Display only the jobs on the route identified by <i>name</i> .</p>
-<dt>
-<dd></dl>
+</dt><dd> Display only the jobs on the route identified by <i>name</i> .</dd>
+</dl>
 <p> <code>-idle</code></p>
 <dl>
 <dt>
-<dd> Display only the idle jobs.</p>
-<dt>
-<dd></dl>
+</dt><dd> Display only the idle jobs.</dd>
+</dl>
 <p> <code>-held</code></p>
 <dl>
 <dt>
-<dd> Display only the held jobs.</p>
-<dt>
-<dd></dl>
+</dt><dd> Display only the held jobs.</dd>
+</dl>
 <p> <code>-constraint </code> <i>X</i></p>
 <dl>
 <dt>
-<dd> Display only the jobs matching constraint <i>X</i> .</p>
-<dt>
-<dd></dl>
+</dt><dd> Display only the jobs matching constraint <i>X</i> .</dd>
+</dl>
 <h2>Exit Status</h2>
 <p> <i>condor_router_q</i> will exit with a status of 0 (zero) upon success, and non-zero otherwise. </p>
 <h2>Author</h2>

@@ -14,22 +14,22 @@ description: "scsi_probe_and_add_lun – probe a LUN, if a LUN is found add it"
 <p><i>starget</i></p>
 <dl>
 <dd>
-<dd>pointer to target device structure</dl>
+</dd><dd>pointer to target device structure</dd></dl>
 <p> <i>lun</i></p>
 <dl>
-<dd>LUN of target device</dl>
+<dd>LUN of target device</dd></dl>
 <p> <i>bflagsp</i></p>
 <dl>
-<dd>store bflags here if not NULL</dl>
+<dd>store bflags here if not NULL</dd></dl>
 <p> <i>sdevp</i></p>
 <dl>
-<dd>probe the LUN corresponding to this scsi_device</dl>
+<dd>probe the LUN corresponding to this scsi_device</dd></dl>
 <p> <i>rescan</i></p>
 <dl>
-<dd>if not equal to SCSI_SCAN_INITIAL skip some code only needed on first scan</dl>
+<dd>if not equal to SCSI_SCAN_INITIAL skip some code only needed on first scan</dd></dl>
 <p> <i>hostdata</i></p>
 <dl>
-<dd>passed to <code>scsi_alloc_sdev</code></dl>
+<dd>passed to <code>scsi_alloc_sdev</code></dd></dl>
 <h2>Description</h2>
 <p>Call scsi_probe_lun, if a LUN with an attached device is found, allocate and set it up by calling scsi_add_lun.</p>
 <h2>Return</h2>
@@ -37,8 +37,8 @@ description: "scsi_probe_and_add_lun – probe a LUN, if a LUN is found add it"
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

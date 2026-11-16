@@ -14,13 +14,13 @@ description: "usb_find_alt_setting – Given a configuration, find the alternate
 <p><i>config</i></p>
 <dl>
 <dd>
-<dd>the configuration to search (not necessarily the current config).</dl>
+</dd><dd>the configuration to search (not necessarily the current config).</dd></dl>
 <p> <i>iface_num</i></p>
 <dl>
-<dd>interface number to search in</dl>
+<dd>interface number to search in</dd></dl>
 <p> <i>alt_num</i></p>
 <dl>
-<dd>alternate interface setting number to search for.</dl>
+<dd>alternate interface setting number to search for.</dd></dl>
 <h2>Description</h2>
 <p>Search the configuration&#8217;s interface cache for the given alt setting.</p>
 <h2>Return</h2>

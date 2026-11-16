@@ -10,10 +10,8 @@ description: "std::is_function – std::is_function"
 <p>std::is_function &#8211; std::is_function</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;type_traits&gt;
-
     template &lt;class T&gt;
     (since C++ 11)
-
         struct is_function;</code></pre>
 <p>Checks whether T is a function type. Types like std::function, lambdas, classes with overloaded operator() and pointers to functions don&#8217;t count as function types. Provides the member constant value which is equal to true, if T is a function type. Otherwise, value is equal to false. </p>
 <h2>Template parameters</h2>
@@ -144,23 +142,19 @@ type std::integral_constant&lt;bool, value&gt;</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;type_traits&gt;
 struct A {
     int fun() const &amp;;
 };
 template &lt;typename&gt;
-
 struct PM_traits {
 };
 template &lt;class T, class U&gt;
-
 struct PM_traits&lt;U T::*&gt; {
     using member_type = U;
 };
 int f();
 int main()
-
 {
     std::cout &lt;&lt; std::boolalpha;
     std::cout &lt;&lt; std::is_function&lt;A&gt;::value &lt;&lt; '

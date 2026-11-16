@@ -9,7 +9,7 @@ description: "orbd – The Object Request Broker Daemon"
 
 <p>orbd &#8211; The Object Request Broker Daemon </p>
 <dl COMPACT>
-<dd><code>orbd</code> is used to enable clients to transparently locate and invoke persistent objects on servers in the CORBA environment. </p>
+<dd><code>orbd</code> is used to enable clients to transparently locate and invoke persistent objects on servers in the CORBA environment. </dd>
 <p> <code>See also:</code> <i>Naming Service</i> </p>
 </dl>
 <h2>Synopsis</h2>
@@ -18,11 +18,11 @@ description: "orbd – The Object Request Broker Daemon"
 <p>The Server Manager included with the <code>orbd</code> tool is used to enable clients to transparently locate and invoke persistent objects on servers in the CORBA environment. The persistent servers, while publishing the persistent object references in the Naming Service, include the port number of the ORBD in the object reference instead of the port number of the Server. The inclusion of an ORBD port number in the object reference for persistent object references has the following advantages: </p>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>o</p>
-<dd>The object reference in the Naming Service remains independent of the server life cycle. For example, the object reference could be published by the server in the Naming Service when it is first installed, and then, independent of how many times the server is started or shutdown, the ORBD will always return the correct object reference to the invoking client.</p>
-<dt>o</p>
-<dd>The client needs to lookup the object reference in the Naming Service only once, and can keep re-using this reference independent of the changes introduced due to server life cycle.</dl>
+</dd><dl COMPACT>
+<dt>o</dt>
+<dd>The object reference in the Naming Service remains independent of the server life cycle. For example, the object reference could be published by the server in the Naming Service when it is first installed, and then, independent of how many times the server is started or shutdown, the ORBD will always return the correct object reference to the invoking client.</dd>
+<dt>o</dt>
+<dd>The client needs to lookup the object reference in the Naming Service only once, and can keep re-using this reference independent of the changes introduced due to server life cycle.</dd></dl>
 </dl>
 <p> To access ORBD&#8217;s Server Manager, the server must be started using <i>servertool</i>, which is a command-line interface for application programmers to register, unregister, startup, and shutdown a persistent server. For more information on the Server Manager, see the section in this document titled <i>Server Manager</i>. </p>
 <p> When <i>orbd</i> starts up, it also starts a naming service. For more information on the naming service, link to <i>Naming Service</i>. </p>
@@ -30,43 +30,43 @@ description: "orbd – The Object Request Broker Daemon"
 <h3>Required Options</h3>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>-ORBInitialPort nameserverport</p>
-<dd>Specifies the port on which the name server should be started. Once started, <i>orbd</i> will listen for incoming requests on this port. Note that when using Solaris software, you must become root to start a process on a port under 1024. For this reason, we recommend that you use a port number greater than or equal to 1024. (required)</dl>
+</dd><dl COMPACT>
+<dt>-ORBInitialPort nameserverport</dt>
+<dd>Specifies the port on which the name server should be started. Once started, <i>orbd</i> will listen for incoming requests on this port. Note that when using Solaris software, you must become root to start a process on a port under 1024. For this reason, we recommend that you use a port number greater than or equal to 1024. (required)</dd></dl>
 </dl>
 <h3>Other Options</h3>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>-port port</p>
-<dd>Specifies the activation port where ORBD should be started, and where ORBD will be accepting requests for persistent objects. The default value for this port is 1049. This port number is added to the port field of the persistent Interoperable Object References (IOR). (optional)</dl>
+</dd><dl COMPACT>
+<dt>-port port</dt>
+<dd>Specifies the activation port where ORBD should be started, and where ORBD will be accepting requests for persistent objects. The default value for this port is 1049. This port number is added to the port field of the persistent Interoperable Object References (IOR). (optional)</dd></dl>
 </dl>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>-defaultdb directory</p>
-<dd>Specifies the base where the ORBD persistent storage directory <i>orb.db</i> is created. If this option is not specified, the default value is &quot;./orb.db&quot;. (optional)</dl>
+</dd><dl COMPACT>
+<dt>-defaultdb directory</dt>
+<dd>Specifies the base where the ORBD persistent storage directory <i>orb.db</i> is created. If this option is not specified, the default value is &quot;./orb.db&quot;. (optional)</dd></dl>
 </dl>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>-serverPollingTime milliseconds</p>
-<dd>Specifies how often ORBD checks for the health of persistent servers registered via <i>servertool</i>. The default value is 1,000 ms. The value specified for <i>milliseconds</i> must be a valid positive integer. (optional)</dl>
+</dd><dl COMPACT>
+<dt>-serverPollingTime milliseconds</dt>
+<dd>Specifies how often ORBD checks for the health of persistent servers registered via <i>servertool</i>. The default value is 1,000 ms. The value specified for <i>milliseconds</i> must be a valid positive integer. (optional)</dd></dl>
 </dl>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>-serverStartupDelay milliseconds</p>
-<dd>Specifies how long ORBD waits before sending a location forward exception after a persistent server that is registered via <i>servertool</i> is restarted. The default value is 1,000 ms. The value specified for <i>milliseconds</i> must be a valid positive integer. (optional)</dl>
+</dd><dl COMPACT>
+<dt>-serverStartupDelay milliseconds</dt>
+<dd>Specifies how long ORBD waits before sending a location forward exception after a persistent server that is registered via <i>servertool</i> is restarted. The default value is 1,000 ms. The value specified for <i>milliseconds</i> must be a valid positive integer. (optional)</dd></dl>
 </dl>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>-Joption</p>
-<dd>Pass <i>option</i> to the Java virtual machine, where <i>option</i> is one of the options described on the reference page for the java application launcher. For example, <code>-J-Xms48m</code> sets the startup memory to 48 megabytes. It is a common convention for <code>-J</code> to pass options to the underlying virtual machine.</p>
+</dd><dl COMPACT>
+<dt>-Joption</dt>
+<dd>Pass <i>option</i> to the Java virtual machine, where <i>option</i> is one of the options described on the reference page for the java application launcher. For example, <code>-J-Xms48m</code> sets the startup memory to 48 megabytes. It is a common convention for <code>-J</code> to pass options to the underlying virtual machine.</dd>
 <dt>
-&nbsp;<wbr></p>
-<dd></dl>
+&nbsp;<wbr></dt>
+<dd></dd></dl>
 </dl>
 <h2>Starting and Stopping the Naming Service</h2>
 <p>A Naming Service is a CORBA service that allows CORBA objects to be named by means of binding a name to an object reference. The name binding may be stored in the naming service, and a client may supply the name to obtain the desired object reference. </p>
@@ -121,10 +121,10 @@ description: "orbd – The Object Request Broker Daemon"
 <h2>See Also</h2>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt>o</p>
-<dd>Naming Service </p>
-<dt>o</p>
-<dd>servertool</dl>
+</dd><dl COMPACT>
+<dt>o</dt>
+<dd>Naming Service </dd>
+<dt>o</dt>
+<dd>servertool</dd></dl>
 </dl>
 <p>&nbsp;<wbr></p>

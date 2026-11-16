@@ -10,20 +10,14 @@ description: "std::uninitialized_fill_n – std::uninitialized_fill_n"
 <p>std::uninitialized_fill_n &#8211; std::uninitialized_fill_n</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;memory&gt;
-
     template &lt;class ForwardIt, class Size, class T&gt;
     (until C++ 11)
-
         void uninitialized_fill_n(ForwardIt first, Size count, const T &amp;value);
-
 template &lt;class ForwardIt, class Size, class T&gt;
 (1)(since C++ 11)
-
     ForwardIt uninitialized_fill_n(ForwardIt first, Size count, const T &amp;value);
-
 template &lt;class ExecutionPolicy, class ForwardIt, class Size, class T&gt;
 (2)(since C++ 17)
-
     ForwardIt uninitialized_fill_n(ExecutionPolicy &amp;&amp;policy, ForwardIt first, Size count, const T &amp;value);</code></pre>
 <p>1) Copies the given value value to the first count elements in an uninitialized memory area beginning at first as if by for (; n&#8211;; ++first)<br />
     ::new (static_cast&lt;void *&gt;(std::addressof(*first)))<br />
@@ -69,16 +63,11 @@ Iterator to the element past the last element copied. <i>(since C++11)</i> </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;memory&gt;
-
 #include &lt;string&gt;
-
 #include &lt;tuple&gt;
 int main()
-
 {
     std::string *p;
     std::size_t sz;

@@ -14,14 +14,14 @@ description: "devm_iio_trigger_unregister – Resource-managed iio_trigger_unreg
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device this iio_trigger belongs to</dl>
+</dd><dd>device this iio_trigger belongs to</dd></dl>
 <p> <i>trig_info</i></p>
 <dl>
-<dd>the trigger associated with the device</dl>
+<dd>the trigger associated with the device</dd></dl>
 <h2>Description</h2>
 <p>Unregister trigger registered with <code>devm_iio_trigger_register</code>.</p>
 <h2>Author</h2>
 <p><code>Daniel Baluta</code> &lt;daniel.baluta [at] intel.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

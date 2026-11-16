@@ -17,12 +17,12 @@ description: "ipa-finduser – Find a user"
 <p> All entries that match are displayed.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a</code>, <code>&#8211;all</p>
-<dd> Display all attributes</p>
-<dt>-n</code>, <code>&#8211;notranslate</code></p>
-<dd> Don&#8217;t translate the LDAP attribute names to labels that match the UI.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Display the XML-RPC request and response for more verbose debugging output.</dl>
+<dt><code>-a</code>, <code>&#8211;all</dt>
+<dd> Display all attributes</dd>
+<dt>-n</code>, <code>&#8211;notranslate</code></dt>
+<dd> Don&#8217;t translate the LDAP attribute names to labels that match the UI.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Display the XML-RPC request and response for more verbose debugging output.</dd></dl>
 <p> By default, the full name, home directory, login shell, and username fields are displayed.</p>
 <h2>EXIT STATUS</h2>
 <p> 0 if one or more entries were found </p>

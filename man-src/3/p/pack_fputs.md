@@ -10,7 +10,6 @@ description: "pack_fputs – Writes a string to the stream. Allegro game program
 <p>pack_fputs &#8211; Writes a string to the stream. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int pack_fputs(const char *p, PACKFILE *f);</code></pre>
 <h2>Description</h2>
 <p>Writes a string to the stream `f&#8217;. The input string is converted from the current text encoding format to UTF-8 before writing. Newline characters are written as `

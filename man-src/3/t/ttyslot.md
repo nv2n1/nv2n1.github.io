@@ -20,7 +20,7 @@ int ttyslot(void);</code></pre>
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE&nbsp;&amp;&amp;&nbsp;_XOPEN_SOURCE&nbsp;&lt;&nbsp;500<br />
  Glibc 2.19 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE ||<br />
-&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE&nbsp;&amp;&amp;&nbsp;_XOPEN_SOURCE&nbsp;&lt;&nbsp;500</dl>
+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE&nbsp;&amp;&amp;&nbsp;_XOPEN_SOURCE&nbsp;&lt;&nbsp;500</dd></dl>
 <h2>Description</h2>
 <p>The legacy function <code>ttyslot</code>() returns the index of the current user&#8217;s entry in some file. </p>
 <p> Now &quot;What file?&quot; you ask. Well, let&#8217;s first look at some history.</p>

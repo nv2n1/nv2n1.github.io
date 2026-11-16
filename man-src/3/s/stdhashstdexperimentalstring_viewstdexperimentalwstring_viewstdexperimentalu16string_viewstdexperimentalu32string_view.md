@@ -11,17 +11,13 @@ std::hash(std::experimental::string_view,std::experimental::wstring_view,std::ex
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;experimental / string_view&gt;
-
     template &lt;&gt;
     struct hash&lt;std::experimental::string_view&gt;;
-
 template &lt;&gt;
 struct hash&lt;std::experimental::wstring_view&gt;;
 (library fundamentals TS)
-
     template &lt;&gt;
     struct hash&lt;std::experimental::u16string_view&gt;;
-
 template &lt;&gt;
 struct hash&lt;std::experimental::u32string_view&gt;;</code></pre> 
 Template specializations of std::hash for the various view classes for hashing views. 

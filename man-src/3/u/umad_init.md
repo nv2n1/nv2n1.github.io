@@ -10,7 +10,6 @@ description: "umad_init, umad_done – perform library initialization and finali
 <p>umad_init, umad_done &#8211; perform library initialization and finalization</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;infiniband/umad.h&gt;
-
 int umad_init(void);
 int umad_done(void);</code></pre>
 <h2>Description</h2>
@@ -22,7 +21,7 @@ int umad_done(void);</code></pre>
 <p>If an error occurs during the library initialization, no further use of the umad library should be attempted.</p>
 <h2>Authors</h2>
 <dl>
-<dt>Hal Rosenstock &lt;halr [at] voltaire.com&gt;</p>
+<dt>Hal Rosenstock &lt;halr [at] voltaire.com&gt;</dt>
 <dd>
-<dt>Dotan Barak &lt;dotanb [at] mellanox.co.il&gt;</p>
-<dd></dl>
+</dd><dt>Dotan Barak &lt;dotanb [at] mellanox.co.il&gt;</dt>
+<dd></dd></dl>

@@ -19,12 +19,12 @@ description: "openbox — A minimalistic, highly configurable, next generation w
 <h2>OPTIONS</h2>
 <p> These are the possible options that <code>openbox</code> accepts:</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Show a summary of the options available.</p>
-<dt><code>&#8211;display</code> DISPLAY</p>
-<dd> Specify the X display to use.</p>
-<dt><code>&#8211;id</code> ID</p>
-<dd> Specify the window identifier for the window whose properties will be displayed.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd> Show a summary of the options available.</dd>
+<dt><code>&#8211;display</code> DISPLAY</dt>
+<dd> Specify the X display to use.</dd>
+<dt><code>&#8211;id</code> ID</dt>
+<dd> Specify the window identifier for the window whose properties will be displayed.</dd></dl>
 <p> Similar to <code>xprop</code>, you may pass one or more property names to have <code>openbox</code> limit its output to only the properties requested.</p>
 <h2>SEE ALSO</h2>
 <p> openbox (1), <a href="/docs/linux/man/1-openbox-session/">openbox-session</a>(1), <a href="/docs/linux/man/1-openbox-gnome-session/">openbox-gnome-session</a>(1), <a href="/docs/linux/man/1-openbox-kde-session/">openbox-kde-session</a>(1). </p>

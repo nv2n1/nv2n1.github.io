@@ -13,9 +13,9 @@ ISGETR - Gets the current values of internal parameters of type REAL.
 
  void c_isgetr (char *cnp, float *rvp)
 <h2>Description</h2><dl COMPACT><dt>CNP
-<dd>(an input expression of type CHARACTER) is the name of an internal parameter. Only the first two characters of the name are meaningful, but a longer character string may be used to more clearly document what internal parameter is being retrieved.
-<dt>RVP
-<dd>(an output variable of type REAL) is the name of a variable into which the value of the parameter specified by CNP is to be retrieved. If the internal parameter is inherently an integer value &quot;i&quot;, &quot;REAL(i)&quot; will be returned as the value of RVP.</dl><h2>Usage</h2>This routine allows you to retrieve the current value of Isosurface parameters. For a complete list of parameters available in this utility, see the isosurface_params man page.
+</dt><dd>(an input expression of type CHARACTER) is the name of an internal parameter. Only the first two characters of the name are meaningful, but a longer character string may be used to more clearly document what internal parameter is being retrieved.
+</dd><dt>RVP
+</dt><dd>(an output variable of type REAL) is the name of a variable into which the value of the parameter specified by CNP is to be retrieved. If the internal parameter is inherently an integer value &quot;i&quot;, &quot;REAL(i)&quot; will be returned as the value of RVP.</dd></dl><h2>Usage</h2>This routine allows you to retrieve the current value of Isosurface parameters. For a complete list of parameters available in this utility, see the isosurface_params man page.
 <h2>C-Binding Description</h2>The C-binding argument descriptions are the same as the FORTRAN argument descriptions.
 <h2>Access</h2>To use ISGETR or c_isgetr, load the NCAR Graphics libraries ncarg, ncarg_gks, and ncarg_c, preferably in that order.
 <h2>Messages</h2>See the isosurface man page for a description of all Isosurface error messages and/or informational messages.

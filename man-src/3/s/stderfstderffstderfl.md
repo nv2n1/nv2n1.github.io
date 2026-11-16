@@ -51,19 +51,13 @@ x<br />
 <p>The following example calculates the probability that a normal variate is on the interval (x1, x2)<br />
  // Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;iomanip&gt;
-
 double phi(double x1, double x2)
-
 {
     return (std::erf(x2 / std::sqrt(2)) - std::erf(x1 / std::sqrt(2))) / 2;
 }
-
 int main()
-
 {
     std::cout &lt;&lt; &quot;normal variate probabilities:
 &quot;

@@ -15,8 +15,6 @@ sgbsv.f -
 <h3>Functions/Subroutines</h3>
 
 <pre><code>subroutine sgbsv (N, KL, KU, NRHS, AB, LDAB, IPIV, B, LDB, INFO)
-
-
 SGBSV computes the solution to system of linear equations A * X = B for GB matrices (simple driver)</code></pre>
 
 <h2>Function/Subroutine Documentation</h2>
@@ -33,26 +31,21 @@ SGBSV computes the solution to system of linear equations A * X = B for GB matri
  used to factor A as A = L * U, where L is a product of permutation
  and unit lower triangular matrices with KL subdiagonals, and U is
  upper triangular with KL+KU superdiagonals. The factored form of A
- is then used to solve the system of equations A * X = B.</pre>&nbsp;<wbr></dl>
+ is then used to solve the system of equations A * X = B.</pre>&nbsp;<wbr></dd></dl>
  
 
  <b>Parameters:</b>
 <dl><dd><i>N</i> 
-
  <pre> N is INTEGER
  The number of linear equations, i.e., the order of the
  matrix A. N &gt;= 0.</pre><i>KL</i> 
-
  <pre> KL is INTEGER
  The number of subdiagonals within the band of A. KL &gt;= 0.</pre><i>KU</i> 
-
  <pre> KU is INTEGER
  The number of superdiagonals within the band of A. KU &gt;= 0.</pre><i>NRHS</i> 
-
  <pre> NRHS is INTEGER
  The number of right hand sides, i.e., the number of columns
  of the matrix B. NRHS &gt;= 0.</pre><i>AB</i> 
-
  <pre> AB is REAL array, dimension (LDAB,N)
  On entry, the matrix A in band storage, in rows KL+1 to
  2*KL+KU+1; rows 1 to KL of the array need not be set.
@@ -64,41 +57,33 @@ SGBSV computes the solution to system of linear equations A * X = B for GB matri
  rows 1 to KL+KU+1, and the multipliers used during the
  factorization are stored in rows KL+KU+2 to 2*KL+KU+1.
  See below for further details.</pre><i>LDAB</i> 
-
  <pre> LDAB is INTEGER
  The leading dimension of the array AB. LDAB &gt;= 2*KL+KU+1.</pre><i>IPIV</i> 
-
  <pre> IPIV is INTEGER array, dimension (N)
  The pivot indices that define the permutation matrix P;
  row i of the matrix was interchanged with row IPIV(i).</pre><i>B</i> 
-
  <pre> B is REAL array, dimension (LDB,NRHS)
  On entry, the N-by-NRHS right hand side matrix B.
  On exit, if INFO = 0, the N-by-NRHS solution matrix X.</pre><i>LDB</i> 
-
  <pre> LDB is INTEGER
  The leading dimension of the array B. LDB &gt;= max(1,N).</pre><i>INFO</i> 
-
  <pre> INFO is INTEGER
  = 0: successful exit
  &lt; 0: if INFO = -i, the i-th argument had an illegal value
  &gt; 0: if INFO = i, U(i,i) is exactly zero. The factorization
  has been completed, but the factor U is exactly
- singular, and the solution has not been computed.</pre>&nbsp;<wbr></dl>
+ singular, and the solution has not been computed.</pre>&nbsp;<wbr></dd></dl>
  
 
  <b>Author:</b>
 <dl><dd>Univ. of Tennessee 
-
  Univ. of California Berkeley 
-
  Univ. of Colorado Denver 
-
- NAG Ltd.</dl>
+ NAG Ltd.</dd></dl>
  
 
  <b>Date:</b>
-<dl><dd>November 2011</dl>
+<dl><dd>November 2011</dd></dl>
  
 
  <b>Further Details: </b>
@@ -113,7 +98,7 @@ SGBSV computes the solution to system of linear equations A * X = B for GB matri
  a31 a42 a53 a64 * * m31 m42 m53 m64 * *
  Array elements marked * are not used by the routine; elements marked
  + need not be set on entry, but are required by the routine to store
- elements of U because of fill-in resulting from the row interchanges.</pre>&nbsp;<wbr></dl>
+ elements of U because of fill-in resulting from the row interchanges.</pre>&nbsp;<wbr></dd></dl>
  
 
  

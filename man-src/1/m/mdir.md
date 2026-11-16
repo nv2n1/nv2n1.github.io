@@ -17,43 +17,43 @@ description: "mdir – display an MSDOS directory"
 <p> <tt>Mdir</tt> displays the contents of MS-DOS directories, or the entries for some MS-DOS files. </p>
 <p> <tt>Mdir</tt> supports the following command line options:</p>
 <dl>
-<dt><tt>/</tt>&nbsp;</p>
-<dd> Recursive output, just like MS-DOS&#8217; <tt>-s</tt> option</p>
-<dt><tt>w</tt>&nbsp;</p>
-<dd> Wide output. With this option, <tt>mdir</tt> prints the filenames across the page without displaying the file size or creation date.</p>
-<dt><tt>a</tt>&nbsp;</p>
-<dd> Also list hidden files.</p>
-<dt><tt>f</tt>&nbsp;</p>
-<dd> Fast. Do not try to find out free space. On larger disks, finding out the amount of free space takes up some non trivial amount of time, as the whole FAT must be read in and scanned. The <tt>-f</tt> flag bypasses this step. This flag is not needed on FAT32 file systems, which store the size explicitly.</p>
-<dt><tt>b</tt>&nbsp;</p>
-<dd> Concise listing. Lists each directory name or filename, one per line (including the filename extension). This switch displays no heading information and no summary. Only a newline separated list of pathnames is displayed.</dl>
+<dt><tt>/</tt>&nbsp;</dt>
+<dd> Recursive output, just like MS-DOS&#8217; <tt>-s</tt> option</dd>
+<dt><tt>w</tt>&nbsp;</dt>
+<dd> Wide output. With this option, <tt>mdir</tt> prints the filenames across the page without displaying the file size or creation date.</dd>
+<dt><tt>a</tt>&nbsp;</dt>
+<dd> Also list hidden files.</dd>
+<dt><tt>f</tt>&nbsp;</dt>
+<dd> Fast. Do not try to find out free space. On larger disks, finding out the amount of free space takes up some non trivial amount of time, as the whole FAT must be read in and scanned. The <tt>-f</tt> flag bypasses this step. This flag is not needed on FAT32 file systems, which store the size explicitly.</dd>
+<dt><tt>b</tt>&nbsp;</dt>
+<dd> Concise listing. Lists each directory name or filename, one per line (including the filename extension). This switch displays no heading information and no summary. Only a newline separated list of pathnames is displayed.</dd></dl>
 <p> An error occurs if a component of the path is not a directory. </p>
 <h2>See Also</h2>
 <p> Mtools&#8217; texinfo doc</p>
 <h2>Viewing the texi doc</h2>
 <p> This manpage has been automatically generated from mtools&#8217;s texinfo documentation. However, this process is only approximative, and some items, such as crossreferences, footnotes and indices are lost in this translation process. Indeed, these items have no appropriate representation in the manpage format. Moreover, not all information has been translated into the manpage version. Thus I strongly advise you to use the original texinfo doc. See the end of this manpage for instructions how to view the texinfo doc.</p>
 <dl>
-<dt>* &nbsp;<wbr>&nbsp;</p>
+<dt>* &nbsp;<wbr>&nbsp;</dt>
 <dd> To generate a printable copy from the texinfo doc, run the following commands:<br />
-&nbsp; </p>
+&nbsp; </dd>
 <pre>
 <code>    ./configure; make dvi; dvips mtools.dvi
 </code></pre>
 </dl>
 <p>&nbsp;</p>
 <dl>
-<dt>* &nbsp;<wbr>&nbsp;</p>
+<dt>* &nbsp;<wbr>&nbsp;</dt>
 <dd> To generate a html copy, run:<br />
-&nbsp; </p>
+&nbsp; </dd>
 <pre>
 <code>    ./configure; make html
 </code></pre>
 </dl>
 <p>&nbsp; A premade html can be found at <tt>&infin;<a rel="nofollow" href="http://www.gnu.org/software/mtools/manual/mtools.htmlIntegral">http://www.gnu.org/software/mtools/manual/mtools.htmlIntegral</a></tt></p>
 <dl>
-<dt>* &nbsp;<wbr>&nbsp;</p>
+<dt>* &nbsp;<wbr>&nbsp;</dt>
 <dd> To generate an info copy (browsable using emacs&#8217; info mode), run:<br />
-&nbsp; </p>
+&nbsp; </dd>
 <pre>
 <code>    ./configure; make info
 </code></pre>

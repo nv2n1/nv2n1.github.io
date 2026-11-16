@@ -10,114 +10,114 @@ description: "secmarks – Shorewall file"
 <p>secmarks &#8211; Shorewall file</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>/etc/shorewall/secmarks</code></dl>
+<dt> <code>/etc/shorewall/secmarks</code></dt></dl>
 <h2>Description</h2>
 <dl>
 <dd>
-<dd><font SIZE="+1"> <code>Important</code> </font></p>
+</dd><dd><font SIZE="+1"> <code>Important</code> </font></dd>
 <dd>
-<dd>Unlike rules in the m[blue]<code>shorewall-rules</code>m[]<font SIZE="-2">[1]</font>(5) file, evaluation of rules in this file will continue after a match. So the final secmark for each packet will be the one assigned by the LAST rule that matches.  The secmarks file is used to associate an SELinux context with packets. It was added in Shorewall version 4.4.13. The columns in the file are as follows (where the column name is followed by a different name in parentheses, the different name is used in the alternate specification syntax). <code>SECMARK &#8211; {SAVE|RESTORE|</code><i>context</i><code>|?COMMENT </code><i>comment</i><code>}</code></p>
+</dd><dd>Unlike rules in the m[blue]<code>shorewall-rules</code>m[]<font SIZE="-2">[1]</font>(5) file, evaluation of rules in this file will continue after a match. So the final secmark for each packet will be the one assigned by the LAST rule that matches.  The secmarks file is used to associate an SELinux context with packets. It was added in Shorewall version 4.4.13. The columns in the file are as follows (where the column name is followed by a different name in parentheses, the different name is used in the alternate specification syntax). <code>SECMARK &#8211; {SAVE|RESTORE|</code><i>context</i><code>|?COMMENT </code><i>comment</i><code>}</code></dd>
 <dl>
-<dd><code>SAVE</code></p>
+<dd><code>SAVE</code></dd>
 <dl>
-<dd>If an SELinux context is associated with the packet, the context is saved in the connection. Normally, the remaining columns should be left blank.</dl>
+<dd>If an SELinux context is associated with the packet, the context is saved in the connection. Normally, the remaining columns should be left blank.</dd></dl>
 <p> <code>RESTORE</code></p>
 <dl>
-<dd>If an SELinux context is not currently associated with the packet, then the saved context (if any) is associated with the packet. Normally, the remaining columns should be left blank.</dl>
+<dd>If an SELinux context is not currently associated with the packet, then the saved context (if any) is associated with the packet. Normally, the remaining columns should be left blank.</dd></dl>
 <p> <i>context</i></p>
 <dl>
-<dd>An SELinux context.</dl>
+<dd>An SELinux context.</dd></dl>
 <p> ?COMMENT</p>
 <dl>
-<dd>The remainder of the line is treated as a comment which is attached to subsequent rules until another ?COMMENT line is found or until the end of the file is reached. To stop adding comments to rules, use a line with only the word ?COMMENT.</dl>
+<dd>The remainder of the line is treated as a comment which is attached to subsequent rules until another ?COMMENT line is found or until the end of the file is reached. To stop adding comments to rules, use a line with only the word ?COMMENT.</dd></dl>
 </dl>
 <p> <code>CHAIN &#8211; {P|I|F|O|T}[:{N|I|U|IU|NI|NU|NIU|NUI:E|ER}]</code></p>
 <dl>
-<dd>This column determines the CHAIN where the SELinux context is to be applied:</p>
+<dd>This column determines the CHAIN where the SELinux context is to be applied:</dd>
 <dl>
-<dd>P &#8211; PREROUTING</dl>
+<dd>P &#8211; PREROUTING</dd></dl>
 <dl>
-<dd>I &#8211; INPUT</dl>
+<dd>I &#8211; INPUT</dd></dl>
 <dl>
-<dd>F &#8211; FORWARD</dl>
+<dd>F &#8211; FORWARD</dd></dl>
 <dl>
-<dd>O &#8211; OUTPUT</dl>
+<dd>O &#8211; OUTPUT</dd></dl>
 <dl>
-<dd>T &#8211; POSTROUTING</dl>
+<dd>T &#8211; POSTROUTING</dd></dl>
 <p> It may be optionally followed by a colon and an indication of the Netfilter connection state(s) at which the context is to be applied:</p>
 <dl>
-<dd>:N &#8211; NEW connection</dl>
+<dd>:N &#8211; NEW connection</dd></dl>
 <dl>
-<dd>:I &#8211; INVALID connection</dl>
+<dd>:I &#8211; INVALID connection</dd></dl>
 <dl>
-<dd>:NI &#8211; NEW or INVALID connection</dl>
+<dd>:NI &#8211; NEW or INVALID connection</dd></dl>
 <dl>
-<dd>:E &#8211; ESTABLISHED connection</dl>
+<dd>:E &#8211; ESTABLISHED connection</dd></dl>
 <dl>
-<dd>:ER &#8211; ESTABLISHED or RELATED connection</dl>
+<dd>:ER &#8211; ESTABLISHED or RELATED connection</dd></dl>
 <p> Beginning with Shorewall 4.5.10, the following additional options are available</p>
 <dl>
-<dd>:U &#8211; UNTRACKED connection</dl>
+<dd>:U &#8211; UNTRACKED connection</dd></dl>
 <dl>
-<dd>:IU &#8211; INVALID or UNTRACKED connection</dl>
+<dd>:IU &#8211; INVALID or UNTRACKED connection</dd></dl>
 <dl>
-<dd>:NU &#8211; NEW or UNTRACKED connection</dl>
+<dd>:NU &#8211; NEW or UNTRACKED connection</dd></dl>
 <dl>
-<dd>:NIU &#8211; NEW, INVALID or UNTRACKED connection.</dl>
+<dd>:NIU &#8211; NEW, INVALID or UNTRACKED connection.</dd></dl>
 <p> This column was formerly labelled CHAIN:STATE.</dl>
 <p> <code>SOURCE</code> &#8211; {<code>&#8211;</code><i>interface</i>|[<i>interface</i>:]<i>address-or-range</i>[<code>,</code><i>address-or-range</i>]&#8230;}[<i>exclusion</i>]</p>
 <dl>
-<dd>May be:</p>
+<dd>May be:</dd>
 <dl>
-<dd>1. An interface name &#8211; matches traffic entering the firewall on the specified interface. May not be used in classify rules or in rules using the T in the CHAIN column.</dl>
+<dd>1. An interface name &#8211; matches traffic entering the firewall on the specified interface. May not be used in classify rules or in rules using the T in the CHAIN column.</dd></dl>
 <dl>
-<dd>2. A comma-separated list of host or network IP addresses or MAC addresses.</dl>
+<dd>2. A comma-separated list of host or network IP addresses or MAC addresses.</dd></dl>
 <dl>
-<dd>3. An interface name followed by a colon (&quot;:&quot;) followed by a comma-separated list of host or network IP addresses or MAC addresses.</dl>
+<dd>3. An interface name followed by a colon (&quot;:&quot;) followed by a comma-separated list of host or network IP addresses or MAC addresses.</dd></dl>
 <p> MAC addresses must be prefixed with &quot;~&quot; and use &quot;-&quot; as a separator. Example: ~00-A0-C9-15-39-78 You may exclude certain hosts from the set already defined through use of an <i>exclusion</i> (see m[blue]<code>shorewall-exclusion</code>m[]<font SIZE="-2">[2]</font>(5)). Addresses may be specified using an ipset name preceded by &#8216;+&#8217;.</dl>
 <p> <code>DEST</code> &#8211; {<code>&#8211;</code>|{<i>interface</i>|[<i>interface</i>:]<i>address-or-range</i>[<code>,</code><i>address-or-range</i>]&#8230;}[<i>exclusion</i>]</p>
 <dl>
-<dd>May be:</p>
+<dd>May be:</dd>
 <dl>
-<dd>1. An interface name. May not be used in the PREROUTING or INPUT chains. The interface name may be optionally followed by a colon (&quot;:&quot;) and an IP address list.</dl>
+<dd>1. An interface name. May not be used in the PREROUTING or INPUT chains. The interface name may be optionally followed by a colon (&quot;:&quot;) and an IP address list.</dd></dl>
 <dl>
-<dd>2. A comma-separated list of host or network IP addresses. The list may include ip address ranges if your kernel and iptables include iprange support.</dl>
+<dd>2. A comma-separated list of host or network IP addresses. The list may include ip address ranges if your kernel and iptables include iprange support.</dd></dl>
 <p> You may exclude certain hosts from the set already defined through use of an <i>exclusion</i> (see m[blue]<code>shorewall-exclusion</code>m[]<font SIZE="-2">[2]</font>(5)). Addresses may be specified using an ipset name preceded by &#8216;+&#8217;.</dl>
 <p> <code>PROTO</code> &#8211; {<code>&#8211;</code>|<code>tcp:syn</code>|<code>ipp2p</code>|<code>ipp2p:udp</code>|<code>ipp2p:all</code>|<i>protocol-number</i>|<i>protocol-name</i>|<code>all}[,&#8230;]</code></p>
 <dl>
-<dd>Protocol &#8211; <code>ipp2p</code> requires ipp2p match support in your kernel and iptables. Beginning with Shorewall 4.5.12, this column can accept a comma-separated list of protocols.</dl>
+<dd>Protocol &#8211; <code>ipp2p</code> requires ipp2p match support in your kernel and iptables. Beginning with Shorewall 4.5.12, this column can accept a comma-separated list of protocols.</dd></dl>
 <p> <code>DPORT</code> &#8211; [<code>&#8211;</code>|<i>port-name-number-or-range</i>[<code>,</code><i>port-name-number-or-range</i>]&#8230;]</p>
 <dl>
-<dd>Optional destination Ports. A comma-separated list of Port names (from <a href="/docs/linux/man/5-services/">services</a>(5)), <i>port number</i>s or <i>port range</i>s; if the protocol is <code>icmp</code>, this column is interpreted as the destination icmp-type(s). ICMP types may be specified as a numeric type, a numeric type and code separated by a slash (e.g., 3/4), or a typename. See m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#ICMP">http://www.shorewall.net/configuration_file_basics.htm#ICMP</a></code>m[]<font SIZE="-2">[3]</font>. If the protocol is <code>ipp2p</code>, this column is interpreted as an ipp2p option without the leading &quot;&#8211;&quot; (example <code>bit</code> for bit-torrent). If no PORT is given, <code>ipp2p</code> is assumed. This column is ignored if PROTOCOL = all but must be entered if any of the following field is supplied. In that case, it is suggested that this field contain &quot;-&quot; This column was formerly labelled DEST PORT(S).</dl>
+<dd>Optional destination Ports. A comma-separated list of Port names (from <a href="/docs/linux/man/5-services/">services</a>(5)), <i>port number</i>s or <i>port range</i>s; if the protocol is <code>icmp</code>, this column is interpreted as the destination icmp-type(s). ICMP types may be specified as a numeric type, a numeric type and code separated by a slash (e.g., 3/4), or a typename. See m[blue]<code><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#ICMP">http://www.shorewall.net/configuration_file_basics.htm#ICMP</a></code>m[]<font SIZE="-2">[3]</font>. If the protocol is <code>ipp2p</code>, this column is interpreted as an ipp2p option without the leading &quot;&#8211;&quot; (example <code>bit</code> for bit-torrent). If no PORT is given, <code>ipp2p</code> is assumed. This column is ignored if PROTOCOL = all but must be entered if any of the following field is supplied. In that case, it is suggested that this field contain &quot;-&quot; This column was formerly labelled DEST PORT(S).</dd></dl>
 <p> <code>SPORT</code> &#8211; [<code>&#8211;</code>|<i>port-name-number-or-range</i>[<code>,</code><i>port-name-number-or-range</i>]&#8230;]</p>
 <dl>
-<dd>Optional source port(s). If omitted, any source port is acceptable. Specified as a comma-separated list of port names, port numbers or port ranges. This column was formerly labelled SOURCE PORT(S).</dl>
+<dd>Optional source port(s). If omitted, any source port is acceptable. Specified as a comma-separated list of port names, port numbers or port ranges. This column was formerly labelled SOURCE PORT(S).</dd></dl>
 <p> <code>USER</code> &#8211; [<code>!</code>][<i>user-name-or-number</i>][<code>:</code><i>group-name-or-number</i>]</p>
 <dl>
-<dd>This optional column may only be non-empty if the SOURCE is the firewall itself. When this column is non-empty, the rule applies only if the program generating the output is running under the effective <i>user</i> and/or <i>group</i> specified (or is NOT running under that id if &quot;!&quot; is given). Examples: joe</p>
+<dd>This optional column may only be non-empty if the SOURCE is the firewall itself. When this column is non-empty, the rule applies only if the program generating the output is running under the effective <i>user</i> and/or <i>group</i> specified (or is NOT running under that id if &quot;!&quot; is given). Examples: joe</dd>
 <dl>
-<dd>program must be run by joe</dl>
+<dd>program must be run by joe</dd></dl>
 <p> :kids</p>
 <dl>
-<dd>program must be run by a member of the &#8216;kids&#8217; group</dl>
+<dd>program must be run by a member of the &#8216;kids&#8217; group</dd></dl>
 <p> !:kids</p>
 <dl>
-<dd>program must not be run by a member of the &#8216;kids&#8217; group</dl>
+<dd>program must not be run by a member of the &#8216;kids&#8217; group</dd></dl>
 </dl>
 <p> <code>MARK</code> &#8211; [<code>!</code>]<i>value</i>[/<i>mask</i>][<code>:C</code>]</p>
 <dl>
-<dd>Defines a test on the existing packet or connection mark. The rule will match only if the test returns true. If you don&#8217;t want to define a test but need to specify anything in the following columns, place a &quot;-&quot; in this field. !</p>
+<dd>Defines a test on the existing packet or connection mark. The rule will match only if the test returns true. If you don&#8217;t want to define a test but need to specify anything in the following columns, place a &quot;-&quot; in this field. !</dd>
 <dl>
-<dd>Inverts the test (not equal)</dl>
+<dd>Inverts the test (not equal)</dd></dl>
 <p> <i>value</i></p>
 <dl>
-<dd>Value of the packet or connection mark.</dl>
+<dd>Value of the packet or connection mark.</dd></dl>
 <p> <i>mask</i></p>
 <dl>
-<dd>A mask to be applied to the mark before testing.</dl>
+<dd>A mask to be applied to the mark before testing.</dd></dl>
 <p> <code>:C</code></p>
 <dl>
-<dd>Designates a connection mark. If omitted, the packet mark&#8217;s value is tested.</dl>
+<dd>Designates a connection mark. If omitted, the packet mark&#8217;s value is tested.</dd></dl>
 </dl>
 <h2>Example</h2>
 <p>Mark the first incoming packet of a connection on the loopback interface and destined for address 127.0.0.1 and tcp port 3306 with context system_u:object_r:mysqld_t:s0 and save that context in the conntrack table. On subsequent input packets in the connection, set the context from the conntrack table. </p>
@@ -126,7 +126,7 @@ description: "secmarks – Shorewall file"
 <dd>
 <pre>#ZONE INTERFACE BROADCAST OPTIONS
 - lo - ignore</pre>
-</dl>
+</dd></dl>
 <p> /etc/shorewall/secmarks: </p>
 <dl>
 <dd>
@@ -134,7 +134,7 @@ description: "secmarks – Shorewall file"
 system_u:object_r:mysqld_packet_t:s0 I:N lo 127.0.0.1 tcp 3306
 SAVE I:N lo 127.0.0.1 tcp 3306
 RESTORE I:ER</pre>
-</dl>
+</dd></dl>
 <h2>Files</h2>
 <p>/etc/shorewall/secmarks</p>
 <h2>See Also</h2>
@@ -143,19 +143,20 @@ RESTORE I:ER</pre>
 <p> <a href="/docs/linux/man/8-shorewall/">shorewall</a>(8), <a href="/docs/linux/man/5-shorewall-accounting/">shorewall-accounting</a>(5), <a href="/docs/linux/man/5-shorewall-actions/">shorewall-actions</a>(5), <a href="/docs/linux/man/5-shorewall-blacklist/">shorewall-blacklist</a>(5), <a href="/docs/linux/man/5-shorewall-hosts/">shorewall-hosts</a>(5), shorewall_interfaces(5), <a href="/docs/linux/man/5-shorewall-ipsets/">shorewall-ipsets</a>(5), <a href="/docs/linux/man/5-shorewall-maclist/">shorewall-maclist</a>(5), <a href="/docs/linux/man/5-shorewall-masq/">shorewall-masq</a>(5), <a href="/docs/linux/man/5-shorewall-nat/">shorewall-nat</a>(5), <a href="/docs/linux/man/5-shorewall-netmap/">shorewall-netmap</a>(5), <a href="/docs/linux/man/5-shorewall-params/">shorewall-params</a>(5), <a href="/docs/linux/man/5-shorewall-policy/">shorewall-policy</a>(5), <a href="/docs/linux/man/5-shorewall-providers/">shorewall-providers</a>(5), <a href="/docs/linux/man/5-shorewall-proxyarp/">shorewall-proxyarp</a>(5), <a href="/docs/linux/man/5-shorewall-rtrules/">shorewall-rtrules</a>(5), <a href="/docs/linux/man/5-shorewall-routestopped/">shorewall-routestopped</a>(5), <a href="/docs/linux/man/5-shorewall-rules/">shorewall-rules</a>(5), <a href="/docs/linux/man/5-shorewall-conf/">shorewall.conf</a>(5), <a href="/docs/linux/man/5-shorewall-tcclasses/">shorewall-tcclasses</a>(5), <a href="/docs/linux/man/5-shorewall-tcdevices/">shorewall-tcdevices</a>(5), <a href="/docs/linux/man/5-shorewall-mangle/">shorewall-mangle</a>(5), <a href="/docs/linux/man/5-shorewall-tos/">shorewall-tos</a>(5), <a href="/docs/linux/man/5-shorewall-tunnels/">shorewall-tunnels</a>(5), <a href="/docs/linux/man/5-shorewall-zones/">shorewall-zones</a>(5)</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>shorewall-rules</p>
+<dt> 1.</dt>
+<dd>shorewall-rules</dd>
 <dl>
-<dd><a rel="nofollow" href="http://www.shorewall.net/manpages/shorewall-rules.html">http://www.shorewall.net/manpages/shorewall-rules.html</a></dl>
-<dt> 2.</p>
-<dd>shorewall-exclusion</p>
+<dd><a rel="nofollow" href="http://www.shorewall.net/manpages/shorewall-rules.html">http://www.shorewall.net/manpages/shorewall-rules.html</a></dd></dl>
+<dt> 2.</dt>
+<dd>shorewall-exclusion</dd>
 <dl>
-<dd><a rel="nofollow" href="http://www.shorewall.net/manpages/shorewall-exclusion.html">http://www.shorewall.net/manpages/shorewall-exclusion.html</a></dl>
-<dt> 3.</p>
-<dd><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#ICMP">http://www.shorewall.net/configuration_file_basics.htm#ICMP</a></p>
+<dd><a rel="nofollow" href="http://www.shorewall.net/manpages/shorewall-exclusion.html">http://www.shorewall.net/manpages/shorewall-exclusion.html</a></dd></dl>
+<dt> 3.</dt>
+<dd><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#ICMP">http://www.shorewall.net/configuration_file_basics.htm#ICMP</a></dd>
 <dl>
-<dd><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#ICMP">http://www.shorewall.net/configuration_file_basics.htm#ICMP</a></dl>
-<dt> 4.</p>
-<dd><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></p>
+<dd><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#ICMP">http://www.shorewall.net/configuration_file_basics.htm#ICMP</a></dd></dl>
+<dt> 4.</dt>
+<dd><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></dd>
 <dl>
-<dd><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></dl>
+<dd><a rel="nofollow" href="http://www.shorewall.net/configuration_file_basics.htm#Pairs">http://www.shorewall.net/configuration_file_basics.htm#Pairs</a></dd></dl>
+</dl></dl>

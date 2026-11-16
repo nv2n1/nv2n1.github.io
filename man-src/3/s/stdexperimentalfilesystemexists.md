@@ -34,16 +34,11 @@ noexcept</p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;fstream&gt;
-
 #include &lt;cstdint&gt;
-
 #include &lt;experimental/filesystem&gt;
-
 namespace fs = std::experimental::filesystem;
 void demo_exists(const fs::path &amp;p, fs::file_status s = fs::file_status{})
-
 {
     std::cout &lt;&lt; p;
     if (fs::status_known(s) ? fs::exists(s) : fs::exists(p))
@@ -53,9 +48,7 @@ void demo_exists(const fs::path &amp;p, fs::file_status s = fs::file_status{})
         std::cout &lt;&lt; &quot; does not exist
 &quot;;
 }
-
 int main()
-
 {
     fs::create_directory(&quot;sandbox&quot;);
     std::ofstream(&quot;sandbox/file&quot;); // create regular file

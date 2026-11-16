@@ -36,3 +36,4 @@ If s is a null pointer, resets its internal conversion state to represent the in
 &quot;;<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;for (wchar_t wc : wstr) {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;std::string mb(MB_CUR_MAX, &#8216;
+</p>

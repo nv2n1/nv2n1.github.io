@@ -19,16 +19,16 @@ description: "CREATE SERVER – define a new foreign server"
 <p> Creating a server requires USAGE privilege on the foreign-data wrapper being used.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>servername</i></p>
-<dd>The name of the foreign server to be created.</p>
-<dt><i>servertype</i></p>
-<dd>Optional server type.</p>
-<dt><i>serverversion</i></p>
-<dd>Optional server version.</p>
-<dt><i>fdwname</i></p>
-<dd>The name of the foreign-data wrapper that manages the server.</p>
-<dt><code>OPTIONS ( </code><i>option</i><code> &#8216;</code><i>value</i><code>&#8216; [, &#8230; ] )</code></p>
-<dd>This clause specifies the options for the server. The options typically define the connection details of the server, but the actual names and values are dependent on the server&#8217;s foreign-data wrapper.</dl>
+<dt><i>servername</i></dt>
+<dd>The name of the foreign server to be created.</dd>
+<dt><i>servertype</i></dt>
+<dd>Optional server type.</dd>
+<dt><i>serverversion</i></dt>
+<dd>Optional server version.</dd>
+<dt><i>fdwname</i></dt>
+<dd>The name of the foreign-data wrapper that manages the server.</dd>
+<dt><code>OPTIONS ( </code><i>option</i><code> &#8216;</code><i>value</i><code>&#8216; [, &#8230; ] )</code></dt>
+<dd>This clause specifies the options for the server. The options typically define the connection details of the server, but the actual names and values are dependent on the server&#8217;s foreign-data wrapper.</dd></dl>
 <h2>Notes</h2>
 <p>When using the <code>dblink</code> module (see in the documentation), the foreign server name can be used as an argument of the <code>dblink_connect</code>(l) function to indicate the connection parameters. See also there for more examples. It is necessary to have the USAGE privilege on the foreign server to be able to use it in this way.</p>
 <h2>Examples</h2>

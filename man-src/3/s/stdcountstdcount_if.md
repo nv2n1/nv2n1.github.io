@@ -11,42 +11,24 @@ std::count,std::count_if - std::count,std::count_if
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class InputIt, class T&gt;
-
     typename iterator_traits&lt;InputIt&gt;::difference_type(until C++ 20)
-
         count(InputIt first, InputIt last, const T &amp;value);
-
 template &lt;class InputIt, class T&gt;
-
 constexpr typename iterator_traits&lt;InputIt&gt;::difference_type(since C++ 20)
-
     count(InputIt first, InputIt last, const T &amp;value);
-
 template &lt;class ExecutionPolicy, class ForwardIt, class T&gt;
-
 typename iterator_traits&lt;ForwardIt&gt;::difference_type(2)(since C++ 17)
-
     count(ExecutionPolicy &amp;&amp;policy, ForwardIt first, ForwardIt last, const T &amp;value);
 (1)
-
     template &lt;class InputIt, class UnaryPredicate&gt;
-
     typename iterator_traits&lt;InputIt&gt;::difference_type(until C++ 20)
-
         count_if(InputIt first, InputIt last, UnaryPredicate p);
-
 template &lt;class InputIt, class UnaryPredicate&gt;
-
 constexpr typename iterator_traits&lt;InputIt&gt;::difference_type(3)(since C++ 20)
-
     count_if(InputIt first, InputIt last, UnaryPredicate p);
-
 template &lt;class ExecutionPolicy, class ForwardIt, class UnaryPredicate&gt;
-
 typename iterator_traits&lt;ForwardIt&gt;::difference_type(4)(since C++ 17)
-
     count_if(ExecutionPolicy &amp;&amp;policy, ForwardIt first, ForwardIt last, UnaryPredicate p);</code></pre> 
 Returns the number of elements in the range [first, last) satisfying specific criteria. 
 1) counts the elements that are equal to value. 
@@ -125,12 +107,9 @@ For the number of elements in the range [first, last) without any additional cri
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;vector&gt;
 int main()
-
 {
     std::vector&lt;int&gt; v{1, 2, 3, 4, 4, 3, 7, 8, 9, 10};
     // determine how many integers in a std::vector match a target value.

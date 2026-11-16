@@ -23,26 +23,26 @@ description: "UPDATE – update rows of a table"
 <p> You must have the UPDATE privilege on the table, or at least on the column(s) that are listed to be updated. You must also have the SELECT privilege on any column whose values are read in the <i>expressions</i> or <i>condition</i>.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>table</i></p>
-<dd>The name (optionally schema-qualified) of the table to update.</p>
-<dt><i>alias</i></p>
-<dd>A substitute name for the target table. When an alias is provided, it completely hides the actual name of the table. For example, given UPDATE foo AS f, the remainder of the <code>UPDATE</code> statement must refer to this table as f not foo.</p>
-<dt><i>column</i></p>
-<dd>The name of a column in <i>table</i>. The column name can be qualified with a subfield name or array subscript, if needed. Do not include the table&#8217;s name in the specification of a target column &#8212; for example, UPDATE tab SET tab.col = 1 is invalid.</p>
-<dt><i>expression</i></p>
-<dd>An expression to assign to the column. The expression can use the old values of this and other columns in the table.</p>
-<dt><code>DEFAULT</code></p>
-<dd>Set the column to its default value (which will be NULL if no specific default expression has been assigned to it).</p>
-<dt><i>fromlist</i></p>
-<dd>A list of table expressions, allowing columns from other tables to appear in the WHERE condition and the update expressions. This is similar to the list of tables that can be specified in the FROM Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] of a <code>SELECT</code> statement. Note that the target table must not appear in the <i>fromlist</i>, unless you intend a self-join (in which case it must appear with an alias in the <i>fromlist</i>).</p>
-<dt><i>condition</i></p>
-<dd>An expression that returns a value of type <code>boolean</code>. Only rows for which this expression returns true will be updated.</p>
-<dt><i>cursor_name</i></p>
-<dd>The name of the cursor to use in a WHERE CURRENT OF condition. The row to be updated is the one most recently fetched from this cursor. The cursor must be a non-grouping query on the <code>UPDATE</code>&#8216;s target table. Note that WHERE CURRENT OF cannot be specified together with a Boolean condition. See DECLARE [<code><a href="/docs/linux/man/7-declare/">declare</a></code>(7)] for more information about using cursors with WHERE CURRENT OF.</p>
-<dt><i>output_expression</i></p>
-<dd>An expression to be computed and returned by the <code>UPDATE</code> command after each row is updated. The expression can use any column names of the <i>table</i> or table(s) listed in FROM. Write * to return all columns.</p>
-<dt><i>output_name</i></p>
-<dd>A name to use for a returned column.</dl>
+<dt><i>table</i></dt>
+<dd>The name (optionally schema-qualified) of the table to update.</dd>
+<dt><i>alias</i></dt>
+<dd>A substitute name for the target table. When an alias is provided, it completely hides the actual name of the table. For example, given UPDATE foo AS f, the remainder of the <code>UPDATE</code> statement must refer to this table as f not foo.</dd>
+<dt><i>column</i></dt>
+<dd>The name of a column in <i>table</i>. The column name can be qualified with a subfield name or array subscript, if needed. Do not include the table&#8217;s name in the specification of a target column &#8212; for example, UPDATE tab SET tab.col = 1 is invalid.</dd>
+<dt><i>expression</i></dt>
+<dd>An expression to assign to the column. The expression can use the old values of this and other columns in the table.</dd>
+<dt><code>DEFAULT</code></dt>
+<dd>Set the column to its default value (which will be NULL if no specific default expression has been assigned to it).</dd>
+<dt><i>fromlist</i></dt>
+<dd>A list of table expressions, allowing columns from other tables to appear in the WHERE condition and the update expressions. This is similar to the list of tables that can be specified in the FROM Clause [<code><a href="/docs/linux/man/7-select/">select</a></code>(7)] of a <code>SELECT</code> statement. Note that the target table must not appear in the <i>fromlist</i>, unless you intend a self-join (in which case it must appear with an alias in the <i>fromlist</i>).</dd>
+<dt><i>condition</i></dt>
+<dd>An expression that returns a value of type <code>boolean</code>. Only rows for which this expression returns true will be updated.</dd>
+<dt><i>cursor_name</i></dt>
+<dd>The name of the cursor to use in a WHERE CURRENT OF condition. The row to be updated is the one most recently fetched from this cursor. The cursor must be a non-grouping query on the <code>UPDATE</code>&#8216;s target table. Note that WHERE CURRENT OF cannot be specified together with a Boolean condition. See DECLARE [<code><a href="/docs/linux/man/7-declare/">declare</a></code>(7)] for more information about using cursors with WHERE CURRENT OF.</dd>
+<dt><i>output_expression</i></dt>
+<dd>An expression to be computed and returned by the <code>UPDATE</code> command after each row is updated. The expression can use any column names of the <i>table</i> or table(s) listed in FROM. Write * to return all columns.</dd>
+<dt><i>output_name</i></dt>
+<dd>A name to use for a returned column.</dd></dl>
 <h2>Outputs</h2>
 <p>On successful completion, an <code>UPDATE</code> command returns a command tag of the form </p>
 <pre>UPDATE <i>count</i></pre>

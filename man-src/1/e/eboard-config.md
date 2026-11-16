@@ -16,14 +16,14 @@ description: "eboard-config – program to get information about the installed e
 <p> eboard-config reports the installation options that the currently installed version of eboard was compiled with.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;prefix</code></p>
-<dd> Returns the prefix under which eboard was installed.</p>
-<dt><code>&#8211;datadir</code></p>
-<dd> Returns the location in which eboard datafiles were installed.</p>
-<dt><code>&#8211;bindir</code></p>
-<dd> Returns the directory in which the eboard binaries were install</p>
-<dt><code>&#8211;version</code></p>
-<dd> Outputs the current eboard version to stdout.</dl>
+<dt><code>&#8211;prefix</code></dt>
+<dd> Returns the prefix under which eboard was installed.</dd>
+<dt><code>&#8211;datadir</code></dt>
+<dd> Returns the location in which eboard datafiles were installed.</dd>
+<dt><code>&#8211;bindir</code></dt>
+<dd> Returns the directory in which the eboard binaries were install</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Outputs the current eboard version to stdout.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Daniel Burrows &lt;dburrows [at] debian.org&gt;, for the Debian GNU/Linux system, but may be used by others. </p>
 <h2>Index</h2>

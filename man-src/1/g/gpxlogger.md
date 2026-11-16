@@ -11,14 +11,14 @@ description: "gps, xgps, xgpsspeed, cgps, lcdgps, cgpxlogger – test clients fo
 <p> gps, xgps, xgpsspeed, cgps, lcdgps, cgpxlogger &#8211; test clients for gpsd </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>xgps</code> [<i>X-options</i>] [-h] [-V] [-j] [-speedunits&nbsp;<wbr>{[mph]&nbsp;<wbr>|&nbsp;<wbr>[kph]&nbsp;<wbr>|&nbsp;<wbr>[knots]}] [-altunits&nbsp;<wbr>{[feet]&nbsp;<wbr>|&nbsp;<wbr>[meters]}] [-l&nbsp;<wbr>[[d]&nbsp;<wbr>|&nbsp;<wbr>[m]&nbsp;<wbr>|&nbsp;<wbr>[s]]] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</p>
-<dt> <code>xgpsspeed</code> [-rv] [<i>X-options</i>] [-h] [-V] [-nc&nbsp;<wbr><i>X-color</i>] [-speedunits&nbsp;<wbr>{[mph]&nbsp;<wbr>|&nbsp;<wbr>[kph]&nbsp;<wbr>|&nbsp;<wbr>[knots]}] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</p>
-<dt> <code>cgps</code> [-h] [-V] [-j] [-speedunits&nbsp;<wbr>{[mph]&nbsp;<wbr>|&nbsp;<wbr>[kph]&nbsp;<wbr>|&nbsp;<wbr>[knots]}] [-altunits&nbsp;<wbr>{[feet]&nbsp;<wbr>|&nbsp;<wbr>[meters]}] [-l&nbsp;<wbr>[[d]&nbsp;<wbr>|&nbsp;<wbr>[m]&nbsp;<wbr>|&nbsp;<wbr>[s]]] [-m] [-s] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</p>
-<dt> <code>lcdgps</code> [-h] [-V] [-j] [-l&nbsp;<wbr>[[d]&nbsp;<wbr>|&nbsp;<wbr>[m]&nbsp;<wbr>|&nbsp;<wbr>[s]]] [-u&nbsp;<wbr>[[i]&nbsp;<wbr>|&nbsp;<wbr>[n]&nbsp;<wbr>|&nbsp;<wbr>[m]]] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</p>
-<dt> <code>gpxlogger</code></p>
-<dt> <code>gpxlogger</code> [-h] [-V] [-j] [-i&nbsp;<wbr><i>track timeout</i>] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</dl>
+<dt> <code>xgps</code> [<i>X-options</i>] [-h] [-V] [-j] [-speedunits&nbsp;<wbr>{[mph]&nbsp;<wbr>|&nbsp;<wbr>[kph]&nbsp;<wbr>|&nbsp;<wbr>[knots]}] [-altunits&nbsp;<wbr>{[feet]&nbsp;<wbr>|&nbsp;<wbr>[meters]}] [-l&nbsp;<wbr>[[d]&nbsp;<wbr>|&nbsp;<wbr>[m]&nbsp;<wbr>|&nbsp;<wbr>[s]]] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</dt>
+<dt> <code>xgpsspeed</code> [-rv] [<i>X-options</i>] [-h] [-V] [-nc&nbsp;<wbr><i>X-color</i>] [-speedunits&nbsp;<wbr>{[mph]&nbsp;<wbr>|&nbsp;<wbr>[kph]&nbsp;<wbr>|&nbsp;<wbr>[knots]}] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</dt>
+<dt> <code>cgps</code> [-h] [-V] [-j] [-speedunits&nbsp;<wbr>{[mph]&nbsp;<wbr>|&nbsp;<wbr>[kph]&nbsp;<wbr>|&nbsp;<wbr>[knots]}] [-altunits&nbsp;<wbr>{[feet]&nbsp;<wbr>|&nbsp;<wbr>[meters]}] [-l&nbsp;<wbr>[[d]&nbsp;<wbr>|&nbsp;<wbr>[m]&nbsp;<wbr>|&nbsp;<wbr>[s]]] [-m] [-s] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</dt>
+<dt> <code>lcdgps</code> [-h] [-V] [-j] [-l&nbsp;<wbr>[[d]&nbsp;<wbr>|&nbsp;<wbr>[m]&nbsp;<wbr>|&nbsp;<wbr>[s]]] [-u&nbsp;<wbr>[[i]&nbsp;<wbr>|&nbsp;<wbr>[n]&nbsp;<wbr>|&nbsp;<wbr>[m]]] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</dt>
+<dt> <code>gpxlogger</code></dt>
+<dt> <code>gpxlogger</code> [-h] [-V] [-j] [-i&nbsp;<wbr><i>track timeout</i>] [<i>server</i> [<i>:port</i> [<i>:device</i>]]]</dt></dl>
 <h2>DESCRIPTION</h2>
-<dd>These are the demonstration clients shipped with gpsd. They have some common options: </p>
+<dd>These are the demonstration clients shipped with gpsd. They have some common options: </dd>
 <p> The <code>-h</code> option causes each client to emit a summary of its options and then exit. </p>
 <p> The <code>-V</code> option causes each client to dump the package version and exit. </p>
 <p> The <code>-j</code> option, where present, tells the daemon to hold fix data across cycles, eliminating jitter from NMEA devices that emit several partial reports. The downside is that with this switch on the client will occasionally report stale or invalid data held over from a previous cycle. This option is ineffective, and not needed, on SiRFs and most other non-NMEA GPSes. See also the discussion of the J command in <code><a href="/docs/linux/man/8-gpsd/">gpsd</a></code>(8). </p>
@@ -41,7 +41,7 @@ description: "gps, xgps, xgpsspeed, cgps, lcdgps, cgpxlogger – test clients fo
 <p> Rather than use X resources to determine which units to use, cgps looks at variables in its environment. Here are the variables and values it checks: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 GPSD_UNITS one of : imperial = miles / feet
                                            nautical = knots / feet
@@ -57,7 +57,7 @@ GPSD_UNITS one of : imperial = miles / feet
                                                                                                                                                                                                            POSIX = miles / feet
                                                                                                                                                                                                                                [other] = km / meters
 </code></pre>
-</dl>
+</dd></dl>
 <p> cgps terminates when you send it a SIGHUP or SIGINT; given default terminal settings this will happen when you type Ctl-C at it. It will also terminate on &#8216;q&#8217;</p>
 <h3>lcdgps</h3>
 <p> A client that passes gpsd data to lcdproc, turning your car computer into a very expensive and nearly feature-free GPS receiver. Currently assumes a 4&#215;40 LCD and writes data formatted to fit that size screen. Also displays 4- or 6-character Maidenhead grid square output. </p>
@@ -74,10 +74,10 @@ GPSD_UNITS one of : imperial = miles / feet
 <p> This manual page by Eric S. Raymond esr [at] thyrsus.com. There is a project page, with xgps screenshots, at m[blue]<code>berlios.de</code>m[]<font SIZE="-2">[1]</font>.</p>
 <h2>NOTES</h2>
 <dl>
-<dt> 1.</p>
-<dd> berlios.de</p>
+<dt> 1.</dt>
+<dd> berlios.de</dd>
 <dl>
 <dt>
-<dd> <a rel="nofollow" href="http://gpsd.berlios.de/">http://gpsd.berlios.de/</a></dl>
+</dt><dd> <a rel="nofollow" href="http://gpsd.berlios.de/">http://gpsd.berlios.de/</a></dd></dl>
 </dl>
 <h2>Index</h2>

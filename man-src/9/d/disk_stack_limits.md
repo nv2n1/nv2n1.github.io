@@ -15,15 +15,15 @@ disk_stack_limits - adjust queue limits for stacked drivers
 <h2>Arguments</h2>
 
 <i>disk</i>
-<dl><dd><dd>MD/DM gendisk (top)</dl>
+<dl><dd></dd><dd>MD/DM gendisk (top)</dd></dl>
  
 
  <i>bdev</i>
-<dl><dd>the underlying block device (bottom)</dl>
+<dl><dd>the underlying block device (bottom)</dd></dl>
  
 
  <i>offset</i>
-<dl><dd>offset to beginning of data within component device</dl>
+<dl><dd>offset to beginning of data within component device</dd></dl>
 
 <h2>Description</h2>
 

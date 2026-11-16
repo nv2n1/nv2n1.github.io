@@ -11,25 +11,16 @@ std::Assignable - std::Assignable
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;concepts&gt;
-
     template &lt;class LHS, class RHS&gt;
-
     concept Assignable =
-
         std::is_lvalue_reference_v&lt;LHS&gt; &amp;&amp;
-
         std::CommonReference &lt;
-
         const std::remove_reference_t&lt;LHS&gt;
 &amp;, (since C++ 20)
-
            const std::remove_reference_t&lt;RHS&gt; &amp; &gt; &amp;&amp;
-
                                                   requires(LHS lhs, RHS &amp;&amp;rhs)
 {
-
     lhs = std::forward&lt;RHS&gt;(rhs);
-
     requires std::Same&lt;decltype(lhs = std::forward&lt;RHS&gt;(rhs)), LHS&gt;;
 };</code></pre> 
 The concept Assignable&lt;LHS, RHS&gt; specifies that an expression of the type and value category specified by RHS can be assigned to an lvalue expression whose type is specified by LHS. 

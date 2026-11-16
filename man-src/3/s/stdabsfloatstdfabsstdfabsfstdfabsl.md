@@ -37,10 +37,8 @@ If the implementation supports IEEE floating-point arithmetic (IEC 60559), </p>
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
 int main()
-
 {
     std::cout &lt;&lt; &quot;abs(+3.0) = &quot; &lt;&lt; std::abs(+3.0) &lt;&lt; '
 '

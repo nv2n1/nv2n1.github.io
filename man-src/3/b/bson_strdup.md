@@ -16,8 +16,8 @@ bson_strdup(const char *str);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>str</code></p>
-<dd> A string.</dl>
+<dt><code>str</code></dt>
+<dd> A string.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Copies <code>str</code> into a new string. If <code>str</code> is NULL, then NULL is returned. </p>
 <h2>RETURNS</h2>

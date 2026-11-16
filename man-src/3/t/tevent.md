@@ -20,42 +20,17 @@ description: "The tevent API – The tevent low-level API."
  <i>The following definitions are usueful only for compatibility with the implementation originally developed within the samba4 code and will be soon removed. </i></p>
 <h3>Macros</h3>
 <pre><code>#define TEVENT_FD_READ   1
-
-
 Monitor a file descriptor for write availability.
-
-
 #define TEVENT_FD_WRITE   2
-
-
 Monitor a file descriptor for data to be read.
-
-
 #define TEVENT_FD_WRITEABLE(fde)   tevent_fd_set_flags(fde, tevent_fd_get_flags(fde) | TEVENT_FD_WRITE)
-
-
 Convenience function for declaring a tevent_fd writable.
-
-
 #define TEVENT_FD_READABLE(fde)   tevent_fd_set_flags(fde, tevent_fd_get_flags(fde) | TEVENT_FD_READ)
-
-
 Convenience function for declaring a tevent_fd readable.
-
-
 #define TEVENT_FD_NOT_WRITEABLE(fde)   tevent_fd_set_flags(fde, tevent_fd_get_flags(fde) &amp; ~TEVENT_FD_WRITE)
-
-
 Convenience function for declaring a tevent_fd non-writable.
-
-
 #define TEVENT_FD_NOT_READABLE(fde)   tevent_fd_set_flags(fde, tevent_fd_get_flags(fde) &amp; ~TEVENT_FD_READ)
-
-
 Convenience function for declaring a tevent_fd non-readable.
-
-
-
 Typedefs</code></pre>
 <p> typedef void(* <code>tevent_fd_handler_t</code> )(struct tevent_context *ev, struct tevent_fd *fde, uint16_t flags, void *private_data)<br />
  <i>Called when a file descriptor monitored by tevent has data to be read or written on it. </i><br />
@@ -131,19 +106,19 @@ Typedefs</code></pre>
 <dd><i>context</i> The memory context to use.<br />
  <i>level</i> The debug level.<br />
  <i>fmt</i> The format string.<br />
- <i>ap</i> The arguments for the format string.</dl>
+ <i>ap</i> The arguments for the format string.</dd></dl>
 <h2>Enumeration Type Documentation</h2>
 <h3>enum <code>tevent_trace_point</code></h3>
 <p><code>Enumerator</code></p>
 <dl>
-<dt><i>TEVENT_TRACE_BEFORE_WAIT </i></p>
-<dd>Corresponds to a trace point just before waiting.</p>
-<dt><i>TEVENT_TRACE_AFTER_WAIT </i></p>
-<dd>Corresponds to a trace point just after waiting.</p>
-<dt><i>TEVENT_TRACE_BEFORE_LOOP_ONCE </i></p>
-<dd>Corresponds to a trace point just before calling the loop_once() backend function.</p>
-<dt><i>TEVENT_TRACE_AFTER_LOOP_ONCE </i></p>
-<dd>Corresponds to a trace point right after the loop_once() backend function has returned.</dl>
+<dt><i>TEVENT_TRACE_BEFORE_WAIT </i></dt>
+<dd>Corresponds to a trace point just before waiting.</dd>
+<dt><i>TEVENT_TRACE_AFTER_WAIT </i></dt>
+<dd>Corresponds to a trace point just after waiting.</dd>
+<dt><i>TEVENT_TRACE_BEFORE_LOOP_ONCE </i></dt>
+<dd>Corresponds to a trace point just before calling the loop_once() backend function.</dd>
+<dt><i>TEVENT_TRACE_AFTER_LOOP_ONCE </i></dt>
+<dd>Corresponds to a trace point right after the loop_once() backend function has returned.</dd></dl>
 <h2>Function Documentation</h2>
 <h3>struct tevent_fd* tevent_add_fd (struct tevent_context *ev, TALLOC_CTX *mem_ctx, intfd, uint16_tflags, <code>tevent_fd_handler_t</code>handler, void *private_data)</h3>
 <p>Add a file descriptor based event. </p>
@@ -154,13 +129,13 @@ Typedefs</code></pre>
  <i>fd</i> The file descriptor to base the event on.<br />
  <i>flags</i> <code>TEVENT_FD_READ</code> or <code>TEVENT_FD_WRITE</code><br />
  <i>handler</i> The callback handler for the event.<br />
- <i>private_data</i> The private data passed to the callback handler.</dl>
+ <i>private_data</i> The private data passed to the callback handler.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The file descriptor based event, NULL on error.</dl>
+<dd>The file descriptor based event, NULL on error.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
-<dd>To cancel the monitoring of a file descriptor, call talloc_free() on the object returned by this function. </p>
+<dd>To cancel the monitoring of a file descriptor, call talloc_free() on the object returned by this function. </dd>
 <p> The caller should avoid closing the file descriptor before calling talloc_free()! Otherwise the behaviour is undefined which might result in crashes. See <a rel="nofollow" href="https://bugzilla.samba.org/show_bug.cgi?id=11141">https://bugzilla.samba.org/show_bug.cgi?id=11141</a> for an example.</dl>
 <h3>struct tevent_signal* tevent_add_signal (struct tevent_context *ev, TALLOC_CTX *mem_ctx, intsignum, intsa_flags, <code>tevent_signal_handler_t</code>handler, void *private_data)</h3>
 <p>Add a tevent signal handler. <code>tevent_add_signal()</code> creates a new event for handling a signal the next time through the mainloop. It implements a very simple traditional signal handler whose only purpose is to add the handler event into the mainloop. </p>
@@ -171,16 +146,16 @@ Typedefs</code></pre>
  <i>signum</i> The signal to trap<br />
  <i>handler</i> The callback handler for the signal.<br />
  <i>sa_flags</i> sigaction flags for this signal handler.<br />
- <i>private_data</i> The private data passed to the callback handler.</dl>
+ <i>private_data</i> The private data passed to the callback handler.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The newly-created signal handler event, or NULL on error.</dl>
+<dd>The newly-created signal handler event, or NULL on error.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
-<dd>To cancel a signal handler, call talloc_free() on the event returned from this function.</dl>
+<dd>To cancel a signal handler, call talloc_free() on the event returned from this function.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>tevent_num_signals</code>, <code>tevent_sa_info_queue_count</code></dl>
+<dd><code>tevent_num_signals</code>, <code>tevent_sa_info_queue_count</code></dd></dl>
 <h3>struct tevent_timer* tevent_add_timer (struct tevent_context *ev, TALLOC_CTX *mem_ctx, struct timevalnext_event, <code>tevent_timer_handler_t</code>handler, void *private_data)</h3>
 <p>Add a timed event. </p>
 <p> <code>Parameters:</code></p>
@@ -189,127 +164,127 @@ Typedefs</code></pre>
  <i>mem_ctx</i> The talloc memory context to use.<br />
  <i>next_event</i> Timeval specifying the absolute time to fire this event. This is not an offset.<br />
  <i>handler</i> The callback handler for the event.<br />
- <i>private_data</i> The private data passed to the callback handler.</dl>
+ <i>private_data</i> The private data passed to the callback handler.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The newly-created timer event, or NULL on error.</dl>
+<dd>The newly-created timer event, or NULL on error.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
-<dd>To cancel a timer event before it fires, call talloc_free() on the event returned from this function. This event is automatically talloc_free()-ed after its event handler files, if it hasn&#8217;t been freed yet. </p>
+<dd>To cancel a timer event before it fires, call talloc_free() on the event returned from this function. This event is automatically talloc_free()-ed after its event handler files, if it hasn&#8217;t been freed yet. </dd>
 <p> Unlike some mainloops, tevent timers are one-time events. To set up a recurring event, it is necessary to call <code>tevent_add_timer()</code> again during the handler processing. </p>
 <p> Due to the internal mainloop processing, a timer set to run immediately will do so after any other pending timers fire, but before any further file descriptor or signal handling events fire. Callers should not rely on this behavior!</dl>
 <h3>const char** tevent_backend_list (TALLOC_CTX *mem_ctx)</h3>
 <p>List available backends. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>mem_ctx</i> The memory context to use.</dl>
+<dd><i>mem_ctx</i> The memory context to use.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>A string vector with a terminating NULL element, NULL on error.</dl>
+<dd>A string vector with a terminating NULL element, NULL on error.</dd></dl>
 <h3>struct tevent_context* tevent_context_init (TALLOC_CTX *mem_ctx)</h3>
 <p>Create a event_context structure. This must be the first events call, and all subsequent calls pass this event_context as the first element. Event handlers also receive this as their first argument. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>mem_ctx</i> The memory context to use.</dl>
+<dd><i>mem_ctx</i> The memory context to use.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>An allocated tevent context, NULL on error.</dl>
+<dd>An allocated tevent context, NULL on error.</dd></dl>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>tevent_context_init()</code></dl>
+<dd><code>tevent_context_init()</code></dd></dl>
 <h3>struct tevent_context* tevent_context_init_byname (TALLOC_CTX *mem_ctx, const char *name)</h3>
 <p>Create a event_context structure and select a specific backend. This must be the first events call, and all subsequent calls pass this event_context as the first element. Event handlers also receive this as their first argument. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>mem_ctx</i> The memory context to use.<br />
- <i>name</i> The name of the backend to use.</dl>
+ <i>name</i> The name of the backend to use.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>An allocated tevent context, NULL on error.</dl>
+<dd>An allocated tevent context, NULL on error.</dd></dl>
 <h3>struct tevent_context* tevent_context_init_ops (TALLOC_CTX *mem_ctx, const struct tevent_ops *ops, void *additional_data)</h3>
 <p>Create a custom event context. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>mem_ctx</i> The memory context to use.<br />
  <i>ops</i> The function pointer table of the backend.<br />
- <i>additional_data</i> The additional/private data to this instance</dl>
+ <i>additional_data</i> The additional/private data to this instance</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>An allocated tevent context, NULL on error.</dl>
+<dd>An allocated tevent context, NULL on error.</dd></dl>
 <h3>struct tevent_immediate* tevent_create_immediate (TALLOC_CTX *mem_ctx)</h3>
 <p>Initialize an immediate event object. This object can be used to trigger an event to occur immediately after returning from the current event (before any other event occurs) </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>mem_ctx</i> The talloc memory context to use as the parent</dl>
+<dd><i>mem_ctx</i> The talloc memory context to use as the parent</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>An empty tevent_immediate object. Use tevent_schedule_immediate to populate and use it.</dl>
+<dd>An empty tevent_immediate object. Use tevent_schedule_immediate to populate and use it.</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
-<dd>Available as of tevent 0.9.8</dl>
+<dd>Available as of tevent 0.9.8</dd></dl>
 <h3>uint16_t tevent_fd_get_flags (struct tevent_fd *fde)</h3>
 <p>Return the flags set on this file descriptor event. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>fde</i> File descriptor event to query</dl>
+<dd><i>fde</i> File descriptor event to query</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>The flags set on the event. See <code>TEVENT_FD_READ</code> and <code>TEVENT_FD_WRITE</code></dl>
+<dd>The flags set on the event. See <code>TEVENT_FD_READ</code> and <code>TEVENT_FD_WRITE</code></dd></dl>
 <h3>void tevent_fd_set_auto_close (struct tevent_fd *fde)</h3>
 <p>Automatically close the file descriptor when the tevent_fd is freed. This function calls close(fd) internally. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>fde</i> File descriptor event to auto-close</dl>
+<dd><i>fde</i> File descriptor event to auto-close</dd></dl>
 <h3>void tevent_fd_set_close_fn (struct tevent_fd *fde, <code>tevent_fd_close_fn_t</code>close_fn)</h3>
 <p>Assign a function to run when a tevent_fd is freed. This function is a destructor for the tevent_fd. It does not automatically close the file descriptor. If this is the desired behavior, then it must be performed by the close_fn. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>fde</i> File descriptor event on which to set the destructor<br />
- <i>close_fn</i> Destructor to execute when fde is freed</dl>
+ <i>close_fn</i> Destructor to execute when fde is freed</dd></dl>
 <h3>void tevent_fd_set_flags (struct tevent_fd *fde, uint16_tflags)</h3>
 <p>Set flags on a file descriptor event. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>fde</i> File descriptor event to set<br />
- <i>flags</i> Flags to set on the event. See <code>TEVENT_FD_READ</code> and <code>TEVENT_FD_WRITE</code></dl>
+ <i>flags</i> Flags to set on the event. See <code>TEVENT_FD_READ</code> and <code>TEVENT_FD_WRITE</code></dd></dl>
 <h3>void tevent_get_trace_callback (struct tevent_context *ev, tevent_trace_callback_t *cb, void *private_data)</h3>
 <p>Retrieve the current trace callback. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>ev</i> Event context<br />
  <i>cb</i> Registered trace callback<br />
- <i>private_data</i> Registered data to be passed to callback</dl>
+ <i>private_data</i> Registered data to be passed to callback</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
-<dd>This can be used to allow one component that wants to register a callback to respect the callback that another component has already registered.</dl>
+<dd>This can be used to allow one component that wants to register a callback to respect the callback that another component has already registered.</dd></dl>
 <h3>int tevent_loop_once (struct tevent_context *ev)</h3>
 <p>Pass a single time through the mainloop. This will process any appropriate signal, immediate, fd and timer events </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ev</i> The event context to process</dl>
+<dd><i>ev</i> The event context to process</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>Zero on success, nonzero if an internal error occurred</dl>
+<dd>Zero on success, nonzero if an internal error occurred</dd></dl>
 <h3>int tevent_loop_wait (struct tevent_context *ev)</h3>
 <p>Run the mainloop. The mainloop will run until there are no events remaining to be processed </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ev</i> The event context to process</dl>
+<dd><i>ev</i> The event context to process</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>Zero if all events have been processed. Nonzero if an internal error occurred.</dl>
+<dd>Zero if all events have been processed. Nonzero if an internal error occurred.</dd></dl>
 <h3>size_t tevent_num_signals (void)</h3>
 <p>the number of supported signals This returns value of the configure time TEVENT_NUM_SIGNALS constant. </p>
 <p> The &#8216;signum&#8217; argument of <code>tevent_add_signal()</code> must be less than TEVENT_NUM_SIGNALS. </p>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>tevent_add_signal</code></dl>
+<dd><code>tevent_add_signal</code></dd></dl>
 <h3>size_t tevent_sa_info_queue_count (void)</h3>
 <p>the number of pending realtime signals This returns value of TEVENT_SA_INFO_QUEUE_COUNT. </p>
 <p> The tevent internals remember the last TEVENT_SA_INFO_QUEUE_COUNT siginfo_t structures for SA_SIGINFO signals. If the system generates more some signals get lost. </p>
 <p> <code>See Also:</code></p>
 <dl>
-<dd><code>tevent_add_signal</code></dl>
+<dd><code>tevent_add_signal</code></dd></dl>
 <h3>void tevent_schedule_immediate (struct tevent_immediate *im, struct tevent_context *ctx, <code>tevent_immediate_handler_t</code>handler, void *private_data)</h3>
 <p>Schedule an event for immediate execution. This event will occur immediately after returning from the current event (before any other event occurs) </p>
 <p> <code>Parameters:</code></p>
@@ -317,50 +292,50 @@ Typedefs</code></pre>
 <dd><i>im</i> The tevent_immediate object to populate and use<br />
  <i>ctx</i> The tevent_context to run this event<br />
  <i>handler</i> The event handler to run when this event fires<br />
- <i>private_data</i> Data to pass to the event handler</dl>
+ <i>private_data</i> Data to pass to the event handler</dd></dl>
 <h3>int tevent_set_debug (struct tevent_context *ev, <code>tevent_debug_fn</code>debug, void *context)</h3>
 <p>Set destination for tevent debug messages. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>ev</i> Event context to debug<br />
  <i>debug</i> Function to handle output printing<br />
- <i>context</i> The context to pass to the debug function.</dl>
+ <i>context</i> The context to pass to the debug function.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>Always returns 0 as of version 0.9.8</dl>
+<dd>Always returns 0 as of version 0.9.8</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
-<dd>Default is to emit no debug messages</dl>
+<dd>Default is to emit no debug messages</dd></dl>
 <h3>int tevent_set_debug_stderr (struct tevent_context *ev)</h3>
 <p>Designate stderr for debug message output. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ev</i> Event context to debug</dl>
+<dd><i>ev</i> Event context to debug</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
-<dd>This function will only output TEVENT_DEBUG_FATAL, TEVENT_DEBUG_ERROR and TEVENT_DEBUG_WARNING messages. For TEVENT_DEBUG_TRACE, please define a function for <code>tevent_set_debug()</code></dl>
+<dd>This function will only output TEVENT_DEBUG_FATAL, TEVENT_DEBUG_ERROR and TEVENT_DEBUG_WARNING messages. For TEVENT_DEBUG_TRACE, please define a function for <code>tevent_set_debug()</code></dd></dl>
 <h3>void tevent_set_default_backend (const char *backend)</h3>
 <p>Set the default tevent backend. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>backend</i> The name of the backend to set.</dl>
+<dd><i>backend</i> The name of the backend to set.</dd></dl>
 <h3>void tevent_set_trace_callback (struct tevent_context *ev, tevent_trace_callback_tcb, void *private_data)</h3>
 <p>Register a callback to be called at certain trace points. </p>
 <p> <code>Parameters:</code></p>
 <dl>
 <dd><i>ev</i> Event context<br />
  <i>cb</i> Trace callback<br />
- <i>private_data</i> Data to be passed to callback</dl>
+ <i>private_data</i> Data to be passed to callback</dd></dl>
 <p> <code>Note:</code></p>
 <dl>
-<dd>The callback will be called at trace points defined by tevent_trace_point. Call with NULL to reset.</dl>
+<dd>The callback will be called at trace points defined by tevent_trace_point. Call with NULL to reset.</dd></dl>
 <h3>bool tevent_signal_support (struct tevent_context *ev)</h3>
 <p>Query whether tevent supports signal handling. </p>
 <p> <code>Parameters:</code></p>
 <dl>
-<dd><i>ev</i> An initialized tevent context</dl>
+<dd><i>ev</i> An initialized tevent context</dd></dl>
 <p> <code>Returns:</code></p>
 <dl>
-<dd>True if this platform and tevent context support signal handling</dl>
+<dd>True if this platform and tevent context support signal handling</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for tevent from the source code.</p>

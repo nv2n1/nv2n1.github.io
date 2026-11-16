@@ -13,8 +13,8 @@ description: "qtconfig – Configuration tool for Qt"
 <p> QConfig allows for GUI based configuration of Qt and other Qt based sources. </p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>
-<dt><code>QTDIR</code></p>
-<dd> Specifies the base Qt dir</dl>
+<dt><code>QTDIR</code></dt>
+<dd> Specifies the base Qt dir</dd></dl>
 <h2>AUTHORS</h2>
 <p> TrollTech &lt;<a rel="nofollow" href="http://www.trolltech.com/">http://www.trolltech.com/</a>&gt; </p>
 <h2>Index</h2>

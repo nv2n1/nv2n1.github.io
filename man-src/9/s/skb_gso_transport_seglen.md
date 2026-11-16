@@ -15,7 +15,7 @@ skb_gso_transport_seglen - Return length of individual segments of a gso packet
 <h2>Arguments</h2>
 
 <i>skb</i>
-<dl><dd><dd>GSO skb</dl>
+<dl><dd></dd><dd>GSO skb</dd></dl>
 
 <h2>Description</h2>
 

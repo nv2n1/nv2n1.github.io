@@ -30,19 +30,19 @@ url: "/docs/linux/man/1-abrt-install-ccpp-hook/"
  install
 <dl>
 <dt>
-<dd> Install coredump handler.</dl>
+</dt><dd> Install coredump handler.</dd></dl>
  
 
  uninstall
 <dl>
 <dt>
-<dd> Uninstall coredump handler.</dl>
+</dt><dd> Uninstall coredump handler.</dd></dl>
  
 
  is-installed
 <dl>
 <dt>
-<dd> Returns 0 if handler is installed, otherwise 1.</dl>
+</dt><dd> Returns 0 if handler is installed, otherwise 1.</dd></dl>
 
 <h2>AUTHORS</h2>
 
@@ -50,7 +50,7 @@ url: "/docs/linux/man/1-abrt-install-ccpp-hook/"
 
 <dl>
 <dt>
-<dd> &bull; ABRT team</dl>
+</dt><dd> &bull; ABRT team</dd></dl>
  
 
 <h2>Index</h2>

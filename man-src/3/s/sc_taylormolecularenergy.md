@@ -12,41 +12,16 @@ description: "sc::TaylorMolecularEnergy –"
 <p> Inherits <code>sc::MolecularEnergy</code>.</p>
 <h3>Public Member Functions</h3>
 <pre><code>TaylorMolecularEnergy (const Ref&lt; KeyVal &gt; &amp;)
-
-
-
 TaylorMolecularEnergy (StateIn &amp;)
-
-
-
 void save_data_state (StateOut &amp;)
-
-
 Save the base classes (with save_data_state) and the members in the same order that the StateIn CTOR initializes them.
-
-
 void print (std::ostream &amp;=ExEnv::out0()) const
-
-
 Print information about the object.
-
-
 void compute ()
-
-
 Recompute at least the results that have compute true and are not already computed.
-
-
 int value_implemented () const
-
-
 Information about the availability of values, gradients, and hessians.
-
-
 int gradient_implemented () const
-
-
-
 int hessian_implemented () const</code></pre>
 <h2>Member Function Documentation</h2>
 <h3>void sc::TaylorMolecularEnergy::compute () [virtual]</h3>

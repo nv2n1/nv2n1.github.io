@@ -16,9 +16,9 @@ description: "SPI_repalloc – reallocate memory in the upper executor context"
 <h2>Arguments</h2>
 <p>void * <i>pointer</i></p>
 <dl COMPACT>
-<dd>pointer to existing storage to change</dl>
+<dd>pointer to existing storage to change</dd></dl>
 <p> Size <i>size</i></p>
 <dl COMPACT>
-<dd>size in bytes of storage to allocate</dl>
+<dd>size in bytes of storage to allocate</dd></dl>
 <h2>Return Value</h2>
 <p>pointer to new storage space of specified size with the contents copied from the existing area</p>

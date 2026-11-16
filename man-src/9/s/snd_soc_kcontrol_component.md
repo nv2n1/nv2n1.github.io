@@ -14,7 +14,7 @@ description: "snd_soc_kcontrol_component – Returns the component that register
 <p><i>kcontrol</i></p>
 <dl>
 <dd>
-<dd>The control for which to get the component</dl>
+</dd><dd>The control for which to get the component</dd></dl>
 <h2>Note</h2>
 <p>This function will work correctly if the control has been registered for a component. Either with <code>snd_soc_add_codec_controls</code> or <code>snd_soc_add_platform_controls</code> or via table based setup for either a CODEC, a platform or component driver. Otherwise the behavior is undefined.</p>
 <h2>Copyright</h2>

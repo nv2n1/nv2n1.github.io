@@ -22,14 +22,10 @@ std::exception_ptr meets the requirements of NullablePointer.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;string&gt;
-
 #include &lt;exception&gt;
-
 #include &lt;stdexcept&gt;
 void handle_eptr(std::exception_ptr eptr) // passing by value is ok
-
 {
     try {
         if (eptr) {
@@ -40,7 +36,6 @@ void handle_eptr(std::exception_ptr eptr) // passing by value is ok
     }
 }
 int main()
-
 {
     std::exception_ptr eptr;
     try {
@@ -49,7 +44,6 @@ int main()
         eptr = std::current_exception(); // capture
     }
     handle_eptr(eptr);
-
 } // destructor for std::out_of_range called here, when the eptr is destructed
 </code></pre>
 

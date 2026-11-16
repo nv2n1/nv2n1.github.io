@@ -14,12 +14,12 @@ description: "laptop-detect – attempt to detect a laptop"
 <p>Laptop-detect attempts to determine whether it is being run on a laptop or a desktop and appraises its caller of this.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code> <code>&#8211;help</code></p>
-<dd>Output help information and exit.</p>
-<dt><code>-v</code> <code>&#8211;verbose</code></p>
-<dd>be verbose (messages go to STDOUT)</p>
-<dt><code>-V</code> <code>&#8211;version</code></p>
-<dd>Output version information and exit.</dl>
+<dt><code>-h</code> <code>&#8211;help</code></dt>
+<dd>Output help information and exit.</dd>
+<dt><code>-v</code> <code>&#8211;verbose</code></dt>
+<dd>be verbose (messages go to STDOUT)</dd>
+<dt><code>-V</code> <code>&#8211;version</code></dt>
+<dd>Output version information and exit.</dd></dl>
 <h2>Exit Status</h2>
 <pre><code>0</code> most likely running on a laptop
 <code>1</code> most likely NOT running on a laptop

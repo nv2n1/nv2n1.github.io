@@ -15,14 +15,14 @@ description: "voikkohyphenate – test program for Voikko hyphenator"
 <p> <code>voikkohyphenate</code> is a test program for hyphenator functionality in libvoikko, library of Finnish language tools. It reads words from stdin (one word on a line) and prints them stdout in fully hyphenated form.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-s</code><i>c</i></p>
-<dd> Use <i>c</i> to separate syllables. By default &#8211; is used. If separator is set to a character other than -, all original characters of the hyphenated word are printed.</p>
-<dt><code>min_hyphenated_word_length=</code><i>n</i></p>
-<dd> Set <i>n</i> as the minimun length for words to hyphenate.</p>
-<dt><code>no_ugly_hyphenation=</code><i>n</i></p>
+<dt><code>-s</code><i>c</i></dt>
+<dd> Use <i>c</i> to separate syllables. By default &#8211; is used. If separator is set to a character other than -, all original characters of the hyphenated word are printed.</dd>
+<dt><code>min_hyphenated_word_length=</code><i>n</i></dt>
+<dd> Set <i>n</i> as the minimun length for words to hyphenate.</dd>
+<dt><code>no_ugly_hyphenation=</code><i>n</i></dt>
 <dd>
-<dt><code>hyphenate_unknown_words=</code><i>n</i></p>
-<dd> Set the value of the specified boolean option. <i>n</i> can be either 0 (false) or 1 (true).</dl>
+</dd><dt><code>hyphenate_unknown_words=</code><i>n</i></dt>
+<dd> Set the value of the specified boolean option. <i>n</i> can be either 0 (false) or 1 (true).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>voikkospell</code> for common options of different Voikko test tools.</p>
 <h2>AUTHOR</h2>

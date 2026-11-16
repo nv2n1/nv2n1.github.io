@@ -18,33 +18,33 @@ int setns(int fd, int nstype);
 <h2>DESCRIPTION</h2>
 <p> The <code>setns</code>() system call allows the calling thread to move into different namespaces. The <i>fd</i> argument is one of the following:</p>
 <dl>
-<dt>&bull;</p>
-<dd> a file descriptor referring to one of the magic links in a <i>/proc/[pid]/ns/</i> directory (or a bind mount to such a link);</p>
-<dt>&bull;</p>
-<dd> a PID file descriptor (see <code><a href="/docs/linux/man/2-pidfd_open/">pidfd_open</a></code>(2)).</dl>
+<dt>&bull;</dt>
+<dd> a file descriptor referring to one of the magic links in a <i>/proc/[pid]/ns/</i> directory (or a bind mount to such a link);</dd>
+<dt>&bull;</dt>
+<dd> a PID file descriptor (see <code><a href="/docs/linux/man/2-pidfd_open/">pidfd_open</a></code>(2)).</dd></dl>
 <p> The <i>nstype</i> argument is interpreted differently in each case.</p>
 <h3>fd refers to a /proc/[pid]/ns/ link</h3>
 <p> If <i>fd</i> refers to a <i>/proc/[pid]/ns/</i> link, then <code>setns</code>() reassociates the calling thread with the namespace associated with that link, subject to any constraints imposed by the <i>nstype</i> argument. In this usage, each call to <code>setns</code>() changes just one of the caller&#8217;s namespace memberships. </p>
 <p> The <i>nstype</i> argument specifies which type of namespace the calling thread may be reassociated with. This argument can have <i>one</i> of the following values:</p>
 <dl>
-<dt><code>0</code></p>
-<dd> Allow any type of namespace to be joined.</p>
-<dt><code>CLONE_NEWCGROUP</code> (since Linux 4.6)</p>
-<dd> <i>fd</i> must refer to a cgroup namespace.</p>
-<dt><code>CLONE_NEWIPC</code> (since Linux 3.0)</p>
-<dd> <i>fd</i> must refer to an IPC namespace.</p>
-<dt><code>CLONE_NEWNET</code> (since Linux 3.0)</p>
-<dd> <i>fd</i> must refer to a network namespace.</p>
-<dt><code>CLONE_NEWNS</code> (since Linux 3.8)</p>
-<dd> <i>fd</i> must refer to a mount namespace.</p>
-<dt><code>CLONE_NEWPID</code> (since Linux 3.8)</p>
-<dd> <i>fd</i> must refer to a descendant PID namespace.</p>
-<dt><code>CLONE_NEWTIME</code> (since Linux 5.8)</p>
-<dd> <i>fd</i> must refer to a time namespace.</p>
-<dt><code>CLONE_NEWUSER</code> (since Linux 3.8)</p>
-<dd> <i>fd</i> must refer to a user namespace.</p>
-<dt><code>CLONE_NEWUTS</code> (since Linux 3.0)</p>
-<dd> <i>fd</i> must refer to a UTS namespace.</dl>
+<dt><code>0</code></dt>
+<dd> Allow any type of namespace to be joined.</dd>
+<dt><code>CLONE_NEWCGROUP</code> (since Linux 4.6)</dt>
+<dd> <i>fd</i> must refer to a cgroup namespace.</dd>
+<dt><code>CLONE_NEWIPC</code> (since Linux 3.0)</dt>
+<dd> <i>fd</i> must refer to an IPC namespace.</dd>
+<dt><code>CLONE_NEWNET</code> (since Linux 3.0)</dt>
+<dd> <i>fd</i> must refer to a network namespace.</dd>
+<dt><code>CLONE_NEWNS</code> (since Linux 3.8)</dt>
+<dd> <i>fd</i> must refer to a mount namespace.</dd>
+<dt><code>CLONE_NEWPID</code> (since Linux 3.8)</dt>
+<dd> <i>fd</i> must refer to a descendant PID namespace.</dd>
+<dt><code>CLONE_NEWTIME</code> (since Linux 5.8)</dt>
+<dd> <i>fd</i> must refer to a time namespace.</dd>
+<dt><code>CLONE_NEWUSER</code> (since Linux 3.8)</dt>
+<dd> <i>fd</i> must refer to a user namespace.</dd>
+<dt><code>CLONE_NEWUTS</code> (since Linux 3.0)</dt>
+<dd> <i>fd</i> must refer to a UTS namespace.</dd></dl>
 <p> Specifying <i>nstype</i> as 0 suffices if the caller knows (or does not care) what type of namespace is referred to by <i>fd</i>. Specifying a nonzero value for <i>nstype</i> is useful if the caller does not know what type of namespace is referred to by <i>fd</i> and wants to ensure that the namespace is of a particular type. (The caller might not know the type of the namespace referred to by <i>fd</i> if the file descriptor was opened by another process and, for example, passed to the caller via a UNIX domain socket.)</p>
 <h3>fd is a PID file descriptor</h3>
 <p> Since Linux 5.8, <i>fd</i> may refer to a PID file descriptor obtained from <code><a href="/docs/linux/man/2-pidfd_open/">pidfd_open</a></code>(2) or <code><a href="/docs/linux/man/3-clone/">clone</a></code>(3). In this usage, <code>setns</code>() atomically moves the calling thread into one or more of the same namespaces as the thread referred to by <i>fd</i>. </p>
@@ -54,62 +54,62 @@ int setns(int fd, int nstype);
 <h3>Details for specific namespace types</h3>
 <p> Note the following details and restrictions when reassociating with specific namespace types:</p>
 <dl>
-<dt>User namespaces</p>
-<dd> A process reassociating itself with a user namespace must have the <code>CAP_SYS_ADMIN</code> capability in the target user namespace. (This necessarily implies that it is only possible to join a descendant user namespace.) Upon successfully joining a user namespace, a process is granted all capabilities in that namespace, regardless of its user and group IDs.</p>
+<dt>User namespaces</dt>
+<dd> A process reassociating itself with a user namespace must have the <code>CAP_SYS_ADMIN</code> capability in the target user namespace. (This necessarily implies that it is only possible to join a descendant user namespace.) Upon successfully joining a user namespace, a process is granted all capabilities in that namespace, regardless of its user and group IDs.</dd>
 <dt>
-<dd> A multithreaded process may not change user namespace with <code>setns</code>().</p>
+</dt><dd> A multithreaded process may not change user namespace with <code>setns</code>().</dd>
 <dt>
-<dd> It is not permitted to use <code>setns</code>() to reenter the caller&#8217;s current user namespace. This prevents a caller that has dropped capabilities from regaining those capabilities via a call to <code>setns</code>().</p>
+</dt><dd> It is not permitted to use <code>setns</code>() to reenter the caller&#8217;s current user namespace. This prevents a caller that has dropped capabilities from regaining those capabilities via a call to <code>setns</code>().</dd>
 <dt>
-<dd> For security reasons, a process can&#8217;t join a new user namespace if it is sharing filesystem-related attributes (the attributes whose sharing is controlled by the <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) <code>CLONE_FS</code> flag) with another process.</p>
+</dt><dd> For security reasons, a process can&#8217;t join a new user namespace if it is sharing filesystem-related attributes (the attributes whose sharing is controlled by the <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) <code>CLONE_FS</code> flag) with another process.</dd>
 <dt>
-<dd> For further details on user namespaces, see <code><a href="/docs/linux/man/7-user_namespaces/">user_namespaces</a></code>(7).</p>
-<dt>Mount namespaces</p>
-<dd> Changing the mount namespace requires that the caller possess both <code>CAP_SYS_CHROOT</code> and <code>CAP_SYS_ADMIN</code> capabilities in its own user namespace and <code>CAP_SYS_ADMIN</code> in the user namespace that owns the target mount namespace.</p>
+</dt><dd> For further details on user namespaces, see <code><a href="/docs/linux/man/7-user_namespaces/">user_namespaces</a></code>(7).</dd>
+<dt>Mount namespaces</dt>
+<dd> Changing the mount namespace requires that the caller possess both <code>CAP_SYS_CHROOT</code> and <code>CAP_SYS_ADMIN</code> capabilities in its own user namespace and <code>CAP_SYS_ADMIN</code> in the user namespace that owns the target mount namespace.</dd>
 <dt>
-<dd> A process can&#8217;t join a new mount namespace if it is sharing filesystem-related attributes (the attributes whose sharing is controlled by the <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) <code>CLONE_FS</code> flag) with another process.</p>
+</dt><dd> A process can&#8217;t join a new mount namespace if it is sharing filesystem-related attributes (the attributes whose sharing is controlled by the <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2) <code>CLONE_FS</code> flag) with another process.</dd>
 <dt>
-<dd> See <code><a href="/docs/linux/man/7-user_namespaces/">user_namespaces</a></code>(7) for details on the interaction of user namespaces and mount namespaces.</p>
-<dt>PID namespaces</p>
-<dd> In order to reassociate itself with a new PID namespace, the caller must have the <code>CAP_SYS_ADMIN</code> capability both in its own user namespace and in the user namespace that owns the target PID namespace.</p>
+</dt><dd> See <code><a href="/docs/linux/man/7-user_namespaces/">user_namespaces</a></code>(7) for details on the interaction of user namespaces and mount namespaces.</dd>
+<dt>PID namespaces</dt>
+<dd> In order to reassociate itself with a new PID namespace, the caller must have the <code>CAP_SYS_ADMIN</code> capability both in its own user namespace and in the user namespace that owns the target PID namespace.</dd>
 <dt>
-<dd> Reassociating the PID namespace has somewhat different from other namespace types. Reassociating the calling thread with a PID namespace changes only the PID namespace that subsequently created child processes of the caller will be placed in; it does not change the PID namespace of the caller itself.</p>
+</dt><dd> Reassociating the PID namespace has somewhat different from other namespace types. Reassociating the calling thread with a PID namespace changes only the PID namespace that subsequently created child processes of the caller will be placed in; it does not change the PID namespace of the caller itself.</dd>
 <dt>
-<dd> Reassociating with a PID namespace is allowed only if the target PID namespace is a descendant (child, grandchild, etc.) of, or is the same as, the current PID namespace of the caller.</p>
+</dt><dd> Reassociating with a PID namespace is allowed only if the target PID namespace is a descendant (child, grandchild, etc.) of, or is the same as, the current PID namespace of the caller.</dd>
 <dt>
-<dd> For further details on PID namespaces, see <code><a href="/docs/linux/man/7-pid_namespaces/">pid_namespaces</a></code>(7).</p>
-<dt>Cgroup namespaces</p>
-<dd> In order to reassociate itself with a new cgroup namespace, the caller must have the <code>CAP_SYS_ADMIN</code> capability both in its own user namespace and in the user namespace that owns the target cgroup namespace.</p>
+</dt><dd> For further details on PID namespaces, see <code><a href="/docs/linux/man/7-pid_namespaces/">pid_namespaces</a></code>(7).</dd>
+<dt>Cgroup namespaces</dt>
+<dd> In order to reassociate itself with a new cgroup namespace, the caller must have the <code>CAP_SYS_ADMIN</code> capability both in its own user namespace and in the user namespace that owns the target cgroup namespace.</dd>
 <dt>
-<dd> Using <code>setns</code>() to change the caller&#8217;s cgroup namespace does not change the caller&#8217;s cgroup memberships.</p>
-<dt>Network, IPC, time, and UTS namespaces</p>
-<dd> In order to reassociate itself with a new network, IPC, time, or UTS namespace, the caller must have the <code>CAP_SYS_ADMIN</code> capability both in its own user namespace and in the user namespace that owns the target namespace.</dl>
+</dt><dd> Using <code>setns</code>() to change the caller&#8217;s cgroup namespace does not change the caller&#8217;s cgroup memberships.</dd>
+<dt>Network, IPC, time, and UTS namespaces</dt>
+<dd> In order to reassociate itself with a new network, IPC, time, or UTS namespace, the caller must have the <code>CAP_SYS_ADMIN</code> capability both in its own user namespace and in the user namespace that owns the target namespace.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> On success, <code>setns</code>() returns 0. On failure, -1 is returned and <i>errno</i> is set to indicate the error.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EBADF</code></p>
-<dd> <i>fd</i> is not a valid file descriptor.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>fd</i> refers to a namespace whose type does not match that specified in <i>nstype</i>.</p>
-<dt><code>EINVAL</code></p>
-<dd> There is problem with reassociating the thread with the specified namespace.</p>
+<dt><code>EBADF</code></dt>
+<dd> <i>fd</i> is not a valid file descriptor.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>fd</i> refers to a namespace whose type does not match that specified in <i>nstype</i>.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> There is problem with reassociating the thread with the specified namespace.</dd>
 <dt>
-<dd> <code>EINVAL</code> The caller tried to join an ancestor (parent, grandparent, and so on) PID namespace.</p>
-<dt><code>EINVAL</code></p>
-<dd> The caller attempted to join the user namespace in which it is already a member.</p>
-<dt><code>EINVAL</code></p>
-<dd> The caller shares filesystem (<code>CLONE_FS</code>) state (in particular, the root directory) with other processes and tried to join a new user namespace.</p>
-<dt><code>EINVAL</code></p>
-<dd> The caller is multithreaded and tried to join a new user namespace.</p>
-<dt><code>EINVAL</code></p>
-<dd> <i>fd</i> is a PID file descriptor and <i>nstype</i> is invalid (e.g., it is 0).</p>
-<dt><code>ENOMEM</code></p>
-<dd> Cannot allocate sufficient memory to change the specified namespace.</p>
-<dt><code>EPERM</code></p>
-<dd> The calling thread did not have the required capability for this operation.</p>
-<dt><code>ESRCH</code></p>
-<dd> <i>fd</i> is a PID file descriptor but the process it refers to no longer exists (i.e., it has terminated and been waited on).</dl>
+</dt><dd> <code>EINVAL</code> The caller tried to join an ancestor (parent, grandparent, and so on) PID namespace.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The caller attempted to join the user namespace in which it is already a member.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The caller shares filesystem (<code>CLONE_FS</code>) state (in particular, the root directory) with other processes and tried to join a new user namespace.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> The caller is multithreaded and tried to join a new user namespace.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> <i>fd</i> is a PID file descriptor and <i>nstype</i> is invalid (e.g., it is 0).</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Cannot allocate sufficient memory to change the specified namespace.</dd>
+<dt><code>EPERM</code></dt>
+<dd> The calling thread did not have the required capability for this operation.</dd>
+<dt><code>ESRCH</code></dt>
+<dd> <i>fd</i> is a PID file descriptor but the process it refers to no longer exists (i.e., it has terminated and been waited on).</dd></dl>
 <h2>VERSIONS</h2>
 <p> The <code>setns</code>() system call first appeared in Linux in kernel 3.0; library support was added to glibc in version 2.14.</p>
 <h2>CONFORMING TO</h2>

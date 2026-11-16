@@ -84,24 +84,24 @@ description: "twadmin – Tripwire administrative and utility tool"
 </td>
 </tr>
 </table>
-<p> <i>configfile.txt</i></dl>
+<p> <i>configfile.txt</i></dd></dl>
 <dl>
-<dt><code>-m F</code>, <code>&#8211;create-cfgfile</code></p>
-<dd>Mode selector.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</p>
-<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></p>
-<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</p>
-<dt><code>-c</code><i> cfgfile</i>, <code>&#8211;cfgfile</code><i> cfgfile</i></p>
-<dd>Specify the destination of the encoded (and optionally signed) configuration file.</p>
-<dt><code>-S</code><i> sitekey</i>, <code>&#8211;site-keyfile</code><i> sitekey</i></p>
-<dd>Use the specified site key file to encode and sign the new configuration file. Exactly one of (<code>-S</code>) or (<code>-e</code>) must be specified.</p>
-<dt><code>-Q</code><i> passphrase</i>, <code>&#8211;site-passphrase</code><i> passphrase</i></p>
-<dd>Specifies passphrase to be used with site key for configuration file encoding and signing. Valid only in conjunction with (<code>-S</code>).</p>
-<dt><code>-e</code>, <code>&#8211;no-encryption</code></p>
-<dd>Do not sign the configuration file being stored. The configuration file will still be compressed, and will not be human-readable. Mutually exclusive with (<code>-Q</code>) and (<code>-S</code>).</p>
-<dt><i>configfile.txt</i></p>
-<dd>Specifies the text configuration file that will become the new configuration file. </p>
+<dt><code>-m F</code>, <code>&#8211;create-cfgfile</code></dt>
+<dd>Mode selector.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</dd>
+<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></dt>
+<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</dd>
+<dt><code>-c</code><i> cfgfile</i>, <code>&#8211;cfgfile</code><i> cfgfile</i></dt>
+<dd>Specify the destination of the encoded (and optionally signed) configuration file.</dd>
+<dt><code>-S</code><i> sitekey</i>, <code>&#8211;site-keyfile</code><i> sitekey</i></dt>
+<dd>Use the specified site key file to encode and sign the new configuration file. Exactly one of (<code>-S</code>) or (<code>-e</code>) must be specified.</dd>
+<dt><code>-Q</code><i> passphrase</i>, <code>&#8211;site-passphrase</code><i> passphrase</i></dt>
+<dd>Specifies passphrase to be used with site key for configuration file encoding and signing. Valid only in conjunction with (<code>-S</code>).</dd>
+<dt><code>-e</code>, <code>&#8211;no-encryption</code></dt>
+<dd>Do not sign the configuration file being stored. The configuration file will still be compressed, and will not be human-readable. Mutually exclusive with (<code>-Q</code>) and (<code>-S</code>).</dd>
+<dt><i>configfile.txt</i></dt>
+<dd>Specifies the text configuration file that will become the new configuration file. </dd>
 <hr>
 </dl>
 <h3>Printing a configuration file:</h3>
@@ -129,16 +129,16 @@ description: "twadmin – Tripwire administrative and utility tool"
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <dl>
-<dt><code>-m f</code>, <code>&#8211;print-cfgfile</code></p>
-<dd>Mode selector.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</p>
-<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></p>
-<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</p>
-<dt><code>-c</code><i> cfgfile</i>, <code>&#8211;cfgfile</code><i> cfgfile</i></p>
-<dd>Print the specified configuration file. </p>
+<dt><code>-m f</code>, <code>&#8211;print-cfgfile</code></dt>
+<dd>Mode selector.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</dd>
+<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></dt>
+<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</dd>
+<dt><code>-c</code><i> cfgfile</i>, <code>&#8211;cfgfile</code><i> cfgfile</i></dt>
+<dd>Print the specified configuration file. </dd>
 <hr>
 </dl>
 <h3>Creating a policy file:</h3>
@@ -186,26 +186,26 @@ description: "twadmin – Tripwire administrative and utility tool"
 </td>
 </tr>
 </table>
-<p> <i>policyfile.txt</i></dl>
+<p> <i>policyfile.txt</i></dd></dl>
 <dl>
-<dt><code>-m P</code>, <code>&#8211;create-polfile</code></p>
-<dd>Mode selector.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</p>
-<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></p>
-<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</p>
-<dt><code>-c</code><i> cfgfile</i>, <code>&#8211;cfgfile</code><i> cfgfile</i></p>
-<dd>Use the specified configuration file.</p>
-<dt><code>-p</code><i> polfile</i>, <code>&#8211;polfile</code><i> polfile</i></p>
-<dd>Specify the destination of the encoded (and optionally signed) policy file.</p>
-<dt><code>-S</code><i> sitekey</i>, <code>&#8211;site-keyfile</code><i> sitekey</i></p>
-<dd>Use the specified site key file. Mutually exclusive with (<code>-e</code>).</p>
-<dt><code>-Q</code><i> passphrase</i>, <code>&#8211;site-passphrase</code><i> passphrase</i></p>
-<dd>Specifies passphrase to be used with site key for policy signing. Mutually exclusive with (<code>-e</code>).</p>
-<dt><code>-e</code>, <code>&#8211;no-encryption</code></p>
-<dd>Do not sign the policy file being stored. The policy file will still be compressed, and will not be human-readable. Mutually exclusive with (<code>-Q</code>) and (<code>-S</code>).</p>
-<dt><i>policyfile.txt</i></p>
-<dd>Specifies the text policy file that will become the new policy file. </p>
+<dt><code>-m P</code>, <code>&#8211;create-polfile</code></dt>
+<dd>Mode selector.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</dd>
+<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></dt>
+<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</dd>
+<dt><code>-c</code><i> cfgfile</i>, <code>&#8211;cfgfile</code><i> cfgfile</i></dt>
+<dd>Use the specified configuration file.</dd>
+<dt><code>-p</code><i> polfile</i>, <code>&#8211;polfile</code><i> polfile</i></dt>
+<dd>Specify the destination of the encoded (and optionally signed) policy file.</dd>
+<dt><code>-S</code><i> sitekey</i>, <code>&#8211;site-keyfile</code><i> sitekey</i></dt>
+<dd>Use the specified site key file. Mutually exclusive with (<code>-e</code>).</dd>
+<dt><code>-Q</code><i> passphrase</i>, <code>&#8211;site-passphrase</code><i> passphrase</i></dt>
+<dd>Specifies passphrase to be used with site key for policy signing. Mutually exclusive with (<code>-e</code>).</dd>
+<dt><code>-e</code>, <code>&#8211;no-encryption</code></dt>
+<dd>Do not sign the policy file being stored. The policy file will still be compressed, and will not be human-readable. Mutually exclusive with (<code>-Q</code>) and (<code>-S</code>).</dd>
+<dt><i>policyfile.txt</i></dt>
+<dd>Specifies the text policy file that will become the new policy file. </dd>
 <hr>
 </dl>
 <h3>Printing a policy file:</h3>
@@ -243,20 +243,20 @@ description: "twadmin – Tripwire administrative and utility tool"
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <dl>
-<dt><code>-m p</code>, <code>&#8211;print-polfile</code></p>
-<dd>Mode selector.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</p>
-<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></p>
-<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</p>
-<dt><code>-c</code><i> cfgfile</i>, <code>&#8211;cfgfile</code><i> cfgfile</i></p>
-<dd>Use the specified configuration file.</p>
-<dt><code>-p</code><i> polfile</i>, <code>&#8211;polfile</code><i> polfile</i></p>
-<dd>Print the specified policy file.</p>
-<dt><code>-S</code><i> sitekey</i>, <code>&#8211;site-keyfile</code><i> sitekey</i></p>
-<dd>Use the specified site key file. </p>
+<dt><code>-m p</code>, <code>&#8211;print-polfile</code></dt>
+<dd>Mode selector.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</dd>
+<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></dt>
+<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</dd>
+<dt><code>-c</code><i> cfgfile</i>, <code>&#8211;cfgfile</code><i> cfgfile</i></dt>
+<dd>Use the specified configuration file.</dd>
+<dt><code>-p</code><i> polfile</i>, <code>&#8211;polfile</code><i> polfile</i></dt>
+<dd>Print the specified policy file.</dd>
+<dt><code>-S</code><i> sitekey</i>, <code>&#8211;site-keyfile</code><i> sitekey</i></dt>
+<dd>Use the specified site key file. </dd>
 <hr>
 </dl>
 <h3>Removing encryption from a file:</h3>
@@ -304,26 +304,26 @@ description: "twadmin – Tripwire administrative and utility tool"
 </td>
 </tr>
 </table>
-<p> <i>file1</i> [ <i>file2&#8230;</i> ]</dl>
+<p> <i>file1</i> [ <i>file2&#8230;</i> ]</dd></dl>
 <dl>
-<dt><code>-m R</code>, <code>&#8211;remove-encryption</code></p>
-<dd>Mode selector.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</p>
-<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></p>
-<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</p>
-<dt><code>-c</code><i> cfgfile</i>, <code>&#8211;cfgfile</code><i> cfgfile</i></p>
-<dd>Use the specified configuration file.</p>
-<dt><code>-L</code><i> localkey</i>, <code>&#8211;local-keyfile</code><i> localkey</i></p>
-<dd>Specify the local keyfile to use to verify database files and reports.</p>
-<dt><code>-S</code><i> sitekey</i>, <code>&#8211;site-keyfile</code><i> sitekey</i></p>
-<dd>Specify the site keyfile to use to verify configuration and policy files.</p>
-<dt><code>-P</code><i> passphrase</i>, <code>&#8211;local-passphrase</code><i> passphrase</i></p>
-<dd>Specify the passphrase to use when verifying with the old local keyfile.</p>
-<dt><code>-Q</code><i> passphrase</i>, <code>&#8211;site-passphrase</code><i> passphrase</i></p>
-<dd>Specify the passphrase to use when verifying with the old site keyfile.</p>
-<dt><i>file1</i> [ <i>file2&#8230;</i> ]</p>
-<dd>List of files from which signing is to be removed. </p>
+<dt><code>-m R</code>, <code>&#8211;remove-encryption</code></dt>
+<dd>Mode selector.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</dd>
+<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></dt>
+<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</dd>
+<dt><code>-c</code><i> cfgfile</i>, <code>&#8211;cfgfile</code><i> cfgfile</i></dt>
+<dd>Use the specified configuration file.</dd>
+<dt><code>-L</code><i> localkey</i>, <code>&#8211;local-keyfile</code><i> localkey</i></dt>
+<dd>Specify the local keyfile to use to verify database files and reports.</dd>
+<dt><code>-S</code><i> sitekey</i>, <code>&#8211;site-keyfile</code><i> sitekey</i></dt>
+<dd>Specify the site keyfile to use to verify configuration and policy files.</dd>
+<dt><code>-P</code><i> passphrase</i>, <code>&#8211;local-passphrase</code><i> passphrase</i></dt>
+<dd>Specify the passphrase to use when verifying with the old local keyfile.</dd>
+<dt><code>-Q</code><i> passphrase</i>, <code>&#8211;site-passphrase</code><i> passphrase</i></dt>
+<dd>Specify the passphrase to use when verifying with the old site keyfile.</dd>
+<dt><i>file1</i> [ <i>file2&#8230;</i> ]</dt>
+<dd>List of files from which signing is to be removed. </dd>
 <hr>
 </dl>
 <h3>Encrypting a file:</h3>
@@ -371,26 +371,26 @@ description: "twadmin – Tripwire administrative and utility tool"
 </td>
 </tr>
 </table>
-<p> <i>file1</i> [ <i>file2&#8230;</i> ]</dl>
+<p> <i>file1</i> [ <i>file2&#8230;</i> ]</dd></dl>
 <dl>
-<dt><code>-m E</code>, <code>&#8211;encrypt</code></p>
-<dd>Mode selector.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</p>
-<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></p>
-<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</p>
-<dt><code>-c</code><i> cfgfile</i>, <code>&#8211;cfgfile</code><i> cfgfile</i></p>
-<dd>Use the specified configuration file.</p>
-<dt><code>-L</code><i> localkey</i>, <code>&#8211;local-keyfile</code><i> localkey</i></p>
-<dd>Specify the local keyfile to use to sign database files and reports.</p>
-<dt><code>-S</code><i> sitekey</i>, <code>&#8211;site-keyfile</code><i> sitekey</i></p>
-<dd>Specify the site keyfile to use to sign configuration and policy files.</p>
-<dt><code>-P</code><i> passphrase</i>, <code>&#8211;local-passphrase</code><i> passphrase</i></p>
-<dd>Specify the passphrase to use when signing with the local keyfile.</p>
-<dt><code>-Q</code><i> passphrase</i>, <code>&#8211;site-passphrase</code><i> passphrase</i></p>
-<dd>Specify the passphrase to use when signing with the site keyfile.</p>
-<dt><i>file1</i> [ <i>file2&#8230;</i> ]</p>
-<dd>List of files to sign using the new key(s). </p>
+<dt><code>-m E</code>, <code>&#8211;encrypt</code></dt>
+<dd>Mode selector.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</dd>
+<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></dt>
+<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</dd>
+<dt><code>-c</code><i> cfgfile</i>, <code>&#8211;cfgfile</code><i> cfgfile</i></dt>
+<dd>Use the specified configuration file.</dd>
+<dt><code>-L</code><i> localkey</i>, <code>&#8211;local-keyfile</code><i> localkey</i></dt>
+<dd>Specify the local keyfile to use to sign database files and reports.</dd>
+<dt><code>-S</code><i> sitekey</i>, <code>&#8211;site-keyfile</code><i> sitekey</i></dt>
+<dd>Specify the site keyfile to use to sign configuration and policy files.</dd>
+<dt><code>-P</code><i> passphrase</i>, <code>&#8211;local-passphrase</code><i> passphrase</i></dt>
+<dd>Specify the passphrase to use when signing with the local keyfile.</dd>
+<dt><code>-Q</code><i> passphrase</i>, <code>&#8211;site-passphrase</code><i> passphrase</i></dt>
+<dd>Specify the passphrase to use when signing with the site keyfile.</dd>
+<dt><i>file1</i> [ <i>file2&#8230;</i> ]</dt>
+<dd>List of files to sign using the new key(s). </dd>
 <hr>
 </dl>
 <h3>Examining the encryption status of a file:</h3>
@@ -428,22 +428,22 @@ description: "twadmin – Tripwire administrative and utility tool"
 </td>
 </tr>
 </table>
-<p> <i>file1</i> [ <i>file2&#8230;</i> ]</dl>
+<p> <i>file1</i> [ <i>file2&#8230;</i> ]</dd></dl>
 <dl>
-<dt><code>-m e</code>, <code>&#8211;examine</code></p>
-<dd>Mode selector.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</p>
-<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></p>
-<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</p>
-<dt><code>-c</code><i> cfgfile</i>, <code>&#8211;cfgfile</code><i> cfgfile</i></p>
-<dd>Use the specified configuration file.</p>
-<dt><code>-L</code><i> localkey</i>, <code>&#8211;local-keyfile</code><i> localkey</i></p>
-<dd>Specifies the key to use as a local key.</p>
-<dt><code>-S</code><i> sitekey</i>, <code>&#8211;site-keyfile</code><i> sitekey</i></p>
-<dd>Specifies the key to use as a site key.</p>
-<dt><i>file1</i> [ <i>file2&#8230;</i> ]</p>
-<dd>List of files to examine. </p>
+<dt><code>-m e</code>, <code>&#8211;examine</code></dt>
+<dd>Mode selector.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</dd>
+<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></dt>
+<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</dd>
+<dt><code>-c</code><i> cfgfile</i>, <code>&#8211;cfgfile</code><i> cfgfile</i></dt>
+<dd>Use the specified configuration file.</dd>
+<dt><code>-L</code><i> localkey</i>, <code>&#8211;local-keyfile</code><i> localkey</i></dt>
+<dd>Specifies the key to use as a local key.</dd>
+<dt><code>-S</code><i> sitekey</i>, <code>&#8211;site-keyfile</code><i> sitekey</i></dt>
+<dd>Specifies the key to use as a site key.</dd>
+<dt><i>file1</i> [ <i>file2&#8230;</i> ]</dt>
+<dd>List of files to examine. </dd>
 <hr>
 </dl>
 <h3>Generating keys:</h3>
@@ -486,24 +486,24 @@ description: "twadmin – Tripwire administrative and utility tool"
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <dl>
-<dt><code>-m G</code>, <code>&#8211;generate-keys</code></p>
-<dd>Mode selector.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</p>
-<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></p>
-<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</p>
-<dt><code>-L</code><i> localkey</i>, <code>&#8211;local-keyfile</code><i> localkey</i></p>
-<dd>Generate the local key into the specified file. At least one of (<code>-L</code>) or (<code>-S</code>) must be specified.</p>
-<dt><code>-S</code><i> sitekey</i>, <code>&#8211;site-keyfile</code><i> sitekey</i></p>
-<dd>Generate the site key into the specified file. At least one of (<code>-S</code>) or (<code>-L</code>) must be specified.</p>
-<dt><code>-P</code><i> passphrase</i>, <code>&#8211;local-passphrase</code><i> passphrase</i></p>
-<dd>Specify local passphrase to be used when generating the local key.</p>
-<dt><code>-Q</code><i> passphrase</i>, <code>&#8211;site-passphrase</code><i> passphrase</i></p>
-<dd>Specify site passphrase to be used when generating the site key.</p>
-<dt><code>-K</code><i> size</i>, <code>&#8211;key-size</code><i> size</i></p>
-<dd>Specify the key size (1024 or 2048 bits) when generating keys. (Default is 1024.) </p>
+<dt><code>-m G</code>, <code>&#8211;generate-keys</code></dt>
+<dd>Mode selector.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</dd>
+<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></dt>
+<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</dd>
+<dt><code>-L</code><i> localkey</i>, <code>&#8211;local-keyfile</code><i> localkey</i></dt>
+<dd>Generate the local key into the specified file. At least one of (<code>-L</code>) or (<code>-S</code>) must be specified.</dd>
+<dt><code>-S</code><i> sitekey</i>, <code>&#8211;site-keyfile</code><i> sitekey</i></dt>
+<dd>Generate the site key into the specified file. At least one of (<code>-S</code>) or (<code>-L</code>) must be specified.</dd>
+<dt><code>-P</code><i> passphrase</i>, <code>&#8211;local-passphrase</code><i> passphrase</i></dt>
+<dd>Specify local passphrase to be used when generating the local key.</dd>
+<dt><code>-Q</code><i> passphrase</i>, <code>&#8211;site-passphrase</code><i> passphrase</i></dt>
+<dd>Specify site passphrase to be used when generating the site key.</dd>
+<dt><code>-K</code><i> size</i>, <code>&#8211;key-size</code><i> size</i></dt>
+<dd>Specify the key size (1024 or 2048 bits) when generating keys. (Default is 1024.) </dd>
 <hr>
 </dl>
 <h3>Changing passphrases:</h3>
@@ -556,26 +556,26 @@ description: "twadmin – Tripwire administrative and utility tool"
 </td>
 </tr>
 </table>
-</dl>
+</dd></dl>
 <dl>
-<dt><code>-m C</code>, <code>&#8211;change-passphrases</code></p>
-<dd>Mode selector.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</p>
-<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></p>
-<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</p>
-<dt><code>-L</code><i> localkey</i>, <code>&#8211;local-keyfile</code><i> localkey</i></p>
-<dd>Change passphrase used to encrypt the private key in the specified localkey file. At least one of (<code>-L</code>) or (<code>-S</code>) must be specified.</p>
-<dt><code>-S</code><i> sitekey</i>, <code>&#8211;site-keyfile</code><i> sitekey</i></p>
-<dd>Change passphrase used to encrypt the private key in the specified sitekey file. At least one of (<code>-L</code>) or (<code>-S</code>) must be specified.</p>
-<dt><code>-P</code><i> passphrase</i>, <code>&#8211;local-passphrase</code><i> passphrase</i></p>
-<dd>Specify passphrase used to encrypt the private key in the specified localkey file.</p>
-<dt><code>-Q</code><i> passphrase</i>, <code>&#8211;site-passphrase</code><i> passphrase</i></p>
-<dd>Specify passphrase used to encrypt the private key in the specified sitekey file.</p>
-<dt><code>&#8211;local-passphrase-old</code><i> passphraseOld</i></p>
-<dd>Specify passphrase used to decrypt the private key in the specified localkey file.</p>
-<dt><code>&#8211;site-passphrase-old</code><i> passphraseOld</i></p>
-<dd>Specify passphrase used to decrypt the private key in the specified sitekey file.</dl>
+<dt><code>-m C</code>, <code>&#8211;change-passphrases</code></dt>
+<dd>Mode selector.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Verbose output mode. Mutually exclusive with (<code>-s</code>).</dd>
+<dt><code>-s</code>, <code>&#8211;silent</code>, <code>&#8211;quiet</code></dt>
+<dd>Silent output mode. Mutually exclusive with (<code>-v</code>).</dd>
+<dt><code>-L</code><i> localkey</i>, <code>&#8211;local-keyfile</code><i> localkey</i></dt>
+<dd>Change passphrase used to encrypt the private key in the specified localkey file. At least one of (<code>-L</code>) or (<code>-S</code>) must be specified.</dd>
+<dt><code>-S</code><i> sitekey</i>, <code>&#8211;site-keyfile</code><i> sitekey</i></dt>
+<dd>Change passphrase used to encrypt the private key in the specified sitekey file. At least one of (<code>-L</code>) or (<code>-S</code>) must be specified.</dd>
+<dt><code>-P</code><i> passphrase</i>, <code>&#8211;local-passphrase</code><i> passphrase</i></dt>
+<dd>Specify passphrase used to encrypt the private key in the specified localkey file.</dd>
+<dt><code>-Q</code><i> passphrase</i>, <code>&#8211;site-passphrase</code><i> passphrase</i></dt>
+<dd>Specify passphrase used to encrypt the private key in the specified sitekey file.</dd>
+<dt><code>&#8211;local-passphrase-old</code><i> passphraseOld</i></dt>
+<dd>Specify passphrase used to decrypt the private key in the specified localkey file.</dd>
+<dt><code>&#8211;site-passphrase-old</code><i> passphraseOld</i></dt>
+<dd>Specify passphrase used to decrypt the private key in the specified sitekey file.</dd></dl>
 <h2>Version Information</h2>
 <p>This man page describes <code>twadmin</code> version 2.4.</p>
 <h2>Authors</h2>

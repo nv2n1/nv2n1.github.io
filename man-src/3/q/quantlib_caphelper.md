@@ -22,6 +22,6 @@ description: "QuantLib::CapHelper – calibration helper for ATM cap"
 <p>calibration helper for ATM cap </p>
 <p> <code>Bug</code></p>
 <dl COMPACT>
-<dd>This helper does not register with the passed IBOR index and with the evaluation date. Furthermore, the ATM strike rate is not recalculated when any of its observables change.</dl>
+<dd>This helper does not register with the passed IBOR index and with the evaluation date. Furthermore, the ATM strike rate is not recalculated when any of its observables change.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

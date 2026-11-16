@@ -75,11 +75,11 @@ url: "/docs/linux/man/1-perlfaq2/"
 
 <dl>
 <dt>&bull;
-<dd> &lt;<a rel="nofollow" HREF="http://www.perl.org/">http://www.perl.org/</a>&gt;
-<dt>&bull;
-<dd> &lt;<a rel="nofollow" HREF="http://perldoc.perl.org/">http://perldoc.perl.org/</a>&gt;
-<dt>&bull;
-<dd> &lt;<a rel="nofollow" HREF="http://learn.perl.org/">http://learn.perl.org/</a>&gt;</dl>
+</dt><dd> &lt;<a rel="nofollow" HREF="http://www.perl.org/">http://www.perl.org/</a>&gt;
+</dd><dt>&bull;
+</dt><dd> &lt;<a rel="nofollow" HREF="http://perldoc.perl.org/">http://perldoc.perl.org/</a>&gt;
+</dd><dt>&bull;
+</dt><dd> &lt;<a rel="nofollow" HREF="http://learn.perl.org/">http://learn.perl.org/</a>&gt;</dd></dl>
  
 
  The complete Perl documentation is available with the Perl distribution. If you have Perl installed locally, you probably have the documentation installed as well: type <tt>&quot;perldoc perl&quot;</tt> in a terminal or view online &lt;<a rel="nofollow" HREF="http://perldoc.perl.org/perl.html">http://perldoc.perl.org/perl.html</a>&gt;. 
@@ -95,13 +95,13 @@ url: "/docs/linux/man/1-perlfaq2/"
  The Perl Foundation is an advocacy organization for the Perl language which maintains the web site &lt;<a rel="nofollow" HREF="http://www.perl.org/">http://www.perl.org/</a>&gt; as a general advocacy site for the Perl language. It uses the domain to provide general support services to the Perl community, including the hosting of mailing lists, web sites, and other services. There are also many other sub-domains for special topics like learning Perl and jobs in Perl, such as:
 <dl>
 <dt>&bull;
-<dd> &lt;<a rel="nofollow" HREF="http://www.perl.org/">http://www.perl.org/</a>&gt;
-<dt>&bull;
-<dd> &lt;<a rel="nofollow" HREF="http://learn.perl.org/">http://learn.perl.org/</a>&gt;
-<dt>&bull;
-<dd> &lt;<a rel="nofollow" HREF="http://jobs.perl.org/">http://jobs.perl.org/</a>&gt;
-<dt>&bull;
-<dd> &lt;<a rel="nofollow" HREF="http://lists.perl.org/">http://lists.perl.org/</a>&gt;</dl>
+</dt><dd> &lt;<a rel="nofollow" HREF="http://www.perl.org/">http://www.perl.org/</a>&gt;
+</dd><dt>&bull;
+</dt><dd> &lt;<a rel="nofollow" HREF="http://learn.perl.org/">http://learn.perl.org/</a>&gt;
+</dd><dt>&bull;
+</dt><dd> &lt;<a rel="nofollow" HREF="http://jobs.perl.org/">http://jobs.perl.org/</a>&gt;
+</dd><dt>&bull;
+</dt><dd> &lt;<a rel="nofollow" HREF="http://lists.perl.org/">http://lists.perl.org/</a>&gt;</dd></dl>
  
 
  Perl Mongers &lt;<a rel="nofollow" HREF="http://www.pm.org/">http://www.pm.org/</a>&gt; uses the pm.org domain for services related to local Perl user groups, including the hosting of mailing lists and web sites. See the Perl Mongers web site &lt;<a rel="nofollow" HREF="http://www.pm.org/">http://www.pm.org/</a>&gt; for more information about joining, starting, or requesting services for a Perl user group. 
@@ -167,4 +167,4 @@ url: "/docs/linux/man/1-perlfaq2/"
 
 
 <dt><a HREF="#lbAT">AUTHOR AND COPYRIGHT</a>
-<dd></dl>
+</dt><dd></dd></dl>

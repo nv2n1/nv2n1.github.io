@@ -10,7 +10,6 @@ description: "start_sound_input – Starts recording in the specified format. Al
 <p>start_sound_input &#8211; Starts recording in the specified format. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 int start_sound_input(int rate, int bits, int stereo);</code></pre>
 <h2>Description</h2>
 <p>Starts recording in the specified format, suspending audio playback as necessary if the card is not full duplex.</p>

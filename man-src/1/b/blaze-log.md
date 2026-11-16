@@ -16,30 +16,30 @@ description: "blaze-log – display the BlazeBlogger repository log"
 <p> <code>blaze-log</code> displays the content of the BlazeBlogger repository log.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-b</code>, <code>&#8211;blogdir</code> <i>directory</i></p>
-<dd> Specify the <i>directory</i> where the BlazeBlogger repository is placed. The default option is the current working directory.</p>
-<dt><code>-n</code>, <code>&#8211;number</code> <i>number</i></p>
-<dd> List selected number of log records only.</p>
-<dt><code>-s</code>, <code>&#8211;short</code></p>
-<dd> Display each log record on a single line.</p>
-<dt><code>-r</code>, <code>&#8211;reverse</code></p>
-<dd> Display log records in reverse order.</p>
-<dt><code>-c</code>, <code>&#8211;color</code>, <code>&#8211;colour</code></p>
-<dd> Enable coloured output, no matter what is set in the configuration.</p>
-<dt><code>-C</code>, <code>&#8211;no-color</code>, <code>&#8211;no-colour</code></p>
-<dd> Disable coloured output, no matter what is set in the configuration.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Avoid displaying messages that are not necessary.</p>
-<dt><code>-V</code>, <code>&#8211;verbose</code></p>
-<dd> Display all messages. This is the default option.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd> Display usage information and exit.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd> Display version information and exit.</dl>
+<dt><code>-b</code>, <code>&#8211;blogdir</code> <i>directory</i></dt>
+<dd> Specify the <i>directory</i> where the BlazeBlogger repository is placed. The default option is the current working directory.</dd>
+<dt><code>-n</code>, <code>&#8211;number</code> <i>number</i></dt>
+<dd> List selected number of log records only.</dd>
+<dt><code>-s</code>, <code>&#8211;short</code></dt>
+<dd> Display each log record on a single line.</dd>
+<dt><code>-r</code>, <code>&#8211;reverse</code></dt>
+<dd> Display log records in reverse order.</dd>
+<dt><code>-c</code>, <code>&#8211;color</code>, <code>&#8211;colour</code></dt>
+<dd> Enable coloured output, no matter what is set in the configuration.</dd>
+<dt><code>-C</code>, <code>&#8211;no-color</code>, <code>&#8211;no-colour</code></dt>
+<dd> Disable coloured output, no matter what is set in the configuration.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Avoid displaying messages that are not necessary.</dd>
+<dt><code>-V</code>, <code>&#8211;verbose</code></dt>
+<dd> Display all messages. This is the default option.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd> Display usage information and exit.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd> Display version information and exit.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>.blaze/log</i></p>
-<dd> BlazeBlogger repository log file.</dl>
+<dt><i>.blaze/log</i></dt>
+<dd> BlazeBlogger repository log file.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-blaze-config/">blaze-config</a></code>(1), <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1).</p>
 <h2>BUGS</h2>

@@ -12,15 +12,11 @@ std::experimental::promise&lt;R&gt;::promise(libraryfundamentalsTS) - std::exper
 
 <pre><code>promise();
 (1)(library fundamentals TS)
-
     template &lt;class Alloc&gt;
     (2)(library fundamentals TS)
-
         promise(std::allocator_arg_t, const Alloc &amp;alloc);
-
 promise(promise &amp;&amp;other) noexcept;
 (3)(library fundamentals TS)
-
     promise(const promise &amp;other) = delete;
 (4)(library fundamentals TS)</code></pre> 
 Constructs a std::experimental::promise object. 

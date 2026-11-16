@@ -118,8 +118,8 @@ description: "dnsmasq_selinux – Security Enhanced Linux Policy for the dnsmasq
 <p> <code>dnsmasq_etc_t</code> </p>
 <p> &#8211; Set files with the dnsmasq_etc_t type, if you want to store dnsmasq files in the /etc directories. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/etc/dnsmasq.d(/.*)?, /etc/dnsmasq.conf </p>
+<dt>Paths:</dt>
+<dd>/etc/dnsmasq.d(/.*)?, /etc/dnsmasq.conf </dd>
 </dl>
 <p> <code>dnsmasq_exec_t</code> </p>
 <p> &#8211; Set files with the dnsmasq_exec_t type, if you want to transition an executable to the dnsmasq_t domain. </p>
@@ -128,8 +128,8 @@ description: "dnsmasq_selinux – Security Enhanced Linux Policy for the dnsmasq
 <p> <code>dnsmasq_lease_t</code> </p>
 <p> &#8211; Set files with the dnsmasq_lease_t type, if you want to treat the files as dnsmasq lease data. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/dnsmasq(/.*)?, /var/lib/misc/dnsmasq.leases </p>
+<dt>Paths:</dt>
+<dd>/var/lib/dnsmasq(/.*)?, /var/lib/misc/dnsmasq.leases </dd>
 </dl>
 <p> <code>dnsmasq_unit_file_t</code> </p>
 <p> &#8211; Set files with the dnsmasq_unit_file_t type, if you want to treat the files as dnsmasq unit content. </p>
@@ -138,8 +138,8 @@ description: "dnsmasq_selinux – Security Enhanced Linux Policy for the dnsmasq
 <p> <code>dnsmasq_var_run_t</code> </p>
 <p> &#8211; Set files with the dnsmasq_var_run_t type, if you want to store the dnsmasq files under the /run or /var/run directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/run/dnsmasq.*, /var/run/libvirt/network(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/run/dnsmasq.*, /var/run/libvirt/network(/.*)? </dd>
 </dl>
 <p> Note: File context can be temporarily modified with the chcon command. If you want to permanently change the file context you need to use the <code>semanage fcontext</code> command. This will modify the SELinux labeling database. You will need to use <code>restorecon</code> to apply the labels.</p>
 <h2>Commands</h2>

@@ -17,26 +17,26 @@ description: "gplib – GNU PIC librarian"
 <p> <code>gplib</code> creates, modifies, and extracts from COFF archives for Microchip (TM) PIC (TM) micro-controllers. <code>gplib</code> is part of gputils. Check the <code><a href="/docs/linux/man/1-gputils/">gputils</a></code>(1) manpage for details on other GNU PIC utilities.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-c</code>, &#8211;create</p>
-<dd> Create a new library.</p>
-<dt><code>-d</code>, &#8211;delete</p>
-<dd> Delete member from library.</p>
-<dt><code>-h</code>, &#8211;help</p>
-<dd> Show the usage message and exit.</p>
-<dt><code>-n</code>, &#8211;no-index</p>
-<dd> Don&#8217;t add symbol index.</p>
-<dt><code>-q</code>, &#8211;quiet</p>
-<dd> Quiet mode.</p>
-<dt><code>-r</code>, &#8211;replace</p>
-<dd> Add or replace member from library.</p>
-<dt><code>-s</code>, &#8211;symbols</p>
-<dd> List global symbols in library.</p>
-<dt><code>-t</code>, &#8211;list</p>
-<dd> List members in library.</p>
-<dt><code>-v</code>, &#8211;version</p>
-<dd> Show the version information and exit.</p>
-<dt><code>-x</code>, &#8211;extract</p>
-<dd> Extract member from library.</dl>
+<dt><code>-c</code>, &#8211;create</dt>
+<dd> Create a new library.</dd>
+<dt><code>-d</code>, &#8211;delete</dt>
+<dd> Delete member from library.</dd>
+<dt><code>-h</code>, &#8211;help</dt>
+<dd> Show the usage message and exit.</dd>
+<dt><code>-n</code>, &#8211;no-index</dt>
+<dd> Don&#8217;t add symbol index.</dd>
+<dt><code>-q</code>, &#8211;quiet</dt>
+<dd> Quiet mode.</dd>
+<dt><code>-r</code>, &#8211;replace</dt>
+<dd> Add or replace member from library.</dd>
+<dt><code>-s</code>, &#8211;symbols</dt>
+<dd> List global symbols in library.</dd>
+<dt><code>-t</code>, &#8211;list</dt>
+<dd> List members in library.</dd>
+<dt><code>-v</code>, &#8211;version</dt>
+<dd> Show the version information and exit.</dd>
+<dt><code>-x</code>, &#8211;extract</dt>
+<dd> Extract member from library.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gputils/">gputils</a></code>(1)</p>
 <h2>AUTHOR</h2>

@@ -15,7 +15,7 @@ pci_bus_add_device - start driver for a single device
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>device to add</dl>
+<dl><dd></dd><dd>device to add</dd></dl>
 
 <h2>Description</h2>
 

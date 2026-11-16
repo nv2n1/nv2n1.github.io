@@ -11,9 +11,7 @@ std::experimental::swap(std::experimental::propagate_const) - std::experimental:
 <h2>Synopsis</h2>
 
 <pre><code>template &lt;class T&gt;
-
 constexpr void swap(std::experimental::propagate_const&lt;T&gt; &amp;lhs, (library fundamentals TS v2)
-
                                                                     std::experimental::propagate_const&lt;T&gt; &amp;rhs) noexcept(/* see below */);</code></pre> 
 Specializes the swap algorithm for std::experimental::propagate_const. Swaps the pointers of lhs and rhs. Equivalent to lhs.swap(rhs). 
 

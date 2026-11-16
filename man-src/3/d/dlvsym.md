@@ -21,10 +21,10 @@ description: "dlsym, dlvsym – obtain address of a symbol in a shared object or
 <p> In unusual cases (see NOTES) the value of the symbol could actually be NULL. Therefore, a NULL return from <code>dlsym</code>() need not indicate an error. The correct way to distinguish an error from a symbol whose value is NULL is to call <code><a href="/docs/linux/man/3-dlerror/">dlerror</a></code>(3) to clear any old error conditions, then call <code>dlsym</code>(), and then call <code><a href="/docs/linux/man/3-dlerror/">dlerror</a></code>(3) again, saving its return value into a variable, and check whether this saved value is not NULL. </p>
 <p> There are two special pseudo-handles that may be specified in <i>handle</i>:</p>
 <dl>
-<dt><code>RTLD_DEFAULT</code></p>
-<dd> Find the first occurrence of the desired symbol using the default shared object search order. The search will include global symbols in the executable and its dependencies, as well as symbols in shared objects that were dynamically loaded with the <code>RTLD_GLOBAL</code> flag.</p>
-<dt><code>RTLD_NEXT</code></p>
-<dd> Find the next occurrence of the desired symbol in the search order after the current object. This allows one to provide a wrapper around a function in another shared object, so that, for example, the definition of a function in a preloaded shared object (see <code>LD_PRELOAD</code> in <code><a href="/docs/linux/man/8-ld-so/">ld.so</a></code>(8)) can find and invoke the &quot;real&quot; function provided in another shared object (or for that matter, the &quot;next&quot; definition of the function in cases where there are multiple layers of preloading).</dl>
+<dt><code>RTLD_DEFAULT</code></dt>
+<dd> Find the first occurrence of the desired symbol using the default shared object search order. The search will include global symbols in the executable and its dependencies, as well as symbols in shared objects that were dynamically loaded with the <code>RTLD_GLOBAL</code> flag.</dd>
+<dt><code>RTLD_NEXT</code></dt>
+<dd> Find the next occurrence of the desired symbol in the search order after the current object. This allows one to provide a wrapper around a function in another shared object, so that, for example, the definition of a function in a preloaded shared object (see <code>LD_PRELOAD</code> in <code><a href="/docs/linux/man/8-ld-so/">ld.so</a></code>(8)) can find and invoke the &quot;real&quot; function provided in another shared object (or for that matter, the &quot;next&quot; definition of the function in cases where there are multiple layers of preloading).</dd></dl>
 <p> The <code>_GNU_SOURCE</code> feature test macro must be defined in order to obtain the definitions of <code>RTLD_DEFAULT</code> and <code>RTLD_NEXT</code> from <i>&lt;dlfcn.h&gt;</i>. </p>
 <p> The function <code>dlvsym</code>() does the same as <code>dlsym</code>() but takes a version string as an additional argument.</p>
 <h2>RETURN VALUE</h2>

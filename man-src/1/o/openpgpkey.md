@@ -19,23 +19,23 @@ description: "openpgpkey – Create and verify RFC-TBD OPENPGPKEY DNS records"
 <p> <code>&#8211;fetch</code></p>
 <dl>
 <dt>
-<dd> Fetch an OPENPGPKEY public key record from DNS</dl>
+</dt><dd> Fetch an OPENPGPKEY public key record from DNS</dd></dl>
 <p> <code>&#8211;create</code></p>
 <dl>
 <dt>
-<dd> Create an OPENPGPKEY DNS record</dl>
+</dt><dd> Create an OPENPGPKEY DNS record</dd></dl>
 <p> <code>&#8211;verify</code></p>
 <dl>
 <dt>
-<dd> Verify a public key from the local GPG keyring with the OPENPGPKEY DNS record</dl>
+</dt><dd> Verify a public key from the local GPG keyring with the OPENPGPKEY DNS record</dd></dl>
 <p> <code>&#8211;resolvconf</code> FILE</p>
 <dl>
 <dt>
-<dd> Specify a custom resolv.conf file (default: /etc/resolv.conf)</dl>
+</dt><dd> Specify a custom resolv.conf file (default: /etc/resolv.conf)</dd></dl>
 <p> <code>&#8211;output</code> rfc | generic | both</p>
 <dl>
 <dt>
-<dd> Output format of OPENPGPKEY record. &quot;OPENPGPKEY&quot; for rfc, &quot;TYPE61&quot; for generic (default: generic)</dl>
+</dt><dd> Output format of OPENPGPKEY record. &quot;OPENPGPKEY&quot; for rfc, &quot;TYPE61&quot; for generic (default: generic)</dd></dl>
 <p> If neither create or verify is specified, create is used.</p>
 <h2>REQUIREMENTS</h2>
 <p> openpgpkey requires the following python libraries: unbound, gnupg and argparse. It also requires gnupg which provides the gpg command.</p>

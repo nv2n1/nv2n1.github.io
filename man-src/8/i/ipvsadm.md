@@ -29,59 +29,59 @@ description: "ipvsadm – Linux Virtual Server administration"
 <p><code><a href="/docs/linux/man/8-ipvsadm/">Ipvsadm</a></code>(8) is used to set up, maintain or inspect the virtual server table in the Linux kernel. The Linux Virtual Server can be used to build scalable network services based on a cluster of two or more nodes. The active node of the cluster redirects service requests to a collection of server hosts that will actually perform the services. Supported features include two protocols (TCP and UDP), three packet-forwarding methods (NAT, tunneling, and direct routing), and eight load balancing algorithms (round robin, weighted round robin, least-connection, weighted least-connection, locality-based least-connection, locality-based least-connection with replication, destination-hashing, and source-hashing). </p>
 <p> The command has two basic formats for execution:</p>
 <dl>
-<dt><code>ipvsadm </code><i>COMMAND</i> [<i>protocol</i>] <i>service-address</i></p>
-<dd>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <code>[</code><i>scheduling-method</i>] [<i>persistence options</i>]</p>
-<dt><code>ipvsadm </code><i>command</i> [<i>protocol</i>] <i>service-address</i></p>
+<dt><code>ipvsadm </code><i>COMMAND</i> [<i>protocol</i>] <i>service-address</i></dt>
+<dd>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <code>[</code><i>scheduling-method</i>] [<i>persistence options</i>]</dd>
+<dt><code>ipvsadm </code><i>command</i> [<i>protocol</i>] <i>service-address</i></dt>
 <dd>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <i>server-address</i> [<i>packet-forwarding-method</i>]<br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <code>[</code><i>weight options</i>]</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> <code>[</code><i>weight options</i>]</dd></dl>
 <p> The first format manipulates a virtual service and the algorithm for assigning service requests to real servers. Optionally, a persistent timeout and network mask for the granularity of a persistent service may be specified. The second format manipulates a real server that is associated with an existing virtual service. When specifying a real server, the packet-forwarding method and the weight of the real server, relative to other real servers for the virtual service, may be specified, otherwise defaults will be used.</p>
 <h3>Commands</h3>
 <p><code><a href="/docs/linux/man/8-ipvsadm/">ipvsadm</a></code>(8) recognises the commands described below. Upper-case commands maintain virtual services. Lower-case commands maintain real servers that are associated with a virtual service.</p>
 <dl>
-<dt><code>-A, &#8211;add-service</code></p>
-<dd>Add a virtual service. A service address is uniquely defined by a triplet: IP address, port number, and protocol. Alternatively, a virtual service may be defined by a firewall-mark.</p>
-<dt><code>-E, &#8211;edit-service</code></p>
-<dd>Edit a virtual service.</p>
-<dt><code>-D, &#8211;delete-service</code></p>
-<dd>Delete a virtual service, along with any associated real servers.</p>
-<dt><code>-C, &#8211;clear</code></p>
-<dd>Clear the virtual server table.</p>
-<dt><code>-R, &#8211;restore</code></p>
-<dd>Restore Linux Virtual Server rules from stdin. Each line read from stdin will be treated as the command line options to a separate invocation of <i>ipvsadm</i>. Lines read from stdin can optionally begin with &quot;ipvsadm&quot;. This option is useful to avoid executing a large number or <i>ipvsadm</i> commands when constructing an extensive routing table.</p>
-<dt><code>-S, &#8211;save</code></p>
-<dd>Dump the Linux Virtual Server rules to stdout in a format that can be read by -R|&#8211;restore.</p>
-<dt><code>-a, &#8211;add-server</code></p>
-<dd>Add a real server to a virtual service.</p>
-<dt><code>-e, &#8211;edit-server</code></p>
-<dd>Edit a real server in a virtual service.</p>
-<dt><code>-d, &#8211;delete-server</code></p>
-<dd>Remove a real server from a virtual service.</p>
-<dt><code>-L, -l, &#8211;list</code></p>
-<dd>List the virtual server table if no argument is specified. If a <i>service-address</i> is selected, list this service only. If the <i>-c</i> option is selected, then display the connection table. The exact output is affected by the other arguments given.</p>
-<dt><code>-Z, &#8211;zero</code></p>
-<dd>Zero the packet, byte and rate counters in a service or all services.</p>
-<dt><code>&#8211;set </code><i>tcp</i> <i>tcpfin</i> <i>udp</i></p>
-<dd>Change the timeout values used for IPVS connections. This command always takes 3 parameters, representing the timeout values (in seconds) for TCP sessions, TCP sessions after receiving a FIN packet, and UDP packets, respectively. A timeout value 0 means that the current timeout value of the corresponding entry is preserved.</p>
-<dt><code>&#8211;start-daemon </code><i>state</i></p>
-<dd>Start the connection synchronization daemon. The <i>state</i> is to indicate that the daemon is started as <i>master</i> or <i>backup</i>. The connection synchronization daemon is implemented inside the Linux kernel. The master daemon running at the primary load balancer multicasts changes of connections periodically, and the backup daemon running at the backup load balancers receives multicast message and creates corresponding connections. Then, in case the primary load balancer fails, a backup load balancer will takeover, and it has state of almost all connections, so that almost all established connections can continue to access the service.</dl>
+<dt><code>-A, &#8211;add-service</code></dt>
+<dd>Add a virtual service. A service address is uniquely defined by a triplet: IP address, port number, and protocol. Alternatively, a virtual service may be defined by a firewall-mark.</dd>
+<dt><code>-E, &#8211;edit-service</code></dt>
+<dd>Edit a virtual service.</dd>
+<dt><code>-D, &#8211;delete-service</code></dt>
+<dd>Delete a virtual service, along with any associated real servers.</dd>
+<dt><code>-C, &#8211;clear</code></dt>
+<dd>Clear the virtual server table.</dd>
+<dt><code>-R, &#8211;restore</code></dt>
+<dd>Restore Linux Virtual Server rules from stdin. Each line read from stdin will be treated as the command line options to a separate invocation of <i>ipvsadm</i>. Lines read from stdin can optionally begin with &quot;ipvsadm&quot;. This option is useful to avoid executing a large number or <i>ipvsadm</i> commands when constructing an extensive routing table.</dd>
+<dt><code>-S, &#8211;save</code></dt>
+<dd>Dump the Linux Virtual Server rules to stdout in a format that can be read by -R|&#8211;restore.</dd>
+<dt><code>-a, &#8211;add-server</code></dt>
+<dd>Add a real server to a virtual service.</dd>
+<dt><code>-e, &#8211;edit-server</code></dt>
+<dd>Edit a real server in a virtual service.</dd>
+<dt><code>-d, &#8211;delete-server</code></dt>
+<dd>Remove a real server from a virtual service.</dd>
+<dt><code>-L, -l, &#8211;list</code></dt>
+<dd>List the virtual server table if no argument is specified. If a <i>service-address</i> is selected, list this service only. If the <i>-c</i> option is selected, then display the connection table. The exact output is affected by the other arguments given.</dd>
+<dt><code>-Z, &#8211;zero</code></dt>
+<dd>Zero the packet, byte and rate counters in a service or all services.</dd>
+<dt><code>&#8211;set </code><i>tcp</i> <i>tcpfin</i> <i>udp</i></dt>
+<dd>Change the timeout values used for IPVS connections. This command always takes 3 parameters, representing the timeout values (in seconds) for TCP sessions, TCP sessions after receiving a FIN packet, and UDP packets, respectively. A timeout value 0 means that the current timeout value of the corresponding entry is preserved.</dd>
+<dt><code>&#8211;start-daemon </code><i>state</i></dt>
+<dd>Start the connection synchronization daemon. The <i>state</i> is to indicate that the daemon is started as <i>master</i> or <i>backup</i>. The connection synchronization daemon is implemented inside the Linux kernel. The master daemon running at the primary load balancer multicasts changes of connections periodically, and the backup daemon running at the backup load balancers receives multicast message and creates corresponding connections. Then, in case the primary load balancer fails, a backup load balancer will takeover, and it has state of almost all connections, so that almost all established connections can continue to access the service.</dd></dl>
 <p> The sync daemon currently only supports IPv4 connections.</p>
 <dl>
-<dt><code>&#8211;stop-daemon</code></p>
-<dd>Stop the connection synchronization daemon.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Display a description of the command syntax.</dl>
+<dt><code>&#8211;stop-daemon</code></dt>
+<dd>Stop the connection synchronization daemon.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Display a description of the command syntax.</dd></dl>
 <h3>Parameters</h3>
 <p>The commands above accept or require zero or more of the following parameters.</p>
 <dl>
-<dt><code>-t, &#8211;tcp-service </code><i>service-address</i></p>
-<dd>Use TCP service. The <i>service-address</i> is of the form <i>host[:port]</i>. <i>Host</i> may be one of a plain IP address or a hostname. <i>Port</i> may be either a plain port number or the service name of port. The <i>Port</i> may be omitted, in which case zero will be used. A <i>Port</i> of zero is only valid if the service is persistent as the -p|&#8211;persistent option, in which case it is a wild-card port, that is connections will be accepted to any port.</p>
-<dt><code>-u, &#8211;udp-service </code><i>service-address</i></p>
-<dd>Use UDP service. See the -t|&#8211;tcp-service for the description of the <i>service-address</i>.</p>
-<dt><code>-f, &#8211;fwmark-service </code><i>integer</i></p>
-<dd>Use a firewall-mark, an integer value greater than zero, to denote a virtual service instead of an address, port and protocol (UDP or TCP). The marking of packets with a firewall-mark is configured using the -m|&#8211;mark option to <code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8). It can be used to build a virtual service associated with the same real servers, covering multiple IP address, port and protocol triplets. If IPv6 addresses are used, the -6 option must be used. </p>
+<dt><code>-t, &#8211;tcp-service </code><i>service-address</i></dt>
+<dd>Use TCP service. The <i>service-address</i> is of the form <i>host[:port]</i>. <i>Host</i> may be one of a plain IP address or a hostname. <i>Port</i> may be either a plain port number or the service name of port. The <i>Port</i> may be omitted, in which case zero will be used. A <i>Port</i> of zero is only valid if the service is persistent as the -p|&#8211;persistent option, in which case it is a wild-card port, that is connections will be accepted to any port.</dd>
+<dt><code>-u, &#8211;udp-service </code><i>service-address</i></dt>
+<dd>Use UDP service. See the -t|&#8211;tcp-service for the description of the <i>service-address</i>.</dd>
+<dt><code>-f, &#8211;fwmark-service </code><i>integer</i></dt>
+<dd>Use a firewall-mark, an integer value greater than zero, to denote a virtual service instead of an address, port and protocol (UDP or TCP). The marking of packets with a firewall-mark is configured using the -m|&#8211;mark option to <code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8). It can be used to build a virtual service associated with the same real servers, covering multiple IP address, port and protocol triplets. If IPv6 addresses are used, the -6 option must be used. </dd>
 <p> Using firewall-mark virtual services provides a convenient method of grouping together different IP addresses, ports and protocols into a single virtual service. This is useful for both simplifying configuration if a large number of virtual services are required and grouping persistence across what would otherwise be multiple virtual services.</p>
-<dt><code>-s, &#8211;scheduler </code><i>scheduling-method</i></p>
-<dd><i>scheduling-method</i> Algorithm for allocating TCP connections and UDP datagrams to real servers. Scheduling algorithms are implemented as kernel modules. Ten are shipped with the Linux Virtual Server: </p>
+<dt><code>-s, &#8211;scheduler </code><i>scheduling-method</i></dt>
+<dd><i>scheduling-method</i> Algorithm for allocating TCP connections and UDP datagrams to real servers. Scheduling algorithms are implemented as kernel modules. Ten are shipped with the Linux Virtual Server: </dd>
 <p> <code>rr</code> &#8211; Round Robin: distributes jobs equally amongst the available real servers. </p>
 <p> <code>wrr</code> &#8211; Weighted Round Robin: assigns jobs to real servers proportionally to there real servers&#8217; weight. Servers with higher weights receive new jobs first and get more jobs than servers with lower weights. Servers with equal weights get an equal distribution of new jobs. </p>
 <p> <code>lc</code> &#8211; Least-Connection: assigns more jobs to real servers with fewer active jobs. </p>
@@ -92,57 +92,57 @@ description: "ipvsadm – Linux Virtual Server administration"
 <p> <code>sh</code> &#8211; Source Hashing: assigns jobs to servers through looking up a statically assigned hash table by their source IP addresses. This scheduler has two flags: sh-fallback, which enables fallback to a different server if the selected server was unavailable, and sh-port, which adds the source port number to the hash computation. </p>
 <p> <code>sed</code> &#8211; Shortest Expected Delay: assigns an incoming job to the server with the shortest expected delay. The expected delay that the job will experience is (Ci + 1) / Ui if sent to the ith server, in which Ci is the number of jobs on the the ith server and Ui is the fixed service rate (weight) of the ith server. </p>
 <p> <code>nq</code> &#8211; Never Queue: assigns an incoming job to an idle server if there is, instead of waiting for a fast one; if all the servers are busy, it adopts the Shortest Expected Delay policy to assign the job.</p>
-<dt><code>-p, &#8211;persistent [</code><i>timeout</i>]</p>
-<dd>Specify that a virtual service is persistent. If this option is specified, multiple requests from a client are redirected to the same real server selected for the first request. Optionally, the <i>timeout</i> of persistent sessions may be specified given in seconds, otherwise the default of 300 seconds will be used. This option may be used in conjunction with protocols such as SSL or FTP where it is important that clients consistently connect with the same real server. </p>
+<dt><code>-p, &#8211;persistent [</code><i>timeout</i>]</dt>
+<dd>Specify that a virtual service is persistent. If this option is specified, multiple requests from a client are redirected to the same real server selected for the first request. Optionally, the <i>timeout</i> of persistent sessions may be specified given in seconds, otherwise the default of 300 seconds will be used. This option may be used in conjunction with protocols such as SSL or FTP where it is important that clients consistently connect with the same real server. </dd>
 <p> <code>Note:</code> If a virtual service is to handle FTP connections then persistence must be set for the virtual service if Direct Routing or Tunnelling is used as the forwarding mechanism. If Masquerading is used in conjunction with an FTP service than persistence is not necessary, but the ip_vs_ftp kernel module must be used. This module may be manually inserted into the kernel using <a href="/docs/linux/man/8-insmod/">insmod</a>(8).</p>
-<dt><code>-M, &#8211;netmask </code><i>netmask</i></p>
-<dd>Specify the granularity with which clients are grouped for persistent virtual services. The source address of the request is masked with this netmask to direct all clients from a network to the same real server. The default is <i>255.255.255.255</i>, that is, the persistence granularity is per client host. Less specific netmasks may be used to resolve problems with non-persistent cache clusters on the client side. IPv6 netmasks should be specified as a prefix length between 1 and 128. The default prefix length is 128.</p>
-<dt><code>-b, &#8211;sched-flags </code><i>sched-flags</i></p>
-<dd>Set scheduler flags for this virtual server. <i>sched-flags</i> is a comma-separated list of flags. See the scheduler descriptions for valid scheduler flags.</p>
-<dt><code>-r, &#8211;real-server </code><i>server-address</i></p>
-<dd>Real server that an associated request for service may be assigned to. The <i>server-address</i> is the <i>host</i> address of a real server, and may plus <i>port</i>. <i>Host</i> can be either a plain IP address or a hostname. <i>Port</i> can be either a plain port number or the service name of port. In the case of the masquerading method, the host address is usually an RFC 1918 private IP address, and the port can be different from that of the associated service. With the tunneling and direct routing methods, <i>port</i> must be equal to that of the service address. For normal services, the port specified in the service address will be used if <i>port</i> is not specified. For fwmark services, <i>port</i> may be omitted, in which case the destination port on the real server will be the destination port of the request sent to the virtual service.</p>
-<dt><code>[packet-forwarding-method]</code></p>
-<dd><code>-g, &#8211;gatewaying</code> Use gatewaying (direct routing). This is the default. </p>
+<dt><code>-M, &#8211;netmask </code><i>netmask</i></dt>
+<dd>Specify the granularity with which clients are grouped for persistent virtual services. The source address of the request is masked with this netmask to direct all clients from a network to the same real server. The default is <i>255.255.255.255</i>, that is, the persistence granularity is per client host. Less specific netmasks may be used to resolve problems with non-persistent cache clusters on the client side. IPv6 netmasks should be specified as a prefix length between 1 and 128. The default prefix length is 128.</dd>
+<dt><code>-b, &#8211;sched-flags </code><i>sched-flags</i></dt>
+<dd>Set scheduler flags for this virtual server. <i>sched-flags</i> is a comma-separated list of flags. See the scheduler descriptions for valid scheduler flags.</dd>
+<dt><code>-r, &#8211;real-server </code><i>server-address</i></dt>
+<dd>Real server that an associated request for service may be assigned to. The <i>server-address</i> is the <i>host</i> address of a real server, and may plus <i>port</i>. <i>Host</i> can be either a plain IP address or a hostname. <i>Port</i> can be either a plain port number or the service name of port. In the case of the masquerading method, the host address is usually an RFC 1918 private IP address, and the port can be different from that of the associated service. With the tunneling and direct routing methods, <i>port</i> must be equal to that of the service address. For normal services, the port specified in the service address will be used if <i>port</i> is not specified. For fwmark services, <i>port</i> may be omitted, in which case the destination port on the real server will be the destination port of the request sent to the virtual service.</dd>
+<dt><code>[packet-forwarding-method]</code></dt>
+<dd><code>-g, &#8211;gatewaying</code> Use gatewaying (direct routing). This is the default. </dd>
 <p> <code>-i, &#8211;ipip</code> Use ipip encapsulation (tunneling). </p>
 <p> <code>-m, &#8211;masquerading</code> Use masquerading (network access translation, or NAT). </p>
 <p> <code>Note:</code> Regardless of the packet-forwarding mechanism specified, real servers for addresses for which there are interfaces on the local node will be use the local forwarding method, then packets for the servers will be passed to upper layer on the local node. This cannot be specified by <i>ipvsadm</i>, rather it set by the kernel as real servers are added or modified.</p>
-<dt><code>-w, &#8211;weight </code><i>weight</i></p>
-<dd><i>Weight</i> is an integer specifying the capacity of a server relative to the others in the pool. The valid values of <i>weight</i> are 0 through to 65535. The default is 1. Quiescent servers are specified with a weight of zero. A quiescent server will receive no new jobs but still serve the existing jobs, for all scheduling algorithms distributed with the Linux Virtual Server. Setting a quiescent server may be useful if the server is overloaded or needs to be taken out of service for maintenance.</p>
-<dt><code>-x, &#8211;u-threshold </code><i>uthreshold</i></p>
-<dd><i>uthreshold</i> is an integer specifying the upper connection threshold of a server. The valid values of <i>uthreshold</i> are 0 through to 65535. The default is 0, which means the upper connection threshold is not set. If <i>uthreshold</i> is set with other values, no new connections will be sent to the server when the number of its connections exceeds its upper connection threshold.</p>
-<dt><code>-y, &#8211;l-threshold </code><i>lthreshold</i></p>
-<dd><i>lthreshold</i> is an integer specifying the lower connection threshold of a server. The valid values of <i>lthreshold</i> are 0 through to 65535. The default is 0, which means the lower connection threshold is not set. If <i>lthreshold</i> is set with other values, the server will receive new connections when the number of its connections drops below its lower connection threshold. If <i>lthreshold</i> is not set but <i>uthreshold</i> is set, the server will receive new connections when the number of its connections drops below three forth of its upper connection threshold.</p>
-<dt><code>&#8211;mcast-interface </code><i>interface</i></p>
-<dd>Specify the multicast interface that the sync master daemon sends outgoing multicasts through, or the sync backup daemon listens to for multicasts.</p>
-<dt><code>&#8211;syncid </code><i>syncid</i></p>
-<dd>Specify the <i>syncid</i> that the sync master daemon fills in the SyncID header while sending multicast messages, or the sync backup daemon uses to filter out multicast messages not matched with the SyncID value. The valid values of <i>syncid</i> are 0 through to 255. The default is 0, which means no filtering at all.</p>
-<dt><code>-c, &#8211;connection</code></p>
-<dd>Connection output. The <i>list</i> command with this option will list current IPVS connections.</p>
-<dt><code>&#8211;timeout</code></p>
-<dd>Timeout output. The <i>list</i> command with this option will display the timeout values (in seconds) for TCP sessions, TCP sessions after receiving a FIN packet, and UDP packets.</p>
-<dt><code>&#8211;daemon</code></p>
-<dd>Daemon information output. The <i>list</i> command with this option will display the daemon status and its multicast interface.</p>
-<dt><code>&#8211;stats</code></p>
-<dd>Output of statistics information. The <i>list</i> command with this option will display the statistics information of services and their servers.</p>
-<dt><code>&#8211;rate</code></p>
-<dd>Output of rate information. The <i>list</i> command with this option will display the rate information (such as connections/second, bytes/second and packets/second) of services and their servers.</p>
-<dt><code>&#8211;thresholds</code></p>
-<dd>Output of thresholds information. The <i>list</i> command with this option will display the upper/lower connection threshold information of each server in service listing.</p>
-<dt><code>&#8211;persistent-conn</code></p>
-<dd>Output of persistent connection information. The <i>list</i> command with this option will display the persistent connection counter information of each server in service listing. The persistent connection is used to forward the actual connections from the same client/network to the same server. </p>
+<dt><code>-w, &#8211;weight </code><i>weight</i></dt>
+<dd><i>Weight</i> is an integer specifying the capacity of a server relative to the others in the pool. The valid values of <i>weight</i> are 0 through to 65535. The default is 1. Quiescent servers are specified with a weight of zero. A quiescent server will receive no new jobs but still serve the existing jobs, for all scheduling algorithms distributed with the Linux Virtual Server. Setting a quiescent server may be useful if the server is overloaded or needs to be taken out of service for maintenance.</dd>
+<dt><code>-x, &#8211;u-threshold </code><i>uthreshold</i></dt>
+<dd><i>uthreshold</i> is an integer specifying the upper connection threshold of a server. The valid values of <i>uthreshold</i> are 0 through to 65535. The default is 0, which means the upper connection threshold is not set. If <i>uthreshold</i> is set with other values, no new connections will be sent to the server when the number of its connections exceeds its upper connection threshold.</dd>
+<dt><code>-y, &#8211;l-threshold </code><i>lthreshold</i></dt>
+<dd><i>lthreshold</i> is an integer specifying the lower connection threshold of a server. The valid values of <i>lthreshold</i> are 0 through to 65535. The default is 0, which means the lower connection threshold is not set. If <i>lthreshold</i> is set with other values, the server will receive new connections when the number of its connections drops below its lower connection threshold. If <i>lthreshold</i> is not set but <i>uthreshold</i> is set, the server will receive new connections when the number of its connections drops below three forth of its upper connection threshold.</dd>
+<dt><code>&#8211;mcast-interface </code><i>interface</i></dt>
+<dd>Specify the multicast interface that the sync master daemon sends outgoing multicasts through, or the sync backup daemon listens to for multicasts.</dd>
+<dt><code>&#8211;syncid </code><i>syncid</i></dt>
+<dd>Specify the <i>syncid</i> that the sync master daemon fills in the SyncID header while sending multicast messages, or the sync backup daemon uses to filter out multicast messages not matched with the SyncID value. The valid values of <i>syncid</i> are 0 through to 255. The default is 0, which means no filtering at all.</dd>
+<dt><code>-c, &#8211;connection</code></dt>
+<dd>Connection output. The <i>list</i> command with this option will list current IPVS connections.</dd>
+<dt><code>&#8211;timeout</code></dt>
+<dd>Timeout output. The <i>list</i> command with this option will display the timeout values (in seconds) for TCP sessions, TCP sessions after receiving a FIN packet, and UDP packets.</dd>
+<dt><code>&#8211;daemon</code></dt>
+<dd>Daemon information output. The <i>list</i> command with this option will display the daemon status and its multicast interface.</dd>
+<dt><code>&#8211;stats</code></dt>
+<dd>Output of statistics information. The <i>list</i> command with this option will display the statistics information of services and their servers.</dd>
+<dt><code>&#8211;rate</code></dt>
+<dd>Output of rate information. The <i>list</i> command with this option will display the rate information (such as connections/second, bytes/second and packets/second) of services and their servers.</dd>
+<dt><code>&#8211;thresholds</code></dt>
+<dd>Output of thresholds information. The <i>list</i> command with this option will display the upper/lower connection threshold information of each server in service listing.</dd>
+<dt><code>&#8211;persistent-conn</code></dt>
+<dd>Output of persistent connection information. The <i>list</i> command with this option will display the persistent connection counter information of each server in service listing. The persistent connection is used to forward the actual connections from the same client/network to the same server. </dd>
 <p> The <i>list</i> command with the -c, &#8211;connection option and this option will include persistence engine data, if any is present, when listing connections.</p>
-<dt><code>&#8211;sort</code></p>
-<dd>Sort the list of virtual services and real servers. The virtual service entries are sorted in ascending order by &lt;protocol, address, port&gt;. The real server entries are sorted in ascending order by &lt;address, port&gt;. (default)</p>
-<dt><code>&#8211;nosort</code></p>
-<dd>Do not sort the list of virtual services and real servers.</p>
-<dt><code>-n, &#8211;numeric</code></p>
-<dd>Numeric output. IP addresses and port numbers will be printed in numeric format rather than as as host names and services respectively, which is the default.</p>
-<dt><code>&#8211;exact</code></p>
-<dd>Expand numbers. Display the exact value of the packet and byte counters, instead of only the rounded number in K&#8217;s (multiples of 1000) M&#8217;s (multiples of 1000K) or G&#8217;s (multiples of 1000M). This option is only relevant for the -L command.</p>
-<dt><code>-6, &#8211;ipv6</code></p>
-<dd>Use with -f to signify fwmark rule uses IPv6 addresses.</p>
-<dt><code>-o, &#8211;ops</code></p>
-<dd>One-packet scheduling. Used in conjunction with a UDP virtual service or a fwmark virtual service that handles only UDP packets. All connections are created such that they only schedule one packet.</dl>
+<dt><code>&#8211;sort</code></dt>
+<dd>Sort the list of virtual services and real servers. The virtual service entries are sorted in ascending order by &lt;protocol, address, port&gt;. The real server entries are sorted in ascending order by &lt;address, port&gt;. (default)</dd>
+<dt><code>&#8211;nosort</code></dt>
+<dd>Do not sort the list of virtual services and real servers.</dd>
+<dt><code>-n, &#8211;numeric</code></dt>
+<dd>Numeric output. IP addresses and port numbers will be printed in numeric format rather than as as host names and services respectively, which is the default.</dd>
+<dt><code>&#8211;exact</code></dt>
+<dd>Expand numbers. Display the exact value of the packet and byte counters, instead of only the rounded number in K&#8217;s (multiples of 1000) M&#8217;s (multiples of 1000K) or G&#8217;s (multiples of 1000M). This option is only relevant for the -L command.</dd>
+<dt><code>-6, &#8211;ipv6</code></dt>
+<dd>Use with -f to signify fwmark rule uses IPv6 addresses.</dd>
+<dt><code>-o, &#8211;ops</code></dt>
+<dd>One-packet scheduling. Used in conjunction with a UDP virtual service or a fwmark virtual service that handles only UDP packets. All connections are created such that they only schedule one packet.</dd></dl>
 <h2>EXAMPLE 1 &#8211; Simple Virtual Service</h2>
 <p>The following commands configure a Linux Director to distribute incoming requests addressed to port 80 on 207.175.44.110 equally to port 80 on five real servers. The forwarding method used in this example is NAT, with each of the real servers being masqueraded by the Linux Director. </p>
 <pre>ipvsadm -A -t 207.175.44.110:80 -s rr

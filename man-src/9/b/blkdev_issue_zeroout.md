@@ -14,19 +14,19 @@ description: "blkdev_issue_zeroout – zero-fill a block range"
 <p><i>bdev</i></p>
 <dl>
 <dd>
-<dd>blockdev to write</dl>
+</dd><dd>blockdev to write</dd></dl>
 <p> <i>sector</i></p>
 <dl>
-<dd>start sector</dl>
+<dd>start sector</dd></dl>
 <p> <i>nr_sects</i></p>
 <dl>
-<dd>number of sectors to write</dl>
+<dd>number of sectors to write</dd></dl>
 <p> <i>gfp_mask</i></p>
 <dl>
-<dd>memory allocation flags (for bio_alloc)</dl>
+<dd>memory allocation flags (for bio_alloc)</dd></dl>
 <p> <i>discard</i></p>
 <dl>
-<dd>whether to discard the block range</dl>
+<dd>whether to discard the block range</dd></dl>
 <h2>Description</h2>
 <p>Zero-fill a block range. If the discard flag is set and the block device guarantees that subsequent READ operations to the block range in question will return zeroes, the blocks will be discarded. Should the discard request fail, if the discard flag is not set, or if discard_zeroes_data is not supported, this function will resort to zeroing the blocks manually, thus provisioning (allocating, anchoring) them. If the block device supports the WRITE SAME command <code>blkdev_issue_zeroout</code> will use it to optimize the process of clearing the block range. Otherwise the zeroing will be performed using regular WRITE calls.</p>
 <h2>Copyright</h2>

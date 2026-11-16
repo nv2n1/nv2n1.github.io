@@ -21,14 +21,14 @@ where <i>lockmode</i> is one of:
 <p> More information about the lock modes and locking strategies can be found in in the documentation.</p>
 <h2>Parameters</h2>
 <dl>
-<dt><i>name</i></p>
-<dd>The name (optionally schema-qualified) of an existing table to lock. If ONLY is specified, only that table is locked. If ONLY is not specified, the table and all its descendant tables (if any) are locked. </p>
+<dt><i>name</i></dt>
+<dd>The name (optionally schema-qualified) of an existing table to lock. If ONLY is specified, only that table is locked. If ONLY is not specified, the table and all its descendant tables (if any) are locked. </dd>
 <p> The command LOCK TABLE a, b; is equivalent to LOCK TABLE a; LOCK TABLE b;. The tables are locked one-by-one in the order specified in the <code>LOCK TABLE</code> command.</p>
-<dt><i>lockmode</i></p>
-<dd>The lock mode specifies which locks this lock conflicts with. Lock modes are described in in the documentation. </p>
+<dt><i>lockmode</i></dt>
+<dd>The lock mode specifies which locks this lock conflicts with. Lock modes are described in in the documentation. </dd>
 <p> If no lock mode is specified, then ACCESS EXCLUSIVE, the most restrictive mode, is used.</p>
-<dt><code>NOWAIT</code></p>
-<dd>Specifies that <code>LOCK TABLE</code> should not wait for any conflicting locks to be released: if the specified lock(s) cannot be acquired immediately without waiting, the transaction is aborted.</dl>
+<dt><code>NOWAIT</code></dt>
+<dd>Specifies that <code>LOCK TABLE</code> should not wait for any conflicting locks to be released: if the specified lock(s) cannot be acquired immediately without waiting, the transaction is aborted.</dd></dl>
 <h2>Notes</h2>
 <p>LOCK TABLE &#8230; IN ACCESS SHARE MODE requires SELECT privileges on the target table. All other forms of <code>LOCK</code> require at least one of UPDATE, DELETE, or TRUNCATE privileges. </p>
 <p> <code>LOCK TABLE</code> is useless outside a transaction block: the lock would remain held only to the completion of the statement. Therefore PostgreSQL reports an error if <code>LOCK</code> is used outside a transaction block. Use BEGIN [<code><a href="/docs/linux/man/7-begin/">begin</a></code>(7)] and COMMIT [<code><a href="/docs/linux/man/7-commit/">commit</a></code>(7)] (or ROLLBACK [<code><a href="/docs/linux/man/7-rollback/">rollback</a></code>(7)]) to define a transaction block. </p>

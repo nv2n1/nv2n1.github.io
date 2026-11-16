@@ -14,15 +14,15 @@ description: "ata_msleep – ATA EH owner aware msleep"
 <p><i>ap</i></p>
 <dl>
 <dd>
-<dd>ATA port to attribute the sleep to</dl>
+</dd><dd>ATA port to attribute the sleep to</dd></dl>
 <p> <i>msecs</i></p>
 <dl>
-<dd>duration to sleep in milliseconds</dl>
+<dd>duration to sleep in milliseconds</dd></dl>
 <h2>Description</h2>
 <p>Sleeps <i>msecs</i>. If the current task is owner of <i>ap</i>&#8216;s EH, the ownership is released before going to sleep and reacquired after the sleep is complete. IOW, other ports sharing the <i>ap</i>-&gt;host will be allowed to own the EH while this task is sleeping. </p>
 <p> LOCKING: Might sleep.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

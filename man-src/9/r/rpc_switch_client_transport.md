@@ -15,15 +15,15 @@ rpc_switch_client_transport -
 <h2>Arguments</h2>
 
 <i>clnt</i>
-<dl><dd><dd>pointer to a struct rpc_clnt</dl>
+<dl><dd></dd><dd>pointer to a struct rpc_clnt</dd></dl>
  
 
  <i>args</i>
-<dl><dd>pointer to the new transport arguments</dl>
+<dl><dd>pointer to the new transport arguments</dd></dl>
  
 
  <i>timeout</i>
-<dl><dd>pointer to the new timeout parameters</dl>
+<dl><dd>pointer to the new timeout parameters</dd></dl>
 
 <h2>Description</h2>
 

@@ -21,8 +21,8 @@ description: "xcam – a graphical camera frontend for SANE"
 <p> If the <code>&#8211;version (-V)</code> option is given, <code>xcam</code> will output its version number. </p>
 <p> The <code>&#8211;help (-h)</code> <code>xcam</code> flag prints a short summary of options. </p>
 <dl>
-<dt><code>SANE_DEBUG_XCAM</code></p>
-<dd> This environment variable controls the debug level xscanimage. Higher debug levels increase the verbosity of the output. </p>
+<dt><code>SANE_DEBUG_XCAM</code></dt>
+<dd> This environment variable controls the debug level xscanimage. Higher debug levels increase the verbosity of the output. </dd>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Value&nbsp;<wbr>&nbsp;<wbr>Descsription<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>0&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>print fatal errors<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>print errors<br />
@@ -34,8 +34,8 @@ description: "xcam – a graphical camera frontend for SANE"
 </dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>$HOME/.sane/xcam/devicename.rc</i></p>
-<dd> For each device, there is one rc-file that holds the saved settings for that particular device. Normally, this file should not be manipulated directly. Instead, the user should use the <code>xcam</code> interface to select appropriate values and then save the device settings using the &quot;Preferences-&gt;Save as default settings&quot; menubar entry. </p>
+<dt><i>$HOME/.sane/xcam/devicename.rc</i></dt>
+<dd> For each device, there is one rc-file that holds the saved settings for that particular device. Normally, this file should not be manipulated directly. Instead, the user should use the <code>xcam</code> interface to select appropriate values and then save the device settings using the &quot;Preferences-&gt;Save as default settings&quot; menubar entry. </dd>
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-sane/">sane</a>(7), xscanimage(1), <a href="/docs/linux/man/1-scanimage/">scanimage</a>(1), <a href="/docs/linux/man/5-sane-dll/">sane-dll</a>(5) and the backend manpages</p>

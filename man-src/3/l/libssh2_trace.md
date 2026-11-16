@@ -16,26 +16,24 @@ description: "libssh2_trace – enable debug info from inside libssh2"
 <p> This is a function present in the library that can be used to get debug info from within libssh2 when it is running. Helpful when trying to trace or debug behaviors. Note that this function has no effect unless libssh2 was built to support tracing! It is usually disabled in release builds. </p>
 <p> <code>bitmask</code> can be set to the logical OR of none, one or more of these:</p>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>LIBSSH2_TRACE_SOCKET</p>
-<dd> Socket low-level debugging</p>
-<dt>LIBSSH2_TRACE_TRANS</p>
-<dd> Transport layer debugging</p>
-<dt>LIBSSH2_TRACE_KEX</p>
-<dd> Key exchange debugging</p>
-<dt>LIBSSH2_TRACE_AUTH</p>
-<dd> Authentication debugging</p>
-<dt>LIBSSH2_TRACE_CONN</p>
-<dd> Connection layer debugging</p>
-<dt>LIBSSH2_TRACE_SCP</p>
-<dd> SCP debugging</p>
-<dt>LIBSSH2_TRACE_SFTP</p>
-<dd> SFTP debugging</p>
-<dt>LIBSSH2_TRACE_ERROR</p>
-<dd> Error debugging</p>
-<dt>LIBSSH2_TRACE_PUBLICKEY</p>
-<dd> Public Key debugging</dl>
+<dt>LIBSSH2_TRACE_SOCKET</dt>
+<dd> Socket low-level debugging</dd>
+<dt>LIBSSH2_TRACE_TRANS</dt>
+<dd> Transport layer debugging</dd>
+<dt>LIBSSH2_TRACE_KEX</dt>
+<dd> Key exchange debugging</dd>
+<dt>LIBSSH2_TRACE_AUTH</dt>
+<dd> Authentication debugging</dd>
+<dt>LIBSSH2_TRACE_CONN</dt>
+<dd> Connection layer debugging</dd>
+<dt>LIBSSH2_TRACE_SCP</dt>
+<dd> SCP debugging</dd>
+<dt>LIBSSH2_TRACE_SFTP</dt>
+<dd> SFTP debugging</dd>
+<dt>LIBSSH2_TRACE_ERROR</dt>
+<dd> Error debugging</dd>
+<dt>LIBSSH2_TRACE_PUBLICKEY</dt>
+<dd> Public Key debugging</dd></dl>
 </dl>
 <h2>Index</h2>

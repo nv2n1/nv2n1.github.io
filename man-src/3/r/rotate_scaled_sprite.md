@@ -10,9 +10,7 @@ description: "rotate_scaled_sprite – Rotates and stretches a sprite. Allegro g
 <p>rotate_scaled_sprite &#8211; Rotates and stretches a sprite. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void rotate_scaled_sprite(BITMAP *bmp, BITMAP *sprite, int x, int y,
-
                           fixed angle, fixed scale);</code></pre>
 <h2>Description</h2>
 <p>Like rotate_sprite(), but stretches or shrinks the image at the same time as rotating it. </p>

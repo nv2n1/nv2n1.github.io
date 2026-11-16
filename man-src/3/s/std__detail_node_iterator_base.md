@@ -11,9 +11,6 @@ description: "std::__detail::_Node_iterator_base< _Value, _Cache_hash_code > –
 <h2>Synopsis</h2>
 <h3>Public Types</h3>
 <pre><code>using __node_type = _Hash_node&lt; _Value, _Cache_hash_code &gt;
-
-
-
 Public Member Functions</code></pre>
 <p> <code>_Node_iterator_base</code> (<code>__node_type</code> *__p) </p>
 <p> void <code>_M_incr</code> ()</p>

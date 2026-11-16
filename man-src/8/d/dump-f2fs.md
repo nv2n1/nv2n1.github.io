@@ -16,19 +16,19 @@ description: "dump.f2fs – retrieve directory and file entries from an F2FS-for
 <p> The exit code returned by <code>dump.f2fs</code> is 0 on success and -1 on failure.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-i</code><i> inode number</i></p>
-<dd>Specify an inode number to dump out.</p>
-<dt><code>-s</code><i> SIT range</i></p>
-<dd>Specify a range presented by segment numbers to dump SIT entries.</p>
-<dt><code>-a</code><i> SSA range</i></p>
-<dd>Specify a range presented by segment numbers to dump SSA entries.</p>
-<dt><code>-b</code><i> block address</i></p>
-<dd>Specify a block address to retrieve its metadata information.</p>
-<dt><code>-d</code><i> debug-level</i></p>
-<dd>Specify the level of debugging options. The default number is 0, which shows basic debugging messages.</p>
-<dt></dl>
+<dt><code>-i</code><i> inode number</i></dt>
+<dd>Specify an inode number to dump out.</dd>
+<dt><code>-s</code><i> SIT range</i></dt>
+<dd>Specify a range presented by segment numbers to dump SIT entries.</dd>
+<dt><code>-a</code><i> SSA range</i></dt>
+<dd>Specify a range presented by segment numbers to dump SSA entries.</dd>
+<dt><code>-b</code><i> block address</i></dt>
+<dd>Specify a block address to retrieve its metadata information.</dd>
+<dt><code>-d</code><i> debug-level</i></dt>
+<dd>Specify the level of debugging options. The default number is 0, which shows basic debugging messages.</dd>
+<dt></dt></dl>
 <h2>Author</h2>
-<dd>Initial checking code was written by Byoung Geun Kim &lt;bgbg.kim [at] samsung.com&gt;.</p>
+<dd>Initial checking code was written by Byoung Geun Kim &lt;bgbg.kim [at] samsung.com&gt;.</dd>
 <h2>Availability</h2>
 <p><code>dump.f2fs</code> is available from <a href="git://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git.">git://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git.</a></p>
 <h2>See Also</h2>

@@ -18,7 +18,7 @@ description: "dgtsvx.f –"
 <p> <code>Purpose: </code></p>
 <dl COMPACT>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  DGTSVX uses the LU factorization to compute the solution to a real
  system of linear equations A * X = B or A**T * X = B,
@@ -27,11 +27,11 @@ description: "dgtsvx.f –"
  Error bounds on the solution and a condition estimate are also
  provided.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Description: </code></p>
 <dl COMPACT>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  The following steps are performed:
  1. If FACT = 'N', the LU decomposition is used to factor the matrix A
@@ -50,11 +50,11 @@ description: "dgtsvx.f –"
     matrix and calculate error bounds and backward error estimates
     for it.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dt>
-<dd> <i>FACT</i> </p>
+</dt><dd> <i>FACT</i> </dd>
 <pre>
           FACT is CHARACTER*1
           Specifies whether or not the factored form of A has been
@@ -228,14 +228,14 @@ description: "dgtsvx.f –"
 <p> <code>Author:</code></p>
 <dl COMPACT>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> Definition at line 292 of file dgtsvx.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code.</p>

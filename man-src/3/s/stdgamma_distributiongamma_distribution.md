@@ -11,10 +11,8 @@ description: "std::gamma_distribution<RealType>::gamma_distribution – std::gam
 <h2>Synopsis</h2>
 <pre><code>gamma_distribution()
     : gamma_distribution(1.0){}(1)(since C++ 11)
-
           explicit gamma_distribution(RealType alpha, RealType beta = 1.0);
 (2)(since C++ 11)
-
     explicit gamma_distribution(const param_type &amp;params);
 (3)(since C++ 11)</code></pre>
 <p>Constructs a new distribution object. <code>(2)</code> uses alpha and beta as the distribution parameters. <code>(3)</code> uses params as the distribution parameters. </p>

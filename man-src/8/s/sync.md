@@ -16,12 +16,12 @@ description: "sync – synchronize data on disk with memory"
 <p> <code>sync</code> should be called before the processor is halted in an unusual manner (e.g., before causing a kernel panic when debugging new kernel code). In general, the processor should be halted using the <code><a href="/docs/linux/man/8-shutdown/">shutdown</a></code>(8) or <code><a href="/docs/linux/man/8-reboot/">reboot</a></code>(8) or <code><a href="/docs/linux/man/8-halt/">halt</a></code>(8) commands, which will attempt to put the system in a quiescent state before calling <code><a href="/docs/linux/man/2-sync/">sync</a></code>(2). (Various implementations of these commands exist; consult your documentation; on some systems one should not call <code><a href="/docs/linux/man/8-reboot/">reboot</a></code>(8) and <code><a href="/docs/linux/man/8-halt/">halt</a></code>(8) directly.)</p>
 <h2>Options</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd>Print a usage message on standard output and exit successfully.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Print version information on standard output, then exit successfully.</p>
-<dt><code>&#8212;</code></p>
-<dd>Terminate option list.</dl>
+<dt><code>&#8211;help</code></dt>
+<dd>Print a usage message on standard output and exit successfully.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Print version information on standard output, then exit successfully.</dd>
+<dt><code>&#8212;</code></dt>
+<dd>Terminate option list.</dd></dl>
 <h2>Environment</h2>
 <p>The variables <code>LANG</code>, <code>LC_ALL</code>, <code>LC_CTYPE</code>, and <code>LC_MESSAGES</code> have the usual meaning.</p>
 <h2>Conforming To</h2>

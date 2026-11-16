@@ -36,7 +36,6 @@ description: "checkmk – Awk script for generating C unit tests for use with th
 #test the_test
                                                                         int nc;
 const char msg[] = "
-
     Hello, world!
 ";
 nc = printf("%s", msg);
@@ -101,3 +100,4 @@ int main(void)<br />
 <p> This is the most basic directive for creating a template for input to <code>checkmk</code>. It is the only directive that is required: there must be at least one #test directive appearing in the template, or <code>checkmk</code> will fail with an error message. The #test directive may be specified several times, each one beginning the definition of a new test function. </p>
 <p> The <i>test_name</i> argument will be used as the name of a test function in the C-language output, so it must be a valid C identifier. That is, it must begin with an alphabetic character or the underscore (_), followed by optional alpha-numeric characters and/or underscores. </p>
 <p> Universal Character Names (introduced in C99) are also allowed, of the form 
+</p>

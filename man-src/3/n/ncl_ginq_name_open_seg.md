@@ -13,10 +13,10 @@ description: "ginq_name_open_seg (Inquire name of open segment) – returns the 
 <p> void ginq_name_open_seg(Gint *err_ind, Gint *name_open_seg);</p>
 <h2>Description</h2>
 <dl COMPACT>
-<dt>err_ind</p>
-<dd>(Output) &#8211; If the GKS state is SGOP (segment open), then err_ind is returned as &quot;0&quot;; otherwise err_ind is returned as &quot;4&quot;.</p>
-<dt>name_open_seg</p>
-<dd>(Output) &#8211; If the GKS state is SGOP (segment open), then name_open_seg is returned as the number of the currently open segment; otherwise name_open_seg is undefined.</dl>
+<dt>err_ind</dt>
+<dd>(Output) &#8211; If the GKS state is SGOP (segment open), then err_ind is returned as &quot;0&quot;; otherwise err_ind is returned as &quot;4&quot;.</dd>
+<dt>name_open_seg</dt>
+<dd>(Output) &#8211; If the GKS state is SGOP (segment open), then name_open_seg is returned as the number of the currently open segment; otherwise name_open_seg is undefined.</dd></dl>
 <h2>Access</h2>
 <p>To use the GKS C-binding routines, load the ncarg_gks and ncarg_c libraries.</p>
 <h2>See Also</h2>

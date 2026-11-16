@@ -16,20 +16,20 @@ description: "file-roller – archive manager for GNOME"
 <p> It supports most common operations such as creating, modifing and extracting files from an archive. You can also view the contents of an archive and open files contained in the archive.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a, &#8211;add-to=ARCHIVE </code></p>
-<dd> Add files to the specified archive and quit the program</p>
-<dt><code>-d, &#8211;add FILE</code></p>
-<dd> Add files asking the name of the archive and quit the program</p>
-<dt><code>-e, &#8211;extract-to=FOLDER</code></p>
-<dd> Extract archives to the specified folder and quit the program</p>
-<dt><code>-f, &#8211;extract </code></p>
-<dd> Extract archives asking the destination folder and quit the program</p>
-<dt><code>-h, &#8211;extract-here </code></p>
-<dd> Extract archives using the archive name as destination folder and quit the program</p>
-<dt><code>&#8211;default-dir=FOLDER</code></p>
-<dd> Default folder to use for the &#8216;&#8211;add&#8217; and &#8216;&#8211;extract&#8217; commands</p>
-<dt><code>&#8211;force</code></p>
-<dd> Create destination folder without asking confirmation</dl>
+<dt><code>-a, &#8211;add-to=ARCHIVE </code></dt>
+<dd> Add files to the specified archive and quit the program</dd>
+<dt><code>-d, &#8211;add FILE</code></dt>
+<dd> Add files asking the name of the archive and quit the program</dd>
+<dt><code>-e, &#8211;extract-to=FOLDER</code></dt>
+<dd> Extract archives to the specified folder and quit the program</dd>
+<dt><code>-f, &#8211;extract </code></dt>
+<dd> Extract archives asking the destination folder and quit the program</dd>
+<dt><code>-h, &#8211;extract-here </code></dt>
+<dd> Extract archives using the archive name as destination folder and quit the program</dd>
+<dt><code>&#8211;default-dir=FOLDER</code></dt>
+<dd> Default folder to use for the &#8216;&#8211;add&#8217; and &#8216;&#8211;extract&#8217; commands</dd>
+<dt><code>&#8211;force</code></dt>
+<dd> Create destination folder without asking confirmation</dd></dl>
 <p> This program also accepts the standard GNOME and GTK options.</p>
 <h2>AUTHORS</h2>
 <p> <code>file-roller</code> is written by Paolo Bacchilega &lt;paolo.bacch [at] tin.it&gt;. </p>

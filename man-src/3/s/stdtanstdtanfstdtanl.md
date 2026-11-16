@@ -37,18 +37,12 @@ The function has mathematical poles at π(1/2 + n); however no common floating-p
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
-
 #include &lt;cerrno&gt;
-
 #include &lt;cfenv&gt;
 #pragma STDC FENV_ACCESS ON
-
 const double pi = std::acos(-1);
-
 int main()
-
 {
     // typical usage
     std::cout &lt;&lt; &quot;tan  (pi/4) = &quot; &lt;&lt; std::tan(pi / 4) &lt;&lt; '

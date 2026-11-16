@@ -32,7 +32,7 @@ url: "/docs/linux/man/1-nvme-flush/"
  -n &lt;nsid&gt;, --namespace-id=&lt;nsid&gt;
 <dl>
 <dt>
-<dd> Specify the optional namespace id for this command. Defaults to 0xffffffff, indicating flush for all namespaces.</dl>
+</dt><dd> Specify the optional namespace id for this command. Defaults to 0xffffffff, indicating flush for all namespaces.</dd></dl>
 
 <h2>EXAMPLES</h2>
 

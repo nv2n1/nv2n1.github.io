@@ -17,12 +17,12 @@ description: "XmNotebookGetPageInfo — A Notebook function that returns page in
 <h2>Description</h2>
 <p><code>XmNotebookGetPageInfo</code> returns status information for the specified Notebook page.</p>
 <dl COMPACT>
-<dt><i>notebook</i></p>
-<dd>Specifies the Notebook widget.</p>
-<dt><i>page_number</i></p>
-<dd>Specifies the page number to be queried.</p>
-<dt><i>page_info</i></p>
-<dd>Points to the structure containing the page information. The structure has the following form:</dl>
+<dt><i>notebook</i></dt>
+<dd>Specifies the Notebook widget.</dd>
+<dt><i>page_number</i></dt>
+<dd>Specifies the page number to be queried.</dd>
+<dt><i>page_info</i></dt>
+<dd>Points to the structure containing the page information. The structure has the following form:</dd></dl>
 <pre>typedef struct
 {
  int <i>page_number</i>;
@@ -34,29 +34,29 @@ description: "XmNotebookGetPageInfo — A Notebook function that returns page in
 (<code>void</code>)</pre>
 <dl COMPACT>
 <dd>
-<dl COMPACT>
-<dt><i>page_number</i></p>
-<dd>Specifies the <i>page_number</i> passed to the function.</p>
-<dt><i>page_widget</i></p>
-<dd>Specifies a child widget of the Notebook with a <code>XmNchildType</code> of <code>XmPAGE</code> and a <code>XmNpageNumber</code> equal to <i>page_number</i> if one exists; otherwise set to NULL.</p>
-<dt><i>status_area_widget</i></p>
-<dd>Specifies a child widget of the Notebook with a <code>XmNchildType</code> of <code>XmSTATUS_AREA</code> and a <code>XmNpageNumber</code> equal to <i>page_number</i> if one exists; otherwise set to NULL.</p>
-<dt><i>major_tab_widget</i></p>
-<dd>Specifies a child widget of the Notebook with a <code>XmNchildType</code> of <code>XmMAJOR_TAB</code> and the nearest <code>XmNpageNumber</code> equal to or less than <i>page_number</i> if one exists; otherwise set to NULL.</p>
-<dt><i>minor_tab_widget</i></p>
-<dd>Specifies a child widget of the Notebook with a <code>XmNchildType</code> of <code>XmMINOR_TAB</code> and the nearest <code>XmNpageNumber</code> equal to or less than <i>page_number</i> if one exists; otherwise set to NULL.</dl>
+</dd><dl COMPACT>
+<dt><i>page_number</i></dt>
+<dd>Specifies the <i>page_number</i> passed to the function.</dd>
+<dt><i>page_widget</i></dt>
+<dd>Specifies a child widget of the Notebook with a <code>XmNchildType</code> of <code>XmPAGE</code> and a <code>XmNpageNumber</code> equal to <i>page_number</i> if one exists; otherwise set to NULL.</dd>
+<dt><i>status_area_widget</i></dt>
+<dd>Specifies a child widget of the Notebook with a <code>XmNchildType</code> of <code>XmSTATUS_AREA</code> and a <code>XmNpageNumber</code> equal to <i>page_number</i> if one exists; otherwise set to NULL.</dd>
+<dt><i>major_tab_widget</i></dt>
+<dd>Specifies a child widget of the Notebook with a <code>XmNchildType</code> of <code>XmMAJOR_TAB</code> and the nearest <code>XmNpageNumber</code> equal to or less than <i>page_number</i> if one exists; otherwise set to NULL.</dd>
+<dt><i>minor_tab_widget</i></dt>
+<dd>Specifies a child widget of the Notebook with a <code>XmNchildType</code> of <code>XmMINOR_TAB</code> and the nearest <code>XmNpageNumber</code> equal to or less than <i>page_number</i> if one exists; otherwise set to NULL.</dd></dl>
 </dl>
 <p> For a complete definition of Notebook and its associated resources, see <code><a href="/docs/linux/man/3-xmnotebook/">XmNotebook</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns one of the following page status values:</p>
 <dl COMPACT>
-<dt><code>XmPAGE_FOUND</code></p>
-<dd>The specified page was found.</p>
-<dt><code>XmPAGE_INVALID</code></p>
-<dd>The specified page number is out of the page number range.</p>
-<dt><code>XmPAGE_EMPTY</code></p>
-<dd>The specified page does not have a page widget.</p>
-<dt><code>XmPAGE_DUPLICATED</code></p>
-<dd>There is more than one page widget with the specified page number. The more recently managed page widget is used for the page information structure.</dl>
+<dt><code>XmPAGE_FOUND</code></dt>
+<dd>The specified page was found.</dd>
+<dt><code>XmPAGE_INVALID</code></dt>
+<dd>The specified page number is out of the page number range.</dd>
+<dt><code>XmPAGE_EMPTY</code></dt>
+<dd>The specified page does not have a page widget.</dd>
+<dt><code>XmPAGE_DUPLICATED</code></dt>
+<dd>There is more than one page widget with the specified page number. The more recently managed page widget is used for the page information structure.</dd></dl>
 <h2>Related</h2>
 <p><code><a href="/docs/linux/man/3-xmnotebook/">XmNotebook</a></code>(3).</p>

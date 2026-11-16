@@ -16,10 +16,10 @@ description: "vokoscreen – simple screencast creator"
 <h2>FILES</h2>
 <p> Settings are stored under $XDG_CONFIG_HOME which is generally $HOME. In this documentation ~ is used.</p>
 <dl>
-<dt><i>~/vokoscreen/vokoscreen.conf</i></p>
-<dd> Configuration file stores audio settings, standard player, video path.</p>
-<dt><i>~/vokoscreen/vokoscreen.log</i></p>
-<dd> Log file stores information of last successful recording.</dl>
+<dt><i>~/vokoscreen/vokoscreen.conf</i></dt>
+<dd> Configuration file stores audio settings, standard player, video path.</dd>
+<dt><i>~/vokoscreen/vokoscreen.log</i></dt>
+<dd> Log file stores information of last successful recording.</dd></dl>
 <h2>BUGS</h2>
 <p> Report bugs to &lt;tux [at] vodafone.de&gt;. </p>
 <h2>Index</h2>

@@ -16,32 +16,32 @@ description: "gftp – file transfer client for *NIX based machines."
 <h2>OPTIONS</h2>
 <p> You may enter a url on the command line that gFTP will automatically connect to when it starts up.</p>
 <dl>
-<dt>&#8211;help, -h</p>
-<dd> Display program usage.</p>
-<dt>&#8211;info</p>
-<dd> Display some information about how gFTP was built. Please send the output of this command when submitting a bug report.</p>
-<dt>&#8211;version, -v</p>
-<dd> Display the current version of gFTP.</p>
-<dt>proto</p>
-<dd> This specifies the protocol that should be used. It can currently be one of the following options: ftp, ftps, http, https, ssh, fsp, local and bookmark. If omitted, the protocol specified by the default_protocol option will be used.</p>
-<dt>user</p>
-<dd> The username that will be used to log into the remote server. If omitted, your current username will be used for most protocols. For the FTP protocol, the anonymous username will be used.</p>
-<dt>pass</p>
-<dd> The password that will be used to log into the remote server. If omitted, you will be prompted for the password. If you are using the FTP protocol, and the username is anonymous, then your email address will be used as the password.</p>
-<dt>server</p>
-<dd> The remote server to connect to.</p>
-<dt>port</p>
-<dd> The remote port on the server to connect to. If omitted, the default port for the protocol will be used. The port will be looked up in the <code><a href="/docs/linux/man/5-services/">services</a>(5)</code> file.</p>
-<dt>directory</p>
-<dd> The directory to change to once you are connected to the remote server.</dl>
+<dt>&#8211;help, -h</dt>
+<dd> Display program usage.</dd>
+<dt>&#8211;info</dt>
+<dd> Display some information about how gFTP was built. Please send the output of this command when submitting a bug report.</dd>
+<dt>&#8211;version, -v</dt>
+<dd> Display the current version of gFTP.</dd>
+<dt>proto</dt>
+<dd> This specifies the protocol that should be used. It can currently be one of the following options: ftp, ftps, http, https, ssh, fsp, local and bookmark. If omitted, the protocol specified by the default_protocol option will be used.</dd>
+<dt>user</dt>
+<dd> The username that will be used to log into the remote server. If omitted, your current username will be used for most protocols. For the FTP protocol, the anonymous username will be used.</dd>
+<dt>pass</dt>
+<dd> The password that will be used to log into the remote server. If omitted, you will be prompted for the password. If you are using the FTP protocol, and the username is anonymous, then your email address will be used as the password.</dd>
+<dt>server</dt>
+<dd> The remote server to connect to.</dd>
+<dt>port</dt>
+<dd> The remote port on the server to connect to. If omitted, the default port for the protocol will be used. The port will be looked up in the <code><a href="/docs/linux/man/5-services/">services</a>(5)</code> file.</dd>
+<dt>directory</dt>
+<dd> The directory to change to once you are connected to the remote server.</dd></dl>
 <h2>FILES</h2>
 <p> <i>~/.gftp/gftprc</i></p>
 <dl>
 <dt>
-<dd> Per user configuration file. Most of these options can be edited inside gFTP. This file is also commented very well. <i>~/.gftp/bookmarks</i></p>
+</dt><dd> Per user configuration file. Most of these options can be edited inside gFTP. This file is also commented very well. <i>~/.gftp/bookmarks</i></dd>
 <dl>
 <dt>
-<dd> Per user bookmarks file.</dl>
+</dt><dd> Per user bookmarks file.</dd></dl>
 </dl>
 <h2>BUGS</h2>
 <p> If you find any bugs in gFTP, please report them to GNOME&#8217;s Bugzilla at <a rel="nofollow" href="http://bugzilla.gnome.org/">http://bugzilla.gnome.org/</a></p>

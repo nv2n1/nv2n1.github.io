@@ -11,7 +11,6 @@ std::asctime - std::asctime
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;ctime&gt;
-
     char *asctime(const std::tm *time_ptr);</code></pre> 
 Converts given calendar time std::tm to a textual representation of the following fixed 25-character form: Www Mmm dd hh:mm:ss yyyy\n 
 * Www - three-letter English abbreviated day of the week from time_ptr-&gt;tm_wday, one of Mon, Tue, Wed, Thu, Fri, Sat, Sun. 
@@ -43,10 +42,8 @@ Some implementations handle timeptr-&gt;tm_mday==0 as meaning the last day of th
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;ctime&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::time_t result = std::time(nullptr);
     std::cout &lt;&lt; std::asctime(std::localtime(&amp;result));

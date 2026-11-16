@@ -22,38 +22,38 @@ description: "ldconfig – configure dynamic linker run-time bindings"
 <p> Failure to follow this pattern may result in compatibility issues after an upgrade.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-c</code> <i>fmt</i>, <code>&#8211;format=</code><i>fmt</i></p>
-<dd>(Since glibc 2.2) Cache format to use: <i>old</i>, <i>new</i>, or <i>compat</i>. Since glibc 2.32, the default is <i>new</i>. Before that, it was <i>compat</i>.</p>
-<dt><code>-C </code><i>cache</i></p>
-<dd>Use <i>cache</i> instead of <i>/etc/ld.so.cache</i>.</p>
-<dt><code>-f </code><i>conf</i></p>
-<dd>Use <i>conf</i> instead of <i>/etc/ld.so.conf</i>.</p>
-<dt><code>-i</code>, <code>&#8211;ignore-aux-cache</code></p>
-<dd>(Since glibc 2.7) Ignore auxiliary cache file.</p>
-<dt><code>-l</code></p>
-<dd>(Since glibc 2.2) Library mode. Manually link individual libraries. Intended for use by experts only.</p>
-<dt><code>-n</code></p>
-<dd>Process only the directories specified on the command line. Don&#8217;t process the trusted directories, nor those specified in <i>/etc/ld.so.conf</i>. Implies <code>-N</code>.</p>
-<dt><code>-N</code></p>
-<dd>Don&#8217;t rebuild the cache. Unless <code>-X</code> is also specified, links are still updated.</p>
-<dt><code>-p</code>, <code>&#8211;print-cache</code></p>
-<dd>Print the lists of directories and candidate libraries stored in the current cache.</p>
-<dt><code>-r </code><i>root</i></p>
-<dd>Change to and use <i>root</i> as the root directory.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd>Verbose mode. Print current version number, the name of each directory as it is scanned, and any links that are created. Overrides quiet mode.</p>
-<dt><code>-V</code>, <code>&#8211;version</code></p>
-<dd>Print program version.</p>
-<dt><code>-X</code></p>
-<dd>Don&#8217;t update links. Unless <code>-N</code> is also specified, the cache is still rebuilt.</dl>
+<dt><code>-c</code> <i>fmt</i>, <code>&#8211;format=</code><i>fmt</i></dt>
+<dd>(Since glibc 2.2) Cache format to use: <i>old</i>, <i>new</i>, or <i>compat</i>. Since glibc 2.32, the default is <i>new</i>. Before that, it was <i>compat</i>.</dd>
+<dt><code>-C </code><i>cache</i></dt>
+<dd>Use <i>cache</i> instead of <i>/etc/ld.so.cache</i>.</dd>
+<dt><code>-f </code><i>conf</i></dt>
+<dd>Use <i>conf</i> instead of <i>/etc/ld.so.conf</i>.</dd>
+<dt><code>-i</code>, <code>&#8211;ignore-aux-cache</code></dt>
+<dd>(Since glibc 2.7) Ignore auxiliary cache file.</dd>
+<dt><code>-l</code></dt>
+<dd>(Since glibc 2.2) Library mode. Manually link individual libraries. Intended for use by experts only.</dd>
+<dt><code>-n</code></dt>
+<dd>Process only the directories specified on the command line. Don&#8217;t process the trusted directories, nor those specified in <i>/etc/ld.so.conf</i>. Implies <code>-N</code>.</dd>
+<dt><code>-N</code></dt>
+<dd>Don&#8217;t rebuild the cache. Unless <code>-X</code> is also specified, links are still updated.</dd>
+<dt><code>-p</code>, <code>&#8211;print-cache</code></dt>
+<dd>Print the lists of directories and candidate libraries stored in the current cache.</dd>
+<dt><code>-r </code><i>root</i></dt>
+<dd>Change to and use <i>root</i> as the root directory.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd>Verbose mode. Print current version number, the name of each directory as it is scanned, and any links that are created. Overrides quiet mode.</dd>
+<dt><code>-V</code>, <code>&#8211;version</code></dt>
+<dd>Print program version.</dd>
+<dt><code>-X</code></dt>
+<dd>Don&#8217;t update links. Unless <code>-N</code> is also specified, the cache is still rebuilt.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><i>/lib/ld.so</i></p>
-<dd>Run-time linker/loader.</p>
-<dt><i>/etc/ld.so.conf</i></p>
-<dd>File containing a list of directories, one per line, in which to search for libraries.</p>
-<dt><i>/etc/ld.so.cache</i></p>
-<dd>File containing an ordered list of libraries found in the directories specified in <i>/etc/ld.so.conf</i>, as well as those found in the trusted directories.</dl>
+<dt><i>/lib/ld.so</i></dt>
+<dd>Run-time linker/loader.</dd>
+<dt><i>/etc/ld.so.conf</i></dt>
+<dd>File containing a list of directories, one per line, in which to search for libraries.</dd>
+<dt><i>/etc/ld.so.cache</i></dt>
+<dd>File containing an ordered list of libraries found in the directories specified in <i>/etc/ld.so.conf</i>, as well as those found in the trusted directories.</dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-ldd/">ldd</a></code>(1), <code><a href="/docs/linux/man/8-ld-so/">ld.so</a></code>(8)</p>
 <h2>Colophon</h2>

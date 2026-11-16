@@ -16,40 +16,40 @@ description: "sg_read – read multiple blocks of data, optionally with SCSI REA
 <p> The <i>COUNT</i> value may be negative when <i>IFILE</i> is a sg device or is a block device with &#8216;blk_sgio=1&#8217; set. Alternatively &#8216;bpt=0&#8217; may be given. In these cases |<i>COUNT</i>| &quot;zero block&quot; SCSI READ commands are issued. &quot;Zero block&quot; means &quot;do nothing&quot; for SCSI READ 10, 12 and 16 byte commands (but not for the 6 byte variant). In practice &quot;zero block&quot; SCSI READ commands have low latency and so are one way to measure SCSI command overhead.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>blk_sgio</code>=0 | 1</p>
-<dd>The default action of this utility is to use the Unix read() command when the <i>IFILE</i> is a block device. In lk 2.6 many block devices can handle SCSI commands issued via the SG_IO ioctl. So when this option is set the SG_IO ioctl sends SCSI READ commands to <i>IFILE</i> if it is a block device.</p>
-<dt><code>bpt</code>=<i>BPT</i></p>
-<dd>where <i>BPT</i> is the maximum number of blocks each read operation fetches. Fewer blocks will be fetched when the remaining <i>COUNT</i> is less than <i>BPT</i>. The default value for <i>BPT</i> is 128. Note that each read operation starts at the same lba (as given by <i>skip=SKIP</i> or 0). If &#8216;bpt=0&#8217; then the <i>COUNT</i> is interpreted as the number of zero block SCSI READ commands to issue.</p>
-<dt><code>bs</code>=<i>BS</i></p>
-<dd>where <i>BS</i> is the size (in bytes) of each block read. This <code>must</code> be the block size of the physical device (defaults to 512) if SCSI commands are being issued to <i>IFILE</i>.</p>
-<dt><code>cdbsz</code>=6 | 10 | 12 | 16</p>
-<dd>size of SCSI READ commands issued on sg device names, or block devices if &#8216;blk_sgio=1&#8217; is given. Default is 10 byte SCSI READ cdbs.</p>
-<dt><code>count</code>=<i>COUNT</i></p>
-<dd>when <i>COUNT</i> is a positive number, read that number of blocks, typically with multiple read operations. When <i>COUNT</i> is negative then |<i>COUNT</i>| SCSI READ commands are performed requesting zero blocks to be transferred. This option is mandatory.</p>
-<dt><code>dio</code>=0 | 1</p>
-<dd>default is 0 which selects indirect IO. Value of 1 attempts direct IO which, if not available, falls back to indirect IO and notes this at completion. This option is only active if <i>IFILE</i> is an sg device. If direct IO is selected and /proc/scsi/sg/allow_dio has the value of 0 then a warning is issued (and indirect IO is performed)</p>
-<dt><code>dpo</code>=0 | 1</p>
-<dd>when set the disable page out (DPO) bit in SCSI READ commands is set. Otherwise the DPO bit is cleared (default).</p>
-<dt><code>fua</code>=0 | 1</p>
-<dd>when set the force unit access (FUA) bit in SCSI READ commands is set. Otherwise the FUA bit is cleared (default).</p>
-<dt><code>if</code>=<i>IFILE</i></p>
-<dd>read from this <i>IFILE</i>. This argument must be given. If the <i>IFILE</i> is a normal file then it must be seekable (if (<i>COUNT</i> &gt; <i>BPT</i>) or <i>skip=SKIP</i> is given). Hence stdin is not acceptable (and giving &quot;-&quot; as the <i>IFILE</i> argument is reported as an error).</p>
-<dt><code>mmap</code>=0 | 1</p>
-<dd>default is 0 which selects indirect IO. Value of 1 causes memory mapped IO to be performed. Selecting both dio and mmap is an error. This option is only active if <i>IFILE</i> is an sg device.</p>
-<dt><code>no_dxfer</code>=0 | 1</p>
-<dd>when set then DMA transfers from the device are made into kernel buffers but no further (i.e. there is no second copy into the user space). The default value is 0 in which case transfers are made into the user space. When neither mmap nor dio is set then data transfer are copied via kernel buffers (i.e. a double copy). Mainly for testing.</p>
-<dt><code>odir</code>=0 | 1</p>
-<dd>when set opens an <i>IFILE</i> which is a block device with an additional O_DIRECT flag. The default value is 0 (i.e. don&#8217;t open block devices O_DIRECT).</p>
-<dt><code>skip</code>=<i>SKIP</i></p>
-<dd>all read operations will start offset by <i>SKIP</i> bs-sized blocks from the start of the input file (or device).</p>
-<dt><code>time</code>=<i>TI</i></p>
-<dd>When <i>TI</i> is 0 (default) doesn&#8217;t perform timing. When 1, times transfer and does throughput calculation, starting at the first issued command until completion. When 2, times transfer and does throughput calculation, starting at the second issued command until completion. When 3 times from third command, etc. An average number of commands (SCSI READs or Unix read()s) executed per second is also output.</p>
-<dt><code>verbose</code>=<i>VERB</i></p>
-<dd>as <i>VERB</i> increases so does the amount of debug output sent to stderr. Default value is zero which yields the minimum amount of debug output. A value of 1 reports extra information that is not repetitive.</p>
-<dt><code>&#8211;help</code></p>
-<dd>Output the usage message then exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd>Output the version string then exit.</dl>
+<dt><code>blk_sgio</code>=0 | 1</dt>
+<dd>The default action of this utility is to use the Unix read() command when the <i>IFILE</i> is a block device. In lk 2.6 many block devices can handle SCSI commands issued via the SG_IO ioctl. So when this option is set the SG_IO ioctl sends SCSI READ commands to <i>IFILE</i> if it is a block device.</dd>
+<dt><code>bpt</code>=<i>BPT</i></dt>
+<dd>where <i>BPT</i> is the maximum number of blocks each read operation fetches. Fewer blocks will be fetched when the remaining <i>COUNT</i> is less than <i>BPT</i>. The default value for <i>BPT</i> is 128. Note that each read operation starts at the same lba (as given by <i>skip=SKIP</i> or 0). If &#8216;bpt=0&#8217; then the <i>COUNT</i> is interpreted as the number of zero block SCSI READ commands to issue.</dd>
+<dt><code>bs</code>=<i>BS</i></dt>
+<dd>where <i>BS</i> is the size (in bytes) of each block read. This <code>must</code> be the block size of the physical device (defaults to 512) if SCSI commands are being issued to <i>IFILE</i>.</dd>
+<dt><code>cdbsz</code>=6 | 10 | 12 | 16</dt>
+<dd>size of SCSI READ commands issued on sg device names, or block devices if &#8216;blk_sgio=1&#8217; is given. Default is 10 byte SCSI READ cdbs.</dd>
+<dt><code>count</code>=<i>COUNT</i></dt>
+<dd>when <i>COUNT</i> is a positive number, read that number of blocks, typically with multiple read operations. When <i>COUNT</i> is negative then |<i>COUNT</i>| SCSI READ commands are performed requesting zero blocks to be transferred. This option is mandatory.</dd>
+<dt><code>dio</code>=0 | 1</dt>
+<dd>default is 0 which selects indirect IO. Value of 1 attempts direct IO which, if not available, falls back to indirect IO and notes this at completion. This option is only active if <i>IFILE</i> is an sg device. If direct IO is selected and /proc/scsi/sg/allow_dio has the value of 0 then a warning is issued (and indirect IO is performed)</dd>
+<dt><code>dpo</code>=0 | 1</dt>
+<dd>when set the disable page out (DPO) bit in SCSI READ commands is set. Otherwise the DPO bit is cleared (default).</dd>
+<dt><code>fua</code>=0 | 1</dt>
+<dd>when set the force unit access (FUA) bit in SCSI READ commands is set. Otherwise the FUA bit is cleared (default).</dd>
+<dt><code>if</code>=<i>IFILE</i></dt>
+<dd>read from this <i>IFILE</i>. This argument must be given. If the <i>IFILE</i> is a normal file then it must be seekable (if (<i>COUNT</i> &gt; <i>BPT</i>) or <i>skip=SKIP</i> is given). Hence stdin is not acceptable (and giving &quot;-&quot; as the <i>IFILE</i> argument is reported as an error).</dd>
+<dt><code>mmap</code>=0 | 1</dt>
+<dd>default is 0 which selects indirect IO. Value of 1 causes memory mapped IO to be performed. Selecting both dio and mmap is an error. This option is only active if <i>IFILE</i> is an sg device.</dd>
+<dt><code>no_dxfer</code>=0 | 1</dt>
+<dd>when set then DMA transfers from the device are made into kernel buffers but no further (i.e. there is no second copy into the user space). The default value is 0 in which case transfers are made into the user space. When neither mmap nor dio is set then data transfer are copied via kernel buffers (i.e. a double copy). Mainly for testing.</dd>
+<dt><code>odir</code>=0 | 1</dt>
+<dd>when set opens an <i>IFILE</i> which is a block device with an additional O_DIRECT flag. The default value is 0 (i.e. don&#8217;t open block devices O_DIRECT).</dd>
+<dt><code>skip</code>=<i>SKIP</i></dt>
+<dd>all read operations will start offset by <i>SKIP</i> bs-sized blocks from the start of the input file (or device).</dd>
+<dt><code>time</code>=<i>TI</i></dt>
+<dd>When <i>TI</i> is 0 (default) doesn&#8217;t perform timing. When 1, times transfer and does throughput calculation, starting at the first issued command until completion. When 2, times transfer and does throughput calculation, starting at the second issued command until completion. When 3 times from third command, etc. An average number of commands (SCSI READs or Unix read()s) executed per second is also output.</dd>
+<dt><code>verbose</code>=<i>VERB</i></dt>
+<dd>as <i>VERB</i> increases so does the amount of debug output sent to stderr. Default value is zero which yields the minimum amount of debug output. A value of 1 reports extra information that is not repetitive.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd>Output the usage message then exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd>Output the version string then exit.</dd></dl>
 <h2>Notes</h2>
 <p>Various numeric arguments (e.g. <i>SKIP</i>) may include multiplicative suffixes or be given in hexadecimal. See the &quot;NUMERIC ARGUMENTS&quot; section in the <a href="/docs/linux/man/8-sg3_utils/">sg3_utils</a>(8) man page. </p>
 <p> Data usually gets to the user space in a 2 stage process: first the SCSI adapter DMAs into kernel buffers and then the sg driver copies this data into user memory. This is called &quot;indirect IO&quot; and there is a &quot;dio&quot; option to select &quot;direct IO&quot; which will DMA directly into user memory. Due to some issues &quot;direct IO&quot; is disabled in the sg driver and needs a configuration change to activate it. This is typically done with &quot;echo 1 &gt; /proc/scsi/sg/allow_dio&quot;. An alternate way to avoid the 2 stage copy is to select memory mapped IO with &#8216;mmap=1&#8217;.</p>

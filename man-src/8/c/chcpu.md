@@ -18,46 +18,46 @@ description: "chcpu – configure CPUs"
 <h2>Options</h2>
 <p><code>-c</code>, <code>&#8211;configure</code> <i>cpu-list</i></p>
 <dl>
-<dd>Configure the specified CPUs. Configuring a CPU means that the hypervisor takes a CPU from the CPU pool and assigns it to the virtual hardware on which your kernel runs.</dl>
+<dd>Configure the specified CPUs. Configuring a CPU means that the hypervisor takes a CPU from the CPU pool and assigns it to the virtual hardware on which your kernel runs.</dd></dl>
 <p> <code>-d</code>, <code>&#8211;disable</code> <i>cpu-list</i></p>
 <dl>
-<dd>Disable the specified CPUs. Disabling a CPU means that the kernel sets it offline.</dl>
+<dd>Disable the specified CPUs. Disabling a CPU means that the kernel sets it offline.</dd></dl>
 <p> <code>-e</code>, <code>&#8211;enable</code> <i>cpu-list</i></p>
 <dl>
-<dd>Enable the specified CPUs. Enabling a CPU means that the kernel sets it online. A CPU must be configured, see <code>-c</code>, before it can be enabled.</dl>
+<dd>Enable the specified CPUs. Enabling a CPU means that the kernel sets it online. A CPU must be configured, see <code>-c</code>, before it can be enabled.</dd></dl>
 <p> <code>-g</code>, <code>&#8211;deconfigure</code> <i>cpu-list</i></p>
 <dl>
-<dd>Deconfigure the specified CPUs. Deconfiguring a CPU means that the hypervisor removes the CPU from the virtual hardware on which the Linux instance runs and returns it to the CPU pool. A CPU must be offline, see <code>-d</code>, before it can be deconfigured.</dl>
+<dd>Deconfigure the specified CPUs. Deconfiguring a CPU means that the hypervisor removes the CPU from the virtual hardware on which the Linux instance runs and returns it to the CPU pool. A CPU must be offline, see <code>-d</code>, before it can be deconfigured.</dd></dl>
 <p> <code>-p</code>, <code>&#8211;dispatch</code> <i>mode</i></p>
 <dl>
-<dd>Set the CPU dispatching <i>mode</i> (polarization). This option has an effect only if your hardware architecture and hypervisor support CPU polarization. Available <i>modes</i> are: </p>
+<dd>Set the CPU dispatching <i>mode</i> (polarization). This option has an effect only if your hardware architecture and hypervisor support CPU polarization. Available <i>modes</i> are: </dd>
 <p> <code>horizontal</code></p>
 <dl>
-<dd>The workload is spread across all available CPUs.</dl>
+<dd>The workload is spread across all available CPUs.</dd></dl>
 <p> <code>vertical</code></p>
 <dl>
-<dd>The workload is concentrated on few CPUs.</dl>
+<dd>The workload is concentrated on few CPUs.</dd></dl>
 </dl>
 <p> <code>-r</code>, <code>&#8211;rescan</code></p>
 <dl>
-<dd>Trigger a rescan of CPUs. After a rescan, the Linux kernel recognizes the new CPUs. Use this option on systems that do not automatically detect newly attached CPUs.</dl>
+<dd>Trigger a rescan of CPUs. After a rescan, the Linux kernel recognizes the new CPUs. Use this option on systems that do not automatically detect newly attached CPUs.</dd></dl>
 <p> <code>-V</code>, <code>&#8211;version</code></p>
 <dl>
-<dd>Display version information and exit.</dl>
+<dd>Display version information and exit.</dd></dl>
 <p> <code>-h</code>, <code>&#8211;help</code></p>
 <dl>
-<dd>Display help text and exit.</dl>
+<dd>Display help text and exit.</dd></dl>
 <h2>Exit Status</h2>
 <p><code>chcpu</code> has the following exit status values: </p>
 <p> <code>0</code></p>
 <dl>
-<dd>success</dl>
+<dd>success</dd></dl>
 <p> <code>1</code></p>
 <dl>
-<dd>failure</dl>
+<dd>failure</dd></dl>
 <p> <code>64</code></p>
 <dl>
-<dd>partial success</dl>
+<dd>partial success</dd></dl>
 <h2>Authors</h2>
 <h2>Copyright</h2>
 <p>Copyright IBM Corp. 2011</p>

@@ -10,56 +10,56 @@ description: "ocf_heartbeat_Delay – Waits for a defined timespan"
 <p>ocf_heartbeat_Delay &#8211; Waits for a defined timespan</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>Delay</code> [start | stop | status | monitor | meta-data | validate-all]</dl>
+<dt> <code>Delay</code> [start | stop | status | monitor | meta-data | validate-all]</dt></dl>
 <h2>Description</h2>
-<dd>This script is a test resource for introducing delay.</p>
+<dd>This script is a test resource for introducing delay.</dd>
 <h2>Supported Parameters</h2>
 <p><code>startdelay</code></p>
 <dl>
-<dd>How long in seconds to delay on start operation. </p>
+<dd>How long in seconds to delay on start operation. </dd>
 <p> (optional, integer, default 30)</dl>
 <p> <code>stopdelay</code></p>
 <dl>
-<dd>How long in seconds to delay on stop operation. Defaults to &quot;startdelay&quot; if unspecified. </p>
+<dd>How long in seconds to delay on stop operation. Defaults to &quot;startdelay&quot; if unspecified. </dd>
 <p> (optional, integer, default 30)</dl>
 <p> <code>mondelay</code></p>
 <dl>
-<dd>How long in seconds to delay on monitor operation. Defaults to &quot;startdelay&quot; if unspecified. </p>
+<dd>How long in seconds to delay on monitor operation. Defaults to &quot;startdelay&quot; if unspecified. </dd>
 <p> (optional, integer, default 30)</dl>
 <h2>Supported Actions</h2>
 <p>This resource agent supports the following actions (operations): </p>
 <p> <code>start</code></p>
 <dl>
-<dd>Starts the resource. Suggested minimum timeout: 30.</dl>
+<dd>Starts the resource. Suggested minimum timeout: 30.</dd></dl>
 <p> <code>stop</code></p>
 <dl>
-<dd>Stops the resource. Suggested minimum timeout: 30.</dl>
+<dd>Stops the resource. Suggested minimum timeout: 30.</dd></dl>
 <p> <code>status</code></p>
 <dl>
-<dd>Performs a status check. Suggested minimum timeout: 30. Suggested interval: 10.</dl>
+<dd>Performs a status check. Suggested minimum timeout: 30. Suggested interval: 10.</dd></dl>
 <p> <code>monitor</code></p>
 <dl>
-<dd>Performs a detailed status check. Suggested minimum timeout: 30. Suggested interval: 10.</dl>
+<dd>Performs a detailed status check. Suggested minimum timeout: 30. Suggested interval: 10.</dd></dl>
 <p> <code>meta-data</code></p>
 <dl>
-<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dl>
+<dd>Retrieves resource agent metadata (internal use only). Suggested minimum timeout: 5.</dd></dl>
 <p> <code>validate-all</code></p>
 <dl>
-<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 5.</dl>
+<dd>Performs a validation of the resource configuration. Suggested minimum timeout: 5.</dd></dl>
 <h2>Example Crm Shell</h2>
 <p>The following is an example configuration for a Delay resource using the <code>crm</code>(8) shell: </p>
 <dl>
 <dd>
 <pre>primitive p_Delay ocf:heartbeat:Delay \
  op monitor depth=&quot;0&quot; timeout=&quot;30&quot; interval=&quot;10&quot; </pre>
-</dl>
+</dd></dl>
 <h2>Example Pcs</h2>
 <p>The following is an example configuration for a Delay resource using <code><a href="/docs/linux/man/8-pcs/">pcs</a></code>(8) </p>
 <dl>
 <dd>
 <pre>pcs resource create p_Delay ocf:heartbeat:Delay \
  op monitor depth=&quot;0&quot; timeout=&quot;30&quot; interval=&quot;10&quot; </pre>
-</dl>
+</dd></dl>
 <h2>See Also</h2>
 <p>m[blue]<code><a rel="nofollow" href="http://www.linux-ha.org/wiki/Delay_(resource_agent)">http://www.linux-ha.org/wiki/Delay_(resource_agent)</a></code>m[]</p>
 <h2>Author</h2>

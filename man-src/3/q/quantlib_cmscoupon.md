@@ -21,6 +21,6 @@ description: "QuantLib::CmsCoupon – CMS coupon class."
 <p>CMS coupon class. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>This class does not perform any date adjustment, i.e., the start and end date passed upon construction should be already rolled to a business day.</dl>
+<dd>This class does not perform any date adjustment, i.e., the start and end date passed upon construction should be already rolled to a business day.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

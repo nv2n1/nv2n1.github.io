@@ -34,7 +34,7 @@ description: "include/antlr3rewritestreams.h –"
 <p> <code>See also:</code></p>
 <dl>
 <dt>
-<dd> <code>pANTLR3_REWRITE_RULE_NODE_STREAM</code> </p>
+</dt><dd> <code>pANTLR3_REWRITE_RULE_NODE_STREAM</code> </dd>
 <p> <code>pANTLR3_REWRITE_RULE_ELEMENT_STREAM</code> </p>
 <p> <code>pANTLR3_REWRITE_RULE_SUBTREE_STREAM</code></dl>
 <p> TODO: add mechanism to detect/puke on modification after reading from stream</p>
@@ -47,5 +47,5 @@ description: "include/antlr3rewritestreams.h –"
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
 <h2>Index</h2>
-<dt><a href="#lbAK">Author</a></p>
-<dd></dl>
+<dt><a href="#lbAK">Author</a></dt>
+<dd></dd></dl>

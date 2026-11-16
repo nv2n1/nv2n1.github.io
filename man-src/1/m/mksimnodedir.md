@@ -14,10 +14,10 @@ description: "mkSimNodeDir – Create a /proc like files for a simulated node"
 <p>This utility build the /proc like file tree for the given node based on the guids dump file produced by the simulator.</p>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt>-n node-name</p>
-<dd>The node name to create the files for.</p>
-<dt>-g sim-guids-file</p>
-<dd>Dump file to use. default is ./ibmgtsim.guids.txt</dl>
+<dt>-n node-name</dt>
+<dd>The node name to create the files for.</dd>
+<dt>-g sim-guids-file</dt>
+<dd>Dump file to use. default is ./ibmgtsim.guids.txt</dd></dl>
 <h2>Limitations</h2>
 <p>Only HCAs are supported. </p>
 <p> Single <font SIZE="-1">HCA</font> per guid.</p>

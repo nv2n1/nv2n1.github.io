@@ -17,30 +17,30 @@ description: "nemo – the Cinnamon File Manager"
 <h2>OPTIONS</h2>
 <p> Nemo follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>
 <dl>
-<dt><code>-c</code></p>
+<dt><code>-c</code></dt>
 <dd>
-<dt><code>&#8211;check</code></p>
-<dd> Perform a quick set of self-check tests.</p>
-<dt><code>-g</code></p>
+</dd><dt><code>&#8211;check</code></dt>
+<dd> Perform a quick set of self-check tests.</dd>
+<dt><code>-g</code></dt>
 <dd>
-<dt><code>&#8211;geometry=</code><i>GEOMETRY</i></p>
-<dd> Create the initial window with the given geometry.</p>
-<dt><code>-n</code></p>
+</dd><dt><code>&#8211;geometry=</code><i>GEOMETRY</i></dt>
+<dd> Create the initial window with the given geometry.</dd>
+<dt><code>-n</code></dt>
 <dd>
-<dt><code>&#8211;no-default-window</code></p>
-<dd> Only create windows for explicitly specified URIs.</p>
-<dt><code>&#8211;no-desktop</code></p>
-<dd> Do not manage the desktop &#8212; ignore the preference set in the preferences dialog.</p>
-<dt><code>-q</code></p>
+</dd><dt><code>&#8211;no-default-window</code></dt>
+<dd> Only create windows for explicitly specified URIs.</dd>
+<dt><code>&#8211;no-desktop</code></dt>
+<dd> Do not manage the desktop &#8212; ignore the preference set in the preferences dialog.</dd>
+<dt><code>-q</code></dt>
 <dd>
-<dt><code>&#8211;quit</code></p>
-<dd> Quit Nemo.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show a summary of options.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show Nemo&#8217; version.</p>
-<dt>Other standard GNOME options not listed here are also supported.</p>
-<dd></dl>
+</dd><dt><code>&#8211;quit</code></dt>
+<dd> Quit Nemo.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show a summary of options.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show Nemo&#8217; version.</dd>
+<dt>Other standard GNOME options not listed here are also supported.</dt>
+<dd></dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was originally written for Nautilus by Takuo KITAME &lt;kitame [at] debian.org&gt; and Dafydd Harries &lt;daf [at] muse.19inch.net&gt; for the Debian GNU/Linux system (but may be used by others). </p>
 <h2>Index</h2>

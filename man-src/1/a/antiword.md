@@ -17,58 +17,56 @@ description: "antiword – show the text and images of MS Word documents"
  Only documents made by MS Word version 2 and version 6 or later are supported.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-a </code><i>papersize</i></p>
-<dd> Output in Adobe PDF form. Printable on paper of the specified size: 10&#215;14, a3, a4, a5, b4, b5, executive, folio, legal, letter, note, quarto, statement or tabloid.</p>
-<dt><code>-f</code></p>
-<dd> Output in formatted text form. That means that bold text is printed like *bold*, italics like /italics/ and underlined text as _underlined_.</p>
-<dt><code>-h</code></p>
-<dd> Give a help message.</p>
-<dt><code>-i </code><i>image level</i></p>
-<dd> The image level determines how images will be shown.</p>
+<dt><code>-a </code><i>papersize</i></dt>
+<dd> Output in Adobe PDF form. Printable on paper of the specified size: 10&#215;14, a3, a4, a5, b4, b5, executive, folio, legal, letter, note, quarto, statement or tabloid.</dd>
+<dt><code>-f</code></dt>
+<dd> Output in formatted text form. That means that bold text is printed like *bold*, italics like /italics/ and underlined text as _underlined_.</dd>
+<dt><code>-h</code></dt>
+<dd> Give a help message.</dd>
+<dt><code>-i </code><i>image level</i></dt>
+<dd> The image level determines how images will be shown.</dd>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>0:</p>
-<dd> Use non-standard extensions from Ghostscript. This output may not print on any PostScript printer, but is useful in case no hard copy is needed. It is also useful when Ghostscript is used as a filter to print a PostScript file to a non-PostScript printer.</p>
-<dt>1:</p>
-<dd> Show no images.</p>
-<dt>2:</p>
-<dd> PostScript level 2 compatible. (default)</p>
-<dt>3:</p>
-<dd> PostScript level 3 compatible. (EXPERIMENTAL, Portable Network Graphics (PNG) images are not printed correctly)</dl>
+<dt>0:</dt>
+<dd> Use non-standard extensions from Ghostscript. This output may not print on any PostScript printer, but is useful in case no hard copy is needed. It is also useful when Ghostscript is used as a filter to print a PostScript file to a non-PostScript printer.</dd>
+<dt>1:</dt>
+<dd> Show no images.</dd>
+<dt>2:</dt>
+<dd> PostScript level 2 compatible. (default)</dd>
+<dt>3:</dt>
+<dd> PostScript level 3 compatible. (EXPERIMENTAL, Portable Network Graphics (PNG) images are not printed correctly)</dd></dl>
 </dl>
-<dt><code>-m </code><i>mapping file</i></p>
-<dd> This file is used to map Unicode characters to your local character set. The default mapping file depends on the locale.</p>
-<dt><code>-p </code><i>papersize</i></p>
-<dd> Output in PostScript form. Printable on paper of the specified size: 10&#215;14, a3, a4, a5, b4, b5, executive, folio, legal, letter, note, quarto, statement or tabloid.</p>
-<dt><code>-r</code></p>
-<dd> Include text removed by the revisioning system.</p>
-<dt><code>-s</code></p>
-<dd> Include text with the so-called &quot;hidden text&quot; attribute.</p>
-<dt><code>-t</code></p>
-<dd> Output in text form. (default)</p>
-<dt><code>-w </code><i>width</i></p>
-<dd> In text mode this is the line width in characters. A value of zero puts an entire paragraph on a line, useful when the text is to used as input for another wordprocessor. This value is ignored in PostScript mode.</p>
-<dt><code>-x </code><i>document type definition</i></p>
-<dd> Output in XML form. Currently the only document type definition is db (for DocBook).</p>
-<dt><code>-L</code></p>
-<dd> In PostScript mode: use landscape mode.</dl>
+<dt><code>-m </code><i>mapping file</i></dt>
+<dd> This file is used to map Unicode characters to your local character set. The default mapping file depends on the locale.</dd>
+<dt><code>-p </code><i>papersize</i></dt>
+<dd> Output in PostScript form. Printable on paper of the specified size: 10&#215;14, a3, a4, a5, b4, b5, executive, folio, legal, letter, note, quarto, statement or tabloid.</dd>
+<dt><code>-r</code></dt>
+<dd> Include text removed by the revisioning system.</dd>
+<dt><code>-s</code></dt>
+<dd> Include text with the so-called &quot;hidden text&quot; attribute.</dd>
+<dt><code>-t</code></dt>
+<dd> Output in text form. (default)</dd>
+<dt><code>-w </code><i>width</i></dt>
+<dd> In text mode this is the line width in characters. A value of zero puts an entire paragraph on a line, useful when the text is to used as input for another wordprocessor. This value is ignored in PostScript mode.</dd>
+<dt><code>-x </code><i>document type definition</i></dt>
+<dd> Output in XML form. Currently the only document type definition is db (for DocBook).</dd>
+<dt><code>-L</code></dt>
+<dd> In PostScript mode: use landscape mode.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt>Mapping files like 8859-1.txt</p>
+<dt>Mapping files like 8859-1.txt</dt>
 <dd>
  Antiword looks for its mapping files in three directories, in the order given:<br />
  (1) The directory specified by $ANTIWORDHOME<br />
  (2) The directory specified by $HOME/.antiword<br />
- (3) Directory /usr/share/antiword</p>
-<dt>The fontnames file</p>
+ (3) Directory /usr/share/antiword</dd>
+<dt>The fontnames file</dt>
 <dd>
  Antiword will look for its fontname file in the same directories as used for the mapping files.<br />
- The fontnames file contains the translation table from font names used by MS Word to font names used by PostScript.</p>
-<dt>NOTE:</p>
+ The fontnames file contains the translation table from font names used by MS Word to font names used by PostScript.</dd>
+<dt>NOTE:</dt>
 <dd>
- Antiword cannot tell the difference between a file that does not exist and a file that cannot be opened for reading.</dl>
+ Antiword cannot tell the difference between a file that does not exist and a file that cannot be opened for reading.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <p> Antiword uses the environment variable &#8220;ANTIWORDHOME&#8221; as the first directory to look for its files. Antiword uses the environment variable &#8220;HOME&#8221; to find the user&#8217;s home directory. When in text mode it uses the variable &#8220;COLUMNS&#8221; to set the width of the output (unless overridden by the -w option). </p>
 <p> Antiword uses the environment variables &#8220;LC_ALL&#8221;, &#8220;LC_CTYPE&#8221; and &#8220;LANG&#8221; (in that order) to get the current locale and uses this information to select the default mapping file.</p>

@@ -15,17 +15,17 @@ description: "SPI_execp – execute a statement in read/write mode"
 <h2>Arguments</h2>
 <p>SPIPlanPtr <i>plan</i></p>
 <dl COMPACT>
-<dd>prepared statement (returned by <code>SPI_prepare</code>)</dl>
+<dd>prepared statement (returned by <code>SPI_prepare</code>)</dd></dl>
 <p> Datum * <i>values</i></p>
 <dl COMPACT>
-<dd>An array of actual parameter values. Must have same length as the statement&#8217;s number of arguments.</dl>
+<dd>An array of actual parameter values. Must have same length as the statement&#8217;s number of arguments.</dd></dl>
 <p> const char * <i>nulls</i></p>
 <dl COMPACT>
-<dd>An array describing which parameters are null. Must have same length as the statement&#8217;s number of arguments. n indicates a null value (entry in <i>values</i> will be ignored); a space indicates a nonnull value (entry in <i>values</i> is valid). </p>
+<dd>An array describing which parameters are null. Must have same length as the statement&#8217;s number of arguments. n indicates a null value (entry in <i>values</i> will be ignored); a space indicates a nonnull value (entry in <i>values</i> is valid). </dd>
 <p> If <i>nulls</i> is NULL then <code>SPI_execp</code> assumes that no parameters are null.</dl>
 <p> long <i>count</i></p>
 <dl COMPACT>
-<dd>maximum number of rows to return, or 0 for no limit</dl>
+<dd>maximum number of rows to return, or 0 for no limit</dd></dl>
 <h2>Return Value</h2>
 <p>See <code>SPI_execute_plan</code>. </p>
 <p> <i>SPI_processed</i> and <i>SPI_tuptable</i> are set as in <code>SPI_execute</code> if successful.</p>

@@ -16,4 +16,4 @@ description: "SPI_cursor_close – close a cursor"
 <h2>Arguments</h2>
 <p>Portal <i>portal</i></p>
 <dl COMPACT>
-<dd>portal containing the cursor</dl>
+<dd>portal containing the cursor</dd></dl>

@@ -55,10 +55,8 @@ POSIX_specifies that in case of underflow, y/x is the value returned, and if tha
 <h2>Example</h2>
 <p>// Run this code </p>
 <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cmath&gt;
 int main()
-
 {
     // normal usage: the signs of the two arguments determine the quadrant
     std::cout &lt;&lt; &quot;(+1,+1) cartesian is (&quot; &lt;&lt; hypot(1, 1)

@@ -15,23 +15,23 @@ rpc_call_async - Perform an asynchronous RPC call
 <h2>Arguments</h2>
 
 <i>clnt</i>
-<dl><dd><dd>pointer to RPC client</dl>
+<dl><dd></dd><dd>pointer to RPC client</dd></dl>
  
 
  <i>msg</i>
-<dl><dd>RPC call parameters</dl>
+<dl><dd>RPC call parameters</dd></dl>
  
 
  <i>flags</i>
-<dl><dd>RPC call flags</dl>
+<dl><dd>RPC call flags</dd></dl>
  
 
  <i>tk_ops</i>
-<dl><dd>RPC call ops</dl>
+<dl><dd>RPC call ops</dd></dl>
  
 
  <i>data</i>
-<dl><dd>user call data</dl>
+<dl><dd>user call data</dd></dl>
 
 <h2>Copyright</h2>
 

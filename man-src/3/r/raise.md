@@ -10,7 +10,6 @@ description: "raise – send a signal to the caller"
 <p>raise &#8211; send a signal to the caller</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;signal.h&gt;
-
 int raise(int sig);</code></pre>
 <h2>Description</h2>
 <p>The <code>raise</code>() function sends a signal to the calling process or thread. In a single-threaded program it is equivalent to </p>

@@ -19,7 +19,7 @@ description: "dposvxx.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 DPOSVXX uses the Cholesky factorization A = U **T *U or A = L *L **T
                                                 to compute the solution to a double precision system of linear equations
@@ -32,11 +32,11 @@ see the definitions of the FACT and EQUED options.Solving with refinement and us
     user-provided factorizations and equilibration factors if they
     differ from what DPOSVXX would itself produce.
 </code></pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Description: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <p>    The following steps are performed:<br />
     1. If FACT = &#8216;E&#8217;, double precision scaling factors are computed to equilibrate<br />
     the system:<br />
@@ -74,11 +74,11 @@ see the definitions of the FACT and EQUED options.Solving with refinement and us
      can pass NPARAMS = 0 which prevents the source code from accessing
      the PARAMS argument.
 </pre>
-</dl>
+</dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>FACT</i> </p>
+</dt><dd> <i>FACT</i> </dd>
 <pre>
           FACT is CHARACTER*1
      Specifies whether or not the factored form of the matrix A is
@@ -367,14 +367,14 @@ if EQUED<br />
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> April 2012</dl>
+</dt><dd> April 2012</dd></dl>
 <p> Definition at line 492 of file dposvxx.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>

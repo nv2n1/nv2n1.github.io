@@ -17,14 +17,14 @@ description: "QuantLib::SphereCylinderOptimizer –"
 <p> bool <code>findByProjection</code> (<code>Real</code> &amp;y1, <code>Real</code> &amp;y2, <code>Real</code> &amp;y3) const </p>
 <h2>Detailed Description</h2>
 <dl COMPACT>
-<dt>*</p>
-<dd>we are in r^3 sphere centred at O radius r</p>
-<dt> *</p>
-<dd>vertical cylinder centred at (alpha,0) radius s</p>
-<dt> *</p>
-<dd>Z some point in R3</p>
-<dt> *</p>
-<dd>find point on intersection that is closest to Z</dl>
+<dt>*</dt>
+<dd>we are in r^3 sphere centred at O radius r</dd>
+<dt> *</dt>
+<dd>vertical cylinder centred at (alpha,0) radius s</dd>
+<dt> *</dt>
+<dd>Z some point in R3</dd>
+<dt> *</dt>
+<dd>find point on intersection that is closest to Z</dd></dl>
 <p> the intersection may be empty! </p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

@@ -16,18 +16,18 @@ description: "IBSTATUS –"
 <h3>Options</h3>
 <p><code>-h, &#8211;help</code> show the usage message</p>
 <dl>
-<dt><code>devname</code></p>
-<dd>InfiniBand device name</p>
-<dt><code>portnum</code></p>
-<dd>port number of InfiniBand device</dl>
+<dt><code>devname</code></dt>
+<dd>InfiniBand device name</dd>
+<dt><code>portnum</code></dt>
+<dd>port number of InfiniBand device</dd></dl>
 <h3>Examples</h3>
 <dl>
-<dt><code>::</code></p>
-<dd>ibstatus # display status of all IB ports ibstatus mthca1 # status of mthca1 ports ibstatus mthca1:1 mthca0:2 # show status of specified ports</dl>
+<dt><code>::</code></dt>
+<dd>ibstatus # display status of all IB ports ibstatus mthca1 # status of mthca1 ports ibstatus mthca1:1 mthca0:2 # show status of specified ports</dd></dl>
 <h3>See Also</h3>
 <p><code>ibstat (8)</code></p>
 <h3>Author</h3>
 <dl>
-<dt><code>Hal Rosenstock</code></p>
-<dd>&lt; <i>halr [at] voltaire.com</i> &gt; </p>
+<dt><code>Hal Rosenstock</code></dt>
+<dd>&lt; <i>halr [at] voltaire.com</i> &gt; </dd>
 </dl>

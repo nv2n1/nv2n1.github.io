@@ -14,11 +14,9 @@ description: "npm-bundle – REMOVED"
 <p> Just use <code>npm install</code> now to do what <code>npm bundle</code> used to do.</p>
 <h3>See Also</h3>
 <dl>
-<dt>
-<dd>
 <dl>
-<dt>&bull;</p>
-<dd> npm help install </p>
+<dt>&bull;</dt>
+<dd> npm help install </dd>
 </dl>
 </dl>
 <h2>Index</h2>

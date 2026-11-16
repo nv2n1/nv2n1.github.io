@@ -14,14 +14,14 @@ description: "ata_qc_new_init – Request an available ATA command, and initiali
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>Device from whom we request an available command structure</dl>
+</dd><dd>Device from whom we request an available command structure</dd></dl>
 <p> <i>tag</i></p>
 <dl>
-<dd>tag</dl>
+<dd>tag</dd></dl>
 <h2>Description</h2>
 <p>LOCKING: None.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

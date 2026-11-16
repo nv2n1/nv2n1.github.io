@@ -10,25 +10,13 @@ description: "QuantLib::EarlyExercisePathPricer – base class for early exercis
 <p>QuantLib::EarlyExercisePathPricer &#8211; base class for early exercise path pricers </p>
 <h2>Synopsis</h2>
 <pre><code>virtual ValueType operator() (const PathType &amp;path, TimeType t) const =0
-
-
-
 virtual StateType state (const PathType &amp;path, TimeType t) const =0
-
-
-
 virtual std::vector&lt; boost::function1&lt; ValueType, StateType &gt; &gt; basisSystem () const =0</code></pre>
 <h3>Public Types</h3>
 <p>typedef EarlyExerciseTraits&lt; PathType &gt;::StateType <code>StateType</code></p>
 <h3>Public Member Functions</h3>
 <pre><code>virtual ValueType operator() (const PathType &amp;path, TimeType t) const =0
-
-
-
 virtual StateType state (const PathType &amp;path, TimeType t) const =0
-
-
-
 virtual std::vector&lt; boost::function1&lt; ValueType, StateType &gt; &gt; basisSystem () const =0</code></pre>
 <h2>Detailed Description</h2>
 <h3>template&lt;class PathType, class TimeType = Size, class ValueType = Real&gt; class QuantLib::EarlyExercisePathPricer&lt; PathType, TimeType, ValueType &gt;</h3>

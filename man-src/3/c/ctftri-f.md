@@ -21,10 +21,10 @@ description: "ctftri.f –"
 <pre> CTFTRI computes the inverse of a triangular matrix A stored in RFP
  format.
  This is a Level 3 BLAS version of the algorithm.</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
-<dd><i>TRANSR</i> </p>
+<dd><i>TRANSR</i> </dd>
 <pre> TRANSR is CHARACTER*1
  = 'N': The Normal TRANSR of RFP A is stored;
  = 'C': The Conjugate-transpose TRANSR of RFP A is stored.</pre>
@@ -63,13 +63,13 @@ description: "ctftri.f –"
 <p>&nbsp;<wbr></dl>
 <p> <code>Author:</code></p>
 <dl COMPACT>
-<dd>Univ. of Tennessee </p>
+<dd>Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl COMPACT>
-<dd>November 2011</dl>
+<dd>November 2011</dd></dl>
 <p> <code>Further Details: </code></p>
 <dl COMPACT>
 <dd>
@@ -150,7 +150,8 @@ description: "ctftri.f –"
  03 13 23 33 11 33 11 21 31 41 51
  -- -- -- -- -- -- -- -- --
  04 14 24 34 44 43 44 22 32 42 52</pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> Definition at line 222 of file ctftri.f.</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for LAPACK from the source code.</p>
+</p>

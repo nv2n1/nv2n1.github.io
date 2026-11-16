@@ -37,33 +37,33 @@ description: "cmake-commands – CMake Language Command Reference"
  COMMAND</pre>
 <p>The options are:</p>
 <dl>
-<dt><code>APPEND</code></p>
-<dd>Append the <code>COMMAND</code> and <code>DEPENDS</code> option values to the custom command for the first output specified. There must have already been a previous call to this command with the same output. The <code>COMMENT</code>, <code>MAIN_DEPENDENCY</code>, and <code>WORKING_DIRECTORY</code> options are currently ignored when APPEND is given, but may be used in the future.</p>
-<dt><code>BYPRODUCTS</code></p>
-<dd>Specify the files the command is expected to produce but whose modification time may or may not be newer than the dependencies. If a byproduct name is a relative path it will be interpreted relative to the build tree directory corresponding to the current source directory. Each byproduct file will be marked with the <code>GENERATED</code> source file property automatically. </p>
+<dt><code>APPEND</code></dt>
+<dd>Append the <code>COMMAND</code> and <code>DEPENDS</code> option values to the custom command for the first output specified. There must have already been a previous call to this command with the same output. The <code>COMMENT</code>, <code>MAIN_DEPENDENCY</code>, and <code>WORKING_DIRECTORY</code> options are currently ignored when APPEND is given, but may be used in the future.</dd>
+<dt><code>BYPRODUCTS</code></dt>
+<dd>Specify the files the command is expected to produce but whose modification time may or may not be newer than the dependencies. If a byproduct name is a relative path it will be interpreted relative to the build tree directory corresponding to the current source directory. Each byproduct file will be marked with the <code>GENERATED</code> source file property automatically. </dd>
 <p> Explicit specification of byproducts is supported by the <code>Ninja</code> generator to tell the <code>ninja</code> build tool how to regenerate byproducts when they are missing. It is also useful when other build rules (e.g. custom commands) depend on the byproducts. Ninja requires a build rule for any generated file on which another rule depends even if there are order-only dependencies to ensure the byproducts will be available before their dependents build. </p>
 <p> The <code>BYPRODUCTS</code> option is ignored on non-Ninja generators except to mark byproducts <code>GENERATED</code>.</p>
-<dt><code>COMMAND</code></p>
-<dd>Specify the command-line(s) to execute at build time. If more than one <code>COMMAND</code> is specified they will be executed in order, but <i>not</i> necessarily composed into a stateful shell or batch script. (To run a full script, use the <code>configure_file()</code> command or the <code>file(GENERATE)</code> command to create it, and then specify a <code>COMMAND</code> to launch it.) The optional <code>ARGS</code> argument is for backward compatibility and will be ignored. </p>
+<dt><code>COMMAND</code></dt>
+<dd>Specify the command-line(s) to execute at build time. If more than one <code>COMMAND</code> is specified they will be executed in order, but <i>not</i> necessarily composed into a stateful shell or batch script. (To run a full script, use the <code>configure_file()</code> command or the <code>file(GENERATE)</code> command to create it, and then specify a <code>COMMAND</code> to launch it.) The optional <code>ARGS</code> argument is for backward compatibility and will be ignored. </dd>
 <p> If <code>COMMAND</code> specifies an executable target name (created by the <code>add_executable()</code> command) it will automatically be replaced by the location of the executable created at build time. If set, the <code>CROSSCOMPILING_EMULATOR</code> executable target property will also be prepended to the command to allow the executable to run on the host. (Use the <code>TARGET_FILE</code> <code>generator expression</code> to reference an executable later in the command line.) Additionally a target-level dependency will be added so that the executable target will be built before any target using this custom command. However this does NOT add a file-level dependency that would cause the custom command to re-run whenever the executable is recompiled. </p>
 <p> Arguments to <code>COMMAND</code> may use <code>generator expressions</code>. References to target names in generator expressions imply target-level dependencies, but NOT file-level dependencies. List target names with the <code>DEPENDS</code> option to add file-level dependencies.</p>
-<dt><code>COMMENT</code></p>
-<dd>Display the given message before the commands are executed at build time.</p>
-<dt><code>DEPENDS</code></p>
-<dd>Specify files on which the command depends. If any dependency is an <code>OUTPUT</code> of another custom command in the same directory (<code>CMakeLists.txt</code> file) CMake automatically brings the other custom command into the target in which this command is built. If <code>DEPENDS</code> is not specified the command will run whenever the <code>OUTPUT</code> is missing; if the command does not actually create the <code>OUTPUT</code> then the rule will always run. If <code>DEPENDS</code> specifies any target (created by the <code>add_custom_target()</code>, <code>add_executable()</code>, or <code>add_library()</code> command) a target-level dependency is created to make sure the target is built before any target using this custom command. Additionally, if the target is an executable or library a file-level dependency is created to cause the custom command to re-run whenever the target is recompiled. </p>
+<dt><code>COMMENT</code></dt>
+<dd>Display the given message before the commands are executed at build time.</dd>
+<dt><code>DEPENDS</code></dt>
+<dd>Specify files on which the command depends. If any dependency is an <code>OUTPUT</code> of another custom command in the same directory (<code>CMakeLists.txt</code> file) CMake automatically brings the other custom command into the target in which this command is built. If <code>DEPENDS</code> is not specified the command will run whenever the <code>OUTPUT</code> is missing; if the command does not actually create the <code>OUTPUT</code> then the rule will always run. If <code>DEPENDS</code> specifies any target (created by the <code>add_custom_target()</code>, <code>add_executable()</code>, or <code>add_library()</code> command) a target-level dependency is created to make sure the target is built before any target using this custom command. Additionally, if the target is an executable or library a file-level dependency is created to cause the custom command to re-run whenever the target is recompiled. </dd>
 <p> Arguments to <code>DEPENDS</code> may use <code>generator expressions</code>.</p>
-<dt><code>IMPLICIT_DEPENDS</code></p>
-<dd>Request scanning of implicit dependencies of an input file. The language given specifies the programming language whose corresponding dependency scanner should be used. Currently only <code>C</code> and <code>CXX</code> language scanners are supported. The language has to be specified for every file in the <code>IMPLICIT_DEPENDS</code> list. Dependencies discovered from the scanning are added to those of the custom command at build time. Note that the <code>IMPLICIT_DEPENDS</code> option is currently supported only for Makefile generators and will be ignored by other generators.</p>
-<dt><code>MAIN_DEPENDENCY</code></p>
-<dd>Specify the primary input source file to the command. This is treated just like any value given to the <code>DEPENDS</code> option but also suggests to Visual Studio generators where to hang the custom command. At most one custom command may specify a given source file as its main dependency.</p>
-<dt><code>OUTPUT</code></p>
-<dd>Specify the output files the command is expected to produce. If an output name is a relative path it will be interpreted relative to the build tree directory corresponding to the current source directory. Each output file will be marked with the <code>GENERATED</code> source file property automatically. If the output of the custom command is not actually created as a file on disk it should be marked with the <code>SYMBOLIC</code> source file property.</p>
-<dt><code>USES_TERMINAL</code></p>
-<dd>The command will be given direct access to the terminal if possible. With the <code>Ninja</code> generator, this places the command in the <code>console</code> <code>pool</code>.</p>
-<dt><code>VERBATIM</code></p>
-<dd>All arguments to the commands will be escaped properly for the build tool so that the invoked command receives each argument unchanged. Note that one level of escapes is still used by the CMake language processor before add_custom_command even sees the arguments. Use of <code>VERBATIM</code> is recommended as it enables correct behavior. When <code>VERBATIM</code> is not given the behavior is platform specific because there is no protection of tool-specific special characters.</p>
-<dt><code>WORKING_DIRECTORY</code></p>
-<dd>Execute the command with the given current working directory. If it is a relative path it will be interpreted relative to the build tree directory corresponding to the current source directory.</dl>
+<dt><code>IMPLICIT_DEPENDS</code></dt>
+<dd>Request scanning of implicit dependencies of an input file. The language given specifies the programming language whose corresponding dependency scanner should be used. Currently only <code>C</code> and <code>CXX</code> language scanners are supported. The language has to be specified for every file in the <code>IMPLICIT_DEPENDS</code> list. Dependencies discovered from the scanning are added to those of the custom command at build time. Note that the <code>IMPLICIT_DEPENDS</code> option is currently supported only for Makefile generators and will be ignored by other generators.</dd>
+<dt><code>MAIN_DEPENDENCY</code></dt>
+<dd>Specify the primary input source file to the command. This is treated just like any value given to the <code>DEPENDS</code> option but also suggests to Visual Studio generators where to hang the custom command. At most one custom command may specify a given source file as its main dependency.</dd>
+<dt><code>OUTPUT</code></dt>
+<dd>Specify the output files the command is expected to produce. If an output name is a relative path it will be interpreted relative to the build tree directory corresponding to the current source directory. Each output file will be marked with the <code>GENERATED</code> source file property automatically. If the output of the custom command is not actually created as a file on disk it should be marked with the <code>SYMBOLIC</code> source file property.</dd>
+<dt><code>USES_TERMINAL</code></dt>
+<dd>The command will be given direct access to the terminal if possible. With the <code>Ninja</code> generator, this places the command in the <code>console</code> <code>pool</code>.</dd>
+<dt><code>VERBATIM</code></dt>
+<dd>All arguments to the commands will be escaped properly for the build tool so that the invoked command receives each argument unchanged. Note that one level of escapes is still used by the CMake language processor before add_custom_command even sees the arguments. Use of <code>VERBATIM</code> is recommended as it enables correct behavior. When <code>VERBATIM</code> is not given the behavior is platform specific because there is no protection of tool-specific special characters.</dd>
+<dt><code>WORKING_DIRECTORY</code></dt>
+<dd>Execute the command with the given current working directory. If it is a relative path it will be interpreted relative to the build tree directory corresponding to the current source directory.</dd></dl>
 <h3>Build Events</h3>
 <p>The second signature adds a custom command to a target such as a library or executable. This is useful for performing an operation before or after building the target. The command becomes part of the target and will only execute when the target itself is built. If the target is already built, the command will not execute. </p>
 <pre>add_custom_command(TARGET &lt;target&gt;
@@ -77,12 +77,12 @@ description: "cmake-commands – CMake Language Command Reference"
 <p>This defines a new command that will be associated with building the specified <code>&lt;target&gt;</code>. The <code>&lt;target&gt;</code> must be defined in the current directory; targets defined in other directories may not be specified. </p>
 <p> When the command will happen is determined by which of the following is specified:</p>
 <dl>
-<dt><code>PRE_BUILD</code></p>
-<dd>Run before any other rules are executed within the target. This is supported only on Visual Studio 7 or later. For all other generators <code>PRE_BUILD</code> will be treated as <code>PRE_LINK</code>.</p>
-<dt><code>PRE_LINK</code></p>
-<dd>Run after sources have been compiled but before linking the binary or running the librarian or archiver tool of a static library. This is not defined for targets created by the <code>add_custom_target()</code> command.</p>
-<dt><code>POST_BUILD</code></p>
-<dd>Run after all other rules within the target have been executed.</dl>
+<dt><code>PRE_BUILD</code></dt>
+<dd>Run before any other rules are executed within the target. This is supported only on Visual Studio 7 or later. For all other generators <code>PRE_BUILD</code> will be treated as <code>PRE_LINK</code>.</dd>
+<dt><code>PRE_LINK</code></dt>
+<dd>Run after sources have been compiled but before linking the binary or running the librarian or archiver tool of a static library. This is not defined for targets created by the <code>add_custom_target()</code> command.</dd>
+<dt><code>POST_BUILD</code></dt>
+<dd>Run after all other rules within the target have been executed.</dd></dl>
 <h3>add_custom_target</h3>
 <p>Add a target with no output so it will always be built. </p>
 <pre>add_custom_target(Name [ALL] [command1 [args1...]]
@@ -96,30 +96,30 @@ description: "cmake-commands – CMake Language Command Reference"
 <p>Adds a target with the given name that executes the given commands. The target has no output file and is <i>always considered out of date</i> even if the commands try to create a file with the name of the target. Use the <code>add_custom_command()</code> command to generate a file with dependencies. By default nothing depends on the custom target. Use the <code>add_dependencies()</code> command to add dependencies to or from other targets. </p>
 <p> The options are:</p>
 <dl>
-<dt><code>ALL</code></p>
-<dd>Indicate that this target should be added to the default build target so that it will be run every time (the command cannot be called <code>ALL</code>).</p>
-<dt><code>BYPRODUCTS</code></p>
-<dd>Specify the files the command is expected to produce but whose modification time may or may not be updated on subsequent builds. If a byproduct name is a relative path it will be interpreted relative to the build tree directory corresponding to the current source directory. Each byproduct file will be marked with the <code>GENERATED</code> source file property automatically. </p>
+<dt><code>ALL</code></dt>
+<dd>Indicate that this target should be added to the default build target so that it will be run every time (the command cannot be called <code>ALL</code>).</dd>
+<dt><code>BYPRODUCTS</code></dt>
+<dd>Specify the files the command is expected to produce but whose modification time may or may not be updated on subsequent builds. If a byproduct name is a relative path it will be interpreted relative to the build tree directory corresponding to the current source directory. Each byproduct file will be marked with the <code>GENERATED</code> source file property automatically. </dd>
 <p> Explicit specification of byproducts is supported by the <code>Ninja</code> generator to tell the <code>ninja</code> build tool how to regenerate byproducts when they are missing. It is also useful when other build rules (e.g. custom commands) depend on the byproducts. Ninja requires a build rule for any generated file on which another rule depends even if there are order-only dependencies to ensure the byproducts will be available before their dependents build. </p>
 <p> The <code>BYPRODUCTS</code> option is ignored on non-Ninja generators except to mark byproducts <code>GENERATED</code>.</p>
-<dt><code>COMMAND</code></p>
-<dd>Specify the command-line(s) to execute at build time. If more than one <code>COMMAND</code> is specified they will be executed in order, but <i>not</i> necessarily composed into a stateful shell or batch script. (To run a full script, use the <code>configure_file()</code> command or the <code>file(GENERATE)</code> command to create it, and then specify a <code>COMMAND</code> to launch it.) </p>
+<dt><code>COMMAND</code></dt>
+<dd>Specify the command-line(s) to execute at build time. If more than one <code>COMMAND</code> is specified they will be executed in order, but <i>not</i> necessarily composed into a stateful shell or batch script. (To run a full script, use the <code>configure_file()</code> command or the <code>file(GENERATE)</code> command to create it, and then specify a <code>COMMAND</code> to launch it.) </dd>
 <p> If <code>COMMAND</code> specifies an executable target name (created by the <code>add_executable()</code> command) it will automatically be replaced by the location of the executable created at build time. If set, the <code>CROSSCOMPILING_EMULATOR</code> executable target property will also be prepended to the command to allow the executable to run on the host. Additionally a target-level dependency will be added so that the executable target will be built before this custom target. </p>
 <p> Arguments to <code>COMMAND</code> may use <code>generator expressions</code>. References to target names in generator expressions imply target-level dependencies. </p>
 <p> The command and arguments are optional and if not specified an empty target will be created.</p>
-<dt><code>COMMENT</code></p>
-<dd>Display the given message before the commands are executed at build time.</p>
-<dt><code>DEPENDS</code></p>
-<dd>Reference files and outputs of custom commands created with <code>add_custom_command()</code> command calls in the same directory (<code>CMakeLists.txt</code> file). They will be brought up to date when the target is built. </p>
+<dt><code>COMMENT</code></dt>
+<dd>Display the given message before the commands are executed at build time.</dd>
+<dt><code>DEPENDS</code></dt>
+<dd>Reference files and outputs of custom commands created with <code>add_custom_command()</code> command calls in the same directory (<code>CMakeLists.txt</code> file). They will be brought up to date when the target is built. </dd>
 <p> Use the <code>add_dependencies()</code> command to add dependencies on other targets.</p>
-<dt><code>SOURCES</code></p>
-<dd>Specify additional source files to be included in the custom target. Specified source files will be added to IDE project files for convenience in editing even if they have no build rules.</p>
-<dt><code>VERBATIM</code></p>
-<dd>All arguments to the commands will be escaped properly for the build tool so that the invoked command receives each argument unchanged. Note that one level of escapes is still used by the CMake language processor before <code>add_custom_target</code> even sees the arguments. Use of <code>VERBATIM</code> is recommended as it enables correct behavior. When <code>VERBATIM</code> is not given the behavior is platform specific because there is no protection of tool-specific special characters.</p>
-<dt><code>USES_TERMINAL</code></p>
-<dd>The command will be given direct access to the terminal if possible. With the <code>Ninja</code> generator, this places the command in the <code>console</code> <code>pool</code>.</p>
-<dt><code>WORKING_DIRECTORY</code></p>
-<dd>Execute the command with the given current working directory. If it is a relative path it will be interpreted relative to the build tree directory corresponding to the current source directory.</dl>
+<dt><code>SOURCES</code></dt>
+<dd>Specify additional source files to be included in the custom target. Specified source files will be added to IDE project files for convenience in editing even if they have no build rules.</dd>
+<dt><code>VERBATIM</code></dt>
+<dd>All arguments to the commands will be escaped properly for the build tool so that the invoked command receives each argument unchanged. Note that one level of escapes is still used by the CMake language processor before <code>add_custom_target</code> even sees the arguments. Use of <code>VERBATIM</code> is recommended as it enables correct behavior. When <code>VERBATIM</code> is not given the behavior is platform specific because there is no protection of tool-specific special characters.</dd>
+<dt><code>USES_TERMINAL</code></dt>
+<dd>The command will be given direct access to the terminal if possible. With the <code>Ninja</code> generator, this places the command in the <code>console</code> <code>pool</code>.</dd>
+<dt><code>WORKING_DIRECTORY</code></dt>
+<dd>Execute the command with the given current working directory. If it is a relative path it will be interpreted relative to the build tree directory corresponding to the current source directory.</dd></dl>
 <h3>add_definitions</h3>
 <p>Adds -D define flags to the compilation of source files. </p>
 <pre>add_definitions(-DFOO -DBAR ...)</pre>
@@ -179,18 +179,18 @@ add_executable(... $&lt;TARGET_OBJECTS:objlib&gt; ...)</pre>
 <pre>add_library(&lt;name&gt; INTERFACE [IMPORTED [GLOBAL]])</pre>
 <p>Creates an <i>Interface Library</i>. An <code>INTERFACE</code> library target does not directly create build output, though it may have properties set on it and it may be installed, exported and imported. Typically the <code>INTERFACE_*</code> properties are populated on the interface target using the commands:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>set_property()</code>,</p>
-<dt>&bull;</p>
-<dd><code>target_link_libraries(INTERFACE)</code>,</p>
-<dt>&bull;</p>
-<dd><code>target_include_directories(INTERFACE)</code>,</p>
-<dt>&bull;</p>
-<dd><code>target_compile_options(INTERFACE)</code>,</p>
-<dt>&bull;</p>
-<dd><code>target_compile_definitions(INTERFACE)</code>, and</p>
-<dt>&bull;</p>
-<dd><code>target_sources(INTERFACE)</code>, </p>
+<dt>&bull;</dt>
+<dd><code>set_property()</code>,</dd>
+<dt>&bull;</dt>
+<dd><code>target_link_libraries(INTERFACE)</code>,</dd>
+<dt>&bull;</dt>
+<dd><code>target_include_directories(INTERFACE)</code>,</dd>
+<dt>&bull;</dt>
+<dd><code>target_compile_options(INTERFACE)</code>,</dd>
+<dt>&bull;</dt>
+<dd><code>target_compile_definitions(INTERFACE)</code>, and</dd>
+<dt>&bull;</dt>
+<dd><code>target_sources(INTERFACE)</code>, </dd>
 <p> and then it is used as an argument to <code>target_link_libraries()</code> like any other target. </p>
 <p> An <code>INTERFACE</code> <i>Imported Target</i> may also be created with this signature. An <code>IMPORTED</code> library target references a library defined outside the project. The target name has scope in the directory in which it is created and below, but the <code>GLOBAL</code> option extends visibility. It may be referenced like any target built within the project. <code>IMPORTED</code> libraries are useful for convenient reference from commands like <code>target_link_libraries()</code>.</dl>
 <h3>add_subdirectory</h3>
@@ -206,12 +206,12 @@ add_executable(... $&lt;TARGET_OBJECTS:objlib&gt; ...)</pre>
  [WORKING_DIRECTORY &lt;dir&gt;])</pre>
 <p>Add a test called <code>&lt;name&gt;</code>. The test name may not contain spaces, quotes, or other characters special in CMake syntax. The options are:</p>
 <dl>
-<dt><code>COMMAND</code></p>
-<dd>Specify the test command-line. If <code>&lt;command&gt;</code> specifies an executable target (created by <code>add_executable()</code>) it will automatically be replaced by the location of the executable created at build time.</p>
-<dt><code>CONFIGURATIONS</code></p>
-<dd>Restrict execution of the test only to the named configurations.</p>
-<dt><code>WORKING_DIRECTORY</code></p>
-<dd>Set the <code>WORKING_DIRECTORY</code> test property to specify the working directory in which to execute the test. If not specified the test will be run with the current working directory set to the build directory corresponding to the current source directory. </p>
+<dt><code>COMMAND</code></dt>
+<dd>Specify the test command-line. If <code>&lt;command&gt;</code> specifies an executable target (created by <code>add_executable()</code>) it will automatically be replaced by the location of the executable created at build time.</dd>
+<dt><code>CONFIGURATIONS</code></dt>
+<dd>Restrict execution of the test only to the named configurations.</dd>
+<dt><code>WORKING_DIRECTORY</code></dt>
+<dd>Set the <code>WORKING_DIRECTORY</code> test property to specify the working directory in which to execute the test. If not specified the test will be run with the current working directory set to the build directory corresponding to the current source directory. </dd>
 <p> The given test command is expected to exit with code <code>0</code> to pass and non-zero to fail, or vice-versa if the <code>WILL_FAIL</code> test property is set. Any output written to stdout or stderr will be captured by <code><a href="/docs/linux/man/1-ctest3/">ctest3</a>(1)</code> but does not affect the pass/fail status unless the <code>PASS_REGULAR_EXPRESSION</code> or <code>FAIL_REGULAR_EXPRESSION</code> test property is used. </p>
 <p> The <code>COMMAND</code> and <code>WORKING_DIRECTORY</code> options may use &quot;generator expressions&quot; with the syntax <code>$&lt;&#8230;&gt;</code>. See the <code><a href="/docs/linux/man/7-cmake3-generator-expressions/">cmake3-generator-expressions</a>(7)</code> manual for available expressions. </p>
 <p> Example usage: </p>
@@ -344,20 +344,20 @@ cmake_policy(POP)</pre>
 <p> If the input file is modified the build system will re-run CMake to re-configure the file and generate the build system again. </p>
 <p> The arguments are:</p>
 <dl>
-<dt><code>&lt;input&gt;</code></p>
-<dd>Path to the input file. A relative path is treated with respect to the value of <code>CMAKE_CURRENT_SOURCE_DIR</code>. The input path must be a file, not a directory.</p>
-<dt><code>&lt;output&gt;</code></p>
-<dd>Path to the output file or directory. A relative path is treated with respect to the value of <code>CMAKE_CURRENT_BINARY_DIR</code>. If the path names an existing directory the output file is placed in that directory with the same file name as the input file.</p>
-<dt><code>COPYONLY</code></p>
-<dd>Copy the file without replacing any variable references or other content. This option may not be used with <code>NEWLINE_STYLE</code>.</p>
-<dt><code>ESCAPE_QUOTES</code></p>
-<dd>Escape any substituted quotes with backslashes (C-style).</p>
-<dt><code>@ONLY</code></p>
-<dd>Restrict variable replacement to references of the form <code>@VAR@</code>. This is useful for configuring scripts that use <code>${VAR}</code> syntax.</p>
-<dt><code>NEWLINE_STYLE &lt;style&gt;</code></p>
+<dt><code>&lt;input&gt;</code></dt>
+<dd>Path to the input file. A relative path is treated with respect to the value of <code>CMAKE_CURRENT_SOURCE_DIR</code>. The input path must be a file, not a directory.</dd>
+<dt><code>&lt;output&gt;</code></dt>
+<dd>Path to the output file or directory. A relative path is treated with respect to the value of <code>CMAKE_CURRENT_BINARY_DIR</code>. If the path names an existing directory the output file is placed in that directory with the same file name as the input file.</dd>
+<dt><code>COPYONLY</code></dt>
+<dd>Copy the file without replacing any variable references or other content. This option may not be used with <code>NEWLINE_STYLE</code>.</dd>
+<dt><code>ESCAPE_QUOTES</code></dt>
+<dd>Escape any substituted quotes with backslashes (C-style).</dd>
+<dt><code>@ONLY</code></dt>
+<dd>Restrict variable replacement to references of the form <code>@VAR@</code>. This is useful for configuring scripts that use <code>${VAR}</code> syntax.</dd>
+<dt><code>NEWLINE_STYLE &lt;style&gt;</code></dt>
 <dd>Specify the newline style for the output file. Specify <code>UNIX</code> or <code>LF</code> for <code>
 </code> newlines, or specify <code>DOS</code>, <code>WIN32</code>, or <code>CRLF</code> for <code>
-</code> newlines. This option may not be used with <code>COPYONLY</code>.</dl>
+</code> newlines. This option may not be used with <code>COPYONLY</code>.</dd></dl>
 <h3>Example</h3>
 <p>Consider a source tree containing a <code>foo.h.in</code> file: </p>
 <pre>#cmakedefine FOO_ENABLE
@@ -464,21 +464,21 @@ CACHED_VARIABLE = documents a CMake cache variable</pre>
 <p>Runs the given sequence of one or more commands with the standard output of each process piped to the standard input of the next. A single standard error pipe is used for all processes. </p>
 <p> Options:</p>
 <dl>
-<dt><code>COMMAND</code></p>
-<dd>A child process command line. </p>
+<dt><code>COMMAND</code></dt>
+<dd>A child process command line. </dd>
 <p> CMake executes the child process using operating system APIs directly. All arguments are passed VERBATIM to the child process. No intermediate shell is used, so shell operators such as <code>&gt;</code> are treated as normal arguments. (Use the <code>INPUT_*</code>, <code>OUTPUT_*</code>, and <code>ERROR_*</code> options to redirect stdin, stdout, and stderr.)</p>
-<dt><code>WORKING_DIRECTORY</code></p>
-<dd>The named directory will be set as the current working directory of the child processes.</p>
-<dt><code>TIMEOUT</code></p>
-<dd>The child processes will be terminated if they do not finish in the specified number of seconds (fractions are allowed).</p>
-<dt><code>RESULT_VARIABLE</code></p>
-<dd>The variable will be set to contain the result of running the processes. This will be an integer return code from the last child or a string describing an error condition.</p>
-<dt><code>OUTPUT_VARIABLE</code>, <code>ERROR_VARIABLE</code></p>
-<dd>The variable named will be set with the contents of the standard output and standard error pipes, respectively. If the same variable is named for both pipes their output will be merged in the order produced.</p>
-<dt><code>INPUT_FILE, OUTPUT_FILE</code>, <code>ERROR_FILE</code></p>
-<dd>The file named will be attached to the standard input of the first process, standard output of the last process, or standard error of all processes, respectively. If the same file is named for both output and error then it will be used for both.</p>
-<dt><code>OUTPUT_QUIET</code>, <code>ERROR_QUIET</code></p>
-<dd>The standard output or standard error results will be quietly ignored. </p>
+<dt><code>WORKING_DIRECTORY</code></dt>
+<dd>The named directory will be set as the current working directory of the child processes.</dd>
+<dt><code>TIMEOUT</code></dt>
+<dd>The child processes will be terminated if they do not finish in the specified number of seconds (fractions are allowed).</dd>
+<dt><code>RESULT_VARIABLE</code></dt>
+<dd>The variable will be set to contain the result of running the processes. This will be an integer return code from the last child or a string describing an error condition.</dd>
+<dt><code>OUTPUT_VARIABLE</code>, <code>ERROR_VARIABLE</code></dt>
+<dd>The variable named will be set with the contents of the standard output and standard error pipes, respectively. If the same variable is named for both pipes their output will be merged in the order produced.</dd>
+<dt><code>INPUT_FILE, OUTPUT_FILE</code>, <code>ERROR_FILE</code></dt>
+<dd>The file named will be attached to the standard input of the first process, standard output of the last process, or standard error of all processes, respectively. If the same file is named for both output and error then it will be used for both.</dd>
+<dt><code>OUTPUT_QUIET</code>, <code>ERROR_QUIET</code></dt>
+<dd>The standard output or standard error results will be quietly ignored. </dd>
 <p> If more than one <code>OUTPUT_*</code> or <code>ERROR_*</code> option is given for the same pipe the precedence is not specified. If no <code>OUTPUT_*</code> or <code>ERROR_*</code> options are given the output will be shared with the corresponding pipes of the CMake process itself. </p>
 <p> The <code>execute_process()</code> command is a newer more powerful version of <code>exec_program()</code>, but the old command has been kept for compatibility. Both commands run while CMake is processing the project prior to build system generation. Use <code>add_custom_target()</code> and <code>add_custom_command()</code> to create custom commands that run at build time.</dl>
 <h3>export</h3>
@@ -508,27 +508,28 @@ file(APPEND &lt;filename&gt; &lt;content&gt;...)</pre>
 <p> <center> &#8212;-<br />
  </center> </p>
 <pre>file(STRINGS &lt;filename&gt; &lt;variable&gt; [&lt;options&gt;...])</pre>
-<p>Parse a list of ASCII strings from <code>&lt;filename&gt;</code> and store it in <code>&lt;variable&gt;</code>. Binary data in the file are ignored. Carriage return (<code></code>, CR) characters are ignored. The options are:</p>
+<p>Parse a list of ASCII strings from <code>&lt;filename&gt;</code> and store it in <code>&lt;variable&gt;</code>. Binary data in the file are ignored. Carriage return (<code>
+</code>, CR) characters are ignored. The options are:</p>
 <dl>
-<dt><code>LENGTH_MAXIMUM &lt;max-len&gt;</code></p>
-<dd>Consider only strings of at most a given length.</p>
-<dt><code>LENGTH_MINIMUM &lt;min-len&gt;</code></p>
-<dd>Consider only strings of at least a given length.</p>
-<dt><code>LIMIT_COUNT &lt;max-num&gt;</code></p>
-<dd>Limit the number of distinct strings to be extracted.</p>
-<dt><code>LIMIT_INPUT &lt;max-in&gt;</code></p>
-<dd>Limit the number of input bytes to read from the file.</p>
-<dt><code>LIMIT_OUTPUT &lt;max-out&gt;</code></p>
-<dd>Limit the number of total bytes to store in the <code>&lt;variable&gt;</code>.</p>
-<dt><code>NEWLINE_CONSUME</code></p>
+<dt><code>LENGTH_MAXIMUM &lt;max-len&gt;</code></dt>
+<dd>Consider only strings of at most a given length.</dd>
+<dt><code>LENGTH_MINIMUM &lt;min-len&gt;</code></dt>
+<dd>Consider only strings of at least a given length.</dd>
+<dt><code>LIMIT_COUNT &lt;max-num&gt;</code></dt>
+<dd>Limit the number of distinct strings to be extracted.</dd>
+<dt><code>LIMIT_INPUT &lt;max-in&gt;</code></dt>
+<dd>Limit the number of input bytes to read from the file.</dd>
+<dt><code>LIMIT_OUTPUT &lt;max-out&gt;</code></dt>
+<dd>Limit the number of total bytes to store in the <code>&lt;variable&gt;</code>.</dd>
+<dt><code>NEWLINE_CONSUME</code></dt>
 <dd>Treat newline characters (<code>
-</code>, LF) as part of string content instead of terminating at them.</p>
-<dt><code>NO_HEX_CONVERSION</code></p>
-<dd>Intel Hex and Motorola S-record files are automatically converted to binary while reading unless this option is given.</p>
-<dt><code>REGEX &lt;regex&gt;</code></p>
-<dd>Consider only strings that match the given regular expression.</p>
-<dt><code>ENCODING &lt;encoding-type&gt;</code></p>
-<dd>Consider strings of a given encoding. Currently supported encodings are: UTF-8, UTF-16LE, UTF-16BE, UTF-32LE, UTF-32BE. If the ENCODING option is not provided and the file has a Byte Order Mark, the ENCODING option will be defaulted to respect the Byte Order Mark. </p>
+</code>, LF) as part of string content instead of terminating at them.</dd>
+<dt><code>NO_HEX_CONVERSION</code></dt>
+<dd>Intel Hex and Motorola S-record files are automatically converted to binary while reading unless this option is given.</dd>
+<dt><code>REGEX &lt;regex&gt;</code></dt>
+<dd>Consider only strings that match the given regular expression.</dd>
+<dt><code>ENCODING &lt;encoding-type&gt;</code></dt>
+<dd>Consider strings of a given encoding. Currently supported encodings are: UTF-8, UTF-16LE, UTF-16BE, UTF-32LE, UTF-32BE. If the ENCODING option is not provided and the file has a Byte Order Mark, the ENCODING option will be defaulted to respect the Byte Order Mark. </dd>
 <p> For example, the code </p>
 <pre>file(STRINGS myfile.txt myfile)</pre>
 <p>stores a list in the variable <code>myfile</code> in which each item is a line from the input file. </p>
@@ -585,24 +586,24 @@ file(TO_NATIVE_PATH &quot;&lt;path&gt;&quot; &lt;variable&gt;)</pre>
 file(UPLOAD &lt;file&gt; &lt;url&gt; [&lt;options&gt;...])</pre>
 <p>The <code>DOWNLOAD</code> mode downloads the given <code>&lt;url&gt;</code> to a local <code>&lt;file&gt;</code>. The <code>UPLOAD</code> mode uploads a local <code>&lt;file&gt;</code> to a given <code>&lt;url&gt;</code>. </p>
 <p> Options to both <code>DOWNLOAD</code> and <code>UPLOAD</code> are:</p>
-<dt><code>INACTIVITY_TIMEOUT &lt;seconds&gt;</code></p>
-<dd>Terminate the operation after a period of inactivity.</p>
-<dt><code>LOG &lt;variable&gt;</code></p>
-<dd>Store a human-readable log of the operation in a variable.</p>
-<dt><code>SHOW_PROGRESS</code></p>
-<dd>Print progress information as status messages until the operation is complete.</p>
-<dt><code>STATUS &lt;variable&gt;</code></p>
-<dd>Store the resulting status of the operation in a variable. The status is a <code>;</code> separated list of length 2. The first element is the numeric return value for the operation, and the second element is a string value for the error. A <code>0</code> numeric error means no error in the operation.</p>
-<dt><code>TIMEOUT &lt;seconds&gt;</code></p>
-<dd>Terminate the operation after a given total time has elapsed. </p>
+<dt><code>INACTIVITY_TIMEOUT &lt;seconds&gt;</code></dt>
+<dd>Terminate the operation after a period of inactivity.</dd>
+<dt><code>LOG &lt;variable&gt;</code></dt>
+<dd>Store a human-readable log of the operation in a variable.</dd>
+<dt><code>SHOW_PROGRESS</code></dt>
+<dd>Print progress information as status messages until the operation is complete.</dd>
+<dt><code>STATUS &lt;variable&gt;</code></dt>
+<dd>Store the resulting status of the operation in a variable. The status is a <code>;</code> separated list of length 2. The first element is the numeric return value for the operation, and the second element is a string value for the error. A <code>0</code> numeric error means no error in the operation.</dd>
+<dt><code>TIMEOUT &lt;seconds&gt;</code></dt>
+<dd>Terminate the operation after a given total time has elapsed. </dd>
 <p> Additional options to <code>DOWNLOAD</code> are: </p>
 <p> <code>EXPECTED_HASH ALGO=&lt;value&gt;</code> Verify that the downloaded content hash matches the expected value, where <code>ALGO</code> is one of <code>MD5</code>, <code>SHA1</code>, <code>SHA224</code>, <code>SHA256</code>, <code>SHA384</code>, or <code>SHA512</code>. If it does not match, the operation fails with an error.</p>
-<dt><code>EXPECTED_MD5 &lt;value&gt;</code></p>
-<dd>Historical short-hand for <code>EXPECTED_HASH MD5=&lt;value&gt;</code>.</p>
-<dt><code>TLS_VERIFY &lt;ON|OFF&gt;</code></p>
-<dd>Specify whether to verify the server certificate for <code>https://</code> URLs. The default is to <i>not</i> verify.</p>
-<dt><code>TLS_CAINFO &lt;file&gt;</code></p>
-<dd>Specify a custom Certificate Authority file for <code>https://</code> URLs. </p>
+<dt><code>EXPECTED_MD5 &lt;value&gt;</code></dt>
+<dd>Historical short-hand for <code>EXPECTED_HASH MD5=&lt;value&gt;</code>.</dd>
+<dt><code>TLS_VERIFY &lt;ON|OFF&gt;</code></dt>
+<dd>Specify whether to verify the server certificate for <code>https://</code> URLs. The default is to <i>not</i> verify.</dd>
+<dt><code>TLS_CAINFO &lt;file&gt;</code></dt>
+<dd>Specify a custom Certificate Authority file for <code>https://</code> URLs. </dd>
 <p> For <code>https://</code> URLs CMake must be built with OpenSSL support. <code>TLS/SSL</code> certificates are not checked by default. Set <code>TLS_VERIFY</code> to <code>ON</code> to check certificates and/or use <code>EXPECTED_HASH</code> to verify downloaded content. If neither <code>TLS</code> option is given CMake will check variables <code>CMAKE_TLS_VERIFY</code> and <code>CMAKE_TLS_CAINFO</code>, respectively. </p>
 <p> <center> &#8212;-<br />
  </center> </p>
@@ -615,14 +616,14 @@ file(UPLOAD &lt;file&gt; &lt;url&gt; [&lt;options&gt;...])</pre>
  &lt;INPUT input-file|CONTENT content&gt;
  [CONDITION expression])</pre>
 <p>Generate an output file for each build configuration supported by the current <code>CMake Generator</code>. Evaluate <code>generator expressions</code> from the input content to produce the output content. The options are:</p>
-<dt><code>CONDITION &lt;condition&gt;</code></p>
-<dd>Generate the output file for a particular configuration only if the condition is true. The condition must be either <code>0</code> or <code>1</code> after evaluating generator expressions.</p>
-<dt><code>CONTENT &lt;content&gt;</code></p>
-<dd>Use the content given explicitly as input.</p>
-<dt><code>INPUT &lt;input-file&gt;</code></p>
-<dd>Use the content from a given file as input.</p>
-<dt><code>OUTPUT &lt;output-file&gt;</code></p>
-<dd>Specify the output file name to generate. Use generator expressions such as <code>$&lt;CONFIG&gt;</code> to specify a configuration-specific output file name. Multiple configurations may generate the same output file only if the generated content is identical. Otherwise, the <code>&lt;output-file&gt;</code> must evaluate to an unique name for each configuration. </p>
+<dt><code>CONDITION &lt;condition&gt;</code></dt>
+<dd>Generate the output file for a particular configuration only if the condition is true. The condition must be either <code>0</code> or <code>1</code> after evaluating generator expressions.</dd>
+<dt><code>CONTENT &lt;content&gt;</code></dt>
+<dd>Use the content given explicitly as input.</dd>
+<dt><code>INPUT &lt;input-file&gt;</code></dt>
+<dd>Use the content from a given file as input.</dd>
+<dt><code>OUTPUT &lt;output-file&gt;</code></dt>
+<dd>Specify the output file name to generate. Use generator expressions such as <code>$&lt;CONFIG&gt;</code> to specify a configuration-specific output file name. Multiple configurations may generate the same output file only if the generated content is identical. Otherwise, the <code>&lt;output-file&gt;</code> must evaluate to an unique name for each configuration. </dd>
 <p> Exactly one <code>CONTENT</code> or <code>INPUT</code> option must be given. A specific <code>OUTPUT</code> file may be named by at most one invocation of <code>file(GENERATE)</code>. Generated files are modified on subsequent cmake runs only if their content is changed. </p>
 <p> <center> &#8212;-<br />
  </center> </p>
@@ -668,58 +669,58 @@ file(UPLOAD &lt;file&gt; &lt;url&gt; [&lt;options&gt;...])</pre>
 <p>This command is used to find a full path to named file. A cache entry named by <code>&lt;VAR&gt;</code> is created to store the result of this command. If the full path to a file is found the result is stored in the variable and the search will not be repeated unless the variable is cleared. If nothing is found, the result will be <code>&lt;VAR&gt;-NOTFOUND</code>, and the search will be attempted again the next time find_file is invoked with the same variable. </p>
 <p> Options include:</p>
 <dl>
-<dt><code>NAMES</code></p>
-<dd>Specify one or more possible names for the full path to a file. </p>
+<dt><code>NAMES</code></dt>
+<dd>Specify one or more possible names for the full path to a file. </dd>
 <p> When using this to specify names with and without a version suffix, we recommend specifying the unversioned name first so that locally-built packages can be found before those provided by distributions.</p>
-<dt><code>HINTS</code>, <code>PATHS</code></p>
-<dd>Specify directories to search in addition to the default locations. The <code>ENV var</code> sub-option reads paths from a system environment variable.</p>
-<dt><code>PATH_SUFFIXES</code></p>
-<dd>Specify additional subdirectories to check below each directory location otherwise considered.</p>
-<dt><code>DOC</code></p>
-<dd>Specify the documentation string for the <code>&lt;VAR&gt;</code> cache entry. </p>
+<dt><code>HINTS</code>, <code>PATHS</code></dt>
+<dd>Specify directories to search in addition to the default locations. The <code>ENV var</code> sub-option reads paths from a system environment variable.</dd>
+<dt><code>PATH_SUFFIXES</code></dt>
+<dd>Specify additional subdirectories to check below each directory location otherwise considered.</dd>
+<dt><code>DOC</code></dt>
+<dd>Specify the documentation string for the <code>&lt;VAR&gt;</code> cache entry. </dd>
 <p> If <code>NO_DEFAULT_PATH</code> is specified, then no additional paths are added to the search. If <code>NO_DEFAULT_PATH</code> is not specified, the search process is as follows:</p>
-<dt>1.</p>
-<dd>Search paths specified in cmake-specific cache variables. These are intended to be used on the command line with a <code>-DVAR=value</code>. This can be skipped if <code>NO_CMAKE_PATH</code> is passed.</p>
-<dt>&bull;</p>
-<dd><code>&lt;prefix&gt;/include/&lt;arch&gt;</code> if <code>CMAKE_LIBRARY_ARCHITECTURE</code> is set, and <code>&lt;prefix&gt;/include</code> for each <code>&lt;prefix&gt;</code> in <code>CMAKE_PREFIX_PATH</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_INCLUDE_PATH</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_FRAMEWORK_PATH</code></p>
-<dt>2.</p>
-<dd>Search paths specified in cmake-specific environment variables. These are intended to be set in the user&#8217;s shell configuration. This can be skipped if <code>NO_CMAKE_ENVIRONMENT_PATH</code> is passed.</p>
-<dt>&bull;</p>
-<dd><code>&lt;prefix&gt;/include/&lt;arch&gt;</code> if <code>CMAKE_LIBRARY_ARCHITECTURE</code> is set, and <code>&lt;prefix&gt;/include</code> for each <code>&lt;prefix&gt;</code> in <code>CMAKE_PREFIX_PATH</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_INCLUDE_PATH</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_FRAMEWORK_PATH</code></p>
-<dt>3.</p>
-<dd>Search the paths specified by the <code>HINTS</code> option. These should be paths computed by system introspection, such as a hint provided by the location of another item already found. Hard-coded guesses should be specified with the <code>PATHS</code> option.</p>
-<dt>4.</p>
-<dd>Search the standard system environment variables. This can be skipped if <code>NO_SYSTEM_ENVIRONMENT_PATH</code> is an argument.</p>
-<dt>&bull;</p>
-<dd>Directories in <code>INCLUDE</code>. On Windows hosts: <code>&lt;prefix&gt;/include/&lt;arch&gt;</code> if <code>CMAKE_LIBRARY_ARCHITECTURE</code> is set, and <code>&lt;prefix&gt;/include</code> for each <code>&lt;prefix&gt;/[s]bin</code> in <code>PATH</code>, and <code>&lt;entry&gt;/include</code> for other entries in <code>PATH</code>, and the directories in <code>PATH</code> itself.</p>
-<dt>5.</p>
-<dd>Search cmake variables defined in the Platform files for the current system. This can be skipped if <code>NO_CMAKE_SYSTEM_PATH</code> is passed.</p>
-<dt>&bull;</p>
-<dd><code>&lt;prefix&gt;/include/&lt;arch&gt;</code> if <code>CMAKE_LIBRARY_ARCHITECTURE</code> is set, and <code>&lt;prefix&gt;/include</code> for each <code>&lt;prefix&gt;</code> in <code>CMAKE_SYSTEM_PREFIX_PATH</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_SYSTEM_INCLUDE_PATH</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_SYSTEM_FRAMEWORK_PATH</code></p>
-<dt>6.</p>
-<dd>Search the paths specified by the PATHS option or in the short-hand version of the command. These are typically hard-coded guesses. </p>
+<dt>1.</dt>
+<dd>Search paths specified in cmake-specific cache variables. These are intended to be used on the command line with a <code>-DVAR=value</code>. This can be skipped if <code>NO_CMAKE_PATH</code> is passed.</dd>
+<dt>&bull;</dt>
+<dd><code>&lt;prefix&gt;/include/&lt;arch&gt;</code> if <code>CMAKE_LIBRARY_ARCHITECTURE</code> is set, and <code>&lt;prefix&gt;/include</code> for each <code>&lt;prefix&gt;</code> in <code>CMAKE_PREFIX_PATH</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_INCLUDE_PATH</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_FRAMEWORK_PATH</code></dd>
+<dt>2.</dt>
+<dd>Search paths specified in cmake-specific environment variables. These are intended to be set in the user&#8217;s shell configuration. This can be skipped if <code>NO_CMAKE_ENVIRONMENT_PATH</code> is passed.</dd>
+<dt>&bull;</dt>
+<dd><code>&lt;prefix&gt;/include/&lt;arch&gt;</code> if <code>CMAKE_LIBRARY_ARCHITECTURE</code> is set, and <code>&lt;prefix&gt;/include</code> for each <code>&lt;prefix&gt;</code> in <code>CMAKE_PREFIX_PATH</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_INCLUDE_PATH</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_FRAMEWORK_PATH</code></dd>
+<dt>3.</dt>
+<dd>Search the paths specified by the <code>HINTS</code> option. These should be paths computed by system introspection, such as a hint provided by the location of another item already found. Hard-coded guesses should be specified with the <code>PATHS</code> option.</dd>
+<dt>4.</dt>
+<dd>Search the standard system environment variables. This can be skipped if <code>NO_SYSTEM_ENVIRONMENT_PATH</code> is an argument.</dd>
+<dt>&bull;</dt>
+<dd>Directories in <code>INCLUDE</code>. On Windows hosts: <code>&lt;prefix&gt;/include/&lt;arch&gt;</code> if <code>CMAKE_LIBRARY_ARCHITECTURE</code> is set, and <code>&lt;prefix&gt;/include</code> for each <code>&lt;prefix&gt;/[s]bin</code> in <code>PATH</code>, and <code>&lt;entry&gt;/include</code> for other entries in <code>PATH</code>, and the directories in <code>PATH</code> itself.</dd>
+<dt>5.</dt>
+<dd>Search cmake variables defined in the Platform files for the current system. This can be skipped if <code>NO_CMAKE_SYSTEM_PATH</code> is passed.</dd>
+<dt>&bull;</dt>
+<dd><code>&lt;prefix&gt;/include/&lt;arch&gt;</code> if <code>CMAKE_LIBRARY_ARCHITECTURE</code> is set, and <code>&lt;prefix&gt;/include</code> for each <code>&lt;prefix&gt;</code> in <code>CMAKE_SYSTEM_PREFIX_PATH</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_SYSTEM_INCLUDE_PATH</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_SYSTEM_FRAMEWORK_PATH</code></dd>
+<dt>6.</dt>
+<dd>Search the paths specified by the PATHS option or in the short-hand version of the command. These are typically hard-coded guesses. </dd>
 <p> On OS X the <code>CMAKE_FIND_FRAMEWORK</code> and <code>CMAKE_FIND_APPBUNDLE</code> variables determine the order of preference between Apple-style and unix-style package components. </p>
 <p> The CMake variable <code>CMAKE_FIND_ROOT_PATH</code> specifies one or more directories to be prepended to all other search directories. This effectively &quot;re-roots&quot; the entire search under given locations. Paths which are descendants of the <code>CMAKE_STAGING_PREFIX</code> are excluded from this re-rooting, because that variable is always a path on the host system. By default the <code>CMAKE_FIND_ROOT_PATH</code> is empty. </p>
 <p> The <code>CMAKE_SYSROOT</code> variable can also be used to specify exactly one directory to use as a prefix. Setting <code>CMAKE_SYSROOT</code> also has other effects. See the documentation for that variable for more. </p>
 <p> These variables are especially useful when cross-compiling to point to the root directory of the target environment and CMake will search there too. By default at first the directories listed in <code>CMAKE_FIND_ROOT_PATH</code> are searched, then the <code>CMAKE_SYSROOT</code> directory is searched, and then the non-rooted directories will be searched. The default behavior can be adjusted by setting <code>CMAKE_FIND_ROOT_PATH_MODE_INCLUDE</code>. This behavior can be manually overridden on a per-call basis using options:</p>
-<dt><code>CMAKE_FIND_ROOT_PATH_BOTH</code></p>
-<dd>Search in the order described above.</p>
-<dt><code>NO_CMAKE_FIND_ROOT_PATH</code></p>
-<dd>Do not use the <code>CMAKE_FIND_ROOT_PATH</code> variable.</p>
-<dt><code>ONLY_CMAKE_FIND_ROOT_PATH</code></p>
-<dd>Search only the re-rooted directories and directories below <code>CMAKE_STAGING_PREFIX</code>. </p>
+<dt><code>CMAKE_FIND_ROOT_PATH_BOTH</code></dt>
+<dd>Search in the order described above.</dd>
+<dt><code>NO_CMAKE_FIND_ROOT_PATH</code></dt>
+<dd>Do not use the <code>CMAKE_FIND_ROOT_PATH</code> variable.</dd>
+<dt><code>ONLY_CMAKE_FIND_ROOT_PATH</code></dt>
+<dd>Search only the re-rooted directories and directories below <code>CMAKE_STAGING_PREFIX</code>. </dd>
 <p> The default search order is designed to be most-specific to least-specific for common use cases. Projects may override the order by simply calling the command multiple times and using the <code>NO_*</code> options: </p>
 <pre>find_file (&lt;VAR&gt; NAMES name PATHS paths... NO_DEFAULT_PATH)
 find_file (&lt;VAR&gt; NAMES name)</pre>
@@ -747,58 +748,58 @@ find_file (&lt;VAR&gt; NAMES name)</pre>
 <p>This command is used to find a library. A cache entry named by <code>&lt;VAR&gt;</code> is created to store the result of this command. If the library is found the result is stored in the variable and the search will not be repeated unless the variable is cleared. If nothing is found, the result will be <code>&lt;VAR&gt;-NOTFOUND</code>, and the search will be attempted again the next time find_library is invoked with the same variable. </p>
 <p> Options include:</p>
 <dl>
-<dt><code>NAMES</code></p>
-<dd>Specify one or more possible names for the library. </p>
+<dt><code>NAMES</code></dt>
+<dd>Specify one or more possible names for the library. </dd>
 <p> When using this to specify names with and without a version suffix, we recommend specifying the unversioned name first so that locally-built packages can be found before those provided by distributions.</p>
-<dt><code>HINTS</code>, <code>PATHS</code></p>
-<dd>Specify directories to search in addition to the default locations. The <code>ENV var</code> sub-option reads paths from a system environment variable.</p>
-<dt><code>PATH_SUFFIXES</code></p>
-<dd>Specify additional subdirectories to check below each directory location otherwise considered.</p>
-<dt><code>DOC</code></p>
-<dd>Specify the documentation string for the <code>&lt;VAR&gt;</code> cache entry. </p>
+<dt><code>HINTS</code>, <code>PATHS</code></dt>
+<dd>Specify directories to search in addition to the default locations. The <code>ENV var</code> sub-option reads paths from a system environment variable.</dd>
+<dt><code>PATH_SUFFIXES</code></dt>
+<dd>Specify additional subdirectories to check below each directory location otherwise considered.</dd>
+<dt><code>DOC</code></dt>
+<dd>Specify the documentation string for the <code>&lt;VAR&gt;</code> cache entry. </dd>
 <p> If <code>NO_DEFAULT_PATH</code> is specified, then no additional paths are added to the search. If <code>NO_DEFAULT_PATH</code> is not specified, the search process is as follows:</p>
-<dt>1.</p>
-<dd>Search paths specified in cmake-specific cache variables. These are intended to be used on the command line with a <code>-DVAR=value</code>. This can be skipped if <code>NO_CMAKE_PATH</code> is passed.</p>
-<dt>&bull;</p>
-<dd><code>&lt;prefix&gt;/lib/&lt;arch&gt;</code> if <code>CMAKE_LIBRARY_ARCHITECTURE</code> is set, and <code>&lt;prefix&gt;/lib</code> for each <code>&lt;prefix&gt;</code> in <code>CMAKE_PREFIX_PATH</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_LIBRARY_PATH</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_FRAMEWORK_PATH</code></p>
-<dt>2.</p>
-<dd>Search paths specified in cmake-specific environment variables. These are intended to be set in the user&#8217;s shell configuration. This can be skipped if <code>NO_CMAKE_ENVIRONMENT_PATH</code> is passed.</p>
-<dt>&bull;</p>
-<dd><code>&lt;prefix&gt;/lib/&lt;arch&gt;</code> if <code>CMAKE_LIBRARY_ARCHITECTURE</code> is set, and <code>&lt;prefix&gt;/lib</code> for each <code>&lt;prefix&gt;</code> in <code>CMAKE_PREFIX_PATH</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_LIBRARY_PATH</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_FRAMEWORK_PATH</code></p>
-<dt>3.</p>
-<dd>Search the paths specified by the <code>HINTS</code> option. These should be paths computed by system introspection, such as a hint provided by the location of another item already found. Hard-coded guesses should be specified with the <code>PATHS</code> option.</p>
-<dt>4.</p>
-<dd>Search the standard system environment variables. This can be skipped if <code>NO_SYSTEM_ENVIRONMENT_PATH</code> is an argument.</p>
-<dt>&bull;</p>
-<dd>Directories in <code>LIB</code>. On Windows hosts: <code>&lt;prefix&gt;/lib/&lt;arch&gt;</code> if <code>CMAKE_LIBRARY_ARCHITECTURE</code> is set, and <code>&lt;prefix&gt;/lib</code> for each <code>&lt;prefix&gt;/[s]bin</code> in <code>PATH</code>, and <code>&lt;entry&gt;/lib</code> for other entries in <code>PATH</code>, and the directories in <code>PATH</code> itself.</p>
-<dt>5.</p>
-<dd>Search cmake variables defined in the Platform files for the current system. This can be skipped if <code>NO_CMAKE_SYSTEM_PATH</code> is passed.</p>
-<dt>&bull;</p>
-<dd><code>&lt;prefix&gt;/lib/&lt;arch&gt;</code> if <code>CMAKE_LIBRARY_ARCHITECTURE</code> is set, and <code>&lt;prefix&gt;/lib</code> for each <code>&lt;prefix&gt;</code> in <code>CMAKE_SYSTEM_PREFIX_PATH</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_SYSTEM_LIBRARY_PATH</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_SYSTEM_FRAMEWORK_PATH</code></p>
-<dt>6.</p>
-<dd>Search the paths specified by the PATHS option or in the short-hand version of the command. These are typically hard-coded guesses. </p>
+<dt>1.</dt>
+<dd>Search paths specified in cmake-specific cache variables. These are intended to be used on the command line with a <code>-DVAR=value</code>. This can be skipped if <code>NO_CMAKE_PATH</code> is passed.</dd>
+<dt>&bull;</dt>
+<dd><code>&lt;prefix&gt;/lib/&lt;arch&gt;</code> if <code>CMAKE_LIBRARY_ARCHITECTURE</code> is set, and <code>&lt;prefix&gt;/lib</code> for each <code>&lt;prefix&gt;</code> in <code>CMAKE_PREFIX_PATH</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_LIBRARY_PATH</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_FRAMEWORK_PATH</code></dd>
+<dt>2.</dt>
+<dd>Search paths specified in cmake-specific environment variables. These are intended to be set in the user&#8217;s shell configuration. This can be skipped if <code>NO_CMAKE_ENVIRONMENT_PATH</code> is passed.</dd>
+<dt>&bull;</dt>
+<dd><code>&lt;prefix&gt;/lib/&lt;arch&gt;</code> if <code>CMAKE_LIBRARY_ARCHITECTURE</code> is set, and <code>&lt;prefix&gt;/lib</code> for each <code>&lt;prefix&gt;</code> in <code>CMAKE_PREFIX_PATH</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_LIBRARY_PATH</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_FRAMEWORK_PATH</code></dd>
+<dt>3.</dt>
+<dd>Search the paths specified by the <code>HINTS</code> option. These should be paths computed by system introspection, such as a hint provided by the location of another item already found. Hard-coded guesses should be specified with the <code>PATHS</code> option.</dd>
+<dt>4.</dt>
+<dd>Search the standard system environment variables. This can be skipped if <code>NO_SYSTEM_ENVIRONMENT_PATH</code> is an argument.</dd>
+<dt>&bull;</dt>
+<dd>Directories in <code>LIB</code>. On Windows hosts: <code>&lt;prefix&gt;/lib/&lt;arch&gt;</code> if <code>CMAKE_LIBRARY_ARCHITECTURE</code> is set, and <code>&lt;prefix&gt;/lib</code> for each <code>&lt;prefix&gt;/[s]bin</code> in <code>PATH</code>, and <code>&lt;entry&gt;/lib</code> for other entries in <code>PATH</code>, and the directories in <code>PATH</code> itself.</dd>
+<dt>5.</dt>
+<dd>Search cmake variables defined in the Platform files for the current system. This can be skipped if <code>NO_CMAKE_SYSTEM_PATH</code> is passed.</dd>
+<dt>&bull;</dt>
+<dd><code>&lt;prefix&gt;/lib/&lt;arch&gt;</code> if <code>CMAKE_LIBRARY_ARCHITECTURE</code> is set, and <code>&lt;prefix&gt;/lib</code> for each <code>&lt;prefix&gt;</code> in <code>CMAKE_SYSTEM_PREFIX_PATH</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_SYSTEM_LIBRARY_PATH</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_SYSTEM_FRAMEWORK_PATH</code></dd>
+<dt>6.</dt>
+<dd>Search the paths specified by the PATHS option or in the short-hand version of the command. These are typically hard-coded guesses. </dd>
 <p> On OS X the <code>CMAKE_FIND_FRAMEWORK</code> and <code>CMAKE_FIND_APPBUNDLE</code> variables determine the order of preference between Apple-style and unix-style package components. </p>
 <p> The CMake variable <code>CMAKE_FIND_ROOT_PATH</code> specifies one or more directories to be prepended to all other search directories. This effectively &quot;re-roots&quot; the entire search under given locations. Paths which are descendants of the <code>CMAKE_STAGING_PREFIX</code> are excluded from this re-rooting, because that variable is always a path on the host system. By default the <code>CMAKE_FIND_ROOT_PATH</code> is empty. </p>
 <p> The <code>CMAKE_SYSROOT</code> variable can also be used to specify exactly one directory to use as a prefix. Setting <code>CMAKE_SYSROOT</code> also has other effects. See the documentation for that variable for more. </p>
 <p> These variables are especially useful when cross-compiling to point to the root directory of the target environment and CMake will search there too. By default at first the directories listed in <code>CMAKE_FIND_ROOT_PATH</code> are searched, then the <code>CMAKE_SYSROOT</code> directory is searched, and then the non-rooted directories will be searched. The default behavior can be adjusted by setting <code>CMAKE_FIND_ROOT_PATH_MODE_LIBRARY</code>. This behavior can be manually overridden on a per-call basis using options:</p>
-<dt><code>CMAKE_FIND_ROOT_PATH_BOTH</code></p>
-<dd>Search in the order described above.</p>
-<dt><code>NO_CMAKE_FIND_ROOT_PATH</code></p>
-<dd>Do not use the <code>CMAKE_FIND_ROOT_PATH</code> variable.</p>
-<dt><code>ONLY_CMAKE_FIND_ROOT_PATH</code></p>
-<dd>Search only the re-rooted directories and directories below <code>CMAKE_STAGING_PREFIX</code>. </p>
+<dt><code>CMAKE_FIND_ROOT_PATH_BOTH</code></dt>
+<dd>Search in the order described above.</dd>
+<dt><code>NO_CMAKE_FIND_ROOT_PATH</code></dt>
+<dd>Do not use the <code>CMAKE_FIND_ROOT_PATH</code> variable.</dd>
+<dt><code>ONLY_CMAKE_FIND_ROOT_PATH</code></dt>
+<dd>Search only the re-rooted directories and directories below <code>CMAKE_STAGING_PREFIX</code>. </dd>
 <p> The default search order is designed to be most-specific to least-specific for common use cases. Projects may override the order by simply calling the command multiple times and using the <code>NO_*</code> options: </p>
 <pre>find_library (&lt;VAR&gt; NAMES name PATHS paths... NO_DEFAULT_PATH)
 find_library (&lt;VAR&gt; NAMES name)</pre>
@@ -845,42 +846,42 @@ find_library (&lt;VAR&gt; NAMES name)</pre>
 <p> If the package configuration file cannot be found CMake will generate an error describing the problem unless the <code>QUIET</code> argument is specified. If <code>REQUIRED</code> is specified and the package is not found a fatal error is generated and the configure step stops executing. If <code>&lt;package&gt;_DIR</code> has been set to a directory not containing a configuration file CMake will ignore it and search from scratch. </p>
 <p> When the <code>[version]</code> argument is given Config mode will only find a version of the package that claims compatibility with the requested version (format is <code>major[.minor[.patch[.tweak]]]</code>). If the <code>EXACT</code> option is given only a version of the package claiming an exact match of the requested version may be found. CMake does not establish any convention for the meaning of version numbers. Package version numbers are checked by &quot;version&quot; files provided by the packages themselves. For a candidate package configuration file <code>&lt;config-file&gt;.cmake</code> the corresponding version file is located next to it and named either <code>&lt;config-file&gt;-version.cmake</code> or <code>&lt;config-file&gt;Version.cmake</code>. If no such version file is available then the configuration file is assumed to not be compatible with any requested version. A basic version file containing generic version matching code can be created using the <code>CMakePackageConfigHelpers</code> module. When a version file is found it is loaded to check the requested version number. The version file is loaded in a nested scope in which the following variables have been defined:</p>
 <dl>
-<dt><code>PACKAGE_FIND_NAME</code></p>
-<dd>the <code>&lt;package&gt;</code> name</p>
-<dt><code>PACKAGE_FIND_VERSION</code></p>
-<dd>full requested version string</p>
-<dt><code>PACKAGE_FIND_VERSION_MAJOR</code></p>
-<dd>major version if requested, else 0</p>
-<dt><code>PACKAGE_FIND_VERSION_MINOR</code></p>
-<dd>minor version if requested, else 0</p>
-<dt><code>PACKAGE_FIND_VERSION_PATCH</code></p>
-<dd>patch version if requested, else 0</p>
-<dt><code>PACKAGE_FIND_VERSION_TWEAK</code></p>
-<dd>tweak version if requested, else 0</p>
-<dt><code>PACKAGE_FIND_VERSION_COUNT</code></p>
-<dd>number of version components, 0 to 4 </p>
+<dt><code>PACKAGE_FIND_NAME</code></dt>
+<dd>the <code>&lt;package&gt;</code> name</dd>
+<dt><code>PACKAGE_FIND_VERSION</code></dt>
+<dd>full requested version string</dd>
+<dt><code>PACKAGE_FIND_VERSION_MAJOR</code></dt>
+<dd>major version if requested, else 0</dd>
+<dt><code>PACKAGE_FIND_VERSION_MINOR</code></dt>
+<dd>minor version if requested, else 0</dd>
+<dt><code>PACKAGE_FIND_VERSION_PATCH</code></dt>
+<dd>patch version if requested, else 0</dd>
+<dt><code>PACKAGE_FIND_VERSION_TWEAK</code></dt>
+<dd>tweak version if requested, else 0</dd>
+<dt><code>PACKAGE_FIND_VERSION_COUNT</code></dt>
+<dd>number of version components, 0 to 4 </dd>
 <p> The version file checks whether it satisfies the requested version and sets these variables:</p>
-<dt><code>PACKAGE_VERSION</code></p>
-<dd>full provided version string</p>
-<dt><code>PACKAGE_VERSION_EXACT</code></p>
-<dd>true if version is exact match</p>
-<dt><code>PACKAGE_VERSION_COMPATIBLE</code></p>
-<dd>true if version is compatible</p>
-<dt><code>PACKAGE_VERSION_UNSUITABLE</code></p>
-<dd>true if unsuitable as any version </p>
+<dt><code>PACKAGE_VERSION</code></dt>
+<dd>full provided version string</dd>
+<dt><code>PACKAGE_VERSION_EXACT</code></dt>
+<dd>true if version is exact match</dd>
+<dt><code>PACKAGE_VERSION_COMPATIBLE</code></dt>
+<dd>true if version is compatible</dd>
+<dt><code>PACKAGE_VERSION_UNSUITABLE</code></dt>
+<dd>true if unsuitable as any version </dd>
 <p> These variables are checked by the <code>find_package</code> command to determine whether the configuration file provides an acceptable version. They are not available after the find_package call returns. If the version is acceptable the following variables are set:</p>
-<dt><code>&lt;package&gt;_VERSION</code></p>
-<dd>full provided version string</p>
-<dt><code>&lt;package&gt;_VERSION_MAJOR</code></p>
-<dd>major version if provided, else 0</p>
-<dt><code>&lt;package&gt;_VERSION_MINOR</code></p>
-<dd>minor version if provided, else 0</p>
-<dt><code>&lt;package&gt;_VERSION_PATCH</code></p>
-<dd>patch version if provided, else 0</p>
-<dt><code>&lt;package&gt;_VERSION_TWEAK</code></p>
-<dd>tweak version if provided, else 0</p>
-<dt><code>&lt;package&gt;_VERSION_COUNT</code></p>
-<dd>number of version components, 0 to 4 </p>
+<dt><code>&lt;package&gt;_VERSION</code></dt>
+<dd>full provided version string</dd>
+<dt><code>&lt;package&gt;_VERSION_MAJOR</code></dt>
+<dd>major version if provided, else 0</dd>
+<dt><code>&lt;package&gt;_VERSION_MINOR</code></dt>
+<dd>minor version if provided, else 0</dd>
+<dt><code>&lt;package&gt;_VERSION_PATCH</code></dt>
+<dd>patch version if provided, else 0</dd>
+<dt><code>&lt;package&gt;_VERSION_TWEAK</code></dt>
+<dd>tweak version if provided, else 0</dd>
+<dt><code>&lt;package&gt;_VERSION_COUNT</code></dt>
+<dd>number of version components, 0 to 4 </dd>
 <p> and the corresponding package configuration file is loaded. When multiple package configuration files are available whose version files claim compatibility with the version requested it is unspecified which one is chosen. No attempt is made to choose a highest or closest version number. </p>
 <p> Config mode provides an elaborate interface and search procedure. Much of the interface is provided for completeness and for use internally by find-modules loaded by Module mode. Most user code should simply call: </p>
 <pre>find_package(&lt;package&gt; [major[.minor]] [EXACT] [REQUIRED|QUIET])</pre>
@@ -903,72 +904,72 @@ find_library (&lt;VAR&gt; NAMES name)</pre>
 <p>In all cases the <code>&lt;name&gt;</code> is treated as case-insensitive and corresponds to any of the names specified (<code>&lt;package&gt;</code> or names given by <code>NAMES</code>). Paths with <code>lib/&lt;arch&gt;</code> are enabled if the <code>CMAKE_LIBRARY_ARCHITECTURE</code> variable is set. If <code>PATH_SUFFIXES</code> is specified the suffixes are appended to each (W) or (U) directory entry one-by-one. </p>
 <p> This set of directories is intended to work in cooperation with projects that provide configuration files in their installation trees. Directories above marked with (W) are intended for installations on Windows where the prefix may point at the top of an application&#8217;s installation directory. Those marked with (U) are intended for installations on UNIX platforms where the prefix is shared by multiple packages. This is merely a convention, so all (W) and (U) directories are still searched on all platforms. Directories marked with (A) are intended for installations on Apple platforms. The <code>CMAKE_FIND_FRAMEWORK</code> and <code>CMAKE_FIND_APPBUNDLE</code> variables determine the order of preference. </p>
 <p> The set of installation prefixes is constructed using the following steps. If <code>NO_DEFAULT_PATH</code> is specified all <code>NO_*</code> options are enabled.</p>
-<dt>1.</p>
-<dd>Search paths specified in cmake-specific cache variables. These are intended to be used on the command line with a <code>-DVAR=value</code>. This can be skipped if <code>NO_CMAKE_PATH</code> is passed: </p>
+<dt>1.</dt>
+<dd>Search paths specified in cmake-specific cache variables. These are intended to be used on the command line with a <code>-DVAR=value</code>. This can be skipped if <code>NO_CMAKE_PATH</code> is passed: </dd>
 <pre>CMAKE_PREFIX_PATH
 CMAKE_FRAMEWORK_PATH
 CMAKE_APPBUNDLE_PATH</pre>
-<dt>2.</p>
-<dd>Search paths specified in cmake-specific environment variables. These are intended to be set in the user&#8217;s shell configuration. This can be skipped if <code>NO_CMAKE_ENVIRONMENT_PATH</code> is passed: </p>
+<dt>2.</dt>
+<dd>Search paths specified in cmake-specific environment variables. These are intended to be set in the user&#8217;s shell configuration. This can be skipped if <code>NO_CMAKE_ENVIRONMENT_PATH</code> is passed: </dd>
 <pre>&lt;package&gt;_DIR
 CMAKE_PREFIX_PATH
 CMAKE_FRAMEWORK_PATH
 CMAKE_APPBUNDLE_PATH</pre>
-<dt>3.</p>
-<dd>Search paths specified by the <code>HINTS</code> option. These should be paths computed by system introspection, such as a hint provided by the location of another item already found. Hard-coded guesses should be specified with the <code>PATHS</code> option.</p>
-<dt>4.</p>
-<dd>Search the standard system environment variables. This can be skipped if <code>NO_SYSTEM_ENVIRONMENT_PATH</code> is passed. Path entries ending in <code>/bin</code> or <code>/sbin</code> are automatically converted to their parent directories: </p>
+<dt>3.</dt>
+<dd>Search paths specified by the <code>HINTS</code> option. These should be paths computed by system introspection, such as a hint provided by the location of another item already found. Hard-coded guesses should be specified with the <code>PATHS</code> option.</dd>
+<dt>4.</dt>
+<dd>Search the standard system environment variables. This can be skipped if <code>NO_SYSTEM_ENVIRONMENT_PATH</code> is passed. Path entries ending in <code>/bin</code> or <code>/sbin</code> are automatically converted to their parent directories: </dd>
 <pre>PATH</pre>
-<dt>5.</p>
-<dd>Search paths stored in the CMake <i>User Package Registry</i>. This can be skipped if <code>NO_CMAKE_PACKAGE_REGISTRY</code> is passed or by setting the <code>CMAKE_FIND_PACKAGE_NO_PACKAGE_REGISTRY</code> to <code>TRUE</code>. See the <code><a href="/docs/linux/man/7-cmake3-packages/">cmake3-packages</a>(7)</code> manual for details on the user package registry.</p>
-<dt>6.</p>
-<dd>Search cmake variables defined in the Platform files for the current system. This can be skipped if <code>NO_CMAKE_SYSTEM_PATH</code> is passed: </p>
+<dt>5.</dt>
+<dd>Search paths stored in the CMake <i>User Package Registry</i>. This can be skipped if <code>NO_CMAKE_PACKAGE_REGISTRY</code> is passed or by setting the <code>CMAKE_FIND_PACKAGE_NO_PACKAGE_REGISTRY</code> to <code>TRUE</code>. See the <code><a href="/docs/linux/man/7-cmake3-packages/">cmake3-packages</a>(7)</code> manual for details on the user package registry.</dd>
+<dt>6.</dt>
+<dd>Search cmake variables defined in the Platform files for the current system. This can be skipped if <code>NO_CMAKE_SYSTEM_PATH</code> is passed: </dd>
 <pre>CMAKE_SYSTEM_PREFIX_PATH
 CMAKE_SYSTEM_FRAMEWORK_PATH
 CMAKE_SYSTEM_APPBUNDLE_PATH</pre>
-<dt>7.</p>
-<dd>Search paths stored in the CMake <i>System Package Registry</i>. This can be skipped if <code>NO_CMAKE_SYSTEM_PACKAGE_REGISTRY</code> is passed or by setting the <code>CMAKE_FIND_PACKAGE_NO_SYSTEM_PACKAGE_REGISTRY</code> to <code>TRUE</code>. See the <code><a href="/docs/linux/man/7-cmake3-packages/">cmake3-packages</a>(7)</code> manual for details on the system package registry.</p>
-<dt>8.</p>
-<dd>Search paths specified by the <code>PATHS</code> option. These are typically hard-coded guesses. </p>
+<dt>7.</dt>
+<dd>Search paths stored in the CMake <i>System Package Registry</i>. This can be skipped if <code>NO_CMAKE_SYSTEM_PACKAGE_REGISTRY</code> is passed or by setting the <code>CMAKE_FIND_PACKAGE_NO_SYSTEM_PACKAGE_REGISTRY</code> to <code>TRUE</code>. See the <code><a href="/docs/linux/man/7-cmake3-packages/">cmake3-packages</a>(7)</code> manual for details on the system package registry.</dd>
+<dt>8.</dt>
+<dd>Search paths specified by the <code>PATHS</code> option. These are typically hard-coded guesses. </dd>
 <p> The CMake variable <code>CMAKE_FIND_ROOT_PATH</code> specifies one or more directories to be prepended to all other search directories. This effectively &quot;re-roots&quot; the entire search under given locations. Paths which are descendants of the <code>CMAKE_STAGING_PREFIX</code> are excluded from this re-rooting, because that variable is always a path on the host system. By default the <code>CMAKE_FIND_ROOT_PATH</code> is empty. </p>
 <p> The <code>CMAKE_SYSROOT</code> variable can also be used to specify exactly one directory to use as a prefix. Setting <code>CMAKE_SYSROOT</code> also has other effects. See the documentation for that variable for more. </p>
 <p> These variables are especially useful when cross-compiling to point to the root directory of the target environment and CMake will search there too. By default at first the directories listed in <code>CMAKE_FIND_ROOT_PATH</code> are searched, then the <code>CMAKE_SYSROOT</code> directory is searched, and then the non-rooted directories will be searched. The default behavior can be adjusted by setting <code>CMAKE_FIND_ROOT_PATH_MODE_PACKAGE</code>. This behavior can be manually overridden on a per-call basis using options:</p>
-<dt><code>CMAKE_FIND_ROOT_PATH_BOTH</code></p>
-<dd>Search in the order described above.</p>
-<dt><code>NO_CMAKE_FIND_ROOT_PATH</code></p>
-<dd>Do not use the <code>CMAKE_FIND_ROOT_PATH</code> variable.</p>
-<dt><code>ONLY_CMAKE_FIND_ROOT_PATH</code></p>
-<dd>Search only the re-rooted directories and directories below <code>CMAKE_STAGING_PREFIX</code>. </p>
+<dt><code>CMAKE_FIND_ROOT_PATH_BOTH</code></dt>
+<dd>Search in the order described above.</dd>
+<dt><code>NO_CMAKE_FIND_ROOT_PATH</code></dt>
+<dd>Do not use the <code>CMAKE_FIND_ROOT_PATH</code> variable.</dd>
+<dt><code>ONLY_CMAKE_FIND_ROOT_PATH</code></dt>
+<dd>Search only the re-rooted directories and directories below <code>CMAKE_STAGING_PREFIX</code>. </dd>
 <p> The default search order is designed to be most-specific to least-specific for common use cases. Projects may override the order by simply calling the command multiple times and using the <code>NO_*</code> options: </p>
 <pre>find_package (&lt;package&gt; PATHS paths... NO_DEFAULT_PATH)
 find_package (&lt;package&gt;)</pre>
 <p>Once one of the calls succeeds the result variable will be set and stored in the cache so that no call will search again. </p>
 <p> Every non-REQUIRED <code>find_package</code> call can be disabled by setting the <code>CMAKE_DISABLE_FIND_PACKAGE_&lt;PackageName&gt;</code> variable to <code>TRUE</code>. </p>
 <p> When loading a find module or package configuration file <code>find_package</code> defines variables to provide information about the call arguments (and restores their original state before returning):</p>
-<dt><code>CMAKE_FIND_PACKAGE_NAME</code></p>
-<dd>the <code>&lt;package&gt;</code> name which is searched for</p>
-<dt><code>&lt;package&gt;_FIND_REQUIRED</code></p>
-<dd>true if <code>REQUIRED</code> option was given</p>
-<dt><code>&lt;package&gt;_FIND_QUIETLY</code></p>
-<dd>true if <code>QUIET</code> option was given</p>
-<dt><code>&lt;package&gt;_FIND_VERSION</code></p>
-<dd>full requested version string</p>
-<dt><code>&lt;package&gt;_FIND_VERSION_MAJOR</code></p>
-<dd>major version if requested, else 0</p>
-<dt><code>&lt;package&gt;_FIND_VERSION_MINOR</code></p>
-<dd>minor version if requested, else 0</p>
-<dt><code>&lt;package&gt;_FIND_VERSION_PATCH</code></p>
-<dd>patch version if requested, else 0</p>
-<dt><code>&lt;package&gt;_FIND_VERSION_TWEAK</code></p>
-<dd>tweak version if requested, else 0</p>
-<dt><code>&lt;package&gt;_FIND_VERSION_COUNT</code></p>
-<dd>number of version components, 0 to 4</p>
-<dt><code>&lt;package&gt;_FIND_VERSION_EXACT</code></p>
-<dd>true if <code>EXACT</code> option was given</p>
-<dt><code>&lt;package&gt;_FIND_COMPONENTS</code></p>
-<dd>list of requested components</p>
-<dt><code>&lt;package&gt;_FIND_REQUIRED_&lt;c&gt;</code></p>
-<dd>true if component <code>&lt;c&gt;</code> is required, false if component <code>&lt;c&gt;</code> is optional </p>
+<dt><code>CMAKE_FIND_PACKAGE_NAME</code></dt>
+<dd>the <code>&lt;package&gt;</code> name which is searched for</dd>
+<dt><code>&lt;package&gt;_FIND_REQUIRED</code></dt>
+<dd>true if <code>REQUIRED</code> option was given</dd>
+<dt><code>&lt;package&gt;_FIND_QUIETLY</code></dt>
+<dd>true if <code>QUIET</code> option was given</dd>
+<dt><code>&lt;package&gt;_FIND_VERSION</code></dt>
+<dd>full requested version string</dd>
+<dt><code>&lt;package&gt;_FIND_VERSION_MAJOR</code></dt>
+<dd>major version if requested, else 0</dd>
+<dt><code>&lt;package&gt;_FIND_VERSION_MINOR</code></dt>
+<dd>minor version if requested, else 0</dd>
+<dt><code>&lt;package&gt;_FIND_VERSION_PATCH</code></dt>
+<dd>patch version if requested, else 0</dd>
+<dt><code>&lt;package&gt;_FIND_VERSION_TWEAK</code></dt>
+<dd>tweak version if requested, else 0</dd>
+<dt><code>&lt;package&gt;_FIND_VERSION_COUNT</code></dt>
+<dd>number of version components, 0 to 4</dd>
+<dt><code>&lt;package&gt;_FIND_VERSION_EXACT</code></dt>
+<dd>true if <code>EXACT</code> option was given</dd>
+<dt><code>&lt;package&gt;_FIND_COMPONENTS</code></dt>
+<dd>list of requested components</dd>
+<dt><code>&lt;package&gt;_FIND_REQUIRED_&lt;c&gt;</code></dt>
+<dd>true if component <code>&lt;c&gt;</code> is required, false if component <code>&lt;c&gt;</code> is optional </dd>
 <p> In Module mode the loaded find module is responsible to honor the request detailed by these variables; see the find module for details. In Config mode <code>find_package</code> handles <code>REQUIRED</code>, <code>QUIET</code>, and <code>[version]</code> options automatically but leaves it to the package configuration file to handle components in a way that makes sense for the package. The package configuration file may set <code>&lt;package&gt;_FOUND</code> to false to tell <code>find_package</code> that component requirements are not satisfied. </p>
 <p> See the <code>cmake_policy()</code> command documentation for discussion of the <code>NO_POLICY_SCOPE</code> option.</dl>
 <h3>find_path</h3>
@@ -994,58 +995,58 @@ find_package (&lt;package&gt;)</pre>
 <p>This command is used to find a directory containing the named file. A cache entry named by <code>&lt;VAR&gt;</code> is created to store the result of this command. If the file in a directory is found the result is stored in the variable and the search will not be repeated unless the variable is cleared. If nothing is found, the result will be <code>&lt;VAR&gt;-NOTFOUND</code>, and the search will be attempted again the next time find_path is invoked with the same variable. </p>
 <p> Options include:</p>
 <dl>
-<dt><code>NAMES</code></p>
-<dd>Specify one or more possible names for the file in a directory. </p>
+<dt><code>NAMES</code></dt>
+<dd>Specify one or more possible names for the file in a directory. </dd>
 <p> When using this to specify names with and without a version suffix, we recommend specifying the unversioned name first so that locally-built packages can be found before those provided by distributions.</p>
-<dt><code>HINTS</code>, <code>PATHS</code></p>
-<dd>Specify directories to search in addition to the default locations. The <code>ENV var</code> sub-option reads paths from a system environment variable.</p>
-<dt><code>PATH_SUFFIXES</code></p>
-<dd>Specify additional subdirectories to check below each directory location otherwise considered.</p>
-<dt><code>DOC</code></p>
-<dd>Specify the documentation string for the <code>&lt;VAR&gt;</code> cache entry. </p>
+<dt><code>HINTS</code>, <code>PATHS</code></dt>
+<dd>Specify directories to search in addition to the default locations. The <code>ENV var</code> sub-option reads paths from a system environment variable.</dd>
+<dt><code>PATH_SUFFIXES</code></dt>
+<dd>Specify additional subdirectories to check below each directory location otherwise considered.</dd>
+<dt><code>DOC</code></dt>
+<dd>Specify the documentation string for the <code>&lt;VAR&gt;</code> cache entry. </dd>
 <p> If <code>NO_DEFAULT_PATH</code> is specified, then no additional paths are added to the search. If <code>NO_DEFAULT_PATH</code> is not specified, the search process is as follows:</p>
-<dt>1.</p>
-<dd>Search paths specified in cmake-specific cache variables. These are intended to be used on the command line with a <code>-DVAR=value</code>. This can be skipped if <code>NO_CMAKE_PATH</code> is passed.</p>
-<dt>&bull;</p>
-<dd><code>&lt;prefix&gt;/include/&lt;arch&gt;</code> if <code>CMAKE_LIBRARY_ARCHITECTURE</code> is set, and <code>&lt;prefix&gt;/include</code> for each <code>&lt;prefix&gt;</code> in <code>CMAKE_PREFIX_PATH</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_INCLUDE_PATH</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_FRAMEWORK_PATH</code></p>
-<dt>2.</p>
-<dd>Search paths specified in cmake-specific environment variables. These are intended to be set in the user&#8217;s shell configuration. This can be skipped if <code>NO_CMAKE_ENVIRONMENT_PATH</code> is passed.</p>
-<dt>&bull;</p>
-<dd><code>&lt;prefix&gt;/include/&lt;arch&gt;</code> if <code>CMAKE_LIBRARY_ARCHITECTURE</code> is set, and <code>&lt;prefix&gt;/include</code> for each <code>&lt;prefix&gt;</code> in <code>CMAKE_PREFIX_PATH</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_INCLUDE_PATH</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_FRAMEWORK_PATH</code></p>
-<dt>3.</p>
-<dd>Search the paths specified by the <code>HINTS</code> option. These should be paths computed by system introspection, such as a hint provided by the location of another item already found. Hard-coded guesses should be specified with the <code>PATHS</code> option.</p>
-<dt>4.</p>
-<dd>Search the standard system environment variables. This can be skipped if <code>NO_SYSTEM_ENVIRONMENT_PATH</code> is an argument.</p>
-<dt>&bull;</p>
-<dd>Directories in <code>INCLUDE</code>. On Windows hosts: <code>&lt;prefix&gt;/include/&lt;arch&gt;</code> if <code>CMAKE_LIBRARY_ARCHITECTURE</code> is set, and <code>&lt;prefix&gt;/include</code> for each <code>&lt;prefix&gt;/[s]bin</code> in <code>PATH</code>, and <code>&lt;entry&gt;/include</code> for other entries in <code>PATH</code>, and the directories in <code>PATH</code> itself.</p>
-<dt>5.</p>
-<dd>Search cmake variables defined in the Platform files for the current system. This can be skipped if <code>NO_CMAKE_SYSTEM_PATH</code> is passed.</p>
-<dt>&bull;</p>
-<dd><code>&lt;prefix&gt;/include/&lt;arch&gt;</code> if <code>CMAKE_LIBRARY_ARCHITECTURE</code> is set, and <code>&lt;prefix&gt;/include</code> for each <code>&lt;prefix&gt;</code> in <code>CMAKE_SYSTEM_PREFIX_PATH</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_SYSTEM_INCLUDE_PATH</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_SYSTEM_FRAMEWORK_PATH</code></p>
-<dt>6.</p>
-<dd>Search the paths specified by the PATHS option or in the short-hand version of the command. These are typically hard-coded guesses. </p>
+<dt>1.</dt>
+<dd>Search paths specified in cmake-specific cache variables. These are intended to be used on the command line with a <code>-DVAR=value</code>. This can be skipped if <code>NO_CMAKE_PATH</code> is passed.</dd>
+<dt>&bull;</dt>
+<dd><code>&lt;prefix&gt;/include/&lt;arch&gt;</code> if <code>CMAKE_LIBRARY_ARCHITECTURE</code> is set, and <code>&lt;prefix&gt;/include</code> for each <code>&lt;prefix&gt;</code> in <code>CMAKE_PREFIX_PATH</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_INCLUDE_PATH</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_FRAMEWORK_PATH</code></dd>
+<dt>2.</dt>
+<dd>Search paths specified in cmake-specific environment variables. These are intended to be set in the user&#8217;s shell configuration. This can be skipped if <code>NO_CMAKE_ENVIRONMENT_PATH</code> is passed.</dd>
+<dt>&bull;</dt>
+<dd><code>&lt;prefix&gt;/include/&lt;arch&gt;</code> if <code>CMAKE_LIBRARY_ARCHITECTURE</code> is set, and <code>&lt;prefix&gt;/include</code> for each <code>&lt;prefix&gt;</code> in <code>CMAKE_PREFIX_PATH</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_INCLUDE_PATH</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_FRAMEWORK_PATH</code></dd>
+<dt>3.</dt>
+<dd>Search the paths specified by the <code>HINTS</code> option. These should be paths computed by system introspection, such as a hint provided by the location of another item already found. Hard-coded guesses should be specified with the <code>PATHS</code> option.</dd>
+<dt>4.</dt>
+<dd>Search the standard system environment variables. This can be skipped if <code>NO_SYSTEM_ENVIRONMENT_PATH</code> is an argument.</dd>
+<dt>&bull;</dt>
+<dd>Directories in <code>INCLUDE</code>. On Windows hosts: <code>&lt;prefix&gt;/include/&lt;arch&gt;</code> if <code>CMAKE_LIBRARY_ARCHITECTURE</code> is set, and <code>&lt;prefix&gt;/include</code> for each <code>&lt;prefix&gt;/[s]bin</code> in <code>PATH</code>, and <code>&lt;entry&gt;/include</code> for other entries in <code>PATH</code>, and the directories in <code>PATH</code> itself.</dd>
+<dt>5.</dt>
+<dd>Search cmake variables defined in the Platform files for the current system. This can be skipped if <code>NO_CMAKE_SYSTEM_PATH</code> is passed.</dd>
+<dt>&bull;</dt>
+<dd><code>&lt;prefix&gt;/include/&lt;arch&gt;</code> if <code>CMAKE_LIBRARY_ARCHITECTURE</code> is set, and <code>&lt;prefix&gt;/include</code> for each <code>&lt;prefix&gt;</code> in <code>CMAKE_SYSTEM_PREFIX_PATH</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_SYSTEM_INCLUDE_PATH</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_SYSTEM_FRAMEWORK_PATH</code></dd>
+<dt>6.</dt>
+<dd>Search the paths specified by the PATHS option or in the short-hand version of the command. These are typically hard-coded guesses. </dd>
 <p> On OS X the <code>CMAKE_FIND_FRAMEWORK</code> and <code>CMAKE_FIND_APPBUNDLE</code> variables determine the order of preference between Apple-style and unix-style package components. </p>
 <p> The CMake variable <code>CMAKE_FIND_ROOT_PATH</code> specifies one or more directories to be prepended to all other search directories. This effectively &quot;re-roots&quot; the entire search under given locations. Paths which are descendants of the <code>CMAKE_STAGING_PREFIX</code> are excluded from this re-rooting, because that variable is always a path on the host system. By default the <code>CMAKE_FIND_ROOT_PATH</code> is empty. </p>
 <p> The <code>CMAKE_SYSROOT</code> variable can also be used to specify exactly one directory to use as a prefix. Setting <code>CMAKE_SYSROOT</code> also has other effects. See the documentation for that variable for more. </p>
 <p> These variables are especially useful when cross-compiling to point to the root directory of the target environment and CMake will search there too. By default at first the directories listed in <code>CMAKE_FIND_ROOT_PATH</code> are searched, then the <code>CMAKE_SYSROOT</code> directory is searched, and then the non-rooted directories will be searched. The default behavior can be adjusted by setting <code>CMAKE_FIND_ROOT_PATH_MODE_INCLUDE</code>. This behavior can be manually overridden on a per-call basis using options:</p>
-<dt><code>CMAKE_FIND_ROOT_PATH_BOTH</code></p>
-<dd>Search in the order described above.</p>
-<dt><code>NO_CMAKE_FIND_ROOT_PATH</code></p>
-<dd>Do not use the <code>CMAKE_FIND_ROOT_PATH</code> variable.</p>
-<dt><code>ONLY_CMAKE_FIND_ROOT_PATH</code></p>
-<dd>Search only the re-rooted directories and directories below <code>CMAKE_STAGING_PREFIX</code>. </p>
+<dt><code>CMAKE_FIND_ROOT_PATH_BOTH</code></dt>
+<dd>Search in the order described above.</dd>
+<dt><code>NO_CMAKE_FIND_ROOT_PATH</code></dt>
+<dd>Do not use the <code>CMAKE_FIND_ROOT_PATH</code> variable.</dd>
+<dt><code>ONLY_CMAKE_FIND_ROOT_PATH</code></dt>
+<dd>Search only the re-rooted directories and directories below <code>CMAKE_STAGING_PREFIX</code>. </dd>
 <p> The default search order is designed to be most-specific to least-specific for common use cases. Projects may override the order by simply calling the command multiple times and using the <code>NO_*</code> options: </p>
 <pre>find_path (&lt;VAR&gt; NAMES name PATHS paths... NO_DEFAULT_PATH)
 find_path (&lt;VAR&gt; NAMES name)</pre>
@@ -1074,58 +1075,58 @@ find_path (&lt;VAR&gt; NAMES name)</pre>
 <p>This command is used to find a program. A cache entry named by <code>&lt;VAR&gt;</code> is created to store the result of this command. If the program is found the result is stored in the variable and the search will not be repeated unless the variable is cleared. If nothing is found, the result will be <code>&lt;VAR&gt;-NOTFOUND</code>, and the search will be attempted again the next time find_program is invoked with the same variable. </p>
 <p> Options include:</p>
 <dl>
-<dt><code>NAMES</code></p>
-<dd>Specify one or more possible names for the program. </p>
+<dt><code>NAMES</code></dt>
+<dd>Specify one or more possible names for the program. </dd>
 <p> When using this to specify names with and without a version suffix, we recommend specifying the unversioned name first so that locally-built packages can be found before those provided by distributions.</p>
-<dt><code>HINTS</code>, <code>PATHS</code></p>
-<dd>Specify directories to search in addition to the default locations. The <code>ENV var</code> sub-option reads paths from a system environment variable.</p>
-<dt><code>PATH_SUFFIXES</code></p>
-<dd>Specify additional subdirectories to check below each directory location otherwise considered.</p>
-<dt><code>DOC</code></p>
-<dd>Specify the documentation string for the <code>&lt;VAR&gt;</code> cache entry. </p>
+<dt><code>HINTS</code>, <code>PATHS</code></dt>
+<dd>Specify directories to search in addition to the default locations. The <code>ENV var</code> sub-option reads paths from a system environment variable.</dd>
+<dt><code>PATH_SUFFIXES</code></dt>
+<dd>Specify additional subdirectories to check below each directory location otherwise considered.</dd>
+<dt><code>DOC</code></dt>
+<dd>Specify the documentation string for the <code>&lt;VAR&gt;</code> cache entry. </dd>
 <p> If <code>NO_DEFAULT_PATH</code> is specified, then no additional paths are added to the search. If <code>NO_DEFAULT_PATH</code> is not specified, the search process is as follows:</p>
-<dt>1.</p>
-<dd>Search paths specified in cmake-specific cache variables. These are intended to be used on the command line with a <code>-DVAR=value</code>. This can be skipped if <code>NO_CMAKE_PATH</code> is passed.</p>
-<dt>&bull;</p>
-<dd><code>&lt;prefix&gt;/[s]bin</code> for each <code>&lt;prefix&gt;</code> in <code>CMAKE_PREFIX_PATH</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_PROGRAM_PATH</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_APPBUNDLE_PATH</code></p>
-<dt>2.</p>
-<dd>Search paths specified in cmake-specific environment variables. These are intended to be set in the user&#8217;s shell configuration. This can be skipped if <code>NO_CMAKE_ENVIRONMENT_PATH</code> is passed.</p>
-<dt>&bull;</p>
-<dd><code>&lt;prefix&gt;/[s]bin</code> for each <code>&lt;prefix&gt;</code> in <code>CMAKE_PREFIX_PATH</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_PROGRAM_PATH</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_APPBUNDLE_PATH</code></p>
-<dt>3.</p>
-<dd>Search the paths specified by the <code>HINTS</code> option. These should be paths computed by system introspection, such as a hint provided by the location of another item already found. Hard-coded guesses should be specified with the <code>PATHS</code> option.</p>
-<dt>4.</p>
-<dd>Search the standard system environment variables. This can be skipped if <code>NO_SYSTEM_ENVIRONMENT_PATH</code> is an argument.</p>
-<dt>&bull;</p>
-<dd><code>PATH</code></p>
-<dt>5.</p>
-<dd>Search cmake variables defined in the Platform files for the current system. This can be skipped if <code>NO_CMAKE_SYSTEM_PATH</code> is passed.</p>
-<dt>&bull;</p>
-<dd><code>&lt;prefix&gt;/[s]bin</code> for each <code>&lt;prefix&gt;</code> in <code>CMAKE_SYSTEM_PREFIX_PATH</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_SYSTEM_PROGRAM_PATH</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_SYSTEM_APPBUNDLE_PATH</code></p>
-<dt>6.</p>
-<dd>Search the paths specified by the PATHS option or in the short-hand version of the command. These are typically hard-coded guesses. </p>
+<dt>1.</dt>
+<dd>Search paths specified in cmake-specific cache variables. These are intended to be used on the command line with a <code>-DVAR=value</code>. This can be skipped if <code>NO_CMAKE_PATH</code> is passed.</dd>
+<dt>&bull;</dt>
+<dd><code>&lt;prefix&gt;/[s]bin</code> for each <code>&lt;prefix&gt;</code> in <code>CMAKE_PREFIX_PATH</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_PROGRAM_PATH</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_APPBUNDLE_PATH</code></dd>
+<dt>2.</dt>
+<dd>Search paths specified in cmake-specific environment variables. These are intended to be set in the user&#8217;s shell configuration. This can be skipped if <code>NO_CMAKE_ENVIRONMENT_PATH</code> is passed.</dd>
+<dt>&bull;</dt>
+<dd><code>&lt;prefix&gt;/[s]bin</code> for each <code>&lt;prefix&gt;</code> in <code>CMAKE_PREFIX_PATH</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_PROGRAM_PATH</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_APPBUNDLE_PATH</code></dd>
+<dt>3.</dt>
+<dd>Search the paths specified by the <code>HINTS</code> option. These should be paths computed by system introspection, such as a hint provided by the location of another item already found. Hard-coded guesses should be specified with the <code>PATHS</code> option.</dd>
+<dt>4.</dt>
+<dd>Search the standard system environment variables. This can be skipped if <code>NO_SYSTEM_ENVIRONMENT_PATH</code> is an argument.</dd>
+<dt>&bull;</dt>
+<dd><code>PATH</code></dd>
+<dt>5.</dt>
+<dd>Search cmake variables defined in the Platform files for the current system. This can be skipped if <code>NO_CMAKE_SYSTEM_PATH</code> is passed.</dd>
+<dt>&bull;</dt>
+<dd><code>&lt;prefix&gt;/[s]bin</code> for each <code>&lt;prefix&gt;</code> in <code>CMAKE_SYSTEM_PREFIX_PATH</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_SYSTEM_PROGRAM_PATH</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_SYSTEM_APPBUNDLE_PATH</code></dd>
+<dt>6.</dt>
+<dd>Search the paths specified by the PATHS option or in the short-hand version of the command. These are typically hard-coded guesses. </dd>
 <p> On OS X the <code>CMAKE_FIND_FRAMEWORK</code> and <code>CMAKE_FIND_APPBUNDLE</code> variables determine the order of preference between Apple-style and unix-style package components. </p>
 <p> The CMake variable <code>CMAKE_FIND_ROOT_PATH</code> specifies one or more directories to be prepended to all other search directories. This effectively &quot;re-roots&quot; the entire search under given locations. Paths which are descendants of the <code>CMAKE_STAGING_PREFIX</code> are excluded from this re-rooting, because that variable is always a path on the host system. By default the <code>CMAKE_FIND_ROOT_PATH</code> is empty. </p>
 <p> The <code>CMAKE_SYSROOT</code> variable can also be used to specify exactly one directory to use as a prefix. Setting <code>CMAKE_SYSROOT</code> also has other effects. See the documentation for that variable for more. </p>
 <p> These variables are especially useful when cross-compiling to point to the root directory of the target environment and CMake will search there too. By default at first the directories listed in <code>CMAKE_FIND_ROOT_PATH</code> are searched, then the <code>CMAKE_SYSROOT</code> directory is searched, and then the non-rooted directories will be searched. The default behavior can be adjusted by setting <code>CMAKE_FIND_ROOT_PATH_MODE_PROGRAM</code>. This behavior can be manually overridden on a per-call basis using options:</p>
-<dt><code>CMAKE_FIND_ROOT_PATH_BOTH</code></p>
-<dd>Search in the order described above.</p>
-<dt><code>NO_CMAKE_FIND_ROOT_PATH</code></p>
-<dd>Do not use the <code>CMAKE_FIND_ROOT_PATH</code> variable.</p>
-<dt><code>ONLY_CMAKE_FIND_ROOT_PATH</code></p>
-<dd>Search only the re-rooted directories and directories below <code>CMAKE_STAGING_PREFIX</code>. </p>
+<dt><code>CMAKE_FIND_ROOT_PATH_BOTH</code></dt>
+<dd>Search in the order described above.</dd>
+<dt><code>NO_CMAKE_FIND_ROOT_PATH</code></dt>
+<dd>Do not use the <code>CMAKE_FIND_ROOT_PATH</code> variable.</dd>
+<dt><code>ONLY_CMAKE_FIND_ROOT_PATH</code></dt>
+<dd>Search only the re-rooted directories and directories below <code>CMAKE_STAGING_PREFIX</code>. </dd>
 <p> The default search order is designed to be most-specific to least-specific for common use cases. Projects may override the order by simply calling the command multiple times and using the <code>NO_*</code> options: </p>
 <pre>find_program (&lt;VAR&gt; NAMES name PATHS paths... NO_DEFAULT_PATH)
 find_program (&lt;VAR&gt; NAMES name)</pre>
@@ -1148,12 +1149,12 @@ endforeach(loop_var)</pre>
 foreach(loop_var RANGE start stop [step])</pre>
 <p>Foreach can also iterate over a generated range of numbers. There are three types of this iteration:</p>
 <dl>
-<dt>&bull;</p>
-<dd>When specifying single number, the range will have elements 0 to &quot;total&quot;.</p>
-<dt>&bull;</p>
-<dd>When specifying two numbers, the range will have elements from the first number to the second number.</p>
-<dt>&bull;</p>
-<dd>The third optional number is the increment used to iterate from the first number to the second number. </p>
+<dt>&bull;</dt>
+<dd>When specifying single number, the range will have elements 0 to &quot;total&quot;.</dd>
+<dt>&bull;</dt>
+<dd>When specifying two numbers, the range will have elements from the first number to the second number.</dd>
+<dt>&bull;</dt>
+<dd>The third optional number is the increment used to iterate from the first number to the second number. </dd>
 <pre>foreach(loop_var IN [LISTS [list1 [...]]]
  [ITEMS [item1 [...]]])</pre>
 <p>Iterates over a precise list of items. The <code>LISTS</code> option names list-valued variables to be traversed, including empty elements (an empty string is a zero-length list). (Note macro arguments are not variables.) The <code>ITEMS</code> option ends argument parsing and includes all arguments following it in the iteration.</dl>
@@ -1223,22 +1224,22 @@ REALPATH = Full path to existing file with symlinks resolved</pre>
  [SET | DEFINED | BRIEF_DOCS | FULL_DOCS])</pre>
 <p>Get one property from one object in a scope. The first argument specifies the variable in which to store the result. The second argument determines the scope from which to get the property. It must be one of the following:</p>
 <dl>
-<dt><code>GLOBAL</code></p>
-<dd>Scope is unique and does not accept a name.</p>
-<dt><code>DIRECTORY</code></p>
-<dd>Scope defaults to the current directory but another directory (already processed by CMake) may be named by full or relative path.</p>
-<dt><code>TARGET</code></p>
-<dd>Scope must name one existing target.</p>
-<dt><code>SOURCE</code></p>
-<dd>Scope must name one source file.</p>
-<dt><code>INSTALL</code></p>
-<dd>Scope must name one installed file path.</p>
-<dt><code>TEST</code></p>
-<dd>Scope must name one existing test.</p>
-<dt><code>CACHE</code></p>
-<dd>Scope must name one cache entry.</p>
-<dt><code>VARIABLE</code></p>
-<dd>Scope is unique and does not accept a name. </p>
+<dt><code>GLOBAL</code></dt>
+<dd>Scope is unique and does not accept a name.</dd>
+<dt><code>DIRECTORY</code></dt>
+<dd>Scope defaults to the current directory but another directory (already processed by CMake) may be named by full or relative path.</dd>
+<dt><code>TARGET</code></dt>
+<dd>Scope must name one existing target.</dd>
+<dt><code>SOURCE</code></dt>
+<dd>Scope must name one source file.</dd>
+<dt><code>INSTALL</code></dt>
+<dd>Scope must name one installed file path.</dd>
+<dt><code>TEST</code></dt>
+<dd>Scope must name one existing test.</dd>
+<dt><code>CACHE</code></dt>
+<dd>Scope must name one cache entry.</dd>
+<dt><code>VARIABLE</code></dt>
+<dd>Scope is unique and does not accept a name. </dd>
 <p> The required <code>PROPERTY</code> option is immediately followed by the name of the property to get. If the property is not set an empty value is returned. If the <code>SET</code> option is given the variable is set to a boolean value indicating whether the property has been set. If the <code>DEFINED</code> option is given the variable is set to a boolean value indicating whether the property has been defined such as with the <code>define_property()</code> command. If <code>BRIEF_DOCS</code> or <code>FULL_DOCS</code> is given then the variable is set to a string containing documentation for the requested property. If documentation is requested for a property that has not been defined <code>NOTFOUND</code> is returned.</dl>
 <h3>get_source_file_property</h3>
 <p>Get a property for a source file. </p>
@@ -1276,60 +1277,60 @@ endif(expression)</pre>
 <p>Evaluates the given expression. If the result is true, the commands in the THEN section are invoked. Otherwise, the commands in the else section are invoked. The elseif and else sections are optional. You may have multiple elseif clauses. Note that the expression in the else and endif clause is optional. Long expressions can be used and there is a traditional order of precedence. Parenthetical expressions are evaluated first followed by unary tests such as <code>EXISTS</code>, <code>COMMAND</code>, and <code>DEFINED</code>. Then any binary tests such as <code>EQUAL</code>, <code>LESS</code>, <code>GREATER</code>, <code>STRLESS</code>, <code>STRGREATER</code>, <code>STREQUAL</code>, and <code>MATCHES</code> will be evaluated. Then boolean <code>NOT</code> operators and finally boolean <code>AND</code> and then <code>OR</code> operators will be evaluated. </p>
 <p> Possible expressions are:</p>
 <dl>
-<dt><code>if(&lt;constant&gt;)</code></p>
-<dd>True if the constant is <code>1</code>, <code>ON</code>, <code>YES</code>, <code>TRUE</code>, <code>Y</code>, or a non-zero number. False if the constant is <code>0</code>, <code>OFF</code>, <code>NO</code>, <code>FALSE</code>, <code>N</code>, <code>IGNORE</code>, <code>NOTFOUND</code>, the empty string, or ends in the suffix <code>-NOTFOUND</code>. Named boolean constants are case-insensitive. If the argument is not one of these specific constants, it is treated as a variable or string and the following signature is used.</p>
-<dt><code>if(&lt;variable|string&gt;)</code></p>
-<dd>True if given a variable that is defined to a value that is not a false constant. False otherwise. (Note macro arguments are not variables.)</p>
-<dt><code>if(NOT &lt;expression&gt;)</code></p>
-<dd>True if the expression is not true.</p>
-<dt><code>if(&lt;expr1&gt; AND &lt;expr2&gt;)</code></p>
-<dd>True if both expressions would be considered true individually.</p>
-<dt><code>if(&lt;expr1&gt; OR &lt;expr2&gt;)</code></p>
-<dd>True if either expression would be considered true individually.</p>
-<dt><code>if(COMMAND command-name)</code></p>
-<dd>True if the given name is a command, macro or function that can be invoked.</p>
-<dt><code>if(POLICY policy-id)</code></p>
-<dd>True if the given name is an existing policy (of the form <code>CMP&lt;NNNN&gt;</code>).</p>
-<dt><code>if(TARGET target-name)</code></p>
-<dd>True if the given name is an existing logical target name created by a call to the <code>add_executable()</code>, <code>add_library()</code>, or <code>add_custom_target()</code> command that has already been invoked (in any directory).</p>
-<dt><code>if(TEST test-name)</code></p>
-<dd>True if the given name is an existing test name created by the <code>add_test()</code> command.</p>
-<dt><code>if(EXISTS path-to-file-or-directory)</code></p>
-<dd>True if the named file or directory exists. Behavior is well-defined only for full paths.</p>
-<dt><code>if(file1 IS_NEWER_THAN file2)</code></p>
-<dd>True if <code>file1</code> is newer than <code>file2</code> or if one of the two files doesn&#8217;t exist. Behavior is well-defined only for full paths. If the file time stamps are exactly the same, an <code>IS_NEWER_THAN</code> comparison returns true, so that any dependent build operations will occur in the event of a tie. This includes the case of passing the same file name for both file1 and file2.</p>
-<dt><code>if(IS_DIRECTORY path-to-directory)</code></p>
-<dd>True if the given name is a directory. Behavior is well-defined only for full paths.</p>
-<dt><code>if(IS_SYMLINK file-name)</code></p>
-<dd>True if the given name is a symbolic link. Behavior is well-defined only for full paths.</p>
-<dt><code>if(IS_ABSOLUTE path)</code></p>
-<dd>True if the given path is an absolute path.</p>
-<dt><code>if(&lt;variable|string&gt; MATCHES regex)</code></p>
-<dd>True if the given string or variable&#8217;s value matches the given regular expression.</p>
-<dt><code>if(&lt;variable|string&gt; LESS &lt;variable|string&gt;)</code></p>
-<dd>True if the given string or variable&#8217;s value is a valid number and less than that on the right.</p>
-<dt><code>if(&lt;variable|string&gt; GREATER &lt;variable|string&gt;)</code></p>
-<dd>True if the given string or variable&#8217;s value is a valid number and greater than that on the right.</p>
-<dt><code>if(&lt;variable|string&gt; EQUAL &lt;variable|string&gt;)</code></p>
-<dd>True if the given string or variable&#8217;s value is a valid number and equal to that on the right.</p>
-<dt><code>if(&lt;variable|string&gt; STRLESS &lt;variable|string&gt;)</code></p>
-<dd>True if the given string or variable&#8217;s value is lexicographically less than the string or variable on the right.</p>
-<dt><code>if(&lt;variable|string&gt; STRGREATER &lt;variable|string&gt;)</code></p>
-<dd>True if the given string or variable&#8217;s value is lexicographically greater than the string or variable on the right.</p>
-<dt><code>if(&lt;variable|string&gt; STREQUAL &lt;variable|string&gt;)</code></p>
-<dd>True if the given string or variable&#8217;s value is lexicographically equal to the string or variable on the right.</p>
-<dt><code>if(&lt;variable|string&gt; VERSION_LESS &lt;variable|string&gt;)</code></p>
-<dd>Component-wise integer version number comparison (version format is <code>major[.minor[.patch[.tweak]]]</code>).</p>
-<dt><code>if(&lt;variable|string&gt; VERSION_EQUAL &lt;variable|string&gt;)</code></p>
-<dd>Component-wise integer version number comparison (version format is <code>major[.minor[.patch[.tweak]]]</code>).</p>
-<dt><code>if(&lt;variable|string&gt; VERSION_GREATER &lt;variable|string&gt;)</code></p>
-<dd>Component-wise integer version number comparison (version format is <code>major[.minor[.patch[.tweak]]]</code>).</p>
-<dt><code>if(&lt;variable|string&gt; IN_LIST &lt;variable&gt;)</code></p>
-<dd>True if the given element is contained in the named list variable.</p>
-<dt><code>if(DEFINED &lt;variable&gt;)</code></p>
-<dd>True if the given variable is defined. It does not matter if the variable is true or false just if it has been set. (Note macro arguments are not variables.)</p>
-<dt><code>if((expression) AND (expression OR (expression)))</code></p>
-<dd>The expressions inside the parenthesis are evaluated first and then the remaining expression is evaluated as in the previous examples. Where there are nested parenthesis the innermost are evaluated as part of evaluating the expression that contains them. </p>
+<dt><code>if(&lt;constant&gt;)</code></dt>
+<dd>True if the constant is <code>1</code>, <code>ON</code>, <code>YES</code>, <code>TRUE</code>, <code>Y</code>, or a non-zero number. False if the constant is <code>0</code>, <code>OFF</code>, <code>NO</code>, <code>FALSE</code>, <code>N</code>, <code>IGNORE</code>, <code>NOTFOUND</code>, the empty string, or ends in the suffix <code>-NOTFOUND</code>. Named boolean constants are case-insensitive. If the argument is not one of these specific constants, it is treated as a variable or string and the following signature is used.</dd>
+<dt><code>if(&lt;variable|string&gt;)</code></dt>
+<dd>True if given a variable that is defined to a value that is not a false constant. False otherwise. (Note macro arguments are not variables.)</dd>
+<dt><code>if(NOT &lt;expression&gt;)</code></dt>
+<dd>True if the expression is not true.</dd>
+<dt><code>if(&lt;expr1&gt; AND &lt;expr2&gt;)</code></dt>
+<dd>True if both expressions would be considered true individually.</dd>
+<dt><code>if(&lt;expr1&gt; OR &lt;expr2&gt;)</code></dt>
+<dd>True if either expression would be considered true individually.</dd>
+<dt><code>if(COMMAND command-name)</code></dt>
+<dd>True if the given name is a command, macro or function that can be invoked.</dd>
+<dt><code>if(POLICY policy-id)</code></dt>
+<dd>True if the given name is an existing policy (of the form <code>CMP&lt;NNNN&gt;</code>).</dd>
+<dt><code>if(TARGET target-name)</code></dt>
+<dd>True if the given name is an existing logical target name created by a call to the <code>add_executable()</code>, <code>add_library()</code>, or <code>add_custom_target()</code> command that has already been invoked (in any directory).</dd>
+<dt><code>if(TEST test-name)</code></dt>
+<dd>True if the given name is an existing test name created by the <code>add_test()</code> command.</dd>
+<dt><code>if(EXISTS path-to-file-or-directory)</code></dt>
+<dd>True if the named file or directory exists. Behavior is well-defined only for full paths.</dd>
+<dt><code>if(file1 IS_NEWER_THAN file2)</code></dt>
+<dd>True if <code>file1</code> is newer than <code>file2</code> or if one of the two files doesn&#8217;t exist. Behavior is well-defined only for full paths. If the file time stamps are exactly the same, an <code>IS_NEWER_THAN</code> comparison returns true, so that any dependent build operations will occur in the event of a tie. This includes the case of passing the same file name for both file1 and file2.</dd>
+<dt><code>if(IS_DIRECTORY path-to-directory)</code></dt>
+<dd>True if the given name is a directory. Behavior is well-defined only for full paths.</dd>
+<dt><code>if(IS_SYMLINK file-name)</code></dt>
+<dd>True if the given name is a symbolic link. Behavior is well-defined only for full paths.</dd>
+<dt><code>if(IS_ABSOLUTE path)</code></dt>
+<dd>True if the given path is an absolute path.</dd>
+<dt><code>if(&lt;variable|string&gt; MATCHES regex)</code></dt>
+<dd>True if the given string or variable&#8217;s value matches the given regular expression.</dd>
+<dt><code>if(&lt;variable|string&gt; LESS &lt;variable|string&gt;)</code></dt>
+<dd>True if the given string or variable&#8217;s value is a valid number and less than that on the right.</dd>
+<dt><code>if(&lt;variable|string&gt; GREATER &lt;variable|string&gt;)</code></dt>
+<dd>True if the given string or variable&#8217;s value is a valid number and greater than that on the right.</dd>
+<dt><code>if(&lt;variable|string&gt; EQUAL &lt;variable|string&gt;)</code></dt>
+<dd>True if the given string or variable&#8217;s value is a valid number and equal to that on the right.</dd>
+<dt><code>if(&lt;variable|string&gt; STRLESS &lt;variable|string&gt;)</code></dt>
+<dd>True if the given string or variable&#8217;s value is lexicographically less than the string or variable on the right.</dd>
+<dt><code>if(&lt;variable|string&gt; STRGREATER &lt;variable|string&gt;)</code></dt>
+<dd>True if the given string or variable&#8217;s value is lexicographically greater than the string or variable on the right.</dd>
+<dt><code>if(&lt;variable|string&gt; STREQUAL &lt;variable|string&gt;)</code></dt>
+<dd>True if the given string or variable&#8217;s value is lexicographically equal to the string or variable on the right.</dd>
+<dt><code>if(&lt;variable|string&gt; VERSION_LESS &lt;variable|string&gt;)</code></dt>
+<dd>Component-wise integer version number comparison (version format is <code>major[.minor[.patch[.tweak]]]</code>).</dd>
+<dt><code>if(&lt;variable|string&gt; VERSION_EQUAL &lt;variable|string&gt;)</code></dt>
+<dd>Component-wise integer version number comparison (version format is <code>major[.minor[.patch[.tweak]]]</code>).</dd>
+<dt><code>if(&lt;variable|string&gt; VERSION_GREATER &lt;variable|string&gt;)</code></dt>
+<dd>Component-wise integer version number comparison (version format is <code>major[.minor[.patch[.tweak]]]</code>).</dd>
+<dt><code>if(&lt;variable|string&gt; IN_LIST &lt;variable&gt;)</code></dt>
+<dd>True if the given element is contained in the named list variable.</dd>
+<dt><code>if(DEFINED &lt;variable&gt;)</code></dt>
+<dd>True if the given variable is defined. It does not matter if the variable is true or false just if it has been set. (Note macro arguments are not variables.)</dd>
+<dt><code>if((expression) AND (expression OR (expression)))</code></dt>
+<dd>The expressions inside the parenthesis are evaluated first and then the remaining expression is evaluated as in the previous examples. Where there are nested parenthesis the innermost are evaluated as part of evaluating the expression that contains them. </dd>
 <p> The if command was written very early in CMake&#8217;s history, predating the <code>${}</code> variable evaluation syntax, and for convenience evaluates variables named by its arguments as shown in the above signatures. Note that normal variable evaluation with <code>${}</code> applies before the if command even receives the arguments. Therefore code like: </p>
 <pre>set(var1 OFF)
 set(var2 &quot;var1&quot;)
@@ -1340,20 +1341,20 @@ if(${var2})</pre>
 <pre>if(var2)</pre>
 <p>which is true because <code>var2</code> is defined to &quot;var1&quot; which is not a false constant. </p>
 <p> Automatic evaluation applies in the other cases whenever the above-documented signature accepts <code>&lt;variable|string&gt;</code>:</p>
-<dt>&bull;</p>
-<dd>The left hand argument to <code>MATCHES</code> is first checked to see if it is a defined variable, if so the variable&#8217;s value is used, otherwise the original value is used.</p>
-<dt>&bull;</p>
-<dd>If the left hand argument to <code>MATCHES</code> is missing it returns false without error</p>
-<dt>&bull;</p>
-<dd>Both left and right hand arguments to <code>LESS</code>, <code>GREATER</code>, and <code>EQUAL</code> are independently tested to see if they are defined variables, if so their defined values are used otherwise the original value is used.</p>
-<dt>&bull;</p>
-<dd>Both left and right hand arguments to <code>STRLESS</code>, <code>STREQUAL</code>, and <code>STRGREATER</code> are independently tested to see if they are defined variables, if so their defined values are used otherwise the original value is used.</p>
-<dt>&bull;</p>
-<dd>Both left and right hand arguments to <code>VERSION_LESS</code>, <code>VERSION_EQUAL</code>, and <code>VERSION_GREATER</code> are independently tested to see if they are defined variables, if so their defined values are used otherwise the original value is used.</p>
-<dt>&bull;</p>
-<dd>The right hand argument to <code>NOT</code> is tested to see if it is a boolean constant, if so the value is used, otherwise it is assumed to be a variable and it is dereferenced.</p>
-<dt>&bull;</p>
-<dd>The left and right hand arguments to <code>AND</code> and <code>OR</code> are independently tested to see if they are boolean constants, if so they are used as such, otherwise they are assumed to be variables and are dereferenced. </p>
+<dt>&bull;</dt>
+<dd>The left hand argument to <code>MATCHES</code> is first checked to see if it is a defined variable, if so the variable&#8217;s value is used, otherwise the original value is used.</dd>
+<dt>&bull;</dt>
+<dd>If the left hand argument to <code>MATCHES</code> is missing it returns false without error</dd>
+<dt>&bull;</dt>
+<dd>Both left and right hand arguments to <code>LESS</code>, <code>GREATER</code>, and <code>EQUAL</code> are independently tested to see if they are defined variables, if so their defined values are used otherwise the original value is used.</dd>
+<dt>&bull;</dt>
+<dd>Both left and right hand arguments to <code>STRLESS</code>, <code>STREQUAL</code>, and <code>STRGREATER</code> are independently tested to see if they are defined variables, if so their defined values are used otherwise the original value is used.</dd>
+<dt>&bull;</dt>
+<dd>Both left and right hand arguments to <code>VERSION_LESS</code>, <code>VERSION_EQUAL</code>, and <code>VERSION_GREATER</code> are independently tested to see if they are defined variables, if so their defined values are used otherwise the original value is used.</dd>
+<dt>&bull;</dt>
+<dd>The right hand argument to <code>NOT</code> is tested to see if it is a boolean constant, if so the value is used, otherwise it is assumed to be a variable and it is dereferenced.</dd>
+<dt>&bull;</dt>
+<dd>The left and right hand arguments to <code>AND</code> and <code>OR</code> are independently tested to see if they are boolean constants, if so they are used as such, otherwise they are assumed to be variables and are dereferenced. </dd>
 <p> To prevent ambiguity, potential variable or keyword names can be specified in a <i>Quoted Argument</i> or a <i>Bracket Argument</i>. A quoted or bracketed variable or keyword will be interpreted as a string and not dereferenced or interpreted. See policy <code>CMP0054</code>.</dl>
 <h3>include_directories</h3>
 <p>Add include directories to the build. </p>
@@ -1391,20 +1392,20 @@ regex_complain = &quot;^$&quot; (match empty string only)</pre>
 <p>This command generates installation rules for a project. Rules specified by calls to this command within a source directory are executed in order during installation. The order across directories is not defined. </p>
 <p> There are multiple signatures for this command. Some of them define installation options for files and targets. Options common to multiple signatures are covered here but they are valid only for signatures that specify them. The common options are:</p>
 <dl>
-<dt><code>DESTINATION</code></p>
-<dd>Specify the directory on disk to which a file will be installed. If a full path (with a leading slash or drive letter) is given it is used directly. If a relative path is given it is interpreted relative to the value of the <code>CMAKE_INSTALL_PREFIX</code> variable. The prefix can be relocated at install time using the <code>DESTDIR</code> mechanism explained in the <code>CMAKE_INSTALL_PREFIX</code> variable documentation.</p>
-<dt><code>PERMISSIONS</code></p>
-<dd>Specify permissions for installed files. Valid permissions are <code>OWNER_READ</code>, <code>OWNER_WRITE</code>, <code>OWNER_EXECUTE</code>, <code>GROUP_READ</code>, <code>GROUP_WRITE</code>, <code>GROUP_EXECUTE</code>, <code>WORLD_READ</code>, <code>WORLD_WRITE</code>, <code>WORLD_EXECUTE</code>, <code>SETUID</code>, and <code>SETGID</code>. Permissions that do not make sense on certain platforms are ignored on those platforms.</p>
-<dt><code>CONFIGURATIONS</code></p>
-<dd>Specify a list of build configurations for which the install rule applies (Debug, Release, etc.).</p>
-<dt><code>COMPONENT</code></p>
-<dd>Specify an installation component name with which the install rule is associated, such as &quot;runtime&quot; or &quot;development&quot;. During component-specific installation only install rules associated with the given component name will be executed. During a full installation all components are installed unless marked with <code>EXCLUDE_FROM_ALL</code>. If <code>COMPONENT</code> is not provided a default component &quot;Unspecified&quot; is created. The default component name may be controlled with the <code>CMAKE_INSTALL_DEFAULT_COMPONENT_NAME</code> variable.</p>
-<dt><code>EXCLUDE_FROM_ALL</code></p>
-<dd>Specify that the file is excluded from a full installation and only installed as part of a component-specific installation</p>
-<dt><code>RENAME</code></p>
-<dd>Specify a name for an installed file that may be different from the original file. Renaming is allowed only when a single file is installed by the command.</p>
-<dt><code>OPTIONAL</code></p>
-<dd>Specify that it is not an error if the file to be installed does not exist. </p>
+<dt><code>DESTINATION</code></dt>
+<dd>Specify the directory on disk to which a file will be installed. If a full path (with a leading slash or drive letter) is given it is used directly. If a relative path is given it is interpreted relative to the value of the <code>CMAKE_INSTALL_PREFIX</code> variable. The prefix can be relocated at install time using the <code>DESTDIR</code> mechanism explained in the <code>CMAKE_INSTALL_PREFIX</code> variable documentation.</dd>
+<dt><code>PERMISSIONS</code></dt>
+<dd>Specify permissions for installed files. Valid permissions are <code>OWNER_READ</code>, <code>OWNER_WRITE</code>, <code>OWNER_EXECUTE</code>, <code>GROUP_READ</code>, <code>GROUP_WRITE</code>, <code>GROUP_EXECUTE</code>, <code>WORLD_READ</code>, <code>WORLD_WRITE</code>, <code>WORLD_EXECUTE</code>, <code>SETUID</code>, and <code>SETGID</code>. Permissions that do not make sense on certain platforms are ignored on those platforms.</dd>
+<dt><code>CONFIGURATIONS</code></dt>
+<dd>Specify a list of build configurations for which the install rule applies (Debug, Release, etc.).</dd>
+<dt><code>COMPONENT</code></dt>
+<dd>Specify an installation component name with which the install rule is associated, such as &quot;runtime&quot; or &quot;development&quot;. During component-specific installation only install rules associated with the given component name will be executed. During a full installation all components are installed unless marked with <code>EXCLUDE_FROM_ALL</code>. If <code>COMPONENT</code> is not provided a default component &quot;Unspecified&quot; is created. The default component name may be controlled with the <code>CMAKE_INSTALL_DEFAULT_COMPONENT_NAME</code> variable.</dd>
+<dt><code>EXCLUDE_FROM_ALL</code></dt>
+<dd>Specify that the file is excluded from a full installation and only installed as part of a component-specific installation</dd>
+<dt><code>RENAME</code></dt>
+<dd>Specify a name for an installed file that may be different from the original file. Renaming is allowed only when a single file is installed by the command.</dd>
+<dt><code>OPTIONAL</code></dt>
+<dd>Specify that it is not an error if the file to be installed does not exist. </dd>
 <p> Command signatures that install files may print messages during installation. Use the <code>CMAKE_INSTALL_MESSAGE</code> variable to control which messages are printed.</dl>
 <h3>Installing Targets</h3>
 <pre>install(TARGETS targets... [EXPORT &lt;export-name&gt;]
@@ -1603,22 +1604,22 @@ project(&lt;PROJECT-NAME&gt;
  [LANGUAGES &lt;language-name&gt;...])</pre>
 <p>Sets the name of the project and stores the name in the <code>PROJECT_NAME</code> variable. Additionally this sets variables</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>PROJECT_SOURCE_DIR</code>, <code>&lt;PROJECT-NAME&gt;_SOURCE_DIR</code></p>
-<dt>&bull;</p>
-<dd><code>PROJECT_BINARY_DIR</code>, <code>&lt;PROJECT-NAME&gt;_BINARY_DIR</code> </p>
+<dt>&bull;</dt>
+<dd><code>PROJECT_SOURCE_DIR</code>, <code>&lt;PROJECT-NAME&gt;_SOURCE_DIR</code></dd>
+<dt>&bull;</dt>
+<dd><code>PROJECT_BINARY_DIR</code>, <code>&lt;PROJECT-NAME&gt;_BINARY_DIR</code> </dd>
 <p> If <code>VERSION</code> is specified, given components must be non-negative integers. If <code>VERSION</code> is not specified, the default version is the empty string. The <code>VERSION</code> option may not be used unless policy <code>CMP0048</code> is set to <code>NEW</code>. </p>
 <p> The <code>project()</code> command stores the version number and its components in variables</p>
-<dt>&bull;</p>
-<dd><code>PROJECT_VERSION</code>, <code>&lt;PROJECT-NAME&gt;_VERSION</code></p>
-<dt>&bull;</p>
-<dd><code>PROJECT_VERSION_MAJOR</code>, <code>&lt;PROJECT-NAME&gt;_VERSION_MAJOR</code></p>
-<dt>&bull;</p>
-<dd><code>PROJECT_VERSION_MINOR</code>, <code>&lt;PROJECT-NAME&gt;_VERSION_MINOR</code></p>
-<dt>&bull;</p>
-<dd><code>PROJECT_VERSION_PATCH</code>, <code>&lt;PROJECT-NAME&gt;_VERSION_PATCH</code></p>
-<dt>&bull;</p>
-<dd><code>PROJECT_VERSION_TWEAK</code>, <code>&lt;PROJECT-NAME&gt;_VERSION_TWEAK</code> </p>
+<dt>&bull;</dt>
+<dd><code>PROJECT_VERSION</code>, <code>&lt;PROJECT-NAME&gt;_VERSION</code></dd>
+<dt>&bull;</dt>
+<dd><code>PROJECT_VERSION_MAJOR</code>, <code>&lt;PROJECT-NAME&gt;_VERSION_MAJOR</code></dd>
+<dt>&bull;</dt>
+<dd><code>PROJECT_VERSION_MINOR</code>, <code>&lt;PROJECT-NAME&gt;_VERSION_MINOR</code></dd>
+<dt>&bull;</dt>
+<dd><code>PROJECT_VERSION_PATCH</code>, <code>&lt;PROJECT-NAME&gt;_VERSION_PATCH</code></dd>
+<dt>&bull;</dt>
+<dd><code>PROJECT_VERSION_TWEAK</code>, <code>&lt;PROJECT-NAME&gt;_VERSION_TWEAK</code> </dd>
 <p> Variables corresponding to unspecified versions are set to the empty string (if policy <code>CMP0048</code> is set to <code>NEW</code>). </p>
 <p> Optionally you can specify which languages your project supports. Example languages are <code>C</code>, <code>CXX</code> (i.e. C++), <code>Fortran</code>, etc. By default <code>C</code> and <code>CXX</code> are enabled if no language options are given. Specify language <code>NONE</code>, or use the <code>LANGUAGES</code> keyword and list no languages, to skip enabling any languages. </p>
 <p> If a variable exists called <code>CMAKE_PROJECT_&lt;PROJECT-NAME&gt;_INCLUDE</code>, the file pointed to by that variable will be included as the last step of the project command. </p>
@@ -1667,24 +1668,24 @@ project(&lt;PROJECT-NAME&gt;
  PROPERTY &lt;name&gt; [value1 [value2 ...]])</pre>
 <p>Set one property on zero or more objects of a scope. The first argument determines the scope in which the property is set. It must be one of the following:</p>
 <dl>
-<dt><code>GLOBAL</code></p>
-<dd>Scope is unique and does not accept a name.</p>
-<dt><code>DIRECTORY</code></p>
-<dd>Scope defaults to the current directory but another directory (already processed by CMake) may be named by full or relative path.</p>
-<dt><code>TARGET</code></p>
-<dd>Scope may name zero or more existing targets.</p>
-<dt><code>SOURCE</code></p>
-<dd>Scope may name zero or more source files. Note that source file properties are visible only to targets added in the same directory (CMakeLists.txt).</p>
-<dt><code>INSTALL</code></p>
-<dd>Scope may name zero or more installed file paths. These are made available to CPack to influence deployment. </p>
+<dt><code>GLOBAL</code></dt>
+<dd>Scope is unique and does not accept a name.</dd>
+<dt><code>DIRECTORY</code></dt>
+<dd>Scope defaults to the current directory but another directory (already processed by CMake) may be named by full or relative path.</dd>
+<dt><code>TARGET</code></dt>
+<dd>Scope may name zero or more existing targets.</dd>
+<dt><code>SOURCE</code></dt>
+<dd>Scope may name zero or more source files. Note that source file properties are visible only to targets added in the same directory (CMakeLists.txt).</dd>
+<dt><code>INSTALL</code></dt>
+<dd>Scope may name zero or more installed file paths. These are made available to CPack to influence deployment. </dd>
 <p> Both the property key and value may use generator expressions. Specific properties may apply to installed files and/or directories. </p>
 <p> Path components have to be separated by forward slashes, must be normalized and are case sensitive. </p>
 <p> To reference the installation prefix itself with a relative path use &quot;.&quot;. </p>
 <p> Currently installed file properties are only defined for the WIX generator where the given paths are relative to the installation prefix.</p>
-<dt><code>TEST</code></p>
-<dd>Scope may name zero or more existing tests.</p>
-<dt><code>CACHE</code></p>
-<dd>Scope must name zero or more cache existing entries. </p>
+<dt><code>TEST</code></dt>
+<dd>Scope may name zero or more existing tests.</dd>
+<dt><code>CACHE</code></dt>
+<dd>Scope must name zero or more cache existing entries. </dd>
 <p> The required <code>PROPERTY</code> option is immediately followed by the name of the property to set. Remaining arguments are used to compose the property value in the form of a semicolon-separated list. If the <code>APPEND</code> option is given the list is appended to any existing property value. If the <code>APPEND_STRING</code> option is given the string is append to any existing property value as string, i.e. it results in a longer string and not a list of strings. </p>
 <p> See the <code><a href="/docs/linux/man/7-cmake3-properties/">cmake3-properties</a>(7)</code> manual for a list of properties in each scope.</dl>
 <h3>set</h3>
@@ -1699,16 +1700,16 @@ project(&lt;PROJECT-NAME&gt;
 <p>Set the given cache <code>&lt;variable&gt;</code> (cache entry). Since cache entries are meant to provide user-settable values this does not overwrite existing cache entries by default. Use the <code>FORCE</code> option to overwrite existing entries. </p>
 <p> The <code>&lt;type&gt;</code> must be specified as one of:</p>
 <dl>
-<dt><code>BOOL</code></p>
-<dd>Boolean <code>ON/OFF</code> value. <code><a href="/docs/linux/man/1-cmake3-gui/">cmake3-gui</a>(1)</code> offers a checkbox.</p>
-<dt><code>FILEPATH</code></p>
-<dd>Path to a file on disk. <code><a href="/docs/linux/man/1-cmake3-gui/">cmake3-gui</a>(1)</code> offers a file dialog.</p>
-<dt><code>PATH</code></p>
-<dd>Path to a directory on disk. <code><a href="/docs/linux/man/1-cmake3-gui/">cmake3-gui</a>(1)</code> offers a file dialog.</p>
-<dt><code>STRING</code></p>
-<dd>A line of text. <code><a href="/docs/linux/man/1-cmake3-gui/">cmake3-gui</a>(1)</code> offers a text field or a drop-down selection if the <code>STRINGS</code> cache entry property is set.</p>
-<dt><code>INTERNAL</code></p>
-<dd>A line of text. <code><a href="/docs/linux/man/1-cmake3-gui/">cmake3-gui</a>(1)</code> does not show internal entries. They may be used to store variables persistently across runs. Use of this type implies <code>FORCE</code>. </p>
+<dt><code>BOOL</code></dt>
+<dd>Boolean <code>ON/OFF</code> value. <code><a href="/docs/linux/man/1-cmake3-gui/">cmake3-gui</a>(1)</code> offers a checkbox.</dd>
+<dt><code>FILEPATH</code></dt>
+<dd>Path to a file on disk. <code><a href="/docs/linux/man/1-cmake3-gui/">cmake3-gui</a>(1)</code> offers a file dialog.</dd>
+<dt><code>PATH</code></dt>
+<dd>Path to a directory on disk. <code><a href="/docs/linux/man/1-cmake3-gui/">cmake3-gui</a>(1)</code> offers a file dialog.</dd>
+<dt><code>STRING</code></dt>
+<dd>A line of text. <code><a href="/docs/linux/man/1-cmake3-gui/">cmake3-gui</a>(1)</code> offers a text field or a drop-down selection if the <code>STRINGS</code> cache entry property is set.</dd>
+<dt><code>INTERNAL</code></dt>
+<dd>A line of text. <code><a href="/docs/linux/man/1-cmake3-gui/">cmake3-gui</a>(1)</code> does not show internal entries. They may be used to store variables persistently across runs. Use of this type implies <code>FORCE</code>. </dd>
 <p> The <code>&lt;docstring&gt;</code> must be specified as a line of text providing a quick summary of the option for presentation to <code><a href="/docs/linux/man/1-cmake3-gui/">cmake3-gui</a>(1)</code> users. </p>
 <p> If the cache entry does not exist prior to the call or the <code>FORCE</code> option is given then the cache entry will be set to the given value. Furthermore, any normal variable binding in the current scope will be removed to expose the newly cached value to any immediately following evaluation. </p>
 <p> It is possible for the cache entry to exist prior to the call but have no type set if it was created on the <code><a href="/docs/linux/man/1-cmake3/">cmake3</a>(1)</code> command line by a user through the <code>-D&lt;var&gt;=&lt;value&gt;</code> option without specifying a type. In this case the <code>set</code> command will add the type. Furthermore, if the <code>&lt;type&gt;</code> is <code>PATH</code> or <code>FILEPATH</code> and the <code>&lt;value&gt;</code> provided on the command line is a relative path, then the <code>set</code> command will treat the path as relative to the current working directory and convert it to an absolute path.</dl>
@@ -1740,10 +1741,10 @@ project(&lt;PROJECT-NAME&gt;
 <pre>source_group(&lt;name&gt; [FILES &lt;src&gt;...] [REGULAR_EXPRESSION &lt;regex&gt;])</pre>
 <p>Defines a group into which sources will be placed in project files. This is intended to set up file tabs in Visual Studio. The options are:</p>
 <dl>
-<dt><code>FILES</code></p>
-<dd>Any source file specified explicitly will be placed in group <code>&lt;name&gt;</code>. Relative paths are interpreted with respect to the current source directory.</p>
-<dt><code>REGULAR_EXPRESSION</code></p>
-<dd>Any source file whose name matches the regular expression will be placed in group <code>&lt;name&gt;</code>. </p>
+<dt><code>FILES</code></dt>
+<dd>Any source file specified explicitly will be placed in group <code>&lt;name&gt;</code>. Relative paths are interpreted with respect to the current source directory.</dd>
+<dt><code>REGULAR_EXPRESSION</code></dt>
+<dd>Any source file whose name matches the regular expression will be placed in group <code>&lt;name&gt;</code>. </dd>
 <p> If a source file matches multiple groups, the <i>last</i> group that explicitly lists the file with <code>FILES</code> will be favored, if any. If no group explicitly lists the file, the <i>last</i> group whose regular expression matches the file will be favored. </p>
 <p> The <code>&lt;name&gt;</code> of the group may contain backslashes to specify subgroups: </p>
 <pre>source_group(outer\inner ...)</pre>
@@ -1926,20 +1927,20 @@ string(COMPARE GREATER &lt;string1&gt; &lt;string2&gt; &lt;output variable&gt;)<
 <pre>target_link_libraries(&lt;target&gt; ... &lt;item&gt;... ...)</pre>
 <p>The named <code>&lt;target&gt;</code> must have been created in the current directory by a command such as <code>add_executable()</code> or <code>add_library()</code>. Repeated calls for the same <code>&lt;target&gt;</code> append items in the order called. Each <code>&lt;item&gt;</code> may be:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>A library target name</code>: The generated link line will have the full path to the linkable library file associated with the target. The buildsystem will have a dependency to re-link <code>&lt;target&gt;</code> if the library file changes. </p>
+<dt>&bull;</dt>
+<dd><code>A library target name</code>: The generated link line will have the full path to the linkable library file associated with the target. The buildsystem will have a dependency to re-link <code>&lt;target&gt;</code> if the library file changes. </dd>
 <p> The named target must be created by <code>add_library()</code> within the project or as an <i>IMPORTED library</i>. If it is created within the project an ordering dependency will automatically be added in the build system to make sure the named library target is up-to-date before the <code>&lt;target&gt;</code> links. </p>
 <p> If an imported library has the <code>IMPORTED_NO_SONAME</code> target property set, CMake may ask the linker to search for the library instead of using the full path (e.g. <code>/usr/lib/libfoo.so</code> becomes <code>-lfoo</code>).</p>
-<dt>&bull;</p>
-<dd><code>A full path to a library file</code>: The generated link line will normally preserve the full path to the file. The buildsystem will have a dependency to re-link <code>&lt;target&gt;</code> if the library file changes. </p>
+<dt>&bull;</dt>
+<dd><code>A full path to a library file</code>: The generated link line will normally preserve the full path to the file. The buildsystem will have a dependency to re-link <code>&lt;target&gt;</code> if the library file changes. </dd>
 <p> There are some cases where CMake may ask the linker to search for the library (e.g. <code>/usr/lib/libfoo.so</code> becomes <code>-lfoo</code>), such as when a shared library is detected to have no <code>SONAME</code> field. See policy <code>CMP0060</code> for discussion of another case. </p>
 <p> If the library file is in a Mac OSX framework, the <code>Headers</code> directory of the framework will also be processed as a <i>usage requirement</i>. This has the same effect as passing the framework directory as an include directory.</p>
-<dt>&bull;</p>
-<dd><code>A plain library name</code>: The generated link line will ask the linker to search for the library (e.g. <code>foo</code> becomes <code>-lfoo</code> or <code>foo.lib</code>).</p>
-<dt>&bull;</p>
-<dd><code>A link flag</code>: Item names starting with <code>&#8211;</code>, but not <code>-l</code> or <code>-framework</code>, are treated as linker flags. Note that such flags will be treated like any other library link item for purposes of transitive dependencies, so they are generally safe to specify only as private link items that will not propagate to dependents.</p>
-<dt>&bull;</p>
-<dd>A <code>debug</code>, <code>optimized</code>, or <code>general</code> keyword immediately followed by another <code>&lt;item&gt;</code>. The item following such a keyword will be used only for the corresponding build configuration. The <code>debug</code> keyword corresponds to the <code>Debug</code> configuration (or to configurations named in the <code>DEBUG_CONFIGURATIONS</code> global property if it is set). The <code>optimized</code> keyword corresponds to all other configurations. The <code>general</code> keyword corresponds to all configurations, and is purely optional. Higher granularity may be achieved for per-configuration rules by creating and linking to <i>IMPORTED library targets</i>. </p>
+<dt>&bull;</dt>
+<dd><code>A plain library name</code>: The generated link line will ask the linker to search for the library (e.g. <code>foo</code> becomes <code>-lfoo</code> or <code>foo.lib</code>).</dd>
+<dt>&bull;</dt>
+<dd><code>A link flag</code>: Item names starting with <code>&#8211;</code>, but not <code>-l</code> or <code>-framework</code>, are treated as linker flags. Note that such flags will be treated like any other library link item for purposes of transitive dependencies, so they are generally safe to specify only as private link items that will not propagate to dependents.</dd>
+<dt>&bull;</dt>
+<dd>A <code>debug</code>, <code>optimized</code>, or <code>general</code> keyword immediately followed by another <code>&lt;item&gt;</code>. The item following such a keyword will be used only for the corresponding build configuration. The <code>debug</code> keyword corresponds to the <code>Debug</code> configuration (or to configurations named in the <code>DEBUG_CONFIGURATIONS</code> global property if it is set). The <code>optimized</code> keyword corresponds to all other configurations. The <code>general</code> keyword corresponds to all configurations, and is purely optional. Higher granularity may be achieved for per-configuration rules by creating and linking to <i>IMPORTED library targets</i>. </dd>
 <p> Items containing <code>::</code>, such as <code>Foo::Bar</code>, are assumed to be <i>IMPORTED</i> or <i>ALIAS</i> library target names and will cause an error if no such target exists. See policy <code>CMP0028</code>. </p>
 <p> Arguments to <code>target_link_libraries</code> may use &quot;generator expressions&quot; with the syntax <code>$&lt;&#8230;&gt;</code>. Note however, that generator expressions will not be used in OLD handling of <code>CMP0003</code> or <code>CMP0004</code>. See the <code><a href="/docs/linux/man/7-cmake3-generator-expressions/">cmake3-generator-expressions</a>(7)</code> manual for available expressions. See the <code><a href="/docs/linux/man/7-cmake3-buildsystem/">cmake3-buildsystem</a>(7)</code> manual for more on defining buildsystem properties.</dl>
 <h3>Libraries for a Target and/or its Dependents</h3>
@@ -2006,31 +2007,31 @@ add_executable(cmTryCompileExec &lt;srcfile&gt;...)
 target_link_libraries(cmTryCompileExec ${LINK_LIBRARIES})</pre>
 <p>The options are:</p>
 <dl>
-<dt><code>CMAKE_FLAGS &lt;flags&gt;&#8230;</code></p>
-<dd>Specify flags of the form <code>-DVAR:TYPE=VALUE</code> to be passed to the <code>cmake3</code> command-line used to drive the test build. The above example shows how values for variables <code>INCLUDE_DIRECTORIES</code>, <code>LINK_DIRECTORIES</code>, and <code>LINK_LIBRARIES</code> are used.</p>
-<dt><code>COMPILE_DEFINITIONS &lt;defs&gt;&#8230;</code></p>
-<dd>Specify <code>-Ddefinition</code> arguments to pass to <code>add_definitions</code> in the generated test project.</p>
-<dt><code>COPY_FILE &lt;fileName&gt;</code></p>
-<dd>Copy the linked executable to the given <code>&lt;fileName&gt;</code>.</p>
-<dt><code>COPY_FILE_ERROR &lt;var&gt;</code></p>
-<dd>Use after <code>COPY_FILE</code> to capture into variable <code>&lt;var&gt;</code> any error message encountered while trying to copy the file.</p>
-<dt><code>LINK_LIBRARIES &lt;libs&gt;&#8230;</code></p>
-<dd>Specify libraries to be linked in the generated project. The list of libraries may refer to system libraries and to <i>Imported Targets</i> from the calling project. </p>
+<dt><code>CMAKE_FLAGS &lt;flags&gt;&#8230;</code></dt>
+<dd>Specify flags of the form <code>-DVAR:TYPE=VALUE</code> to be passed to the <code>cmake3</code> command-line used to drive the test build. The above example shows how values for variables <code>INCLUDE_DIRECTORIES</code>, <code>LINK_DIRECTORIES</code>, and <code>LINK_LIBRARIES</code> are used.</dd>
+<dt><code>COMPILE_DEFINITIONS &lt;defs&gt;&#8230;</code></dt>
+<dd>Specify <code>-Ddefinition</code> arguments to pass to <code>add_definitions</code> in the generated test project.</dd>
+<dt><code>COPY_FILE &lt;fileName&gt;</code></dt>
+<dd>Copy the linked executable to the given <code>&lt;fileName&gt;</code>.</dd>
+<dt><code>COPY_FILE_ERROR &lt;var&gt;</code></dt>
+<dd>Use after <code>COPY_FILE</code> to capture into variable <code>&lt;var&gt;</code> any error message encountered while trying to copy the file.</dd>
+<dt><code>LINK_LIBRARIES &lt;libs&gt;&#8230;</code></dt>
+<dd>Specify libraries to be linked in the generated project. The list of libraries may refer to system libraries and to <i>Imported Targets</i> from the calling project. </dd>
 <p> If this option is specified, any <code>-DLINK_LIBRARIES=&#8230;</code> value given to the <code>CMAKE_FLAGS</code> option will be ignored.</p>
-<dt><code>OUTPUT_VARIABLE &lt;var&gt;</code></p>
-<dd>Store the output from the build process the given variable. </p>
+<dt><code>OUTPUT_VARIABLE &lt;var&gt;</code></dt>
+<dd>Store the output from the build process the given variable. </dd>
 <p> In this version all files in <code>&lt;bindir&gt;/CMakeFiles/CMakeTmp</code> will be cleaned automatically. For debugging, <code>&#8211;debug-trycompile</code> can be passed to <code>cmake3</code> to avoid this clean. However, multiple sequential <code>try_compile</code> operations reuse this single output directory. If you use <code>&#8211;debug-trycompile</code>, you can only debug one <code>try_compile</code> call at a time. The recommended procedure is to protect all <code>try_compile</code> calls in your project by <code>if(NOT DEFINED RESULT_VAR)</code> logic, configure with cmake all the way through once, then delete the cache entry associated with the try_compile call of interest, and then re-run cmake again with <code>&#8211;debug-trycompile</code>.</dl>
 <h3>Other Behavior Settings</h3>
 <p>If set, the following variables are passed in to the generated try_compile CMakeLists.txt to initialize compile target properties with default values:</p>
 <dl>
-<dt>&bull;</p>
-<dd><code>CMAKE_ENABLE_EXPORTS</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_LINK_SEARCH_START_STATIC</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_LINK_SEARCH_END_STATIC</code></p>
-<dt>&bull;</p>
-<dd><code>CMAKE_POSITION_INDEPENDENT_CODE</code> </p>
+<dt>&bull;</dt>
+<dd><code>CMAKE_ENABLE_EXPORTS</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_LINK_SEARCH_START_STATIC</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_LINK_SEARCH_END_STATIC</code></dd>
+<dt>&bull;</dt>
+<dd><code>CMAKE_POSITION_INDEPENDENT_CODE</code> </dd>
 <p> If <code>CMP0056</code> is set to <code>NEW</code>, then <code>CMAKE_EXE_LINKER_FLAGS</code> is passed in as well. </p>
 <p> The current setting of <code>CMP0065</code> is set in the generated project. </p>
 <p> Set the <code>CMAKE_TRY_COMPILE_CONFIGURATION</code> variable to choose a build configuration. </p>
@@ -2050,28 +2051,28 @@ target_link_libraries(cmTryCompileExec ${LINK_LIBRARIES})</pre>
 <p>Try compiling a <code>&lt;srcfile&gt;</code>. Returns <code>TRUE</code> or <code>FALSE</code> for success or failure in <code>COMPILE_RESULT_VAR</code>. If the compile succeeded, runs the executable and returns its exit code in <code>RUN_RESULT_VAR</code>. If the executable was built, but failed to run, then <code>RUN_RESULT_VAR</code> will be set to <code>FAILED_TO_RUN</code>. See the <code>try_compile()</code> command for information on how the test project is constructed to build the source file. </p>
 <p> The options are:</p>
 <dl>
-<dt><code>CMAKE_FLAGS &lt;flags&gt;&#8230;</code></p>
-<dd>Specify flags of the form <code>-DVAR:TYPE=VALUE</code> to be passed to the <code>cmake3</code> command-line used to drive the test build. The example in <code>try_compile()</code> shows how values for variables <code>INCLUDE_DIRECTORIES</code>, <code>LINK_DIRECTORIES</code>, and <code>LINK_LIBRARIES</code> are used.</p>
-<dt><code>COMPILE_DEFINITIONS &lt;defs&gt;&#8230;</code></p>
-<dd>Specify <code>-Ddefinition</code> arguments to pass to <code>add_definitions</code> in the generated test project.</p>
-<dt><code>COMPILE_OUTPUT_VARIABLE &lt;var&gt;</code></p>
-<dd>Report the compile step build output in a given variable.</p>
-<dt><code>LINK_LIBRARIES &lt;libs&gt;&#8230;</code></p>
-<dd>Specify libraries to be linked in the generated project. The list of libraries may refer to system libraries and to <i>Imported Targets</i> from the calling project. </p>
+<dt><code>CMAKE_FLAGS &lt;flags&gt;&#8230;</code></dt>
+<dd>Specify flags of the form <code>-DVAR:TYPE=VALUE</code> to be passed to the <code>cmake3</code> command-line used to drive the test build. The example in <code>try_compile()</code> shows how values for variables <code>INCLUDE_DIRECTORIES</code>, <code>LINK_DIRECTORIES</code>, and <code>LINK_LIBRARIES</code> are used.</dd>
+<dt><code>COMPILE_DEFINITIONS &lt;defs&gt;&#8230;</code></dt>
+<dd>Specify <code>-Ddefinition</code> arguments to pass to <code>add_definitions</code> in the generated test project.</dd>
+<dt><code>COMPILE_OUTPUT_VARIABLE &lt;var&gt;</code></dt>
+<dd>Report the compile step build output in a given variable.</dd>
+<dt><code>LINK_LIBRARIES &lt;libs&gt;&#8230;</code></dt>
+<dd>Specify libraries to be linked in the generated project. The list of libraries may refer to system libraries and to <i>Imported Targets</i> from the calling project. </dd>
 <p> If this option is specified, any <code>-DLINK_LIBRARIES=&#8230;</code> value given to the <code>CMAKE_FLAGS</code> option will be ignored.</p>
-<dt><code>OUTPUT_VARIABLE &lt;var&gt;</code></p>
-<dd>Report the compile build output and the output from running the executable in the given variable. This option exists for legacy reasons. Prefer <code>COMPILE_OUTPUT_VARIABLE</code> and <code>RUN_OUTPUT_VARIABLE</code> instead.</p>
-<dt><code>RUN_OUTPUT_VARIABLE &lt;var&gt;</code></p>
-<dd>Report the output from running the executable in a given variable.</dl>
+<dt><code>OUTPUT_VARIABLE &lt;var&gt;</code></dt>
+<dd>Report the compile build output and the output from running the executable in the given variable. This option exists for legacy reasons. Prefer <code>COMPILE_OUTPUT_VARIABLE</code> and <code>RUN_OUTPUT_VARIABLE</code> instead.</dd>
+<dt><code>RUN_OUTPUT_VARIABLE &lt;var&gt;</code></dt>
+<dd>Report the output from running the executable in a given variable.</dd></dl>
 <h3>Other Behavior Settings</h3>
 <p>Set the <code>CMAKE_TRY_COMPILE_CONFIGURATION</code> variable to choose a build configuration.</p>
 <h3>Behavior when Cross Compiling</h3>
 <p>When cross compiling, the executable compiled in the first step usually cannot be run on the build host. The <code>try_run</code> command checks the <code>CMAKE_CROSSCOMPILING</code> variable to detect whether CMake is in cross-compiling mode. If that is the case, it will still try to compile the executable, but it will not try to run the executable unless the <code>CMAKE_CROSSCOMPILING_EMULATOR</code> variable is set. Instead it will create cache variables which must be filled by the user or by presetting them in some CMake script file to the values the executable would have produced if it had been run on its actual target platform. These cache entries are:</p>
 <dl>
-<dt><code>&lt;RUN_RESULT_VAR&gt;</code></p>
-<dd>Exit code if the executable were to be run on the target platform.</p>
-<dt><code>&lt;RUN_RESULT_VAR&gt;__TRYRUN_OUTPUT</code></p>
-<dd>Output from stdout and stderr if the executable were to be run on the target platform. This is created only if the <code>RUN_OUTPUT_VARIABLE</code> or <code>OUTPUT_VARIABLE</code> option was used. </p>
+<dt><code>&lt;RUN_RESULT_VAR&gt;</code></dt>
+<dd>Exit code if the executable were to be run on the target platform.</dd>
+<dt><code>&lt;RUN_RESULT_VAR&gt;__TRYRUN_OUTPUT</code></dt>
+<dd>Output from stdout and stderr if the executable were to be run on the target platform. This is created only if the <code>RUN_OUTPUT_VARIABLE</code> or <code>OUTPUT_VARIABLE</code> option was used. </dd>
 <p> In order to make cross compiling your project easier, use <code>try_run</code> only if really required. If you use <code>try_run</code>, use the <code>RUN_OUTPUT_VARIABLE</code> or <code>OUTPUT_VARIABLE</code> options only if really required. Using them will require that when cross-compiling, the cache variables will have to be set manually to the output of the executable. You can also &quot;guard&quot; the calls to <code>try_run</code> with an <code>if()</code> block checking the <code>CMAKE_CROSSCOMPILING</code> variable and provide an easy-to-preset alternative for this case.</dl>
 <h3>unset</h3>
 <p>Unset a variable, cache variable, or environment variable. </p>
@@ -2215,26 +2216,26 @@ install_programs(&lt;dir&gt; FILES file1 [file2 ...])</pre>
 <p> The <code>CTEST_BUILD_COMMAND</code> variable may be set to explicitly specify the build command line. Otherwise the build command line is computed automatically based on the options given. </p>
 <p> The options are:</p>
 <dl>
-<dt><code>BUILD &lt;build-dir&gt;</code></p>
-<dd>Specify the top-level build directory. If not given, the <code>CTEST_BINARY_DIRECTORY</code> variable is used.</p>
-<dt><code>APPEND</code></p>
-<dd>Mark results for append to those previously submitted to a dashboard server since the last <code>ctest_start()</code> call. Append semantics are defined by the dashboard server in use.</p>
-<dt><code>CONFIGURATION &lt;config&gt;</code></p>
-<dd>Specify the build configuration (e.g. <code>Debug</code>). If not specified the <code>CTEST_BUILD_CONFIGURATION</code> variable will be checked. Otherwise the <code>-C &lt;cfg&gt;</code> option given to the <code><a href="/docs/linux/man/1-ctest3/">ctest3</a>(1)</code> command will be used, if any.</p>
-<dt><code>FLAGS &lt;flags&gt;</code></p>
-<dd>Pass additional arguments to the underlying build command. If not specified the <code>CTEST_BUILD_FLAGS</code> variable will be checked. This can, e.g., be used to trigger a parallel build using the <code>-j</code> option of make. See the <code>ProcessorCount</code> module for an example.</p>
-<dt><code>PROJECT_NAME &lt;project-name&gt;</code></p>
-<dd>Set the name of the project to build. This should correspond to the top-level call to the <code>project()</code> command. If not specified the <code>CTEST_PROJECT_NAME</code> variable will be checked.</p>
-<dt><code>TARGET &lt;target-name&gt;</code></p>
-<dd>Specify the name of a target to build. If not specified the <code>CTEST_BUILD_TARGET</code> variable will be checked. Otherwise the default target will be built. This is the &quot;all&quot; target (called <code>ALL_BUILD</code> in <i>Visual Studio Generators</i>).</p>
-<dt><code>NUMBER_ERRORS &lt;num-err-var&gt;</code></p>
-<dd>Store the number of build errors detected in the given variable.</p>
-<dt><code>NUMBER_WARNINGS &lt;num-warn-var&gt;</code></p>
-<dd>Store the number of build warnings detected in the given variable.</p>
-<dt><code>RETURN_VALUE &lt;result-var&gt;</code></p>
-<dd>Store the return value of the native build tool in the given variable.</p>
-<dt><code>QUIET</code></p>
-<dd>Suppress any CTest-specific non-error output that would have been printed to the console otherwise. The summary of warnings / errors, as well as the output from the native build tool is unaffected by this option.</dl>
+<dt><code>BUILD &lt;build-dir&gt;</code></dt>
+<dd>Specify the top-level build directory. If not given, the <code>CTEST_BINARY_DIRECTORY</code> variable is used.</dd>
+<dt><code>APPEND</code></dt>
+<dd>Mark results for append to those previously submitted to a dashboard server since the last <code>ctest_start()</code> call. Append semantics are defined by the dashboard server in use.</dd>
+<dt><code>CONFIGURATION &lt;config&gt;</code></dt>
+<dd>Specify the build configuration (e.g. <code>Debug</code>). If not specified the <code>CTEST_BUILD_CONFIGURATION</code> variable will be checked. Otherwise the <code>-C &lt;cfg&gt;</code> option given to the <code><a href="/docs/linux/man/1-ctest3/">ctest3</a>(1)</code> command will be used, if any.</dd>
+<dt><code>FLAGS &lt;flags&gt;</code></dt>
+<dd>Pass additional arguments to the underlying build command. If not specified the <code>CTEST_BUILD_FLAGS</code> variable will be checked. This can, e.g., be used to trigger a parallel build using the <code>-j</code> option of make. See the <code>ProcessorCount</code> module for an example.</dd>
+<dt><code>PROJECT_NAME &lt;project-name&gt;</code></dt>
+<dd>Set the name of the project to build. This should correspond to the top-level call to the <code>project()</code> command. If not specified the <code>CTEST_PROJECT_NAME</code> variable will be checked.</dd>
+<dt><code>TARGET &lt;target-name&gt;</code></dt>
+<dd>Specify the name of a target to build. If not specified the <code>CTEST_BUILD_TARGET</code> variable will be checked. Otherwise the default target will be built. This is the &quot;all&quot; target (called <code>ALL_BUILD</code> in <i>Visual Studio Generators</i>).</dd>
+<dt><code>NUMBER_ERRORS &lt;num-err-var&gt;</code></dt>
+<dd>Store the number of build errors detected in the given variable.</dd>
+<dt><code>NUMBER_WARNINGS &lt;num-warn-var&gt;</code></dt>
+<dd>Store the number of build warnings detected in the given variable.</dd>
+<dt><code>RETURN_VALUE &lt;result-var&gt;</code></dt>
+<dd>Store the return value of the native build tool in the given variable.</dd>
+<dt><code>QUIET</code></dt>
+<dd>Suppress any CTest-specific non-error output that would have been printed to the console otherwise. The summary of warnings / errors, as well as the output from the native build tool is unaffected by this option.</dd></dl>
 <h3>ctest_configure</h3>
 <p>Perform the <i>CTest Configure Step</i> as a <i>Dashboard Client</i>. </p>
 <pre>ctest_configure([BUILD &lt;build-dir&gt;] [SOURCE &lt;source-dir&gt;] [APPEND]
@@ -2242,18 +2243,18 @@ install_programs(&lt;dir&gt; FILES file1 [file2 ...])</pre>
 <p>Configure the project build tree and record results in <code>Configure.xml</code> for submission with the <code>ctest_submit()</code> command. </p>
 <p> The options are:</p>
 <dl>
-<dt><code>BUILD &lt;build-dir&gt;</code></p>
-<dd>Specify the top-level build directory. If not given, the <code>CTEST_BINARY_DIRECTORY</code> variable is used.</p>
-<dt><code>SOURCE &lt;source-dir&gt;</code></p>
-<dd>Specify the source directory. If not given, the <code>CTEST_SOURCE_DIRECTORY</code> variable is used.</p>
-<dt><code>APPEND</code></p>
-<dd>Mark results for append to those previously submitted to a dashboard server since the last <code>ctest_start()</code> call. Append semantics are defined by the dashboard server in use.</p>
-<dt><code>OPTIONS &lt;options&gt;</code></p>
-<dd>Specify command-line arguments to pass to the configuration tool.</p>
-<dt><code>RETURN_VALUE &lt;result-var&gt;</code></p>
-<dd>Store in the <code>&lt;result-var&gt;</code> variable the return value of the native configuration tool.</p>
-<dt><code>QUIET</code></p>
-<dd>Suppress any CTest-specific non-error messages that would have otherwise been printed to the console. Output from the underlying configure command is not affected.</dl>
+<dt><code>BUILD &lt;build-dir&gt;</code></dt>
+<dd>Specify the top-level build directory. If not given, the <code>CTEST_BINARY_DIRECTORY</code> variable is used.</dd>
+<dt><code>SOURCE &lt;source-dir&gt;</code></dt>
+<dd>Specify the source directory. If not given, the <code>CTEST_SOURCE_DIRECTORY</code> variable is used.</dd>
+<dt><code>APPEND</code></dt>
+<dd>Mark results for append to those previously submitted to a dashboard server since the last <code>ctest_start()</code> call. Append semantics are defined by the dashboard server in use.</dd>
+<dt><code>OPTIONS &lt;options&gt;</code></dt>
+<dd>Specify command-line arguments to pass to the configuration tool.</dd>
+<dt><code>RETURN_VALUE &lt;result-var&gt;</code></dt>
+<dd>Store in the <code>&lt;result-var&gt;</code> variable the return value of the native configuration tool.</dd>
+<dt><code>QUIET</code></dt>
+<dd>Suppress any CTest-specific non-error messages that would have otherwise been printed to the console. Output from the underlying configure command is not affected.</dd></dl>
 <h3>ctest_coverage</h3>
 <p>Perform the <i>CTest Coverage Step</i> as a <i>Dashboard Client</i>. </p>
 <pre>ctest_coverage([BUILD &lt;build-dir&gt;] [APPEND]
@@ -2264,16 +2265,16 @@ install_programs(&lt;dir&gt; FILES file1 [file2 ...])</pre>
 <p>Collect coverage tool results and stores them in <code>Coverage.xml</code> for submission with the <code>ctest_submit()</code> command. </p>
 <p> The options are:</p>
 <dl>
-<dt><code>BUILD &lt;build-dir&gt;</code></p>
-<dd>Specify the top-level build directory. If not given, the <code>CTEST_BINARY_DIRECTORY</code> variable is used.</p>
-<dt><code>APPEND</code></p>
-<dd>Mark results for append to those previously submitted to a dashboard server since the last <code>ctest_start()</code> call. Append semantics are defined by the dashboard server in use.</p>
-<dt><code>LABELS</code></p>
-<dd>Filter the coverage report to include only source files labeled with at least one of the labels specified.</p>
-<dt><code>RETURN_VALUE &lt;result-var&gt;</code></p>
-<dd>Store in the <code>&lt;result-var&gt;</code> variable <code>0</code> if coverage tools ran without error and non-zero otherwise.</p>
-<dt><code>QUIET</code></p>
-<dd>Suppress any CTest-specific non-error output that would have been printed to the console otherwise. The summary indicating how many lines of code were covered is unaffected by this option.</dl>
+<dt><code>BUILD &lt;build-dir&gt;</code></dt>
+<dd>Specify the top-level build directory. If not given, the <code>CTEST_BINARY_DIRECTORY</code> variable is used.</dd>
+<dt><code>APPEND</code></dt>
+<dd>Mark results for append to those previously submitted to a dashboard server since the last <code>ctest_start()</code> call. Append semantics are defined by the dashboard server in use.</dd>
+<dt><code>LABELS</code></dt>
+<dd>Filter the coverage report to include only source files labeled with at least one of the labels specified.</dd>
+<dt><code>RETURN_VALUE &lt;result-var&gt;</code></dt>
+<dd>Store in the <code>&lt;result-var&gt;</code> variable <code>0</code> if coverage tools ran without error and non-zero otherwise.</dd>
+<dt><code>QUIET</code></dt>
+<dd>Suppress any CTest-specific non-error output that would have been printed to the console otherwise. The summary indicating how many lines of code were covered is unaffected by this option.</dd></dl>
 <h3>ctest_empty_binary_directory</h3>
 <p>empties the binary directory </p>
 <pre>ctest_empty_binary_directory( directory )</pre>
@@ -2329,8 +2330,8 @@ install_programs(&lt;dir&gt; FILES file1 [file2 ...])</pre>
 <p>Submit results to a dashboard server. By default all available parts are submitted. </p>
 <p> The options are:</p>
 <dl>
-<dt><code>PARTS &lt;part&gt;&#8230;</code></p>
-<dd>Specify a subset of parts to submit. Valid part names are: </p>
+<dt><code>PARTS &lt;part&gt;&#8230;</code></dt>
+<dd>Specify a subset of parts to submit. Valid part names are: </dd>
 <pre>Start = nothing
 Update = ctest_update results, in Update.xml
 Configure = ctest_configure results, in Configure.xml
@@ -2342,16 +2343,16 @@ Notes = Files listed by CTEST_NOTES_FILES, in Notes.xml
 ExtraFiles = Files listed by CTEST_EXTRA_SUBMIT_FILES
 Upload = Files prepared for upload by ctest_upload(), in Upload.xml
 Submit = nothing</pre>
-<dt><code>FILES &lt;file&gt;&#8230;</code></p>
-<dd>Specify an explicit list of specific files to be submitted. Each individual file must exist at the time of the call.</p>
-<dt><code>RETRY_COUNT &lt;count&gt;</code></p>
-<dd>Specify how many times to retry a timed-out submission.</p>
-<dt><code>RETRY_DELAY &lt;delay&gt;</code></p>
-<dd>Specify how long (in seconds) to wait after a timed-out submission before attempting to re-submit.</p>
-<dt><code>RETURN_VALUE &lt;result-var&gt;</code></p>
-<dd>Store in the <code>&lt;result-var&gt;</code> variable <code>0</code> for success and non-zero on failure.</p>
-<dt><code>QUIET</code></p>
-<dd>Suppress all non-error messages that would have otherwise been printed to the console.</dl>
+<dt><code>FILES &lt;file&gt;&#8230;</code></dt>
+<dd>Specify an explicit list of specific files to be submitted. Each individual file must exist at the time of the call.</dd>
+<dt><code>RETRY_COUNT &lt;count&gt;</code></dt>
+<dd>Specify how many times to retry a timed-out submission.</dd>
+<dt><code>RETRY_DELAY &lt;delay&gt;</code></dt>
+<dd>Specify how long (in seconds) to wait after a timed-out submission before attempting to re-submit.</dd>
+<dt><code>RETURN_VALUE &lt;result-var&gt;</code></dt>
+<dd>Store in the <code>&lt;result-var&gt;</code> variable <code>0</code> for success and non-zero on failure.</dd>
+<dt><code>QUIET</code></dt>
+<dd>Suppress all non-error messages that would have otherwise been printed to the console.</dd></dl>
 <h3>Submit to CDash Upload API</h3>
 <pre>ctest_submit(CDASH_UPLOAD &lt;file&gt; [CDASH_UPLOAD_TYPE &lt;type&gt;])</pre>
 <p>This second signature is used to upload files to CDash via the CDash file upload API. The api first sends a request to upload to CDash along with a content hash of the file. If CDash does not already have the file, then it is uploaded. Along with the file, a CDash type string is specified to tell CDash which handler to use to process the data.</p>
@@ -2375,36 +2376,36 @@ Submit = nothing</pre>
 <p>Run tests in the project build tree and store results in <code>Test.xml</code> for submission with the <code>ctest_submit()</code> command. </p>
 <p> The options are:</p>
 <dl>
-<dt><code>BUILD &lt;build-dir&gt;</code></p>
-<dd>Specify the top-level build directory. If not given, the <code>CTEST_BINARY_DIRECTORY</code> variable is used.</p>
-<dt><code>APPEND</code></p>
-<dd>Mark results for append to those previously submitted to a dashboard server since the last <code>ctest_start()</code> call. Append semantics are defined by the dashboard server in use.</p>
-<dt><code>START &lt;start-number&gt;</code></p>
-<dd>Specify the beginning of a range of test numbers.</p>
-<dt><code>END &lt;end-number&gt;</code></p>
-<dd>Specify the end of a range of test numbers.</p>
-<dt><code>STRIDE &lt;stride-number&gt;</code></p>
-<dd>Specify the stride by which to step across a range of test numbers.</p>
-<dt><code>EXCLUDE &lt;exclude-regex&gt;</code></p>
-<dd>Specify a regular expression matching test names to exclude.</p>
-<dt><code>INCLUDE &lt;include-regex&gt;</code></p>
-<dd>Specify a regular expression matching test names to include. Tests not matching this expression are excluded.</p>
-<dt><code>EXCLUDE_LABEL &lt;label-exclude-regex&gt;</code></p>
-<dd>Specify a regular expression matching test labels to exclude.</p>
-<dt><code>INCLUDE_LABEL &lt;label-include-regex&gt;</code></p>
-<dd>Specify a regular expression matching test labels to include. Tests not matching this expression are excluded.</p>
-<dt><code>PARALLEL_LEVEL &lt;level&gt;</code></p>
-<dd>Specify a positive number representing the number of tests to be run in parallel.</p>
-<dt><code>TEST_LOAD &lt;threshold&gt;</code></p>
-<dd>While running tests in parallel, try not to start tests when they may cause the CPU load to pass above a given threshold. If not specified the <code>CTEST_TEST_LOAD</code> variable will be checked, and then the <code>&#8211;test-load</code> command-line argument to <code><a href="/docs/linux/man/1-ctest3/">ctest3</a>(1)</code>. See also the <code>TestLoad</code> setting in the <i>CTest Test Step</i>.</p>
-<dt><code>SCHEDULE_RANDOM &lt;ON|OFF&gt;</code></p>
-<dd>Launch tests in a random order. This may be useful for detecting implicit test dependencies.</p>
-<dt><code>STOP_TIME &lt;time-of-day&gt;</code></p>
-<dd>Specify a time of day at which the tests should all stop running.</p>
-<dt><code>RETURN_VALUE &lt;result-var&gt;</code></p>
-<dd>Store in the <code>&lt;result-var&gt;</code> variable <code>0</code> if all tests passed. Store non-zero if anything went wrong.</p>
-<dt><code>QUIET</code></p>
-<dd>Suppress any CTest-specific non-error messages that would have otherwise been printed to the console. Output from the underlying test command is not affected. Summary info detailing the percentage of passing tests is also unaffected by the <code>QUIET</code> option. </p>
+<dt><code>BUILD &lt;build-dir&gt;</code></dt>
+<dd>Specify the top-level build directory. If not given, the <code>CTEST_BINARY_DIRECTORY</code> variable is used.</dd>
+<dt><code>APPEND</code></dt>
+<dd>Mark results for append to those previously submitted to a dashboard server since the last <code>ctest_start()</code> call. Append semantics are defined by the dashboard server in use.</dd>
+<dt><code>START &lt;start-number&gt;</code></dt>
+<dd>Specify the beginning of a range of test numbers.</dd>
+<dt><code>END &lt;end-number&gt;</code></dt>
+<dd>Specify the end of a range of test numbers.</dd>
+<dt><code>STRIDE &lt;stride-number&gt;</code></dt>
+<dd>Specify the stride by which to step across a range of test numbers.</dd>
+<dt><code>EXCLUDE &lt;exclude-regex&gt;</code></dt>
+<dd>Specify a regular expression matching test names to exclude.</dd>
+<dt><code>INCLUDE &lt;include-regex&gt;</code></dt>
+<dd>Specify a regular expression matching test names to include. Tests not matching this expression are excluded.</dd>
+<dt><code>EXCLUDE_LABEL &lt;label-exclude-regex&gt;</code></dt>
+<dd>Specify a regular expression matching test labels to exclude.</dd>
+<dt><code>INCLUDE_LABEL &lt;label-include-regex&gt;</code></dt>
+<dd>Specify a regular expression matching test labels to include. Tests not matching this expression are excluded.</dd>
+<dt><code>PARALLEL_LEVEL &lt;level&gt;</code></dt>
+<dd>Specify a positive number representing the number of tests to be run in parallel.</dd>
+<dt><code>TEST_LOAD &lt;threshold&gt;</code></dt>
+<dd>While running tests in parallel, try not to start tests when they may cause the CPU load to pass above a given threshold. If not specified the <code>CTEST_TEST_LOAD</code> variable will be checked, and then the <code>&#8211;test-load</code> command-line argument to <code><a href="/docs/linux/man/1-ctest3/">ctest3</a>(1)</code>. See also the <code>TestLoad</code> setting in the <i>CTest Test Step</i>.</dd>
+<dt><code>SCHEDULE_RANDOM &lt;ON|OFF&gt;</code></dt>
+<dd>Launch tests in a random order. This may be useful for detecting implicit test dependencies.</dd>
+<dt><code>STOP_TIME &lt;time-of-day&gt;</code></dt>
+<dd>Specify a time of day at which the tests should all stop running.</dd>
+<dt><code>RETURN_VALUE &lt;result-var&gt;</code></dt>
+<dd>Store in the <code>&lt;result-var&gt;</code> variable <code>0</code> if all tests passed. Store non-zero if anything went wrong.</dd>
+<dt><code>QUIET</code></dt>
+<dd>Suppress any CTest-specific non-error messages that would have otherwise been printed to the console. Output from the underlying test command is not affected. Summary info detailing the percentage of passing tests is also unaffected by the <code>QUIET</code> option. </dd>
 <p> See also the <code>CTEST_CUSTOM_MAXIMUM_PASSED_TEST_OUTPUT_SIZE</code> and <code>CTEST_CUSTOM_MAXIMUM_FAILED_TEST_OUTPUT_SIZE</code> variables.</dl>
 <h3>ctest_update</h3>
 <p>Perform the <i>CTest Update Step</i> as a <i>Dashboard Client</i>. </p>
@@ -2412,21 +2413,21 @@ Submit = nothing</pre>
 <p>Update the source tree from version control and record results in <code>Update.xml</code> for submission with the <code>ctest_submit()</code> command. </p>
 <p> The options are:</p>
 <dl>
-<dt><code>SOURCE &lt;source-dir&gt;</code></p>
-<dd>Specify the source directory. If not given, the <code>CTEST_SOURCE_DIRECTORY</code> variable is used.</p>
-<dt><code>RETURN_VALUE &lt;result-var&gt;</code></p>
-<dd>Store in the <code>&lt;result-var&gt;</code> variable the number of files updated or <code>-1</code> on error.</p>
-<dt><code>QUIET</code></p>
-<dd>Tell CTest to suppress most non-error messages that it would have otherwise printed to the console. CTest will still report the new revision of the repository and any conflicting files that were found. </p>
+<dt><code>SOURCE &lt;source-dir&gt;</code></dt>
+<dd>Specify the source directory. If not given, the <code>CTEST_SOURCE_DIRECTORY</code> variable is used.</dd>
+<dt><code>RETURN_VALUE &lt;result-var&gt;</code></dt>
+<dd>Store in the <code>&lt;result-var&gt;</code> variable the number of files updated or <code>-1</code> on error.</dd>
+<dt><code>QUIET</code></dt>
+<dd>Tell CTest to suppress most non-error messages that it would have otherwise printed to the console. CTest will still report the new revision of the repository and any conflicting files that were found. </dd>
 <p> The update always follows the version control branch currently checked out in the source directory. See the <i>CTest Update Step</i> documentation for more information.</dl>
 <h3>ctest_upload</h3>
 <p>Upload files to a dashboard server as a <i>Dashboard Client</i>. </p>
 <pre>ctest_upload(FILES &lt;file&gt;... [QUIET])</pre>
 <p>The options are:</p>
 <dl>
-<dt><code>FILES &lt;file&gt;&#8230;</code></p>
-<dd>Specify a list of files to be sent along with the build results to the dashboard server.</p>
-<dt><code>QUIET</code></p>
-<dd>Suppress any CTest-specific non-error output that would have been printed to the console otherwise.</dl>
+<dt><code>FILES &lt;file&gt;&#8230;</code></dt>
+<dd>Specify a list of files to be sent along with the build results to the dashboard server.</dd>
+<dt><code>QUIET</code></dt>
+<dd>Suppress any CTest-specific non-error output that would have been printed to the console otherwise.</dd></dl>
 <h2>Copyright</h2>
 <p>2000-2016 Kitware, Inc.</p>

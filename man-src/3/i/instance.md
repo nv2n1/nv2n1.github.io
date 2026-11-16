@@ -23,12 +23,10 @@ description: "QuantLib::Singleton – Basic support for the singleton pattern."
 class Foo : public Singleton&lt;Foo&gt;
 {
     friend class Singleton&lt;Foo&gt;;
-
   private:
     Foo()
     {
     }
-
   public:
     ...
 };

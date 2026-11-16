@@ -16,12 +16,12 @@ description: "beagle-manage-index"
 <h2>Commands</h2>
 <p><code>beagle-manage-index</code> takes the following commands</p>
 <dl>
-<dt><code>merge &lt;index_to_merge&gt;</code></p>
-<dd>Merge another Lucene index into the target.</p>
-<dt><code>info</code></p>
-<dd>Print basic index information.</p>
-<dt><code>optimize</code></p>
-<dd>Optimize index.</dl>
+<dt><code>merge &lt;index_to_merge&gt;</code></dt>
+<dd>Merge another Lucene index into the target.</dd>
+<dt><code>info</code></dt>
+<dd>Print basic index information.</dd>
+<dt><code>optimize</code></dt>
+<dd>Optimize index.</dd></dl>
 <h2>Author</h2>
 <p>Novell, Inc.</p>
 <h2>Reporting Bugs</h2>

@@ -12,7 +12,6 @@ ALTER ROLE - change a database role
 
 <pre>ALTER ROLE <i>name</i> [ [ WITH ] <i>option</i> [ ... ] ]
 where <i>option</i> can be:
- 
  SUPERUSER | NOSUPERUSER
  | CREATEDB | NOCREATEDB
  | CREATEROLE | NOCREATEROLE
@@ -41,34 +40,32 @@ ALTER ROLE <i>name</i> RESET ALL</pre>
 <h2>Parameters</h2>
 
 <dl><dt><i>name</i>
-<dd>The name of the role whose attributes are to be altered.
-<dt><b>SUPERUSER</b>
-<dd><dt><b>NOSUPERUSER</b>
-<dd><dt><b>CREATEDB</b>
-<dd><dt><b>NOCREATEDB</b>
-<dd><dt><b>CREATEROLE</b>
-<dd><dt><b>NOCREATEROLE</b>
-<dd><dt><b>CREATEUSER</b>
-<dd><dt><b>NOCREATEUSER</b>
-<dd><dt><b>INHERIT</b>
-<dd><dt><b>NOINHERIT</b>
-<dd><dt><b>LOGIN</b>
-<dd><dt><b>NOLOGIN</b>
-<dd><dt><b>CONNECTION LIMIT </b><i>connlimit</i>
-<dd><dt><b>PASSWORD </b><i>password</i>
-<dd><dt><b>ENCRYPTED</b>
-<dd><dt><b>UNENCRYPTED</b>
-<dd><dt><b>VALID UNTIL '</b><i>timestamp</i><b>'</b>
-<dd>These clauses alter attributes originally set by CREATE ROLE [<b><a HREF="/docs/linux/man/7-create_role/">create_role</a></b>(7)]. For more information, see the <b>CREATE ROLE</b> reference page.
-<dt><i>newname</i>
-<dd>The new name of the role.
-<dt><i>configuration_parameter</i>
-<dd><dt><i>value</i>
-<dd>Set this role's session default for the specified configuration parameter to the given value. If <i>value</i> is DEFAULT or, equivalently, RESET is used, the role-specific variable setting is removed, so the role will inherit the system-wide default setting in new sessions. Use RESET ALL to clear all role-specific settings. SET FROM CURRENT saves the session's current value of the parameter as the role-specific value. 
-
+</dt><dd>The name of the role whose attributes are to be altered.
+</dd><dt><b>SUPERUSER</b>
+</dt><dd></dd><dt><b>NOSUPERUSER</b>
+</dt><dd></dd><dt><b>CREATEDB</b>
+</dt><dd></dd><dt><b>NOCREATEDB</b>
+</dt><dd></dd><dt><b>CREATEROLE</b>
+</dt><dd></dd><dt><b>NOCREATEROLE</b>
+</dt><dd></dd><dt><b>CREATEUSER</b>
+</dt><dd></dd><dt><b>NOCREATEUSER</b>
+</dt><dd></dd><dt><b>INHERIT</b>
+</dt><dd></dd><dt><b>NOINHERIT</b>
+</dt><dd></dd><dt><b>LOGIN</b>
+</dt><dd></dd><dt><b>NOLOGIN</b>
+</dt><dd></dd><dt><b>CONNECTION LIMIT </b><i>connlimit</i>
+</dt><dd></dd><dt><b>PASSWORD </b><i>password</i>
+</dt><dd></dd><dt><b>ENCRYPTED</b>
+</dt><dd></dd><dt><b>UNENCRYPTED</b>
+</dt><dd></dd><dt><b>VALID UNTIL '</b><i>timestamp</i><b>'</b>
+</dt><dd>These clauses alter attributes originally set by CREATE ROLE [<b><a HREF="/docs/linux/man/7-create_role/">create_role</a></b>(7)]. For more information, see the <b>CREATE ROLE</b> reference page.
+</dd><dt><i>newname</i>
+</dt><dd>The new name of the role.
+</dd><dt><i>configuration_parameter</i>
+</dt><dd></dd><dt><i>value</i>
+</dt><dd>Set this role's session default for the specified configuration parameter to the given value. If <i>value</i> is DEFAULT or, equivalently, RESET is used, the role-specific variable setting is removed, so the role will inherit the system-wide default setting in new sessions. Use RESET ALL to clear all role-specific settings. SET FROM CURRENT saves the session's current value of the parameter as the role-specific value. 
  Role-specific variable setting take effect only at login; SET ROLE [<b><a HREF="/docs/linux/man/7-set_role/">set_role</a></b>(7)] does not process role-specific variable settings. 
-
- See SET [<b><a HREF="/docs/linux/man/7-set/">set</a></b>(7)] and in the documentation for more information about allowed parameter names and values.</dl>
+ See SET [<b><a HREF="/docs/linux/man/7-set/">set</a></b>(7)] and in the documentation for more information about allowed parameter names and values.</dd></dl>
 
 <h2>Notes</h2>
 

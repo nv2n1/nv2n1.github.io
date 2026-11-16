@@ -15,15 +15,15 @@ memscan - Find a character in an area of memory.
 <h2>Arguments</h2>
 
 <i>addr</i>
-<dl><dd><dd>The memory area</dl>
+<dl><dd></dd><dd>The memory area</dd></dl>
  
 
  <i>c</i>
-<dl><dd>The byte to search for</dl>
+<dl><dd>The byte to search for</dd></dl>
  
 
  <i>size</i>
-<dl><dd>The size of the area.</dl>
+<dl><dd>The size of the area.</dd></dl>
 
 <h2>Description</h2>
 

@@ -15,8 +15,8 @@ Tk_Uid
 <code>Tk_Class</code>(<i>tkwin</i>)</pre>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dd>Tk_Window <i>tkwin</i> (in) Token for window.</p>
-<dd>char <i>*class</i> (in) New class name for window. </p>
+<dd>Tk_Window <i>tkwin</i> (in) Token for window.</dd>
+<dd>char <i>*class</i> (in) New class name for window. </dd>
 </dl>
 <h2>Description</h2>
 <p><code>Tk_SetClass</code> is called to associate a class with a particular window. The <i>class</i> string identifies the type of the window; all windows with the same general class of behavior (button, menu, etc.) should have the same class. By convention all class names start with a capital letter, and there exists a Tcl command with the same name as each class (except all in lower-case) which can be used to create and manipulate windows of that class. A window&#8217;s class string is initialized to NULL when the window is created. </p>

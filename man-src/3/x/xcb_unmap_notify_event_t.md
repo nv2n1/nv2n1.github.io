@@ -22,16 +22,16 @@ description: "xcb_unmap_notify_event_t – a window is unmapped"
 } <code>xcb_unmap_notify_event_t</code>;</pre>
 <h2>Event Fields</h2>
 <dl>
-<dt><i>response_type</i></p>
-<dd>The type of this event, in this case <i>XCB_UNMAP_NOTIFY</i>. This field is also present in the <i>xcb_generic_event_t</i> and can be used to tell events apart from each other.</p>
-<dt><i>sequence</i></p>
-<dd>The sequence number of the last request processed by the X11 server.</p>
-<dt><i>event</i></p>
-<dd>The reconfigured window or its parent, depending on whether <i>StructureNotify</i> or <i>SubstructureNotify</i> was selected.</p>
-<dt><i>window</i></p>
-<dd>The window that was unmapped.</p>
-<dt><i>from_configure</i></p>
-<dd>Set to 1 if the event was generated as a result of a resizing of the window&#8217;s parent when <i>window</i> had a win_gravity of <i>UnmapGravity</i>.</dl>
+<dt><i>response_type</i></dt>
+<dd>The type of this event, in this case <i>XCB_UNMAP_NOTIFY</i>. This field is also present in the <i>xcb_generic_event_t</i> and can be used to tell events apart from each other.</dd>
+<dt><i>sequence</i></dt>
+<dd>The sequence number of the last request processed by the X11 server.</dd>
+<dt><i>event</i></dt>
+<dd>The reconfigured window or its parent, depending on whether <i>StructureNotify</i> or <i>SubstructureNotify</i> was selected.</dd>
+<dt><i>window</i></dt>
+<dd>The window that was unmapped.</dd>
+<dt><i>from_configure</i></dt>
+<dd>Set to 1 if the event was generated as a result of a resizing of the window&#8217;s parent when <i>window</i> had a win_gravity of <i>UnmapGravity</i>.</dd></dl>
 <h2>Description</h2>
 <h2>See Also</h2>
 <p><code>xcb_generic_event_t</code>(3), <code><a href="/docs/linux/man/3-xcb_unmap_window/">xcb_unmap_window</a></code>(3)</p>

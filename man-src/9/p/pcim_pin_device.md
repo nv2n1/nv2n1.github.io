@@ -14,7 +14,7 @@ description: "pcim_pin_device – Pin managed PCI device"
 <p><i>pdev</i></p>
 <dl>
 <dd>
-<dd>PCI device to pin</dl>
+</dd><dd>PCI device to pin</dd></dl>
 <h2>Description</h2>
 <p>Pin managed PCI device <i>pdev</i>. Pinned device won&#8217;t be disabled on driver detach. <i>pdev</i> must have been enabled with <code>pcim_enable_device</code>.</p>
 <h2>Copyright</h2>

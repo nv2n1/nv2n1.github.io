@@ -19,7 +19,7 @@ git count - objects[-v][-H | --human - readable]
 <p> -v, &#8211;verbose</p>
 <dl>
 <dt>
-<dd> Report in more detail: </p>
+</dt><dd> Report in more detail: </dd>
 <p> count: the number of loose objects </p>
 <p> size: disk space consumed by loose objects, in KiB (unless -H is specified) </p>
 <p> in-pack: the number of in-pack objects </p>
@@ -31,7 +31,7 @@ git count - objects[-v][-H | --human - readable]
 <p> -H, &#8211;human-readable</p>
 <dl>
 <dt>
-<dd> Print sizes in human readable format</dl>
+</dt><dd> Print sizes in human readable format</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
 <h2>Index</h2>

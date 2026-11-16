@@ -214,7 +214,7 @@ description: "org.freedesktop.login1 – The D-Bus interface of systemd-logind"
  interface org.freedesktop.DBus.Introspectable { ... };
  interface org.freedesktop.DBus.Properties { ... };
 };</pre>
-</dl>
+</dd></dl>
 <h3>Methods</h3>
 <p><code>GetSession()</code> may be used to get the session object path for the session with the specified ID. Similarly, <code>GetUser()</code> and <code>GetSeat()</code> get the user and seat objects, respectively. <code>GetSessionByPID()</code> and <code>GetUserByPID()</code> get the session/user object the specified PID belongs to if there is any. </p>
 <p> <code>ListSessions()</code> returns an array of all current sessions. The structures in the array consist of the following fields: session id, user id, user name, seat id, session object path. If a session does not have a seat attached, the seat id field will be an empty string. </p>
@@ -236,7 +236,7 @@ description: "org.freedesktop.login1 – The D-Bus interface of systemd-logind"
 <dd>
 <pre>#define SD_LOGIND_ROOT_CHECK_INHIBITORS (UINT64_C(1) &lt;&lt; 0)
 #define SD_LOGIND_KEXEC_REBOOT (UINT64_C(1) &lt;&lt; 1)</pre>
-</dl>
+</dd></dl>
 <p> When the <i>flags</i> is 0 then these methods behave just like the versions without flags. When <code>SD_LOGIND_ROOT_CHECK_INHIBITORS</code> (0x01) is set, active inhibitors are honoured for privileged users too. When <code>SD_LOGIND_KEXEC_REBOOT</code> (0x02) is set, then <code>RebootWithFlags()</code> perform kexec reboot if kexec kernel is loaded. </p>
 <p> <code>SetRebootParameter()</code> sets a parameter for a subsequent reboot operation. See the description of <code>reboot</code> in <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1) and <code><a href="/docs/linux/man/2-reboot/">reboot</a></code>(2) for more information. </p>
 <p> <code>SetRebootToFirmwareSetup()</code>, <code>SetRebootToBootLoaderMenu()</code>, and <code>SetRebootToBootLoaderEntry()</code> configure the action to be taken from the boot loader after a reboot: respectively entering firmware setup mode, the boot loader menu, or a specific boot loader entry. See <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1) for the corresponding command line interface. </p>
@@ -295,7 +295,7 @@ description: "org.freedesktop.login1 – The D-Bus interface of systemd-logind"
  interface org.freedesktop.DBus.Introspectable { ... };
  interface org.freedesktop.DBus.Properties { ... };
 };</pre>
-</dl>
+</dd></dl>
 <h3>Methods</h3>
 <p><code>Terminate()</code> and <code>ActivateSession()</code> work similar to TerminateSeat(), ActivationSessionOnSeat() on the Manager object. </p>
 <p> <code>SwitchTo()</code> switches to the session on the virtual terminal <i>vtnr</i>. <code>SwitchToNext()</code> and <code>SwitchToPrevious()</code> switch to, respectively, the next and previous sessions on the seat in the order of virtual terminals. If there is no active session, they switch to, respectively, the first and last session on the seat.</p>
@@ -347,7 +347,7 @@ description: "org.freedesktop.login1 – The D-Bus interface of systemd-logind"
  interface org.freedesktop.DBus.Introspectable { ... };
  interface org.freedesktop.DBus.Properties { ... };
 };</pre>
-</dl>
+</dd></dl>
 <h3>Methods</h3>
 <p><code>Terminate()</code> and <code>Kill()</code> work similar to the <code>TerminateUser()</code> and <code>KillUser()</code> methods on the manager object.</p>
 <h3>Signals</h3>
@@ -450,7 +450,7 @@ description: "org.freedesktop.login1 – The D-Bus interface of systemd-logind"
  interface org.freedesktop.DBus.Introspectable { ... };
  interface org.freedesktop.DBus.Properties { ... };
 };</pre>
-</dl>
+</dd></dl>
 <h3>Methods</h3>
 <p><code>Terminate()</code>, <code>Activate()</code>, <code>Lock()</code>, <code>Unlock()</code>, and <code>Kill()</code> work similarly to the respective calls on the Manager object. </p>
 <p> <code>SetIdleHint()</code> is called by the session object to update the idle state of the session whenever it changes. </p>
@@ -496,42 +496,43 @@ description: "org.freedesktop.login1 – The D-Bus interface of systemd-logind"
 <dd>
 <pre>$ gdbus introspect --system --dest org.freedesktop.login1 \
  --object-path /org/freedesktop/login1</pre>
-</dl>
+</dd></dl>
 <p> <code>Example 2. Introspect org.freedesktop.login1.Seat on the bus</code> </p>
 <dl>
 <dd>
 <pre>$ gdbus introspect --system --dest org.freedesktop.login1 \
  --object-path /org/freedesktop/login1/seat/seat0</pre>
-</dl>
+</dd></dl>
 <p> <code>Example 3. Introspect org.freedesktop.login1.User on the bus</code> </p>
 <dl>
 <dd>
 <pre>$ gdbus introspect --system --dest org.freedesktop.login1 \
  --object-path /org/freedesktop/login1/user/_1000</pre>
-</dl>
+</dd></dl>
 <p> <code>Example 4. Introspect org.freedesktop.login1.Session on the bus</code> </p>
 <dl>
 <dd>
 <pre>$ gdbus introspect --system --dest org.freedesktop.login1 \
  --object-path /org/freedesktop/login1/session/45</pre>
-</dl>
+</dd></dl>
 <h2>Versioning</h2>
 <p>These D-Bus interfaces follow m[blue]<code>the usual interface versioning guidelines</code>m[]<font SIZE="-2">[4]</font>.</p>
 <h2>Notes</h2>
 <dl>
-<dt> 1.</p>
-<dd>polkit</p>
+<dt> 1.</dt>
+<dd>polkit</dd>
 <dl>
-<dd><a rel="nofollow" href="https://www.freedesktop.org/software/polkit/docs/latest/">https://www.freedesktop.org/software/polkit/docs/latest/</a></dl>
-<dt> 2.</p>
-<dd>Inhibitor Locks</p>
+<dd><a rel="nofollow" href="https://www.freedesktop.org/software/polkit/docs/latest/">https://www.freedesktop.org/software/polkit/docs/latest/</a></dd></dl>
+<dt> 2.</dt>
+<dd>Inhibitor Locks</dd>
 <dl>
-<dd><a rel="nofollow" href="https://www.freedesktop.org/wiki/Software/systemd/inhibit">https://www.freedesktop.org/wiki/Software/systemd/inhibit</a></dl>
-<dt> 3.</p>
-<dd>XDG Basedir Specification</p>
+<dd><a rel="nofollow" href="https://www.freedesktop.org/wiki/Software/systemd/inhibit">https://www.freedesktop.org/wiki/Software/systemd/inhibit</a></dd></dl>
+<dt> 3.</dt>
+<dd>XDG Basedir Specification</dd>
 <dl>
-<dd><a rel="nofollow" href="https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html">https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html</a></dl>
-<dt> 4.</p>
-<dd>the usual interface versioning guidelines</p>
+<dd><a rel="nofollow" href="https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html">https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html</a></dd></dl>
+<dt> 4.</dt>
+<dd>the usual interface versioning guidelines</dd>
 <dl>
-<dd><a rel="nofollow" href="http://0pointer.de/blog/projects/versioning-dbus.html">http://0pointer.de/blog/projects/versioning-dbus.html</a></dl>
+<dd><a rel="nofollow" href="http://0pointer.de/blog/projects/versioning-dbus.html">http://0pointer.de/blog/projects/versioning-dbus.html</a></dd></dl>
+</dl>

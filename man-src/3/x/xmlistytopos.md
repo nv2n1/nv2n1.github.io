@@ -16,10 +16,10 @@ description: "XmListYToPos — A List function that returns the position of the 
 <h2>Description</h2>
 <p><code>XmListYToPos</code> returns the position of the item at the given y-coordinate within the list.</p>
 <dl COMPACT>
-<dt><i>widget</i></p>
-<dd>Specifies the ID of the List widget</p>
-<dt><i>y</i></p>
-<dd>Specifies the y-coordinate in the list&#8217;s coordinate system</dl>
+<dt><i>widget</i></dt>
+<dd>Specifies the ID of the List widget</dd>
+<dt><i>y</i></dt>
+<dd>Specifies the y-coordinate in the list&#8217;s coordinate system</dd></dl>
 <p> For a complete definition of List and its associated resources, see <code><a href="/docs/linux/man/3-xmlist/">XmList</a></code>(3).</p>
 <h2>Return</h2>
 <p>Returns the position of the item at the specified y coordinate. A value of 1 indicates the first item in the list; a value of 2 indicates the second item; and so on. A value of 0 (zero) indicates that no item exists at the specified y coordinate.</p>

@@ -14,17 +14,17 @@ description: "scsi_unlock_floptical – unlock device via a special MODE SENSE c
 <p><i>sdev</i></p>
 <dl>
 <dd>
-<dd>scsi device to send command to</dl>
+</dd><dd>scsi device to send command to</dd></dl>
 <p> <i>result</i></p>
 <dl>
-<dd>area to store the result of the MODE SENSE</dl>
+<dd>area to store the result of the MODE SENSE</dd></dl>
 <h2>Description</h2>
 <p>Send a vendor specific MODE SENSE (not a MODE SELECT) command. Called for BLIST_KEY devices.</p>
 <h2>Authors</h2>
 <p><code>James Bottomley</code> &lt;James.Bottomley [at] hansenpartnership.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <p> <code>Rob Landley</code> &lt;rob [at] landley.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

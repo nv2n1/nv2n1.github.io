@@ -27,118 +27,118 @@ description: "update-alternatives – maintain symbolic links determining defaul
 <h2>TERMINOLOGY</h2>
 <p> Since the activities of <code>update-alternatives</code> are quite involved, some specific terms will help to explain its operation.</p>
 <dl>
-<dt>generic name (or alternative link)</p>
-<dd> A name, like <i>/usr/bin/editor</i>, which refers, via the alternatives system, to one of a number of files of similar function.</p>
-<dt>alternative name</p>
-<dd> The name of a symbolic link in the alternatives directory.</p>
-<dt>alternative (or alternative path)</p>
-<dd> The name of a specific file in the filesystem, which may be made accessible via a generic name using the alternatives system.</p>
-<dt>alternatives directory</p>
-<dd> A directory, by default <i>/etc/alternatives</i>, containing the symlinks.</p>
-<dt>administrative directory</p>
-<dd> A directory, by default <i>/var/lib/dpkg/alternatives</i>, containing <code>update-alternatives</code>&#8216; state information.</p>
-<dt>link group</p>
-<dd> A set of related symlinks, intended to be updated as a group.</p>
-<dt>master link</p>
-<dd> The alternative link in a link group which determines how the other links in the group are configured.</p>
-<dt>slave link</p>
-<dd> An alternative link in a link group which is controlled by the setting of the master link.</p>
-<dt>automatic mode</p>
-<dd> When a link group is in automatic mode, the alternatives system ensures that the links in the group point to the highest priority alternative appropriate for the group.</p>
-<dt>manual mode</p>
-<dd> When a link group is in manual mode, the alternatives system will not make any changes to the system administrator&#8217;s settings.</dl>
+<dt>generic name (or alternative link)</dt>
+<dd> A name, like <i>/usr/bin/editor</i>, which refers, via the alternatives system, to one of a number of files of similar function.</dd>
+<dt>alternative name</dt>
+<dd> The name of a symbolic link in the alternatives directory.</dd>
+<dt>alternative (or alternative path)</dt>
+<dd> The name of a specific file in the filesystem, which may be made accessible via a generic name using the alternatives system.</dd>
+<dt>alternatives directory</dt>
+<dd> A directory, by default <i>/etc/alternatives</i>, containing the symlinks.</dd>
+<dt>administrative directory</dt>
+<dd> A directory, by default <i>/var/lib/dpkg/alternatives</i>, containing <code>update-alternatives</code>&#8216; state information.</dd>
+<dt>link group</dt>
+<dd> A set of related symlinks, intended to be updated as a group.</dd>
+<dt>master link</dt>
+<dd> The alternative link in a link group which determines how the other links in the group are configured.</dd>
+<dt>slave link</dt>
+<dd> An alternative link in a link group which is controlled by the setting of the master link.</dd>
+<dt>automatic mode</dt>
+<dd> When a link group is in automatic mode, the alternatives system ensures that the links in the group point to the highest priority alternative appropriate for the group.</dd>
+<dt>manual mode</dt>
+<dd> When a link group is in manual mode, the alternatives system will not make any changes to the system administrator&#8217;s settings.</dd></dl>
 <h2>COMMANDS</h2>
 <dl>
-<dt><code>&#8211;install</code> <i>link name path priority</i> [<code>&#8211;slave</code> <i>link name path</i>]&#8230;</p>
-<dd> Add a group of alternatives to the system. <i>link</i> is the generic name for the master link, <i>name</i> is the name of its symlink in the alternatives directory, and <i>path</i> is the alternative being introduced for the master link. The arguments after <code>&#8211;slave</code> are the generic name, symlink name in the alternatives directory and the alternative path for a slave link. Zero or more <code>&#8211;slave</code> options, each followed by three arguments, may be specified. Note that the master alternative must exist or the call will fail. However if a slave alternative doesn&#8217;t exist, the corresponding slave alternative link will simply not be installed (a warning will still be displayed). If some real file is installed where an alternative link has to be installed, it is kept unless <code>&#8211;force</code> is used. </p>
+<dt><code>&#8211;install</code> <i>link name path priority</i> [<code>&#8211;slave</code> <i>link name path</i>]&#8230;</dt>
+<dd> Add a group of alternatives to the system. <i>link</i> is the generic name for the master link, <i>name</i> is the name of its symlink in the alternatives directory, and <i>path</i> is the alternative being introduced for the master link. The arguments after <code>&#8211;slave</code> are the generic name, symlink name in the alternatives directory and the alternative path for a slave link. Zero or more <code>&#8211;slave</code> options, each followed by three arguments, may be specified. Note that the master alternative must exist or the call will fail. However if a slave alternative doesn&#8217;t exist, the corresponding slave alternative link will simply not be installed (a warning will still be displayed). If some real file is installed where an alternative link has to be installed, it is kept unless <code>&#8211;force</code> is used. </dd>
 <p> If the alternative name specified exists already in the alternatives system&#8217;s records, the information supplied will be added as a new set of alternatives for the group. Otherwise, a new group, set to automatic mode, will be added with this information. If the group is in automatic mode, and the newly added alternatives&#8217; priority is higher than any other installed alternatives for this group, the symlinks will be updated to point to the newly added alternatives.</p>
-<dt><code>&#8211;set</code> <i>name path</i></p>
-<dd> Set the program <i>path</i> as alternative for <i>name</i>. This is equivalent to <code>&#8211;config</code> but is non-interactive and thus scriptable.</p>
-<dt><code>&#8211;remove</code> <i>name path</i></p>
-<dd> Remove an alternative and all of its associated slave links. <i>name</i> is a name in the alternatives directory, and <i>path</i> is an absolute filename to which <i>name</i> could be linked. If <i>name</i> is indeed linked to <i>path</i>, <i>name</i> will be updated to point to another appropriate alternative (and the group is put back in automatic mode), or removed if there is no such alternative left. Associated slave links will be updated or removed, correspondingly. If the link is not currently pointing to <i>path</i>, no links are changed; only the information about the alternative is removed.</p>
-<dt><code>&#8211;remove-all</code> <i>name</i></p>
-<dd> Remove all alternatives and all of their associated slave links. <i>name</i> is a name in the alternatives directory.</p>
-<dt><code>&#8211;all</code></p>
-<dd> Call <code>&#8211;config</code> on all alternatives. It can be usefully combined with <code>&#8211;skip-auto</code> to review and configure all alternatives which are not configured in automatic mode. Broken alternatives are also displayed. Thus a simple way to fix all broken alternatives is to call <code>yes &#8221; | update-alternatives &#8211;force &#8211;all</code>.</p>
-<dt><code>&#8211;auto</code> <i>name</i></p>
-<dd> Switch the link group behind the alternative for <i>name</i> to automatic mode. In the process, the master symlink and its slaves are updated to point to the highest priority installed alternatives.</p>
-<dt><code>&#8211;display</code> <i>name</i></p>
-<dd> Display information about the link group. Information displayed includes the group&#8217;s mode (auto or manual), the master and slave links, which alternative the master link currently points to, what other alternatives are available (and their corresponding slave alternatives), and the highest priority alternative currently installed.</p>
-<dt><code>&#8211;get-selections</code></p>
-<dd> List all master alternative names (those controlling a link group) and their status (since version 1.15.0). Each line contains up to 3 fields (separated by one or more spaces). The first field is the alternative name, the second one is the status (either <code>auto</code> or <code>manual</code>), and the last one contains the current choice in the alternative (beware: it&#8217;s a filename and thus might contain spaces).</p>
-<dt><code>&#8211;set-selections</code></p>
-<dd> Read configuration of alternatives on standard input in the format generated by <code>&#8211;get-selections</code> and reconfigure them accordingly (since version 1.15.0).</p>
-<dt><code>&#8211;query</code> <i>name</i></p>
-<dd> Display information about the link group like <code>&#8211;display</code> does, but in a machine parseable way (since version 1.15.0, see section <font SIZE="-1"><code>QUERY FORMAT</code></font> below).</p>
-<dt><code>&#8211;list</code> <i>name</i></p>
-<dd> Display all targets of the link group.</p>
-<dt><code>&#8211;config</code> <i>name</i></p>
-<dd> Show available alternatives for a link group and allow the user to interactively select which one to use. The link group is updated.</p>
-<dt><code>&#8211;help</code></p>
-<dd> Show the usage message and exit.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Show the version and exit.</dl>
+<dt><code>&#8211;set</code> <i>name path</i></dt>
+<dd> Set the program <i>path</i> as alternative for <i>name</i>. This is equivalent to <code>&#8211;config</code> but is non-interactive and thus scriptable.</dd>
+<dt><code>&#8211;remove</code> <i>name path</i></dt>
+<dd> Remove an alternative and all of its associated slave links. <i>name</i> is a name in the alternatives directory, and <i>path</i> is an absolute filename to which <i>name</i> could be linked. If <i>name</i> is indeed linked to <i>path</i>, <i>name</i> will be updated to point to another appropriate alternative (and the group is put back in automatic mode), or removed if there is no such alternative left. Associated slave links will be updated or removed, correspondingly. If the link is not currently pointing to <i>path</i>, no links are changed; only the information about the alternative is removed.</dd>
+<dt><code>&#8211;remove-all</code> <i>name</i></dt>
+<dd> Remove all alternatives and all of their associated slave links. <i>name</i> is a name in the alternatives directory.</dd>
+<dt><code>&#8211;all</code></dt>
+<dd> Call <code>&#8211;config</code> on all alternatives. It can be usefully combined with <code>&#8211;skip-auto</code> to review and configure all alternatives which are not configured in automatic mode. Broken alternatives are also displayed. Thus a simple way to fix all broken alternatives is to call <code>yes &#8221; | update-alternatives &#8211;force &#8211;all</code>.</dd>
+<dt><code>&#8211;auto</code> <i>name</i></dt>
+<dd> Switch the link group behind the alternative for <i>name</i> to automatic mode. In the process, the master symlink and its slaves are updated to point to the highest priority installed alternatives.</dd>
+<dt><code>&#8211;display</code> <i>name</i></dt>
+<dd> Display information about the link group. Information displayed includes the group&#8217;s mode (auto or manual), the master and slave links, which alternative the master link currently points to, what other alternatives are available (and their corresponding slave alternatives), and the highest priority alternative currently installed.</dd>
+<dt><code>&#8211;get-selections</code></dt>
+<dd> List all master alternative names (those controlling a link group) and their status (since version 1.15.0). Each line contains up to 3 fields (separated by one or more spaces). The first field is the alternative name, the second one is the status (either <code>auto</code> or <code>manual</code>), and the last one contains the current choice in the alternative (beware: it&#8217;s a filename and thus might contain spaces).</dd>
+<dt><code>&#8211;set-selections</code></dt>
+<dd> Read configuration of alternatives on standard input in the format generated by <code>&#8211;get-selections</code> and reconfigure them accordingly (since version 1.15.0).</dd>
+<dt><code>&#8211;query</code> <i>name</i></dt>
+<dd> Display information about the link group like <code>&#8211;display</code> does, but in a machine parseable way (since version 1.15.0, see section <font SIZE="-1"><code>QUERY FORMAT</code></font> below).</dd>
+<dt><code>&#8211;list</code> <i>name</i></dt>
+<dd> Display all targets of the link group.</dd>
+<dt><code>&#8211;config</code> <i>name</i></dt>
+<dd> Show available alternatives for a link group and allow the user to interactively select which one to use. The link group is updated.</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> Show the usage message and exit.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Show the version and exit.</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;altdir</code> <i>directory</i></p>
-<dd> Specifies the alternatives directory, when this is to be different from the default. Defaults to &laquo;<i>/etc/alternatives</i>&raquo;.</p>
-<dt><code>&#8211;admindir</code> <i>directory</i></p>
-<dd> Specifies the administrative directory, when this is to be different from the default. Defaults to &laquo;<i>/var/lib/dpkg/alternatives</i>&raquo;</p>
-<dt><code>&#8211;instdir</code> <i>directory</i></p>
-<dd> Specifies the installation directory where alternatives links will be created (since version 1.20.1). Defaults to &laquo;&raquo;.</p>
-<dt><code>&#8211;root</code> <i>directory</i></p>
-<dd> Specifies the root directory (since version 1.20.1). This also sets the alternatives, installation and administrative directories to match. Defaults to &laquo;&raquo;.</p>
-<dt><code>&#8211;log</code> <i>file</i></p>
-<dd> Specifies the log file (since version 1.15.0), when this is to be different from the default (/var/log/alternatives.log).</p>
-<dt><code>&#8211;force</code></p>
-<dd> Allow replacing or dropping any real file that is installed where an alternative link has to be installed or removed.</p>
-<dt><code>&#8211;skip-auto</code></p>
-<dd> Skip configuration prompt for alternatives which are properly configured in automatic mode. This option is only relevant with <code>&#8211;config</code> or <code>&#8211;all</code>.</p>
-<dt><code>&#8211;quiet</code></p>
-<dd> Do not generate any comments unless errors occur.</p>
-<dt><code>&#8211;verbose</code></p>
-<dd> Generate more comments about what is being done.</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Generate even more comments, helpful for debugging, about what is being done (since version 1.19.3).</dl>
+<dt><code>&#8211;altdir</code> <i>directory</i></dt>
+<dd> Specifies the alternatives directory, when this is to be different from the default. Defaults to &laquo;<i>/etc/alternatives</i>&raquo;.</dd>
+<dt><code>&#8211;admindir</code> <i>directory</i></dt>
+<dd> Specifies the administrative directory, when this is to be different from the default. Defaults to &laquo;<i>/var/lib/dpkg/alternatives</i>&raquo;</dd>
+<dt><code>&#8211;instdir</code> <i>directory</i></dt>
+<dd> Specifies the installation directory where alternatives links will be created (since version 1.20.1). Defaults to &laquo;&raquo;.</dd>
+<dt><code>&#8211;root</code> <i>directory</i></dt>
+<dd> Specifies the root directory (since version 1.20.1). This also sets the alternatives, installation and administrative directories to match. Defaults to &laquo;&raquo;.</dd>
+<dt><code>&#8211;log</code> <i>file</i></dt>
+<dd> Specifies the log file (since version 1.15.0), when this is to be different from the default (/var/log/alternatives.log).</dd>
+<dt><code>&#8211;force</code></dt>
+<dd> Allow replacing or dropping any real file that is installed where an alternative link has to be installed or removed.</dd>
+<dt><code>&#8211;skip-auto</code></dt>
+<dd> Skip configuration prompt for alternatives which are properly configured in automatic mode. This option is only relevant with <code>&#8211;config</code> or <code>&#8211;all</code>.</dd>
+<dt><code>&#8211;quiet</code></dt>
+<dd> Do not generate any comments unless errors occur.</dd>
+<dt><code>&#8211;verbose</code></dt>
+<dd> Generate more comments about what is being done.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Generate even more comments, helpful for debugging, about what is being done (since version 1.19.3).</dd></dl>
 <h2>EXIT STATUS</h2>
 <dl>
-<dt><code>0</code></p>
-<dd> The requested action was successfully performed.</p>
-<dt><code>2</code></p>
-<dd> Problems were encountered whilst parsing the command line or performing the action.</dl>
+<dt><code>0</code></dt>
+<dd> The requested action was successfully performed.</dd>
+<dt><code>2</code></dt>
+<dd> Problems were encountered whilst parsing the command line or performing the action.</dd></dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><font SIZE="-1"><code>DPKG_ADMINDIR</code></font></p>
-<dd> If set and the <code>&#8211;admindir</code> option has not been specified, it will be used as the base administrative directory.</dl>
+<dt><font SIZE="-1"><code>DPKG_ADMINDIR</code></font></dt>
+<dd> If set and the <code>&#8211;admindir</code> option has not been specified, it will be used as the base administrative directory.</dd></dl>
 <h2>FILES</h2>
 <dl>
-<dt><i>/etc/alternatives/</i></p>
-<dd> The default alternatives directory. Can be overridden by the <code>&#8211;altdir</code> option.</p>
-<dt><i>/var/lib/dpkg/alternatives/</i></p>
-<dd> The default administration directory. Can be overridden by the <code>&#8211;admindir</code> option.</dl>
+<dt><i>/etc/alternatives/</i></dt>
+<dd> The default alternatives directory. Can be overridden by the <code>&#8211;altdir</code> option.</dd>
+<dt><i>/var/lib/dpkg/alternatives/</i></dt>
+<dd> The default administration directory. Can be overridden by the <code>&#8211;admindir</code> option.</dd></dl>
 <h2>QUERY FORMAT</h2>
 <p> The <code>&#8211;query</code> format is using an RFC822-like flat format. It&#8217;s made of <i>n</i> + 1 blocks where <i>n</i> is the number of alternatives available in the queried link group. The first block contains the following fields:</p>
 <dl>
-<dt><code>Name:</code> <i>name</i></p>
-<dd> The alternative name in the alternative directory.</p>
-<dt><code>Link:</code> <i>link</i></p>
-<dd> The generic name of the alternative.</p>
-<dt><code>Slaves:</code> <i>list-of-slaves</i></p>
-<dd> When this field is present, the <code>next</code> lines hold all slave links associated to the master link of the alternative. There is one slave per line. Each line contains one space, the generic name of the slave alternative, another space, and the path to the slave link.</p>
-<dt><code>Status:</code> <i>status</i></p>
-<dd> The status of the alternative (<code>auto</code> or <code>manual</code>).</p>
-<dt><code>Best:</code> <i>best-choice</i></p>
-<dd> The path of the best alternative for this link group. Not present if there is no alternatives available.</p>
-<dt><code>Value:</code> <i>currently-selected-alternative</i></p>
-<dd> The path of the currently selected alternative. It can also take the magic value <code>none</code>. It is used if the link doesn&#8217;t exist.</dl>
+<dt><code>Name:</code> <i>name</i></dt>
+<dd> The alternative name in the alternative directory.</dd>
+<dt><code>Link:</code> <i>link</i></dt>
+<dd> The generic name of the alternative.</dd>
+<dt><code>Slaves:</code> <i>list-of-slaves</i></dt>
+<dd> When this field is present, the <code>next</code> lines hold all slave links associated to the master link of the alternative. There is one slave per line. Each line contains one space, the generic name of the slave alternative, another space, and the path to the slave link.</dd>
+<dt><code>Status:</code> <i>status</i></dt>
+<dd> The status of the alternative (<code>auto</code> or <code>manual</code>).</dd>
+<dt><code>Best:</code> <i>best-choice</i></dt>
+<dd> The path of the best alternative for this link group. Not present if there is no alternatives available.</dd>
+<dt><code>Value:</code> <i>currently-selected-alternative</i></dt>
+<dd> The path of the currently selected alternative. It can also take the magic value <code>none</code>. It is used if the link doesn&#8217;t exist.</dd></dl>
 <p> The other blocks describe the available alternatives in the queried link group:</p>
 <dl>
-<dt><code>Alternative:</code> <i>path-of-this-alternative</i></p>
-<dd> Path to this block&#8217;s alternative.</p>
-<dt><code>Priority:</code> <i>priority-value</i></p>
-<dd> Value of the priority of this alternative.</p>
-<dt><code>Slaves:</code> <i>list-of-slaves</i></p>
-<dd> When this field is present, the <code>next</code> lines hold all slave alternatives associated to the master link of the alternative. There is one slave per line. Each line contains one space, the generic name of the slave alternative, another space, and the path to the slave alternative.</dl>
+<dt><code>Alternative:</code> <i>path-of-this-alternative</i></dt>
+<dd> Path to this block&#8217;s alternative.</dd>
+<dt><code>Priority:</code> <i>priority-value</i></dt>
+<dd> Value of the priority of this alternative.</dd>
+<dt><code>Slaves:</code> <i>list-of-slaves</i></dt>
+<dd> When this field is present, the <code>next</code> lines hold all slave alternatives associated to the master link of the alternative. There is one slave per line. Each line contains one space, the generic name of the slave alternative, another space, and the path to the slave alternative.</dd></dl>
 <h3>Example</h3>
 <pre>
  $ update-alternatives --query editor

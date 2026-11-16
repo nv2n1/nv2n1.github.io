@@ -10,29 +10,18 @@ description: "std::experimental::ranges::search_n – std::experimental::ranges:
 <p>std::experimental::ranges::search_n &#8211; std::experimental::ranges::search_n</p>
 <h2>Synopsis</h2>
 <pre><code>Defined in header&lt;experimental / ranges / algorithm&gt;
-
     template &lt;ForwardIterator I, Sentinel&lt;I&gt; S, class T,
-
               class Pred = ranges::equal_to&lt;&gt;, class Proj = ranges::identity&gt;
-
 requires IndirectlyComparable&lt;I, const T *, Pred, Proj&gt;(1)
 (ranges TS)
-
     I search_n(I first, S last, ranges::difference_type_t&lt;I&gt; count,
-
                const T &amp;value, Pred pred = Pred{}, Proj proj = Proj{});
-
 template &lt;ForwardRange R, class T, class Pred = ranges::equal_to&lt;&gt;,
-
           class Proj = ranges::identity&gt;
-
 requires IndirectlyComparable &lt; ranges::iterator_t&lt;R&gt;,
 const T *, Pred, Proj &gt; (2)(ranges TS)
-
                             ranges::safe_iterator_t&lt;R&gt; search_n(R &amp;&amp;r,
-
                                                                 ranges::difference_type_t&lt;ranges::iterator_t&lt;R&gt;&gt; count,
-
                                                                 const T &amp;value, Pred pred = Pred{}, Proj proj = Proj{});</code></pre>
 <p>1) Searches the range [first, last) for the first sequence of count elements whose projected values are each equal to the given value value according to the predicate pred.<br />
 2) Same as <code>(1)</code>, but uses r as the source range, as if using ranges::begin(r) as first and ranges::end(r) as last. </p>

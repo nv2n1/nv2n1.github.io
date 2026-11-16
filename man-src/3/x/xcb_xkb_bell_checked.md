@@ -10,37 +10,32 @@ description: "xcb_xkb_bell –"
 <p>xcb_xkb_bell &#8211;</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;xcb/xkb.h&gt;
-
-
 Request function
-
-
-
 xcb_void_cookie_t xcb_xkb_bell(xcb_connection_t *conn, xcb_xkb_device_spec_t deviceSpec, xcb_xkb_bell_class_spec_t bellClass, xcb_xkb_id_spec_t bellID, int8_t percent, uint8_t forceSound, uint8_t eventOnly, int16_t pitch, int16_t duration, xcb_atom_t name, xcb_window_t window);</code></pre>
 <h2>Request Arguments</h2>
 <dl>
-<dt><i>conn</i></p>
-<dd>The XCB connection to X11.</p>
-<dt><i>deviceSpec</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>bellClass</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>bellID</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>percent</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>forceSound</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>eventOnly</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>pitch</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>duration</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>name</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</p>
-<dt><i>window</i></p>
-<dd>TODO: NOT YET DOCUMENTED.</dl>
+<dt><i>conn</i></dt>
+<dd>The XCB connection to X11.</dd>
+<dt><i>deviceSpec</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>bellClass</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>bellID</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>percent</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>forceSound</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>eventOnly</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>pitch</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>duration</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>name</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd>
+<dt><i>window</i></dt>
+<dd>TODO: NOT YET DOCUMENTED.</dd></dl>
 <h2>Description</h2>
 <h2>Return Value</h2>
 <p>Returns an <i>xcb_void_cookie_t</i>. Errors (if any) have to be handled in the event loop. </p>

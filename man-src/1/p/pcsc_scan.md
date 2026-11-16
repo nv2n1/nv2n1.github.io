@@ -24,30 +24,30 @@ description: "pcsc_scan – regularly scans every PC/SC readers connected to the
 &nbsp;<wbr>1: GemPC430 0 0 </p>
 <p> When a card is inserted in any reader some information is printed:</p>
 <dl>
-<dt>date and time:</p>
-<dd> Thu Jun 13 18:56:14 2002</p>
-<dt>reader name:</p>
-<dd> Reader 0 (GemPC410 0 0)</p>
-<dt>card state and occured event:</p>
-<dd> Card state: State has changed, Card inserted,</p>
-<dt>ATR in case of card insertion:</p>
-<dd> ATR: 3B 82 00 86 1E</p>
-<dt>print an ATR analysis if the <code>ATR_analysis</code> command is available:</p>
+<dt>date and time:</dt>
+<dd> Thu Jun 13 18:56:14 2002</dd>
+<dt>reader name:</dt>
+<dd> Reader 0 (GemPC410 0 0)</dd>
+<dt>card state and occured event:</dt>
+<dd> Card state: State has changed, Card inserted,</dd>
+<dt>ATR in case of card insertion:</dt>
+<dd> ATR: 3B 82 00 86 1E</dd>
+<dt>print an ATR analysis if the <code>ATR_analysis</code> command is available:</dt>
 <dd>
 &nbsp;<wbr>ATR: 3B 82 00 86 1E<br />
 &nbsp;<wbr>+&nbsp;<wbr>TS&nbsp;<wbr>=&nbsp;<wbr>3B &#8211;&gt;&nbsp;<wbr>Direct Convention<br />
 &nbsp;<wbr>+&nbsp;<wbr>T0&nbsp;<wbr>=&nbsp;<wbr>82,&nbsp;<wbr>Y(1): 1000, K: 2&nbsp;<wbr>(historical bytes)<br />
 TD(1)&nbsp;<wbr>=&nbsp;<wbr>00 &#8211;&gt;&nbsp;<wbr>Y(i+1)&nbsp;<wbr>=&nbsp;<wbr>0000, Protocol T&nbsp;<wbr>=&nbsp;<wbr>0<br />
 &nbsp;<wbr>&#8212;&#8211;<br />
-&nbsp;<wbr>+&nbsp;<wbr>Historical bytes: 86 1E</dl>
+&nbsp;<wbr>+&nbsp;<wbr>Historical bytes: 86 1E</dd></dl>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd> print help</p>
-<dt><code>-V</code></p>
-<dd> print version number</p>
-<dt><code>-n</code></p>
-<dd> do not print ATR analysis</dl>
+<dt><code>-h</code></dt>
+<dd> print help</dd>
+<dt><code>-V</code></dt>
+<dd> print version number</dd>
+<dt><code>-n</code></dt>
+<dd> do not print ATR analysis</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-pcscd/">pcscd</a></code>(8), <code>ATR_analysis</code>(1)</p>
 <h2>AUTHOR</h2>

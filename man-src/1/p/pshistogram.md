@@ -16,101 +16,101 @@ description: "pshistogram – Calculate and plot histograms"
 <p> <code>pshistogram</code> reads <i>file</i> [or standard input] and examines the first data column (or use <code>-i</code>) to calculate histogram parameters based on the bin-width provided. Using these parameters, scaling, and optional range parameters it will generate PostScript code that plots a histogram. A cumulative histogram may also be specified.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>
-<dt><code>-Jx</code></p>
-<dd> <i>xscale[/yscale]</i> (Linear scale(s) in distance unit/data unit).</p>
-<dt><code>-W</code><i>bin_width</i>[<code>+l</code>|<code>h</code>|<code>b</code>]</p>
-<dd> Sets the bin width used for histogram calculations. The modifiers specify the handling of extreme values that fall outside the range set by <code>-R</code>. By default these values are ignored. Use <code>+b</code> to let these values be included in the first or last bins. To only include extreme values below first bin into the first bin, use <code>+l</code>, and to only include extreme values above the last bin into that last bin, use <code>+h</code>.</dl>
+<dt><code>-Jx</code></dt>
+<dd> <i>xscale[/yscale]</i> (Linear scale(s) in distance unit/data unit).</dd>
+<dt><code>-W</code><i>bin_width</i>[<code>+l</code>|<code>h</code>|<code>b</code>]</dt>
+<dd> Sets the bin width used for histogram calculations. The modifiers specify the handling of extreme values that fall outside the range set by <code>-R</code>. By default these values are ignored. Use <code>+b</code> to let these values be included in the first or last bins. To only include extreme values below first bin into the first bin, use <code>+l</code>, and to only include extreme values above the last bin into that last bin, use <code>+h</code>.</dd></dl>
 <h2>OPTIONAL ARGUMENTS</h2>
 <dl>
-<dt><i>table</i></p>
-<dd> One or more ASCII (or binary, see <code>-bi</code>[<i>ncols</i>][<i>type</i>]) data table file(s) holding a number of data columns. If no tables are given then we read from standard input.</p>
-<dt><code>-A</code></p>
-<dd> Plot the histogram horizontally from x = 0 [Default is vertically from y = 0].</p>
-<dt><code>-B</code>[<code>p</code>|<code>s</code>]<i>parameters</i> <i>(more &#8230;)</i></p>
-<dd> Set map boundary intervals.</p>
-<dt><code>-C</code><i>cpt</i></p>
-<dd> Give a CPT file. The mid x-value for each bar is used to look-up the bar color.</p>
-<dt><code>-D</code>[<code>+b</code>][<code>+f</code><i>font</i>][<code>+o</code><i>off</i>][<code>+r</code>]</p>
-<dd> Annotate each bar with the count it represents. Append any of the following modifiers: Use <code>+b</code> to place the labels beneath the bars instead of above; use <code>+f</code> to change to another font than the default annotation font; use <code>+o</code> to change the offset between bar and label [6p]; use <code>+r</code> to rotate the labels from horizontal to vertical.</p>
-<dt><code>-F</code></p>
-<dd> Center bin on each value. [Default is left edge].</p>
-<dt><code>-G</code><i>fill</i></p>
-<dd> Select filling of bars [Default is no fill].</p>
-<dt><code>-I</code>[<code>o</code>|<code>O</code>]</p>
-<dd> Inquire about min/max x and y after binning. The <i>xmin xmax ymin ymax</i> is output; no plotting is done. Append <code>o</code> to output an ASCII table of the resulting x,y data instead. Upper case <code>O</code> will output all x,y bin data even when y == 0.</p>
-<dt><code>-Jz</code>|<code>Z</code><i>parameters</i> <i>(more &#8230;)</i></p>
-<dd> Set z-axis scaling; same syntax as <code>-Jx</code>.</p>
-<dt><code>-K</code> <i>(more &#8230;)</i></p>
-<dd> Do not finalize the PostScript plot.</p>
-<dt><code>-L</code><i>pen</i></p>
-<dd> Draw bar outline using the specified pen thickness. [Default is no outline].</p>
-<dt><code>-N</code>[<i>mode</i>][<code>+p</code><i>pen</i>]</p>
-<dd> Draw the equivalent normal distribution; append desired pen [0.5p,black]. The <i>mode</i> selects which central location and scale to use:</p>
-<dt>&bull;</p>
-<dd> 0 = mean and standard deviation [Default];</p>
-<dt>&bull;</p>
-<dd> 1 = median and L1 scale;</p>
-<dt>&bull;</p>
-<dd> 2 = LMS mode and scale. </p>
+<dt><i>table</i></dt>
+<dd> One or more ASCII (or binary, see <code>-bi</code>[<i>ncols</i>][<i>type</i>]) data table file(s) holding a number of data columns. If no tables are given then we read from standard input.</dd>
+<dt><code>-A</code></dt>
+<dd> Plot the histogram horizontally from x = 0 [Default is vertically from y = 0].</dd>
+<dt><code>-B</code>[<code>p</code>|<code>s</code>]<i>parameters</i> <i>(more &#8230;)</i></dt>
+<dd> Set map boundary intervals.</dd>
+<dt><code>-C</code><i>cpt</i></dt>
+<dd> Give a CPT file. The mid x-value for each bar is used to look-up the bar color.</dd>
+<dt><code>-D</code>[<code>+b</code>][<code>+f</code><i>font</i>][<code>+o</code><i>off</i>][<code>+r</code>]</dt>
+<dd> Annotate each bar with the count it represents. Append any of the following modifiers: Use <code>+b</code> to place the labels beneath the bars instead of above; use <code>+f</code> to change to another font than the default annotation font; use <code>+o</code> to change the offset between bar and label [6p]; use <code>+r</code> to rotate the labels from horizontal to vertical.</dd>
+<dt><code>-F</code></dt>
+<dd> Center bin on each value. [Default is left edge].</dd>
+<dt><code>-G</code><i>fill</i></dt>
+<dd> Select filling of bars [Default is no fill].</dd>
+<dt><code>-I</code>[<code>o</code>|<code>O</code>]</dt>
+<dd> Inquire about min/max x and y after binning. The <i>xmin xmax ymin ymax</i> is output; no plotting is done. Append <code>o</code> to output an ASCII table of the resulting x,y data instead. Upper case <code>O</code> will output all x,y bin data even when y == 0.</dd>
+<dt><code>-Jz</code>|<code>Z</code><i>parameters</i> <i>(more &#8230;)</i></dt>
+<dd> Set z-axis scaling; same syntax as <code>-Jx</code>.</dd>
+<dt><code>-K</code> <i>(more &#8230;)</i></dt>
+<dd> Do not finalize the PostScript plot.</dd>
+<dt><code>-L</code><i>pen</i></dt>
+<dd> Draw bar outline using the specified pen thickness. [Default is no outline].</dd>
+<dt><code>-N</code>[<i>mode</i>][<code>+p</code><i>pen</i>]</dt>
+<dd> Draw the equivalent normal distribution; append desired pen [0.5p,black]. The <i>mode</i> selects which central location and scale to use:</dd>
+<dt>&bull;</dt>
+<dd> 0 = mean and standard deviation [Default];</dd>
+<dt>&bull;</dt>
+<dd> 1 = median and L1 scale;</dd>
+<dt>&bull;</dt>
+<dd> 2 = LMS mode and scale. </dd>
 <p> The <code>-N</code> option may be repeated to draw several of these curves.</p>
-<dt><code>-O</code> <i>(more &#8230;)</i></p>
-<dd> Append to existing PostScript plot.</p>
-<dt><code>-P</code> <i>(more &#8230;)</i></p>
-<dd> Select &quot;Portrait&quot; plot orientation.</p>
-<dt><code>-Q</code></p>
-<dd> Draw a cumulative histogram.</p>
-<dt><code>-R</code>[<i>unit</i>]<i>xmin</i>/<i>xmax</i>/<i>ymin</i>/<i>ymax</i>[<code>r</code>] <i>(more &#8230;)</i></p>
-<dd> Specify the region of interest. </p>
+<dt><code>-O</code> <i>(more &#8230;)</i></dt>
+<dd> Append to existing PostScript plot.</dd>
+<dt><code>-P</code> <i>(more &#8230;)</i></dt>
+<dd> Select &quot;Portrait&quot; plot orientation.</dd>
+<dt><code>-Q</code></dt>
+<dd> Draw a cumulative histogram.</dd>
+<dt><code>-R</code>[<i>unit</i>]<i>xmin</i>/<i>xmax</i>/<i>ymin</i>/<i>ymax</i>[<code>r</code>] <i>(more &#8230;)</i></dt>
+<dd> Specify the region of interest. </dd>
 <p> For perspective view <code>p</code>, optionally append /<i>zmin</i>/<i>zmax</i>. <i>(more &#8230;)</i> If not given, <code>pshistogram</code> will automatically find reasonable values for the region.</p>
-<dt><code>-S</code></p>
-<dd> Draws a stairs-step diagram which does not include the internal bars of the default histogram.</p>
-<dt><code>-U</code>[<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] <i>(more &#8230;)</i></p>
-<dd> Draw GMT time stamp logo on plot.</p>
-<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></p>
-<dd> Select verbosity level [c]. </p>
+<dt><code>-S</code></dt>
+<dd> Draws a stairs-step diagram which does not include the internal bars of the default histogram.</dd>
+<dt><code>-U</code>[<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] <i>(more &#8230;)</i></dt>
+<dd> Draw GMT time stamp logo on plot.</dd>
+<dt><code>-V</code>[<i>level</i>] <i>(more &#8230;)</i></dt>
+<dd> Select verbosity level [c]. </dd>
 <p> <code>-X</code>[<code>a</code>|<code>c</code>|<code>f</code>|<code>r</code>][<i>x-shift</i>[<code>u</code>]]</p>
-<dt><code>-Y</code>[<code>a</code>|<code>c</code>|<code>f</code>|<code>r</code>][<i>y-shift</i>[<code>u</code>]] <i>(more &#8230;)</i></p>
-<dd> Shift plot origin.</p>
-<dt><code>-Z</code><i>type</i></p>
-<dd> Choose between 6 types of histograms:</p>
-<dt>&bull;</p>
-<dd> 0 = counts [Default]</p>
-<dt>&bull;</p>
-<dd> 1 = frequency_percent</p>
-<dt>&bull;</p>
-<dd> 2 = log (1.0 + count)</p>
-<dt>&bull;</p>
-<dd> 3 = log (1.0 + frequency_percent)</p>
-<dt>&bull;</p>
-<dd> 4 = log10 (1.0 + count)</p>
-<dt>&bull;</p>
-<dd> 5 = log10 (1.0 + frequency_percent).</p>
-<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></p>
-<dd> Select native binary input. [Default is 2 input columns].</p>
-<dt><code>-c</code><i>copies</i> <i>(more &#8230;)</i></p>
-<dd> Specify number of plot copies [Default is 1].</p>
-<dt><code>-di</code><i>nodata</i> <i>(more &#8230;)</i></p>
-<dd> Replace input columns that equal <i>nodata</i> with NaN.</p>
-<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></p>
-<dd> Specify data types of input and/or output columns.</p>
-<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></p>
-<dd> Skip or produce header record(s).</p>
-<dt><code>-i</code><i>cols</i>[<code>l</code>][<code>s</code><i>scale</i>][<code>o</code><i>offset</i>][,<i>&#8230;</i>] <i>(more &#8230;)</i></p>
-<dd> Select input columns (0 is first column).</p>
-<dt><code>-p</code>[<code>x</code>|<code>y</code>|<code>z</code>]<i>azim</i>/<i>elev</i>[/<i>zlevel</i>][<code>+w</code><i>lon0</i>/<i>lat0</i>[/<i>z0</i>]][<code>+v</code><i>x0</i>/<i>y0</i>] <i>(more &#8230;)</i></p>
-<dd> Select perspective view.</p>
-<dt><code>-t</code>[<i>transp</i>] <i>(more &#8230;)</i></p>
-<dd> Set PDF transparency level in percent.</p>
-<dt><code>-^</code> or just <code>&#8211;</code></p>
-<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</p>
-<dt><code>-+</code> or just <code>+</code></p>
-<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</p>
-<dt><code>-?</code> or no arguments</p>
-<dd> Print a complete usage (help) message, including the explanation of options, then exits.</p>
-<dt><code>&#8211;</code><code>-version</code></p>
-<dd> Print GMT version and exit.</p>
-<dt><code>&#8211;</code><code>-show-datadir</code></p>
-<dd> Print full path to GMT share directory and exit.</dl>
+<dt><code>-Y</code>[<code>a</code>|<code>c</code>|<code>f</code>|<code>r</code>][<i>y-shift</i>[<code>u</code>]] <i>(more &#8230;)</i></dt>
+<dd> Shift plot origin.</dd>
+<dt><code>-Z</code><i>type</i></dt>
+<dd> Choose between 6 types of histograms:</dd>
+<dt>&bull;</dt>
+<dd> 0 = counts [Default]</dd>
+<dt>&bull;</dt>
+<dd> 1 = frequency_percent</dd>
+<dt>&bull;</dt>
+<dd> 2 = log (1.0 + count)</dd>
+<dt>&bull;</dt>
+<dd> 3 = log (1.0 + frequency_percent)</dd>
+<dt>&bull;</dt>
+<dd> 4 = log10 (1.0 + count)</dd>
+<dt>&bull;</dt>
+<dd> 5 = log10 (1.0 + frequency_percent).</dd>
+<dt><code>-bi</code>[<i>ncols</i>][<code>t</code>] <i>(more &#8230;)</i></dt>
+<dd> Select native binary input. [Default is 2 input columns].</dd>
+<dt><code>-c</code><i>copies</i> <i>(more &#8230;)</i></dt>
+<dd> Specify number of plot copies [Default is 1].</dd>
+<dt><code>-di</code><i>nodata</i> <i>(more &#8230;)</i></dt>
+<dd> Replace input columns that equal <i>nodata</i> with NaN.</dd>
+<dt><code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> <i>(more &#8230;)</i></dt>
+<dd> Specify data types of input and/or output columns.</dd>
+<dt><code>-h</code>[<code>i</code>|<code>o</code>][<i>n</i>][<code>+c</code>][<code>+d</code>][<code>+r</code><i>remark</i>][<code>+r</code><i>title</i>] <i>(more &#8230;)</i></dt>
+<dd> Skip or produce header record(s).</dd>
+<dt><code>-i</code><i>cols</i>[<code>l</code>][<code>s</code><i>scale</i>][<code>o</code><i>offset</i>][,<i>&#8230;</i>] <i>(more &#8230;)</i></dt>
+<dd> Select input columns (0 is first column).</dd>
+<dt><code>-p</code>[<code>x</code>|<code>y</code>|<code>z</code>]<i>azim</i>/<i>elev</i>[/<i>zlevel</i>][<code>+w</code><i>lon0</i>/<i>lat0</i>[/<i>z0</i>]][<code>+v</code><i>x0</i>/<i>y0</i>] <i>(more &#8230;)</i></dt>
+<dd> Select perspective view.</dd>
+<dt><code>-t</code>[<i>transp</i>] <i>(more &#8230;)</i></dt>
+<dd> Set PDF transparency level in percent.</dd>
+<dt><code>-^</code> or just <code>&#8211;</code></dt>
+<dd> Print a short message about the syntax of the command, then exits (NOTE: on Windows use just <code>&#8211;</code>).</dd>
+<dt><code>-+</code> or just <code>+</code></dt>
+<dd> Print an extensive usage (help) message, including the explanation of any module-specific option (but not the GMT common options), then exits.</dd>
+<dt><code>-?</code> or no arguments</dt>
+<dd> Print a complete usage (help) message, including the explanation of options, then exits.</dd>
+<dt><code>&#8211;</code><code>-version</code></dt>
+<dd> Print GMT version and exit.</dd>
+<dt><code>&#8211;</code><code>-show-datadir</code></dt>
+<dd> Print full path to GMT share directory and exit.</dd></dl>
 <h2>EXAMPLES</h2>
 <p> To draw a histogram of the data v3206.t containing seafloor depths, using a 250 meter bin width, center bars, and draw bar outline, use: </p>
 <pre>

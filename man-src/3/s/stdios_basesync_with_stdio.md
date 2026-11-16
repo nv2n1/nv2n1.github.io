@@ -35,10 +35,8 @@ synchronization state before the call to the function
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstdio&gt;
 int main()
-
 {
     std::ios::sync_with_stdio(false);
     std::cout &lt;&lt; &quot;a\n&quot;;

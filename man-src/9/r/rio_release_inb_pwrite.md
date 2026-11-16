@@ -14,11 +14,11 @@ description: "rio_release_inb_pwrite – release inbound port-write message serv
 <p><i>rdev</i></p>
 <dl>
 <dd>
-<dd>RIO device which registered for inbound port-write callback</dl>
+</dd><dd>RIO device which registered for inbound port-write callback</dd></dl>
 <h2>Description</h2>
 <p>Removes callback from the rio_dev structure. Returns 0 if the request has been satisfied.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

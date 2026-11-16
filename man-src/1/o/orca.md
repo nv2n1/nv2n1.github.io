@@ -16,28 +16,27 @@ description: "orca – a scriptable screen reader"
 <p> <code>orca</code> works with applications and toolkits that support the Assistive Technology Service Provider Interface (AT-SPI), which is the primary assistive technology infrastructure for Linux and Solaris. Applications and toolkits supporting the AT-SPI include the GNOME Gtk+ toolkit, the Java platform&#8217;s Swing toolkit, LibreOffice, Gecko, and WebKitGtk. AT-SPI support for the KDE Qt toolkit is being pursued.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-s, &#8211;setup</code></p>
-<dd> When starting <code>orca</code>, initiate the GUI-based configuration.</p>
-<dt><code>-u, &#8211;user-prefs-dir=</code><i>dirname</i></p>
-<dd> When starting <code>orca</code>, use <i>dirname</i> as an alternate directory for the user preferences.</p>
-<dt><code>-e, &#8211;enable=</code><i>speech|braille|braille-monitor</i></p>
-<dd> When starting <code>orca</code>, force the enabling of the supplied options.</p>
-<dt><code>-d, &#8211;disable=</code><i>speech|braille|braille-monitor</i></p>
-<dd> When starting <code>orca</code>, force the disabling of the supplied options.</p>
-<dt><code>-l, &#8211;list-apps</code></p>
-<dd> Prints the names of all the currently running applications. This is used primarily for debugging purposes to see if <code>orca</code> can talk to the accessibility infrastructure. Note that if <code>orca</code> is already running, this will not kill the other <code>orca</code> process. It will just list the currently running applications, and you will see <code>orca</code> listed twice: once for the existing <code>orca</code> and once for this instance.</p>
-<dt><code>&#8211;debug</code></p>
-<dd> Enables debug output for <code>orca</code> and sends all debug output to a file with a name of the form &#8216;debug-YYYY-MM-DD-HH:MM:SS.out&#8217; in the current directory. The YYYY-MM-DD-HH:MM:SS portion will be replaced with the current date and time.</p>
-<dt><code>&#8211;debug-file=</code><i>filename</i></p>
-<dd> Enables debug output for <code>orca</code> and sends all debug output to the given filename.</p>
-<dt><code>-v, &#8211;version</code></p>
-<dd> outputs <code>orca</code> version number and exits.</p>
-<dt><code>-h, &#8211;help</code></p>
-<dd> displays <code>orca</code> help and exits.</p>
-<dt><code>&#8211;replace</code></p>
-<dd> Replace a currently running <code>orca</code> process. By default, if <code>orca</code> detects an existing <code>orca</code> process for the same session, it will not start a new <code>orca</code> process. This option will kill and cleanup after any existing <code>orca</code> process and then start a new <code>orca</code> in its place.</p>
-<dt>
-<dd></dl>
+<dt><code>-s, &#8211;setup</code></dt>
+<dd> When starting <code>orca</code>, initiate the GUI-based configuration.</dd>
+<dt><code>-u, &#8211;user-prefs-dir=</code><i>dirname</i></dt>
+<dd> When starting <code>orca</code>, use <i>dirname</i> as an alternate directory for the user preferences.</dd>
+<dt><code>-e, &#8211;enable=</code><i>speech|braille|braille-monitor</i></dt>
+<dd> When starting <code>orca</code>, force the enabling of the supplied options.</dd>
+<dt><code>-d, &#8211;disable=</code><i>speech|braille|braille-monitor</i></dt>
+<dd> When starting <code>orca</code>, force the disabling of the supplied options.</dd>
+<dt><code>-l, &#8211;list-apps</code></dt>
+<dd> Prints the names of all the currently running applications. This is used primarily for debugging purposes to see if <code>orca</code> can talk to the accessibility infrastructure. Note that if <code>orca</code> is already running, this will not kill the other <code>orca</code> process. It will just list the currently running applications, and you will see <code>orca</code> listed twice: once for the existing <code>orca</code> and once for this instance.</dd>
+<dt><code>&#8211;debug</code></dt>
+<dd> Enables debug output for <code>orca</code> and sends all debug output to a file with a name of the form &#8216;debug-YYYY-MM-DD-HH:MM:SS.out&#8217; in the current directory. The YYYY-MM-DD-HH:MM:SS portion will be replaced with the current date and time.</dd>
+<dt><code>&#8211;debug-file=</code><i>filename</i></dt>
+<dd> Enables debug output for <code>orca</code> and sends all debug output to the given filename.</dd>
+<dt><code>-v, &#8211;version</code></dt>
+<dd> outputs <code>orca</code> version number and exits.</dd>
+<dt><code>-h, &#8211;help</code></dt>
+<dd> displays <code>orca</code> help and exits.</dd>
+<dt><code>&#8211;replace</code></dt>
+<dd> Replace a currently running <code>orca</code> process. By default, if <code>orca</code> detects an existing <code>orca</code> process for the same session, it will not start a new <code>orca</code> process. This option will kill and cleanup after any existing <code>orca</code> process and then start a new <code>orca</code> in its place.</dd>
+</dl>
 <h2>KEYBOARD SETTINGS</h2>
 <p> Orca provides two keyboard modes, Desktop and Laptop keyboard layout. The <code>Orca_Modifier</code> key is <code>Insert</code> in desktop keyboard layout and <code>Caps_Lock</code> in laptop keyboard layout. </p>
 <p> <code>Orca</code> uses default GNOME keyboard shortcuts to navigate the desktop and interact with various applications. The flat review commands provide an alternative method of interaction in certain inaccessible applications. It should not be confused with flat review functionality provided by other screen readers. </p>
@@ -103,18 +102,18 @@ description: "orca – a scriptable screen reader"
 <p> <code>Caps_Lock+F11</code> toggle the reading of tables, either by single cell or whole row. </p>
 <h2>FILES</h2>
 <dl>
-<dt><code>~/.local/share/orca</code></p>
-<dd> <code>Orca</code> user preferences directory</p>
-<dt><code>~/.local/share/orca/user-settings.conf</code></p>
-<dd> <code>Orca</code> user preferences configuration file.</p>
-<dt><code>~/.local/share/orca/orca-customizations.py</code></p>
-<dd> <code>Orca</code> user customizations configuration file </p>
-<dt><code>~/.local/share/orca/orca-scripts</code></p>
-<dd> <code>Orca</code> user orca scripts directory</p>
-<dt><code>~/.local/share/orca/bookmarks</code></p>
-<dd> <code>Orca</code> user bookmarks directory</p>
-<dt><code>~/.local/share/orca/app-settings</code></p>
-<dd> <code>Orca</code> user application specific settings directory </p>
+<dt><code>~/.local/share/orca</code></dt>
+<dd> <code>Orca</code> user preferences directory</dd>
+<dt><code>~/.local/share/orca/user-settings.conf</code></dt>
+<dd> <code>Orca</code> user preferences configuration file.</dd>
+<dt><code>~/.local/share/orca/orca-customizations.py</code></dt>
+<dd> <code>Orca</code> user customizations configuration file </dd>
+<dt><code>~/.local/share/orca/orca-scripts</code></dt>
+<dd> <code>Orca</code> user orca scripts directory</dd>
+<dt><code>~/.local/share/orca/bookmarks</code></dt>
+<dd> <code>Orca</code> user bookmarks directory</dd>
+<dt><code>~/.local/share/orca/app-settings</code></dt>
+<dd> <code>Orca</code> user application specific settings directory </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> <code>Orca</code> originated as a community effort led by the Sun Microsystems Inc. Accessibility Program Office and with contributions from many community members.</p>

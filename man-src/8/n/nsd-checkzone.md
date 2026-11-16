@@ -15,12 +15,12 @@ description: "nsd-checkzone – NSD zone file syntax checker."
 <p> This is used to check files before feeding them to the <a href="/docs/linux/man/8-nsd/">nsd</a>(8) daemon.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-h</code></p>
-<dd>Print usage help information and exit.</p>
-<dt><i>zonename</i></p>
-<dd>The name of the zone to check, eg. &quot;example.com&quot;.</p>
-<dt><i>zonefile</i></p>
-<dd>The file to read, eg. &quot;zones/example.com.zone.signed&quot;.</dl>
+<dt><code>-h</code></dt>
+<dd>Print usage help information and exit.</dd>
+<dt><i>zonename</i></dt>
+<dd>The name of the zone to check, eg. &quot;example.com&quot;.</dd>
+<dt><i>zonefile</i></dt>
+<dd>The file to read, eg. &quot;zones/example.com.zone.signed&quot;.</dd></dl>
 <h2>See Also</h2>
 <p><i><a href="/docs/linux/man/8-nsd/">nsd</a></i>(8), <i><a href="/docs/linux/man/8-nsd-checkconf/">nsd-checkconf</a></i>(8)</p>
 <h2>Authors</h2>

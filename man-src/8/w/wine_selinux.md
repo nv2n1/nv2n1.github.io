@@ -64,8 +64,8 @@ description: "wine_selinux – Security Enhanced Linux Policy for the wine proce
 <p> <code>wine_exec_t</code> </p>
 <p> &#8211; Set files with the wine_exec_t type, if you want to transition an executable to the wine_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/usr/bin/wine.*, /opt/teamviewer(/.*)?/bin/wine.*, /opt/google/picasa(/.*)?/bin/wdi, /opt/google/picasa(/.*)?/bin/wine.*, /opt/google/picasa(/.*)?/bin/msiexec, /opt/google/picasa(/.*)?/bin/notepad, /opt/google/picasa(/.*)?/bin/progman, /opt/google/picasa(/.*)?/bin/regedit, /opt/google/picasa(/.*)?/bin/regsvr32, /opt/google/picasa(/.*)?/Picasa3/.*exe, /opt/google/picasa(/.*)?/bin/uninstaller, /opt/cxoffice/bin/wine.*, /opt/picasa/wine/bin/wine.*, /usr/bin/msiexec, /usr/bin/notepad, /usr/bin/regedit, /usr/bin/regsvr32, /usr/bin/uninstaller, /home/[^/]+/cxoffice/bin/wine.+ </p>
+<dt>Paths:</dt>
+<dd>/usr/bin/wine.*, /opt/teamviewer(/.*)?/bin/wine.*, /opt/google/picasa(/.*)?/bin/wdi, /opt/google/picasa(/.*)?/bin/wine.*, /opt/google/picasa(/.*)?/bin/msiexec, /opt/google/picasa(/.*)?/bin/notepad, /opt/google/picasa(/.*)?/bin/progman, /opt/google/picasa(/.*)?/bin/regedit, /opt/google/picasa(/.*)?/bin/regsvr32, /opt/google/picasa(/.*)?/Picasa3/.*exe, /opt/google/picasa(/.*)?/bin/uninstaller, /opt/cxoffice/bin/wine.*, /opt/picasa/wine/bin/wine.*, /usr/bin/msiexec, /usr/bin/notepad, /usr/bin/regedit, /usr/bin/regsvr32, /usr/bin/uninstaller, /home/[^/]+/cxoffice/bin/wine.+ </dd>
 </dl>
 <p> <code>wine_home_t</code> </p>
 <p> &#8211; Set files with the wine_home_t type, if you want to store wine files in the users home directory. </p>

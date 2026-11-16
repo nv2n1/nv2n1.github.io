@@ -11,9 +11,7 @@ std::make_from_tuple - std::make_from_tuple
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header &lt;tuple&gt;
-
 template &lt;class T, class Tuple&gt;          (since C++17)
-
 constexpr T make_from_tuple(Tuple&amp;&amp; t);</code></pre> 
 Construct an object of type T, using the elements of the tuple t as the arguments to the constructor. 
 
@@ -51,7 +49,6 @@ Due to guaranteed_copy_elision, T need not be movable.
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;tuple&gt;
 struct Foo {
     Foo(int first, float second, int third)
@@ -60,7 +57,6 @@ struct Foo {
     }
 };
 int main()
-
 {
     auto tuple = std::make_tuple(42, 3.14f, 0);
     std::make_from_tuple&lt;Foo&gt;(std::move(tuple));

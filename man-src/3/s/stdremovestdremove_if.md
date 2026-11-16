@@ -11,36 +11,24 @@ std::remove,std::remove_if - std::remove,std::remove_if
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;algorithm&gt;
-
     template &lt;class ForwardIt, class T&gt;
     (until C++ 20)
-
         ForwardIt remove(ForwardIt first, ForwardIt last, const T &amp;value);
-
 template &lt;class ForwardIt, class T&gt;
 (since C++ 20)
-
     constexpr ForwardIt remove(ForwardIt first, ForwardIt last, const T &amp;value);
-
 template &lt;class ExecutionPolicy, class ForwardIt, class T&gt;
 (2)(since C++ 17)
-
     ForwardIt remove(ExecutionPolicy &amp;&amp;policy, ForwardIt first, ForwardIt last, const T &amp;value);
 (1)
-
     template &lt;class ForwardIt, class UnaryPredicate&gt;
     (until C++ 20)
-
         ForwardIt remove_if(ForwardIt first, ForwardIt last, UnaryPredicate p);
-
 template &lt;class ForwardIt, class UnaryPredicate&gt;
 (3)(since C++ 20)
-
     constexpr ForwardIt remove_if(ForwardIt first, ForwardIt last, UnaryPredicate p);
-
 template &lt;class ExecutionPolicy, class ForwardIt, class UnaryPredicate&gt;
 (4)(since C++ 17)
-
     ForwardIt remove_if(ExecutionPolicy &amp;&amp;policy, ForwardIt first, ForwardIt last, UnaryPredicate p);</code></pre> 
 Removes all elements satisfying specific criteria from the range [first, last) and returns a past-the-end iterator for the new end of the range. 
 1) Removes all elements that are equal to value. 
@@ -122,14 +110,10 @@ Because std::remove takes value by reference, it can have unexpected behavior if
 
 The following code removes all spaces from a string by shifting all non-space characters to the left and then erasing the extra. This is an example of erase-remove_idiom. 
  // Run this code <pre><code>#include &lt;algorithm&gt;
-
 #include &lt;string&gt;
-
 #include &lt;iostream&gt;
-
 #include &lt;cctype&gt;
 int main()
-
 {
     std::string str1 = &quot;Text with some   spaces&quot;;
     str1.erase(std::remove(str1.begin(), str1.end(), ' '),

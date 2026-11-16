@@ -14,13 +14,13 @@ description: "devm_iio_trigger_alloc – Resource-managed iio_trigger_alloc"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>Device to allocate iio_trigger for</dl>
+</dd><dd>Device to allocate iio_trigger for</dd></dl>
 <p> <i>fmt</i></p>
 <dl>
-<dd>trigger name format. If it includes format specifiers, the additional arguments following format are formatted and inserted in the resulting string replacing their respective specifiers.</dl>
+<dd>trigger name format. If it includes format specifiers, the additional arguments following format are formatted and inserted in the resulting string replacing their respective specifiers.</dd></dl>
 <p> <i>&#8230;</i></p>
 <dl>
-<dd>variable arguments</dl>
+<dd>variable arguments</dd></dl>
 <h2>Description</h2>
 <p>Managed iio_trigger_alloc. iio_trigger allocated with this function is automatically freed on driver detach. </p>
 <p> If an iio_trigger allocated with this function needs to be freed separately, <code>devm_iio_trigger_free</code> must be used.</p>
@@ -29,5 +29,5 @@ description: "devm_iio_trigger_alloc – Resource-managed iio_trigger_alloc"
 <h2>Author</h2>
 <p><code>Daniel Baluta</code> &lt;daniel.baluta [at] intel.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

@@ -14,21 +14,21 @@ description: "ata_mselect_control – Simulate MODE SELECT for control page"
 <p><i>qc</i></p>
 <dl>
 <dd>
-<dd>Storage for translated ATA taskfile</dl>
+</dd><dd>Storage for translated ATA taskfile</dd></dl>
 <p> <i>buf</i></p>
 <dl>
-<dd>input buffer</dl>
+<dd>input buffer</dd></dl>
 <p> <i>len</i></p>
 <dl>
-<dd>number of valid bytes in the input buffer</dl>
+<dd>number of valid bytes in the input buffer</dd></dl>
 <p> <i>fp</i></p>
 <dl>
-<dd>out parameter for the failed field on error</dl>
+<dd>out parameter for the failed field on error</dd></dl>
 <h2>Description</h2>
 <p>Prepare a taskfile to modify caching information for the device. </p>
 <p> LOCKING: None.</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

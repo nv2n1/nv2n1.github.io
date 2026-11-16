@@ -15,8 +15,8 @@ description: "XmFontListNextEntry — A font list function that returns the next
 <h2>Description</h2>
 <p><code>XmFontListNextEntry</code> returns the next entry in the font list. The application uses the <code>XmFontListInitFontContext</code> routine to create a font list context. The first call to <code>XmFontListNextEntry</code> sets the context to the first entry in the font list. The application then calls <code>XmFontListNextEntry</code> repeatedly with the same context. Each succeeding call accesses the next entry of the font list. When finished, the application calls <code>XmFontListFreeFontContext</code> to free the allocated font list context.</p>
 <dl COMPACT>
-<dt><i>context</i></p>
-<dd>Specifies the font list context</dl>
+<dt><i>context</i></dt>
+<dd>Specifies the font list context</dd></dl>
 <h2>Return</h2>
 <p>Returns NULL if the context does not refer to a valid entry or if it is at the end of the font list; otherwise, it returns a font list entry. If the function does return a font list entry, the font list entry is not a copy. Therefore, the application should not free the returned font list entry.</p>
 <h2>Related</h2>

@@ -11,7 +11,6 @@ std::ctime - std::ctime
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;ctime&gt;
-
     char *ctime(const std::time_t *time);</code></pre> 
 Converts given time since epoch to a calendar local time and then to a textual representation, as if by calling std::asctime(std::localtime(time)). The resulting string has the following format: 
 &nbsp;<wbr>&nbsp;Www Mmm dd hh:mm:ss yyyy 
@@ -40,10 +39,8 @@ The behavior may be undefined for the values of time_t that result in the string
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;ctime&gt;
-
 #include &lt;iostream&gt;
 int main()
-
 {
     std::time_t result = std::time(nullptr);
     std::cout &lt;&lt; std::ctime(&amp;result);

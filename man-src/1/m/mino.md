@@ -25,16 +25,16 @@ description: "Mino – a user friendly text editor for GNU/Linux console/xterm"
  There is a table showing the DOS-like key combinations along with their respective GNU key bindings in the README file installed with this package. To read more about the levels of experience and the keybindings, please refer to the README file, accessible from the Help menu in mino. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt>&#8211;reset-config</p>
-<dd> To reset the configuration file</p>
-<dt>&#8211;help, -h</p>
-<dd> Print command line help, including short instructions on the command line options, without starting the program</p>
-<dt>&#8211;version, -v</p>
-<dd> Show program version</p>
-<dt>&#8211;levelX, -lX</p>
-<dd> Set the level of experience, where X is a number in the range 1 to 6</p>
-<dt>file-name</p>
-<dd> If you want to load a file into mino on program startup</dl>
+<dt>&#8211;reset-config</dt>
+<dd> To reset the configuration file</dd>
+<dt>&#8211;help, -h</dt>
+<dd> Print command line help, including short instructions on the command line options, without starting the program</dd>
+<dt>&#8211;version, -v</dt>
+<dd> Show program version</dd>
+<dt>&#8211;levelX, -lX</dt>
+<dd> Set the level of experience, where X is a number in the range 1 to 6</dd>
+<dt>file-name</dt>
+<dd> If you want to load a file into mino on program startup</dd></dl>
 <h2>FILES</h2>
 <p> <i>~/.mino.conf</i> The default file used to store mino&#8217;s configuration. It can be edited manually, but this is not advisable. Use mino Options menu to change program preferences</p>
 <h2>TODO</h2>

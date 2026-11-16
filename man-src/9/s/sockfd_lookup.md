@@ -15,11 +15,11 @@ sockfd_lookup - Go from a file number to its socket slot
 <h2>Arguments</h2>
 
 <i>fd</i>
-<dl><dd><dd>file handle</dl>
+<dl><dd></dd><dd>file handle</dd></dl>
  
 
  <i>err</i>
-<dl><dd>pointer to an error code return</dl>
+<dl><dd>pointer to an error code return</dd></dl>
 
 <h2>Description</h2>
 

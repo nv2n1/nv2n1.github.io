@@ -55,9 +55,9 @@ description: "hddtemp_selinux – Security Enhanced Linux Policy for the hddtemp
 <p> Policy governs the access confined processes have to these ports. SELinux hddtemp policy is very flexible allowing users to setup their hddtemp processes in as secure a method as possible. </p>
 <p> The following port types are defined for hddtemp: </p>
 <dl>
-<dt><code>hddtemp_port_t</code></p>
+<dt><code>hddtemp_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 7634</dl>
+</dd><dd>Default Defined Ports: tcp 7634</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type hddtemp_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>

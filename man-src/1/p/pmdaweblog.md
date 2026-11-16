@@ -18,32 +18,32 @@ description: "pmdaweblog – performance metrics domain agent (PMDA) for Web ser
 <p> Like all other PMDAs, <code>pmdaweblog</code> is launched by <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) using command line options specified in <i>$PCP_PMCDCONF_PATH</i> &#8211; the <code>Install</code> script will prompt for appropriate values for the command line options, and update <i>$PCP_PMCDCONF_PATH</i>. </p>
 <p> A brief description of the <code>pmdaweblog</code> command line options follows:</p>
 <dl>
-<dt><code>-C</code></p>
-<dd> Check the configuration and exit.</p>
-<dt><code>-d</code><i> domain</i></p>
-<dd> Specify the <i>domain</i> number. It is absolutely crucial that the performance metrics <i>domain</i> number specified here is unique and consistent. That is, <i>domain</i> should be different for every PMDA on the one host, and the same <i>domain</i> number should be used for the <code>pmdaweblog</code> PMDA on all hosts.</p>
+<dt><code>-C</code></dt>
+<dd> Check the configuration and exit.</dd>
+<dt><code>-d</code><i> domain</i></dt>
+<dd> Specify the <i>domain</i> number. It is absolutely crucial that the performance metrics <i>domain</i> number specified here is unique and consistent. That is, <i>domain</i> should be different for every PMDA on the one host, and the same <i>domain</i> number should be used for the <code>pmdaweblog</code> PMDA on all hosts.</dd>
 <dl>
 <dt>
-<dd>
-<p> For most installations, the default <i>domain</i> as encapsulated in the file <code>$PCP_PMDAS_DIR/weblog/domain.h</code> will suffice. For alternate values, check <i>$PCP_PMCDCONF_PATH</i> for the <i>domain</i> values already in use on this host, and the file <code>$PCP_VAR_DIR/pmns/stdpmid</code> contains a repository of &#8220;well known&#8221; <i>domain</i> assignments that probably should be avoided.</dl>
-<dt><code>-h</code><i> helpfile</i></p>
-<dd> Get the help text from the supplied <i>helpfile</i> rather than from the default location.</p>
-<dt><code>-i</code><i> port</i></p>
-<dd> Communicate with <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) on the specified Internet <i>port</i> (which may be a number or a name).</p>
-<dt><code>-l</code><i> logfile</i></p>
-<dd> Location of the log file. By default, a log file named <i>weblog.log</i> is written in the current directory of <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) when <code>pmdaweblog</code> is started, i.e. <code>$PCP_LOG_DIR/pmcd</code>. If the log file cannot be created or is not writable, output is written to the standard error instead.</p>
-<dt><code>-n</code><i> idlesec</i></p>
-<dd> If a Web server log file has not been modified for <i>idlesec</i> seconds, then the file will be closed and re-opened. This is the only way <code>pmdaweblog</code> can detect any asynchronous rotation of the logs by Web server administrative scripts. The default period is 20 seconds. This value may be changed dynamically using <code><a href="/docs/linux/man/1-pmstore/">pmstore</a></code>(1) to modify the value of the performance metric <code>web.config.check</code>. <i></p>
-<dt></i><code>-p</code></p>
-<dd> Communicate with <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) via a pipe.</p>
-<dt><code>-S</code><i> num</i></p>
-<dd> Specify the maximum number of Web servers per <i>sproc</i>. It may be desirable (from a latency and load balancing perspective) or necessary (due to file descriptor limits) to delegate responsibility for scanning the Web server log files to several <i>sprocs</i>. <code>pmdaweblog</code> will ensure that each <i>sproc</i> handles the log files for at most <i>num</i> Web servers. The default value is 80 Web servers per <i>sproc</i>.</p>
-<dt><code>-t</code><i> delay</i></p>
-<dd> To avoid the need to scan a lot of information from the Web server logs in response to a single request for performance metrics, all log files will be checked at least once every <i>delay</i> seconds. The default is 15 seconds. This value may by changed dynamically using <code><a href="/docs/linux/man/1-pmstore/">pmstore</a></code>(1) to modify the value of the performance metric <code>web.config.catchup</code>.</p>
-<dt><code>-u</code><i> socket</i></p>
-<dd> Communicate with <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) via the given Unix domain <i>socket</i>.</p>
-<dt><code>-U</code></p>
-<dd> User account under which to run the agent. The default is the unprivileged &quot;pcp&quot; account in current versions of PCP, but in older versions the superuser account (&quot;root&quot;) was used by default.</dl>
+</dt><dd>
+<p> For most installations, the default <i>domain</i> as encapsulated in the file <code>$PCP_PMDAS_DIR/weblog/domain.h</code> will suffice. For alternate values, check <i>$PCP_PMCDCONF_PATH</i> for the <i>domain</i> values already in use on this host, and the file <code>$PCP_VAR_DIR/pmns/stdpmid</code> contains a repository of &#8220;well known&#8221; <i>domain</i> assignments that probably should be avoided.</dd></dl>
+<dt><code>-h</code><i> helpfile</i></dt>
+<dd> Get the help text from the supplied <i>helpfile</i> rather than from the default location.</dd>
+<dt><code>-i</code><i> port</i></dt>
+<dd> Communicate with <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) on the specified Internet <i>port</i> (which may be a number or a name).</dd>
+<dt><code>-l</code><i> logfile</i></dt>
+<dd> Location of the log file. By default, a log file named <i>weblog.log</i> is written in the current directory of <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) when <code>pmdaweblog</code> is started, i.e. <code>$PCP_LOG_DIR/pmcd</code>. If the log file cannot be created or is not writable, output is written to the standard error instead.</dd>
+<dt><code>-n</code><i> idlesec</i></dt>
+<dd> If a Web server log file has not been modified for <i>idlesec</i> seconds, then the file will be closed and re-opened. This is the only way <code>pmdaweblog</code> can detect any asynchronous rotation of the logs by Web server administrative scripts. The default period is 20 seconds. This value may be changed dynamically using <code><a href="/docs/linux/man/1-pmstore/">pmstore</a></code>(1) to modify the value of the performance metric <code>web.config.check</code>. <i></dd>
+<dt></i><code>-p</code></dt>
+<dd> Communicate with <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) via a pipe.</dd>
+<dt><code>-S</code><i> num</i></dt>
+<dd> Specify the maximum number of Web servers per <i>sproc</i>. It may be desirable (from a latency and load balancing perspective) or necessary (due to file descriptor limits) to delegate responsibility for scanning the Web server log files to several <i>sprocs</i>. <code>pmdaweblog</code> will ensure that each <i>sproc</i> handles the log files for at most <i>num</i> Web servers. The default value is 80 Web servers per <i>sproc</i>.</dd>
+<dt><code>-t</code><i> delay</i></dt>
+<dd> To avoid the need to scan a lot of information from the Web server logs in response to a single request for performance metrics, all log files will be checked at least once every <i>delay</i> seconds. The default is 15 seconds. This value may by changed dynamically using <code><a href="/docs/linux/man/1-pmstore/">pmstore</a></code>(1) to modify the value of the performance metric <code>web.config.catchup</code>.</dd>
+<dt><code>-u</code><i> socket</i></dt>
+<dd> Communicate with <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) via the given Unix domain <i>socket</i>.</dd>
+<dt><code>-U</code></dt>
+<dd> User account under which to run the agent. The default is the unprivileged &quot;pcp&quot; account in current versions of PCP, but in older versions the superuser account (&quot;root&quot;) was used by default.</dd></dl>
 <h2>INSTALLATION</h2>
 <p> The PCP framework allows metrics to be collected on one host and monitored from another. These hosts are referred to as <i>collector </i> and <i>monitor </i> hosts, respectively. A host may be both a collector and a monitor. </p>
 <p> Collector hosts require the installation of the agent, while monitoring hosts require no agent installation at all. </p>
@@ -93,10 +93,10 @@ regex SYSLOG_FTP_err FTP LOGIN FAILED
 </pre>
 <p> If <code>POSIX</code> compliant regular expressions are used, additional information is required since the order of parameters cannot be specified in the regular expression. For backwards compatibility, the common case of two parameters the order may be specified as <i>method,size</i> or <i>size,method</i> In the general case, the ordering is specified by one of the following methods:</p>
 <dl>
-<dt>n1,n2,n3,n4</p>
-<dd> where nX is a digit between 1 and 4. Each comma-seperated field represents (in order) the argument number for <i>method,size,client_status,server_status</i></p>
-<dt>&#8211;</p>
-<dd> Used for cases like the error logs where the content is ignored.</dl>
+<dt>n1,n2,n3,n4</dt>
+<dd> where nX is a digit between 1 and 4. Each comma-seperated field represents (in order) the argument number for <i>method,size,client_status,server_status</i></dd>
+<dt>&#8211;</dt>
+<dd> Used for cases like the error logs where the content is ignored.</dd></dl>
 <p> As for the non- <code>Posix</code> format, the <i>SQUID</i> RegexName is treated as a special case to match the non-numerical status codes. </p>
 <p> Some legal <code>Posix</code> regex expression specifications for monitoring an access log are: </p>
 <pre><code>
@@ -136,22 +136,22 @@ server ftpd on SYSLOG_FTP /var/log/messages SYSLOG_FTP_err /var/log/messages
 <p> Specifying regular expressions with an incorrect number of arguments, anything other than 2 for access logs, and none for error logs, may cause the PMDA to behave incorrectly and even crash. This is due to limitations in the interface of <code><a href="/docs/linux/man/3-regex/">regex</a></code>(3).</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>$PCP_PMDAS_DIR/weblog</code></p>
-<dd> installation directory for the weblog PMDA</p>
-<dt><code>$PCP_PMDAS_DIR/weblog/Install</code></p>
-<dd> installation script for the weblog PMDA</p>
-<dt><code>$PCP_PMDAS_DIR/weblog/Remove</code></p>
-<dd> de-installation script for the weblog PMDA</p>
-<dt><code>$PCP_LOG_DIR/pmcd/weblog.log</code></p>
-<dd> default log file for error reporting</p>
-<dt><i>$PCP_PMCDCONF_PATH</i></p>
-<dd> <code>pmcd</code> configuration file that specifies the command line options to be used when <code>pmdaweblog</code> is launched</p>
-<dt><code>$PCP_LOG_DIR/NOTICES</code></p>
-<dd> log of PMDA installations and removals</p>
-<dt><code>$PCP_VAR_DIR/config/web/weblog.conf</code></p>
-<dd> likely location of the weblog PMDA configuration file</p>
-<dt><code>$PCP_DOC_DIR/pcpweb/index.html</code></p>
-<dd> the online HTML documentation for PCPWEB</dl>
+<dt><code>$PCP_PMDAS_DIR/weblog</code></dt>
+<dd> installation directory for the weblog PMDA</dd>
+<dt><code>$PCP_PMDAS_DIR/weblog/Install</code></dt>
+<dd> installation script for the weblog PMDA</dd>
+<dt><code>$PCP_PMDAS_DIR/weblog/Remove</code></dt>
+<dd> de-installation script for the weblog PMDA</dd>
+<dt><code>$PCP_LOG_DIR/pmcd/weblog.log</code></dt>
+<dd> default log file for error reporting</dd>
+<dt><i>$PCP_PMCDCONF_PATH</i></dt>
+<dd> <code>pmcd</code> configuration file that specifies the command line options to be used when <code>pmdaweblog</code> is launched</dd>
+<dt><code>$PCP_LOG_DIR/NOTICES</code></dt>
+<dd> log of PMDA installations and removals</dd>
+<dt><code>$PCP_VAR_DIR/config/web/weblog.conf</code></dt>
+<dd> likely location of the weblog PMDA configuration file</dd>
+<dt><code>$PCP_DOC_DIR/pcpweb/index.html</code></dt>
+<dd> the online HTML documentation for PCPWEB</dd></dl>
 <h2>PCP ENVIRONMENT</h2>
 <p> Environment variables with the prefix <code>PCP_</code> are used to parameterize the file and directory names used by PCP. On each installation, the file <code>/etc/pcp.conf</code> contains the local values for these variables. The <code>$PCP_CONF</code> variable may be used to specify an alternative configuration file, as described in <code><a href="/docs/linux/man/5-pcp-conf/">pcp.conf</a></code>(5).</p>
 <h2>SEE ALSO</h2>

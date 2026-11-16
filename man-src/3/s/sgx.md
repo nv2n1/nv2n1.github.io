@@ -19,40 +19,40 @@ description: "QuantLib::Singapore – Singapore calendars"
 <p>Singapore calendars </p>
 <p> Holidays for the <code>Singapore</code> exchange (data from &lt;<a rel="nofollow" href="http://www.ses.com.sg">http://www.ses.com.sg</a>&gt;): </p>
 <dl COMPACT>
-<dt>*</p>
-<dd>Saturdays</p>
-<dt>*</p>
-<dd>Sundays</p>
-<dt>*</p>
-<dd>New Year&#8217;s day, January 1st</p>
-<dt>*</p>
-<dd>Good Friday</p>
-<dt>*</p>
-<dd>Labour Day, May 1st</p>
-<dt>*</p>
-<dd>National Day, August 9th</p>
-<dt>*</p>
-<dd>Christmas, December 25th</dl>
+<dt>*</dt>
+<dd>Saturdays</dd>
+<dt>*</dt>
+<dd>Sundays</dd>
+<dt>*</dt>
+<dd>New Year&#8217;s day, January 1st</dd>
+<dt>*</dt>
+<dd>Good Friday</dd>
+<dt>*</dt>
+<dd>Labour Day, May 1st</dd>
+<dt>*</dt>
+<dd>National Day, August 9th</dd>
+<dt>*</dt>
+<dd>Christmas, December 25th</dd></dl>
 <p> Other holidays for which no rule is given (data available for 2004-2008 only:) </p>
 <dl COMPACT>
-<dt>*</p>
-<dd>Chinese New Year</p>
-<dt>*</p>
-<dd>Hari Raya Haji</p>
-<dt>*</p>
-<dd>Vesak Poya Day</p>
-<dt>*</p>
-<dd>Deepavali</p>
-<dt>*</p>
-<dd>Diwali</p>
-<dt>*</p>
-<dd>Hari Raya Puasa</dl>
+<dt>*</dt>
+<dd>Chinese New Year</dd>
+<dt>*</dt>
+<dd>Hari Raya Haji</dd>
+<dt>*</dt>
+<dd>Vesak Poya Day</dd>
+<dt>*</dt>
+<dd>Deepavali</dd>
+<dt>*</dt>
+<dd>Diwali</dd>
+<dt>*</dt>
+<dd>Hari Raya Puasa</dd></dl>
 <h2>Member Enumeration Documentation</h2>
 <h3>enum <code>Market</code></h3>
 <p><code>Enumerator: </code></p>
 <dl COMPACT>
-<dt><i>SGX </i></p>
-<dd><code>Singapore</code> exchange. </p>
+<dt><i>SGX </i></dt>
+<dd><code>Singapore</code> exchange. </dd>
 </dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

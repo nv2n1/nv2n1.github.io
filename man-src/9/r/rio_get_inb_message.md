@@ -14,14 +14,14 @@ description: "rio_get_inb_message – Get A RIO message from an inbound mailbox 
 <p><i>mport</i></p>
 <dl>
 <dd>
-<dd>Master port containing the inbound mailbox</dl>
+</dd><dd>Master port containing the inbound mailbox</dd></dl>
 <p> <i>mbox</i></p>
 <dl>
-<dd>The inbound mailbox number</dl>
+<dd>The inbound mailbox number</dd></dl>
 <h2>Description</h2>
 <p>Get a RIO message from an inbound mailbox queue. Returns 0 on success.</p>
 <h2>Author</h2>
 <p><code>Matt Porter</code> &lt;mporter [at] kernel.crashing.org&gt;, &lt;mporter [at] mvista.com&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

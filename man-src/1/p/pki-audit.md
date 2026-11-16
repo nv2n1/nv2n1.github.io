@@ -18,19 +18,19 @@ pki[CLI options]&lt;subsystem&gt; - audit pki[CLI options]&lt;subsystem&gt; - au
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-audit</code></p>
 <dl>
 <dt>
-<dd> This command is to list the available audit commands for the subsystem.</dl>
+</dt><dd> This command is to list the available audit commands for the subsystem.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-audit-show</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to show the audit configuration in the subsystem.</dl>
+</dt><dd> This command is to show the audit configuration in the subsystem.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-audit-mod &#8211;action &lt;action&gt;</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to change the audit (enabled/disabled) status in the subsystem.</dl>
+</dt><dd> This command is to change the audit (enabled/disabled) status in the subsystem.</dd></dl>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-audit-mod &#8211;input &lt;input file&gt;</code> [command options]</p>
 <dl>
 <dt>
-<dd> This command is to modify the audit configuration in the subsystem.</dl>
+</dt><dd> This command is to modify the audit configuration in the subsystem.</dd></dl>
 <h2>OPTIONS</h2>
 <p> The CLI options are described in <code><a href="/docs/linux/man/1-pki/">pki</a></code>(1). </p>
 <h2>OPERATIONS</h2>

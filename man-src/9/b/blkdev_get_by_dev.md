@@ -14,13 +14,13 @@ description: "blkdev_get_by_dev – open a block device by device number"
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>device number of block device to open</dl>
+</dd><dd>device number of block device to open</dd></dl>
 <p> <i>mode</i></p>
 <dl>
-<dd>FMODE_* mask</dl>
+<dd>FMODE_* mask</dd></dl>
 <p> <i>holder</i></p>
 <dl>
-<dd>exclusive holder identifier</dl>
+<dd>exclusive holder identifier</dd></dl>
 <h2>Description</h2>
 <p>Open the blockdevice described by device number <i>dev</i>. <i>mode</i> and <i>holder</i> are identical to <code>blkdev_get</code>. </p>
 <p> Use it ONLY if you really do not have anything better &#8211; i.e. when you are behind a truly sucky interface and all you are given is a device number. _Never_ to be used for internal purposes. If you ever need it &#8211; reconsider your API. </p>

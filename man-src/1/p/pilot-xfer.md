@@ -25,7 +25,6 @@ description: "pilot-xfer – Backup, sync, and restore databases from a Palm han
 <pre>
    <code>-a</code>, <code>--archive</code>
    &lt;<i>dir</i>&gt;
-                        
 </pre>
 <p> Back up the Palm into the specified directory (which will be created if it does not already exist). </p>
 <pre>
@@ -145,35 +144,30 @@ description: "pilot-xfer – Backup, sync, and restore databases from a Palm han
 <p>&nbsp;<wbr> </p>
 <pre>
    <i>pilot-xfer</i> <code>--port</code> <i>/dev/pilot</i> <code>--backup</code> <i>$HOME/pilot/Backup</i>
-            
 </pre>
 <p>&nbsp;<wbr> </p>
 <p> # or over IrDA, using short options </p>
 <p>&nbsp;<wbr> </p>
 <pre>
    <i>pilot-xfer</i> <code>-p</code> <i>/dev/ircomm0</i> <code>-b</code> <i>$HOME/pilot/Backup</i>
-            
 </pre>
 <p>&nbsp;<wbr> </p>
 <p> To restore that backup to a non-standard serial port (for example, to a xcopilot or POSE session, assuming you have xcopilot or POSE configured properly for this operation, see the appropriate man pages for details on configuring your emulator): </p>
 <p>&nbsp;<wbr> </p>
 <pre>
    <i>pilot-xfer</i> <code>-p</code> <i>/dev/ttyqe</i> <code>--restore</code> <i>$HOME/pilot/Backup</i>
-            
 </pre>
 <p>&nbsp;<wbr> </p>
 <p> To fetch a file that is on your Palm handheld, such as the Palm Address Book database, you could do the following. This will connect to /dev/pilot and retrieve the records found in AddressDB and place them in a local file called AddressDB.pdb (Palm Record Database). </p>
 <p>&nbsp;<wbr> </p>
 <pre>
    <i>pilot-xfer</i> <code>-p</code> <i>/dev/pilot</i> <code>--fetch</code> <code>AddressDB</code> 
-            
 </pre>
 <p>&nbsp;<wbr> </p>
 <p> This will connect to your Palm device and install the application Foo (in Foo.prc) to your external storage card (typically an SD or MMC card) in the directory /Palm/Launcher on that card, using VFS. </p>
 <p>&nbsp;<wbr> </p>
 <pre>
    <i>pilot-xfer</i> <code>-p</code> <i>/dev/pilot</i> <code>-i Foo.prc -D /Palm/Launcher</code>
-            
 </pre>
 <p>&nbsp;<wbr> </p>
 <h2>AUTHOR</h2>

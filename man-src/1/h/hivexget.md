@@ -47,11 +47,11 @@ url: "/docs/linux/man/1-hivexget/"
  The corresponding data item is printed ``raw'' (ie. no processing or escaping) except:
 <dl>
 <dt>1.
-<dd> If it's a string we will convert it from Windows <font SIZE="-1">UTF-16</font> to <font SIZE="-1">UTF-8,</font> if this conversion is possible. The string is printed with a single trailing newline.
-<dt>2.
-<dd> If it's a multiple-string value, each string is printed on a separate line.
-<dt>3.
-<dd> If it's a numeric value, it is printed as a decimal number.</dl>
+</dt><dd> If it's a string we will convert it from Windows <font SIZE="-1">UTF-16</font> to <font SIZE="-1">UTF-8,</font> if this conversion is possible. The string is printed with a single trailing newline.
+</dd><dt>2.
+</dt><dd> If it's a multiple-string value, each string is printed on a separate line.
+</dd><dt>3.
+</dt><dd> If it's a numeric value, it is printed as a decimal number.</dd></dl>
 
 <h2>SEE ALSO</h2>
 

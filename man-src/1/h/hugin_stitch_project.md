@@ -15,14 +15,14 @@ description: "hugin_stitch_project – Stitch a hugin project"
 <p> A <font SIZE="-1">GUI</font> tool to stitch a single hugin project.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-h|&#8211;help</code></p>
-<dd> Show help message</p>
-<dt><code>-o|&#8211;output</code>=&lt;str&gt;</p>
-<dd> Output prefix</p>
-<dt><code>-t|&#8211;threads</code>=&lt;num&gt;</p>
-<dd> Number of threads</p>
-<dt><code>-d|&#8211;delete</code></p>
-<dd> Delete .pto file after stitching</dl>
+<dt><code>-h|&#8211;help</code></dt>
+<dd> Show help message</dd>
+<dt><code>-o|&#8211;output</code>=&lt;str&gt;</dt>
+<dd> Output prefix</dd>
+<dt><code>-t|&#8211;threads</code>=&lt;num&gt;</dt>
+<dd> Number of threads</dd>
+<dt><code>-d|&#8211;delete</code></dt>
+<dd> Delete .pto file after stitching</dd></dl>
 <h2>AUTHORS</h2>
 <p> Written by Pablo d&#8217;Angelo. Also contains contributions from Douglas Wilkins, Ippei Ukai, Ed Halley, Bruno Postle, Gerry Patterson and Brent Townshend. </p>
 <p> This man page was written by Cyril Brulebois &lt;cyril.brulebois [at] enst-bretagne.fr&gt; and is licensed under the same terms as the hugin package itself. </p>

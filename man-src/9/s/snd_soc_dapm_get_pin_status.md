@@ -15,11 +15,11 @@ snd_soc_dapm_get_pin_status - get audio pin status
 <h2>Arguments</h2>
 
 <i>dapm</i>
-<dl><dd><dd>DAPM context</dl>
+<dl><dd></dd><dd>DAPM context</dd></dl>
  
 
  <i>pin</i>
-<dl><dd>audio signal pin endpoint (or start point)</dl>
+<dl><dd>audio signal pin endpoint (or start point)</dd></dl>
 
 <h2>Description</h2>
 

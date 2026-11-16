@@ -15,15 +15,15 @@ snd_rawmidi_receive - receive the input data from the device
 <h2>Arguments</h2>
 
 <i>substream</i>
-<dl><dd><dd>the rawmidi substream</dl>
+<dl><dd></dd><dd>the rawmidi substream</dd></dl>
  
 
  <i>buffer</i>
-<dl><dd>the buffer pointer</dl>
+<dl><dd>the buffer pointer</dd></dl>
  
 
  <i>count</i>
-<dl><dd>the data size to read</dl>
+<dl><dd>the data size to read</dd></dl>
 
 <h2>Description</h2>
 

@@ -36,7 +36,7 @@ description: "QuantLib::Lattice – Lattice (tree, finite-differences) base clas
 <p>Roll back an asset until the given time, but do not perform the final adjustment. </p>
 <p> <code>Warning</code></p>
 <dl COMPACT>
-<dd>In version 0.3.7 and earlier, this method was called rollAlmostBack method and performed pre-adjustment. This is no longer true; when migrating your code, you&#8217;ll have to replace calls such as:</dl>
+<dd>In version 0.3.7 and earlier, this method was called rollAlmostBack method and performed pre-adjustment. This is no longer true; when migrating your code, you&#8217;ll have to replace calls such as:</dd></dl>
 <pre> method-&gt;rollAlmostBack(asset,t);</pre>
 <p>&nbsp;<wbr>with the two statements:&nbsp;<wbr> </p>
 <pre> method-&gt;partialRollback(asset,t);

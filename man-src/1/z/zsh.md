@@ -12,40 +12,40 @@ description: "zsh – the Z shell"
 <h2>OVERVIEW</h2>
 <p> Because zsh contains many features, the zsh manual has been split into a number of sections: </p>
 <dl>
-<dt><i>zsh</i> Zsh overview (this section)</p>
+<dt><i>zsh</i> Zsh overview (this section)</dt>
 <dd>
-<dt><i>zshroadmap</i> Informal introduction to the manual</p>
+</dd><dt><i>zshroadmap</i> Informal introduction to the manual</dt>
 <dd>
-<dt><i>zshmisc</i> Anything not fitting into the other sections</p>
+</dd><dt><i>zshmisc</i> Anything not fitting into the other sections</dt>
 <dd>
-<dt><i>zshexpn</i> Zsh command and parameter expansion</p>
+</dd><dt><i>zshexpn</i> Zsh command and parameter expansion</dt>
 <dd>
-<dt><i>zshparam</i> Zsh parameters</p>
+</dd><dt><i>zshparam</i> Zsh parameters</dt>
 <dd>
-<dt><i>zshoptions</i> Zsh options</p>
+</dd><dt><i>zshoptions</i> Zsh options</dt>
 <dd>
-<dt><i>zshbuiltins</i> Zsh built-in functions</p>
+</dd><dt><i>zshbuiltins</i> Zsh built-in functions</dt>
 <dd>
-<dt><i>zshzle</i> Zsh command line editing</p>
+</dd><dt><i>zshzle</i> Zsh command line editing</dt>
 <dd>
-<dt><i>zshcompwid</i> Zsh completion widgets</p>
+</dd><dt><i>zshcompwid</i> Zsh completion widgets</dt>
 <dd>
-<dt><i>zshcompsys</i> Zsh completion system</p>
+</dd><dt><i>zshcompsys</i> Zsh completion system</dt>
 <dd>
-<dt><i>zshcompctl</i> Zsh completion control</p>
+</dd><dt><i>zshcompctl</i> Zsh completion control</dt>
 <dd>
-<dt><i>zshmodules</i> Zsh loadable modules</p>
+</dd><dt><i>zshmodules</i> Zsh loadable modules</dt>
 <dd>
-<dt><i>zshcalsys</i> Zsh built-in calendar functions</p>
+</dd><dt><i>zshcalsys</i> Zsh built-in calendar functions</dt>
 <dd>
-<dt><i>zshtcpsys</i> Zsh built-in TCP functions</p>
+</dd><dt><i>zshtcpsys</i> Zsh built-in TCP functions</dt>
 <dd>
-<dt><i>zshzftpsys</i> Zsh built-in FTP client</p>
+</dd><dt><i>zshzftpsys</i> Zsh built-in FTP client</dt>
 <dd>
-<dt><i>zshcontrib</i> Additional zsh functions and utilities</p>
+</dd><dt><i>zshcontrib</i> Additional zsh functions and utilities</dt>
 <dd>
-<dt><i>zshall</i> Meta-man page containing all of the above</p>
-<dd></dl>
+</dd><dt><i>zshall</i> Meta-man page containing all of the above</dt>
+<dd></dd></dl>
 <h2>DESCRIPTION</h2>
 <p> Zsh is a UNIX command interpreter (shell) usable as an interactive login shell and as a shell script command processor. Of the standard shells, zsh most closely resembles <code>ksh</code> but includes many enhancements. It does not provide compatibility with POSIX or other shells in its default operating mode: see the section Compatibility below. </p>
 <p> Zsh has command line editing, builtin spelling correction, programmable command completion, shell functions (with autoloading), a history mechanism, and a host of other features.</p>
@@ -63,26 +63,26 @@ description: "zsh – the Z shell"
 <p> Zsh has 3 mailing lists: </p>
 <dl>
 <dt>
-<dd> <code>&lt;zsh-announce [at] zsh.org&gt;</code> Announcements about releases, major changes in the shell and the monthly posting of the Zsh FAQ. (moderated)</p>
-<dt><code>&lt;zsh-users [at] zsh.org&gt;</code></p>
-<dd> User discussions.</p>
-<dt><code>&lt;zsh-workers [at] zsh.org&gt;</code></p>
-<dd> Hacking, development, bug reports and patches.</dl>
+</dt><dd> <code>&lt;zsh-announce [at] zsh.org&gt;</code> Announcements about releases, major changes in the shell and the monthly posting of the Zsh FAQ. (moderated)</dd>
+<dt><code>&lt;zsh-users [at] zsh.org&gt;</code></dt>
+<dd> User discussions.</dd>
+<dt><code>&lt;zsh-workers [at] zsh.org&gt;</code></dt>
+<dd> Hacking, development, bug reports and patches.</dd></dl>
 <p> To subscribe or unsubscribe, send mail to the associated administrative address for the mailing list. </p>
 <dl>
-<dt><code>&lt;zsh-announce-subscribe [at] zsh.org&gt;</code></p>
+<dt><code>&lt;zsh-announce-subscribe [at] zsh.org&gt;</code></dt>
 <dd>
-<dt><code>&lt;zsh-users-subscribe [at] zsh.org&gt;</code></p>
+</dd><dt><code>&lt;zsh-users-subscribe [at] zsh.org&gt;</code></dt>
 <dd>
-<dt><code>&lt;zsh-workers-subscribe [at] zsh.org&gt;</code></p>
-<dd></dl>
+</dd><dt><code>&lt;zsh-workers-subscribe [at] zsh.org&gt;</code></dt>
+<dd></dd></dl>
 <dl>
-<dt><code>&lt;zsh-announce-unsubscribe [at] zsh.org&gt;</code></p>
+<dt><code>&lt;zsh-announce-unsubscribe [at] zsh.org&gt;</code></dt>
 <dd>
-<dt><code>&lt;zsh-users-unsubscribe [at] zsh.org&gt;</code></p>
+</dd><dt><code>&lt;zsh-users-unsubscribe [at] zsh.org&gt;</code></dt>
 <dd>
-<dt><code>&lt;zsh-workers-unsubscribe [at] zsh.org&gt;</code></p>
-<dd></dl>
+</dd><dt><code>&lt;zsh-workers-unsubscribe [at] zsh.org&gt;</code></dt>
+<dd></dd></dl>
 <p> YOU ONLY NEED TO JOIN ONE OF THE MAILING LISTS AS THEY ARE NESTED. All submissions to <code>zsh-announce</code> are automatically forwarded to <code>zsh-users</code>. All submissions to <code>zsh-users</code> are automatically forwarded to <code>zsh-workers</code>. </p>
 <p> If you have problems subscribing/unsubscribing to any of the mailing lists, send mail to <code>&lt;listmaster [at] zsh.org&gt;</code>. The mailing lists are maintained by Karsten Thygesen <code>&lt;karthy [at] kom.auc.dk&gt;</code>. </p>
 <p> The mailing lists are archived; the archives can be accessed via the administrative addresses listed above. There is also a hypertext archive, maintained by Geoff Wing <code>&lt;gcw [at] zsh.org&gt;</code>, available at <code><a rel="nofollow" href="https://www.zsh.org/mla/">https://www.zsh.org/mla/</a></code>.</p>
@@ -96,11 +96,11 @@ description: "zsh – the Z shell"
 <p> The following flags are interpreted by the shell when invoked to determine where the shell will read commands from: </p>
 <dl>
 <dt>
-<dd> <code>-c</code> Take the first argument as a command to execute, rather than reading commands from a script or standard input. If any further arguments are given, the first one is assigned to <code>$0</code>, rather than being used as a positional parameter.</p>
-<dt><code>-i</code></p>
-<dd> Force shell to be interactive. It is still possible to specify a script to execute.</p>
-<dt><code>-s</code></p>
-<dd> Force shell to read commands from the standard input. If the <code>-s</code> flag is not present and an argument is given, the first argument is taken to be the pathname of a script to execute.</dl>
+</dt><dd> <code>-c</code> Take the first argument as a command to execute, rather than reading commands from a script or standard input. If any further arguments are given, the first one is assigned to <code>$0</code>, rather than being used as a positional parameter.</dd>
+<dt><code>-i</code></dt>
+<dd> Force shell to be interactive. It is still possible to specify a script to execute.</dd>
+<dt><code>-s</code></dt>
+<dd> Force shell to read commands from the standard input. If the <code>-s</code> flag is not present and an argument is given, the first argument is taken to be the pathname of a script to execute.</dd></dl>
 <p> If there are any remaining arguments after option processing, and neither of the options <code>-c</code> or <code>-s</code> was supplied, the first argument is taken as the file name of a script containing shell commands to be executed. If the option <code>PATH_SCRIPT</code> is set, and the file name does not contain a directory path (i.e. there is no `<code>/</code>&#8216; in the name), first the current directory and then the command path given by the variable <code>PATH</code> are searched for the script. If the option is not set or the file name contains a `<code>/</code>&#8216; it is used directly. </p>
 <p> After the first one or two arguments have been appropriated as described above, the remaining arguments are assigned to the positional parameters. </p>
 <p> For further options, which are common to invocation and the <code>set</code> builtin, see <i><a href="/docs/linux/man/1-zshoptions/">zshoptions</a></i>(1). </p>
@@ -108,11 +108,11 @@ description: "zsh – the Z shell"
 <p> Options may be specified by name using the <code>-o</code> option. <code>-o</code> acts like a single-letter option, but takes a following string as the option name. For example, </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <code>zsh -x -o shwordsplit scr</code>
 </pre>
-</dl>
+</dd></dl>
 <p> runs the script <code>scr</code>, setting the <code>XTRACE</code> option by the corresponding letter `<code>-x</code>&#8216; and the <code>SH_WORD_SPLIT</code> option by name. Options may be turned <i>off</i> by name by using <code>+o</code> instead of <code>-o</code>. <code>-o</code> can be stacked up with preceding single-letter options, so for example `<code>-xo shwordsplit</code>&#8216; or `<code>-xoshwordsplit</code>&#8216; is equivalent to `<code>-x -o shwordsplit</code>&#8216;. </p>
 <p> Options may also be specified by name in GNU long option style, `<code>&#8211;</code><code>&#8211;</code><i>option-name</i>&#8216;. When this is done, `<code>&#8211;</code>&#8216; characters in the option name are permitted: they are translated into `<code>_</code>&#8216;, and thus ignored. So, for example, `<code>zsh &#8211;</code><code>-sh-word-split</code>&#8216; invokes zsh with the <code>SH_WORD_SPLIT</code> option turned on. Like other option syntaxes, options can be turned off by replacing the initial `<code>&#8211;</code>&#8216; with a `<code>+</code>&#8216;; thus `<code>+-sh-word-split</code>&#8216; is equivalent to `<code>&#8211;</code><code>-no-sh-word-split</code>&#8216;. Unlike other option syntaxes, GNU-style long options cannot be stacked with any other options, so for example `<code>-x-shwordsplit</code>&#8216; is an error, rather than being treated like `<code>-x &#8211;</code><code>-shwordsplit</code>&#8216;. </p>
 <p> The special GNU-style option `<code>&#8211;</code><code>-version</code>&#8216; is handled; it sends to standard output the shell&#8217;s version information, then exits successfully. `<code>&#8211;</code><code>-help</code>&#8216; is also handled; it sends to standard output a list of options that can be used when invoking the shell, then exits successfully. </p>
@@ -127,23 +127,23 @@ description: "zsh – the Z shell"
 <p> When the basename of the command used to invoke zsh starts with the letter `<code>r</code>&#8216; or the `<code>-r</code>&#8216; command line option is supplied at invocation, the shell becomes restricted. Emulation mode is determined after stripping the letter `<code>r</code>&#8216; from the invocation name. The following are disabled in restricted mode: </p>
 <dl>
 <dt>
-<dd> &bull; changing directories with the <code>cd</code> builtin</p>
-<dt>&bull;</p>
-<dd> changing or unsetting the <code>EGID</code>, <code>EUID</code>, <code>GID</code>, <code>HISTFILE</code>, <code>HISTSIZE</code>, <code>IFS</code>, <code>LD_AOUT_LIBRARY_PATH</code>, <code>LD_AOUT_PRELOAD</code>, <code>LD_LIBRARY_PATH</code>, <code>LD_PRELOAD</code>, <code>MODULE_PATH</code>, <code>module_path</code>, <code>PATH</code>, <code>path</code>, <code>SHELL</code>, <code>UID</code> and <code>USERNAME</code> parameters</p>
-<dt>&bull;</p>
-<dd> specifying command names containing <code>/</code></p>
-<dt>&bull;</p>
-<dd> specifying command pathnames using <code>hash</code></p>
-<dt>&bull;</p>
-<dd> redirecting output to files</p>
-<dt>&bull;</p>
-<dd> using the <code>exec</code> builtin command to replace the shell with another command</p>
-<dt>&bull;</p>
-<dd> using <code>jobs -Z</code> to overwrite the shell process&#8217; argument and environment space</p>
-<dt>&bull;</p>
-<dd> using the <code>ARGV0</code> parameter to override <code>argv[0]</code> for external commands</p>
-<dt>&bull;</p>
-<dd> turning off restricted mode with <code>set +r</code> or <code>unsetopt RESTRICTED</code></dl>
+</dt><dd> &bull; changing directories with the <code>cd</code> builtin</dd>
+<dt>&bull;</dt>
+<dd> changing or unsetting the <code>EGID</code>, <code>EUID</code>, <code>GID</code>, <code>HISTFILE</code>, <code>HISTSIZE</code>, <code>IFS</code>, <code>LD_AOUT_LIBRARY_PATH</code>, <code>LD_AOUT_PRELOAD</code>, <code>LD_LIBRARY_PATH</code>, <code>LD_PRELOAD</code>, <code>MODULE_PATH</code>, <code>module_path</code>, <code>PATH</code>, <code>path</code>, <code>SHELL</code>, <code>UID</code> and <code>USERNAME</code> parameters</dd>
+<dt>&bull;</dt>
+<dd> specifying command names containing <code>/</code></dd>
+<dt>&bull;</dt>
+<dd> specifying command pathnames using <code>hash</code></dd>
+<dt>&bull;</dt>
+<dd> redirecting output to files</dd>
+<dt>&bull;</dt>
+<dd> using the <code>exec</code> builtin command to replace the shell with another command</dd>
+<dt>&bull;</dt>
+<dd> using <code>jobs -Z</code> to overwrite the shell process&#8217; argument and environment space</dd>
+<dt>&bull;</dt>
+<dd> using the <code>ARGV0</code> parameter to override <code>argv[0]</code> for external commands</dd>
+<dt>&bull;</dt>
+<dd> turning off restricted mode with <code>set +r</code> or <code>unsetopt RESTRICTED</code></dd></dl>
 <p> These restrictions are enforced after processing the startup files. The startup files should set up <code>PATH</code> to point to a directory of commands which can be safely invoked in the restricted environment. They may also add further restrictions by disabling selected builtins. </p>
 <p> Restricted mode can also be activated any time by setting the <code>RESTRICTED</code> option. This immediately enables all the restrictions described above even if the shell still has not processed all startup files. </p>
 <p> A shell <i>Restricted Mode</i> is an outdated way to restrict what users may do: modern systems have better, safer and more reliable ways to confine user actions, such as <i>chroot jails</i>, <i>containers</i> and <i>zones</i>. </p>
@@ -164,28 +164,28 @@ description: "zsh – the Z shell"
 <p> Any of these files may be pre-compiled with the <code>zcompile</code> builtin command (see <i><a href="/docs/linux/man/1-zshbuiltins/">zshbuiltins</a></i>(1)). If a compiled file exists (named for the original file plus the <code>.zwc</code> extension) and it is newer than the original file, the compiled file will be used instead.</p>
 <h2>FILES</h2>
 <dl>
-<dt><code>$ZDOTDIR/.zshenv</code></p>
+<dt><code>$ZDOTDIR/.zshenv</code></dt>
 <dd>
-<dt><code>$ZDOTDIR/.zprofile</code></p>
+</dd><dt><code>$ZDOTDIR/.zprofile</code></dt>
 <dd>
-<dt><code>$ZDOTDIR/.zshrc</code></p>
+</dd><dt><code>$ZDOTDIR/.zshrc</code></dt>
 <dd>
-<dt><code>$ZDOTDIR/.zlogin</code></p>
+</dd><dt><code>$ZDOTDIR/.zlogin</code></dt>
 <dd>
-<dt><code>$ZDOTDIR/.zlogout</code></p>
+</dd><dt><code>$ZDOTDIR/.zlogout</code></dt>
 <dd>
-<dt><code>${TMPPREFIX}*</code> (default is /tmp/zsh*)</p>
+</dd><dt><code>${TMPPREFIX}*</code> (default is /tmp/zsh*)</dt>
 <dd>
-<dt><code>/etc/zsh/zshenv</code></p>
+</dd><dt><code>/etc/zsh/zshenv</code></dt>
 <dd>
-<dt><code>/etc/zsh/zprofile</code></p>
+</dd><dt><code>/etc/zsh/zprofile</code></dt>
 <dd>
-<dt><code>/etc/zsh/zshrc</code></p>
+</dd><dt><code>/etc/zsh/zshrc</code></dt>
 <dd>
-<dt><code>/etc/zsh/zlogin</code></p>
+</dd><dt><code>/etc/zsh/zlogin</code></dt>
 <dd>
-<dt><code>/etc/zsh/zlogout</code> (installation-specific &#8211; <code>/etc</code> is the default)</p>
-<dd></dl>
+</dd><dt><code>/etc/zsh/zlogout</code> (installation-specific &#8211; <code>/etc</code> is the default)</dt>
+<dd></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-sh/">sh</a></i>(1), <i><a href="/docs/linux/man/1-csh/">csh</a></i>(1), <i><a href="/docs/linux/man/1-tcsh/">tcsh</a></i>(1), <i><a href="/docs/linux/man/1-rc/">rc</a></i>(1), <i><a href="/docs/linux/man/1-bash/">bash</a></i>(1), <i>ksh</i>(1), <i><a href="/docs/linux/man/1-zshall/">zshall</a></i>(1), <i><a href="/docs/linux/man/1-zshbuiltins/">zshbuiltins</a></i>(1), <i><a href="/docs/linux/man/1-zshcalsys/">zshcalsys</a></i>(1), <i><a href="/docs/linux/man/1-zshcompwid/">zshcompwid</a></i>(1), <i><a href="/docs/linux/man/1-zshcompsys/">zshcompsys</a></i>(1), <i><a href="/docs/linux/man/1-zshcompctl/">zshcompctl</a></i>(1), <i><a href="/docs/linux/man/1-zshcontrib/">zshcontrib</a></i>(1), <i><a href="/docs/linux/man/1-zshexpn/">zshexpn</a></i>(1), <i><a href="/docs/linux/man/1-zshmisc/">zshmisc</a></i>(1), <i><a href="/docs/linux/man/1-zshmodules/">zshmodules</a></i>(1), <i><a href="/docs/linux/man/1-zshoptions/">zshoptions</a></i>(1), <i><a href="/docs/linux/man/1-zshparam/">zshparam</a></i>(1), <i><a href="/docs/linux/man/1-zshroadmap/">zshroadmap</a></i>(1), <i><a href="/docs/linux/man/1-zshtcpsys/">zshtcpsys</a></i>(1), <i><a href="/docs/linux/man/1-zshzftpsys/">zshzftpsys</a></i>(1), <i><a href="/docs/linux/man/1-zshzle/">zshzle</a></i>(1) </p>
 <p> <code>IEEE Standard for information Technology &#8211; Portable Operating System Interface (POSIX) &#8211; Part 2: Shell and Utilities</code>, IEEE Inc, 1993, ISBN 1-55937-255-9. </p>

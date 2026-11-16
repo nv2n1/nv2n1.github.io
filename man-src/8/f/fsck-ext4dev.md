@@ -16,66 +16,66 @@ description: "e2fsck – check a Linux ext2/ext3/ext4 file system"
 <p> Note that in general it is not safe to run <code>e2fsck</code> on mounted filesystems. The only exception is if the <code>-n</code> option is specified, and <code>-c</code>, <code>-l</code>, or <code>-L</code> options are <i>not</i> specified. However, even if it is safe to do so, the results printed by <code>e2fsck</code> are not valid if the filesystem is mounted. If <code>e2fsck</code> asks whether or not you should check a filesystem which is mounted, the only correct answer is &#8220;no&#8221;. Only experts who really know what they are doing should consider answering this question in any other way.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-a </code></p>
-<dd>This option does the same thing as the <code>-p</code> option. It is provided for backwards compatibility only; it is suggested that people use <code>-p </code> option whenever possible.</p>
-<dt><code>-b</code><i> superblock</i></p>
-<dd>Instead of using the normal superblock, use an alternative superblock specified by <i>superblock</i>. This option is normally used when the primary superblock has been corrupted. The location of the backup superblock is dependent on the filesystem&#8217;s blocksize. For filesystems with 1k blocksizes, a backup superblock can be found at block 8193; for filesystems with 2k blocksizes, at block 16384; and for 4k blocksizes, at block 32768.</p>
-<dd>Additional backup superblocks can be determined by using the <code>mke2fs </code> program using the <code>-n</code> option to print out where the superblocks were created. The <code>-b </code> option to <code>mke2fs</code>, which specifies blocksize of the filesystem must be specified in order for the superblock locations that are printed out to be accurate.</p>
-<dd>If an alternative superblock is specified and the filesystem is not opened read-only, e2fsck will make sure that the primary superblock is updated appropriately upon completion of the filesystem check.</p>
-<dt><code>-B</code><i> blocksize</i></p>
-<dd>Normally, <code>e2fsck</code> will search for the superblock at various different block sizes in an attempt to find the appropriate block size. This search can be fooled in some cases. This option forces <code>e2fsck</code> to only try locating the superblock at a particular blocksize. If the superblock is not found, <code>e2fsck </code> will terminate with a fatal error.</p>
-<dt><code>-c</code></p>
-<dd>This option causes <code>e2fsck </code> to use <code><a href="/docs/linux/man/8-badblocks/">badblocks</a></code>(8) program to do a read-only scan of the device in order to find any bad blocks. If any bad blocks are found, they are added to the bad block inode to prevent them from being allocated to a file or directory. If this option is specified twice, then the bad block scan will be done using a non-destructive read-write test.</p>
-<dt><code>-C</code><i> fd</i></p>
-<dd>This option causes <code>e2fsck</code> to write completion information to the specified file descriptor so that the progress of the filesystem check can be monitored. This option is typically used by programs which are running <code>e2fsck</code>. If the file descriptor number is negative, then absolute value of the file descriptor will be used, and the progress information will be suppressed initially. It can later be enabled by sending the <code>e2fsck</code> process a SIGUSR1 signal. If the file descriptor specified is 0, <code>e2fsck</code> will print a completion bar as it goes about its business. This requires that e2fsck is running on a video console or terminal.</p>
-<dt><code>-d</code></p>
-<dd>Print debugging output (useless unless you are debugging <code>e2fsck</code>).</p>
-<dt><code>-D</code></p>
-<dd>Optimize directories in filesystem. This option causes e2fsck to try to optimize all directories, either by reindexing them if the filesystem supports directory indexing, or by sorting and compressing directories for smaller directories, or for filesystems using traditional linear directories.</p>
-<dd>Even without the <code>-D</code> option, <code>e2fsck</code> may sometimes optimize a few directories &#8212; for example, if directory indexing is enabled and a directory is not indexed and would benefit from being indexed, or if the index structures are corrupted and need to be rebuilt. The <code>-D</code> option forces all directories in the filesystem to be optimized. This can sometimes make them a little smaller and slightly faster to search, but in practice, you should rarely need to use this option.</p>
-<dd>The <code>-D</code> option will detect directory entries with duplicate names in a single directory, which e2fsck normally does not enforce for performance reasons.</p>
-<dt><code>-E</code><i> extended_options</i></p>
-<dd>Set e2fsck extended options. Extended options are comma separated, and may take an argument using the equals (&#8216;=&#8217;) sign. The following options are supported:</p>
+<dt><code>-a </code></dt>
+<dd>This option does the same thing as the <code>-p</code> option. It is provided for backwards compatibility only; it is suggested that people use <code>-p </code> option whenever possible.</dd>
+<dt><code>-b</code><i> superblock</i></dt>
+<dd>Instead of using the normal superblock, use an alternative superblock specified by <i>superblock</i>. This option is normally used when the primary superblock has been corrupted. The location of the backup superblock is dependent on the filesystem&#8217;s blocksize. For filesystems with 1k blocksizes, a backup superblock can be found at block 8193; for filesystems with 2k blocksizes, at block 16384; and for 4k blocksizes, at block 32768.</dd>
+<dd>Additional backup superblocks can be determined by using the <code>mke2fs </code> program using the <code>-n</code> option to print out where the superblocks were created. The <code>-b </code> option to <code>mke2fs</code>, which specifies blocksize of the filesystem must be specified in order for the superblock locations that are printed out to be accurate.</dd>
+<dd>If an alternative superblock is specified and the filesystem is not opened read-only, e2fsck will make sure that the primary superblock is updated appropriately upon completion of the filesystem check.</dd>
+<dt><code>-B</code><i> blocksize</i></dt>
+<dd>Normally, <code>e2fsck</code> will search for the superblock at various different block sizes in an attempt to find the appropriate block size. This search can be fooled in some cases. This option forces <code>e2fsck</code> to only try locating the superblock at a particular blocksize. If the superblock is not found, <code>e2fsck </code> will terminate with a fatal error.</dd>
+<dt><code>-c</code></dt>
+<dd>This option causes <code>e2fsck </code> to use <code><a href="/docs/linux/man/8-badblocks/">badblocks</a></code>(8) program to do a read-only scan of the device in order to find any bad blocks. If any bad blocks are found, they are added to the bad block inode to prevent them from being allocated to a file or directory. If this option is specified twice, then the bad block scan will be done using a non-destructive read-write test.</dd>
+<dt><code>-C</code><i> fd</i></dt>
+<dd>This option causes <code>e2fsck</code> to write completion information to the specified file descriptor so that the progress of the filesystem check can be monitored. This option is typically used by programs which are running <code>e2fsck</code>. If the file descriptor number is negative, then absolute value of the file descriptor will be used, and the progress information will be suppressed initially. It can later be enabled by sending the <code>e2fsck</code> process a SIGUSR1 signal. If the file descriptor specified is 0, <code>e2fsck</code> will print a completion bar as it goes about its business. This requires that e2fsck is running on a video console or terminal.</dd>
+<dt><code>-d</code></dt>
+<dd>Print debugging output (useless unless you are debugging <code>e2fsck</code>).</dd>
+<dt><code>-D</code></dt>
+<dd>Optimize directories in filesystem. This option causes e2fsck to try to optimize all directories, either by reindexing them if the filesystem supports directory indexing, or by sorting and compressing directories for smaller directories, or for filesystems using traditional linear directories.</dd>
+<dd>Even without the <code>-D</code> option, <code>e2fsck</code> may sometimes optimize a few directories &#8212; for example, if directory indexing is enabled and a directory is not indexed and would benefit from being indexed, or if the index structures are corrupted and need to be rebuilt. The <code>-D</code> option forces all directories in the filesystem to be optimized. This can sometimes make them a little smaller and slightly faster to search, but in practice, you should rarely need to use this option.</dd>
+<dd>The <code>-D</code> option will detect directory entries with duplicate names in a single directory, which e2fsck normally does not enforce for performance reasons.</dd>
+<dt><code>-E</code><i> extended_options</i></dt>
+<dd>Set e2fsck extended options. Extended options are comma separated, and may take an argument using the equals (&#8216;=&#8217;) sign. The following options are supported:</dd>
 <dl>
 <dd>
-<dl>
-<dt><code>ea_ver=</code><i>extended_attribute_version</i></p>
-<dd>Set the version of the extended attribute blocks which <code>e2fsck</code> will require while checking the filesystem. The version number may be 1 or 2. The default extended attribute version format is 2.</p>
-<dt><code>journal_only</code></p>
-<dd>Only replay the journal if required, but do not perform any further checks or repairs.</p>
-<dt><code>fragcheck</code></p>
-<dd>During pass 1, print a detailed report of any discontiguous blocks for files in the filesystem.</p>
-<dt><code>discard</code></p>
-<dd>Attempt to discard free blocks and unused inode blocks after the full filesystem check (discarding blocks is useful on solid state devices and sparse / thin-provisioned storage). Note that discard is done in pass 5 AFTER the filesystem has been fully checked and only if it does not contain recognizable errors. However there might be cases where <code>e2fsck</code> does not fully recognize a problem and hence in this case this option may prevent you from further manual data recovery.</p>
-<dt><code>nodiscard</code></p>
-<dd>Do not attempt to discard free blocks and unused inode blocks. This option is exactly the opposite of discard option. This is set as default.</dl>
+</dd><dl>
+<dt><code>ea_ver=</code><i>extended_attribute_version</i></dt>
+<dd>Set the version of the extended attribute blocks which <code>e2fsck</code> will require while checking the filesystem. The version number may be 1 or 2. The default extended attribute version format is 2.</dd>
+<dt><code>journal_only</code></dt>
+<dd>Only replay the journal if required, but do not perform any further checks or repairs.</dd>
+<dt><code>fragcheck</code></dt>
+<dd>During pass 1, print a detailed report of any discontiguous blocks for files in the filesystem.</dd>
+<dt><code>discard</code></dt>
+<dd>Attempt to discard free blocks and unused inode blocks after the full filesystem check (discarding blocks is useful on solid state devices and sparse / thin-provisioned storage). Note that discard is done in pass 5 AFTER the filesystem has been fully checked and only if it does not contain recognizable errors. However there might be cases where <code>e2fsck</code> does not fully recognize a problem and hence in this case this option may prevent you from further manual data recovery.</dd>
+<dt><code>nodiscard</code></dt>
+<dd>Do not attempt to discard free blocks and unused inode blocks. This option is exactly the opposite of discard option. This is set as default.</dd></dl>
 </dl>
-<dt><code>-f</code></p>
-<dd>Force checking even if the file system seems clean.</p>
-<dt><code>-F</code></p>
-<dd>Flush the filesystem device&#8217;s buffer caches before beginning. Only really useful for doing <code>e2fsck </code> time trials.</p>
-<dt><code>-j</code><i> external-journal</i></p>
-<dd>Set the pathname where the external-journal for this filesystem can be found.</p>
-<dt><code>-k</code></p>
-<dd>When combined with the <code>-c</code> option, any existing bad blocks in the bad blocks list are preserved, and any new bad blocks found by running <code><a href="/docs/linux/man/8-badblocks/">badblocks</a></code>(8) will be added to the existing bad blocks list.</p>
-<dt><code>-l</code><i> filename</i></p>
-<dd>Add the block numbers listed in the file specified by <i>filename</i> to the list of bad blocks. The format of this file is the same as the one generated by the <code><a href="/docs/linux/man/8-badblocks/">badblocks</a></code>(8) program. Note that the block numbers are based on the blocksize of the filesystem. Hence, <code><a href="/docs/linux/man/8-badblocks/">badblocks</a></code>(8) must be given the blocksize of the filesystem in order to obtain correct results. As a result, it is much simpler and safer to use the <code>-c</code> option to <code>e2fsck</code>, since it will assure that the correct parameters are passed to the <code>badblocks</code> program.</p>
-<dt><code>-L</code><i> filename</i></p>
-<dd>Set the bad blocks list to be the list of blocks specified by <i>filename</i>. (This option is the same as the <code>-l</code> option, except the bad blocks list is cleared before the blocks listed in the file are added to the bad blocks list.)</p>
-<dt><code>-n</code></p>
-<dd>Open the filesystem read-only, and assume an answer of `no&#8217; to all questions. Allows <code>e2fsck</code> to be used non-interactively. This option may not be specified at the same time as the <code>-p</code> or <code>-y</code> options.</p>
-<dt><code>-p</code></p>
-<dd>Automatically repair (&quot;preen&quot;) the file system. This option will cause <code>e2fsck</code> to automatically fix any filesystem problems that can be safely fixed without human intervention. If <code>e2fsck</code> discovers a problem which may require the system administrator to take additional corrective action, <code>e2fsck</code> will print a description of the problem and then exit with the value 4 logically or&#8217;ed into the exit code. (See the <code>EXIT CODE</code> section.) This option is normally used by the system&#8217;s boot scripts. It may not be specified at the same time as the <code>-n</code> or <code>-y</code> options.</p>
-<dt><code>-r</code></p>
-<dd>This option does nothing at all; it is provided only for backwards compatibility.</p>
-<dt><code>-t</code></p>
-<dd>Print timing statistics for <code>e2fsck</code>. If this option is used twice, additional timing statistics are printed on a pass by pass basis.</p>
-<dt><code>-v</code></p>
-<dd>Verbose mode.</p>
-<dt><code>-V</code></p>
-<dd>Print version information and exit.</p>
-<dt><code>-y</code></p>
-<dd>Assume an answer of `yes&#8217; to all questions; allows <code>e2fsck</code> to be used non-interactively. This option may not be specified at the same time as the <code>-n</code> or <code>-p</code> options.</dl>
+<dt><code>-f</code></dt>
+<dd>Force checking even if the file system seems clean.</dd>
+<dt><code>-F</code></dt>
+<dd>Flush the filesystem device&#8217;s buffer caches before beginning. Only really useful for doing <code>e2fsck </code> time trials.</dd>
+<dt><code>-j</code><i> external-journal</i></dt>
+<dd>Set the pathname where the external-journal for this filesystem can be found.</dd>
+<dt><code>-k</code></dt>
+<dd>When combined with the <code>-c</code> option, any existing bad blocks in the bad blocks list are preserved, and any new bad blocks found by running <code><a href="/docs/linux/man/8-badblocks/">badblocks</a></code>(8) will be added to the existing bad blocks list.</dd>
+<dt><code>-l</code><i> filename</i></dt>
+<dd>Add the block numbers listed in the file specified by <i>filename</i> to the list of bad blocks. The format of this file is the same as the one generated by the <code><a href="/docs/linux/man/8-badblocks/">badblocks</a></code>(8) program. Note that the block numbers are based on the blocksize of the filesystem. Hence, <code><a href="/docs/linux/man/8-badblocks/">badblocks</a></code>(8) must be given the blocksize of the filesystem in order to obtain correct results. As a result, it is much simpler and safer to use the <code>-c</code> option to <code>e2fsck</code>, since it will assure that the correct parameters are passed to the <code>badblocks</code> program.</dd>
+<dt><code>-L</code><i> filename</i></dt>
+<dd>Set the bad blocks list to be the list of blocks specified by <i>filename</i>. (This option is the same as the <code>-l</code> option, except the bad blocks list is cleared before the blocks listed in the file are added to the bad blocks list.)</dd>
+<dt><code>-n</code></dt>
+<dd>Open the filesystem read-only, and assume an answer of `no&#8217; to all questions. Allows <code>e2fsck</code> to be used non-interactively. This option may not be specified at the same time as the <code>-p</code> or <code>-y</code> options.</dd>
+<dt><code>-p</code></dt>
+<dd>Automatically repair (&quot;preen&quot;) the file system. This option will cause <code>e2fsck</code> to automatically fix any filesystem problems that can be safely fixed without human intervention. If <code>e2fsck</code> discovers a problem which may require the system administrator to take additional corrective action, <code>e2fsck</code> will print a description of the problem and then exit with the value 4 logically or&#8217;ed into the exit code. (See the <code>EXIT CODE</code> section.) This option is normally used by the system&#8217;s boot scripts. It may not be specified at the same time as the <code>-n</code> or <code>-y</code> options.</dd>
+<dt><code>-r</code></dt>
+<dd>This option does nothing at all; it is provided only for backwards compatibility.</dd>
+<dt><code>-t</code></dt>
+<dd>Print timing statistics for <code>e2fsck</code>. If this option is used twice, additional timing statistics are printed on a pass by pass basis.</dd>
+<dt><code>-v</code></dt>
+<dd>Verbose mode.</dd>
+<dt><code>-V</code></dt>
+<dd>Print version information and exit.</dd>
+<dt><code>-y</code></dt>
+<dd>Assume an answer of `yes&#8217; to all questions; allows <code>e2fsck</code> to be used non-interactively. This option may not be specified at the same time as the <code>-n</code> or <code>-p</code> options.</dd></dl>
 <h2>Exit Code</h2>
 <p>The exit code returned by <code>e2fsck</code> is the sum of the following conditions:<br />
  0 &#8211; No errors<br />
@@ -90,10 +90,10 @@ description: "e2fsck – check a Linux ext2/ext3/ext4 file system"
 <h2>Signals</h2>
 <p>The following signals have the following effect when sent to <code>e2fsck</code>.</p>
 <dl>
-<dt><code>SIGUSR1</code></p>
-<dd>This signal causes <code>e2fsck</code> to start displaying a completion bar or emitting progress information. (See discussion of the <code>-C</code> option.)</p>
-<dt><code>SIGUSR2</code></p>
-<dd>This signal causes <code>e2fsck </code> to stop displaying a completion bar or emitting progress information.</dl>
+<dt><code>SIGUSR1</code></dt>
+<dd>This signal causes <code>e2fsck</code> to start displaying a completion bar or emitting progress information. (See discussion of the <code>-C</code> option.)</dd>
+<dt><code>SIGUSR2</code></dt>
+<dd>This signal causes <code>e2fsck </code> to stop displaying a completion bar or emitting progress information.</dd></dl>
 <h2>Reporting Bugs</h2>
 <p>Almost any piece of software will have bugs. If you manage to find a filesystem which causes <code>e2fsck</code> to crash, or which <code>e2fsck</code> is unable to repair, please report it to the author. </p>
 <p> Please include as much information as possible in your bug report. Ideally, include a complete transcript of the <code>e2fsck</code> run, so I can see exactly what error messages are displayed. (Make sure the messages printed by <code>e2fsck </code> are in English; if your system has been configured so that <code>e2fsck</code>&#8216;s messages have been translated into another language, please set the the <code>LC_ALL</code> environment variable to <code>C</code> so that the transcript of e2fsck&#8217;s output will be useful to me.) If you have a writable filesystem where the transcript can be stored, the <code><a href="/docs/linux/man/1-script/">script</a></code>(1) program is a handy way to save the output of <code>e2fsck</code> to a file. </p>

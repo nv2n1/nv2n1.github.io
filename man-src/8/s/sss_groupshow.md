@@ -10,17 +10,17 @@ description: "sss_groupshow – print properties of a group"
 <p>sss_groupshow &#8211; print properties of a group</p>
 <h2>Synopsis</h2>
 <dl>
-<dt> <code>sss_groupshow</code> [<i>options</i>] <i>GROUP</i></dl>
+<dt> <code>sss_groupshow</code> [<i>options</i>] <i>GROUP</i></dt></dl>
 <h2>Description</h2>
 <p><code>sss_groupshow</code></p>
-<dd>displays information about a group identified by its name <i>GROUP</i>. The information includes the group ID number, members of the group and the parent group.</p>
+<dd>displays information about a group identified by its name <i>GROUP</i>. The information includes the group ID number, members of the group and the parent group.</dd>
 <h2>Options</h2>
 <p><code>-R</code>,<code>&#8211;recursive</code></p>
 <dl>
-<dd>Also print indirect group members in a tree-like hierarchy. Note that this also affects printing parent groups &#8211; without <code>R</code>, only the direct parent will be printed.</dl>
+<dd>Also print indirect group members in a tree-like hierarchy. Note that this also affects printing parent groups &#8211; without <code>R</code>, only the direct parent will be printed.</dd></dl>
 <p> <code>-?</code>,<code>&#8211;help</code></p>
 <dl>
-<dd>Display help message and exit.</dl>
+<dd>Display help message and exit.</dd></dl>
 <h2>The Local Domain</h2>
 <p>In order to function correctly, a domain with &#8220;id_provider=local&#8221; must be created and the SSSD must be running. </p>
 <p> The administrator might want to use the SSSD local users instead of traditional UNIX users in cases where the group nesting (see <code><a href="/docs/linux/man/8-sss_groupadd/">sss_groupadd</a></code>(8)) is needed. The local users are also useful for testing and development of the SSSD without having to deploy a full remote server. The <code>sss_user*</code> and <code>sss_group*</code> tools use a local LDB storage to store users and groups.</p>

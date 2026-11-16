@@ -55,9 +55,9 @@ description: "gear_selinux – Security Enhanced Linux Policy for the gear proce
 <p> Policy governs the access confined processes have to these ports. SELinux gear policy is very flexible allowing users to setup their gear processes in as secure a method as possible. </p>
 <p> The following port types are defined for gear: </p>
 <dl>
-<dt><code>gear_port_t</code></p>
+<dt><code>gear_port_t</code></dt>
 <dd>
-<dd>Default Defined Ports: tcp 43273 udp 43273</dl>
+</dd><dd>Default Defined Ports: tcp 43273 udp 43273</dd></dl>
 <h2>Managed Files</h2>
 <p>The SELinux process type gear_t can manage files labeled with the following file types. The paths listed are the default paths for these file types. Note the processes UID still need to have DAC permissions. </p>
 <p> <code>cluster_conf_t</code> </p>
@@ -123,14 +123,14 @@ description: "gear_selinux – Security Enhanced Linux Policy for the gear proce
 <p> <code>gear_unit_file_t</code> </p>
 <p> &#8211; Set files with the gear_unit_file_t type, if you want to treat the files as gear unit content. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/containers/units(/.*)?, /usr/lib/systemd/system/gear.service </p>
+<dt>Paths:</dt>
+<dd>/var/lib/containers/units(/.*)?, /usr/lib/systemd/system/gear.service </dd>
 </dl>
 <p> <code>gear_var_lib_t</code> </p>
 <p> &#8211; Set files with the gear_var_lib_t type, if you want to store the gear files under the /var/lib directory. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/var/lib/gear(/.*)?, /var/lib/containers(/.*)? </p>
+<dt>Paths:</dt>
+<dd>/var/lib/gear(/.*)?, /var/lib/containers(/.*)? </dd>
 </dl>
 <p> <code>gear_var_run_t</code> </p>
 <p> &#8211; Set files with the gear_var_run_t type, if you want to store the gear files under the /run or /var/run directory. </p>

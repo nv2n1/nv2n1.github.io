@@ -14,22 +14,22 @@ description: "usb_bulk_msg – Builds a bulk urb, sends it off and waits for com
 <p><i>usb_dev</i></p>
 <dl>
 <dd>
-<dd>pointer to the usb device to send the message to</dl>
+</dd><dd>pointer to the usb device to send the message to</dd></dl>
 <p> <i>pipe</i></p>
 <dl>
-<dd>endpoint &#8220;pipe&#8221; to send the message to</dl>
+<dd>endpoint &#8220;pipe&#8221; to send the message to</dd></dl>
 <p> <i>data</i></p>
 <dl>
-<dd>pointer to the data to send</dl>
+<dd>pointer to the data to send</dd></dl>
 <p> <i>len</i></p>
 <dl>
-<dd>length in bytes of the data to send</dl>
+<dd>length in bytes of the data to send</dd></dl>
 <p> <i>actual_length</i></p>
 <dl>
-<dd>pointer to a location to put the actual length transferred in bytes</dl>
+<dd>pointer to a location to put the actual length transferred in bytes</dd></dl>
 <p> <i>timeout</i></p>
 <dl>
-<dd>time in msecs to wait for the message to complete before timing out (if 0 the wait is forever)</dl>
+<dd>time in msecs to wait for the message to complete before timing out (if 0 the wait is forever)</dd></dl>
 <h2>Context</h2>
 <p>!in_interrupt ()</p>
 <h2>Description</h2>

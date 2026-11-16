@@ -10,7 +10,6 @@ description: "simulate_keypress – Stuffs a key into the keyboard buffer. Alleg
 <p>simulate_keypress &#8211; Stuffs a key into the keyboard buffer. Allegro game programming library.</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;allegro.h&gt;
-
 void simulate_keypress(int key);</code></pre>
 <h2>Description</h2>
 <p>Stuffs a key into the keyboard buffer, just as if the user had pressed it. The parameter is in the same format returned by readkey(). Example: </p>

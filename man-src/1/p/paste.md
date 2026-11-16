@@ -16,16 +16,16 @@ description: "paste – merge lines of files"
 <p> With no FILE, or when FILE is -, read standard input. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>
-<dt><code>-d</code>, <code>&#8211;delimiters</code>=<i>,LIST/</i></p>
-<dd> reuse characters from LIST instead of TABs</p>
-<dt><code>-s</code>, <code>&#8211;serial</code></p>
-<dd> paste one file at a time instead of in parallel</p>
-<dt><code>-z</code>, <code>&#8211;zero-terminated</code></p>
-<dd> line delimiter is NUL, not newline</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-d</code>, <code>&#8211;delimiters</code>=<i>,LIST/</i></dt>
+<dd> reuse characters from LIST instead of TABs</dd>
+<dt><code>-s</code>, <code>&#8211;serial</code></dt>
+<dd> paste one file at a time instead of in parallel</dd>
+<dt><code>-z</code>, <code>&#8211;zero-terminated</code></dt>
+<dd> line delimiter is NUL, not newline</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by David M. Ihnat and David MacKenzie.</p>
 <h2>REPORTING BUGS</h2>

@@ -21,7 +21,7 @@ long double exp2l(long double x);
 <p> <code>exp2</code>(), <code>exp2f</code>(), <code>exp2l</code>():</p>
 <dl>
 <dt>
-<dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dl>
+</dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> These functions return the value of 2 raised to the power of <i>x</i>.</p>
 <h2>RETURN VALUE</h2>

@@ -14,15 +14,15 @@ description: "ata_std_postreset – standard postreset callback"
 <p><i>link</i></p>
 <dl>
 <dd>
-<dd>the target ata_link</dl>
+</dd><dd>the target ata_link</dd></dl>
 <p> <i>classes</i></p>
 <dl>
-<dd>classes of attached devices</dl>
+<dd>classes of attached devices</dd></dl>
 <h2>Description</h2>
 <p>This function is invoked after a successful reset. Note that the device might have been reset more than once using different reset methods before postreset is invoked. </p>
 <p> LOCKING: Kernel thread context (may sleep)</p>
 <h2>Author</h2>
 <p><code>Jeff Garzik</code></p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

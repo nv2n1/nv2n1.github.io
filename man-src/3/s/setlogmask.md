@@ -10,7 +10,6 @@ description: "setlogmask – set log priority mask"
 <p>setlogmask &#8211; set log priority mask</p>
 <h2>Synopsis</h2>
 <pre><code>#include &lt;syslog.h&gt;
-
 int setlogmask(int mask);</code></pre>
 <h2>Description</h2>
 <p>A process has a log priority mask that determines which calls to <code><a href="/docs/linux/man/3-syslog/">syslog</a></code>(3) may be logged. All other calls will be ignored. Logging is enabled for the priorities that have the corresponding bit set in <i>mask</i>. The initial mask is such that logging is enabled for all priorities. </p>

@@ -16,34 +16,34 @@ description: "ripd – a RIP routing engine for use with Quagga routing software
 <p>Options available for the <code>ripd</code> command:</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-d</code>, <code>&#8211;daemon</code></p>
-<dd>Runs in daemon mode, forking and exiting from tty.</p>
-<dt><code>-f</code>, <code>&#8211;config-file </code><i>config-file</i></p>
-<dd>Specifies the config file to use for startup. If not specified this option will likely default to <i>/usr/local/etc/ripd.conf</i>.</p>
-<dt><code>-g</code>, <code>&#8211;group </code><i>group</i></p>
-<dd>Specify the group to run as. Default is <i>quagga</i>.</p>
-<dt><code>-h</code>, <code>&#8211;help</code></p>
-<dd>A brief message.</p>
-<dt><code>-i</code>, <code>&#8211;pid_file </code><i>pid-file</i></p>
-<dd>When ripd starts its process identifier is written to <i>pid-file</i>. The init system uses the recorded PID to stop or restart ripd. The likely default is <i>/var/run/ripd.pid</i>.</p>
-<dt><code>-P</code>, <code>&#8211;vty_port </code><i>port-number</i></p>
-<dd>Specify the port that the ripd VTY will listen on. This defaults to 2602, as specified in <i>/etc/services</i>.</p>
-<dt><code>-A</code>, <code>&#8211;vty_addr </code><i>vty-address</i></p>
-<dd>Specify the address that the ripd VTY will listen on. Default is all interfaces.</p>
-<dt><code>-u</code>, <code>&#8211;user </code><i>user</i></p>
-<dd>Specify the user to run as. Default is <i>quagga</i>.</p>
-<dt><code>-r</code>, <code>&#8211;retain</code></p>
-<dd>When the program terminates, retain routes added by <code>ripd</code>.</p>
-<dt><code>-v</code>, <code>&#8211;version</code></p>
-<dd>Print the version and exit.</dl>
+<dt><code>-d</code>, <code>&#8211;daemon</code></dt>
+<dd>Runs in daemon mode, forking and exiting from tty.</dd>
+<dt><code>-f</code>, <code>&#8211;config-file </code><i>config-file</i></dt>
+<dd>Specifies the config file to use for startup. If not specified this option will likely default to <i>/usr/local/etc/ripd.conf</i>.</dd>
+<dt><code>-g</code>, <code>&#8211;group </code><i>group</i></dt>
+<dd>Specify the group to run as. Default is <i>quagga</i>.</dd>
+<dt><code>-h</code>, <code>&#8211;help</code></dt>
+<dd>A brief message.</dd>
+<dt><code>-i</code>, <code>&#8211;pid_file </code><i>pid-file</i></dt>
+<dd>When ripd starts its process identifier is written to <i>pid-file</i>. The init system uses the recorded PID to stop or restart ripd. The likely default is <i>/var/run/ripd.pid</i>.</dd>
+<dt><code>-P</code>, <code>&#8211;vty_port </code><i>port-number</i></dt>
+<dd>Specify the port that the ripd VTY will listen on. This defaults to 2602, as specified in <i>/etc/services</i>.</dd>
+<dt><code>-A</code>, <code>&#8211;vty_addr </code><i>vty-address</i></dt>
+<dd>Specify the address that the ripd VTY will listen on. Default is all interfaces.</dd>
+<dt><code>-u</code>, <code>&#8211;user </code><i>user</i></dt>
+<dd>Specify the user to run as. Default is <i>quagga</i>.</dd>
+<dt><code>-r</code>, <code>&#8211;retain</code></dt>
+<dd>When the program terminates, retain routes added by <code>ripd</code>.</dd>
+<dt><code>-v</code>, <code>&#8211;version</code></dt>
+<dd>Print the version and exit.</dd></dl>
 <h2>Files</h2>
 <dl>
-<dt><code>/usr/local/sbin/ripd</code></p>
-<dd>The default location of the <code>ripd</code> binary.</p>
-<dt><code>/usr/local/etc/ripd.conf</code></p>
-<dd>The default location of the <code>ripd</code> config file.</p>
-<dt><code>$(PWD)/ripd.log</code></p>
-<dd>If the <code>ripd</code> process is config&#8217;d to output logs to a file, then you will find this file in the directory where you started <code>ripd</code>.</dl>
+<dt><code>/usr/local/sbin/ripd</code></dt>
+<dd>The default location of the <code>ripd</code> binary.</dd>
+<dt><code>/usr/local/etc/ripd.conf</code></dt>
+<dd>The default location of the <code>ripd</code> config file.</dd>
+<dt><code>$(PWD)/ripd.log</code></dt>
+<dd>If the <code>ripd</code> process is config&#8217;d to output logs to a file, then you will find this file in the directory where you started <code>ripd</code>.</dd></dl>
 <h2>Warning</h2>
 <p>This man page is intended to be a quick reference for command line options. The definitive document is the Info file <code>Quagga</code>.</p>
 <h2>Diagnostics</h2>

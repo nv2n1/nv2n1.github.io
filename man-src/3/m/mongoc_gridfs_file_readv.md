@@ -17,20 +17,20 @@ mongoc_gridfs_file_readv (mongoc_gridfs_file_t *file,
  uint32_t timeout_msec);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>file</code></p>
-<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dl>
+<dt><code>file</code></dt>
+<dd>A <code>mongoc_gridfs_file_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>iov</code></p>
-<dd>An array of <code>mongoc_iovec_t</code> \&amp;.</dl>
+<dt><code>iov</code></dt>
+<dd>An array of <code>mongoc_iovec_t</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>iovcnt</code></p>
-<dd>The number of elements in <code>iov</code> \&amp;.</dl>
+<dt><code>iovcnt</code></dt>
+<dd>The number of elements in <code>iov</code> \&amp;.</dd></dl>
 <dl COMPACT>
-<dt><code>min_bytes</code></p>
-<dd>The minimum number of bytes that must be read or an error will be synthesized.</dl>
+<dt><code>min_bytes</code></dt>
+<dd>The minimum number of bytes that must be read or an error will be synthesized.</dd></dl>
 <dl COMPACT>
-<dt><code>timeout_msec</code></p>
-<dd>A uint32_t with the timeout in milliseconds.</dl>
+<dt><code>timeout_msec</code></dt>
+<dd>A uint32_t with the timeout in milliseconds.</dd></dl>
 <h2>Description</h2>
 <p>This function performs a scattered read from <code>file</code> , potentially blocking to read from the MongoDB server. </p>
 <p> Timeout should be the number of milliseconds to allow blocking, or 0 to disallow blocking. </p>

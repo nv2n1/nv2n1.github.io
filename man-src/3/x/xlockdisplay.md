@@ -10,13 +10,13 @@ description: "XInitThreads, XLockDisplay, XUnlockDisplay – multi-threading sup
 <p>XInitThreads, XLockDisplay, XUnlockDisplay &#8211; multi-threading support </p>
 <h2>Syntax</h2>
 <dl COMPACT>
-<dd>Status XInitThreads(void);</p>
-<dd>void XLockDisplay(Display *<i>display</i>);</p>
-<dd>void XUnlockDisplay(Display *<i>display</i>);</dl>
+<dd>Status XInitThreads(void);</dd>
+<dd>void XLockDisplay(Display *<i>display</i>);</dd>
+<dd>void XUnlockDisplay(Display *<i>display</i>);</dd></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>display</i></p>
-<dd>Specifies the connection to the X server.</dl>
+<dt><i>display</i></dt>
+<dd>Specifies the connection to the X server.</dd></dl>
 <h2>Description</h2>
 <p>The <code>XInitThreads</code> function initializes Xlib support for concurrent threads. This function must be the first Xlib function a multi-threaded program calls, and it must complete before any other Xlib call is made. This function returns a nonzero status if initialization was successful; otherwise, it returns zero. On systems that do not support threads, this function always returns zero. </p>
 <p> It is only necessary to call this function if multiple threads might use Xlib concurrently. If all calls to Xlib functions are protected by some other access mechanism (for example, a mutual exclusion lock in a toolkit or through explicit client programming), Xlib thread initialization is not required. It is recommended that single-threaded programs not call this function. </p>

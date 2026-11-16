@@ -16,13 +16,13 @@ description: "cas – c aMule statistics"
 <p> <code>cas</code> is a program for displaying the contents of your aMule online signature file to console (in a human readable form). For this to work, you must enable the &quot;Online Signature&quot; option in aMule&#8217;s preferences.</p>
 <dl>
 <dt>
-<dd> Writes the online signature picture. You can optionally append <i>=&lt;PATH&gt;</i> to this option, to specify the location it should be written to.</p>
+</dt><dd> Writes the online signature picture. You can optionally append <i>=&lt;PATH&gt;</i> to this option, to specify the location it should be written to.</dd>
 <dt>
-<dd> HTML page with stats and picture. You can optionally append <i>=&lt;PATH&gt;</i> to this option, to specify the location it should be written to.</p>
-<dt><code>[ -c</code> <i>&lt;path&gt;</i>, <code>&#8211;config-dir</code>=<i>&lt;path&gt;</i> <code>]</code></p>
-<dd> Read config from <i>&lt;path&gt;</i> instead of home</p>
+</dt><dd> HTML page with stats and picture. You can optionally append <i>=&lt;PATH&gt;</i> to this option, to specify the location it should be written to.</dd>
+<dt><code>[ -c</code> <i>&lt;path&gt;</i>, <code>&#8211;config-dir</code>=<i>&lt;path&gt;</i> <code>]</code></dt>
+<dd> Read config from <i>&lt;path&gt;</i> instead of home</dd>
 <dt>
-<dd> Prints a short usage description.</dl>
+</dt><dd> Prints a short usage description.</dd></dl>
 <p> Without any options, it prints online signature data to stdout. </p>
 <p> <code>cas</code> was written by Pedro de Oliveira &lt;falso [at] rdk.homeip.net&gt;</p>
 <h2>FILES</h2>

@@ -19,7 +19,7 @@ description: "slaed3.f –"
 <p> <code>Purpose: </code></p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
  SLAED3 finds the roots of the secular equation, as defined by the
  values in D, W, and RHO, between 1 and K.  It makes the
@@ -34,11 +34,11 @@ description: "slaed3.f –"
  It could conceivably fail on hexadecimal or decimal machines
  without guard digits, but we know of none.
 </pre>
-<p>&nbsp;<wbr></dl>
+<p>&nbsp;<wbr></dd></dl>
 <p> <code>Parameters:</code></p>
 <dl>
 <dt>
-<dd> <i>K</i> </p>
+</dt><dd> <i>K</i> </dd>
 <pre>
           K is INTEGER
           The number of terms in the rational function to be solved by
@@ -135,20 +135,21 @@ description: "slaed3.f –"
 <p> <code>Author:</code></p>
 <dl>
 <dt>
-<dd> Univ. of Tennessee </p>
+</dt><dd> Univ. of Tennessee </dd>
 <p> Univ. of California Berkeley </p>
 <p> Univ. of Colorado Denver </p>
 <p> NAG Ltd.</dl>
 <p> <code>Date:</code></p>
 <dl>
 <dt>
-<dd> September 2012</dl>
+</dt><dd> September 2012</dd></dl>
 <p> <code>Contributors: </code></p>
 <dl>
 <dt>
-<dd> Jeff Rutter, Computer Science Division, University of California at Berkeley, USA </p>
+</dt><dd> Jeff Rutter, Computer Science Division, University of California at Berkeley, USA </dd>
 <p>&nbsp;<wbr>Modified by Francoise Tisseur, University of Tennessee&nbsp;<wbr></dl>
 <p> Definition at line 185 of file slaed3.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
 <h2>Index</h2>
+</p>

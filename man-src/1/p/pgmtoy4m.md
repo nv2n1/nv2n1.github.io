@@ -16,16 +16,16 @@ description: "pgmtoy4m – Convert mpeg2dec pgm and pgmpipe output to YUV4MPEG2"
 <h2>OPTIONS</h2>
 <p> <code>pgmtoy4m</code> accepts the following options:</p>
 <dl>
-<dt><code>-v</code><i> num</i></p>
-<dd> Set verbosity level. (default: 0)</p>
-<dt><code>-h</code></p>
-<dd> Print a usage summary and exit.</p>
-<dt><code>-i</code><i> t|b|p</i></p>
-<dd> Set the interlacing mode. Top field first (t), bottom field first (b) or progressive/none (p). (default: t)</p>
-<dt><code>-a</code><i> sar</i></p>
-<dd> Set the sample aspect ratio. (default: 10:11)</p>
-<dt><code>-r</code><i> frame rate</i></p>
-<dd> Set the frame rate. (default: 30000:1001)</dl>
+<dt><code>-v</code><i> num</i></dt>
+<dd> Set verbosity level. (default: 0)</dd>
+<dt><code>-h</code></dt>
+<dd> Print a usage summary and exit.</dd>
+<dt><code>-i</code><i> t|b|p</i></dt>
+<dd> Set the interlacing mode. Top field first (t), bottom field first (b) or progressive/none (p). (default: t)</dd>
+<dt><code>-a</code><i> sar</i></dt>
+<dd> Set the sample aspect ratio. (default: 10:11)</dd>
+<dt><code>-r</code><i> frame rate</i></dt>
+<dd> Set the frame rate. (default: 30000:1001)</dd></dl>
 <h2>EXAMPLES</h2>
 <pre>
 mpeg2dec -s -o pgmpipe file.mpg | pgmtoy4m -a 10:11 -r 24000:1001 -i b | yuvplay

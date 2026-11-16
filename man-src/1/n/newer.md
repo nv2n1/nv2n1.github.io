@@ -16,13 +16,13 @@ description: "newer – compare file modification times"
 <h2>OPTIONS</h2>
 <p> <code>newer</code> accepts the following options:</p>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Print help message and exit.</p>
-<dt><code>&#8211;quiet, -q</code></p>
-<dd> Do not print any output, including error messages.</p>
-<dt><code>&#8211;version</code></p>
-<dd> Print version information and exit.</p>
-<dt><code>&#8211;verbose, -v</code></p>
-<dd> List missing source files. This is the default. </p>
+<dt><code>&#8211;help</code></dt>
+<dd> Print help message and exit.</dd>
+<dt><code>&#8211;quiet, -q</code></dt>
+<dd> Do not print any output, including error messages.</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> Print version information and exit.</dd>
+<dt><code>&#8211;verbose, -v</code></dt>
+<dd> List missing source files. This is the default. </dd>
 </dl>
 <h2>Index</h2>

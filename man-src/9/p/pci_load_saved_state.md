@@ -14,8 +14,8 @@ description: "pci_load_saved_state – Reload the provided save state into struc
 <p><i>dev</i></p>
 <dl>
 <dd>
-<dd>PCI device that we&#8217;re dealing with</dl>
+</dd><dd>PCI device that we&#8217;re dealing with</dd></dl>
 <p> <i>state</i></p>
 <dl>
-<dd>Saved state returned from <code>pci_store_saved_state</code></dl>
+<dd>Saved state returned from <code>pci_store_saved_state</code></dd></dl>
 <h2>Copyright</h2>

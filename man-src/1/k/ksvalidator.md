@@ -18,14 +18,14 @@ description: "ksvalidator — verify the syntax of a kickstart file"
 <p> <code>ksvalidator</code> returns 0 on success, and 1 if INFILE does not exist or there is an error parsing the kickstart file.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-e</code>, <code>&#8211;firsterror</code></p>
-<dd> Stop on the first warning or error. By default, <code>ksvalidator</code> will attempt to process the entire file, potentially raising multiple errors.</p>
-<dt><code>-i</code>, <code>&#8211;followincludes</code></p>
-<dd> Process included files in the input file when they are seen, like anaconda would. If the included file does not exist (this can happen for a variety of reasons, but the most common being a %pre script that generates an included file) and this option is given, an error will be generated and processing halted.</p>
-<dt><code>-l</code>, <code>&#8211;listversions</code></p>
-<dd> List all versions of kickstart syntax supported by <code>ksvalidator</code>. This is useful for determining what values can be fed back in on a second run.</p>
-<dt><code>-v</code>, <code>&#8211;version VERSION</code></p>
-<dd> Use this version of kickstart syntax when processing the file, or the latest if no version is given.</dl>
+<dt><code>-e</code>, <code>&#8211;firsterror</code></dt>
+<dd> Stop on the first warning or error. By default, <code>ksvalidator</code> will attempt to process the entire file, potentially raising multiple errors.</dd>
+<dt><code>-i</code>, <code>&#8211;followincludes</code></dt>
+<dd> Process included files in the input file when they are seen, like anaconda would. If the included file does not exist (this can happen for a variety of reasons, but the most common being a %pre script that generates an included file) and this option is given, an error will be generated and processing halted.</dd>
+<dt><code>-l</code>, <code>&#8211;listversions</code></dt>
+<dd> List all versions of kickstart syntax supported by <code>ksvalidator</code>. This is useful for determining what values can be fed back in on a second run.</dd>
+<dt><code>-v</code>, <code>&#8211;version VERSION</code></dt>
+<dd> Use this version of kickstart syntax when processing the file, or the latest if no version is given.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> ksflatten (1), ksverdiff (1) </p>
 <h2>Index</h2>

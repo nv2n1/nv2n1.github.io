@@ -17,10 +17,10 @@ description: "verify – Postfix address verification server"
 <p> The <code><a href="/docs/linux/man/8-verify/">verify</a></code>(8) server is designed to run under control by the Postfix master server. It maintains an optional persistent database. To avoid being interrupted by &quot;postfix stop&quot; in the middle of a database update, the process runs in a separate process group. </p>
 <p> The <code><a href="/docs/linux/man/8-verify/">verify</a></code>(8) server implements the following requests:</p>
 <dl>
-<dt><code>update</code><i> address status text</i></p>
-<dd>Update the status and text of the specified address.</p>
-<dt><code>query</code><i> address</i></p>
-<dd>Look up the <i>status</i> and <i>text</i> for the specified <i>address</i>. If the status is unknown, a probe is sent and an &quot;in progress&quot; status is returned.</dl>
+<dt><code>update</code><i> address status text</i></dt>
+<dd>Update the status and text of the specified address.</dd>
+<dt><code>query</code><i> address</i></dt>
+<dd>Look up the <i>status</i> and <i>text</i> for the specified <i>address</i>. If the status is unknown, a probe is sent and an &quot;in progress&quot; status is returned.</dd></dl>
 <h2>Security</h2>
 <p>The address verification server is not security-sensitive. It does not talk to the network, and it does not talk to local users. The verify server can run chrooted at fixed low privilege. </p>
 <p> The address verification server can be coerced to store unlimited amounts of garbage. Limiting the cache expiry time trades one problem (disk space exhaustion) for another one (poor response time to client requests). </p>
@@ -35,71 +35,71 @@ description: "verify – Postfix address verification server"
 <p> The text below provides only a parameter summary. See <code><a href="/docs/linux/man/5-postconf/">postconf</a></code>(5) for more details including examples.</p>
 <h2>Probe Message Controls</h2>
 <dl>
-<dt><code>address_verify_sender ($double_bounce_sender)</code></p>
-<dd>The sender address to use in address verification probes; prior to Postfix 2.5 the default was &quot;postmaster&quot;.</dl>
+<dt><code>address_verify_sender ($double_bounce_sender)</code></dt>
+<dd>The sender address to use in address verification probes; prior to Postfix 2.5 the default was &quot;postmaster&quot;.</dd></dl>
 <p> Available with Postfix 2.9 and later:</p>
 <dl>
-<dt><code>address_verify_sender_ttl (0s)</code></p>
-<dd>The time between changes in the time-dependent portion of address verification probe sender addresses.</dl>
+<dt><code>address_verify_sender_ttl (0s)</code></dt>
+<dd>The time between changes in the time-dependent portion of address verification probe sender addresses.</dd></dl>
 <h2>Cache Controls</h2>
 <dl>
-<dt><code>address_verify_map (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>Lookup table for persistent address verification status storage.</p>
-<dt><code>address_verify_positive_expire_time (31d)</code></p>
-<dd>The time after which a successful probe expires from the address verification cache.</p>
-<dt><code>address_verify_positive_refresh_time (7d)</code></p>
-<dd>The time after which a successful address verification probe needs to be refreshed.</p>
-<dt><code>address_verify_negative_cache (yes)</code></p>
-<dd>Enable caching of failed address verification probe results.</p>
-<dt><code>address_verify_negative_expire_time (3d)</code></p>
-<dd>The time after which a failed probe expires from the address verification cache.</p>
-<dt><code>address_verify_negative_refresh_time (3h)</code></p>
-<dd>The time after which a failed address verification probe needs to be refreshed.</dl>
+<dt><code>address_verify_map (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>Lookup table for persistent address verification status storage.</dd>
+<dt><code>address_verify_positive_expire_time (31d)</code></dt>
+<dd>The time after which a successful probe expires from the address verification cache.</dd>
+<dt><code>address_verify_positive_refresh_time (7d)</code></dt>
+<dd>The time after which a successful address verification probe needs to be refreshed.</dd>
+<dt><code>address_verify_negative_cache (yes)</code></dt>
+<dd>Enable caching of failed address verification probe results.</dd>
+<dt><code>address_verify_negative_expire_time (3d)</code></dt>
+<dd>The time after which a failed probe expires from the address verification cache.</dd>
+<dt><code>address_verify_negative_refresh_time (3h)</code></dt>
+<dd>The time after which a failed address verification probe needs to be refreshed.</dd></dl>
 <p> Available with Postfix 2.7 and later:</p>
 <dl>
-<dt><code>address_verify_cache_cleanup_interval (12h)</code></p>
-<dd>The amount of time between <code><a href="/docs/linux/man/8-verify/">verify</a></code>(8) address verification database cleanup runs.</dl>
+<dt><code>address_verify_cache_cleanup_interval (12h)</code></dt>
+<dd>The amount of time between <code><a href="/docs/linux/man/8-verify/">verify</a></code>(8) address verification database cleanup runs.</dd></dl>
 <h2>Probe Message Routing Controls</h2>
 <p>By default, probe messages are delivered via the same route as regular messages. The following parameters can be used to override specific message routing mechanisms.</p>
 <dl>
-<dt><code>address_verify_relayhost ($relayhost)</code></p>
-<dd>Overrides the relayhost parameter setting for address verification probes.</p>
-<dt><code>address_verify_transport_maps ($transport_maps)</code></p>
-<dd>Overrides the transport_maps parameter setting for address verification probes.</p>
-<dt><code>address_verify_local_transport ($local_transport)</code></p>
-<dd>Overrides the local_transport parameter setting for address verification probes.</p>
-<dt><code>address_verify_virtual_transport ($virtual_transport)</code></p>
-<dd>Overrides the virtual_transport parameter setting for address verification probes.</p>
-<dt><code>address_verify_relay_transport ($relay_transport)</code></p>
-<dd>Overrides the relay_transport parameter setting for address verification probes.</p>
-<dt><code>address_verify_default_transport ($default_transport)</code></p>
-<dd>Overrides the default_transport parameter setting for address verification probes.</dl>
+<dt><code>address_verify_relayhost ($relayhost)</code></dt>
+<dd>Overrides the relayhost parameter setting for address verification probes.</dd>
+<dt><code>address_verify_transport_maps ($transport_maps)</code></dt>
+<dd>Overrides the transport_maps parameter setting for address verification probes.</dd>
+<dt><code>address_verify_local_transport ($local_transport)</code></dt>
+<dd>Overrides the local_transport parameter setting for address verification probes.</dd>
+<dt><code>address_verify_virtual_transport ($virtual_transport)</code></dt>
+<dd>Overrides the virtual_transport parameter setting for address verification probes.</dd>
+<dt><code>address_verify_relay_transport ($relay_transport)</code></dt>
+<dd>Overrides the relay_transport parameter setting for address verification probes.</dd>
+<dt><code>address_verify_default_transport ($default_transport)</code></dt>
+<dd>Overrides the default_transport parameter setting for address verification probes.</dd></dl>
 <p> Available in Postfix 2.3 and later:</p>
 <dl>
-<dt><code>address_verify_sender_dependent_relayhost_maps ($sender_dependent_relayhost_maps)</code></p>
-<dd>Overrides the sender_dependent_relayhost_maps parameter setting for address verification probes.</dl>
+<dt><code>address_verify_sender_dependent_relayhost_maps ($sender_dependent_relayhost_maps)</code></dt>
+<dd>Overrides the sender_dependent_relayhost_maps parameter setting for address verification probes.</dd></dl>
 <p> Available in Postfix 2.7 and later:</p>
 <dl>
-<dt><code>address_verify_sender_dependent_default_transport_maps ($sender_dependent_default_transport_maps)</code></p>
-<dd>Overrides the sender_dependent_default_transport_maps parameter setting for address verification probes.</dl>
+<dt><code>address_verify_sender_dependent_default_transport_maps ($sender_dependent_default_transport_maps)</code></dt>
+<dd>Overrides the sender_dependent_default_transport_maps parameter setting for address verification probes.</dd></dl>
 <h2>Miscellaneous Controls</h2>
 <dl>
-<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The default location of the Postfix main.cf and master.cf configuration files.</p>
-<dt><code>daemon_timeout (18000s)</code></p>
-<dd>How much time a Postfix daemon process may take to handle a request before it is terminated by a built-in watchdog timer.</p>
-<dt><code>ipc_timeout (3600s)</code></p>
-<dd>The time limit for sending or receiving information over an internal communication channel.</p>
-<dt><code>process_id (read-only)</code></p>
-<dd>The process ID of a Postfix command or daemon process.</p>
-<dt><code>process_name (read-only)</code></p>
-<dd>The process name of a Postfix command or daemon process.</p>
-<dt><code>queue_directory (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The location of the Postfix top-level queue directory.</p>
-<dt><code>syslog_facility (mail)</code></p>
-<dd>The syslog facility of Postfix logging.</p>
-<dt><code>syslog_name (see &#8216;postconf -d&#8217; output)</code></p>
-<dd>The mail system name that is prepended to the process name in syslog records, so that &quot;smtpd&quot; becomes, for example, &quot;postfix/smtpd&quot;.</dl>
+<dt><code>config_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The default location of the Postfix main.cf and master.cf configuration files.</dd>
+<dt><code>daemon_timeout (18000s)</code></dt>
+<dd>How much time a Postfix daemon process may take to handle a request before it is terminated by a built-in watchdog timer.</dd>
+<dt><code>ipc_timeout (3600s)</code></dt>
+<dd>The time limit for sending or receiving information over an internal communication channel.</dd>
+<dt><code>process_id (read-only)</code></dt>
+<dd>The process ID of a Postfix command or daemon process.</dd>
+<dt><code>process_name (read-only)</code></dt>
+<dd>The process name of a Postfix command or daemon process.</dd>
+<dt><code>queue_directory (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The location of the Postfix top-level queue directory.</dd>
+<dt><code>syslog_facility (mail)</code></dt>
+<dd>The syslog facility of Postfix logging.</dd>
+<dt><code>syslog_name (see &#8216;postconf -d&#8217; output)</code></dt>
+<dd>The mail system name that is prepended to the process name in syslog records, so that &quot;smtpd&quot; becomes, for example, &quot;postfix/smtpd&quot;.</dd></dl>
 <h2>See Also</h2>
 <pre><a href="//www.systutorials.com/docs/linux/man/8-smtpd/">smtpd</a>(8), Postfix SMTP server
 <a href="//www.systutorials.com/docs/linux/man/8-cleanup/">cleanup</a>(8), enqueue Postfix message

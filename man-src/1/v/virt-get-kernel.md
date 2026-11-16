@@ -19,64 +19,64 @@ virt - get - kernel[--options] - d domname virt - get - kernel[--options] - a di
 <p> In the case where the guest contains multiple kernels, the one with the highest version number is chosen. To extract arbitrary kernels from the disk image, see <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1). To extract the entire <tt>&quot;/boot&quot;</tt> directory of a guest, see <i><a href="/docs/linux/man/1-virt-copy-out/">virt-copy-out</a></i>(1).</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;help</code></p>
-<dd> Display help.</p>
-<dt><code>-a</code> file</p>
+<dt><code>&#8211;help</code></dt>
+<dd> Display help.</dd>
+<dt><code>-a</code> file</dt>
 <dd>
-<dt><code>&#8211;add</code> file</p>
-<dd> Add <i>file</i> which should be a disk image from a virtual machine. </p>
+</dd><dt><code>&#8211;add</code> file</dt>
+<dd> Add <i>file</i> which should be a disk image from a virtual machine. </dd>
 <p> The format of the disk image is auto-detected. To override this and force a particular format use the <i>&#8211;format</i> option.</p>
-<dt><code>-a</code> <font SIZE="-1">URI</font></p>
+<dt><code>-a</code> <font SIZE="-1">URI</font></dt>
 <dd>
-<dt><code>&#8211;add</code> <font SIZE="-1">URI</font></p>
-<dd> Add a remote disk. The <font SIZE="-1">URI</font> format is compatible with guestfish. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</p>
-<dt><code>&#8211;colors</code></p>
+</dd><dt><code>&#8211;add</code> <font SIZE="-1">URI</font></dt>
+<dd> Add a remote disk. The <font SIZE="-1">URI</font> format is compatible with guestfish. See &#8220;<font SIZE="-1">ADDING REMOTE STORAGE&#8221;</font> in <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1).</dd>
+<dt><code>&#8211;colors</code></dt>
 <dd>
-<dt><code>&#8211;colours</code></p>
-<dd> Use <font SIZE="-1">ANSI</font> colour sequences to colourize messages. This is the default when the output is a tty. If the output of the program is redirected to a file, <font SIZE="-1">ANSI</font> colour sequences are disabled unless you use this option.</p>
-<dt><code>-c</code> <font SIZE="-1">URI</font></p>
+</dd><dt><code>&#8211;colours</code></dt>
+<dd> Use <font SIZE="-1">ANSI</font> colour sequences to colourize messages. This is the default when the output is a tty. If the output of the program is redirected to a file, <font SIZE="-1">ANSI</font> colour sequences are disabled unless you use this option.</dd>
+<dt><code>-c</code> <font SIZE="-1">URI</font></dt>
 <dd>
-<dt><code>&#8211;connect</code> <font SIZE="-1">URI</font></p>
-<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </p>
+</dd><dt><code>&#8211;connect</code> <font SIZE="-1">URI</font></dt>
+<dd> If using libvirt, connect to the given <i></i><font SIZE="-1"><i>URI</i></font><i></i>. If omitted, then we connect to the default libvirt hypervisor. </dd>
 <p> If you specify guest block devices directly (<i>-a</i>), then libvirt is not used at all.</p>
-<dt><code>-d</code> guest</p>
+<dt><code>-d</code> guest</dt>
 <dd>
-<dt><code>&#8211;domain</code> guest</p>
-<dd> Add all the disks from the named libvirt guest. Domain UUIDs can be used instead of names.</p>
-<dt><code>&#8211;format</code> raw|qcow2|..</p>
+</dd><dt><code>&#8211;domain</code> guest</dt>
+<dd> Add all the disks from the named libvirt guest. Domain UUIDs can be used instead of names.</dd>
+<dt><code>&#8211;format</code> raw|qcow2|..</dt>
 <dd>
-<dt><code>&#8211;format</code> auto</p>
-<dd> The default for the <i>-a</i> option is to auto-detect the format of the disk image. Using this forces the disk format for the <i>-a</i> option on the command line. </p>
+</dd><dt><code>&#8211;format</code> auto</dt>
+<dd> The default for the <i>-a</i> option is to auto-detect the format of the disk image. Using this forces the disk format for the <i>-a</i> option on the command line. </dd>
 <p> If you have untrusted raw-format guest disk images, you should use this option to specify the disk format. This avoids a possible security problem with malicious guests (<font SIZE="-1">CVE-2010-3851</font>).</p>
-<dt><code>&#8211;machine-readable</code></p>
-<dd> This option is used to make the output more machine friendly when being parsed by other programs. See &#8220;<font SIZE="-1">MACHINE READABLE OUTPUT&#8221;</font> below.</p>
-<dt><code>-o</code> directory</p>
+<dt><code>&#8211;machine-readable</code></dt>
+<dd> This option is used to make the output more machine friendly when being parsed by other programs. See &#8220;<font SIZE="-1">MACHINE READABLE OUTPUT&#8221;</font> below.</dd>
+<dt><code>-o</code> directory</dt>
 <dd>
-<dt><code>&#8211;output</code> directory</p>
-<dd> This option specifies the output directory where kernel and initramfs from the guest are written. </p>
+</dd><dt><code>&#8211;output</code> directory</dt>
+<dd> This option specifies the output directory where kernel and initramfs from the guest are written. </dd>
 <p> If not specified, the default output is the current directory.</p>
-<dt><code>&#8211;prefix</code> prefix</p>
-<dd> This option specifies a prefix for the extracted files. </p>
+<dt><code>&#8211;prefix</code> prefix</dt>
+<dd> This option specifies a prefix for the extracted files. </dd>
 <p> If a prefix is specified, then there will be a dash (<tt>&quot;-&quot;</tt>) after the prefix and before the rest of the file name; for example, a kernel in the guest like <tt>&quot;vmlinuz-3.19.0-20-generic&quot;</tt> is saved as <tt>&quot;mydistro-vmlinuz-3.19.0-20-generic&quot;</tt> when the prefix is <tt>&quot;mydistro&quot;</tt>. </p>
 <p> See also <i>&#8211;unversioned-names</i>.</p>
-<dt><code>-q</code></p>
+<dt><code>-q</code></dt>
 <dd>
-<dt><code>&#8211;quiet</code></p>
-<dd> Don&#8217;t print ordinary progress messages.</p>
-<dt><code>&#8211;unversioned-names</code></p>
-<dd> This option affects the destination file name of extracted files. </p>
+</dd><dt><code>&#8211;quiet</code></dt>
+<dd> Don&#8217;t print ordinary progress messages.</dd>
+<dt><code>&#8211;unversioned-names</code></dt>
+<dd> This option affects the destination file name of extracted files. </dd>
 <p> If enabled, files will be saved locally just with the base name; for example, kernel and ramdisk in the guest like <tt>&quot;vmlinuz-3.19.0-20-generic&quot;</tt> and <tt>&quot;initrd.img-3.19.0-20-generic&quot;</tt> are saved respectively as <tt>&quot;vmlinuz&quot;</tt> and <tt>&quot;initrd.img&quot;</tt>. </p>
 <p> See also <i>&#8211;prefix</i>.</p>
-<dt><code>-v</code></p>
+<dt><code>-v</code></dt>
 <dd>
-<dt><code>&#8211;verbose</code></p>
-<dd> Enable verbose messages for debugging.</p>
-<dt><code>-V</code></p>
+</dd><dt><code>&#8211;verbose</code></dt>
+<dd> Enable verbose messages for debugging.</dd>
+<dt><code>-V</code></dt>
 <dd>
-<dt><code>&#8211;version</code></p>
-<dd> Display version number and exit.</p>
-<dt><code>-x</code></p>
-<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</dl>
+</dd><dt><code>&#8211;version</code></dt>
+<dd> Display version number and exit.</dd>
+<dt><code>-x</code></dt>
+<dd> Enable tracing of libguestfs <font SIZE="-1">API</font> calls.</dd></dl>
 <h2>MACHINE READABLE OUTPUT</h2>
 <p> The <i>&#8211;machine-readable</i> option can be used to make the output more machine friendly, which is useful when calling virt-get-kernel from other programs, GUIs etc. </p>
 <p> Use the option on its own to query the capabilities of the virt-get-kernel binary. Typical output looks like this: </p>
@@ -104,13 +104,13 @@ virt - get - kernel[--options] - d domname virt - get - kernel[--options] - a di
 <p> To report a new bug against libguestfs, use this link: <a rel="nofollow" href="https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs">https://bugzilla.redhat.com/enter_bug.cgi?component=libguestfs</a>&amp;product=Virtualization+Tools </p>
 <p> When reporting a bug, please supply:</p>
 <dl>
-<dt>&bull;</p>
-<dd> The version of libguestfs.</p>
-<dt>&bull;</p>
-<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</p>
-<dt>&bull;</p>
-<dd> Describe the bug accurately and give a way to reproduce it.</p>
-<dt>&bull;</p>
-<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </p>
+<dt>&bull;</dt>
+<dd> The version of libguestfs.</dd>
+<dt>&bull;</dt>
+<dd> Where you got libguestfs (eg. which Linux distro, compiled from source, etc)</dd>
+<dt>&bull;</dt>
+<dd> Describe the bug accurately and give a way to reproduce it.</dd>
+<dt>&bull;</dt>
+<dd> Run <i><a href="/docs/linux/man/1-libguestfs-test-tool/">libguestfs-test-tool</a></i>(1) and paste the <code>complete, unedited</code> output into the bug report. </dd>
 </dl>
 <h2>Index</h2>

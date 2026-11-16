@@ -15,11 +15,11 @@ blk_delay_queue - restart queueing after defined interval
 <h2>Arguments</h2>
 
 <i>q</i>
-<dl><dd><dd>The struct request_queue in question</dl>
+<dl><dd></dd><dd>The struct request_queue in question</dd></dl>
  
 
  <i>msecs</i>
-<dl><dd>Delay in msecs</dl>
+<dl><dd>Delay in msecs</dd></dl>
 
 <h2>Description</h2>
 

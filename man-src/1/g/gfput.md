@@ -14,30 +14,30 @@ description: "gfput – manual page for gfput (glusterfs-coreutils) 0.2.0"
 <h2>DESCRIPTION</h2>
 <p> Put data from standard input on a remote Gluster volume.</p>
 <dl>
-<dt><code>-a</code>, <code>&#8211;append</code></p>
-<dd> append data to the end of the file</p>
-<dt><code>-f</code>, <code>&#8211;overwrite</code></p>
-<dd> overwrite the existing file</p>
-<dt><code>-o</code>, <code>&#8211;xlator-option</code>=<i>OPTION</i></p>
-<dd> specify a translator option for the connection. Multiple options are supported and take the form xlator.key=value.</p>
-<dt><code>-p</code>, <code>&#8211;port</code>=<i>PORT</i></p>
-<dd> specify the port on which to connect</p>
-<dt><code>-r</code>, <code>&#8211;parents</code></p>
-<dd> no error if existing, make parent directories as needed</p>
-<dt><code>&#8211;help</code></p>
-<dd> display this help and exit</p>
-<dt><code>&#8211;version</code></p>
-<dd> output version information and exit</dl>
+<dt><code>-a</code>, <code>&#8211;append</code></dt>
+<dd> append data to the end of the file</dd>
+<dt><code>-f</code>, <code>&#8211;overwrite</code></dt>
+<dd> overwrite the existing file</dd>
+<dt><code>-o</code>, <code>&#8211;xlator-option</code>=<i>OPTION</i></dt>
+<dd> specify a translator option for the connection. Multiple options are supported and take the form xlator.key=value.</dd>
+<dt><code>-p</code>, <code>&#8211;port</code>=<i>PORT</i></dt>
+<dd> specify the port on which to connect</dd>
+<dt><code>-r</code>, <code>&#8211;parents</code></dt>
+<dd> no error if existing, make parent directories as needed</dd>
+<dt><code>&#8211;help</code></dt>
+<dd> display this help and exit</dd>
+<dt><code>&#8211;version</code></dt>
+<dd> output version information and exit</dd></dl>
 <h2>EXAMPLES</h2>
 <dl>
 <dt>
-<dd> gfput <a href="glfs://localhost/groot/file">glfs://localhost/groot/file</a></p>
+</dt><dd> gfput <a href="glfs://localhost/groot/file">glfs://localhost/groot/file</a></dd>
 <dt>
-<dd> Write the contents of standard input to /file on the Gluster volume of groot on host localhost.</p>
+</dt><dd> Write the contents of standard input to /file on the Gluster volume of groot on host localhost.</dd>
 <dt>
-<dd> gfput -r <a href="glfs://localhost/groot/path/to/file">glfs://localhost/groot/path/to/file</a></p>
+</dt><dd> gfput -r <a href="glfs://localhost/groot/path/to/file">glfs://localhost/groot/path/to/file</a></dd>
 <dt>
-<dd> Write the contents of standard input to /file on the Gluster volume of groot on host localhost, creating the parent directories as necessary.</dl>
+</dt><dd> Write the contents of standard input to /file on the Gluster volume of groot on host localhost, creating the parent directories as necessary.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Craig Cabrey.</p>
 <h2>COPYRIGHT</h2>

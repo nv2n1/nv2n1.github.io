@@ -17,18 +17,18 @@ description: "mate-panel – The Panel for the MATE Desktop Environment"
 <p> This manual page documents the <code>mate-panel</code> command.</p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>&#8211;replace</code></p>
-<dd> Replace a currently running instance of <code>mate-panel</code>.</p>
-<dt><code>&#8211;reset</code></p>
-<dd> Reset the panel configuration to the default setting.</p>
-<dt><code>&#8211;run-dialog</code></p>
-<dd> Open the &quot;Run Application&quot; dialog, also accessible by pressing ALT+F2.</p>
-<dt><code>&#8211;display=DISPLAY</code></p>
-<dd> X display to use.</p>
-<dt><code>-?, -h, &#8211;help</code></p>
-<dd> Print standard command line options.</p>
-<dt><code>&#8211;help-all</code></p>
-<dd> Print all command line options.</dl>
+<dt><code>&#8211;replace</code></dt>
+<dd> Replace a currently running instance of <code>mate-panel</code>.</dd>
+<dt><code>&#8211;reset</code></dt>
+<dd> Reset the panel configuration to the default setting.</dd>
+<dt><code>&#8211;run-dialog</code></dt>
+<dd> Open the &quot;Run Application&quot; dialog, also accessible by pressing ALT+F2.</dd>
+<dt><code>&#8211;display=DISPLAY</code></dt>
+<dd> X display to use.</dd>
+<dt><code>-?, -h, &#8211;help</code></dt>
+<dd> Print standard command line options.</dd>
+<dt><code>&#8211;help-all</code></dt>
+<dd> Print all command line options.</dd></dl>
 <p> This program also accepts the standard GTK options.</p>
 <h2>BUGS</h2>
 <h3>Should you encounter any bugs, they may be reported at:</h3>

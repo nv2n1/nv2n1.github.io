@@ -24,45 +24,45 @@ description: "fbsetroot – a simple background utility used by the"
 <p> <code>-solid</code> <i>color</i></p>
 <dl>
 <dt>
-<dd> Sets the root window to specified color.</dl>
+</dt><dd> Sets the root window to specified color.</dd></dl>
 <p> <code>-mod</code> <i>x</i> <i>y</i></p>
 <dl>
 <dt>
-<dd> Creates a modula pattern. You must specify <code>-bg</code> and <code>-fg</code> colors.</dl>
+</dt><dd> Creates a modula pattern. You must specify <code>-bg</code> and <code>-fg</code> colors.</dd></dl>
 <p> <code>-gradient</code> <i>texturestring</i></p>
 <dl>
 <dt>
-<dd> Renders the specified texture string to the root window. </p>
+</dt><dd> Renders the specified texture string to the root window. </dd>
 <p> <i>texturestring</i> may be one of:</p>
 <dl>
 <dt>
-<dd> <code>Horizontal / Vertical / Diagonal / Crossdiagonal / Pipecross / Elliptic / Rectangle / Pyramid</code> </p>
+</dt><dd> <code>Horizontal / Vertical / Diagonal / Crossdiagonal / Pipecross / Elliptic / Rectangle / Pyramid</code> </dd>
 <p> Select one of these texture types, they only apply when <code>-gradient</code> is specified. You must also specify both a <code>-from</code> and a <code>-to</code> color.</dl>
 </dl>
 <p> <code>-display</code> <i>display</i></p>
 <dl>
 <dt>
-<dd> Tells fbsetroot to connect to the specified display.</dl>
+</dt><dd> Tells fbsetroot to connect to the specified display.</dd></dl>
 <p> <code>-bg, -background</code> <i>color</i></p>
 <dl>
 <dt>
-<dd> Background color. Needed for <code>-mod</code> patterns.</dl>
+</dt><dd> Background color. Needed for <code>-mod</code> patterns.</dd></dl>
 <p> <code>-fg, -foreground</code> <i>color</i></p>
 <dl>
 <dt>
-<dd> Foreground color. Needed for <code>-mod</code> patterns.</dl>
+</dt><dd> Foreground color. Needed for <code>-mod</code> patterns.</dd></dl>
 <p> <code>-from</code> <i>color</i></p>
 <dl>
 <dt>
-<dd> Start color for rendering textures. Needed for <code>-gradient</code> patterns.</dl>
+</dt><dd> Start color for rendering textures. Needed for <code>-gradient</code> patterns.</dd></dl>
 <p> <code>-to</code> <i>color</i></p>
 <dl>
 <dt>
-<dd> Ending color for rendering textures. Needed for <code>-gradient</code> patterns.</dl>
+</dt><dd> Ending color for rendering textures. Needed for <code>-gradient</code> patterns.</dd></dl>
 <p> <code>-help</code></p>
 <dl>
 <dt>
-<dd> Prints version info and short help text.</dl>
+</dt><dd> Prints version info and short help text.</dd></dl>
 <h2>AUTHORS</h2>
 <p> This manpage was modified by Curt &quot;Asenchi&quot; Micol &lt;asenchi at asenchi.com&gt; for the Fluxbox window manager. </p>
 <p> Further updates for fluxbox-1.1.2 and conversion to asciidoc format by Jim Ramsay &lt;i.am at jimramsay.com&gt;</p>
@@ -72,5 +72,5 @@ description: "fbsetroot – a simple background utility used by the"
 <p> <code>Jim Ramsay</code> &lt;i.am [at] jimramsay.com&gt;</p>
 <dl>
 <dt>
-<dd> Author.</dl>
+</dt><dd> Author.</dd></dl>
 <h2>Index</h2>

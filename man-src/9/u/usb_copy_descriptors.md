@@ -14,7 +14,7 @@ description: "usb_copy_descriptors – copy a vector of USB descriptors"
 <p><i>src</i></p>
 <dl>
 <dd>
-<dd>null-terminated vector to copy</dl>
+</dd><dd>null-terminated vector to copy</dd></dl>
 <h2>Context</h2>
 <p>initialization code, which may sleep</p>
 <h2>Description</h2>
@@ -22,5 +22,5 @@ description: "usb_copy_descriptors – copy a vector of USB descriptors"
 <h2>Author</h2>
 <p><code>David Brownell</code> &lt;dbrownell [at] users.sourceforge.net&gt;</p>
 <dl>
-<dd>Author.</dl>
+<dd>Author.</dd></dl>
 <h2>Copyright</h2>

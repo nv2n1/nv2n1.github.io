@@ -57,34 +57,34 @@ int statx(int dirfd, const char *pathname, int flags,
 <p> To access a file&#8217;s status, no permissions are required on the file itself, but in the case of <code>statx</code>() with a pathname, execute (search) permission is required on all of the directories in <i>pathname</i> that lead to the file. </p>
 <p> <code>statx</code>() uses <i>pathname</i>, <i>dirfd</i>, and <i>flags</i> to identify the target file in one of the following ways:</p>
 <dl>
-<dt>An absolute pathname</p>
-<dd> If <i>pathname</i> begins with a slash, then it is an absolute pathname that identifies the target file. In this case, <i>dirfd</i> is ignored.</p>
-<dt>A relative pathname</p>
-<dd> If <i>pathname</i> is a string that begins with a character other than a slash and <i>dirfd</i> is <code>AT_FDCWD</code>, then <i>pathname</i> is a relative pathname that is interpreted relative to the process&#8217;s current working directory.</p>
-<dt>A directory-relative pathname</p>
-<dd> If <i>pathname</i> is a string that begins with a character other than a slash and <i>dirfd</i> is a file descriptor that refers to a directory, then <i>pathname</i> is a relative pathname that is interpreted relative to the directory referred to by <i>dirfd</i>.</p>
-<dt>By file descriptor</p>
-<dd> If <i>pathname</i> is an empty string and the <code>AT_EMPTY_PATH</code> flag is specified in <i>flags</i> (see below), then the target file is the one referred to by the file descriptor <i>dirfd</i>.</dl>
+<dt>An absolute pathname</dt>
+<dd> If <i>pathname</i> begins with a slash, then it is an absolute pathname that identifies the target file. In this case, <i>dirfd</i> is ignored.</dd>
+<dt>A relative pathname</dt>
+<dd> If <i>pathname</i> is a string that begins with a character other than a slash and <i>dirfd</i> is <code>AT_FDCWD</code>, then <i>pathname</i> is a relative pathname that is interpreted relative to the process&#8217;s current working directory.</dd>
+<dt>A directory-relative pathname</dt>
+<dd> If <i>pathname</i> is a string that begins with a character other than a slash and <i>dirfd</i> is a file descriptor that refers to a directory, then <i>pathname</i> is a relative pathname that is interpreted relative to the directory referred to by <i>dirfd</i>.</dd>
+<dt>By file descriptor</dt>
+<dd> If <i>pathname</i> is an empty string and the <code>AT_EMPTY_PATH</code> flag is specified in <i>flags</i> (see below), then the target file is the one referred to by the file descriptor <i>dirfd</i>.</dd></dl>
 <p> <i>flags</i> can be used to influence a pathname-based lookup. A value for <i>flags</i> is constructed by ORing together zero or more of the following constants:</p>
 <dl>
-<dt><code>AT_EMPTY_PATH</code></p>
-<dd> If <i>pathname</i> is an empty string, operate on the file referred to by <i>dirfd</i> (which may have been obtained using the <code><a href="/docs/linux/man/2-open/">open</a></code>(2) <code>O_PATH</code> flag). In this case, <i>dirfd</i> can refer to any type of file, not just a directory.</p>
+<dt><code>AT_EMPTY_PATH</code></dt>
+<dd> If <i>pathname</i> is an empty string, operate on the file referred to by <i>dirfd</i> (which may have been obtained using the <code><a href="/docs/linux/man/2-open/">open</a></code>(2) <code>O_PATH</code> flag). In this case, <i>dirfd</i> can refer to any type of file, not just a directory.</dd>
 <dt>
-<dd> If <i>dirfd</i> is <code>AT_FDCWD</code>, the call operates on the current working directory.</p>
+</dt><dd> If <i>dirfd</i> is <code>AT_FDCWD</code>, the call operates on the current working directory.</dd>
 <dt>
-<dd> This flag is Linux-specific; define <code>_GNU_SOURCE</code> to obtain its definition.</p>
-<dt><code>AT_NO_AUTOMOUNT</code></p>
-<dd> Don&#8217;t automount the terminal (&quot;basename&quot;) component of <i>pathname</i> if it is a directory that is an automount point. This allows the caller to gather attributes of an automount point (rather than the location it would mount). This flag can be used in tools that scan directories to prevent mass-automounting of a directory of automount points. The <code>AT_NO_AUTOMOUNT</code> flag has no effect if the mount point has already been mounted over. This flag is Linux-specific; define <code>_GNU_SOURCE</code> to obtain its definition.</p>
-<dt><code>AT_SYMLINK_NOFOLLOW</code></p>
-<dd> If <i>pathname</i> is a symbolic link, do not dereference it: instead return information about the link itself, like <code><a href="/docs/linux/man/2-lstat/">lstat</a></code>(2).</dl>
+</dt><dd> This flag is Linux-specific; define <code>_GNU_SOURCE</code> to obtain its definition.</dd>
+<dt><code>AT_NO_AUTOMOUNT</code></dt>
+<dd> Don&#8217;t automount the terminal (&quot;basename&quot;) component of <i>pathname</i> if it is a directory that is an automount point. This allows the caller to gather attributes of an automount point (rather than the location it would mount). This flag can be used in tools that scan directories to prevent mass-automounting of a directory of automount points. The <code>AT_NO_AUTOMOUNT</code> flag has no effect if the mount point has already been mounted over. This flag is Linux-specific; define <code>_GNU_SOURCE</code> to obtain its definition.</dd>
+<dt><code>AT_SYMLINK_NOFOLLOW</code></dt>
+<dd> If <i>pathname</i> is a symbolic link, do not dereference it: instead return information about the link itself, like <code><a href="/docs/linux/man/2-lstat/">lstat</a></code>(2).</dd></dl>
 <p> <i>flags</i> can also be used to control what sort of synchronization the kernel will do when querying a file on a remote filesystem. This is done by ORing in one of the following values:</p>
 <dl>
-<dt><code>AT_STATX_SYNC_AS_STAT</code></p>
-<dd> Do whatever <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2) does. This is the default and is very much filesystem-specific.</p>
-<dt><code>AT_STATX_FORCE_SYNC</code></p>
-<dd> Force the attributes to be synchronized with the server. This may require that a network filesystem perform a data writeback to get the timestamps correct.</p>
-<dt><code>AT_STATX_DONT_SYNC</code></p>
-<dd> Don&#8217;t synchronize anything, but rather just take whatever the system has cached if possible. This may mean that the information returned is approximate, but, on a network filesystem, it may not involve a round trip to the server &#8211; even if no lease is held.</dl>
+<dt><code>AT_STATX_SYNC_AS_STAT</code></dt>
+<dd> Do whatever <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2) does. This is the default and is very much filesystem-specific.</dd>
+<dt><code>AT_STATX_FORCE_SYNC</code></dt>
+<dd> Force the attributes to be synchronized with the server. This may require that a network filesystem perform a data writeback to get the timestamps correct.</dd>
+<dt><code>AT_STATX_DONT_SYNC</code></dt>
+<dd> Don&#8217;t synchronize anything, but rather just take whatever the system has cached if possible. This may mean that the information returned is approximate, but, on a network filesystem, it may not involve a round trip to the server &#8211; even if no lease is held.</dd></dl>
 <p> The <i>mask</i> argument to <code>statx</code>() is used to tell the kernel which fields the caller is interested in. <i>mask</i> is an ORed combination of the following constants: </p>
 <table>
 <tr VALIGN=top>
@@ -167,89 +167,89 @@ int statx(int dirfd, const char *pathname, int flags,
 <p> <i>Note</i>: for performance and simplicity reasons, different fields in the <i>statx</i> structure may contain state information from different moments during the execution of the system call. For example, if <i>stx_mode</i> or <i>stx_uid</i> is changed by another process by calling <code><a href="/docs/linux/man/2-chmod/">chmod</a></code>(2) or <code><a href="/docs/linux/man/2-chown/">chown</a></code>(2), <code>stat</code>() might return the old <i>stx_mode</i> together with the new <i>stx_uid</i>, or the old <i>stx_uid</i> together with the new <i>stx_mode</i>. </p>
 <p> Apart from <i>stx_mask</i> (which is described above), the fields in the <i>statx</i> structure are:</p>
 <dl>
-<dt><i>stx_blksize</i></p>
-<dd> The &quot;preferred&quot; block size for efficient filesystem I/O. (Writing to a file in smaller chunks may cause an inefficient read-modify-rewrite.)</p>
-<dt><i>stx_attributes</i></p>
-<dd> Further status information about the file (see below for more information).</p>
-<dt><i>stx_nlink</i></p>
-<dd> The number of hard links on a file.</p>
-<dt><i>stx_uid</i></p>
-<dd> This field contains the user ID of the owner of the file.</p>
-<dt><i>stx_gid</i></p>
-<dd> This field contains the ID of the group owner of the file.</p>
-<dt><i>stx_mode</i></p>
-<dd> The file type and mode. See <code><a href="/docs/linux/man/7-inode/">inode</a></code>(7) for details.</p>
-<dt><i>stx_ino</i></p>
-<dd> The inode number of the file.</p>
-<dt><i>stx_size</i></p>
-<dd> The size of the file (if it is a regular file or a symbolic link) in bytes. The size of a symbolic link is the length of the pathname it contains, without a terminating null byte.</p>
-<dt><i>stx_blocks</i></p>
-<dd> The number of blocks allocated to the file on the medium, in 512-byte units. (This may be smaller than <i>stx_size</i>/512 when the file has holes.)</p>
-<dt><i>stx_attributes_mask</i></p>
-<dd> A mask indicating which bits in <i>stx_attributes</i> are supported by the VFS and the filesystem.</p>
-<dt><i>stx_atime</i></p>
-<dd> The file&#8217;s last access timestamp.</p>
-<dt><i>stx_btime</i></p>
-<dd> The file&#8217;s creation timestamp.</p>
-<dt><i>stx_ctime</i></p>
-<dd> The file&#8217;s last status change timestamp.</p>
-<dt><i>stx_mtime</i></p>
-<dd> The file&#8217;s last modification timestamp.</p>
-<dt><i>stx_dev_major</i> and <i>stx_dev_minor</i></p>
-<dd> The device on which this file (inode) resides.</p>
-<dt><i>stx_rdev_major</i> and <i>stx_rdev_minor</i></p>
-<dd> The device that this file (inode) represents if the file is of block or character device type.</dl>
+<dt><i>stx_blksize</i></dt>
+<dd> The &quot;preferred&quot; block size for efficient filesystem I/O. (Writing to a file in smaller chunks may cause an inefficient read-modify-rewrite.)</dd>
+<dt><i>stx_attributes</i></dt>
+<dd> Further status information about the file (see below for more information).</dd>
+<dt><i>stx_nlink</i></dt>
+<dd> The number of hard links on a file.</dd>
+<dt><i>stx_uid</i></dt>
+<dd> This field contains the user ID of the owner of the file.</dd>
+<dt><i>stx_gid</i></dt>
+<dd> This field contains the ID of the group owner of the file.</dd>
+<dt><i>stx_mode</i></dt>
+<dd> The file type and mode. See <code><a href="/docs/linux/man/7-inode/">inode</a></code>(7) for details.</dd>
+<dt><i>stx_ino</i></dt>
+<dd> The inode number of the file.</dd>
+<dt><i>stx_size</i></dt>
+<dd> The size of the file (if it is a regular file or a symbolic link) in bytes. The size of a symbolic link is the length of the pathname it contains, without a terminating null byte.</dd>
+<dt><i>stx_blocks</i></dt>
+<dd> The number of blocks allocated to the file on the medium, in 512-byte units. (This may be smaller than <i>stx_size</i>/512 when the file has holes.)</dd>
+<dt><i>stx_attributes_mask</i></dt>
+<dd> A mask indicating which bits in <i>stx_attributes</i> are supported by the VFS and the filesystem.</dd>
+<dt><i>stx_atime</i></dt>
+<dd> The file&#8217;s last access timestamp.</dd>
+<dt><i>stx_btime</i></dt>
+<dd> The file&#8217;s creation timestamp.</dd>
+<dt><i>stx_ctime</i></dt>
+<dd> The file&#8217;s last status change timestamp.</dd>
+<dt><i>stx_mtime</i></dt>
+<dd> The file&#8217;s last modification timestamp.</dd>
+<dt><i>stx_dev_major</i> and <i>stx_dev_minor</i></dt>
+<dd> The device on which this file (inode) resides.</dd>
+<dt><i>stx_rdev_major</i> and <i>stx_rdev_minor</i></dt>
+<dd> The device that this file (inode) represents if the file is of block or character device type.</dd></dl>
 <p> For further information on the above fields, see <code><a href="/docs/linux/man/7-inode/">inode</a></code>(7).</p>
 <h3>File attributes</h3>
 <p> The <i>stx_attributes</i> field contains a set of ORed flags that indicate additional attributes of the file. Note that any attribute that is not indicated as supported by <i>stx_attributes_mask</i> has no usable value here. The bits in <i>stx_attributes_mask</i> correspond bit-by-bit to <i>stx_attributes</i>. </p>
 <p> The flags are as follows:</p>
 <dl>
-<dt><code>STATX_ATTR_COMPRESSED</code></p>
-<dd> The file is compressed by the filesystem and may take extra resources to access.</p>
-<dt><code>STATX_ATTR_IMMUTABLE</code></p>
-<dd> The file cannot be modified: it cannot be deleted or renamed, no hard links can be created to this file and no data can be written to it. See <code><a href="/docs/linux/man/1-chattr/">chattr</a></code>(1).</p>
-<dt><code>STATX_ATTR_APPEND</code></p>
-<dd> The file can only be opened in append mode for writing. Random access writing is not permitted. See <code><a href="/docs/linux/man/1-chattr/">chattr</a></code>(1).</p>
-<dt><code>STATX_ATTR_NODUMP</code></p>
-<dd> File is not a candidate for backup when a backup program such as <code><a href="/docs/linux/man/8-dump/">dump</a></code>(8) is run. See <code><a href="/docs/linux/man/1-chattr/">chattr</a></code>(1).</p>
-<dt><code>STATX_ATTR_ENCRYPTED</code></p>
-<dd> A key is required for the file to be encrypted by the filesystem.</p>
-<dt><code>STATX_ATTR_VERITY</code> (since Linux 5.5)</p>
-<dd> The file has fs-verity enabled. It cannot be written to, and all reads from it will be verified against a cryptographic hash that covers the entire file (e.g., via a Merkle tree).</p>
-<dt><code>STATX_ATTR_DAX</code> (since Linux 5.8)</p>
-<dd> The file is in the DAX (cpu direct access) state. DAX state attempts to minimize software cache effects for both I/O and memory mappings of this file. It requires a file system which has been configured to support DAX.</p>
+<dt><code>STATX_ATTR_COMPRESSED</code></dt>
+<dd> The file is compressed by the filesystem and may take extra resources to access.</dd>
+<dt><code>STATX_ATTR_IMMUTABLE</code></dt>
+<dd> The file cannot be modified: it cannot be deleted or renamed, no hard links can be created to this file and no data can be written to it. See <code><a href="/docs/linux/man/1-chattr/">chattr</a></code>(1).</dd>
+<dt><code>STATX_ATTR_APPEND</code></dt>
+<dd> The file can only be opened in append mode for writing. Random access writing is not permitted. See <code><a href="/docs/linux/man/1-chattr/">chattr</a></code>(1).</dd>
+<dt><code>STATX_ATTR_NODUMP</code></dt>
+<dd> File is not a candidate for backup when a backup program such as <code><a href="/docs/linux/man/8-dump/">dump</a></code>(8) is run. See <code><a href="/docs/linux/man/1-chattr/">chattr</a></code>(1).</dd>
+<dt><code>STATX_ATTR_ENCRYPTED</code></dt>
+<dd> A key is required for the file to be encrypted by the filesystem.</dd>
+<dt><code>STATX_ATTR_VERITY</code> (since Linux 5.5)</dt>
+<dd> The file has fs-verity enabled. It cannot be written to, and all reads from it will be verified against a cryptographic hash that covers the entire file (e.g., via a Merkle tree).</dd>
+<dt><code>STATX_ATTR_DAX</code> (since Linux 5.8)</dt>
+<dd> The file is in the DAX (cpu direct access) state. DAX state attempts to minimize software cache effects for both I/O and memory mappings of this file. It requires a file system which has been configured to support DAX.</dd>
 <dt>
-<dd> DAX generally assumes all accesses are via CPU load / store instructions which can minimize overhead for small accesses, but may adversely affect CPU utilization for large transfers.</p>
+</dt><dd> DAX generally assumes all accesses are via CPU load / store instructions which can minimize overhead for small accesses, but may adversely affect CPU utilization for large transfers.</dd>
 <dt>
-<dd> File I/O is done directly to/from user-space buffers and memory mapped I/O may be performed with direct memory mappings that bypass the kernel page cache.</p>
+</dt><dd> File I/O is done directly to/from user-space buffers and memory mapped I/O may be performed with direct memory mappings that bypass the kernel page cache.</dd>
 <dt>
-<dd> While the DAX property tends to result in data being transferred synchronously, it does not give the same guarantees as the <code>O_SYNC</code> flag (see <code><a href="/docs/linux/man/2-open/">open</a></code>(2)), where data and the necessary metadata are transferred together.</p>
+</dt><dd> While the DAX property tends to result in data being transferred synchronously, it does not give the same guarantees as the <code>O_SYNC</code> flag (see <code><a href="/docs/linux/man/2-open/">open</a></code>(2)), where data and the necessary metadata are transferred together.</dd>
 <dt>
-<dd> A DAX file may support being mapped with the <code>MAP_SYNC</code> flag, which enables a program to use CPU cache flush instructions to persist CPU store operations without an explicit <code><a href="/docs/linux/man/2-fsync/">fsync</a></code>(2). See <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) for more information.</dl>
+</dt><dd> A DAX file may support being mapped with the <code>MAP_SYNC</code> flag, which enables a program to use CPU cache flush instructions to persist CPU store operations without an explicit <code><a href="/docs/linux/man/2-fsync/">fsync</a></code>(2). See <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) for more information.</dd></dl>
 <h2>RETURN VALUE</h2>
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>
 <h2>ERRORS</h2>
 <dl>
-<dt><code>EACCES</code></p>
-<dd> Search permission is denied for one of the directories in the path prefix of <i>pathname</i>. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</p>
-<dt><code>EBADF</code></p>
-<dd> <i>dirfd</i> is not a valid open file descriptor.</p>
-<dt><code>EFAULT</code></p>
-<dd> <i>pathname</i> or <i>statxbuf</i> is NULL or points to a location outside the process&#8217;s accessible address space.</p>
-<dt><code>EINVAL</code></p>
-<dd> Invalid flag specified in <i>flags</i>.</p>
-<dt><code>EINVAL</code></p>
-<dd> Reserved flag specified in <i>mask</i>. (Currently, there is one such flag, designated by the constant <code>STATX__RESERVED</code>, with the value 0x80000000U.)</p>
-<dt><code>ELOOP</code></p>
-<dd> Too many symbolic links encountered while traversing the pathname.</p>
-<dt><code>ENAMETOOLONG</code></p>
-<dd> <i>pathname</i> is too long.</p>
-<dt><code>ENOENT</code></p>
-<dd> A component of <i>pathname</i> does not exist, or <i>pathname</i> is an empty string and <code>AT_EMPTY_PATH</code> was not specified in <i>flags</i>.</p>
-<dt><code>ENOMEM</code></p>
-<dd> Out of memory (i.e., kernel memory).</p>
-<dt><code>ENOTDIR</code></p>
-<dd> A component of the path prefix of <i>pathname</i> is not a directory or <i>pathname</i> is relative and <i>dirfd</i> is a file descriptor referring to a file other than a directory.</dl>
+<dt><code>EACCES</code></dt>
+<dd> Search permission is denied for one of the directories in the path prefix of <i>pathname</i>. (See also <code><a href="/docs/linux/man/7-path_resolution/">path_resolution</a></code>(7).)</dd>
+<dt><code>EBADF</code></dt>
+<dd> <i>dirfd</i> is not a valid open file descriptor.</dd>
+<dt><code>EFAULT</code></dt>
+<dd> <i>pathname</i> or <i>statxbuf</i> is NULL or points to a location outside the process&#8217;s accessible address space.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Invalid flag specified in <i>flags</i>.</dd>
+<dt><code>EINVAL</code></dt>
+<dd> Reserved flag specified in <i>mask</i>. (Currently, there is one such flag, designated by the constant <code>STATX__RESERVED</code>, with the value 0x80000000U.)</dd>
+<dt><code>ELOOP</code></dt>
+<dd> Too many symbolic links encountered while traversing the pathname.</dd>
+<dt><code>ENAMETOOLONG</code></dt>
+<dd> <i>pathname</i> is too long.</dd>
+<dt><code>ENOENT</code></dt>
+<dd> A component of <i>pathname</i> does not exist, or <i>pathname</i> is an empty string and <code>AT_EMPTY_PATH</code> was not specified in <i>flags</i>.</dd>
+<dt><code>ENOMEM</code></dt>
+<dd> Out of memory (i.e., kernel memory).</dd>
+<dt><code>ENOTDIR</code></dt>
+<dd> A component of the path prefix of <i>pathname</i> is not a directory or <i>pathname</i> is relative and <i>dirfd</i> is a file descriptor referring to a file other than a directory.</dd></dl>
 <h2>VERSIONS</h2>
 <p> <code>statx</code>() was added to Linux in kernel 4.11; library support was added in glibc 2.28.</p>
 <h2>CONFORMING TO</h2>
@@ -259,15 +259,15 @@ int statx(int dirfd, const char *pathname, int flags,
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
 <h2>Index</h2>
-<dt><a href="#lbAH">RETURN VALUE</a></p>
+<dt><a href="#lbAH">RETURN VALUE</a></dt>
 <dd>
-<dt><a href="#lbAI">ERRORS</a></p>
+</dd><dt><a href="#lbAI">ERRORS</a></dt>
 <dd>
-<dt><a href="#lbAJ">VERSIONS</a></p>
+</dd><dt><a href="#lbAJ">VERSIONS</a></dt>
 <dd>
-<dt><a href="#lbAK">CONFORMING TO</a></p>
+</dd><dt><a href="#lbAK">CONFORMING TO</a></dt>
 <dd>
-<dt><a href="#lbAL">SEE ALSO</a></p>
+</dd><dt><a href="#lbAL">SEE ALSO</a></dt>
 <dd>
-<dt><a href="#lbAM">COLOPHON</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAM">COLOPHON</a></dt>
+<dd></dd></dl>

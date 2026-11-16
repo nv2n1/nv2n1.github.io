@@ -17,12 +17,12 @@ description: "gtags-cscope – pseudo cscope which implements the line-oriented 
 <h2>OPTIONS</h2>
 <p> The following options are available:</p>
 <dl>
-<dt><code>-C</code>, <code>&#8211;ignore-case</code></p>
-<dd> Ignore letter case when searching.</p>
-<dt><code>-q</code>, <code>&#8211;quiet</code></p>
-<dd> Quiet mode.</p>
-<dt><code>-v</code>, <code>&#8211;verbose</code></p>
-<dd> Verbose mode.</dl>
+<dt><code>-C</code>, <code>&#8211;ignore-case</code></dt>
+<dd> Ignore letter case when searching.</dd>
+<dt><code>-q</code>, <code>&#8211;quiet</code></dt>
+<dd> Quiet mode.</dd>
+<dt><code>-v</code>, <code>&#8211;verbose</code></dt>
+<dd> Verbose mode.</dd></dl>
 <h2>EXAMPLES</h2>
 <pre><code>
 $ gtags - cscope &gt;&gt; help 0 &lt; arg &gt; : Find this C symbol 1 &lt; arg &gt; : Find this definition 2 &lt; arg &gt; : Find functions called by this function(Not implemented yet.) 3 &lt; arg &gt; : Find functions calling this function

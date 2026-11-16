@@ -57,8 +57,8 @@ description: "netutils_selinux – Security Enhanced Linux Policy for the netuti
 <p> <code>netutils_exec_t</code> </p>
 <p> &#8211; Set files with the netutils_exec_t type, if you want to transition an executable to the netutils_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/arping, /usr/sbin/arping, /usr/sbin/tcpdump </p>
+<dt>Paths:</dt>
+<dd>/sbin/arping, /usr/sbin/arping, /usr/sbin/tcpdump </dd>
 </dl>
 <p> <code>netutils_tmp_t</code> </p>
 <p> &#8211; Set files with the netutils_tmp_t type, if you want to store netutils temporary files in the /tmp directories. </p>

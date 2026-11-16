@@ -27,20 +27,20 @@ description: "Doubly Linked List Adding Functions – Functions that are used to
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>list</i> The given doubly linked list.<br />
- <i>data</i> The data to append.</dl>
+ <i>data</i> The data to append.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>TRUE if the data is successfully appended, FALSE otherwise.</dl>
+<dd>TRUE if the data is successfully appended, FALSE otherwise.</dd></dl>
 <p> Referenced by ecore_dlist_insert().</p>
 <h3>EAPI int ecore_dlist_append_list (Ecore_DList * list, Ecore_DList * append)</h3>
 <p>Appends a list to the given doubly linked list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>list</i> The given doubly linked list.<br />
- <i>append</i> The list to append.</dl>
+ <i>append</i> The list to append.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>TRUE if the data is successfully appended, FALSE otherwise.</dl>
+<dd>TRUE if the data is successfully appended, FALSE otherwise.</dd></dl>
 <p> References ecore_dlist_empty_is(), and ecore_dlist_init(). </p>
 <p> Referenced by ecore_dlist_merge().</p>
 <h3>EAPI int ecore_dlist_insert (Ecore_DList * list, void * data)</h3>
@@ -48,30 +48,30 @@ description: "Doubly Linked List Adding Functions – Functions that are used to
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>list</i> The given doubly linked list.<br />
- <i>data</i> The data to be inserted.</dl>
+ <i>data</i> The data to be inserted.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>TRUE on success, FALSE otherwise.</dl>
+<dd>TRUE on success, FALSE otherwise.</dd></dl>
 <p> References ecore_dlist_append(), and ecore_dlist_prepend().</p>
 <h3>EAPI int ecore_dlist_prepend (Ecore_DList * list, void * data)</h3>
 <p>Adds data to the very beginning of the given doubly linked list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>list</i> The given doubly linked list.<br />
- <i>data</i> The data to prepend.</dl>
+ <i>data</i> The data to prepend.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>TRUE if the data is successfully prepended, FALSE otherwise.</dl>
+<dd>TRUE if the data is successfully prepended, FALSE otherwise.</dd></dl>
 <p> Referenced by ecore_dlist_insert().</p>
 <h3>EAPI int ecore_dlist_prepend_list (Ecore_DList * list, Ecore_DList * prepend)</h3>
 <p>Adds a list to the very beginning of the given doubly linked list. </p>
 <p> <code>Parameters:</code></p>
 <dl COMPACT>
 <dd><i>list</i> The given doubly linked list.<br />
- <i>prepend</i> The list to prepend.</dl>
+ <i>prepend</i> The list to prepend.</dd></dl>
 <p> <code>Returns:</code></p>
 <dl COMPACT>
-<dd>TRUE if the data is successfully prepended, FALSE otherwise.</dl>
+<dd>TRUE if the data is successfully prepended, FALSE otherwise.</dd></dl>
 <p> References ecore_dlist_empty_is(), and ecore_dlist_init().</p>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for Ecore from the source code.</p>

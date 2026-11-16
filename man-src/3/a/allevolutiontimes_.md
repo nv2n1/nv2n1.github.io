@@ -45,6 +45,6 @@ description: "QuantLib::MarketModelComposite – Composition of two or more mark
 <p> Instances of this class build a market-model product by composing one or more subproducts. </p>
 <p> <code>Precondition:</code></p>
 <dl COMPACT>
-<dd>All subproducts must have the same rate times.</dl>
+<dd>All subproducts must have the same rate times.</dd></dl>
 <h2>Author</h2>
 <p>Generated automatically by Doxygen for QuantLib from the source code.</p>

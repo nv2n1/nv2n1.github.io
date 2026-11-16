@@ -15,18 +15,18 @@ description: "globus-scheduler-event-generator-admin – Enable globus-scheduler
 <h2>Options</h2>
 <p><code>-h</code></p>
 <dl>
-<dd>Display a help message and exit.</dl>
+<dd>Display a help message and exit.</dd></dl>
 <p> <code>-e </code><i>SERVICE</i></p>
 <dl>
-<dd>Enable the globus-scheduler-event-generator for <i>SERVICE</i>, such as pbs or sge.</dl>
+<dd>Enable the globus-scheduler-event-generator for <i>SERVICE</i>, such as pbs or sge.</dd></dl>
 <p> <code>-d </code><i>SERVICE</i></p>
 <dl>
-<dd>Enable the globus-scheduler-event-generator for <i>SERVICE</i>, such as pbs or sge.</dl>
+<dd>Enable the globus-scheduler-event-generator for <i>SERVICE</i>, such as pbs or sge.</dd></dl>
 <p> <code>-n </code><i>NAME</i></p>
 <dl>
-<dd>When used with the -l option below, only list services which match <i>NAME</i>.</dl>
+<dd>When used with the -l option below, only list services which match <i>NAME</i>.</dd></dl>
 <p> <code>-l</code></p>
 <dl>
-<dd>List the all the available LRM services and whether they are enabled.</dl>
+<dd>List the all the available LRM services and whether they are enabled.</dd></dl>
 <h2>Author</h2>
 <p>Copyright (c) 1999-2014 University of Chicago</p>

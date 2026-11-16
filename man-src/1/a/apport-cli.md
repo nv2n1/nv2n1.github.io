@@ -24,34 +24,34 @@ description: "apport-cli, apport-gtk, apport-kde – Apport user interfaces for 
 <p> For desktop systems with a graphical user interface, you should consider installing the GTK or KDE user interface (apport-gtk or apport-kde). They accept the very same options and arguments. <code>apport-cli</code> is mainly intended to be used on servers. </p>
 <h2>OPTIONS</h2>
 <dl>
-<dt><code>-f, &#8211;file-bug</code></p>
-<dd> Report a (non-crash) problem. If neither <code>&#8211;package</code>, <code>&#8211;symptom</code>, or <code>&#8211;pid</code> are specified, then it displays a list of available symptoms. If none are available, it aborts with an error. </p>
+<dt><code>-f, &#8211;file-bug</code></dt>
+<dd> Report a (non-crash) problem. If neither <code>&#8211;package</code>, <code>&#8211;symptom</code>, or <code>&#8211;pid</code> are specified, then it displays a list of available symptoms. If none are available, it aborts with an error. </dd>
 <p> This will automatically attach information about your operating system and the package version etc. to the bug report, so that the developers have some important context. </p>
-<dt><code>-s </code><i>symptom</i>, <code>&#8211;symptom</code>=<i>symptom</i></p>
-<dd> When being used in <code>&#8211;file-bug</code> mode, specify the symptom to report the problem about. </p>
-<dt><code>-p </code><i>package</i>, <code>&#8211;package</code>=<i>package</i></p>
-<dd> When being used in <code>&#8211;file-bug</code> mode, specify the package to report the problem against. </p>
-<dt><code>-P </code><i>pid</i>, <code>&#8211;pid</code>=<i>pid</i></p>
-<dd> When being used in <code>&#8211;file-bug</code> mode, specify the PID (process ID) of a running program to report the problem against. This can be determined with e. g. <code>ps -ux</code>. </p>
-<dt><code>-c </code><i>report</i>, <code>&#8211;crash-file</code>=<i>report</i></p>
-<dd> Upload a previously processed stored report in an arbitrary file location. This is useful for copying a crash report to a machine with internet connection and reporting it from there. Files must end in <code>.crash</code> or <code>.apport</code>. </p>
-<dt><code>-u </code><i>report-number</i>, <code>&#8211;update-report </code><i>report-number</i></p>
-<dd> Run apport information collection on an already existing problem report. The affected package is taken from the report by default, but you can explicitly specify one with &#8211;package to collect information for a different package (this is useful if the report is assigned to the wrong package). </p>
-<dt><code>&#8211;save </code><i>filename</i></p>
-<dd> In &#8211;file-bug mode, save the collected information into a file instead of reporting it. This file can then be reported with &#8211;crash-file later on. </p>
-<dt><code>-w, &#8211;window</code></p>
-<dd> Point and click at the application window against which you wish to report the bug. Apport will automatically find the package name and generate a report for you. This option can be specially useful in situations when you do not know the name of the package, or if the application window has stopped responding and you cannot report the problem from the &quot;Help&quot; menu of the application. </p>
+<dt><code>-s </code><i>symptom</i>, <code>&#8211;symptom</code>=<i>symptom</i></dt>
+<dd> When being used in <code>&#8211;file-bug</code> mode, specify the symptom to report the problem about. </dd>
+<dt><code>-p </code><i>package</i>, <code>&#8211;package</code>=<i>package</i></dt>
+<dd> When being used in <code>&#8211;file-bug</code> mode, specify the package to report the problem against. </dd>
+<dt><code>-P </code><i>pid</i>, <code>&#8211;pid</code>=<i>pid</i></dt>
+<dd> When being used in <code>&#8211;file-bug</code> mode, specify the PID (process ID) of a running program to report the problem against. This can be determined with e. g. <code>ps -ux</code>. </dd>
+<dt><code>-c </code><i>report</i>, <code>&#8211;crash-file</code>=<i>report</i></dt>
+<dd> Upload a previously processed stored report in an arbitrary file location. This is useful for copying a crash report to a machine with internet connection and reporting it from there. Files must end in <code>.crash</code> or <code>.apport</code>. </dd>
+<dt><code>-u </code><i>report-number</i>, <code>&#8211;update-report </code><i>report-number</i></dt>
+<dd> Run apport information collection on an already existing problem report. The affected package is taken from the report by default, but you can explicitly specify one with &#8211;package to collect information for a different package (this is useful if the report is assigned to the wrong package). </dd>
+<dt><code>&#8211;save </code><i>filename</i></dt>
+<dd> In &#8211;file-bug mode, save the collected information into a file instead of reporting it. This file can then be reported with &#8211;crash-file later on. </dd>
+<dt><code>-w, &#8211;window</code></dt>
+<dd> Point and click at the application window against which you wish to report the bug. Apport will automatically find the package name and generate a report for you. This option can be specially useful in situations when you do not know the name of the package, or if the application window has stopped responding and you cannot report the problem from the &quot;Help&quot; menu of the application. </dd>
 <p> This option is not supported on Wayland. Users running Wayland should use another option such as <code>-P</code> to specify the application. </p>
 </dl>
 <h2>ENVIRONMENT</h2>
 <dl>
-<dt><code>APPORT_IGNORE_OBSOLETE_PACKAGES</code></p>
-<dd> Apport refuses to create bug reports if the package or any dependency is not current. If this environment variable is set, this check is waived. Experts who will thoroughly check the situation before filing a bug report can define this in their <code>~/.bashrc</code> or temporarily when calling the apport frontend (-cli, -gtk, or -kde). </p>
+<dt><code>APPORT_IGNORE_OBSOLETE_PACKAGES</code></dt>
+<dd> Apport refuses to create bug reports if the package or any dependency is not current. If this environment variable is set, this check is waived. Experts who will thoroughly check the situation before filing a bug report can define this in their <code>~/.bashrc</code> or temporarily when calling the apport frontend (-cli, -gtk, or -kde). </dd>
 </dl>
 <h2>FILES</h2>
 <dl>
-<dt><code>/usr/share/apport/symptoms/*.py</code></p>
-<dd> Symptom scripts. These ask a set of interactive questions to determine the package which is responsible for a particular problem. (For some problems like sound or storage device related bugs there are many places where things can go wrong, and it&#8217;s not immediately obvious for a bug reporter where the problem is.) </p>
+<dt><code>/usr/share/apport/symptoms/*.py</code></dt>
+<dd> Symptom scripts. These ask a set of interactive questions to determine the package which is responsible for a particular problem. (For some problems like sound or storage device related bugs there are many places where things can go wrong, and it&#8217;s not immediately obvious for a bug reporter where the problem is.) </dd>
 </dl>
 <h2>AUTHOR</h2>
 <p> <code>apport</code> and the accompanying tools are developed by Martin Pitt &lt;martin.pitt [at] ubuntu.com&gt;. </p>

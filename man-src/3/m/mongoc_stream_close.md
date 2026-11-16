@@ -13,8 +13,8 @@ description: "mongoc_stream_close() – This function shall close underlying fil
 mongoc_stream_close (mongoc_stream_t *stream);</pre>
 <h2>Parameters</h2>
 <dl COMPACT>
-<dt><code>stream</code></p>
-<dd>A <code>mongoc_stream_t</code> \&amp;.</dl>
+<dt><code>stream</code></dt>
+<dd>A <code>mongoc_stream_t</code> \&amp;.</dd></dl>
 <p> This function shall close underlying file-descriptors of <code>stream</code> \&amp;. </p>
 <h2>Returns</h2>
 <p><code>0</code> on success, otherwise <code>-1</code> and <code>errno</code> is set. </p>

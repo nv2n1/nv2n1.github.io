@@ -23,62 +23,62 @@ stg branch
 <p> <i>stg branch</i></p>
 <dl>
 <dt>
-<dd> Display the name of the current branch.</dl>
+</dt><dd> Display the name of the current branch.</dd></dl>
 <p> <i>stg branch</i> &lt;branch&gt;</p>
 <dl>
 <dt>
-<dd> Switch to the given branch.</dl>
+</dt><dd> Switch to the given branch.</dd></dl>
 <h2>OPTIONS</h2>
 <p> -l, &#8211;list</p>
 <dl>
 <dt>
-<dd> List each branch in the current repository, followed by its branch description (if any). The current branch is prefixed with <i>&gt;</i>. Branches that have been initialized for StGit (with <code><a href="/docs/linux/man/1-stg-init/">stg-init</a></code>(1)) are prefixed with <i>s</i>. Protected branches are prefixed with <i>p</i>.</dl>
+</dt><dd> List each branch in the current repository, followed by its branch description (if any). The current branch is prefixed with <i>&gt;</i>. Branches that have been initialized for StGit (with <code><a href="/docs/linux/man/1-stg-init/">stg-init</a></code>(1)) are prefixed with <i>s</i>. Protected branches are prefixed with <i>p</i>.</dd></dl>
 <p> -c, &#8211;create</p>
 <dl>
 <dt>
-<dd> Create (and switch to) a new branch. The new branch is already initialized as an StGit patch stack, so you do not have to run <code><a href="/docs/linux/man/1-stg-init/">stg-init</a></code>(1) manually. If you give a committish argument, the new branch is based there; otherwise, it is based at the current HEAD. </p>
+</dt><dd> Create (and switch to) a new branch. The new branch is already initialized as an StGit patch stack, so you do not have to run <code><a href="/docs/linux/man/1-stg-init/">stg-init</a></code>(1) manually. If you give a committish argument, the new branch is based there; otherwise, it is based at the current HEAD. </dd>
 <p> StGit will try to detect the branch off of which the new branch is forked, as well as the remote repository from which that parent branch is taken (if any), so that running <code><a href="/docs/linux/man/1-stg-pull/">stg-pull</a></code>(1) will automatically pull new commits from the correct branch. It will warn if it cannot guess the parent branch (e.g. if you do not specify a branch name as committish).</dl>
 <p> &#8211;clone</p>
 <dl>
 <dt>
-<dd> Clone the current branch, under the name &lt;new-branch&gt; if specified, or using the current branch&#8217;s name plus a timestamp. </p>
+</dt><dd> Clone the current branch, under the name &lt;new-branch&gt; if specified, or using the current branch&#8217;s name plus a timestamp. </dd>
 <p> The description of the new branch is set to tell it is a clone of the current branch. The parent information of the new branch is copied from the current branch.</dl>
 <p> -r, &#8211;rename</p>
 <dl>
 <dt>
-<dd> Rename an existing branch.</dl>
+</dt><dd> Rename an existing branch.</dd></dl>
 <p> -p, &#8211;protect</p>
 <dl>
 <dt>
-<dd> Prevent StGit from modifying a branch &#8212; either the current one, or one named on the command line.</dl>
+</dt><dd> Prevent StGit from modifying a branch &#8212; either the current one, or one named on the command line.</dd></dl>
 <p> -u, &#8211;unprotect</p>
 <dl>
 <dt>
-<dd> Allow StGit to modify a branch &#8212; either the current one, or one named on the command line. This undoes the effect of an earlier <i>stg branch &#8211;protect</i> command.</dl>
+</dt><dd> Allow StGit to modify a branch &#8212; either the current one, or one named on the command line. This undoes the effect of an earlier <i>stg branch &#8211;protect</i> command.</dd></dl>
 <p> &#8211;delete</p>
 <dl>
 <dt>
-<dd> Delete the named branch. If there are any patches left in the branch, StGit will refuse to delete it unless you give the <i>&#8211;force</i> flag. </p>
+</dt><dd> Delete the named branch. If there are any patches left in the branch, StGit will refuse to delete it unless you give the <i>&#8211;force</i> flag. </dd>
 <p> A protected branch cannot be deleted; it must be unprotected first (see <i>&#8211;unprotect</i> above). </p>
 <p> If you delete the current branch, you are switched to the &quot;master&quot; branch, if it exists.</dl>
 <p> &#8211;cleanup</p>
 <dl>
 <dt>
-<dd> Remove the StGit information for the current or given branch. If there are patches left in the branch, StGit refuses the operation unless <i>&#8211;force</i> is given. </p>
+</dt><dd> Remove the StGit information for the current or given branch. If there are patches left in the branch, StGit refuses the operation unless <i>&#8211;force</i> is given. </dd>
 <p> A protected branch cannot be cleaned up; it must be unprotected first (see <i>&#8211;unprotect</i> above). </p>
 <p> A cleaned up branch can be re-initialised using the <i>stg init</i> command.</dl>
 <p> -d DESCRIPTION, &#8211;description DESCRIPTION</p>
 <dl>
 <dt>
-<dd> Set the branch description.</dl>
+</dt><dd> Set the branch description.</dd></dl>
 <p> &#8211;merge</p>
 <dl>
 <dt>
-<dd> Merge work tree changes into the other branch.</dl>
+</dt><dd> Merge work tree changes into the other branch.</dd></dl>
 <p> &#8211;force</p>
 <dl>
 <dt>
-<dd> Force a delete when the series is not empty.</dl>
+</dt><dd> Force a delete when the series is not empty.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
 <h2>Index</h2>

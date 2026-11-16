@@ -15,7 +15,7 @@ netdev_boot_setup_check - check boot time settings
 <h2>Arguments</h2>
 
 <i>dev</i>
-<dl><dd><dd>the netdevice</dl>
+<dl><dd></dd><dd>the netdevice</dd></dl>
 
 <h2>Description</h2>
 

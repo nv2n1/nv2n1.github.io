@@ -11,7 +11,6 @@ std::strcpy - std::strcpy
 <h2>Synopsis</h2>
 
 <pre><code>Defined in header&lt;cstring&gt;
-
     char *strcpy(char *dest, const char *src);</code></pre> 
 Copies the character string pointed to by src, including the null terminator, to the character array whose first element is pointed to by dest. 
 The behavior is undefined if the dest array is not large enough. The behavior is undefined if the strings overlap. 
@@ -28,15 +27,11 @@ dest
 <h2>Example</h2>
 
 // Run this code <pre><code>#include &lt;iostream&gt;
-
 #include &lt;cstring&gt;
-
 #include &lt;memory&gt;
 int main()
-
 {
     const char *src = &quot;Take the test.&quot;;
-
     //  src[0] = 'M'; // can't modify string literal
     auto dst = std::make_unique&lt;char[]&gt;(std::strlen(src) + 1); // +1 for the null terminator
     std::strcpy(dst.get(), src);

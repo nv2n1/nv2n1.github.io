@@ -76,21 +76,21 @@ Destructor
 <code>__init__(self, servername='', logfile=None, sync_timeout=0.10000000000000001)</code>
 Constructor
 Initialize object's private data.
-<dl><dt><dd><dl><dt><code>servername:</code>
-<dd>Host name or IP address of host where remote server will run
-<dt><code>logfile:</code>
-<dd>Pathname of log file to be created on remote host
+<dl><dl><dt><code>servername:</code>
+</dt><dd>Host name or IP address of host where remote server will run
+</dd><dt><code>logfile:</code>
+</dt><dd>Pathname of log file to be created on remote host
 [Default: &quot;/dev/null&quot;]
-<dt><code>sync_timeout:</code>
-<dd>Timeout used for synchronizing the connection stream
+</dd><dt><code>sync_timeout:</code>
+</dt><dd>Timeout used for synchronizing the connection stream
 [Default: 0.1]
-</dl></dl>
+</dd></dl></dl>
 <code>poll(self, timeout=0)</code>
 Return whether there is any data available to be read
-<dl><dt><dd><dl><dt><code>timeout:</code>
-<dd>Maximum time in seconds to block, if timeout is None then
+<dl><dl><dt><code>timeout:</code>
+</dt><dd>Maximum time in seconds to block, if timeout is None then
 an infinite timeout is used
-</dl></dl>
+</dd></dl></dl>
 <code>rcode(self, code)</code>
 Define function on remote server
 <code>results(self)</code>
@@ -101,11 +101,11 @@ Evaluate expression on remote server
 Execute statement on remote server
 <code>rimport(self, module, symbols=[])</code>
 Import module on remote server
-<dl><dt><dd><dl><dt><code>module:</code>
-<dd>Module to import in the remote server
-<dt><code>symbols:</code>
-<dd>If given, import only these symbols from the module
-</dl></dl>
+<dl><dl><dt><code>module:</code>
+</dt><dd>Module to import in the remote server
+</dd><dt><code>symbols:</code>
+</dt><dd>If given, import only these symbols from the module
+</dd></dl></dl>
 <code>run(self, *kwts, **kwds)</code>
 Run function on remote server
 The first positional argument is the function to be executed.
@@ -113,12 +113,12 @@ All other positional arguments and any named arguments are treated
 as arguments to the function
 <code>wait(self, objlist=None, timeout=0)</code>
 Return a list of Rexec objects where data is available to be read
-<dl><dt><dd><dl><dt><code>objlist:</code>
-<dd>List of Rexec objects to poll, if not given use current object
-<dt><code>timeout:</code>
-<dd>Maximum time in seconds to block, if timeout is None then
+<dl><dl><dt><code>objlist:</code>
+</dt><dd>List of Rexec objects to poll, if not given use current object
+</dd><dt><code>timeout:</code>
+</dt><dd>Maximum time in seconds to block, if timeout is None then
 an infinite timeout is used
-</dl></dl></pre>
+</dd></dl></dl></pre>
 <h2>Functions</h2>
 <h3>bare_server(port, logfile)</h3>
 <p>Bare-bones remote server</p>
@@ -126,11 +126,11 @@ an infinite timeout is used
 <p>Main remote procedure server </p>
 <dl>
 <dd>
-<dl>
-<dt><code>fd:</code></p>
-<dd>File descriptor for logfile</p>
-<dt><code>conn:</code></p>
-<dd>Connection object</dl>
+</dd><dl>
+<dt><code>fd:</code></dt>
+<dd>File descriptor for logfile</dd>
+<dt><code>conn:</code></dt>
+<dd>Connection object</dd></dl>
 </dl>
 <h3>write_log(fd, msg, nl=&#8217;)</h3>
 <p>Return timestamp</p>

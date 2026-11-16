@@ -11,12 +11,12 @@ description: "XkbActionCtrls – Returns the ctrls fields of act converted to an
 <h2>Synopsis</h2>
 <dl COMPACT>
 <dt> <code>unsigned int XkbActionCtrls</code> <code>(XkbCtrlsAction </code><i>act</i><code>);</code><br />
- &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dl>
+ &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</dt></dl>
 <h2>Arguments</h2>
 <dl COMPACT>
-<dt><i>&#8211; act</i></p>
+<dt><i>&#8211; act</i></dt>
 <dd>
-<dd>action from which to extract controls</dl>
+</dd><dd>action from which to extract controls</dd></dl>
 <h2>Description</h2>
 <p>Actions associated with the XkbCtrlsAction structure change the state of the boolean controls. </p>
 <p> The <i>type </i> field can have any one of the values shown in Table 1. </p>

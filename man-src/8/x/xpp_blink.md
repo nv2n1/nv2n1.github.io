@@ -19,24 +19,23 @@ Blink all the leds of an <font SIZE="-1">XPD</font>.
 <h2>Blink mode:</h2>
 
 <dl><dt>on
-<dd>Turn on constant blink
-<dt>off
-<dd>Turn off blink
-<dt>bzzt
-<dd>Blink briefly for 1 second.</dl>
+</dt><dd>Turn on constant blink
+</dd><dt>off
+</dt><dd>Turn off blink
+</dd><dt>bzzt
+</dt><dd>Blink briefly for 1 second.</dd></dl>
 
 <h2>Selector:</h2>
 
 <dl><dt>span
-<dd>Select by span number. This only work for <font SIZE="-1">XPD</font> registered to dahdi. 
-
+</dt><dd>Select by span number. This only work for <font SIZE="-1">XPD</font> registered to dahdi. 
  will also print the dahdi channels of the span and the xbus/xpd this span represents.
-<dt>chan
-<dd>Select by channel number. This only work for <font SIZE="-1">XPD</font> registered to dahdi.
-<dt>xpd
-<dd>Select by xbus + xpd numbers. If only xbus number is given, all the XPDs of the selected xbus (Astribank) are blinked.
-<dt>label
-<dd>Select by xbus label. Affect the whole Astribank.</dl>
+</dd><dt>chan
+</dt><dd>Select by channel number. This only work for <font SIZE="-1">XPD</font> registered to dahdi.
+</dd><dt>xpd
+</dt><dd>Select by xbus + xpd numbers. If only xbus number is given, all the XPDs of the selected xbus (Astribank) are blinked.
+</dd><dt>label
+</dt><dd>Select by xbus label. Affect the whole Astribank.</dd></dl>
 
 <h2>Examples</h2>
 

@@ -11,35 +11,35 @@ description: "xdg-user-dir – Find an XDG user dir"
 <p> xdg-user-dir &#8211; Find an XDG user dir </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>xdg-user-dir</code> [NAME]</dl>
+<dt> <code>xdg-user-dir</code> [NAME]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>xdg-user-dir</code></p>
-<dd>looks up the current path for one of the special XDG user dirs. </p>
+<dd>looks up the current path for one of the special XDG user dirs. </dd>
 <p> This command expects the name of an XDG user dir as argument. The possible names are:</p>
 <dl>
 <dt>
-<dd> DESKTOP</dl>
+</dt><dd> DESKTOP</dd></dl>
 <dl>
 <dt>
-<dd> DOWNLOAD</dl>
+</dt><dd> DOWNLOAD</dd></dl>
 <dl>
 <dt>
-<dd> TEMPLATES</dl>
+</dt><dd> TEMPLATES</dd></dl>
 <dl>
 <dt>
-<dd> PUBLICSHARE</dl>
+</dt><dd> PUBLICSHARE</dd></dl>
 <dl>
 <dt>
-<dd> DOCUMENTS</dl>
+</dt><dd> DOCUMENTS</dd></dl>
 <dl>
 <dt>
-<dd> MUSIC</dl>
+</dt><dd> MUSIC</dd></dl>
 <dl>
 <dt>
-<dd> PICTURES</dl>
+</dt><dd> PICTURES</dd></dl>
 <dl>
 <dt>
-<dd> VIDEOS</dl>
+</dt><dd> VIDEOS</dd></dl>
 <h2>FILES</h2>
 <p> The values are looked up in the user-dirs.dir file. This file is created by the xdg-user-dirs-update utility.</p>
 <h2>ENVIRONMENT</h2>

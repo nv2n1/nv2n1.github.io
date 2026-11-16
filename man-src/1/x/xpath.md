@@ -15,21 +15,16 @@ description: "XML::XPath – a set of modules for parsing and evaluating XPath s
 <pre><code>
 use XML::XPath;
 use XML::XPath::XMLParser;
-
 my $xp = XML::XPath-&gt;new (filename = &gt; 'test.xhtml');
-
 my $nodeset = $xp-&gt;find('/html/body/p');
 #find all paragraphs
-
     foreach my
     $node($nodeset-&gt;get_nodelist)
 {
     print "FOUND
-
 ",
         XML::XPath::XMLParser::as_string($node),
         "
-
 ";
 }
 </code></pre>
@@ -83,13 +78,13 @@ my $xp = XML::XPath-&gt;new (context = &gt; $node);
 <h2>SEE ALSO</h2>
 <p> XML::XPath::Literal, XML::XPath::Boolean, XML::XPath::Number, XML::XPath::XMLParser, XML::XPath::NodeSet, XML::XPath::PerlSAX, XML::XPath::Builder. </p>
 <h2>Index</h2>
-<dt><a href="#lbAT">Node Object Model</a></p>
+<dt><a href="#lbAT">Node Object Model</a></dt>
 <dd>
-<dt><a href="#lbAU">On Garbage Collection</a></p>
+</dd><dt><a href="#lbAU">On Garbage Collection</a></dt>
 <dd>
-<dt><a href="#lbAV">Example</a></p>
+</dd><dt><a href="#lbAV">Example</a></dt>
 <dd>
-<dt><a href="#lbAW">Support/Author</a></p>
+</dd><dt><a href="#lbAW">Support/Author</a></dt>
 <dd>
-<dt><a href="#lbAX">SEE ALSO</a></p>
-<dd></dl>
+</dd><dt><a href="#lbAX">SEE ALSO</a></dt>
+<dd></dd></dl>

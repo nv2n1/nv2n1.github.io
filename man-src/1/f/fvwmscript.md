@@ -19,46 +19,46 @@ description: "FvwmScript – module to build graphic user interface"
 <h2>Configuration Options</h2>
 <p>The following commands can be used in the config file (see <i><a href="/docs/linux/man/1-fvwm/">fvwm</a></i>(1), section <code>MODULE COMMANDS</code> for details). They are used only if the corresponding script commands are not used in the script. </p>
 <dl>
-<dt>*FvwmScript: DefaultFont <i>font</i></p>
-<dd>Specifies the default font to be used. If not specified with this command or in the script with the Font command, fixed font is assumed. </p>
-<dt>*FvwmScript: DefaultFore <i>color</i></p>
-<dd>Specifies the default foreground color to be used. If not specified with this command or in the script with the ForeColor command, black is used. </p>
-<dt>*FvwmScript: DefaultBack <i>color</i></p>
-<dd>Specifies the default background color to be used. If not specified with this command or in the script with the BackColor command, grey85 is used. </p>
-<dt>*FvwmScript: DefaultHilight <i>color</i></p>
-<dd>Specifies the default hilight color to be used. If not specified with this command or in the script with the HilightColor command, grey100 is used. </p>
-<dt>*FvwmScript: DefaultShadow <i>color</i></p>
-<dd>Specifies the default shadow color to be used. If not specified with this command or in the script with the ShadowColor command, grey55 is used. </p>
-<dt>*FvwmScript: DefaultColorset <i>colorset</i></p>
-<dd>Tells the module to use colorset <i>colorset</i> as the default colorset. Refer to the FvwmTheme man page for details about colorsets. </p>
+<dt>*FvwmScript: DefaultFont <i>font</i></dt>
+<dd>Specifies the default font to be used. If not specified with this command or in the script with the Font command, fixed font is assumed. </dd>
+<dt>*FvwmScript: DefaultFore <i>color</i></dt>
+<dd>Specifies the default foreground color to be used. If not specified with this command or in the script with the ForeColor command, black is used. </dd>
+<dt>*FvwmScript: DefaultBack <i>color</i></dt>
+<dd>Specifies the default background color to be used. If not specified with this command or in the script with the BackColor command, grey85 is used. </dd>
+<dt>*FvwmScript: DefaultHilight <i>color</i></dt>
+<dd>Specifies the default hilight color to be used. If not specified with this command or in the script with the HilightColor command, grey100 is used. </dd>
+<dt>*FvwmScript: DefaultShadow <i>color</i></dt>
+<dd>Specifies the default shadow color to be used. If not specified with this command or in the script with the ShadowColor command, grey55 is used. </dd>
+<dt>*FvwmScript: DefaultColorset <i>colorset</i></dt>
+<dd>Tells the module to use colorset <i>colorset</i> as the default colorset. Refer to the FvwmTheme man page for details about colorsets. </dd>
 </dl>
 <h2>Anatomy Of A Script</h2>
 <p>FvwmScript uses a particular programming language. A script is composed of five parts. Heading contains general characteristics of the window and default properties for all widgets. The second part contains instructions whom are executed at the startup of the script. The third part contains periodic tasks which are executed every second. The fourth part contains instructions which are executed at exit. And the last part contains the description of widgets. A widget consists of eleven types of items: text labels, single-line text inputs, radio buttons, checkbox, push buttons, horizontal and vertical scrollbars, rectangles, pop up menus, swallowexecs and mini scrollbars. </p>
 <h2>Heading Of A Script</h2>
 <p>The syntax is as follows: </p>
 <dl>
-<dt>WindowTitle <i>string</i></p>
-<dd>This option sets the window title. </p>
-<dt>WindowSize <i>width height</i></p>
-<dd>This option sets window size. <i>width</i> and <i>height</i> are numerical value. </p>
-<dt>WindowPosition <i>x y</i></p>
-<dd>This option sets window position. <i>x</i> and <i>y</i> are numerical value. </p>
-<dt>ForeColor {<i>color</i>}</p>
-<dd>This option sets the default foreground color for all widgets. </p>
-<dt>BackColor {<i>color</i>}</p>
-<dd>This option sets the default background color for all widgets. </p>
-<dt>HilightColor {<i>color</i>}</p>
-<dd>This option sets the default hilight color for all widgets. </p>
-<dt>ShadowColor {<i>color</i>}</p>
-<dd>This option sets the default shadow color for all widgets. </p>
-<dt>Colorset {<i>n</i>}</p>
-<dd>This option sets the default colorset for all widgets. </p>
-<dt>Font {<i>font</i>}</p>
-<dd>This option sets the default font for all widgets. </p>
-<dt>UseGettext [<i>locale_path</i>]</p>
-<dd>Enable the use of the gettext mechanism which is used by the WindowLocaleTitle, LocaleTitle, ChangeLocaleTitle instructions and the Gettext function. If no argument is given, the default FvwmScript locale catalog is used. This catalog is under the locale fvwm installation directory and the text domain is FvwmScript (install_prefix/share/locale/*/LC_MESSAGES/FvwmScript.mo). You can reset this catalog or add some catalogs exactly in the same way than with the <code>LocalePath</code> fvwm command (see the fvwm manual page). This instruction should be placed before the WindowLocaleTitle instruction. </p>
-<dt>WindowLocaleTitle <i>string</i></p>
-<dd>This option sets the window title, but use the locale catalog(s) defined with UseGettext. </p>
+<dt>WindowTitle <i>string</i></dt>
+<dd>This option sets the window title. </dd>
+<dt>WindowSize <i>width height</i></dt>
+<dd>This option sets window size. <i>width</i> and <i>height</i> are numerical value. </dd>
+<dt>WindowPosition <i>x y</i></dt>
+<dd>This option sets window position. <i>x</i> and <i>y</i> are numerical value. </dd>
+<dt>ForeColor {<i>color</i>}</dt>
+<dd>This option sets the default foreground color for all widgets. </dd>
+<dt>BackColor {<i>color</i>}</dt>
+<dd>This option sets the default background color for all widgets. </dd>
+<dt>HilightColor {<i>color</i>}</dt>
+<dd>This option sets the default hilight color for all widgets. </dd>
+<dt>ShadowColor {<i>color</i>}</dt>
+<dd>This option sets the default shadow color for all widgets. </dd>
+<dt>Colorset {<i>n</i>}</dt>
+<dd>This option sets the default colorset for all widgets. </dd>
+<dt>Font {<i>font</i>}</dt>
+<dd>This option sets the default font for all widgets. </dd>
+<dt>UseGettext [<i>locale_path</i>]</dt>
+<dd>Enable the use of the gettext mechanism which is used by the WindowLocaleTitle, LocaleTitle, ChangeLocaleTitle instructions and the Gettext function. If no argument is given, the default FvwmScript locale catalog is used. This catalog is under the locale fvwm installation directory and the text domain is FvwmScript (install_prefix/share/locale/*/LC_MESSAGES/FvwmScript.mo). You can reset this catalog or add some catalogs exactly in the same way than with the <code>LocalePath</code> fvwm command (see the fvwm manual page). This instruction should be placed before the WindowLocaleTitle instruction. </dd>
+<dt>WindowLocaleTitle <i>string</i></dt>
+<dd>This option sets the window title, but use the locale catalog(s) defined with UseGettext. </dd>
 </dl>
 <h2>Initialisation</h2>
 <p>This part contains instructions which will be executed at the startup. For example: </p>
@@ -125,76 +125,76 @@ Property
 <h2>List Of Widgets</h2>
 <p>There is fifteen types of widgets. </p>
 <dl>
-<dt><code>CheckBox</code>: Display check box with a string.</p>
-<dd><code>Title</code>: title of the check box. </p>
+<dt><code>CheckBox</code>: Display check box with a string.</dt>
+<dd><code>Title</code>: title of the check box. </dd>
 <p> <code>Value</code>: if Value is equal to 1, the box is checked else it is not. </p>
 <p> The <code>Size</code> property is ignored. </p>
-<dt><code>HDipstick</code>: Display a horizontal dipstick.</p>
-<dd>This widget can be used to display disk usage. </p>
+<dt><code>HDipstick</code>: Display a horizontal dipstick.</dt>
+<dd>This widget can be used to display disk usage. </dd>
 <p> <code>Value</code>: specify the current value of the dipstick. </p>
 <p> <code>MinValue</code>: specify the minimum value of the dipstick. </p>
 <p> <code>MaxValue</code>: specify the maximum value of the dipstick. </p>
 <p> A minimum size of 30&#215;11 is imposed. </p>
-<dt><code>HScrollBar</code>: Display an horizontal scrollbar.</p>
-<dd><code>Value</code>: position of the thumb. </p>
+<dt><code>HScrollBar</code>: Display an horizontal scrollbar.</dt>
+<dd><code>Value</code>: position of the thumb. </dd>
 <p> <code>MaxValue</code>: upper limit of Value. </p>
 <p> <code>MinValue</code>: lower limit of Value. </p>
 <p> The height property is ignored and a minimum width is imposed. The width should be at least the range plus 37 if all values are to be selectable e.g. a min of 0 and max of 10 has a range of 11 and therefore should have a minimum width of 48. </p>
-<dt><code>ItemDraw</code>: Display an icon and/or a string.</p>
-<dd><code>Title</code>: string to display. </p>
+<dt><code>ItemDraw</code>: Display an icon and/or a string.</dt>
+<dd><code>Title</code>: string to display. </dd>
 <p> <code>Icon</code>: icon to display. </p>
 <p> <code>MaxValue</code>: x coordinate of the cursor. </p>
 <p> <code>MinValue</code>: y coordinate of the cursor. </p>
 <p> The size is made large enough to contain the title and/or the icon. </p>
-<dt><code>List</code>: Display a list.</p>
-<dd>List lets user to choose between various options. </p>
+<dt><code>List</code>: Display a list.</dt>
+<dd>List lets user to choose between various options. </dd>
 <p> <code>Value</code>: specify which option is selected. </p>
 <p> <code>MinValue</code>: First visible option. </p>
 <p> <code>Title</code>: title contains options displayed in the list. The syntax is the following: {Option 1|Option 2|&#8230;|Option N}. All menus are displayed at the top of window. </p>
 <p> A minimum height of three items is imposed and the width is made to be at least 108. </p>
-<dt><code>Menu</code>: Display a menu whom lets user to choose a option.</p>
-<dd>Items of type Menu are layed out from left to right along the top of the window. The size and position properties are ignored. </p>
+<dt><code>Menu</code>: Display a menu whom lets user to choose a option.</dt>
+<dd>Items of type Menu are layed out from left to right along the top of the window. The size and position properties are ignored. </dd>
 <p> <code>Value</code>: specify which option is selected. </p>
 <p> <code>Title</code>: title contains options displayed in the menu. The syntax is the following: {Option 1|Option 2|&#8230;|Option N}. </p>
-<dt><code>MiniScroll</code>: Display a very small vertical scrollbar.</p>
-<dd><code>Value</code>: position of the thumb. </p>
+<dt><code>MiniScroll</code>: Display a very small vertical scrollbar.</dt>
+<dd><code>Value</code>: position of the thumb. </dd>
 <p> <code>MaxValue</code>: upper limit of Value. </p>
 <p> <code>MinValue</code>: lower limit of Value. </p>
 <p> The size is set to 19&#215;34. </p>
-<dt><code>PopupMenu</code>: Display a pop up menu.</p>
-<dd><code>Value</code>: specify what option is selected. </p>
+<dt><code>PopupMenu</code>: Display a pop up menu.</dt>
+<dd><code>Value</code>: specify what option is selected. </dd>
 <p> <code>Title</code>: the title has the following syntax: {Option 1|Option 2|&#8230;|Option N}.&quot;Option 1|Option 2|&#8230;|Option N&quot; is the pop up menu which is displayed when pressing mouse button. </p>
 <p> The size property is ignored. </p>
-<dt><code>PushButton</code>: Display push button with an icon and/or a string.</p>
-<dd><code>Title</code>: this string has the following syntax {Title of the button|Option 1|Option 2|Option3|&#8230;|Option N}. &quot;Option 1|Option 2|&#8230;|Option N&quot; is the pop up menu which is displayed when pressing the right button. </p>
+<dt><code>PushButton</code>: Display push button with an icon and/or a string.</dt>
+<dd><code>Title</code>: this string has the following syntax {Title of the button|Option 1|Option 2|Option3|&#8230;|Option N}. &quot;Option 1|Option 2|&#8230;|Option N&quot; is the pop up menu which is displayed when pressing the right button. </dd>
 <p> <code>Icon</code>: icon to display. </p>
 <p> The button is made large enough to fit the icon and or label. </p>
-<dt><code>RadioButton</code>: Display radio button with a string.</p>
-<dd><code>Title</code>: title of the radio button. </p>
+<dt><code>RadioButton</code>: Display radio button with a string.</dt>
+<dd><code>Title</code>: title of the radio button. </dd>
 <p> <code>Value</code>: if Value is equal to 1, the box is checked else it is not. </p>
 <p> The size property is ignored </p>
-<dt><code>Rectangle</code>: Display a rectangle.</p>
-<dd>&nbsp;<wbr>This type of widget can be used to decorate window. </p>
-<dt><code>SwallowExec</code></p>
-<dd>This type of widget causes FvwmScript to spawn an process, and capture the first window whose name or resource is equal to Title, and display it in the script window. </p>
+<dt><code>Rectangle</code>: Display a rectangle.</dt>
+<dd>&nbsp;<wbr>This type of widget can be used to decorate window. </dd>
+<dt><code>SwallowExec</code></dt>
+<dd>This type of widget causes FvwmScript to spawn an process, and capture the first window whose name or resource is equal to Title, and display it in the script window. </dd>
 <p> <code>Title</code>: specify the window name which be captured and displayed in the script window. </p>
 <p> <code>SwallowExec</code>: specify the command line to execute to spawn the process. Modules can also be swallowed. </p>
 <p> <code>Value</code>: specify the looking of the border. Possible value: -1, 0, 1. </p>
 <p> The size is made to be at least 30&#215;30 </p>
-<dt><code>TextField</code>: Display a text input field.</p>
-<dd>The text input field can be used to edit a single-line string. </p>
+<dt><code>TextField</code>: Display a text input field.</dt>
+<dd>The text input field can be used to edit a single-line string. </dd>
 <p> <code>Title</code>: content of text field. </p>
 <p> <code>Value</code>: position of the insert point. </p>
 <p> <code>MinValue</code>: position of the end of the selection. </p>
 <p> <code>MaxValue</code>: first visible character of the title </p>
 <p> The height property is ignored, the width is made to be at least 40 pixels wider than the initial contents. </p>
-<dt><code>VDipstick</code>: Display a vertical dipstick.</p>
-<dd><code>Value</code>: specify the current value of the dipstick. </p>
+<dt><code>VDipstick</code>: Display a vertical dipstick.</dt>
+<dd><code>Value</code>: specify the current value of the dipstick. </dd>
 <p> <code>MinValue</code>: specify the minimum value of the dipstick. </p>
 <p> <code>MaxValue</code>: specify the maximum value of the dipstick. </p>
 <p> The size is made to be at least 11&#215;30. </p>
-<dt><code>VScrollBar</code>: Display a vertical scrollbar.</p>
-<dd><code>Value</code>: position of the thumb. </p>
+<dt><code>VScrollBar</code>: Display a vertical scrollbar.</dt>
+<dd><code>Value</code>: position of the thumb. </dd>
 <p> <code>MaxValue</code>: upper limit of Value. </p>
 <p> <code>MinValue</code>: lower limit of Value. </p>
 <p> The width property is ignored and a minimum height is imposed. The height should be at least the range plus 37 if all values are to be selectable e.g. a min of 0 and max of 10 has a range of 11 and therefore should have a minimum height of 48. </p>
@@ -202,54 +202,54 @@ Property
 <h2>Instructions</h2>
 <p>Here is the description of all instructions. </p>
 <dl>
-<dt>HideWidget <i>id</i> : hide the widget numbered <i>id</i>.</p>
+<dt>HideWidget <i>id</i> : hide the widget numbered <i>id</i>.</dt>
 <dd>
-<dt>ShowWidget <i>id</i>: show the widget numbered <i>id</i>.</p>
+</dd><dt>ShowWidget <i>id</i>: show the widget numbered <i>id</i>.</dt>
 <dd>
-<dt>ChangeValue <i>id1 id2</i></p>
-<dd>Set the value of the widget numbered <i>id1</i> to <i>id2</i>. </p>
-<dt>ChangeMaxValue <i>id1 id2</i></p>
-<dd>Set the maximum value of the widget numbered <i>id1</i> to <i>id2</i>. </p>
-<dt>ChangeMinValue <i>id1 id2</i></p>
-<dd>Set the minimum value of the widget numbered <i>id1</i> to <i>id2</i>. </p>
-<dt>ChangeTitle <i>id1 id2</i></p>
-<dd>Set the title of the widget numbered <i>id1</i> to <i>id2</i>. </p>
-<dt>ChangeWindowTitle <i>string</i></p>
-<dd>Set the title of the window to <i>string</i>. </p>
-<dt>ChangeWindowTitleFromArg <i>numarg</i></p>
-<dd>Set the title of the window to the value of the <i>numarg</i>-th script argument. </p>
-<dt>ChangeLocaleTitle <i>id1 id2</i></p>
-<dd>As ChangeTitle but use the locale catalog(s) defined with UseGettext. </p>
-<dt>ChangeIcon <i>id1 id2</i></p>
-<dd>Set the icon of the widget numbered <i>id1</i> to <i>id2</i>. </p>
-<dt>ChangeForeColor <i>id1</i> {<i>color</i>}</p>
-<dd>Set the foreground color of the widget numbered <i>id1</i> to {<i>color</i>}. </p>
-<dt>ChangeBackColor <i>id1</i> {<i>color</i>}</p>
-<dd>Set the background color of the widget numbered <i>id1</i> to {<i>color</i>}. </p>
-<dt>ChangeColorSet <i>id1</i> <i>id2</i></p>
-<dd>Set the colorset of the widget numbered <i>id1</i> to <i>id2</i>. Specifying widget 0 sets the main window colorset. </p>
-<dt>ChangePosition <i>id1 x y</i></p>
-<dd>Move the widget numbered <i>id1</i> to position (<i>x</i>,<i>y</i>). </p>
-<dt>ChangeSize <i>id1 width height</i></p>
-<dd>Set the size of the widget numbered <i>id1</i> to (<i>width</i>,<i>height</i>). </p>
-<dt>ChangeFont <i>id1 newfont</i></p>
-<dd>Set the font of the widget numbered <i>id1</i> to <i>newfont</i>. </p>
-<dt>WarpPointer <i>id</i></p>
-<dd>Warp the mouse pointer into the widget numbered <i>id</i>. </p>
-<dt>WriteToFile <i>filename</i> {<i>str1</i>} {<i>str2</i>} etc</p>
-<dd>Write to the file <i>filename</i> the string which is the concatenation of all arguments <i>str1</i>, <i>str2</i>, etc. </p>
-<dt>Do {<i>command args</i>}</p>
-<dd>Execute the fvwm command inside the Do block. Any fvwm command as described in the fvwm2 man page can be used. Commands are sent from this module to the fvwm main program for processing. The length of the command and arguments can not exceed 988 characters. </p>
-<dt>Set $<i>var</i>={<i>str</i>1} {<i>str2</i>} etc</p>
-<dd>Concatenate all arguments to a string and set the variable $<i>var</i> to this string. </p>
-<dt>Quit: quit the program.</p>
+</dd><dt>ChangeValue <i>id1 id2</i></dt>
+<dd>Set the value of the widget numbered <i>id1</i> to <i>id2</i>. </dd>
+<dt>ChangeMaxValue <i>id1 id2</i></dt>
+<dd>Set the maximum value of the widget numbered <i>id1</i> to <i>id2</i>. </dd>
+<dt>ChangeMinValue <i>id1 id2</i></dt>
+<dd>Set the minimum value of the widget numbered <i>id1</i> to <i>id2</i>. </dd>
+<dt>ChangeTitle <i>id1 id2</i></dt>
+<dd>Set the title of the widget numbered <i>id1</i> to <i>id2</i>. </dd>
+<dt>ChangeWindowTitle <i>string</i></dt>
+<dd>Set the title of the window to <i>string</i>. </dd>
+<dt>ChangeWindowTitleFromArg <i>numarg</i></dt>
+<dd>Set the title of the window to the value of the <i>numarg</i>-th script argument. </dd>
+<dt>ChangeLocaleTitle <i>id1 id2</i></dt>
+<dd>As ChangeTitle but use the locale catalog(s) defined with UseGettext. </dd>
+<dt>ChangeIcon <i>id1 id2</i></dt>
+<dd>Set the icon of the widget numbered <i>id1</i> to <i>id2</i>. </dd>
+<dt>ChangeForeColor <i>id1</i> {<i>color</i>}</dt>
+<dd>Set the foreground color of the widget numbered <i>id1</i> to {<i>color</i>}. </dd>
+<dt>ChangeBackColor <i>id1</i> {<i>color</i>}</dt>
+<dd>Set the background color of the widget numbered <i>id1</i> to {<i>color</i>}. </dd>
+<dt>ChangeColorSet <i>id1</i> <i>id2</i></dt>
+<dd>Set the colorset of the widget numbered <i>id1</i> to <i>id2</i>. Specifying widget 0 sets the main window colorset. </dd>
+<dt>ChangePosition <i>id1 x y</i></dt>
+<dd>Move the widget numbered <i>id1</i> to position (<i>x</i>,<i>y</i>). </dd>
+<dt>ChangeSize <i>id1 width height</i></dt>
+<dd>Set the size of the widget numbered <i>id1</i> to (<i>width</i>,<i>height</i>). </dd>
+<dt>ChangeFont <i>id1 newfont</i></dt>
+<dd>Set the font of the widget numbered <i>id1</i> to <i>newfont</i>. </dd>
+<dt>WarpPointer <i>id</i></dt>
+<dd>Warp the mouse pointer into the widget numbered <i>id</i>. </dd>
+<dt>WriteToFile <i>filename</i> {<i>str1</i>} {<i>str2</i>} etc</dt>
+<dd>Write to the file <i>filename</i> the string which is the concatenation of all arguments <i>str1</i>, <i>str2</i>, etc. </dd>
+<dt>Do {<i>command args</i>}</dt>
+<dd>Execute the fvwm command inside the Do block. Any fvwm command as described in the fvwm2 man page can be used. Commands are sent from this module to the fvwm main program for processing. The length of the command and arguments can not exceed 988 characters. </dd>
+<dt>Set $<i>var</i>={<i>str</i>1} {<i>str2</i>} etc</dt>
+<dd>Concatenate all arguments to a string and set the variable $<i>var</i> to this string. </dd>
+<dt>Quit: quit the program.</dt>
 <dd>
-<dt>SendSignal <i>id1 id2</i></p>
-<dd>Send a message numbered <i>id2</i> to widget <i>id1</i>. </p>
-<dt>SendToScript <i>id_script</i> {<i>str1</i>1} {<i>str2</i>} etc</p>
-<dd>Send a message to the script identified by id_script. The message is the concatenation of str1, str2&#8230; </p>
-<dt>Key <i>Keyname</i> <i>Modifier</i> <i>id</i> <i>sig</i> <i>str1</i> <i>str2</i> etc</p>
-<dd>Binds a keyboard key to the instruction </p>
+</dd><dt>SendSignal <i>id1 id2</i></dt>
+<dd>Send a message numbered <i>id2</i> to widget <i>id1</i>. </dd>
+<dt>SendToScript <i>id_script</i> {<i>str1</i>1} {<i>str2</i>} etc</dt>
+<dd>Send a message to the script identified by id_script. The message is the concatenation of str1, str2&#8230; </dd>
+<dt>Key <i>Keyname</i> <i>Modifier</i> <i>id</i> <i>sig</i> <i>str1</i> <i>str2</i> etc</dt>
+<dd>Binds a keyboard key to the instruction </dd>
 <p> SendSignal <i>id</i> <i>sig</i> </p>
 <p> and sets the &quot;last string&quot; to the concatenation of str1, str2&#8230; (see the LastString function). The <i>Keyname</i> and <i>Modifiers</i> fields are defined as in the fvwm Key command. </p>
 </dl>
@@ -260,60 +260,60 @@ Property
 <pre>(function argument1 argument2 etc)</pre>
 <p>Here is the complete list of arguments: </p>
 <dl>
-<dt>(GetTitle <i>id</i>)</p>
-<dd>Return the title of the widget numbered <i>id</i>. </p>
-<dt>(GetValue <i>id</i>)</p>
-<dd>Return the current value of the widget numbered <i>id</i>. </p>
-<dt>(GetMinValue <i>id</i>)</p>
-<dd>Return the current Min value of the widget numbered <i>id</i>. </p>
-<dt>(GetMaxValue <i>id</i>)</p>
-<dd>Return the current Max value of the widget numbered <i>id</i>. </p>
-<dt>(GetFore <i>id</i>)</p>
-<dd>Return the current RGB foreground value of the widget numbered <i>id</i> in the hex format RRGGBB. </p>
-<dt>(GetBack <i>id</i>)</p>
-<dd>Return the current RGB background value of the widget numbered <i>id</i> in the hex format RRGGBB. </p>
-<dt>(GetHilight <i>id</i>)</p>
-<dd>Return the current RGB hilight value of the widget numbered <i>id</i> in the hex format RRGGBB. </p>
-<dt>(GetShadow <i>id</i>)</p>
-<dd>Return the current RGB shadow value of the widget numbered <i>id</i> in the hex format RRGGBB. </p>
-<dt>(GetOutput {<i>str</i>} <i>int1 int2</i>)</p>
-<dd>Executes the command <i>str</i>, gets the standard output and returns the word which is in the line <i>int1</i> and in the position <i>int2</i>. If <i>int2</i> is equal to -1, GetOutput returns the complete line. </p>
-<dt>(NumToHex <i>int</i>)</p>
-<dd>Return the hexadecimal value of <i>int</i>. </p>
-<dt>(HexToNum {<i>str</i>})</p>
-<dd>Return the decimal value of <i>str</i>, <i>str</i> must be an hexadecimal value. </p>
-<dt>(Add <i>int1 int2</i>)</p>
-<dd>Return the result of (<i>int1</i>+<i>int2</i>). </p>
-<dt>(Mult <i>int1 int2</i>)</p>
-<dd>Return the result of (<i>int1</i>*<i>int2</i>). </p>
-<dt>(Div <i>int1 int2</i>)</p>
-<dd>Return the result of (<i>int1</i>/<i>int2</i>). </p>
-<dt>(StrCopy {<i>str</i>} <i>int1 int2</i>)</p>
-<dd>Return the string whom is between position int1 and int2. For example, (StrCopy {Hello} 1 2) returns {He} </p>
-<dt>(LaunchScript {<i>str</i>})</p>
-<dd>This function launches the script named str and returns an identification number. This number is necessary to use the functions SendToScript and ReceiveFromScript. The string str contains the script name and some arguments. </p>
-<dt>(GetScriptArgument {<i>int</i>})</p>
-<dd>This function returns the argument script used in the function LaunchScript. If int is equal to zero, GetScriptArgument returns the name of the script. </p>
-<dt>(GetScriptFather)</p>
-<dd>This function returns the identification number of the script father. </p>
-<dt>(ReceivFromScript {<i>int</i>})</p>
-<dd>This function returns the message sent by the script numbered int. </p>
-<dt>(RemainderOfDiv {<i>int1 int2</i>}): t</p>
-<dd>This function returns the remainder of the division (<i>int1</i>/<i>int2</i>). </p>
-<dt>(GetTime)</p>
-<dd>This function returns the time in seconds. </p>
-<dt>(GetPid)</p>
-<dd>This function returns the process id of the script. </p>
-<dt>(Gettext {<i>str</i>})</p>
-<dd>This function return the translation of <i>str</i> by using the locale catalog(s) defined with UseGettext. </p>
-<dt>(SendMsgAndGet {<i>comId</i>} {<i>cmd</i>} <i>bool</i>)</p>
-<dd>Sends the command <i>cmd</i> with identifier <i>comId</i> to an external program ready to communicate with the script using a protocol specific to FvwmScript. If <i>bool</i> is 0 FvwmScript does not wait for an answer from the external program. In this case the returned value is 1 if the message can be sent to the external program and 0 if this is not the case. If <i>bool</i> is 1, then FvwmScript waits for an answer from the external program and the return value is this answer (a line of no more than 32000 characters). If the communication fails, the returned value is 0. See the section <code>A COMMUNICATION PROTOCOL</code> for a description of the communication protocol used. </p>
-<dt>(Parse {<i>str</i>} <i>int</i>)</p>
-<dd>where <i>str</i> must be a string of the form: </p>
+<dt>(GetTitle <i>id</i>)</dt>
+<dd>Return the title of the widget numbered <i>id</i>. </dd>
+<dt>(GetValue <i>id</i>)</dt>
+<dd>Return the current value of the widget numbered <i>id</i>. </dd>
+<dt>(GetMinValue <i>id</i>)</dt>
+<dd>Return the current Min value of the widget numbered <i>id</i>. </dd>
+<dt>(GetMaxValue <i>id</i>)</dt>
+<dd>Return the current Max value of the widget numbered <i>id</i>. </dd>
+<dt>(GetFore <i>id</i>)</dt>
+<dd>Return the current RGB foreground value of the widget numbered <i>id</i> in the hex format RRGGBB. </dd>
+<dt>(GetBack <i>id</i>)</dt>
+<dd>Return the current RGB background value of the widget numbered <i>id</i> in the hex format RRGGBB. </dd>
+<dt>(GetHilight <i>id</i>)</dt>
+<dd>Return the current RGB hilight value of the widget numbered <i>id</i> in the hex format RRGGBB. </dd>
+<dt>(GetShadow <i>id</i>)</dt>
+<dd>Return the current RGB shadow value of the widget numbered <i>id</i> in the hex format RRGGBB. </dd>
+<dt>(GetOutput {<i>str</i>} <i>int1 int2</i>)</dt>
+<dd>Executes the command <i>str</i>, gets the standard output and returns the word which is in the line <i>int1</i> and in the position <i>int2</i>. If <i>int2</i> is equal to -1, GetOutput returns the complete line. </dd>
+<dt>(NumToHex <i>int</i>)</dt>
+<dd>Return the hexadecimal value of <i>int</i>. </dd>
+<dt>(HexToNum {<i>str</i>})</dt>
+<dd>Return the decimal value of <i>str</i>, <i>str</i> must be an hexadecimal value. </dd>
+<dt>(Add <i>int1 int2</i>)</dt>
+<dd>Return the result of (<i>int1</i>+<i>int2</i>). </dd>
+<dt>(Mult <i>int1 int2</i>)</dt>
+<dd>Return the result of (<i>int1</i>*<i>int2</i>). </dd>
+<dt>(Div <i>int1 int2</i>)</dt>
+<dd>Return the result of (<i>int1</i>/<i>int2</i>). </dd>
+<dt>(StrCopy {<i>str</i>} <i>int1 int2</i>)</dt>
+<dd>Return the string whom is between position int1 and int2. For example, (StrCopy {Hello} 1 2) returns {He} </dd>
+<dt>(LaunchScript {<i>str</i>})</dt>
+<dd>This function launches the script named str and returns an identification number. This number is necessary to use the functions SendToScript and ReceiveFromScript. The string str contains the script name and some arguments. </dd>
+<dt>(GetScriptArgument {<i>int</i>})</dt>
+<dd>This function returns the argument script used in the function LaunchScript. If int is equal to zero, GetScriptArgument returns the name of the script. </dd>
+<dt>(GetScriptFather)</dt>
+<dd>This function returns the identification number of the script father. </dd>
+<dt>(ReceivFromScript {<i>int</i>})</dt>
+<dd>This function returns the message sent by the script numbered int. </dd>
+<dt>(RemainderOfDiv {<i>int1 int2</i>}): t</dt>
+<dd>This function returns the remainder of the division (<i>int1</i>/<i>int2</i>). </dd>
+<dt>(GetTime)</dt>
+<dd>This function returns the time in seconds. </dd>
+<dt>(GetPid)</dt>
+<dd>This function returns the process id of the script. </dd>
+<dt>(Gettext {<i>str</i>})</dt>
+<dd>This function return the translation of <i>str</i> by using the locale catalog(s) defined with UseGettext. </dd>
+<dt>(SendMsgAndGet {<i>comId</i>} {<i>cmd</i>} <i>bool</i>)</dt>
+<dd>Sends the command <i>cmd</i> with identifier <i>comId</i> to an external program ready to communicate with the script using a protocol specific to FvwmScript. If <i>bool</i> is 0 FvwmScript does not wait for an answer from the external program. In this case the returned value is 1 if the message can be sent to the external program and 0 if this is not the case. If <i>bool</i> is 1, then FvwmScript waits for an answer from the external program and the return value is this answer (a line of no more than 32000 characters). If the communication fails, the returned value is 0. See the section <code>A COMMUNICATION PROTOCOL</code> for a description of the communication protocol used. </dd>
+<dt>(Parse {<i>str</i>} <i>int</i>)</dt>
+<dd>where <i>str</i> must be a string of the form: </dd>
 <pre> X1S1X2S2X3S3...SnXn</pre>
 <p>where the Xn are numbers containing four decimal digits and where Sn are strings of length exactly Xn. The returned value is the string S<i>int</i>. If <i>int</i> is out of range (e.g., &gt;n) the returned value is the empty string. If <i>str</i> is not of the specified form, the return value is unpredictable (but empty in the average). This function is useful to handle strings returned by the SendMsgAndGet function. </p>
-<dt>(LastString)</p>
-<dd>This function returns the &quot;current working string&quot; for the Key instruction and the SendString command (see the <code>COMMANDS</code> section). At startup this string is empty, but when a Key binding is detected (respectively, a SendString command is received), then this string is set to the string associated to the instruction (respectively, to the command). </p>
+<dt>(LastString)</dt>
+<dd>This function returns the &quot;current working string&quot; for the Key instruction and the SendString command (see the <code>COMMANDS</code> section). At startup this string is empty, but when a Key binding is detected (respectively, a SendString command is received), then this string is set to the string associated to the instruction (respectively, to the command). </dd>
 </dl>
 <h2>Conditional Loops</h2>
 <p>There are three kinds of conditional loops. The instruction &quot;If-Then-Else&quot; has the following syntax: </p>

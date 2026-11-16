@@ -21,81 +21,81 @@ description: "S-nail [v14.9.23] – send and receive Internet mail"
 <p> S-nail provides a simple and friendly environment for sending and receiving mail. It is intended to provide the functionality of the POSIX <a href="/docs/linux/man/1-mailx/">mailx</a>(1) command, but is MIME capable and optionally offers extensions for line editing, S/MIME, SMTP and POP3, among others. S-nail divides incoming mail into its constituent messages and allows the user to deal with them in any order. It offers many Sx COMMANDS and Sx INTERNAL VARIABLES for manipulating messages and sending mail. It provides the user simple editing capabilities to ease the composition of outgoing messages, and increasingly powerful and reliable non-interactive scripting capabilities.</p>
 <h3>Options</h3>
 <dl>
-<dt><code>-: </code><i>spec , &#8211;</i><code>-resource-files =..</code></p>
-<dd> Controls loading of (as via <code>source</code> Sx Resource files : <i>spec</i> is parsed case-insensitively, the letter `s&#8217; corresponds to the system wide s-nail.rc `u&#8217; the user&#8217;s personal file ~/.mailrc The (original) system wide resource is also compiled-in, accessible via `x&#8217; The letters `-&#8216; and `/&#8217; disable usage of resource files. Order matters, default is `su&#8217; This option overrides &#8211;<code>n</code></p>
-<dt><code>-A </code><i>name , &#8211;</i><code>-account =..</code></p>
-<dd> Activate user <code>account</code> <i>name</i> after program startup is complete (resource files loaded, only &#8211;<code>X</code> commands are to be executed), and switch to its Sx primary system mailbox (most likely the <i>inbox )</i> If activation fails the program e <code>xit s if used non-interactively, or if any of</code> <i>errexit</i> or <i>posix</i> are set.</p>
-<dt><code>-a </code><i>file </i>[<i>=input-charset </i>[<i>#output-charset </i>] ]</p>
+<dt><code>-: </code><i>spec , &#8211;</i><code>-resource-files =..</code></dt>
+<dd> Controls loading of (as via <code>source</code> Sx Resource files : <i>spec</i> is parsed case-insensitively, the letter `s&#8217; corresponds to the system wide s-nail.rc `u&#8217; the user&#8217;s personal file ~/.mailrc The (original) system wide resource is also compiled-in, accessible via `x&#8217; The letters `-&#8216; and `/&#8217; disable usage of resource files. Order matters, default is `su&#8217; This option overrides &#8211;<code>n</code></dd>
+<dt><code>-A </code><i>name , &#8211;</i><code>-account =..</code></dt>
+<dd> Activate user <code>account</code> <i>name</i> after program startup is complete (resource files loaded, only &#8211;<code>X</code> commands are to be executed), and switch to its Sx primary system mailbox (most likely the <i>inbox )</i> If activation fails the program e <code>xit s if used non-interactively, or if any of</code> <i>errexit</i> or <i>posix</i> are set.</dd>
+<dt><code>-a </code><i>file </i>[<i>=input-charset </i>[<i>#output-charset </i>] ]</dt>
 <dd>
-&nbsp;<wbr>&nbsp;Fl Fl attach Ns&nbsp;=.. (Send mode) Attach <i>file</i> For (Compose mode) opportunities refer to <code>~@</code> and <code>~^</code> <i>file</i> is subject to tilde expansion (see Sx Filename transformations and <code>folder )</code> if it is not accessible but contains a `=&#8217; character, anything before the last `=&#8217; will be used as the filename, anything thereafter as a character set specification, as shown. </p>
+&nbsp;<wbr>&nbsp;Fl Fl attach Ns&nbsp;=.. (Send mode) Attach <i>file</i> For (Compose mode) opportunities refer to <code>~@</code> and <code>~^</code> <i>file</i> is subject to tilde expansion (see Sx Filename transformations and <code>folder )</code> if it is not accessible but contains a `=&#8217; character, anything before the last `=&#8217; will be used as the filename, anything thereafter as a character set specification, as shown. </dd>
 <p> If only an input character set is specified, the input side is fixed, and no character set conversion will be applied; an empty or the special string hyphen-minus `-&#8216; is taken for <i>ttycharset</i> (the default). If an output character set has also been specified the desired conversion is performed immediately, not considering file type and content, except for an empty string or hyphen-minus `-&#8216; , which select the default conversion algorithm (see Sx Character sets ) : no immediate conversion is performed, <i>file</i> and its contents will be MIME-classified ( Sx HTML mail and MIME attachments , The mime.types files) first &#8212; only the latter mode is available unless <i>features</i> includes `,+iconv,&#8217;</p>
-<dt><code>-B</code></p>
-<dd> ([Obsolete]: S-nail will always use line-buffered output, to gain line-buffered input even in batch mode enable batch mode via &#8211;<code># .</code></p>
-<dt><code>-b </code><i>addr , &#8211;</i><code>-bcc =..</code></p>
-<dd> (Send mode) Send a blind carbon copy to recipient <i>addr</i> The option may be used multiple times. Also see the section Sx On sending mail, and non-interactive mode .</p>
-<dt><code>-C </code><i>field: body , &#8211;</i><code>-custom-header =..</code></p>
-<dd> Create a custom header which persists for an entire session. A custom header consists of the field name followed by a colon `:&#8217; and the field content body, for example `-C&#8217; Blah: Neminem laede; imo omnes, quantum potes, juva . Standard header field names cannot be overwritten by custom headers. Runtime adjustable custom headers are available via the variable <i>customhdr</i> and in (Compose mode) <code>~^</code> one of the Sx COMMAND ESCAPES , as well as <code>digmsg</code> are the most flexible and powerful options to manage message headers. This option may be used multiple times.</p>
-<dt><code>-c </code><i>addr , &#8211;</i><code>-cc =..</code></p>
-<dd> (Send mode) Just like &#8211;<code>b</code> except it places the argument in the list of carbon copies.</p>
-<dt><code>-D , &#8211;disconnected</code></p>
-<dd> [Option] Startup with <i>disconnected</i> <code>set</code></p>
-<dt><code>-d , &#8211;debug</code></p>
-<dd> Enter a debug-only sandbox mode by setting the internal variable <i>debug</i> the same can be achieved via `-<code>S</code> &#8216; Va debug or `<code>set</code> &#8216; Va debug . Also see &#8211;<code>v</code></p>
-<dt><code>-E , &#8211;discard-empty-messages</code></p>
-<dd> (Send mode) <code>set</code> <i>skipemptybody</i> and thus discard messages with an empty message part body, successfully.</p>
-<dt><code>-e , &#8211;check-and-exit</code></p>
-<dd> Just check if mail is present (in the system <i>inbox</i> or the one specified via &#8211;<code>f )</code> if yes, return an exit status of zero, a non-zero value otherwise. To restrict the set of mails to consider in this evaluation a message specification can be added with the option &#8211;<code>L</code> Quickrun: does not open an interactive session.</p>
-<dt><code>-F</code></p>
-<dd> (Send mode) Save the message to send in a file named after the local part of the first recipient&#8217;s address (instead of in <i>record </i><code>).</code></p>
-<dt><code>-f , &#8211;file</code></p>
-<dd> Read in the contents of the user&#8217;s Sx secondary mailbox <code>MBOX</code> (or the specified file) for processing; when S-nail is quit, it writes undeleted messages back to this file (but be aware of the <i>hold</i> option). The optional <i>file</i> argument will undergo some special Sx Filename transformations (as via <code>folder )</code> Note that <i>file</i> is not an argument to the flag &#8211;<code>f</code> but is instead taken from the command line after option processing has been completed. In order to use a <i>file</i> that starts with a hyphen-minus, prefix with a relative path, as in `./-hyphenbox.mbox&#8217;</p>
-<dt><code>-H , &#8211;header-summary</code></p>
-<dd> Display a summary of <code>headers</code> for the given <code>folder</code> (depending on &#8211;<code>u</code> <i>inbox</i> or <code>MAIL</code> or as specified via &#8211;<code>f )</code> then exit. A configurable summary view is available via the option &#8211;<code>L</code> This mode does not honour <i>showlast</i> Quickrun: does not open an interactive session.</p>
-<dt><code>-h , &#8211;help</code></p>
-<dd> Show a brief usage summary; use &#8211;<code>-long-help</code> for a list long options.</p>
-<dt><code>-i</code></p>
-<dd> <code>set</code> <i>ignore</i> to ignore tty interrupt signals.</p>
-<dt><code>-L </code><i>spec , &#8211;</i><code>-search =..</code></p>
-<dd> Display a summary of <code>headers</code> of all messages that match the given <i>spec</i> in the <code>folder</code> found by the same algorithm used by &#8211;<code>H</code> then exit. See the section Sx Specifying messages for the format of <i>spec</i> This mode does not honour <i>showlast</i> </p>
+<dt><code>-B</code></dt>
+<dd> ([Obsolete]: S-nail will always use line-buffered output, to gain line-buffered input even in batch mode enable batch mode via &#8211;<code># .</code></dd>
+<dt><code>-b </code><i>addr , &#8211;</i><code>-bcc =..</code></dt>
+<dd> (Send mode) Send a blind carbon copy to recipient <i>addr</i> The option may be used multiple times. Also see the section Sx On sending mail, and non-interactive mode .</dd>
+<dt><code>-C </code><i>field: body , &#8211;</i><code>-custom-header =..</code></dt>
+<dd> Create a custom header which persists for an entire session. A custom header consists of the field name followed by a colon `:&#8217; and the field content body, for example `-C&#8217; Blah: Neminem laede; imo omnes, quantum potes, juva . Standard header field names cannot be overwritten by custom headers. Runtime adjustable custom headers are available via the variable <i>customhdr</i> and in (Compose mode) <code>~^</code> one of the Sx COMMAND ESCAPES , as well as <code>digmsg</code> are the most flexible and powerful options to manage message headers. This option may be used multiple times.</dd>
+<dt><code>-c </code><i>addr , &#8211;</i><code>-cc =..</code></dt>
+<dd> (Send mode) Just like &#8211;<code>b</code> except it places the argument in the list of carbon copies.</dd>
+<dt><code>-D , &#8211;disconnected</code></dt>
+<dd> [Option] Startup with <i>disconnected</i> <code>set</code></dd>
+<dt><code>-d , &#8211;debug</code></dt>
+<dd> Enter a debug-only sandbox mode by setting the internal variable <i>debug</i> the same can be achieved via `-<code>S</code> &#8216; Va debug or `<code>set</code> &#8216; Va debug . Also see &#8211;<code>v</code></dd>
+<dt><code>-E , &#8211;discard-empty-messages</code></dt>
+<dd> (Send mode) <code>set</code> <i>skipemptybody</i> and thus discard messages with an empty message part body, successfully.</dd>
+<dt><code>-e , &#8211;check-and-exit</code></dt>
+<dd> Just check if mail is present (in the system <i>inbox</i> or the one specified via &#8211;<code>f )</code> if yes, return an exit status of zero, a non-zero value otherwise. To restrict the set of mails to consider in this evaluation a message specification can be added with the option &#8211;<code>L</code> Quickrun: does not open an interactive session.</dd>
+<dt><code>-F</code></dt>
+<dd> (Send mode) Save the message to send in a file named after the local part of the first recipient&#8217;s address (instead of in <i>record </i><code>).</code></dd>
+<dt><code>-f , &#8211;file</code></dt>
+<dd> Read in the contents of the user&#8217;s Sx secondary mailbox <code>MBOX</code> (or the specified file) for processing; when S-nail is quit, it writes undeleted messages back to this file (but be aware of the <i>hold</i> option). The optional <i>file</i> argument will undergo some special Sx Filename transformations (as via <code>folder )</code> Note that <i>file</i> is not an argument to the flag &#8211;<code>f</code> but is instead taken from the command line after option processing has been completed. In order to use a <i>file</i> that starts with a hyphen-minus, prefix with a relative path, as in `./-hyphenbox.mbox&#8217;</dd>
+<dt><code>-H , &#8211;header-summary</code></dt>
+<dd> Display a summary of <code>headers</code> for the given <code>folder</code> (depending on &#8211;<code>u</code> <i>inbox</i> or <code>MAIL</code> or as specified via &#8211;<code>f )</code> then exit. A configurable summary view is available via the option &#8211;<code>L</code> This mode does not honour <i>showlast</i> Quickrun: does not open an interactive session.</dd>
+<dt><code>-h , &#8211;help</code></dt>
+<dd> Show a brief usage summary; use &#8211;<code>-long-help</code> for a list long options.</dd>
+<dt><code>-i</code></dt>
+<dd> <code>set</code> <i>ignore</i> to ignore tty interrupt signals.</dd>
+<dt><code>-L </code><i>spec , &#8211;</i><code>-search =..</code></dt>
+<dd> Display a summary of <code>headers</code> of all messages that match the given <i>spec</i> in the <code>folder</code> found by the same algorithm used by &#8211;<code>H</code> then exit. See the section Sx Specifying messages for the format of <i>spec</i> This mode does not honour <i>showlast</i> </dd>
 <p> If the &#8211;<code>e</code> option has been given in addition no header summary is produced, but S-nail will instead indicate via its exit status whether <i>spec</i> matched any messages ( `0&#8242; or not ( `1&#8242; ); note that any verbose output is suppressed in this mode and must instead be enabled explicitly (see &#8211;<code>v )</code> Quickrun: does not open an interactive session.</p>
-<dt><code>-M </code><i>type</i></p>
-<dd> (Send mode) Will flag standard input with the MIME `Content-Type:&#8217; set to the given known <i>type</i> ( Sx HTML mail and MIME attachments , The mime.types files and use it as the main message body. [v15 behaviour may differ] Using this option will bypass processing of <i>message-inject-head</i> and <i>message-inject-tail</i> Also see &#8211;<code>q , m , t</code></p>
-<dt><code>-m </code><i>file</i></p>
-<dd> (Send mode) MIME classify the specified <i>file</i> and use it as the main message body. [v15 behaviour may differ] Using this option will bypass processing of <i>message-inject-head</i> and <i>message-inject-tail</i> Also see &#8211;<code>q , M , t</code></p>
-<dt><code>-N , &#8211;no-header-summary</code></p>
-<dd> inhibit the initial display of message headers when reading mail or editing a mailbox <code>folder</code> by calling <code>unset</code> for the internal variable <i>header</i></p>
-<dt><code>-n</code></p>
-<dd> Standard flag that inhibits reading the system wide s-nail.rc upon startup. The option &#8211;<code>:</code> allows more control over the startup sequence; also see Sx Resource files .</p>
-<dt><code>-q </code><i>file , &#8211;</i><code>-quote-file =..</code></p>
-<dd> (Send mode) Initialize the message body with the contents of <i>file</i> which may be standard input `-&#8216; only in non-interactive context. Also see &#8211;<code>M , m , t</code></p>
-<dt><code>-R , &#8211;read-only</code></p>
-<dd> Any mailbox <code>folder</code> aka <code>folder</code> opened will be in read-only mode.</p>
-<dt><code>-r </code><i>from-addr , &#8211;</i><code>-from-address =..</code></p>
-<dd> The RFC 5321 reverse-path used for relaying and delegating messages to its destination(s), for example to report delivery errors, is normally derived from the address which appears in the <i>from</i> header (or, if that contains multiple addresses, in <i>sender )</i> A file-based aka local executable <i>mta</i> (Mail-Transfer-Agent), however, instead uses the local identity of the initiating user. </p>
+<dt><code>-M </code><i>type</i></dt>
+<dd> (Send mode) Will flag standard input with the MIME `Content-Type:&#8217; set to the given known <i>type</i> ( Sx HTML mail and MIME attachments , The mime.types files and use it as the main message body. [v15 behaviour may differ] Using this option will bypass processing of <i>message-inject-head</i> and <i>message-inject-tail</i> Also see &#8211;<code>q , m , t</code></dd>
+<dt><code>-m </code><i>file</i></dt>
+<dd> (Send mode) MIME classify the specified <i>file</i> and use it as the main message body. [v15 behaviour may differ] Using this option will bypass processing of <i>message-inject-head</i> and <i>message-inject-tail</i> Also see &#8211;<code>q , M , t</code></dd>
+<dt><code>-N , &#8211;no-header-summary</code></dt>
+<dd> inhibit the initial display of message headers when reading mail or editing a mailbox <code>folder</code> by calling <code>unset</code> for the internal variable <i>header</i></dd>
+<dt><code>-n</code></dt>
+<dd> Standard flag that inhibits reading the system wide s-nail.rc upon startup. The option &#8211;<code>:</code> allows more control over the startup sequence; also see Sx Resource files .</dd>
+<dt><code>-q </code><i>file , &#8211;</i><code>-quote-file =..</code></dt>
+<dd> (Send mode) Initialize the message body with the contents of <i>file</i> which may be standard input `-&#8216; only in non-interactive context. Also see &#8211;<code>M , m , t</code></dd>
+<dt><code>-R , &#8211;read-only</code></dt>
+<dd> Any mailbox <code>folder</code> aka <code>folder</code> opened will be in read-only mode.</dd>
+<dt><code>-r </code><i>from-addr , &#8211;</i><code>-from-address =..</code></dt>
+<dd> The RFC 5321 reverse-path used for relaying and delegating messages to its destination(s), for example to report delivery errors, is normally derived from the address which appears in the <i>from</i> header (or, if that contains multiple addresses, in <i>sender )</i> A file-based aka local executable <i>mta</i> (Mail-Transfer-Agent), however, instead uses the local identity of the initiating user. </dd>
 <p> When this command line option is used the given single addressee <i>from-addr</i> will be assigned to the internal variable <i>from</i> but in addition the command line option &#8211;<code>f </code><i>from-addr</i> will be passed to a file-based <i>mta</i> whenever a message is sent. Shall <i>from-addr</i> include a user name the address components will be separated and the name part will be passed to a file-based <i>mta</i> individually via &#8211;<code>F </code><i>name</i> Even though not a recipient the `shquote&#8217; <i>expandaddr</i> flag is supported. </p>
 <p> If an empty string is passed as <i>from-addr</i> then the content of the variable <i>from</i> (or, if that contains multiple addresses, <i>sender</i> will be evaluated and used for this purpose whenever the file-based <i>mta</i> is contacted. By default, without &#8211;<code>r</code> that is, neither &#8211;<code>f</code> nor &#8211;<code>F</code> command line options are used when contacting a file-based MTA, unless this automatic deduction is enforced by <code>set ting the internal variable</code> <i>r-option-implicit</i> </p>
 <p> Remarks: many default installations and sites disallow overriding the local user identity like this unless either the MTA has been configured accordingly or the user is member of a group with special privileges. Passing an invalid address will cause an error.</p>
-<dt><code>-S </code><i>var </i>[= <code>value , &#8211;set =..</code> ]</p>
-<dd> <code>set</code> (or, with a prefix string `no&#8217; , as documented in Sx INTERNAL VARIABLES , <code>unset</code> <i>var </i><code>iable and optionally assign</code> <i>value</i> if supported; [v15 behaviour may differ] the entire expression is evaluated as if specified within dollar-single-quotes (see Sx Shell-style argument quoting ) if the internal variable <i>v15-compat</i> is set. If the operation fails the program will exit if any of <i>errexit</i> or <i>posix</i> are set. Settings established via &#8211;<code>S</code> cannot be changed from within Sx Resource files or an account switch initiated by &#8211;<code>A</code> They will become mutable again before commands registered via &#8211;<code>X</code> are executed.</p>
-<dt><code>-s </code><i>subject , &#8211;</i><code>-subject =..</code></p>
-<dd> (Send mode) Specify the subject of the message to be sent. Newline (NL) and carriage-return (CR) bytes are invalid and will be normalized to space (SP) characters.</p>
-<dt><code>-T </code><i>field: addr , &#8211;</i><code>-target =..</code></p>
-<dd> (Send mode) Add <i>addr</i> to the list of receivers targeted by <i>field</i> for now supported are only `bcc&#8217; , `cc&#8217; , `fcc&#8217; , and `to&#8217; Field and body (address) are separated by a colon `:&#8217; and optionally blank (space, tabulator) characters. The `shquote&#8217; <i>expandaddr</i> flag is supported. <i>addr</i> is parsed like a message header address line, as if it would be part of a template message fed in via &#8211;<code>t</code> and the same modifier suffix is supported. This option may be used multiple times.</p>
-<dt><code>-t , &#8211;template</code></p>
-<dd> (Send mode) The text message given (on standard input) is expected to contain, separated from the message body by an empty line, one or multiple plain text message headers. [v15 behaviour may differ] Readily prepared MIME mail messages cannot be passed. Headers can span multiple consecutive lines if follow lines start with any amount of whitespace. A line starting with the number sign `#&#8217; in the first column is ignored. Message recipients can be given via the message headers `To:&#8217; , `Cc:&#8217; , `Bcc:&#8217; (the `?single&#8217; modifier enforces treatment as a single addressee, for example `To?single:&#8217; exa, &lt;m@ple&gt; ) or `Fcc:&#8217; , they will be added to any recipients specified on the command line, and are likewise subject to <i>expandaddr</i> validity checks. If a message subject is specified via `Subject:&#8217; then it will be used in favour of one given on the command line. </p>
+<dt><code>-S </code><i>var </i>[= <code>value , &#8211;set =..</code> ]</dt>
+<dd> <code>set</code> (or, with a prefix string `no&#8217; , as documented in Sx INTERNAL VARIABLES , <code>unset</code> <i>var </i><code>iable and optionally assign</code> <i>value</i> if supported; [v15 behaviour may differ] the entire expression is evaluated as if specified within dollar-single-quotes (see Sx Shell-style argument quoting ) if the internal variable <i>v15-compat</i> is set. If the operation fails the program will exit if any of <i>errexit</i> or <i>posix</i> are set. Settings established via &#8211;<code>S</code> cannot be changed from within Sx Resource files or an account switch initiated by &#8211;<code>A</code> They will become mutable again before commands registered via &#8211;<code>X</code> are executed.</dd>
+<dt><code>-s </code><i>subject , &#8211;</i><code>-subject =..</code></dt>
+<dd> (Send mode) Specify the subject of the message to be sent. Newline (NL) and carriage-return (CR) bytes are invalid and will be normalized to space (SP) characters.</dd>
+<dt><code>-T </code><i>field: addr , &#8211;</i><code>-target =..</code></dt>
+<dd> (Send mode) Add <i>addr</i> to the list of receivers targeted by <i>field</i> for now supported are only `bcc&#8217; , `cc&#8217; , `fcc&#8217; , and `to&#8217; Field and body (address) are separated by a colon `:&#8217; and optionally blank (space, tabulator) characters. The `shquote&#8217; <i>expandaddr</i> flag is supported. <i>addr</i> is parsed like a message header address line, as if it would be part of a template message fed in via &#8211;<code>t</code> and the same modifier suffix is supported. This option may be used multiple times.</dd>
+<dt><code>-t , &#8211;template</code></dt>
+<dd> (Send mode) The text message given (on standard input) is expected to contain, separated from the message body by an empty line, one or multiple plain text message headers. [v15 behaviour may differ] Readily prepared MIME mail messages cannot be passed. Headers can span multiple consecutive lines if follow lines start with any amount of whitespace. A line starting with the number sign `#&#8217; in the first column is ignored. Message recipients can be given via the message headers `To:&#8217; , `Cc:&#8217; , `Bcc:&#8217; (the `?single&#8217; modifier enforces treatment as a single addressee, for example `To?single:&#8217; exa, &lt;m@ple&gt; ) or `Fcc:&#8217; , they will be added to any recipients specified on the command line, and are likewise subject to <i>expandaddr</i> validity checks. If a message subject is specified via `Subject:&#8217; then it will be used in favour of one given on the command line. </dd>
 <p> More optional headers are `Reply-To:&#8217; (possibly overriding <i>reply-to )</i> `Sender:&#8217; ( <i>sender</i> `From:&#8217; ( <i>from</i> and / or option &#8211;<code>r )</code> `Message-ID:&#8217; , `In-Reply-To:&#8217; , `References:&#8217; and `Mail-Followup-To:&#8217; , by default created automatically dependent on message context, will be used if specified (a special address massage will however still occur for the latter). Any other custom header field (also see &#8211;<code>C</code> <i>customhdr</i> and <code>~^</code> is passed through entirely unchanged, and in conjunction with the options &#8211;<code>~</code> or &#8211;<code>#</code> it is possible to embed Sx COMMAND ESCAPES . Also see &#8211;<code>M , m , q</code></p>
-<dt><code>-u </code><i>user , &#8211;</i><code>-inbox-of =..</code></p>
-<dd> Initially read the Sx primary system mailbox of <i>user</i> appropriate privileges presumed; effectively identical to `-<code>f</code> &#8216; Ns &nbsp;%user .</p>
-<dt><code>-V , &#8211;version</code></p>
-<dd> Show S-nails <i>version</i> and exit. The command <code>version</code> will also show the list of <i>features</i> `$&#8217; s-nail -:/ -Xversion -Xx .</p>
-<dt><code>-v , &#8211;verbose</code></p>
-<dd> <code>set s the internal variable</code> <i>verbose</i> to enable logging of informational context messages. (Increases level of verbosity when used multiple times.) Also see &#8211;<code>d</code></p>
-<dt><code>-X </code><i>cmd , &#8211;</i><code>-startup-cmd =..</code></p>
-<dd> Add the given (or multiple for a multiline argument) <i>cmd</i> to a list of commands to be executed before normal operation starts. The commands will be evaluated as a unit, just as via <code>source</code> Correlates with &#8211;<code>#</code> and <i>errexit</i></p>
-<dt><code>-Y </code><i>cmd , &#8211;</i><code>-cmd =..</code></p>
-<dd> Add the given (or multiple for a multiline argument) <i>cmd</i> to a list of commands to be executed after normal operation has started. The commands will be evaluated successively in the given order, and as if given on the program&#8217;s standard input &#8212; before interactive prompting begins in interactive mode, after standard input has been consumed otherwise.</p>
-<dt><code>-~ , &#8211;enable-cmd-escapes</code></p>
-<dd> Enable Sx COMMAND ESCAPES in (Compose mode) even in non-interactive use cases. This can for example be used to automatically format the composed message text before sending the message: </p>
+<dt><code>-u </code><i>user , &#8211;</i><code>-inbox-of =..</code></dt>
+<dd> Initially read the Sx primary system mailbox of <i>user</i> appropriate privileges presumed; effectively identical to `-<code>f</code> &#8216; Ns &nbsp;%user .</dd>
+<dt><code>-V , &#8211;version</code></dt>
+<dd> Show S-nails <i>version</i> and exit. The command <code>version</code> will also show the list of <i>features</i> `$&#8217; s-nail -:/ -Xversion -Xx .</dd>
+<dt><code>-v , &#8211;verbose</code></dt>
+<dd> <code>set s the internal variable</code> <i>verbose</i> to enable logging of informational context messages. (Increases level of verbosity when used multiple times.) Also see &#8211;<code>d</code></dd>
+<dt><code>-X </code><i>cmd , &#8211;</i><code>-startup-cmd =..</code></dt>
+<dd> Add the given (or multiple for a multiline argument) <i>cmd</i> to a list of commands to be executed before normal operation starts. The commands will be evaluated as a unit, just as via <code>source</code> Correlates with &#8211;<code>#</code> and <i>errexit</i></dd>
+<dt><code>-Y </code><i>cmd , &#8211;</i><code>-cmd =..</code></dt>
+<dd> Add the given (or multiple for a multiline argument) <i>cmd</i> to a list of commands to be executed after normal operation has started. The commands will be evaluated successively in the given order, and as if given on the program&#8217;s standard input &#8212; before interactive prompting begins in interactive mode, after standard input has been consumed otherwise.</dd>
+<dt><code>-~ , &#8211;enable-cmd-escapes</code></dt>
+<dd> Enable Sx COMMAND ESCAPES in (Compose mode) even in non-interactive use cases. This can for example be used to automatically format the composed message text before sending the message: </dd>
 <blockquote>
 <pre>
 $ ( echo 'line    one. Word.     Word2.';\
@@ -103,8 +103,8 @@ $ ( echo 'line    one. Word.     Word2.';\
   LC_ALL=C s-nail -d~:/ -Sttycharset=utf-8 bob [at] exam.ple
 </pre>
 </blockquote>
-<dt><code>-# , &#8211;batch-mode</code></p>
-<dd> Enables batch mode: standard input is made line buffered, the complete set of (interactive) commands is available, processing of Sx COMMAND ESCAPES is enabled in Sx Compose mode , and diverse Sx INTERNAL VARIABLES are adjusted for batch necessities, exactly as if done via &#8211;<code>S</code> <i>emptystart</i> no <i>errexit</i> no <i>header</i> no <i>posix</i> <i>quiet</i> <i>sendwait</i> <i>typescript-mode</i> as well as <code>MAIL</code> <code>MBOX</code> and <i>inbox</i> (the latter three to /dev/null ) Also, the values of <code>COLUMNS</code> and <code>LINES</code> are looked up, and acted upon. The following prepares an email message in a batched dry run: </p>
+<dt><code>-# , &#8211;batch-mode</code></dt>
+<dd> Enables batch mode: standard input is made line buffered, the complete set of (interactive) commands is available, processing of Sx COMMAND ESCAPES is enabled in Sx Compose mode , and diverse Sx INTERNAL VARIABLES are adjusted for batch necessities, exactly as if done via &#8211;<code>S</code> <i>emptystart</i> no <i>errexit</i> no <i>header</i> no <i>posix</i> <i>quiet</i> <i>sendwait</i> <i>typescript-mode</i> as well as <code>MAIL</code> <code>MBOX</code> and <i>inbox</i> (the latter three to /dev/null ) Also, the values of <code>COLUMNS</code> and <code>LINES</code> are looked up, and acted upon. The following prepares an email message in a batched dry run: </dd>
 <blockquote>
 <pre><code>
 $ for name in bob alice [at] exam.ple lisa [at] exam.ple;
@@ -117,8 +117,8 @@ Text
     LC_ALL = C s - nail - # : x - Smta = test - X 'alias bob bob [at] exam.ple'
 </code></pre>
 </blockquote>
-<dt><code>-. , &#8211;end-options</code></p>
-<dd> This flag forces termination of option processing in order to prevent &#8220;option injection&#8221; (attacks). It also forcefully puts S-nail into send mode, see Sx On sending mail, and non-interactive mode .</dl>
+<dt><code>-. , &#8211;end-options</code></dt>
+<dd> This flag forces termination of option processing in order to prevent &#8220;option injection&#8221; (attacks). It also forcefully puts S-nail into send mode, see Sx On sending mail, and non-interactive mode .</dd></dl>
 <p> If the setting of <i>expandargv</i> allows their recognition all <i>mta-option</i> arguments given at the end of the command line after a `&#8211;&#8216; separator will be passed through to a file-based <i>mta</i> (Mail-Transfer-Agent) and persist for the entire session. <i>expandargv</i> constraints do not apply to the content of <i>mta-arguments</i> Command line receiver address handling supports the `shquote&#8217; constraint of <i>expandaddr</i> for more please see Sx On sending mail, and non-interactive mode . </p>
 <blockquote>
 <pre>
@@ -217,3 +217,4 @@ $ s &#8211; nail &#8211; : / -Squiet &#8211; Semptystart &#8211; Sfullnames &#82
                                                                                        ?   	ype &#8220;$@&#8221;<br />
                       ? }<br />
                   ? 
+</p>

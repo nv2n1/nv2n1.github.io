@@ -16,7 +16,7 @@ description: "cvs.sh – C shell log-in script for CVS users"
 <p>if ( &quot;$?CVS_RSH&quot; == 0 ) setenv CVS_RSH ssh</p>
 <h2>Files</h2>
 <dl>
-<dt><code>/etc/profile.d/cvs.csh</code></p>
-<dd></dl>
+<dt><code>/etc/profile.d/cvs.csh</code></dt>
+<dd></dd></dl>
 <h2>See Also</h2>
 <p><code><a href="/docs/linux/man/1-csh/">csh</a></code>(1), <code><a href="/docs/linux/man/1-cvs/">cvs</a></code>(1), <code><a href="/docs/linux/man/1-bash/">bash</a></code>(1). </p>

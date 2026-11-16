@@ -21,18 +21,18 @@ description: "oggz-codecs — List codecs in one or more Ogg files and their bit
 &nbsp;<wbr></p>
 <h3>Display options</h3>
 <dl>
-<dt>-a, &#8211;all</p>
-<dd> Display codec names multiple times if present in multiple tracks.</p>
-<dt>-m, &#8211;mime</p>
-<dd> Display MIME types rather than codec names.</p>
-<dt>-1, &#8211;one-per-line</p>
-<dd> Display one entry per line.</dl>
+<dt>-a, &#8211;all</dt>
+<dd> Display codec names multiple times if present in multiple tracks.</dd>
+<dt>-m, &#8211;mime</dt>
+<dd> Display MIME types rather than codec names.</dd>
+<dt>-1, &#8211;one-per-line</dt>
+<dd> Display one entry per line.</dd></dl>
 <h3>Miscellaneous options</h3>
 <dl>
-<dt>-h, &#8211;help</p>
-<dd> Display usage information and exit.</p>
-<dt>-v, &#8211;version</p>
-<dd> Output version information and exit.</dl>
+<dt>-h, &#8211;help</dt>
+<dd> Display usage information and exit.</dd>
+<dt>-v, &#8211;version</dt>
+<dd> Output version information and exit.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Conrad Parker May 15, 2008;</p>
 <h2>COPYRIGHT</h2>

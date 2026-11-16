@@ -11,13 +11,13 @@ description: "scan – produce a one line per message scan listing"
 <p> scan &#8211; produce a one line per message scan listing </p>
 <h2>SYNOPSIS</h2>
 <dl>
-<dt> <code>scan</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-clear</code> | <code>-noclear</code>] [<code>-form</code> <i>formatfile</i>] [<code>-format</code> <i>string</i>] [<code>-header</code> | <code>-noheader</code>] [<code>-width</code> <i>columns</i>] [<code>-reverse</code> | <code>-noreverse</code>] [<code>-file</code> <i>filename</i>] [<code>-version</code>] [<code>-help</code>]</dl>
+<dt> <code>scan</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-clear</code> | <code>-noclear</code>] [<code>-form</code> <i>formatfile</i>] [<code>-format</code> <i>string</i>] [<code>-header</code> | <code>-noheader</code>] [<code>-width</code> <i>columns</i>] [<code>-reverse</code> | <code>-noreverse</code>] [<code>-file</code> <i>filename</i>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
 <h2>DESCRIPTION</h2>
 <p> <code>Scan</code></p>
-<dd>produces a one-line-per-message listing of the specified folder or messages. Each <code>scan</code> line contains the message number (name), the date, the &#8220;From:&#8221; field, the &#8220;Subject&#8221; field, and, if room allows, some of the body of the message. For example: </p>
+<dd>produces a one-line-per-message listing of the specified folder or messages. Each <code>scan</code> line contains the message number (name), the date, the &#8220;From:&#8221; field, the &#8220;Subject&#8221; field, and, if room allows, some of the body of the message. For example: </dd>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre><code>
 15 + 10 / 05 crocker nned &amp;nbsp;
 &amp;nbsp;
@@ -25,7 +25,7 @@ description: "scan – produce a one line per message scan listing"
 &amp;nbsp;
 &lt;&lt; I recommend 18 10 / 06 brien Re : Exit status from mkdir 19 10 / 07 * brien       ``scan'' listing format in nmh
 </code></pre>
-</dl>
+</dd></dl>
 <p> The `+&#8217; on message 15 indicates that it is the current message. </p>
 <p> The `-&#8216; on message 16 indicates that it has been replied to, as indicated by a &#8220;Replied:&#8221; component (produced by the <code>-annotate</code> switch to the <code>repl</code> command). </p>
 <p> The `*&#8217; on message 19 indicates that no &#8220;Date:&#8221; header was present. The time of last modification of the message is given instead. </p>
@@ -39,20 +39,20 @@ description: "scan – produce a one line per message scan listing"
 <p> For example, the command: </p>
 <dl>
 <dt>
-<dd> (scan -clear -header; show all -show pr -f) | lpr</dl>
+</dt><dd> (scan -clear -header; show all -show pr -f) | lpr</dd></dl>
 <p> produces a scan listing of the current folder, followed by a formfeed, followed by a formatted listing of all messages in the folder, one per page. Omitting &#8220;<code>-show pr -f</code>&#8221; will cause the messages to be concatenated, separated by a one-line header and two blank lines. </p>
 <p> To override the output format used by <code>scan</code>, the <code>-format</code> <i>string</i> or <code>-form</code> <i>file</i> switches are used. This permits individual fields of the scan listing to be extracted with ease. The string is simply a format string and the file is simply a format file. See <i><a href="/docs/linux/man/5-mh-format/">mh-format</a></i>(5) for the details. </p>
 <p> In addition to the standard <i><a href="/docs/linux/man/5-mh-format/">mh-format</a></i>(5) escapes, <code>scan</code> also recognizes the following additional <i>component</i> escapes: </p>
 <dl>
 <dt>
-<dd>
+</dt><dd>
 <pre>
 <i>Escape   Returns  Description</i>
 body      string   the (compressed) first part of the body
 dtimenow  date     the current date
 folder    string   the name of the current folder
 </pre>
-</dl>
+</dd></dl>
 <p> If no date header is present in the message, the <i>function</i> escapes which operate on {<code>date</code>} will return values for the date of last modification of the message file itself. This feature is handy for scanning a draft folder, as message drafts usually aren&#8217;t allowed to have dates in them. </p>
 <p> The <code>/etc/nmh</code> directory contains several format files as examples of customized <code>scan</code> output. </p>
 <p> <code>scan</code> will update the <code>nmh</code> context prior to starting the listing, so interrupting a long <code>scan</code> listing preserves the new context. <code>nmh</code> purists hate this idea.</p>

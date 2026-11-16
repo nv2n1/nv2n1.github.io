@@ -15,11 +15,11 @@ seq_pad - write padding spaces to buffer
 <h2>Arguments</h2>
 
 <i>m</i>
-<dl><dd><dd>seq_file identifying the buffer to which data should be written</dl>
+<dl><dd></dd><dd>seq_file identifying the buffer to which data should be written</dd></dl>
  
 
  <i>c</i>
-<dl><dd>the byte to append after padding if non-zero</dl>
+<dl><dd>the byte to append after padding if non-zero</dd></dl>
 
 <h2>Copyright</h2>
 

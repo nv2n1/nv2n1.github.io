@@ -233,10 +233,10 @@ print{$barfh} $_ while&lt;$foofh&gt;;
 
 
 <dt><a HREF="#lbAU">INTERNALS</a>
-<dd>
+</dt><dd>
 
 
-<dt><a HREF="#lbBB">AUTHOR</a>
-<dd>
-<dt><a HREF="#lbBC">SEE ALSO</a>
-<dd></dl>
+</dd><dt><a HREF="#lbBB">AUTHOR</a>
+</dt><dd>
+</dd><dt><a HREF="#lbBC">SEE ALSO</a>
+</dt><dd></dd></dl>

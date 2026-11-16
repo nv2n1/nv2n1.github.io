@@ -15,8 +15,8 @@ void bson_init(bson_t *b);
 </code></pre>
 <h2>PARAMETERS</h2>
 <dl>
-<dt><code>b</code></p>
-<dd> A <code>bson_t</code> \&amp;.</dl>
+<dt><code>b</code></dt>
+<dd> A <code>bson_t</code> \&amp;.</dd></dl>
 <h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_init/">bson_init</a>(3)</code> function shall initialize a <code>bson_t</code> that is placed on the stack. This is equivalent to initializing a <code>bson_t</code> to <code>BSON_INITIALIZER</code> \&amp;. </p>
 <h2>COLOPHON</h2>

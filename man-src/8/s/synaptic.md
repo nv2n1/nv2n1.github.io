@@ -15,12 +15,12 @@ description: "synaptic – graphical management of software packages"
 <h2>Options</h2>
 <p>Synaptic accepts all of the standard Gtk+ toolkit command line options as well as the following:</p>
 <dl>
-<dt><code>-f</code>, <code>&#8211;filter-file</code>=<i>filename</i></p>
-<dd>specify an alternative filter settings file</p>
-<dt><code>-i</code>, <code>&#8211;initial-filter</code>=<i>int</i></p>
-<dd>apply the filter with number <i>int</i> at startup</p>
-<dt><code>-o</code>, <code>&#8211;option</code>=<i>option</i></p>
-<dd>set an internal option (experts only) </p>
+<dt><code>-f</code>, <code>&#8211;filter-file</code>=<i>filename</i></dt>
+<dd>specify an alternative filter settings file</dd>
+<dt><code>-i</code>, <code>&#8211;initial-filter</code>=<i>int</i></dt>
+<dd>apply the filter with number <i>int</i> at startup</dd>
+<dt><code>-o</code>, <code>&#8211;option</code>=<i>option</i></dt>
+<dd>set an internal option (experts only) </dd>
 </dl>
 <h2>Authors</h2>
 <p>Synaptic was originally developed by Alfredo K. Kojima &lt;kojima [at] conectiva.com.br&gt;. His last official release was 0.16. Michael Vogt &lt;mvo [at] debian.org&gt; took over his CVS version, that already included a nearly complete port to Gtk+. Michael completed the port and added new features. See the <i>NEWS</i> file for the user visible changes from that point on. Conectiva is still involved in the development of synaptic. Gustavo Niemeyer &lt;niemeyer [at] conectiva.com&gt; is doing a great deal of work. </p>

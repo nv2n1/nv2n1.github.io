@@ -218,23 +218,23 @@ description: "cdk – Curses Development Kit"
 <h2>DESCRIPTION</h2>
 <p> Cdk is a library of functions which allow a programmer to quickly create a full screen interactive program with ease. The Cdk widgets support the following features: </p>
 <dl>
-<dt>&bull; Ncurses library.</p>
-<dd> Instead of using the standard curses library, Cdk can take advantage of the colors that Ncurses provides. To learn how to take advantage of Cdk&#8217;s color capabilities, see <i>cdk_display (3)</i>.</dl>
+<dt>&bull; Ncurses library.</dt>
+<dd> Instead of using the standard curses library, Cdk can take advantage of the colors that Ncurses provides. To learn how to take advantage of Cdk&#8217;s color capabilities, see <i>cdk_display (3)</i>.</dd></dl>
 <dl>
-<dt>&bull; Key Bindings.</p>
-<dd> Individual keys can be overridden with a callback. The callback is set up using the <code>bindCDKObject</code> function. To learn more about this see <i>cdk_binding (3)</i>.</dl>
+<dt>&bull; Key Bindings.</dt>
+<dd> Individual keys can be overridden with a callback. The callback is set up using the <code>bindCDKObject</code> function. To learn more about this see <i>cdk_binding (3)</i>.</dd></dl>
 <dl>
-<dt>&bull; Pre and Post Processing.</p>
-<dd> Certain widgets allow the user to trap a character before and after the character has been applied to the widget. This allows programmers to `filter&#8217; character input. To learn more about this see <i>cdk_process (3)</i>.</dl>
+<dt>&bull; Pre and Post Processing.</dt>
+<dd> Certain widgets allow the user to trap a character before and after the character has been applied to the widget. This allows programmers to `filter&#8217; character input. To learn more about this see <i>cdk_process (3)</i>.</dd></dl>
 <dl>
-<dt>&bull; Self Test Widgets.</p>
-<dd> With the use of the inject function class and the activate function, programmers can have the widgets test themselves. This allows the programmer to perform automated tests on a final program.</dl>
+<dt>&bull; Self Test Widgets.</dt>
+<dd> With the use of the inject function class and the activate function, programmers can have the widgets test themselves. This allows the programmer to perform automated tests on a final program.</dd></dl>
 <dl>
-<dt>&bull; Special Display Formats</p>
-<dd> There are special character format commands that can be inserted into any string in Cdk and the contents will get mapped to a <i>chtype</i> (see the curses manual page) with character attributes. This allows the programmer to insert format types on each character if they wish.</dl>
+<dt>&bull; Special Display Formats</dt>
+<dd> There are special character format commands that can be inserted into any string in Cdk and the contents will get mapped to a <i>chtype</i> (see the curses manual page) with character attributes. This allows the programmer to insert format types on each character if they wish.</dd></dl>
 <dl>
-<dt>&bull; The Ability To Build Predefined Screens</p>
-<dd> Widgets can be associated to any given screen. If there is more than one screen defined, then Cdk has the ability to &quot;flip&quot; from one screen to another with ease. See the <i>cdk_screen</i> manual page for more details.</dl>
+<dt>&bull; The Ability To Build Predefined Screens</dt>
+<dd> Widgets can be associated to any given screen. If there is more than one screen defined, then Cdk has the ability to &quot;flip&quot; from one screen to another with ease. See the <i>cdk_screen</i> manual page for more details.</dd></dl>
 <h2>STANDARD WIDGET BEHAVIOR</h2>
 <p> All of the widgets have a member of the structure called <i>exitType</i>. This member states how the widget exited. There are three values in which to check for, they are as follows: </p>
 <p> <center></p>

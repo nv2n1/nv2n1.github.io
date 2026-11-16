@@ -85,8 +85,8 @@ description: "prelude_audisp_selinux – Security Enhanced Linux Policy for the 
 <p> <code>prelude_audisp_exec_t</code> </p>
 <p> &#8211; Set files with the prelude_audisp_exec_t type, if you want to transition an executable to the prelude_audisp_t domain. </p>
 <dl>
-<dt>Paths:</p>
-<dd>/sbin/audisp-prelude, /usr/sbin/audisp-prelude </p>
+<dt>Paths:</dt>
+<dd>/sbin/audisp-prelude, /usr/sbin/audisp-prelude </dd>
 </dl>
 <p> <code>prelude_audisp_var_run_t</code> </p>
 <p> &#8211; Set files with the prelude_audisp_var_run_t type, if you want to store the prelude audisp files under the /run or /var/run directory. </p>

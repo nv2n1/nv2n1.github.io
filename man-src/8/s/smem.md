@@ -15,90 +15,90 @@ description: "smem – Report memory usage with shared memory divided proportion
 <h2>Options</h2>
 <h3>General Options</h3>
 <dl>
-<dt><code>-h, &#8211;help</code></p>
-<dd>Show help. </p>
+<dt><code>-h, &#8211;help</code></dt>
+<dd>Show help. </dd>
 </dl>
 <h3>Source Data</h3>
 <p>By default, smem will pull most of the data it needs from the /proc filesystem of the system it is running on. The &#8211;source option lets you used a tarred set of /proc data saved earlier, possibly on a different machine. The &#8211;kernel and &#8211;realmem options let you specify a couple things that smem cannot discover on its own. </p>
 <dl>
-<dt><code>-K </code><i>KERNEL</i><code>, &#8211;kernel=</code><i>KERNEL</i></p>
-<dd>Path to an uncompressed kernel image. This lets smem include the size of the kernel&#8217;s code and statically allocated data in the systemwide (-w) output. (To obtain an uncompressed image of a kernel on disk, you may need to build the kernel yourself, then locate file vmlinux in the source tree.) </p>
-<dt><code>-R </code><i>REALMEM</i><code>, &#8211;realmem=</code><i>REALMEM</i></p>
-<dd>Amount of physical RAM. This lets smem detect the amount of memory used by firmware/hardware in the systemwide (-w) output. If provided, it will also be used as the total memory size to base percentages on. Example: &#8211;realmem=1024M </p>
-<dt><code>-S </code><i>SOURCE</i><code>, &#8211;source=</code><i>SOURCE</i></p>
-<dd>/proc data source. This lets you specify an alternate source of the /proc data. For example, you can capture data from an embedded system using smemcap, and parse the data later on a different machine. If the &#8211;source option is not included, smem reports memory usage on the running system. </p>
+<dt><code>-K </code><i>KERNEL</i><code>, &#8211;kernel=</code><i>KERNEL</i></dt>
+<dd>Path to an uncompressed kernel image. This lets smem include the size of the kernel&#8217;s code and statically allocated data in the systemwide (-w) output. (To obtain an uncompressed image of a kernel on disk, you may need to build the kernel yourself, then locate file vmlinux in the source tree.) </dd>
+<dt><code>-R </code><i>REALMEM</i><code>, &#8211;realmem=</code><i>REALMEM</i></dt>
+<dd>Amount of physical RAM. This lets smem detect the amount of memory used by firmware/hardware in the systemwide (-w) output. If provided, it will also be used as the total memory size to base percentages on. Example: &#8211;realmem=1024M </dd>
+<dt><code>-S </code><i>SOURCE</i><code>, &#8211;source=</code><i>SOURCE</i></dt>
+<dd>/proc data source. This lets you specify an alternate source of the /proc data. For example, you can capture data from an embedded system using smemcap, and parse the data later on a different machine. If the &#8211;source option is not included, smem reports memory usage on the running system. </dd>
 </dl>
 <h3>Report By</h3>
 <p>If none of the following options are included, smem reports memory usage by process. </p>
 <dl>
-<dt><code>-m, &#8211;mappings</code></p>
-<dd>Report memory usage by mapping. </p>
-<dt><code>-u, &#8211;users</code></p>
-<dd>Report memory usage by user. </p>
-<dt><code>-w, &#8211;system</code></p>
-<dd>Report systemwide memory usage summary. </p>
+<dt><code>-m, &#8211;mappings</code></dt>
+<dd>Report memory usage by mapping. </dd>
+<dt><code>-u, &#8211;users</code></dt>
+<dd>Report memory usage by user. </dd>
+<dt><code>-w, &#8211;system</code></dt>
+<dd>Report systemwide memory usage summary. </dd>
 </dl>
 <h3>Filter By</h3>
 <p>If none of these options are included, memory usage is reported for all processes, users, or mappings. (Note: If you are running as a non-root user, and if you are not using the &#8211;source options, then you will only see data from processes whose /proc/ information you have access to.) </p>
 <dl>
-<dt><code>-M </code><i>MAPFILTER</i><code>, &#8211;mapfilter=</code><i>MAPFILTER</i></p>
-<dd>Mapping filter regular expression. </p>
-<dt><code>-P </code><i>PROCESSFILTER</i><code>, &#8211;processfilter=</code><i>PROCESSFILTER</i></p>
-<dd>Process filter regular expression. </p>
-<dt><code>-U </code><i>USERFILTER</i><code>, &#8211;userfilter=</code><i>USERFILTER</i></p>
-<dd>User filter regular expression. </p>
+<dt><code>-M </code><i>MAPFILTER</i><code>, &#8211;mapfilter=</code><i>MAPFILTER</i></dt>
+<dd>Mapping filter regular expression. </dd>
+<dt><code>-P </code><i>PROCESSFILTER</i><code>, &#8211;processfilter=</code><i>PROCESSFILTER</i></dt>
+<dd>Process filter regular expression. </dd>
+<dt><code>-U </code><i>USERFILTER</i><code>, &#8211;userfilter=</code><i>USERFILTER</i></dt>
+<dd>User filter regular expression. </dd>
 </dl>
 <h3>Output Formatting</h3>
 <dl>
-<dt><code>-c </code><i>COLUMNS</i><code>, &#8211;columns=</code><i>COLUMNS</i></p>
-<dd>Columns to show. </p>
-<dt><code>-H, &#8211;no-header</code></p>
-<dd>Disable header line. </p>
-<dt><code>-k, &#8211;abbreviate</code></p>
-<dd>Show unit suffixes. </p>
-<dt><code>-n, &#8211;numeric</code></p>
-<dd>Show numeric user IDs instead of usernames. </p>
-<dt><code>-p, &#8211;percent</code></p>
-<dd>Show percentages. </p>
-<dt><code>-r, &#8211;reverse</code></p>
-<dd>Reverse sort. </p>
-<dt><code>-s </code><i>SORT</i><code>, &#8211;sort=</code><i>SORT</i></p>
-<dd>Field to sort on. </p>
-<dt><code>-t, &#8211;totals</code></p>
-<dd>Show totals. </p>
+<dt><code>-c </code><i>COLUMNS</i><code>, &#8211;columns=</code><i>COLUMNS</i></dt>
+<dd>Columns to show. </dd>
+<dt><code>-H, &#8211;no-header</code></dt>
+<dd>Disable header line. </dd>
+<dt><code>-k, &#8211;abbreviate</code></dt>
+<dd>Show unit suffixes. </dd>
+<dt><code>-n, &#8211;numeric</code></dt>
+<dd>Show numeric user IDs instead of usernames. </dd>
+<dt><code>-p, &#8211;percent</code></dt>
+<dd>Show percentages. </dd>
+<dt><code>-r, &#8211;reverse</code></dt>
+<dd>Reverse sort. </dd>
+<dt><code>-s </code><i>SORT</i><code>, &#8211;sort=</code><i>SORT</i></dt>
+<dd>Field to sort on. </dd>
+<dt><code>-t, &#8211;totals</code></dt>
+<dd>Show totals. </dd>
 </dl>
 <h3>Output Type</h3>
 <p>These options specify graphical output styles. </p>
 <dl>
-<dt><code>&#8211;bar=</code><i>BAR</i></p>
-<dd>Show bar graph. </p>
-<dt><code>&#8211;pie=</code><i>PIE</i></p>
-<dd>Show pie graph. </p>
+<dt><code>&#8211;bar=</code><i>BAR</i></dt>
+<dd>Show bar graph. </dd>
+<dt><code>&#8211;pie=</code><i>PIE</i></dt>
+<dd>Show pie graph. </dd>
 </dl>
 <h2>Requirements</h2>
 <p><code>smem</code> requires: </p>
 <dl>
-<dt>&bull;</p>
-<dd>Linux kernel providing &#8216;Pss&#8217; metric in /proc/&lt;pid&gt;/smaps (generally 2.6.27 or newer).</p>
-<dt>&bull;</p>
-<dd>Python 2.x (at least 2.4 or so).</p>
-<dt>&bull;</p>
-<dd>The matplotlib library (only if you want to generate graphical charts). </p>
+<dt>&bull;</dt>
+<dd>Linux kernel providing &#8216;Pss&#8217; metric in /proc/&lt;pid&gt;/smaps (generally 2.6.27 or newer).</dd>
+<dt>&bull;</dt>
+<dd>Python 2.x (at least 2.4 or so).</dd>
+<dt>&bull;</dt>
+<dd>The matplotlib library (only if you want to generate graphical charts). </dd>
 </dl>
 <h2>Embedded Usage</h2>
 <p>To capture memory statistics on resource-constrained systems, the the <code>smem</code> source includes a utility named <code>smemcap</code>. <code>smemcap</code> captures all /proc entries required by <code>smem</code> and outputs them as an uncompressed .tar file to STDOUT. <code>smem</code> can analyze the output using the <code>&#8211;source</code> option. <code>smemcap</code> is small and does not require Python. </p>
 <p> To use <code>smemcap</code>:</p>
 <dl>
-<dt>1.</p>
-<dd>Obtain the smem source at <a rel="nofollow" href="http://selenic.com/repo/smem">http://selenic.com/repo/smem</a></p>
-<dt>2.</p>
-<dd>Compile <i>smemcap.c</i> for your target system.</p>
-<dt>3.</p>
+<dt>1.</dt>
+<dd>Obtain the smem source at <a rel="nofollow" href="http://selenic.com/repo/smem">http://selenic.com/repo/smem</a></dd>
+<dt>2.</dt>
+<dd>Compile <i>smemcap.c</i> for your target system.</dd>
+<dt>3.</dt>
 <dd>Run <code>smemcap</code> on the target system and save the output:<br />
- smemcap &gt; memorycapture.tar</p>
-<dt>4.</p>
+ smemcap &gt; memorycapture.tar</dd>
+<dt>4.</dt>
 <dd>Copy the output to another machine and run smem on it:<br />
- smem -S memorycapture.tar </p>
+ smem -S memorycapture.tar </dd>
 </dl>
 <h2>Files</h2>
 <p><i>/proc/$pid/cmdline</i> </p>

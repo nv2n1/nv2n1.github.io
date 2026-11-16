@@ -14,22 +14,22 @@ description: "nsd-notify – program to send NOTIFY’s to remote nameservers."
 <p><code>Nsd-notify </code> is simple program to send NOTIFY&#8217;s to remoter nameservers. <code>NSD </code> is a complete implementation of an authoritative DNS nameserver.</p>
 <h2>Options</h2>
 <dl>
-<dt><code>-4</code></p>
-<dd>Only send to IPv4 addresses.</p>
-<dt><code>-6</code></p>
-<dd>Only send to IPv6 addresses.</p>
-<dt><code>-h</code></p>
-<dd>Print help information and exit.</p>
-<dt><code>-a</code><i> address[@port]</i></p>
-<dd>Specify the source address (and port) to send from.</p>
-<dt><code>-p</code><i> port</i></p>
-<dd>Specify the port to send to.</p>
-<dt><code>-y</code><i> key:secret[:algorithm]</i></p>
-<dd>Specify a TSIG key and base64 encoded secret to sign the notification with. If the TSIG algorithm is not defined, MD5 is used.</p>
-<dt><code>z</code><i> zone</i></p>
-<dd>Specify the zone to notify about.</p>
-<dt><i>servers</i></p>
-<dd>List of nameservers to send to.</dl>
+<dt><code>-4</code></dt>
+<dd>Only send to IPv4 addresses.</dd>
+<dt><code>-6</code></dt>
+<dd>Only send to IPv6 addresses.</dd>
+<dt><code>-h</code></dt>
+<dd>Print help information and exit.</dd>
+<dt><code>-a</code><i> address[@port]</i></dt>
+<dd>Specify the source address (and port) to send from.</dd>
+<dt><code>-p</code><i> port</i></dt>
+<dd>Specify the port to send to.</dd>
+<dt><code>-y</code><i> key:secret[:algorithm]</i></dt>
+<dd>Specify a TSIG key and base64 encoded secret to sign the notification with. If the TSIG algorithm is not defined, MD5 is used.</dd>
+<dt><code>z</code><i> zone</i></dt>
+<dd>Specify the zone to notify about.</dd>
+<dt><i>servers</i></dt>
+<dd>List of nameservers to send to.</dd></dl>
 <h2>Examples</h2>
 <p>To run this program the standard way type: </p>
 <p> <code># nsd-notify -z foobar.cz 1.2.3.4</code></p>
